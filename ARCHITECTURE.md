@@ -84,11 +84,10 @@ The in-repository schema engine implements the JSON Schema keywords used by thes
 
 ## Deployment
 
-`ci.yml` verifies pull requests, pushes, and explicitly dispatched checks for automation-created branches. `deploy-pages.yml` performs the same checks, generates the interactive client, discovery pages, sitemap, and robots metadata into `dist/`, then deploys that directory through GitHub's official Pages Actions. `refresh-corpus.yml` is a weekly and manually dispatchable build-time workflow that crawls into staging, retains snapshots as temporary artifacts, validates and diffs the candidate, applies a versioned safety policy, and creates a draft data pull request. Scheduled and manual runs are serialized, and the workflow never writes directly to `main`.
+`ci.yml` verifies pull requests, pushes, and explicitly dispatched checks for automation-created branches. `deploy-pages.yml` performs the same checks, generates the interactive client, discovery pages, sitemap, and robots metadata into `dist/`, then deploys that directory through GitHub's official Pages Actions. `refresh-corpus.yml` and `refresh-secondary.yml` are weekly and manually dispatchable build-time workflows. Both acquire into staging, retain replayable source evidence as temporary artifacts, validate and diff candidates, apply versioned safety policies, and create draft data pull requests only for meaningful passing changes. A changed primary corpus includes a coordinated secondary-source re-resolution against the candidate base. Scheduled and manual runs are serialized within each workflow, and neither writes directly to `main`.
 
 ## Next increments
 
-- Automate reviewed secondary-source refresh pull requests using the established diff and safety policy.
 - Expose reviewed supplement selection and change labels in the reader interface once the first real edition is published.
 - Derive edition-aware search artifacts after supplement-selection behavior is accepted in the reader.
-- Publish corpus diffs automatically as data-refresh pull request summaries.
+- Add a reviewed supplement acquisition pipeline when the first official edition is selected.

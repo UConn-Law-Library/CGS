@@ -18,8 +18,10 @@ npm run secondary:acquire -- --output .crawl/secondary/sources
 TLS verification is the default. If the known CGA certificate-chain problem persists after the system trust store is loaded, the same explicit temporary workaround used by the statute crawler is available:
 
 ```sh
-npm run secondary:acquire -- --output .crawl/secondary/sources --no-ssl-verify
+npm run secondary:acquire -- --output .crawl/secondary/sources --no-cga-ssl-verify
 ```
+
+This exception is scoped to `www.cga.ct.gov`. Judicial Branch TLS verification remains enabled. Downloads retry transient failures twice and then fail closed.
 
 The Judicial Branch sometimes rejects hosted-runner traffic. A manually retrieved official PDF can be supplied without weakening or silently bypassing acquisition:
 
@@ -86,7 +88,7 @@ The migrated pipeline has completed a full isolated run against the current offi
 - 164,529 resolved statute references;
 - 161 derived artifacts, with the largest shard approximately two megabytes.
 
-These generated artifacts remain in ignored `.crawl` staging until legal-data review approves publication under `public/data/secondary`.
+The first reviewed artifacts are published under `public/data/secondary`; future candidates remain in ignored `.crawl` staging until legal-data review approves their replacement.
 
 ## Refresh review
 
@@ -106,6 +108,22 @@ npm run review:secondary -- \
 ```
 
 The gate rejects implausibly small datasets, excessive removals, any Chart B rule removal, and citation-resolution regressions below the configured floors. Passing the gate does not publish data automatically; the diff and legal-source changes still require human review. The first reviewed dataset is now published under `public/data/secondary`, establishing the baseline for future refresh diffs.
+
+## Automated refresh runbook
+
+The `Review secondary sources refresh` GitHub Actions workflow runs Wednesdays at 11:43 UTC and can also be dispatched from **Actions → Review secondary sources refresh → Run workflow**. It:
+
+1. acquires the four official PDFs into a content-addressed snapshot;
+2. parses and resolves a candidate against the published canonical corpus;
+3. validates schemas, provenance, hashes, counts, links, and base identity;
+4. compares the candidate with `public/data/secondary` and applies `config/secondary-refresh-policy.json`;
+5. runs the complete project check and, only for meaningful passing changes, creates a draft data PR without writing to `main`.
+
+Every run retains `secondary-refresh-review-*` reports for 30 days and `secondary-refresh-sources-*` PDFs for 14 days. An unchanged run creates no branch or PR. A policy failure creates no PR and requires review of the uploaded report; legitimate threshold changes belong in a separate policy PR.
+
+The Judicial Branch source fails closed if a hosted runner cannot retrieve a verified PDF. Inspect `acquisition.log` and the partial source artifact, then use the documented local fallback with an official manually retrieved `infractions.pdf` and submit the resulting data as a normal reviewed PR. Never substitute an unofficial mirror or disable Judicial Branch TLS verification.
+
+Primary corpus refreshes also reacquire and re-import the secondary sources against the candidate corpus whenever statute data changes. This keeps canonical links and the recorded base-manifest identity synchronized in a single PR.
 
 ## Reader integration
 

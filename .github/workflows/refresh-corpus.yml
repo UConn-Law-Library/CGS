@@ -29,6 +29,7 @@ jobs:
       LEGACY_DIR: .crawl/refresh/legacy
       SNAPSHOT_DIR: .crawl/refresh/snapshots
       CANONICAL_DIR: .crawl/refresh/canonical
+      SECONDARY_SOURCE_DIR: .crawl/refresh/secondary-sources
       REPORT_DIR: .crawl/refresh/reports
       CREATE_PULL_REQUEST: ${{ github.event_name == 'schedule' || inputs.create_pull_request }}
     steps:
@@ -89,6 +90,22 @@ jobs:
           if [ -f "$REPORT_DIR/refresh-summary.md" ]; then
             cat "$REPORT_DIR/refresh-summary.md" >> "$GITHUB_STEP_SUMMARY"
           fi
+
+      - name: Rebind secondary sources to the candidate corpus
+        if: steps.review.outputs.has_changes == 'true'
+        run: |
+          set -o pipefail
+          npm run secondary:acquire -- \
+            --output "$SECONDARY_SOURCE_DIR" \
+            --no-cga-ssl-verify \
+            2>&1 | tee "$REPORT_DIR/secondary-acquisition.log"
+          npm run secondary:import -- \
+            --sources "$SECONDARY_SOURCE_DIR/manifest.json" \
+            --base "$CANONICAL_DIR" \
+            --output "$CANONICAL_DIR/secondary"
+          npm run validate:secondary -- \
+            --data "$CANONICAL_DIR/secondary" \
+            --base "$CANONICAL_DIR"
 
       - name: Stage and verify the candidate corpus
         if: steps.review.outputs.has_changes == 'true'
@@ -153,6 +170,16 @@ jobs:
         with:
           name: corpus-refresh-snapshots-${{ github.run_id }}-${{ github.run_attempt }}
           path: .crawl/refresh/snapshots/
+          if-no-files-found: ignore
+          include-hidden-files: true
+          retention-days: 14
+
+      - name: Upload corpus-rebinding source PDFs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: corpus-refresh-secondary-sources-${{ github.run_id }}-${{ github.run_attempt }}
+          path: .crawl/refresh/secondary-sources/
           if-no-files-found: ignore
           include-hidden-files: true
           retention-days: 14

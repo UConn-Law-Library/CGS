@@ -4,7 +4,33 @@ from pathlib import Path
 import tempfile
 import unittest
 
-from secondary_sources.acquisition import PdfSnapshotStore, discover_index_sources
+import requests
+
+from secondary_sources.acquisition import PdfAcquirer, PdfSnapshotStore, discover_index_sources
+
+
+class FakeResponse:
+    def __init__(self, content=b"", text="", content_type="application/pdf"):
+        self.content = content
+        self.text = text
+        self.headers = {"Content-Type": content_type}
+
+    def raise_for_status(self):
+        return None
+
+
+class FakeSession:
+    def __init__(self, responses):
+        self.responses = iter(responses)
+        self.headers = {}
+        self.calls = []
+
+    def get(self, url, timeout, verify):
+        self.calls.append({"url": url, "timeout": timeout, "verify": verify})
+        response = next(self.responses)
+        if isinstance(response, Exception):
+            raise response
+        return response
 
 
 class AcquisitionTests(unittest.TestCase):
@@ -38,6 +64,43 @@ class AcquisitionTests(unittest.TestCase):
                 PdfSnapshotStore(Path(temporary)).capture(
                     "https://example.test/not.pdf", "not.pdf", b"<html>blocked</html>", "2026-01-01T00:00:00Z"
                 )
+
+    def test_cga_tls_exception_does_not_disable_judicial_tls(self):
+        html = """
+        <p>THE INDEX, REVISION OF 1958, REVISED TO JANUARY 1, 2025.</p>
+        <a href="index/2025/Index%20A-H.pdf">A-H</a>
+        <a href="index/2025/Index%20I-S.pdf">I-S</a>
+        <a href="index/2025/Index%20T-Z.pdf">T-Z</a>
+        """
+        responses = [FakeResponse(text=html, content_type="text/html")]
+        responses.extend(FakeResponse(content=f"%PDF-{index}".encode()) for index in range(4))
+        session = FakeSession(responses)
+        with tempfile.TemporaryDirectory() as temporary:
+            PdfAcquirer(
+                PdfSnapshotStore(Path(temporary)),
+                session=session,
+                verify_ssl=True,
+                cga_verify_ssl=False,
+                sleeper=lambda _: None,
+            ).capture_all("2026-01-01T00:00:00Z")
+        self.assertEqual([call["verify"] for call in session.calls], [False, False, False, False, True])
+
+    def test_retries_transient_download_failures(self):
+        session = FakeSession([
+            requests.ConnectionError("first"),
+            requests.ConnectionError("second"),
+            FakeResponse(content=b"%PDF-recovered"),
+        ])
+        sleeps = []
+        with tempfile.TemporaryDirectory() as temporary:
+            content = PdfAcquirer(
+                PdfSnapshotStore(Path(temporary)),
+                session=session,
+                max_attempts=3,
+                sleeper=sleeps.append,
+            ).get_bytes("https://example.test/retry.pdf")
+        self.assertEqual(content, b"%PDF-recovered")
+        self.assertEqual(sleeps, [1, 2])
 
 
 if __name__ == "__main__":

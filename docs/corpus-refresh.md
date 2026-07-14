@@ -62,3 +62,5 @@ The initial gate completed with three clean full-corpus refreshes. Each run acqu
 | [29305962351](https://github.com/UConn-Law-Library/CGS/actions/runs/29305962351) | 2026-07-14 04:43 | PASS | None |
 
 The workflow is scheduled for Mondays at 10:17 UTC. Scheduled runs always enable draft-pull-request creation when meaningful changes pass policy; manual dispatches retain the explicit toggle. The existing `corpus-refresh` concurrency group serializes scheduled and manual runs, and `cancel-in-progress: false` prevents a later trigger from discarding an active evidentiary crawl.
+
+When the primary corpus changes, the workflow reacquires the official index and infractions PDFs and rebuilds `public/data/secondary` against the candidate base before the full verification and PR steps. The content-addressed PDFs are retained as `corpus-refresh-secondary-sources-*` artifacts for 14 days. A secondary-source acquisition or resolution failure stops the corpus refresh rather than publishing stale links or deleting the reviewed secondary dataset.

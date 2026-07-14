@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { normalizeText, scoreDocument, searchDocuments, tokenize } from "../src/search.js";
+import { normalizeText, scoreDocument, SearchRepository, searchDocuments, tokenize } from "../src/search.js";
 
 const documents = [
   {
@@ -35,4 +35,20 @@ test("ranks an exact citation above body matches", () => {
 test("requires every query token and orders relevant results", () => {
   assert.deepEqual(searchDocuments(documents, "commonly language").map((result) => result.document.id), ["section-1-1"]);
   assert.deepEqual(searchDocuments(documents, "missing term"), []);
+});
+
+test("SearchRepository calls fetch with the global receiver", async () => {
+  const repository = new SearchRepository({
+    baseUrl: "https://example.test/data/search/",
+    fetchImpl(url) {
+      assert.equal(this, globalThis);
+      assert.equal(url.href, "https://example.test/data/search/manifest.json");
+      return Promise.resolve({
+        ok: true,
+        json: () => Promise.resolve({ shards: [] })
+      });
+    }
+  });
+
+  assert.deepEqual(await repository.init(), { shards: [] });
 });

@@ -54,7 +54,7 @@ export class SearchRepository {
 
   constructor({ baseUrl = "./data/search/", fetchImpl = globalThis.fetch } = {}) {
     this.#baseUrl = new URL(baseUrl, globalThis.location?.href ?? "http://localhost/");
-    this.#fetch = fetchImpl;
+    this.#fetch = fetchImpl.bind(globalThis);
   }
 
   async #json(relativePath) {

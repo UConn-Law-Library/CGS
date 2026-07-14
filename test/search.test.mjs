@@ -52,3 +52,19 @@ test("SearchRepository calls fetch with the global receiver", async () => {
 
   assert.deepEqual(await repository.init(), { shards: [] });
 });
+
+test("SearchRepository annotates results with their title for stable routes", async () => {
+  const responses = new Map([
+    ["https://example.test/data/search/manifest.json", { shards: [{ titleId: "title-01", path: "title-01.json" }] }],
+    ["https://example.test/data/search/title-01.json", { title: { id: "title-01", number: "01", name: "General" }, documents }]
+  ]);
+  const repository = new SearchRepository({
+    baseUrl: "https://example.test/data/search/",
+    fetchImpl(url) {
+      return Promise.resolve({ ok: true, json: () => Promise.resolve(responses.get(url.href)) });
+    }
+  });
+
+  const [result] = await repository.search("1-1");
+  assert.equal(result.document.title.number, "01");
+});

@@ -49,6 +49,12 @@ Chapter files are the authoritative content boundary. They are small enough to c
 
 Search data is derived, never authoritative. It is sharded by title: 81 requests are a tractable upper bound for an eventual progressive global search, while title-scoped search normally fetches one shard. Search results point back to chapter artifacts.
 
+## Client routing and reading
+
+The Pages client uses hash routes because GitHub Pages cannot rewrite arbitrary paths to the application shell. Routes identify a title, chapter, section, and optional subsection independently of generated filenames. Direct links therefore survive refreshes and can be shared without adding a hosting service.
+
+The catalog resolves title and chapter navigation. A reader fetches only the selected chapter artifact, then builds its section index, breadcrumbs, adjacent-section links, internal legal-reference links, and subsection anchors in the browser. Legacy query-string reader links are accepted as an input compatibility layer and immediately canonicalized to the hash route.
+
 ## Validation layers
 
 Validation deliberately has four layers:
@@ -69,7 +75,7 @@ The in-repository schema engine implements the JSON Schema keywords used by thes
 ## Next increments
 
 - Move global search into a Web Worker and stream title shard results progressively.
-- Add generated title/chapter route pages for stronger no-JavaScript navigation and indexing.
+- Add generated title and chapter discovery pages for stronger no-JavaScript navigation and indexing while retaining the canonical hash route contract.
 - Complete three reviewed manual crawler refreshes, then consider a weekly schedule.
 - Decide how annual supplements should merge with or overlay the canonical current-statutes contract.
 - Publish corpus diffs automatically as data-refresh pull request summaries.

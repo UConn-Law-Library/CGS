@@ -85,6 +85,10 @@ export class SearchRepository {
     const manifest = await this.init();
     const ids = titleIds?.length ? titleIds : manifest.shards.map((shard) => shard.titleId);
     const shards = await Promise.all(ids.map((id) => this.loadTitle(id)));
-    return searchDocuments(shards.flatMap((shard) => shard.documents), query, { limit });
+    const documents = shards.flatMap((shard) => shard.documents.map((document) => ({
+      ...document,
+      title: shard.title
+    })));
+    return searchDocuments(documents, query, { limit });
   }
 }

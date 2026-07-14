@@ -70,5 +70,6 @@ The in-repository schema engine implements the JSON Schema keywords used by thes
 
 - Move global search into a Web Worker and stream title shard results progressively.
 - Add generated title/chapter route pages for stronger no-JavaScript navigation and indexing.
-- Shadow-run the replacement crawler against the legacy crawler and review intentional differences before cutover.
+- Automate reviewed crawler refresh pull requests with attached corpus-diff summaries.
+- Decide how annual supplements should merge with or overlay the canonical current-statutes contract.
 - Publish corpus diffs automatically as data-refresh pull request summaries.

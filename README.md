@@ -38,7 +38,7 @@ For a reproducible build, pass `--generated-at 2026-07-13T13:33:18Z`. Otherwise 
 - `public/data/manifest.json`: corpus counts plus SHA-256 and byte size for every generated artifact.
 - `schemas/*.schema.json`: the canonical JSON Schema contracts.
 
-The checked-in `public/data/` is the complete initial production baseline: 81 titles, 1,141 chapters, and 33,013 provisions from the legacy snapshot generated July 13, 2026. The much smaller `fixtures/legacy/` corpus remains available for isolated importer tests and local pipeline experiments.
+The checked-in `public/data/` is the complete production baseline: 81 titles, 1,141 chapters, and 33,013 provisions, regenerated from the reviewed replacement crawler on July 14, 2026. The much smaller `fixtures/legacy/` corpus remains available for isolated importer tests and local pipeline experiments.
 
 See [ARCHITECTURE.md](ARCHITECTURE.md) for design constraints, invariants, and the migration path.
 

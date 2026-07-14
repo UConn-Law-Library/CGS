@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-07-13T13:33:18Z",
+  "generatedAt": "2026-07-14T00:27:33Z",
   "counts": {
     "titles": 81,
     "chapters": 1141,
@@ -11,7 +11,7 @@
     {
       "path": "catalog.json",
       "bytes": 336562,
-      "sha256": "c46c2f0e43e014114494f8bad6e487bc3e79346ece16cd1894f3bc4a9ac0095e"
+      "sha256": "d23d8dc7b1875cc02d0fe35c8807fcd972096f62908bf986ec01d9374e8c37c8"
     },
     {
       "path": "chapters/001.json",
@@ -5721,7 +5721,7 @@
     {
       "path": "search/manifest.json",
       "bytes": 8219,
-      "sha256": "7f66cc11a982e939f038b400c3b1ecf0a07df88d12d16a5f3616c795de257ea9"
+      "sha256": "d216b5812d2276e7b090e50dde8e820d93a8b962f77d8d5730e1b8d1c0e23d89"
     },
     {
       "path": "search/title-01.json",

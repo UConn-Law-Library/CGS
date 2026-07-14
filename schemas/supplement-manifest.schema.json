@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://uconn-law-library.github.io/CGS/schemas/supplement-manifest.schema.json",
+  "title": "CGS supplement overlay manifest",
+  "type": "object",
+  "required": ["schemaVersion", "editionYear", "generatedAt", "strategy", "base", "source", "titles", "counts", "artifacts"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "editionYear": { "type": "integer", "minimum": 2000 },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "strategy": { "const": "replace-by-citation" },
+    "base": {
+      "type": "object",
+      "required": ["schemaVersion", "generatedAt", "manifestSha256"],
+      "additionalProperties": false,
+      "properties": {
+        "schemaVersion": { "const": "1.0.0" },
+        "generatedAt": { "type": "string", "format": "date-time" },
+        "manifestSha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+      }
+    },
+    "source": { "$ref": "#/$defs/source" },
+    "titles": { "type": "array", "items": { "$ref": "#/$defs/title" } },
+    "counts": { "$ref": "#/$defs/counts" },
+    "artifacts": { "type": "array", "items": { "$ref": "#/$defs/artifact" } }
+  },
+  "$defs": {
+    "source": {
+      "type": "object",
+      "required": ["name", "url", "retrievedAt"],
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "url": { "type": "string", "format": "uri" },
+        "retrievedAt": { "type": "string", "format": "date-time" }
+      }
+    },
+    "chapter": {
+      "type": "object",
+      "required": ["id", "number", "name", "path", "sourceUrl", "sectionCount", "replacementCount", "additionCount"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "pattern": "^chapter-[0-9a-z-]+$" },
+        "number": { "type": "string", "pattern": "^[0-9a-z]+(?:-[0-9a-z]+)*$" },
+        "name": { "type": "string", "minLength": 1 },
+        "path": { "type": "string", "pattern": "^chapters/[0-9a-z-]+\\.json$" },
+        "sourceUrl": { "type": "string", "format": "uri" },
+        "sectionCount": { "type": "integer", "minimum": 0 },
+        "replacementCount": { "type": "integer", "minimum": 0 },
+        "additionCount": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "title": {
+      "type": "object",
+      "required": ["id", "number", "name", "sourceUrl", "chapters"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "pattern": "^title-[0-9a-z-]+$" },
+        "number": { "type": "string", "pattern": "^[0-9]+[a-z]*$" },
+        "name": { "type": "string", "minLength": 1 },
+        "sourceUrl": { "type": "string", "format": "uri" },
+        "chapters": { "type": "array", "items": { "$ref": "#/$defs/chapter" } }
+      }
+    },
+    "counts": {
+      "type": "object",
+      "required": ["titles", "chapters", "sections", "replacements", "additions"],
+      "additionalProperties": false,
+      "properties": {
+        "titles": { "type": "integer", "minimum": 0 },
+        "chapters": { "type": "integer", "minimum": 0 },
+        "sections": { "type": "integer", "minimum": 0 },
+        "replacements": { "type": "integer", "minimum": 0 },
+        "additions": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "artifact": {
+      "type": "object",
+      "required": ["path", "bytes", "sha256"],
+      "additionalProperties": false,
+      "properties": {
+        "path": { "type": "string", "pattern": "^chapters/[0-9a-z-]+\\.json$" },
+        "bytes": { "type": "integer", "minimum": 1 },
+        "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+      }
+    }
+  }
+}

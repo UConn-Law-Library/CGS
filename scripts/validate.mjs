@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import path from "node:path";
 import { validateCorpus } from "./lib/validator.mjs";
+import { validateSupplements } from "./lib/supplement-validator.mjs";
 
 function valueAfter(flag) {
   const index = process.argv.indexOf(flag);
@@ -8,15 +9,23 @@ function valueAfter(flag) {
 }
 
 try {
+  const dataDir = path.resolve(valueAfter("--data") ?? "public/data");
+  const schemaDir = path.resolve(valueAfter("--schemas") ?? "schemas");
   const result = await validateCorpus({
-    dataDir: path.resolve(valueAfter("--data") ?? "public/data"),
-    schemaDir: path.resolve(valueAfter("--schemas") ?? "schemas")
+    dataDir,
+    schemaDir
   });
-  if (result.errors.length) {
-    console.error(result.errors.map((error) => `- ${error}`).join("\n"));
+  const supplements = await validateSupplements({
+    supplementsDir: path.join(dataDir, "supplements"),
+    baseDataDir: dataDir,
+    schemaDir
+  });
+  const errors = [...result.errors, ...supplements.errors];
+  if (errors.length) {
+    console.error(errors.map((error) => `- ${error}`).join("\n"));
     process.exitCode = 1;
   } else {
-    console.log(`Validated ${result.counts.titles} titles, ${result.counts.chapters} chapters, and ${result.counts.sections} provisions.`);
+    console.log(`Validated ${result.counts.titles} titles, ${result.counts.chapters} chapters, ${result.counts.sections} provisions, and ${supplements.editions} supplement editions.`);
   }
 } catch (error) {
   console.error(error.stack ?? error.message);

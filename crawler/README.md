@@ -34,9 +34,15 @@ After reviewing the partial run, omit `--titles` for a full crawl. The full craw
 
 ## Supplement
 
+Use a separate output and snapshot directory, then import the adapter as an overlay against the reviewed current corpus:
+
 ```sh
 python -m crawler.cgs_crawler.cli --edition supplement --supplement-year 2026 --output .crawl/supplement --snapshots .crawl/supplement-snapshots
+npm run import:supplement -- --input .crawl/supplement --base public/data --output .crawl/supplement-canonical --year 2026
+npm run validate:supplement -- --data .crawl/supplement-canonical --base public/data
 ```
+
+After review, publish the validated directory as `public/data/supplements/2026`. The importer never changes `public/data/catalog.json` or the base chapter files. Repeat the import whenever the base corpus changes because every overlay is deliberately bound to the exact corpus it was reviewed against.
 
 ## Offline replay
 

@@ -117,7 +117,7 @@ Each edition records the exact base schema version and generation timestamp it w
 
 ## Infractions and General Statutes index
 
-The Phase 7 pipeline migrates the legacy PDF geometry parsers into deterministic, content-addressed ingestion for the official Judicial Branch infractions schedule (Charts A and B) and the three-volume LCO subject index. Derived records resolve against canonical statute citations and generate reverse-link shards without modifying chapter artifacts. No production secondary-source data is published until its first full review. See [docs/secondary-sources.md](docs/secondary-sources.md) for commands, provenance, artifact contracts, and the production-scale validation record.
+The Phase 7 pipeline migrates the legacy PDF geometry parsers into deterministic, content-addressed ingestion for the official Judicial Branch infractions schedule (Charts A and B) and the three-volume LCO subject index. The reviewed artifacts are published under `public/data/secondary`. Statute pages lazily display linked schedule entries, fee-rule roles, and subject-index records; `#/index` provides alphabetical browsing and letter-scoped client search without a database. See [docs/secondary-sources.md](docs/secondary-sources.md) for commands, provenance, artifact contracts, and the production-scale validation record.
 
 ## Data authority
 

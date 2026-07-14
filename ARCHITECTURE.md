@@ -88,8 +88,7 @@ The in-repository schema engine implements the JSON Schema keywords used by thes
 
 ## Next increments
 
-- Review and publish the first production secondary-source artifacts.
-- Add subject-index and infractions reader interfaces using the derived reverse links.
+- Automate reviewed secondary-source refresh pull requests using the established diff and safety policy.
 - Expose reviewed supplement selection and change labels in the reader interface once the first real edition is published.
 - Derive edition-aware search artifacts after supplement-selection behavior is accepted in the reader.
 - Publish corpus diffs automatically as data-refresh pull request summaries.

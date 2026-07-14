@@ -48,12 +48,55 @@ export class SecondarySourceRepository {
     return shards.flatMap((shard) => shard.headings);
   }
 
+  async loadLinkedIndexEntries(links = []) {
+    const byShard = new Map();
+    for (const link of links) {
+      if (!byShard.has(link.shard)) byShard.set(link.shard, []);
+      byShard.get(link.shard).push(link);
+    }
+    const resolved = new Map();
+    await Promise.all([...byShard].map(async ([shardPath, shardLinks]) => {
+      const shard = await this.#json(shardPath);
+      const topics = new Map((shard.headings ?? []).map((heading) => [heading.id, heading]));
+      for (const link of shardLinks) {
+        const topic = topics.get(link.topicId);
+        const entry = topic?.items.find((item) => item.id === link.entryId);
+        if (topic && entry) resolved.set(`${link.topicId}\0${link.entryId}`, { topic, entry });
+      }
+    }));
+    return links.map((link) => resolved.get(`${link.topicId}\0${link.entryId}`)).filter(Boolean);
+  }
+
   async loadSectionLinks(titleId, citation) {
     const { links } = await this.init();
     const entry = links.shards.find((shard) => shard.titleId === titleId);
     if (!entry) return emptySectionLinks();
     const shard = await this.#json(`links/${entry.path}`);
     return shard.sections[citation] ?? emptySectionLinks();
+  }
+
+  async loadSectionContext(titleId, citation) {
+    const [manifests, links] = await Promise.all([this.init(), this.loadSectionLinks(titleId, citation)]);
+    const [infractionShard, feeArtifact, indexEntries] = await Promise.all([
+      links.infractions.length ? this.loadInfractions(titleId) : Promise.resolve({ entries: [] }),
+      links.feeRules.length ? this.loadFeeRules() : Promise.resolve({ rules: [] }),
+      this.loadLinkedIndexEntries(links.indexEntries)
+    ]);
+    const infractionIds = new Set(links.infractions.map((link) => link.id));
+    const feeRoles = new Map();
+    for (const link of links.feeRules) {
+      if (!feeRoles.has(link.id)) feeRoles.set(link.id, new Set());
+      feeRoles.get(link.id).add(link.role);
+    }
+    return {
+      manifests,
+      links,
+      infractions: infractionShard.entries.filter((entry) => infractionIds.has(entry.id)),
+      feeRules: feeArtifact.rules
+        .filter((rule) => feeRoles.has(rule.id))
+        .map((rule) => ({ rule, roles: [...feeRoles.get(rule.id)].sort() })),
+      indexEntries
+    };
   }
 }
 

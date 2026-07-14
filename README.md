@@ -91,7 +91,7 @@ npm run diff:corpus -- --before public/data --after .refresh/data --markdown .re
 
 The diff uses citations as stable identities, so a provision moved to another chapter is reported as a location change instead of a removal and addition.
 
-Production refreshes use the manually dispatched `Review corpus refresh` GitHub Actions workflow. It performs a complete crawl, retains replayable raw snapshots as temporary artifacts, validates a staged canonical corpus, enforces the committed safety policy, and opens a draft data pull request only when meaningful changes exist. See [docs/corpus-refresh.md](docs/corpus-refresh.md) for prerequisites and the review runbook.
+Production refreshes use the weekly and manually dispatchable `Review corpus refresh` GitHub Actions workflow. It performs a complete crawl, retains replayable raw snapshots as temporary artifacts, validates a staged canonical corpus, enforces the committed safety policy, and opens a draft data pull request only when meaningful changes exist. See [docs/corpus-refresh.md](docs/corpus-refresh.md) for the three-run reliability record, prerequisites, and review runbook.
 
 ## Crawler
 

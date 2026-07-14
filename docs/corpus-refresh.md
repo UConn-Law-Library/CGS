@@ -1,6 +1,6 @@
 # Reviewed corpus refreshes
 
-The `Review corpus refresh` GitHub Actions workflow refreshes the complete current-statutes corpus without a database, server, or direct write to `main`. It is intentionally manual during the first operational cycles.
+The `Review corpus refresh` GitHub Actions workflow refreshes the complete current-statutes corpus without a database, server, or direct write to `main`. It runs weekly after completing the initial manual reliability gate and remains manually dispatchable for supervised refreshes.
 
 ## Repository prerequisites
 
@@ -53,4 +53,12 @@ To roll back a bad refresh, revert its merge commit through a pull request. The 
 
 ## Scheduling gate
 
-Keep the workflow manual for at least three clean full-corpus refreshes. After those runs demonstrate stable source acquisition and review volume, add a weekly schedule that retains the same safety checks and draft-PR-only publication behavior.
+The initial gate completed with three clean full-corpus refreshes. Each run acquired all titles, validated the same 81-title, 1,141-chapter, 33,013-provision corpus, passed the versioned safety policy, found no meaningful changes, retained both report and replayable-snapshot artifacts, and created no pull request.
+
+| Run | Completed (UTC) | Result | Changes |
+| --- | --- | --- | --- |
+| [29300882887](https://github.com/UConn-Law-Library/CGS/actions/runs/29300882887) | 2026-07-14 02:36 | PASS | None |
+| [29305321575](https://github.com/UConn-Law-Library/CGS/actions/runs/29305321575) | 2026-07-14 04:24 | PASS | None |
+| [29305962351](https://github.com/UConn-Law-Library/CGS/actions/runs/29305962351) | 2026-07-14 04:43 | PASS | None |
+
+The workflow is scheduled for Mondays at 10:17 UTC. Scheduled runs always enable draft-pull-request creation when meaningful changes pass policy; manual dispatches retain the explicit toggle. The existing `corpus-refresh` concurrency group serializes scheduled and manual runs, and `cancel-in-progress: false` prevents a later trigger from discarding an active evidentiary crawl.

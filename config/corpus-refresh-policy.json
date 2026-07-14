@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.0.0",
+  "maxTitleCountDelta": 0,
+  "maxTitleMembershipChanges": 0,
+  "maxTitleMetadataChanges": 10,
+  "maxChapterCountDeltaPercent": 5,
+  "maxChapterMembershipChangesPercent": 5,
+  "maxChapterMetadataChangesPercent": 10,
+  "maxProvisionCountDeltaPercent": 5,
+  "maxAddedProvisionsPercent": 5,
+  "maxRemovedProvisionsPercent": 2,
+  "maxChangedProvisionsPercent": 35
+}

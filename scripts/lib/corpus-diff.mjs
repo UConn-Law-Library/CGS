@@ -36,13 +36,41 @@ function snapshot(section, title, chapter) {
   };
 }
 
+function titleSnapshot(title) {
+  return {
+    id: title.id,
+    number: title.number,
+    name: title.name,
+    sourceUrl: title.sourceUrl,
+    searchPath: title.searchPath
+  };
+}
+
+function chapterSnapshot(chapter, title) {
+  return {
+    id: chapter.id,
+    number: chapter.number,
+    name: chapter.name,
+    titleId: title.id,
+    path: chapter.path,
+    sourceUrl: chapter.sourceUrl,
+    sectionCount: chapter.sectionCount
+  };
+}
+
 async function loadCorpus(dataDir, titleIds) {
   const root = path.resolve(dataDir);
   const catalog = await readJson(path.join(root, "catalog.json"));
+  const titles = new Map();
+  const chapters = new Map();
   const provisions = new Map();
   for (const title of catalog.titles) {
     if (titleIds?.size && !titleIds.has(title.id)) continue;
+    if (titles.has(title.id)) throw new Error(`Duplicate title ID ${title.id} in ${root}`);
+    titles.set(title.id, titleSnapshot(title));
     for (const chapterEntry of title.chapters) {
+      if (chapters.has(chapterEntry.id)) throw new Error(`Duplicate chapter ID ${chapterEntry.id} in ${root}`);
+      chapters.set(chapterEntry.id, chapterSnapshot(chapterEntry, title));
       const chapter = await readJson(path.join(root, chapterEntry.path));
       for (const section of chapter.sections) {
         const value = snapshot(section, title, chapter);
@@ -53,7 +81,7 @@ async function loadCorpus(dataDir, titleIds) {
       }
     }
   }
-  return { catalog, provisions };
+  return { catalog, titles, chapters, provisions };
 }
 
 function publicSnapshot(value) {
@@ -73,7 +101,30 @@ function changedFields(before, after) {
 }
 
 function sortByKey(values) {
-  return values.sort((left, right) => collator.compare(left.key, right.key));
+  return values.sort((left, right) => collator.compare(left.key ?? left.id, right.key ?? right.id));
+}
+
+function diffMetadata(before, after, fields) {
+  const added = [];
+  const removed = [];
+  const changed = [];
+  for (const [key, current] of after) {
+    const previous = before.get(key);
+    if (!previous) {
+      added.push(current);
+      continue;
+    }
+    const changes = fields.filter((field) => JSON.stringify(previous[field]) !== JSON.stringify(current[field]));
+    if (changes.length) changed.push({ key, changes, before: previous, after: current });
+  }
+  for (const [key, previous] of before) {
+    if (!after.has(key)) removed.push(previous);
+  }
+  return {
+    added: sortByKey(added),
+    removed: sortByKey(removed),
+    changed: sortByKey(changed)
+  };
 }
 
 export async function diffCorpora({ beforeDir, afterDir, titleIds }) {
@@ -81,6 +132,8 @@ export async function diffCorpora({ beforeDir, afterDir, titleIds }) {
   const selectedTitles = titleIds?.length ? new Set(titleIds) : null;
   const before = await loadCorpus(beforeDir, selectedTitles);
   const after = await loadCorpus(afterDir, selectedTitles);
+  const titleChanges = diffMetadata(before.titles, after.titles, ["number", "name", "sourceUrl", "searchPath"]);
+  const chapterChanges = diffMetadata(before.chapters, after.chapters, ["number", "name", "titleId", "path", "sourceUrl", "sectionCount"]);
   const added = [];
   const removed = [];
   const changed = [];
@@ -131,10 +184,20 @@ export async function diffCorpora({ beforeDir, afterDir, titleIds }) {
       counts: { ...after.catalog.counts, provisionsRead: after.provisions.size }
     },
     summary: {
+      titlesAdded: titleChanges.added.length,
+      titlesRemoved: titleChanges.removed.length,
+      titlesChanged: titleChanges.changed.length,
+      chaptersAdded: chapterChanges.added.length,
+      chaptersRemoved: chapterChanges.removed.length,
+      chaptersChanged: chapterChanges.changed.length,
       added: added.length,
       removed: removed.length,
       changed: changed.length,
       statusTransitions: statusTransitions.length
+    },
+    structure: {
+      titles: titleChanges,
+      chapters: chapterChanges
     },
     added,
     removed,
@@ -157,6 +220,12 @@ export function renderDiffMarkdown(report) {
     "",
     "| Change | Count |",
     "| --- | ---: |",
+    `| Titles added | ${report.summary.titlesAdded} |`,
+    `| Titles removed | ${report.summary.titlesRemoved} |`,
+    `| Titles changed | ${report.summary.titlesChanged} |`,
+    `| Chapters added | ${report.summary.chaptersAdded} |`,
+    `| Chapters removed | ${report.summary.chaptersRemoved} |`,
+    `| Chapters changed | ${report.summary.chaptersChanged} |`,
     `| Added | ${report.summary.added} |`,
     `| Removed | ${report.summary.removed} |`,
     `| Changed | ${report.summary.changed} |`,
@@ -164,6 +233,12 @@ export function renderDiffMarkdown(report) {
     ""
   ];
   const sections = [
+    ["Titles added", report.structure.titles.added, (item) => `- Title ${item.number} — ${item.name}`],
+    ["Titles removed", report.structure.titles.removed, (item) => `- Title ${item.number} — ${item.name}`],
+    ["Titles changed", report.structure.titles.changed, (item) => `- Title ${item.after.number} — ${item.changes.join(", ")}: ${item.after.name}`],
+    ["Chapters added", report.structure.chapters.added, (item) => `- Chapter ${item.number} — ${item.name} (${item.titleId})`],
+    ["Chapters removed", report.structure.chapters.removed, (item) => `- Chapter ${item.number} — ${item.name} (${item.titleId})`],
+    ["Chapters changed", report.structure.chapters.changed, (item) => `- Chapter ${item.after.number} — ${item.changes.join(", ")}: ${item.after.name}`],
     ["Status transitions", report.statusTransitions, (item) => `- ${displayCitation(item)} — ${item.from} → ${item.to}: ${item.heading}`],
     ["Added", report.added, (item) => `- ${displayCitation(item)} — ${item.heading} (${item.chapterId})`],
     ["Removed", report.removed, (item) => `- ${displayCitation(item)} — ${item.heading} (${item.chapterId})`],

@@ -49,6 +49,7 @@ See [ARCHITECTURE.md](ARCHITECTURE.md) for design constraints, invariants, and t
 | `npm run import:fixture` | Rebuild `public/data/` from the checked-in fixture |
 | `npm run import:legacy -- --input <dir>` | Import a legacy title-JSON directory |
 | `npm run diff:corpus -- --before <dir> --after <dir> [--titles 1,42a]` | Report corpus additions, removals, edits, moves, and status transitions |
+| `npm run review:refresh -- --report <diff.json> --policy config/corpus-refresh-policy.json` | Apply the versioned production-refresh safety policy |
 | `npm run crawl -- --titles 1 --output .crawl/legacy --snapshots .crawl/snapshots` | Crawl current CGA source into an isolated legacy-adapter directory |
 | `npm run validate` | Validate schemas, references, counts, and content hashes |
 | `npm test` | Run importer, validator, and client search tests |
@@ -68,6 +69,8 @@ npm run diff:corpus -- --before public/data --after .refresh/data --markdown .re
 ```
 
 The diff uses citations as stable identities, so a provision moved to another chapter is reported as a location change instead of a removal and addition.
+
+Production refreshes use the manually dispatched `Review corpus refresh` GitHub Actions workflow. It performs a complete crawl, retains replayable raw snapshots as temporary artifacts, validates a staged canonical corpus, enforces the committed safety policy, and opens a draft data pull request only when meaningful changes exist. See [docs/corpus-refresh.md](docs/corpus-refresh.md) for prerequisites and the review runbook.
 
 ## Crawler
 

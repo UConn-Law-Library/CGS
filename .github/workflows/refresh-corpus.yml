@@ -1,0 +1,153 @@
+name: Review corpus refresh
+
+on:
+  workflow_dispatch:
+    inputs:
+      create_pull_request:
+        description: Create a draft pull request when meaningful changes pass review
+        required: true
+        default: true
+        type: boolean
+
+permissions:
+  actions: write
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: corpus-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    env:
+      REFRESH_ROOT: .crawl/refresh
+      LEGACY_DIR: .crawl/refresh/legacy
+      SNAPSHOT_DIR: .crawl/refresh/snapshots
+      CANONICAL_DIR: .crawl/refresh/canonical
+      REPORT_DIR: .crawl/refresh/reports
+    steps:
+      - uses: actions/checkout@v4
+      - name: Require the published main baseline
+        run: |
+          if [ "$GITHUB_REF" != "refs/heads/main" ]; then
+            echo "Run corpus refreshes from the main branch, not $GITHUB_REF." >&2
+            exit 1
+          fi
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: python -m pip install -r crawler/requirements.txt
+      - run: npm ci
+
+      - name: Crawl the current statutes
+        run: |
+          mkdir -p "$REPORT_DIR"
+          python -m crawler.cgs_crawler.cli \
+            --output "$LEGACY_DIR" \
+            --snapshots "$SNAPSHOT_DIR" \
+            2>&1 | tee "$REPORT_DIR/crawl.log"
+
+      - name: Build and validate the candidate corpus
+        run: |
+          npm run import:legacy -- --input "$LEGACY_DIR" --output "$CANONICAL_DIR"
+          node scripts/validate.mjs --data "$CANONICAL_DIR" --schemas schemas
+
+      - name: Generate the full corpus diff
+        run: |
+          npm run diff:corpus -- \
+            --before public/data \
+            --after "$CANONICAL_DIR" \
+            --json "$REPORT_DIR/corpus-diff.json" \
+            --markdown "$REPORT_DIR/corpus-diff.md"
+
+      - name: Apply refresh safety policy
+        id: review
+        run: |
+          node scripts/check-corpus-refresh.mjs \
+            --report "$REPORT_DIR/corpus-diff.json" \
+            --policy config/corpus-refresh-policy.json \
+            --summary "$REPORT_DIR/refresh-summary.md" \
+            --state "$REPORT_DIR/refresh-state.json" \
+            --github-output "$GITHUB_OUTPUT"
+
+      - name: Publish review summary
+        if: always()
+        run: |
+          if [ -f "$REPORT_DIR/refresh-summary.md" ]; then
+            cat "$REPORT_DIR/refresh-summary.md" >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Stage and verify the candidate corpus
+        if: steps.review.outputs.has_changes == 'true'
+        run: |
+          rm -rf public/data
+          cp -a "$CANONICAL_DIR" public/data
+          npm run check
+
+      - name: Prepare pull request description
+        if: steps.review.outputs.has_changes == 'true' && inputs.create_pull_request
+        run: |
+          {
+            echo "# Automated CGS corpus refresh"
+            echo
+            echo "This draft was produced by the reviewed corpus-refresh workflow. It never writes directly to main."
+            echo
+            cat "$REPORT_DIR/refresh-summary.md"
+            echo
+            echo "The complete corpus diff and replayable raw snapshots are retained as artifacts on the [workflow run]($GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)."
+            echo
+            echo "Review the legal-text changes, status transitions, and official source links before merging."
+          } > "$REPORT_DIR/pull-request.md"
+
+      - name: Create draft refresh pull request
+        if: steps.review.outputs.has_changes == 'true' && inputs.create_pull_request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          branch="automation/corpus-refresh-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$branch"
+          git add -- public/data
+          if git diff --cached --quiet; then
+            echo "The review reported meaningful changes, but no canonical artifacts changed." >&2
+            exit 1
+          fi
+          git commit -m "Refresh CGS corpus $(date -u +%Y-%m-%d)"
+          git push origin "$branch"
+          pr_url="$(gh pr create \
+            --base main \
+            --head "$branch" \
+            --draft \
+            --title "Refresh CGS corpus $(date -u +%Y-%m-%d)" \
+            --body-file "$REPORT_DIR/pull-request.md")"
+          gh workflow run ci.yml --ref "$branch"
+          echo "Created draft refresh PR: $pr_url" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload refresh reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: corpus-refresh-review-${{ github.run_id }}-${{ github.run_attempt }}
+          path: .crawl/refresh/reports/
+          if-no-files-found: ignore
+          include-hidden-files: true
+          retention-days: 30
+
+      - name: Upload replayable raw snapshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: corpus-refresh-snapshots-${{ github.run_id }}-${{ github.run_attempt }}
+          path: .crawl/refresh/snapshots/
+          if-no-files-found: ignore
+          include-hidden-files: true
+          retention-days: 14

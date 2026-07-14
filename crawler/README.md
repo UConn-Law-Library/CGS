@@ -61,6 +61,8 @@ npm run diff:corpus -- --before public/data --after .crawl/canonical --markdown 
 
 Only replace `public/data` after the validation and corpus diff are reviewed.
 
+For production, the manually dispatched `Review corpus refresh` workflow performs this sequence and opens a draft pull request when meaningful changes pass the committed safety policy. Raw snapshots and review reports are retained as temporary Actions artifacts. Operational instructions are in [`docs/corpus-refresh.md`](../docs/corpus-refresh.md).
+
 For a shadow crawl of selected titles, pass the same title list to the diff so unselected titles are not reported as removals:
 
 ```sh

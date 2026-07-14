@@ -6,7 +6,7 @@ The repository turns the legacy title-level JSON export into versioned, canonica
 
 ## Quick start
 
-Requirements: Node.js 22 or newer. The static platform has no npm dependencies. Crawler tests additionally require Python 3.12 and the packages in `crawler/requirements.txt`.
+Requirements: Node.js 24 or newer. The static platform has no npm dependencies. Crawler tests additionally require Python 3.12 and the packages in `crawler/requirements.txt`.
 
 ```sh
 npm ci

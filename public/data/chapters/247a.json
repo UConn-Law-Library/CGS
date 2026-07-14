@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-247a",
+  "number": "247a",
+  "name": "Motor Vehicle Theft Task Force",
+  "title": {
+    "id": "title-14",
+    "number": "14",
+    "name": "Motor Vehicles. Use of the Highway By Vehicles. Gasoline"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_247a.htm",
+  "sections": [
+    {
+      "id": "section-14-211a",
+      "kind": "section",
+      "citation": "14-211a",
+      "citations": [
+        "14-211a"
+      ],
+      "heading": "Sec. 14-211a. Motor vehicle theft task force.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_247a.htm#sec_14-211a",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 14-211a is repealed, effective June 30, 2015."
+        ],
+        "sourceNotes": [
+          "(P.A. 80-292, S. 14, 17; P.A. 83-233; P.A. 85-191; P.A. 11-51, S. 134; June Sp. Sess. P.A. 15-5, S. 513.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 14-211a is repealed, effective June 30, 2015."
+      }
+    }
+  ]
+}

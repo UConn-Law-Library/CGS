@@ -1,0 +1,97 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-278",
+  "number": "278",
+  "name": "Railroads and Railways",
+  "title": {
+    "id": "title-16",
+    "number": "16",
+    "name": "Public Service Companies"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_278.htm",
+  "sections": [
+    {
+      "id": "group-16-51-to-16-52-to-16-53-to-16-54-to-16-55-to-16-56-to-16-57-to-16-58-to-16-59-to-16-60-to-16-61-to-16-62-to-16-63-to-16-64-to-16-65-to-16-66-to-16-67-to-16-68-to-16-69-to-16-70-to-16-71",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "16-51",
+        "16-52",
+        "16-53",
+        "16-54",
+        "16-55",
+        "16-56",
+        "16-57",
+        "16-58",
+        "16-59",
+        "16-60",
+        "16-61",
+        "16-62",
+        "16-63",
+        "16-64",
+        "16-65",
+        "16-66",
+        "16-67",
+        "16-68",
+        "16-69",
+        "16-70",
+        "16-71"
+      ],
+      "heading": "Secs. 16-51 to 16-71.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_278.htm#secs_16-51_to_16-71",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 245, Secs. 13b-200 to 13b-210 , inclusive, and Secs. 13b-212 to 13b-222 , inclusive."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 245, Secs. 13b-200 to 13b-210 , inclusive, and Secs. 13b-212 to 13b-222 , inclusive."
+      }
+    },
+    {
+      "id": "section-16-72",
+      "kind": "section",
+      "citation": "16-72",
+      "citations": [
+        "16-72"
+      ],
+      "heading": "Sec. 16-72. Sunday laws not applicable to electric cars or motor buses.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_278.htm#sec_16-72",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 16-72 is repealed."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 5462; P.A. 76-415, S. 9; 76-435, S. 81, 82.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 16-72 is repealed."
+      }
+    },
+    {
+      "id": "group-16-73-to-16-75i",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "16-73",
+        "16-75i"
+      ],
+      "heading": "Secs. 16-73 to 16-75i.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_278.htm#secs_16-73_to_16-75i",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 245, Secs. 13b-223 to 13b-234 , inclusive."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 245, Secs. 13b-223 to 13b-234 , inclusive."
+      }
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-419e",
+  "number": "419e",
+  "name": "Boxing and Wrestling",
+  "title": {
+    "id": "title-21a",
+    "number": "21a",
+    "name": "Consumer Protection"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_419e.htm",
+  "sections": [
+    {
+      "id": "section-21a-195",
+      "kind": "section",
+      "citation": "21a-195",
+      "citations": [
+        "21a-195"
+      ],
+      "heading": "Sec. 21a-195. Boxing Commission established.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_419e.htm#sec_21a-195",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 21a-195 is repealed."
+        ],
+        "sourceNotes": [
+          "(P.A. 84-344, S. 1, 11; P.A. 85-157, S. 8, 9.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 21a-195 is repealed."
+      }
+    },
+    {
+      "id": "group-21a-195a-to-21a-211",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "21a-195a",
+        "21a-211"
+      ],
+      "heading": "Secs. 21a-195a to 21a-211.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_419e.htm#secs_21a-195a_to_21a-211",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 532a, Secs. 29-143i to 29-143z , inclusive."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 532a, Secs. 29-143i to 29-143z , inclusive."
+      }
+    },
+    {
+      "id": "group-21a-212-to-21a-213-to-21a-214-to-21a-215",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "21a-212",
+        "21a-213",
+        "21a-214",
+        "21a-215"
+      ],
+      "heading": "Secs. 21a-212 to 21a-215.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_419e.htm#secs_21a-212_to_21a-215",
+      "status": "reserved",
+      "content": {
+        "body": [
+          "Reserved for future use."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Reserved for future use."
+      }
+    }
+  ]
+}

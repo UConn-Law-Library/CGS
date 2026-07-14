@@ -1,0 +1,98 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-848",
+  "number": "848",
+  "name": "Chattel Mortgages",
+  "title": {
+    "id": "title-49",
+    "number": "49",
+    "name": "Mortgages and Liens"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_848.htm",
+  "sections": [
+    {
+      "id": "group-49-93-to-49-94-to-49-95-to-49-96-to-49-97-to-49-98-to-49-99-to-49-100-to-49-101-to-49-102-to-49-103-to-49-104-to-49-105-to-49-106-to-49-107-to-49-108-to-49-109-to-49-110-to-49-111-to-49-112-to-49-113-to-49-114-to-49-115",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "49-93",
+        "49-94",
+        "49-95",
+        "49-96",
+        "49-97",
+        "49-98",
+        "49-99",
+        "49-100",
+        "49-101",
+        "49-102",
+        "49-103",
+        "49-104",
+        "49-105",
+        "49-106",
+        "49-107",
+        "49-108",
+        "49-109",
+        "49-110",
+        "49-111",
+        "49-112",
+        "49-113",
+        "49-114",
+        "49-115"
+      ],
+      "heading": "Secs. 49-93 to 49-115. Chattel mortgages.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_848.htm#secs_49-93_to_49-115",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Sections 49-93 to 49-115 , inclusive, are repealed."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 7265–7285; 1951, S. 2996d, 2997d, 2999d; 1953, S. 2994d; 1955, S. 2993d, 2995d; November, 1955, S. N222; 1957, P.A. 534, 626; 1959, P.A. 133, S. 10-102.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 49-93 to 49-115 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-49-93",
+      "kind": "section",
+      "citation": "49-93",
+      "citations": [
+        "49-93"
+      ],
+      "heading": "49-93",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_848.htm#sec_49-93",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 49-93 to 49-115. Chattel mortgages. Sections 49-93 to 49-115 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 49-93 to 49-115. Chattel mortgages. Sections 49-93 to 49-115 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-49-115",
+      "kind": "section",
+      "citation": "49-115",
+      "citations": [
+        "49-115"
+      ],
+      "heading": "49-115",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_848.htm#sec_49-115",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 49-93 to 49-115. Chattel mortgages. Sections 49-93 to 49-115 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 49-93 to 49-115. Chattel mortgages. Sections 49-93 to 49-115 , inclusive, are repealed."
+      }
+    }
+  ]
+}

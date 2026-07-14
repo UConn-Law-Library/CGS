@@ -1,0 +1,116 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-949",
+  "number": "949",
+  "name": "Crimes Involving Credit Cards, Scanning Devices or Reencoders",
+  "title": {
+    "id": "title-53",
+    "number": "53",
+    "name": "Crimes"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_949.htm",
+  "sections": [
+    {
+      "id": "group-53-380-to-53-381-to-53-382-to-53-383-to-53-384-to-53-385-to-53-386-to-53-387-to-53-388",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "53-380",
+        "53-381",
+        "53-382",
+        "53-383",
+        "53-384",
+        "53-385",
+        "53-386",
+        "53-387",
+        "53-388"
+      ],
+      "heading": "Secs. 53-380 to 53-388. Credit card crimes.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_949.htm#secs_53-380_to_53-388",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Sections 53-380 to 53-388 , inclusive, are repealed."
+        ],
+        "sourceNotes": [
+          "(1969, P.A. 750, S. 1–9; 1971, P.A. 871, S. 129.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 53-380 to 53-388 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-53-388a",
+      "kind": "section",
+      "citation": "53-388a",
+      "citations": [
+        "53-388a"
+      ],
+      "heading": "Sec. 53-388a. Unlawful use or possession of scanning device or reencoder. Civil action by Attorney General. Penalties.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_949.htm#sec_53-388a",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) As used in this section:",
+          "(1) “Scanning device” means a scanner, reader or any other electronic device that is used to access, read, scan, obtain, memorize or temporarily or permanently store information encoded on a computer chip or a magnetic strip or stripe of a payment card.",
+          "(2) “Reencoder” means an electronic device that places encoded information from a computer chip or a magnetic strip or stripe of a payment card onto a computer chip or a magnetic strip or stripe of a different payment card or any electronic medium that allows an authorized transaction to occur.",
+          "(3) “Payment card” means a credit card, charge card, debit card or any other card that is issued to an authorized card user and that allows the user to obtain, purchase or receive goods, services, money or anything else of value from a merchant.",
+          "(4) “Merchant” means a person who receives, from an authorized user of a payment card or from someone the person reasonably believes to be such an authorized user, a payment card or information from a payment card or what the person reasonably believes to be a payment card or information from a payment card, as an instrument for obtaining, purchasing or receiving goods, services, money or anything else of value from the person.",
+          "(b) No person shall use a scanning device to access, read, obtain, memorize or temporarily or permanently store information encoded on a computer chip or a magnetic strip or stripe of a payment card without the permission of the authorized user of the payment card and with the intent to defraud the authorized user, the issuer of the authorized user's payment card or a merchant.",
+          "(c) No person shall use a reencoder to place information encoded on a computer chip or a magnetic strip or stripe of a payment card onto a computer chip or a magnetic strip or stripe of a different card without the permission of the authorized user of the card from which the information is being reencoded and with the intent to defraud the authorized user, the issuer of the authorized user's payment card or a merchant.",
+          "(d) The Attorney General may institute a civil proceeding in Superior Court against any person who violates subsection (b) or (c) of this section.",
+          "(e) Any person who violates the provisions of subsection (b) or (c) of this section shall be fined not more than ten thousand dollars and imprisoned not less than one year or more than ten years, or both.",
+          "(f) No person shall possess a scanning device or reencoder under circumstances manifesting an intent to use the same in the commission of a violation of subsection (b) or (c) of this section.",
+          "(g) Any person who violates subsection (f) of this section shall be guilty of a class A misdemeanor."
+        ],
+        "sourceNotes": [
+          "(P.A. 06-60, S. 1.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "(a) As used in this section:\n\n(1) “Scanning device” means a scanner, reader or any other electronic device that is used to access, read, scan, obtain, memorize or temporarily or permanently store information encoded on a computer chip or a magnetic strip or stripe of a payment card.\n\n(2) “Reencoder” means an electronic device that places encoded information from a computer chip or a magnetic strip or stripe of a payment card onto a computer chip or a magnetic strip or stripe of a different payment card or any electronic medium that allows an authorized transaction to occur.\n\n(3) “Payment card” means a credit card, charge card, debit card or any other card that is issued to an authorized card user and that allows the user to obtain, purchase or receive goods, services, money or anything else of value from a merchant.\n\n(4) “Merchant” means a person who receives, from an authorized user of a payment card or from someone the person reasonably believes to be such an authorized user, a payment card or information from a payment card or what the person reasonably believes to be a payment card or information from a payment card, as an instrument for obtaining, purchasing or receiving goods, services, money or anything else of value from the person.\n\n(b) No person shall use a scanning device to access, read, obtain, memorize or temporarily or permanently store information encoded on a computer chip or a magnetic strip or stripe of a payment card without the permission of the authorized user of the payment card and with the intent to defraud the authorized user, the issuer of the authorized user's payment card or a merchant.\n\n(c) No person shall use a reencoder to place information encoded on a computer chip or a magnetic strip or stripe of a payment card onto a computer chip or a magnetic strip or stripe of a different card without the permission of the authorized user of the card from which the information is being reencoded and with the intent to defraud the authorized user, the issuer of the authorized user's payment card or a merchant.\n\n(d) The Attorney General may institute a civil proceeding in Superior Court against any person who violates subsection (b) or (c) of this section.\n\n(e) Any person who violates the provisions of subsection (b) or (c) of this section shall be fined not more than ten thousand dollars and imprisoned not less than one year or more than ten years, or both.\n\n(f) No person shall possess a scanning device or reencoder under circumstances manifesting an intent to use the same in the commission of a violation of subsection (b) or (c) of this section.\n\n(g) Any person who violates subsection (f) of this section shall be guilty of a class A misdemeanor."
+      }
+    },
+    {
+      "id": "section-53-380",
+      "kind": "section",
+      "citation": "53-380",
+      "citations": [
+        "53-380"
+      ],
+      "heading": "53-380",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_949.htm#sec_53-380",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 53-380 to 53-388. Credit card crimes. Sections 53-380 to 53-388 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 53-380 to 53-388. Credit card crimes. Sections 53-380 to 53-388 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-53-388",
+      "kind": "section",
+      "citation": "53-388",
+      "citations": [
+        "53-388"
+      ],
+      "heading": "53-388",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_949.htm#sec_53-388",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 53-380 to 53-388. Credit card crimes. Sections 53-380 to 53-388 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 53-380 to 53-388. Credit card crimes. Sections 53-380 to 53-388 , inclusive, are repealed."
+      }
+    }
+  ]
+}

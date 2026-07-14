@@ -1,0 +1,92 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-368t",
+  "number": "368t",
+  "name": "Council on Mental Retardation. General Provisions",
+  "title": {
+    "id": "title-19a",
+    "number": "19a",
+    "name": "Public Health and Well-Being"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_368t.htm",
+  "sections": [
+    {
+      "id": "group-19a-445-to-19a-446-to-19a-447-to-19a-448-to-19a-449-to-19a-450-to-19a-451-to-19a-452-to-19a-453-to-19a-454-to-19a-455-to-19a-456-to-19a-457",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "19a-445",
+        "19a-446",
+        "19a-447",
+        "19a-448",
+        "19a-449",
+        "19a-450",
+        "19a-451",
+        "19a-452",
+        "19a-453",
+        "19a-454",
+        "19a-455",
+        "19a-456",
+        "19a-457"
+      ],
+      "heading": "Secs. 19a-445 to 19a-457.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_368t.htm#secs_19a-445_to_19a-457",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 319c, Secs. 17a-270 to 17a-272 , inclusive, and 17a-274 to 17a-283 , inclusive."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 319c, Secs. 17a-270 to 17a-272 , inclusive, and 17a-274 to 17a-283 , inclusive."
+      }
+    },
+    {
+      "id": "group-19a-458-to-19a-458a-to-19a-458b-to-19a-458c-to-19a-458d-to-19a-458e-to-19a-458f",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "19a-458",
+        "19a-458a",
+        "19a-458b",
+        "19a-458c",
+        "19a-458d",
+        "19a-458e",
+        "19a-458f"
+      ],
+      "heading": "Secs. 19a-458 to 19a-458f.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_368t.htm#secs_19a-458_to_19a-458f",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 813, Secs. 46a-11a to 46a-11g , inclusive."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 813, Secs. 46a-11a to 46a-11g , inclusive."
+      }
+    },
+    {
+      "id": "section-19a-459",
+      "kind": "section",
+      "citation": "19a-459",
+      "citations": [
+        "19a-459"
+      ],
+      "heading": "Sec. 19a-459.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_368t.htm#sec_19a-459",
+      "status": "reserved",
+      "content": {
+        "body": [
+          "Reserved for future use."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Reserved for future use."
+      }
+    }
+  ]
+}

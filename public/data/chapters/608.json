@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-608",
+  "number": "608",
+  "name": "Miscellaneous Provisions",
+  "title": {
+    "id": "title-33",
+    "number": "33",
+    "name": "Corporations"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_608.htm",
+  "sections": [
+    {
+      "id": "section-33-2000",
+      "kind": "section",
+      "citation": "33-2000",
+      "citations": [
+        "33-2000"
+      ],
+      "heading": "Sec. 33-2000. Conversion of stock corporation organized before January 1, 1920, to nonstock corporation.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_608.htm#sec_33-2000",
+      "status": "active",
+      "content": {
+        "body": [
+          "A stock corporation organized before January 1, 1920, and having a certificate of incorporation providing that each member of the corporation shall be entitled to one vote, irrespective of the number of shares the member may hold in the same, may convert to a nonstock corporation under chapter 602 by filing with the Secretary of the State a certificate of conversion (1) stating the terms of the corporation's plan of conversion and the classes of membership to which shareholders of the stock corporation, including any current classes of shareholders, will or may elect to belong following conversion and any amendment, restatement or amendment and restatement of the corporation's certificate of incorporation to be effected as a result of such conversion, and (2) certifying that the board of directors adopted the plan of conversion and such amendment, restatement or amendment and restatement of the certificate of incorporation and that a majority of the members or shares who were present or represented by proxy and voting at a duly noticed meeting of its shareholders or members voted in favor of the plan of conversion and to effect such amendment, restatement or amendment and restatement of the certificate of incorporation. After the filing of such certificate of conversion, (A) the corporation shall be deemed to have continued in existence with all the same corporate powers, except those that may not be exercised by a nonstock corporation under chapter 602, and to continue to own all its assets and properties and to be liable for all its debts and liabilities; (B) the actions taken by a majority vote of shares present and voting at each past meeting of the shareholders of the corporation as recorded in the minutes of such meetings are valid without regard to any defect in notice or whether a quorum was present, unless an action was commenced alleging such facts prior to June 21, 2011; and (C) the corporation shall not be required until after January 1, 2015, to comply with the provisions of chapter 32 relating to ownership interests in the corporation deemed abandoned."
+        ],
+        "sourceNotes": [
+          "(P.A. 11-61, S. 152.)"
+        ],
+        "history": [
+          "History: P.A. 11-61 effective June 21, 2011."
+        ],
+        "annotations": [],
+        "plainText": "A stock corporation organized before January 1, 1920, and having a certificate of incorporation providing that each member of the corporation shall be entitled to one vote, irrespective of the number of shares the member may hold in the same, may convert to a nonstock corporation under chapter 602 by filing with the Secretary of the State a certificate of conversion (1) stating the terms of the corporation's plan of conversion and the classes of membership to which shareholders of the stock corporation, including any current classes of shareholders, will or may elect to belong following conversion and any amendment, restatement or amendment and restatement of the corporation's certificate of incorporation to be effected as a result of such conversion, and (2) certifying that the board of directors adopted the plan of conversion and such amendment, restatement or amendment and restatement of the certificate of incorporation and that a majority of the members or shares who were present or represented by proxy and voting at a duly noticed meeting of its shareholders or members voted in favor of the plan of conversion and to effect such amendment, restatement or amendment and restatement of the certificate of incorporation. After the filing of such certificate of conversion, (A) the corporation shall be deemed to have continued in existence with all the same corporate powers, except those that may not be exercised by a nonstock corporation under chapter 602, and to continue to own all its assets and properties and to be liable for all its debts and liabilities; (B) the actions taken by a majority vote of shares present and voting at each past meeting of the shareholders of the corporation as recorded in the minutes of such meetings are valid without regard to any defect in notice or whether a quorum was present, unless an action was commenced alleging such facts prior to June 21, 2011; and (C) the corporation shall not be required until after January 1, 2015, to comply with the provisions of chapter 32 relating to ownership interests in the corporation deemed abandoned."
+      }
+    },
+    {
+      "id": "section-33-2001",
+      "kind": "section",
+      "citation": "33-2001",
+      "citations": [
+        "33-2001"
+      ],
+      "heading": "Sec. 33-2001. Commission on Connecticut's Leadership in Corporation and Business Law.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_608.htm#sec_33-2001",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 33-2001 is repealed, effective July 1, 2023."
+        ],
+        "sourceNotes": [
+          "(P.A. 14-89, S. 50; P.A. 23-204, S. 444.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 33-2001 is repealed, effective July 1, 2023."
+      }
+    }
+  ]
+}

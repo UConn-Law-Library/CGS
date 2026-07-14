@@ -1,0 +1,121 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-949d",
+  "number": "949d",
+  "name": "Communications Consumer Privacy Act",
+  "title": {
+    "id": "title-53",
+    "number": "53",
+    "name": "Crimes"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_949d.htm",
+  "sections": [
+    {
+      "id": "section-53-420",
+      "kind": "section",
+      "citation": "53-420",
+      "citations": [
+        "53-420"
+      ],
+      "heading": "Sec. 53-420. Short title: Communications Consumer Privacy Act.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_949d.htm#sec_53-420",
+      "status": "active",
+      "content": {
+        "body": [
+          "This chapter shall be cited as the “Communications Consumer Privacy Act”."
+        ],
+        "sourceNotes": [
+          "(P.A. 84-304, S. 1.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "This chapter shall be cited as the “Communications Consumer Privacy Act”."
+      }
+    },
+    {
+      "id": "section-53-421",
+      "kind": "section",
+      "citation": "53-421",
+      "citations": [
+        "53-421"
+      ],
+      "heading": "Sec. 53-421. Definitions.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_949d.htm#sec_53-421",
+      "status": "active",
+      "content": {
+        "body": [
+          "As used in this chapter, “communications company” means any person or organization which owns, controls, operates or manages any company which provides information or entertainment electronically to a household, including but not limited to a cable or community antenna television system."
+        ],
+        "sourceNotes": [
+          "(P.A. 84-304, S. 2.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "As used in this chapter, “communications company” means any person or organization which owns, controls, operates or manages any company which provides information or entertainment electronically to a household, including but not limited to a cable or community antenna television system."
+      }
+    },
+    {
+      "id": "section-53-422",
+      "kind": "section",
+      "citation": "53-422",
+      "citations": [
+        "53-422"
+      ],
+      "heading": "Sec. 53-422. Prohibited activities. Penalty. Recovery of damages.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_949d.htm#sec_53-422",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) It shall be unlawful for a communications company to:",
+          "(1) Install and use any equipment which would allow a communications company to visually observe or listen to what is occurring in the household of an individual subscriber without the knowledge or permission of the subscriber.",
+          "(2) Provide any person or public or private organization with a list containing the name of a subscriber, unless (A) the communications company gives notice thereof to the subscriber and (B) the subscriber does not object to the disclosure of his name to such person or organization, or (C) such person or public or private organization is acting as an agent, servant or employee of the communications company.",
+          "(3) Disclose the television viewing habits of any individual subscriber without the consent of the subscriber.",
+          "(4) Install or maintain a home-protection scanning device in a dwelling as part of a communication service without the express written consent of the occupant.",
+          "(b) Any communications company which violates any provision of this section shall be fined not more than ten thousand dollars for each violation. Any person who has been injured by a violation of this section shall have the right of action against any communications company which has committed the violation to recover damages for such injury. If the court awards damages, the plaintiff shall be awarded costs."
+        ],
+        "sourceNotes": [
+          "(P.A. 84-304, S. 3.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "(a) It shall be unlawful for a communications company to:\n\n(1) Install and use any equipment which would allow a communications company to visually observe or listen to what is occurring in the household of an individual subscriber without the knowledge or permission of the subscriber.\n\n(2) Provide any person or public or private organization with a list containing the name of a subscriber, unless (A) the communications company gives notice thereof to the subscriber and (B) the subscriber does not object to the disclosure of his name to such person or organization, or (C) such person or public or private organization is acting as an agent, servant or employee of the communications company.\n\n(3) Disclose the television viewing habits of any individual subscriber without the consent of the subscriber.\n\n(4) Install or maintain a home-protection scanning device in a dwelling as part of a communication service without the express written consent of the occupant.\n\n(b) Any communications company which violates any provision of this section shall be fined not more than ten thousand dollars for each violation. Any person who has been injured by a violation of this section shall have the right of action against any communications company which has committed the violation to recover damages for such injury. If the court awards damages, the plaintiff shall be awarded costs."
+      }
+    },
+    {
+      "id": "group-53-423-to-53-424-to-53-425-to-53-426-to-53-427-to-53-428-to-53-429-to-53-430-to-53-431-to-53-432-to-53-433-to-53-434-to-53-435-to-53-436-to-53-437-to-53-438-to-53-439",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "53-423",
+        "53-424",
+        "53-425",
+        "53-426",
+        "53-427",
+        "53-428",
+        "53-429",
+        "53-430",
+        "53-431",
+        "53-432",
+        "53-433",
+        "53-434",
+        "53-435",
+        "53-436",
+        "53-437",
+        "53-438",
+        "53-439"
+      ],
+      "heading": "Secs. 53-423 to 53-439.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_949d.htm#secs_53-423_to_53-439",
+      "status": "reserved",
+      "content": {
+        "body": [
+          "Reserved for future use."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Reserved for future use."
+      }
+    }
+  ]
+}

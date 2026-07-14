@@ -1,0 +1,100 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-291",
+  "number": "291",
+  "name": "Tri-State Regional Planning Compact",
+  "title": {
+    "id": "title-16",
+    "number": "16",
+    "name": "Public Service Companies"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_291.htm",
+  "sections": [
+    {
+      "id": "group-16-339-to-16-340-to-16-341",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "16-339",
+        "16-340",
+        "16-341"
+      ],
+      "heading": "Secs. 16-339 to 16-341. Tri-State Regional Planning Compact.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_291.htm#secs_16-339_to_16-341",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Sections 16-339 to 16-341 , inclusive, are repealed."
+        ],
+        "sourceNotes": [
+          "(February, 1965, P.A. 413, S. 1–3; 1967, P.A. 539; 1969, P.A. 39, S. 1; 768, S. 245; 1971, P.A. 450, S. 1; P.A. 73-679, S. 37, 43; P.A. 74-338, S. 31, 94; P.A. 75-537, S. 50, 55; P.A. 76-112; P.A. 77-614, S. 19, 610; P.A. 78-174, S. 1–3; P.A. 79-31, S. 15, 17; 79-399, S. 1–6; P.A. 81-463, S. 9, 10.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 16-339 to 16-341 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-16-341a",
+      "kind": "section",
+      "citation": "16-341a",
+      "citations": [
+        "16-341a"
+      ],
+      "heading": "Sec. 16-341a. Revocation of membership on the Tri-State Regional Planning Commission and participation in the Tri-State Regional Planning Compact.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_291.htm#sec_16-341a",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 16-341a is repealed."
+        ],
+        "sourceNotes": [
+          "(P.A. 81-463, S. 6, 8, 10; P.A. 95-217, S. 9.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 16-341a is repealed."
+      }
+    },
+    {
+      "id": "section-16-339",
+      "kind": "section",
+      "citation": "16-339",
+      "citations": [
+        "16-339"
+      ],
+      "heading": "16-339",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_291.htm#sec_16-339",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 16-339 to 16-341. Tri-State Regional Planning Compact. Sections 16-339 to 16-341 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 16-339 to 16-341. Tri-State Regional Planning Compact. Sections 16-339 to 16-341 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-16-341",
+      "kind": "section",
+      "citation": "16-341",
+      "citations": [
+        "16-341"
+      ],
+      "heading": "16-341",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_291.htm#sec_16-341",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 16-339 to 16-341. Tri-State Regional Planning Compact. Sections 16-339 to 16-341 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 16-339 to 16-341. Tri-State Regional Planning Compact. Sections 16-339 to 16-341 , inclusive, are repealed."
+      }
+    }
+  ]
+}

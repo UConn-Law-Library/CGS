@@ -1,0 +1,83 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-609",
+  "number": "609",
+  "name": "Limited Partnerships",
+  "title": {
+    "id": "title-34",
+    "number": "34",
+    "name": "Limited Partnerships, Partnerships, Professional Associations, Limited Liability Companies and Statutory Trusts"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_609.htm",
+  "sections": [
+    {
+      "id": "group-34-1-to-34-2-to-34-3-to-34-4-to-34-5-to-34-6-to-34-7-to-34-8",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "34-1",
+        "34-2",
+        "34-3",
+        "34-4",
+        "34-5",
+        "34-6",
+        "34-7",
+        "34-8"
+      ],
+      "heading": "Secs. 34-1 to 34-8. Limited partnerships.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_609.htm#secs_34-1_to_34-8",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Sections 34-1 to 34-8 , inclusive, are repealed."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 6276–6284; 1951, S. 2853d, 2854d; 1961, P.A. 79, S. 31.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 34-1 to 34-8 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-34-1",
+      "kind": "section",
+      "citation": "34-1",
+      "citations": [
+        "34-1"
+      ],
+      "heading": "34-1",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_609.htm#sec_34-1",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 34-1 to 34-8. Limited partnerships. Sections 34-1 to 34-8 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 34-1 to 34-8. Limited partnerships. Sections 34-1 to 34-8 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-34-8",
+      "kind": "section",
+      "citation": "34-8",
+      "citations": [
+        "34-8"
+      ],
+      "heading": "34-8",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_609.htm#sec_34-8",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 34-1 to 34-8. Limited partnerships. Sections 34-1 to 34-8 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 34-1 to 34-8. Limited partnerships. Sections 34-1 to 34-8 , inclusive, are repealed."
+      }
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-023b",
+  "number": "023b",
+  "name": "Office of the Inspector General",
+  "title": {
+    "id": "title-02",
+    "number": "02",
+    "name": "General Assembly and Legislative Agencies"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_023b.htm",
+  "sections": [
+    {
+      "id": "group-2-101-to-2-102-to-2-103-to-2-104",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "2-101",
+        "2-102",
+        "2-103",
+        "2-104"
+      ],
+      "heading": "Secs. 2-101 to 2-104. Office of the Inspector General.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_023b.htm#secs_2-101_to_2-104",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Sections 2-101 to 2-104 , inclusive, are repealed."
+        ],
+        "sourceNotes": [
+          "(P.A. 85-559, S. 1–4; P.A. 87-442, S. 7, 8.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 2-101 to 2-104 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-2-105",
+      "kind": "section",
+      "citation": "2-105",
+      "citations": [
+        "2-105"
+      ],
+      "heading": "Sec. 2-105. Permanent employees and records of Inspector General transferred to Attorney General.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_023b.htm#sec_2-105",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 2-105 is repealed, effective October 1, 2002."
+        ],
+        "sourceNotes": [
+          "(P.A. 87-442, S. 4, 8; S.A. 02-12, S. 1.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 2-105 is repealed, effective October 1, 2002."
+      }
+    },
+    {
+      "id": "group-2-106-to-2-107-to-2-108-to-2-109",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "2-106",
+        "2-107",
+        "2-108",
+        "2-109"
+      ],
+      "heading": "Secs. 2-106 to 2-109.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_023b.htm#secs_2-106_to_2-109",
+      "status": "reserved",
+      "content": {
+        "body": [
+          "Reserved for future use."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Reserved for future use."
+      }
+    },
+    {
+      "id": "section-2-101",
+      "kind": "section",
+      "citation": "2-101",
+      "citations": [
+        "2-101"
+      ],
+      "heading": "2-101",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_023b.htm#sec_2-101",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 2-101 to 2-104. Office of the Inspector General. Sections 2-101 to 2-104 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 2-101 to 2-104. Office of the Inspector General. Sections 2-101 to 2-104 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-2-104",
+      "kind": "section",
+      "citation": "2-104",
+      "citations": [
+        "2-104"
+      ],
+      "heading": "2-104",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_023b.htm#sec_2-104",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 2-101 to 2-104. Office of the Inspector General. Sections 2-101 to 2-104 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 2-101 to 2-104. Office of the Inspector General. Sections 2-101 to 2-104 , inclusive, are repealed."
+      }
+    }
+  ]
+}

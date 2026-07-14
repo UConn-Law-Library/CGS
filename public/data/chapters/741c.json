@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-741c",
+  "number": "741c",
+  "name": "Liquidated Damages Provisions in Consumer Contracts",
+  "title": {
+    "id": "title-42",
+    "number": "42",
+    "name": "Business, Selling, Trading and Collection Practices"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_741c.htm",
+  "sections": [
+    {
+      "id": "section-42-150u",
+      "kind": "section",
+      "citation": "42-150u",
+      "citations": [
+        "42-150u"
+      ],
+      "heading": "Sec. 42-150u. Enforceability of liquidated damages provision in consumer contracts. Consumer contract or consumer lease for personal emergency response system. Death of consumer. Exclusions.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_741c.htm#sec_42-150u",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) No provision in a written contract for the purchase or lease of goods or services primarily for personal, family or household purposes that provides for the payment of liquidated damages in the event of a breach of the contract shall be enforceable unless (1) the contract contains a statement in boldface type at least twelve points in size immediately following such liquidated damages provision stating “I ACKNOWLEDGE THAT THIS CONTRACT CONTAINS A LIQUIDATED DAMAGES PROVISION”, and (2) the person against whom such provision is to be enforced signs such person's name or writes such person's initials next to such statement. Nothing in this section shall validate a clause that is a penalty clause or is otherwise invalid under the law of this state.",
+          "(b) For purposes of this subsection, “personal emergency response system” means a twenty-four-hour-per-day electronic alarm system placed in an adult's home that enables him or her to obtain immediate help in case of an emergency. In the event a consumer dies during the term of a consumer contract or consumer lease for a personal emergency response system, the consumer contract or consumer lease for such system shall be deemed terminated upon such consumer's death and any penalty provision contained in the contract or lease regarding early termination shall be unreasonable pursuant to section 42-421 .",
+          "(c) The provisions of subsection (a) of this section shall not apply to (1) contracts between a consumer and an agency of the state or any political subdivision of the state or of the federal government, (2) negotiable instruments, (3) contract provisions for late fees, prepayment penalties or default interest rates, (4) contracts originated or held by an institution, or any subsidiary or affiliate of such institution, that is regulated by the Department of Banking or by a federal bank regulatory agency, provided, in the case of a contract originated or held by a subsidiary or affiliate of such institution, the subject matter of the contract is an activity that is financial in nature or incidental to such an activity as described in the Bank Holding Company Act, 12 USC 1843(k)(4), and (5) contracts originated or held by a person, firm or corporation licensed by the Department of Motor Vehicles in accordance with the provisions of section 14-52 or 14-67a ."
+        ],
+        "sourceNotes": [
+          "(P.A. 07-210, S. 1; P.A. 08-69, S. 1; 08-150, S. 61; P.A. 18-141, S. 6.)"
+        ],
+        "history": [
+          "History: P.A. 07-210 effective July 1, 2008, and applicable to contracts entered into, renewed or extended on or after that date; P.A. 08-69 amended Subsec. (b) to add Subdiv. (4) re contracts originated or held by an institution, or any subsidiary or affiliate of such institution, that is regulated by Department of Banking or by a federal bank regulatory agency, effective July 1, 2008; P.A. 08-150 amended Subsec. (b) to add provision, codified by the Revisors as Subdiv. (5), re contracts originated or held by person, firm or corporation licensed by Department of Motor Vehicles in accordance with Sec. 14-52 or 14-67a, effective July 1, 2008; P.A. 18-141 added new Subsec. (b) re personal emergency response systems and redesignated existing Subsec. (b) as Subsec. (c), effective June 11, 2018."
+        ],
+        "annotations": [],
+        "plainText": "(a) No provision in a written contract for the purchase or lease of goods or services primarily for personal, family or household purposes that provides for the payment of liquidated damages in the event of a breach of the contract shall be enforceable unless (1) the contract contains a statement in boldface type at least twelve points in size immediately following such liquidated damages provision stating “I ACKNOWLEDGE THAT THIS CONTRACT CONTAINS A LIQUIDATED DAMAGES PROVISION”, and (2) the person against whom such provision is to be enforced signs such person's name or writes such person's initials next to such statement. Nothing in this section shall validate a clause that is a penalty clause or is otherwise invalid under the law of this state.\n\n(b) For purposes of this subsection, “personal emergency response system” means a twenty-four-hour-per-day electronic alarm system placed in an adult's home that enables him or her to obtain immediate help in case of an emergency. In the event a consumer dies during the term of a consumer contract or consumer lease for a personal emergency response system, the consumer contract or consumer lease for such system shall be deemed terminated upon such consumer's death and any penalty provision contained in the contract or lease regarding early termination shall be unreasonable pursuant to section 42-421 .\n\n(c) The provisions of subsection (a) of this section shall not apply to (1) contracts between a consumer and an agency of the state or any political subdivision of the state or of the federal government, (2) negotiable instruments, (3) contract provisions for late fees, prepayment penalties or default interest rates, (4) contracts originated or held by an institution, or any subsidiary or affiliate of such institution, that is regulated by the Department of Banking or by a federal bank regulatory agency, provided, in the case of a contract originated or held by a subsidiary or affiliate of such institution, the subject matter of the contract is an activity that is financial in nature or incidental to such an activity as described in the Bank Holding Company Act, 12 USC 1843(k)(4), and (5) contracts originated or held by a person, firm or corporation licensed by the Department of Motor Vehicles in accordance with the provisions of section 14-52 or 14-67a ."
+      }
+    },
+    {
+      "id": "group-42-150v-to-42-150w-to-42-150x-to-42-150y-to-42-150z",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "42-150v",
+        "42-150w",
+        "42-150x",
+        "42-150y",
+        "42-150z"
+      ],
+      "heading": "Secs. 42-150v to 42-150z.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_741c.htm#secs_42-150v_to_42-150z",
+      "status": "reserved",
+      "content": {
+        "body": [
+          "Reserved for future use."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Reserved for future use."
+      }
+    }
+  ]
+}

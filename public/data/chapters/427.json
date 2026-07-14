@@ -1,0 +1,82 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-427",
+  "number": "427",
+  "name": "Fertilizers",
+  "title": {
+    "id": "title-22",
+    "number": "22",
+    "name": "Agriculture. Domestic Animals"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_427.htm",
+  "sections": [
+    {
+      "id": "group-22-105-to-22-106-to-22-107-to-22-108-to-22-109-to-22-110-to-22-111",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "22-105",
+        "22-106",
+        "22-107",
+        "22-108",
+        "22-109",
+        "22-110",
+        "22-111"
+      ],
+      "heading": "Secs. 22-105 to 22-111. Fertilizers.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_427.htm#secs_22-105_to_22-111",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Sections 22-105 to 22-111 , inclusive, are repealed."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 6733–6739; 1949, S. 2873d, 2875d; 1959, P.A. 138, S. 1; February, 1965, P.A. 198, S. 18.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 22-105 to 22-111 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-22-105",
+      "kind": "section",
+      "citation": "22-105",
+      "citations": [
+        "22-105"
+      ],
+      "heading": "22-105",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_427.htm#sec_22-105",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 22-105 to 22-111. Fertilizers. Sections 22-105 to 22-111 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 22-105 to 22-111. Fertilizers. Sections 22-105 to 22-111 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-22-111",
+      "kind": "section",
+      "citation": "22-111",
+      "citations": [
+        "22-111"
+      ],
+      "heading": "22-111",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_427.htm#sec_22-111",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 22-105 to 22-111. Fertilizers. Sections 22-105 to 22-111 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 22-105 to 22-111. Fertilizers. Sections 22-105 to 22-111 , inclusive, are repealed."
+      }
+    }
+  ]
+}

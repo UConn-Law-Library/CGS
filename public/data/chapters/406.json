@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-406",
+  "number": "406",
+  "name": "Motor Vehicle Junk Yards",
+  "title": {
+    "id": "title-21",
+    "number": "21",
+    "name": "Licenses"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_406.htm",
+  "sections": [
+    {
+      "id": "group-21-15-to-21-22a",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "21-15",
+        "21-22a"
+      ],
+      "heading": "Secs. 21-15 to 21-22a.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_406.htm#secs_21-15_to_21-22a",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 246, Secs. 14-67g to 14-67r , inclusive."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 246, Secs. 14-67g to 14-67r , inclusive."
+      }
+    },
+    {
+      "id": "section-21-22b",
+      "kind": "section",
+      "citation": "21-22b",
+      "citations": [
+        "21-22b"
+      ],
+      "heading": "Sec. 21-22b. Regulations concerning storage of unregistered motor vehicles and parts.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_406.htm#sec_21-22b",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 21-22b is repealed."
+        ],
+        "sourceNotes": [
+          "(1967, P.A. 854, S. 2, 4; 1969, P.A. 514, S. 1.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 21-22b is repealed."
+      }
+    },
+    {
+      "id": "group-21-23-to-21-26a",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "21-23",
+        "21-26a"
+      ],
+      "heading": "Secs. 21-23 to 21-26a.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_406.htm#secs_21-23_to_21-26a",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 246, Secs. 14-67s to 14-67w , inclusive."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 246, Secs. 14-67s to 14-67w , inclusive."
+      }
+    }
+  ]
+}

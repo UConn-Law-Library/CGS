@@ -1,0 +1,99 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-588g",
+  "number": "588g",
+  "name": "Job Training Coordination",
+  "title": {
+    "id": "title-32",
+    "number": "32",
+    "name": "Commerce and Economic and Community Development"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588g.htm",
+  "sections": [
+    {
+      "id": "group-32-170-to-32-171",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "32-170",
+        "32-171"
+      ],
+      "heading": "Secs. 32-170 and 32-171. Connecticut Job Training Coordinating Council. Service delivery areas.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588g.htm#secs_32-170_and_32-171",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Sections 32-170 and 32-171 are repealed."
+        ],
+        "sourceNotes": [
+          "(P.A. 86-326, S. 1, 2; P.A. 89-292, S. 5, 6.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 32-170 and 32-171 are repealed."
+      }
+    },
+    {
+      "id": "group-32-172-to-32-173-to-32-174",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "32-172",
+        "32-173",
+        "32-174"
+      ],
+      "heading": "Secs. 32-172 to 32-174.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588g.htm#secs_32-172_to_32-174",
+      "status": "reserved",
+      "content": {
+        "body": [
+          "Reserved for future use."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Reserved for future use."
+      }
+    },
+    {
+      "id": "section-32-170",
+      "kind": "section",
+      "citation": "32-170",
+      "citations": [
+        "32-170"
+      ],
+      "heading": "32-170",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588g.htm#sec_32-170",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 32-170 and 32-171. Connecticut Job Training Coordinating Council. Service delivery areas. Sections 32-170 and 32-171 are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 32-170 and 32-171. Connecticut Job Training Coordinating Council. Service delivery areas. Sections 32-170 and 32-171 are repealed."
+      }
+    },
+    {
+      "id": "section-32-171",
+      "kind": "section",
+      "citation": "32-171",
+      "citations": [
+        "32-171"
+      ],
+      "heading": "32-171",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588g.htm#sec_32-171",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 32-170 and 32-171. Connecticut Job Training Coordinating Council. Service delivery areas. Sections 32-170 and 32-171 are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 32-170 and 32-171. Connecticut Job Training Coordinating Council. Service delivery areas. Sections 32-170 and 32-171 are repealed."
+      }
+    }
+  ]
+}

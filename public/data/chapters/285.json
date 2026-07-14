@@ -1,0 +1,102 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-285",
+  "number": "285",
+  "name": "Motor Carriers of Property for Hire",
+  "title": {
+    "id": "title-16",
+    "number": "16",
+    "name": "Public Service Companies"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_285.htm",
+  "sections": [
+    {
+      "id": "section-16-281",
+      "kind": "section",
+      "citation": "16-281",
+      "citations": [
+        "16-281"
+      ],
+      "heading": "Sec. 16-281.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_285.htm#sec_16-281",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 245c, Sec. 13b-387 ."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 245c, Sec. 13b-387 ."
+      }
+    },
+    {
+      "id": "section-16-281a",
+      "kind": "section",
+      "citation": "16-281a",
+      "citations": [
+        "16-281a"
+      ],
+      "heading": "Sec. 16-281a. Transfer of powers and duties.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_285.htm#sec_16-281a",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 16-281a is repealed, effective June 6, 2014."
+        ],
+        "sourceNotes": [
+          "(P.A. 88-249, S. 2, 9; P.A. 11-80, S. 1; P.A. 14-134, S. 130.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 16-281a is repealed, effective June 6, 2014."
+      }
+    },
+    {
+      "id": "group-16-282-to-16-283-to-16-284-to-16-285-to-16-286-to-16-287-to-16-288-to-16-289-to-16-290-to-16-291-to-16-292-to-16-293-to-16-294-to-16-295-to-16-296-to-16-297-to-16-298-to-16-299-to-16-300-to-16-301-to-16-302-to-16-303-to-16-304-to-16-305-to-16-306-to-16-307-to-16-308",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "16-282",
+        "16-283",
+        "16-284",
+        "16-285",
+        "16-286",
+        "16-287",
+        "16-288",
+        "16-289",
+        "16-290",
+        "16-291",
+        "16-292",
+        "16-293",
+        "16-294",
+        "16-295",
+        "16-296",
+        "16-297",
+        "16-298",
+        "16-299",
+        "16-300",
+        "16-301",
+        "16-302",
+        "16-303",
+        "16-304",
+        "16-305",
+        "16-306",
+        "16-307",
+        "16-308"
+      ],
+      "heading": "Secs. 16-282 to 16-308.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_285.htm#secs_16-282_to_16-308",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 245c, Secs. 13b-388 to 13b-414 , inclusive."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 245c, Secs. 13b-388 to 13b-414 , inclusive."
+      }
+    }
+  ]
+}

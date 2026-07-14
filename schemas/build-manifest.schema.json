@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://uconn-law-library.github.io/CGS/schemas/build-manifest.schema.json",
+  "title": "CGS generated corpus manifest",
+  "type": "object",
+  "required": ["schemaVersion", "generatedAt", "counts", "artifacts"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "counts": {
+      "type": "object",
+      "required": ["titles", "chapters", "sections", "searchDocuments"],
+      "additionalProperties": false,
+      "properties": {
+        "titles": { "type": "integer", "minimum": 0 },
+        "chapters": { "type": "integer", "minimum": 0 },
+        "sections": { "type": "integer", "minimum": 0 },
+        "searchDocuments": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["path", "bytes", "sha256"],
+        "additionalProperties": false,
+        "properties": {
+          "path": { "type": "string", "minLength": 1 },
+          "bytes": { "type": "integer", "minimum": 1 },
+          "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+        }
+      }
+    }
+  }
+}

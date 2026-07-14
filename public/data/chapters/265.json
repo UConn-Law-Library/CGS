@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-265",
+  "number": "265",
+  "name": "Coast Survey",
+  "title": {
+    "id": "title-15",
+    "number": "15",
+    "name": "Navigation and Aeronautics"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_265.htm",
+  "sections": [
+    {
+      "id": "section-15-32",
+      "kind": "section",
+      "citation": "15-32",
+      "citations": [
+        "15-32"
+      ],
+      "heading": "Sec. 15-32. Entry upon land for coast survey. Damages.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_265.htm#sec_15-32",
+      "status": "active",
+      "content": {
+        "body": [
+          "Persons employed under an act of the Congress of the United States, passed February 10, 1807, and the supplements thereto, may enter upon any land within this state, for any purpose which may be necessary to effect the objects of said act, and erect thereon works, stations, buildings or appendages for that purpose, doing no unnecessary injury. If the parties interested cannot agree upon the amount to be paid for damages caused thereby, either of them may file suit in the superior court for the judicial district in which such land is situated. A trial shall be had in said court in the same manner in which other civil actions are tried therein, and such hearing shall take precedence of all other causes. The person so entering upon land may tender to the party injured payment therefor; and, if the damages finally assessed are not more than the amount tendered, the person entering shall recover costs; otherwise, the prevailing party shall recover such costs as are ordinarily taxed in civil actions in said court."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 4780; 1959, P.A. 152, S. 38; P.A. 78-280, S. 2, 127.)"
+        ],
+        "history": [
+          "History: 1959 act removed provision for determination of damages by county commissioners, county government having been abolished; P.A. 78-280 substituted “judicial district” for “county”."
+        ],
+        "annotations": [],
+        "plainText": "Persons employed under an act of the Congress of the United States, passed February 10, 1807, and the supplements thereto, may enter upon any land within this state, for any purpose which may be necessary to effect the objects of said act, and erect thereon works, stations, buildings or appendages for that purpose, doing no unnecessary injury. If the parties interested cannot agree upon the amount to be paid for damages caused thereby, either of them may file suit in the superior court for the judicial district in which such land is situated. A trial shall be had in said court in the same manner in which other civil actions are tried therein, and such hearing shall take precedence of all other causes. The person so entering upon land may tender to the party injured payment therefor; and, if the damages finally assessed are not more than the amount tendered, the person entering shall recover costs; otherwise, the prevailing party shall recover such costs as are ordinarily taxed in civil actions in said court."
+      }
+    },
+    {
+      "id": "section-15-33",
+      "kind": "section",
+      "citation": "15-33",
+      "citations": [
+        "15-33"
+      ],
+      "heading": "Sec. 15-33. Injury to signals.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_265.htm#sec_15-33",
+      "status": "active",
+      "content": {
+        "body": [
+          "Any person who wilfully injures or removes any signal, monument, building or appendage thereto, erected, used or constructed under said acts of Congress, shall be fined fifty dollars and shall be liable for all damages sustained by the United States."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 4781.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Any person who wilfully injures or removes any signal, monument, building or appendage thereto, erected, used or constructed under said acts of Congress, shall be fined fifty dollars and shall be liable for all damages sustained by the United States."
+      }
+    }
+  ]
+}

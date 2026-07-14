@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-879",
+  "number": "879",
+  "name": "Municipal Courts",
+  "title": {
+    "id": "title-51",
+    "number": "51",
+    "name": "Courts"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_879.htm",
+  "sections": [
+    {
+      "id": "group-51-127-to-51-128-to-51-129-to-51-130-to-51-131-to-51-132-to-51-133-to-51-134-to-51-135-to-51-136-to-51-137-to-51-138",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "51-127",
+        "51-128",
+        "51-129",
+        "51-130",
+        "51-131",
+        "51-132",
+        "51-133",
+        "51-134",
+        "51-135",
+        "51-136",
+        "51-137",
+        "51-138"
+      ],
+      "heading": "Secs. 51-127 to 51-138. Municipal courts.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_879.htm#secs_51-127_to_51-138",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Sections 51-127 to 51-138 , inclusive, are repealed."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 76, 7581–7587, 7590, 7735; 1951, S. 3098d; 1953, S. 25d, 3099d–3101d; 1957, P.A. 13, S. 97; 570; 651, S. 22, 23; 1959, P.A. 28, S. 204.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 51-127 to 51-138 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-51-127",
+      "kind": "section",
+      "citation": "51-127",
+      "citations": [
+        "51-127"
+      ],
+      "heading": "51-127",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_879.htm#sec_51-127",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 51-127 to 51-138. Municipal courts. Sections 51-127 to 51-138 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 51-127 to 51-138. Municipal courts. Sections 51-127 to 51-138 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-51-138",
+      "kind": "section",
+      "citation": "51-138",
+      "citations": [
+        "51-138"
+      ],
+      "heading": "51-138",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_879.htm#sec_51-138",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 51-127 to 51-138. Municipal courts. Sections 51-127 to 51-138 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 51-127 to 51-138. Municipal courts. Sections 51-127 to 51-138 , inclusive, are repealed."
+      }
+    }
+  ]
+}

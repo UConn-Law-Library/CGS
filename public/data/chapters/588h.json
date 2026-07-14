@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-588h",
+  "number": "588h",
+  "name": "Small Business Innovation Research Assistance",
+  "title": {
+    "id": "title-32",
+    "number": "32",
+    "name": "Commerce and Economic and Community Development"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588h.htm",
+  "sections": [
+    {
+      "id": "group-32-175-to-32-176",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "32-175",
+        "32-176"
+      ],
+      "heading": "Secs. 32-175 and 32-176.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588h.htm#secs_32-175_and_32-176",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 588r, Secs. 32-344 and 32-345 ."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 588r, Secs. 32-344 and 32-345 ."
+      }
+    },
+    {
+      "id": "group-32-177-to-32-178-to-32-179",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "32-177",
+        "32-178",
+        "32-179"
+      ],
+      "heading": "Secs. 32-177 to 32-179.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588h.htm#secs_32-177_to_32-179",
+      "status": "reserved",
+      "content": {
+        "body": [
+          "Reserved for future use."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Reserved for future use."
+      }
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-709",
+  "number": "709",
+  "name": "Uniform Trust Receipts Act",
+  "title": {
+    "id": "title-40",
+    "number": "40",
+    "name": "Warehouses and Warehouse Receipts. Trust Receipts"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_709.htm",
+  "sections": [
+    {
+      "id": "group-40-60-to-40-61-to-40-62-to-40-63-to-40-64-to-40-65-to-40-66-to-40-67-to-40-68-to-40-69-to-40-70-to-40-71-to-40-72-to-40-73-to-40-74-to-40-75-to-40-76-to-40-77-to-40-78-to-40-79-to-40-80",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "40-60",
+        "40-61",
+        "40-62",
+        "40-63",
+        "40-64",
+        "40-65",
+        "40-66",
+        "40-67",
+        "40-68",
+        "40-69",
+        "40-70",
+        "40-71",
+        "40-72",
+        "40-73",
+        "40-74",
+        "40-75",
+        "40-76",
+        "40-77",
+        "40-78",
+        "40-79",
+        "40-80"
+      ],
+      "heading": "Secs. 40-60 to 40-80. Uniform Trust Receipts Act.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_709.htm#secs_40-60_to_40-80",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Sections 40-60 to 40-80 , inclusive, are repealed."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 6544–6563; 1955, S. 2855d–2857d; 1959, P.A. 133, S. 10-102; 546, S. 1.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 40-60 to 40-80 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-40-60",
+      "kind": "section",
+      "citation": "40-60",
+      "citations": [
+        "40-60"
+      ],
+      "heading": "40-60",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_709.htm#sec_40-60",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 40-60 to 40-80. Uniform Trust Receipts Act. Sections 40-60 to 40-80 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 40-60 to 40-80. Uniform Trust Receipts Act. Sections 40-60 to 40-80 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-40-80",
+      "kind": "section",
+      "citation": "40-80",
+      "citations": [
+        "40-80"
+      ],
+      "heading": "40-80",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_709.htm#sec_40-80",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 40-60 to 40-80. Uniform Trust Receipts Act. Sections 40-60 to 40-80 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 40-60 to 40-80. Uniform Trust Receipts Act. Sections 40-60 to 40-80 , inclusive, are repealed."
+      }
+    }
+  ]
+}

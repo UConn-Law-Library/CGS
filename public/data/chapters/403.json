@@ -1,0 +1,169 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-403",
+  "number": "403",
+  "name": "Auctioneers",
+  "title": {
+    "id": "title-21",
+    "number": "21",
+    "name": "Licenses"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_403.htm",
+  "sections": [
+    {
+      "id": "section-21-1",
+      "kind": "section",
+      "citation": "21-1",
+      "citations": [
+        "21-1"
+      ],
+      "heading": "Sec. 21-1. Penalty for selling at auction without license.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_403.htm#sec_21-1",
+      "status": "active",
+      "content": {
+        "body": [
+          "Each person who exposes for sale by auction any goods or articles, except provisions, charcoal, wood, the products of a farm and secondhand household furniture, in any town, city or borough of which he is not a resident, without a license therefor from a majority of the selectmen of such town or from the authorities of such city or borough authorized by the charter or ordinances of such city or borough to issue such license, shall be fined not more than two hundred fifty dollars. This section shall not apply to any auction conducted by or contracted for the state in accordance with any court order under the provisions of section 54-36b or 54-36c .",
+          "See Sec. 21-30 re licensure of veterans without payment of fee.",
+          "See Sec. 54-36d re inapplicability of this section to proceedings under chapters 214, 220 and 490."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 4639; P.A. 75-530, S. 20, 35; P.A. 12-80, S. 14.)"
+        ],
+        "history": [
+          "History: P.A. 75-530 exempted auctions conducted by or contracted for the state in accordance with court order; P.A. 12-80 replaced penalty of a fine of not more than $50 or imprisonment of not more than 60 days or both with a fine of not more than $250 and made technical changes."
+        ],
+        "annotations": [],
+        "plainText": "Each person who exposes for sale by auction any goods or articles, except provisions, charcoal, wood, the products of a farm and secondhand household furniture, in any town, city or borough of which he is not a resident, without a license therefor from a majority of the selectmen of such town or from the authorities of such city or borough authorized by the charter or ordinances of such city or borough to issue such license, shall be fined not more than two hundred fifty dollars. This section shall not apply to any auction conducted by or contracted for the state in accordance with any court order under the provisions of section 54-36b or 54-36c .\n\nSee Sec. 21-30 re licensure of veterans without payment of fee.\n\nSee Sec. 54-36d re inapplicability of this section to proceedings under chapters 214, 220 and 490."
+      }
+    },
+    {
+      "id": "section-21-2",
+      "kind": "section",
+      "citation": "21-2",
+      "citations": [
+        "21-2"
+      ],
+      "heading": "Sec. 21-2. Issue and revocation.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_403.htm#sec_21-2",
+      "status": "active",
+      "content": {
+        "body": [
+          "The majority of the selectmen of each town may issue such licenses and, if the charter or ordinances of any city or borough do not authorize any person or persons to issue such licenses, the mayor of such city or the warden of such borough may issue the same; but no license shall be issued unless an application therefor in writing has been made and filed with one of the selectmen or with the authority authorized by law to issue such license, at least three days before the issue thereof. The authority issuing such license may revoke the same if, in the judgment of such authority, it is for the public interest to do so."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 4640.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "The majority of the selectmen of each town may issue such licenses and, if the charter or ordinances of any city or borough do not authorize any person or persons to issue such licenses, the mayor of such city or the warden of such borough may issue the same; but no license shall be issued unless an application therefor in writing has been made and filed with one of the selectmen or with the authority authorized by law to issue such license, at least three days before the issue thereof. The authority issuing such license may revoke the same if, in the judgment of such authority, it is for the public interest to do so."
+      }
+    },
+    {
+      "id": "group-21-3-to-21-4",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "21-3",
+        "21-4"
+      ],
+      "heading": "Secs. 21-3 and 21-4. License for sale of jewelry; fee; hours of sale. Penalty for fraudulent statements.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_403.htm#secs_21-3_and_21-4",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Sections 21-3 and 21-4 are repealed."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 4641, 4642; 1949, S. 2329d; P.A. 73-15, S. 1, 2; P.A. 96-259, S. 19.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 21-3 and 21-4 are repealed."
+      }
+    },
+    {
+      "id": "section-21-5",
+      "kind": "section",
+      "citation": "21-5",
+      "citations": [
+        "21-5"
+      ],
+      "heading": "Sec. 21-5. Blind persons not to pay for license to sell their own work.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_403.htm#sec_21-5",
+      "status": "active",
+      "content": {
+        "body": [
+          "No town, city or borough shall require any license fee from any blind person, resident of this state, for the privilege of selling within its limits goods, wares and merchandise, manufactured by him with his own hands."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 4643.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "No town, city or borough shall require any license fee from any blind person, resident of this state, for the privilege of selling within its limits goods, wares and merchandise, manufactured by him with his own hands."
+      }
+    },
+    {
+      "id": "section-21-5a",
+      "kind": "section",
+      "citation": "21-5a",
+      "citations": [
+        "21-5a"
+      ],
+      "heading": "Sec. 21-5a. Auction by noncommercial educational broadcasting facilities exempt.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_403.htm#sec_21-5a",
+      "status": "active",
+      "content": {
+        "body": [
+          "The provisions of this chapter shall not apply to auctions conducted by a noncommercial educational broadcasting facility."
+        ],
+        "sourceNotes": [
+          "(1972, P.A. 16, S. 1.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "The provisions of this chapter shall not apply to auctions conducted by a noncommercial educational broadcasting facility."
+      }
+    },
+    {
+      "id": "section-21-3",
+      "kind": "section",
+      "citation": "21-3",
+      "citations": [
+        "21-3"
+      ],
+      "heading": "21-3",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_403.htm#sec_21-3",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 21-3 and 21-4. License for sale of jewelry; fee; hours of sale. Penalty for fraudulent statements. Sections 21-3 and 21-4 are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 21-3 and 21-4. License for sale of jewelry; fee; hours of sale. Penalty for fraudulent statements. Sections 21-3 and 21-4 are repealed."
+      }
+    },
+    {
+      "id": "section-21-4",
+      "kind": "section",
+      "citation": "21-4",
+      "citations": [
+        "21-4"
+      ],
+      "heading": "21-4",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_403.htm#sec_21-4",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 21-3 and 21-4. License for sale of jewelry; fee; hours of sale. Penalty for fraudulent statements. Sections 21-3 and 21-4 are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 21-3 and 21-4. License for sale of jewelry; fee; hours of sale. Penalty for fraudulent statements. Sections 21-3 and 21-4 are repealed."
+      }
+    }
+  ]
+}

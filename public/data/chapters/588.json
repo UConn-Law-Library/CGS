@@ -1,0 +1,173 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-588",
+  "number": "588",
+  "name": "Small Business Advisory Council",
+  "title": {
+    "id": "title-32",
+    "number": "32",
+    "name": "Commerce and Economic and Community Development"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588.htm",
+  "sections": [
+    {
+      "id": "section-32-96",
+      "kind": "section",
+      "citation": "32-96",
+      "citations": [
+        "32-96"
+      ],
+      "heading": "Sec. 32-96. Small Business Advisory Council. Membership. Organization.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588.htm#sec_32-96",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 32-96 is repealed, effective July 1, 2011."
+        ],
+        "sourceNotes": [
+          "(P.A. 84-400, S. 1, 7; P.A. 88-183, S. 1, 3; P.A. 95-250, S. 1; P.A. 96-211, S. 1, 5, 6; P.A. 11-131, S. 5.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 32-96 is repealed, effective July 1, 2011."
+      }
+    },
+    {
+      "id": "section-32-97",
+      "kind": "section",
+      "citation": "32-97",
+      "citations": [
+        "32-97"
+      ],
+      "heading": "Sec. 32-97. Annual report.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588.htm#sec_32-97",
+      "status": "obsolete",
+      "content": {
+        "body": [
+          "Obsolete."
+        ],
+        "sourceNotes": [
+          "(P.A. 84-400, S. 2, 7; P.A. 02-89, S. 72.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Obsolete."
+      }
+    },
+    {
+      "id": "section-32-98",
+      "kind": "section",
+      "citation": "32-98",
+      "citations": [
+        "32-98"
+      ],
+      "heading": "Sec. 32-98. Duties.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588.htm#sec_32-98",
+      "status": "obsolete",
+      "content": {
+        "body": [
+          "Obsolete."
+        ],
+        "sourceNotes": [
+          "(P.A. 84-400, S. 3, 7; P.A. 95-250, S. 1; P.A. 96-211, S. 1, 5, 6.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Obsolete."
+      }
+    },
+    {
+      "id": "section-32-99",
+      "kind": "section",
+      "citation": "32-99",
+      "citations": [
+        "32-99"
+      ],
+      "heading": "Sec. 32-99. Powers.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588.htm#sec_32-99",
+      "status": "obsolete",
+      "content": {
+        "body": [
+          "Obsolete."
+        ],
+        "sourceNotes": [
+          "(P.A. 84-400, S. 4, 7; P.A. 02-89, S. 73.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Obsolete."
+      }
+    },
+    {
+      "id": "section-32-100",
+      "kind": "section",
+      "citation": "32-100",
+      "citations": [
+        "32-100"
+      ],
+      "heading": "Sec. 32-100. Assistance from the Department of Economic and Community Development.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588.htm#sec_32-100",
+      "status": "obsolete",
+      "content": {
+        "body": [
+          "Obsolete."
+        ],
+        "sourceNotes": [
+          "(P.A. 84-400, S. 5, 7; P.A. 95-250, S. 1; P.A. 96-211, S. 1, 5, 6.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Obsolete."
+      }
+    },
+    {
+      "id": "section-32-101",
+      "kind": "section",
+      "citation": "32-101",
+      "citations": [
+        "32-101"
+      ],
+      "heading": "Sec. 32-101. Termination of council.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588.htm#sec_32-101",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 32-101 is repealed, effective October 1, 2002."
+        ],
+        "sourceNotes": [
+          "(P.A. 84-400, S. 6, 7; P.A. 88-183, S. 2, 3; P.A. 02-89, S. 90.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 32-101 is repealed, effective October 1, 2002."
+      }
+    },
+    {
+      "id": "group-32-102-to-32-103-to-32-104-to-32-105-to-32-106-to-32-107-to-32-108-to-32-109",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "32-102",
+        "32-103",
+        "32-104",
+        "32-105",
+        "32-106",
+        "32-107",
+        "32-108",
+        "32-109"
+      ],
+      "heading": "Secs. 32-102 to 32-109.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588.htm#secs_32-102_to_32-109",
+      "status": "reserved",
+      "content": {
+        "body": [
+          "Reserved for future use."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Reserved for future use."
+      }
+    }
+  ]
+}

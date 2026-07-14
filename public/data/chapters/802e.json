@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-802e",
+  "number": "802e",
+  "name": "Durable Power of Attorney",
+  "title": {
+    "id": "title-45a",
+    "number": "45a",
+    "name": "Probate Courts and Procedure"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_802e.htm",
+  "sections": [
+    {
+      "id": "section-45a-562",
+      "kind": "section",
+      "citation": "45a-562",
+      "citations": [
+        "45a-562"
+      ],
+      "heading": "Sec. 45a-562. (Formerly Sec. 45-69o). Power of attorney to survive disability or incompetence.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_802e.htm#sec_45a-562",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 45a-562 is repealed, effective October 1, 2016."
+        ],
+        "sourceNotes": [
+          "(P.A. 76-54, S. 1, 2; P.A. 78-44; P.A. 80-476, S. 183; P.A. 81-396, S. 1; P.A. 15-240, S. 57; P.A. 16-40, S. 9.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 45a-562 is repealed, effective October 1, 2016."
+      }
+    },
+    {
+      "id": "group-45a-563-to-45a-564-to-45a-565-to-45a-566-to-45a-567",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "45a-563",
+        "45a-564",
+        "45a-565",
+        "45a-566",
+        "45a-567"
+      ],
+      "heading": "Secs. 45a-563 to 45a-567.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_802e.htm#secs_45a-563_to_45a-567",
+      "status": "reserved",
+      "content": {
+        "body": [
+          "Reserved for future use."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Reserved for future use."
+      }
+    }
+  ]
+}

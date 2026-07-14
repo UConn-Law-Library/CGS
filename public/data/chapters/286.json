@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-286",
+  "number": "286",
+  "name": "Motor Buses",
+  "title": {
+    "id": "title-16",
+    "number": "16",
+    "name": "Public Service Companies"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_286.htm",
+  "sections": [
+    {
+      "id": "group-16-309-to-16-317a",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "16-309",
+        "16-317a"
+      ],
+      "heading": "Secs. 16-309 to 16-317a.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_286.htm#secs_16-309_to_16-317a",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 244, Secs. 13b-80 to 13b-93 , inclusive."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 244, Secs. 13b-80 to 13b-93 , inclusive."
+      }
+    }
+  ]
+}

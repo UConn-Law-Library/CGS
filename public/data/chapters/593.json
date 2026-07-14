@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-593",
+  "number": "593",
+  "name": "Medical Service Corporations",
+  "title": {
+    "id": "title-33",
+    "number": "33",
+    "name": "Corporations"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_593.htm",
+  "sections": [
+    {
+      "id": "group-33-168-to-33-169-to-33-170-to-33-171-to-33-172-to-33-173-to-33-174-to-33-175-to-33-176-to-33-177-to-33-178-to-33-179",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "33-168",
+        "33-169",
+        "33-170",
+        "33-171",
+        "33-172",
+        "33-173",
+        "33-174",
+        "33-175",
+        "33-176",
+        "33-177",
+        "33-178",
+        "33-179"
+      ],
+      "heading": "Secs. 33-168 to 33-179.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_593.htm#secs_33-168_to_33-179",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 698a, Part III, Secs. 38a-214 to 38a-225 , inclusive."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 698a, Part III, Secs. 38a-214 to 38a-225 , inclusive."
+      }
+    }
+  ]
+}

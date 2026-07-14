@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-476",
+  "number": "476",
+  "name": "New England Interstate Water Pollution Control Commission",
+  "title": {
+    "id": "title-25",
+    "number": "25",
+    "name": "Water Resources. Flood and Erosion Control"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_476.htm",
+  "sections": [
+    {
+      "id": "group-25-67-to-25-68-to-25-68a",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "25-67",
+        "25-68",
+        "25-68a"
+      ],
+      "heading": "Secs. 25-67, 25-68 and 25-68a.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_476.htm#secs_25-67_25-68_and_25-68a",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 446g, Secs. 22a-308 to 22a-310 , inclusive."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 446g, Secs. 22a-308 to 22a-310 , inclusive."
+      }
+    }
+  ]
+}

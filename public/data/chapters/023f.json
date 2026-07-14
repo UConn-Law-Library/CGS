@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-023f",
+  "number": "023f",
+  "name": "Asian Pacific American Affairs Commission",
+  "title": {
+    "id": "title-02",
+    "number": "02",
+    "name": "General Assembly and Legislative Agencies"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_023f.htm",
+  "sections": [
+    {
+      "id": "section-2-122",
+      "kind": "section",
+      "citation": "2-122",
+      "citations": [
+        "2-122"
+      ],
+      "heading": "Sec. 2-122. Asian Pacific American Affairs Commission. Membership. Vacancies. Duties. Annual report. Staff. Authority.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_023f.htm#sec_2-122",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 2-122 is repealed, effective July 1, 2016."
+        ],
+        "sourceNotes": [
+          "(P.A. 08-166, S. 1; Sept. Sp. Sess. P.A. 09-7, S. 145; P.A. 10-1, S. 4; June 12 Sp. Sess. P.A. 12-2, S. 41; May Sp. Sess. P.A. 16-3, S. 209.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 2-122 is repealed, effective July 1, 2016."
+      }
+    }
+  ]
+}

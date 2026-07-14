@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-743t",
+  "number": "743t",
+  "name": "Dry Cleaning",
+  "title": {
+    "id": "title-42",
+    "number": "42",
+    "name": "Business, Selling, Trading and Collection Practices"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_743t.htm",
+  "sections": [
+    {
+      "id": "section-42-360",
+      "kind": "section",
+      "citation": "42-360",
+      "citations": [
+        "42-360"
+      ],
+      "heading": "Sec. 42-360. Dry cleaning price information. Penalty. Unfair trade practice.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_743t.htm#sec_42-360",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) Each person, firm or corporation conducting a dry cleaning business shall either:",
+          "(1) Post a list containing the retail price, including taxes, charged for each type of garment cleaned or accepted for cleaning by such business, except for garments requiring special handling or care. Any such price list shall be displayed in a prominent location on the premises of such business for viewing by customers; or",
+          "(2) Furnish on the premises of such business a printed leaflet or flyer containing the price information set forth in subdivision (1) of this subsection. Any such leaflet or flyer shall be readily available to customers in a conspicuous location at each service counter.",
+          "(b) Any such person, firm or corporation that violates any provision of subsection (a) of this section shall be fined not more than one hundred dollars.",
+          "(c) A violation of any provision of subsection (a) of this section shall be deemed an unfair or deceptive trade practice under subsection (a) of section 42-110b ."
+        ],
+        "sourceNotes": [
+          "(P.A. 98-230.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "(a) Each person, firm or corporation conducting a dry cleaning business shall either:\n\n(1) Post a list containing the retail price, including taxes, charged for each type of garment cleaned or accepted for cleaning by such business, except for garments requiring special handling or care. Any such price list shall be displayed in a prominent location on the premises of such business for viewing by customers; or\n\n(2) Furnish on the premises of such business a printed leaflet or flyer containing the price information set forth in subdivision (1) of this subsection. Any such leaflet or flyer shall be readily available to customers in a conspicuous location at each service counter.\n\n(b) Any such person, firm or corporation that violates any provision of subsection (a) of this section shall be fined not more than one hundred dollars.\n\n(c) A violation of any provision of subsection (a) of this section shall be deemed an unfair or deceptive trade practice under subsection (a) of section 42-110b ."
+      }
+    },
+    {
+      "id": "group-42-361-to-42-362-to-42-363-to-42-364-to-42-365-to-42-366-to-42-367-to-42-368-to-42-369",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "42-361",
+        "42-362",
+        "42-363",
+        "42-364",
+        "42-365",
+        "42-366",
+        "42-367",
+        "42-368",
+        "42-369"
+      ],
+      "heading": "Secs. 42-361 to 42-369.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_743t.htm#secs_42-361_to_42-369",
+      "status": "reserved",
+      "content": {
+        "body": [
+          "Reserved for future use."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Reserved for future use."
+      }
+    }
+  ]
+}

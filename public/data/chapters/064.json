@@ -1,0 +1,123 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-064",
+  "number": "064",
+  "name": "Retirement",
+  "title": {
+    "id": "title-05",
+    "number": "05",
+    "name": "State Employees"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_064.htm",
+  "sections": [
+    {
+      "id": "group-5-94-to-5-95-to-5-96-to-5-97-to-5-98-to-5-99-to-5-100-to-5-101-to-5-102-to-5-103-to-5-104-to-5-105-to-5-106-to-5-107-to-5-108-to-5-109-to-5-110-to-5-111-to-5-112-to-5-113-to-5-114-to-5-115-to-5-116-to-5-117-to-5-118-to-5-119-to-5-120-to-5-121-to-5-122-to-5-123-to-5-124-to-5-125-to-5-126-to-5-127-to-5-128-to-5-129-to-5-130-to-5-131-to-5-132-to-5-133-to-5-134-to-5-135-to-5-136-to-5-137-to-5-138-to-5-139-to-5-140-to-5-141",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "5-94",
+        "5-95",
+        "5-96",
+        "5-97",
+        "5-98",
+        "5-99",
+        "5-100",
+        "5-101",
+        "5-102",
+        "5-103",
+        "5-104",
+        "5-105",
+        "5-106",
+        "5-107",
+        "5-108",
+        "5-109",
+        "5-110",
+        "5-111",
+        "5-112",
+        "5-113",
+        "5-114",
+        "5-115",
+        "5-116",
+        "5-117",
+        "5-118",
+        "5-119",
+        "5-120",
+        "5-121",
+        "5-122",
+        "5-123",
+        "5-124",
+        "5-125",
+        "5-126",
+        "5-127",
+        "5-128",
+        "5-129",
+        "5-130",
+        "5-131",
+        "5-132",
+        "5-133",
+        "5-134",
+        "5-135",
+        "5-136",
+        "5-137",
+        "5-138",
+        "5-139",
+        "5-140",
+        "5-141"
+      ],
+      "heading": "Secs. 5-94 to 5-141. Retirement.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_064.htm#secs_5-94_to_5-141",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Sections 5-94 to 5-141 , inclusive, are repealed."
+        ],
+        "sourceNotes": [
+          "(1961, P.A. 234, S. 34.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 5-94 to 5-141 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-5-94",
+      "kind": "section",
+      "citation": "5-94",
+      "citations": [
+        "5-94"
+      ],
+      "heading": "5-94",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_064.htm#sec_5-94",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 5-94 to 5-141. Retirement. Sections 5-94 to 5-141 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 5-94 to 5-141. Retirement. Sections 5-94 to 5-141 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-5-141",
+      "kind": "section",
+      "citation": "5-141",
+      "citations": [
+        "5-141"
+      ],
+      "heading": "5-141",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_064.htm#sec_5-141",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 5-94 to 5-141. Retirement. Sections 5-94 to 5-141 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 5-94 to 5-141. Retirement. Sections 5-94 to 5-141 , inclusive, are repealed."
+      }
+    }
+  ]
+}

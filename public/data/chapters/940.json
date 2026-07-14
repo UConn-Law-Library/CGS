@@ -1,0 +1,89 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-940",
+  "number": "940",
+  "name": "Offenses Against Public Property",
+  "title": {
+    "id": "title-53",
+    "number": "53",
+    "name": "Crimes"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_940.htm",
+  "sections": [
+    {
+      "id": "group-53-42-to-53-43-to-53-44-to-53-45-to-53-46-to-53-47-to-53-48-to-53-49-to-53-50-to-53-51-to-53-52-to-53-53-to-53-54-to-53-55",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "53-42",
+        "53-43",
+        "53-44",
+        "53-45",
+        "53-46",
+        "53-47",
+        "53-48",
+        "53-49",
+        "53-50",
+        "53-51",
+        "53-52",
+        "53-53",
+        "53-54",
+        "53-55"
+      ],
+      "heading": "Secs. 53-42 to 53-55. Offenses against public property.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_940.htm#secs_53-42_to_53-55",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Sections 53-42 to 53-55 , inclusive, are repealed."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 8380–8393; 1953, S. 3270d; 1955, S. 3272d; 1957, P.A. 163, S. 45; September, 1957, P.A. 11, S. 10; 1959, P.A. 40, S. 1; 437, S. 1; 449, S. 2; 1963, P.A. 56; 400; 589, S. 1, 2; February, 1965, P.A. 188; 448, S. 41, 44; 1967, P.A. 17; 18; 1969, P.A. 256; 452, S. 6, 9; 828, S. 214; 1971, P.A. 871, S. 129; P.A. 74-262, S. 5, 7.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 53-42 to 53-55 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-53-42",
+      "kind": "section",
+      "citation": "53-42",
+      "citations": [
+        "53-42"
+      ],
+      "heading": "53-42",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_940.htm#sec_53-42",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 53-42 to 53-55. Offenses against public property. Sections 53-42 to 53-55 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 53-42 to 53-55. Offenses against public property. Sections 53-42 to 53-55 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-53-55",
+      "kind": "section",
+      "citation": "53-55",
+      "citations": [
+        "53-55"
+      ],
+      "heading": "53-55",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_940.htm#sec_53-55",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 53-42 to 53-55. Offenses against public property. Sections 53-42 to 53-55 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 53-42 to 53-55. Offenses against public property. Sections 53-42 to 53-55 , inclusive, are repealed."
+      }
+    }
+  ]
+}

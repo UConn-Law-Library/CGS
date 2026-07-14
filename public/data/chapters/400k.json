@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-400k",
+  "number": "400k",
+  "name": "Industrial Hygiene and Safety Inspectors",
+  "title": {
+    "id": "title-20",
+    "number": "20",
+    "name": "Professional and Occupational Licensing, Certification, Title Protection and Registration. Examining Boards"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_400k.htm",
+  "sections": [
+    {
+      "id": "section-20-640",
+      "kind": "section",
+      "citation": "20-640",
+      "citations": [
+        "20-640"
+      ],
+      "heading": "Sec. 20-640. Industrial hygiene and safety titles, use of titles restricted. Penalties.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_400k.htm#sec_20-640",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) No person shall use the title:",
+          "(1) “Associate safety professional” or use in connection with his name the letters “A.S.P.” or any other title, word, letter or other designation intended to imply or designate that he is an associate safety professional, unless he is certified as such by the Board of Certified Safety Professionals;",
+          "(2) “Certified industrial hygienist” or use in connection with his name the letters “C.I.H.” or any other title, word, letter or other designation intended to imply or designate that he is a certified industrial hygienist, unless he is certified as such by the American Board of Industrial Hygiene;",
+          "(3) “Certified safety professional” or use in connection with his name the letters “C.S.P.” or any other title, word, letter or other designation intended to imply or designate that he is a certified safety professional, unless he is certified as such by the Board of Certified Safety Professionals;",
+          "(4) “Industrial hygienist in training” or use in connection with his name the letters “I.H.I.T.” or any other title, word, letter or other designation intended to imply or designate that he is an industrial hygienist in training, unless he is certified as such by the American Board of Industrial Hygiene; or",
+          "(5) “Occupational health and safety technologist” or use in connection with his name the letters “O.H.S.T.” or any other title, word or other designation intended to imply or designate that he is an occupational health and safety technologist, unless he is certified as such by the Joint Committee of the American Board of Industrial Hygiene and the Board of Certified Safety Professionals.",
+          "(b) Any person who knowingly, wilfully or intentionally violates any provision of subsection (a) of this section shall, for a first violation, have committed an infraction and, for a second or subsequent violation, be fined not more than five hundred dollars or imprisoned not more than three months, or both."
+        ],
+        "sourceNotes": [
+          "(P.A. 96-123, S. 1.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "(a) No person shall use the title:\n\n(1) “Associate safety professional” or use in connection with his name the letters “A.S.P.” or any other title, word, letter or other designation intended to imply or designate that he is an associate safety professional, unless he is certified as such by the Board of Certified Safety Professionals;\n\n(2) “Certified industrial hygienist” or use in connection with his name the letters “C.I.H.” or any other title, word, letter or other designation intended to imply or designate that he is a certified industrial hygienist, unless he is certified as such by the American Board of Industrial Hygiene;\n\n(3) “Certified safety professional” or use in connection with his name the letters “C.S.P.” or any other title, word, letter or other designation intended to imply or designate that he is a certified safety professional, unless he is certified as such by the Board of Certified Safety Professionals;\n\n(4) “Industrial hygienist in training” or use in connection with his name the letters “I.H.I.T.” or any other title, word, letter or other designation intended to imply or designate that he is an industrial hygienist in training, unless he is certified as such by the American Board of Industrial Hygiene; or\n\n(5) “Occupational health and safety technologist” or use in connection with his name the letters “O.H.S.T.” or any other title, word or other designation intended to imply or designate that he is an occupational health and safety technologist, unless he is certified as such by the Joint Committee of the American Board of Industrial Hygiene and the Board of Certified Safety Professionals.\n\n(b) Any person who knowingly, wilfully or intentionally violates any provision of subsection (a) of this section shall, for a first violation, have committed an infraction and, for a second or subsequent violation, be fined not more than five hundred dollars or imprisoned not more than three months, or both."
+      }
+    },
+    {
+      "id": "group-20-641-to-20-642-to-20-643-to-20-644-to-20-645-to-20-646-to-20-647-to-20-648-to-20-649",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "20-641",
+        "20-642",
+        "20-643",
+        "20-644",
+        "20-645",
+        "20-646",
+        "20-647",
+        "20-648",
+        "20-649"
+      ],
+      "heading": "Secs. 20-641 to 20-649.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_400k.htm#secs_20-641_to_20-649",
+      "status": "reserved",
+      "content": {
+        "body": [
+          "Reserved for future use."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Reserved for future use."
+      }
+    }
+  ]
+}

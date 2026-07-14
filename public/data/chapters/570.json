@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-570",
+  "number": "570",
+  "name": "Committee of Concern for Connecticut Jobs",
+  "title": {
+    "id": "title-31",
+    "number": "31",
+    "name": "Labor"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_570.htm",
+  "sections": [
+    {
+      "id": "group-31-363-to-31-364-to-31-365-to-31-366",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "31-363",
+        "31-364",
+        "31-365",
+        "31-366"
+      ],
+      "heading": "Secs. 31-363 to 31-366. Committee of Concern for Connecticut Jobs.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_570.htm#secs_31-363_to_31-366",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Sections 31-363 to 31-366 , inclusive, are repealed."
+        ],
+        "sourceNotes": [
+          "(1972, P.A. 162, S. 1–4; P.A. 77-614, S. 609, 610.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 31-363 to 31-366 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-31-363",
+      "kind": "section",
+      "citation": "31-363",
+      "citations": [
+        "31-363"
+      ],
+      "heading": "31-363",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_570.htm#sec_31-363",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 31-363 to 31-366. Committee of Concern for Connecticut Jobs. Sections 31-363 to 31-366 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 31-363 to 31-366. Committee of Concern for Connecticut Jobs. Sections 31-363 to 31-366 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-31-366",
+      "kind": "section",
+      "citation": "31-366",
+      "citations": [
+        "31-366"
+      ],
+      "heading": "31-366",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_570.htm#sec_31-366",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 31-363 to 31-366. Committee of Concern for Connecticut Jobs. Sections 31-363 to 31-366 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 31-363 to 31-366. Committee of Concern for Connecticut Jobs. Sections 31-363 to 31-366 , inclusive, are repealed."
+      }
+    }
+  ]
+}

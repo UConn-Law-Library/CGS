@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-176",
+  "number": "176",
+  "name": "New England Higher Education Compact",
+  "title": {
+    "id": "title-10",
+    "number": "10",
+    "name": "Education and Culture"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_176.htm",
+  "sections": [
+    {
+      "id": "group-10-317-to-10-318-to-10-319-to-10-320",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "10-317",
+        "10-318",
+        "10-319",
+        "10-320"
+      ],
+      "heading": "Secs. 10-317 to 10-320.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_176.htm#secs_10-317_to_10-320",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 185a, Secs. 10a-61 to 10a-64 , inclusive."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 185a, Secs. 10a-61 to 10a-64 , inclusive."
+      }
+    },
+    {
+      "id": "section-10-320a",
+      "kind": "section",
+      "citation": "10-320a",
+      "citations": [
+        "10-320a"
+      ],
+      "heading": "Sec. 10-320a. Withdrawal from Compact. Governor to give notice.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_176.htm#sec_10-320a",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 10-320a is repealed."
+        ],
+        "sourceNotes": [
+          "(P.A. 80-361, S. 1, 4; P.A. 82-373, S. 3, 4.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 10-320a is repealed."
+      }
+    }
+  ]
+}

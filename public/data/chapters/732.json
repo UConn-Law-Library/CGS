@@ -1,0 +1,81 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-732",
+  "number": "732",
+  "name": "Sales of Personal Property on Condition",
+  "title": {
+    "id": "title-42",
+    "number": "42",
+    "name": "Business, Selling, Trading and Collection Practices"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_732.htm",
+  "sections": [
+    {
+      "id": "group-42-77-to-42-78-to-42-79-to-42-80-to-42-81-to-42-82",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "42-77",
+        "42-78",
+        "42-79",
+        "42-80",
+        "42-81",
+        "42-82"
+      ],
+      "heading": "Secs. 42-77 to 42-82. Sales of personal property on condition.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_732.htm#secs_42-77_to_42-82",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Sections 42-77 to 42-82 , inclusive, are repealed."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 6692–6697 ; 1953, S. 2860d; 1955, S. 2861d; 1959, P.A. 133, S. 10-102.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 42-77 to 42-82 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-42-77",
+      "kind": "section",
+      "citation": "42-77",
+      "citations": [
+        "42-77"
+      ],
+      "heading": "42-77",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_732.htm#sec_42-77",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 42-77 to 42-82. Sales of personal property on condition. Sections 42-77 to 42-82 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 42-77 to 42-82. Sales of personal property on condition. Sections 42-77 to 42-82 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-42-82",
+      "kind": "section",
+      "citation": "42-82",
+      "citations": [
+        "42-82"
+      ],
+      "heading": "42-82",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_732.htm#sec_42-82",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 42-77 to 42-82. Sales of personal property on condition. Sections 42-77 to 42-82 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 42-77 to 42-82. Sales of personal property on condition. Sections 42-77 to 42-82 , inclusive, are repealed."
+      }
+    }
+  ]
+}

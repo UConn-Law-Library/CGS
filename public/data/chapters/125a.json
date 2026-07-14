@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-125a",
+  "number": "125a",
+  "name": "Local Land Use Ordinances",
+  "title": {
+    "id": "title-08",
+    "number": "08",
+    "name": "Zoning, Planning, Housing and Economic and Community Development"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_125a.htm",
+  "sections": [
+    {
+      "id": "section-8-17a",
+      "kind": "section",
+      "citation": "8-17a",
+      "citations": [
+        "8-17a"
+      ],
+      "heading": "Sec. 8-17a. Land use ordinances.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_125a.htm#sec_8-17a",
+      "status": "active",
+      "content": {
+        "body": [
+          "Any town, city or borough which, on June 8, 1982, has not adopted the provisions of chapter 124 and which is not exercising zoning power pursuant to any special act may, by ordinance, prescribe minimum land use regulations reasonably related to public health, safety and welfare, provided that such ordinance shall not be effective for a period of more than five years from the date of its adoption and provided further that such regulations shall be superseded by any regulations adopted on or after June 8, 1982, by any town, city or borough pursuant to chapter 124."
+        ],
+        "sourceNotes": [
+          "(P.A. 82-437, S. 1, 2.)"
+        ],
+        "history": [],
+        "annotations": [
+          {
+            "first": true,
+            "text": "Town properly adopted ordinance under section after regulations adopted pursuant to Ch. 124 had been repealed. 300 C. 521."
+          }
+        ],
+        "plainText": "Any town, city or borough which, on June 8, 1982, has not adopted the provisions of chapter 124 and which is not exercising zoning power pursuant to any special act may, by ordinance, prescribe minimum land use regulations reasonably related to public health, safety and welfare, provided that such ordinance shall not be effective for a period of more than five years from the date of its adoption and provided further that such regulations shall be superseded by any regulations adopted on or after June 8, 1982, by any town, city or borough pursuant to chapter 124."
+      }
+    }
+  ]
+}

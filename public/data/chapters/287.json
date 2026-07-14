@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-287",
+  "number": "287",
+  "name": "Taxicabs",
+  "title": {
+    "id": "title-16",
+    "number": "16",
+    "name": "Public Service Companies"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_287.htm",
+  "sections": [
+    {
+      "id": "group-16-318-to-16-319-to-16-320-to-16-321-to-16-322-to-16-323",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "16-318",
+        "16-319",
+        "16-320",
+        "16-321",
+        "16-322",
+        "16-323"
+      ],
+      "heading": "Secs. 16-318 to 16-323.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_287.htm#secs_16-318_to_16-323",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 244a, Secs. 13b-95 to 13b-100 , inclusive."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 244a, Secs. 13b-95 to 13b-100 , inclusive."
+      }
+    }
+  ]
+}

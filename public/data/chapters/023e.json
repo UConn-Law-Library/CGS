@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-023e",
+  "number": "023e",
+  "name": "African-American Affairs Commission",
+  "title": {
+    "id": "title-02",
+    "number": "02",
+    "name": "General Assembly and Legislative Agencies"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_023e.htm",
+  "sections": [
+    {
+      "id": "section-2-121",
+      "kind": "section",
+      "citation": "2-121",
+      "citations": [
+        "2-121"
+      ],
+      "heading": "Sec. 2-121. African-American Affairs Commission. Membership. Vacancies. Duties. Annual report. Staff. Authority.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_023e.htm#sec_2-121",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 2-121 is repealed, effective July 1, 2016."
+        ],
+        "sourceNotes": [
+          "(June 18 Sp. Sess. P.A. 97-11, S. 24, 65; Sept. Sp. Sess. P.A. 09-7, S. 144; P.A. 10-1, S. 3; June 12 Sp. Sess. P.A. 12-2, S. 40; May Sp. Sess. P.A. 16-3, S. 209.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 2-121 is repealed, effective July 1, 2016."
+      }
+    }
+  ]
+}

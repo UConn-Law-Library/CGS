@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-483b",
+  "number": "483b",
+  "name": "Housatonic River Estuary Commission",
+  "title": {
+    "id": "title-25",
+    "number": "25",
+    "name": "Water Resources. Flood and Erosion Control"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_483b.htm",
+  "sections": [
+    {
+      "id": "section-25-170",
+      "kind": "section",
+      "citation": "25-170",
+      "citations": [
+        "25-170"
+      ],
+      "heading": "Sec. 25-170. Commission authorized. Membership. Duties.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_483b.htm#sec_25-170",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) The towns of Shelton, Derby, Ansonia, Orange, Stratford and Milford may by ordinance establish a Housatonic River Estuary Commission. The ordinance shall set forth the number of members of the commission, their method of selection, terms of office and procedure for filling any vacancy. The commission may employ expert and such other assistants as it judges necessary and may accept funds from any source. Notwithstanding any other provision of the general statutes, funds appropriated to the commission, or received by the commission from any other source, shall be held in the custody of the commission and expended by the commission for the purposes set forth in subsection (b) of this section.",
+          "(b) The commission may study any issues relating to the Housatonic River and may make such recommendations as may be necessary to maintain, protect and restore the resources of the estuary of the Housatonic River. The commission shall consider the adverse impact any action proposed in or for the Housatonic River estuary may have upon the marine resources of said river. The commission may prepare and submit a report to the local legislative bodies of the towns represented on said commission."
+        ],
+        "sourceNotes": [
+          "(P.A. 90-341, S. 5.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "(a) The towns of Shelton, Derby, Ansonia, Orange, Stratford and Milford may by ordinance establish a Housatonic River Estuary Commission. The ordinance shall set forth the number of members of the commission, their method of selection, terms of office and procedure for filling any vacancy. The commission may employ expert and such other assistants as it judges necessary and may accept funds from any source. Notwithstanding any other provision of the general statutes, funds appropriated to the commission, or received by the commission from any other source, shall be held in the custody of the commission and expended by the commission for the purposes set forth in subsection (b) of this section.\n\n(b) The commission may study any issues relating to the Housatonic River and may make such recommendations as may be necessary to maintain, protect and restore the resources of the estuary of the Housatonic River. The commission shall consider the adverse impact any action proposed in or for the Housatonic River estuary may have upon the marine resources of said river. The commission may prepare and submit a report to the local legislative bodies of the towns represented on said commission."
+      }
+    },
+    {
+      "id": "group-25-171-to-25-172-to-25-173-to-25-174",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "25-171",
+        "25-172",
+        "25-173",
+        "25-174"
+      ],
+      "heading": "Secs. 25-171 to 25-174.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_483b.htm#secs_25-171_to_25-174",
+      "status": "reserved",
+      "content": {
+        "body": [
+          "Reserved for future use."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Reserved for future use."
+      }
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://uconn-law-library.github.io/CGS/schemas/catalog.schema.json",
+  "title": "CGS corpus catalog",
+  "type": "object",
+  "required": ["schemaVersion", "generatedAt", "source", "titles", "counts"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "source": { "$ref": "#/$defs/source" },
+    "titles": { "type": "array", "items": { "$ref": "#/$defs/title" } },
+    "counts": { "$ref": "#/$defs/counts" }
+  },
+  "$defs": {
+    "source": {
+      "type": "object",
+      "required": ["name", "url", "retrievedAt"],
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "url": { "type": "string", "format": "uri" },
+        "retrievedAt": { "type": "string", "format": "date-time" }
+      }
+    },
+    "chapter": {
+      "type": "object",
+      "required": ["id", "number", "name", "path", "sourceUrl", "sectionCount"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "pattern": "^chapter-[0-9a-z-]+$" },
+        "number": { "type": "string", "pattern": "^[0-9a-z]+(?:-[0-9a-z]+)*$" },
+        "name": { "type": "string", "minLength": 1 },
+        "path": { "type": "string", "pattern": "^chapters/[0-9a-z-]+\\.json$" },
+        "sourceUrl": { "type": "string", "format": "uri" },
+        "sectionCount": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "title": {
+      "type": "object",
+      "required": ["id", "number", "name", "sourceUrl", "searchPath", "chapters"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "pattern": "^title-[0-9a-z-]+$" },
+        "number": { "type": "string", "pattern": "^[0-9]+[a-z]*$" },
+        "name": { "type": "string", "minLength": 1 },
+        "sourceUrl": { "type": "string", "format": "uri" },
+        "searchPath": { "type": "string", "pattern": "^search/title-[0-9a-z-]+\\.json$" },
+        "chapters": { "type": "array", "items": { "$ref": "#/$defs/chapter" } }
+      }
+    },
+    "counts": {
+      "type": "object",
+      "required": ["titles", "chapters", "sections"],
+      "additionalProperties": false,
+      "properties": {
+        "titles": { "type": "integer", "minimum": 0 },
+        "chapters": { "type": "integer", "minimum": 0 },
+        "sections": { "type": "integer", "minimum": 0 }
+      }
+    }
+  }
+}

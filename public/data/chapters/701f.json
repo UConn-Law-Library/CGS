@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-701f",
+  "number": "701f",
+  "name": "Fraternal Agents",
+  "title": {
+    "id": "title-38a",
+    "number": "38a",
+    "name": "Insurance"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_701f.htm",
+  "sections": [
+    {
+      "id": "section-38a-764",
+      "kind": "section",
+      "citation": "38a-764",
+      "citations": [
+        "38a-764"
+      ],
+      "heading": "Sec. 38a-764. Requirements for fraternal agents. Penalty.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_701f.htm#sec_38a-764",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) “Fraternal agent”, as used in this section and section 38a-800 , means any authorized or acknowledged agent of a society who acts as such in the solicitation, negotiation or procurement or making of a life insurance, accident and health insurance or annuity contract, except that the term “fraternal agent” shall not include: (1) Any regular salaried officer or employee of a licensed society who devotes substantially all of his services to activities other than the solicitation of fraternal insurance contracts from the public, and who receives for the solicitation of such contracts no commission or other compensation directly dependent upon the amount of business obtained; or (2) any agent or representative of a society who devotes, or intends to devote, less than fifty per cent of his time to the solicitation and procurement of insurance contracts for such society. Any person who in the preceding calendar year has solicited and procured life insurance contracts on behalf of any society in an amount of insurance in excess of fifty thousand dollars, or, in the case of any other kind or kinds of insurance which the society might write, on the persons of more than twenty-five individuals and who has received or will receive a commission or other compensation therefor, shall be presumed to be devoting, or intending to devote, fifty per cent of his time to the solicitation or procurement of insurance contracts for such society.",
+          "(b) Except as provided in subsection (a) of this section, any person who in this state acts as fraternal agent for a society without having authority so to do by virtue of a license issued and in force pursuant to the provisions of this section shall be fined not more than ten thousand dollars.",
+          "(c) No society doing business in this state shall pay any commission or other compensation to any person for any services in obtaining in this state any new contract of life, accident or health insurance, or any new annuity contract, except to a licensed fraternal agent of such society and except to an agent exempted under subdivision (2) of subsection (a) of this section."
+        ],
+        "sourceNotes": [
+          "(P.A. 90-243, S. 141; P.A. 08-178, S. 31.)"
+        ],
+        "history": [
+          "History: P.A. 08-178 amended Subsec. (b) by making a technical change and increasing maximum fine from $100 to $10,000."
+        ],
+        "annotations": [],
+        "plainText": "(a) “Fraternal agent”, as used in this section and section 38a-800 , means any authorized or acknowledged agent of a society who acts as such in the solicitation, negotiation or procurement or making of a life insurance, accident and health insurance or annuity contract, except that the term “fraternal agent” shall not include: (1) Any regular salaried officer or employee of a licensed society who devotes substantially all of his services to activities other than the solicitation of fraternal insurance contracts from the public, and who receives for the solicitation of such contracts no commission or other compensation directly dependent upon the amount of business obtained; or (2) any agent or representative of a society who devotes, or intends to devote, less than fifty per cent of his time to the solicitation and procurement of insurance contracts for such society. Any person who in the preceding calendar year has solicited and procured life insurance contracts on behalf of any society in an amount of insurance in excess of fifty thousand dollars, or, in the case of any other kind or kinds of insurance which the society might write, on the persons of more than twenty-five individuals and who has received or will receive a commission or other compensation therefor, shall be presumed to be devoting, or intending to devote, fifty per cent of his time to the solicitation or procurement of insurance contracts for such society.\n\n(b) Except as provided in subsection (a) of this section, any person who in this state acts as fraternal agent for a society without having authority so to do by virtue of a license issued and in force pursuant to the provisions of this section shall be fined not more than ten thousand dollars.\n\n(c) No society doing business in this state shall pay any commission or other compensation to any person for any services in obtaining in this state any new contract of life, accident or health insurance, or any new annuity contract, except to a licensed fraternal agent of such society and except to an agent exempted under subdivision (2) of subsection (a) of this section."
+      }
+    },
+    {
+      "id": "group-38a-765-to-38a-766-to-38a-767-to-38a-768",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "38a-765",
+        "38a-766",
+        "38a-767",
+        "38a-768"
+      ],
+      "heading": "Secs. 38a-765 to 38a-768.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_701f.htm#secs_38a-765_to_38a-768",
+      "status": "reserved",
+      "content": {
+        "body": [
+          "Reserved for future use."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Reserved for future use."
+      }
+    }
+  ]
+}

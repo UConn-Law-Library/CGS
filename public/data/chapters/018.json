@@ -1,0 +1,84 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-018",
+  "number": "018",
+  "name": "Legislative Council",
+  "title": {
+    "id": "title-02",
+    "number": "02",
+    "name": "General Assembly and Legislative Agencies"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_018.htm",
+  "sections": [
+    {
+      "id": "group-2-63-to-2-64-to-2-65-to-2-66-to-2-67-to-2-68-to-2-69-to-2-70-to-2-71",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "2-63",
+        "2-64",
+        "2-65",
+        "2-66",
+        "2-67",
+        "2-68",
+        "2-69",
+        "2-70",
+        "2-71"
+      ],
+      "heading": "Secs. 2-63 to 2-71. Legislative Council.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_018.htm#secs_2-63_to_2-71",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Sections 2-63 to 2-71 , inclusive, are repealed."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 54–62; 1953, 1955, S. 1963d; 1955, S. 19d; 1957, P.A. 493, S. 1; 655, S. 1; 1959, P.A. 561, S. 1; 1967, P.A. 152, S. 6; 705, S. 1; 1969, P.A. 749, S. 20.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 2-63 to 2-71 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-2-63",
+      "kind": "section",
+      "citation": "2-63",
+      "citations": [
+        "2-63"
+      ],
+      "heading": "2-63",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_018.htm#sec_2-63",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 2-63 to 2-71. Legislative Council. Sections 2-63 to 2-71 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 2-63 to 2-71. Legislative Council. Sections 2-63 to 2-71 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-2-71",
+      "kind": "section",
+      "citation": "2-71",
+      "citations": [
+        "2-71"
+      ],
+      "heading": "2-71",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_018.htm#sec_2-71",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 2-63 to 2-71. Legislative Council. Sections 2-63 to 2-71 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 2-63 to 2-71. Legislative Council. Sections 2-63 to 2-71 , inclusive, are repealed."
+      }
+    }
+  ]
+}

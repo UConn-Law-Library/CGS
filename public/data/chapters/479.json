@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-479",
+  "number": "479",
+  "name": "Dams and Reservoirs",
+  "title": {
+    "id": "title-25",
+    "number": "25",
+    "name": "Water Resources. Flood and Erosion Control"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_479.htm",
+  "sections": [
+    {
+      "id": "group-25-110-to-25-111-to-25-112-to-25-113-to-25-114-to-25-115-to-25-116-to-25-117-to-25-118-to-25-119",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "25-110",
+        "25-111",
+        "25-112",
+        "25-113",
+        "25-114",
+        "25-115",
+        "25-116",
+        "25-117",
+        "25-118",
+        "25-119"
+      ],
+      "heading": "Secs. 25-110 to 25-119.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_479.htm#secs_25-110_to_25-119",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 446j, Secs. 22a-401 to 22a-410 , inclusive."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 446j, Secs. 22a-401 to 22a-410 , inclusive."
+      }
+    }
+  ]
+}

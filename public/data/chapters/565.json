@@ -1,0 +1,108 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-565",
+  "number": "565",
+  "name": "Employment of Persons with Disabilities",
+  "title": {
+    "id": "title-31",
+    "number": "31",
+    "name": "Labor"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_565.htm",
+  "sections": [
+    {
+      "id": "section-31-135",
+      "kind": "section",
+      "citation": "31-135",
+      "citations": [
+        "31-135"
+      ],
+      "heading": "Sec. 31-135. Governor's committee.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_565.htm#sec_31-135",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 31-135 is repealed."
+        ],
+        "sourceNotes": [
+          "(1957, P.A. 525, S. 1; P.A. 73-274, S. 1, 2; P.A. 77-614, S. 609, 610.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 31-135 is repealed."
+      }
+    },
+    {
+      "id": "section-31-136",
+      "kind": "section",
+      "citation": "31-136",
+      "citations": [
+        "31-136"
+      ],
+      "heading": "Sec. 31-136. Promotion of employment.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_565.htm#sec_31-136",
+      "status": "active",
+      "content": {
+        "body": [
+          "The Labor Commissioner shall carry on a continuing program to promote the employment of persons with disabilities by creating state-wide interest in the rehabilitation and employment of persons with disabilities and by obtaining and maintaining cooperation from all public and private groups in this field."
+        ],
+        "sourceNotes": [
+          "(1957, P.A. 525, S. 2; February, 1965, P.A. 361, S. 14; 1967, P.A. 543, S. 1; P.A. 73-616, S. 30; P.A. 77-128, S. 1; 77-614, S. 527, 610; P.A. 79-610, S. 38; P.A. 17-202, S. 84.)"
+        ],
+        "history": [
+          "History: 1965 act authorized committee to employ executive secretary and clerical personnel; 1967 act authorized committee to contract with executive secretary to perform advisory, consulting and administrative services; P.A. 73-616 deleted provision added by 1967 act; P.A. 77-128 replaced President's Committee on Employment of the Physically Handicapped with President's Commission on Employment of the Handicapped; P.A. 77-614 replaced Governor's committee on the Employment of the Handicapped with commissioner of human resources and deleted provision authorizing committee to employ executive secretary and clerical personnel, effective January 1, 1979; P.A. 79-610 replaced commissioner of human resources with labor commissioner; P.A. 17-202 replaced references to handicapped persons with references to persons with disabilities and deleted provision re cooperation with President's Commission on Employment of the Handicapped."
+        ],
+        "annotations": [],
+        "plainText": "The Labor Commissioner shall carry on a continuing program to promote the employment of persons with disabilities by creating state-wide interest in the rehabilitation and employment of persons with disabilities and by obtaining and maintaining cooperation from all public and private groups in this field."
+      }
+    },
+    {
+      "id": "section-31-137",
+      "kind": "section",
+      "citation": "31-137",
+      "citations": [
+        "31-137"
+      ],
+      "heading": "Sec. 31-137. Receipt of gifts and donations.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_565.htm#sec_31-137",
+      "status": "active",
+      "content": {
+        "body": [
+          "The Labor Commissioner is authorized to receive any gifts, grants or donations made for any of the purposes of any program under this chapter and to disburse and administer the same in accordance with the terms thereof."
+        ],
+        "sourceNotes": [
+          "(September, 1957, P.A. 3, S. 1; P.A. 77-614, S. 528, 587, 610; P.A. 78-303, S. 85, 136; P.A. 79-610, S. 39; P.A. 80-483, S. 93, 186.)"
+        ],
+        "history": [
+          "History: P.A. 77-614 and P.A. 78-303 replaced committee on employment of the handicapped with commissioner of human resources, effective January 1, 1979; P.A. 79-610 replaced commissioner of human resources with labor commissioner; P.A. 80-483 substituted “any program” for “its program”."
+        ],
+        "annotations": [],
+        "plainText": "The Labor Commissioner is authorized to receive any gifts, grants or donations made for any of the purposes of any program under this chapter and to disburse and administer the same in accordance with the terms thereof."
+      }
+    },
+    {
+      "id": "section-31-138",
+      "kind": "section",
+      "citation": "31-138",
+      "citations": [
+        "31-138"
+      ],
+      "heading": "Sec. 31-138. National Disability Employment Awareness Month.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_565.htm#sec_31-138",
+      "status": "active",
+      "content": {
+        "body": [
+          "The Governor shall proclaim the month of October of each year to be “National Disability Employment Awareness Month” to recognize and celebrate businesses who employ individuals with disabilities and to encourage other businesses to do so to reduce the unemployment rate of individuals with disabilities."
+        ],
+        "sourceNotes": [
+          "(1957, P.A. 525, S. 3; P.A. 77-128, S. 2; P.A. 17-202, S. 85; 17-204, S. 2.)"
+        ],
+        "history": [
+          "History: P.A. 77-128 dropped the word “Physically” from official designation of Handicapped Week; P.A. 17-202 replaced provision re first full week in October to be “National Employ the Handicapped Week” with provision re month of October to be “National Disability Employment Awareness Month” ; P.A. 17-204 replaced provision re first full week in October to be “National Employ the Handicapped Week” with provision re month of October to be “National Disability Employment Awareness Month”, and added provision re recognizing and celebrating businesses who employ individuals with disabilities."
+        ],
+        "annotations": [],
+        "plainText": "The Governor shall proclaim the month of October of each year to be “National Disability Employment Awareness Month” to recognize and celebrate businesses who employ individuals with disabilities and to encourage other businesses to do so to reduce the unemployment rate of individuals with disabilities."
+      }
+    }
+  ]
+}

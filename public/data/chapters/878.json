@@ -1,0 +1,91 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-878",
+  "number": "878",
+  "name": "Trial Justices and Prosecuting Grand Jurors",
+  "title": {
+    "id": "title-51",
+    "number": "51",
+    "name": "Courts"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_878.htm",
+  "sections": [
+    {
+      "id": "group-51-111-to-51-112-to-51-113-to-51-114-to-51-115-to-51-116-to-51-117-to-51-118-to-51-119-to-51-120-to-51-121-to-51-122-to-51-123-to-51-124-to-51-125-to-51-126",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "51-111",
+        "51-112",
+        "51-113",
+        "51-114",
+        "51-115",
+        "51-116",
+        "51-117",
+        "51-118",
+        "51-119",
+        "51-120",
+        "51-121",
+        "51-122",
+        "51-123",
+        "51-124",
+        "51-125",
+        "51-126"
+      ],
+      "heading": "Secs. 51-111 to 51-126. Trial justices and prosecuting grand jurors.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_878.htm#secs_51-111_to_51-126",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Sections 51-111 to 51-126 , inclusive, are repealed."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 7566–7576, 7578, 8736–8739; 1957, P.A. 13, S. 98; 574; 651, S. 21; March, 1958, P.A. 27, S. 51; 1959, P.A. 28, S. 204.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 51-111 to 51-126 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-51-111",
+      "kind": "section",
+      "citation": "51-111",
+      "citations": [
+        "51-111"
+      ],
+      "heading": "51-111",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_878.htm#sec_51-111",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 51-111 to 51-126. Trial justices and prosecuting grand jurors. Sections 51-111 to 51-126 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 51-111 to 51-126. Trial justices and prosecuting grand jurors. Sections 51-111 to 51-126 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-51-126",
+      "kind": "section",
+      "citation": "51-126",
+      "citations": [
+        "51-126"
+      ],
+      "heading": "51-126",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_878.htm#sec_51-126",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 51-111 to 51-126. Trial justices and prosecuting grand jurors. Sections 51-111 to 51-126 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 51-111 to 51-126. Trial justices and prosecuting grand jurors. Sections 51-111 to 51-126 , inclusive, are repealed."
+      }
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-622",
+  "number": "622",
+  "name": "Trade Union Labels. Insignia",
+  "title": {
+    "id": "title-35",
+    "number": "35",
+    "name": "Trade Regulations, Trademarks and Collective and Certification Marks"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_622.htm",
+  "sections": [
+    {
+      "id": "group-35-12-to-35-13-to-35-14-to-35-15-to-35-16-to-35-17-to-35-18",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "35-12",
+        "35-13",
+        "35-14",
+        "35-15",
+        "35-16",
+        "35-17",
+        "35-18"
+      ],
+      "heading": "Secs. 35-12 to 35-18. Trade union labels. Insignia.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_622.htm#secs_35-12_to_35-18",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Sections 35-12 to 35-18 , inclusive, are repealed."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 6795–6801; 1967, P.A. 689, S. 12.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 35-12 to 35-18 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-35-12",
+      "kind": "section",
+      "citation": "35-12",
+      "citations": [
+        "35-12"
+      ],
+      "heading": "35-12",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_622.htm#sec_35-12",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 35-12 to 35-18. Trade union labels. Insignia. Sections 35-12 to 35-18 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 35-12 to 35-18. Trade union labels. Insignia. Sections 35-12 to 35-18 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-35-18",
+      "kind": "section",
+      "citation": "35-18",
+      "citations": [
+        "35-18"
+      ],
+      "heading": "35-18",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_622.htm#sec_35-18",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 35-12 to 35-18. Trade union labels. Insignia. Sections 35-12 to 35-18 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 35-12 to 35-18. Trade union labels. Insignia. Sections 35-12 to 35-18 , inclusive, are repealed."
+      }
+    }
+  ]
+}

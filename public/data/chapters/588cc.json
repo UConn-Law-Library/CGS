@@ -1,0 +1,126 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-588cc",
+  "number": "588cc",
+  "name": "Innovation Network for Economic Development",
+  "title": {
+    "id": "title-32",
+    "number": "32",
+    "name": "Commerce and Economic and Community Development"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588cc.htm",
+  "sections": [
+    {
+      "id": "section-32-716",
+      "kind": "section",
+      "citation": "32-716",
+      "citations": [
+        "32-716"
+      ],
+      "heading": "Sec. 32-716. Legislative finding.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588cc.htm#sec_32-716",
+      "status": "active",
+      "content": {
+        "body": [
+          "It is found and declared that the maintenance and continued development of the state's technology-based sector is important to create a vibrant technology-based economy in Connecticut which (1) encourages and retains entrepreneurs; (2) drives an innovation engine to sustain a technology pipeline; (3) mines the resources and expertise of local technology-based companies, universities, hospitals and other institutions; (4) encourages productive regional collaborations among academic and medical institutions; and (5) results in new Connecticut-sited businesses. It is found that in order for innovation to exist, the state needs a blend of technology, talent and capital as well as the participation and cooperation of the state's agencies and authorities in providing financial assistance that will improve the timeliness of promoting such collaborations and therefore the necessity in the public interest and for the public benefit and good for the provisions of sections 32-716 to 32-718 , inclusive, is hereby declared as a matter of legislative determination."
+        ],
+        "sourceNotes": [
+          "(P.A. 05-165, S. 1.)"
+        ],
+        "history": [
+          "History: P.A. 05-165 effective July 1, 2005."
+        ],
+        "annotations": [],
+        "plainText": "It is found and declared that the maintenance and continued development of the state's technology-based sector is important to create a vibrant technology-based economy in Connecticut which (1) encourages and retains entrepreneurs; (2) drives an innovation engine to sustain a technology pipeline; (3) mines the resources and expertise of local technology-based companies, universities, hospitals and other institutions; (4) encourages productive regional collaborations among academic and medical institutions; and (5) results in new Connecticut-sited businesses. It is found that in order for innovation to exist, the state needs a blend of technology, talent and capital as well as the participation and cooperation of the state's agencies and authorities in providing financial assistance that will improve the timeliness of promoting such collaborations and therefore the necessity in the public interest and for the public benefit and good for the provisions of sections 32-716 to 32-718 , inclusive, is hereby declared as a matter of legislative determination."
+      }
+    },
+    {
+      "id": "group-32-717-to-32-718",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "32-717",
+        "32-718"
+      ],
+      "heading": "Secs. 32-717 and 32-718. Implementation plan for Innovation Network. Funding for plan implementation.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588cc.htm#secs_32-717_and_32-718",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Sections 32-717 and 32-718 are repealed, effective July 1, 2011."
+        ],
+        "sourceNotes": [
+          "(P.A. 05-165, S. 2, 3; P.A. 10-75, S. 20; P.A. 11-48, S. 303; 11-140, S. 11.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 32-717 and 32-718 are repealed, effective July 1, 2011."
+      }
+    },
+    {
+      "id": "group-32-719-to-32-720-to-32-721-to-32-722-to-32-723-to-32-724",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "32-719",
+        "32-720",
+        "32-721",
+        "32-722",
+        "32-723",
+        "32-724"
+      ],
+      "heading": "Secs. 32-719 to 32-724.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588cc.htm#secs_32-719_to_32-724",
+      "status": "reserved",
+      "content": {
+        "body": [
+          "Reserved for future use."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Reserved for future use."
+      }
+    },
+    {
+      "id": "section-32-718",
+      "kind": "section",
+      "citation": "32-718",
+      "citations": [
+        "32-718"
+      ],
+      "heading": "32-718",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588cc.htm#sec_32-718",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 32-717 and 32-718. Implementation plan for Innovation Network. Funding for plan implementation. Sections 32-717 and 32-718 are repealed, effective July 1, 2011."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 32-717 and 32-718. Implementation plan for Innovation Network. Funding for plan implementation. Sections 32-717 and 32-718 are repealed, effective July 1, 2011."
+      }
+    },
+    {
+      "id": "section-32-717",
+      "kind": "section",
+      "citation": "32-717",
+      "citations": [
+        "32-717"
+      ],
+      "heading": "32-717",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588cc.htm#sec_32-717",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 32-717 and 32-718. Implementation plan for Innovation Network. Funding for plan implementation. Sections 32-717 and 32-718 are repealed, effective July 1, 2011."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 32-717 and 32-718. Implementation plan for Innovation Network. Funding for plan implementation. Sections 32-717 and 32-718 are repealed, effective July 1, 2011."
+      }
+    }
+  ]
+}

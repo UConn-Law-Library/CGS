@@ -1,0 +1,82 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-735",
+  "number": "735",
+  "name": "Fair Trade Act",
+  "title": {
+    "id": "title-42",
+    "number": "42",
+    "name": "Business, Selling, Trading and Collection Practices"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_735.htm",
+  "sections": [
+    {
+      "id": "group-42-104-to-42-105-to-42-106-to-42-107-to-42-108-to-42-109-to-42-110",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "42-104",
+        "42-105",
+        "42-106",
+        "42-107",
+        "42-108",
+        "42-109",
+        "42-110"
+      ],
+      "heading": "Secs. 42-104 to 42-110. Fair Trade Act.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_735.htm#secs_42-104_to_42-110",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Sections 42-104 to 42-110 , inclusive, are repealed."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 6708–6714; 1971, P.A. 596; P.A. 75-31.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 42-104 to 42-110 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-42-104",
+      "kind": "section",
+      "citation": "42-104",
+      "citations": [
+        "42-104"
+      ],
+      "heading": "42-104",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_735.htm#sec_42-104",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 42-104 to 42-110. Fair Trade Act. Sections 42-104 to 42-110 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 42-104 to 42-110. Fair Trade Act. Sections 42-104 to 42-110 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-42-110",
+      "kind": "section",
+      "citation": "42-110",
+      "citations": [
+        "42-110"
+      ],
+      "heading": "42-110",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_735.htm#sec_42-110",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 42-104 to 42-110. Fair Trade Act. Sections 42-104 to 42-110 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 42-104 to 42-110. Fair Trade Act. Sections 42-104 to 42-110 , inclusive, are repealed."
+      }
+    }
+  ]
+}

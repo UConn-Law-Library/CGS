@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-880",
+  "number": "880",
+  "name": "Judicial District of Waterbury",
+  "title": {
+    "id": "title-51",
+    "number": "51",
+    "name": "Courts"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_880.htm",
+  "sections": [
+    {
+      "id": "section-51-139",
+      "kind": "section",
+      "citation": "51-139",
+      "citations": [
+        "51-139"
+      ],
+      "heading": "Sec. 51-139. Constitution of districts.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_880.htm#sec_51-139",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 51-139 is repealed."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 7592; 1951, S. 3103d; 1972, P.A. 165, S. 1; June, 1972, P.A. 1, S. 20; P.A. 75-26, S. 2, 8; 75-578, S. 10; P.A. 76-380, S. 2, 12; 76-436, S. 400, 681; P.A. 77-576, S. 11, 65.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 51-139 is repealed."
+      }
+    },
+    {
+      "id": "section-51-140",
+      "kind": "section",
+      "citation": "51-140",
+      "citations": [
+        "51-140"
+      ],
+      "heading": "Sec. 51-140.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_880.htm#sec_51-140",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 890, Sec. 51-342 ."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 890, Sec. 51-342 ."
+      }
+    },
+    {
+      "id": "section-51-141",
+      "kind": "section",
+      "citation": "51-141",
+      "citations": [
+        "51-141"
+      ],
+      "heading": "Sec. 51-141. Appeals from administrative agencies in Seymour, Ansonia or Derby.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_880.htm#sec_51-141",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 51-141 is repealed."
+        ],
+        "sourceNotes": [
+          "(1951, S. 3104d; P.A. 76-436, S. 655, 681.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 51-141 is repealed."
+      }
+    }
+  ]
+}

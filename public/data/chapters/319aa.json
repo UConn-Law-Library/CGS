@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-319aa",
+  "number": "319aa",
+  "name": "Office of the Long-Term Care Ombudsman",
+  "title": {
+    "id": "title-17b",
+    "number": "17b",
+    "name": "Social Services"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_319aa.htm",
+  "sections": [
+    {
+      "id": "group-17b-400-to-17b-401-to-17b-402-to-17b-403-to-17b-404-to-17b-405-to-17b-406-to-17b-407-to-17b-408-to-17b-409-to-17b-410-to-17b-411-to-17b-412-to-17b-413-to-17b-414-to-17b-415-to-17b-416-to-17b-417",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "17b-400",
+        "17b-401",
+        "17b-402",
+        "17b-403",
+        "17b-404",
+        "17b-405",
+        "17b-406",
+        "17b-407",
+        "17b-408",
+        "17b-409",
+        "17b-410",
+        "17b-411",
+        "17b-412",
+        "17b-413",
+        "17b-414",
+        "17b-415",
+        "17b-416",
+        "17b-417"
+      ],
+      "heading": "Secs. 17b-400 to 17b-417.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_319aa.htm#secs_17b-400_to_17b-417",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 319h, Secs. 17a-405 to 17a-422 , inclusive."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 319h, Secs. 17a-405 to 17a-422 , inclusive."
+      }
+    },
+    {
+      "id": "group-17b-418-to-17b-419",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "17b-418",
+        "17b-419"
+      ],
+      "heading": "Secs. 17b-418 and 17b-419.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_319aa.htm#secs_17b-418_and_17b-419",
+      "status": "reserved",
+      "content": {
+        "body": [
+          "Reserved for future use."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Reserved for future use."
+      }
+    }
+  ]
+}

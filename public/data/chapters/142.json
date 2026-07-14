@@ -1,0 +1,137 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-142",
+  "number": "142",
+  "name": "Congressional, Senatorial and Assembly Districts",
+  "title": {
+    "id": "title-09",
+    "number": "09",
+    "name": "Elections"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_142.htm",
+  "sections": [
+    {
+      "id": "section-9-9",
+      "kind": "section",
+      "citation": "9-9",
+      "citations": [
+        "9-9"
+      ],
+      "heading": "Sec. 9-9. Representatives in Congress. Districts.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_142.htm#sec_9-9",
+      "status": "active",
+      "content": {
+        "body": [
+          "For the purpose of representation in the Congress of the United States, there shall be elected in the manner provided by law one representative from each of the five congressional districts."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 989; 1953, S. 509d; April, 1964, P.A. 2, S. 1; P.A. 03-170, S. 2.)"
+        ],
+        "history": [
+          "History: 1964 act provided for six congressional districts instead of five congressional districts and one representative at large; P.A. 03-170 changed number of congressional districts from six to five and deleted “into which the state shall be divided, as follows”, effective June 26, 2003."
+        ],
+        "annotations": [
+          {
+            "first": true,
+            "text": "Cited. 14 CS 421."
+          }
+        ],
+        "plainText": "For the purpose of representation in the Congress of the United States, there shall be elected in the manner provided by law one representative from each of the five congressional districts."
+      }
+    },
+    {
+      "id": "section-9-10",
+      "kind": "section",
+      "citation": "9-10",
+      "citations": [
+        "9-10"
+      ],
+      "heading": "Sec. 9-10. Senatorial districts.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_142.htm#sec_9-10",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 9-10 is repealed."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 990; November, 1964, P.A. 2, S. 4.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 9-10 is repealed."
+      }
+    },
+    {
+      "id": "section-9-10a",
+      "kind": "section",
+      "citation": "9-10a",
+      "citations": [
+        "9-10a"
+      ],
+      "heading": "Sec. 9-10a. State senators. Senatorial districts.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_142.htm#sec_9-10a",
+      "status": "active",
+      "content": {
+        "body": [
+          "The Senate shall consist of thirty-six senators, and the state shall be divided into thirty-six districts, in each of which one senator shall be elected as follows:",
+          "(Districts omitted.*)"
+        ],
+        "sourceNotes": [
+          "(November, 1964, P.A. 2, S. 3.)",
+          "*Note: See Article XXVI., and Article XXX., Sec. 2, of the Amendments to the Constitution of the State of Connecticut re reapportionment."
+        ],
+        "history": [
+          "History: 1964 act set forth boundaries of thirty-six senatorial districts, effective November, 1966."
+        ],
+        "annotations": [],
+        "plainText": "The Senate shall consist of thirty-six senators, and the state shall be divided into thirty-six districts, in each of which one senator shall be elected as follows:\n\n(Districts omitted.*)"
+      }
+    },
+    {
+      "id": "group-9-10b-to-9-10c-to-9-10d",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "9-10b",
+        "9-10c",
+        "9-10d"
+      ],
+      "heading": "Secs. 9-10b to 9-10d. State representatives. Assembly districts. Boundaries of local voting districts.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_142.htm#secs_9-10b_to_9-10d",
+      "status": "obsolete",
+      "content": {
+        "body": [
+          "Obsolete."
+        ],
+        "sourceNotes": [
+          "(November, 1964, P.A. 2, S. 1, 2, 6; December, 1965, P.A. 2, S. 1.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Obsolete."
+      }
+    },
+    {
+      "id": "section-9-11",
+      "kind": "section",
+      "citation": "9-11",
+      "citations": [
+        "9-11"
+      ],
+      "heading": "Sec. 9-11. Notice of election of congressmen and senators.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_142.htm#sec_9-11",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 9-11 is repealed."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 172; 1953, S. 511d; P.A. 85-577, S. 23.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 9-11 is repealed."
+      }
+    }
+  ]
+}

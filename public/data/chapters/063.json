@@ -1,0 +1,77 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-063",
+  "number": "063",
+  "name": "State Employment",
+  "title": {
+    "id": "title-05",
+    "number": "05",
+    "name": "State Employees"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_063.htm",
+  "sections": [
+    {
+      "id": "group-5-1-to-5-93b",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "5-1",
+        "5-93b"
+      ],
+      "heading": "Secs. 5-1 to 5-93b. State employment.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_063.htm#secs_5-1_to_5-93b",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Sections 5-1 to 5-93b , inclusive, are repealed."
+        ],
+        "sourceNotes": [
+          "(1967, P.A. 657, S. 1.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 5-1 to 5-93b , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-5-1",
+      "kind": "section",
+      "citation": "5-1",
+      "citations": [
+        "5-1"
+      ],
+      "heading": "5-1",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_063.htm#sec_5-1",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 5-1 to 5-93b. State employment. Sections 5-1 to 5-93b , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 5-1 to 5-93b. State employment. Sections 5-1 to 5-93b , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-5-93b",
+      "kind": "section",
+      "citation": "5-93b",
+      "citations": [
+        "5-93b"
+      ],
+      "heading": "5-93b",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_063.htm#sec_5-93b",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 5-1 to 5-93b. State employment. Sections 5-1 to 5-93b , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 5-1 to 5-93b. State employment. Sections 5-1 to 5-93b , inclusive, are repealed."
+      }
+    }
+  ]
+}

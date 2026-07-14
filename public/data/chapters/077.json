@@ -1,0 +1,145 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-077",
+  "number": "077",
+  "name": "County Officers, Appropriations and Taxes",
+  "title": {
+    "id": "title-06",
+    "number": "06",
+    "name": "Counties and County Officers. Judicial and State Marshals"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_077.htm",
+  "sections": [
+    {
+      "id": "group-6-3-to-6-4-to-6-5-to-6-6-to-6-7-to-6-8-to-6-9-to-6-10-to-6-11-to-6-12-to-6-13-to-6-14-to-6-15-to-6-16-to-6-17-to-6-18-to-6-19-to-6-20-to-6-21-to-6-22-to-6-23-to-6-24-to-6-25-to-6-26-to-6-27-to-6-28",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "6-3",
+        "6-4",
+        "6-5",
+        "6-6",
+        "6-7",
+        "6-8",
+        "6-9",
+        "6-10",
+        "6-11",
+        "6-12",
+        "6-13",
+        "6-14",
+        "6-15",
+        "6-16",
+        "6-17",
+        "6-18",
+        "6-19",
+        "6-20",
+        "6-21",
+        "6-22",
+        "6-23",
+        "6-24",
+        "6-25",
+        "6-26",
+        "6-27",
+        "6-28"
+      ],
+      "heading": "Secs. 6-3 to 6-28.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_077.htm#secs_6-3_to_6-28",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Sections 6-3 to 6-28 , inclusive, are repealed."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 424-434, 436-448, 3617; 1949, 1955, S. 187d, 188d; November, 1955, S. N6; 1957, P.A. 5; 12; 25; 228; 307; 1959, P.A. 152, S. 99.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 6-3 to 6-28 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-6-28a",
+      "kind": "section",
+      "citation": "6-28a",
+      "citations": [
+        "6-28a"
+      ],
+      "heading": "Sec. 6-28a. Statutory references to county commissioners or treasurers changed.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_077.htm#sec_6-28a",
+      "status": "active",
+      "content": {
+        "body": [
+          "Any reference in the general statutes or special acts to county commissioners or county treasurers, or their powers and duties, shall be to the state or the State Treasurer, as the case may be."
+        ],
+        "sourceNotes": [
+          "(1959, P.A. 152, S. 98.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Any reference in the general statutes or special acts to county commissioners or county treasurers, or their powers and duties, shall be to the state or the State Treasurer, as the case may be."
+      }
+    },
+    {
+      "id": "section-6-28b",
+      "kind": "section",
+      "citation": "6-28b",
+      "citations": [
+        "6-28b"
+      ],
+      "heading": "Sec. 6-28b. Employment of former county employees after military service.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_077.htm#sec_6-28b",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 6-28b is repealed, effective October 1, 2002."
+        ],
+        "sourceNotes": [
+          "(1959, P.A. 152, S. 21; P.A. 77-614, S. 66, 610; S.A. 02-12, S. 1.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 6-28b is repealed, effective October 1, 2002."
+      }
+    },
+    {
+      "id": "section-6-3",
+      "kind": "section",
+      "citation": "6-3",
+      "citations": [
+        "6-3"
+      ],
+      "heading": "6-3",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_077.htm#sec_6-3",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 6-3 to 6-28. Sections 6-3 to 6-28 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 6-3 to 6-28. Sections 6-3 to 6-28 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-6-28",
+      "kind": "section",
+      "citation": "6-28",
+      "citations": [
+        "6-28"
+      ],
+      "heading": "6-28",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_077.htm#sec_6-28",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 6-3 to 6-28. Sections 6-3 to 6-28 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 6-3 to 6-28. Sections 6-3 to 6-28 , inclusive, are repealed."
+      }
+    }
+  ]
+}

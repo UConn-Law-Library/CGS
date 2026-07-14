@@ -1,0 +1,112 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-319e",
+  "number": "319e",
+  "name": "Connecticut Pharmaceutical Assistance Contract to the Elderly and the Disabled Program",
+  "title": {
+    "id": "title-17a",
+    "number": "17a",
+    "name": "Social and Human Services and Resources"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_319e.htm",
+  "sections": [
+    {
+      "id": "section-17a-340",
+      "kind": "section",
+      "citation": "17a-340",
+      "citations": [
+        "17a-340"
+      ],
+      "heading": "Sec. 17a-340.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_319e.htm#sec_17a-340",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 319ff, Sec. 17b-490 ."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 319ff, Sec. 17b-490 ."
+      }
+    },
+    {
+      "id": "section-17a-341",
+      "kind": "section",
+      "citation": "17a-341",
+      "citations": [
+        "17a-341"
+      ],
+      "heading": "Sec. 17a-341. (Formerly Sec. 17-511). Pharmaceutical Assistance Advisory Board.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_319e.htm#sec_17a-341",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 17a-341 is repealed."
+        ],
+        "sourceNotes": [
+          "(P.A. 85-573, S. 4, 18; P.A. 87-3, S. 2, 9; P.A. 91-190, S. 8, 9.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 17a-341 is repealed."
+      }
+    },
+    {
+      "id": "group-17a-342-to-17a-343-to-17a-344-to-17a-345-to-17a-346-to-17a-347-to-17a-348-to-17a-349",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "17a-342",
+        "17a-343",
+        "17a-344",
+        "17a-345",
+        "17a-346",
+        "17a-347",
+        "17a-348",
+        "17a-349"
+      ],
+      "heading": "Secs. 17a-342 to 17a-349.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_319e.htm#secs_17a-342_to_17a-349",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 319ff, Secs. 17b-491 to 17b-498 , inclusive."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 319ff, Secs. 17b-491 to 17b-498 , inclusive."
+      }
+    },
+    {
+      "id": "group-17a-350-to-17a-351-to-17a-352-to-17a-353-to-17a-354-to-17a-355-to-17a-356-to-17a-357-to-17a-358-to-17a-359",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "17a-350",
+        "17a-351",
+        "17a-352",
+        "17a-353",
+        "17a-354",
+        "17a-355",
+        "17a-356",
+        "17a-357",
+        "17a-358",
+        "17a-359"
+      ],
+      "heading": "Secs. 17a-350 to 17a-359.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_319e.htm#secs_17a-350_to_17a-359",
+      "status": "reserved",
+      "content": {
+        "body": [
+          "Reserved for future use."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Reserved for future use."
+      }
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-028a",
+  "number": "028a",
+  "name": "Terminations",
+  "title": {
+    "id": "title-02c",
+    "number": "02c",
+    "name": "Review and Termination of Governmental Entities and Programs"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_028a.htm",
+  "sections": [
+    {
+      "id": "section-2c-21",
+      "kind": "section",
+      "citation": "2c-21",
+      "citations": [
+        "2c-21"
+      ],
+      "heading": "Sec. 2c-21. Repeal of laws creating reporting bodies.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_028a.htm#sec_2c-21",
+      "status": "active",
+      "content": {
+        "body": [
+          "Unless otherwise provided by law, a provision of the general statutes or of a special act which creates, empowers or establishes a board, commission, council, authority, task force or other body on or after January 4, 1995, the primary purpose of which body is to submit a report, findings or recommendations, shall be deemed to be repealed one hundred twenty days after the date on which such body is required to submit its report, findings or recommendations."
+        ],
+        "sourceNotes": [
+          "(P.A. 95-38, S. 1; June 12 Sp. Sess. P.A. 12-2, S. 42.)"
+        ],
+        "history": [
+          "History: June 12 Sp. Sess. P.A. 12-2 made a technical change."
+        ],
+        "annotations": [],
+        "plainText": "Unless otherwise provided by law, a provision of the general statutes or of a special act which creates, empowers or establishes a board, commission, council, authority, task force or other body on or after January 4, 1995, the primary purpose of which body is to submit a report, findings or recommendations, shall be deemed to be repealed one hundred twenty days after the date on which such body is required to submit its report, findings or recommendations."
+      }
+    }
+  ]
+}

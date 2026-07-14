@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-475",
+  "number": "475",
+  "name": "Interstate Sanitation Commission",
+  "title": {
+    "id": "title-25",
+    "number": "25",
+    "name": "Water Resources. Flood and Erosion Control"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_475.htm",
+  "sections": [
+    {
+      "id": "group-25-55-to-25-66a",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "25-55",
+        "25-66a"
+      ],
+      "heading": "Secs. 25-55 to 25-66a.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_475.htm#secs_25-55_to_25-66a",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 446f, Secs. 22a-293 to 22a-305 , inclusive."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 446f, Secs. 22a-293 to 22a-305 , inclusive."
+      }
+    }
+  ]
+}

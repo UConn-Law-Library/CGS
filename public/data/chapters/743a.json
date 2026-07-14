@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-743a",
+  "number": "743a",
+  "name": "Bulk Transfers by Restaurants and Other Food-Dispensing Establishments",
+  "title": {
+    "id": "title-42",
+    "number": "42",
+    "name": "Business, Selling, Trading and Collection Practices"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_743a.htm",
+  "sections": [
+    {
+      "id": "section-42-170",
+      "kind": "section",
+      "citation": "42-170",
+      "citations": [
+        "42-170"
+      ],
+      "heading": "Sec. 42-170. Bulk transfers by restaurants and other food-dispensing establishments.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_743a.htm#sec_42-170",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 42-170 is repealed."
+        ],
+        "sourceNotes": [
+          "(P.A. 82-13; P.A. 93-107, S. 4.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 42-170 is repealed."
+      }
+    },
+    {
+      "id": "group-42-171-to-42-172-to-42-173-to-42-174-to-42-175-to-42-176-to-42-177-to-42-178",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "42-171",
+        "42-172",
+        "42-173",
+        "42-174",
+        "42-175",
+        "42-176",
+        "42-177",
+        "42-178"
+      ],
+      "heading": "Secs. 42-171 to 42-178.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_743a.htm#secs_42-171_to_42-178",
+      "status": "reserved",
+      "content": {
+        "body": [
+          "Reserved for future use."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Reserved for future use."
+      }
+    }
+  ]
+}

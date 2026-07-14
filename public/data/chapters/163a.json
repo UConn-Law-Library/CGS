@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-163a",
+  "number": "163a",
+  "name": "Proficiency Examinations",
+  "title": {
+    "id": "title-10",
+    "number": "10",
+    "name": "Education and Culture"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_163a.htm",
+  "sections": [
+    {
+      "id": "group-10-14e-to-10-14f-to-10-14g-to-10-14h",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "10-14e",
+        "10-14f",
+        "10-14g",
+        "10-14h"
+      ],
+      "heading": "Secs. 10-14e to 10-14h. Taking of proficiency examination required for high school students. Non-high-school students eligible to take proficiency examination. Duties of State Board of Education. Effective date.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_163a.htm#secs_10-14e_to_10-14h",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Sections 10-14e to 10-14h , inclusive, are repealed."
+        ],
+        "sourceNotes": [
+          "(P.A. 76-405, S. 1–4; P.A. 78-194, S. 7, 9; 78-218, S. 211.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 10-14e to 10-14h , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-10-14e",
+      "kind": "section",
+      "citation": "10-14e",
+      "citations": [
+        "10-14e"
+      ],
+      "heading": "10-14e",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_163a.htm#sec_10-14e",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 10-14e to 10-14h. Taking of proficiency examination required for high school students. Non-high-school students eligible to take proficiency examination. Duties of State Board of Education. Effective date. Sections 10-14e to 10-14h , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 10-14e to 10-14h. Taking of proficiency examination required for high school students. Non-high-school students eligible to take proficiency examination. Duties of State Board of Education. Effective date. Sections 10-14e to 10-14h , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-10-14h",
+      "kind": "section",
+      "citation": "10-14h",
+      "citations": [
+        "10-14h"
+      ],
+      "heading": "10-14h",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_163a.htm#sec_10-14h",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 10-14e to 10-14h. Taking of proficiency examination required for high school students. Non-high-school students eligible to take proficiency examination. Duties of State Board of Education. Effective date. Sections 10-14e to 10-14h , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 10-14e to 10-14h. Taking of proficiency examination required for high school students. Non-high-school students eligible to take proficiency examination. Duties of State Board of Education. Effective date. Sections 10-14e to 10-14h , inclusive, are repealed."
+      }
+    }
+  ]
+}

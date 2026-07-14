@@ -1,0 +1,127 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-177",
+  "number": "177",
+  "name": "Connecticut Historical Commission",
+  "title": {
+    "id": "title-10",
+    "number": "10",
+    "name": "Education and Culture"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_177.htm",
+  "sections": [
+    {
+      "id": "group-10-320b-to-10-320c-to-10-320d-to-10-320e-to-10-320f-to-10-320g-to-10-320h",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "10-320b",
+        "10-320c",
+        "10-320d",
+        "10-320e",
+        "10-320f",
+        "10-320g",
+        "10-320h"
+      ],
+      "heading": "Secs. 10-320b to 10-320h.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_177.htm#secs_10-320b_to_10-320h",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 184b, Secs. 10-409 to 10-415 , inclusive."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 184b, Secs. 10-409 to 10-415 , inclusive."
+      }
+    },
+    {
+      "id": "section-10-320i",
+      "kind": "section",
+      "citation": "10-320i",
+      "citations": [
+        "10-320i"
+      ],
+      "heading": "Sec. 10-320i. (Formerly Sec. 10-321g). Director, appointment, duties and powers.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_177.htm#sec_10-320i",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 10-320i is repealed, effective August 20, 2003."
+        ],
+        "sourceNotes": [
+          "(1967, P.A. 231; P.A. 75-371, S. 8, 10; June 30 Sp. Sess. P.A. 03-6, S. 248.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 10-320i is repealed, effective August 20, 2003."
+      }
+    },
+    {
+      "id": "section-10-320j",
+      "kind": "section",
+      "citation": "10-320j",
+      "citations": [
+        "10-320j"
+      ],
+      "heading": "Sec. 10-320j.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_177.htm#sec_10-320j",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 184b, Sec. 10-416 ."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 184b, Sec. 10-416 ."
+      }
+    },
+    {
+      "id": "group-10-321-to-10-321a-to-10-321b-to-10-321c-to-10-321d-to-10-321e-to-10-321f-to-10-321g",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "10-321",
+        "10-321a",
+        "10-321b",
+        "10-321c",
+        "10-321d",
+        "10-321e",
+        "10-321f",
+        "10-321g"
+      ],
+      "heading": "Secs. 10-321 to 10-321g.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_177.htm#secs_10-321_to_10-321g",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Secs. 10-320b to 10-320i , inclusive."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Secs. 10-320b to 10-320i , inclusive."
+      }
+    },
+    {
+      "id": "section-10-320b",
+      "kind": "section",
+      "citation": "10-320b",
+      "citations": [
+        "10-320b"
+      ],
+      "heading": "10-320b",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_177.htm#sec_10-320b",
+      "status": "active",
+      "content": {
+        "body": [],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": ""
+      }
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-251",
+  "number": "251",
+  "name": "Special Fuel Use Tax",
+  "title": {
+    "id": "title-14",
+    "number": "14",
+    "name": "Motor Vehicles. Use of the Highway By Vehicles. Gasoline"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_251.htm",
+  "sections": [
+    {
+      "id": "group-14-345-to-14-346-to-14-347-to-14-348-to-14-349-to-14-350-to-14-351-to-14-352-to-14-353-to-14-354-to-14-355-to-14-356",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "14-345",
+        "14-346",
+        "14-347",
+        "14-348",
+        "14-349",
+        "14-350",
+        "14-351",
+        "14-352",
+        "14-353",
+        "14-354",
+        "14-355",
+        "14-356"
+      ],
+      "heading": "Secs. 14-345 to 14-356. Special fuel use tax.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_251.htm#secs_14-345_to_14-356",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Sections 14-345 to 14-356 , inclusive, are repealed."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 2562–2573; 1949, S. 1420d, 1422d; 1953, S. 1422d; June, 1955, S. 1421d; November, 1955, S. N166; 1957, P.A. 294; 620, S. 2; 671, S. 1; March, 1958, P.A. 10, S. 1; 1959, P.A. 132, S. 29; 579, S. 26.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 14-345 to 14-356 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-14-345",
+      "kind": "section",
+      "citation": "14-345",
+      "citations": [
+        "14-345"
+      ],
+      "heading": "14-345",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_251.htm#sec_14-345",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 14-345 to 14-356. Special fuel use tax. Sections 14-345 to 14-356 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 14-345 to 14-356. Special fuel use tax. Sections 14-345 to 14-356 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-14-356",
+      "kind": "section",
+      "citation": "14-356",
+      "citations": [
+        "14-356"
+      ],
+      "heading": "14-356",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_251.htm#sec_14-356",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 14-345 to 14-356. Special fuel use tax. Sections 14-345 to 14-356 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 14-345 to 14-356. Special fuel use tax. Sections 14-345 to 14-356 , inclusive, are repealed."
+      }
+    }
+  ]
+}

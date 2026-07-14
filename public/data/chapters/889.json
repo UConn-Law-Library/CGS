@@ -1,0 +1,161 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-889",
+  "number": "889",
+  "name": "Family Matters",
+  "title": {
+    "id": "title-51",
+    "number": "51",
+    "name": "Courts"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_889.htm",
+  "sections": [
+    {
+      "id": "group-51-330-to-51-331-to-51-332-to-51-333",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "51-330",
+        "51-331",
+        "51-332",
+        "51-333"
+      ],
+      "heading": "Secs. 51-330 to 51-333.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_889.htm#secs_51-330_to_51-333",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 815, Secs. 46b-1 to 46b-4 , inclusive."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 815, Secs. 46b-1 to 46b-4 , inclusive."
+      }
+    },
+    {
+      "id": "section-51-334",
+      "kind": "section",
+      "citation": "51-334",
+      "citations": [
+        "51-334"
+      ],
+      "heading": "Sec. 51-334. (Formerly Sec. 51-182g). Family relations cases claimed as for short calendar. Lists.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_889.htm#sec_51-334",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 51-334 is repealed."
+        ],
+        "sourceNotes": [
+          "(1959, P.A. 531, S. 7; P.A. 76-436, S. 659, 681; P.A. 78-379, S. 26, 27.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 51-334 is repealed."
+      }
+    },
+    {
+      "id": "section-51-335",
+      "kind": "section",
+      "citation": "51-335",
+      "citations": [
+        "51-335"
+      ],
+      "heading": "Sec. 51-335.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_889.htm#sec_51-335",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 815, Sec. 46b-11 ."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 815, Sec. 46b-11 ."
+      }
+    },
+    {
+      "id": "group-51-336-to-51-337-to-51-338",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "51-336",
+        "51-337",
+        "51-338"
+      ],
+      "heading": "Secs. 51-336 to 51-338.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_889.htm#secs_51-336_to_51-338",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 815, Secs. 46b-5 to 46b-7 , inclusive."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 815, Secs. 46b-5 to 46b-7 , inclusive."
+      }
+    },
+    {
+      "id": "section-51-339",
+      "kind": "section",
+      "citation": "51-339",
+      "citations": [
+        "51-339"
+      ],
+      "heading": "Sec. 51-339.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_889.htm#sec_51-339",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 815, Sec. 46b-10 ."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 815, Sec. 46b-10 ."
+      }
+    },
+    {
+      "id": "section-51-340",
+      "kind": "section",
+      "citation": "51-340",
+      "citations": [
+        "51-340"
+      ],
+      "heading": "Sec. 51-340.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_889.htm#sec_51-340",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 815, Sec. 46b-9 ."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 815, Sec. 46b-9 ."
+      }
+    },
+    {
+      "id": "section-51-341",
+      "kind": "section",
+      "citation": "51-341",
+      "citations": [
+        "51-341"
+      ],
+      "heading": "Sec. 51-341.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_889.htm#sec_51-341",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 815, Sec. 46b-8 ."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 815, Sec. 46b-8 ."
+      }
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-588a",
+  "number": "588a",
+  "name": "Infrastructure Development Economic Assistance",
+  "title": {
+    "id": "title-32",
+    "number": "32",
+    "name": "Commerce and Economic and Community Development"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588a.htm",
+  "sections": [
+    {
+      "id": "group-32-110-to-32-111-to-32-112-to-32-113-to-32-114-to-32-115-to-32-116-to-32-117-to-32-118-to-32-119-to-32-120-to-32-121-to-32-122",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "32-110",
+        "32-111",
+        "32-112",
+        "32-113",
+        "32-114",
+        "32-115",
+        "32-116",
+        "32-117",
+        "32-118",
+        "32-119",
+        "32-120",
+        "32-121",
+        "32-122"
+      ],
+      "heading": "Secs. 32-110 to 32-122. Infrastructure development economic assistance.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588a.htm#secs_32-110_to_32-122",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Sections 32-110 to 32-122 , inclusive, are repealed."
+        ],
+        "sourceNotes": [
+          "(P.A. 85-571, S. 1–13, 16; P.A. 86-107, S. 17, 19; 86-335, S. 4, 5; P.A. 87-416, S. 19, 24; P.A. 90-297, S. 23, 24.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 32-110 to 32-122 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "group-32-123-to-32-124-to-32-125-to-32-126-to-32-127-to-32-128-to-32-129",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "32-123",
+        "32-124",
+        "32-125",
+        "32-126",
+        "32-127",
+        "32-128",
+        "32-129"
+      ],
+      "heading": "Secs. 32-123 to 32-129.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588a.htm#secs_32-123_to_32-129",
+      "status": "reserved",
+      "content": {
+        "body": [
+          "Reserved for future use."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Reserved for future use."
+      }
+    },
+    {
+      "id": "section-32-110",
+      "kind": "section",
+      "citation": "32-110",
+      "citations": [
+        "32-110"
+      ],
+      "heading": "32-110",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588a.htm#sec_32-110",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 32-110 to 32-122. Infrastructure development economic assistance. Sections 32-110 to 32-122 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 32-110 to 32-122. Infrastructure development economic assistance. Sections 32-110 to 32-122 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-32-122",
+      "kind": "section",
+      "citation": "32-122",
+      "citations": [
+        "32-122"
+      ],
+      "heading": "32-122",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588a.htm#sec_32-122",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 32-110 to 32-122. Infrastructure development economic assistance. Sections 32-110 to 32-122 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 32-110 to 32-122. Infrastructure development economic assistance. Sections 32-110 to 32-122 , inclusive, are repealed."
+      }
+    }
+  ]
+}

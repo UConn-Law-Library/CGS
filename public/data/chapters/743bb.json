@@ -1,0 +1,92 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-743bb",
+  "number": "743bb",
+  "name": "Rental of Trucks for the Transportation of Personal Property",
+  "title": {
+    "id": "title-42",
+    "number": "42",
+    "name": "Business, Selling, Trading and Collection Practices"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_743bb.htm",
+  "sections": [
+    {
+      "id": "section-42-450",
+      "kind": "section",
+      "citation": "42-450",
+      "citations": [
+        "42-450"
+      ],
+      "heading": "Sec. 42-450. Definitions. Delivery of rental truck or alternative. Damages.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_743bb.htm#sec_42-450",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) For the purposes of this section:",
+          "(1) “Rental truck” means a motor vehicle rented without a driver that has a gross vehicle weight rating of twenty-six thousand pounds or less and is used in the transportation of personal property but not for business purposes.",
+          "(2) “Rental company” means any business entity that is engaged in the business of renting trucks or vans without a driver in this state to renters and that uses for rental purposes a motor vehicle fleet of five or more rental trucks in this state, but does not mean any person, firm or corporation that is licensed, or required to be licensed, pursuant to section 14-52 , (A) as a new car dealer or repairer, or (B) as a used car dealer that is not primarily engaged in the business of renting passenger motor vehicles or rental trucks without a driver in this state to renters.",
+          "(3) “Financial instrument” includes, but is not limited to, a check, money order, note, credit card, debit card or transaction authorization mechanism.",
+          "(b) A rental company that accepts a reservation for a rental truck and secures the reservation with a financial instrument shall deliver the rental truck at the time and location specified by the rental company at the time the reservation is made or provide an alternative rental truck comparable to the rental truck reserved by the customer.",
+          "(c) In the event a rental company violates any provision of this section, such rental company shall be subject to damages in favor of the customer in an amount up to two times the daily rental rate agreed to between the customer and the rental company for the rental truck."
+        ],
+        "sourceNotes": [
+          "(P.A. 03-245, S. 1; P.A. 23-40, S. 13.)"
+        ],
+        "history": [
+          "History: P.A. 23-40 amended Subsec. (a)(2) by redefining “rental company” to delete reference to limited repairer, effective January 1, 2024."
+        ],
+        "annotations": [],
+        "plainText": "(a) For the purposes of this section:\n\n(1) “Rental truck” means a motor vehicle rented without a driver that has a gross vehicle weight rating of twenty-six thousand pounds or less and is used in the transportation of personal property but not for business purposes.\n\n(2) “Rental company” means any business entity that is engaged in the business of renting trucks or vans without a driver in this state to renters and that uses for rental purposes a motor vehicle fleet of five or more rental trucks in this state, but does not mean any person, firm or corporation that is licensed, or required to be licensed, pursuant to section 14-52 , (A) as a new car dealer or repairer, or (B) as a used car dealer that is not primarily engaged in the business of renting passenger motor vehicles or rental trucks without a driver in this state to renters.\n\n(3) “Financial instrument” includes, but is not limited to, a check, money order, note, credit card, debit card or transaction authorization mechanism.\n\n(b) A rental company that accepts a reservation for a rental truck and secures the reservation with a financial instrument shall deliver the rental truck at the time and location specified by the rental company at the time the reservation is made or provide an alternative rental truck comparable to the rental truck reserved by the customer.\n\n(c) In the event a rental company violates any provision of this section, such rental company shall be subject to damages in favor of the customer in an amount up to two times the daily rental rate agreed to between the customer and the rental company for the rental truck."
+      }
+    },
+    {
+      "id": "section-42-451",
+      "kind": "section",
+      "citation": "42-451",
+      "citations": [
+        "42-451"
+      ],
+      "heading": "Sec. 42-451. Rental company to post sign re failure to provide rental truck or alternative.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_743bb.htm#sec_42-451",
+      "status": "active",
+      "content": {
+        "body": [
+          "Each rental company shall post in a prominent location a clearly legible sign stating the rental company shall be subject to up to two times the daily rental rate agreed to if such company fails to provide the customer with the rental truck reserved by the customer or an alternative rental truck comparable to the rental truck reserved by the customer."
+        ],
+        "sourceNotes": [
+          "(P.A. 03-245, S. 2.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Each rental company shall post in a prominent location a clearly legible sign stating the rental company shall be subject to up to two times the daily rental rate agreed to if such company fails to provide the customer with the rental truck reserved by the customer or an alternative rental truck comparable to the rental truck reserved by the customer."
+      }
+    },
+    {
+      "id": "group-42-452-to-42-453-to-42-454-to-42-455-to-42-456-to-42-457-to-42-458-to-42-459",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "42-452",
+        "42-453",
+        "42-454",
+        "42-455",
+        "42-456",
+        "42-457",
+        "42-458",
+        "42-459"
+      ],
+      "heading": "Secs. 42-452 to 42-459.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_743bb.htm#secs_42-452_to_42-459",
+      "status": "reserved",
+      "content": {
+        "body": [
+          "Reserved for future use."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Reserved for future use."
+      }
+    }
+  ]
+}

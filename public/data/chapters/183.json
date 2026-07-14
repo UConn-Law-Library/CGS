@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-183",
+  "number": "183",
+  "name": "State Museum of Connecticut History",
+  "title": {
+    "id": "title-10",
+    "number": "10",
+    "name": "Education and Culture"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_183.htm",
+  "sections": [
+    {
+      "id": "group-10-377-to-10-378-to-10-379",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "10-377",
+        "10-378",
+        "10-379"
+      ],
+      "heading": "Secs. 10-377 to 10-379. State Museum of Connecticut History.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_183.htm#secs_10-377_to_10-379",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Sections 10-377 to 10-379 , inclusive, are repealed."
+        ],
+        "sourceNotes": [
+          "(P.A. 74-347, S. 1–5, 7; P.A. 75-593; P.A. 80-483, S. 49, 186; P.A. 84-256, S. 16, 17.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 10-377 to 10-379 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-10-377",
+      "kind": "section",
+      "citation": "10-377",
+      "citations": [
+        "10-377"
+      ],
+      "heading": "10-377",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_183.htm#sec_10-377",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 10-377 to 10-379. State Museum of Connecticut History. Sections 10-377 to 10-379 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 10-377 to 10-379. State Museum of Connecticut History. Sections 10-377 to 10-379 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-10-379",
+      "kind": "section",
+      "citation": "10-379",
+      "citations": [
+        "10-379"
+      ],
+      "heading": "10-379",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_183.htm#sec_10-379",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 10-377 to 10-379. State Museum of Connecticut History. Sections 10-377 to 10-379 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 10-377 to 10-379. State Museum of Connecticut History. Sections 10-377 to 10-379 , inclusive, are repealed."
+      }
+    }
+  ]
+}

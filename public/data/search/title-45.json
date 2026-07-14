@@ -1,0 +1,2208 @@
+{
+  "schemaVersion": "1.0.0",
+  "title": {
+    "id": "title-45",
+    "number": "45",
+    "name": "Probate Courts and Procedure"
+  },
+  "documents": [
+    {
+      "id": "group-45-1-to-45-29y",
+      "citation": null,
+      "citations": [
+        "45-1",
+        "45-29y"
+      ],
+      "heading": "Secs. 45-1 to 45-29y. Organization, powers, duties and general provisions.",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "Sections 45-1 to 45-29y , inclusive, have been transferred or repealed.\n\nNote: These sections were formerly published as chapter 774.",
+      "href": "?chapter=774&section=group-45-1-to-45-29y"
+    },
+    {
+      "id": "group-45-30-to-45-31-to-45-32-to-45-33",
+      "citation": null,
+      "citations": [
+        "45-30",
+        "45-31",
+        "45-32",
+        "45-33"
+      ],
+      "heading": "Secs. 45-30 to 45-33. Probate hearings, notices.",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "Sections 45-30 to 45-33 , inclusive, have been transferred.\n\nNote: These sections were formerly published as chapter 775.",
+      "href": "?chapter=774&section=group-45-30-to-45-31-to-45-32-to-45-33"
+    },
+    {
+      "id": "group-45-34-to-45-35-to-45-36-to-45-37-to-45-38-to-45-39-to-45-40-to-45-41",
+      "citation": null,
+      "citations": [
+        "45-34",
+        "45-35",
+        "45-36",
+        "45-37",
+        "45-38",
+        "45-39",
+        "45-40",
+        "45-41"
+      ],
+      "heading": "Secs. 45-34 to 45-41. Probate bonds.",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "Sections 45-34 to 45-41 , inclusive, have been transferred or repealed.\n\nNote: These sections were formerly published as chapter 776.",
+      "href": "?chapter=774&section=group-45-34-to-45-35-to-45-36-to-45-37-to-45-38-to-45-39-to-45-40-to-45-41"
+    },
+    {
+      "id": "group-45-42-to-45-60a",
+      "citation": null,
+      "citations": [
+        "45-42",
+        "45-60a"
+      ],
+      "heading": "Secs. 45-42 to 45-60a. Guardian and ward.",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "Sections 45-42 to 45-60a , inclusive, have been transferred or repealed.\n\nNote: These sections were formerly published as chapter 777.",
+      "href": "?chapter=774&section=group-45-42-to-45-60a"
+    },
+    {
+      "id": "group-45-61-to-45-69b",
+      "citation": null,
+      "citations": [
+        "45-61",
+        "45-69b"
+      ],
+      "heading": "Secs. 45-61 to 45-69b. Adoption.",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "Sections 45-61 to 45-69b , inclusive, have been transferred or repealed.\n\nNote: These sections were formerly published as chapter 778.",
+      "href": "?chapter=774&section=group-45-61-to-45-69b"
+    },
+    {
+      "id": "group-45-69c-to-45-69d-to-45-69e",
+      "citation": null,
+      "citations": [
+        "45-69c",
+        "45-69d",
+        "45-69e"
+      ],
+      "heading": "Secs. 45-69c to 45-69e. Adoption Review Board.",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "Sections 45-69c to 45-69e , inclusive, have been transferred.\n\nNote: These sections were formerly published as chapter 778a.",
+      "href": "?chapter=774&section=group-45-69c-to-45-69d-to-45-69e"
+    },
+    {
+      "id": "group-45-69f-to-45-69g-to-45-69h-to-45-69i-to-45-69j-to-45-69k-to-45-69l-to-45-69m-to-45-69n",
+      "citation": null,
+      "citations": [
+        "45-69f",
+        "45-69g",
+        "45-69h",
+        "45-69i",
+        "45-69j",
+        "45-69k",
+        "45-69l",
+        "45-69m",
+        "45-69n"
+      ],
+      "heading": "Secs. 45-69f to 45-69n. Children conceived through artificial insemination.",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "Sections 45-69f to 45-69n , inclusive, have been transferred.\n\nNote: These sections were formerly published as chapter 778b.",
+      "href": "?chapter=774&section=group-45-69f-to-45-69g-to-45-69h-to-45-69i-to-45-69j-to-45-69k-to-45-69l-to-45-69m-to-45-69n"
+    },
+    {
+      "id": "section-45-69o",
+      "citation": "45-69o",
+      "citations": [
+        "45-69o"
+      ],
+      "heading": "Sec. 45-69o. Durable power of attorney.",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "Section 45-69o has been transferred.\n\nNote: This section was formerly published as chapter 778c.",
+      "href": "?chapter=774&section=section-45-69o"
+    },
+    {
+      "id": "group-45-70-to-45-71-to-45-72-to-45-73-to-45-74-to-45-75-to-45-76-to-45-77-to-45-78",
+      "citation": null,
+      "citations": [
+        "45-70",
+        "45-71",
+        "45-72",
+        "45-73",
+        "45-74",
+        "45-75",
+        "45-76",
+        "45-77",
+        "45-78"
+      ],
+      "heading": "Secs. 45-70 to 45-78. Conservatorships.",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "Sections 45-70 to 45-78 , inclusive, have been transferred or repealed.\n\nNote: These sections were formerly published as chapter 779.",
+      "href": "?chapter=774&section=group-45-70-to-45-71-to-45-72-to-45-73-to-45-74-to-45-75-to-45-76-to-45-77-to-45-78"
+    },
+    {
+      "id": "group-45-78a-to-45-78b-to-45-78c-to-45-78d-to-45-78e-to-45-78f-to-45-78g-to-45-78h-to-45-78i-to-45-78j-to-45-78k-to-45-78l-to-45-78m-to-45-78n-to-45-78o",
+      "citation": null,
+      "citations": [
+        "45-78a",
+        "45-78b",
+        "45-78c",
+        "45-78d",
+        "45-78e",
+        "45-78f",
+        "45-78g",
+        "45-78h",
+        "45-78i",
+        "45-78j",
+        "45-78k",
+        "45-78l",
+        "45-78m",
+        "45-78n",
+        "45-78o"
+      ],
+      "heading": "Secs. 45-78a to 45-78o. Guardians of mentally retarded persons.",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "repealed",
+      "text": "Sections 45-78a to 45-78o , inclusive, are repealed.\n\nNote: These sections were formerly published as chapter 779a.",
+      "href": "?chapter=774&section=group-45-78a-to-45-78b-to-45-78c-to-45-78d-to-45-78e-to-45-78f-to-45-78g-to-45-78h-to-45-78i-to-45-78j-to-45-78k-to-45-78l-to-45-78m-to-45-78n-to-45-78o"
+    },
+    {
+      "id": "group-45-78p-to-45-78q-to-45-78r-to-45-78s-to-45-78t-to-45-78u-to-45-78v-to-45-78w-to-45-78x-to-45-78y-to-45-78z",
+      "citation": null,
+      "citations": [
+        "45-78p",
+        "45-78q",
+        "45-78r",
+        "45-78s",
+        "45-78t",
+        "45-78u",
+        "45-78v",
+        "45-78w",
+        "45-78x",
+        "45-78y",
+        "45-78z"
+      ],
+      "heading": "Secs. 45-78p to 45-78z. Sterilization.",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "Sections 45-78p to 45-78z , inclusive, have been transferred.\n\nNote: These sections were formerly published as chapter 779b.",
+      "href": "?chapter=774&section=group-45-78p-to-45-78q-to-45-78r-to-45-78s-to-45-78t-to-45-78u-to-45-78v-to-45-78w-to-45-78x-to-45-78y-to-45-78z"
+    },
+    {
+      "id": "group-45-79-to-45-80-to-45-81-to-45-82-to-45-83-to-45-84-to-45-85-to-45-86-to-45-87-to-45-88-to-45-89-to-45-90-to-45-91-to-45-92-to-45-93-to-45-94-to-45-95-to-45-96-to-45-97-to-45-98-to-45-99-to-45-100",
+      "citation": null,
+      "citations": [
+        "45-79",
+        "45-80",
+        "45-81",
+        "45-82",
+        "45-83",
+        "45-84",
+        "45-85",
+        "45-86",
+        "45-87",
+        "45-88",
+        "45-89",
+        "45-90",
+        "45-91",
+        "45-92",
+        "45-93",
+        "45-94",
+        "45-95",
+        "45-96",
+        "45-97",
+        "45-98",
+        "45-99",
+        "45-100"
+      ],
+      "heading": "Secs. 45-79 to 45-100. Trusts.",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "Sections 45-79 to 45-100 , inclusive, have been transferred.\n\nNote: These sections were formerly published as chapter 780.",
+      "href": "?chapter=774&section=group-45-79-to-45-80-to-45-81-to-45-82-to-45-83-to-45-84-to-45-85-to-45-86-to-45-87-to-45-88-to-45-89-to-45-90-to-45-91-to-45-92-to-45-93-to-45-94-to-45-95-to-45-96-to-45-97-to-45-98-to-45-99-to-45-100"
+    },
+    {
+      "id": "group-45-100a-to-45-100b-to-45-100c",
+      "citation": null,
+      "citations": [
+        "45-100a",
+        "45-100b",
+        "45-100c"
+      ],
+      "heading": "Secs. 45-100a to 45-100c. Powers in Trust Instruments Act.",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "Sections 45-100a to 45-100c , inclusive, have been transferred.\n\nNote: These sections were formerly published as chapter 780a.",
+      "href": "?chapter=774&section=group-45-100a-to-45-100b-to-45-100c"
+    },
+    {
+      "id": "group-45-100d-to-45-100e-to-45-100f-to-45-100g",
+      "citation": null,
+      "citations": [
+        "45-100d",
+        "45-100e",
+        "45-100f",
+        "45-100g"
+      ],
+      "heading": "Secs. 45-100d to 45-100g. Fiduciary Powers Act.",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "Sections 45-100d to 45-100g , inclusive, have been transferred.\n\nNote: These sections were formerly published as chapter 780b.",
+      "href": "?chapter=774&section=group-45-100d-to-45-100e-to-45-100f-to-45-100g"
+    },
+    {
+      "id": "group-45-100h-to-45-100i-to-45-100j-to-45-100k-to-45-100l-to-45-100m-to-45-100n-to-45-100o-to-45-100p",
+      "citation": null,
+      "citations": [
+        "45-100h",
+        "45-100i",
+        "45-100j",
+        "45-100k",
+        "45-100l",
+        "45-100m",
+        "45-100n",
+        "45-100o",
+        "45-100p"
+      ],
+      "heading": "Secs. 45-100h to 45-100p. Uniform Management of Institutional Funds Act.",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "Sections 45-100h to 45-100p , inclusive, have been transferred.\n\nNote: These sections were formerly published as chapter 780c.",
+      "href": "?chapter=774&section=group-45-100h-to-45-100i-to-45-100j-to-45-100k-to-45-100l-to-45-100m-to-45-100n-to-45-100o-to-45-100p"
+    },
+    {
+      "id": "section-45-100q",
+      "citation": "45-100q",
+      "citations": [
+        "45-100q"
+      ],
+      "heading": "Sec. 45-100q. Deposit of securities in clearing corporation.",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "Section 45-100q has been transferred.\n\nNote: This section was formerly published as chapter 780d.",
+      "href": "?chapter=774&section=section-45-100q"
+    },
+    {
+      "id": "group-45-101-to-45-109b",
+      "citation": null,
+      "citations": [
+        "45-101",
+        "45-109b"
+      ],
+      "heading": "Secs. 45-101 to 45-109b. Uniform Gifts to Minors Act.",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "Sections 45-101 to 45-109b , inclusive, have been transferred.\n\nNote: These sections were formerly published as chapter 781.",
+      "href": "?chapter=774&section=group-45-101-to-45-109b"
+    },
+    {
+      "id": "group-45-110-to-45-111-to-45-112-to-45-113-to-45-114-to-45-115-to-45-116-to-45-117-to-45-118-to-45-119",
+      "citation": null,
+      "citations": [
+        "45-110",
+        "45-111",
+        "45-112",
+        "45-113",
+        "45-114",
+        "45-115",
+        "45-116",
+        "45-117",
+        "45-118",
+        "45-119"
+      ],
+      "heading": "Secs. 45-110 to 45-119. Apportionments among tenants and remaindermen.",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "repealed",
+      "text": "Sections 45-110 to 45-119 , inclusive, are repealed.\n\nNote: These sections were formerly published as chapter 782.",
+      "href": "?chapter=774&section=group-45-110-to-45-111-to-45-112-to-45-113-to-45-114-to-45-115-to-45-116-to-45-117-to-45-118-to-45-119"
+    },
+    {
+      "id": "group-45-120-to-45-123a",
+      "citation": null,
+      "citations": [
+        "45-120",
+        "45-123a"
+      ],
+      "heading": "Secs. 45-120 to 45-123a. Powers of appointment.",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "Sections 45-120 to 45-123a , inclusive, have been transferred.\n\nNote: These sections were formerly published as chapter 783.",
+      "href": "?chapter=774&section=group-45-120-to-45-123a"
+    },
+    {
+      "id": "group-45-124-to-45-125-to-45-126-to-45-127-to-45-128-to-45-129-to-45-130-to-45-131-to-45-132-to-45-133-to-45-134-to-45-135-to-45-136-to-45-137-to-45-138-to-45-139-to-45-140-to-45-141-to-45-142-to-45-143-to-45-144-to-45-145-to-45-146-to-45-147-to-45-148-to-45-149-to-45-150-to-45-151-to-45-152-to-45-153-to-45-154-to-45-155-to-45-156-to-45-157-to-45-158-to-45-159",
+      "citation": null,
+      "citations": [
+        "45-124",
+        "45-125",
+        "45-126",
+        "45-127",
+        "45-128",
+        "45-129",
+        "45-130",
+        "45-131",
+        "45-132",
+        "45-133",
+        "45-134",
+        "45-135",
+        "45-136",
+        "45-137",
+        "45-138",
+        "45-139",
+        "45-140",
+        "45-141",
+        "45-142",
+        "45-143",
+        "45-144",
+        "45-145",
+        "45-146",
+        "45-147",
+        "45-148",
+        "45-149",
+        "45-150",
+        "45-151",
+        "45-152",
+        "45-153",
+        "45-154",
+        "45-155",
+        "45-156",
+        "45-157",
+        "45-158",
+        "45-159"
+      ],
+      "heading": "Secs. 45-124 to 45-159. Insolvent debtors.",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "repealed",
+      "text": "Sections 45-124 to 45-159 , inclusive, are repealed.\n\nNote: These sections were formerly published as chapter 784.",
+      "href": "?chapter=774&section=group-45-124-to-45-125-to-45-126-to-45-127-to-45-128-to-45-129-to-45-130-to-45-131-to-45-132-to-45-133-to-45-134-to-45-135-to-45-136-to-45-137-to-45-138-to-45-139-to-45-140-to-45-141-to-45-142-to-45-143-to-45-144-to-45-145-to-45-146-to-45-147-to-45-148-to-45-149-to-45-150-to-45-151-to-45-152-to-45-153-to-45-154-to-45-155-to-45-156-to-45-157-to-45-158-to-45-159"
+    },
+    {
+      "id": "group-45-160-to-45-161-to-45-162-to-45-163-to-45-164-to-45-165-to-45-166-to-45-167-to-45-168-to-45-169-to-45-170-to-45-171-to-45-172-to-45-173-to-45-174-to-45-175-to-45-176-to-45-177-to-45-178-to-45-179-to-45-180-to-45-181-to-45-182-to-45-183-to-45-184-to-45-185-to-45-186-to-45-187-to-45-188-to-45-189-to-45-190-to-45-191-to-45-192-to-45-193-to-45-194",
+      "citation": null,
+      "citations": [
+        "45-160",
+        "45-161",
+        "45-162",
+        "45-163",
+        "45-164",
+        "45-165",
+        "45-166",
+        "45-167",
+        "45-168",
+        "45-169",
+        "45-170",
+        "45-171",
+        "45-172",
+        "45-173",
+        "45-174",
+        "45-175",
+        "45-176",
+        "45-177",
+        "45-178",
+        "45-179",
+        "45-180",
+        "45-181",
+        "45-182",
+        "45-183",
+        "45-184",
+        "45-185",
+        "45-186",
+        "45-187",
+        "45-188",
+        "45-189",
+        "45-190",
+        "45-191",
+        "45-192",
+        "45-193",
+        "45-194"
+      ],
+      "heading": "Secs. 45-160 to 45-194. Wills.",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "Sections 45-160 to 45-194 , inclusive, have been transferred or repealed.\n\nNote: These sections were formerly published as chapter 785.",
+      "href": "?chapter=774&section=group-45-160-to-45-161-to-45-162-to-45-163-to-45-164-to-45-165-to-45-166-to-45-167-to-45-168-to-45-169-to-45-170-to-45-171-to-45-172-to-45-173-to-45-174-to-45-175-to-45-176-to-45-177-to-45-178-to-45-179-to-45-180-to-45-181-to-45-182-to-45-183-to-45-184-to-45-185-to-45-186-to-45-187-to-45-188-to-45-189-to-45-190-to-45-191-to-45-192-to-45-193-to-45-194"
+    },
+    {
+      "id": "group-45-194a-to-45-194b-to-45-194c-to-45-194d-to-45-194e-to-45-194f-to-45-194g-to-45-194h-to-45-194i",
+      "citation": null,
+      "citations": [
+        "45-194a",
+        "45-194b",
+        "45-194c",
+        "45-194d",
+        "45-194e",
+        "45-194f",
+        "45-194g",
+        "45-194h",
+        "45-194i"
+      ],
+      "heading": "Secs. 45-194a to 45-194i. International wills.",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "Sections 45-194a to 45-194i , inclusive, have been transferred.\n\nNote: These sections were formerly published as chapter 785a.",
+      "href": "?chapter=774&section=group-45-194a-to-45-194b-to-45-194c-to-45-194d-to-45-194e-to-45-194f-to-45-194g-to-45-194h-to-45-194i"
+    },
+    {
+      "id": "group-45-195-to-45-196-to-45-197-to-45-198-to-45-199-to-45-200-to-45-201",
+      "citation": null,
+      "citations": [
+        "45-195",
+        "45-196",
+        "45-197",
+        "45-198",
+        "45-199",
+        "45-200",
+        "45-201"
+      ],
+      "heading": "Secs. 45-195 to 45-201. Estate administration.",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "Sections 45-195 to 45-201 , inclusive, have been transferred.\n\nNote: These sections were formerly published as chapter 786.",
+      "href": "?chapter=774&section=group-45-195-to-45-196-to-45-197-to-45-198-to-45-199-to-45-200-to-45-201"
+    },
+    {
+      "id": "group-45-201a-to-45-204",
+      "citation": null,
+      "citations": [
+        "45-201a",
+        "45-204"
+      ],
+      "heading": "Secs. 45-201a to 45-204. Estate inventories.",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "Sections 45-201a to 45-204 , inclusive, have been transferred or repealed.\n\nNote: These sections were formerly published as chapter 787.",
+      "href": "?chapter=774&section=group-45-201a-to-45-204"
+    },
+    {
+      "id": "group-45-204a-to-45-204b-to-45-204c-to-45-204d-to-45-204e",
+      "citation": null,
+      "citations": [
+        "45-204a",
+        "45-204b",
+        "45-204c",
+        "45-204d",
+        "45-204e"
+      ],
+      "heading": "Secs. 45-204a to 45-204e. Claims against decedents' estates.",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "Sections 45-204a to 45-204e , inclusive, have been transferred.\n\nNote: These sections were formerly published as chapter 787a.",
+      "href": "?chapter=774&section=group-45-204a-to-45-204b-to-45-204c-to-45-204d-to-45-204e"
+    },
+    {
+      "id": "group-45-205-to-45-213c",
+      "citation": null,
+      "citations": [
+        "45-205",
+        "45-213c"
+      ],
+      "heading": "Secs. 45-205 to 45-213c. Claims against solvent estates.",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "Sections 45-205 to 45-213c , inclusive, have been transferred or repealed.\n\nNote: These sections were formerly published as chapter 788.",
+      "href": "?chapter=774&section=group-45-205-to-45-213c"
+    },
+    {
+      "id": "group-45-214-to-45-215-to-45-216-to-45-217-to-45-218-to-45-219-to-45-220-to-45-221-to-45-222-to-45-223-to-45-224-to-45-225",
+      "citation": null,
+      "citations": [
+        "45-214",
+        "45-215",
+        "45-216",
+        "45-217",
+        "45-218",
+        "45-219",
+        "45-220",
+        "45-221",
+        "45-222",
+        "45-223",
+        "45-224",
+        "45-225"
+      ],
+      "heading": "Secs. 45-214 to 45-225. Claims against insolvent estates.",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "Sections 45-214 to 45-225 , inclusive, have been transferred or repealed.\n\nNote: These sections were formerly published as chapter 789.",
+      "href": "?chapter=774&section=group-45-214-to-45-215-to-45-216-to-45-217-to-45-218-to-45-219-to-45-220-to-45-221-to-45-222-to-45-223-to-45-224-to-45-225"
+    },
+    {
+      "id": "group-45-226-to-45-227-to-45-228-to-45-229-to-45-230",
+      "citation": null,
+      "citations": [
+        "45-226",
+        "45-227",
+        "45-228",
+        "45-229",
+        "45-230"
+      ],
+      "heading": "Secs. 45-226 to 45-230. Insolvent estates.",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "Sections 45-226 to 45-230 , inclusive, have been transferred.\n\nNote: These sections were formerly published as chapter 790.",
+      "href": "?chapter=774&section=group-45-226-to-45-227-to-45-228-to-45-229-to-45-230"
+    },
+    {
+      "id": "group-45-230a-to-45-230b-to-45-230c-to-45-230d-to-45-230e-to-45-230f-to-45-230g-to-45-230h-to-45-230i-to-45-230j-to-45-230k-to-45-230l-to-45-230m-to-45-230n-to-45-230o-to-45-230p-to-45-230q-to-45-230r-to-45-230s-to-45-230t-to-45-230u-to-45-230v-to-45-230w-to-45-230x-to-45-230y-to-45-230z-to-45-230aa-to-45-230bb-to-45-230cc-to-45-230dd-to-45-230ee-to-45-230ff-to-45-230gg-to-45-230hh-to-45-230ii-to-45-230jj-to-45-230kk",
+      "citation": null,
+      "citations": [
+        "45-230a",
+        "45-230b",
+        "45-230c",
+        "45-230d",
+        "45-230e",
+        "45-230f",
+        "45-230g",
+        "45-230h",
+        "45-230i",
+        "45-230j",
+        "45-230k",
+        "45-230l",
+        "45-230m",
+        "45-230n",
+        "45-230o",
+        "45-230p",
+        "45-230q",
+        "45-230r",
+        "45-230s",
+        "45-230t",
+        "45-230u",
+        "45-230v",
+        "45-230w",
+        "45-230x",
+        "45-230y",
+        "45-230z",
+        "45-230aa",
+        "45-230bb",
+        "45-230cc",
+        "45-230dd",
+        "45-230ee",
+        "45-230ff",
+        "45-230gg",
+        "45-230hh",
+        "45-230ii",
+        "45-230jj",
+        "45-230kk"
+      ],
+      "heading": "Secs. 45-230a to 45-230kk. Claims against solvent and insolvent estates.",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "Sections 45-230a to 45-230kk , inclusive, have been transferred.\n\nNote: These sections were formerly published as chapter 790a.",
+      "href": "?chapter=774&section=group-45-230a-to-45-230b-to-45-230c-to-45-230d-to-45-230e-to-45-230f-to-45-230g-to-45-230h-to-45-230i-to-45-230j-to-45-230k-to-45-230l-to-45-230m-to-45-230n-to-45-230o-to-45-230p-to-45-230q-to-45-230r-to-45-230s-to-45-230t-to-45-230u-to-45-230v-to-45-230w-to-45-230x-to-45-230y-to-45-230z-to-45-230aa-to-45-230bb-to-45-230cc-to-45-230dd-to-45-230ee-to-45-230ff-to-45-230gg-to-45-230hh-to-45-230ii-to-45-230jj-to-45-230kk"
+    },
+    {
+      "id": "group-45-231-to-45-232-to-45-233-to-45-234-to-45-235",
+      "citation": null,
+      "citations": [
+        "45-231",
+        "45-232",
+        "45-233",
+        "45-234",
+        "45-235"
+      ],
+      "heading": "Secs. 45-231 to 45-235. Estate claims, compounding and arbitration.",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "Sections 45-231 to 45-235 , inclusive, have been transferred.\n\nNote: These sections were formerly published as chapter 791.",
+      "href": "?chapter=774&section=group-45-231-to-45-232-to-45-233-to-45-234-to-45-235"
+    },
+    {
+      "id": "group-45-236-to-45-237-to-45-238-to-45-239-to-45-240-to-45-241-to-45-242-to-45-243-to-45-244-to-45-245-to-45-246-to-45-247-to-45-248-to-45-249",
+      "citation": null,
+      "citations": [
+        "45-236",
+        "45-237",
+        "45-238",
+        "45-239",
+        "45-240",
+        "45-241",
+        "45-242",
+        "45-243",
+        "45-244",
+        "45-245",
+        "45-246",
+        "45-247",
+        "45-248",
+        "45-249"
+      ],
+      "heading": "Secs. 45-236 to 45-249. Sale, mortgage or partition of estates.",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "Sections 45-236 to 45-249 , inclusive, have been transferred or repealed.\n\nNote: These sections were formerly published as chapter 792.",
+      "href": "?chapter=774&section=group-45-236-to-45-237-to-45-238-to-45-239-to-45-240-to-45-241-to-45-242-to-45-243-to-45-244-to-45-245-to-45-246-to-45-247-to-45-248-to-45-249"
+    },
+    {
+      "id": "group-45-249a-to-45-266c",
+      "citation": null,
+      "citations": [
+        "45-249a",
+        "45-266c"
+      ],
+      "heading": "Secs. 45-249a to 45-266c. Estate administration generally.",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "Sections 45-249a to 45-266c , inclusive, have been transferred or repealed.\n\nNote: These sections were formerly published as chapter 793.",
+      "href": "?chapter=774&section=group-45-249a-to-45-266c"
+    },
+    {
+      "id": "group-45-267-to-45-268-to-45-269-to-45-270-to-45-271",
+      "citation": null,
+      "citations": [
+        "45-267",
+        "45-268",
+        "45-269",
+        "45-270",
+        "45-271"
+      ],
+      "heading": "Secs. 45-267 to 45-271. Estate accounts.",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "Sections 45-267 to 45-271 , inclusive, have been transferred.\n\nNote: These sections were formerly published as chapter 794.",
+      "href": "?chapter=774&section=group-45-267-to-45-268-to-45-269-to-45-270-to-45-271"
+    },
+    {
+      "id": "group-45-271a-to-45-287b",
+      "citation": null,
+      "citations": [
+        "45-271a",
+        "45-287b"
+      ],
+      "heading": "Secs. 45-271a to 45-287b. Estate distribution.",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "Sections 45-271a to 45-287b , inclusive, have been transferred or repealed.\n\nNote: These sections were formerly published as chapter 795.",
+      "href": "?chapter=774&section=group-45-271a-to-45-287b"
+    },
+    {
+      "id": "group-45-288-to-45-289-to-45-290-to-45-291-to-45-292-to-45-293-to-45-294-to-45-295",
+      "citation": null,
+      "citations": [
+        "45-288",
+        "45-289",
+        "45-290",
+        "45-291",
+        "45-292",
+        "45-293",
+        "45-294",
+        "45-295"
+      ],
+      "heading": "Secs. 45-288 to 45-295. Probate appeals.",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "Sections 45-288 to 45-295 , inclusive, have been transferred.\n\nNote: These sections were formerly published as chapter 796.",
+      "href": "?chapter=774&section=group-45-288-to-45-289-to-45-290-to-45-291-to-45-292-to-45-293-to-45-294-to-45-295"
+    },
+    {
+      "id": "group-45-296-to-45-297-to-45-298",
+      "citation": null,
+      "citations": [
+        "45-296",
+        "45-297",
+        "45-298"
+      ],
+      "heading": "Secs. 45-296 to 45-298. Escheats.",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "Sections 45-296 to 45-298 , inclusive, have been transferred or repealed.\n\nNote: These sections were formerly published as chapter 797.",
+      "href": "?chapter=774&section=group-45-296-to-45-297-to-45-298"
+    },
+    {
+      "id": "group-45-298a-to-45-298b-to-45-298c-to-45-298d-to-45-298e-to-45-298f-to-45-298g-to-45-298h-to-45-298i",
+      "citation": null,
+      "citations": [
+        "45-298a",
+        "45-298b",
+        "45-298c",
+        "45-298d",
+        "45-298e",
+        "45-298f",
+        "45-298g",
+        "45-298h",
+        "45-298i"
+      ],
+      "heading": "Secs. 45-298a to 45-298i. Connecticut Uniform Disposition of Community Property Rights at Death Act.",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "Sections 45-298a to 45-298i , inclusive, have been transferred.\n\nNote: These sections were formerly published as chapter 797a.",
+      "href": "?chapter=774&section=group-45-298a-to-45-298b-to-45-298c-to-45-298d-to-45-298e-to-45-298f-to-45-298g-to-45-298h-to-45-298i"
+    },
+    {
+      "id": "group-45-299-to-45-300-to-45-301-to-45-302-to-45-303-to-45-304-to-45-305-to-45-306-to-45-307-to-45-308-to-45-309-to-45-310-to-45-311-to-45-312-to-45-313-to-45-314-to-45-315-to-45-316-to-45-317-to-45-318-to-45-319",
+      "citation": null,
+      "citations": [
+        "45-299",
+        "45-300",
+        "45-301",
+        "45-302",
+        "45-303",
+        "45-304",
+        "45-305",
+        "45-306",
+        "45-307",
+        "45-308",
+        "45-309",
+        "45-310",
+        "45-311",
+        "45-312",
+        "45-313",
+        "45-314",
+        "45-315",
+        "45-316",
+        "45-317",
+        "45-318",
+        "45-319"
+      ],
+      "heading": "Secs. 45-299 to 45-319. Disclaimer of estate property.",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "Sections 45-299 to 45-319 , inclusive, have been transferred or repealed.\n\nNote: These sections were formerly published as chapter 798.",
+      "href": "?chapter=774&section=group-45-299-to-45-300-to-45-301-to-45-302-to-45-303-to-45-304-to-45-305-to-45-306-to-45-307-to-45-308-to-45-309-to-45-310-to-45-311-to-45-312-to-45-313-to-45-314-to-45-315-to-45-316-to-45-317-to-45-318-to-45-319"
+    },
+    {
+      "id": "group-45-320-to-45-321-to-45-322-to-45-323-to-45-324-to-45-325-to-45-326-to-45-327-to-45-328-to-45-329-to-45-330-to-45-331-to-45-332-to-45-333-to-45-334-to-45-335-to-45-336-to-45-337-to-45-338-to-45-339-to-45-340-to-45-341-to-45-342-to-45-343-to-45-344-to-45-345-to-45-346-to-45-347-to-45-348-to-45-349",
+      "citation": null,
+      "citations": [
+        "45-320",
+        "45-321",
+        "45-322",
+        "45-323",
+        "45-324",
+        "45-325",
+        "45-326",
+        "45-327",
+        "45-328",
+        "45-329",
+        "45-330",
+        "45-331",
+        "45-332",
+        "45-333",
+        "45-334",
+        "45-335",
+        "45-336",
+        "45-337",
+        "45-338",
+        "45-339",
+        "45-340",
+        "45-341",
+        "45-342",
+        "45-343",
+        "45-344",
+        "45-345",
+        "45-346",
+        "45-347",
+        "45-348",
+        "45-349"
+      ],
+      "heading": "Secs. 45-320 to 45-349. Guardianship of mentally retarded persons.",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "Sections 45-320 to 45-349 , inclusive, have been transferred.\n\nNote: These sections were formerly published as chapter 799.",
+      "href": "?chapter=774&section=group-45-320-to-45-321-to-45-322-to-45-323-to-45-324-to-45-325-to-45-326-to-45-327-to-45-328-to-45-329-to-45-330-to-45-331-to-45-332-to-45-333-to-45-334-to-45-335-to-45-336-to-45-337-to-45-338-to-45-339-to-45-340-to-45-341-to-45-342-to-45-343-to-45-344-to-45-345-to-45-346-to-45-347-to-45-348-to-45-349"
+    },
+    {
+      "id": "group-45-350-to-45-351-to-45-352-to-45-353-to-45-354-to-45-355-to-45-356-to-45-357-to-45-358-to-45-359-to-45-360-to-45-361-to-45-362-to-45-363",
+      "citation": null,
+      "citations": [
+        "45-350",
+        "45-351",
+        "45-352",
+        "45-353",
+        "45-354",
+        "45-355",
+        "45-356",
+        "45-357",
+        "45-358",
+        "45-359",
+        "45-360",
+        "45-361",
+        "45-362",
+        "45-363"
+      ],
+      "heading": "Secs. 45-350 to 45-363. Allocations between principal and income.",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "Sections 45-350 to 45-363 , inclusive, have been transferred.\n\nNote: These sections were formerly published as chapter 800.",
+      "href": "?chapter=774&section=group-45-350-to-45-351-to-45-352-to-45-353-to-45-354-to-45-355-to-45-356-to-45-357-to-45-358-to-45-359-to-45-360-to-45-361-to-45-362-to-45-363"
+    },
+    {
+      "id": "section-45-1",
+      "citation": "45-1",
+      "citations": [
+        "45-1"
+      ],
+      "heading": "45-1",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-1"
+    },
+    {
+      "id": "section-45-29y",
+      "citation": "45-29y",
+      "citations": [
+        "45-29y"
+      ],
+      "heading": "45-29y",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-29y"
+    },
+    {
+      "id": "section-45-30",
+      "citation": "45-30",
+      "citations": [
+        "45-30"
+      ],
+      "heading": "45-30",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-30"
+    },
+    {
+      "id": "section-45-33",
+      "citation": "45-33",
+      "citations": [
+        "45-33"
+      ],
+      "heading": "45-33",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-33"
+    },
+    {
+      "id": "section-45-34",
+      "citation": "45-34",
+      "citations": [
+        "45-34"
+      ],
+      "heading": "45-34",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-34"
+    },
+    {
+      "id": "section-45-41",
+      "citation": "45-41",
+      "citations": [
+        "45-41"
+      ],
+      "heading": "45-41",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-41"
+    },
+    {
+      "id": "section-45-42",
+      "citation": "45-42",
+      "citations": [
+        "45-42"
+      ],
+      "heading": "45-42",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-42"
+    },
+    {
+      "id": "section-45-60a",
+      "citation": "45-60a",
+      "citations": [
+        "45-60a"
+      ],
+      "heading": "45-60a",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-60a"
+    },
+    {
+      "id": "section-45-61",
+      "citation": "45-61",
+      "citations": [
+        "45-61"
+      ],
+      "heading": "45-61",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-61"
+    },
+    {
+      "id": "section-45-69b",
+      "citation": "45-69b",
+      "citations": [
+        "45-69b"
+      ],
+      "heading": "45-69b",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-69b"
+    },
+    {
+      "id": "section-45-69c",
+      "citation": "45-69c",
+      "citations": [
+        "45-69c"
+      ],
+      "heading": "45-69c",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-69c"
+    },
+    {
+      "id": "section-45-69e",
+      "citation": "45-69e",
+      "citations": [
+        "45-69e"
+      ],
+      "heading": "45-69e",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-69e"
+    },
+    {
+      "id": "section-45-69f",
+      "citation": "45-69f",
+      "citations": [
+        "45-69f"
+      ],
+      "heading": "45-69f",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-69f"
+    },
+    {
+      "id": "section-45-69n",
+      "citation": "45-69n",
+      "citations": [
+        "45-69n"
+      ],
+      "heading": "45-69n",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-69n"
+    },
+    {
+      "id": "section-45-70",
+      "citation": "45-70",
+      "citations": [
+        "45-70"
+      ],
+      "heading": "45-70",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-70"
+    },
+    {
+      "id": "section-45-78",
+      "citation": "45-78",
+      "citations": [
+        "45-78"
+      ],
+      "heading": "45-78",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-78"
+    },
+    {
+      "id": "section-45-78a",
+      "citation": "45-78a",
+      "citations": [
+        "45-78a"
+      ],
+      "heading": "45-78a",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "repealed",
+      "text": "Secs. 45-78a to 45-78o. Guardians of mentally retarded persons. Sections 45-78a to 45-78o , inclusive, are repealed.",
+      "href": "?chapter=774&section=section-45-78a"
+    },
+    {
+      "id": "section-45-78o",
+      "citation": "45-78o",
+      "citations": [
+        "45-78o"
+      ],
+      "heading": "45-78o",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "repealed",
+      "text": "Secs. 45-78a to 45-78o. Guardians of mentally retarded persons. Sections 45-78a to 45-78o , inclusive, are repealed.",
+      "href": "?chapter=774&section=section-45-78o"
+    },
+    {
+      "id": "section-45-78p",
+      "citation": "45-78p",
+      "citations": [
+        "45-78p"
+      ],
+      "heading": "45-78p",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-78p"
+    },
+    {
+      "id": "section-45-78z",
+      "citation": "45-78z",
+      "citations": [
+        "45-78z"
+      ],
+      "heading": "45-78z",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-78z"
+    },
+    {
+      "id": "section-45-79",
+      "citation": "45-79",
+      "citations": [
+        "45-79"
+      ],
+      "heading": "45-79",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-79"
+    },
+    {
+      "id": "section-45-100",
+      "citation": "45-100",
+      "citations": [
+        "45-100"
+      ],
+      "heading": "45-100",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-100"
+    },
+    {
+      "id": "section-45-100a",
+      "citation": "45-100a",
+      "citations": [
+        "45-100a"
+      ],
+      "heading": "45-100a",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-100a"
+    },
+    {
+      "id": "section-45-100c",
+      "citation": "45-100c",
+      "citations": [
+        "45-100c"
+      ],
+      "heading": "45-100c",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-100c"
+    },
+    {
+      "id": "section-45-100d",
+      "citation": "45-100d",
+      "citations": [
+        "45-100d"
+      ],
+      "heading": "45-100d",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-100d"
+    },
+    {
+      "id": "section-45-100g",
+      "citation": "45-100g",
+      "citations": [
+        "45-100g"
+      ],
+      "heading": "45-100g",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-100g"
+    },
+    {
+      "id": "section-45-100h",
+      "citation": "45-100h",
+      "citations": [
+        "45-100h"
+      ],
+      "heading": "45-100h",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-100h"
+    },
+    {
+      "id": "section-45-100p",
+      "citation": "45-100p",
+      "citations": [
+        "45-100p"
+      ],
+      "heading": "45-100p",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-100p"
+    },
+    {
+      "id": "section-45-101",
+      "citation": "45-101",
+      "citations": [
+        "45-101"
+      ],
+      "heading": "45-101",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-101"
+    },
+    {
+      "id": "section-45-109b",
+      "citation": "45-109b",
+      "citations": [
+        "45-109b"
+      ],
+      "heading": "45-109b",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-109b"
+    },
+    {
+      "id": "section-45-110",
+      "citation": "45-110",
+      "citations": [
+        "45-110"
+      ],
+      "heading": "45-110",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "repealed",
+      "text": "Secs. 45-110 to 45-119. Apportionments among tenants and remaindermen. Sections 45-110 to 45-119 , inclusive, are repealed.",
+      "href": "?chapter=774&section=section-45-110"
+    },
+    {
+      "id": "section-45-119",
+      "citation": "45-119",
+      "citations": [
+        "45-119"
+      ],
+      "heading": "45-119",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "repealed",
+      "text": "Secs. 45-110 to 45-119. Apportionments among tenants and remaindermen. Sections 45-110 to 45-119 , inclusive, are repealed.",
+      "href": "?chapter=774&section=section-45-119"
+    },
+    {
+      "id": "section-45-120",
+      "citation": "45-120",
+      "citations": [
+        "45-120"
+      ],
+      "heading": "45-120",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-120"
+    },
+    {
+      "id": "section-45-123a",
+      "citation": "45-123a",
+      "citations": [
+        "45-123a"
+      ],
+      "heading": "45-123a",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-123a"
+    },
+    {
+      "id": "section-45-124",
+      "citation": "45-124",
+      "citations": [
+        "45-124"
+      ],
+      "heading": "45-124",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "repealed",
+      "text": "Secs. 45-124 to 45-159. Insolvent debtors. Sections 45-124 to 45-159 , inclusive, are repealed.",
+      "href": "?chapter=774&section=section-45-124"
+    },
+    {
+      "id": "section-45-159",
+      "citation": "45-159",
+      "citations": [
+        "45-159"
+      ],
+      "heading": "45-159",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "repealed",
+      "text": "Secs. 45-124 to 45-159. Insolvent debtors. Sections 45-124 to 45-159 , inclusive, are repealed.",
+      "href": "?chapter=774&section=section-45-159"
+    },
+    {
+      "id": "section-45-160",
+      "citation": "45-160",
+      "citations": [
+        "45-160"
+      ],
+      "heading": "45-160",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-160"
+    },
+    {
+      "id": "section-45-194",
+      "citation": "45-194",
+      "citations": [
+        "45-194"
+      ],
+      "heading": "45-194",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-194"
+    },
+    {
+      "id": "section-45-194a",
+      "citation": "45-194a",
+      "citations": [
+        "45-194a"
+      ],
+      "heading": "45-194a",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-194a"
+    },
+    {
+      "id": "section-45-194i",
+      "citation": "45-194i",
+      "citations": [
+        "45-194i"
+      ],
+      "heading": "45-194i",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-194i"
+    },
+    {
+      "id": "section-45-195",
+      "citation": "45-195",
+      "citations": [
+        "45-195"
+      ],
+      "heading": "45-195",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-195"
+    },
+    {
+      "id": "section-45-201",
+      "citation": "45-201",
+      "citations": [
+        "45-201"
+      ],
+      "heading": "45-201",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-201"
+    },
+    {
+      "id": "section-45-201a",
+      "citation": "45-201a",
+      "citations": [
+        "45-201a"
+      ],
+      "heading": "45-201a",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-201a"
+    },
+    {
+      "id": "section-45-204",
+      "citation": "45-204",
+      "citations": [
+        "45-204"
+      ],
+      "heading": "45-204",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-204"
+    },
+    {
+      "id": "section-45-204a",
+      "citation": "45-204a",
+      "citations": [
+        "45-204a"
+      ],
+      "heading": "45-204a",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-204a"
+    },
+    {
+      "id": "section-45-204e",
+      "citation": "45-204e",
+      "citations": [
+        "45-204e"
+      ],
+      "heading": "45-204e",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-204e"
+    },
+    {
+      "id": "section-45-205",
+      "citation": "45-205",
+      "citations": [
+        "45-205"
+      ],
+      "heading": "45-205",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-205"
+    },
+    {
+      "id": "section-45-213c",
+      "citation": "45-213c",
+      "citations": [
+        "45-213c"
+      ],
+      "heading": "45-213c",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-213c"
+    },
+    {
+      "id": "section-45-214",
+      "citation": "45-214",
+      "citations": [
+        "45-214"
+      ],
+      "heading": "45-214",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-214"
+    },
+    {
+      "id": "section-45-225",
+      "citation": "45-225",
+      "citations": [
+        "45-225"
+      ],
+      "heading": "45-225",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-225"
+    },
+    {
+      "id": "section-45-226",
+      "citation": "45-226",
+      "citations": [
+        "45-226"
+      ],
+      "heading": "45-226",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-226"
+    },
+    {
+      "id": "section-45-230",
+      "citation": "45-230",
+      "citations": [
+        "45-230"
+      ],
+      "heading": "45-230",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-230"
+    },
+    {
+      "id": "section-45-230a",
+      "citation": "45-230a",
+      "citations": [
+        "45-230a"
+      ],
+      "heading": "45-230a",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-230a"
+    },
+    {
+      "id": "section-45-230kk",
+      "citation": "45-230kk",
+      "citations": [
+        "45-230kk"
+      ],
+      "heading": "45-230kk",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-230kk"
+    },
+    {
+      "id": "section-45-231",
+      "citation": "45-231",
+      "citations": [
+        "45-231"
+      ],
+      "heading": "45-231",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-231"
+    },
+    {
+      "id": "section-45-235",
+      "citation": "45-235",
+      "citations": [
+        "45-235"
+      ],
+      "heading": "45-235",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-235"
+    },
+    {
+      "id": "section-45-236",
+      "citation": "45-236",
+      "citations": [
+        "45-236"
+      ],
+      "heading": "45-236",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-236"
+    },
+    {
+      "id": "section-45-249",
+      "citation": "45-249",
+      "citations": [
+        "45-249"
+      ],
+      "heading": "45-249",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-249"
+    },
+    {
+      "id": "section-45-249a",
+      "citation": "45-249a",
+      "citations": [
+        "45-249a"
+      ],
+      "heading": "45-249a",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-249a"
+    },
+    {
+      "id": "section-45-266c",
+      "citation": "45-266c",
+      "citations": [
+        "45-266c"
+      ],
+      "heading": "45-266c",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-266c"
+    },
+    {
+      "id": "section-45-267",
+      "citation": "45-267",
+      "citations": [
+        "45-267"
+      ],
+      "heading": "45-267",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-267"
+    },
+    {
+      "id": "section-45-271",
+      "citation": "45-271",
+      "citations": [
+        "45-271"
+      ],
+      "heading": "45-271",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-271"
+    },
+    {
+      "id": "section-45-271a",
+      "citation": "45-271a",
+      "citations": [
+        "45-271a"
+      ],
+      "heading": "45-271a",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-271a"
+    },
+    {
+      "id": "section-45-287b",
+      "citation": "45-287b",
+      "citations": [
+        "45-287b"
+      ],
+      "heading": "45-287b",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-287b"
+    },
+    {
+      "id": "section-45-288",
+      "citation": "45-288",
+      "citations": [
+        "45-288"
+      ],
+      "heading": "45-288",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-288"
+    },
+    {
+      "id": "section-45-295",
+      "citation": "45-295",
+      "citations": [
+        "45-295"
+      ],
+      "heading": "45-295",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-295"
+    },
+    {
+      "id": "section-45-296",
+      "citation": "45-296",
+      "citations": [
+        "45-296"
+      ],
+      "heading": "45-296",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-296"
+    },
+    {
+      "id": "section-45-298",
+      "citation": "45-298",
+      "citations": [
+        "45-298"
+      ],
+      "heading": "45-298",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-298"
+    },
+    {
+      "id": "section-45-298a",
+      "citation": "45-298a",
+      "citations": [
+        "45-298a"
+      ],
+      "heading": "45-298a",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-298a"
+    },
+    {
+      "id": "section-45-298i",
+      "citation": "45-298i",
+      "citations": [
+        "45-298i"
+      ],
+      "heading": "45-298i",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-298i"
+    },
+    {
+      "id": "section-45-299",
+      "citation": "45-299",
+      "citations": [
+        "45-299"
+      ],
+      "heading": "45-299",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-299"
+    },
+    {
+      "id": "section-45-319",
+      "citation": "45-319",
+      "citations": [
+        "45-319"
+      ],
+      "heading": "45-319",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-319"
+    },
+    {
+      "id": "section-45-320",
+      "citation": "45-320",
+      "citations": [
+        "45-320"
+      ],
+      "heading": "45-320",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-320"
+    },
+    {
+      "id": "section-45-349",
+      "citation": "45-349",
+      "citations": [
+        "45-349"
+      ],
+      "heading": "45-349",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-349"
+    },
+    {
+      "id": "section-45-350",
+      "citation": "45-350",
+      "citations": [
+        "45-350"
+      ],
+      "heading": "45-350",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-350"
+    },
+    {
+      "id": "section-45-363",
+      "citation": "45-363",
+      "citations": [
+        "45-363"
+      ],
+      "heading": "45-363",
+      "chapter": {
+        "id": "chapter-774",
+        "number": "774",
+        "name": "Chapters 774–800 Probate Courts and Procedure"
+      },
+      "status": "active",
+      "text": "",
+      "href": "?chapter=774&section=section-45-363"
+    }
+  ]
+}

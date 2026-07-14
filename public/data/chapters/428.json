@@ -1,0 +1,82 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-428",
+  "number": "428",
+  "name": "Commercial Feeding Stuffs",
+  "title": {
+    "id": "title-22",
+    "number": "22",
+    "name": "Agriculture. Domestic Animals"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_428.htm",
+  "sections": [
+    {
+      "id": "group-22-112-to-22-113-to-22-114-to-22-115-to-22-116-to-22-117-to-22-118",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "22-112",
+        "22-113",
+        "22-114",
+        "22-115",
+        "22-116",
+        "22-117",
+        "22-118"
+      ],
+      "heading": "Secs. 22-112 to 22-118. Commercial feeding stuffs.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_428.htm#secs_22-112_to_22-118",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Sections 22-112 to 22-118 , inclusive, are repealed."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 6740–6746; 1959, P.A. 358, S. 1; P.A. 412, S. 37; February, 1965, P.A. 296, S. 11.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 22-112 to 22-118 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-22-112",
+      "kind": "section",
+      "citation": "22-112",
+      "citations": [
+        "22-112"
+      ],
+      "heading": "22-112",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_428.htm#sec_22-112",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 22-112 to 22-118. Commercial feeding stuffs. Sections 22-112 to 22-118 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 22-112 to 22-118. Commercial feeding stuffs. Sections 22-112 to 22-118 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-22-118",
+      "kind": "section",
+      "citation": "22-118",
+      "citations": [
+        "22-118"
+      ],
+      "heading": "22-118",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_428.htm#sec_22-118",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 22-112 to 22-118. Commercial feeding stuffs. Sections 22-112 to 22-118 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 22-112 to 22-118. Commercial feeding stuffs. Sections 22-112 to 22-118 , inclusive, are repealed."
+      }
+    }
+  ]
+}

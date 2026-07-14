@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-188a",
+  "number": "188a",
+  "name": "Cooperating Library Service Unit Program",
+  "title": {
+    "id": "title-11",
+    "number": "11",
+    "name": "Libraries and Museums"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_188a.htm",
+  "sections": [
+    {
+      "id": "section-11-9e",
+      "kind": "section",
+      "citation": "11-9e",
+      "citations": [
+        "11-9e"
+      ],
+      "heading": "Sec. 11-9e. “Cooperating library service unit” defined. Budget recommendations.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_188a.htm#sec_11-9e",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) For purposes of this section and section 11-1 , a “cooperating library service unit” means an organization of different types of libraries situated in a stipulated area of the state whose purpose is to improve library service through coordinated planning, resource sharing, and the development of programs too costly or impractical for a single library to maintain.",
+          "(b) The State Library Board shall include in its budget recommendations to the Governor and General Assembly such amounts as are required in the estimation of the board of the operation of the cooperating library service units to provide services pursuant to subsection (a) of this section."
+        ],
+        "sourceNotes": [
+          "(P.A. 82-360, S. 1, 4; P.A. 88-216, S. 4, 7.)"
+        ],
+        "history": [
+          "History: P.A. 88-216 in Subsec. (a) removed reference to Sec. 11-9f repealed by the same act and added reference to Sec. 11-1."
+        ],
+        "annotations": [],
+        "plainText": "(a) For purposes of this section and section 11-1 , a “cooperating library service unit” means an organization of different types of libraries situated in a stipulated area of the state whose purpose is to improve library service through coordinated planning, resource sharing, and the development of programs too costly or impractical for a single library to maintain.\n\n(b) The State Library Board shall include in its budget recommendations to the Governor and General Assembly such amounts as are required in the estimation of the board of the operation of the cooperating library service units to provide services pursuant to subsection (a) of this section."
+      }
+    },
+    {
+      "id": "section-11-9f",
+      "kind": "section",
+      "citation": "11-9f",
+      "citations": [
+        "11-9f"
+      ],
+      "heading": "Sec. 11-9f. Appointment and duties of Cooperating Library Service Unit Review Board.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_188a.htm#sec_11-9f",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 11-9f is repealed."
+        ],
+        "sourceNotes": [
+          "(P.A. 82-360, S. 2, 4; P.A. 88-216, S. 6, 7.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 11-9f is repealed."
+      }
+    }
+  ]
+}

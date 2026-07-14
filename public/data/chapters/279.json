@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-279",
+  "number": "279",
+  "name": "Railroad Construction and Location",
+  "title": {
+    "id": "title-16",
+    "number": "16",
+    "name": "Public Service Companies"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_279.htm",
+  "sections": [
+    {
+      "id": "group-16-76-to-16-139a",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "16-76",
+        "16-139a"
+      ],
+      "heading": "Secs. 16-76 to 16-139a.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_279.htm#secs_16-76_to_16-139a",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 245a, Secs. 13b-244 to 13b-314 , inclusive."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 245a, Secs. 13b-244 to 13b-314 , inclusive."
+      }
+    }
+  ]
+}

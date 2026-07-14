@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-481",
+  "number": "481",
+  "name": "Interstate Water Compact",
+  "title": {
+    "id": "title-25",
+    "number": "25",
+    "name": "Water Resources. Flood and Erosion Control"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_481.htm",
+  "sections": [
+    {
+      "id": "group-25-122-to-25-123-to-25-124-to-25-125",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "25-122",
+        "25-123",
+        "25-124",
+        "25-125"
+      ],
+      "heading": "Secs. 25-122 to 25-125. Authority to enter compact. Assistance to Governor. Connecticut Interstate Water Compact Commission. Appropriation.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_481.htm#secs_25-122_to_25-125",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Sections 25-122 to 25-125 , inclusive, are repealed."
+        ],
+        "sourceNotes": [
+          "(February, 1965, P.A. 626, S. 1–4; P.A. 80-187.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 25-122 to 25-125 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-25-122",
+      "kind": "section",
+      "citation": "25-122",
+      "citations": [
+        "25-122"
+      ],
+      "heading": "25-122",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_481.htm#sec_25-122",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 25-122 to 25-125. Authority to enter compact. Assistance to Governor. Connecticut Interstate Water Compact Commission. Appropriation. Sections 25-122 to 25-125 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 25-122 to 25-125. Authority to enter compact. Assistance to Governor. Connecticut Interstate Water Compact Commission. Appropriation. Sections 25-122 to 25-125 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-25-125",
+      "kind": "section",
+      "citation": "25-125",
+      "citations": [
+        "25-125"
+      ],
+      "heading": "25-125",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_481.htm#sec_25-125",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 25-122 to 25-125. Authority to enter compact. Assistance to Governor. Connecticut Interstate Water Compact Commission. Appropriation. Sections 25-122 to 25-125 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 25-122 to 25-125. Authority to enter compact. Assistance to Governor. Connecticut Interstate Water Compact Commission. Appropriation. Sections 25-122 to 25-125 , inclusive, are repealed."
+      }
+    }
+  ]
+}

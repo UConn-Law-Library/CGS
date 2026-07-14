@@ -1,0 +1,98 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-419c",
+  "number": "419c",
+  "name": "Illuminating Oils, Burning Fluids and Kerosene",
+  "title": {
+    "id": "title-21a",
+    "number": "21a",
+    "name": "Consumer Protection"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_419c.htm",
+  "sections": [
+    {
+      "id": "section-21a-165",
+      "kind": "section",
+      "citation": "21a-165",
+      "citations": [
+        "21a-165"
+      ],
+      "heading": "Sec. 21a-165. (Formerly Sec. 19-292). Legal test for oil.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_419c.htm#sec_21a-165",
+      "status": "active",
+      "content": {
+        "body": [
+          "No person shall sell or give away, for use in this state in wick lamps or wick stoves, oil or liquid product of petroleum of any kind standing less than one hundred and ten degrees Fahrenheit flash test or one hundred and forty degrees Fahrenheit fire test, both of said tests to be determined by the use of C. J. Tagliabue's open test cup method, and either of said tests shall be the legal test. Any person who violates any provision of this section shall be fined not more than three thousand five hundred dollars or imprisoned not more than two years, or both."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 6731; P.A. 13-258, S. 12.)"
+        ],
+        "history": [
+          "History: Sec. 19-292 transferred to Sec. 21a-165 in 1983; P.A. 13-258 changed maximum fine from $300 to $3,500 and made a technical change."
+        ],
+        "annotations": [
+          {
+            "first": true,
+            "text": "Annotation to former section 19-292:"
+          },
+          {
+            "first": false,
+            "text": "Previous law. 79 C. 463."
+          }
+        ],
+        "plainText": "No person shall sell or give away, for use in this state in wick lamps or wick stoves, oil or liquid product of petroleum of any kind standing less than one hundred and ten degrees Fahrenheit flash test or one hundred and forty degrees Fahrenheit fire test, both of said tests to be determined by the use of C. J. Tagliabue's open test cup method, and either of said tests shall be the legal test. Any person who violates any provision of this section shall be fined not more than three thousand five hundred dollars or imprisoned not more than two years, or both."
+      }
+    },
+    {
+      "id": "section-21a-166",
+      "kind": "section",
+      "citation": "21a-166",
+      "citations": [
+        "21a-166"
+      ],
+      "heading": "Sec. 21a-166. Regulation of the sale, transport and delivery of kerosene.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_419c.htm#sec_21a-166",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) No person shall sell or offer for sale at retail any crude oil distillate in a container or from a pump, labeled “1-K Kerosene”, or with any similar term indicating that the product being sold is 1-K kerosene, unless such distillate meets standards established by the American Society for Testing and Materials for use in non-flue-connected kerosene burner appliances and contains not more than four one hundredths of one per cent sulfur by weight.",
+          "(b) Kerosene shall not be transported or delivered in a vehicle tank containing gasoline and no seller or dispenser of kerosene shall store kerosene in a red container. Each item dispensing kerosene for retail sale shall bear a printed sign or placard containing the following information concerning containers for kerosene: Portable containers should be completely empty prior to filling, be constructed of metal or other approved material, have a tight closure, be designed so that contents can be poured without spillage and have a warning label affixed.",
+          "(c) A violation of subsection (a) or (b) of this section shall be deemed a class C misdemeanor."
+        ],
+        "sourceNotes": [
+          "(P.A. 83-386, S. 1–3.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "(a) No person shall sell or offer for sale at retail any crude oil distillate in a container or from a pump, labeled “1-K Kerosene”, or with any similar term indicating that the product being sold is 1-K kerosene, unless such distillate meets standards established by the American Society for Testing and Materials for use in non-flue-connected kerosene burner appliances and contains not more than four one hundredths of one per cent sulfur by weight.\n\n(b) Kerosene shall not be transported or delivered in a vehicle tank containing gasoline and no seller or dispenser of kerosene shall store kerosene in a red container. Each item dispensing kerosene for retail sale shall bear a printed sign or placard containing the following information concerning containers for kerosene: Portable containers should be completely empty prior to filling, be constructed of metal or other approved material, have a tight closure, be designed so that contents can be poured without spillage and have a warning label affixed.\n\n(c) A violation of subsection (a) or (b) of this section shall be deemed a class C misdemeanor."
+      }
+    },
+    {
+      "id": "group-21a-167-to-21a-168-to-21a-169-to-21a-170-to-21a-171-to-21a-172-to-21a-173-to-21a-174",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "21a-167",
+        "21a-168",
+        "21a-169",
+        "21a-170",
+        "21a-171",
+        "21a-172",
+        "21a-173",
+        "21a-174"
+      ],
+      "heading": "Secs. 21a-167 to 21a-174.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_419c.htm#secs_21a-167_to_21a-174",
+      "status": "reserved",
+      "content": {
+        "body": [
+          "Reserved for future use."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Reserved for future use."
+      }
+    }
+  ]
+}

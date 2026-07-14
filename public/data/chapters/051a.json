@@ -1,0 +1,102 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-051a",
+  "number": "051a",
+  "name": "Public Building Contracts",
+  "title": {
+    "id": "title-04",
+    "number": "04",
+    "name": "Management of State Agencies"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_051a.htm",
+  "sections": [
+    {
+      "id": "group-4-137a-to-4-137b-to-4-137c-to-4-137d-to-4-137e",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "4-137a",
+        "4-137b",
+        "4-137c",
+        "4-137d",
+        "4-137e"
+      ],
+      "heading": "Secs. 4-137a to 4-137e.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_051a.htm#secs_4-137a_to_4-137e",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 60, Part II, Secs. 4b-91 to 4b-95 , inclusive."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 60, Part II, Secs. 4b-91 to 4b-95 , inclusive."
+      }
+    },
+    {
+      "id": "section-4-137f",
+      "kind": "section",
+      "citation": "4-137f",
+      "citations": [
+        "4-137f"
+      ],
+      "heading": "Sec. 4-137f. Sub-bids; relation to general bidders; procedure on rejection of bids.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_051a.htm#sec_4-137f",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 4-137f is repealed."
+        ],
+        "sourceNotes": [
+          "(P.A. 73-528, S. 6–8, 12; P.A. 74-246, S. 6, 7, 11; P.A. 79-349, S. 1, 2; 79-388; P.A. 82-447, S. 7.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 4-137f is repealed."
+      }
+    },
+    {
+      "id": "section-4-137g",
+      "kind": "section",
+      "citation": "4-137g",
+      "citations": [
+        "4-137g"
+      ],
+      "heading": "Sec. 4-137g.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_051a.htm#sec_4-137g",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 60, Part II, Sec. 4b-96 ."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 60, Part II, Sec. 4b-96 ."
+      }
+    },
+    {
+      "id": "section-4-137h",
+      "kind": "section",
+      "citation": "4-137h",
+      "citations": [
+        "4-137h"
+      ],
+      "heading": "Sec. 4-137h. General bidder may submit sub-bid.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_051a.htm#sec_4-137h",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 4-137h is repealed."
+        ],
+        "sourceNotes": [
+          "(P.A. 73-528, S. 10, 12; P.A. 74-246, S. 9, 11; P.A. 79-441; P.A. 82-447, S. 7.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 4-137h is repealed."
+      }
+    }
+  ]
+}

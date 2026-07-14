@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://uconn-law-library.github.io/CGS/schemas/chapter.schema.json",
+  "title": "CGS canonical chapter",
+  "type": "object",
+  "required": ["schemaVersion", "id", "number", "name", "title", "sourceUrl", "sections"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "id": { "type": "string", "pattern": "^chapter-[0-9a-z-]+$" },
+    "number": { "type": "string", "pattern": "^[0-9a-z]+(?:-[0-9a-z]+)*$" },
+    "name": { "type": "string", "minLength": 1 },
+    "title": { "$ref": "#/$defs/titleReference" },
+    "sourceUrl": { "type": "string", "format": "uri" },
+    "sections": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/section" }
+    }
+  },
+  "$defs": {
+    "titleReference": {
+      "type": "object",
+      "required": ["id", "number", "name"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "pattern": "^title-[0-9a-z-]+$" },
+        "number": { "type": "string", "pattern": "^[0-9]+[a-z]*$" },
+        "name": { "type": "string", "minLength": 1 }
+      }
+    },
+    "annotation": {
+      "type": "object",
+      "required": ["first", "text"],
+      "additionalProperties": false,
+      "properties": {
+        "first": { "type": "boolean" },
+        "text": { "type": "string", "minLength": 1 }
+      }
+    },
+    "content": {
+      "type": "object",
+      "required": ["body", "sourceNotes", "history", "annotations", "plainText"],
+      "additionalProperties": false,
+      "properties": {
+        "body": { "type": "array", "items": { "type": "string" } },
+        "sourceNotes": { "type": "array", "items": { "type": "string" } },
+        "history": { "type": "array", "items": { "type": "string" } },
+        "annotations": { "type": "array", "items": { "$ref": "#/$defs/annotation" } },
+        "plainText": { "type": "string" }
+      }
+    },
+    "section": {
+      "type": "object",
+      "required": ["id", "kind", "citation", "citations", "heading", "sourceUrl", "status", "content"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "pattern": "^(section|group)-[0-9a-z-]+$" },
+        "kind": { "enum": ["section", "group"] },
+        "citation": { "type": ["string", "null"] },
+        "citations": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+        "heading": { "type": "string", "minLength": 1 },
+        "sourceUrl": { "type": "string", "format": "uri" },
+        "sourceAnchor": { "type": "string", "minLength": 1 },
+        "identifierWarning": { "type": "string", "minLength": 1 },
+        "status": { "enum": ["active", "mixed", "obsolete", "repealed", "reserved", "transferred"] },
+        "content": { "$ref": "#/$defs/content" }
+      }
+    }
+  }
+}

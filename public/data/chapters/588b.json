@@ -1,0 +1,104 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-588b",
+  "number": "588b",
+  "name": "Loan Incentives for Employment",
+  "title": {
+    "id": "title-32",
+    "number": "32",
+    "name": "Commerce and Economic and Community Development"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588b.htm",
+  "sections": [
+    {
+      "id": "group-32-130-to-32-131",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "32-130",
+        "32-131"
+      ],
+      "heading": "Secs. 32-130 and 32-131. Loan incentives for employment. Bond issue.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588b.htm#secs_32-130_and_32-131",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Sections 32-130 and 32-131 are repealed."
+        ],
+        "sourceNotes": [
+          "(P.A. 85-536, S. 1–3; P.A. 86-107, S. 16, 19; P.A. 87-416, S. 20, 24; P.A. 88-265, S. 35, 36.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 32-130 and 32-131 are repealed."
+      }
+    },
+    {
+      "id": "group-32-132-to-32-133-to-32-134-to-32-135-to-32-136-to-32-137-to-32-138-to-32-139",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "32-132",
+        "32-133",
+        "32-134",
+        "32-135",
+        "32-136",
+        "32-137",
+        "32-138",
+        "32-139"
+      ],
+      "heading": "Secs. 32-132 to 32-139.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588b.htm#secs_32-132_to_32-139",
+      "status": "reserved",
+      "content": {
+        "body": [
+          "Reserved for future use."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Reserved for future use."
+      }
+    },
+    {
+      "id": "section-32-130",
+      "kind": "section",
+      "citation": "32-130",
+      "citations": [
+        "32-130"
+      ],
+      "heading": "32-130",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588b.htm#sec_32-130",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 32-130 and 32-131. Loan incentives for employment. Bond issue. Sections 32-130 and 32-131 are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 32-130 and 32-131. Loan incentives for employment. Bond issue. Sections 32-130 and 32-131 are repealed."
+      }
+    },
+    {
+      "id": "section-32-131",
+      "kind": "section",
+      "citation": "32-131",
+      "citations": [
+        "32-131"
+      ],
+      "heading": "32-131",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588b.htm#sec_32-131",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 32-130 and 32-131. Loan incentives for employment. Bond issue. Sections 32-130 and 32-131 are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 32-130 and 32-131. Loan incentives for employment. Bond issue. Sections 32-130 and 32-131 are repealed."
+      }
+    }
+  ]
+}

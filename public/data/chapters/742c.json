@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-742c",
+  "number": "742c",
+  "name": "Refuse Removal or Disposal Contracts",
+  "title": {
+    "id": "title-42",
+    "number": "42",
+    "name": "Business, Selling, Trading and Collection Practices"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_742c.htm",
+  "sections": [
+    {
+      "id": "section-42-158aa",
+      "kind": "section",
+      "citation": "42-158aa",
+      "citations": [
+        "42-158aa"
+      ],
+      "heading": "Sec. 42-158aa. Refuse removal or disposal contracts. Renewal. Conditions. Exceptions.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_742c.htm#sec_42-158aa",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) No provision of a contract for refuse removal or disposal which states that the term of such contract shall be deemed renewed for a specified additional period of time shall be enforceable unless the person against whom such provision is to be enforced initialed or signed a conspicuous statement immediately following such provision, stating, in boldface type at least twelve points in size: “I acknowledge that this contract contains an AUTOMATIC RENEWAL provision.” The provisions of this subsection apply to written contracts and shall also apply to contracts meeting the requirements of the Connecticut Uniform Electronic Transactions Act, sections 1-266 to 1-286 , inclusive.",
+          "(b) The provisions of this section shall not apply to: (1) Any contract in which the automatic renewal period specified is thirty-one days or less and can be cancelled at any time without penalty or damages, or (2) a written contract subject to the provisions of section 42-126b ."
+        ],
+        "sourceNotes": [
+          "(P.A. 07-215, S. 1.)"
+        ],
+        "history": [
+          "History: P.A. 07-215 effective October 1, 2007, and applicable to contracts entered into on and after that date."
+        ],
+        "annotations": [],
+        "plainText": "(a) No provision of a contract for refuse removal or disposal which states that the term of such contract shall be deemed renewed for a specified additional period of time shall be enforceable unless the person against whom such provision is to be enforced initialed or signed a conspicuous statement immediately following such provision, stating, in boldface type at least twelve points in size: “I acknowledge that this contract contains an AUTOMATIC RENEWAL provision.” The provisions of this subsection apply to written contracts and shall also apply to contracts meeting the requirements of the Connecticut Uniform Electronic Transactions Act, sections 1-266 to 1-286 , inclusive.\n\n(b) The provisions of this section shall not apply to: (1) Any contract in which the automatic renewal period specified is thirty-one days or less and can be cancelled at any time without penalty or damages, or (2) a written contract subject to the provisions of section 42-126b ."
+      }
+    },
+    {
+      "id": "group-42-158bb-to-42-158cc-to-42-158dd-to-42-158ee",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "42-158bb",
+        "42-158cc",
+        "42-158dd",
+        "42-158ee"
+      ],
+      "heading": "Secs. 42-158bb to 42-158ee.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_742c.htm#secs_42-158bb_to_42-158ee",
+      "status": "reserved",
+      "content": {
+        "body": [
+          "Reserved for future use."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Reserved for future use."
+      }
+    }
+  ]
+}

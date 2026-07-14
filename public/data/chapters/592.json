@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-592",
+  "number": "592",
+  "name": "Hospital Service Corporations",
+  "title": {
+    "id": "title-33",
+    "number": "33",
+    "name": "Corporations"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_592.htm",
+  "sections": [
+    {
+      "id": "group-33-157-to-33-158-to-33-159-to-33-160-to-33-161-to-33-162-to-33-163-to-33-164-to-33-165-to-33-166-to-33-167",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "33-157",
+        "33-158",
+        "33-159",
+        "33-160",
+        "33-161",
+        "33-162",
+        "33-163",
+        "33-164",
+        "33-165",
+        "33-166",
+        "33-167"
+      ],
+      "heading": "Secs. 33-157 to 33-167.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_592.htm#secs_33-157_to_33-167",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 698a, Part II, Secs. 38a-199 to 38a-209 , inclusive."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 698a, Part II, Secs. 38a-199 to 38a-209 , inclusive."
+      }
+    }
+  ]
+}

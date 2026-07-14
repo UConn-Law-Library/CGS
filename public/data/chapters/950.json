@@ -1,0 +1,286 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-950",
+  "number": "950",
+  "name": "Penal Code: General Provisions",
+  "title": {
+    "id": "title-53a",
+    "number": "53a",
+    "name": "Penal Code"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_950.htm",
+  "sections": [
+    {
+      "id": "section-53a-1",
+      "kind": "section",
+      "citation": "53a-1",
+      "citations": [
+        "53a-1"
+      ],
+      "heading": "Sec. 53a-1. Short title: Penal Code.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_950.htm#sec_53a-1",
+      "status": "active",
+      "content": {
+        "body": [
+          "This title shall be known as the “Penal Code”."
+        ],
+        "sourceNotes": [
+          "(1969, P.A. 828, S. 1.)"
+        ],
+        "history": [],
+        "annotations": [
+          {
+            "first": true,
+            "text": "Cited. 171 C. 524."
+          }
+        ],
+        "plainText": "This title shall be known as the “Penal Code”."
+      }
+    },
+    {
+      "id": "section-53a-2",
+      "kind": "section",
+      "citation": "53a-2",
+      "citations": [
+        "53a-2"
+      ],
+      "heading": "Sec. 53a-2. Application and scope.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_950.htm#sec_53a-2",
+      "status": "active",
+      "content": {
+        "body": [
+          "The provisions of this title shall apply to any offense defined in this title or the general statutes, unless otherwise expressly provided or unless the context otherwise requires, and committed on or after October 1, 1971, and to any defense to prosecution for such an offense."
+        ],
+        "sourceNotes": [
+          "(1969, P.A. 828, S. 2.)"
+        ],
+        "history": [],
+        "annotations": [
+          {
+            "first": true,
+            "text": "Cited. 192 C. 154; 201 C. 505; 207 C. 456; 211 C. 258; 228 C. 758."
+          },
+          {
+            "first": false,
+            "text": "Cited. 2 CA 204; 11 CA 665; 29 CA 591."
+          }
+        ],
+        "plainText": "The provisions of this title shall apply to any offense defined in this title or the general statutes, unless otherwise expressly provided or unless the context otherwise requires, and committed on or after October 1, 1971, and to any defense to prosecution for such an offense."
+      }
+    },
+    {
+      "id": "section-53a-3",
+      "kind": "section",
+      "citation": "53a-3",
+      "citations": [
+        "53a-3"
+      ],
+      "heading": "Sec. 53a-3. Definitions.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_950.htm#sec_53a-3",
+      "status": "active",
+      "content": {
+        "body": [
+          "Except where different meanings are expressly specified, the following terms have the following meanings when used in this title:",
+          "(1) “Person” means a human being, and, where appropriate, a public or private corporation, a limited liability company, an unincorporated association, a partnership, a government or a governmental instrumentality;",
+          "(2) “Possess” means to have physical possession or otherwise to exercise dominion or control over tangible property;",
+          "(3) “Physical injury” means impairment of physical condition or pain;",
+          "(4) “Serious physical injury” means physical injury which creates a substantial risk of death, or which causes serious disfigurement, serious impairment of health or serious loss or impairment of the function of any bodily organ;",
+          "(5) “Deadly physical force” means physical force which can be reasonably expected to cause death or serious physical injury;",
+          "(6) “Deadly weapon” means any weapon, whether loaded or unloaded, from which a shot may be discharged, or a switchblade knife, gravity knife, billy, blackjack, bludgeon, or metal knuckles. The definition of “deadly weapon” in this subdivision shall be deemed not to apply to section 29-38 or 53-206 ;",
+          "(7) “Dangerous instrument” means any instrument, article or substance which, under the circumstances in which it is used or attempted or threatened to be used, is capable of causing death or serious physical injury, and includes a “vehicle” as that term is defined in this section and includes a dog that has been commanded to attack, except a dog owned by a law enforcement agency of the state or any political subdivision thereof or of the federal government when such dog is in the performance of its duties under the direct supervision, care and control of an assigned law enforcement officer;",
+          "(8) “Vehicle” means a “motor vehicle” as defined in section 14-1 , a snowmobile, any aircraft, or any vessel equipped for propulsion by mechanical means or sail;",
+          "(9) “Peace officer” means a member of the Division of State Police within the Department of Emergency Services and Public Protection or an organized local police department, a chief inspector or inspector in the Division of Criminal Justice, a state marshal while exercising authority granted under any provision of the general statutes, a judicial marshal in the performance of the duties of a judicial marshal, a conservation officer or special conservation officer, as defined in section 26-5 , a constable who performs criminal law enforcement duties, a special policeman appointed under section 29-18 , 29-18a , 29-18b or 29-19 , an adult probation officer, an official of the Department of Correction authorized by the Commissioner of Correction to make arrests in a correctional institution or facility, any investigator in the investigations unit of the office of the State Treasurer, an inspector of motor vehicles in the Department of Motor Vehicles, who is certified under the provisions of sections 7-294a to 7-294e , inclusive, a United States marshal or deputy marshal, any special agent of the federal government authorized to enforce the provisions of Title 21 of the United States Code, or a member of a law enforcement unit of the Mashantucket Pequot Tribe or the Mohegan Tribe of Indians of Connecticut created and governed by a memorandum of agreement under section 47-65c who is certified as a police officer by the Police Officer Standards and Training Council pursuant to sections 7-294a to 7-294e , inclusive;",
+          "(10) “Firefighter” means any agent of a municipality whose duty it is to protect life and property therein as a member of a duly constituted fire department whether professional or volunteer;",
+          "(11) A person acts “intentionally” with respect to a result or to conduct described by a statute defining an offense when his conscious objective is to cause such result or to engage in such conduct;",
+          "(12) A person acts “knowingly” with respect to conduct or to a circumstance described by a statute defining an offense when he is aware that his conduct is of such nature or that such circumstance exists;",
+          "(13) A person acts “recklessly” with respect to a result or to a circumstance described by a statute defining an offense when he is aware of and consciously disregards a substantial and unjustifiable risk that such result will occur or that such circumstance exists. The risk must be of such nature and degree that disregarding it constitutes a gross deviation from the standard of conduct that a reasonable person would observe in the situation;",
+          "(14) A person acts with “criminal negligence” with respect to a result or to a circumstance described by a statute defining an offense when he fails to perceive a substantial and unjustifiable risk that such result will occur or that such circumstance exists. The risk must be of such nature and degree that the failure to perceive it constitutes a gross deviation from the standard of care that a reasonable person would observe in the situation;",
+          "(15) “Machine gun” means a weapon of any description, irrespective of size, by whatever name known, loaded or unloaded, from which a number of shots or bullets may be rapidly or automatically discharged from a magazine with one continuous pull of the trigger and includes a submachine gun;",
+          "(16) “Rifle” means a weapon designed or redesigned, made or remade, and intended to be fired from the shoulder and designed or redesigned and made or remade to use the energy of the explosive in a fixed metallic cartridge to fire only a single projectile through a rifled bore for each single pull of the trigger;",
+          "(17) “Shotgun” means a weapon designed or redesigned, made or remade, and intended to be fired from the shoulder and designed or redesigned and made or remade to use the energy of the explosive in a fixed shotgun shell to fire through a smooth bore either a number of ball shot or a single projectile for each single pull of the trigger;",
+          "(18) “Pistol” or “revolver” means any firearm having a barrel less than twelve inches;",
+          "(19) “Firearm” means any sawed-off shotgun, machine gun, rifle, shotgun, pistol, revolver or other weapon, whether loaded or unloaded from which a shot may be discharged;",
+          "(20) “Electronic defense weapon” means a weapon which by electronic impulse or current is capable of immobilizing a person temporarily, including a stun gun or other conductive energy device;",
+          "(21) “Martial arts weapon” means a nunchaku, kama, kasari-fundo, octagon sai, tonfa or chinese star;",
+          "(22) “Employee of an emergency medical service organization” means an ambulance driver, emergency medical technician or paramedic as defined in section 19a-175 ;",
+          "(23) “Railroad property” means all tangible property owned, leased or operated by a railroad carrier including, but not limited to, a right-of-way, track, roadbed, bridge, yard, shop, station, tunnel, viaduct, trestle, depot, warehouse, terminal or any other structure or appurtenance or equipment owned, leased or used in the operation of a railroad carrier including a train, locomotive, engine, railroad car, signals or safety device or work equipment or rolling stock;",
+          "(24) “Serious firearm offense” means a violation of section 29-36 , 29-36a or 53-202w , possession of a stolen firearm or a firearm that is altered in a manner that renders the firearm unlawful, or any crime of which an essential element is that the person discharged, used or was armed with and threatened the use of a firearm; and",
+          "(25) “Serious firearm offender” means a person who has (A) two convictions for a serious firearm offense, (B) a conviction for a serious firearm offense and was previously convicted of a violation of section 29-36 , 29-36a , subdivision (1) of subsection (a) of section 53a-217 or subdivision (1) of subsection (a) of section 53a-217c , or (C) a conviction for a serious firearm offense and was previously convicted of two or more additional felony offenses."
+        ],
+        "sourceNotes": [
+          "(1969, P.A. 828, S. 3; 1971, P.A. 871, S. 1; 1972, P.A. 188, S. 3; P.A. 73-295; 73-639, S. 1; P.A. 74-180; 74-186, S. 8, 129; P.A. 75-283; 75-380, S. 1; P.A. 76-111, S. 9; P.A. 77-604, S. 38, 84; 77-614, S. 486, 610; P.A. 80-308; 80-394, S. 8, 13; P.A. 85-602, S. 3, 4; P.A. 86-280, S. 2; 86-287, S. 2; P.A. 90-157, S. 1; P.A. 91-171, S. 1; May 25 Sp. Sess. P.A. 94-1, S. 98, 130; P.A. 95-79, S. 182, 189; 95-277, S. 13, 19; P.A. 96-243, S. 7, 16; P.A. 00-99, S. 5, 154; 00-149, S. 1; P.A. 01-84, S. 9, 26; P.A. 02-132, S. 29; P.A. 07-123, S. 6; P.A. 11-51, S. 134; P.A. 13-170, S. 3; P.A. 15-211, S. 18; P.A. 19-108, S. 1; P.A. 21-31, S. 4; P.A. 22-117, S. 8; P.A. 23-53, S. 36.)"
+        ],
+        "history": [
+          "History: 1971 act included snowmobiles in definition of “vehicle” and added definitions of “peace officer” and “fireman”; 1972 act redefined “peace officer” to include special policemen appointed under Sec. 29-18; P.A. 73-295 added reference to special policemen appointed under Sec. 29-18a in definition of “peace officer”; P.A. 73-639 specified that weapons “whether loaded or unloaded” are deadly weapons; P.A. 74-180 amended definition of “deadly weapon” to specify its inapplicability to Secs. 29-38 and 53-206; P.A. 74-186 replaced county detectives with detectives in division of criminal justice in definition of “peace officer”, county government having been abolished; P.A. 75-283 included special policemen appointed under Sec. 29-19 in definition of “peace officer”; P.A. 75-380 added Subdivs. (15) to (19) defining “machine gun”, “rifle”, “shotgun”, “pistol” or “revolver” and “firearm”; P.A. 76-111 substituted chief inspectors and inspectors for detectives in definition of “peace officer”; P.A. 77-604 made technical grammatical correction in Subdiv. (9); P.A. 77-614 made state police department a division within the department of public safety, effective January 1, 1979, amending Subdiv. (9) accordingly; P.A. 80-308 included adult probation officers appointed under Sec. 54-104 in definition of “peace officer”; P.A. 80-394 included special deputy sheriffs in definition of “peace officer”; P.A. 85-602 redefined “peace officer” to include investigators in the investigations unit of the state treasurer's office; P.A. 86-280 defined “martial arts weapon”; P.A. 86-287 reiterated definition of “martial arts weapon” and defined “electronic defense weapon”; P.A. 90-157 added Subdiv. (22) defining “employee of an emergency medical service organization”; P.A. 91-171 included special agents of the federal government authorized to enforce the provisions of Title 21 of the United States Code in definition of “peace officer”; May 25 Sp. Sess. P.A. 94-1 amended Subdiv. (9) by making technical change, effective July 1, 1994; P.A. 95-79 redefined “person” to include a limited liability company, effective May 31, 1995; P.A. 95-277 redefined “peace officer”, to include investigators in the office of the State Treasurer rather than Workers' Compensation Commission investigators, effective June 29, 1995; P.A. 96-243 amended Subdiv. (7) to include certain dogs in the definition of “dangerous instrument”, effective June 6, 1996; P.A. 00-99 amended Subdiv. (9) by deleting reference to sheriff, deputy sheriff and special deputy sheriff and adding provision re state marshal exercising statutory authority and judicial marshal in performance of duties, effective December 1, 2000; P.A. 00-149 added Subdiv. (23) defining “railroad property”; P.A. 01-84 amended Subdiv. (10) to replace “Fireman” with “Firefighter”, effective July 1, 2001; P.A. 02-132 amended Subdiv. (9) by deleting provision re appointment under Sec. 54-104; P.A. 07-123 redefined “electronic defense weapon” in Subdiv. (20) to include “a stun gun or other conductive energy device”; pursuant to P.A. 11-51, “Department of Public Safety” was changed editorially by the Revisors to “Department of Emergency Services and Public Protection” in Subdiv. (9), effective July 1, 2011; P.A. 13-170 redefined “peace officer” in Subdiv. (9) to include member of law enforcement unit of Mashantucket Pequot Tribe or Mohegan Tribe of Indians of Connecticut under certain conditions, effective June 25, 2013; P.A. 15-211 amended Subdiv. (9) by redefining “peace officer” to include United States marshal or deputy marshal, effective June 30, 2015; P.A. 19-108 redefined “peace officer” in Subdiv. (9); P.A. 21-31 redefined “electronic defense weapon” in Subdiv. (20) to delete requirement that the weapon not be capable of inflicting death or serious physical injury, effective July 1, 2021; P.A. 22-117 redefined “peace officer” in Subdiv. (9), effective May 27, 2022; P.A. 23-53 added Subdiv. (24) defining “serious firearm offense” and Subdiv. (25) defining “serious firearm offender”."
+        ],
+        "annotations": [
+          {
+            "first": true,
+            "text": "Court correctly charged jury on definition of dangerous instrument. 173 C. 91. Subdiv. (3) compared to Subdiv. (4). 175 C. 204. Cited. 182 C. 501; 197 C. 574; 201 C. 505; 211 C. 258; 226 C. 514; 231 C. 545. Offense of carrying a dangerous weapon is not constitutionally overbroad in violation of the first and fourteenth amendments to the U.S. Constitution; defendant's threatened use of a table leg to inflict serious bodily injury against victim, in the event that victim continued to bother him, constitutes a violation of this section and Sec. 53-206 if the threat is found to be a true threat not protected by the first amendment to the U.S. Constitution. 287 C. 237. Evidence re use of pepper spray causing temporary blindness, chemical conjunctivitis and chemical burns constituted sufficient evidence of “serious physical injury” and “dangerous instrument” under section. 292 C. 533."
+          },
+          {
+            "first": false,
+            "text": "Cited. 8 CA 545; 9 CA 686; 11 CA 665; 12 CA 221; Id., 225; 14 CA 10; Id., 67; 37 CA 338. Earlier jury instruction in earlier related case defining assault as the reduced ability to act as one would have otherwise acted did not prejudice jury. 71 CA 190."
+          },
+          {
+            "first": false,
+            "text": "Cited. 35 CS 519; 37 CS 661; 38 CS 619; 39 CS 494; 40 CS 498; 43 CS 46."
+          },
+          {
+            "first": false,
+            "text": "Subdiv. (1):"
+          },
+          {
+            "first": false,
+            "text": "“Human being” construed for purposes of murder statute in accordance with long-standing common-law principle that the term includes a fetus that has been born alive. 296 C. 622."
+          },
+          {
+            "first": false,
+            "text": "Cited. 17 CA 326; 25 CA 586; judgment reversed, see 223 C. 492."
+          },
+          {
+            "first": false,
+            "text": "Subdiv. (3):"
+          },
+          {
+            "first": false,
+            "text": "Cited. 171 C. 276; 197 C. 602."
+          },
+          {
+            "first": false,
+            "text": "Cited. 3 CA 353; 5 CA 612; 10 CA 330; 14 CA 586; 17 CA 226; Id., 391; 23 CA 160; 26 CA 641; 28 CA 581; judgment reversed, see 226 C. 601; Id., 612; 37 CA 733; 41 CA 255; Id., 565; 43 CA 76; 45 CA 591."
+          },
+          {
+            "first": false,
+            "text": "Subdiv. (4):"
+          },
+          {
+            "first": false,
+            "text": "Cited. 172 C. 275; 173 C. 389; 174 C. 604; 181 C. 406; 182 C. 66; 186 C. 654; 189 C. 303; 197 C. 602; 202 C. 463; 211 C. 441; 213 C. 593; 225 C. 450; 231 C. 115; 237 C. 748. “Disfigurement” as defined in Sec. 31-275(8) and used in the workers' compensation statutes, applies to the Penal Code for purposes of “serious physical injury” as defined in Subdiv. 332 C. 472."
+          },
+          {
+            "first": false,
+            "text": "Cited. 5 CA 590; Id., 612; 6 CA 667; 8 CA 496; 10 CA 330; Id., 462; 11 CA 499; 14 CA 657; 15 CA 531; 16 CA 346; 17 CA 226; 19 CA 654; Id., 674; 21 CA 688; 23 CA 502; 25 CA 734; 26 CA 641; 28 CA 81; Id., 402; Id., 581; judgment reversed, see 226 C. 601; Id., 612; 29 CA 679; 30 CA 232; 33 CA 782; 34 CA 261; 38 CA 20; 39 CA 18; judgment reversed, see 237 C. 748; 41 CA 565; 42 CA 307; 45 CA 270; Id., 591. “Disfigurement” defined as that which impairs or injures beauty, symmetry or appearance of a person or which renders unsightly, misshapen or imperfect or deforms in some manner. 82 CA 684. Victim's testimony and medical records re injury that required surgical treatment, left victim with impairment to the use of her dominant hand and left victim's hand visibly scarred was sufficient to establish proof of serious physical injury. 116 CA 196. The jury reasonably could have concluded that scars constituted serious physical injury because they negatively affected the appearance of skin on face and abdomen. 118 CA 831."
+          },
+          {
+            "first": false,
+            "text": "Subdiv. (5):"
+          },
+          {
+            "first": false,
+            "text": "Cited. 186 C. 654; 188 C. 653; 213 C. 593."
+          },
+          {
+            "first": false,
+            "text": "Cited. 8 CA 667; 16 CA 346; 25 CA 734; 30 CA 406; judgment reversed, see 228 C. 335; 31 CA 58."
+          },
+          {
+            "first": false,
+            "text": "Subdiv. (6):"
+          },
+          {
+            "first": false,
+            "text": "Cited. 169 C. 683; 171 C. 277; 175 C. 569; 177 C. 379; 179 C. 576; 182 C. 262; Id., 533; 185 C. 473; 189 C. 268; 190 C. 822; 195 C. 567; Id., 651; Id., 668; 197 C. 507; 203 C. 506. If a weapon from which a shot may be discharged is designed for violence and is capable of inflicting death or serious physical injury, it is a deadly weapon regardless of whether the shot is discharged by gunpowder. 278 C. 113."
+          },
+          {
+            "first": false,
+            "text": "Cited. 7 CA 445; 19 CA 111; judgment reversed, see 215 C. 538; 21 CA 299; 25 CA 104; 29 CA 679; 31 CA 614; 33 CA 468; 39 CA 579; 45 CA 591. Trial court did not invade jury's fact-finding province when it ruled as a matter of law that BB gun in evidence was a deadly weapon under Subdiv. in this case. 110 CA 263."
+          },
+          {
+            "first": false,
+            "text": "Subdiv. (7):"
+          },
+          {
+            "first": false,
+            "text": "Cited. 169 C. 683; 171 C. 277. Tire iron used to break into apartment is not a dangerous instrument per se; potential for injury considered only in conjunction with circumstances of actual or threatened use. 177 C. 140. Cited. 182 C. 533; 190 C. 822; 195 C. 668; 202 C. 629; 218 C. 432. A fist or other body part is not a dangerous instrument under definition. 307 C. 115."
+          },
+          {
+            "first": false,
+            "text": "Cited. 5 CA 40; 6 CA 667; 7 CA 27; Id., 445; 10 CA 330; 14 CA 586; Id., 657; 15 CA 586; 17 CA 226; 21 CA 299; 25 CA 171; 28 CA 612; 29 CA 262; Id., 679; 33 CA 468; 38 CA 868; 45 CA 270. Jury reasonably could have found that defendant's “feet and footwear” were a “dangerous instrument” in the manner in which they were used because of defendant's above average size, the age and delicate health of the elderly victim, the continual kicking of such victim in the area of several vital organs and the force of the kicks which was intensified by the weight of the footwear. 74 CA 545. Dangerous instrument as defined in Subdiv. is “any instrument, article or substance which, under the circumstances in which it is used ... or threatened to be used, is capable of causing death or serious physical injury”. 81 CA 367. Evidence was sufficient to prove that a knife or similar instrument was used thereby constituting a dangerous instrument. 98 CA 13. Jury reasonably could have concluded that being stabbed with a hypodermic syringe potentially contaminated with a blood-borne pathogen constituted a dangerous instrument. 161 CA 379. Jury reasonably could have found that a PVC pipe, under the circumstances in which it was used, was a dangerous instrument capable of causing serious physical injury. 176 CA 807."
+          },
+          {
+            "first": false,
+            "text": "Subdiv. (11):"
+          },
+          {
+            "first": false,
+            "text": "Cited. 171 C. 271; 178 C. 448; 180 C. 382; 182 C. 449; 184 C. 121; 186 C. 414; Id., 555; Id., 574; Id., 654; 188 C. 515; 189 C. 383; 190 C. 219; 194 C. 258; Id., 376; 195 C. 166; 198 C. 92; 199 C. 1; 201 C. 489; 202 C. 520; Id., 629; 204 C. 1; 209 C. 290; 214 C. 77; 216 C. 585; 219 C. 16; Id., 363; Id., 489; 220 C. 285; 223 C. 595; Id., 674; 225 C. 55; Id., 114; 227 C. 456; 228 C. 62; Id., 118; Id., 281; 229 C. 328; 231 C. 115; 233 C. 215; 235 C. 274; Id., 477; 236 C. 189; 237 C. 748; 238 C. 253."
+          },
+          {
+            "first": false,
+            "text": "Cited. 5 CA 599; 7 CA 180; 9 CA 111; Id., 373; 11 CA 24; 16 CA 455; 19 CA 674; 24 CA 598; 27 CA 103; 28 CA 81; 34 CA 223; 35 CA 51; 36 CA 417; 39 CA 18; judgment reversed, see 237 C. 748; 40 CA 643; 41 CA 361; 45 CA 297. Provision dealing with intent to engage in proscribed conduct is irrelevant to a murder prosecution pursuant to Sec. 53a-54a. 48 CA 677. Meaning of acting “intentionally”. 51 CA 345. Portion of the definition of “intent” relating to intent to engage in proscribed conduct is not relevant to charge of assault in the second degree. 70 CA 855. State sufficiently proved defendant had conscious objective to cause victim's face to be scarred where defendant butted victim's face with his head, bit her face, struck her on the head with a hairdryer, kicked her and attempted to choke her, resulting in scars to victim's face. 74 CA 633. Although court improperly instructed jury on entire definition re attempted murder and kidnapping charge, it properly instructed that jury had to find that defendant intended to cause the death of another or intended to abduct and restrain another. 97 CA 837. Definition embraces both specific intent to cause a result and general intent to engage in proscribed conduct, and it is improper for court to refer in its instruction to entire definitional language, including the intent to engage in conduct, when the charge relates to a crime requiring only the intent to cause a specific result. 99 CA 230. Although court instructed jury regarding intent by using the full statutory definition including portion relating to general intent crimes, it was not reasonably possible that jury was misled by court's instructions because court gave numerous proper instructions regarding proper intent required for crime of attempt to commit assault in the first degree. 107 CA 517."
+          },
+          {
+            "first": false,
+            "text": "Subdiv. (12):"
+          },
+          {
+            "first": false,
+            "text": "Cited. 182 C. 449; 203 C. 682; 223 C. 595; 235 C. 477."
+          },
+          {
+            "first": false,
+            "text": "Cited. 5 CA 599; 11 CA 24; 13 CA 288; 16 CA 455; 40 CA 643."
+          },
+          {
+            "first": false,
+            "text": "Subdiv. (13):"
+          },
+          {
+            "first": false,
+            "text": "Cited. 171 C. 271; 180 C. 382; 182 C. 66; Id., 449; 184 C. 400; 185 C. 63; 186 C. 265; 187 C. 6; 193 C. 632; 195 C. 232; 198 C. 92; Id., 454; 199 C. 1; 202 C. 629; 212 C. 593; 213 C. 579; 214 C. 57; 216 C. 585; 219 C. 16; 222 C. 444; 225 C. 55; 226 C. 20; 228 C. 147; 231 C. 115; 233 C. 174."
+          },
+          {
+            "first": false,
+            "text": "Cited. 5 CA 40; Id., 571; 7 CA 180; 11 CA 24; Id., 473; 17 CA 502; judgment reversed, see 213 C. 579; 19 CA 674; 26 CA 331; Id., 448; 27 CA 73; Id., 322; 30 CA 95; judgment reversed, see 228 C. 147; 34 CA 807; 35 CA 51; 41 CA 333."
+          },
+          {
+            "first": false,
+            "text": "Statute applies an objective yardstick to measure the nature and degree of the risk and a subjective yardstick to measure defendant's awareness of the risk. 35 CS 570."
+          },
+          {
+            "first": false,
+            "text": "Subdiv. (14):"
+          },
+          {
+            "first": false,
+            "text": "Cited. 171 C. 112; 176 C. 451; 180 C. 382; 182 C. 449; 187 C. 6; 195 C. 232; 201 C. 174; 202 C. 520; Id., 629; 204 C. 410; Id., 429; 212 C. 593; 213 C. 579; 214 C. 57; 222 C. 444; 226 C. 20; 228 C. 147; 231 C. 115; 238 C. 253; 242 C. 211."
+          },
+          {
+            "first": false,
+            "text": "Cited. 5 CA 40; 11 CA 473; Id., 499; 17 CA 502; judgment reversed, see 213 C. 579; 23 CA 720; 26 CA 448; 29 CA 825; 30 CA 95; judgment reversed, see 228 C. 147."
+          },
+          {
+            "first": false,
+            "text": "Subdiv. (18):"
+          },
+          {
+            "first": false,
+            "text": "Cited. 195 C. 651; 196 C. 395; 197 C. 507; 205 C. 370; 231 C. 235."
+          },
+          {
+            "first": false,
+            "text": "Cited. 7 CA 726; 9 CA 169; judgment reversed, see 205 C. 370; Id., 330; 19 CA 48; Id., 111; 36 CA 805; 37 CA 672; 39 CA 502."
+          },
+          {
+            "first": false,
+            "text": "Subdiv. (19):"
+          },
+          {
+            "first": false,
+            "text": "Cited. 175 C. 569; 190 C. 715; 196 C. 395. “Firearm” includes BB. gun; legislature could have restricted the term “firearm” to guns that use gunpowder to discharge their shots, and the fact that legislature elected not to do so is strong evidence that it did not intend to limit the term in that manner. 294 C. 151."
+          },
+          {
+            "first": false,
+            "text": "Cited. 3 CA 289; 19 CA 48; Id., 111; 21 CA 299; 34 CA 751; judgment reversed, see 233 C. 211; 38 CA 481; 39 CA 82; Id., 502; 45 CA 591. Subdiv. does not require state to establish that ammunition recovered with handgun was capable of being discharged from the handgun, and use of other ammunition was permitted to establish that handgun was a weapon from which a shot may be discharged. 127 CA 377. Although gun was not operable at time of testing, that responding officer was able to dry fire it at time of seizure and observe that firing mechanism was functional was sufficient to prove operability. 146 CA 844."
+          },
+          {
+            "first": false,
+            "text": "Replica antique pistol that propelled via gunpowder a shot that mortally wounded defendant's spouse constituted a pistol, revolver or other weapon from which a shot could be discharged, as defined by Subdiv. 49 CS 248."
+          }
+        ],
+        "plainText": "Except where different meanings are expressly specified, the following terms have the following meanings when used in this title:\n\n(1) “Person” means a human being, and, where appropriate, a public or private corporation, a limited liability company, an unincorporated association, a partnership, a government or a governmental instrumentality;\n\n(2) “Possess” means to have physical possession or otherwise to exercise dominion or control over tangible property;\n\n(3) “Physical injury” means impairment of physical condition or pain;\n\n(4) “Serious physical injury” means physical injury which creates a substantial risk of death, or which causes serious disfigurement, serious impairment of health or serious loss or impairment of the function of any bodily organ;\n\n(5) “Deadly physical force” means physical force which can be reasonably expected to cause death or serious physical injury;\n\n(6) “Deadly weapon” means any weapon, whether loaded or unloaded, from which a shot may be discharged, or a switchblade knife, gravity knife, billy, blackjack, bludgeon, or metal knuckles. The definition of “deadly weapon” in this subdivision shall be deemed not to apply to section 29-38 or 53-206 ;\n\n(7) “Dangerous instrument” means any instrument, article or substance which, under the circumstances in which it is used or attempted or threatened to be used, is capable of causing death or serious physical injury, and includes a “vehicle” as that term is defined in this section and includes a dog that has been commanded to attack, except a dog owned by a law enforcement agency of the state or any political subdivision thereof or of the federal government when such dog is in the performance of its duties under the direct supervision, care and control of an assigned law enforcement officer;\n\n(8) “Vehicle” means a “motor vehicle” as defined in section 14-1 , a snowmobile, any aircraft, or any vessel equipped for propulsion by mechanical means or sail;\n\n(9) “Peace officer” means a member of the Division of State Police within the Department of Emergency Services and Public Protection or an organized local police department, a chief inspector or inspector in the Division of Criminal Justice, a state marshal while exercising authority granted under any provision of the general statutes, a judicial marshal in the performance of the duties of a judicial marshal, a conservation officer or special conservation officer, as defined in section 26-5 , a constable who performs criminal law enforcement duties, a special policeman appointed under section 29-18 , 29-18a , 29-18b or 29-19 , an adult probation officer, an official of the Department of Correction authorized by the Commissioner of Correction to make arrests in a correctional institution or facility, any investigator in the investigations unit of the office of the State Treasurer, an inspector of motor vehicles in the Department of Motor Vehicles, who is certified under the provisions of sections 7-294a to 7-294e , inclusive, a United States marshal or deputy marshal, any special agent of the federal government authorized to enforce the provisions of Title 21 of the United States Code, or a member of a law enforcement unit of the Mashantucket Pequot Tribe or the Mohegan Tribe of Indians of Connecticut created and governed by a memorandum of agreement under section 47-65c who is certified as a police officer by the Police Officer Standards and Training Council pursuant to sections 7-294a to 7-294e , inclusive;\n\n(10) “Firefighter” means any agent of a municipality whose duty it is to protect life and property therein as a member of a duly constituted fire department whether professional or volunteer;\n\n(11) A person acts “intentionally” with respect to a result or to conduct described by a statute defining an offense when his conscious objective is to cause such result or to engage in such conduct;\n\n(12) A person acts “knowingly” with respect to conduct or to a circumstance described by a statute defining an offense when he is aware that his conduct is of such nature or that such circumstance exists;\n\n(13) A person acts “recklessly” with respect to a result or to a circumstance described by a statute defining an offense when he is aware of and consciously disregards a substantial and unjustifiable risk that such result will occur or that such circumstance exists. The risk must be of such nature and degree that disregarding it constitutes a gross deviation from the standard of conduct that a reasonable person would observe in the situation;\n\n(14) A person acts with “criminal negligence” with respect to a result or to a circumstance described by a statute defining an offense when he fails to perceive a substantial and unjustifiable risk that such result will occur or that such circumstance exists. The risk must be of such nature and degree that the failure to perceive it constitutes a gross deviation from the standard of care that a reasonable person would observe in the situation;\n\n(15) “Machine gun” means a weapon of any description, irrespective of size, by whatever name known, loaded or unloaded, from which a number of shots or bullets may be rapidly or automatically discharged from a magazine with one continuous pull of the trigger and includes a submachine gun;\n\n(16) “Rifle” means a weapon designed or redesigned, made or remade, and intended to be fired from the shoulder and designed or redesigned and made or remade to use the energy of the explosive in a fixed metallic cartridge to fire only a single projectile through a rifled bore for each single pull of the trigger;\n\n(17) “Shotgun” means a weapon designed or redesigned, made or remade, and intended to be fired from the shoulder and designed or redesigned and made or remade to use the energy of the explosive in a fixed shotgun shell to fire through a smooth bore either a number of ball shot or a single projectile for each single pull of the trigger;\n\n(18) “Pistol” or “revolver” means any firearm having a barrel less than twelve inches;\n\n(19) “Firearm” means any sawed-off shotgun, machine gun, rifle, shotgun, pistol, revolver or other weapon, whether loaded or unloaded from which a shot may be discharged;\n\n(20) “Electronic defense weapon” means a weapon which by electronic impulse or current is capable of immobilizing a person temporarily, including a stun gun or other conductive energy device;\n\n(21) “Martial arts weapon” means a nunchaku, kama, kasari-fundo, octagon sai, tonfa or chinese star;\n\n(22) “Employee of an emergency medical service organization” means an ambulance driver, emergency medical technician or paramedic as defined in section 19a-175 ;\n\n(23) “Railroad property” means all tangible property owned, leased or operated by a railroad carrier including, but not limited to, a right-of-way, track, roadbed, bridge, yard, shop, station, tunnel, viaduct, trestle, depot, warehouse, terminal or any other structure or appurtenance or equipment owned, leased or used in the operation of a railroad carrier including a train, locomotive, engine, railroad car, signals or safety device or work equipment or rolling stock;\n\n(24) “Serious firearm offense” means a violation of section 29-36 , 29-36a or 53-202w , possession of a stolen firearm or a firearm that is altered in a manner that renders the firearm unlawful, or any crime of which an essential element is that the person discharged, used or was armed with and threatened the use of a firearm; and\n\n(25) “Serious firearm offender” means a person who has (A) two convictions for a serious firearm offense, (B) a conviction for a serious firearm offense and was previously convicted of a violation of section 29-36 , 29-36a , subdivision (1) of subsection (a) of section 53a-217 or subdivision (1) of subsection (a) of section 53a-217c , or (C) a conviction for a serious firearm offense and was previously convicted of two or more additional felony offenses."
+      }
+    }
+  ]
+}

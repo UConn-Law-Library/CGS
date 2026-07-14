@@ -1,0 +1,141 @@
+{
+  "schemaVersion": "1.0.0",
+  "title": {
+    "id": "title-24",
+    "number": "24",
+    "name": "State Geological and Natural History Survey. Weather Control Board"
+  },
+  "documents": [
+    {
+      "id": "section-24-1",
+      "citation": "24-1",
+      "citations": [
+        "24-1"
+      ],
+      "heading": "Sec. 24-1. Appointment and duties of commission.",
+      "chapter": {
+        "id": "chapter-462",
+        "number": "462",
+        "name": "State Geological and Natural History Survey"
+      },
+      "status": "repealed",
+      "text": "Section 24-1 is repealed.",
+      "href": "?chapter=462&section=section-24-1"
+    },
+    {
+      "id": "section-24-2",
+      "citation": "24-2",
+      "citations": [
+        "24-2"
+      ],
+      "heading": "Sec. 24-2. Objects of survey.",
+      "chapter": {
+        "id": "chapter-462",
+        "number": "462",
+        "name": "State Geological and Natural History Survey"
+      },
+      "status": "active",
+      "text": "The state geological and natural history survey shall be under the direction of the Commissioner of Energy and Environmental Protection. Said survey shall have for its objects: (1) An examination of the geological formation of the state, with special reference to such economic products as building stones, clays, ores and other mineral substances; (2) an examination of the animal and plant life of the state, with special reference to its economic and educational value; (3) the preparation of special maps to illustrate the resources of the state; (4) the preparation of special reports, with necessary illustrations and maps, which shall embrace both a general and detailed description of the geology and natural history of the state.",
+      "href": "?chapter=462&section=section-24-2"
+    },
+    {
+      "id": "section-24-2a",
+      "citation": "24-2a",
+      "citations": [
+        "24-2a"
+      ],
+      "heading": "Sec. 24-2a. Disclosure of the location of rare, threatened or endangered species.",
+      "chapter": {
+        "id": "chapter-462",
+        "number": "462",
+        "name": "State Geological and Natural History Survey"
+      },
+      "status": "repealed",
+      "text": "Section 24-2a is repealed.",
+      "href": "?chapter=462&section=section-24-2a"
+    },
+    {
+      "id": "section-24-3",
+      "citation": "24-3",
+      "citations": [
+        "24-3"
+      ],
+      "heading": "Sec. 24-3. Distribution of survey reports. Sales and publication account.",
+      "chapter": {
+        "id": "chapter-462",
+        "number": "462",
+        "name": "State Geological and Natural History Survey"
+      },
+      "status": "active",
+      "text": "(a) Said commissioner shall cause to be prepared a report to the General Assembly before each regular session of the same in the odd-numbered years, showing the progress and condition of the survey, together with such other information as he deems useful or as the General Assembly requires. The regular and special reports of the survey, with illustrations and maps, shall be produced for public use and shall be distributed or sold by the commissioner as the interests of the state and of science may demand.\n\n(b) There is established a separate account within the General Fund, to be known as the state geological and natural history survey sales and publication account, for the purpose of providing moneys for production of environmental publications and purchase, for resale, of related materials and products. All moneys obtained from the sale of such publications, materials and products shall be paid to the State Treasurer and credited to said account and the commissioner may expend moneys of said account for the production and distribution of such publications and the purchase, for resale, of such materials and products.",
+      "href": "?chapter=462&section=section-24-3"
+    },
+    {
+      "id": "section-24-4",
+      "citation": "24-4",
+      "citations": [
+        "24-4"
+      ],
+      "heading": "Sec. 24-4. Disposition of material collected.",
+      "chapter": {
+        "id": "chapter-462",
+        "number": "462",
+        "name": "State Geological and Natural History Survey"
+      },
+      "status": "active",
+      "text": "All material collected, after having served the purposes of the survey, shall be distributed by the commissioner to the educational institutions of the state in such manner as to be of the greatest advantage to the educational interests of the state, or, if deemed advisable by said commissioner, the whole or any part of such material shall be put on permanent exhibition.",
+      "href": "?chapter=462&section=section-24-4"
+    },
+    {
+      "id": "group-24-5-to-24-6-to-24-7-to-24-8",
+      "citation": null,
+      "citations": [
+        "24-5",
+        "24-6",
+        "24-7",
+        "24-8"
+      ],
+      "heading": "Secs. 24-5 to 24-8. Weather Control Board.",
+      "chapter": {
+        "id": "chapter-463",
+        "number": "463",
+        "name": "Weather Control Board"
+      },
+      "status": "repealed",
+      "text": "Sections 24-5 to 24-8 , inclusive, are repealed.",
+      "href": "?chapter=463&section=group-24-5-to-24-6-to-24-7-to-24-8"
+    },
+    {
+      "id": "section-24-5",
+      "citation": "24-5",
+      "citations": [
+        "24-5"
+      ],
+      "heading": "24-5",
+      "chapter": {
+        "id": "chapter-463",
+        "number": "463",
+        "name": "Weather Control Board"
+      },
+      "status": "repealed",
+      "text": "Secs. 24-5 to 24-8. Weather Control Board. Sections 24-5 to 24-8 , inclusive, are repealed.",
+      "href": "?chapter=463&section=section-24-5"
+    },
+    {
+      "id": "section-24-8",
+      "citation": "24-8",
+      "citations": [
+        "24-8"
+      ],
+      "heading": "24-8",
+      "chapter": {
+        "id": "chapter-463",
+        "number": "463",
+        "name": "Weather Control Board"
+      },
+      "status": "repealed",
+      "text": "Secs. 24-5 to 24-8. Weather Control Board. Sections 24-5 to 24-8 , inclusive, are repealed.",
+      "href": "?chapter=463&section=section-24-8"
+    }
+  ]
+}

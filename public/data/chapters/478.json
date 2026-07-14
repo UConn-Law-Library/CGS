@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-478",
+  "number": "478",
+  "name": "Soil Conservation",
+  "title": {
+    "id": "title-25",
+    "number": "25",
+    "name": "Water Resources. Flood and Erosion Control"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_478.htm",
+  "sections": [
+    {
+      "id": "section-25-103",
+      "kind": "section",
+      "citation": "25-103",
+      "citations": [
+        "25-103"
+      ],
+      "heading": "Sec. 25-103. Soil Conservation Advisory Committee.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_478.htm#sec_25-103",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 25-103 is repealed."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 3061; 1953, S. 1702d; 1957, P.A. 364, S. 4; 1971, P.A. 872, S. 121.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 25-103 is repealed."
+      }
+    },
+    {
+      "id": "group-25-104-to-25-109b",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "25-104",
+        "25-109b"
+      ],
+      "heading": "Secs. 25-104 to 25-109b.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_478.htm#secs_25-104_to_25-109b",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 446h, Secs. 22a-314 to 22a-324 , inclusive."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 446h, Secs. 22a-314 to 22a-324 , inclusive."
+      }
+    }
+  ]
+}

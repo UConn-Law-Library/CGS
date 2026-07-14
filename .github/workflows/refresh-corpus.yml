@@ -1,6 +1,8 @@
 name: Review corpus refresh
 
 on:
+  schedule:
+    - cron: "17 10 * * 1"
   workflow_dispatch:
     inputs:
       create_pull_request:
@@ -28,6 +30,7 @@ jobs:
       SNAPSHOT_DIR: .crawl/refresh/snapshots
       CANONICAL_DIR: .crawl/refresh/canonical
       REPORT_DIR: .crawl/refresh/reports
+      CREATE_PULL_REQUEST: ${{ github.event_name == 'schedule' || inputs.create_pull_request }}
     steps:
       - uses: actions/checkout@v4
       - name: Require the published main baseline
@@ -95,7 +98,7 @@ jobs:
           npm run check
 
       - name: Prepare pull request description
-        if: steps.review.outputs.has_changes == 'true' && inputs.create_pull_request
+        if: steps.review.outputs.has_changes == 'true' && env.CREATE_PULL_REQUEST == 'true'
         run: |
           {
             echo "# Automated CGS corpus refresh"
@@ -110,7 +113,7 @@ jobs:
           } > "$REPORT_DIR/pull-request.md"
 
       - name: Create draft refresh pull request
-        if: steps.review.outputs.has_changes == 'true' && inputs.create_pull_request
+        if: steps.review.outputs.has_changes == 'true' && env.CREATE_PULL_REQUEST == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |

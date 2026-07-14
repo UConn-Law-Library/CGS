@@ -62,6 +62,8 @@ Older `?chapter=001&section=section-1-1` links are translated to the canonical r
 
 Title-scoped and all-title searches use the same static search shards. The client loads up to six title shards concurrently and sends each completed shard to a Web Worker, which continuously merges a deterministic top-result set. The interface displays results and progress as shards arrive, cancels stale work when a new search or route begins, and falls back to incremental main-thread ranking when workers are unavailable.
 
+The global omnibar debounces input and displays mixed quick results while the user types. Title and chapter matches come from the already-loaded catalog, statute sections stream from the progressive worker search, infractions use the cached schedule shards, and index suggestions load only the relevant initial-letter shard. Arrow keys choose a result, Escape closes the panel, Enter opens the selected result or the complete statute-results page, and `/` focuses the omnibar outside another form field.
+
 ## Static discovery pages
 
 `npm run build` generates a script-free discovery hierarchy at `dist/discover/`: one all-title index, one page per title, and one page per chapter. Chapter pages expose every provision heading, link to the official CGA text, and link into the interactive hash reader. The same build writes `sitemap.xml` and `robots.txt`; these outputs are derived from the canonical catalog and chapter artifacts and are not checked in.

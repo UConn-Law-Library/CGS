@@ -10,6 +10,7 @@ const SHELL_FILES = [
   "./styles.css",
   "./app.js",
   "./device-state.js",
+  "./omnisearch.js",
   "./pwa.js",
   "./reader.js",
   "./routes.js",

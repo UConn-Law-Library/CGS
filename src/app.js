@@ -22,6 +22,14 @@ import { SecondarySourceRepository } from "./secondary-sources.js";
 import { applyPreferences, DeviceState } from "./device-state.js";
 import { PwaManager } from "./pwa.js";
 import {
+  buildOmniRows,
+  findIndexMatches,
+  findInfractionMatches,
+  findNavigationMatches,
+  indexLetterForQuery,
+  statuteMatches
+} from "./omnisearch.js";
+import {
   formatMoney,
   renderIndexEntry,
   renderIndexReferences,
@@ -39,6 +47,9 @@ const pwaManager = new PwaManager();
 const catalogPromise = getJson("./data/catalog.json");
 let renderSequence = 0;
 let activeSearchController = null;
+let activeOmniController = null;
+let omniTimer = null;
+let omniSelection = -1;
 let pwaState = pwaManager.state;
 applyPreferences(deviceState.preferences());
 pwaManager.subscribe((state) => {
@@ -132,12 +143,134 @@ function siteHeader() {
       </nav>
     </div>
     <form class="global-search" data-global-search role="search">
-      <label class="visually-hidden" for="global-query">Search statutes</label>
-      <input id="global-query" name="query" type="search" minlength="2" required value="${escapeHtml(searchValue)}" placeholder="Search statutes by citation or keyword">
+      <label class="visually-hidden" for="global-query">Search statutes, index topics, and infractions</label>
+      <div class="global-search-field">
+        <input id="global-query" name="query" type="search" minlength="2" required value="${escapeHtml(searchValue)}" placeholder="Search statutes, index, and infractions" autocomplete="off" spellcheck="false"
+          role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="omni-results" data-omni-input>
+        <kbd class="omni-shortcut" aria-hidden="true">/</kbd>
+        <div class="omni-panel" id="omni-results" role="listbox" hidden data-omni-panel></div>
+      </div>
       <button type="submit" class="global-search-button">Search</button>
     </form>
     ${settingsPanel()}
   </header>`;
+}
+
+function omniItems() {
+  return [...document.querySelectorAll("[data-omni-option]")];
+}
+
+function closeOmni({ abort = true } = {}) {
+  clearTimeout(omniTimer);
+  omniTimer = null;
+  if (abort) activeOmniController?.abort();
+  if (abort) activeOmniController = null;
+  const input = document.querySelector("[data-omni-input]");
+  const panel = document.querySelector("[data-omni-panel]");
+  if (panel) panel.hidden = true;
+  input?.setAttribute("aria-expanded", "false");
+  input?.removeAttribute("aria-activedescendant");
+  omniSelection = -1;
+}
+
+function renderOmniPanel(query, groups, { completed = 0, total = 0, pending = false } = {}) {
+  const input = document.querySelector("[data-omni-input]");
+  const panel = document.querySelector("[data-omni-panel]");
+  if (!input || !panel || input.value.trim() !== query) return;
+  const previousHref = omniItems()[omniSelection]?.getAttribute("href") ?? null;
+  const rows = buildOmniRows(groups);
+  const body = rows.length ? rows.map((row, index) => `<a class="omni-item" id="omni-option-${index}" role="option" aria-selected="false" data-omni-option href="${escapeHtml(row.href)}">
+      <span class="omni-kind">${escapeHtml(row.kind)}</span>
+      <strong class="omni-main">${escapeHtml(row.label)}</strong>
+      <small class="omni-sub">${escapeHtml(row.subtitle)}</small>
+    </a>`).join("") : `<p class="omni-empty">${pending ? "Searching published legal data…" : "No quick matches. Press Enter for complete statute results."}</p>`;
+  const progress = pending && total ? `Searching ${completed} of ${total} statute titles…` : pending ? "Searching published legal data…" : `${rows.length} quick match${rows.length === 1 ? "" : "es"}`;
+  panel.innerHTML = `${body}<div class="omni-foot"><span>${escapeHtml(progress)}</span><span>Enter: full statute results · ↑↓: choose · Esc: close</span></div>`;
+  panel.hidden = false;
+  input.setAttribute("aria-expanded", "true");
+  omniSelection = previousHref ? omniItems().findIndex((item) => item.getAttribute("href") === previousHref) : -1;
+  if (omniSelection >= 0) {
+    const active = omniItems()[omniSelection];
+    active.classList.add("selected");
+    active.setAttribute("aria-selected", "true");
+    input.setAttribute("aria-activedescendant", active.id);
+  } else {
+    input.removeAttribute("aria-activedescendant");
+  }
+}
+
+function moveOmniSelection(delta) {
+  const input = document.querySelector("[data-omni-input]");
+  const items = omniItems();
+  if (!items.length) return false;
+  omniSelection = (omniSelection + delta + items.length) % items.length;
+  items.forEach((item, index) => {
+    const selected = index === omniSelection;
+    item.classList.toggle("selected", selected);
+    item.setAttribute("aria-selected", String(selected));
+  });
+  const active = items[omniSelection];
+  input?.setAttribute("aria-activedescendant", active.id);
+  active.scrollIntoView({ block: "nearest" });
+  return true;
+}
+
+async function runOmnisearch(query) {
+  activeOmniController?.abort();
+  const controller = new AbortController();
+  activeOmniController = controller;
+  const catalog = await catalogPromise;
+  if (controller.signal.aborted) return;
+  const groups = { statutes: [], ...findNavigationMatches(catalog, query), index: [], infractions: [] };
+  const letter = indexLetterForQuery(query);
+  let completed = 0;
+  let total = 0;
+  let pendingTasks = letter ? 3 : 2;
+  const render = () => renderOmniPanel(query, groups, { completed, total, pending: pendingTasks > 0 });
+  const finish = () => {
+    pendingTasks -= 1;
+    if (!controller.signal.aborted) render();
+  };
+  render();
+
+  const statutes = searchClient.search(query, {
+    limit: 5,
+    signal: controller.signal,
+    onProgress(update) {
+      if (controller.signal.aborted) return;
+      completed = update.completed;
+      total = update.total;
+      groups.statutes = statuteMatches(update.results);
+      render();
+    }
+  }).then((results) => {
+    groups.statutes = statuteMatches(results);
+  }).catch((error) => {
+    if (error.name !== "AbortError") console.warn("Quick statute search failed", error);
+  }).finally(finish);
+
+  const infractions = secondaryRepository.loadAllInfractions().then((entries) => {
+    if (!controller.signal.aborted) groups.infractions = findInfractionMatches(entries, query);
+  }).catch((error) => console.warn("Quick infraction search failed", error)).finally(finish);
+
+  const index = letter ? secondaryRepository.loadIndexLetter(letter).then((topics) => {
+    if (!controller.signal.aborted) groups.index = findIndexMatches(topics, query);
+  }).catch((error) => console.warn("Quick index search failed", error)).finally(finish) : Promise.resolve();
+
+  await Promise.all([statutes, infractions, index]);
+  if (activeOmniController === controller) activeOmniController = null;
+}
+
+function scheduleOmnisearch(input, delay = 180) {
+  clearTimeout(omniTimer);
+  activeOmniController?.abort();
+  activeOmniController = null;
+  const query = input.value.trim();
+  if (query.length < 2) return closeOmni();
+  omniTimer = setTimeout(() => {
+    omniTimer = null;
+    runOmnisearch(query);
+  }, delay);
 }
 
 function breadcrumbs(items) {
@@ -635,6 +768,7 @@ function renderNotFound(message = "That page was not found.") {
 }
 
 async function renderCurrentRoute() {
+  closeOmni();
   activeSearchController?.abort();
   activeSearchController = null;
   const sequence = ++renderSequence;
@@ -662,7 +796,58 @@ async function renderCurrentRoute() {
   }
 }
 
+document.addEventListener("input", (event) => {
+  if (event.target.matches("[data-omni-input]")) scheduleOmnisearch(event.target);
+});
+
+document.addEventListener("focusin", (event) => {
+  if (event.target.matches("[data-omni-input]") && event.target.value.trim().length >= 2) {
+    scheduleOmnisearch(event.target, 0);
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  const input = event.target.closest?.("[data-omni-input]");
+  if (input) {
+    if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+      if (moveOmniSelection(event.key === "ArrowDown" ? 1 : -1)) event.preventDefault();
+      return;
+    }
+    if (event.key === "Enter") {
+      const selected = omniSelection >= 0 ? omniItems()[omniSelection] : null;
+      const query = input.value.trim();
+      if (!selected && query.length < 2) return;
+      event.preventDefault();
+      const href = selected?.getAttribute("href") ?? searchRouteHref(query);
+      closeOmni();
+      location.hash = href;
+      return;
+    }
+    if (event.key === "Escape") {
+      event.preventDefault();
+      closeOmni();
+    }
+    return;
+  }
+  const inField = /^(input|select|textarea)$/i.test(document.activeElement?.tagName ?? "");
+  if (event.key === "/" && !inField && !event.metaKey && !event.ctrlKey && !event.altKey) {
+    event.preventDefault();
+    const globalInput = document.querySelector("[data-omni-input]");
+    globalInput?.focus();
+    globalInput?.select();
+  }
+});
+
+document.addEventListener("pointerdown", (event) => {
+  if (!event.target.closest("[data-global-search]")) closeOmni();
+});
+
 document.addEventListener("click", async (event) => {
+  const omniOption = event.target.closest("[data-omni-option]");
+  if (omniOption) {
+    closeOmni();
+    return;
+  }
   const skip = event.target.closest("[data-skip-link]");
   if (skip) {
     event.preventDefault();
@@ -782,6 +967,7 @@ document.addEventListener("submit", (event) => {
   if (form.matches("[data-global-search]")) {
     event.preventDefault();
     const query = new FormData(form).get("query").trim();
+    closeOmni();
     location.hash = searchRouteHref(query);
     return;
   }

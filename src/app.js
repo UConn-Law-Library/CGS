@@ -89,11 +89,33 @@ function offlineStatus(state) {
   return state.supported ? "Preparing offline storage…" : "Offline storage is unavailable";
 }
 
+function formatStorage(bytes) {
+  if (!Number.isFinite(bytes)) return null;
+  const units = ["B", "KB", "MB", "GB"];
+  let value = bytes;
+  let unit = 0;
+  while (value >= 1024 && unit < units.length - 1) {
+    value /= 1024;
+    unit += 1;
+  }
+  return `${value >= 10 || unit === 0 ? Math.round(value) : value.toFixed(1)} ${units[unit]}`;
+}
+
+function storageStatus(state) {
+  const usage = formatStorage(state.storageUsage);
+  const quota = formatStorage(state.storageQuota);
+  if (usage && quota) return `Browser storage for this site: ${usage} used of ${quota}`;
+  if (usage) return `Browser storage for this site: ${usage} used`;
+  return "Storage usage is not reported by this browser.";
+}
+
 function updatePwaControls() {
   const install = document.querySelector("[data-install-app]");
   const download = document.querySelector("[data-download-offline]");
   const clear = document.querySelector("[data-clear-offline]");
   const status = document.querySelector("[data-pwa-status]");
+  const storage = document.querySelector("[data-storage-status]");
+  const update = document.querySelector("[data-apply-update]");
   const progress = document.querySelector("[data-pwa-progress]");
   if (!install) return;
   install.disabled = pwaState.installed || !pwaState.installable;
@@ -102,6 +124,8 @@ function updatePwaControls() {
   download.querySelector("[data-offline-action-label]").textContent = pwaState.complete ? "Refresh offline data" : "Download for offline use";
   clear.disabled = !pwaState.cachedFiles || pwaState.busy;
   status.textContent = offlineStatus(pwaState);
+  storage.textContent = storageStatus(pwaState);
+  update.hidden = !pwaState.updateAvailable;
   progress.hidden = !pwaState.busy || !pwaState.totalFiles;
   progress.max = Math.max(1, pwaState.totalFiles);
   progress.value = pwaState.cachedFiles;
@@ -117,11 +141,13 @@ function settingsPanel() {
     </div></div>
     <div class="setting-row"><span><strong>Text size</strong><small data-text-size-value>${Math.round(preferences.textScale * 100)}%</small></span><div class="text-size-controls"><button type="button" data-text-size="decrease" aria-label="Decrease text size">A−</button><button type="button" data-text-size="increase" aria-label="Increase text size">A+</button></div></div>
     <label class="setting-row"><span><strong>Compact lists</strong><small>Show more items on screen</small></span><input type="checkbox" data-compact-lists${preferences.compactLists ? " checked" : ""}></label>
+    <button type="button" class="settings-action update-action" data-apply-update${pwaState.updateAvailable ? "" : " hidden"}>Update available <small>Reload to use the latest published app</small></button>
     <button type="button" class="settings-action" data-install-app${pwaState.installed || !pwaState.installable ? " disabled" : ""}>Install app <small>${escapeHtml(installStatus(pwaState))}</small></button>
     <button type="button" class="settings-action" data-download-offline${!pwaState.ready || pwaState.busy ? " disabled" : ""}><span data-offline-action-label>${pwaState.complete ? "Refresh offline data" : "Download for offline use"}</span><small>Statutes, search, index, and infractions</small></button>
     <progress class="offline-progress" data-pwa-progress value="${pwaState.cachedFiles}" max="${Math.max(1, pwaState.totalFiles)}"${!pwaState.busy || !pwaState.totalFiles ? " hidden" : ""}>Offline download progress</progress>
     <button type="button" class="settings-action" data-clear-offline${!pwaState.cachedFiles || pwaState.busy ? " disabled" : ""}>Remove offline data <small>Keep the installed app shell</small></button>
     <p class="settings-note" data-pwa-status role="status" aria-live="polite">${escapeHtml(offlineStatus(pwaState))}</p>
+    <p class="settings-note" data-storage-status>${escapeHtml(storageStatus(pwaState))}</p>
     <button type="button" class="settings-action" data-clear-bookmarks${bookmarkCount ? "" : " disabled"}>Clear bookmarks <small>${bookmarkCount ? `${bookmarkCount} saved` : "None saved"}</small></button>
     <a class="settings-action" href="./discover/">Static discovery index <small>Script-free browsing</small></a>
   </section>`;
@@ -884,6 +910,11 @@ document.addEventListener("click", async (event) => {
     const preferences = deviceState.updatePreferences({ textScale: Math.round((current.textScale + direction * .1) * 10) / 10 });
     applyPreferences(preferences);
     document.querySelector("[data-text-size-value]").textContent = `${Math.round(preferences.textScale * 100)}%`;
+    return;
+  }
+  const applyUpdate = event.target.closest("[data-apply-update]");
+  if (applyUpdate) {
+    pwaManager.applyUpdate();
     return;
   }
   const installApp = event.target.closest("[data-install-app]");

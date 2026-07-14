@@ -2,6 +2,7 @@
 import { cp, mkdir, readFile, rm } from "node:fs/promises";
 import path from "node:path";
 import { generateDiscovery } from "./lib/discovery.mjs";
+import { stampServiceWorker } from "./lib/pwa-build.mjs";
 import { generateSupplementIndex } from "./lib/supplement-index.mjs";
 
 const root = process.cwd();
@@ -19,4 +20,5 @@ const supplementIndex = await generateSupplementIndex({
   outputDir: path.join(output, "data", "supplements"),
   generatedAt: catalog.generatedAt
 });
-console.log(`Built static site at ${output} with ${discovery.pages} indexed URLs and ${supplementIndex.editions.length} supplement editions`);
+const buildId = await stampServiceWorker(output);
+console.log(`Built static site at ${output} with ${discovery.pages} indexed URLs, ${supplementIndex.editions.length} supplement editions, and PWA build ${buildId}`);

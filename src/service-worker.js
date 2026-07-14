@@ -1,4 +1,5 @@
-const SHELL_CACHE = "cgs-shell-v1";
+const BUILD_ID = "__CGS_BUILD_ID__";
+const SHELL_CACHE = `cgs-shell-${BUILD_ID}`;
 const DATA_CACHE = "cgs-data-v1";
 const METADATA_URL = "./__offline-metadata__";
 const SHELL_FILES = [

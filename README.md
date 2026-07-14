@@ -125,7 +125,7 @@ The Phase 7 pipeline migrates the legacy PDF geometry parsers into deterministic
 
 The interactive client uses a mobile-first application shell modeled on the established CT Statutes navigation: **Statutes**, **Index**, **Infractions**, **Bookmarks**, and **Settings**. Phones keep these destinations in a persistent bottom navigation bar; larger screens place the same navigation in the header. Infractions can be browsed independently by schedule category, while statute sections and individual infractions can be bookmarked locally on the device. Theme, text-size, and list-density preferences are also device-local and require no account or database.
 
-The same static client is installable as a PWA. Its service worker caches the application shell and recently viewed data automatically. Settings exposes an explicit download for the complete published statutes, search, index, and infractions dataset, along with refresh and removal controls. All offline data stays in the browser cache; it is derived from the published JSON artifacts and does not introduce a database or hosting service.
+The same static client is installable as a PWA. Its service worker caches the application shell and recently viewed data automatically. Settings exposes an explicit download for the complete published statutes, search, index, and infractions dataset, along with refresh and removal controls. The production build fingerprints the complete shell so installed clients can offer a reload when a new version takes control, and Settings reports browser-provided storage usage and quota when available. All offline data stays in the browser cache; it is derived from the published JSON artifacts and does not introduce a database or hosting service.
 
 ## Data authority
 

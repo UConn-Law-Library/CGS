@@ -58,6 +58,41 @@ test("install prompt state is exposed without requiring a service worker", async
   assert.equal(manager.state.installable, false);
 });
 
+test("reports browser storage usage when the estimate API is available", async () => {
+  const manager = new PwaManager({
+    navigatorObject: { storage: { estimate: async () => ({ usage: 12_582_912, quota: 104_857_600 }) } },
+    windowObject: {},
+    MessageChannelClass: null
+  });
+  await manager.refreshStorageEstimate();
+  assert.equal(manager.state.storageUsage, 12_582_912);
+  assert.equal(manager.state.storageQuota, 104_857_600);
+});
+
+test("offers a reload when an installed app receives a new worker", async () => {
+  const handlers = new Map();
+  let reloads = 0;
+  const serviceWorker = {
+    controller: {},
+    addEventListener(type, handler) { handlers.set(type, handler); },
+    async register() { throw new Error("registration intentionally stopped"); }
+  };
+  const manager = new PwaManager({
+    navigatorObject: { serviceWorker },
+    windowObject: {
+      addEventListener() {},
+      matchMedia() { return { matches: true }; },
+      location: { reload() { reloads += 1; } }
+    },
+    MessageChannelClass: null
+  });
+  await manager.init();
+  handlers.get("controllerchange")();
+  assert.equal(manager.state.updateAvailable, true);
+  assert.equal(manager.applyUpdate(), true);
+  assert.equal(reloads, 1);
+});
+
 test("heading scale remains compact across app page types", async () => {
   const styles = await readFile(new URL("../src/styles.css", import.meta.url), "utf8");
   assert.match(styles, /h1 \{ font-size: clamp\(1\.75rem, 5vw, 2\.75rem\)/);

@@ -36,6 +36,8 @@ For a reproducible build, pass `--generated-at 2026-07-13T13:33:18Z`. Otherwise 
 - `public/data/search/manifest.json`: discoverable search-shard metadata.
 - `public/data/search/title-<title>.json`: compact title-level full-text search documents.
 - `public/data/manifest.json`: corpus counts plus SHA-256 and byte size for every generated artifact.
+- `public/data/supplements/<year>/manifest.json`: an optional, immutable annual-overlay manifest bound to one reviewed base corpus.
+- `public/data/supplements/<year>/chapters/<chapter>.json`: only the provisions published in that supplement.
 - `schemas/*.schema.json`: the canonical JSON Schema contracts.
 
 The checked-in `public/data/` is the complete production baseline: 81 titles, 1,141 chapters, and 33,013 provisions, regenerated from the reviewed replacement crawler on July 14, 2026. The much smaller `fixtures/legacy/` corpus remains available for isolated importer tests and local pipeline experiments.
@@ -69,10 +71,12 @@ The sitemap defaults to `https://uconn-law-library.github.io/CGS/`. Set `CGS_SIT
 | --- | --- |
 | `npm run import:fixture` | Rebuild `public/data/` from the checked-in fixture |
 | `npm run import:legacy -- --input <dir>` | Import a legacy title-JSON directory |
+| `npm run import:supplement -- --input <dir> --base public/data --output <dir> --year <yyyy>` | Import an annual supplement as a reviewed, year-scoped overlay |
 | `npm run diff:corpus -- --before <dir> --after <dir> [--titles 1,42a]` | Report corpus additions, removals, edits, moves, and status transitions |
 | `npm run review:refresh -- --report <diff.json> --policy config/corpus-refresh-policy.json` | Apply the versioned production-refresh safety policy |
 | `npm run crawl -- --titles 1 --output .crawl/legacy --snapshots .crawl/snapshots` | Crawl current CGA source into an isolated legacy-adapter directory |
 | `npm run validate` | Validate schemas, references, counts, and content hashes |
+| `npm run validate:supplement -- --data <dir> --base public/data` | Validate one supplement and its base-corpus binding |
 | `npm test` | Run importer, validator, and client search tests |
 | `npm run build` | Assemble the GitHub Pages artifact in `dist/` |
 | `npm run dev` | Serve `dist/` locally at `http://localhost:4173` |
@@ -96,6 +100,12 @@ Production refreshes use the weekly and manually dispatchable `Review corpus ref
 ## Crawler
 
 The replacement crawler lives in [`crawler/`](crawler/README.md). It separates network acquisition, content-addressed raw snapshots, offline replay, HTML parsing, transactional publication, and canonical import. Current statutes and supplements share one CLI; the crawler remains a build-time tool and is not included in the Pages runtime.
+
+## Annual supplements
+
+Supplements are opt-in, immutable overlays rather than destructive edits to the current-statutes corpus. A provision with the same complete citation set replaces that base provision for the selected edition; a new citation is added. A missing citation never deletes current law, and a partial match against a grouped provision fails validation instead of guessing.
+
+Each edition records the exact base schema version and generation timestamp it was reviewed against. A later base refresh therefore requires the overlay to be re-imported and reviewed before publication. The build derives `data/supplements/manifest.json` so the client can discover available editions without a server or database. See [docs/supplements.md](docs/supplements.md) for the artifact contract and review workflow.
 
 ## Data authority
 

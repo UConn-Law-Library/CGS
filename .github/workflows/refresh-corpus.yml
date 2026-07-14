@@ -49,10 +49,12 @@ jobs:
 
       - name: Crawl the current statutes
         run: |
+          set -o pipefail
           mkdir -p "$REPORT_DIR"
           python -m crawler.cgs_crawler.cli \
             --output "$LEGACY_DIR" \
             --snapshots "$SNAPSHOT_DIR" \
+            --no-ssl-verify \
             2>&1 | tee "$REPORT_DIR/crawl.log"
 
       - name: Build and validate the candidate corpus

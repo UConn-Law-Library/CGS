@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://uconn-law-library.github.io/CGS/schemas/secondary-links-manifest.schema.json",
+  "title": "CGS secondary reverse-link manifest",
+  "type": "object",
+  "required": ["schemaVersion", "generatedAt", "shards"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "shards": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["titleId", "path", "sectionCount"],
+        "additionalProperties": false,
+        "properties": {
+          "titleId": { "type": "string", "pattern": "^title-[0-9a-z-]+$" },
+          "path": { "type": "string", "pattern": "^title-[0-9a-z-]+\\.json$" },
+          "sectionCount": { "type": "integer", "minimum": 1 }
+        }
+      }
+    }
+  }
+}

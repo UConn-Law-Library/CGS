@@ -6,7 +6,7 @@ The repository turns the legacy title-level JSON export into versioned, canonica
 
 ## Quick start
 
-Requirements: Node.js 24 or newer. The static platform has no npm dependencies. Crawler tests additionally require Python 3.12 and the packages in `crawler/requirements.txt`.
+Requirements: Node.js 24 or newer. The static platform has no npm dependencies. Crawler and PDF-ingestion tests additionally require Python 3.12 and the packages in `crawler/requirements.txt`.
 
 ```sh
 npm ci
@@ -38,6 +38,9 @@ For a reproducible build, pass `--generated-at 2026-07-13T13:33:18Z`. Otherwise 
 - `public/data/manifest.json`: corpus counts plus SHA-256 and byte size for every generated artifact.
 - `public/data/supplements/<year>/manifest.json`: an optional, immutable annual-overlay manifest bound to one reviewed base corpus.
 - `public/data/supplements/<year>/chapters/<chapter>.json`: only the provisions published in that supplement.
+- `public/data/secondary/infractions/`: optional title-sharded Judicial Branch Chart A entries and Chart B fee rules.
+- `public/data/secondary/statutes-index/`: optional size-bounded LCO subject-index shards.
+- `public/data/secondary/links/`: derived statute-to-infraction and statute-to-index reverse links.
 - `schemas/*.schema.json`: the canonical JSON Schema contracts.
 
 The checked-in `public/data/` is the complete production baseline: 81 titles, 1,141 chapters, and 33,013 provisions, regenerated from the reviewed replacement crawler on July 14, 2026. The much smaller `fixtures/legacy/` corpus remains available for isolated importer tests and local pipeline experiments.
@@ -72,11 +75,16 @@ The sitemap defaults to `https://uconn-law-library.github.io/CGS/`. Set `CGS_SIT
 | `npm run import:fixture` | Rebuild `public/data/` from the checked-in fixture |
 | `npm run import:legacy -- --input <dir>` | Import a legacy title-JSON directory |
 | `npm run import:supplement -- --input <dir> --base public/data --output <dir> --year <yyyy>` | Import an annual supplement as a reviewed, year-scoped overlay |
+| `npm run secondary:acquire -- --output <dir>` | Capture the three LCO index PDFs and Judicial Branch infractions PDF by content hash |
+| `npm run secondary:import -- --sources <manifest> --base public/data --output <dir>` | Parse, resolve, shard, and bind the secondary datasets to the canonical corpus |
+| `npm run diff:secondary -- --before <dir> --after <dir> --json <file> --markdown <file>` | Produce bounded, deterministic secondary-source change reports |
+| `npm run review:secondary -- --report <file> --policy config/secondary-refresh-policy.json` | Enforce count, removal, and citation-resolution safety thresholds |
 | `npm run diff:corpus -- --before <dir> --after <dir> [--titles 1,42a]` | Report corpus additions, removals, edits, moves, and status transitions |
 | `npm run review:refresh -- --report <diff.json> --policy config/corpus-refresh-policy.json` | Apply the versioned production-refresh safety policy |
 | `npm run crawl -- --titles 1 --output .crawl/legacy --snapshots .crawl/snapshots` | Crawl current CGA source into an isolated legacy-adapter directory |
 | `npm run validate` | Validate schemas, references, counts, and content hashes |
 | `npm run validate:supplement -- --data <dir> --base public/data` | Validate one supplement and its base-corpus binding |
+| `npm run validate:secondary -- --data <dir> --base public/data` | Validate secondary-source schemas, links, counts, hashes, and base binding |
 | `npm test` | Run importer, validator, and client search tests |
 | `npm run build` | Assemble the GitHub Pages artifact in `dist/` |
 | `npm run dev` | Serve `dist/` locally at `http://localhost:4173` |
@@ -106,6 +114,10 @@ The replacement crawler lives in [`crawler/`](crawler/README.md). It separates n
 Supplements are opt-in, immutable overlays rather than destructive edits to the current-statutes corpus. A provision with the same complete citation set replaces that base provision for the selected edition; a new citation is added. A missing citation never deletes current law, and a partial match against a grouped provision fails validation instead of guessing.
 
 Each edition records the exact base schema version and generation timestamp it was reviewed against. A later base refresh therefore requires the overlay to be re-imported and reviewed before publication. The build derives `data/supplements/manifest.json` so the client can discover available editions without a server or database. See [docs/supplements.md](docs/supplements.md) for the artifact contract and review workflow.
+
+## Infractions and General Statutes index
+
+The Phase 7 pipeline migrates the legacy PDF geometry parsers into deterministic, content-addressed ingestion for the official Judicial Branch infractions schedule (Charts A and B) and the three-volume LCO subject index. Derived records resolve against canonical statute citations and generate reverse-link shards without modifying chapter artifacts. No production secondary-source data is published until its first full review. See [docs/secondary-sources.md](docs/secondary-sources.md) for commands, provenance, artifact contracts, and the production-scale validation record.
 
 ## Data authority
 

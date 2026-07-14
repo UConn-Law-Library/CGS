@@ -10,16 +10,22 @@
     "import:fixture": "node scripts/import-legacy.mjs --input fixtures/legacy --output public/data",
     "import:legacy": "node scripts/import-legacy.mjs",
     "import:supplement": "node scripts/import-supplement.mjs",
+    "secondary:acquire": "python -m secondary_sources.cli acquire",
+    "secondary:import": "python -m secondary_sources.cli import",
     "diff:corpus": "node scripts/diff-corpus.mjs",
+    "diff:secondary": "node scripts/diff-secondary.mjs",
     "review:refresh": "node scripts/check-corpus-refresh.mjs",
+    "review:secondary": "node scripts/check-secondary-refresh.mjs",
     "crawl": "python -m crawler.cgs_crawler.cli",
     "validate": "node scripts/validate.mjs --data public/data --schemas schemas",
     "validate:supplement": "node scripts/validate-supplement.mjs --base public/data --schemas schemas",
+    "validate:secondary": "node scripts/validate-secondary.mjs --base public/data --schemas schemas",
     "test": "node --test --test-isolation=none",
     "test:crawler": "python -m unittest discover -s crawler/tests -v",
+    "test:secondary": "python -m unittest discover -s secondary_sources/tests -v",
     "build": "node scripts/build-site.mjs",
     "dev": "node scripts/serve.mjs",
-    "check": "npm run validate && npm test && npm run test:crawler && npm run build",
+    "check": "npm run validate && npm test && npm run test:crawler && npm run test:secondary && npm run build",
     "check:fixture": "npm run import:fixture && npm run check"
   }
 }

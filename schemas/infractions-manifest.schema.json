@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://uconn-law-library.github.io/CGS/schemas/infractions-manifest.schema.json",
+  "title": "CGS infractions manifest",
+  "type": "object",
+  "required": ["schemaVersion", "generatedAt", "source", "counts", "shards"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "source": { "$ref": "#/$defs/source" },
+    "counts": {
+      "type": "object",
+      "required": ["entries", "resolved", "categories", "feeRules", "feeRuleReferences", "feeRuleResolved"],
+      "additionalProperties": false,
+      "properties": {
+        "entries": { "type": "integer", "minimum": 0 },
+        "resolved": { "type": "integer", "minimum": 0 },
+        "categories": { "type": "integer", "minimum": 0 },
+        "feeRules": { "type": "integer", "minimum": 0 },
+        "feeRuleReferences": { "type": "integer", "minimum": 0 },
+        "feeRuleResolved": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "shards": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["key", "path", "entryCount"],
+        "additionalProperties": false,
+        "properties": {
+          "key": { "type": "string", "minLength": 1 },
+          "path": { "type": "string", "pattern": "^[0-9a-z-]+\\.json$" },
+          "entryCount": { "type": "integer", "minimum": 0 }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "file": {
+      "type": "object",
+      "required": ["name", "url", "bytes", "sha256"],
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "url": { "type": "string", "format": "uri" },
+        "bytes": { "type": "integer", "minimum": 1 },
+        "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+      }
+    },
+    "source": {
+      "type": "object",
+      "required": ["name", "publisher", "url", "effective", "chartBRevision", "pageCount", "files"],
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "publisher": { "type": "string", "minLength": 1 },
+        "url": { "type": "string", "format": "uri" },
+        "effective": { "type": ["string", "null"] },
+        "chartBRevision": { "type": ["string", "null"] },
+        "pageCount": { "type": "integer", "minimum": 1 },
+        "files": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/file" } }
+      }
+    }
+  }
+}

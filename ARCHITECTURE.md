@@ -36,6 +36,8 @@ New source refreshes begin one layer earlier: the modular Python crawler capture
 
 Annual supplements branch from that same adapter boundary. `scripts/import-supplement.mjs` converts an edition into immutable, year-scoped chapter overlays under `data/supplements/<year>/`; it never rewrites the base chapter artifacts. The build derives a small edition index for client discovery.
 
+Official secondary sources enter through a separate PDF boundary. Content-addressed acquisition captures the three LCO subject-index volumes and the Judicial Branch infractions schedule. Geometry parsers produce normalized Chart A entries, Chart B fee rules, and index records; the publication layer binds them to the exact canonical manifest, resolves citations, writes size-bounded shards, and derives reverse links. Canonical chapters remain unchanged.
+
 ## Canonical identifiers
 
 - A title ID is `title-` plus the lower-case legacy title key, for example `title-10a`.
@@ -52,6 +54,8 @@ Chapter files are the authoritative content boundary. They are small enough to c
 Search data is derived, never authoritative. It is sharded by title: title-scoped search fetches one shard, while global search loads a bounded number of shards concurrently and streams each completed shard to a Web Worker. The worker ranks off the UI thread and publishes a deterministic top-result set after every shard. New searches cancel stale processing, previously fetched shards remain cached, and an incremental inline path preserves search when workers are unavailable. Search results point back to chapter artifacts.
 
 Supplement data is also non-authoritative relative to the current-statutes base. Selecting an edition overlays only the edition's cited provisions: exact citation-set matches replace and unseen citations add. Absence is not deletion. Partial overlap with a grouped provision is rejected as ambiguous. Every edition manifest binds the overlay to the exact reviewed base schema version and generation timestamp, so a base refresh cannot silently change the overlay's meaning.
+
+Infractions and subject-index records preserve their own publisher, revision or effective date, source-file digest, and source-page semantics. Citation resolution is explicit: exact, section-only, unresolved, or not applicable. Reverse links are derived artifacts and never become legal text within a canonical chapter.
 
 ## Client routing and reading
 
@@ -74,6 +78,8 @@ Base-corpus validation deliberately has four layers:
 
 Supplement validation applies the same chapter schema and artifact-integrity checks, recomputes replacement/addition classifications, rejects ambiguous grouped-provision matches, and verifies the recorded base identity. The client applies the same deterministic citation rule without mutating its cached base chapter.
 
+Secondary-source validation verifies PDF provenance, canonical base identity, JSON Schemas, aggregate and shard counts, content hashes, resolution links, and both directions of the derived statute relationships. Parser regression tests exercise monetary columns, wrapped rows, two-column ordering, continuation headings, subject references, and content-addressed capture.
+
 The in-repository schema engine implements the JSON Schema keywords used by these contracts. This avoids a dependency supply chain while keeping the schemas consumable by standard Draft 2020-12 tooling.
 
 ## Deployment
@@ -82,6 +88,8 @@ The in-repository schema engine implements the JSON Schema keywords used by thes
 
 ## Next increments
 
+- Review and publish the first production secondary-source artifacts.
+- Add subject-index and infractions reader interfaces using the derived reverse links.
 - Expose reviewed supplement selection and change labels in the reader interface once the first real edition is published.
 - Derive edition-aware search artifacts after supplement-selection behavior is accepted in the reader.
 - Publish corpus diffs automatically as data-refresh pull request summaries.

@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://uconn-law-library.github.io/CGS/schemas/secondary-links.schema.json",
+  "title": "CGS statute reverse links",
+  "type": "object",
+  "required": ["schemaVersion", "titleId", "sections"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "titleId": { "type": "string", "pattern": "^title-[0-9a-z-]+$" },
+    "sections": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["infractions", "feeRules", "indexEntries"],
+        "additionalProperties": false,
+        "properties": {
+          "infractions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["id", "shard"],
+              "additionalProperties": false,
+              "properties": {
+                "id": { "type": "string", "pattern": "^infraction-[0-9a-f]{16}$" },
+                "shard": { "type": "string", "pattern": "^infractions/[0-9a-z-]+\\.json$" }
+              }
+            }
+          },
+          "feeRules": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["id", "role", "shard"],
+              "additionalProperties": false,
+              "properties": {
+                "id": { "type": "string", "pattern": "^fee-rule-[0-9a-f]{16}$" },
+                "role": { "enum": ["authority", "affected"] },
+                "shard": { "const": "infractions/fee-rules.json" }
+              }
+            }
+          },
+          "indexEntries": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["topicId", "entryId", "shard"],
+              "additionalProperties": false,
+              "properties": {
+                "topicId": { "type": "string", "pattern": "^topic-[0-9a-f]{16}$" },
+                "entryId": { "type": "string", "pattern": "^index-entry-[0-9a-f]{16}$" },
+                "shard": { "type": "string", "pattern": "^statutes-index/[0-9a-z-]+\\.json$" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

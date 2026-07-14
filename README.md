@@ -57,6 +57,12 @@ Older `?chapter=001&section=section-1-1` links are translated to the canonical r
 
 Title-scoped and all-title searches use the same static search shards. The client loads up to six title shards concurrently and sends each completed shard to a Web Worker, which continuously merges a deterministic top-result set. The interface displays results and progress as shards arrive, cancels stale work when a new search or route begins, and falls back to incremental main-thread ranking when workers are unavailable.
 
+## Static discovery pages
+
+`npm run build` generates a script-free discovery hierarchy at `dist/discover/`: one all-title index, one page per title, and one page per chapter. Chapter pages expose every provision heading, link to the official CGA text, and link into the interactive hash reader. The same build writes `sitemap.xml` and `robots.txt`; these outputs are derived from the canonical catalog and chapter artifacts and are not checked in.
+
+The sitemap defaults to `https://uconn-law-library.github.io/CGS/`. Set `CGS_SITE_URL` when building for another production origin or base path.
+
 ## Commands
 
 | Command | Purpose |

@@ -1,0 +1,82 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-319f",
+  "number": "319f",
+  "name": "Management of Continuing Care Facilities",
+  "title": {
+    "id": "title-17a",
+    "number": "17a",
+    "name": "Social and Human Services and Resources"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_319f.htm",
+  "sections": [
+    {
+      "id": "group-17a-360-to-17a-361-to-17a-362-to-17a-363-to-17a-364-to-17a-365-to-17a-366-to-17a-367-to-17a-368-to-17a-369-to-17a-370-to-17a-371-to-17a-372-to-17a-373-to-17a-374-to-17a-375",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "17a-360",
+        "17a-361",
+        "17a-362",
+        "17a-363",
+        "17a-364",
+        "17a-365",
+        "17a-366",
+        "17a-367",
+        "17a-368",
+        "17a-369",
+        "17a-370",
+        "17a-371",
+        "17a-372",
+        "17a-373",
+        "17a-374",
+        "17a-375"
+      ],
+      "heading": "Secs. 17a-360 to 17a-375.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_319f.htm#secs_17a-360_to_17a-375",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 319hh, Secs. 17b-520 to 17b-535 , inclusive."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 319hh, Secs. 17b-520 to 17b-535 , inclusive."
+      }
+    },
+    {
+      "id": "group-17a-376-to-17a-377-to-17a-378-to-17a-379-to-17a-380-to-17a-381-to-17a-382-to-17a-383-to-17a-384-to-17a-385-to-17a-386-to-17a-387-to-17a-388-to-17a-389",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "17a-376",
+        "17a-377",
+        "17a-378",
+        "17a-379",
+        "17a-380",
+        "17a-381",
+        "17a-382",
+        "17a-383",
+        "17a-384",
+        "17a-385",
+        "17a-386",
+        "17a-387",
+        "17a-388",
+        "17a-389"
+      ],
+      "heading": "Secs. 17a-376 to 17a-389.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_319f.htm#secs_17a-376_to_17a-389",
+      "status": "reserved",
+      "content": {
+        "body": [
+          "Reserved for future use."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Reserved for future use."
+      }
+    }
+  ]
+}

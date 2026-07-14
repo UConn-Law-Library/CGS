@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-061c",
+  "number": "061c",
+  "name": "Broadband Internet and Communications Infrastructure",
+  "title": {
+    "id": "title-04d",
+    "number": "04d",
+    "name": "State Information and Telecommunication Systems"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_061c.htm",
+  "sections": [
+    {
+      "id": "section-4d-100",
+      "kind": "section",
+      "citation": "4d-100",
+      "citations": [
+        "4d-100"
+      ],
+      "heading": "Sec. 4d-100. Broadband Internet Coordinating Council. Membership. Duties.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_061c.htm#sec_4d-100",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 4d-100 is repealed, effective July 1, 2011."
+        ],
+        "sourceNotes": [
+          "(P.A. 07-254, S. 3; P.A. 11-80, S. 140.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 4d-100 is repealed, effective July 1, 2011."
+      }
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-228f",
+  "number": "228f",
+  "name": "Nursing Home Tax",
+  "title": {
+    "id": "title-12",
+    "number": "12",
+    "name": "Taxation"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_228f.htm",
+  "sections": [
+    {
+      "id": "section-12-675",
+      "kind": "section",
+      "citation": "12-675",
+      "citations": [
+        "12-675"
+      ],
+      "heading": "Sec. 12-675. Nursing home tax.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_228f.htm#sec_12-675",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 12-675 is repealed, effective October 1, 2002."
+        ],
+        "sourceNotes": [
+          "(May Sp. Sess. P.A. 92-16, S. 34, 89; P.A. 93-262, S. 1, 87; S.A. 02-12, S. 1.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 12-675 is repealed, effective October 1, 2002."
+      }
+    },
+    {
+      "id": "group-12-676-to-12-677-to-12-678-to-12-679-to-12-680-to-12-681-to-12-682-to-12-683-to-12-684",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "12-676",
+        "12-677",
+        "12-678",
+        "12-679",
+        "12-680",
+        "12-681",
+        "12-682",
+        "12-683",
+        "12-684"
+      ],
+      "heading": "Secs. 12-676 to 12-684.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_228f.htm#secs_12-676_to_12-684",
+      "status": "reserved",
+      "content": {
+        "body": [
+          "Reserved for future use."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Reserved for future use."
+      }
+    }
+  ]
+}

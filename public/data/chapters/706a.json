@@ -1,0 +1,154 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-706a",
+  "number": "706a",
+  "name": "Charitable Gift Annuities",
+  "title": {
+    "id": "title-38a",
+    "number": "38a",
+    "name": "Insurance"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_706a.htm",
+  "sections": [
+    {
+      "id": "section-38a-1030",
+      "kind": "section",
+      "citation": "38a-1030",
+      "citations": [
+        "38a-1030"
+      ],
+      "heading": "Sec. 38a-1030. Definitions.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_706a.htm#sec_38a-1030",
+      "status": "active",
+      "content": {
+        "body": [
+          "As used in sections 38a-1030 to 38a-1034 , inclusive:",
+          "(1) “Charitable gift annuity” means a transfer of cash or other property by a donor to a charitable organization in return for an annuity payable over one or two lives, under which the actuarial value of the annuity is less than the value of the cash or other property transferred and the difference in value constitutes a charitable deduction for federal tax purposes.",
+          "(2) “Charitable organization” means an entity described in: (A) Section 501(c)(3) of the Internal Revenue Code of 1986, or any subsequent corresponding internal revenue code of the United States, as from time to time amended (26 USC Section 501(c)(3)); or (B) Section 170(c) of said Internal Revenue Code (26 USC Section 170(c)).",
+          "(3) “Qualified charitable gift annuity” means a charitable gift annuity described in Section 501(m)(5) of said Internal Revenue Code (26 USC Section 501(m)(5)), and Section 514(c)(5) of said Internal Revenue Code (26 USC Section 514(c)(5)), that is issued by a charitable organization that on the date of the annuity agreement: (A) Has a minimum of three hundred thousand dollars in unrestricted cash, cash equivalents or publicly traded securities, exclusive of the assets funding the annuity agreement; and (B) has been in continuous operation for at least three years or is a successor or affiliate of a charitable organization that has been in continuous operation for at least three years."
+        ],
+        "sourceNotes": [
+          "(P.A. 99-52, S. 1.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "As used in sections 38a-1030 to 38a-1034 , inclusive:\n\n(1) “Charitable gift annuity” means a transfer of cash or other property by a donor to a charitable organization in return for an annuity payable over one or two lives, under which the actuarial value of the annuity is less than the value of the cash or other property transferred and the difference in value constitutes a charitable deduction for federal tax purposes.\n\n(2) “Charitable organization” means an entity described in: (A) Section 501(c)(3) of the Internal Revenue Code of 1986, or any subsequent corresponding internal revenue code of the United States, as from time to time amended (26 USC Section 501(c)(3)); or (B) Section 170(c) of said Internal Revenue Code (26 USC Section 170(c)).\n\n(3) “Qualified charitable gift annuity” means a charitable gift annuity described in Section 501(m)(5) of said Internal Revenue Code (26 USC Section 501(m)(5)), and Section 514(c)(5) of said Internal Revenue Code (26 USC Section 514(c)(5)), that is issued by a charitable organization that on the date of the annuity agreement: (A) Has a minimum of three hundred thousand dollars in unrestricted cash, cash equivalents or publicly traded securities, exclusive of the assets funding the annuity agreement; and (B) has been in continuous operation for at least three years or is a successor or affiliate of a charitable organization that has been in continuous operation for at least three years."
+      }
+    },
+    {
+      "id": "section-38a-1031",
+      "kind": "section",
+      "citation": "38a-1031",
+      "citations": [
+        "38a-1031"
+      ],
+      "heading": "Sec. 38a-1031. Issuance of charitable gift annuity does not constitute engaging in the business of insurance.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_706a.htm#sec_38a-1031",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) The issuance of a qualified charitable gift annuity shall not constitute engaging in the business of insurance in this state.",
+          "(b) A charitable gift annuity issued before October 1, 1999, is a qualified charitable gift annuity for the purposes of sections 38a-1030 to 38a-1034 , inclusive, and the issuance of that charitable gift annuity shall not constitute engaging in the business of insurance in this state."
+        ],
+        "sourceNotes": [
+          "(P.A. 99-52, S. 2.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "(a) The issuance of a qualified charitable gift annuity shall not constitute engaging in the business of insurance in this state.\n\n(b) A charitable gift annuity issued before October 1, 1999, is a qualified charitable gift annuity for the purposes of sections 38a-1030 to 38a-1034 , inclusive, and the issuance of that charitable gift annuity shall not constitute engaging in the business of insurance in this state."
+      }
+    },
+    {
+      "id": "section-38a-1032",
+      "kind": "section",
+      "citation": "38a-1032",
+      "citations": [
+        "38a-1032"
+      ],
+      "heading": "Sec. 38a-1032. Written disclosures.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_706a.htm#sec_38a-1032",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) When entering into an agreement for a qualified charitable gift annuity, the charitable organization shall disclose to the donor in writing in the annuity agreement that a qualified charitable gift annuity is not insurance under the laws of this state and is not subject to regulation by the Insurance Commissioner or protected by an insurance guaranty association.",
+          "(b) The notice provisions required by this section shall be in a separate paragraph in a print size no smaller than that employed in the annuity agreement generally."
+        ],
+        "sourceNotes": [
+          "(P.A. 99-52, S. 3.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "(a) When entering into an agreement for a qualified charitable gift annuity, the charitable organization shall disclose to the donor in writing in the annuity agreement that a qualified charitable gift annuity is not insurance under the laws of this state and is not subject to regulation by the Insurance Commissioner or protected by an insurance guaranty association.\n\n(b) The notice provisions required by this section shall be in a separate paragraph in a print size no smaller than that employed in the annuity agreement generally."
+      }
+    },
+    {
+      "id": "section-38a-1033",
+      "kind": "section",
+      "citation": "38a-1033",
+      "citations": [
+        "38a-1033"
+      ],
+      "heading": "Sec. 38a-1033. Notice to commissioner.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_706a.htm#sec_38a-1033",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) A charitable organization that issues qualified charitable gift annuities shall notify the Insurance Commissioner, in writing, by the latter of January 1, 2000, or the date on which it enters into the organization's first qualified charitable gift annuity agreement. The notice shall: (1) Be signed by an officer or director of the organization; (2) identify the organization; and (3) certify that: (A) The organization is a charitable organization; and (B) the annuities issued by the organization are qualified charitable gift annuities.",
+          "(b) The organization shall not be required to submit additional information except to determine appropriate penalties that may be applicable under section 38a-1034 ."
+        ],
+        "sourceNotes": [
+          "(P.A. 99-52, S. 4.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "(a) A charitable organization that issues qualified charitable gift annuities shall notify the Insurance Commissioner, in writing, by the latter of January 1, 2000, or the date on which it enters into the organization's first qualified charitable gift annuity agreement. The notice shall: (1) Be signed by an officer or director of the organization; (2) identify the organization; and (3) certify that: (A) The organization is a charitable organization; and (B) the annuities issued by the organization are qualified charitable gift annuities.\n\n(b) The organization shall not be required to submit additional information except to determine appropriate penalties that may be applicable under section 38a-1034 ."
+      }
+    },
+    {
+      "id": "section-38a-1034",
+      "kind": "section",
+      "citation": "38a-1034",
+      "citations": [
+        "38a-1034"
+      ],
+      "heading": "Sec. 38a-1034. Failure to comply with notice requirements. Validity of charitable gift annuity after failure to give notice. Penalties.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_706a.htm#sec_38a-1034",
+      "status": "active",
+      "content": {
+        "body": [
+          "The failure of a charitable organization to comply with the notice requirements imposed under section 38a-1032 or 38a-1033 shall not prevent a charitable gift annuity that otherwise meets the requirements of sections 38a-1030 to 38a-1034 , inclusive, from constituting a qualified charitable gift annuity. The Insurance Commissioner may enforce performance of the requirements of sections 38a-1032 and 38a-1033 by sending a letter by certified mail, return receipt requested, demanding that the charitable organization comply with the requirements of sections 38a-1032 and 38a-1033 . The commissioner may fine the charitable organization in an amount not to exceed one thousand dollars per qualified charitable gift annuity agreement issued until such time as the charitable organization complies with the requirements of sections 38a-1032 and 38a-1033 ."
+        ],
+        "sourceNotes": [
+          "(P.A. 99-52, S. 5.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "The failure of a charitable organization to comply with the notice requirements imposed under section 38a-1032 or 38a-1033 shall not prevent a charitable gift annuity that otherwise meets the requirements of sections 38a-1030 to 38a-1034 , inclusive, from constituting a qualified charitable gift annuity. The Insurance Commissioner may enforce performance of the requirements of sections 38a-1032 and 38a-1033 by sending a letter by certified mail, return receipt requested, demanding that the charitable organization comply with the requirements of sections 38a-1032 and 38a-1033 . The commissioner may fine the charitable organization in an amount not to exceed one thousand dollars per qualified charitable gift annuity agreement issued until such time as the charitable organization complies with the requirements of sections 38a-1032 and 38a-1033 ."
+      }
+    },
+    {
+      "id": "group-38a-1035-to-38a-1036-to-38a-1037-to-38a-1038-to-38a-1039",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "38a-1035",
+        "38a-1036",
+        "38a-1037",
+        "38a-1038",
+        "38a-1039"
+      ],
+      "heading": "Secs. 38a-1035 to 38a-1039.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_706a.htm#secs_38a-1035_to_38a-1039",
+      "status": "reserved",
+      "content": {
+        "body": [
+          "Reserved for future use."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Reserved for future use."
+      }
+    }
+  ]
+}

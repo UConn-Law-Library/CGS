@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-914",
+  "number": "914",
+  "name": "Forcible Entry and Detainer",
+  "title": {
+    "id": "title-52",
+    "number": "52",
+    "name": "Civil Actions"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_914.htm",
+  "sections": [
+    {
+      "id": "group-52-462-to-52-463-to-52-464-to-52-465",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "52-462",
+        "52-463",
+        "52-464",
+        "52-465"
+      ],
+      "heading": "Secs. 52-462 to 52-465.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_914.htm#secs_52-462_to_52-465",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 833, Secs. 47a-43 to 47a-46 , inclusive."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 833, Secs. 47a-43 to 47a-46 , inclusive."
+      }
+    }
+  ]
+}

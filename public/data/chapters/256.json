@@ -1,0 +1,84 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-256",
+  "number": "256",
+  "name": "Petroleum Products Control Commission",
+  "title": {
+    "id": "title-14",
+    "number": "14",
+    "name": "Motor Vehicles. Use of the Highway By Vehicles. Gasoline"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_256.htm",
+  "sections": [
+    {
+      "id": "group-14-391-to-14-392-to-14-393-to-14-394-to-14-395-to-14-396-to-14-397-to-14-398-to-14-399",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "14-391",
+        "14-392",
+        "14-393",
+        "14-394",
+        "14-395",
+        "14-396",
+        "14-397",
+        "14-398",
+        "14-399"
+      ],
+      "heading": "Secs. 14-391 to 14-399. Petroleum Products Control Commission.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_256.htm#secs_14-391_to_14-399",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Sections 14-391 to 14-399 , inclusive, are repealed."
+        ],
+        "sourceNotes": [
+          "(P.A. 73-678, S. 1–9, 12; P.A. 74-285, S. 18, 20.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 14-391 to 14-399 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-14-391",
+      "kind": "section",
+      "citation": "14-391",
+      "citations": [
+        "14-391"
+      ],
+      "heading": "14-391",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_256.htm#sec_14-391",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 14-391 to 14-399. Petroleum Products Control Commission. Sections 14-391 to 14-399 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 14-391 to 14-399. Petroleum Products Control Commission. Sections 14-391 to 14-399 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-14-399",
+      "kind": "section",
+      "citation": "14-399",
+      "citations": [
+        "14-399"
+      ],
+      "heading": "14-399",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_256.htm#sec_14-399",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 14-391 to 14-399. Petroleum Products Control Commission. Sections 14-391 to 14-399 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 14-391 to 14-399. Petroleum Products Control Commission. Sections 14-391 to 14-399 , inclusive, are repealed."
+      }
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-013",
+  "number": "013",
+  "name": "Connecticut Institute for Municipal Studies",
+  "title": {
+    "id": "title-01",
+    "number": "01",
+    "name": "Provisions of General Application"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_013.htm",
+  "sections": [
+    {
+      "id": "group-1-135-to-1-136-to-1-137-to-1-138-to-1-139",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "1-135",
+        "1-136",
+        "1-137",
+        "1-138",
+        "1-139"
+      ],
+      "heading": "Secs. 1-135 to 1-139. Connecticut Institute for Municipal Studies; established. Board of directors. Meetings; agenda; staff. Consortium of public and private institutions of higher education. Pilot demonstration projects; funding.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_013.htm#secs_1-135_to_1-139",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Sections 1-135 to 1-139 , inclusive, are repealed, effective July 1, 2002."
+        ],
+        "sourceNotes": [
+          "(May Sp. Sess. P.A. 92-16, S. 78–82, 89; P.A. 96-256, S. 167, 209; P.A. 02-140, S. 9.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 1-135 to 1-139 , inclusive, are repealed, effective July 1, 2002."
+      }
+    },
+    {
+      "id": "section-1-139a",
+      "kind": "section",
+      "citation": "1-139a",
+      "citations": [
+        "1-139a"
+      ],
+      "heading": "Sec. 1-139a. Institute for Municipal and Regional Policy: Transfer of assets and records.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_013.htm#sec_1-139a",
+      "status": "active",
+      "content": {
+        "body": [
+          "The financial assets of the Institute for Municipal and Regional Policy at Central Connecticut State University are transferred to The University of Connecticut for the purposes of the Institute for Municipal and Regional Policy at The University of Connecticut. The records, files, intellectual property rights and copyright rights of the Institute for Municipal and Regional Policy at Central Connecticut State University are transferred to the Institute for Municipal and Regional Policy at The University of Connecticut."
+        ],
+        "sourceNotes": [
+          "(P.A. 02-140, S. 8; P.A. 13-247, S. 61; June Sp. Sess. P.A. 21-2, S. 22.)"
+        ],
+        "history": [
+          "History: P.A. 02-140 effective July 1, 2002; P.A. 13-247 deleted references to Center for Public Policy and Practical Politics, effective July 1, 2013; June Sp. Sess. P.A. 21-2 deleted references to Connecticut Institute for Municipal Studies and the Connecticut State University System and added provisions re the transfer of financial assets, records and rights of the Institute for Municipal and Regional Policy at Central Connecticut State University to the Institute for Municipal and Regional Policy at The University of Connecticut."
+        ],
+        "annotations": [],
+        "plainText": "The financial assets of the Institute for Municipal and Regional Policy at Central Connecticut State University are transferred to The University of Connecticut for the purposes of the Institute for Municipal and Regional Policy at The University of Connecticut. The records, files, intellectual property rights and copyright rights of the Institute for Municipal and Regional Policy at Central Connecticut State University are transferred to the Institute for Municipal and Regional Policy at The University of Connecticut."
+      }
+    },
+    {
+      "id": "section-1-140",
+      "kind": "section",
+      "citation": "1-140",
+      "citations": [
+        "1-140"
+      ],
+      "heading": "Sec. 1-140.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_013.htm#sec_1-140",
+      "status": "reserved",
+      "content": {
+        "body": [
+          "Reserved for future use."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Reserved for future use."
+      }
+    },
+    {
+      "id": "section-1-135",
+      "kind": "section",
+      "citation": "1-135",
+      "citations": [
+        "1-135"
+      ],
+      "heading": "1-135",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_013.htm#sec_1-135",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 1-135 to 1-139. Connecticut Institute for Municipal Studies; established. Board of directors. Meetings; agenda; staff. Consortium of public and private institutions of higher education. Pilot demonstration projects; funding. Sections 1-135 to 1-139 , inclusive, are repealed, effective July 1, 2002."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 1-135 to 1-139. Connecticut Institute for Municipal Studies; established. Board of directors. Meetings; agenda; staff. Consortium of public and private institutions of higher education. Pilot demonstration projects; funding. Sections 1-135 to 1-139 , inclusive, are repealed, effective July 1, 2002."
+      }
+    },
+    {
+      "id": "section-1-139",
+      "kind": "section",
+      "citation": "1-139",
+      "citations": [
+        "1-139"
+      ],
+      "heading": "1-139",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_013.htm#sec_1-139",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 1-135 to 1-139. Connecticut Institute for Municipal Studies; established. Board of directors. Meetings; agenda; staff. Consortium of public and private institutions of higher education. Pilot demonstration projects; funding. Sections 1-135 to 1-139 , inclusive, are repealed, effective July 1, 2002."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 1-135 to 1-139. Connecticut Institute for Municipal Studies; established. Board of directors. Meetings; agenda; staff. Consortium of public and private institutions of higher education. Pilot demonstration projects; funding. Sections 1-135 to 1-139 , inclusive, are repealed, effective July 1, 2002."
+      }
+    }
+  ]
+}

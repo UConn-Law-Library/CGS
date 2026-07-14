@@ -1,0 +1,82 @@
+{
+  "title_key": "01",
+  "label": "Title 1",
+  "name": "Provisions of General Application",
+  "url": "https://www.cga.ct.gov/current/pub/title_01.htm",
+  "chapters": [
+    {
+      "chapter_key": "001",
+      "label": "Chapter 1",
+      "name": "Construction of Statutes",
+      "url": "https://www.cga.ct.gov/current/pub/chap_001.htm",
+      "sections": [
+        {
+          "section_key": "1-1",
+          "label": "Sec. 1-1. Words and phrases. Construction of statutes.",
+          "url": "https://www.cga.ct.gov/current/pub/chap_001.htm#sec_1-1",
+          "content": {
+            "body_paragraphs": [
+              "Words and phrases shall be construed according to the commonly approved usage of the language."
+            ],
+            "source": ["(1949 Rev., S. 3639.)"],
+            "history": ["History: Amended by P.A. 76-186."],
+            "annotations": [{ "first": true, "text": "Cited. 171 C. 705." }],
+            "text": "Words and phrases shall be construed according to the commonly approved usage of the language."
+          }
+        },
+        {
+          "section_key": "",
+          "label": "Secs. 1-1o to 1-1s.",
+          "url": "https://www.cga.ct.gov/current/pub/chap_001.htm#secs_1-1o_to_1-1s",
+          "grouped": true,
+          "section_keys": ["1-1o", "1-1p", "1-1q", "1-1r", "1-1s"],
+          "content": {
+            "body_paragraphs": ["Reserved for future use."],
+            "source": [],
+            "history": [],
+            "annotations": [],
+            "text": "Reserved for future use.",
+            "statuses": ["reserved"],
+            "status": "reserved"
+          }
+        }
+      ]
+    },
+    {
+      "chapter_key": "002",
+      "label": "Chapter 2",
+      "name": "Continuity of Government",
+      "url": "https://www.cga.ct.gov/current/pub/chap_002.htm",
+      "sections": [
+        {
+          "section_key": "1-4",
+          "label": "Sec. 1-4. Continuity of government.",
+          "url": "https://www.cga.ct.gov/current/pub/chap_002.htm#sec_1-4",
+          "source_fragment_key": "sec_1-4",
+          "content": {
+            "body_paragraphs": ["Public offices shall remain continuous in an emergency."],
+            "source": [],
+            "history": [],
+            "annotations": [],
+            "text": "Public offices shall remain continuous in an emergency."
+          }
+        },
+        {
+          "section_key": "1-5",
+          "label": "Sec. 1-5. Former emergency provision.",
+          "url": "https://www.cga.ct.gov/current/pub/chap_002.htm#sec_1-5",
+          "identifier_warning": "Legacy source fragment differed from the visible citation.",
+          "content": {
+            "body_paragraphs": ["Repealed."],
+            "source": [],
+            "history": ["Repealed by P.A. 90-1."],
+            "annotations": [],
+            "text": "Repealed.",
+            "statuses": ["repealed"],
+            "status": "repealed"
+          }
+        }
+      ]
+    }
+  ]
+}

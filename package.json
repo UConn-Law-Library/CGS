@@ -1,0 +1,22 @@
+{
+  "name": "cgs-pages",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "import:fixture": "node scripts/import-legacy.mjs --input fixtures/legacy --output public/data",
+    "import:legacy": "node scripts/import-legacy.mjs",
+    "diff:corpus": "node scripts/diff-corpus.mjs",
+    "crawl": "python -m crawler.cgs_crawler.cli",
+    "validate": "node scripts/validate.mjs --data public/data --schemas schemas",
+    "test": "node --test --test-isolation=none",
+    "test:crawler": "python -m unittest discover -s crawler/tests -v",
+    "build": "node scripts/build-site.mjs",
+    "dev": "node scripts/serve.mjs",
+    "check": "npm run validate && npm test && npm run test:crawler && npm run build",
+    "check:fixture": "npm run import:fixture && npm run check"
+  }
+}

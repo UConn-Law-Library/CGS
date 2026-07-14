@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-400d",
+  "number": "400d",
+  "name": "Home Building Contractors",
+  "title": {
+    "id": "title-20",
+    "number": "20",
+    "name": "Professional and Occupational Licensing, Certification, Title Protection and Registration. Examining Boards"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_400d.htm",
+  "sections": [
+    {
+      "id": "section-20-484",
+      "kind": "section",
+      "citation": "20-484",
+      "citations": [
+        "20-484"
+      ],
+      "heading": "Sec. 20-484. Registration required.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_400d.htm#sec_20-484",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 20-484 is repealed."
+        ],
+        "sourceNotes": [
+          "(P.A. 94-68, S. 5; P.A. 96-259, S. 18.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 20-484 is repealed."
+      }
+    },
+    {
+      "id": "group-20-485-to-20-486-to-20-487-to-20-488-to-20-489",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "20-485",
+        "20-486",
+        "20-487",
+        "20-488",
+        "20-489"
+      ],
+      "heading": "Secs. 20-485 to 20-489.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_400d.htm#secs_20-485_to_20-489",
+      "status": "reserved",
+      "content": {
+        "body": [
+          "Reserved for future use.",
+          "Note: Chapter 400e is also reserved for future use."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Reserved for future use.\n\nNote: Chapter 400e is also reserved for future use."
+      }
+    }
+  ]
+}

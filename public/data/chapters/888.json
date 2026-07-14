@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-888",
+  "number": "888",
+  "name": "Juvenile Matters",
+  "title": {
+    "id": "title-51",
+    "number": "51",
+    "name": "Courts"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_888.htm",
+  "sections": [
+    {
+      "id": "group-51-301-to-51-302-to-51-303-to-51-304-to-51-305-to-51-306-to-51-307-to-51-308-to-51-309-to-51-310-to-51-311-to-51-312-to-51-313-to-51-314-to-51-315-to-51-316-to-51-317-to-51-318-to-51-319-to-51-320-to-51-321-to-51-322-to-51-323-to-51-324-to-51-325-to-51-326-to-51-327-to-51-328-to-51-329",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "51-301",
+        "51-302",
+        "51-303",
+        "51-304",
+        "51-305",
+        "51-306",
+        "51-307",
+        "51-308",
+        "51-309",
+        "51-310",
+        "51-311",
+        "51-312",
+        "51-313",
+        "51-314",
+        "51-315",
+        "51-316",
+        "51-317",
+        "51-318",
+        "51-319",
+        "51-320",
+        "51-321",
+        "51-322",
+        "51-323",
+        "51-324",
+        "51-325",
+        "51-326",
+        "51-327",
+        "51-328",
+        "51-329"
+      ],
+      "heading": "Secs. 51-301 to 51-329.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_888.htm#secs_51-301_to_51-329",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 815t, Secs. 46b-120 to 46b-148 , inclusive."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 815t, Secs. 46b-120 to 46b-148 , inclusive."
+      }
+    }
+  ]
+}

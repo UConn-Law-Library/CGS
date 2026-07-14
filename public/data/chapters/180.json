@@ -1,0 +1,127 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-180",
+  "number": "180",
+  "name": "Connecticut Student Loan Foundation",
+  "title": {
+    "id": "title-10",
+    "number": "10",
+    "name": "Education and Culture"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_180.htm",
+  "sections": [
+    {
+      "id": "group-10-358-to-10-359-to-10-360-to-10-361-to-10-362-to-10-363-to-10-364",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "10-358",
+        "10-359",
+        "10-360",
+        "10-361",
+        "10-362",
+        "10-363",
+        "10-364"
+      ],
+      "heading": "Secs. 10-358 to 10-364.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_180.htm#secs_10-358_to_10-364",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 187a, Secs. 10a-201 to 10a-207 , inclusive."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 187a, Secs. 10a-201 to 10a-207 , inclusive."
+      }
+    },
+    {
+      "id": "group-10-364a-to-10-364b-to-10-364c-to-10-364d-to-10-364e",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "10-364a",
+        "10-364b",
+        "10-364c",
+        "10-364d",
+        "10-364e"
+      ],
+      "heading": "Secs. 10-364a to 10-364e. Definitions. Loans for vocational training. Interest on loans. Terms and conditions of loans. Application of other statutes.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_180.htm#secs_10-364a_to_10-364e",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Sections 10-364a to 10-364e , inclusive, are repealed."
+        ],
+        "sourceNotes": [
+          "(1967, P.A. 624, S. 1–5; 1969, P.A. 660, S. 9.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 10-364a to 10-364e , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "group-10-365-to-10-368e",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "10-365",
+        "10-368e"
+      ],
+      "heading": "Secs. 10-365 to 10-368e.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_180.htm#secs_10-365_to_10-368e",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 187a, Secs. 10a-208 to 10a-216 , inclusive."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 187a, Secs. 10a-208 to 10a-216 , inclusive."
+      }
+    },
+    {
+      "id": "section-10-364a",
+      "kind": "section",
+      "citation": "10-364a",
+      "citations": [
+        "10-364a"
+      ],
+      "heading": "10-364a",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_180.htm#sec_10-364a",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 10-364a to 10-364e. Definitions. Loans for vocational training. Interest on loans. Terms and conditions of loans. Application of other statutes. Sections 10-364a to 10-364e , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 10-364a to 10-364e. Definitions. Loans for vocational training. Interest on loans. Terms and conditions of loans. Application of other statutes. Sections 10-364a to 10-364e , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-10-364e",
+      "kind": "section",
+      "citation": "10-364e",
+      "citations": [
+        "10-364e"
+      ],
+      "heading": "10-364e",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_180.htm#sec_10-364e",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 10-364a to 10-364e. Definitions. Loans for vocational training. Interest on loans. Terms and conditions of loans. Application of other statutes. Sections 10-364a to 10-364e , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 10-364a to 10-364e. Definitions. Loans for vocational training. Interest on loans. Terms and conditions of loans. Application of other statutes. Sections 10-364a to 10-364e , inclusive, are repealed."
+      }
+    }
+  ]
+}

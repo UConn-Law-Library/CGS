@@ -1,0 +1,83 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-252",
+  "number": "252",
+  "name": "Highway Use Tax",
+  "title": {
+    "id": "title-14",
+    "number": "14",
+    "name": "Motor Vehicles. Use of the Highway By Vehicles. Gasoline"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_252.htm",
+  "sections": [
+    {
+      "id": "group-14-357-to-14-358-to-14-359-to-14-360-to-14-361-to-14-362-to-14-363-to-14-364",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "14-357",
+        "14-358",
+        "14-359",
+        "14-360",
+        "14-361",
+        "14-362",
+        "14-363",
+        "14-364"
+      ],
+      "heading": "Secs. 14-357 to 14-364. Highway use tax.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_252.htm#secs_14-357_to_14-364",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Sections 14-357 to 14-364 , inclusive, are repealed."
+        ],
+        "sourceNotes": [
+          "(1957, P.A. 671, S. 2–9; 1959, P.A. 43, S. 1; 579, S. 24, 25; 1961, P.A. 517, S. 129; 575, S. 17.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 14-357 to 14-364 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-14-357",
+      "kind": "section",
+      "citation": "14-357",
+      "citations": [
+        "14-357"
+      ],
+      "heading": "14-357",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_252.htm#sec_14-357",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 14-357 to 14-364. Highway use tax. Sections 14-357 to 14-364 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 14-357 to 14-364. Highway use tax. Sections 14-357 to 14-364 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-14-364",
+      "kind": "section",
+      "citation": "14-364",
+      "citations": [
+        "14-364"
+      ],
+      "heading": "14-364",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_252.htm#sec_14-364",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 14-357 to 14-364. Highway use tax. Sections 14-357 to 14-364 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 14-357 to 14-364. Highway use tax. Sections 14-357 to 14-364 , inclusive, are repealed."
+      }
+    }
+  ]
+}

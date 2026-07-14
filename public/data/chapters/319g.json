@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-319g",
+  "number": "319g",
+  "name": "Medicare Assignment",
+  "title": {
+    "id": "title-17a",
+    "number": "17a",
+    "name": "Social and Human Services and Resources"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_319g.htm",
+  "sections": [
+    {
+      "id": "group-17a-390-to-17a-391-to-17a-392-to-17a-393-to-17a-394",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "17a-390",
+        "17a-391",
+        "17a-392",
+        "17a-393",
+        "17a-394"
+      ],
+      "heading": "Secs. 17a-390 to 17a-394.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_319g.htm#secs_17a-390_to_17a-394",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 319jj, Secs. 17b-550 to 17b-554 , inclusive."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 319jj, Secs. 17b-550 to 17b-554 , inclusive."
+      }
+    },
+    {
+      "id": "group-17a-395-to-17a-396-to-17a-397-to-17a-398-to-17a-399-to-17a-400-to-17a-401-to-17a-402-to-17a-403-to-17a-404",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "17a-395",
+        "17a-396",
+        "17a-397",
+        "17a-398",
+        "17a-399",
+        "17a-400",
+        "17a-401",
+        "17a-402",
+        "17a-403",
+        "17a-404"
+      ],
+      "heading": "Secs. 17a-395 to 17a-404.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_319g.htm#secs_17a-395_to_17a-404",
+      "status": "reserved",
+      "content": {
+        "body": [
+          "Reserved for future use."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Reserved for future use."
+      }
+    }
+  ]
+}

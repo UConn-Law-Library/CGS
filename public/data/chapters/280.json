@@ -1,0 +1,124 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-280",
+  "number": "280",
+  "name": "Railroad Operations",
+  "title": {
+    "id": "title-16",
+    "number": "16",
+    "name": "Public Service Companies"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_280.htm",
+  "sections": [
+    {
+      "id": "group-16-140-to-16-141-to-16-142-to-16-143-to-16-144-to-16-145-to-16-146-to-16-147-to-16-148-to-16-149-to-16-150-to-16-151-to-16-152-to-16-153-to-16-154-to-16-155-to-16-156-to-16-157-to-16-158-to-16-159-to-16-160-to-16-161-to-16-162-to-16-163-to-16-164-to-16-165-to-16-166-to-16-167-to-16-168-to-16-169-to-16-170-to-16-171-to-16-172-to-16-173-to-16-174-to-16-175-to-16-176-to-16-177-to-16-178-to-16-179-to-16-180",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "16-140",
+        "16-141",
+        "16-142",
+        "16-143",
+        "16-144",
+        "16-145",
+        "16-146",
+        "16-147",
+        "16-148",
+        "16-149",
+        "16-150",
+        "16-151",
+        "16-152",
+        "16-153",
+        "16-154",
+        "16-155",
+        "16-156",
+        "16-157",
+        "16-158",
+        "16-159",
+        "16-160",
+        "16-161",
+        "16-162",
+        "16-163",
+        "16-164",
+        "16-165",
+        "16-166",
+        "16-167",
+        "16-168",
+        "16-169",
+        "16-170",
+        "16-171",
+        "16-172",
+        "16-173",
+        "16-174",
+        "16-175",
+        "16-176",
+        "16-177",
+        "16-178",
+        "16-179",
+        "16-180"
+      ],
+      "heading": "Secs. 16-140 to 16-180.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_280.htm#secs_16-140_to_16-180",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 245b, Secs. 13b-324 to 13b-365 , inclusive."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 245b, Secs. 13b-324 to 13b-365 , inclusive."
+      }
+    },
+    {
+      "id": "section-16-181",
+      "kind": "section",
+      "citation": "16-181",
+      "citations": [
+        "16-181"
+      ],
+      "heading": "Sec. 16-181. Sunday trains. Freight. Forfeiture.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_280.htm#sec_16-181",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 16-181 is repealed."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 5563; P.A. 76-415, S. 9; 76-435, S. 81, 82.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 16-181 is repealed."
+      }
+    },
+    {
+      "id": "group-16-182-to-16-183-to-16-184-to-16-185-to-16-186-to-16-187-to-16-188-to-16-189-to-16-190",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "16-182",
+        "16-183",
+        "16-184",
+        "16-185",
+        "16-186",
+        "16-187",
+        "16-188",
+        "16-189",
+        "16-190"
+      ],
+      "heading": "Secs. 16-182 to 16-190.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_280.htm#secs_16-182_to_16-190",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 245b, Secs. 13b-366 to 13b-374 , inclusive."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 245b, Secs. 13b-366 to 13b-374 , inclusive."
+      }
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-414a",
+  "number": "414a",
+  "name": "Check Cashing Services",
+  "title": {
+    "id": "title-21",
+    "number": "21",
+    "name": "Licenses"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_414a.htm",
+  "sections": [
+    {
+      "id": "group-21-111-to-21-112-to-21-113-to-21-114-to-21-115-to-21-116-to-21-117-to-21-118-to-21-119",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "21-111",
+        "21-112",
+        "21-113",
+        "21-114",
+        "21-115",
+        "21-116",
+        "21-117",
+        "21-118",
+        "21-119"
+      ],
+      "heading": "Secs. 21-111 to 21-119.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_414a.htm#secs_21-111_to_21-119",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 662d, Secs. 36-564 to 36-568 , inclusive, and 36-570 to 36-573 , inclusive."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 662d, Secs. 36-564 to 36-568 , inclusive, and 36-570 to 36-573 , inclusive."
+      }
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-264",
+  "number": "264",
+  "name": "Commissioners of Steamship Terminals",
+  "title": {
+    "id": "title-15",
+    "number": "15",
+    "name": "Navigation and Aeronautics"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_264.htm",
+  "sections": [
+    {
+      "id": "group-15-27-to-15-30a",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "15-27",
+        "15-30a"
+      ],
+      "heading": "Secs. 15-27 to 15-30a. Commissioners. Office. Powers and duties. Sale of land by commissioner. Disposition of proceeds. Docking facilities in Stonington.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_264.htm#secs_15-27_to_15-30a",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Sections 15-27 to 15-30a , inclusive, are repealed."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 4775–4778; 1953, S. 2407d; 1959, P.A. 44; 570, S. 1; 1963, P.A. 634, S. 1–3; February, 1965, P.A. 616, S. 1, 2; 1967, P.A. 330, S. 2; 1969, P.A. 768, S. 263.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 15-27 to 15-30a , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-15-31",
+      "kind": "section",
+      "citation": "15-31",
+      "citations": [
+        "15-31"
+      ],
+      "heading": "Sec. 15-31.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_264.htm#sec_15-31",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 263, Sec. 15-11a ."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 263, Sec. 15-11a ."
+      }
+    },
+    {
+      "id": "section-15-27",
+      "kind": "section",
+      "citation": "15-27",
+      "citations": [
+        "15-27"
+      ],
+      "heading": "15-27",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_264.htm#sec_15-27",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 15-27 to 15-30a. Commissioners. Office. Powers and duties. Sale of land by commissioner. Disposition of proceeds. Docking facilities in Stonington. Sections 15-27 to 15-30a , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 15-27 to 15-30a. Commissioners. Office. Powers and duties. Sale of land by commissioner. Disposition of proceeds. Docking facilities in Stonington. Sections 15-27 to 15-30a , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-15-30a",
+      "kind": "section",
+      "citation": "15-30a",
+      "citations": [
+        "15-30a"
+      ],
+      "heading": "15-30a",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_264.htm#sec_15-30a",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 15-27 to 15-30a. Commissioners. Office. Powers and duties. Sale of land by commissioner. Disposition of proceeds. Docking facilities in Stonington. Sections 15-27 to 15-30a , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 15-27 to 15-30a. Commissioners. Office. Powers and duties. Sale of land by commissioner. Disposition of proceeds. Docking facilities in Stonington. Sections 15-27 to 15-30a , inclusive, are repealed."
+      }
+    }
+  ]
+}

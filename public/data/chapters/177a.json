@@ -1,0 +1,84 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-177a",
+  "number": "177a",
+  "name": "American Revolution Bicentennial Commission",
+  "title": {
+    "id": "title-10",
+    "number": "10",
+    "name": "Education and Culture"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_177a.htm",
+  "sections": [
+    {
+      "id": "group-10-321h-to-10-321i-to-10-321j-to-10-321k-to-10-321l-to-10-321m-to-10-321n-to-10-321o-to-10-321p",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "10-321h",
+        "10-321i",
+        "10-321j",
+        "10-321k",
+        "10-321l",
+        "10-321m",
+        "10-321n",
+        "10-321o",
+        "10-321p"
+      ],
+      "heading": "Secs. 10-321h to 10-321p. American Revolution Bicentennial Commission.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_177a.htm#secs_10-321h_to_10-321p",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Sections 10-321h to 10-321p , inclusive, are repealed."
+        ],
+        "sourceNotes": [
+          "(1971, P.A. 620, S. 1–9; P.A. 74-93, S. 1, 2; P.A. 75-302, S. 1–5; P.A. 77-614, S. 306, 610; P.A. 84-256, S. 16, 17; 84-546, S. 171, 173.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 10-321h to 10-321p , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-10-321h",
+      "kind": "section",
+      "citation": "10-321h",
+      "citations": [
+        "10-321h"
+      ],
+      "heading": "10-321h",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_177a.htm#sec_10-321h",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 10-321h to 10-321p. American Revolution Bicentennial Commission. Sections 10-321h to 10-321p , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 10-321h to 10-321p. American Revolution Bicentennial Commission. Sections 10-321h to 10-321p , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-10-321p",
+      "kind": "section",
+      "citation": "10-321p",
+      "citations": [
+        "10-321p"
+      ],
+      "heading": "10-321p",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_177a.htm#sec_10-321p",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 10-321h to 10-321p. American Revolution Bicentennial Commission. Sections 10-321h to 10-321p , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 10-321h to 10-321p. American Revolution Bicentennial Commission. Sections 10-321h to 10-321p , inclusive, are repealed."
+      }
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-382c",
+  "number": "382c",
+  "name": "Phlebotomists",
+  "title": {
+    "id": "title-20",
+    "number": "20",
+    "name": "Professional and Occupational Licensing, Certification, Title Protection and Registration. Examining Boards"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_382c.htm",
+  "sections": [
+    {
+      "id": "section-20-185v",
+      "kind": "section",
+      "citation": "20-185v",
+      "citations": [
+        "20-185v"
+      ],
+      "heading": "Sec. 20-185v. Phlebotomists. Definition. Certification.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_382c.htm#sec_20-185v",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) As used in this section, “phlebotomist” means a person, acting on an order of a physician licensed pursuant to chapter 370, physician assistant licensed pursuant to chapter 370, advanced practice registered nurse licensed pursuant to chapter 378 or podiatrist licensed pursuant to chapter 375, who draws blood for diagnostic testing, transfusions, research or blood donations.",
+          "(b) A person who practices as a phlebotomist in the state may obtain certification as a phlebotomist from the American Society of Phlebotomy Technicians, National Center for Competency Testing, National Phlebotomy Association, National Healthcareer Association or American Medical Technologists."
+        ],
+        "sourceNotes": [
+          "(P.A. 17-23, S. 1; 17-234, S. 1.)"
+        ],
+        "history": [
+          "History: P.A. 17-234 amended Subsec. (a) by adding provision regarding a phlebotomist acting on order of physician, physician assistant, advanced practice registered nurse or podiatrist."
+        ],
+        "annotations": [],
+        "plainText": "(a) As used in this section, “phlebotomist” means a person, acting on an order of a physician licensed pursuant to chapter 370, physician assistant licensed pursuant to chapter 370, advanced practice registered nurse licensed pursuant to chapter 378 or podiatrist licensed pursuant to chapter 375, who draws blood for diagnostic testing, transfusions, research or blood donations.\n\n(b) A person who practices as a phlebotomist in the state may obtain certification as a phlebotomist from the American Society of Phlebotomy Technicians, National Center for Competency Testing, National Phlebotomy Association, National Healthcareer Association or American Medical Technologists."
+      }
+    },
+    {
+      "id": "section-20-185w",
+      "kind": "section",
+      "citation": "20-185w",
+      "citations": [
+        "20-185w"
+      ],
+      "heading": "Sec. 20-185w. Flushing of peripheral IV with prepackaged normal saline.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_382c.htm#sec_20-185w",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) As used in this section:",
+          "(1) “Normal saline” means a nine-tenths of one per cent sodium chloride solution that does not contain additives and is suitable for administration to a hospital patient;",
+          "(2) “Prepackaged” means prepared by a pharmacy or a manufacturer in a sterile environment; and",
+          "(3) “Peripheral IV” means a peripherally inserted intravenous line.",
+          "(b) The flushing of a peripheral IV with prepackaged normal saline, in a single use pre-filled syringe, may be performed at a hospital by a phlebotomist who (1) maintains certification from the American Society of Phlebotomy Technicians, National Center for Competency Testing, National Phlebotomy Association, National Healthcareer Association or American Medical Technologists, and (2) is responsible for drawing blood and trained under a protocol approved by the hospital. The hospital-approved protocol shall indicate the level of supervision and training required for such phlebotomists who perform flushing of a peripheral IV and include education about aseptic technique and infection control. The hospital shall document and maintain such protocol at the hospital for not less than two years from the date of implementation of such protocol. The flushing of a peripheral IV with prepackaged normal saline shall not be considered the administration of medication."
+        ],
+        "sourceNotes": [
+          "(P.A. 17-234, S. 2.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "(a) As used in this section:\n\n(1) “Normal saline” means a nine-tenths of one per cent sodium chloride solution that does not contain additives and is suitable for administration to a hospital patient;\n\n(2) “Prepackaged” means prepared by a pharmacy or a manufacturer in a sterile environment; and\n\n(3) “Peripheral IV” means a peripherally inserted intravenous line.\n\n(b) The flushing of a peripheral IV with prepackaged normal saline, in a single use pre-filled syringe, may be performed at a hospital by a phlebotomist who (1) maintains certification from the American Society of Phlebotomy Technicians, National Center for Competency Testing, National Phlebotomy Association, National Healthcareer Association or American Medical Technologists, and (2) is responsible for drawing blood and trained under a protocol approved by the hospital. The hospital-approved protocol shall indicate the level of supervision and training required for such phlebotomists who perform flushing of a peripheral IV and include education about aseptic technique and infection control. The hospital shall document and maintain such protocol at the hospital for not less than two years from the date of implementation of such protocol. The flushing of a peripheral IV with prepackaged normal saline shall not be considered the administration of medication."
+      }
+    },
+    {
+      "id": "group-20-185x-to-20-185y-to-20-185z",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "20-185x",
+        "20-185y",
+        "20-185z"
+      ],
+      "heading": "Secs. 20-185x to 20-185z.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_382c.htm#secs_20-185x_to_20-185z",
+      "status": "reserved",
+      "content": {
+        "body": [
+          "Reserved for future use."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Reserved for future use."
+      }
+    }
+  ]
+}

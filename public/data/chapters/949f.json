@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-949f",
+  "number": "949f",
+  "name": "Videotape Rental and Privacy",
+  "title": {
+    "id": "title-53",
+    "number": "53",
+    "name": "Crimes"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_949f.htm",
+  "sections": [
+    {
+      "id": "section-53-450",
+      "kind": "section",
+      "citation": "53-450",
+      "citations": [
+        "53-450"
+      ],
+      "heading": "Sec. 53-450. Confidentiality of videotape rental information. Cause of action. Penalty.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_949f.htm#sec_53-450",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) All personally identifiable information contained in the circulation records of any person renting videotape cassettes shall be confidential.",
+          "(b) Any person who has been injured by a violation of this section shall have a right of action against any person renting videotape cassettes who has committed the violation to recover damages for such injury.",
+          "(c) Any person who violates any provisions of this section shall be fined not more than five hundred dollars."
+        ],
+        "sourceNotes": [
+          "(P.A. 88-205, S. 1–3.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "(a) All personally identifiable information contained in the circulation records of any person renting videotape cassettes shall be confidential.\n\n(b) Any person who has been injured by a violation of this section shall have a right of action against any person renting videotape cassettes who has committed the violation to recover damages for such injury.\n\n(c) Any person who violates any provisions of this section shall be fined not more than five hundred dollars."
+      }
+    }
+  ]
+}

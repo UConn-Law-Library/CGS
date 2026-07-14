@@ -1,0 +1,456 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-244d",
+  "number": "244d",
+  "name": "Peer-to-Peer Car Sharing",
+  "title": {
+    "id": "title-13b",
+    "number": "13b",
+    "name": "Transportation"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_244d.htm",
+  "sections": [
+    {
+      "id": "section-13b-127",
+      "kind": "section",
+      "citation": "13b-127",
+      "citations": [
+        "13b-127"
+      ],
+      "heading": "Sec. 13b-127. Definitions.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_244d.htm#sec_13b-127",
+      "status": "active",
+      "content": {
+        "body": [
+          "For the purposes of this section and sections 13b-127a to 13b-127 l , inclusive:",
+          "(1) “Peer-to-peer car sharing” means the authorized use of a vehicle by a person other than the vehicle's owner through a peer-to-peer car sharing platform.",
+          "(2) “Peer-to-peer car sharing company” or “company” means a car sharing platform that connects vehicle owners with drivers to enable the sharing of vehicles for financial consideration. “Peer-to-peer car sharing company” does not include any person licensed pursuant to section 14-15 .",
+          "(3) “Car sharing platform” means a physical or electronic place, including, but not limited to, a store, a booth, an Internet web site, a catalog or a dedicated software application that allows a shared vehicle owner to make a shared vehicle available for peer-to-peer car sharing and connect a shared vehicle owner with a shared vehicle driver.",
+          "(4) “Car sharing agreement” means the terms and conditions applicable to a shared vehicle owner and a shared vehicle driver that govern the use of a shared vehicle through a peer-to-peer sharing platform. “Car sharing agreement” does not include any motor vehicle rental contracts.",
+          "(5) “Shared vehicle” means a vehicle that is available for sharing through a peer-to-peer car sharing platform. “Shared vehicle” does not include a passenger motor vehicle used for rental purposes by any person licensed pursuant to section 14-15 .",
+          "(6) “Shared vehicle driver” means a person authorized by the shared vehicle owner to drive the shared vehicle under a car sharing agreement. “Shared vehicle driver” does not include a lessee, as that term is used in section 14-15 .",
+          "(7) “Shared vehicle owner” means the registered owner, or a person or entity designated by the registered owner, of a vehicle made available on a peer-to-peer car sharing platform. “Shared vehicle owner” does not include a person licensed or required to be licensed pursuant to section 14-15 .",
+          "(8) “Car sharing delivery period” means the period of time during which a shared vehicle is being delivered to the location of the car sharing start time, if applicable, as documented by the car sharing agreement.",
+          "(9) “Car sharing period” means the period of time that begins at the start of the car sharing delivery period or, if there is no car sharing delivery period, that begins at the car sharing start time, and ends at the car sharing termination time.",
+          "(10) “Car sharing start time” means the time when a shared vehicle driver takes possession and control of the shared vehicle at or after the time the reservation of a shared vehicle is scheduled to begin as documented in the records of the peer-to-peer car sharing platform.",
+          "(11) “Car sharing termination time” means the earliest of the following events:",
+          "(A) The expiration of the agreed upon period of time established for the use of a shared vehicle according to the terms of the car sharing agreement if the shared vehicle is delivered to the location agreed upon in such agreement;",
+          "(B) When the shared vehicle is returned to a location as alternatively agreed upon by the shared vehicle owner and shared vehicle driver as communicated through a car sharing platform and incorporated into the car sharing agreement; or",
+          "(C) When the shared vehicle owner or the shared vehicle owner's authorized designee takes possession and control of the shared vehicle."
+        ],
+        "sourceNotes": [
+          "(P.A. 21-106, S. 52; P.A. 22-107, S. 2.)"
+        ],
+        "history": [
+          "History: P.A. 21-106 effective January 1, 2022; P.A. 22-107 amended definition of “peer-to-peer car sharing” to delete “shared” and “for a consideration”, amended definition of “peer-to-peer car sharing company” to delete existing definition and redefine as “a car sharing platform that connects vehicle owners with drivers to enable the sharing of vehicles for financial consideration”, amended definition of “car sharing agreement” to provide that such agreement does not include motor vehicle rental contracts, amended definition of “shared vehicle driver” to provide that it does not include a lessee as used in section 14-15, amended definition of “shared vehicle owner” to provide that it does not include a person licensed or required to be licensed pursuant to section 14-15, amended definition of “car sharing start time” by deleting reference to “car sharing agreement” and inserting in its place “peer-to-peer car sharing platform” and made technical changes to insert terms “peer-to-peer” and “peer-to-peer car sharing platform” throughout section, effective January 1, 2023."
+        ],
+        "annotations": [],
+        "plainText": "For the purposes of this section and sections 13b-127a to 13b-127 l , inclusive:\n\n(1) “Peer-to-peer car sharing” means the authorized use of a vehicle by a person other than the vehicle's owner through a peer-to-peer car sharing platform.\n\n(2) “Peer-to-peer car sharing company” or “company” means a car sharing platform that connects vehicle owners with drivers to enable the sharing of vehicles for financial consideration. “Peer-to-peer car sharing company” does not include any person licensed pursuant to section 14-15 .\n\n(3) “Car sharing platform” means a physical or electronic place, including, but not limited to, a store, a booth, an Internet web site, a catalog or a dedicated software application that allows a shared vehicle owner to make a shared vehicle available for peer-to-peer car sharing and connect a shared vehicle owner with a shared vehicle driver.\n\n(4) “Car sharing agreement” means the terms and conditions applicable to a shared vehicle owner and a shared vehicle driver that govern the use of a shared vehicle through a peer-to-peer sharing platform. “Car sharing agreement” does not include any motor vehicle rental contracts.\n\n(5) “Shared vehicle” means a vehicle that is available for sharing through a peer-to-peer car sharing platform. “Shared vehicle” does not include a passenger motor vehicle used for rental purposes by any person licensed pursuant to section 14-15 .\n\n(6) “Shared vehicle driver” means a person authorized by the shared vehicle owner to drive the shared vehicle under a car sharing agreement. “Shared vehicle driver” does not include a lessee, as that term is used in section 14-15 .\n\n(7) “Shared vehicle owner” means the registered owner, or a person or entity designated by the registered owner, of a vehicle made available on a peer-to-peer car sharing platform. “Shared vehicle owner” does not include a person licensed or required to be licensed pursuant to section 14-15 .\n\n(8) “Car sharing delivery period” means the period of time during which a shared vehicle is being delivered to the location of the car sharing start time, if applicable, as documented by the car sharing agreement.\n\n(9) “Car sharing period” means the period of time that begins at the start of the car sharing delivery period or, if there is no car sharing delivery period, that begins at the car sharing start time, and ends at the car sharing termination time.\n\n(10) “Car sharing start time” means the time when a shared vehicle driver takes possession and control of the shared vehicle at or after the time the reservation of a shared vehicle is scheduled to begin as documented in the records of the peer-to-peer car sharing platform.\n\n(11) “Car sharing termination time” means the earliest of the following events:\n\n(A) The expiration of the agreed upon period of time established for the use of a shared vehicle according to the terms of the car sharing agreement if the shared vehicle is delivered to the location agreed upon in such agreement;\n\n(B) When the shared vehicle is returned to a location as alternatively agreed upon by the shared vehicle owner and shared vehicle driver as communicated through a car sharing platform and incorporated into the car sharing agreement; or\n\n(C) When the shared vehicle owner or the shared vehicle owner's authorized designee takes possession and control of the shared vehicle."
+      }
+    },
+    {
+      "id": "section-13b-127a",
+      "kind": "section",
+      "citation": "13b-127a",
+      "citations": [
+        "13b-127a"
+      ],
+      "heading": "Sec. 13b-127a. Automobile liability insurance requirements.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_244d.htm#sec_13b-127a",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) Except as provided in subsection (b) of this section, a peer-to-peer car sharing company shall assume liability of a shared vehicle owner for bodily injury or property damage to third parties, or uninsured and underinsured motorist or personal injury protection losses, during the car sharing period in an amount stated in the peer-to-peer car sharing agreement, but not less than the minimum amounts required by subsection (a) of section 14-112 .",
+          "(b) The assumption of liability under subsection (a) of this section shall not apply to any shared vehicle owner who: (1) Makes an intentional or fraudulent material misrepresentation or omission to the peer-to-peer car sharing company or on the car sharing platform before the car sharing period in which the liability arose; or (2) acts in concert with a shared vehicle driver who fails to return the shared vehicle pursuant to the car sharing agreement.",
+          "(c) The assumption of liability under subsection (a) of this section shall apply to bodily injury, property damage, uninsured and underinsured motorist or personal injury protection losses by damaged third parties, in accordance with section 14-112 .",
+          "(d) A peer-to-peer car sharing company shall ensure that, during each car sharing period, the shared vehicle owner and the shared vehicle driver are insured under an automobile liability insurance policy that: (1) Provides insurance coverage in amounts not less than the minimum amounts required by subsection (a) of section 14-112 ; and (2) recognizes that the shared vehicle insured under the policy is made available and used through a car sharing platform, or does not exclude the use of a shared vehicle by a shared vehicle driver.",
+          "(e) The coverage requirements of subsection (d) of this section may be satisfied by an automobile liability insurance maintained by the shared vehicle owner, the shared vehicle driver, the peer-to-peer car sharing company or the shared vehicle owner, the shared vehicle driver and the peer-to-peer car sharing company.",
+          "(f) The insurer, insurers or peer-to-peer car sharing company providing or maintaining coverage under subsection (d) or (e) of this section shall assume primary liability for a claim when:",
+          "(1) A dispute exists as to who was in control of the shared motor vehicle at the time of the loss and the peer-to-peer car sharing company does not have available, did not retain or fails to provide the information required by section 13b-127d ; or",
+          "(2) A dispute exists as to whether the shared vehicle was returned to the alternatively agreed upon location as agreed to by the shared vehicle owner and the shared vehicle operator.",
+          "(g) The liability insurance described in subsection (e) of this section that satisfies the insurance requirement of subsection (d) of this section shall be primary during each car sharing period and in the event that a claim occurs in another state with minimum financial responsibility limits higher than those established in subsection (a) of section 14-112 , during the car sharing period, the coverage maintained under subsection (e) of this section shall satisfy the difference in minimum coverage amounts, up to the applicable policy limits.",
+          "(h) If an automobile liability insurance policy maintained by a shared vehicle owner or shared vehicle driver has lapsed or does not provide the coverage required pursuant to subsection (d) of this section, the insurance maintained by a peer-to-peer car sharing company shall provide the coverage required by subsection (d) of this section, beginning with the first dollar of a claim, and shall have the duty to defend a claim except under circumstances as set forth in subsection (b) of this section.",
+          "(i) Coverage under an automobile insurance policy maintained by the peer-to-peer car sharing company shall not be contingent on another automobile insurance company first denying a claim, nor shall such other insurance company be required to first deny a claim.",
+          "(j) Nothing in this section shall:",
+          "(1) Limit the liability of the peer-to-peer car sharing company for any act or omission of the company that results in bodily injury to any person as a result of the use of a shared vehicle through a car sharing platform; or",
+          "(2) Limit the ability of the peer-to-peer car sharing company to contract for indemnification from the shared vehicle owner or the shared vehicle driver for economic loss sustained by the company resulting from a breach of the terms and conditions of the car sharing agreement."
+        ],
+        "sourceNotes": [
+          "(P.A. 21-106, S. 53; P.A. 22-107, S. 3.)"
+        ],
+        "history": [
+          "History: P.A. 21-106 effective January 1, 2022; P.A. 22-107 added Subsec. (c) re assumption of liability applies to bodily injury, property damage, uninsured and underinsured motorist or personal injury protection losses by damaged third parties, redesignated existing Subsec. (c) as Subsec. (d), redesignated existing Subsec. (d) as Subsec. (e), redesignated existing Subsec. (e) as Subsec. (f) and amended same by replacing provision re automobile liability insurance shall assume primary liability with new provision re insurer or peer-to-peer car sharing company providing or maintaining coverage shall assume primary liability when dispute exists as to who was in control at the time of loss or dispute exists as to whether the shared vehicle was returned to the alternatively agreed upon location and information required under section 13b-127d is not available, added new Subsec. (g) re liability insurance is primary during each car sharing period and where a claim occurs in another state with limits higher than limits set forth in section 14-112, such coverage under Subsec. (e) satisfies the difference in coverage amounts up to the applicable policy limits, redesignated existing Subsec. (g) as Subsec. (h) and amended same by replacing provision re peer-to-peer car sharing company's automobile liability insurance policy provides coverage with new provision re insurance maintained by peer-to-peer car sharing company shall provide coverage required, redesignated existing Subsec. (h) as Subsec. (i) and redesignated existing Subsec. (i) as Subsec. (j), effective January 1, 2023."
+        ],
+        "annotations": [],
+        "plainText": "(a) Except as provided in subsection (b) of this section, a peer-to-peer car sharing company shall assume liability of a shared vehicle owner for bodily injury or property damage to third parties, or uninsured and underinsured motorist or personal injury protection losses, during the car sharing period in an amount stated in the peer-to-peer car sharing agreement, but not less than the minimum amounts required by subsection (a) of section 14-112 .\n\n(b) The assumption of liability under subsection (a) of this section shall not apply to any shared vehicle owner who: (1) Makes an intentional or fraudulent material misrepresentation or omission to the peer-to-peer car sharing company or on the car sharing platform before the car sharing period in which the liability arose; or (2) acts in concert with a shared vehicle driver who fails to return the shared vehicle pursuant to the car sharing agreement.\n\n(c) The assumption of liability under subsection (a) of this section shall apply to bodily injury, property damage, uninsured and underinsured motorist or personal injury protection losses by damaged third parties, in accordance with section 14-112 .\n\n(d) A peer-to-peer car sharing company shall ensure that, during each car sharing period, the shared vehicle owner and the shared vehicle driver are insured under an automobile liability insurance policy that: (1) Provides insurance coverage in amounts not less than the minimum amounts required by subsection (a) of section 14-112 ; and (2) recognizes that the shared vehicle insured under the policy is made available and used through a car sharing platform, or does not exclude the use of a shared vehicle by a shared vehicle driver.\n\n(e) The coverage requirements of subsection (d) of this section may be satisfied by an automobile liability insurance maintained by the shared vehicle owner, the shared vehicle driver, the peer-to-peer car sharing company or the shared vehicle owner, the shared vehicle driver and the peer-to-peer car sharing company.\n\n(f) The insurer, insurers or peer-to-peer car sharing company providing or maintaining coverage under subsection (d) or (e) of this section shall assume primary liability for a claim when:\n\n(1) A dispute exists as to who was in control of the shared motor vehicle at the time of the loss and the peer-to-peer car sharing company does not have available, did not retain or fails to provide the information required by section 13b-127d ; or\n\n(2) A dispute exists as to whether the shared vehicle was returned to the alternatively agreed upon location as agreed to by the shared vehicle owner and the shared vehicle operator.\n\n(g) The liability insurance described in subsection (e) of this section that satisfies the insurance requirement of subsection (d) of this section shall be primary during each car sharing period and in the event that a claim occurs in another state with minimum financial responsibility limits higher than those established in subsection (a) of section 14-112 , during the car sharing period, the coverage maintained under subsection (e) of this section shall satisfy the difference in minimum coverage amounts, up to the applicable policy limits.\n\n(h) If an automobile liability insurance policy maintained by a shared vehicle owner or shared vehicle driver has lapsed or does not provide the coverage required pursuant to subsection (d) of this section, the insurance maintained by a peer-to-peer car sharing company shall provide the coverage required by subsection (d) of this section, beginning with the first dollar of a claim, and shall have the duty to defend a claim except under circumstances as set forth in subsection (b) of this section.\n\n(i) Coverage under an automobile insurance policy maintained by the peer-to-peer car sharing company shall not be contingent on another automobile insurance company first denying a claim, nor shall such other insurance company be required to first deny a claim.\n\n(j) Nothing in this section shall:\n\n(1) Limit the liability of the peer-to-peer car sharing company for any act or omission of the company that results in bodily injury to any person as a result of the use of a shared vehicle through a car sharing platform; or\n\n(2) Limit the ability of the peer-to-peer car sharing company to contract for indemnification from the shared vehicle owner or the shared vehicle driver for economic loss sustained by the company resulting from a breach of the terms and conditions of the car sharing agreement."
+      }
+    },
+    {
+      "id": "section-13b-127b",
+      "kind": "section",
+      "citation": "13b-127b",
+      "citations": [
+        "13b-127b"
+      ],
+      "heading": "Sec. 13b-127b. Notification by peer-to-peer car sharing company to shared vehicle owner.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_244d.htm#sec_13b-127b",
+      "status": "active",
+      "content": {
+        "body": [
+          "When a vehicle owner registers as a shared vehicle owner with a peer-to-peer car sharing company but before the shared vehicle is made available on the car sharing platform, the peer-to-peer car sharing company shall notify the shared vehicle owner that, if the shared vehicle has a lien against it, the use of the shared vehicle through a car sharing platform, including use without physical damage coverage, may violate the terms of the contract with the lienholder."
+        ],
+        "sourceNotes": [
+          "(P.A. 21-106, S. 54.)"
+        ],
+        "history": [
+          "History: P.A. 21-106 effective January 1, 2022."
+        ],
+        "annotations": [],
+        "plainText": "When a vehicle owner registers as a shared vehicle owner with a peer-to-peer car sharing company but before the shared vehicle is made available on the car sharing platform, the peer-to-peer car sharing company shall notify the shared vehicle owner that, if the shared vehicle has a lien against it, the use of the shared vehicle through a car sharing platform, including use without physical damage coverage, may violate the terms of the contract with the lienholder."
+      }
+    },
+    {
+      "id": "section-13b-127c",
+      "kind": "section",
+      "citation": "13b-127c",
+      "citations": [
+        "13b-127c"
+      ],
+      "heading": "Sec. 13b-127c. Insurance company offering automobile liability insurance to shared vehicle owner.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_244d.htm#sec_13b-127c",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) An insurance company that offers automobile liability insurance coverage in this state may offer automobile liability insurance policies to individuals that exclude any or all coverage and the duty to defend or indemnify any claim afforded under a shared vehicle owner's automobile liability insurance policy. Such exclusions may include, but are not limited to: (1) Liability coverage for bodily injury and property damage; (2) personal injury protection coverage; (3) uninsured and underinsured motorist coverage; (4) medical payments coverage; (5) comprehensive physical damage coverage; or (6) collision physical damage coverage.",
+          "(b) Nothing in this section shall be construed to: (1) Invalidate or limit an exclusion contained in an automobile liability insurance policy, including any insurance policy that excludes coverage for motor vehicles made available for rent, sharing, hire or business use, or (2) invalidate, limit or restrict an insurance company's ability to offer automobile liability insurance coverage to underwrite, cancel or not renew any insurance policy. Nothing in this section shall be construed to invalidate, limit or restrict an insurer's ability to cancel and not renew policies."
+        ],
+        "sourceNotes": [
+          "(P.A. 21-106, S. 55; P.A. 22-107, S. 4.)"
+        ],
+        "history": [
+          "History: P.A. 21-106 effective January 1, 2022; P.A. 22-107 amended Subsec. (b) by deleting “company that offers” and inserting in its place “company's ability to offer” and added new language re section does not invalidate, limit or restrict an insurer's ability to cancel and not renew policies, effective January 1, 2023."
+        ],
+        "annotations": [],
+        "plainText": "(a) An insurance company that offers automobile liability insurance coverage in this state may offer automobile liability insurance policies to individuals that exclude any or all coverage and the duty to defend or indemnify any claim afforded under a shared vehicle owner's automobile liability insurance policy. Such exclusions may include, but are not limited to: (1) Liability coverage for bodily injury and property damage; (2) personal injury protection coverage; (3) uninsured and underinsured motorist coverage; (4) medical payments coverage; (5) comprehensive physical damage coverage; or (6) collision physical damage coverage.\n\n(b) Nothing in this section shall be construed to: (1) Invalidate or limit an exclusion contained in an automobile liability insurance policy, including any insurance policy that excludes coverage for motor vehicles made available for rent, sharing, hire or business use, or (2) invalidate, limit or restrict an insurance company's ability to offer automobile liability insurance coverage to underwrite, cancel or not renew any insurance policy. Nothing in this section shall be construed to invalidate, limit or restrict an insurer's ability to cancel and not renew policies."
+      }
+    },
+    {
+      "id": "section-13b-127d",
+      "kind": "section",
+      "citation": "13b-127d",
+      "citations": [
+        "13b-127d"
+      ],
+      "heading": "Sec. 13b-127d. Peer-to-peer car sharing company records.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_244d.htm#sec_13b-127d",
+      "status": "active",
+      "content": {
+        "body": [
+          "A peer-to-peer car sharing company shall collect and verify records pertaining to the use of a shared vehicle, including, but not limited to, the times used, location of the car sharing start time and car sharing termination time, car sharing period fees paid by the shared vehicle driver and revenues received by the shared vehicle owner. The company shall provide such records: (1) Upon request to the shared vehicle owner, the shared vehicle owner's insurance company or the shared vehicle driver's insurance company to facilitate a claim coverage investigation, settlement, negotiation or litigation, or (2) as required by an agreement entered into pursuant to section 13b-127 l . The company shall retain the records for a time period not less than the applicable personal injury statute of limitations."
+        ],
+        "sourceNotes": [
+          "(P.A. 21-106, S. 56.)"
+        ],
+        "history": [
+          "History: P.A. 21-106 effective January 1, 2022."
+        ],
+        "annotations": [],
+        "plainText": "A peer-to-peer car sharing company shall collect and verify records pertaining to the use of a shared vehicle, including, but not limited to, the times used, location of the car sharing start time and car sharing termination time, car sharing period fees paid by the shared vehicle driver and revenues received by the shared vehicle owner. The company shall provide such records: (1) Upon request to the shared vehicle owner, the shared vehicle owner's insurance company or the shared vehicle driver's insurance company to facilitate a claim coverage investigation, settlement, negotiation or litigation, or (2) as required by an agreement entered into pursuant to section 13b-127 l . The company shall retain the records for a time period not less than the applicable personal injury statute of limitations."
+      }
+    },
+    {
+      "id": "section-13b-127e",
+      "kind": "section",
+      "citation": "13b-127e",
+      "citations": [
+        "13b-127e"
+      ],
+      "heading": "Sec. 13b-127e. Vicarious liability.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_244d.htm#sec_13b-127e",
+      "status": "active",
+      "content": {
+        "body": [
+          "A peer-to-peer car sharing company and a shared vehicle owner shall be exempt from vicarious liability consistent with 49 USC 30106, as amended from time to time, and under any state law or municipal ordinance that imposes liability solely based on vehicle ownership."
+        ],
+        "sourceNotes": [
+          "(P.A. 21-106, S. 57; P.A. 22-107, S. 5.)"
+        ],
+        "history": [
+          "History: P.A. 21-106 effective January 1, 2022; P.A. 22-107 deleted “in accordance” and replaced with “consistent”, effective January 1, 2023."
+        ],
+        "annotations": [],
+        "plainText": "A peer-to-peer car sharing company and a shared vehicle owner shall be exempt from vicarious liability consistent with 49 USC 30106, as amended from time to time, and under any state law or municipal ordinance that imposes liability solely based on vehicle ownership."
+      }
+    },
+    {
+      "id": "section-13b-127f",
+      "kind": "section",
+      "citation": "13b-127f",
+      "citations": [
+        "13b-127f"
+      ],
+      "heading": "Sec. 13b-127f. Insurance company right to seek recovery.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_244d.htm#sec_13b-127f",
+      "status": "active",
+      "content": {
+        "body": [
+          "An insurance company that defends or indemnifies a claim against a shared vehicle that is excluded under the terms of its automobile liability insurance policy shall have a right to seek recovery against the insurance company of the peer-to-peer car sharing company if the claim is: (1) Made against the shared vehicle owner or the shared vehicle driver for loss or injury that occurs during the car sharing period; and (2) excluded under the terms of its policy."
+        ],
+        "sourceNotes": [
+          "(P.A. 21-106, S. 58.)"
+        ],
+        "history": [
+          "History: P.A. 21-106 effective January 1, 2022."
+        ],
+        "annotations": [],
+        "plainText": "An insurance company that defends or indemnifies a claim against a shared vehicle that is excluded under the terms of its automobile liability insurance policy shall have a right to seek recovery against the insurance company of the peer-to-peer car sharing company if the claim is: (1) Made against the shared vehicle owner or the shared vehicle driver for loss or injury that occurs during the car sharing period; and (2) excluded under the terms of its policy."
+      }
+    },
+    {
+      "id": "section-13b-127g",
+      "kind": "section",
+      "citation": "13b-127g",
+      "citations": [
+        "13b-127g"
+      ],
+      "heading": "Sec. 13b-127g. Peer-to-peer car sharing company insurable interest.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_244d.htm#sec_13b-127g",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) A peer-to-peer car sharing company shall have an insurable interest in a shared vehicle during the car sharing period. Nothing in this subsection shall create liability for a peer-to-peer car sharing company for failure to maintain the insurance coverage required pursuant to section 13b-127a .",
+          "(b) A peer-to-peer car sharing company may own and maintain, as the named insured, one or more policies of automobile liability insurance that provides coverage for: (1) Liability assumed by the peer-to-peer car sharing company under a car sharing agreement; (2) any liability of the shared vehicle owner; (3) damage or loss to the shared vehicle; or (4) any liability of the shared vehicle driver."
+        ],
+        "sourceNotes": [
+          "(P.A. 21-106, S. 59.)"
+        ],
+        "history": [
+          "History: P.A. 21-106 effective January 1, 2022."
+        ],
+        "annotations": [],
+        "plainText": "(a) A peer-to-peer car sharing company shall have an insurable interest in a shared vehicle during the car sharing period. Nothing in this subsection shall create liability for a peer-to-peer car sharing company for failure to maintain the insurance coverage required pursuant to section 13b-127a .\n\n(b) A peer-to-peer car sharing company may own and maintain, as the named insured, one or more policies of automobile liability insurance that provides coverage for: (1) Liability assumed by the peer-to-peer car sharing company under a car sharing agreement; (2) any liability of the shared vehicle owner; (3) damage or loss to the shared vehicle; or (4) any liability of the shared vehicle driver."
+      }
+    },
+    {
+      "id": "section-13b-127h",
+      "kind": "section",
+      "citation": "13b-127h",
+      "citations": [
+        "13b-127h"
+      ],
+      "heading": "Sec. 13b-127h. Car sharing agreement.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_244d.htm#sec_13b-127h",
+      "status": "active",
+      "content": {
+        "body": [
+          "Each car sharing agreement shall, at a minimum, disclose to the shared vehicle owner and the shared vehicle driver:",
+          "(1) Any right of the peer-to-peer car sharing company to seek indemnification from the shared vehicle owner or the shared vehicle driver for economic loss sustained by the company resulting from a breach of the terms and conditions of the car sharing agreement;",
+          "(2) That an automobile liability insurance policy issued to the shared vehicle owner for the shared vehicle or to the shared vehicle driver does not provide a defense or indemnification for any claim asserted by the peer-to-peer car sharing company;",
+          "(3) That the peer-to-peer car sharing company's insurance coverage on the shared vehicle owner and the shared vehicle driver is in effect only during each car sharing period and that, for any use of the shared vehicle by the shared vehicle driver after the car sharing termination time, the shared vehicle driver and the shared vehicle owner may not have insurance coverage;",
+          "(4) The daily rate, fees and, if applicable, any insurance or protection package costs that are charged to the shared vehicle owner or the shared vehicle driver;",
+          "(5) That the shared vehicle owner's automobile liability insurance may not provide coverage for a shared vehicle;",
+          "(6) An emergency telephone number to personnel capable of answering calls for roadside assistance and other customer service inquiries; and",
+          "(7) If there are conditions under which a shared vehicle driver shall maintain a personal automobile insurance policy with certain applicable coverage limits on a primary basis to book a shared vehicle."
+        ],
+        "sourceNotes": [
+          "(P.A. 21-106, S. 60.)"
+        ],
+        "history": [
+          "History: P.A. 21-106 effective January 1, 2022."
+        ],
+        "annotations": [],
+        "plainText": "Each car sharing agreement shall, at a minimum, disclose to the shared vehicle owner and the shared vehicle driver:\n\n(1) Any right of the peer-to-peer car sharing company to seek indemnification from the shared vehicle owner or the shared vehicle driver for economic loss sustained by the company resulting from a breach of the terms and conditions of the car sharing agreement;\n\n(2) That an automobile liability insurance policy issued to the shared vehicle owner for the shared vehicle or to the shared vehicle driver does not provide a defense or indemnification for any claim asserted by the peer-to-peer car sharing company;\n\n(3) That the peer-to-peer car sharing company's insurance coverage on the shared vehicle owner and the shared vehicle driver is in effect only during each car sharing period and that, for any use of the shared vehicle by the shared vehicle driver after the car sharing termination time, the shared vehicle driver and the shared vehicle owner may not have insurance coverage;\n\n(4) The daily rate, fees and, if applicable, any insurance or protection package costs that are charged to the shared vehicle owner or the shared vehicle driver;\n\n(5) That the shared vehicle owner's automobile liability insurance may not provide coverage for a shared vehicle;\n\n(6) An emergency telephone number to personnel capable of answering calls for roadside assistance and other customer service inquiries; and\n\n(7) If there are conditions under which a shared vehicle driver shall maintain a personal automobile insurance policy with certain applicable coverage limits on a primary basis to book a shared vehicle."
+      }
+    },
+    {
+      "id": "section-13b-127i",
+      "kind": "section",
+      "citation": "13b-127i",
+      "citations": [
+        "13b-127i"
+      ],
+      "heading": "Sec. 13b-127i. Peer-to-peer car sharing company and shared vehicle driver agreement and records.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_244d.htm#sec_13b-127i",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) A peer-to-peer car sharing company may not enter into a car sharing agreement with a shared vehicle driver unless the shared vehicle driver holds an operator's license, as defined in section 14-1 , that authorizes the driver to operate a motor vehicle of the same class as the shared vehicle.",
+          "(b) A peer-to-peer car sharing company shall keep a record of: (1) The name and address of the shared vehicle driver; (2) the number of the operator's license of each shared vehicle driver; and (3) the place of issuance of the operator's license."
+        ],
+        "sourceNotes": [
+          "(P.A. 21-106, S. 61.)"
+        ],
+        "history": [
+          "History: P.A. 21-106 effective January 1, 2022."
+        ],
+        "annotations": [],
+        "plainText": "(a) A peer-to-peer car sharing company may not enter into a car sharing agreement with a shared vehicle driver unless the shared vehicle driver holds an operator's license, as defined in section 14-1 , that authorizes the driver to operate a motor vehicle of the same class as the shared vehicle.\n\n(b) A peer-to-peer car sharing company shall keep a record of: (1) The name and address of the shared vehicle driver; (2) the number of the operator's license of each shared vehicle driver; and (3) the place of issuance of the operator's license."
+      }
+    },
+    {
+      "id": "section-13b-127j",
+      "kind": "section",
+      "citation": "13b-127j",
+      "citations": [
+        "13b-127j"
+      ],
+      "heading": "Sec. 13b-127j. Peer-to-peer car sharing company responsible for certain equipment.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_244d.htm#sec_13b-127j",
+      "status": "active",
+      "content": {
+        "body": [
+          "A peer-to-peer car sharing company is responsible for any equipment, such as a global positioning system, that is put in or on the shared vehicle to monitor or facilitate the car sharing transaction. The company shall indemnify and hold harmless the shared vehicle owner for any damage to or theft of such equipment during the car sharing period, unless caused by the vehicle owner. The company has the right to seek indemnification from the shared vehicle driver for any loss or damage to such equipment that occurs during the car sharing period."
+        ],
+        "sourceNotes": [
+          "(P.A. 21-106, S. 62.)"
+        ],
+        "history": [
+          "History: P.A. 21-106 effective January 1, 2022."
+        ],
+        "annotations": [],
+        "plainText": "A peer-to-peer car sharing company is responsible for any equipment, such as a global positioning system, that is put in or on the shared vehicle to monitor or facilitate the car sharing transaction. The company shall indemnify and hold harmless the shared vehicle owner for any damage to or theft of such equipment during the car sharing period, unless caused by the vehicle owner. The company has the right to seek indemnification from the shared vehicle driver for any loss or damage to such equipment that occurs during the car sharing period."
+      }
+    },
+    {
+      "id": "section-13b-127k",
+      "kind": "section",
+      "citation": "13b-127k",
+      "citations": [
+        "13b-127k"
+      ],
+      "heading": "Sec. 13b-127k. Shared vehicle subject to safety recall.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_244d.htm#sec_13b-127k",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) When a shared vehicle owner registers a shared vehicle with a peer-to-peer car sharing company but before the shared vehicle is available on the car sharing platform, the company shall: (1) Verify that the shared vehicle is not subject to a safety recall for which the repairs have not been made; and (2) notify the shared vehicle owner of the requirements under subsection (b) of this section.",
+          "(b) (1) If a shared vehicle owner received an actual notice of a safety recall for the shared vehicle, the shared vehicle owner shall not make the shared vehicle available on the car sharing platform until the safety recall repair has been made.",
+          "(2) If a shared vehicle owner receives an actual notice of a safety recall for a shared vehicle while the shared vehicle is available on the car sharing platform, the shared vehicle owner shall remove the shared vehicle's availability on the platform as soon as practicable after receiving such notice and until the safety recall repair has been made.",
+          "(3) If a shared vehicle owner receives an actual notice of a safety recall for a shared vehicle during the car sharing period, the shared vehicle owner shall notify both the shared vehicle driver and the peer-to-peer car sharing company of the safety recall as soon as practicable."
+        ],
+        "sourceNotes": [
+          "(P.A. 21-106, S. 63.)"
+        ],
+        "history": [
+          "History: P.A. 21-106 effective January 1, 2022."
+        ],
+        "annotations": [],
+        "plainText": "(a) When a shared vehicle owner registers a shared vehicle with a peer-to-peer car sharing company but before the shared vehicle is available on the car sharing platform, the company shall: (1) Verify that the shared vehicle is not subject to a safety recall for which the repairs have not been made; and (2) notify the shared vehicle owner of the requirements under subsection (b) of this section.\n\n(b) (1) If a shared vehicle owner received an actual notice of a safety recall for the shared vehicle, the shared vehicle owner shall not make the shared vehicle available on the car sharing platform until the safety recall repair has been made.\n\n(2) If a shared vehicle owner receives an actual notice of a safety recall for a shared vehicle while the shared vehicle is available on the car sharing platform, the shared vehicle owner shall remove the shared vehicle's availability on the platform as soon as practicable after receiving such notice and until the safety recall repair has been made.\n\n(3) If a shared vehicle owner receives an actual notice of a safety recall for a shared vehicle during the car sharing period, the shared vehicle owner shall notify both the shared vehicle driver and the peer-to-peer car sharing company of the safety recall as soon as practicable."
+      }
+    },
+    {
+      "id": "section-13b-127l",
+      "kind": "section",
+      "citation": "13b-127l",
+      "citations": [
+        "13b-127l"
+      ],
+      "heading": "Sec. 13b-127 l . Peer-to-peer car sharing at Bradley International Airport pursuant to agreement.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_244d.htm#sec_13b-127l",
+      "status": "active",
+      "content": {
+        "body": [
+          "A peer-to-peer car sharing company shall not permit the operation of peer-to-peer car sharing at Bradley International Airport unless such company enters into an agreement with the Connecticut Airport Authority, established pursuant to section 15-120bb . The Connecticut Airport Authority may charge and collect a reasonable fee from any such company for the privilege of operating peer-to-peer car sharing at such airport."
+        ],
+        "sourceNotes": [
+          "(P.A. 21-106, S. 64.)"
+        ],
+        "history": [
+          "History: P.A. 21-106 effective January 1, 2022."
+        ],
+        "annotations": [],
+        "plainText": "A peer-to-peer car sharing company shall not permit the operation of peer-to-peer car sharing at Bradley International Airport unless such company enters into an agreement with the Connecticut Airport Authority, established pursuant to section 15-120bb . The Connecticut Airport Authority may charge and collect a reasonable fee from any such company for the privilege of operating peer-to-peer car sharing at such airport."
+      }
+    },
+    {
+      "id": "group-13b-128-to-13b-129-to-13b-130-to-13b-131-to-13b-132-to-13b-133-to-13b-134-to-13b-135-to-13b-136-to-13b-137-to-13b-138-to-13b-139-to-13b-140-to-13b-141-to-13b-142-to-13b-143-to-13b-144-to-13b-145-to-13b-146-to-13b-147-to-13b-148-to-13b-149-to-13b-150-to-13b-151-to-13b-152-to-13b-153-to-13b-154-to-13b-155-to-13b-156-to-13b-157-to-13b-158-to-13b-159-to-13b-160-to-13b-161-to-13b-162-to-13b-163-to-13b-164-to-13b-165-to-13b-166-to-13b-167-to-13b-168-to-13b-169-to-13b-170-to-13b-171-to-13b-172-to-13b-173-to-13b-174-to-13b-175-to-13b-176-to-13b-177-to-13b-178-to-13b-179-to-13b-180-to-13b-181-to-13b-182-to-13b-183-to-13b-184-to-13b-185-to-13b-186-to-13b-187-to-13b-188-to-13b-189-to-13b-190-to-13b-191-to-13b-192-to-13b-193-to-13b-194-to-13b-195-to-13b-196-to-13b-197-to-13b-198",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "13b-128",
+        "13b-129",
+        "13b-130",
+        "13b-131",
+        "13b-132",
+        "13b-133",
+        "13b-134",
+        "13b-135",
+        "13b-136",
+        "13b-137",
+        "13b-138",
+        "13b-139",
+        "13b-140",
+        "13b-141",
+        "13b-142",
+        "13b-143",
+        "13b-144",
+        "13b-145",
+        "13b-146",
+        "13b-147",
+        "13b-148",
+        "13b-149",
+        "13b-150",
+        "13b-151",
+        "13b-152",
+        "13b-153",
+        "13b-154",
+        "13b-155",
+        "13b-156",
+        "13b-157",
+        "13b-158",
+        "13b-159",
+        "13b-160",
+        "13b-161",
+        "13b-162",
+        "13b-163",
+        "13b-164",
+        "13b-165",
+        "13b-166",
+        "13b-167",
+        "13b-168",
+        "13b-169",
+        "13b-170",
+        "13b-171",
+        "13b-172",
+        "13b-173",
+        "13b-174",
+        "13b-175",
+        "13b-176",
+        "13b-177",
+        "13b-178",
+        "13b-179",
+        "13b-180",
+        "13b-181",
+        "13b-182",
+        "13b-183",
+        "13b-184",
+        "13b-185",
+        "13b-186",
+        "13b-187",
+        "13b-188",
+        "13b-189",
+        "13b-190",
+        "13b-191",
+        "13b-192",
+        "13b-193",
+        "13b-194",
+        "13b-195",
+        "13b-196",
+        "13b-197",
+        "13b-198"
+      ],
+      "heading": "Secs. 13b-128 to 13b-198.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_244d.htm#secs_13b-128_to_13b-198",
+      "status": "reserved",
+      "content": {
+        "body": [
+          "Reserved for future use."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Reserved for future use."
+      }
+    }
+  ]
+}

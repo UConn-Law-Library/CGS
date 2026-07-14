@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-588ee",
+  "number": "588ee",
+  "name": "Connecticut Competitiveness Council",
+  "title": {
+    "id": "title-32",
+    "number": "32",
+    "name": "Commerce and Economic and Community Development"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588ee.htm",
+  "sections": [
+    {
+      "id": "section-32-730",
+      "kind": "section",
+      "citation": "32-730",
+      "citations": [
+        "32-730"
+      ],
+      "heading": "Sec. 32-730. Connecticut Competitiveness Council.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588ee.htm#sec_32-730",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 32-730 is repealed, effective July 1, 2011."
+        ],
+        "sourceNotes": [
+          "(P.A. 10-75, S. 19; P.A. 11-48, S. 303; 11-140, S. 33.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 32-730 is repealed, effective July 1, 2011."
+      }
+    },
+    {
+      "id": "group-32-731-to-32-732-to-32-733-to-32-734-to-32-735-to-32-736-to-32-737-to-32-738-to-32-739-to-32-740",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "32-731",
+        "32-732",
+        "32-733",
+        "32-734",
+        "32-735",
+        "32-736",
+        "32-737",
+        "32-738",
+        "32-739",
+        "32-740"
+      ],
+      "heading": "Secs. 32-731 to 32-740.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588ee.htm#secs_32-731_to_32-740",
+      "status": "reserved",
+      "content": {
+        "body": [
+          "Reserved for future use."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Reserved for future use."
+      }
+    }
+  ]
+}

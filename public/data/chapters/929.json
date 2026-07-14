@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-929",
+  "number": "929",
+  "name": "Uniform Foreign Money-Judgments Recognition Act",
+  "title": {
+    "id": "title-52",
+    "number": "52",
+    "name": "Civil Actions"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_929.htm",
+  "sections": [
+    {
+      "id": "group-52-610-to-52-611-to-52-612-to-52-613-to-52-614-to-52-615-to-52-616-to-52-617-to-52-618",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "52-610",
+        "52-611",
+        "52-612",
+        "52-613",
+        "52-614",
+        "52-615",
+        "52-616",
+        "52-617",
+        "52-618"
+      ],
+      "heading": "Secs. 52-610 to 52-618.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_929.htm#secs_52-610_to_52-618",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 861, Secs. 50a-30 to 50a-38 , inclusive."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 861, Secs. 50a-30 to 50a-38 , inclusive."
+      }
+    }
+  ]
+}

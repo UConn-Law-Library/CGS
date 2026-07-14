@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-184",
+  "number": "184",
+  "name": "Cultural Commissions",
+  "title": {
+    "id": "title-10",
+    "number": "10",
+    "name": "Education and Culture"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_184.htm",
+  "sections": [
+    {
+      "id": "section-10-380",
+      "kind": "section",
+      "citation": "10-380",
+      "citations": [
+        "10-380"
+      ],
+      "heading": "Sec. 10-380. American and Francophone Cultural Commission.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_184.htm#sec_10-380",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 10-380 is repealed."
+        ],
+        "sourceNotes": [
+          "(P.A. 74-225, S. 1–5; P.A. 77-614, S. 609, 610.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 10-380 is repealed."
+      }
+    }
+  ]
+}

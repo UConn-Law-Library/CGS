@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-707",
+  "number": "707",
+  "name": "Warehouses",
+  "title": {
+    "id": "title-40",
+    "number": "40",
+    "name": "Warehouses and Warehouse Receipts. Trust Receipts"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_707.htm",
+  "sections": [
+    {
+      "id": "section-40-1",
+      "kind": "section",
+      "citation": "40-1",
+      "citations": [
+        "40-1"
+      ],
+      "heading": "Sec. 40-1. Establishment; receipts.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_707.htm#sec_40-1",
+      "status": "active",
+      "content": {
+        "body": [
+          "Any person may establish and maintain a public warehouse and may receive on storage into the same any goods, wares, merchandise, provisions or other commodity, and shall issue to the person from whom he receives the same warehouse receipts therefor; and he may issue warehouse receipts for any of his own property which is deposited in such warehouse; but no person shall issue any receipt for any such property so received by him on storage or deposited by him in such warehouse, unless he has displayed and maintains in a conspicuous manner, on the front of the building where such goods or other commodities are stored, the words “Public Warehouse”."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 6485.)"
+        ],
+        "history": [],
+        "annotations": [
+          {
+            "first": true,
+            "text": "Presumption of negligence in case of nondelivery; where receipt does not specify quantity or value of goods, burden of proof as to these points is on bailor. 108 C. 659; 141 C. 308."
+          }
+        ],
+        "plainText": "Any person may establish and maintain a public warehouse and may receive on storage into the same any goods, wares, merchandise, provisions or other commodity, and shall issue to the person from whom he receives the same warehouse receipts therefor; and he may issue warehouse receipts for any of his own property which is deposited in such warehouse; but no person shall issue any receipt for any such property so received by him on storage or deposited by him in such warehouse, unless he has displayed and maintains in a conspicuous manner, on the front of the building where such goods or other commodities are stored, the words “Public Warehouse”."
+      }
+    }
+  ]
+}

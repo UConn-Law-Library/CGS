@@ -1,0 +1,77 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-733",
+  "number": "733",
+  "name": "Retail Installment Sales Financing",
+  "title": {
+    "id": "title-42",
+    "number": "42",
+    "name": "Business, Selling, Trading and Collection Practices"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_733.htm",
+  "sections": [
+    {
+      "id": "group-42-83-to-42-84",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "42-83",
+        "42-84"
+      ],
+      "heading": "Secs. 42-83 and 42-84.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_733.htm#secs_42-83_and_42-84",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 669, Part XI, Secs. 36a-770 and 36a-771 ."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 669, Part XI, Secs. 36a-770 and 36a-771 ."
+      }
+    },
+    {
+      "id": "group-42-84a-to-42-84b",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "42-84a",
+        "42-84b"
+      ],
+      "heading": "Secs. 42-84a and 42-84b.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_733.htm#secs_42-84a_and_42-84b",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 733a, Secs. 42-100b and 42-100c ."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 733a, Secs. 42-100b and 42-100c ."
+      }
+    },
+    {
+      "id": "group-42-85-to-42-100a",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "42-85",
+        "42-100a"
+      ],
+      "heading": "Secs. 42-85 to 42-100a.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_733.htm#secs_42-85_to_42-100a",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 669, Part XI, Secs. 36a-772 to 36a-788 , inclusive."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 669, Part XI, Secs. 36a-772 to 36a-788 , inclusive."
+      }
+    }
+  ]
+}

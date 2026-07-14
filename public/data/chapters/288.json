@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-288",
+  "number": "288",
+  "name": "Motor Vehicles in Livery Service",
+  "title": {
+    "id": "title-16",
+    "number": "16",
+    "name": "Public Service Companies"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_288.htm",
+  "sections": [
+    {
+      "id": "group-16-324-to-16-325-to-16-326-to-16-327-to-16-328-to-16-329",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "16-324",
+        "16-325",
+        "16-326",
+        "16-327",
+        "16-328",
+        "16-329"
+      ],
+      "heading": "Secs. 16-324 to 16-329.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_288.htm#secs_16-324_to_16-329",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 244b, Secs. 13b-101 to 13b-108 , inclusive."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 244b, Secs. 13b-101 to 13b-108 , inclusive."
+      }
+    }
+  ]
+}

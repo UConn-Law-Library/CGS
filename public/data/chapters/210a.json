@@ -1,0 +1,95 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-210a",
+  "number": "210a",
+  "name": "Telecommunications Service Company Tax",
+  "title": {
+    "id": "title-12",
+    "number": "12",
+    "name": "Taxation"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_210a.htm",
+  "sections": [
+    {
+      "id": "group-12-255a-to-12-255b-to-12-255c-to-12-255d-to-12-255e-to-12-255f-to-12-255g-to-12-255h-to-12-255i-to-12-255j-to-12-255k-to-12-255l-to-12-255m-to-12-255n-to-12-255o-to-12-255p-to-12-255q-to-12-255r-to-12-255s-to-12-255t",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "12-255a",
+        "12-255b",
+        "12-255c",
+        "12-255d",
+        "12-255e",
+        "12-255f",
+        "12-255g",
+        "12-255h",
+        "12-255i",
+        "12-255j",
+        "12-255k",
+        "12-255l",
+        "12-255m",
+        "12-255n",
+        "12-255o",
+        "12-255p",
+        "12-255q",
+        "12-255r",
+        "12-255s",
+        "12-255t"
+      ],
+      "heading": "Secs. 12-255a to 12-255t. Telecommunications service company tax.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_210a.htm#secs_12-255a_to_12-255t",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Sections 12-255a to 12-255t , inclusive, are repealed effective May 9, 1991, and applicable to taxable years of taxpayers commencing on or after January 1, 1991."
+        ],
+        "sourceNotes": [
+          "(P.A. 86-410, S. 1–19, 28; P.A. 88-11; 88-230, S. 1, 12; 88-337, S. 2, 5; P.A. 89-251, S. 10, 203; 89-343, S. 7, 17; P.A. 90-98, S. 1, 2; P.A. 91-82, S. 4, 5.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 12-255a to 12-255t , inclusive, are repealed effective May 9, 1991, and applicable to taxable years of taxpayers commencing on or after January 1, 1991."
+      }
+    },
+    {
+      "id": "section-12-255a",
+      "kind": "section",
+      "citation": "12-255a",
+      "citations": [
+        "12-255a"
+      ],
+      "heading": "12-255a",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_210a.htm#sec_12-255a",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 12-255a to 12-255t. Telecommunications service company tax. Sections 12-255a to 12-255t , inclusive, are repealed effective May 9, 1991, and applicable to taxable years of taxpayers commencing on or after January 1, 1991."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 12-255a to 12-255t. Telecommunications service company tax. Sections 12-255a to 12-255t , inclusive, are repealed effective May 9, 1991, and applicable to taxable years of taxpayers commencing on or after January 1, 1991."
+      }
+    },
+    {
+      "id": "section-12-255t",
+      "kind": "section",
+      "citation": "12-255t",
+      "citations": [
+        "12-255t"
+      ],
+      "heading": "12-255t",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_210a.htm#sec_12-255t",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 12-255a to 12-255t. Telecommunications service company tax. Sections 12-255a to 12-255t , inclusive, are repealed effective May 9, 1991, and applicable to taxable years of taxpayers commencing on or after January 1, 1991."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 12-255a to 12-255t. Telecommunications service company tax. Sections 12-255a to 12-255t , inclusive, are repealed effective May 9, 1991, and applicable to taxable years of taxpayers commencing on or after January 1, 1991."
+      }
+    }
+  ]
+}

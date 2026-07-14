@@ -1,0 +1,83 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-621",
+  "number": "621",
+  "name": "Trademarks",
+  "title": {
+    "id": "title-35",
+    "number": "35",
+    "name": "Trade Regulations, Trademarks and Collective and Certification Marks"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_621.htm",
+  "sections": [
+    {
+      "id": "group-35-4-to-35-5-to-35-6-to-35-7-to-35-8-to-35-9-to-35-10-to-35-11",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "35-4",
+        "35-5",
+        "35-6",
+        "35-7",
+        "35-8",
+        "35-9",
+        "35-10",
+        "35-11"
+      ],
+      "heading": "Secs. 35-4 to 35-11. Trademarks.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_621.htm#secs_35-4_to_35-11",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Sections 35-4 to 35-11 , inclusive, are repealed."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 6787–6794; 1963, P.A. 51, S. 12.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 35-4 to 35-11 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-35-4",
+      "kind": "section",
+      "citation": "35-4",
+      "citations": [
+        "35-4"
+      ],
+      "heading": "35-4",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_621.htm#sec_35-4",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 35-4 to 35-11. Trademarks. Sections 35-4 to 35-11 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 35-4 to 35-11. Trademarks. Sections 35-4 to 35-11 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-35-11",
+      "kind": "section",
+      "citation": "35-11",
+      "citations": [
+        "35-11"
+      ],
+      "heading": "35-11",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_621.htm#sec_35-11",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 35-4 to 35-11. Trademarks. Sections 35-4 to 35-11 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 35-4 to 35-11. Trademarks. Sections 35-4 to 35-11 , inclusive, are repealed."
+      }
+    }
+  ]
+}

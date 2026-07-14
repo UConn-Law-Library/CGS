@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-588bb",
+  "number": "588bb",
+  "name": "Connecticut Rural Development Council",
+  "title": {
+    "id": "title-32",
+    "number": "32",
+    "name": "Commerce and Economic and Community Development"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588bb.htm",
+  "sections": [
+    {
+      "id": "section-32-710",
+      "kind": "section",
+      "citation": "32-710",
+      "citations": [
+        "32-710"
+      ],
+      "heading": "Sec. 32-710. Connecticut Rural Development Council. Established. Duties.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588bb.htm#sec_32-710",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) There is established the Connecticut Rural Development Council in accordance with the Federal Farm Security and Rural Investment Act of 2002, as amended from time to time.",
+          "(b) The Connecticut Rural Development Council shall be composed of the requisite board and membership required under the Federal Farm Security and Rural Investment Act of 2002, as amended from time to time.",
+          "(c) The Connecticut Rural Development Council shall monitor, report and comment on policies and programs that address or fail to address the following goals with respect to rural areas: (1) Coordination of state, federal, tribal and private sector relationships to increase efficiency, eliminate duplication, identify gaps and promote the interests of rural areas, and (2) promotion of the fiscal autonomy of rural municipalities."
+        ],
+        "sourceNotes": [
+          "(P.A. 04-120, S. 1.)"
+        ],
+        "history": [
+          "History: P.A. 04-120 effective July 1, 2004."
+        ],
+        "annotations": [],
+        "plainText": "(a) There is established the Connecticut Rural Development Council in accordance with the Federal Farm Security and Rural Investment Act of 2002, as amended from time to time.\n\n(b) The Connecticut Rural Development Council shall be composed of the requisite board and membership required under the Federal Farm Security and Rural Investment Act of 2002, as amended from time to time.\n\n(c) The Connecticut Rural Development Council shall monitor, report and comment on policies and programs that address or fail to address the following goals with respect to rural areas: (1) Coordination of state, federal, tribal and private sector relationships to increase efficiency, eliminate duplication, identify gaps and promote the interests of rural areas, and (2) promotion of the fiscal autonomy of rural municipalities."
+      }
+    },
+    {
+      "id": "group-32-711-to-32-712-to-32-713-to-32-714-to-32-715",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "32-711",
+        "32-712",
+        "32-713",
+        "32-714",
+        "32-715"
+      ],
+      "heading": "Secs. 32-711 to 32-715.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588bb.htm#secs_32-711_to_32-715",
+      "status": "reserved",
+      "content": {
+        "body": [
+          "Reserved for future use."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Reserved for future use."
+      }
+    }
+  ]
+}

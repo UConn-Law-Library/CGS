@@ -1,0 +1,119 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-862a",
+  "number": "862a",
+  "name": "International Awards",
+  "title": {
+    "id": "title-50a",
+    "number": "50a",
+    "name": "International Law"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_862a.htm",
+  "sections": [
+    {
+      "id": "section-50a-140",
+      "kind": "section",
+      "citation": "50a-140",
+      "citations": [
+        "50a-140"
+      ],
+      "heading": "Sec. 50a-140. Enforcement of interim and international awards.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_862a.htm#sec_50a-140",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) For the purposes of this section:",
+          "(1) “International award” means any final award issued by: (A) An arbitral tribunal of the Permanent Court of Arbitration; or (B) an arbitral tribunal of the International Center for the Settlement of Investment Disputes.",
+          "(2) “Interim award” means any order of interim measures issued by: (A) An arbitral tribunal of the Permanent Court of Arbitration; or (B) an arbitral tribunal of the International Center for the Settlement of Investment Disputes.",
+          "(b) Any international award shall be enforceable as if such international award was a final and binding judgment issued by the Superior Court of this state and any applicable appeal time has expired. An execution may immediately issue on an international award upon filing with the Superior Court.",
+          "(c) Any interim award shall be enforceable to the same extent and in the same manner as a similar order of the Superior Court for which any applicable appeal time has expired.",
+          "(d) Upon receipt of a copy of any interim or international award certified by the appropriate authority, the Superior Court shall issue all necessary orders to enforce any interim award in accordance with chapter 903a and any international award in accordance with chapter 906. Such orders shall be immediately appealable in the same manner as orders in aid of execution of a judgment issued by the Superior Court."
+        ],
+        "sourceNotes": [
+          "(P.A. 95-248, S. 1–4.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "(a) For the purposes of this section:\n\n(1) “International award” means any final award issued by: (A) An arbitral tribunal of the Permanent Court of Arbitration; or (B) an arbitral tribunal of the International Center for the Settlement of Investment Disputes.\n\n(2) “Interim award” means any order of interim measures issued by: (A) An arbitral tribunal of the Permanent Court of Arbitration; or (B) an arbitral tribunal of the International Center for the Settlement of Investment Disputes.\n\n(b) Any international award shall be enforceable as if such international award was a final and binding judgment issued by the Superior Court of this state and any applicable appeal time has expired. An execution may immediately issue on an international award upon filing with the Superior Court.\n\n(c) Any interim award shall be enforceable to the same extent and in the same manner as a similar order of the Superior Court for which any applicable appeal time has expired.\n\n(d) Upon receipt of a copy of any interim or international award certified by the appropriate authority, the Superior Court shall issue all necessary orders to enforce any interim award in accordance with chapter 903a and any international award in accordance with chapter 906. Such orders shall be immediately appealable in the same manner as orders in aid of execution of a judgment issued by the Superior Court."
+      }
+    },
+    {
+      "id": "group-50a-141-to-50a-142-to-50a-143-to-50a-144-to-50a-145-to-50a-146-to-50a-147-to-50a-148-to-50a-149-to-50a-150-to-50a-151-to-50a-152-to-50a-153-to-50a-154-to-50a-155-to-50a-156-to-50a-157-to-50a-158-to-50a-159-to-50a-160-to-50a-161-to-50a-162-to-50a-163-to-50a-164-to-50a-165-to-50a-166-to-50a-167-to-50a-168-to-50a-169-to-50a-170-to-50a-171-to-50a-172-to-50a-173-to-50a-174-to-50a-175-to-50a-176-to-50a-177-to-50a-178-to-50a-179-to-50a-180-to-50a-181-to-50a-182-to-50a-183-to-50a-184-to-50a-185-to-50a-186-to-50a-187-to-50a-188-to-50a-189-to-50a-190-to-50a-191-to-50a-192-to-50a-193-to-50a-194-to-50a-195-to-50a-196-to-50a-197-to-50a-198-to-50a-199",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "50a-141",
+        "50a-142",
+        "50a-143",
+        "50a-144",
+        "50a-145",
+        "50a-146",
+        "50a-147",
+        "50a-148",
+        "50a-149",
+        "50a-150",
+        "50a-151",
+        "50a-152",
+        "50a-153",
+        "50a-154",
+        "50a-155",
+        "50a-156",
+        "50a-157",
+        "50a-158",
+        "50a-159",
+        "50a-160",
+        "50a-161",
+        "50a-162",
+        "50a-163",
+        "50a-164",
+        "50a-165",
+        "50a-166",
+        "50a-167",
+        "50a-168",
+        "50a-169",
+        "50a-170",
+        "50a-171",
+        "50a-172",
+        "50a-173",
+        "50a-174",
+        "50a-175",
+        "50a-176",
+        "50a-177",
+        "50a-178",
+        "50a-179",
+        "50a-180",
+        "50a-181",
+        "50a-182",
+        "50a-183",
+        "50a-184",
+        "50a-185",
+        "50a-186",
+        "50a-187",
+        "50a-188",
+        "50a-189",
+        "50a-190",
+        "50a-191",
+        "50a-192",
+        "50a-193",
+        "50a-194",
+        "50a-195",
+        "50a-196",
+        "50a-197",
+        "50a-198",
+        "50a-199"
+      ],
+      "heading": "Secs. 50a-141 to 50a-199.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_862a.htm#secs_50a-141_to_50a-199",
+      "status": "reserved",
+      "content": {
+        "body": [
+          "Reserved for future use."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Reserved for future use."
+      }
+    }
+  ]
+}

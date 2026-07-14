@@ -1,0 +1,215 @@
+{
+  "schemaVersion": "1.0.0",
+  "title": {
+    "id": "title-41",
+    "number": "41",
+    "name": "Bills of Lading"
+  },
+  "documents": [
+    {
+      "id": "group-41-1-to-41-2-to-41-3-to-41-4-to-41-5-to-41-6-to-41-7-to-41-8-to-41-9-to-41-10-to-41-11-to-41-12-to-41-13-to-41-14-to-41-15-to-41-16-to-41-17-to-41-18-to-41-19-to-41-20-to-41-21-to-41-22-to-41-23-to-41-24-to-41-25-to-41-26-to-41-27-to-41-28-to-41-29-to-41-30-to-41-31-to-41-32-to-41-33-to-41-34-to-41-35-to-41-36-to-41-37-to-41-38-to-41-39-to-41-40-to-41-41-to-41-42-to-41-43-to-41-44-to-41-45-to-41-46",
+      "citation": null,
+      "citations": [
+        "41-1",
+        "41-2",
+        "41-3",
+        "41-4",
+        "41-5",
+        "41-6",
+        "41-7",
+        "41-8",
+        "41-9",
+        "41-10",
+        "41-11",
+        "41-12",
+        "41-13",
+        "41-14",
+        "41-15",
+        "41-16",
+        "41-17",
+        "41-18",
+        "41-19",
+        "41-20",
+        "41-21",
+        "41-22",
+        "41-23",
+        "41-24",
+        "41-25",
+        "41-26",
+        "41-27",
+        "41-28",
+        "41-29",
+        "41-30",
+        "41-31",
+        "41-32",
+        "41-33",
+        "41-34",
+        "41-35",
+        "41-36",
+        "41-37",
+        "41-38",
+        "41-39",
+        "41-40",
+        "41-41",
+        "41-42",
+        "41-43",
+        "41-44",
+        "41-45",
+        "41-46"
+      ],
+      "heading": "Secs. 41-1 to 41-46.",
+      "chapter": {
+        "id": "chapter-720",
+        "number": "720",
+        "name": "Bills of Lading"
+      },
+      "status": "repealed",
+      "text": "Sections 41-1 to 41-46 , inclusive, are repealed.",
+      "href": "?chapter=720&section=group-41-1-to-41-2-to-41-3-to-41-4-to-41-5-to-41-6-to-41-7-to-41-8-to-41-9-to-41-10-to-41-11-to-41-12-to-41-13-to-41-14-to-41-15-to-41-16-to-41-17-to-41-18-to-41-19-to-41-20-to-41-21-to-41-22-to-41-23-to-41-24-to-41-25-to-41-26-to-41-27-to-41-28-to-41-29-to-41-30-to-41-31-to-41-32-to-41-33-to-41-34-to-41-35-to-41-36-to-41-37-to-41-38-to-41-39-to-41-40-to-41-41-to-41-42-to-41-43-to-41-44-to-41-45-to-41-46"
+    },
+    {
+      "id": "section-41-47",
+      "citation": "41-47",
+      "citations": [
+        "41-47"
+      ],
+      "heading": "Sec. 41-47. Issue of bill for goods not received.",
+      "chapter": {
+        "id": "chapter-720",
+        "number": "720",
+        "name": "Bills of Lading"
+      },
+      "status": "active",
+      "text": "Any officer, agent or servant of a carrier, who, with intent to defraud, issues or aids in issuing a bill, knowing that all or any part of the goods for which such bill is issued have not been received by such carrier, or by an agent of such carrier, or by a connecting carrier, or are not under the carrier's control at the time of issuing such bill, shall, for each offense, be guilty of a class D felony.",
+      "href": "?chapter=720&section=section-41-47"
+    },
+    {
+      "id": "section-41-48",
+      "citation": "41-48",
+      "citations": [
+        "41-48"
+      ],
+      "heading": "Sec. 41-48. Issue of bill containing false statement.",
+      "chapter": {
+        "id": "chapter-720",
+        "number": "720",
+        "name": "Bills of Lading"
+      },
+      "status": "active",
+      "text": "Any officer, agent or servant of a carrier who, with intent to defraud, issues or aids in issuing a bill for goods knowing that it contains any false statement shall, for each offense, be fined not more than one thousand dollars or imprisoned not more than one year or both.",
+      "href": "?chapter=720&section=section-41-48"
+    },
+    {
+      "id": "section-41-49",
+      "citation": "41-49",
+      "citations": [
+        "41-49"
+      ],
+      "heading": "Sec. 41-49. Issue of duplicate bills not so marked.",
+      "chapter": {
+        "id": "chapter-720",
+        "number": "720",
+        "name": "Bills of Lading"
+      },
+      "status": "active",
+      "text": "Any officer, agent or servant of a carrier, who, with intent to defraud, issues or aids in issuing a duplicate or additional negotiable bill for goods which constitutes an overissue and upon which the carrier may be liable under section 42a-7-402 , knowing that a former negotiable bill for the same goods or any part thereof is outstanding and uncancelled, shall, for each offense, be guilty of a class D felony.",
+      "href": "?chapter=720&section=section-41-49"
+    },
+    {
+      "id": "section-41-50",
+      "citation": "41-50",
+      "citations": [
+        "41-50"
+      ],
+      "heading": "Sec. 41-50. Negotiation of bill for mortgaged goods.",
+      "chapter": {
+        "id": "chapter-720",
+        "number": "720",
+        "name": "Bills of Lading"
+      },
+      "status": "active",
+      "text": "Any person who ships goods to which he has no title or upon which there is a lien or mortgage, and who takes, for such goods, a negotiable bill which he afterwards negotiates, for value, with intent to deceive, and without disclosing his want of title or the existence of the lien or mortgage, shall, for each offense, be fined not more than one thousand dollars or imprisoned not more than one year or both.",
+      "href": "?chapter=720&section=section-41-50"
+    },
+    {
+      "id": "section-41-51",
+      "citation": "41-51",
+      "citations": [
+        "41-51"
+      ],
+      "heading": "Sec. 41-51. Negotiation of bill when goods are not in the carrier's possession.",
+      "chapter": {
+        "id": "chapter-720",
+        "number": "720",
+        "name": "Bills of Lading"
+      },
+      "status": "active",
+      "text": "Any person who, with intent to deceive, negotiates or transfers for value a bill, knowing that any or all of the goods which, by the terms of such bill, appear to have been received for transportation by the carrier which issued the bill are not in the possession or control of such carrier, or of a connecting carrier, without disclosing such fact, shall, for each offense, be guilty of a class D felony.",
+      "href": "?chapter=720&section=section-41-51"
+    },
+    {
+      "id": "section-41-52",
+      "citation": "41-52",
+      "citations": [
+        "41-52"
+      ],
+      "heading": "Sec. 41-52. Inducing carrier to issue bill when goods have not been received.",
+      "chapter": {
+        "id": "chapter-720",
+        "number": "720",
+        "name": "Bills of Lading"
+      },
+      "status": "active",
+      "text": "Any person who, with intent to defraud, secures the issue, by a carrier, of a bill, knowing that any or all of the goods described in such bill as received for transportation have not, at the time of such issue, been received by such carrier, or an agent of such carrier, or a connecting carrier, or are not under the carrier's control, by inducing an officer, agent or servant of such carrier falsely to believe that such goods have been received by such carrier or are under its control, shall, for each offense, be guilty of a class D felony.",
+      "href": "?chapter=720&section=section-41-52"
+    },
+    {
+      "id": "section-41-53",
+      "citation": "41-53",
+      "citations": [
+        "41-53"
+      ],
+      "heading": "Sec. 41-53. Issue of nonnegotiable bill not so marked.",
+      "chapter": {
+        "id": "chapter-720",
+        "number": "720",
+        "name": "Bills of Lading"
+      },
+      "status": "active",
+      "text": "Any person who, with intent to defraud, issues or aids in issuing a nonnegotiable bill without the word “nonnegotiable” or the words “not negotiable” appearing plainly upon the face thereof shall, for each offense, be guilty of a class D felony.",
+      "href": "?chapter=720&section=section-41-53"
+    },
+    {
+      "id": "section-41-1",
+      "citation": "41-1",
+      "citations": [
+        "41-1"
+      ],
+      "heading": "41-1",
+      "chapter": {
+        "id": "chapter-720",
+        "number": "720",
+        "name": "Bills of Lading"
+      },
+      "status": "repealed",
+      "text": "Secs. 41-1 to 41-46. Sections 41-1 to 41-46 , inclusive, are repealed.",
+      "href": "?chapter=720&section=section-41-1"
+    },
+    {
+      "id": "section-41-46",
+      "citation": "41-46",
+      "citations": [
+        "41-46"
+      ],
+      "heading": "41-46",
+      "chapter": {
+        "id": "chapter-720",
+        "number": "720",
+        "name": "Bills of Lading"
+      },
+      "status": "repealed",
+      "text": "Secs. 41-1 to 41-46. Sections 41-1 to 41-46 , inclusive, are repealed.",
+      "href": "?chapter=720&section=section-41-46"
+    }
+  ]
+}

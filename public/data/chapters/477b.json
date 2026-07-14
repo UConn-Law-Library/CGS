@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-477b",
+  "number": "477b",
+  "name": "Oil Spill Containment",
+  "title": {
+    "id": "title-25",
+    "number": "25",
+    "name": "Water Resources. Flood and Erosion Control"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_477b.htm",
+  "sections": [
+    {
+      "id": "section-25-102t",
+      "kind": "section",
+      "citation": "25-102t",
+      "citations": [
+        "25-102t"
+      ],
+      "heading": "Sec. 25-102t. Oil spill containment and removal within lower Connecticut River area.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_477b.htm#sec_25-102t",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) As used in this section, “oil” means floating oil of any kind or in any form including but not limited to fuel oil, sludge, oil refuse and oil mixed with other matter; “lower Connecticut River” means the river and lands downstream of Middletown and East Hampton to Long Island Sound; “adjacent shoreline” means the land between, and including, the towns of Guilford and Waterford, and the waters of Long Island Sound extending outwards from these towns to the demarcation line between Connecticut and New York.",
+          "(b) The Commissioner of Energy and Environmental Protection shall (1) provide and maintain necessary equipment and train adequate emergency response personnel for the purpose of oil spill containment and removal within the lower Connecticut River and adjacent shoreline area; and (2) assist in and coordinate the development of oil spill containment and removal contingency plans for the towns located within the lower Connecticut River and adjacent shoreline area.",
+          "See Sec. 22a-449 re water pollution control powers of the commissioner."
+        ],
+        "sourceNotes": [
+          "(P.A. 79-319, S. 1, 5; P.A. 11-80, S. 1.)"
+        ],
+        "history": [
+          "History: Pursuant to P.A. 11-80, “Commissioner of Environmental Protection” was changed editorially by the Revisors to “Commissioner of Energy and Environmental Protection” in Subsec. (b), effective July 1, 2011."
+        ],
+        "annotations": [],
+        "plainText": "(a) As used in this section, “oil” means floating oil of any kind or in any form including but not limited to fuel oil, sludge, oil refuse and oil mixed with other matter; “lower Connecticut River” means the river and lands downstream of Middletown and East Hampton to Long Island Sound; “adjacent shoreline” means the land between, and including, the towns of Guilford and Waterford, and the waters of Long Island Sound extending outwards from these towns to the demarcation line between Connecticut and New York.\n\n(b) The Commissioner of Energy and Environmental Protection shall (1) provide and maintain necessary equipment and train adequate emergency response personnel for the purpose of oil spill containment and removal within the lower Connecticut River and adjacent shoreline area; and (2) assist in and coordinate the development of oil spill containment and removal contingency plans for the towns located within the lower Connecticut River and adjacent shoreline area.\n\nSee Sec. 22a-449 re water pollution control powers of the commissioner."
+      }
+    },
+    {
+      "id": "group-25-102u-to-25-102v-to-25-102w-to-25-102x-to-25-102y-to-25-102z",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "25-102u",
+        "25-102v",
+        "25-102w",
+        "25-102x",
+        "25-102y",
+        "25-102z"
+      ],
+      "heading": "Sec. 25-102u to 25-102z.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_477b.htm#sec_25-102u_to_25-102z",
+      "status": "reserved",
+      "content": {
+        "body": [
+          "Reserved for future use."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Reserved for future use."
+      }
+    }
+  ]
+}

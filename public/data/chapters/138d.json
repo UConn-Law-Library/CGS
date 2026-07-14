@@ -1,0 +1,81 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-138d",
+  "number": "138d",
+  "name": "Rental Housing Assistance Trust Fund",
+  "title": {
+    "id": "title-08",
+    "number": "08",
+    "name": "Zoning, Planning, Housing and Economic and Community Development"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_138d.htm",
+  "sections": [
+    {
+      "id": "group-8-370-to-8-371-to-8-372-to-8-373-to-8-374-to-8-375",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "8-370",
+        "8-371",
+        "8-372",
+        "8-373",
+        "8-374",
+        "8-375"
+      ],
+      "heading": "Secs. 8-370 to 8-375. Rental Housing Assistance Trust Fund.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_138d.htm#secs_8-370_to_8-375",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Sections 8-370 to 8-375 , inclusive, are repealed."
+        ],
+        "sourceNotes": [
+          "(P.A. 86-395, S. 1, 2, 5–8, 10; P.A. 87-377, S. 4, 5.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 8-370 to 8-375 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-8-370",
+      "kind": "section",
+      "citation": "8-370",
+      "citations": [
+        "8-370"
+      ],
+      "heading": "8-370",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_138d.htm#sec_8-370",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 8-370 to 8-375. Rental Housing Assistance Trust Fund. Sections 8-370 to 8-375 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 8-370 to 8-375. Rental Housing Assistance Trust Fund. Sections 8-370 to 8-375 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-8-375",
+      "kind": "section",
+      "citation": "8-375",
+      "citations": [
+        "8-375"
+      ],
+      "heading": "8-375",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_138d.htm#sec_8-375",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 8-370 to 8-375. Rental Housing Assistance Trust Fund. Sections 8-370 to 8-375 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 8-370 to 8-375. Rental Housing Assistance Trust Fund. Sections 8-370 to 8-375 , inclusive, are repealed."
+      }
+    }
+  ]
+}

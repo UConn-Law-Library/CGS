@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-881a",
+  "number": "881a",
+  "name": "Common Pleas Judicial District of Ansonia-Milford",
+  "title": {
+    "id": "title-51",
+    "number": "51",
+    "name": "Courts"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_881a.htm",
+  "sections": [
+    {
+      "id": "group-51-164j-to-51-164k-to-51-164l",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "51-164j",
+        "51-164k",
+        "51-164l"
+      ],
+      "heading": "Secs. 51-164j to 51-164 l . Common pleas judicial district of Ansonia-Milford.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_881a.htm#secs_51-164j_to_51-164l",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Sections 51-164j to 51-164 l , inclusive, are repealed."
+        ],
+        "sourceNotes": [
+          "(P.A. 75-578, S. 9, 12, 15; P.A. 76-380, S. 1, 12; 76-436, S. 667, 672, 681; P.A. 77-576, S. 11, 65.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 51-164j to 51-164 l , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-51-164j",
+      "kind": "section",
+      "citation": "51-164j",
+      "citations": [
+        "51-164j"
+      ],
+      "heading": "51-164j",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_881a.htm#sec_51-164j",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 51-164j to 51-164 l . Common pleas judicial district of Ansonia-Milford. Sections 51-164j to 51-164 l , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 51-164j to 51-164 l . Common pleas judicial district of Ansonia-Milford. Sections 51-164j to 51-164 l , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-51-164l",
+      "kind": "section",
+      "citation": "51-164l",
+      "citations": [
+        "51-164l"
+      ],
+      "heading": "51-164 l",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_881a.htm#sec_51-164l",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 51-164j to 51-164 l . Common pleas judicial district of Ansonia-Milford. Sections 51-164j to 51-164 l , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 51-164j to 51-164 l . Common pleas judicial district of Ansonia-Milford. Sections 51-164j to 51-164 l , inclusive, are repealed."
+      }
+    }
+  ]
+}

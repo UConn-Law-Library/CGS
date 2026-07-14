@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-814",
+  "number": "814",
+  "name": "Protection of the Elderly",
+  "title": {
+    "id": "title-46a",
+    "number": "46a",
+    "name": "Human Rights"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_814.htm",
+  "sections": [
+    {
+      "id": "group-46a-14-to-46a-15-to-46a-16-to-46a-17-to-46a-18-to-46a-19-to-46a-20-to-46a-21-to-46a-22-to-46a-23-to-46a-24-to-46a-25",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "46a-14",
+        "46a-15",
+        "46a-16",
+        "46a-17",
+        "46a-18",
+        "46a-19",
+        "46a-20",
+        "46a-21",
+        "46a-22",
+        "46a-23",
+        "46a-24",
+        "46a-25"
+      ],
+      "heading": "Secs. 46a-14 to 46a-25.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_814.htm#secs_46a-14_to_46a-25",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 319h, Part II, Secs. 17a-430 to 17a-441 , inclusive."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 319h, Part II, Secs. 17a-430 to 17a-441 , inclusive."
+      }
+    },
+    {
+      "id": "section-46a-26",
+      "kind": "section",
+      "citation": "46a-26",
+      "citations": [
+        "46a-26"
+      ],
+      "heading": "Sec. 46a-26. Reimbursement of certain funds expended for purposes of chapter.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_814.htm#sec_46a-26",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 46a-26 is repealed."
+        ],
+        "sourceNotes": [
+          "(P.A. 77-613, S. 13, 15; 77-614, S. 521, 587, 610; P.A. 78-265, S. 2, 3; 78-303, S. 85, 136.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 46a-26 is repealed."
+      }
+    }
+  ]
+}

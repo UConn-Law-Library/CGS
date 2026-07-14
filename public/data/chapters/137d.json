@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-137d",
+  "number": "137d",
+  "name": "Connecticut Housing Trust Fund",
+  "title": {
+    "id": "title-08",
+    "number": "08",
+    "name": "Zoning, Planning, Housing and Economic and Community Development"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_137d.htm",
+  "sections": [
+    {
+      "id": "section-8-336l",
+      "kind": "section",
+      "citation": "8-336l",
+      "citations": [
+        "8-336l"
+      ],
+      "heading": "Sec. 8-336 l . Connecticut Housing Trust Fund. Regulations.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_137d.htm#sec_8-336l",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 8-336 l is repealed."
+        ],
+        "sourceNotes": [
+          "(P.A. 89-170, S. 1, 2; P.A. 94-95, S. 25.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 8-336 l is repealed."
+      }
+    }
+  ]
+}

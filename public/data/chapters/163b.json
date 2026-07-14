@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-163b",
+  "number": "163b",
+  "name": "Private Occupational School Student Protection Fund",
+  "title": {
+    "id": "title-10",
+    "number": "10",
+    "name": "Education and Culture"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_163b.htm",
+  "sections": [
+    {
+      "id": "group-10-14i-to-10-14j-to-10-14k-to-10-14l",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "10-14i",
+        "10-14j",
+        "10-14k",
+        "10-14l"
+      ],
+      "heading": "Secs. 10-14i to 10-14 l .",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_163b.htm#secs_10-14i_to_10-14l",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 185, Part I, Secs. 10a-22u to 10a-22x , inclusive."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 185, Part I, Secs. 10a-22u to 10a-22x , inclusive."
+      }
+    }
+  ]
+}

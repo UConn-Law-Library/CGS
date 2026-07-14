@@ -1,0 +1,105 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-588y",
+  "number": "588y",
+  "name": "Patriots Stadium",
+  "title": {
+    "id": "title-32",
+    "number": "32",
+    "name": "Commerce and Economic and Community Development"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588y.htm",
+  "sections": [
+    {
+      "id": "group-32-620-to-32-621-to-32-622-to-32-623-to-32-624-to-32-625-to-32-626-to-32-627-to-32-628-to-32-629-to-32-630-to-32-631-to-32-632-to-32-633-to-32-634-to-32-635-to-32-636-to-32-637-to-32-638-to-32-639-to-32-640-to-32-641-to-32-642-to-32-643-to-32-644-to-32-645-to-32-646-to-32-647-to-32-648-to-32-649",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "32-620",
+        "32-621",
+        "32-622",
+        "32-623",
+        "32-624",
+        "32-625",
+        "32-626",
+        "32-627",
+        "32-628",
+        "32-629",
+        "32-630",
+        "32-631",
+        "32-632",
+        "32-633",
+        "32-634",
+        "32-635",
+        "32-636",
+        "32-637",
+        "32-638",
+        "32-639",
+        "32-640",
+        "32-641",
+        "32-642",
+        "32-643",
+        "32-644",
+        "32-645",
+        "32-646",
+        "32-647",
+        "32-648",
+        "32-649"
+      ],
+      "heading": "Secs. 32-620 to 32-649. Legislative findings.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588y.htm#secs_32-620_to_32-649",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Sections 32-620 to 32-649 , inclusive, are repealed, effective July 1, 1999."
+        ],
+        "sourceNotes": [
+          "(Dec. Sp. Sess. P.A. 98-1, S. 1–28, 41, 43; P.A. 99-241, S. 65, 66.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 32-620 to 32-649 , inclusive, are repealed, effective July 1, 1999."
+      }
+    },
+    {
+      "id": "section-32-620",
+      "kind": "section",
+      "citation": "32-620",
+      "citations": [
+        "32-620"
+      ],
+      "heading": "32-620",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588y.htm#sec_32-620",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 32-620 to 32-649. Legislative findings. Sections 32-620 to 32-649 , inclusive, are repealed, effective July 1, 1999."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 32-620 to 32-649. Legislative findings. Sections 32-620 to 32-649 , inclusive, are repealed, effective July 1, 1999."
+      }
+    },
+    {
+      "id": "section-32-649",
+      "kind": "section",
+      "citation": "32-649",
+      "citations": [
+        "32-649"
+      ],
+      "heading": "32-649",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588y.htm#sec_32-649",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 32-620 to 32-649. Legislative findings. Sections 32-620 to 32-649 , inclusive, are repealed, effective July 1, 1999."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 32-620 to 32-649. Legislative findings. Sections 32-620 to 32-649 , inclusive, are repealed, effective July 1, 1999."
+      }
+    }
+  ]
+}

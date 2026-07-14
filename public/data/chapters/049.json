@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-049",
+  "number": "049",
+  "name": "Auditors of Public Accounts",
+  "title": {
+    "id": "title-04",
+    "number": "04",
+    "name": "Management of State Agencies"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_049.htm",
+  "sections": [
+    {
+      "id": "group-4-62-to-4-63-to-4-64",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "4-62",
+        "4-63",
+        "4-64"
+      ],
+      "heading": "Secs. 4-62 to 4-64.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_049.htm#secs_4-62_to_4-64",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 23, Secs. 2-89 to 2-92 , inclusive."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 23, Secs. 2-89 to 2-92 , inclusive."
+      }
+    }
+  ]
+}

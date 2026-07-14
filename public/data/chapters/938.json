@@ -1,0 +1,83 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-938",
+  "number": "938",
+  "name": "Offenses Against the Sovereignty of the State",
+  "title": {
+    "id": "title-53",
+    "number": "53",
+    "name": "Crimes"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_938.htm",
+  "sections": [
+    {
+      "id": "group-53-1-to-53-2-to-53-3-to-53-4-to-53-5-to-53-6-to-53-7-to-53-8",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "53-1",
+        "53-2",
+        "53-3",
+        "53-4",
+        "53-5",
+        "53-6",
+        "53-7",
+        "53-8"
+      ],
+      "heading": "Secs. 53-1 to 53-8. Offenses against the sovereignty of the state.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_938.htm#secs_53-1_to_53-8",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Sections 53-1 to 53-8 , inclusive, are repealed."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 8342–8349; 1969, P.A. 828, S. 214.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 53-1 to 53-8 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-53-1",
+      "kind": "section",
+      "citation": "53-1",
+      "citations": [
+        "53-1"
+      ],
+      "heading": "53-1",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_938.htm#sec_53-1",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 53-1 to 53-8. Offenses against the sovereignty of the state. Sections 53-1 to 53-8 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 53-1 to 53-8. Offenses against the sovereignty of the state. Sections 53-1 to 53-8 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-53-8",
+      "kind": "section",
+      "citation": "53-8",
+      "citations": [
+        "53-8"
+      ],
+      "heading": "53-8",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_938.htm#sec_53-8",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 53-1 to 53-8. Offenses against the sovereignty of the state. Sections 53-1 to 53-8 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 53-1 to 53-8. Offenses against the sovereignty of the state. Sections 53-1 to 53-8 , inclusive, are repealed."
+      }
+    }
+  ]
+}

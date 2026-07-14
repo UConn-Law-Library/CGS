@@ -1,0 +1,991 @@
+{
+  "schemaVersion": "1.0.0",
+  "title": {
+    "id": "title-04d",
+    "number": "04d",
+    "name": "State Information and Telecommunication Systems"
+  },
+  "documents": [
+    {
+      "id": "section-4d-1",
+      "citation": "4d-1",
+      "citations": [
+        "4d-1"
+      ],
+      "heading": "Sec. 4d-1. (Formerly Sec. 16a-109). Definitions.",
+      "chapter": {
+        "id": "chapter-061",
+        "number": "061",
+        "name": "State Information and Telecommunication Systems Management and Contracts"
+      },
+      "status": "active",
+      "text": "As used in this chapter, unless the context indicates a different meaning:\n\n(1) “Architecture” means the defined structure or orderly arrangement of information systems and telecommunication systems, based on accepted industry standards and guidelines, for the purpose of maximizing the interconnection and efficiency of such systems and the ability of users to share information resources.\n\n(2) “Information systems” means the combination of data processing hardware and software in the collection, processing and distribution of data to and from interactive computer-based systems to meet informational needs.\n\n(3) “State agency” means each department, board, council, commission, institution or other agency of the Executive Department of the state government, provided each board, council, commission, institution or other agency included by law within any given department shall be deemed a division of that department. The term “state agency” shall include (A) the offices of the Governor, Lieutenant Governor, Treasurer, Attorney General, Secretary of the State and Comptroller, and (B) all operations of an Executive Department agency which are funded by either the General Fund or a special fund.\n\n(4) “Telecommunication systems” means telephone equipment and transmission facilities, either alone or in combination with information systems, for the electronic distribution of all forms of information, including voice, data and images.\n\n(5) “Commissioner” means the Commissioner of Administrative Services.",
+      "href": "?chapter=061&section=section-4d-1"
+    },
+    {
+      "id": "section-4d-1a",
+      "citation": "4d-1a",
+      "citations": [
+        "4d-1a"
+      ],
+      "heading": "Sec. 4d-1a. Commissioner and Department of Administrative Services substituted for former officer and department.",
+      "chapter": {
+        "id": "chapter-061",
+        "number": "061",
+        "name": "State Information and Telecommunication Systems Management and Contracts"
+      },
+      "status": "repealed",
+      "text": "Section 4d-1a is repealed, effective July 1, 2013.",
+      "href": "?chapter=061&section=section-4d-1a"
+    },
+    {
+      "id": "section-4d-2",
+      "citation": "4d-2",
+      "citations": [
+        "4d-2"
+      ],
+      "heading": "Sec. 4d-2. (Formerly Sec. 16a-110). Division of Information Technology within Department of Administrative Services. Chief Information Officer. Duties. Review of state agency contracts.",
+      "chapter": {
+        "id": "chapter-061",
+        "number": "061",
+        "name": "State Information and Telecommunication Systems Management and Contracts"
+      },
+      "status": "active",
+      "text": "(a) There shall be a Division of Information Technology within the Department of Administrative Services. The Commissioner of Administrative Services shall appoint a Chief Information Officer to administer the division, who shall be exempt from the classified service. The Chief Information Officer shall be an individual knowledgeable with respect to information and telecommunication systems.\n\n(b) The Commissioner of Administrative Services shall: (1) Identify and implement (A) optimal information and telecommunication systems to efficiently service the needs of state agencies, and (B) opportunities for reducing costs for such systems; (2) approve or disapprove, in accordance with guidelines established by the commissioner, each proposed state agency acquisition of hardware or software for an information or telecommunication system, except for (A) hardware or software having a cost of less than twenty thousand dollars, or (B) hardware or software having a cost of twenty thousand dollars or more, but less than one hundred thousand dollars, which is for a project that complies with the agency's business systems plan; (3) approve or disapprove, in accordance with guidelines established by the commissioner, all state agency requests or proposed contracts for consultants for information and telecommunication systems; (4) be responsible for purchasing, leasing and contracting for all information system and telecommunication system facilities, equipment and services for state agencies, in accordance with the provisions of subsection (a) of section 4d-8 , except for the offices of the Governor, Lieutenant Governor, Treasurer, Attorney General, Secretary of the State and Comptroller; (5) review existing and new information and telecommunication system technologies to ensure consistency with the strategic plan established under section 4d-7 and approved state agency architecture and make recommendations to the Standardization Committee established under section 4a-58 for review and appropriate action; (6) cooperate with the General Assembly, the Judicial Department and the constituent units of the state system of higher education in assessing opportunities for cost savings and greater sharing of information resources which could result if such entities acquire information and telecommunication systems similar to those of state agencies; and (7) ensure state-wide implementation of the 9-1-1 and E 9-1-1 systems.\n\n(c) The Department of Administrative Services shall approve or disapprove a state agency request or proposed contract under subdivision (2) or (3) of subsection (b) of this section no later than seven business days after receipt of the request or proposed contract and any necessary supporting information. If the Department of Administrative Services does not approve or disapprove the request or proposed contract by the end of such seven-day period, the request or proposed contract shall be deemed to have been approved. The provisions of subdivision (3) of subsection (b) of this section shall not apply to telecommunication consultants retained by the Public Utilities Regulatory Authority or the Office of Consumer Counsel in connection with telecommunication proceedings of said authority.",
+      "href": "?chapter=061&section=section-4d-2"
+    },
+    {
+      "id": "section-4d-3",
+      "citation": "4d-3",
+      "citations": [
+        "4d-3"
+      ],
+      "heading": "Sec. 4d-3. (Formerly Sec. 16a-120). Regulations.",
+      "chapter": {
+        "id": "chapter-061",
+        "number": "061",
+        "name": "State Information and Telecommunication Systems Management and Contracts"
+      },
+      "status": "active",
+      "text": "The commissioner may adopt regulations to carry out the purposes of sections 4d-1 to 4d-5 , inclusive, 4d-7 , 4d-11 and 4d-12 .",
+      "href": "?chapter=061&section=section-4d-3"
+    },
+    {
+      "id": "section-4d-4",
+      "citation": "4d-4",
+      "citations": [
+        "4d-4"
+      ],
+      "heading": "Sec. 4d-4. (Formerly Sec. 16a-117). Information and telecommunication systems. Transfer and responsibility for.",
+      "chapter": {
+        "id": "chapter-061",
+        "number": "061",
+        "name": "State Information and Telecommunication Systems Management and Contracts"
+      },
+      "status": "repealed",
+      "text": "Section 4d-4 is repealed, effective July 1, 2011.",
+      "href": "?chapter=061&section=section-4d-4"
+    },
+    {
+      "id": "section-4d-5",
+      "citation": "4d-5",
+      "citations": [
+        "4d-5"
+      ],
+      "heading": "Sec. 4d-5. (Formerly Sec. 16a-118). Telecommunication facilities, equipment, services and infrastructure.",
+      "chapter": {
+        "id": "chapter-061",
+        "number": "061",
+        "name": "State Information and Telecommunication Systems Management and Contracts"
+      },
+      "status": "active",
+      "text": "(a) The commissioner shall be responsible for purchasing, leasing and contracting for all telecommunication facilities, equipment and services for the state-wide telecommunication infrastructure for the support of state agencies; implementing, or assisting state agencies in implementing, such facilities; processing bills for telecommunication services used by state agencies including telecommunication services provided at the request of state agencies to (1) private nonprofit or not-for-profit agencies whose telecommunication services are funded primarily by the state, and (2) political subdivisions of the state; and managing the operation of such infrastructure.\n\n(b) The commissioner shall be responsible for planning for such telecommunication infrastructure and assisting state agencies in (1) planning for the acquisition of telecommunication systems and (2) implementing such systems.\n\nSee Sec. 14-42a re provision of Department of Motor Vehicles information to organ and tissue procurement organizations.\n\nSee Sec. 18-81x re transfer of revenue derived from contract for inmate pay telephone service.\n\nSee Sec. 27-62 re telephone and telegraph services for military units.",
+      "href": "?chapter=061&section=section-4d-5"
+    },
+    {
+      "id": "section-4d-6",
+      "citation": "4d-6",
+      "citations": [
+        "4d-6"
+      ],
+      "heading": "Sec. 4d-6. Implementation plan.",
+      "chapter": {
+        "id": "chapter-061",
+        "number": "061",
+        "name": "State Information and Telecommunication Systems Management and Contracts"
+      },
+      "status": "repealed",
+      "text": "Section 4d-6 is repealed, effective October 1, 2002.",
+      "href": "?chapter=061&section=section-4d-6"
+    },
+    {
+      "id": "section-4d-7",
+      "citation": "4d-7",
+      "citations": [
+        "4d-7"
+      ],
+      "heading": "Sec. 4d-7. (Formerly Sec. 16a-113). Information and telecommunication systems strategic plan.",
+      "chapter": {
+        "id": "chapter-061",
+        "number": "061",
+        "name": "State Information and Telecommunication Systems Management and Contracts"
+      },
+      "status": "active",
+      "text": "(a) The Commissioner of Administrative Services shall develop, publish and annually update an information and telecommunication systems strategic plan, in accordance with the policies established by the Office of Policy and Management, which shall have the following goals: (1) To provide a level of voice and data communications service among all state agencies that will ensure the effective and efficient completion of their respective functions; (2) to provide all necessary telecommunication services between state agencies and the public; (3) to provide, in the event of an emergency, immediate voice and data communications and critical application recovery capabilities which are necessary to support state agency functions; and (4) to provide necessary access to higher technology for state agencies.\n\n(b) In order to facilitate the development of a fully integrated state-wide information services and telecommunication system that effectively and efficiently supports data processing and telecommunication requirements of all state agencies, the strategic plan shall include: (1) Guidelines and standards for the architecture for information and telecommunication systems that support state agencies, including, but not limited to, standards for digital identity verification under section 1-276 that are consistent with industry standards and best practices; (2) plans for a cost-effective state-wide telecommunication network to support state agencies, which network may consist of different types of transmission media, including wire, fiber and radio, and shall be able to support voice, data, electronic mail, video and facsimile transmission requirements and any other form of information exchange that takes place via electromagnetic media; (3) identification of annual expenditures and major capital commitments for information and telecommunication systems; (4) identification of all state agency technology projects; (5) a description of the efforts of executive branch state agencies to use e-government solutions to deliver state services and conduct state programs, including the feedback and demands of clients of such agencies received by such agencies and such agencies' plans to address client concerns by using online solutions, when such solutions are determined feasible by such agencies; and (6) potential opportunities for increasing the efficiency or reducing the costs of the state's information and telecommunication systems.\n\n(c) On or before August first, annually, each state agency shall submit to the Commissioner of Administrative Services all plans, documents and other information requested by the commissioner for the development of such plan.\n\n(d) The Commissioner of Administrative Services shall not implement a state agency proposal for information system hardware, software, maintenance service or consulting unless such proposal complies with the strategic plan and the agency's approved business systems plan. The commissioner shall maintain a current inventory of information system components to facilitate asset management and procurement leverage.\n\n(e) Not later than September fifteenth, annually, the Commissioner of Administrative Services shall submit the updated strategic plan to the Secretary of the Office of Policy and Management. Not later than October first, annually, the Secretary of the Office of Policy and Management shall submit to the Governor and the General Assembly, in accordance with the provisions of section 11-4a , (1) the updated strategic plan, and (2) a report on the activities of the Department of Administrative Services and any cost savings and improvements in the efficiency of information and telecommunication systems of state agencies that are attributable to the efforts of the Department of Administrative Services.",
+      "href": "?chapter=061&section=section-4d-7"
+    },
+    {
+      "id": "section-4d-8",
+      "citation": "4d-8",
+      "citations": [
+        "4d-8"
+      ],
+      "heading": "Sec. 4d-8. Information and telecommunication systems. Purchase, lease, contracts for, sale and disposal.",
+      "chapter": {
+        "id": "chapter-061",
+        "number": "061",
+        "name": "State Information and Telecommunication Systems Management and Contracts"
+      },
+      "status": "active",
+      "text": "(a) The provisions of title 4a shall apply to the purchasing, leasing and contracting for information system and telecommunication system facilities, equipment and services.\n\n(b) (1) As used in this subsection, “information technology personal property” includes, but is not limited to, electronic data processing equipment, other equipment necessary for the utilization of information systems, telecommunication equipment or installations, and other equipment necessary for the utilization of telecommunication systems.\n\n(2) Notwithstanding any provision of the general statutes to the contrary, the Commissioner of Administrative Services may sell, lease or otherwise dispose of information technology personal property. The commissioner may execute personal service agreements or other contracts with outside vendors for such purposes. If any such information technology personal property was purchased or improved with the proceeds of tax-exempt obligations issued or to be issued by the state, the commissioner shall notify the State Treasurer and obtain the approval of the State Treasurer, before selling, leasing or disposing of the personal property or executing such an agreement or contract for such purpose. The State Treasurer may disapprove such sale, lease, disposition, agreement or contract only if it would affect the tax-exempt status of such obligations and could not be modified to maintain such tax-exempt status.",
+      "href": "?chapter=061&section=section-4d-8"
+    },
+    {
+      "id": "section-4d-8a",
+      "citation": "4d-8a",
+      "citations": [
+        "4d-8a"
+      ],
+      "heading": "Sec. 4d-8a. Information and telecommunications systems for state agencies. Policies. Standards.",
+      "chapter": {
+        "id": "chapter-061",
+        "number": "061",
+        "name": "State Information and Telecommunication Systems Management and Contracts"
+      },
+      "status": "active",
+      "text": "The Office of Policy and Management shall (1) develop and implement an integrated set of policies governing the use of information and telecommunications systems for state agencies, and (2) develop a series of comprehensive standards and planning guidelines pertaining to the development, acquisition, implementation, oversight and management of information and telecommunications systems for state agencies.",
+      "href": "?chapter=061&section=section-4d-8a"
+    },
+    {
+      "id": "section-4d-9",
+      "citation": "4d-9",
+      "citations": [
+        "4d-9"
+      ],
+      "heading": "Sec. 4d-9. (Formerly Sec. 4a-7). Technical Services Revolving Fund.",
+      "chapter": {
+        "id": "chapter-061",
+        "number": "061",
+        "name": "State Information and Telecommunication Systems Management and Contracts"
+      },
+      "status": "active",
+      "text": "There shall be a Technical Services Revolving Fund in the Department of Administrative Services for the purchase, installation and utilization of information and telecommunication systems, as such terms are defined in section 4d-1 , for budgeted agencies of the state. The Commissioner of Administrative Services and the Secretary of the Office of Policy and Management shall jointly be responsible for the administration of said fund. Said commissioner and said secretary shall regularly review said fund using generally accepted accounting principles and the Auditors of Public Accounts shall conduct an annual comprehensive financial review of said fund.",
+      "href": "?chapter=061&section=section-4d-9"
+    },
+    {
+      "id": "section-4d-10",
+      "citation": "4d-10",
+      "citations": [
+        "4d-10"
+      ],
+      "heading": "Sec. 4d-10. (Formerly Sec. 4a-8). Capital Equipment Data Processing Revolving Fund.",
+      "chapter": {
+        "id": "chapter-061",
+        "number": "061",
+        "name": "State Information and Telecommunication Systems Management and Contracts"
+      },
+      "status": "repealed",
+      "text": "Section 4d-10 is repealed, effective July 1, 2015.",
+      "href": "?chapter=061&section=section-4d-10"
+    },
+    {
+      "id": "section-4d-11",
+      "citation": "4d-11",
+      "citations": [
+        "4d-11"
+      ],
+      "heading": "Sec. 4d-11. (Formerly Sec. 16a-114). State agency appropriations and expenditures for information and telecommunication systems.",
+      "chapter": {
+        "id": "chapter-061",
+        "number": "061",
+        "name": "State Information and Telecommunication Systems Management and Contracts"
+      },
+      "status": "active",
+      "text": "The commissioner shall establish a procedure for the preparation by state agencies of plans and estimates of expenditure requirements for information and telecommunication systems, for consideration for inclusion in the Governor's budget document.",
+      "href": "?chapter=061&section=section-4d-11"
+    },
+    {
+      "id": "section-4d-12",
+      "citation": "4d-12",
+      "citations": [
+        "4d-12"
+      ],
+      "heading": "Sec. 4d-12. (Formerly Sec. 16a-115). Advisory committees. Information and telecommunication systems executive steering committee.",
+      "chapter": {
+        "id": "chapter-061",
+        "number": "061",
+        "name": "State Information and Telecommunication Systems Management and Contracts"
+      },
+      "status": "active",
+      "text": "(a) The Commissioner of Administrative Services may establish such committees as he deems necessary to advise the commissioner in carrying out the purposes of sections 4d-1 to 4d-5 , inclusive, section 4d-7 , this section and section 4d-11 .\n\n(b) There is established an information and telecommunication systems executive steering committee consisting of the following members or their designees: The Commissioner of Administrative Services, the Secretary of the State and the Secretary of the Office of Policy and Management and not more than four other members who are commissioners of an executive branch state agency, appointed jointly by the Commissioner of Administrative Services and the Secretary of the Office of Policy and Management. The Commissioner of Administrative Services, or a designee, shall serve as chairperson of the committee. The Department of Administrative Services shall serve as staff to the committee. The committee shall (1) review and approve or disapprove the annual information and telecommunication systems strategic plan developed under section 4d-7 , state agency estimates of expenditure requirements for information and telecommunication systems established under section 4d-11 , and major telecommunication initiatives, (2) review, in consultation with the Department of Administrative Services, and approve or disapprove variances to (A) the list of approved architectural components for information and telecommunication systems for state agencies, (B) the strategic plan, and (C) appropriations for information and telecommunication systems, and (3) advise the Department of Administrative Services on the organization and functions of the department in regards to information and telecommunication systems. The committee shall submit a report on each approved variance to the General Assembly, in accordance with the provisions of section 11-4a . Such report shall include the reasons for the variance and the results of a cost-benefit analysis on the variance.",
+      "href": "?chapter=061&section=section-4d-12"
+    },
+    {
+      "id": "section-4d-13",
+      "citation": "4d-13",
+      "citations": [
+        "4d-13"
+      ],
+      "heading": "Sec. 4d-13. (Formerly Sec. 16a-116). Technology Advisory Committee established.",
+      "chapter": {
+        "id": "chapter-061",
+        "number": "061",
+        "name": "State Information and Telecommunication Systems Management and Contracts"
+      },
+      "status": "repealed",
+      "text": "Section 4d-13 is repealed, effective July 1, 2012.",
+      "href": "?chapter=061&section=section-4d-13"
+    },
+    {
+      "id": "section-4d-14",
+      "citation": "4d-14",
+      "citations": [
+        "4d-14"
+      ],
+      "heading": "Sec. 4d-14. (Formerly Sec. 16a-119). Reports.",
+      "chapter": {
+        "id": "chapter-061",
+        "number": "061",
+        "name": "State Information and Telecommunication Systems Management and Contracts"
+      },
+      "status": "repealed",
+      "text": "Section 4d-14 is repealed, effective June 12, 2014.",
+      "href": "?chapter=061&section=section-4d-14"
+    },
+    {
+      "id": "section-4d-15",
+      "citation": "4d-15",
+      "citations": [
+        "4d-15"
+      ],
+      "heading": "Sec. 4d-15. (Formerly Sec. 16a-119a). Reports on implementation of systems requirements re computer-stored public records.",
+      "chapter": {
+        "id": "chapter-061",
+        "number": "061",
+        "name": "State Information and Telecommunication Systems Management and Contracts"
+      },
+      "status": "repealed",
+      "text": "Section 4d-15 is repealed, effective October 1, 1999.",
+      "href": "?chapter=061&section=section-4d-15"
+    },
+    {
+      "id": "group-4d-16-to-4d-16a",
+      "citation": null,
+      "citations": [
+        "4d-16",
+        "4d-16a"
+      ],
+      "heading": "Secs. 4d-16 and 4d-16a. Century date change effect. Management of century date change effect by municipalities; municipal authority to contract for services; cooperative purchasing plans.",
+      "chapter": {
+        "id": "chapter-061",
+        "number": "061",
+        "name": "State Information and Telecommunication Systems Management and Contracts"
+      },
+      "status": "repealed",
+      "text": "Sections 4d-16 and 4d-16a are repealed, effective October 1, 2002.",
+      "href": "?chapter=061&section=group-4d-16-to-4d-16a"
+    },
+    {
+      "id": "section-4d-17",
+      "citation": "4d-17",
+      "citations": [
+        "4d-17"
+      ],
+      "heading": "Sec. 4d-17. Professional development of information technology employees.",
+      "chapter": {
+        "id": "chapter-061",
+        "number": "061",
+        "name": "State Information and Telecommunication Systems Management and Contracts"
+      },
+      "status": "repealed",
+      "text": "Section 4d-17 is repealed, effective July 1, 2011.",
+      "href": "?chapter=061&section=section-4d-17"
+    },
+    {
+      "id": "group-4d-18-to-4d-19-to-4d-20-to-4d-21-to-4d-22-to-4d-23-to-4d-24-to-4d-25-to-4d-26-to-4d-27-to-4d-28-to-4d-29",
+      "citation": null,
+      "citations": [
+        "4d-18",
+        "4d-19",
+        "4d-20",
+        "4d-21",
+        "4d-22",
+        "4d-23",
+        "4d-24",
+        "4d-25",
+        "4d-26",
+        "4d-27",
+        "4d-28",
+        "4d-29"
+      ],
+      "heading": "Secs. 4d-18 to 4d-29.",
+      "chapter": {
+        "id": "chapter-061",
+        "number": "061",
+        "name": "State Information and Telecommunication Systems Management and Contracts"
+      },
+      "status": "reserved",
+      "text": "Reserved for future use.",
+      "href": "?chapter=061&section=group-4d-18-to-4d-19-to-4d-20-to-4d-21-to-4d-22-to-4d-23-to-4d-24-to-4d-25-to-4d-26-to-4d-27-to-4d-28-to-4d-29"
+    },
+    {
+      "id": "section-4d-30",
+      "citation": "4d-30",
+      "citations": [
+        "4d-30"
+      ],
+      "heading": "Sec. 4d-30. Definitions.",
+      "chapter": {
+        "id": "chapter-061",
+        "number": "061",
+        "name": "State Information and Telecommunication Systems Management and Contracts"
+      },
+      "status": "active",
+      "text": "As used in this section and sections 4d-31 to 4d-44 , inclusive:\n\n(1) “Contract” means a contract for state agency information system or telecommunication system facilities, equipment or services, which is awarded pursuant to this chapter or subsection (e) of section 1-205 , subsection (c) of section 1-211 , subsection (b) of section 1-212 , section 4-5 , subsection (a) of section 10a-151b , or subsection (b) of section 19a-110 .\n\n(2) “Contractor” means a business entity or individual who is awarded a contract or an amendment to a contract.\n\n(3) “Subcontractor” means a subcontractor of a contractor for work under a contract or an amendment to a contract.",
+      "href": "?chapter=061&section=section-4d-30"
+    },
+    {
+      "id": "section-4d-31",
+      "citation": "4d-31",
+      "citations": [
+        "4d-31"
+      ],
+      "heading": "Sec. 4d-31. Contracts, subcontracts, amendments to include State Comptroller's specifications.",
+      "chapter": {
+        "id": "chapter-061",
+        "number": "061",
+        "name": "State Information and Telecommunication Systems Management and Contracts"
+      },
+      "status": "active",
+      "text": "Each contract, subcontract or amendment to a contract or subcontract shall include any specifications established by the State Comptroller to ensure that all policies, procedures, processes and control systems, including hardware, software and protocols, which are established or provided by the contractor or subcontractor, shall be compatible with and support the state's core financial systems, including but not limited to, accounting, payroll, time and attendance, and retirement systems.",
+      "href": "?chapter=061&section=section-4d-31"
+    },
+    {
+      "id": "section-4d-32",
+      "citation": "4d-32",
+      "citations": [
+        "4d-32"
+      ],
+      "heading": "Sec. 4d-32. Approval of subcontract awards.",
+      "chapter": {
+        "id": "chapter-061",
+        "number": "061",
+        "name": "State Information and Telecommunication Systems Management and Contracts"
+      },
+      "status": "active",
+      "text": "No contractor shall award a subcontract for work under a contract or for work under an amendment to a contract without the approval of the Commissioner of Administrative Services or a designee of (1) the selection of the subcontractor, and (2) the disclosure of the provisions of the subcontract.",
+      "href": "?chapter=061&section=section-4d-32"
+    },
+    {
+      "id": "section-4d-33",
+      "citation": "4d-33",
+      "citations": [
+        "4d-33"
+      ],
+      "heading": "Sec. 4d-33. “Public record” defined.",
+      "chapter": {
+        "id": "chapter-061",
+        "number": "061",
+        "name": "State Information and Telecommunication Systems Management and Contracts"
+      },
+      "status": "active",
+      "text": "For purposes of this section and sections 4d-34 to 4d-39 , inclusive, “public record” means a public record, as defined in section 1-200 , and also includes any recorded data or information relating to the conduct of the public's business prepared, owned, used, received or retained by a contractor or subcontractor for work under a contract, subcontract or amendment to a contract or subcontract, whether such data or information be handwritten, typed, tape-recorded, printed, photostated, photographed or recorded by any other method.",
+      "href": "?chapter=061&section=section-4d-33"
+    },
+    {
+      "id": "section-4d-34",
+      "citation": "4d-34",
+      "citations": [
+        "4d-34"
+      ],
+      "heading": "Sec. 4d-34. Ownership rights and integrity of public records under a contract, subcontract or amendment.",
+      "chapter": {
+        "id": "chapter-061",
+        "number": "061",
+        "name": "State Information and Telecommunication Systems Management and Contracts"
+      },
+      "status": "active",
+      "text": "(a) No contractor or subcontractor, or employee or agent of a contractor or subcontractor, shall have any ownership rights or interest in (1) any public records which the contractor, subcontractor, employee or agent possesses, modifies or creates pursuant to a contract, subcontract or amendment to a contract or subcontract, or (2) any modifications by such contractor, subcontractor, employee or agent to such public records.\n\n(b) No contractor or subcontractor, or employee or agent of a contractor or subcontractor, shall impair the integrity of any public records which the contractor, subcontractor, employee or agent possesses or creates.\n\n(c) Public records which a contractor, subcontractor, or employee or agent of a contractor or subcontractor, possesses, modifies or creates pursuant to a contract, subcontract or amendment to a contract or subcontract shall at all times and for all purposes remain the property of the state.",
+      "href": "?chapter=061&section=section-4d-34"
+    },
+    {
+      "id": "section-4d-35",
+      "citation": "4d-35",
+      "citations": [
+        "4d-35"
+      ],
+      "heading": "Sec. 4d-35. Application of Freedom of Information Act to public records provided to contractor or subcontractor.",
+      "chapter": {
+        "id": "chapter-061",
+        "number": "061",
+        "name": "State Information and Telecommunication Systems Management and Contracts"
+      },
+      "status": "active",
+      "text": "(a) Any public record which a state agency provides to a contractor or subcontractor shall remain a public record for the purposes of subsection (a) of section 1-210 .\n\n(b) With regard to any public record, the state agency and the contractor or subcontractor shall have a joint and several obligation to comply with the obligations of the state agency under the Freedom of Information Act, as defined in section 1-200 , provided the determination of whether or not to disclose a particular record or type of record shall be made by such state agency.",
+      "href": "?chapter=061&section=section-4d-35"
+    },
+    {
+      "id": "section-4d-36",
+      "citation": "4d-36",
+      "citations": [
+        "4d-36"
+      ],
+      "heading": "Sec. 4d-36. Nondisclosure of public records by contractor or subcontractor.",
+      "chapter": {
+        "id": "chapter-061",
+        "number": "061",
+        "name": "State Information and Telecommunication Systems Management and Contracts"
+      },
+      "status": "active",
+      "text": "No contractor or subcontractor, or employee or agent of a contractor or subcontractor, shall disclose to the public any public records (1) which it possesses, modifies or creates pursuant to a contract, subcontract or amendment to a contract or subcontract and (2) which the state agency (A) is prohibited from disclosing pursuant to state or federal law in all cases, (B) may disclose pursuant to state or federal law only to certain entities or individuals or under certain conditions or (C) may withhold from disclosure pursuant to state or federal law. No provision of this section shall be construed to prohibit any such contractor from disclosing such public records to any of its subcontractors to carry out the purposes of its subcontract.",
+      "href": "?chapter=061&section=section-4d-36"
+    },
+    {
+      "id": "section-4d-37",
+      "citation": "4d-37",
+      "citations": [
+        "4d-37"
+      ],
+      "heading": "Sec. 4d-37. Prohibition on selling, marketing or otherwise profiting from public records.",
+      "chapter": {
+        "id": "chapter-061",
+        "number": "061",
+        "name": "State Information and Telecommunication Systems Management and Contracts"
+      },
+      "status": "active",
+      "text": "No contractor or subcontractor, or employee or agent of a contractor or subcontractor, shall sell, market or otherwise profit from the disclosure or use of any public records which are in its possession pursuant to a contract, subcontract or amendment to a contract or subcontract, except as authorized in the contract, subcontract or amendment.",
+      "href": "?chapter=061&section=section-4d-37"
+    },
+    {
+      "id": "section-4d-38",
+      "citation": "4d-38",
+      "citations": [
+        "4d-38"
+      ],
+      "heading": "Sec. 4d-38. Notice to commissioner of violations.",
+      "chapter": {
+        "id": "chapter-061",
+        "number": "061",
+        "name": "State Information and Telecommunication Systems Management and Contracts"
+      },
+      "status": "active",
+      "text": "Any contractor or subcontractor, or employee or agent of a contractor or subcontractor, which learns of any violation of the provisions of section 4d-36 or 4d-37 shall, no later than seven calendar days after learning of such violation, notify the commissioner of such violation.",
+      "href": "?chapter=061&section=section-4d-38"
+    },
+    {
+      "id": "section-4d-39",
+      "citation": "4d-39",
+      "citations": [
+        "4d-39"
+      ],
+      "heading": "Sec. 4d-39. Remedies and penalties for violations.",
+      "chapter": {
+        "id": "chapter-061",
+        "number": "061",
+        "name": "State Information and Telecommunication Systems Management and Contracts"
+      },
+      "status": "active",
+      "text": "(a) If any person violates any provision of section 4d-36 , 4d-37 or 4d-38 , the Attorney General may bring an action against such person in the superior court for the judicial district of Hartford seeking (1) damages on behalf of the state for such violation, (2) restitution for damages suffered by any person as a result of the violation or (3) imposition and recovery of a civil penalty of not more than fifty thousand dollars for the violation.\n\n(b) In addition to the remedies under subsection (a) of this section, any person aggrieved by a violation of any provision of section 4d-36 , 4d-37 or 4d-38 may bring an action in Superior Court to recover any damages suffered as a result of such violation.\n\n(c) In any action brought under subsection (a) or (b) of this section, the court may (1) order disgorgement of any profits or other benefits derived as a result of a violation of any provision of section 4d-36 , 4d-37 or 4d-38 , (2) award punitive damages, costs or reasonable attorneys fees, or (3) order injunctive or other equitable relief. Proof of public interest or public injury shall not be required in any action brought under subsection (a) or (b) of this section. No action may be brought under subsection (a) or (b) of this section more than three years after the occurrence of such violation.\n\n(d) Any person who knowingly and wilfully violates any provision of section 4d-36 , 4d-37 or 4d-38 shall, for each such violation, be guilty of a class D felony.",
+      "href": "?chapter=061&section=section-4d-39"
+    },
+    {
+      "id": "section-4d-40",
+      "citation": "4d-40",
+      "citations": [
+        "4d-40"
+      ],
+      "heading": "Sec. 4d-40. General Assembly access to state agency records under contracts, subcontracts and amendments thereto.",
+      "chapter": {
+        "id": "chapter-061",
+        "number": "061",
+        "name": "State Information and Telecommunication Systems Management and Contracts"
+      },
+      "status": "active",
+      "text": "Each contract, subcontract or amendment to a contract or subcontract shall include provisions ensuring that the Joint Committee on Legislative Management and each nonpartisan office of the General Assembly shall continue to have access to state agency records that is not less than the access that said committee and such offices have on July 1, 1997.",
+      "href": "?chapter=061&section=section-4d-40"
+    },
+    {
+      "id": "section-4d-41",
+      "citation": "4d-41",
+      "citations": [
+        "4d-41"
+      ],
+      "heading": "Sec. 4d-41. Interagency agreement between Joint Committee on Legislative Management and commissioner.",
+      "chapter": {
+        "id": "chapter-061",
+        "number": "061",
+        "name": "State Information and Telecommunication Systems Management and Contracts"
+      },
+      "status": "active",
+      "text": "The Joint Committee on Legislative Management and the commissioner may, by interagency agreement, provide for the General Assembly (1) to receive information system and telecommunication system facilities, equipment and services pursuant to contracts, subcontracts or amendments to contracts or subcontracts, and (2) to interconnect with state agency information systems and telecommunication systems.",
+      "href": "?chapter=061&section=section-4d-41"
+    },
+    {
+      "id": "section-4d-42",
+      "citation": "4d-42",
+      "citations": [
+        "4d-42"
+      ],
+      "heading": "Sec. 4d-42. Interagency agreement between Chief Court Administrator and commissioner.",
+      "chapter": {
+        "id": "chapter-061",
+        "number": "061",
+        "name": "State Information and Telecommunication Systems Management and Contracts"
+      },
+      "status": "active",
+      "text": "The Chief Court Administrator and the commissioner may, by interagency agreement, provide for the Judicial Department (1) to receive information system and telecommunication system facilities, equipment and services pursuant to contracts, subcontracts or amendments to contracts or subcontracts, and (2) to interconnect with state agency information systems and telecommunication systems.",
+      "href": "?chapter=061&section=section-4d-42"
+    },
+    {
+      "id": "section-4d-43",
+      "citation": "4d-43",
+      "citations": [
+        "4d-43"
+      ],
+      "heading": "Sec. 4d-43. Interagency agreements between constitutional officers and commissioner.",
+      "chapter": {
+        "id": "chapter-061",
+        "number": "061",
+        "name": "State Information and Telecommunication Systems Management and Contracts"
+      },
+      "status": "active",
+      "text": "The Office of the Governor, Lieutenant Governor, Treasurer, Attorney General, Secretary of the State or Comptroller and the commissioner may, by interagency agreement, provide for such office (1) to receive information system and telecommunication system facilities, equipment and services pursuant to contracts, subcontracts or amendments to contracts or subcontracts, and (2) to interconnect with other state agency information systems and telecommunication systems.",
+      "href": "?chapter=061&section=section-4d-43"
+    },
+    {
+      "id": "section-4d-44",
+      "citation": "4d-44",
+      "citations": [
+        "4d-44"
+      ],
+      "heading": "Sec. 4d-44. Continuity of systems in event of expiration or termination of contract, amendment or subcontract or default of contractor or subcontractor.",
+      "chapter": {
+        "id": "chapter-061",
+        "number": "061",
+        "name": "State Information and Telecommunication Systems Management and Contracts"
+      },
+      "status": "active",
+      "text": "Each contract, subcontract or amendment to a contract or subcontract shall include provisions ensuring continuity of state agency information system and telecommunication system facilities, equipment and services, in the event that work under such contract, subcontract or amendment is transferred back to the state or transferred to a different contractor, upon the expiration or termination of the contract, subcontract or amendment or upon the default of the contractor or subcontractor. Such provisions shall include, but not be limited to, (1) procedures for the orderly transfer to the state of (A) such facilities and equipment, (B) all software created or modified pursuant to the contract, subcontract or amendment, and (C) all public records, as defined in section 4d-33 , which the contractor or subcontractor possesses or creates pursuant to such contract, subcontract or amendment, and (2) procedures for granting former state employees who were hired by such contractor or subcontractor the opportunity for reemployment with the state.",
+      "href": "?chapter=061&section=section-4d-44"
+    },
+    {
+      "id": "group-4d-45-to-4d-46",
+      "citation": null,
+      "citations": [
+        "4d-45",
+        "4d-46"
+      ],
+      "heading": "Secs. 4d-45 and 4d-46. Review of contracts and amendments entered into pursuant to Department of Administrative Services requests for proposals. Disqualification of potential contractors and subcontractors which participate in Department of Administrative Services requests for proposals process.",
+      "chapter": {
+        "id": "chapter-061",
+        "number": "061",
+        "name": "State Information and Telecommunication Systems Management and Contracts"
+      },
+      "status": "repealed",
+      "text": "Sections 4d-45 and 4d-46 are repealed, effective June 12, 2014.",
+      "href": "?chapter=061&section=group-4d-45-to-4d-46"
+    },
+    {
+      "id": "section-4d-47",
+      "citation": "4d-47",
+      "citations": [
+        "4d-47"
+      ],
+      "heading": "Sec. 4d-47. Hiring of state employees by contractors and subcontractors.",
+      "chapter": {
+        "id": "chapter-061",
+        "number": "061",
+        "name": "State Information and Telecommunication Systems Management and Contracts"
+      },
+      "status": "active",
+      "text": "With respect to any state employee whose position is eliminated or who is laid off as a result of any contract or amendment to a contract which is subject to the provisions of this chapter and subsection (e) of section 1-205 , subsection (c) of section 1-211 , subsection (b) of section 1-212 , section 4-5 , 4a-50 , 4a-51 , subsection (b) of section 4a-57 , subsection (a) of section 10a-151b , or subsection (b) of section 19a-110 , or any subcontract for work under such contract or amendment, (1) the contractor shall hire the employee, upon application by the employee, unless the employee is hired by a subcontractor of the contractor, or (2) the employee may transfer to any vacant position in state service for which such employee is qualified, to the extent allowed under the provisions of existing collectively bargained agreements and the general statutes. If the contractor or any such subcontractor hires any such state employee and does not provide the employee with fringe benefits which are equivalent to, or greater than, the fringe benefits that the employee would have received in state service, the state shall, for two years after the employee terminates from state service, provide to the employee either (A) the same benefits that such employee received from the state, or (B) compensation in an amount which represents the difference in the value of the fringe benefits that such employee received when in state service and the fringe benefits that such employee receives from the contractor or subcontractor.",
+      "href": "?chapter=061&section=section-4d-47"
+    },
+    {
+      "id": "section-4d-48",
+      "citation": "4d-48",
+      "citations": [
+        "4d-48"
+      ],
+      "heading": "Sec. 4d-48. Disqualification of potential contractors and subcontractors for past nonperformance.",
+      "chapter": {
+        "id": "chapter-061",
+        "number": "061",
+        "name": "State Information and Telecommunication Systems Management and Contracts"
+      },
+      "status": "active",
+      "text": "No contract or subcontract for state agency information system or telecommunication system facilities, equipment or services may be awarded to any business entity or individual pursuant to this chapter or subsection (e) of section 1-205 , subsection (c) of section 1-211 , subsection (b) of section 1-212 , section 4-5 , subsection (a) of section 10a-151b , or subsection (b) of section 19a-110 , if such business entity or individual previously had a contract with the state or a state agency to provide information system or telecommunication system facilities, equipment or services and such prior contract was finally terminated by the state or a state agency within the previous five years for the reason that such business entity or individual failed to perform or otherwise breached a material obligation of the contract related to information system or telecommunication system facilities, equipment or services. If the termination of any such previous contract is contested in an arbitration or judicial proceeding, the termination shall not be final until the conclusion of such arbitration or judicial proceeding. If the fact-finder determines, or a settlement stipulates, that the contractor failed to perform or otherwise breached a material obligation of the contract related to information system or telecommunication system facilities, equipment or services, any award of a contract pursuant to said chapter or sections during the pendency of such arbitration or proceeding shall be rescinded and the bar provided in this section shall apply to such business entity or individual.",
+      "href": "?chapter=061&section=section-4d-48"
+    },
+    {
+      "id": "group-4d-49-to-4d-50-to-4d-51-to-4d-52-to-4d-53-to-4d-54-to-4d-55-to-4d-56-to-4d-57-to-4d-58-to-4d-59-to-4d-60-to-4d-61-to-4d-62-to-4d-63-to-4d-64-to-4d-65-to-4d-66-to-4d-67-to-4d-68-to-4d-69-to-4d-70-to-4d-71-to-4d-72-to-4d-73-to-4d-74-to-4d-75-to-4d-76-to-4d-77-to-4d-78-to-4d-79",
+      "citation": null,
+      "citations": [
+        "4d-49",
+        "4d-50",
+        "4d-51",
+        "4d-52",
+        "4d-53",
+        "4d-54",
+        "4d-55",
+        "4d-56",
+        "4d-57",
+        "4d-58",
+        "4d-59",
+        "4d-60",
+        "4d-61",
+        "4d-62",
+        "4d-63",
+        "4d-64",
+        "4d-65",
+        "4d-66",
+        "4d-67",
+        "4d-68",
+        "4d-69",
+        "4d-70",
+        "4d-71",
+        "4d-72",
+        "4d-73",
+        "4d-74",
+        "4d-75",
+        "4d-76",
+        "4d-77",
+        "4d-78",
+        "4d-79"
+      ],
+      "heading": "Secs. 4d-49 to 4d-79.",
+      "chapter": {
+        "id": "chapter-061",
+        "number": "061",
+        "name": "State Information and Telecommunication Systems Management and Contracts"
+      },
+      "status": "reserved",
+      "text": "Reserved for future use.",
+      "href": "?chapter=061&section=group-4d-49-to-4d-50-to-4d-51-to-4d-52-to-4d-53-to-4d-54-to-4d-55-to-4d-56-to-4d-57-to-4d-58-to-4d-59-to-4d-60-to-4d-61-to-4d-62-to-4d-63-to-4d-64-to-4d-65-to-4d-66-to-4d-67-to-4d-68-to-4d-69-to-4d-70-to-4d-71-to-4d-72-to-4d-73-to-4d-74-to-4d-75-to-4d-76-to-4d-77-to-4d-78-to-4d-79"
+    },
+    {
+      "id": "section-4d-16",
+      "citation": "4d-16",
+      "citations": [
+        "4d-16"
+      ],
+      "heading": "4d-16",
+      "chapter": {
+        "id": "chapter-061",
+        "number": "061",
+        "name": "State Information and Telecommunication Systems Management and Contracts"
+      },
+      "status": "repealed",
+      "text": "Secs. 4d-16 and 4d-16a. Century date change effect. Management of century date change effect by municipalities; municipal authority to contract for services; cooperative purchasing plans. Sections 4d-16 and 4d-16a are repealed, effective October 1, 2002.",
+      "href": "?chapter=061&section=section-4d-16"
+    },
+    {
+      "id": "section-4d-16a",
+      "citation": "4d-16a",
+      "citations": [
+        "4d-16a"
+      ],
+      "heading": "4d-16a",
+      "chapter": {
+        "id": "chapter-061",
+        "number": "061",
+        "name": "State Information and Telecommunication Systems Management and Contracts"
+      },
+      "status": "repealed",
+      "text": "Secs. 4d-16 and 4d-16a. Century date change effect. Management of century date change effect by municipalities; municipal authority to contract for services; cooperative purchasing plans. Sections 4d-16 and 4d-16a are repealed, effective October 1, 2002.",
+      "href": "?chapter=061&section=section-4d-16a"
+    },
+    {
+      "id": "section-4d-45",
+      "citation": "4d-45",
+      "citations": [
+        "4d-45"
+      ],
+      "heading": "4d-45",
+      "chapter": {
+        "id": "chapter-061",
+        "number": "061",
+        "name": "State Information and Telecommunication Systems Management and Contracts"
+      },
+      "status": "repealed",
+      "text": "Secs. 4d-45 and 4d-46. Review of contracts and amendments entered into pursuant to Department of Administrative Services requests for proposals. Disqualification of potential contractors and subcontractors which participate in Department of Administrative Services requests for proposals process. Sections 4d-45 and 4d-46 are repealed, effective June 12, 2014.",
+      "href": "?chapter=061&section=section-4d-45"
+    },
+    {
+      "id": "section-4d-46",
+      "citation": "4d-46",
+      "citations": [
+        "4d-46"
+      ],
+      "heading": "4d-46",
+      "chapter": {
+        "id": "chapter-061",
+        "number": "061",
+        "name": "State Information and Telecommunication Systems Management and Contracts"
+      },
+      "status": "repealed",
+      "text": "Secs. 4d-45 and 4d-46. Review of contracts and amendments entered into pursuant to Department of Administrative Services requests for proposals. Disqualification of potential contractors and subcontractors which participate in Department of Administrative Services requests for proposals process. Sections 4d-45 and 4d-46 are repealed, effective June 12, 2014.",
+      "href": "?chapter=061&section=section-4d-46"
+    },
+    {
+      "id": "section-4d-80",
+      "citation": "4d-80",
+      "citations": [
+        "4d-80"
+      ],
+      "heading": "Sec. 4d-80. Commission for Educational Technology.",
+      "chapter": {
+        "id": "chapter-061a",
+        "number": "061a",
+        "name": "Educational Technology"
+      },
+      "status": "active",
+      "text": "(a) There is established a Commission for Educational Technology within the Department of Administrative Services. The commission shall consist of the following members or their designees: (1) The Secretary of the Office of Policy and Management, the Commissioner of Administrative Services, the Commissioner of Education, the Commissioner of Economic and Community Development, the president of The University of Connecticut and the chancellor of the Connecticut State Colleges and Universities, the State Librarian and the Consumer Counsel, (2) one member each representing the Connecticut Conference of Independent Colleges, the Connecticut Association of Boards of Education, the Connecticut Conference of Municipalities, the Connecticut Council of Small Towns, the Connecticut Library Association, the Connecticut Association of Public School Superintendents and the Connecticut Educators Computer Association, (3) a secondary school teacher designated by the Connecticut Education Association and an elementary school teacher designated by the American Federation of Teachers–Connecticut, (4) four members who represent business or have expertise in information technology, two of whom shall be appointed by the Governor, one of whom shall be appointed by the speaker of the House of Representatives and one of whom shall be appointed by the president pro tempore of the Senate, (5) one member who is a chief elected official of a municipality, who shall be appointed by the minority leader of the Senate, and (6) one member who is a representative of small business who shall be appointed by the minority leader of the House of Representatives. The commission shall convene a meeting at least once during each calendar quarter.\n\n(b) The Governor shall appoint a chairperson from among the members of the commission or their designees. Subject to the provisions of chapter 67, and within available appropriations, the commission may appoint an executive director and such other employees as may be necessary for the discharge of the duties of the commission. Notwithstanding any provision of the general statutes, the executive director shall have the option to elect participation in the state employees retirement system, or the alternate retirement program established for eligible employees in higher education or the teachers' retirement system.\n\n(c) The commission shall:\n\n(1) Be the principal educational technology policy advisor for state government;\n\n(2) Develop, oversee and direct the attainment of state-wide technology goals including:\n\n(A) Connecting all institutions of higher education, libraries, public elementary and secondary schools, regional educational service centers and other parties through a state-wide high speed, flexible network that will allow for video, voice and data transmission;\n\n(B) Wiring all school classrooms and connecting them to the Internet and to the state-wide high-speed network through wired, wireless, or any other digital transmission technology providing high-speed connectivity;\n\n(C) Providing access for all public schools, public libraries and libraries at institutions of higher education to a core set of on-line full text resources and to the ability to purchase collaboratively for other collections in order to maximize buying power;\n\n(D) Ensuring, in cooperation with the State Board of Education, competency in computing skills by the sixth grade for all students;\n\n(E) Ensuring competency in specific computing skills and the integration of technology into the curriculum for all public school teachers;\n\n(F) Ensuring that institutions of higher education offer a wide range of course and degree programs via the Internet and through other synchronous and asynchronous methods;\n\n(3) Coordinate the activities of all state agencies, educational institutions and other parties involved in the creation and management of a reliable and secure network that will offer connectivity and allow for the transmission of video, voice and data transmission to every library, school, regional educational service center and institution of higher education;\n\n(4) Be the liaison between the Governor and the General Assembly and local, state and federal organizations and entities with respect to educational technology matters;\n\n(5) Develop and maintain a long-range plan and make related recommendations for the coordination of educational technology. The plan shall (A) establish clear goals and a strategy for using telecommunications and information technology to improve education, (B) include a professional development strategy to ensure that teachers and faculty know how to use the new technologies to improve education, (C) include an assessment of the telecommunications, hardware, software and other services that will be needed to improve education, and (D) include an evaluation process that monitors progress towards the specified goals;\n\n(6) Measure the availability and usage of Internet access sites available to the public, including, but not limited to, those maintained by state and local government agencies, libraries, schools, institutions of higher education, nonprofit organizations, businesses and other organizations and recommend strategies for reducing the disparities in Internet accessibility and usage across the state and among all potential users;\n\n(7) Establish methods and procedures to ensure the maximum involvement of members of the public, educators, librarians, representatives of higher education, the legislature and local officials in educational technology matters and organize, as necessary, advisory boards consisting of individuals with expertise in a particular discipline significant to the work of the commission;\n\n(8) Report, on or before January first, annually, in accordance with section 11-4a , on its activities, progress made in the attainment of the state-wide technology goals as outlined in the long-range plan and any recommendations to the joint standing committee of the General Assembly having cognizance of matters relating to education and appropriations and the budgets of state agencies, the State Board of Education, and the Board of Regents for Higher Education. The report shall include recommendations for adjustments to the funding formula for grants pursuant to section 10-262n if there are school districts that are at a disadvantage in terms of wiring their schools and the use of technology in their schools;\n\n(9) Enter into such contractual agreements, in accordance with established procedures, as may be necessary to carry out the provisions of this section;\n\n(10) Take any other action necessary to carry out the provisions of this section.\n\n(d) The Commission for Educational Technology may request any office, department, board, commission or other agency of the state to supply such reports, information and assistance as may be necessary or appropriate in order to carry out its duties and requirements.\n\n(e) For purposes of this section, educational technology includes, but is not limited to: (1) Computer-assisted instruction; (2) information retrieval and data transfer; (3) telecommunications related to voice, data and video transmission of instruction related materials and courses; (4) the development and acquisition of educational software; and (5) the instructional uses of the Internet and other technologies.",
+      "href": "?chapter=061a&section=section-4d-80"
+    },
+    {
+      "id": "section-4d-81",
+      "citation": "4d-81",
+      "citations": [
+        "4d-81"
+      ],
+      "heading": "Sec. 4d-81. Educational technology account.",
+      "chapter": {
+        "id": "chapter-061a",
+        "number": "061a",
+        "name": "Educational Technology"
+      },
+      "status": "active",
+      "text": "There is established an educational technology account. The Commission for Educational Technology shall deposit in said account any private donation, bequest or devise made to it to assist in the attainment of the state-wide technology goals established pursuant to subdivision (2) of subsection (c) of section 4d-80 . Said account is intended to be in addition to those resources that are appropriated by the state for technology purposes. The commission shall use the resources of the account for activities related to the attainment of such goals.",
+      "href": "?chapter=061a&section=section-4d-81"
+    },
+    {
+      "id": "section-4d-81a",
+      "citation": "4d-81a",
+      "citations": [
+        "4d-81a"
+      ],
+      "heading": "Sec. 4d-81a. Grants to further the use of technology.",
+      "chapter": {
+        "id": "chapter-061a",
+        "number": "061a",
+        "name": "Educational Technology"
+      },
+      "status": "active",
+      "text": "The Department of Administrative Services may make grants to further the use of technology, including education in technology.",
+      "href": "?chapter=061a&section=section-4d-81a"
+    },
+    {
+      "id": "section-4d-82",
+      "citation": "4d-82",
+      "citations": [
+        "4d-82"
+      ],
+      "heading": "Sec. 4d-82. Connecticut Education Network. State-wide Universal Service Fund application.",
+      "chapter": {
+        "id": "chapter-061a",
+        "number": "061a",
+        "name": "Educational Technology"
+      },
+      "status": "active",
+      "text": "(a) The Commission for Educational Technology shall develop, with the advice and assistance of the State Board of Education, the Board of Regents for Higher Education and the Department of Administrative Services, a five-year plan for the implementation of the Connecticut Education Network to provide state-of-the-art, high-speed, reliable Internet access and video, voice and data transmissions that electronically link all educational institutions in the state, including public and independent institutions of higher education, the state's libraries and all elementary, middle and secondary schools and other institutions including businesses, job centers and community organizations. The plan shall include the establishment of a Connecticut Digital Library as a component of the Connecticut Education Network to ensure on-line access by all students and citizens to essential library and information resources. The State Library, in conjunction with the Board of Regents for Higher Education, shall administer the Connecticut Digital Library. The Connecticut Digital Library shall provide access to available on-line electronic full-text databases, a state-wide electronic catalog and interlibrary loan system and the electronic and physical delivery of library resources. The Connecticut Digital Library shall include elements specifically designed to meet the educational and research needs of the general public, higher education students and faculty and elementary and secondary school students and teachers.\n\n(b) The commission shall oversee the preparation and submission of a state-wide application to the federal Universal Service Fund to enhance connectivity to the Connecticut Education Network, maximize participation and grant attainment rates, and reduce overly burdensome administrative requirements which discourage local involvement. No later than the annual federal funding deadline, and for every subsequent universal service funding cycle, the commission, or its designee, shall submit a state-wide application for universal service funds. Each local and regional board of education and public library that is designated by the commission for connection to the Connecticut Education Network shall be deemed to have authorized the commission or its designee to submit an application for such funds on its behalf.",
+      "href": "?chapter=061a&section=section-4d-82"
+    },
+    {
+      "id": "section-4d-82a",
+      "citation": "4d-82a",
+      "citations": [
+        "4d-82a"
+      ],
+      "heading": "Sec. 4d-82a. Ed-Net account.",
+      "chapter": {
+        "id": "chapter-061a",
+        "number": "061a",
+        "name": "Educational Technology"
+      },
+      "status": "active",
+      "text": "(a) There is established a separate nonlapsing account within the General Fund to be known as the Ed-Net account. Any reimbursements received by the Department of Administrative Services for costs associated with the Connecticut Education Network shall be deposited in the General Fund and credited to the Ed-Net account to be used by said department to support the costs of said network.\n\n(b) The funds made available to the Department of Administrative Services in subsection (a) of this section, for Ed-Net, may be transferred by said department to state agencies requiring funds for such purpose.",
+      "href": "?chapter=061a&section=section-4d-82a"
+    },
+    {
+      "id": "section-4d-83",
+      "citation": "4d-83",
+      "citations": [
+        "4d-83"
+      ],
+      "heading": "Sec. 4d-83. Technical assistance. Purchasing under state-wide contracts.",
+      "chapter": {
+        "id": "chapter-061a",
+        "number": "061a",
+        "name": "Educational Technology"
+      },
+      "status": "active",
+      "text": "The Department of Administrative Services, in consultation with the Department of Education, shall provide (1) technical assistance to local and regional boards of education and technical education and career schools to expand their educational technology capabilities, including, but not limited to, wiring, Internet connectivity and technical support, and (2) opportunities for such boards of education and schools to purchase under state-wide contracts.",
+      "href": "?chapter=061a&section=section-4d-83"
+    },
+    {
+      "id": "group-4d-84-to-4d-85",
+      "citation": null,
+      "citations": [
+        "4d-84",
+        "4d-85"
+      ],
+      "heading": "Secs. 4d-84 and 4d-85. Technology standards. State-wide standard for teacher and administrator competency in the use of technology for instructional purposes.",
+      "chapter": {
+        "id": "chapter-061a",
+        "number": "061a",
+        "name": "Educational Technology"
+      },
+      "status": "repealed",
+      "text": "Sections 4d-84 and 4d-85 are repealed, effective July 1, 2013.",
+      "href": "?chapter=061a&section=group-4d-84-to-4d-85"
+    },
+    {
+      "id": "group-4d-86-to-4d-87-to-4d-88-to-4d-89",
+      "citation": null,
+      "citations": [
+        "4d-86",
+        "4d-87",
+        "4d-88",
+        "4d-89"
+      ],
+      "heading": "Secs. 4d-86 to 4d-89.",
+      "chapter": {
+        "id": "chapter-061a",
+        "number": "061a",
+        "name": "Educational Technology"
+      },
+      "status": "reserved",
+      "text": "Reserved for future use.",
+      "href": "?chapter=061a&section=group-4d-86-to-4d-87-to-4d-88-to-4d-89"
+    },
+    {
+      "id": "section-4d-84",
+      "citation": "4d-84",
+      "citations": [
+        "4d-84"
+      ],
+      "heading": "4d-84",
+      "chapter": {
+        "id": "chapter-061a",
+        "number": "061a",
+        "name": "Educational Technology"
+      },
+      "status": "repealed",
+      "text": "Secs. 4d-84 and 4d-85. Technology standards. State-wide standard for teacher and administrator competency in the use of technology for instructional purposes. Sections 4d-84 and 4d-85 are repealed, effective July 1, 2013.",
+      "href": "?chapter=061a&section=section-4d-84"
+    },
+    {
+      "id": "section-4d-85",
+      "citation": "4d-85",
+      "citations": [
+        "4d-85"
+      ],
+      "heading": "4d-85",
+      "chapter": {
+        "id": "chapter-061a",
+        "number": "061a",
+        "name": "Educational Technology"
+      },
+      "status": "repealed",
+      "text": "Secs. 4d-84 and 4d-85. Technology standards. State-wide standard for teacher and administrator competency in the use of technology for instructional purposes. Sections 4d-84 and 4d-85 are repealed, effective July 1, 2013.",
+      "href": "?chapter=061a&section=section-4d-85"
+    },
+    {
+      "id": "section-4d-90",
+      "citation": "4d-90",
+      "citations": [
+        "4d-90"
+      ],
+      "heading": "Sec. 4d-90. Geospatial information. Capacity, policies and standards. Assistance to municipalities and regional councils of governments. Grants. Report.",
+      "chapter": {
+        "id": "chapter-061b",
+        "number": "061b",
+        "name": "Geospatial Information Systems"
+      },
+      "status": "active",
+      "text": "(a) The Office of Policy and Management shall constitute a successor department to the Geospatial Information Systems Council in accordance with the provisions of sections 4-38d and 4-39 .\n\n(b) The Secretary of the Office of Policy and Management shall coordinate geospatial information system capacity for municipalities, regional councils of governments and the state and establish policies for the collection, management and distribution of geospatial information. The secretary shall set standards for the acquisition, management and reporting of geospatial information and the acquisition, creation or use of applications employing such information by any executive branch agency. In establishing such capacity, policies or standards the secretary shall consult with municipalities, regional councils of governments, state agencies and other users of geospatial information system technology. The purpose of any such system shall be to facilitate communication and coordination regarding the use of geospatial information system technology, eliminate duplicative use of such technology and expand the use of geospatial information within the state.\n\n(c) The secretary may apply for federal grants and may accept and expend such grants on behalf of the state.\n\n(d) The secretary shall, within available appropriations, administer a program of technical assistance to municipalities and regional councils of governments to develop geospatial information systems and shall periodically recommend improvements to the geospatial information system provided for in subsection (b) of this section.\n\n(e) On or before January 1, 2014, and annually thereafter, the secretary shall submit, in accordance with section 11-4a , a report on activities under this section to the joint standing committee of the General Assembly having cognizance of matters relating to planning and development.",
+      "href": "?chapter=061b&section=section-4d-90"
+    },
+    {
+      "id": "section-4d-91",
+      "citation": "4d-91",
+      "citations": [
+        "4d-91"
+      ],
+      "heading": "Sec. 4d-91. Geographic Information Systems Office. Geographic Information Officer.",
+      "chapter": {
+        "id": "chapter-061b",
+        "number": "061b",
+        "name": "Geospatial Information Systems"
+      },
+      "status": "active",
+      "text": "(a) There is established within the Office of Policy and Management a Geographic Information Systems Office. The Secretary of the Office of Policy and Management shall designate an employee of the Office of Policy and Management to serve as Geographic Information Officer. Such employee shall have extensive knowledge of the principles, practices, terminology and trends in geographic information systems, spatial data, analysis and related technology and experience in administration, project management, policy development, coordination of services and planning. Such employee shall (1) oversee the operations of the Geographic Information Systems Office, (2) manage the staff of such office, and (3) in conjunction with the Geographic Information Systems Advisory Council created under section 4d-92 , establish goals for such office within the scope of the powers and duties described in subsection (b) of this section.\n\n(b) The Geographic Information Officer shall be responsible for (1) coordinating the collection, compilation and dissemination of geographic information systems data across the state, including from and to state agencies, regional councils of governments, municipalities and other constituencies; (2) managing a geospatial data clearinghouse for public access to such information through the online repository described in subsection (i) of section 4-67p ; (3) supporting economic development efforts in the state through the provision of such information; (4) providing training and outreach on the use of such information; (5) administering the creation and acquisition of geospatial data, including aerial imagery and elevation and parcel information; (6) adopting geospatial data standards, guidelines and procedures to ensure consistency and quality of such data; and (7) performing technical data processing to aggregate and organize existing data sets and create new data sets.",
+      "href": "?chapter=061b&section=section-4d-91"
+    },
+    {
+      "id": "section-4d-92",
+      "citation": "4d-92",
+      "citations": [
+        "4d-92"
+      ],
+      "heading": "Sec. 4d-92. Geographic Information Systems Advisory Council.",
+      "chapter": {
+        "id": "chapter-061b",
+        "number": "061b",
+        "name": "Geospatial Information Systems"
+      },
+      "status": "active",
+      "text": "(a) There is created a Geographic Information Systems Advisory Council to consult with the Geographic Information Officer, designated pursuant to section 4d-91 , on matters relating to (1) the coordination, procurement, processing, storage and distribution of free and public geographic information systems data; and (2) the powers and duties described in section 4d-90 . In the course of such consultation, the advisory council shall (A) develop (i) priorities regarding the performance of any action described in subdivisions (1) and (2) of this subsection, and (ii) an annual five-year plan for such performance, and (B) make recommendations to the Geographic Information Officer concerning such priorities and plan.\n\n(b) The Geographic Information Systems Advisory Council shall consist of the following members:\n\n(1) The Geographic Information Officer, or the officer's designee, who shall serve as chairperson of the advisory council;\n\n(2) The Chief Data Officer, or the officer's designee;\n\n(3) One representative of the Department of Energy and Environmental Protection, who has expertise in geographic information systems, appointed by the Commissioner of Energy and Environmental Protection;\n\n(4) One representative of the Department of Transportation, who has expertise in geographic information systems, appointed by the Commissioner of Transportation;\n\n(5) One representative of the Department of Emergency Services and Public Protection, who has expertise in geographic information systems, appointed by the Commissioner of Emergency Services and Public Protection;\n\n(6) One representative of the Department of Public Health, who has expertise in geographic information systems, appointed by the Commissioner of Public Health;\n\n(7) Two representatives of different regional councils of governments, who have expertise in geographic information systems, including aerial imagery acquisition and the provision of geographic information to municipalities, appointed by the chairperson of the Connecticut Association of Councils of Governments;\n\n(8) Two representatives of different municipal governments, who have expertise in geographic information systems and are members of the Connecticut GIS Network, appointed by the president of the Connecticut Conference of Municipalities;\n\n(9) One representative of The University of Connecticut, who has experience in providing the state's geospatial information, including state-wide aerial imagery and elevation, to various constituencies, appointed by the president of The University of Connecticut;\n\n(10) One representative of a public utility company, appointed by the chairperson of the Public Utilities Regulatory Authority; and\n\n(11) Two representatives from different private companies, neither of which is a public utility company, who have expertise in mapping applications for commercial purposes, one of whom is appointed jointly by the chairpersons of the joint standing committee of the General Assembly having cognizance of matters relating to planning and development and the other of whom is appointed jointly by the ranking members of such committee.\n\n(c) All initial appointments to the advisory council shall be made not later than January 1, 2022. Each member of the advisory council shall serve for a term of two years and may serve until a successor is appointed and has qualified, except that in the event of any vacancy the appointing authority shall fill such vacancy for the unexpired portion of such term.\n\n(d) Not later than March 1, 2022, and biennially thereafter, the Geographic Information Officer, or the officer's designee, as applicable, shall convene a meeting of the advisory council. All other meetings of the advisory council shall be as scheduled by said officer or designee.",
+      "href": "?chapter=061b&section=section-4d-92"
+    },
+    {
+      "id": "group-4d-93-to-4d-94-to-4d-95-to-4d-96-to-4d-97-to-4d-98-to-4d-99",
+      "citation": null,
+      "citations": [
+        "4d-93",
+        "4d-94",
+        "4d-95",
+        "4d-96",
+        "4d-97",
+        "4d-98",
+        "4d-99"
+      ],
+      "heading": "Secs. 4d-93 to 4d-99.",
+      "chapter": {
+        "id": "chapter-061b",
+        "number": "061b",
+        "name": "Geospatial Information Systems"
+      },
+      "status": "reserved",
+      "text": "Reserved for future use.",
+      "href": "?chapter=061b&section=group-4d-93-to-4d-94-to-4d-95-to-4d-96-to-4d-97-to-4d-98-to-4d-99"
+    },
+    {
+      "id": "section-4d-100",
+      "citation": "4d-100",
+      "citations": [
+        "4d-100"
+      ],
+      "heading": "Sec. 4d-100. Broadband Internet Coordinating Council. Membership. Duties.",
+      "chapter": {
+        "id": "chapter-061c",
+        "number": "061c",
+        "name": "Broadband Internet and Communications Infrastructure"
+      },
+      "status": "repealed",
+      "text": "Section 4d-100 is repealed, effective July 1, 2011.",
+      "href": "?chapter=061c&section=section-4d-100"
+    }
+  ]
+}

@@ -1,0 +1,282 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-095",
+  "number": "095",
+  "name": "Constables",
+  "title": {
+    "id": "title-07",
+    "number": "07",
+    "name": "Municipalities"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_095.htm",
+  "sections": [
+    {
+      "id": "section-7-86",
+      "kind": "section",
+      "citation": "7-86",
+      "citations": [
+        "7-86"
+      ],
+      "heading": "Sec. 7-86. Bond.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_095.htm#sec_7-86",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 7-86 is repealed."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 605; 1953, S. 240d, 242d; P.A. 82-327, S. 12.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 7-86 is repealed."
+      }
+    },
+    {
+      "id": "section-7-87",
+      "kind": "section",
+      "citation": "7-87",
+      "citations": [
+        "7-87"
+      ],
+      "heading": "Sec. 7-87. Ineligibility for office.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_095.htm#sec_7-87",
+      "status": "active",
+      "content": {
+        "body": [
+          "No judge, except a judge of probate, shall hold the office of constable.",
+          "See Sec. 29-154c re prohibition against licensure of constable as private detective, watchman, security guard, etc."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 605; 1953, S. 243d; P.A. 82-11, S. 10, 12.)"
+        ],
+        "history": [
+          "History: P.A. 82-11 deleted the prohibition against a justice of the peace being a constable."
+        ],
+        "annotations": [],
+        "plainText": "No judge, except a judge of probate, shall hold the office of constable.\n\nSee Sec. 29-154c re prohibition against licensure of constable as private detective, watchman, security guard, etc."
+      }
+    },
+    {
+      "id": "section-7-88",
+      "kind": "section",
+      "citation": "7-88",
+      "citations": [
+        "7-88"
+      ],
+      "heading": "Sec. 7-88. Oaths of constables.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_095.htm#sec_7-88",
+      "status": "active",
+      "content": {
+        "body": [
+          "Each person elected to the office of constable in any town shall, before the commencement of his term of office, or within thirty days thereafter, take the oath of office before some proper officer, who shall certify in writing to that fact and deliver the certificate to the person by whom the oath was taken; and such person shall, without delay, lodge such certificate for record in the office of the town clerk of the town in which he was elected constable, and such clerk shall record the same. If any person elected to the office of constable does not comply with the requirements of this section, his office shall be vacant and shall be filled in the manner provided in section 9-220 ."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 524; 1953, S. 254d.)"
+        ],
+        "history": [],
+        "annotations": [
+          {
+            "first": true,
+            "text": "A qualified constable reelected for ensuing term may act without being sworn. 1 R. 83. Const., Art. 10, Sec. 1, (Art. XI, Sec. 1, of revised constitution) applies only to officer thereafter appointed. 5 C. 278."
+          }
+        ],
+        "plainText": "Each person elected to the office of constable in any town shall, before the commencement of his term of office, or within thirty days thereafter, take the oath of office before some proper officer, who shall certify in writing to that fact and deliver the certificate to the person by whom the oath was taken; and such person shall, without delay, lodge such certificate for record in the office of the town clerk of the town in which he was elected constable, and such clerk shall record the same. If any person elected to the office of constable does not comply with the requirements of this section, his office shall be vacant and shall be filled in the manner provided in section 9-220 ."
+      }
+    },
+    {
+      "id": "section-7-89",
+      "kind": "section",
+      "citation": "7-89",
+      "citations": [
+        "7-89"
+      ],
+      "heading": "Sec. 7-89. Service of process. Liability.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_095.htm#sec_7-89",
+      "status": "active",
+      "content": {
+        "body": [
+          "Constables shall have the power in their towns to serve and execute all lawful process legally directed to them and shall be liable for any neglect or unfaithfulness in their office."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 606; P.A. 00-99, S. 22, 154.)"
+        ],
+        "history": [
+          "History: P.A. 00-99 deleted references to sheriffs in respective counties, effective December 1, 2000."
+        ],
+        "annotations": [],
+        "plainText": "Constables shall have the power in their towns to serve and execute all lawful process legally directed to them and shall be liable for any neglect or unfaithfulness in their office."
+      }
+    },
+    {
+      "id": "section-7-90",
+      "kind": "section",
+      "citation": "7-90",
+      "citations": [
+        "7-90"
+      ],
+      "heading": "Sec. 7-90. Command of assistance.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_095.htm#sec_7-90",
+      "status": "active",
+      "content": {
+        "body": [
+          "Any constable, when necessary, may command any person to assist him in the execution of the duties of his office.",
+          "See Sec. 53a-167b re penalty for failure to assist peace officer."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 607.)"
+        ],
+        "history": [],
+        "annotations": [
+          {
+            "first": true,
+            "text": "One may lawfully assist an officer de facto who he believes is an officer de jure. 46 C. 218. Cited. 217 C. 73."
+          }
+        ],
+        "plainText": "Any constable, when necessary, may command any person to assist him in the execution of the duties of his office.\n\nSee Sec. 53a-167b re penalty for failure to assist peace officer."
+      }
+    },
+    {
+      "id": "section-7-91",
+      "kind": "section",
+      "citation": "7-91",
+      "citations": [
+        "7-91"
+      ],
+      "heading": "Sec. 7-91. Special constables and policemen to be citizens.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_095.htm#sec_7-91",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 7-91 is repealed."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 608; P.A. 82-327, S. 12.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 7-91 is repealed."
+      }
+    },
+    {
+      "id": "section-7-92",
+      "kind": "section",
+      "citation": "7-92",
+      "citations": [
+        "7-92"
+      ],
+      "heading": "Sec. 7-92. Special constables.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_095.htm#sec_7-92",
+      "status": "active",
+      "content": {
+        "body": [
+          "The chief executive officer of any municipality may appoint such number of special constables as he or she deems necessary to preserve the public peace within such municipality, who may serve for terms of not more than two years or during any public celebration or gathering or any riot or unusual excitement, and such special officers shall have the authority of constables of such town to serve criminal process and make arrests for commission of crime. The chief executive officer may appoint special constables: (1) With limited geographical jurisdiction; or (2) who are appointed at the request of corporations, associations or businesses and are subject to such limitations, restrictions and conditions as the chief executive officer of the municipality deems appropriate, and who shall: (A) Have jurisdiction only on land controlled by such corporation, association or business; (B) be deemed for all purposes to be agents and employees of such corporation, association or business; and (C) be paid for their services by such corporation, association or business."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 539; February, 1965, P.A. 300; 1967, P.A. 77; P.A. 82-327, S. 3; P.A. 04-192, S. 40.)"
+        ],
+        "history": [
+          "History: 1965 act increased constables' term from six months to two years; 1967 act substituted “municipality” for “town” and “chief executive officer” for “selectmen”; P.A. 82-327 added to this section the provisions concerning special constables with limited geographical jurisdiction and for private organizations; P.A. 04-192 made a technical change and added provision in Subdiv. (2) that special constables appointed at request of corporations, associations or businesses are subject to such limitations, restrictions and conditions as the chief executive officer of the municipality deems appropriate."
+        ],
+        "annotations": [
+          {
+            "first": true,
+            "text": "Special constable appointed pursuant to section had power to make arrest. 313 C. 205."
+          },
+          {
+            "first": false,
+            "text": "Cited. 15 CS 344."
+          }
+        ],
+        "plainText": "The chief executive officer of any municipality may appoint such number of special constables as he or she deems necessary to preserve the public peace within such municipality, who may serve for terms of not more than two years or during any public celebration or gathering or any riot or unusual excitement, and such special officers shall have the authority of constables of such town to serve criminal process and make arrests for commission of crime. The chief executive officer may appoint special constables: (1) With limited geographical jurisdiction; or (2) who are appointed at the request of corporations, associations or businesses and are subject to such limitations, restrictions and conditions as the chief executive officer of the municipality deems appropriate, and who shall: (A) Have jurisdiction only on land controlled by such corporation, association or business; (B) be deemed for all purposes to be agents and employees of such corporation, association or business; and (C) be paid for their services by such corporation, association or business."
+      }
+    },
+    {
+      "id": "group-7-93-to-7-94-to-7-95-to-7-96",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "7-93",
+        "7-94",
+        "7-95",
+        "7-96"
+      ],
+      "heading": "Secs. 7-93 to 7-96. Special constables for manufacturing and retail establishments and parking areas and for certain societies. School janitors and janitors of public buildings as special constables.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_095.htm#secs_7-93_to_7-96",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Sections 7-93 to 7-96 , inclusive, are repealed."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 540–543; February, 1965, P.A. 432; P.A. 82-327, S. 12.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 7-93 to 7-96 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-7-97",
+      "kind": "section",
+      "citation": "7-97",
+      "citations": [
+        "7-97"
+      ],
+      "heading": "Sec. 7-97. Compensation of constables and other officers.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_095.htm#sec_7-97",
+      "status": "active",
+      "content": {
+        "body": [
+          "Any town, city or borough, in addition to such powers as it has under the provisions of the general statutes or of any special act, is authorized to make appropriations to pay for the services of constables, special constables and other officers."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 665.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Any town, city or borough, in addition to such powers as it has under the provisions of the general statutes or of any special act, is authorized to make appropriations to pay for the services of constables, special constables and other officers."
+      }
+    },
+    {
+      "id": "section-7-93",
+      "kind": "section",
+      "citation": "7-93",
+      "citations": [
+        "7-93"
+      ],
+      "heading": "7-93",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_095.htm#sec_7-93",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 7-93 to 7-96. Special constables for manufacturing and retail establishments and parking areas and for certain societies. School janitors and janitors of public buildings as special constables. Sections 7-93 to 7-96 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 7-93 to 7-96. Special constables for manufacturing and retail establishments and parking areas and for certain societies. School janitors and janitors of public buildings as special constables. Sections 7-93 to 7-96 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-7-96",
+      "kind": "section",
+      "citation": "7-96",
+      "citations": [
+        "7-96"
+      ],
+      "heading": "7-96",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_095.htm#sec_7-96",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 7-93 to 7-96. Special constables for manufacturing and retail establishments and parking areas and for certain societies. School janitors and janitors of public buildings as special constables. Sections 7-93 to 7-96 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 7-93 to 7-96. Special constables for manufacturing and retail establishments and parking areas and for certain societies. School janitors and janitors of public buildings as special constables. Sections 7-93 to 7-96 , inclusive, are repealed."
+      }
+    }
+  ]
+}

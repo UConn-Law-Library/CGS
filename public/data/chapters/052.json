@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-052",
+  "number": "052",
+  "name": "State Building Program Commission",
+  "title": {
+    "id": "title-04",
+    "number": "04",
+    "name": "Management of State Agencies"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_052.htm",
+  "sections": [
+    {
+      "id": "group-4-138-to-4-139-to-4-140",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "4-138",
+        "4-139",
+        "4-140"
+      ],
+      "heading": "Secs. 4-138 to 4-140. State Building Program Commission.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_052.htm#secs_4-138_to_4-140",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Sections 4-138 to 4-140 , inclusive, are repealed."
+        ],
+        "sourceNotes": [
+          "(June, 1955, S. 1930d–1932d; September, 1957, P.A. 11, S. 16; 1972, P.A. 85, S. 4.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 4-138 to 4-140 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-4-138",
+      "kind": "section",
+      "citation": "4-138",
+      "citations": [
+        "4-138"
+      ],
+      "heading": "4-138",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_052.htm#sec_4-138",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 4-138 to 4-140. State Building Program Commission. Sections 4-138 to 4-140 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 4-138 to 4-140. State Building Program Commission. Sections 4-138 to 4-140 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-4-140",
+      "kind": "section",
+      "citation": "4-140",
+      "citations": [
+        "4-140"
+      ],
+      "heading": "4-140",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_052.htm#sec_4-140",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 4-138 to 4-140. State Building Program Commission. Sections 4-138 to 4-140 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 4-138 to 4-140. State Building Program Commission. Sections 4-138 to 4-140 , inclusive, are repealed."
+      }
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-738",
+  "number": "738",
+  "name": "Assignment of Choses in Action",
+  "title": {
+    "id": "title-42",
+    "number": "42",
+    "name": "Business, Selling, Trading and Collection Practices"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_738.htm",
+  "sections": [
+    {
+      "id": "group-42-117-to-42-118-to-42-119-to-42-120-to-42-121-to-42-122-to-42-123-to-42-124-to-42-125",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "42-117",
+        "42-118",
+        "42-119",
+        "42-120",
+        "42-121",
+        "42-122",
+        "42-123",
+        "42-124",
+        "42-125"
+      ],
+      "heading": "Secs. 42-117 to 42-125. Assignment of choses in action.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_738.htm#secs_42-117_to_42-125",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Sections 42-117 to 42-125 , inclusive, are repealed."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 6718–6726; 1959, P.A. 133, S. 10-102.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 42-117 to 42-125 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-42-117",
+      "kind": "section",
+      "citation": "42-117",
+      "citations": [
+        "42-117"
+      ],
+      "heading": "42-117",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_738.htm#sec_42-117",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 42-117 to 42-125. Assignment of choses in action. Sections 42-117 to 42-125 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 42-117 to 42-125. Assignment of choses in action. Sections 42-117 to 42-125 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-42-125",
+      "kind": "section",
+      "citation": "42-125",
+      "citations": [
+        "42-125"
+      ],
+      "heading": "42-125",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_738.htm#sec_42-125",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 42-117 to 42-125. Assignment of choses in action. Sections 42-117 to 42-125 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 42-117 to 42-125. Assignment of choses in action. Sections 42-117 to 42-125 , inclusive, are repealed."
+      }
+    }
+  ]
+}

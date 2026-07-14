@@ -1,0 +1,109 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-588j",
+  "number": "588j",
+  "name": "Connecticut Convention Center",
+  "title": {
+    "id": "title-32",
+    "number": "32",
+    "name": "Commerce and Economic and Community Development"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588j.htm",
+  "sections": [
+    {
+      "id": "group-32-185-to-32-186-to-32-187-to-32-188-to-32-189-to-32-190-to-32-191-to-32-192-to-32-193-to-32-194-to-32-195-to-32-196-to-32-197-to-32-198",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "32-185",
+        "32-186",
+        "32-187",
+        "32-188",
+        "32-189",
+        "32-190",
+        "32-191",
+        "32-192",
+        "32-193",
+        "32-194",
+        "32-195",
+        "32-196",
+        "32-197",
+        "32-198"
+      ],
+      "heading": "Secs. 32-185 to 32-198. Connecticut Convention Center Authority Act.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588j.htm#secs_32-185_to_32-198",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Sections 32-185 to 32-198 , inclusive, are repealed, effective June 5, 1998."
+        ],
+        "sourceNotes": [
+          "(P.A. 89-381, S. 1–15; P.A. 90-230, S. 70, 101; P.A. 92-184, S. 17, 19; May Sp. Sess. P.A. 92-11, S. 55, 56, 70; P.A. 98-179, S. 29, 30.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 32-185 to 32-198 , inclusive, are repealed, effective June 5, 1998."
+      }
+    },
+    {
+      "id": "section-32-199",
+      "kind": "section",
+      "citation": "32-199",
+      "citations": [
+        "32-199"
+      ],
+      "heading": "Sec. 32-199.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588j.htm#sec_32-199",
+      "status": "reserved",
+      "content": {
+        "body": [
+          "Reserved for future use."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Reserved for future use."
+      }
+    },
+    {
+      "id": "section-32-185",
+      "kind": "section",
+      "citation": "32-185",
+      "citations": [
+        "32-185"
+      ],
+      "heading": "32-185",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588j.htm#sec_32-185",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 32-185 to 32-198. Connecticut Convention Center Authority Act. Sections 32-185 to 32-198 , inclusive, are repealed, effective June 5, 1998."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 32-185 to 32-198. Connecticut Convention Center Authority Act. Sections 32-185 to 32-198 , inclusive, are repealed, effective June 5, 1998."
+      }
+    },
+    {
+      "id": "section-32-198",
+      "kind": "section",
+      "citation": "32-198",
+      "citations": [
+        "32-198"
+      ],
+      "heading": "32-198",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588j.htm#sec_32-198",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 32-185 to 32-198. Connecticut Convention Center Authority Act. Sections 32-185 to 32-198 , inclusive, are repealed, effective June 5, 1998."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 32-185 to 32-198. Connecticut Convention Center Authority Act. Sections 32-185 to 32-198 , inclusive, are repealed, effective June 5, 1998."
+      }
+    }
+  ]
+}

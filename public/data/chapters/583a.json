@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-583a",
+  "number": "583a",
+  "name": "Task Force on Manufacturing in Connecticut",
+  "title": {
+    "id": "title-32",
+    "number": "32",
+    "name": "Commerce and Economic and Community Development"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_583a.htm",
+  "sections": [
+    {
+      "id": "section-32-59a",
+      "kind": "section",
+      "citation": "32-59a",
+      "citations": [
+        "32-59a"
+      ],
+      "heading": "Sec. 32-59a. Task force on manufacturing in Connecticut.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_583a.htm#sec_32-59a",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 32-59a is repealed."
+        ],
+        "sourceNotes": [
+          "(P.A. 87-536, S. 1, 7; P.A. 95-38, S. 8.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 32-59a is repealed."
+      }
+    }
+  ]
+}

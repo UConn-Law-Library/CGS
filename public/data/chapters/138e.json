@@ -1,0 +1,199 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-138e",
+  "number": "138e",
+  "name": "Housing Development Zones",
+  "title": {
+    "id": "title-08",
+    "number": "08",
+    "name": "Zoning, Planning, Housing and Economic and Community Development"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_138e.htm",
+  "sections": [
+    {
+      "id": "section-8-376",
+      "kind": "section",
+      "citation": "8-376",
+      "citations": [
+        "8-376"
+      ],
+      "heading": "Sec. 8-376. Designation of housing development zones.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_138e.htm#sec_8-376",
+      "status": "active",
+      "content": {
+        "body": [
+          "Any municipality which is a distressed municipality as defined in subsection (b) of section 32-9p , on October 1, 1987, may apply to the Commissioner of Housing to designate an area of such municipality as a housing development zone. Any such area shall consist of one or two contiguous United States census tracts or a portion of an individual census tract as determined in accordance with the most recent United States census. At least twenty-five per cent of the designated area shall be zoned or allow for multifamily residential dwellings."
+        ],
+        "sourceNotes": [
+          "(P.A. 87-378, S. 1; P.A. 95-250, S. 1; P.A. 96-211, S. 1, 5, 6; P.A. 13-234, S. 2.)"
+        ],
+        "history": [
+          "History: P.A. 95-250 and P.A. 96-211 replaced Commissioner and Department of Housing with Commissioner and Department of Economic and Community Development; pursuant to P.A. 13-234, reference to Commissioner of Economic and Community Development was changed editorially by the Revisors to reference to Commissioner of Housing, effective June 19, 2013."
+        ],
+        "annotations": [],
+        "plainText": "Any municipality which is a distressed municipality as defined in subsection (b) of section 32-9p , on October 1, 1987, may apply to the Commissioner of Housing to designate an area of such municipality as a housing development zone. Any such area shall consist of one or two contiguous United States census tracts or a portion of an individual census tract as determined in accordance with the most recent United States census. At least twenty-five per cent of the designated area shall be zoned or allow for multifamily residential dwellings."
+      }
+    },
+    {
+      "id": "section-8-377",
+      "kind": "section",
+      "citation": "8-377",
+      "citations": [
+        "8-377"
+      ],
+      "heading": "Sec. 8-377. Plan of development and rehabilitation.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_138e.htm#sec_8-377",
+      "status": "active",
+      "content": {
+        "body": [
+          "Any municipality which applies for designation of an area of the municipality as a housing development zone shall submit to the commissioner a plan for the development and rehabilitation of housing in the area. Such plan shall include evidence of the commitment of financial assistance that will be made for housing development in the area by private persons, the municipality, state agencies or agencies of the United States government."
+        ],
+        "sourceNotes": [
+          "(P.A. 87-378, S. 2.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Any municipality which applies for designation of an area of the municipality as a housing development zone shall submit to the commissioner a plan for the development and rehabilitation of housing in the area. Such plan shall include evidence of the commitment of financial assistance that will be made for housing development in the area by private persons, the municipality, state agencies or agencies of the United States government."
+      }
+    },
+    {
+      "id": "section-8-378",
+      "kind": "section",
+      "citation": "8-378",
+      "citations": [
+        "8-378"
+      ],
+      "heading": "Sec. 8-378. Approval of designation. Priority financial assistance. Removal of designation.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_138e.htm#sec_8-378",
+      "status": "active",
+      "content": {
+        "body": [
+          "The Commissioner of Housing may approve the designation of up to three areas in the state as housing development zones, provided the commissioner shall not approve the designation of more than one housing development zone in any municipality. Proposals for financial assistance received by the commissioner from eligible developers, as defined in section 8-39 , for programs or projects authorized pursuant to chapter 128, 130 or 133 which will be located in a housing development zone shall be accorded a high priority to receive financial assistance from the commissioner. The commissioner may remove the designation of any area which has been approved as a housing development zone if such area no longer meets the criteria for designation as such a zone set forth in sections 8-376 and 8-377 or in regulations adopted pursuant to section 8-381 , provided no such designation shall be removed less than ten years from the original date of approval of such zone."
+        ],
+        "sourceNotes": [
+          "(P.A. 87-378, S. 3; P.A. 95-250, S. 1; P.A. 96-211, S. 1, 5, 6; P.A. 13-234, S. 34.)"
+        ],
+        "history": [
+          "History: P.A. 95-250 and P.A. 96-211 replaced Commissioner and Department of Housing with Commissioner and Department of Economic and Community Development; P.A. 13-234 substituted “Commissioner of Housing” for “Commissioner of Economic and Community Development” and deleted reference to Ch. 138, effective July 1, 2013."
+        ],
+        "annotations": [],
+        "plainText": "The Commissioner of Housing may approve the designation of up to three areas in the state as housing development zones, provided the commissioner shall not approve the designation of more than one housing development zone in any municipality. Proposals for financial assistance received by the commissioner from eligible developers, as defined in section 8-39 , for programs or projects authorized pursuant to chapter 128, 130 or 133 which will be located in a housing development zone shall be accorded a high priority to receive financial assistance from the commissioner. The commissioner may remove the designation of any area which has been approved as a housing development zone if such area no longer meets the criteria for designation as such a zone set forth in sections 8-376 and 8-377 or in regulations adopted pursuant to section 8-381 , provided no such designation shall be removed less than ten years from the original date of approval of such zone."
+      }
+    },
+    {
+      "id": "section-8-379",
+      "kind": "section",
+      "citation": "8-379",
+      "citations": [
+        "8-379"
+      ],
+      "heading": "Sec. 8-379. Waiver of percentage limitations on financial assistance.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_138e.htm#sec_8-379",
+      "status": "active",
+      "content": {
+        "body": [
+          "The commissioner may waive the limitations on the amount of state financial assistance provided pursuant to section 8-216b for housing and community development projects undertaken in a housing development zone."
+        ],
+        "sourceNotes": [
+          "(P.A. 87-378, S. 4; P.A. 88-280, S. 12.)"
+        ],
+        "history": [
+          "History: P.A. 88-280 made technical changes."
+        ],
+        "annotations": [],
+        "plainText": "The commissioner may waive the limitations on the amount of state financial assistance provided pursuant to section 8-216b for housing and community development projects undertaken in a housing development zone."
+      }
+    },
+    {
+      "id": "section-8-380",
+      "kind": "section",
+      "citation": "8-380",
+      "citations": [
+        "8-380"
+      ],
+      "heading": "Sec. 8-380. Fixing of assessments in housing development zones.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_138e.htm#sec_8-380",
+      "status": "active",
+      "content": {
+        "body": [
+          "Any municipality which includes an area which has been designated as a housing development zone pursuant to section 8-378 shall provide, by ordinance, for the fixing of assessments on all commercial and residential property in such zone which is improved during the period when such area is designated a housing development zone and, in the case of residential property, is occupied by families whose income is less than one hundred fifty per cent of the median family income of the municipality. Such fixed assessments shall be for a period of eleven years from the time of such improvement and the municipality shall defer any increase in assessment attributable to such improvements according to the following schedule:",
+          "Year",
+          "Percentage Of Increase Deferred",
+          "First",
+          "100",
+          "Second",
+          "100",
+          "Third",
+          "90",
+          "Fourth",
+          "80",
+          "Fifth",
+          "70",
+          "Sixth",
+          "60",
+          "Seventh",
+          "50",
+          "Eighth",
+          "40",
+          "Ninth",
+          "30",
+          "Tenth",
+          "20",
+          "Eleventh",
+          "10"
+        ],
+        "sourceNotes": [
+          "(P.A. 87-378, S. 5.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Any municipality which includes an area which has been designated as a housing development zone pursuant to section 8-378 shall provide, by ordinance, for the fixing of assessments on all commercial and residential property in such zone which is improved during the period when such area is designated a housing development zone and, in the case of residential property, is occupied by families whose income is less than one hundred fifty per cent of the median family income of the municipality. Such fixed assessments shall be for a period of eleven years from the time of such improvement and the municipality shall defer any increase in assessment attributable to such improvements according to the following schedule:\n\nYear\n\nPercentage Of Increase Deferred\n\nFirst\n\n100\n\nSecond\n\n100\n\nThird\n\n90\n\nFourth\n\n80\n\nFifth\n\n70\n\nSixth\n\n60\n\nSeventh\n\n50\n\nEighth\n\n40\n\nNinth\n\n30\n\nTenth\n\n20\n\nEleventh\n\n10"
+      }
+    },
+    {
+      "id": "section-8-381",
+      "kind": "section",
+      "citation": "8-381",
+      "citations": [
+        "8-381"
+      ],
+      "heading": "Sec. 8-381. Regulations.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_138e.htm#sec_8-381",
+      "status": "active",
+      "content": {
+        "body": [
+          "The Commissioner of Housing shall adopt regulations in accordance with the provisions of chapter 54 to establish such additional qualifications for designation as a housing development zone and such other requirements as necessary to carry out the provisions of this chapter."
+        ],
+        "sourceNotes": [
+          "(P.A. 87-378, S. 6; P.A. 95-250, S. 1; P.A. 96-211, S. 1, 5, 6; P.A. 13-234, S. 2.)"
+        ],
+        "history": [
+          "History: P.A. 95-250 and P.A. 96-211 replaced Commissioner and Department of Housing with Commissioner and Department of Economic and Community Development; pursuant to P.A. 13-234, reference to Commissioner of Economic and Community Development was changed editorially by the Revisors to reference to Commissioner of Housing, effective June 19, 2013."
+        ],
+        "annotations": [],
+        "plainText": "The Commissioner of Housing shall adopt regulations in accordance with the provisions of chapter 54 to establish such additional qualifications for designation as a housing development zone and such other requirements as necessary to carry out the provisions of this chapter."
+      }
+    },
+    {
+      "id": "group-8-382-to-8-383",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "8-382",
+        "8-383"
+      ],
+      "heading": "Secs. 8-382 and 8-383.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_138e.htm#secs_8-382_and_8-383",
+      "status": "reserved",
+      "content": {
+        "body": [
+          "Reserved for future use."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Reserved for future use."
+      }
+    }
+  ]
+}

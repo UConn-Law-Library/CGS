@@ -1,0 +1,251 @@
+{
+  "schemaVersion": "1.0.0",
+  "title": {
+    "id": "title-50",
+    "number": "50",
+    "name": "Lost and Unclaimed Property"
+  },
+  "documents": [
+    {
+      "id": "section-50-1",
+      "citation": "50-1",
+      "citations": [
+        "50-1"
+      ],
+      "heading": "Sec. 50-1. Disposition of perishable property.",
+      "chapter": {
+        "id": "chapter-859",
+        "number": "859",
+        "name": "Lost and Unclaimed Property"
+      },
+      "status": "active",
+      "text": "All goods of a perishable nature left with any person, when the owner is unknown or when the owner neglects to take them away after reasonable notice, shall be advertised at least one week in a newspaper published in the county where they were left; and, if not then claimed and taken away, may be sold at public auction, under the inspection of a state marshal of such county, and the proceeds of the sale, after deducting the expenses thereof and the charges for which they may be liable, shall be deposited with the treasurer of the town where they were left, who shall hold the same, subject to the provisions of part III of chapter 32.",
+      "href": "?chapter=859&section=section-50-1"
+    },
+    {
+      "id": "section-50-2",
+      "citation": "50-2",
+      "citations": [
+        "50-2"
+      ],
+      "heading": "Sec. 50-2. Disposition of goods not perishable.",
+      "chapter": {
+        "id": "chapter-859",
+        "number": "859",
+        "name": "Lost and Unclaimed Property"
+      },
+      "status": "active",
+      "text": "All goods not perishable, left with any person or upon any public wharf or highway, and all goods, other than personal baggage of passengers, which are left at any railroad station or in any railroad car or carriage, and whose owner is unknown or neglects to take them away for six months from the time when they were left, shall be advertised one month in a newspaper published in the county where such goods were left. If the owner thereof does not take them away within such month, they may be sold and the proceeds disposed of in the manner provided in section 50-1 .\n\nSee Sec. 7-285 re sale of unclaimed goods by police departments.",
+      "href": "?chapter=859&section=section-50-2"
+    },
+    {
+      "id": "section-50-3",
+      "citation": "50-3",
+      "citations": [
+        "50-3"
+      ],
+      "heading": "Sec. 50-3. Expressmen and common carriers; goods not perishable.",
+      "chapter": {
+        "id": "chapter-859",
+        "number": "859",
+        "name": "Lost and Unclaimed Property"
+      },
+      "status": "active",
+      "text": "Each person engaged in the express business, and each common carrier, who has in his possession for six months any unclaimed article not perishable, may sell it at auction and out of the proceeds retain the charges of transportation and storage and of advertising and sale. No such sale shall be made until four weeks after the first publication, in a newspaper published in the county in which the place is located to which such unclaimed article or articles are consigned or addressed, of a notice of such sale, containing a description of such articles and the name of the person to whom directed; and the expense of advertising shall be a lien upon the articles advertised, in a ratable proportion according to the amount received for each article. Such notice shall be published at least twice within said four weeks. No such article or articles shall be removed or transported from the place to which consigned until after the expiration of such four weeks.",
+      "href": "?chapter=859&section=section-50-3"
+    },
+    {
+      "id": "section-50-4",
+      "citation": "50-4",
+      "citations": [
+        "50-4"
+      ],
+      "heading": "Sec. 50-4. Disposition of perishable goods.",
+      "chapter": {
+        "id": "chapter-859",
+        "number": "859",
+        "name": "Lost and Unclaimed Property"
+      },
+      "status": "active",
+      "text": "If such unclaimed article is in its nature perishable, it may be sold by such person engaged in the express business or as a common carrier, as soon as its condition makes it necessary and without the notice required in section 50-3 .",
+      "href": "?chapter=859&section=section-50-4"
+    },
+    {
+      "id": "section-50-5",
+      "citation": "50-5",
+      "citations": [
+        "50-5"
+      ],
+      "heading": "Sec. 50-5. Avails to be accounted for. Escheat.",
+      "chapter": {
+        "id": "chapter-859",
+        "number": "859",
+        "name": "Lost and Unclaimed Property"
+      },
+      "status": "active",
+      "text": "Such person engaged in the express business or as a common carrier shall make an entry on his books of the balance of the proceeds of such sales, credited to the person to whom such article was directed, as nearly as can be ascertained, and, at any time within five years thereafter, shall, on demand, pay such balance to the owner of such article. If such balance is not claimed by the owner within ten years, it shall be disposed of in accordance with the provisions of part III of chapter 32.",
+      "href": "?chapter=859&section=section-50-5"
+    },
+    {
+      "id": "group-50-6-to-50-7",
+      "citation": null,
+      "citations": [
+        "50-6",
+        "50-7"
+      ],
+      "heading": "Secs. 50-6 and 50-7. Disposition of stray beasts; lost goods. Restoration to owner if claimed; procedure if unclaimed.",
+      "chapter": {
+        "id": "chapter-859",
+        "number": "859",
+        "name": "Lost and Unclaimed Property"
+      },
+      "status": "repealed",
+      "text": "Sections 50-6 and 50-7 are repealed, effective October 1, 2000.",
+      "href": "?chapter=859&section=group-50-6-to-50-7"
+    },
+    {
+      "id": "section-50-8",
+      "citation": "50-8",
+      "citations": [
+        "50-8"
+      ],
+      "heading": "Sec. 50-8. Marine vegetable deposits.",
+      "chapter": {
+        "id": "chapter-859",
+        "number": "859",
+        "name": "Lost and Unclaimed Property"
+      },
+      "status": "active",
+      "text": "No right in any marine vegetable deposit, thrown up by the sea or by a navigable river, shall be acquired by any person by his gathering it together upon any public beach, unless he removes it within twenty-four hours thereafter.",
+      "href": "?chapter=859&section=section-50-8"
+    },
+    {
+      "id": "section-50-9",
+      "citation": "50-9",
+      "citations": [
+        "50-9"
+      ],
+      "heading": "Sec. 50-9. Lost goods; towns may adopt procedure for.",
+      "chapter": {
+        "id": "chapter-859",
+        "number": "859",
+        "name": "Lost and Unclaimed Property"
+      },
+      "status": "active",
+      "text": "Sections 50-10 to 50-14 , inclusive, shall apply only to a municipality in which there is a police department and in which the provisions of said sections have been adopted by ordinance. Any statutory provision inconsistent with said sections shall not apply to any municipality which adopts the provisions thereof.",
+      "href": "?chapter=859&section=section-50-9"
+    },
+    {
+      "id": "section-50-10",
+      "citation": "50-10",
+      "citations": [
+        "50-10"
+      ],
+      "heading": "Sec. 50-10. Duties of finder.",
+      "chapter": {
+        "id": "chapter-859",
+        "number": "859",
+        "name": "Lost and Unclaimed Property"
+      },
+      "status": "active",
+      "text": "Any person who finds and takes possession of any article of the value of one dollar or more shall report the finding of such article to the police department of the municipality in which he finds such article within forty-eight hours from the time of such finding. The finder of such article shall, at the time of reporting, furnish to the police department the date, time and place of finding, his name and address and a description of the article found, and, within a period of one week from such finding, shall deliver such article to the police department. Any person who violates or fails to comply with the provisions of this section shall be guilty of a class D misdemeanor.",
+      "href": "?chapter=859&section=section-50-10"
+    },
+    {
+      "id": "section-50-11",
+      "citation": "50-11",
+      "citations": [
+        "50-11"
+      ],
+      "heading": "Sec. 50-11. Advertising; sale of perishable goods.",
+      "chapter": {
+        "id": "chapter-859",
+        "number": "859",
+        "name": "Lost and Unclaimed Property"
+      },
+      "status": "active",
+      "text": "The police department shall, commencing within one week from the date of receipt of any lost article, advertise a general description of such article once a week for at least two successive weeks in a newspaper having a circulation in such municipality and shall retain custody of such article for six months from the date of receipt thereof, unless it is claimed by the rightful owner within such six months' period. The requirement of advertising may be omitted when the value or estimated value of the article is less than two dollars. Perishable or obnoxious property or articles of a dangerous or harmful nature may be sold or otherwise disposed of as soon as practicable on the best terms available.",
+      "href": "?chapter=859&section=section-50-11"
+    },
+    {
+      "id": "section-50-12",
+      "citation": "50-12",
+      "citations": [
+        "50-12"
+      ],
+      "heading": "Sec. 50-12. Restoration to owner if claimed.",
+      "chapter": {
+        "id": "chapter-859",
+        "number": "859",
+        "name": "Lost and Unclaimed Property"
+      },
+      "status": "active",
+      "text": "If the owner of any such article claims it within six months from the date of receipt by the police department, the article or the proceeds thereof shall be restored to him upon payment or deduction of all proper charges.",
+      "href": "?chapter=859&section=section-50-12"
+    },
+    {
+      "id": "section-50-13",
+      "citation": "50-13",
+      "citations": [
+        "50-13"
+      ],
+      "heading": "Sec. 50-13. Procedure if unclaimed.",
+      "chapter": {
+        "id": "chapter-859",
+        "number": "859",
+        "name": "Lost and Unclaimed Property"
+      },
+      "status": "active",
+      "text": "If no owner claims such article within six months from the receipt thereof by the police department, the police department shall, within two weeks thereafter, notify the finder of such fact by registered or certified mail at his last-known address, and the article or the proceeds thereof shall be turned over to the finder, upon demand by him within thirty days from the expiration of the six months' period and upon payment or deduction of all proper charges; but, if such finder fails to demand such article or the proceeds thereof or refuses to pay such charges within thirty days from the expiration of the six months' period, such article or proceeds shall belong to such municipality. The requirement of notification may be omitted when the value or estimated value of the article is less than five dollars.",
+      "href": "?chapter=859&section=section-50-13"
+    },
+    {
+      "id": "section-50-14",
+      "citation": "50-14",
+      "citations": [
+        "50-14"
+      ],
+      "heading": "Sec. 50-14. Disposition after expiration of time for making claim.",
+      "chapter": {
+        "id": "chapter-859",
+        "number": "859",
+        "name": "Lost and Unclaimed Property"
+      },
+      "status": "active",
+      "text": "The police commissioners of such municipality shall sell at public auction any articles which it acquires as provided herein after the expiration of the time for the owner or finder to demand the same and after the time and place of such sale and a description of the articles to be sold have been advertised once a week for two successive weeks in a newspaper having a circulation in such municipality. The net proceeds from such sales and the unclaimed net proceeds from the sales of perishable or obnoxious property or articles of a dangerous or harmful nature shall be paid to the treasurer of such municipality, who shall deposit them in the police benefit fund, if any, of such municipality.",
+      "href": "?chapter=859&section=section-50-14"
+    },
+    {
+      "id": "section-50-6",
+      "citation": "50-6",
+      "citations": [
+        "50-6"
+      ],
+      "heading": "50-6",
+      "chapter": {
+        "id": "chapter-859",
+        "number": "859",
+        "name": "Lost and Unclaimed Property"
+      },
+      "status": "repealed",
+      "text": "Secs. 50-6 and 50-7. Disposition of stray beasts; lost goods. Restoration to owner if claimed; procedure if unclaimed. Sections 50-6 and 50-7 are repealed, effective October 1, 2000.",
+      "href": "?chapter=859&section=section-50-6"
+    },
+    {
+      "id": "section-50-7",
+      "citation": "50-7",
+      "citations": [
+        "50-7"
+      ],
+      "heading": "50-7",
+      "chapter": {
+        "id": "chapter-859",
+        "number": "859",
+        "name": "Lost and Unclaimed Property"
+      },
+      "status": "repealed",
+      "text": "Secs. 50-6 and 50-7. Disposition of stray beasts; lost goods. Restoration to owner if claimed; procedure if unclaimed. Sections 50-6 and 50-7 are repealed, effective October 1, 2000.",
+      "href": "?chapter=859&section=section-50-7"
+    }
+  ]
+}

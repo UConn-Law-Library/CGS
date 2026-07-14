@@ -1,0 +1,81 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-404",
+  "number": "404",
+  "name": "Exhibitions",
+  "title": {
+    "id": "title-21",
+    "number": "21",
+    "name": "Licenses"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_404.htm",
+  "sections": [
+    {
+      "id": "section-21-6",
+      "kind": "section",
+      "citation": "21-6",
+      "citations": [
+        "21-6"
+      ],
+      "heading": "Sec. 21-6. Licenses.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_404.htm#sec_21-6",
+      "status": "active",
+      "content": {
+        "body": [
+          "The mayor, aldermen and common council of any city, the warden and burgesses of any borough and the selectmen of any town may license and regulate any exhibitions therein; but selectmen shall not license any such exhibition within the limits of any city or borough.",
+          "See Sec. 29-129 et seq. re licensure of amusement parks."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 4644.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "The mayor, aldermen and common council of any city, the warden and burgesses of any borough and the selectmen of any town may license and regulate any exhibitions therein; but selectmen shall not license any such exhibition within the limits of any city or borough.\n\nSee Sec. 29-129 et seq. re licensure of amusement parks."
+      }
+    },
+    {
+      "id": "section-21-7",
+      "kind": "section",
+      "citation": "21-7",
+      "citations": [
+        "21-7"
+      ],
+      "heading": "Sec. 21-7. Exhibits relating to venereal diseases.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_404.htm#sec_21-7",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 21-7 is repealed, effective October 1, 2018."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 4645; P.A. 77-614, S. 323, 610; P.A. 93-381, S. 9, 39; P.A. 95-257, S. 12, 21, 58; P.A. 18-168, S. 85.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 21-7 is repealed, effective October 1, 2018."
+      }
+    },
+    {
+      "id": "section-21-8",
+      "kind": "section",
+      "citation": "21-8",
+      "citations": [
+        "21-8"
+      ],
+      "heading": "Sec. 21-8. Witnesses for state not to be prosecuted.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_404.htm#sec_21-8",
+      "status": "active",
+      "content": {
+        "body": [
+          "No person who testifies for the state in any prosecution for any unlawful exhibition or erection or construction therefor or forfeiture accruing therefrom shall thereafter be prosecuted for anything about which he has so testified."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 4646.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "No person who testifies for the state in any prosecution for any unlawful exhibition or erection or construction therefor or forfeiture accruing therefrom shall thereafter be prosecuted for anything about which he has so testified."
+      }
+    }
+  ]
+}

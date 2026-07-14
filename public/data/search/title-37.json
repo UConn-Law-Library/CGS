@@ -1,0 +1,234 @@
+{
+  "schemaVersion": "1.0.0",
+  "title": {
+    "id": "title-37",
+    "number": "37",
+    "name": "Interest"
+  },
+  "documents": [
+    {
+      "id": "section-37-1",
+      "citation": "37-1",
+      "citations": [
+        "37-1"
+      ],
+      "heading": "Sec. 37-1. Legal rate. Accrual as addition to debt.",
+      "chapter": {
+        "id": "chapter-673",
+        "number": "673",
+        "name": "Interest"
+      },
+      "status": "active",
+      "text": "(a) The compensation for forbearance of property loaned at a fixed valuation, or for money, shall, in the absence of any agreement to the contrary, be at the rate of eight per cent a year; and, in computing interest, three hundred sixty days may be considered to be a year.\n\n(b) Unless otherwise provided by agreement, interest at the legal rate from the date of maturity of a debt shall accrue as an addition to the debt.",
+      "href": "?chapter=673&section=section-37-1"
+    },
+    {
+      "id": "section-37-1a",
+      "citation": "37-1a",
+      "citations": [
+        "37-1a"
+      ],
+      "heading": "Sec. 37-1a. Payment of interest on commercial loans in excess of ten thousand dollars.",
+      "chapter": {
+        "id": "chapter-673",
+        "number": "673",
+        "name": "Interest"
+      },
+      "status": "active",
+      "text": "On any loan in excess of ten thousand dollars made to any person, corporation, partnership or association engaged in commercial, manufacturing, industrial or nonconsumer pursuits the loan agreement may provide for the interest to be either paid currently or to accrue, and, if such interest is to accrue, such accrued interest may be added to the principal of the debt on which interest may be charged and collected.",
+      "href": "?chapter=673&section=section-37-1a"
+    },
+    {
+      "id": "section-37-2",
+      "citation": "37-2",
+      "citations": [
+        "37-2"
+      ],
+      "heading": "Sec. 37-2. No recovery after payment.",
+      "chapter": {
+        "id": "chapter-673",
+        "number": "673",
+        "name": "Interest"
+      },
+      "status": "active",
+      "text": "No borrower of money shall be permitted to set off or recover back, by any proceeding in court, any sum of money paid by way of interest, discount or damages, for the detention of money, in excess of the rate of six per cent a year.",
+      "href": "?chapter=673&section=section-37-2"
+    },
+    {
+      "id": "section-37-3",
+      "citation": "37-3",
+      "citations": [
+        "37-3"
+      ],
+      "heading": "Sec. 37-3. Rate recoverable as damages.",
+      "chapter": {
+        "id": "chapter-673",
+        "number": "673",
+        "name": "Interest"
+      },
+      "status": "repealed",
+      "text": "Section 37-3 is repealed.",
+      "href": "?chapter=673&section=section-37-3"
+    },
+    {
+      "id": "section-37-3a",
+      "citation": "37-3a",
+      "citations": [
+        "37-3a"
+      ],
+      "heading": "Sec. 37-3a. Rate recoverable as damages. Rate on debt arising out of hospital services.",
+      "chapter": {
+        "id": "chapter-673",
+        "number": "673",
+        "name": "Interest"
+      },
+      "status": "active",
+      "text": "(a) Except as provided in sections 37-3b , 37-3c and 52-192a , interest at the rate of ten per cent a year, and no more, may be recovered and allowed in civil actions or arbitration proceedings under chapter 909, including actions to recover money loaned at a greater rate, as damages for the detention of money after it becomes payable. Judgment may be given for the recovery of taxes assessed and paid upon the loan, and the insurance upon the estate mortgaged to secure the loan, whenever the borrower has agreed in writing to pay such taxes or insurance or both. Whenever the maker of any contract is a resident of another state or the mortgage security is located in another state, any obligee or holder of such contract, residing in this state, may lawfully recover any agreed rate of interest or damages on such contract until it is fully performed, not exceeding the legal rate of interest in the state where such contract purports to have been made or such mortgage security is located.\n\n(b) In the case of a debt arising out of services provided at a hospital, prejudgment and postjudgment interest shall be no more than five per cent per year. The awarding of interest in such cases is discretionary.",
+      "href": "?chapter=673&section=section-37-3a"
+    },
+    {
+      "id": "section-37-3b",
+      "citation": "37-3b",
+      "citations": [
+        "37-3b"
+      ],
+      "heading": "Sec. 37-3b. Rate of interest recoverable in negligence actions.",
+      "chapter": {
+        "id": "chapter-673",
+        "number": "673",
+        "name": "Interest"
+      },
+      "status": "active",
+      "text": "(a) For a cause of action arising on or after May 27, 1997, interest at the rate of ten per cent a year, and no more, shall be recovered and allowed in any action to recover damages for injury to the person, or to real or personal property, caused by negligence, computed from the date that is twenty days after the date of judgment or the date that is ninety days after the date of verdict, whichever is earlier, upon the amount of the judgment.\n\n(b) If any plaintiff in such action files a postverdict or postjudgment motion or an appeal, the recovery of interest by such plaintiff shall be tolled and interest shall not be added to the judgment for the period that such postverdict or postjudgment motion or appeal is pending before the court. The provisions of this subsection shall not apply if the reason for the filing of a postverdict or postjudgment motion or appeal by the plaintiff is to reply to or answer a motion or appeal filed by a defendant.",
+      "href": "?chapter=673&section=section-37-3b"
+    },
+    {
+      "id": "section-37-3c",
+      "citation": "37-3c",
+      "citations": [
+        "37-3c"
+      ],
+      "heading": "Sec. 37-3c. Rate of interest recoverable in condemnation cases.",
+      "chapter": {
+        "id": "chapter-673",
+        "number": "673",
+        "name": "Interest"
+      },
+      "status": "active",
+      "text": "The judgment of compensation for a taking of property by eminent domain shall include interest at a rate that is reasonable and just on the amount of the compensation awarded. If a court does not set a rate of interest on the amount of compensation awarded, the interest shall be calculated as follows: (1) If the period for which interest is owed does not exceed one year, interest shall be calculated from the date of taking at an annual rate equal to the weekly average one-year constant maturity yield of United States Treasury securities, as published by the Board of Governors of the Federal Reserve System, for the calendar week preceding the date of taking; and (2) if the period for which interest is owed exceeds one year, interest for the first year shall be calculated pursuant to the provisions of subdivision (1) of this section and interest for each additional year shall be calculated on the combined amount of principal, which is the amount by which the compensation award exceeds the original condemnation deposit, plus accrued interest at an annual rate equal to the weekly average one-year constant maturity yield of United States Treasury securities, as published by the Board of Governors of the Federal Reserve System, for the calendar week preceding the beginning of each year for which interest is owed. Such judgment shall not include interest on any funds deposited by the condemnor as compensation for the taking for the period after such deposited funds become available for withdrawal by the condemnee. The interest shall accrue from the date of taking to the date of payment.",
+      "href": "?chapter=673&section=section-37-3c"
+    },
+    {
+      "id": "section-37-4",
+      "citation": "37-4",
+      "citations": [
+        "37-4"
+      ],
+      "heading": "Sec. 37-4. Loans at greater rate than twelve per cent prohibited.",
+      "chapter": {
+        "id": "chapter-673",
+        "number": "673",
+        "name": "Interest"
+      },
+      "status": "active",
+      "text": "No person and no firm or corporation or agent thereof, other than a pawnbroker as provided in section 21-44 , shall, as guarantor or otherwise, directly or indirectly, loan money to any person and, directly or indirectly, charge, demand, accept or make any agreement to receive therefor interest at a rate greater than twelve per cent per annum.",
+      "href": "?chapter=673&section=section-37-4"
+    },
+    {
+      "id": "section-37-5",
+      "citation": "37-5",
+      "citations": [
+        "37-5"
+      ],
+      "heading": "Sec. 37-5. Notes not to be accepted for greater amounts than loaned.",
+      "chapter": {
+        "id": "chapter-673",
+        "number": "673",
+        "name": "Interest"
+      },
+      "status": "active",
+      "text": "No person and no firm or corporation, or agent thereof, shall, with intent to evade the provisions of section 37-4 , accept a note or notes for a greater amount than that actually loaned.",
+      "href": "?chapter=673&section=section-37-5"
+    },
+    {
+      "id": "section-37-6",
+      "citation": "37-6",
+      "citations": [
+        "37-6"
+      ],
+      "heading": "Sec. 37-6. Certain expenses not to be charged to the borrower.",
+      "chapter": {
+        "id": "chapter-673",
+        "number": "673",
+        "name": "Interest"
+      },
+      "status": "active",
+      "text": "No person and no firm or corporation, or agent thereof, shall charge a borrower with any expense of inquiry as to his financial responsibility or expense of negotiating a loan, or charge, at the time of making the loan, the expense of collecting the interest and principal of the loan, unless the total of such charges and of the interest agreed upon is, during any one year, twelve per cent of the loan or less.",
+      "href": "?chapter=673&section=section-37-6"
+    },
+    {
+      "id": "section-37-7",
+      "citation": "37-7",
+      "citations": [
+        "37-7"
+      ],
+      "heading": "Sec. 37-7. Penalty.",
+      "chapter": {
+        "id": "chapter-673",
+        "number": "673",
+        "name": "Interest"
+      },
+      "status": "active",
+      "text": "Any person who, individually, or as a member of any firm, or as an officer of any corporation, or as an agent of any firm or corporation, violates any provision of section 37-4 , 37-5 or 37-6 shall be fined not more than one thousand dollars or imprisoned not more than six months or both.",
+      "href": "?chapter=673&section=section-37-7"
+    },
+    {
+      "id": "section-37-8",
+      "citation": "37-8",
+      "citations": [
+        "37-8"
+      ],
+      "heading": "Sec. 37-8. Actions not to be brought on prohibited loans.",
+      "chapter": {
+        "id": "chapter-673",
+        "number": "673",
+        "name": "Interest"
+      },
+      "status": "active",
+      "text": "No action shall be brought to recover principal or interest, or any part thereof, on any loan prohibited by sections 37-4 , 37-5 and 37-6 , or upon any cause arising from the negotiation of such loan.",
+      "href": "?chapter=673&section=section-37-8"
+    },
+    {
+      "id": "section-37-9",
+      "citation": "37-9",
+      "citations": [
+        "37-9"
+      ],
+      "heading": "Sec. 37-9. Loans to which prohibitions do not apply.",
+      "chapter": {
+        "id": "chapter-673",
+        "number": "673",
+        "name": "Interest"
+      },
+      "status": "active",
+      "text": "The provisions of sections 37-4 , 37-5 and 37-6 shall not affect: (1) Any loan made prior to September 12, 1911; (2) any loan made by (A) any bank, as defined in section 36a-2 , or any out-of-state bank, as defined in section 36a-2 , that maintains in this state a branch, as defined in section 36a-410 , (B) any wholly-owned subsidiary of such bank or out-of-state bank, except a loan for consumer purposes, or (C) any Connecticut credit union, as defined in section 36a-2 , or federal credit union, as defined in section 36a-2 ; (3) any bona fide mortgage of real property for a sum in excess of five thousand dollars; (4) (A) any loan, carrying an annual interest rate of not more than the deposit index, as determined under section 36a-26 , for the calendar year in which the loan is made plus seventeen per cent, made to a foreign or domestic corporation, statutory trust, limited liability company, general, limited or limited liability partnership or association organized for a profit or any individual, provided such corporation, trust, company, partnership, association or individual is engaged primarily in commercial, manufacturing, industrial or nonconsumer pursuits and provided further that the funds received by such corporation, trust, company, partnership, association or individual are utilized in such entity's business or investment activities and are not utilized for consumer purposes and provided further that the original indebtedness to be repaid is in excess of ten thousand dollars but less than or equal to two hundred fifty thousand dollars, or, in the case of one or more advances of money of less than ten thousand dollars made pursuant to a revolving loan agreement or similar agreement or a loan agreement providing for the making of advances to the borrower from time to time up to an aggregate maximum amount, the total principal amount of all loans owing by the borrower to the lender at the time of any such advance is in excess of ten thousand dollars but less than or equal to two hundred fifty thousand dollars, or (B) any loan made to a foreign or domestic corporation, statutory trust, limited liability company, general, limited or limited liability partnership or association organized for a profit or any individual, provided such corporation, trust, company, partnership, association or individual is engaged primarily in commercial, manufacturing, industrial or nonconsumer pursuits and provided further that the funds received by such corporation, trust, company, partnership, association or individual are utilized in such entity's business or investment activities and are not utilized for consumer purposes and provided further that the original indebtedness to be repaid is in excess of two hundred fifty thousand dollars, or, in the case of one or more advances of money of less than two hundred fifty thousand dollars made pursuant to a revolving loan agreement or similar agreement or a loan agreement providing for the making of advances to the borrower from time to time up to an aggregate maximum amount, the total principal amount of all loans owing by the borrower to the lender at the time of any such advance is in excess of two hundred fifty thousand dollars; (5) any obligations, including bonds, notes or other obligations, issued by (A) the state, (B) any municipality, including any city, town, borough, district, whether consolidated or not, or other public body corporate, or (C) any authority, instrumentality, public agency or other political subdivision of the state or of a municipality; (6) any loan made by (A) the state, (B) any municipality, including any city, town, borough, district, whether consolidated or not, or other public body corporate, or (C) any authority, instrumentality, public agency or other political subdivision of the state or of a municipality; (7) any loan made for the purpose of financing the purchase of a motor vehicle, a recreational vehicle or a boat, carrying an interest rate of not more than (A) eighteen per cent per annum on loans made on or after July 1, 1981, and prior to October 1, 1985, and (B) on loans made on or after October 1, 1985, and prior to October 1, 1993, (i) sixteen per cent per annum for new motor vehicles, recreational vehicles or boats, and (ii) eighteen per cent per annum for used motor vehicles, recreational vehicles or boats, payable in four or more monthly, quarterly or yearly installments which is unsecured or in which a security interest is taken in such property; (8) any loan by an institution of higher education made to an individual for the purpose of enabling attendance at such institution and carrying an interest rate of not more than the greater of (A) the maximum rate then permitted by section 37-4 , or (B) a rate which is not more than five per cent in excess of the discount rate, including any surcharge, on ninety-day commercial paper in effect from time to time at the federal reserve bank in the federal reserve district where such institution is located; (9) any loan made to a plan participant or beneficiary from an employee pension benefit plan as defined in the Employee Retirement Income Security Act of 1974, Public Law 93-406, as from time to time amended. The provisions of part III of chapter 668 shall not apply to loans made pursuant to subdivision (7) of this section. No provision of this section shall prevent any such bank, out-of-state bank, Connecticut credit union or federal credit union or other lender from recovering by an action at law the amount of the principal and the interest stipulated or interest at the legal rate, if interest is not stipulated, in any negotiable instrument which it has acquired for value and in good faith without notice of illegality in the consideration. For the purpose of this section: “Interest” shall not be construed to include attorney's fees, including preparation of mortgage deed and note, security agreements, title search, waivers and closing fees, survey charges or recording fees paid by the mortgagor or borrower; and “consumer purposes” means the utilization of funds for personal, family or household purchases, acquisitions or uses.",
+      "href": "?chapter=673&section=section-37-9"
+    },
+    {
+      "id": "section-37-10",
+      "citation": "37-10",
+      "citations": [
+        "37-10"
+      ],
+      "heading": "Sec. 37-10.",
+      "chapter": {
+        "id": "chapter-673",
+        "number": "673",
+        "name": "Interest"
+      },
+      "status": "transferred",
+      "text": "Transferred to Chapter 846, Sec. 49-2b .",
+      "href": "?chapter=673&section=section-37-10"
+    }
+  ]
+}

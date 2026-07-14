@@ -1,0 +1,80 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-144a",
+  "number": "144a",
+  "name": "Absentee Voting at Primaries",
+  "title": {
+    "id": "title-09",
+    "number": "09",
+    "name": "Elections"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_144a.htm",
+  "sections": [
+    {
+      "id": "group-9-133a-to-9-133b-to-9-133c-to-9-133d-to-9-133e",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "9-133a",
+        "9-133b",
+        "9-133c",
+        "9-133d",
+        "9-133e"
+      ],
+      "heading": "Secs. 9-133a to 9-133e. Eligibility for absentee voting. Application for ballot; distribution. Votes to be restricted to candidates appearing on ballot label. Voting and counting procedures. Form and printing of primary absentee ballot; filing of ballot and affidavit with secretary; vacancies occurring after ballot printed; envelopes.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_144a.htm#secs_9-133a_to_9-133e",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Sections 9-133a to 9-133e , inclusive, are repealed."
+        ],
+        "sourceNotes": [
+          "(1971, P.A. 819, S. 1–5; 1972, P.A. 13, S. 1, 2; P.A. 73-630, S. 15, 19; P.A. 74-25, S. 1, 13; P.A. 75-310, S. 3, 4, 11; 75-595, S. 1, 5; P.A. 76-50, S. 1, 7; P.A. 77-97; 77-245, S. 14; P.A. 78-168, S. 1; P.A. 81-238, S. 1; 81-472, S. 118, 159; P.A. 82-472, S. 26, 183; P.A. 83-254, S. 1, 4; P.A. 84-319, S. 10, 49; P.A. 85-577, S. 3, 4; P.A. 86-179, S. 52, 53.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 9-133a to 9-133e , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-9-133a",
+      "kind": "section",
+      "citation": "9-133a",
+      "citations": [
+        "9-133a"
+      ],
+      "heading": "9-133a",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_144a.htm#sec_9-133a",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 9-133a to 9-133e. Eligibility for absentee voting. Application for ballot; distribution. Votes to be restricted to candidates appearing on ballot label. Voting and counting procedures. Form and printing of primary absentee ballot; filing of ballot and affidavit with secretary; vacancies occurring after ballot printed; envelopes. Sections 9-133a to 9-133e , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 9-133a to 9-133e. Eligibility for absentee voting. Application for ballot; distribution. Votes to be restricted to candidates appearing on ballot label. Voting and counting procedures. Form and printing of primary absentee ballot; filing of ballot and affidavit with secretary; vacancies occurring after ballot printed; envelopes. Sections 9-133a to 9-133e , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-9-133e",
+      "kind": "section",
+      "citation": "9-133e",
+      "citations": [
+        "9-133e"
+      ],
+      "heading": "9-133e",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_144a.htm#sec_9-133e",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 9-133a to 9-133e. Eligibility for absentee voting. Application for ballot; distribution. Votes to be restricted to candidates appearing on ballot label. Voting and counting procedures. Form and printing of primary absentee ballot; filing of ballot and affidavit with secretary; vacancies occurring after ballot printed; envelopes. Sections 9-133a to 9-133e , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 9-133a to 9-133e. Eligibility for absentee voting. Application for ballot; distribution. Votes to be restricted to candidates appearing on ballot label. Voting and counting procedures. Form and printing of primary absentee ballot; filing of ballot and affidavit with secretary; vacancies occurring after ballot printed; envelopes. Sections 9-133a to 9-133e , inclusive, are repealed."
+      }
+    }
+  ]
+}

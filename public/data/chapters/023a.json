@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-023a",
+  "number": "023a",
+  "name": "Commission on Local Government in Connecticut",
+  "title": {
+    "id": "title-02",
+    "number": "02",
+    "name": "General Assembly and Legislative Agencies"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_023a.htm",
+  "sections": [
+    {
+      "id": "section-2-100",
+      "kind": "section",
+      "citation": "2-100",
+      "citations": [
+        "2-100"
+      ],
+      "heading": "Sec. 2-100. Commission on Local Government in Connecticut.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_023a.htm#sec_2-100",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 2-100 is repealed."
+        ],
+        "sourceNotes": [
+          "(P.A. 80-474, S. 2, 4; P.A. 82-376, S. 1, 2; P.A. 87-589, S. 18, 87.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 2-100 is repealed."
+      }
+    }
+  ]
+}

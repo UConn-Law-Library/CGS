@@ -1,0 +1,125 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-116c",
+  "number": "116c",
+  "name": "Public Investment Communities",
+  "title": {
+    "id": "title-07",
+    "number": "07",
+    "name": "Municipalities"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_116c.htm",
+  "sections": [
+    {
+      "id": "section-7-545",
+      "kind": "section",
+      "citation": "7-545",
+      "citations": [
+        "7-545"
+      ],
+      "heading": "Sec. 7-545. Definitions.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_116c.htm#sec_7-545",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) As used in this section:",
+          "(1) “Secretary” means the Secretary of the Office of Policy and Management;",
+          "(2) “Municipality” means any town, consolidated town and city or consolidated town and borough;",
+          "(3) “Per capita income” for each town means that enumerated in the most recent federal decennial census of population or that enumerated in the current population report series issued by the United States Department of Commerce, Bureau of the Census, whichever is more recent and available on January first of the fiscal year two years prior to the fiscal year in which the eligibility index is prepared pursuant to subsection (b) of this section;",
+          "(4) “Adjusted equalized net grand list per capita” means the most recent adjusted equalized net grand list per capita determined for each town pursuant to section 10-261 ;",
+          "(5) “Equalized mill rate” means the tax rate derived from the most recent available grand levy of a town divided by the equalized net grand list on which such levy is based as determined by the secretary in accordance with section 10-261a ;",
+          "(6) “Per capita temporary family assistance” means the number obtained by adding together the unduplicated aggregate number of children eligible to receive benefits by town under the temporary family assistance program in October and May of each fiscal year, and dividing by two, such number to be certified and submitted annually, no later than the first day of July of the succeeding fiscal year, to the secretary by the Commissioner of Social Services. Such number shall be expressed as a percentage of the population of a town;",
+          "(7) “Unemployment rate” means the average unemployment rate of a town as reported by the Labor Commissioner on the first day of July for the latest available twelve-month period;",
+          "(8) “Eligibility index” is a measure of local burden determined by calculating a town's disparity in relation to all municipalities. Points shall be allocated for each of the following factors: (A) Per capita income, (B) adjusted equalized net grand list per capita, (C) equalized mill rate, (D) per capita temporary family assistance, and (E) unemployment rate. For each factor the variance shall be the difference between the first percentile and the one-hundredth percentile town factors. In calculating the eligibility index for unemployment rate, per capita temporary family assistance and equalized mill rate, the factor for the first percentile town shall be subtracted from the factor for the town and the result divided by the variance and multiplied by one hundred. In calculating the eligibility index for per capita income and adjusted equalized net grand list per capita, the factor for the first percentile town shall be subtracted from the factor for the town and the result shall be divided by the variance and multiplied by one hundred. The product of such multiplication shall then be subtracted from one hundred. The index points for all factors shall be totalled by town resulting in the overall eligibility index. The eligibility index listing shall be ranked for all towns from highest to lowest points according to need;",
+          "(9) “Public investment communities” are municipalities requiring financial assistance to offset their service burdens with eligibility defined as one which is in the top quartile of the “eligibility index” scale;",
+          "(10) “Grand levy” means the mill rate of the town multiplied by the net taxable grand list of the town and includes the value of special service districts if such districts contain fifty per cent or more of the value of total taxable property within the town;",
+          "(11) “Population” of a town means that enumerated in the most recent federal decennial census of the population or that enumerated in the current population report series issued by the United States Department of Commerce, Bureau of the Census available on January first of the fiscal year two years prior to the fiscal year in which the eligibility index is prepared pursuant to subsection (b) of this section, whichever is most recent, except that for any town whose enumerated population residing in state or federal institutions within such town and attributed to such town by the census exceeds forty per cent of the population of such town, “population” shall not include persons who are incarcerated or in custodial situations, including, but not limited to, jails, prisons, hospitals or training schools or persons who reside in dormitory facilities in schools, colleges, universities or military bases.",
+          "(b) On or before July 15, 1994, and annually thereafter, the secretary shall prepare the eligibility index for Connecticut municipalities. A municipality shall continue to be a public investment community for the fiscal year in which such municipality is not included in the top quartile of the eligibility index scale and for the following four fiscal years."
+        ],
+        "sourceNotes": [
+          "(P.A. 92-213, S. 1, 5; May Sp. Sess. P.A. 92-14, S. 4, 11; P.A. 93-99, S. 1, 3; 93-262, S. 1, 87; P.A. 94-65, S. 2, 4; P.A. 97-274, S. 4, 7; June 18 Sp. Sess. P.A. 97-2, S. 9, 165; P.A. 07-10, S. 1.)"
+        ],
+        "history": [
+          "History: May Sp. Sess. P.A. 92-14 amended Subdiv. (10) to add “net taxable”; P.A. 93-99 amended Subdiv. (5) defining “equalized mill rate” to eliminate references to specific grand levy and to refer instead to most recent available grand levy, amended Subdiv. (7) to eliminate definition of “per capita unemployment” and to define “unemployment rate” and made technical changes in Subdiv. (8) defining “eligibility index”, effective June 2, 1993, and applicable to applications for grants made on and after July 1, 1992; P.A. 93-262 replaced commissioner of income maintenance with commissioner of social services, effective July 1, 1993; P.A. 94-65 amended Subsec. (b) by substituting “July 15, 1994” for “July 1, 1991”, effective May 19, 1994; (Revisor's note: In 1997 a reference in Subdiv. (7) of Subsec. (a) to “Commissioner of the Department of Labor” was replaced editorially by the Revisors with “Labor Commissioner” for consistency with customary statutory usage); P.A. 97-274 deleted reference to Sec. 7-547 in Subsec. (a), effective June 26, 1997; June 18 Sp. Sess. P.A. 97-2 replaced references to aid to families with dependent children with temporary family assistance, effective July 1, 1997; P.A. 07-10 deleted reference to Sec. 7-546 in Subsec. (a), redefined “per capita income” in Subsec. (a)(3), redefined “population” in Subsec. (a)(11), and amended Subsec. (b) to allow municipality to remain as public investment community for additional time period, effective July 1, 2007."
+        ],
+        "annotations": [],
+        "plainText": "(a) As used in this section:\n\n(1) “Secretary” means the Secretary of the Office of Policy and Management;\n\n(2) “Municipality” means any town, consolidated town and city or consolidated town and borough;\n\n(3) “Per capita income” for each town means that enumerated in the most recent federal decennial census of population or that enumerated in the current population report series issued by the United States Department of Commerce, Bureau of the Census, whichever is more recent and available on January first of the fiscal year two years prior to the fiscal year in which the eligibility index is prepared pursuant to subsection (b) of this section;\n\n(4) “Adjusted equalized net grand list per capita” means the most recent adjusted equalized net grand list per capita determined for each town pursuant to section 10-261 ;\n\n(5) “Equalized mill rate” means the tax rate derived from the most recent available grand levy of a town divided by the equalized net grand list on which such levy is based as determined by the secretary in accordance with section 10-261a ;\n\n(6) “Per capita temporary family assistance” means the number obtained by adding together the unduplicated aggregate number of children eligible to receive benefits by town under the temporary family assistance program in October and May of each fiscal year, and dividing by two, such number to be certified and submitted annually, no later than the first day of July of the succeeding fiscal year, to the secretary by the Commissioner of Social Services. Such number shall be expressed as a percentage of the population of a town;\n\n(7) “Unemployment rate” means the average unemployment rate of a town as reported by the Labor Commissioner on the first day of July for the latest available twelve-month period;\n\n(8) “Eligibility index” is a measure of local burden determined by calculating a town's disparity in relation to all municipalities. Points shall be allocated for each of the following factors: (A) Per capita income, (B) adjusted equalized net grand list per capita, (C) equalized mill rate, (D) per capita temporary family assistance, and (E) unemployment rate. For each factor the variance shall be the difference between the first percentile and the one-hundredth percentile town factors. In calculating the eligibility index for unemployment rate, per capita temporary family assistance and equalized mill rate, the factor for the first percentile town shall be subtracted from the factor for the town and the result divided by the variance and multiplied by one hundred. In calculating the eligibility index for per capita income and adjusted equalized net grand list per capita, the factor for the first percentile town shall be subtracted from the factor for the town and the result shall be divided by the variance and multiplied by one hundred. The product of such multiplication shall then be subtracted from one hundred. The index points for all factors shall be totalled by town resulting in the overall eligibility index. The eligibility index listing shall be ranked for all towns from highest to lowest points according to need;\n\n(9) “Public investment communities” are municipalities requiring financial assistance to offset their service burdens with eligibility defined as one which is in the top quartile of the “eligibility index” scale;\n\n(10) “Grand levy” means the mill rate of the town multiplied by the net taxable grand list of the town and includes the value of special service districts if such districts contain fifty per cent or more of the value of total taxable property within the town;\n\n(11) “Population” of a town means that enumerated in the most recent federal decennial census of the population or that enumerated in the current population report series issued by the United States Department of Commerce, Bureau of the Census available on January first of the fiscal year two years prior to the fiscal year in which the eligibility index is prepared pursuant to subsection (b) of this section, whichever is most recent, except that for any town whose enumerated population residing in state or federal institutions within such town and attributed to such town by the census exceeds forty per cent of the population of such town, “population” shall not include persons who are incarcerated or in custodial situations, including, but not limited to, jails, prisons, hospitals or training schools or persons who reside in dormitory facilities in schools, colleges, universities or military bases.\n\n(b) On or before July 15, 1994, and annually thereafter, the secretary shall prepare the eligibility index for Connecticut municipalities. A municipality shall continue to be a public investment community for the fiscal year in which such municipality is not included in the top quartile of the eligibility index scale and for the following four fiscal years."
+      }
+    },
+    {
+      "id": "section-7-546",
+      "kind": "section",
+      "citation": "7-546",
+      "citations": [
+        "7-546"
+      ],
+      "heading": "Sec. 7-546. Grants-in-aid. Plan for activities.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_116c.htm#sec_7-546",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 7-546 is repealed, effective April 26, 2007."
+        ],
+        "sourceNotes": [
+          "(P.A. 92-213, S. 2, 5; P.A. 93-99, S. 2, 3; P.A. 95-250, S. 1; P.A. 96-211, S. 1, 5, 6; P.A. 97-274, S. 5, 7; P.A. 07-10, S. 2.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 7-546 is repealed, effective April 26, 2007."
+      }
+    },
+    {
+      "id": "section-7-547",
+      "kind": "section",
+      "citation": "7-547",
+      "citations": [
+        "7-547"
+      ],
+      "heading": "Sec. 7-547. Report evaluating program.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_116c.htm#sec_7-547",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 7-547 is repealed, effective June 26, 1997."
+        ],
+        "sourceNotes": [
+          "(P.A. 92-213, S. 3, 5; P.A. 97-274, S. 6, 7.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 7-547 is repealed, effective June 26, 1997."
+      }
+    },
+    {
+      "id": "group-7-548-to-7-549-to-7-550-to-7-551-to-7-552-to-7-553-to-7-554-to-7-555-to-7-556-to-7-557-to-7-558-to-7-559",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "7-548",
+        "7-549",
+        "7-550",
+        "7-551",
+        "7-552",
+        "7-553",
+        "7-554",
+        "7-555",
+        "7-556",
+        "7-557",
+        "7-558",
+        "7-559"
+      ],
+      "heading": "Secs. 7-548 to 7-559.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_116c.htm#secs_7-548_to_7-559",
+      "status": "reserved",
+      "content": {
+        "body": [
+          "Reserved for future use."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Reserved for future use."
+      }
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-150a",
+  "number": "150a",
+  "name": "Computerization of Campaign Finance Statements and Data",
+  "title": {
+    "id": "title-09",
+    "number": "09",
+    "name": "Elections"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_150a.htm",
+  "sections": [
+    {
+      "id": "group-9-348ee-to-9-348ff-to-9-348gg",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "9-348ee",
+        "9-348ff",
+        "9-348gg"
+      ],
+      "heading": "Secs. 9-348ee to 9-348gg.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_150a.htm#secs_9-348ee_to_9-348gg",
+      "status": "transferred",
+      "content": {
+        "body": [
+          "Transferred to Chapter 156, Secs. 9-675 to 9-677 , inclusive."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Transferred to Chapter 156, Secs. 9-675 to 9-677 , inclusive."
+      }
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-005",
+  "number": "005",
+  "name": "Bonds",
+  "title": {
+    "id": "title-01",
+    "number": "01",
+    "name": "Provisions of General Application"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_005.htm",
+  "sections": [
+    {
+      "id": "section-1-26",
+      "kind": "section",
+      "citation": "1-26",
+      "citations": [
+        "1-26"
+      ],
+      "heading": "Sec. 1-26. Construction of bond requirement.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_005.htm#sec_1-26",
+      "status": "active",
+      "content": {
+        "body": [
+          "Except as otherwise provided by the general statutes, whenever any person is by law required to give a bond, such requirement shall mean a bond with surety."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 3577; 1967, P.A. 549, S. 6.)"
+        ],
+        "history": [
+          "History: 1967 act added “except as otherwise provided by the general statutes”."
+        ],
+        "annotations": [],
+        "plainText": "Except as otherwise provided by the general statutes, whenever any person is by law required to give a bond, such requirement shall mean a bond with surety."
+      }
+    },
+    {
+      "id": "section-1-27",
+      "kind": "section",
+      "citation": "1-27",
+      "citations": [
+        "1-27"
+      ],
+      "heading": "Sec. 1-27. Joint control of money and assets by principal and surety.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_005.htm#sec_1-27",
+      "status": "active",
+      "content": {
+        "body": [
+          "Any person of whom a bond, undertaking or other obligation is required may agree with his surety or sureties concerning the deposit of any money or assets for which he and his surety or sureties are held responsible with a bank, savings bank or safe-deposit or trust company authorized by law to do business as such, or with any other depository approved by the court requiring such obligation or by a judge thereof, if such deposit is otherwise legal, for the safekeeping thereof. Such deposit shall be made in such manner as to prevent the withdrawal of such money or assets or any part thereof without the written consent of such surety or sureties or an order of such court or judge made on such notice to such surety or sureties as such court or judge directs; provided such agreement shall not release from or change the liability of the principal or sureties as established by the terms of such bond."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 3578.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Any person of whom a bond, undertaking or other obligation is required may agree with his surety or sureties concerning the deposit of any money or assets for which he and his surety or sureties are held responsible with a bank, savings bank or safe-deposit or trust company authorized by law to do business as such, or with any other depository approved by the court requiring such obligation or by a judge thereof, if such deposit is otherwise legal, for the safekeeping thereof. Such deposit shall be made in such manner as to prevent the withdrawal of such money or assets or any part thereof without the written consent of such surety or sureties or an order of such court or judge made on such notice to such surety or sureties as such court or judge directs; provided such agreement shall not release from or change the liability of the principal or sureties as established by the terms of such bond."
+      }
+    }
+  ]
+}

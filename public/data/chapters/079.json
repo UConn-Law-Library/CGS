@@ -1,0 +1,102 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-079",
+  "number": "079",
+  "name": "Coroners",
+  "title": {
+    "id": "title-06",
+    "number": "06",
+    "name": "Counties and County Officers. Judicial and State Marshals"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_079.htm",
+  "sections": [
+    {
+      "id": "group-6-50-to-6-51-to-6-52-to-6-53-to-6-54-to-6-55-to-6-56-to-6-57-to-6-58-to-6-59-to-6-60-to-6-61-to-6-62-to-6-63-to-6-64-to-6-65-to-6-66-to-6-67-to-6-68-to-6-69-to-6-70-to-6-71-to-6-72-to-6-73-to-6-74-to-6-75-to-6-76",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "6-50",
+        "6-51",
+        "6-52",
+        "6-53",
+        "6-54",
+        "6-55",
+        "6-56",
+        "6-57",
+        "6-58",
+        "6-59",
+        "6-60",
+        "6-61",
+        "6-62",
+        "6-63",
+        "6-64",
+        "6-65",
+        "6-66",
+        "6-67",
+        "6-68",
+        "6-69",
+        "6-70",
+        "6-71",
+        "6-72",
+        "6-73",
+        "6-74",
+        "6-75",
+        "6-76"
+      ],
+      "heading": "Secs. 6-50 to 6-76. Coroners.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_079.htm#secs_6-50_to_6-76",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Sections 6-50 to 6-76 , inclusive, are repealed."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 466–490, 3630; 1949, S. 199d, 200d, 201d; 1953, S. 1505c, 196d, 203d; 1955, S. 198d, 202d, 1982d; June, 1955, S. 197d; 1957, P.A. 18; 1959, P.A. 152, S. 12; 154; 155; 1961, P.A. 517, S. 86, 87; 1963, P.A. 642, S. 4; 1967, P.A. 709; 863; 901, S. 1–7, 9, 10; 1969, P.A. 699, S. 18, 32–37, 39; 1971, P.A. 412, S. 8; P.A. 73-116, S. 33; 73-616, S. 43, 67; 73-667, S. 1, 2; P.A. 75-180; P.A. 77-614, S. 323, 486, 587, 610; P.A. 78-303, S. 85, 136; 78-379, S. 1, 26, 27; P.A. 79-47, S. 18; 79-619.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 6-50 to 6-76 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-6-50",
+      "kind": "section",
+      "citation": "6-50",
+      "citations": [
+        "6-50"
+      ],
+      "heading": "6-50",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_079.htm#sec_6-50",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 6-50 to 6-76. Coroners. Sections 6-50 to 6-76 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 6-50 to 6-76. Coroners. Sections 6-50 to 6-76 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-6-76",
+      "kind": "section",
+      "citation": "6-76",
+      "citations": [
+        "6-76"
+      ],
+      "heading": "6-76",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_079.htm#sec_6-76",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 6-50 to 6-76. Coroners. Sections 6-50 to 6-76 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 6-50 to 6-76. Coroners. Sections 6-50 to 6-76 , inclusive, are repealed."
+      }
+    }
+  ]
+}

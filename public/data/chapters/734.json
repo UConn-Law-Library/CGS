@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-734",
+  "number": "734",
+  "name": "Bulk Sales",
+  "title": {
+    "id": "title-42",
+    "number": "42",
+    "name": "Business, Selling, Trading and Collection Practices"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_734.htm",
+  "sections": [
+    {
+      "id": "group-42-101-to-42-102-to-42-103",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "42-101",
+        "42-102",
+        "42-103"
+      ],
+      "heading": "Secs. 42-101 to 42-103. Bulk sales.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_734.htm#secs_42-101_to_42-103",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Sections 42-101 to 42-103 , inclusive, are repealed."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 6705–6707; 1959, P.A. 133, S. 10-102.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 42-101 to 42-103 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-42-101",
+      "kind": "section",
+      "citation": "42-101",
+      "citations": [
+        "42-101"
+      ],
+      "heading": "42-101",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_734.htm#sec_42-101",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 42-101 to 42-103. Bulk sales. Sections 42-101 to 42-103 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 42-101 to 42-103. Bulk sales. Sections 42-101 to 42-103 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-42-103",
+      "kind": "section",
+      "citation": "42-103",
+      "citations": [
+        "42-103"
+      ],
+      "heading": "42-103",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_734.htm#sec_42-103",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 42-101 to 42-103. Bulk sales. Sections 42-101 to 42-103 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 42-101 to 42-103. Bulk sales. Sections 42-101 to 42-103 , inclusive, are repealed."
+      }
+    }
+  ]
+}

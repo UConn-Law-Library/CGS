@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-594",
+  "number": "594",
+  "name": "Medical Group Clinic Corporations",
+  "title": {
+    "id": "title-33",
+    "number": "33",
+    "name": "Corporations"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_594.htm",
+  "sections": [
+    {
+      "id": "group-33-180-to-33-181-to-33-182",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "33-180",
+        "33-181",
+        "33-182"
+      ],
+      "heading": "Secs. 33-180 to 33-182. Formation of medical group clinics. Clinic registration certificate. Appeal from decision of board.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_594.htm#secs_33-180_to_33-182",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Sections 33-180 to 33-182 , inclusive, are repealed."
+        ],
+        "sourceNotes": [
+          "(1951, S. 2599d–2601d; 1959, P.A. 453, S. 1; 1961, P.A. 394, S. 1; P.A. 76-276, S. 19, 22; 76-436, S. 627, 681; P.A. 77-603, S. 24, 125; P.A. 78-280, S. 5, 127; P.A. 88-230, S. 1, 12; P.A. 90-98, S. 1, 2; P.A. 93-142, S. 4, 7, 8; P.A. 95-271, S. 39.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 33-180 to 33-182 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-33-180",
+      "kind": "section",
+      "citation": "33-180",
+      "citations": [
+        "33-180"
+      ],
+      "heading": "33-180",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_594.htm#sec_33-180",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 33-180 to 33-182. Formation of medical group clinics. Clinic registration certificate. Appeal from decision of board. Sections 33-180 to 33-182 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 33-180 to 33-182. Formation of medical group clinics. Clinic registration certificate. Appeal from decision of board. Sections 33-180 to 33-182 , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-33-182",
+      "kind": "section",
+      "citation": "33-182",
+      "citations": [
+        "33-182"
+      ],
+      "heading": "33-182",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_594.htm#sec_33-182",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Secs. 33-180 to 33-182. Formation of medical group clinics. Clinic registration certificate. Appeal from decision of board. Sections 33-180 to 33-182 , inclusive, are repealed."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Secs. 33-180 to 33-182. Formation of medical group clinics. Clinic registration certificate. Appeal from decision of board. Sections 33-180 to 33-182 , inclusive, are repealed."
+      }
+    }
+  ]
+}

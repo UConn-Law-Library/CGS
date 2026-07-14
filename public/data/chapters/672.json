@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-672",
+  "number": "672",
+  "name": "General Statement",
+  "title": {
+    "id": "title-36b",
+    "number": "36b",
+    "name": "Connecticut Securities Law and Business Opportunity Investment Act"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_672.htm",
+  "sections": [
+    {
+      "id": "section-36b-1",
+      "kind": "section",
+      "citation": "36b-1",
+      "citations": [
+        "36b-1"
+      ],
+      "heading": "Sec. 36b-1. General statement.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_672.htm#sec_36b-1",
+      "status": "active",
+      "content": {
+        "body": [
+          "Sections 36b-2 to 36b-34 , inclusive, and 36b-40 to 36b-52 , inclusive, and 36b-60 to 36b-80 , inclusive, shall be known as the “Securities and Business Investments Law of Connecticut” and shall be applicable to all issuers of securities, broker-dealers, agents, investment advisers, investment adviser agents, sellers of business opportunities, and offerors in a tender offer, and to such other corporations, unincorporated associations, partnerships, limited liability companies and individuals who subject themselves to special provisions in said sections, or who, by violating any of the provisions of said sections become subject to the penalties provided in said sections."
+        ],
+        "sourceNotes": [
+          "(P.A. 94-122, S. 336, 340; P.A. 97-22, S. 3; P.A. 10-141, S. 1.)"
+        ],
+        "history": [
+          "History: P.A. 94-122 effective January 1, 1995; P.A. 97-22 made a technical change; P.A. 10-141 replaced reference to Sec. 36b-33 with reference to Sec. 36b-34, effective June 7, 2010."
+        ],
+        "annotations": [],
+        "plainText": "Sections 36b-2 to 36b-34 , inclusive, and 36b-40 to 36b-52 , inclusive, and 36b-60 to 36b-80 , inclusive, shall be known as the “Securities and Business Investments Law of Connecticut” and shall be applicable to all issuers of securities, broker-dealers, agents, investment advisers, investment adviser agents, sellers of business opportunities, and offerors in a tender offer, and to such other corporations, unincorporated associations, partnerships, limited liability companies and individuals who subject themselves to special provisions in said sections, or who, by violating any of the provisions of said sections become subject to the penalties provided in said sections."
+      }
+    }
+  ]
+}

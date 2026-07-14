@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-023i",
+  "number": "023i",
+  "name": "Commission on Women, Children and Seniors",
+  "title": {
+    "id": "title-02",
+    "number": "02",
+    "name": "General Assembly and Legislative Agencies"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_023i.htm",
+  "sections": [
+    {
+      "id": "section-2-135",
+      "kind": "section",
+      "citation": "2-135",
+      "citations": [
+        "2-135"
+      ],
+      "heading": "Sec. 2-135. Commission on Women, Children and Seniors. Membership. Quorum. Staff. Policy divisions.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_023i.htm#sec_2-135",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 2-135 is repealed, effective July 1, 2019."
+        ],
+        "sourceNotes": [
+          "(May Sp. Sess. P.A. 16-3, S. 129; P.A. 18-133, S. 1; P.A. 19-117, S. 398.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 2-135 is repealed, effective July 1, 2019."
+      }
+    },
+    {
+      "id": "section-2-136",
+      "kind": "section",
+      "citation": "2-136",
+      "citations": [
+        "2-136"
+      ],
+      "heading": "Sec. 2-136. Commission on Women, Children and Seniors. Duties. Status report. Powers.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_023i.htm#sec_2-136",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 2-136 is repealed, effective July 1, 2019."
+        ],
+        "sourceNotes": [
+          "(May Sp. Sess. P.A. 16-3, S. 130; P.A. 19-117, S. 398.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 2-136 is repealed, effective July 1, 2019."
+      }
+    }
+  ]
+}

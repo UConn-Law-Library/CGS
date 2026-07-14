@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-743hh",
+  "number": "743hh",
+  "name": "Commercial Leases: General Provisions",
+  "title": {
+    "id": "title-42",
+    "number": "42",
+    "name": "Business, Selling, Trading and Collection Practices"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_743hh.htm",
+  "sections": [
+    {
+      "id": "section-42-500",
+      "kind": "section",
+      "citation": "42-500",
+      "citations": [
+        "42-500"
+      ],
+      "heading": "Sec. 42-500. Insurance disclosures.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_743hh.htm#sec_42-500",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) If any insurance is required to be obtained for a lease pursuant to subsection (e) of section 42a-2A-305 , any such agreement as set forth in said subsection shall disclose in a conspicuous manner: (1) Whether the insurance is included in the lease for no additional charge; (2) if the insurance is not included in the lease or if there is an additional charge for obtaining insurance through the lessor, that the lessee may purchase the required insurance from an insurer of the lessee's choice, subject to the lessor's right to reject that insurer for reasonable cause; and (3) that the insurance policies offered by the lessor may duplicate coverage already provided by a lessee's personal insurance policies.",
+          "(b) If insurance on the leased goods is neither required nor provided in such lease or by agreement, the lease shall contain or be accompanied by a conspicuous statement in a record substantially as follows: “No insurance coverage for the leased goods, or loss of the leased goods, is provided under this lease.”."
+        ],
+        "sourceNotes": [
+          "(P.A. 09-134, S. 3; P.A. 10-5, S. 58.)"
+        ],
+        "history": [
+          "History: P.A. 09-134 effective October 1, 2009, and applicable to consumer leases entered, renewed, modified or extended on or after October 1, 2009; P.A. 10-5 made a technical change in Subsec. (b), effective May 5, 2010, and applicable to commercial leases entered, renewed, modified or extended on or after May 5, 2010."
+        ],
+        "annotations": [],
+        "plainText": "(a) If any insurance is required to be obtained for a lease pursuant to subsection (e) of section 42a-2A-305 , any such agreement as set forth in said subsection shall disclose in a conspicuous manner: (1) Whether the insurance is included in the lease for no additional charge; (2) if the insurance is not included in the lease or if there is an additional charge for obtaining insurance through the lessor, that the lessee may purchase the required insurance from an insurer of the lessee's choice, subject to the lessor's right to reject that insurer for reasonable cause; and (3) that the insurance policies offered by the lessor may duplicate coverage already provided by a lessee's personal insurance policies.\n\n(b) If insurance on the leased goods is neither required nor provided in such lease or by agreement, the lease shall contain or be accompanied by a conspicuous statement in a record substantially as follows: “No insurance coverage for the leased goods, or loss of the leased goods, is provided under this lease.”."
+      }
+    },
+    {
+      "id": "group-42-501-to-42-502-to-42-503-to-42-504-to-42-505-to-42-506-to-42-507-to-42-508-to-42-509-to-42-510",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "42-501",
+        "42-502",
+        "42-503",
+        "42-504",
+        "42-505",
+        "42-506",
+        "42-507",
+        "42-508",
+        "42-509",
+        "42-510"
+      ],
+      "heading": "Secs. 42-501 to 42-510.",
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_743hh.htm#secs_42-501_to_42-510",
+      "status": "reserved",
+      "content": {
+        "body": [
+          "Reserved for future use."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Reserved for future use."
+      }
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-188",
+  "number": "188",
+  "name": "State Library",
+  "title": {
+    "id": "title-11",
+    "number": "11",
+    "name": "Libraries and Museums"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_188.htm",
+  "sections": [
+    {
+      "id": "section-11-8i",
+      "kind": "section",
+      "citation": "11-8i",
+      "citations": [
+        "11-8i"
+      ],
+      "heading": "Sec. 11-8i. Historic documents preservation account.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_188.htm#sec_11-8i",
+      "status": "active",
+      "content": {
+        "body": [
+          "There is established a separate and nonlapsing account to be known as the “historic documents preservation account”. The account shall contain any moneys required by law to be deposited in the account. Investment earnings credited to the assets of the account shall become part of the assets of the account. Any balance remaining in the account at the end of any fiscal year shall be carried forward for the fiscal year next succeeding. The moneys in said account shall be used for the purposes of sections 11-8j to 11-8 l , inclusive."
+        ],
+        "sourceNotes": [
+          "(P.A. 00-146, S. 2, 8; P.A. 25-110, S. 32.)"
+        ],
+        "history": [
+          "History: P.A. 00-146 effective July 1, 2000; P.A. 25-110 deleted reference to General Fund, effective July 1, 2025."
+        ],
+        "annotations": [],
+        "plainText": "There is established a separate and nonlapsing account to be known as the “historic documents preservation account”. The account shall contain any moneys required by law to be deposited in the account. Investment earnings credited to the assets of the account shall become part of the assets of the account. Any balance remaining in the account at the end of any fiscal year shall be carried forward for the fiscal year next succeeding. The moneys in said account shall be used for the purposes of sections 11-8j to 11-8 l , inclusive."
+      }
+    }
+  ]
+}

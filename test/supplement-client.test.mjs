@@ -49,6 +49,74 @@ test("refuses a partial replacement of a grouped provision", () => {
   assert.throws(() => applyChapterOverlay(groupedBase, partialOverlay, 2026), /ambiguous/);
 });
 
+test("splits a reserved grouped placeholder when a supplement fills one citation", () => {
+  const reservedBase = {
+    id: "chapter-050",
+    sections: [{
+      id: "group-4-66i-to-4-66j",
+      kind: "group",
+      citation: null,
+      citations: ["4-66i", "4-66j"],
+      heading: "Secs. 4-66i and 4-66j.",
+      status: "reserved",
+      content: {
+        body: ["Reserved for future use.", "Note: The following chapter is also reserved."],
+        plainText: "Reserved for future use.\n\nNote: The following chapter is also reserved."
+      }
+    }]
+  };
+  const supplement = {
+    id: "chapter-050",
+    sourceUrl: "https://example.test/2026/supplement",
+    sections: [{ id: "section-4-66i", kind: "section", citation: "4-66i", citations: ["4-66i"] }]
+  };
+  const result = applyChapterOverlay(reservedBase, supplement, 2026);
+  assert.deepEqual(result.chapter.sections.map((section) => section.citations), [["4-66i"], ["4-66j"]]);
+  assert.equal(result.chapter.sections[1].heading, "Sec. 4-66j. Reserved for future use.");
+  assert.deepEqual(result.overlay.changes, [{ sectionId: "section-4-66i", kind: "replacement" }]);
+});
+
+test("prefers an exact provision over an overlapping reserved placeholder", () => {
+  const exact = { id: "section-9-163k", kind: "section", citation: "9-163k", citations: ["9-163k"] };
+  const reserved = {
+    id: "group-9-163-to-9-163z",
+    kind: "group",
+    citation: null,
+    citations: ["9-163", "9-163k", "9-163l"],
+    status: "reserved",
+    content: { body: ["Reserved for future use."], plainText: "Reserved for future use." }
+  };
+  const replacement = { ...exact, content: { plainText: "Updated text." } };
+  const result = applyChapterOverlay(
+    { id: "chapter-145", sections: [exact, reserved] },
+    { id: "chapter-145", sections: [replacement] },
+    2026
+  );
+  assert.equal(result.chapter.sections.filter((section) => section.citations.includes("9-163k")).length, 1);
+  assert.deepEqual(result.chapter.sections.find((section) => section.status === "reserved").citations, ["9-163", "9-163l"]);
+  assert.deepEqual(result.overlay.changes, [{ sectionId: "section-9-163k", kind: "replacement" }]);
+});
+
+test("replaces complete standalone provisions with one grouped supplement provision", () => {
+  const base = {
+    id: "chapter-184c",
+    sections: [
+      { id: "section-10-511", citation: "10-511", citations: ["10-511"] },
+      { id: "section-10-511a", citation: "10-511a", citations: ["10-511a"] }
+    ]
+  };
+  const grouped = {
+    id: "group-10-511-to-10-511a",
+    kind: "group",
+    citation: null,
+    citations: ["10-511", "10-511a"],
+    status: "repealed"
+  };
+  const result = applyChapterOverlay(base, { id: "chapter-184c", sections: [grouped] }, 2026);
+  assert.deepEqual(result.chapter.sections, [grouped]);
+  assert.deepEqual(result.overlay.changes, [{ sectionId: grouped.id, kind: "replacement" }]);
+});
+
 test("discovers supplement editions and resolves their chapter artifacts", async () => {
   const responses = new Map([
     ["https://example.test/data/supplements/manifest.json", { editions: [{ editionYear: 2026, path: "2026/manifest.json" }] }],

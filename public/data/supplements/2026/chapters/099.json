@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-099",
+  "number": "099",
+  "name": "Municipal Charters and Special Acts",
+  "title": {
+    "id": "title-07",
+    "number": "07",
+    "name": "Municipalities"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_099.htm",
+  "sections": [
+    {
+      "id": "section-7-194",
+      "kind": "section",
+      "citation": "7-194",
+      "citations": [
+        "7-194"
+      ],
+      "heading": "Sec. 7-194. Powers. Designation as a city.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_099.htm#sec_7-194",
+      "status": "active",
+      "content": {
+        "body": [
+          "Subject to the provisions of section 7-192, a town, city or borough that has a charter or adopts or amends a charter under the provisions of this chapter shall have the following specific powers in addition to all powers granted to towns, cities and boroughs under the Constitution and general statutes: (1) To manage, regulate and control the finances and property, real and personal, of the town, city or borough, (2) to regulate and provide for the sale, conveyance, transfer and release of town, city or borough property, and (3) to provide for the execution of contracts and evidence of indebtedness issued by the town, city or borough. A town described in this section may designate itself a city through the adoption or amendment of its charter. Any town that designates itself a city pursuant to this section shall be deemed a consolidated town and city for the purposes of the general statutes."
+        ],
+        "sourceNotes": [
+          "(1957, P.A. 465, S. 8; 1961, P.A. 490; 517, S. 89; 1967, P.A. 19; 1971, P.A. 802, S. 12; 1972, P.A. 279, S. 1, 2; P.A. 75-516, S. 1, 2; P.A. 79-531, S. 2; 79-618, S. 2; P.A. 80-403, S. 8, 10; 80-483, S. 19, 186; P.A. 81-219, S. 2, 3; P.A. 25-73, S. 1.)"
+        ],
+        "history": [
+          "History: 1961 acts made section applicable to municipalities having a charter as well as those which adopted or amended a charter under provisions of this chapter and amended Subdiv. (50) to remove obsolete exception for court officers; 1967 act amended Subdiv. (57) to raise maximum penalty from $25 to $100; 1971 act repealed Subdiv. (41) re building code regulation; 1972 act added Subdiv. (58) re merit and civil service systems; P.A. 75-516 added Subdiv. (59) re leasing real property; P.A. 79-531 added Subdivs. (60) and (61) re fair housing and data processing services; P.A. 79-618 added Subdiv. (62) re ethics code; P.A. 80-403 added Subdiv. (63) re discriminatory practices; P.A. 80-483 made technical changes; P.A. 81-219 transferred most powers from this section to Sec. 7-148, effective October 1, 1982; P.A. 25-73 added provision re a town may designate itself as a city pursuant to a charter adoption or revision."
+        ],
+        "annotations": [],
+        "plainText": "Subject to the provisions of section 7-192, a town, city or borough that has a charter or adopts or amends a charter under the provisions of this chapter shall have the following specific powers in addition to all powers granted to towns, cities and boroughs under the Constitution and general statutes: (1) To manage, regulate and control the finances and property, real and personal, of the town, city or borough, (2) to regulate and provide for the sale, conveyance, transfer and release of town, city or borough property, and (3) to provide for the execution of contracts and evidence of indebtedness issued by the town, city or borough. A town described in this section may designate itself a city through the adoption or amendment of its charter. Any town that designates itself a city pursuant to this section shall be deemed a consolidated town and city for the purposes of the general statutes."
+      }
+    }
+  ]
+}

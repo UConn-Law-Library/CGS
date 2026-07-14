@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-821",
+  "number": "821",
+  "name": "Land Titles",
+  "title": {
+    "id": "title-47",
+    "number": "47",
+    "name": "Land and Land Titles"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_821.htm",
+  "sections": [
+    {
+      "id": "section-47-34a",
+      "kind": "section",
+      "citation": "47-34a",
+      "citations": [
+        "47-34a"
+      ],
+      "heading": "Sec. 47-34a. Unlawful destruction, disturbance or removal of surveyor's marker or monument.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_821.htm#sec_47-34a",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) Any person who knowingly injures, destroys, disturbs or removes any marker properly placed on any tract of land or street or highway line by a surveyor, or by any person at the direction of a surveyor, for the purpose of designating any point, course or line in the boundary of such tract of land, street or highway, shall be fined not less than five hundred dollars or more than one thousand dollars.",
+          "(b) Notwithstanding the provisions of subsection (a) of this section, a surveyor licensed under chapter 391, or a person acting at the direction of any such licensed surveyor, may remove an existing marker in order to place an upgraded marker in the same location.",
+          "(c) Any person who knowingly injures, destroys, disturbs or removes any monument that has been established by the National Geodetic Survey for use in the determination of spatial location relative to the Connecticut Plane Coordinate System specified in section 13a-255 or precise elevation datum shall be fined not less than two thousand dollars or more than five thousand dollars."
+        ],
+        "sourceNotes": [
+          "(1971, P.A. 804; P.A. 88-99; P.A. 03-115, S. 82; P.A. 04-257, S. 75; P.A. 25-65, S. 2.)"
+        ],
+        "history": [
+          "History: P.A. 88-99 increased fine from not more than $50 to not less than $150 nor more than $500 and added Subsec. (b) permitting surveyor or person acting at the direction of any such surveyor to remove existing marker in order to place upgraded marker in same location; P.A. 03-115 amended Subsec. (a) to include any marker placed on any street or highway line and to increase the minimum fine from $150 to $500 and the maximum fine from $500 to $1,000, and added Subsec. (c) to establish a fine for any person who knowingly injures, destroys, disturbs or removes any monument established by the National Geodetic Survey or Connecticut Geodetic Survey for use in determination of spatial location re Connecticut coordinate systems or precise elevation datum, effective June 18, 2003; P.A. 04-257 made a technical change in Subsecs. (a) and (c), effective June 14, 2004; P.A. 25-65 amended Subsec. (c) by deleting reference to Connecticut Geodetic Survey and replacing reference to Connecticut coordinate systems with reference to Connecticut Plane Coordinate System, effective January 1, 2026."
+        ],
+        "annotations": [],
+        "plainText": "(a) Any person who knowingly injures, destroys, disturbs or removes any marker properly placed on any tract of land or street or highway line by a surveyor, or by any person at the direction of a surveyor, for the purpose of designating any point, course or line in the boundary of such tract of land, street or highway, shall be fined not less than five hundred dollars or more than one thousand dollars.\n\n(b) Notwithstanding the provisions of subsection (a) of this section, a surveyor licensed under chapter 391, or a person acting at the direction of any such licensed surveyor, may remove an existing marker in order to place an upgraded marker in the same location.\n\n(c) Any person who knowingly injures, destroys, disturbs or removes any monument that has been established by the National Geodetic Survey for use in the determination of spatial location relative to the Connecticut Plane Coordinate System specified in section 13a-255 or precise elevation datum shall be fined not less than two thousand dollars or more than five thousand dollars."
+      }
+    }
+  ]
+}

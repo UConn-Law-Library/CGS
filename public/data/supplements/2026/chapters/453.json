@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-453",
+  "number": "453",
+  "name": "Recreation and Natural Heritage Trust Program. Connecticut Heritage Areas",
+  "title": {
+    "id": "title-23",
+    "number": "23",
+    "name": "Parks, Forests and Public Shade Trees"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_453.htm",
+  "sections": [
+    {
+      "id": "section-23-79",
+      "kind": "section",
+      "citation": "23-79",
+      "citations": [
+        "23-79"
+      ],
+      "heading": "Sec. 23-79. Stewardship account.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_453.htm#sec_23-79",
+      "status": "active",
+      "content": {
+        "body": [
+          "To ensure the proper management of land acquired pursuant to sections 23-73 to 23-79, inclusive, concurrent with each land acquisition, an amount not to exceed twenty per cent of the appraised value of the land may be allocated from the proceeds of bonds authorized for the purposes of this program to be used for the management of acquisitions or to be deposited in a stewardship account that shall be established by the Comptroller as a separate, nonlapsing account. Income derived from the investment of such account shall be credited to such account and such account shall be used for the management of acquisitions. The commissioner may name a cooperator as primary manager of the land and on such nomination may authorize, at reasonable times and in reasonable amounts, payments to the primary manager for expenses incurred in the management of program acquisitions. A cooperator shall not be required to provide matching funds for any expenditure from a stewardship account. Such account shall also receive any other funds, as required by law or any contributions from others."
+        ],
+        "sourceNotes": [
+          "(P.A. 86-406, S. 8, 15; P.A. 87-448, S. 4, 6; June Sp. Sess. P.A. 93-1, S. 17, 45; May 25 Sp. Sess. P.A. 94-1, S. 26, 130; P.A. 14-98, S. 59; P.A. 25-110, S. 92.)"
+        ],
+        "history": [
+          "History: P.A. 87-448 added provision that cooperators shall not be required to match stewardship account expenditures; June Sp. Sess. P.A. 93-1 amended section by deleting references to “fund” and authorized use of bond proceeds for management of acquisitions, effective July 1, 1993; May 25 Sp. Sess. P.A. 94-1 made technical change, effective July 1, 1994; (Revisor's note: In 1999 a reference to Sec. 23-80 was changed editorially by the Revisors to Sec. 23-79, since Sec. 23-80 was repealed by P.A. 98-157); P.A. 14-98 added provision re receipt of other funds or contributions, effective May 22, 2014; P.A. 25-110 deleted reference to General Fund and made technical changes, effective July 1, 2025."
+        ],
+        "annotations": [],
+        "plainText": "To ensure the proper management of land acquired pursuant to sections 23-73 to 23-79, inclusive, concurrent with each land acquisition, an amount not to exceed twenty per cent of the appraised value of the land may be allocated from the proceeds of bonds authorized for the purposes of this program to be used for the management of acquisitions or to be deposited in a stewardship account that shall be established by the Comptroller as a separate, nonlapsing account. Income derived from the investment of such account shall be credited to such account and such account shall be used for the management of acquisitions. The commissioner may name a cooperator as primary manager of the land and on such nomination may authorize, at reasonable times and in reasonable amounts, payments to the primary manager for expenses incurred in the management of program acquisitions. A cooperator shall not be required to provide matching funds for any expenditure from a stewardship account. Such account shall also receive any other funds, as required by law or any contributions from others."
+      }
+    }
+  ]
+}

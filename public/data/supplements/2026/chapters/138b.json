@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-138b",
+  "number": "138b",
+  "name": "Housing Programs for Homeless Persons",
+  "title": {
+    "id": "title-08",
+    "number": "08",
+    "name": "Zoning, Planning, Housing and Economic and Community Development"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_138b.htm",
+  "sections": [
+    {
+      "id": "section-8-360",
+      "kind": "section",
+      "citation": "8-360",
+      "citations": [
+        "8-360"
+      ],
+      "heading": "Sec. 8-360. Nondisclosure of location of housing for domestic violence or sexual assault victims.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_138b.htm#sec_8-360",
+      "status": "active",
+      "content": {
+        "body": [
+          "Notwithstanding the provisions of chapter 14, (1) a public agency, as defined in section 1-200, shall not disclose any information indicating the location of a shelter or transitional housing for victims of domestic violence or sexual assault, and (2) any portion of a meeting of a public agency in which discussions of a shelter or transitional housing for such victims would reveal the location of such shelter or transitional housing may be held in executive session."
+        ],
+        "sourceNotes": [
+          "(P.A. 89-38, S. 1, 2; P.A. 25-70, S. 1.)"
+        ],
+        "history": [
+          "History: (Revisor's note: In 1997 references to “sections 1-15, 1-18a, 1-19 to 1-19b, inclusive, and 1-21 to 1-21k, inclusive,” were changed editorially by the Revisors to the corresponding section numbers in Ch. 3 and Sec. 19a-342, reflecting the transfer of those sections); P.A. 25-70 replaced “Nothing in” with “Notwithstanding”, replaced reference to specific statutory sections with reference to Ch. 14, replaced “shall be construed to require” with “shall not”, designated existing provision as Subdiv. (1) and amended same to add “sexual assault” and added Subdiv. (2) re authorization to hold portion of certain public agency meetings in executive session."
+        ],
+        "annotations": [],
+        "plainText": "Notwithstanding the provisions of chapter 14, (1) a public agency, as defined in section 1-200, shall not disclose any information indicating the location of a shelter or transitional housing for victims of domestic violence or sexual assault, and (2) any portion of a meeting of a public agency in which discussions of a shelter or transitional housing for such victims would reveal the location of such shelter or transitional housing may be held in executive session."
+      }
+    }
+  ]
+}

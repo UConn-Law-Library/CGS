@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-930",
+  "number": "930",
+  "name": "Uniform Commercial Real Estate Receivership Act",
+  "title": {
+    "id": "title-52",
+    "number": "52",
+    "name": "Civil Actions"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_930.htm",
+  "sections": [
+    {
+      "id": "section-52-625",
+      "kind": "section",
+      "citation": "52-625",
+      "citations": [
+        "52-625"
+      ],
+      "heading": "Sec. 52-625. Disqualification from appointment as receiver; disclosure of interest.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_930.htm#sec_52-625",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) The court may not appoint a person as receiver unless the person submits to the court a statement under penalty of perjury that the person is not disqualified.",
+          "(b) Except as provided in subsection (c) of this section, a person is disqualified from appointment as receiver if the person:",
+          "(1) Is an affiliate of a party;",
+          "(2) Has an interest materially adverse to an interest of a party;",
+          "(3) Has a material financial interest in the outcome of the action, other than compensation the court may allow the receiver;",
+          "(4) Has a debtor-creditor relationship with a party; or",
+          "(5) Holds an equity interest in a party, other than a noncontrolling interest in a publicly traded company.",
+          "(c) A person is not disqualified from appointment as receiver solely because the person:",
+          "(1) Was appointed receiver or is owed compensation in an unrelated matter involving a party or was engaged by a party in a matter unrelated to the receivership;",
+          "(2) Is an individual obligated to a party on a debt that is not in default and was incurred primarily for personal, family or household purposes; or",
+          "(3) Maintains with a party a deposit account, as defined in section 42a-9-102.",
+          "(d) A person seeking appointment of a receiver may nominate a person to serve as receiver, but the court is not bound by the nomination."
+        ],
+        "sourceNotes": [
+          "(P.A. 21-80, S. 7; P.A. 22-26, S. 64; P.A. 25-145, S. 119.)"
+        ],
+        "history": [
+          "History: P.A. 21-80 effective July 1, 2022; P.A. 22-26 changed effective date of P.A. 21-80, S. 7, from July 1, 2022, to July 1, 2023, effective May 10, 2022; P.A. 25-145 deleted “subdivision (29) of subsection (a)” in reference to Sec. 42a-9-102 in Subsec. (c)(3), effective January 1, 2026."
+        ],
+        "annotations": [],
+        "plainText": "(a) The court may not appoint a person as receiver unless the person submits to the court a statement under penalty of perjury that the person is not disqualified.\n\n(b) Except as provided in subsection (c) of this section, a person is disqualified from appointment as receiver if the person:\n\n(1) Is an affiliate of a party;\n\n(2) Has an interest materially adverse to an interest of a party;\n\n(3) Has a material financial interest in the outcome of the action, other than compensation the court may allow the receiver;\n\n(4) Has a debtor-creditor relationship with a party; or\n\n(5) Holds an equity interest in a party, other than a noncontrolling interest in a publicly traded company.\n\n(c) A person is not disqualified from appointment as receiver solely because the person:\n\n(1) Was appointed receiver or is owed compensation in an unrelated matter involving a party or was engaged by a party in a matter unrelated to the receivership;\n\n(2) Is an individual obligated to a party on a debt that is not in default and was incurred primarily for personal, family or household purposes; or\n\n(3) Maintains with a party a deposit account, as defined in section 42a-9-102.\n\n(d) A person seeking appointment of a receiver may nominate a person to serve as receiver, but the court is not bound by the nomination."
+      }
+    }
+  ]
+}

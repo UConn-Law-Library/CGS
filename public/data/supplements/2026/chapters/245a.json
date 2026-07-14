@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-245a",
+  "number": "245a",
+  "name": "Railroad Construction and Location",
+  "title": {
+    "id": "title-13b",
+    "number": "13b",
+    "name": "Transportation"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_245a.htm",
+  "sections": [
+    {
+      "id": "section-13b-244",
+      "kind": "section",
+      "citation": "13b-244",
+      "citations": [
+        "13b-244"
+      ],
+      "heading": "Sec. 13b-244. (Formerly Sec. 16-76). Powers.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_245a.htm#sec_13b-244",
+      "status": "active",
+      "content": {
+        "body": [
+          "Each railroad company may hold such real estate as may be convenient for accomplishing the objects of its organization. Each railroad company and the Commissioner of Transportation may by the agents of such company or of the commissioner enter such places as may be designated by its directors or the commissioner for the purpose of making surveys and determining the line whereon to construct a railroad and may construct, equip and maintain a railroad, with one or more tracks, over the route specified in its charter, in the case of the railroad company, and transport persons or property thereon by any power."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 5465; P.A. 25-65, S. 10.)"
+        ],
+        "history": [
+          "History: In 1981 Sec. 16-76 transferred to Sec. 13b-244; P.A. 25-65 added references to the Commissioner of Transportation and made technical and conforming changes, effective July 1, 2025."
+        ],
+        "annotations": [],
+        "plainText": "Each railroad company may hold such real estate as may be convenient for accomplishing the objects of its organization. Each railroad company and the Commissioner of Transportation may by the agents of such company or of the commissioner enter such places as may be designated by its directors or the commissioner for the purpose of making surveys and determining the line whereon to construct a railroad and may construct, equip and maintain a railroad, with one or more tracks, over the route specified in its charter, in the case of the railroad company, and transport persons or property thereon by any power."
+      }
+    }
+  ]
+}

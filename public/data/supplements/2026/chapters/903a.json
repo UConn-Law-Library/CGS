@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-903a",
+  "number": "903a",
+  "name": "Prejudgment Remedies",
+  "title": {
+    "id": "title-52",
+    "number": "52",
+    "name": "Civil Actions"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_903a.htm",
+  "sections": [
+    {
+      "id": "section-52-278f",
+      "kind": "section",
+      "citation": "52-278f",
+      "citations": [
+        "52-278f"
+      ],
+      "heading": "Sec. 52-278f. Issuance of prejudgment remedy when defendant in commercial transaction has waived notice and hearing.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_903a.htm#sec_52-278f",
+      "status": "active",
+      "content": {
+        "body": [
+          "In an action upon a commercial transaction, as defined in section 52-278a, wherein the defendant has waived his right to a notice and hearing under sections 52-278a to 52-278g, inclusive, the attorney for the plaintiff shall issue the writ for a prejudgment remedy without securing a court order provided that (1) the complaint shall set forth a copy of the waiver; (2) the plaintiff shall file an affidavit sworn to by the plaintiff or any competent affiant setting forth a statement of facts sufficient to show that there is probable cause that a judgment in the amount of the prejudgment remedy sought, or in an amount greater than the amount of the prejudgment remedy sought, taking into account any known defenses, counterclaims or set-offs, will be rendered in the matter in favor of the plaintiff; (3) the plaintiff shall include in the process served on the defendant a notice satisfying the requirements of subsections (b) and (c) of section 52-278e; and (4) service of process of such complaint be returned to the court (A) within twelve days, inclusive, after the earlier of (i) service of process upon the defendant preventing the dissipation of property, or (ii) service of process upon any third person holding property of the defendant, and (B) at least six days before the return date."
+        ],
+        "sourceNotes": [
+          "(P.A. 73-431, S. 6, 8; P.A. 91-315, S. 2, 5; P.A. 93-431, S. 4, 10; P.A. 25-91, S. 29.)"
+        ],
+        "history": [
+          "History: P.A. 91-315 added Subdiv. (2) requiring the plaintiff to file an affidavit setting forth facts showing there is probable cause to sustain his claim and Subdiv. (3) requiring the plaintiff to provide a notice to the defendant satisfying the requirements of Sec. 52-278e(b); P.A. 93-431 amended Subdiv. (2) to require the affidavit to contain facts sufficient to show that there is probable cause “that a judgment in the amount of the prejudgment remedy sought, or in an amount greater than the amount of the prejudgment remedy sought, taking into account any known defenses, counterclaims or set-offs, will be rendered in the matter in favor of the plaintiff” rather than that there is probable cause “to sustain the validity of the plaintiff's claim” and amended Subdiv. (3) to add reference to Sec. 52-278e(c), effective January 1, 1994; P.A. 25-91 added Subdiv. (4) re time frame for when service of process of complaint be returned to the court and made technical changes."
+        ],
+        "annotations": [],
+        "plainText": "In an action upon a commercial transaction, as defined in section 52-278a, wherein the defendant has waived his right to a notice and hearing under sections 52-278a to 52-278g, inclusive, the attorney for the plaintiff shall issue the writ for a prejudgment remedy without securing a court order provided that (1) the complaint shall set forth a copy of the waiver; (2) the plaintiff shall file an affidavit sworn to by the plaintiff or any competent affiant setting forth a statement of facts sufficient to show that there is probable cause that a judgment in the amount of the prejudgment remedy sought, or in an amount greater than the amount of the prejudgment remedy sought, taking into account any known defenses, counterclaims or set-offs, will be rendered in the matter in favor of the plaintiff; (3) the plaintiff shall include in the process served on the defendant a notice satisfying the requirements of subsections (b) and (c) of section 52-278e; and (4) service of process of such complaint be returned to the court (A) within twelve days, inclusive, after the earlier of (i) service of process upon the defendant preventing the dissipation of property, or (ii) service of process upon any third person holding property of the defendant, and (B) at least six days before the return date."
+      }
+    }
+  ]
+}

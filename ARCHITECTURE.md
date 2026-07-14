@@ -94,6 +94,6 @@ The in-repository schema engine implements the JSON Schema keywords used by thes
 
 ## Next increments
 
-- Expose reviewed supplement selection and change labels in the reader interface once the first real edition is published.
+- Expose the published 2026 supplement selection and change labels in the reader interface.
 - Derive edition-aware search artifacts after supplement-selection behavior is accepted in the reader.
-- Add a reviewed supplement acquisition pipeline when the first official edition is selected.
+- Add bounded supplement-specific diff policy and reporting to the coordinated primary-corpus refresh path.

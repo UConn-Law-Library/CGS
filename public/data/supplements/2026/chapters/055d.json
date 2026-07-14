@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-055d",
+  "number": "055d",
+  "name": "Public-Private Partnerships",
+  "title": {
+    "id": "title-04",
+    "number": "04",
+    "name": "Management of State Agencies"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_055d.htm",
+  "sections": [
+    {
+      "id": "section-4-261",
+      "kind": "section",
+      "citation": "4-261",
+      "citations": [
+        "4-261"
+      ],
+      "heading": "Sec. 4-261. Prevailing wage requirements or project labor agreement. Compliance with state and local requirements. Agreements re operations or maintenance of state facilities.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_055d.htm#sec_4-261",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) Each project shall either be subject to the prevailing wage requirements pursuant to section 31-53 or the rate established by the use of a project labor agreement. The department shall provide notice of which requirement applies prior to soliciting bids or proposals for such project.",
+          "(b) Each project shall comply with: (1) The state's environmental policy requirements as set forth in sections 22a-1 and 22a-1a, (2) the requirements of the spending allocation program for small contractors as set forth in section 4a-60g, and (3) any applicable permitting or inspection requirements for projects of a similar type, scope and size as set forth in the general statutes or the local ordinances of the municipality where the project is to be located.",
+          "(c) The department shall comply with the provisions of section 4e-16, provided, notwithstanding the provisions of subsection (a) of section 4e-16, if the department enters into a partnership agreement concerning the operations or maintenance of a state facility that meets the definition of a privatization contract, as defined in section 4e-1, the department shall be subject to the requirements of section 4e-16 regardless of whether such services are currently privatized."
+        ],
+        "sourceNotes": [
+          "(Oct. Sp. Sess. P.A. 11-1, S. 86; P.A. 21-99, S. 8; P.A. 25-168, S. 222.)"
+        ],
+        "history": [
+          "History: Oct. Sp. Sess. P.A. 11-1 effective October 27, 2011; P.A. 21-99 replaced references to agency with references to department, amended Subsecs. (a) and (b) to replace “public-private partnership project” with “project”, and amended Subsec. (c) to replace reference to agency subject to Sec. 4e-16 with “The department” and make conforming changes, effective June 28, 2021; P.A. 25-168 amended Subsec. (b) to replace reference to “set-aside program” with reference to “spending allocation program”."
+        ],
+        "annotations": [],
+        "plainText": "(a) Each project shall either be subject to the prevailing wage requirements pursuant to section 31-53 or the rate established by the use of a project labor agreement. The department shall provide notice of which requirement applies prior to soliciting bids or proposals for such project.\n\n(b) Each project shall comply with: (1) The state's environmental policy requirements as set forth in sections 22a-1 and 22a-1a, (2) the requirements of the spending allocation program for small contractors as set forth in section 4a-60g, and (3) any applicable permitting or inspection requirements for projects of a similar type, scope and size as set forth in the general statutes or the local ordinances of the municipality where the project is to be located.\n\n(c) The department shall comply with the provisions of section 4e-16, provided, notwithstanding the provisions of subsection (a) of section 4e-16, if the department enters into a partnership agreement concerning the operations or maintenance of a state facility that meets the definition of a privatization contract, as defined in section 4e-1, the department shall be subject to the requirements of section 4e-16 regardless of whether such services are currently privatized."
+      }
+    }
+  ]
+}

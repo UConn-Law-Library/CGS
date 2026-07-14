@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-532a",
+  "number": "532a",
+  "name": "Boxing and Mixed Martial Arts",
+  "title": {
+    "id": "title-29",
+    "number": "29",
+    "name": "Public Safety and State Police"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_532a.htm",
+  "sections": [
+    {
+      "id": "section-29-143w",
+      "kind": "section",
+      "citation": "29-143w",
+      "citations": [
+        "29-143w"
+      ],
+      "heading": "Sec. 29-143w. (Formerly Sec. 21a-208). Betting prohibited. Exception.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_532a.htm#sec_29-143w",
+      "status": "active",
+      "content": {
+        "body": [
+          "No person shall bet or wager upon the result of any boxing or mixed martial arts match, unless such bet or wager is conducted pursuant to sections 12-850 to 12-872, inclusive."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 3519; 1972, P.A. 55, S. 9; P.A. 99-194, S. 19; P.A. 13-259, S. 13; P.A. 25-112, S. 13.)"
+        ],
+        "history": [
+          "History: 1972 act specified prohibition applies to boxing and wrestling; Sec. 19-338 transferred to Sec. 21a-208 in 1983; P.A. 99-194 replaced reference to boxing exhibition with reference to boxing match and replaced reference to wrestling bout with reference to boxing exhibition; Sec. 21a-208 transferred to Sec. 29-143w in 2007; P.A. 13-259 made provisions applicable to mixed martial arts match and deleted reference to wrestling exhibition; P.A. 25-112 added exception re bet or wager conducted pursuant to Secs. 12-850 to 12-872, inclusive, effective June 24, 2025."
+        ],
+        "annotations": [],
+        "plainText": "No person shall bet or wager upon the result of any boxing or mixed martial arts match, unless such bet or wager is conducted pursuant to sections 12-850 to 12-872, inclusive."
+      }
+    }
+  ]
+}

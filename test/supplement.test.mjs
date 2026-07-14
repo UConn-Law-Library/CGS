@@ -6,6 +6,7 @@ import test from "node:test";
 import { importLegacy } from "../scripts/lib/importer.mjs";
 import { importSupplement } from "../scripts/lib/supplement-importer.mjs";
 import { generateSupplementIndex } from "../scripts/lib/supplement-index.mjs";
+import { classifyChapterOverlay } from "../scripts/lib/supplement-overlay.mjs";
 import { validateSupplement } from "../scripts/lib/supplement-validator.mjs";
 import { validateSchema } from "../scripts/lib/json-schema.mjs";
 
@@ -95,6 +96,15 @@ test("rejects partial overlays of grouped base provisions", async (t) => {
   t.after(() => rm(root, { recursive: true, force: true }));
   const base = path.join(root, "base");
   await importLegacy({ inputDir: fixture, outputDir: base, generatedAt: "2026-07-14T00:00:00Z" });
+  const baseChapterPath = path.join(base, "chapters", "001.json");
+  const baseChapter = JSON.parse(await readFile(baseChapterPath, "utf8"));
+  const groupedProvision = baseChapter.sections.find((section) => section.citations?.includes("1-1o"));
+  groupedProvision.status = "active";
+  groupedProvision.content = {
+    body: ["Substantive grouped provision text."],
+    plainText: "Substantive grouped provision text."
+  };
+  await writeFile(baseChapterPath, `${JSON.stringify(baseChapter, null, 2)}\n`, "utf8");
   const input = await supplementInput(root, { partialGroup: true });
   await assert.rejects(() => importSupplement({
     inputDir: input,
@@ -103,4 +113,58 @@ test("rejects partial overlays of grouped base provisions", async (t) => {
     editionYear: 2026,
     generatedAt: "2026-08-01T00:00:00Z"
   }), /partial grouped-provision overlays are ambiguous/);
+});
+
+test("classifies a new provision carved from a reserved grouped placeholder", () => {
+  const baseChapter = {
+    id: "chapter-050",
+    sections: [{
+      id: "group-4-66i-to-4-66j",
+      kind: "group",
+      citations: ["4-66i", "4-66j"],
+      status: "reserved",
+      content: { body: ["Reserved for future use."], plainText: "Reserved for future use." }
+    }]
+  };
+  const overlayChapter = {
+    id: "chapter-050",
+    sections: [{ id: "section-4-66i", citation: "4-66i", citations: ["4-66i"] }]
+  };
+  assert.deepEqual(classifyChapterOverlay(overlayChapter, baseChapter), { replacements: 1, additions: 0 });
+});
+
+test("classifies an exact provision despite an overlapping reserved placeholder", () => {
+  const baseChapter = {
+    id: "chapter-145",
+    sections: [
+      { id: "section-9-163k", kind: "section", citation: "9-163k", citations: ["9-163k"] },
+      {
+        id: "group-9-163-to-9-163z",
+        kind: "group",
+        citations: ["9-163", "9-163k", "9-163l"],
+        status: "reserved",
+        content: { body: ["Reserved for future use."], plainText: "Reserved for future use." }
+      }
+    ]
+  };
+  const overlayChapter = {
+    id: "chapter-145",
+    sections: [{ id: "section-9-163k", citation: "9-163k", citations: ["9-163k"] }]
+  };
+  assert.deepEqual(classifyChapterOverlay(overlayChapter, baseChapter), { replacements: 1, additions: 0 });
+});
+
+test("classifies a grouped overlay that exactly spans standalone base provisions", () => {
+  const baseChapter = {
+    id: "chapter-184c",
+    sections: [
+      { id: "section-10-511", citation: "10-511", citations: ["10-511"] },
+      { id: "section-10-511a", citation: "10-511a", citations: ["10-511a"] }
+    ]
+  };
+  const overlayChapter = {
+    id: "chapter-184c",
+    sections: [{ id: "group-10-511-to-10-511a", citations: ["10-511", "10-511a"] }]
+  };
+  assert.deepEqual(classifyChapterOverlay(overlayChapter, baseChapter), { replacements: 1, additions: 0 });
 });

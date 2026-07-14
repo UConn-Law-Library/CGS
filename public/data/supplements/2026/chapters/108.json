@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-108",
+  "number": "108",
+  "name": "Municipal Reserve Fund",
+  "title": {
+    "id": "title-07",
+    "number": "07",
+    "name": "Municipalities"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_108.htm",
+  "sections": [
+    {
+      "id": "section-7-364",
+      "kind": "section",
+      "citation": "7-364",
+      "citations": [
+        "7-364"
+      ],
+      "heading": "Sec. 7-364. Use of fund.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_108.htm#sec_7-364",
+      "status": "active",
+      "content": {
+        "body": [
+          "Upon the recommendation of the budget-making authority and approval by the legislative body, any part or the whole of such fund may be used for (1) capital and nonrecurring expenditures, but such use shall be restricted to the financing of all or part of the planning, construction, reconstruction or acquisition of any specific capital improvement, including, but not limited to, planning, construction, reconstruction or acquisition intended to increase the resiliency of a capital improvement against the impacts of climate change, including, but not limited to, increased precipitation, flooding, sea level rise and extreme heat, or the acquisition of any specific item of equipment, (2) costs associated with a property tax revaluation, and (3) costs associated with the preparation, amendment or adoption of a plan of conservation and development pursuant to section 8-23. Upon the approval of any such expenditure, an appropriation shall be set up, plainly designated for the project, acquisition, revaluation or plan of conservation and development for which it has been authorized, and such unexpended appropriation may be continued until such project, acquisition, revaluation or plan of conservation and development is completed. Any unexpended portion of such appropriation remaining after such completion shall revert to said reserve fund."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 797; P.A. 15-229, S. 3; P.A. 16-180, S. 4; P.A. 25-33, S. 9.)"
+        ],
+        "history": [
+          "History: P.A. 15-229 designated existing provision re capital and nonrecurring expenditures as Subdiv. (1), added Subdiv. (2) re costs associated with property tax revaluation as permitted use of reserve fund moneys and made conforming changes; P.A. 16-180 added Subdiv. (3) re costs associated with preparation, amendment or adoption of plan of conservation and development pursuant to Sec. 8-23 and made conforming changes; P.A. 25-33 added reference to planning and construction intended to increase resiliency against impacts of climate change, effective July 1, 2025."
+        ],
+        "annotations": [],
+        "plainText": "Upon the recommendation of the budget-making authority and approval by the legislative body, any part or the whole of such fund may be used for (1) capital and nonrecurring expenditures, but such use shall be restricted to the financing of all or part of the planning, construction, reconstruction or acquisition of any specific capital improvement, including, but not limited to, planning, construction, reconstruction or acquisition intended to increase the resiliency of a capital improvement against the impacts of climate change, including, but not limited to, increased precipitation, flooding, sea level rise and extreme heat, or the acquisition of any specific item of equipment, (2) costs associated with a property tax revaluation, and (3) costs associated with the preparation, amendment or adoption of a plan of conservation and development pursuant to section 8-23. Upon the approval of any such expenditure, an appropriation shall be set up, plainly designated for the project, acquisition, revaluation or plan of conservation and development for which it has been authorized, and such unexpended appropriation may be continued until such project, acquisition, revaluation or plan of conservation and development is completed. Any unexpended portion of such appropriation remaining after such completion shall revert to said reserve fund."
+      }
+    }
+  ]
+}

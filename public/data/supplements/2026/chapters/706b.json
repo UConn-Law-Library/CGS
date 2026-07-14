@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-706b",
+  "number": "706b",
+  "name": "Office of the Healthcare Advocate and Office of the Behavioral Health Advocate",
+  "title": {
+    "id": "title-38a",
+    "number": "38a",
+    "name": "Insurance"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_706b.htm",
+  "sections": [
+    {
+      "id": "section-38a-1053",
+      "kind": "section",
+      "citation": "38a-1053",
+      "citations": [
+        "38a-1053"
+      ],
+      "heading": "Sec. 38a-1053. Online hospital financial assistance portal.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_706b.htm#sec_38a-1053",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) As used in this section, (1) “hospital” has the same meaning as provided in section 19a-490; and (2) “hospital financial assistance” means any program administered by a hospital that reduces, in whole or in part, a patient's liability for the cost of providing services, as defined in section 19a-673.",
+          "(b) The Office of the Healthcare Advocate shall contract with a vendor to develop an online hospital financial assistance portal for use by patients and family members. Such portal shall serve as a navigation tool to help patients and family members identify and apply for hospital financial assistance at hospitals in the state. The portal may include, but need not be limited to, (1) technical assistance and tools that streamline the application process for hospital financial assistance, (2) a screening tool to help determine whether patients may be eligible for hospital financial assistance, and (3) information to assist patients and family members in avoiding future medical debt.",
+          "(c) The Office of the Healthcare Advocate may, (1) in consultation with the Office of Policy and Management, publish on the Office of the Healthcare Advocate's Internet web site information regarding the state's medical debt erasure initiative authorized pursuant to section 48 of public act 23-204*, as amended by section 1 of public act 24-81*, and (2) in consultation with relevant organizations, develop recommendations concerning such initiative that may assist patients and family members in avoiding future medical debt, including, but not limited to, methods to streamline the application process for hospital financial assistance.",
+          "(d) On and after July 1, 2026, any hospital maintaining a financial assistance program shall provide the Office of the Healthcare Advocate with the (1) links for each Internet web site for such program, and (2) telephone number and electronic mail address for the hospital's financial assistance referral contact. If a hospital revises its hospital financial assistance application form, changes its financial assistance referral contact or establishes a new hospital financial assistance program, the hospital shall notify the Office of the Healthcare Advocate of such revisions, changes or new program and provide said office with any new links for each Internet web site or the telephone number and electronic mail address of the new referral contact for such program not later than thirty days after making such revisions or changes or establishing a new program."
+        ],
+        "sourceNotes": [
+          "(P.A. 25-168, S. 182.)",
+          "*Note: Section 48 of public act 23-204 and section 1 of public act 24-81 are special in nature and therefore have not been codified but remain in full force and effect according to their terms."
+        ],
+        "history": [
+          "History: P.A. 25-168 effective July 1, 2025."
+        ],
+        "annotations": [],
+        "plainText": "(a) As used in this section, (1) “hospital” has the same meaning as provided in section 19a-490; and (2) “hospital financial assistance” means any program administered by a hospital that reduces, in whole or in part, a patient's liability for the cost of providing services, as defined in section 19a-673.\n\n(b) The Office of the Healthcare Advocate shall contract with a vendor to develop an online hospital financial assistance portal for use by patients and family members. Such portal shall serve as a navigation tool to help patients and family members identify and apply for hospital financial assistance at hospitals in the state. The portal may include, but need not be limited to, (1) technical assistance and tools that streamline the application process for hospital financial assistance, (2) a screening tool to help determine whether patients may be eligible for hospital financial assistance, and (3) information to assist patients and family members in avoiding future medical debt.\n\n(c) The Office of the Healthcare Advocate may, (1) in consultation with the Office of Policy and Management, publish on the Office of the Healthcare Advocate's Internet web site information regarding the state's medical debt erasure initiative authorized pursuant to section 48 of public act 23-204*, as amended by section 1 of public act 24-81*, and (2) in consultation with relevant organizations, develop recommendations concerning such initiative that may assist patients and family members in avoiding future medical debt, including, but not limited to, methods to streamline the application process for hospital financial assistance.\n\n(d) On and after July 1, 2026, any hospital maintaining a financial assistance program shall provide the Office of the Healthcare Advocate with the (1) links for each Internet web site for such program, and (2) telephone number and electronic mail address for the hospital's financial assistance referral contact. If a hospital revises its hospital financial assistance application form, changes its financial assistance referral contact or establishes a new hospital financial assistance program, the hospital shall notify the Office of the Healthcare Advocate of such revisions, changes or new program and provide said office with any new links for each Internet web site or the telephone number and electronic mail address of the new referral contact for such program not later than thirty days after making such revisions or changes or establishing a new program."
+      }
+    }
+  ]
+}

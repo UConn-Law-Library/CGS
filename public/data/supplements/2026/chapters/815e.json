@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-815e",
+  "number": "815e",
+  "name": "Marriage",
+  "title": {
+    "id": "title-46b",
+    "number": "46b",
+    "name": "Family Law"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_815e.htm",
+  "sections": [
+    {
+      "id": "section-46b-20a",
+      "kind": "section",
+      "citation": "46b-20a",
+      "citations": [
+        "46b-20a"
+      ],
+      "heading": "Sec. 46b-20a. Eligibility to marry.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_815e.htm#sec_46b-20a",
+      "status": "active",
+      "content": {
+        "body": [
+          "A person is eligible to marry if such person is:",
+          "(1) Not a party to another marriage, or a relationship that provides substantially the same rights, benefits and responsibilities as a marriage, entered into in this state or another state or jurisdiction, unless the parties to the marriage will be the same as the parties to such other relationship;",
+          "(2) At least eighteen years of age;",
+          "(3) Except as provided in section 46b-29, not under the supervision or control of a conservator; and",
+          "(4) Not prohibited from entering into a marriage pursuant to section 46b-21 or 46b-21a."
+        ],
+        "sourceNotes": [
+          "(P.A. 09-13, S. 4; P.A. 16-66, S. 21; P.A. 17-54, S. 1; P.A. 23-44, S. 1; P.A. 25-72, S. 2.)"
+        ],
+        "history": [
+          "History: P.A. 09-13 effective April 23, 2009; P.A. 16-66 amended Subdiv. (1) to delete “marriage or”; P.A. 17-54 designated existing provisions re person eligible to marry as Subsec. (a) and amended same by substituting “subsection (b) of this section” for “section 46b-30” in Subdiv. (2), and added Subsec. (b) re issuance of license to minor who is at least 16 but under 18 years of age; P.A. 23-44 deleted former Subsec. (b) re issuance of marriage license to minor who is at least 16 but under 18 years of age, deleted former Subsec. (a) designator and amended former Subsec. (a)(2) by deleting “Except as provided in subsection (b) of this section”, effective July 1, 2023; P.A. 25-72 added reference to Sec. 46b-21a in Subdiv. (4)."
+        ],
+        "annotations": [],
+        "plainText": "A person is eligible to marry if such person is:\n\n(1) Not a party to another marriage, or a relationship that provides substantially the same rights, benefits and responsibilities as a marriage, entered into in this state or another state or jurisdiction, unless the parties to the marriage will be the same as the parties to such other relationship;\n\n(2) At least eighteen years of age;\n\n(3) Except as provided in section 46b-29, not under the supervision or control of a conservator; and\n\n(4) Not prohibited from entering into a marriage pursuant to section 46b-21 or 46b-21a."
+      }
+    },
+    {
+      "id": "section-46b-21a",
+      "kind": "section",
+      "citation": "46b-21a",
+      "citations": [
+        "46b-21a"
+      ],
+      "heading": "Sec. 46b-21a. Marriage of first cousins prohibited.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_815e.htm#sec_46b-21a",
+      "status": "active",
+      "content": {
+        "body": [
+          "On and after October 1, 2025, no person may knowingly marry such person's first cousin."
+        ],
+        "sourceNotes": [
+          "(P.A. 25-72, S. 1.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "On and after October 1, 2025, no person may knowingly marry such person's first cousin."
+      }
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-704",
+  "number": "704",
+  "name": "Unfair and Prohibited Practices",
+  "title": {
+    "id": "title-38a",
+    "number": "38a",
+    "name": "Insurance"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_704.htm",
+  "sections": [
+    {
+      "id": "section-38a-835",
+      "kind": "section",
+      "citation": "38a-835",
+      "citations": [
+        "38a-835"
+      ],
+      "heading": "Sec. 38a-835. Adverse action based on provision of reproductive health care services or gender-affirming health care services prohibited.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_704.htm#sec_38a-835",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) As used in this section, (1) “health care provider” means a person licensed pursuant to title 20 who provides reproductive health care services or gender-affirming health care services, (2) “insurer” means an insurer that insures a health care provider against professional liability, and (3) “reproductive health care services” and “gender-affirming health care services” have the same meanings as provided in section 52-571m.",
+          "(b) An insurer shall not take any adverse action, including, but not limited to, denial or revocation of coverage, sanctions, fines, penalties or rate increases against a health care provider, if such action is based solely on:",
+          "(1) Such health care provider's alleged provision of, receipt of, assistance in provision or receipt of, material support for, or any theory of vicarious, joint, several or conspiracy liability derived therefrom, reproductive health care services or gender-affirming health care services that are permitted under the laws of this state and were provided in accordance with the standard of care applicable to such services, regardless of whether the patient receiving such services was a resident of this state; or",
+          "(2) Pending disciplinary action, an unresolved complaint or the imposition of disciplinary action against such health care provider by a duly authorized professional disciplinary agency of another state, the District of Columbia, or a commonwealth, territory or possession of the United States that is based solely on the alleged provision of, receipt of, assistance in provision or receipt of, material support for, or any theory of vicarious, joint, several or conspiracy liability derived therefrom, reproductive health care services or gender-affirming health care services that are permitted under the laws of this state and were provided in accordance with the standard of care applicable to such services, regardless of whether the patient receiving such services was a resident of this state."
+        ],
+        "sourceNotes": [
+          "(P.A. 23-128, S. 4; P.A. 25-168, S. 282.)"
+        ],
+        "history": [
+          "History: P.A. 23-128 effective June 27, 2023; P.A. 25-168 amended section by adding references to gender-affirming health care services and by making technical changes, effective July 1, 2025."
+        ],
+        "annotations": [],
+        "plainText": "(a) As used in this section, (1) “health care provider” means a person licensed pursuant to title 20 who provides reproductive health care services or gender-affirming health care services, (2) “insurer” means an insurer that insures a health care provider against professional liability, and (3) “reproductive health care services” and “gender-affirming health care services” have the same meanings as provided in section 52-571m.\n\n(b) An insurer shall not take any adverse action, including, but not limited to, denial or revocation of coverage, sanctions, fines, penalties or rate increases against a health care provider, if such action is based solely on:\n\n(1) Such health care provider's alleged provision of, receipt of, assistance in provision or receipt of, material support for, or any theory of vicarious, joint, several or conspiracy liability derived therefrom, reproductive health care services or gender-affirming health care services that are permitted under the laws of this state and were provided in accordance with the standard of care applicable to such services, regardless of whether the patient receiving such services was a resident of this state; or\n\n(2) Pending disciplinary action, an unresolved complaint or the imposition of disciplinary action against such health care provider by a duly authorized professional disciplinary agency of another state, the District of Columbia, or a commonwealth, territory or possession of the United States that is based solely on the alleged provision of, receipt of, assistance in provision or receipt of, material support for, or any theory of vicarious, joint, several or conspiracy liability derived therefrom, reproductive health care services or gender-affirming health care services that are permitted under the laws of this state and were provided in accordance with the standard of care applicable to such services, regardless of whether the patient receiving such services was a resident of this state."
+      }
+    }
+  ]
+}

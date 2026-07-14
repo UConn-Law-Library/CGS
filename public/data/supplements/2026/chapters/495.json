@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-495",
+  "number": "495",
+  "name": "Endangered Species",
+  "title": {
+    "id": "title-26",
+    "number": "26",
+    "name": "Fisheries and Game"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_495.htm",
+  "sections": [
+    {
+      "id": "section-26-307a",
+      "kind": "section",
+      "citation": "26-307a",
+      "citations": [
+        "26-307a"
+      ],
+      "heading": "Sec. 26-307a. Endangered Species Act environmental reviews. Evaluation report.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_495.htm#sec_26-307a",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) The Commissioner of Energy and Environmental Protection shall prepare a report that evaluates potential improvements to environmental reviews undertaken pursuant to the state Endangered Species Act. Such report shall include: (1) Recommendations for improvements to the processing of such environmental reviews that will increase the efficiency, transparency, and predictability of such reviews, (2) an assessment of similar environmental review programs in other states, (3) recommendations concerning qualifications and proficiencies of third-party consultants that prepare mitigation plans and other materials required by the Department of Energy and Environmental Protection's Natural Diversity Data Base review process, (4) a description of the required components of a Natural Diversity Data Base review request, (5) the outcomes of a stakeholder engagement process that compiles public opinions on Natural Diversity Data Base review program improvements, and (6) a prioritized list of additional scientific and communications resources that would increase the efficiency and predictability of the environmental review process.",
+          "(b) The commissioner may, within existing resources, hire a consultant to assist in preparing the report or portions thereof.",
+          "(c) Not later than February 1, 2026, the commissioner shall submit said report, in accordance with the provisions of section 11-4a, to the joint standing committee of the General Assembly having cognizance of matters relating to the environment and shall post said report on the Department of Energy and Environmental Protection's Internet web site."
+        ],
+        "sourceNotes": [
+          "(P.A. 25-84, S. 3.)"
+        ],
+        "history": [
+          "History: P.A. 25-84 effective June 23, 2025."
+        ],
+        "annotations": [],
+        "plainText": "(a) The Commissioner of Energy and Environmental Protection shall prepare a report that evaluates potential improvements to environmental reviews undertaken pursuant to the state Endangered Species Act. Such report shall include: (1) Recommendations for improvements to the processing of such environmental reviews that will increase the efficiency, transparency, and predictability of such reviews, (2) an assessment of similar environmental review programs in other states, (3) recommendations concerning qualifications and proficiencies of third-party consultants that prepare mitigation plans and other materials required by the Department of Energy and Environmental Protection's Natural Diversity Data Base review process, (4) a description of the required components of a Natural Diversity Data Base review request, (5) the outcomes of a stakeholder engagement process that compiles public opinions on Natural Diversity Data Base review program improvements, and (6) a prioritized list of additional scientific and communications resources that would increase the efficiency and predictability of the environmental review process.\n\n(b) The commissioner may, within existing resources, hire a consultant to assist in preparing the report or portions thereof.\n\n(c) Not later than February 1, 2026, the commissioner shall submit said report, in accordance with the provisions of section 11-4a, to the joint standing committee of the General Assembly having cognizance of matters relating to the environment and shall post said report on the Department of Energy and Environmental Protection's Internet web site."
+      }
+    },
+    {
+      "id": "section-26-314",
+      "kind": "section",
+      "citation": "26-314",
+      "citations": [
+        "26-314"
+      ],
+      "heading": "Sec. 26-314. Natural Area Preserves Advisory Committee.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_495.htm#sec_26-314",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 26-314 is repealed, effective July 8, 2025."
+        ],
+        "sourceNotes": [
+          "(P.A. 89-224, S. 19, 22; P.A. 91-65, S. 6; P.A. 11-80, S. 1; P.A. 25-170, S. 13.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 26-314 is repealed, effective July 8, 2025."
+      }
+    }
+  ]
+}

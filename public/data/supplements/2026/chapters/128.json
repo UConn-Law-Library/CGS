@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-128",
+  "number": "128",
+  "name": "Department of Housing: Municipal Housing Projects",
+  "title": {
+    "id": "title-08",
+    "number": "08",
+    "name": "Zoning, Planning, Housing and Economic and Community Development"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_128.htm",
+  "sections": [
+    {
+      "id": "section-8-68d",
+      "kind": "section",
+      "citation": "8-68d",
+      "citations": [
+        "8-68d"
+      ],
+      "heading": "Sec. 8-68d. Housing authority annual report.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_128.htm#sec_8-68d",
+      "status": "active",
+      "content": {
+        "body": [
+          "Each housing authority shall submit a report to the Commissioner of Housing and the chief executive officer of the municipality in which the authority is located and post such report on the housing authority's Internet web site not later than July 1, 2026, and thereafter annually on March first. The report shall contain (1) an inventory of all existing housing owned or operated by the authority, including the total number, types and sizes of rental units and the total number of occupancies and vacancies in each housing project or development, and a description of the condition of such housing, (2) a description of any new construction projects being undertaken by the authority and the status of such projects, (3) the number and types of any rental housing sold, leased or transferred during the period of the report which is no longer available for the purpose of low or moderate income rental housing, (4) the results of the authority's annual audit conducted in accordance with section 4-231 if required by said section, (5) the rental price levels by income group, as defined in section 8-37aa, of rental units owned or operated by the housing authority, (6) the number of rental units at each such respective rental price level, displayed as a per cent of the area median income, for each respective housing project or development owned or operated by the housing authority, (7) the annual change in the rental price level of rental units owned or operated by the housing authority, (8) the dates when rental units qualified as affordable, (9) the number of individuals on the waiting list for any rental units owned or operated by the authority, and (10) such other information as the commissioner may require by regulations adopted in accordance with the provisions of chapter 54."
+        ],
+        "sourceNotes": [
+          "(P.A. 88-267, S. 1, 4; P.A. 95-250, S. 1; P.A. 96-211, S. 1, 5, 6; P.A. 13-234, S. 2; P.A. 23-207, S. 15; Nov. Sp. Sess. P.A. 25-1, S. 44.)"
+        ],
+        "history": [
+          "History: P.A. 95-250 and P.A. 96-211 replaced Commissioner and Department of Housing with Commissioner and Department of Economic and Community Development; pursuant to P.A. 13-234, reference to Commissioner of Economic and Community Development was changed editorially by the Revisors to reference to Commissioner of Housing, effective June 19, 2013; P.A. 23-207 added new Subdiv. (4) requiring housing authorities to include the results of required audits in annual reports to the Commissioner of Housing and redesignated existing Subdiv. (4) as Subdiv. (5); Nov. Sp. Sess. P.A. 25-1 added provision re annual reports be posted on the housing authority's Internet web site, added new Subdiv. (5) and Subdivs. (6) to (9) re additional requirements for such reports, and redesignated existing Subdiv. (5) as Subdiv. (10), effective January 1, 2026."
+        ],
+        "annotations": [],
+        "plainText": "Each housing authority shall submit a report to the Commissioner of Housing and the chief executive officer of the municipality in which the authority is located and post such report on the housing authority's Internet web site not later than July 1, 2026, and thereafter annually on March first. The report shall contain (1) an inventory of all existing housing owned or operated by the authority, including the total number, types and sizes of rental units and the total number of occupancies and vacancies in each housing project or development, and a description of the condition of such housing, (2) a description of any new construction projects being undertaken by the authority and the status of such projects, (3) the number and types of any rental housing sold, leased or transferred during the period of the report which is no longer available for the purpose of low or moderate income rental housing, (4) the results of the authority's annual audit conducted in accordance with section 4-231 if required by said section, (5) the rental price levels by income group, as defined in section 8-37aa, of rental units owned or operated by the housing authority, (6) the number of rental units at each such respective rental price level, displayed as a per cent of the area median income, for each respective housing project or development owned or operated by the housing authority, (7) the annual change in the rental price level of rental units owned or operated by the housing authority, (8) the dates when rental units qualified as affordable, (9) the number of individuals on the waiting list for any rental units owned or operated by the authority, and (10) such other information as the commissioner may require by regulations adopted in accordance with the provisions of chapter 54."
+      }
+    }
+  ]
+}

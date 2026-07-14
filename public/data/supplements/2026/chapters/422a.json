@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-422a",
+  "number": "422a",
+  "name": "Agricultural Lands",
+  "title": {
+    "id": "title-22",
+    "number": "22",
+    "name": "Agriculture. Domestic Animals"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_422a.htm",
+  "sections": [
+    {
+      "id": "section-22-26mm",
+      "kind": "section",
+      "citation": "22-26mm",
+      "citations": [
+        "22-26mm"
+      ],
+      "heading": "Sec. 22-26mm. Municipal loan program. Account. Regulations.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_422a.htm#sec_22-26mm",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) The Commissioner of Agriculture shall administer a program providing eligible municipalities with a loan for the purchasing of agricultural lands. Such loan shall be for a period not to exceed five years and shall not be subject to interest. Municipalities shall be eligible for such loan if they provide not less than twenty per cent of the purchase price of such lands and may apply for such loan on a form prescribed by the Commissioner of Agriculture.",
+          "(b) There is established an account to be known as the “municipal purchasing of agricultural land account”, which shall be a separate, nonlapsing account. The account may contain any moneys required by law to be deposited in the account. Moneys in the account shall be expended by the Commissioner of Agriculture for the purposes of providing municipalities with loans for the purchase of agricultural lands in accordance with subsection (a) of this section.",
+          "(c) The Commissioner of Agriculture may adopt regulations, in accordance with the provisions of chapter 54, setting forth the criteria for loans granted under this section, and the terms governing such loans."
+        ],
+        "sourceNotes": [
+          "(P.A. 07-131, S. 3; P.A. 25-110, S. 78.)"
+        ],
+        "history": [
+          "History: P.A. 07-131 effective July 1, 2007; P.A. 25-110 amended Subsec. (b) to delete reference to General Fund and make a technical change, effective July 1, 2025."
+        ],
+        "annotations": [],
+        "plainText": "(a) The Commissioner of Agriculture shall administer a program providing eligible municipalities with a loan for the purchasing of agricultural lands. Such loan shall be for a period not to exceed five years and shall not be subject to interest. Municipalities shall be eligible for such loan if they provide not less than twenty per cent of the purchase price of such lands and may apply for such loan on a form prescribed by the Commissioner of Agriculture.\n\n(b) There is established an account to be known as the “municipal purchasing of agricultural land account”, which shall be a separate, nonlapsing account. The account may contain any moneys required by law to be deposited in the account. Moneys in the account shall be expended by the Commissioner of Agriculture for the purposes of providing municipalities with loans for the purchase of agricultural lands in accordance with subsection (a) of this section.\n\n(c) The Commissioner of Agriculture may adopt regulations, in accordance with the provisions of chapter 54, setting forth the criteria for loans granted under this section, and the terms governing such loans."
+      }
+    },
+    {
+      "id": "section-22-26rr",
+      "kind": "section",
+      "citation": "22-26rr",
+      "citations": [
+        "22-26rr"
+      ],
+      "heading": "Sec. 22-26rr. (Note: This section is effective July 1, 2027.) Program for holding land for agricultural preservation. Grants. Eligible entities.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_422a.htm#sec_22-26rr",
+      "status": "active",
+      "content": {
+        "body": [
+          "The Department of Agriculture, within available appropriations, may establish and administer a grant program for the purpose of providing grants to hold land for agricultural preservation purposes by any: (1) Agricultural not-for-profit organization qualified under Section 501(c)(3) of the Internal Revenue Code of 1986, or any subsequent corresponding internal revenue code of the United States, as amended from time to time; (2) municipality; (3) group of municipalities; (4) regional council of governments organized under the provisions of sections 4-124i to 4-124p, inclusive; or (5) group of municipalities that have established a regional interlocal agreement pursuant to sections 7-339a to 7-339 l , inclusive. In carrying out such purpose, any such grant may be expended for developing farmland access and affordability programs, other than such programs that may exist as of July 1, 2027. No grant recipient shall utilize a grant distributed pursuant to such program for any purpose that conflicts with the preservation of farmland, as set forth in chapter 422."
+        ],
+        "sourceNotes": [
+          "(P.A. 25-141, S. 1.)"
+        ],
+        "history": [
+          "History: P.A. 25-141 effective July 1, 2027."
+        ],
+        "annotations": [],
+        "plainText": "The Department of Agriculture, within available appropriations, may establish and administer a grant program for the purpose of providing grants to hold land for agricultural preservation purposes by any: (1) Agricultural not-for-profit organization qualified under Section 501(c)(3) of the Internal Revenue Code of 1986, or any subsequent corresponding internal revenue code of the United States, as amended from time to time; (2) municipality; (3) group of municipalities; (4) regional council of governments organized under the provisions of sections 4-124i to 4-124p, inclusive; or (5) group of municipalities that have established a regional interlocal agreement pursuant to sections 7-339a to 7-339 l , inclusive. In carrying out such purpose, any such grant may be expended for developing farmland access and affordability programs, other than such programs that may exist as of July 1, 2027. No grant recipient shall utilize a grant distributed pursuant to such program for any purpose that conflicts with the preservation of farmland, as set forth in chapter 422."
+      }
+    }
+  ]
+}

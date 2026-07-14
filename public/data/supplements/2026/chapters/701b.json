@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-701b",
+  "number": "701b",
+  "name": "Public Adjusters",
+  "title": {
+    "id": "title-38a",
+    "number": "38a",
+    "name": "Insurance"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_701b.htm",
+  "sections": [
+    {
+      "id": "section-38a-726",
+      "kind": "section",
+      "citation": "38a-726",
+      "citations": [
+        "38a-726"
+      ],
+      "heading": "Sec. 38a-726. Fees charged.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_701b.htm#sec_38a-726",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) No public adjuster shall charge or collect a fee if, within thirty days of a loss to a structure covered by a fire insurance policy, the insurer offers in writing to pay the full policy limits.",
+          "(b) Any fee charged to an insured by a public adjuster shall be based only on the amount of the insurance settlement proceeds actually paid by the insurer on the account of a loss and shall be collected by such public adjuster after the insurer has paid such settlement proceeds."
+        ],
+        "sourceNotes": [
+          "(P.A. 90-326; P.A. 12-162, S. 4; P.A. 25-106, S. 1.)"
+        ],
+        "history": [
+          "History: P.A. 12-162 designated existing provision as Subsec. (a) and added Subsec. (b) re basis of fee charged by public adjuster, effective July 1, 2012; P.A. 25-106 amended Subsec. (b) by replacing proceeds received by the insured with settlement proceeds paid by the insurer."
+        ],
+        "annotations": [],
+        "plainText": "(a) No public adjuster shall charge or collect a fee if, within thirty days of a loss to a structure covered by a fire insurance policy, the insurer offers in writing to pay the full policy limits.\n\n(b) Any fee charged to an insured by a public adjuster shall be based only on the amount of the insurance settlement proceeds actually paid by the insurer on the account of a loss and shall be collected by such public adjuster after the insurer has paid such settlement proceeds."
+      }
+    }
+  ]
+}

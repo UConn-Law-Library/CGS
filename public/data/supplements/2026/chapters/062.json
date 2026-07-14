@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-062",
+  "number": "062",
+  "name": "State Contracting Standards Board",
+  "title": {
+    "id": "title-04e",
+    "number": "04e",
+    "name": "State Contracting"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_062.htm",
+  "sections": [
+    {
+      "id": "section-4e-15",
+      "kind": "section",
+      "citation": "4e-15",
+      "citations": [
+        "4e-15"
+      ],
+      "heading": "Sec. 4e-15. Requirements of janitorial work pilot program for persons with disability and persons with a disadvantage unaffected by certain state contracting provisions.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_062.htm#sec_4e-15",
+      "status": "active",
+      "content": {
+        "body": [
+          "Nothing in sections 4e-1 to 4e-14, inclusive, and 4e-16 shall be construed to affect the requirements of subsection (g) of section 4a-57, subsection (m) of section 4a-60g, sections 4a-82 and 17a-796 and subsection (c) of section 31-57g."
+        ],
+        "sourceNotes": [
+          "(Sept. Sp. Sess. P.A. 07-1, S. 15; P.A. 22-65, S. 4; P.A. 25-168, S. 226.)"
+        ],
+        "history": [
+          "History: Sept. Sp. Sess. P.A. 07-1 effective January 1, 2009; P.A. 22-65 made a conforming change; P.A. 25-168 replaced reference to Sec. 4a-60g(p) with reference to Sec. 4a-60g(m)."
+        ],
+        "annotations": [],
+        "plainText": "Nothing in sections 4e-1 to 4e-14, inclusive, and 4e-16 shall be construed to affect the requirements of subsection (g) of section 4a-57, subsection (m) of section 4a-60g, sections 4a-82 and 17a-796 and subsection (c) of section 31-57g."
+      }
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-533a",
+  "number": "533a",
+  "name": "Bail Enforcement Agents",
+  "title": {
+    "id": "title-29",
+    "number": "29",
+    "name": "Public Safety and State Police"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_533a.htm",
+  "sections": [
+    {
+      "id": "section-29-152k",
+      "kind": "section",
+      "citation": "29-152k",
+      "citations": [
+        "29-152k"
+      ],
+      "heading": "Sec. 29-152k. Notice to law enforcement agency prior to and restrictions re apprehension of principal.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_533a.htm#sec_29-152k",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) Prior to taking or attempting to take into custody the principal on a bond, a professional bondsman licensed under chapter 533, a surety bail bond agent licensed under chapter 700f or a bail enforcement agent licensed under sections 29-152f to 29-152i, inclusive, shall notify the police department or resident state trooper for, or state police troop having jurisdiction over, the municipality in which the principal is believed to be located of such bondsman's or agent's intentions.",
+          "(b) No such professional bondsman, surety bail bond agent or bail enforcement agent shall take or attempt to take into custody a principal on a bond on the premises, grounds or campus of any (1) health care facility or institution licensed under chapter 368v or operated by the state, or office of a health care provider licensed by the Department of Public Health, (2) public or private school or institution of higher education, or (3) house of worship."
+        ],
+        "sourceNotes": [
+          "(P.A. 97-287, S. 8; P.A. 25-25, S. 1.)"
+        ],
+        "history": [
+          "History: P.A. 25-25 designated existing language as Subsec. (a) and added Subsec. (b) re restrictions on taking a principal into custody."
+        ],
+        "annotations": [],
+        "plainText": "(a) Prior to taking or attempting to take into custody the principal on a bond, a professional bondsman licensed under chapter 533, a surety bail bond agent licensed under chapter 700f or a bail enforcement agent licensed under sections 29-152f to 29-152i, inclusive, shall notify the police department or resident state trooper for, or state police troop having jurisdiction over, the municipality in which the principal is believed to be located of such bondsman's or agent's intentions.\n\n(b) No such professional bondsman, surety bail bond agent or bail enforcement agent shall take or attempt to take into custody a principal on a bond on the premises, grounds or campus of any (1) health care facility or institution licensed under chapter 368v or operated by the state, or office of a health care provider licensed by the Department of Public Health, (2) public or private school or institution of higher education, or (3) house of worship."
+      }
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-483",
+  "number": "483",
+  "name": "Long Island Sound",
+  "title": {
+    "id": "title-25",
+    "number": "25",
+    "name": "Water Resources. Flood and Erosion Control"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_483.htm",
+  "sections": [
+    {
+      "id": "section-25-156",
+      "kind": "section",
+      "citation": "25-156",
+      "citations": [
+        "25-156"
+      ],
+      "heading": "Sec. 25-156. Long Island Sound Foundation, Inc.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_483.htm#sec_25-156",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) There is established the Long Island Sound Foundation, Inc., a nonstock, nonprofit corporation, organized under the laws of the state of Connecticut as a state chartered foundation. The Long Island Sound Foundation, Inc. shall be a successor organization to the Long Island Sound Assembly established under section 25-155 of the general statutes, revision of 1958, revised to January 1, 2023.",
+          "(b) The Long Island Sound Foundation, Inc. shall: (1) Target and promote the coordination and support of research and education activities and public information programs regarding the restoration and protection of Long Island Sound; and (2) receive, disburse and administer gifts, grants, endowments or other funds from any source that supports research and education activities connected with the Long Island Sound ecosystem consistent with the purposes of this section. Recipients of such funds may include nonprofit organizations, civic and community groups, schools, public agencies and the private sector."
+        ],
+        "sourceNotes": [
+          "(P.A. 93-74, S. 48, 67; P.A. 23-204, S. 239; P.A. 25-134, S. 19.)"
+        ],
+        "history": [
+          "History: P.A. 93-74 effective July 1, 1993; P.A. 23-204 amended Subsec. (a) to add “, revision of 1958, revised to January 1, 2023”, effective July 1, 2023; P.A. 25-134 amended Subsec. (a) by adding “of the general statutes” after “section 25-155”."
+        ],
+        "annotations": [],
+        "plainText": "(a) There is established the Long Island Sound Foundation, Inc., a nonstock, nonprofit corporation, organized under the laws of the state of Connecticut as a state chartered foundation. The Long Island Sound Foundation, Inc. shall be a successor organization to the Long Island Sound Assembly established under section 25-155 of the general statutes, revision of 1958, revised to January 1, 2023.\n\n(b) The Long Island Sound Foundation, Inc. shall: (1) Target and promote the coordination and support of research and education activities and public information programs regarding the restoration and protection of Long Island Sound; and (2) receive, disburse and administer gifts, grants, endowments or other funds from any source that supports research and education activities connected with the Long Island Sound ecosystem consistent with the purposes of this section. Recipients of such funds may include nonprofit organizations, civic and community groups, schools, public agencies and the private sector."
+      }
+    }
+  ]
+}

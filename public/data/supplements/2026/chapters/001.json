@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-001",
+  "number": "001",
+  "name": "Construction of Statutes",
+  "title": {
+    "id": "title-01",
+    "number": "01",
+    "name": "Provisions of General Application"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_001.htm",
+  "sections": [
+    {
+      "id": "section-1-1a",
+      "kind": "section",
+      "citation": "1-1a",
+      "citations": [
+        "1-1a"
+      ],
+      "heading": "Sec. 1-1a. Terms relating to security in personal property.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_001.htm#sec_1-1a",
+      "status": "active",
+      "content": {
+        "body": [
+          "Unless the context of any statute requires a different interpretation, all words and terms appearing in any statute and relating to security in personal property shall be construed to mean their counterparts in section 42a-1-201 and chapter 748. In particular “chattel mortgage”, “conditional sale contract” or “lien” on personal property, except a lien of the type to which chapter 748 does not apply under subdivision (2) of subsection (d) of section 42a-9-109, shall be construed to mean “security interest”; “mortgagor” and “conditional vendee” shall be construed to mean “debtor”; “mortgagee” and “conditional vendor” shall be construed to mean “secured party”."
+        ],
+        "sourceNotes": [
+          "(1959, P.A. 574, S. 9; P.A. 01-132, S. 152; P.A. 05-109, S. 40; P.A. 25-145, S. 102.)"
+        ],
+        "history": [
+          "History: P.A. 01-132 replaced reference to Sec. 42a-9-104(c) with Sec. 42a-9-109(d)(2); P.A. 05-109 replaced reference to Sec. 42a-1-201(37) with reference to Sec. 42a-1-201(b)(35); P.A. 25-145 deleted reference to “subdivision (35) of subsection (b)” of Sec. 42a-1-201, effective January 1, 2026."
+        ],
+        "annotations": [],
+        "plainText": "Unless the context of any statute requires a different interpretation, all words and terms appearing in any statute and relating to security in personal property shall be construed to mean their counterparts in section 42a-1-201 and chapter 748. In particular “chattel mortgage”, “conditional sale contract” or “lien” on personal property, except a lien of the type to which chapter 748 does not apply under subdivision (2) of subsection (d) of section 42a-9-109, shall be construed to mean “security interest”; “mortgagor” and “conditional vendee” shall be construed to mean “debtor”; “mortgagee” and “conditional vendor” shall be construed to mean “secured party”."
+      }
+    }
+  ]
+}

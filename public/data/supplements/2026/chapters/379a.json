@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-379a",
+  "number": "379a",
+  "name": "Dental Hygienists",
+  "title": {
+    "id": "title-20",
+    "number": "20",
+    "name": "Professional and Occupational Licensing, Certification, Title Protection and Registration. Examining Boards"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_379a.htm",
+  "sections": [
+    {
+      "id": "section-20-126i",
+      "kind": "section",
+      "citation": "20-126i",
+      "citations": [
+        "20-126i"
+      ],
+      "heading": "Sec. 20-126i. Application for license. Application from foreign dental school graduate.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_379a.htm#sec_20-126i",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) Each application for a license to practice dental hygiene shall be in writing and signed by the applicant and accompanied by satisfactory proof that such person has received a diploma or certificate of graduation from a dental hygiene program with a minimum of two academic years of curriculum provided in a college or institution of higher education the program of which is accredited by the Commission on Dental Accreditation or such other national professional accrediting body as may be recognized by the United States Department of Education.",
+          "(b) Notwithstanding the provisions of subsection (a) of this section, each application for a license to practice dental hygiene from an applicant who holds a diploma from a foreign dental school shall be in writing and signed by the applicant and accompanied by satisfactory proof that such person has (1) graduated from a dental school located outside the United States and received the degree of doctor of dental medicine or surgery, or its equivalent; (2) passed the written and practical examinations required in section 20-126j; and (3) enrolled in a dental hygiene program in this state that is accredited by the Commission on Dental Accreditation or its successor organization and successfully completed not less than one year of clinical training in a community health center affiliated with and under the supervision of such dental hygiene program.",
+          "(c) No fee shall be required for the issuance of a license under this section."
+        ],
+        "sourceNotes": [
+          "(P.A. 94-149, S. 2; P.A. 05-213, S. 10; June Sp. Sess. P.A. 09-3, S. 203; P.A. 25-168, S. 422.)"
+        ],
+        "history": [
+          "History: P.A. 05-213 designated existing language as Subsec. (a) and added Subsec. (b) specifying requirements for graduates of foreign dental schools seeking licensure as a dental hygienist; June Sp. Sess. P.A. 09-3 amended Subsec. (a) to increase fee from $75 to $150; P.A. 25-168 amended Subsec. (a) to delete fee and added Subsec. (c) re no fee for license issuance."
+        ],
+        "annotations": [],
+        "plainText": "(a) Each application for a license to practice dental hygiene shall be in writing and signed by the applicant and accompanied by satisfactory proof that such person has received a diploma or certificate of graduation from a dental hygiene program with a minimum of two academic years of curriculum provided in a college or institution of higher education the program of which is accredited by the Commission on Dental Accreditation or such other national professional accrediting body as may be recognized by the United States Department of Education.\n\n(b) Notwithstanding the provisions of subsection (a) of this section, each application for a license to practice dental hygiene from an applicant who holds a diploma from a foreign dental school shall be in writing and signed by the applicant and accompanied by satisfactory proof that such person has (1) graduated from a dental school located outside the United States and received the degree of doctor of dental medicine or surgery, or its equivalent; (2) passed the written and practical examinations required in section 20-126j; and (3) enrolled in a dental hygiene program in this state that is accredited by the Commission on Dental Accreditation or its successor organization and successfully completed not less than one year of clinical training in a community health center affiliated with and under the supervision of such dental hygiene program.\n\n(c) No fee shall be required for the issuance of a license under this section."
+      }
+    },
+    {
+      "id": "section-20-126k",
+      "kind": "section",
+      "citation": "20-126k",
+      "citations": [
+        "20-126k"
+      ],
+      "heading": "Sec. 20-126k. Licensure without examination.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_379a.htm#sec_20-126k",
+      "status": "active",
+      "content": {
+        "body": [
+          "The Department of Public Health may, without examination, issue a license to any dental hygienist who has provided evidence of professional education not less than that required in this state and who is licensed in some other state or territory, if such other state or territory has requirements of admission determined by the department to be similar to or higher than the requirements of this state, upon certification from the board of examiners or like board of the state or territory in which such dental hygienist was a practitioner certifying to his competency. No fee shall be required for the issuance of a license under this section. No license shall be issued under this section to any applicant against whom professional disciplinary action is pending or who is the subject of an unresolved complaint."
+        ],
+        "sourceNotes": [
+          "(P.A. 94-149, S. 4; P.A. 95-257, S. 12, 21, 58; June Sp. Sess. P.A. 09-3, S. 204; P.A. 25-168, S. 423.)"
+        ],
+        "history": [
+          "History: P.A. 95-257 replaced Commissioner and Department of Public Health and Addiction Services with Commissioner and Department of Public Health, effective July 1, 1995; June Sp. Sess. P.A. 09-3 increased fee from $75 to $150; P.A. 25-168 deleted fee and made a conforming change."
+        ],
+        "annotations": [],
+        "plainText": "The Department of Public Health may, without examination, issue a license to any dental hygienist who has provided evidence of professional education not less than that required in this state and who is licensed in some other state or territory, if such other state or territory has requirements of admission determined by the department to be similar to or higher than the requirements of this state, upon certification from the board of examiners or like board of the state or territory in which such dental hygienist was a practitioner certifying to his competency. No fee shall be required for the issuance of a license under this section. No license shall be issued under this section to any applicant against whom professional disciplinary action is pending or who is the subject of an unresolved complaint."
+      }
+    }
+  ]
+}

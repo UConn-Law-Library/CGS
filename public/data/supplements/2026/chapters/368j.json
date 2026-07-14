@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-368j",
+  "number": "368j",
+  "name": "Cemeteries",
+  "title": {
+    "id": "title-19a",
+    "number": "19a",
+    "name": "Public Health and Well-Being"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_368j.htm",
+  "sections": [
+    {
+      "id": "section-19a-308b",
+      "kind": "section",
+      "citation": "19a-308b",
+      "citations": [
+        "19a-308b"
+      ],
+      "heading": "Sec. 19a-308b. Neglected cemetery account.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_368j.htm#sec_19a-308b",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) There is established an account to be known as the “neglected cemetery account”, which shall be a separate, nonlapsing account. The account shall contain any moneys required by law to be deposited in the account. Moneys in the account shall be expended by the Office of Policy and Management for the purposes of municipal maintenance of neglected burial grounds and cemeteries, as described in section 19a-308.",
+          "(b) Each municipality may apply for moneys in the account established pursuant to this section on a form and in such manner as prescribed by the Secretary of the Office of Policy and Management."
+        ],
+        "sourceNotes": [
+          "(P.A. 14-217, S. 205; P.A. 25-110, S. 73.)"
+        ],
+        "history": [
+          "History: P.A. 25-110 amended Subsec. (a) by deleting reference to General Fund and making a technical change, effective July 1, 2025."
+        ],
+        "annotations": [],
+        "plainText": "(a) There is established an account to be known as the “neglected cemetery account”, which shall be a separate, nonlapsing account. The account shall contain any moneys required by law to be deposited in the account. Moneys in the account shall be expended by the Office of Policy and Management for the purposes of municipal maintenance of neglected burial grounds and cemeteries, as described in section 19a-308.\n\n(b) Each municipality may apply for moneys in the account established pursuant to this section on a form and in such manner as prescribed by the Secretary of the Office of Policy and Management."
+      }
+    }
+  ]
+}

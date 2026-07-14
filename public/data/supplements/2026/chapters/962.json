@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-962",
+  "number": "962",
+  "name": "Costs, Fees and Expenses in Criminal Proceedings or Prosecutions",
+  "title": {
+    "id": "title-54",
+    "number": "54",
+    "name": "Criminal Procedure"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_962.htm",
+  "sections": [
+    {
+      "id": "section-54-155a",
+      "kind": "section",
+      "citation": "54-155a",
+      "citations": [
+        "54-155a"
+      ],
+      "heading": "Sec. 54-155a. Prohibition on use of public resources in furtherance of interstate investigation or proceeding concerning the provision, seeking or receipt of or assistance with reproductive health care services or gender-affirming health care services.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_962.htm#sec_54-155a",
+      "status": "active",
+      "content": {
+        "body": [
+          "No public agency, as defined in section 1-200, or employee, appointee, officer or official or any other person acting on behalf of a public agency may provide any information or expend or use time, money, facilities, property, equipment, personnel or other resources in furtherance of any interstate investigation or proceeding seeking to impose civil or criminal liability upon a person or entity for (1) the provision, seeking or receipt of or inquiring about reproductive health care services or gender-affirming health care services, as defined in section 52-571m, that are legal in this state, or (2) assisting any person or entity providing, seeking, receiving or responding to an inquiry about reproductive health care services or gender-affirming health care services, as defined in section 52-571m, that are legal in this state. This section shall not apply to any investigation or proceeding where the conduct subject to potential liability under the investigation or proceeding would be subject to liability under the laws of this state if committed in this state."
+        ],
+        "sourceNotes": [
+          "(P.A. 22-19, S. 6; P.A. 25-168, S. 285.)"
+        ],
+        "history": [
+          "History: P.A. 22-19 effective July 1, 2022; P.A. 25-168 amended Subdivs. (1) and (2) by adding references to gender-affirming health care services, effective July 1, 2025."
+        ],
+        "annotations": [],
+        "plainText": "No public agency, as defined in section 1-200, or employee, appointee, officer or official or any other person acting on behalf of a public agency may provide any information or expend or use time, money, facilities, property, equipment, personnel or other resources in furtherance of any interstate investigation or proceeding seeking to impose civil or criminal liability upon a person or entity for (1) the provision, seeking or receipt of or inquiring about reproductive health care services or gender-affirming health care services, as defined in section 52-571m, that are legal in this state, or (2) assisting any person or entity providing, seeking, receiving or responding to an inquiry about reproductive health care services or gender-affirming health care services, as defined in section 52-571m, that are legal in this state. This section shall not apply to any investigation or proceeding where the conduct subject to potential liability under the investigation or proceeding would be subject to liability under the laws of this state if committed in this state."
+      }
+    },
+    {
+      "id": "section-54-155b",
+      "kind": "section",
+      "citation": "54-155b",
+      "citations": [
+        "54-155b"
+      ],
+      "heading": "Sec. 54-155b. Prohibition on use of public resources in furtherance of interstate investigation or proceeding concerning the provision, seeking or receipt of or assistance with reproductive health care services or gender-affirming health care services.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_962.htm#sec_54-155b",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 54-155b is repealed, effective July 1, 2025."
+        ],
+        "sourceNotes": [
+          "(P.A. 22-118, S. 488; P.A. 25-168, S. 287.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 54-155b is repealed, effective July 1, 2025."
+      }
+    }
+  ]
+}

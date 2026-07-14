@@ -3,10 +3,13 @@ const initialState = Object.freeze({
   ready: false,
   installable: false,
   installed: false,
+  updateAvailable: false,
   busy: false,
   cachedFiles: 0,
   totalFiles: 0,
   complete: false,
+  storageUsage: null,
+  storageQuota: null,
   error: null
 });
 
@@ -17,6 +20,7 @@ export class PwaManager {
   #installPrompt = null;
   #listeners = new Set();
   #MessageChannel;
+  #hadController;
   state;
 
   constructor({
@@ -27,6 +31,7 @@ export class PwaManager {
     this.#navigator = navigatorObject;
     this.#window = windowObject;
     this.#MessageChannel = MessageChannelClass;
+    this.#hadController = Boolean(navigatorObject?.serviceWorker?.controller);
     const installed = Boolean(
       navigatorObject?.standalone
       || windowObject?.matchMedia?.("(display-mode: standalone)")?.matches
@@ -55,6 +60,10 @@ export class PwaManager {
       this.#installPrompt = null;
       this.#update({ installed: true, installable: false });
     });
+    this.#navigator?.serviceWorker?.addEventListener?.("controllerchange", () => {
+      if (this.#hadController) this.#update({ updateAvailable: true });
+      this.#hadController = true;
+    });
     if (!this.state.supported) return this.state;
     try {
       this.#registration = await this.#navigator.serviceWorker.register("./service-worker.js", { scope: "./" });
@@ -80,19 +89,55 @@ export class PwaManager {
     if (!this.state.ready) return this.state;
     const status = await this.#request("OFFLINE_STATUS");
     this.#update({ ...status, error: null });
+    await this.refreshStorageEstimate();
     return this.state;
   }
 
+  async refreshStorageEstimate() {
+    try {
+      const estimate = await this.#navigator.storage?.estimate?.();
+      if (estimate) {
+        this.#update({
+          storageUsage: Number.isFinite(estimate.usage) ? estimate.usage : null,
+          storageQuota: Number.isFinite(estimate.quota) ? estimate.quota : null
+        });
+      }
+    } catch {
+      // Storage estimates are optional and must not block the app.
+    }
+    return this.state;
+  }
+
+  applyUpdate() {
+    if (!this.state.updateAvailable) return false;
+    this.#window?.location?.reload?.();
+    return true;
+  }
+
   async downloadOfflineData({ refresh = false } = {}) {
+    const previous = {
+      cachedFiles: this.state.cachedFiles,
+      totalFiles: this.state.totalFiles,
+      complete: this.state.complete
+    };
     this.#update({ busy: true, error: null });
     try {
       const result = await this.#request("DOWNLOAD_OFFLINE_DATA", { refresh }, (progress) => {
         this.#update({ cachedFiles: progress.completed, totalFiles: progress.total });
       });
       this.#update({ ...result, busy: false, error: null });
+      await this.refreshStorageEstimate();
       return result;
     } catch (error) {
-      this.#update({ busy: false, error: error.message });
+      const recovery = previous.complete
+        ? "Your previous offline copy is still available."
+        : "No incomplete download was kept.";
+      this.#update({
+        ...previous,
+        busy: false,
+        error: `Download interrupted. ${recovery} Select download to retry. ${error.message}`
+      });
+      await this.refreshStorageEstimate();
       throw error;
     }
   }
@@ -102,6 +147,7 @@ export class PwaManager {
     try {
       const result = await this.#request("CLEAR_OFFLINE_DATA");
       this.#update({ ...result, busy: false, error: null });
+      await this.refreshStorageEstimate();
       return result;
     } catch (error) {
       this.#update({ busy: false, error: error.message });

@@ -115,6 +115,11 @@ export class PwaManager {
   }
 
   async downloadOfflineData({ refresh = false } = {}) {
+    const previous = {
+      cachedFiles: this.state.cachedFiles,
+      totalFiles: this.state.totalFiles,
+      complete: this.state.complete
+    };
     this.#update({ busy: true, error: null });
     try {
       const result = await this.#request("DOWNLOAD_OFFLINE_DATA", { refresh }, (progress) => {
@@ -124,7 +129,15 @@ export class PwaManager {
       await this.refreshStorageEstimate();
       return result;
     } catch (error) {
-      this.#update({ busy: false, error: error.message });
+      const recovery = previous.complete
+        ? "Your previous offline copy is still available."
+        : "No incomplete download was kept.";
+      this.#update({
+        ...previous,
+        busy: false,
+        error: `Download interrupted. ${recovery} Select download to retry. ${error.message}`
+      });
+      await this.refreshStorageEstimate();
       throw error;
     }
   }

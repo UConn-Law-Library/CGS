@@ -9,7 +9,9 @@ test("web app manifest keeps every entry point within the Pages scope", async ()
   assert.equal(manifest.start_url, "./");
   assert.equal(manifest.scope, "./");
   assert.equal(manifest.display, "standalone");
-  assert.ok(manifest.icons.some((icon) => icon.src === "./icon.svg" && icon.purpose.includes("maskable")));
+  assert.ok(manifest.icons.some((icon) => icon.src === "./icon-192.png" && icon.sizes === "192x192"));
+  assert.ok(manifest.icons.some((icon) => icon.src === "./icon-512.png" && icon.sizes === "512x512"));
+  assert.ok(manifest.icons.some((icon) => icon.src === "./icon-maskable-512.png" && icon.purpose === "maskable"));
   assert.deepEqual(
     manifest.shortcuts.map(({ url }) => url),
     ["./#/", "./#/index", "./#/infractions", "./#/bookmarks"]
@@ -22,6 +24,7 @@ test("service worker declares an offline shell and explicit corpus controls", as
     assert.match(source, new RegExp(shellFile.replaceAll(".", "\\.")));
   }
   assert.match(source, /request\.mode === "navigate"/);
+  assert.match(source, /scopedUrl\("\.\/index\.html"\)/);
   assert.match(source, /url\.origin !== self\.location\.origin/);
   assert.match(source, /networkFirst\(request, SHELL_CACHE\)/);
   assert.doesNotMatch(source, /cacheFirst\(request\)/);
@@ -30,6 +33,24 @@ test("service worker declares an offline shell and explicit corpus controls", as
   assert.match(source, /DOWNLOAD_OFFLINE_DATA/);
   assert.match(source, /CLEAR_OFFLINE_DATA/);
   assert.match(source, /OFFLINE_STATUS/);
+  assert.match(source, /OFFLINE_CACHE_PREFIX/);
+  assert.match(source, /ACTIVE_CACHE_URL/);
+  assert.match(source, /control\.put\(scopedUrl\(ACTIVE_CACHE_URL\)/);
+  assert.match(source, /catch \(error\) \{\s+await caches\.delete\(stagingName\)/);
+});
+
+test("committed PNG install icons have their declared dimensions", async () => {
+  for (const [name, width, height] of [
+    ["icon-192.png", 192, 192],
+    ["icon-512.png", 512, 512],
+    ["icon-maskable-512.png", 512, 512],
+    ["apple-touch-icon.png", 180, 180]
+  ]) {
+    const png = await readFile(new URL(`../src/${name}`, import.meta.url));
+    assert.equal(png.subarray(1, 4).toString("ascii"), "PNG");
+    assert.equal(png.readUInt32BE(16), width);
+    assert.equal(png.readUInt32BE(20), height);
+  }
 });
 
 test("install prompt state is exposed without requiring a service worker", async () => {
@@ -91,6 +112,48 @@ test("offers a reload when an installed app receives a new worker", async () => 
   assert.equal(manager.state.updateAvailable, true);
   assert.equal(manager.applyUpdate(), true);
   assert.equal(reloads, 1);
+});
+
+test("an interrupted refresh preserves the last complete offline status", async () => {
+  class TestMessageChannel {
+    constructor() {
+      this.port1 = {};
+      this.port2 = {
+        reply: (data) => this.port1.onmessage({ data })
+      };
+    }
+  }
+  const target = {
+    postMessage({ type }, [port]) {
+      if (type === "OFFLINE_STATUS") {
+        port.reply({ type: "complete", result: { cachedFiles: 120, totalFiles: 120, complete: true } });
+      } else {
+        port.reply({ type: "progress", completed: 40, total: 125 });
+        port.reply({ type: "error", message: "connection lost" });
+      }
+    }
+  };
+  const registration = { active: target };
+  const manager = new PwaManager({
+    navigatorObject: {
+      serviceWorker: {
+        controller: target,
+        addEventListener() {},
+        async register() { return registration; },
+        ready: Promise.resolve(registration)
+      }
+    },
+    windowObject: { addEventListener() {}, matchMedia() { return { matches: true }; } },
+    MessageChannelClass: TestMessageChannel
+  });
+  await manager.init();
+
+  await assert.rejects(manager.downloadOfflineData({ refresh: true }), /connection lost/);
+  assert.equal(manager.state.cachedFiles, 120);
+  assert.equal(manager.state.totalFiles, 120);
+  assert.equal(manager.state.complete, true);
+  assert.match(manager.state.error, /previous offline copy is still available/i);
+  assert.match(manager.state.error, /retry/i);
 });
 
 test("heading scale remains compact across app page types", async () => {

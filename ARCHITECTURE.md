@@ -55,6 +55,8 @@ The Pages client uses hash routes because GitHub Pages cannot rewrite arbitrary 
 
 The catalog resolves title and chapter navigation. A reader fetches only the selected chapter artifact, then builds its section index, breadcrumbs, adjacent-section links, internal legal-reference links, and subsection anchors in the browser. Legacy query-string reader links are accepted as an input compatibility layer and immediately canonicalized to the hash route.
 
+The build also derives a script-free discovery hierarchy from the same catalog and chapter artifacts. Static title pages link to static chapter pages; chapter pages expose provision headings, official-source links, and handoff links to the interactive reader. These generated pages plus `sitemap.xml` make the corpus discoverable without treating HTML as another authoritative data source.
+
 ## Validation layers
 
 Validation deliberately has four layers:
@@ -70,11 +72,10 @@ The in-repository schema engine implements the JSON Schema keywords used by thes
 
 ## Deployment
 
-`ci.yml` verifies pull requests, pushes, and explicitly dispatched checks for automation-created branches. `deploy-pages.yml` performs the same checks, uploads only `dist/`, and deploys through GitHub's official Pages Actions. `refresh-corpus.yml` is a manually dispatched build-time workflow that crawls into staging, retains snapshots as temporary artifacts, validates and diffs the candidate, applies a versioned safety policy, and creates a draft data pull request. It never writes directly to `main`.
+`ci.yml` verifies pull requests, pushes, and explicitly dispatched checks for automation-created branches. `deploy-pages.yml` performs the same checks, generates the interactive client, discovery pages, sitemap, and robots metadata into `dist/`, then deploys that directory through GitHub's official Pages Actions. `refresh-corpus.yml` is a manually dispatched build-time workflow that crawls into staging, retains snapshots as temporary artifacts, validates and diffs the candidate, applies a versioned safety policy, and creates a draft data pull request. It never writes directly to `main`.
 
 ## Next increments
 
-- Add generated title and chapter discovery pages for stronger no-JavaScript navigation and indexing while retaining the canonical hash route contract.
 - Complete three reviewed manual crawler refreshes, then consider a weekly schedule.
 - Decide how annual supplements should merge with or overlay the canonical current-statutes contract.
 - Publish corpus diffs automatically as data-refresh pull request summaries.

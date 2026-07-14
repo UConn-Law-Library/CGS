@@ -32,7 +32,7 @@ async function getJson(path) {
 function siteHeader() {
   return `<header class="site-header">
     <a class="brand" href="#/">Connecticut General Statutes</a>
-    <nav aria-label="Primary"><a href="#/">Browse</a></nav>
+    <nav aria-label="Primary"><a href="#/">Browse</a> <a href="./discover/">Static index</a></nav>
   </header>`;
 }
 

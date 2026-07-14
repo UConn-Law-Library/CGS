@@ -45,6 +45,7 @@ button, input, select { font: inherit; }
   background: #071e38;
 }
 .site-header a { color: white; }
+.site-header nav { display: flex; gap: 1rem; }
 .site-header nav a { font-weight: 700; }
 .brand { font: 700 1.15rem Georgia, serif; text-decoration: none; }
 
@@ -126,6 +127,16 @@ button:hover { background: var(--blue-dark); }
 }
 
 .catalog { padding: 3rem 0 5rem; }
+.discovery-page { padding-block: 2rem 5rem; }
+.discovery-intro {
+  max-width: 58rem;
+  padding: clamp(1.5rem, 4vw, 3rem) 0 2rem;
+}
+.discovery-intro h1 { margin: .35rem 0; font-size: clamp(2.25rem, 6vw, 4rem); line-height: 1.05; }
+.section-index { margin: 0; padding: 0; list-style: none; }
+.section-index li { padding: 1.25rem 0; border-top: 1px solid var(--line); }
+.section-index h2 { margin: 0; font-size: 1.25rem; }
+.section-index p { display: flex; flex-wrap: wrap; gap: 1rem; margin: .5rem 0 0; }
 .section-heading, .browse-heading {
   display: flex;
   align-items: end;

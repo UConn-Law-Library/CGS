@@ -1,0 +1,28 @@
+{
+  "id": "./",
+  "name": "Connecticut General Statutes",
+  "short_name": "CT Statutes",
+  "description": "A mobile-first, searchable access copy of the Connecticut General Statutes.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "background_color": "#10141b",
+  "theme_color": "#071525",
+  "orientation": "any",
+  "categories": ["books", "education", "reference"],
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    { "name": "Browse statutes", "short_name": "Statutes", "url": "./#/" },
+    { "name": "Subject index", "short_name": "Index", "url": "./#/index" },
+    { "name": "Infractions", "short_name": "Infractions", "url": "./#/infractions" },
+    { "name": "Bookmarks", "short_name": "Bookmarks", "url": "./#/bookmarks" }
+  ]
+}

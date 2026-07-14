@@ -20,6 +20,7 @@ import {
 } from "./reader.js";
 import { SecondarySourceRepository } from "./secondary-sources.js";
 import { applyPreferences, DeviceState } from "./device-state.js";
+import { PwaManager } from "./pwa.js";
 import {
   formatMoney,
   renderIndexEntry,
@@ -34,10 +35,17 @@ const repository = new SearchRepository();
 const searchClient = new ProgressiveSearchClient({ repository });
 const secondaryRepository = new SecondarySourceRepository();
 const deviceState = new DeviceState();
+const pwaManager = new PwaManager();
 const catalogPromise = getJson("./data/catalog.json");
 let renderSequence = 0;
 let activeSearchController = null;
+let pwaState = pwaManager.state;
 applyPreferences(deviceState.preferences());
+pwaManager.subscribe((state) => {
+  pwaState = state;
+  updatePwaControls();
+});
+pwaManager.init();
 
 async function getJson(path) {
   const response = await fetch(path);
@@ -56,6 +64,38 @@ function navLink({ href, id, icon, label }, active) {
   return `<a href="${href}"${active === id ? ` aria-current="page"` : ""}><span aria-hidden="true">${icon}</span><span>${label}</span></a>`;
 }
 
+function installStatus(state) {
+  if (state.installed) return "Installed on this device";
+  if (state.installable) return "Ready to install";
+  return state.supported ? "Use the browser menu if unavailable" : "Not supported by this browser";
+}
+
+function offlineStatus(state) {
+  if (state.error) return state.error;
+  if (state.busy && state.totalFiles) return `Downloading ${state.cachedFiles.toLocaleString()} of ${state.totalFiles.toLocaleString()} files…`;
+  if (state.complete) return `${state.cachedFiles.toLocaleString()} files available offline`;
+  if (state.ready) return "Download the complete published dataset";
+  return state.supported ? "Preparing offline storage…" : "Offline storage is unavailable";
+}
+
+function updatePwaControls() {
+  const install = document.querySelector("[data-install-app]");
+  const download = document.querySelector("[data-download-offline]");
+  const clear = document.querySelector("[data-clear-offline]");
+  const status = document.querySelector("[data-pwa-status]");
+  const progress = document.querySelector("[data-pwa-progress]");
+  if (!install) return;
+  install.disabled = pwaState.installed || !pwaState.installable;
+  install.querySelector("small").textContent = installStatus(pwaState);
+  download.disabled = !pwaState.ready || pwaState.busy;
+  download.querySelector("[data-offline-action-label]").textContent = pwaState.complete ? "Refresh offline data" : "Download for offline use";
+  clear.disabled = !pwaState.cachedFiles || pwaState.busy;
+  status.textContent = offlineStatus(pwaState);
+  progress.hidden = !pwaState.busy || !pwaState.totalFiles;
+  progress.max = Math.max(1, pwaState.totalFiles);
+  progress.value = pwaState.cachedFiles;
+}
+
 function settingsPanel() {
   const preferences = deviceState.preferences();
   const bookmarkCount = deviceState.bookmarks().length;
@@ -66,9 +106,13 @@ function settingsPanel() {
     </div></div>
     <div class="setting-row"><span><strong>Text size</strong><small data-text-size-value>${Math.round(preferences.textScale * 100)}%</small></span><div class="text-size-controls"><button type="button" data-text-size="decrease" aria-label="Decrease text size">A−</button><button type="button" data-text-size="increase" aria-label="Increase text size">A+</button></div></div>
     <label class="setting-row"><span><strong>Compact lists</strong><small>Show more items on screen</small></span><input type="checkbox" data-compact-lists${preferences.compactLists ? " checked" : ""}></label>
+    <button type="button" class="settings-action" data-install-app${pwaState.installed || !pwaState.installable ? " disabled" : ""}>Install app <small>${escapeHtml(installStatus(pwaState))}</small></button>
+    <button type="button" class="settings-action" data-download-offline${!pwaState.ready || pwaState.busy ? " disabled" : ""}><span data-offline-action-label>${pwaState.complete ? "Refresh offline data" : "Download for offline use"}</span><small>Statutes, search, index, and infractions</small></button>
+    <progress class="offline-progress" data-pwa-progress value="${pwaState.cachedFiles}" max="${Math.max(1, pwaState.totalFiles)}"${!pwaState.busy || !pwaState.totalFiles ? " hidden" : ""}>Offline download progress</progress>
+    <button type="button" class="settings-action" data-clear-offline${!pwaState.cachedFiles || pwaState.busy ? " disabled" : ""}>Remove offline data <small>Keep the installed app shell</small></button>
+    <p class="settings-note" data-pwa-status role="status" aria-live="polite">${escapeHtml(offlineStatus(pwaState))}</p>
     <button type="button" class="settings-action" data-clear-bookmarks${bookmarkCount ? "" : " disabled"}>Clear bookmarks <small>${bookmarkCount ? `${bookmarkCount} saved` : "None saved"}</small></button>
     <a class="settings-action" href="./discover/">Static discovery index <small>Script-free browsing</small></a>
-    <p class="settings-note">Installation and full offline data controls will be added with the PWA service-worker phase.</p>
   </section>`;
 }
 
@@ -655,6 +699,31 @@ document.addEventListener("click", async (event) => {
     const preferences = deviceState.updatePreferences({ textScale: Math.round((current.textScale + direction * .1) * 10) / 10 });
     applyPreferences(preferences);
     document.querySelector("[data-text-size-value]").textContent = `${Math.round(preferences.textScale * 100)}%`;
+    return;
+  }
+  const installApp = event.target.closest("[data-install-app]");
+  if (installApp) {
+    await pwaManager.install();
+    return;
+  }
+  const downloadOffline = event.target.closest("[data-download-offline]");
+  if (downloadOffline) {
+    try {
+      await pwaManager.downloadOfflineData({
+        refresh: pwaState.complete || pwaState.cachedFiles > 0
+      });
+    } catch {
+      // PwaManager exposes the failure in the live settings status.
+    }
+    return;
+  }
+  const clearOffline = event.target.closest("[data-clear-offline]");
+  if (clearOffline) {
+    try {
+      await pwaManager.clearOfflineData();
+    } catch {
+      // PwaManager exposes the failure in the live settings status.
+    }
     return;
   }
   const clearBookmarks = event.target.closest("[data-clear-bookmarks]");

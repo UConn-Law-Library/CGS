@@ -10,6 +10,7 @@
     "import:fixture": "node scripts/import-legacy.mjs --input fixtures/legacy --output public/data",
     "import:legacy": "node scripts/import-legacy.mjs",
     "diff:corpus": "node scripts/diff-corpus.mjs",
+    "review:refresh": "node scripts/check-corpus-refresh.mjs",
     "crawl": "python -m crawler.cgs_crawler.cli",
     "validate": "node scripts/validate.mjs --data public/data --schemas schemas",
     "test": "node --test --test-isolation=none",

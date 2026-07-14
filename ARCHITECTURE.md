@@ -64,12 +64,12 @@ The in-repository schema engine implements the JSON Schema keywords used by thes
 
 ## Deployment
 
-`ci.yml` verifies pull requests and pushes. `deploy-pages.yml` performs the same checks, uploads only `dist/`, and deploys through GitHub's official Pages Actions. No secret, database, server, or scheduled process is required.
+`ci.yml` verifies pull requests, pushes, and explicitly dispatched checks for automation-created branches. `deploy-pages.yml` performs the same checks, uploads only `dist/`, and deploys through GitHub's official Pages Actions. `refresh-corpus.yml` is a manually dispatched build-time workflow that crawls into staging, retains snapshots as temporary artifacts, validates and diffs the candidate, applies a versioned safety policy, and creates a draft data pull request. It never writes directly to `main`.
 
 ## Next increments
 
 - Move global search into a Web Worker and stream title shard results progressively.
 - Add generated title/chapter route pages for stronger no-JavaScript navigation and indexing.
-- Automate reviewed crawler refresh pull requests with attached corpus-diff summaries.
+- Complete three reviewed manual crawler refreshes, then consider a weekly schedule.
 - Decide how annual supplements should merge with or overlay the canonical current-statutes contract.
 - Publish corpus diffs automatically as data-refresh pull request summaries.

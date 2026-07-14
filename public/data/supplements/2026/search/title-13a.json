@@ -1,0 +1,233 @@
+{
+  "schemaVersion": "1.0.0",
+  "editionYear": 2026,
+  "title": {
+    "id": "title-13a",
+    "number": "13a",
+    "name": "Highways and Bridges"
+  },
+  "removedDocumentIds": [
+    "section-13a-60",
+    "section-13a-98e",
+    "section-13a-98i",
+    "section-13a-98m",
+    "section-13a-124a",
+    "section-13a-175a",
+    "group-13a-175-to-13a-175a-to-13a-175b-to-13a-175c-to-13a-175d-to-13a-175e-to-13a-175f-to-13a-175g-to-13a-175h-to-13a-175i-to-13a-175j-to-13a-175k-to-13a-175l-to-13a-175m-to-13a-175n-to-13a-175o",
+    "section-13a-255",
+    "section-13a-260",
+    "section-13a-262"
+  ],
+  "documents": [
+    {
+      "id": "section-13a-60",
+      "citation": "13a-60",
+      "citations": [
+        "13a-60"
+      ],
+      "heading": "Sec. 13a-60. Entry upon private property in altering of highways or railroad facilities.",
+      "chapter": {
+        "id": "chapter-238",
+        "number": "238",
+        "name": "Highway Construction and Maintenance"
+      },
+      "status": "active",
+      "text": "The commissioner or the commissioner's agent may enter upon private property for the purpose of conducting surveys, inspections or geological investigations for the location, relocation, construction or reconstruction of any proposed or existing highway or railroad facilities. After giving reasonable notice to the property owner or owners affected, the commissioner or the commissioner's agent may also enter private property for the purpose of performing borings, soundings or other tests required to accomplish any of the foregoing objectives with respect to such highways or railroad facilities. The commissioner or the commissioner's agent shall use care so that no unnecessary damage shall result, and the state shall pay damages to the owner of any property from appropriations made to the Department of Transportation for any damage or injury the commissioner or the commissioner's agent causes such owner by such entrance and use. If entry to any property for the purpose of performing borings, soundings or other tests is refused to the commissioner or the commissioner's agent after the commissioner or the commissioner's agent has given reasonable notice to the owner or owners thereof, the commissioner shall assess damages in the manner provided by statute for the taking of land for highway purposes, and, at any time after such assessment has been made by said commissioner, may enter such property for the purpose of performing borings, soundings or other tests. If the owner accepts such assessment of damages, the owner shall notify the commissioner in writing, and said commissioner shall pay such sum to such owner within thirty days or, after the expiration of such thirty days, shall pay such sum with interest at six per cent. If the owner is aggrieved by such assessment, the owner shall notify the commissioner in writing and may appeal to any court within its jurisdiction for a reassessment of such damages within six months from the date said commissioner forwarded such assessment to such owner. This section shall not limit or modify rights of entry upon property otherwise provided for by law.",
+      "href": "?chapter=238&section=section-13a-60",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-13a-98e",
+      "citation": "13a-98e",
+      "citations": [
+        "13a-98e"
+      ],
+      "heading": "Sec. 13a-98e. Acquisition of land and rights-of-way.",
+      "chapter": {
+        "id": "chapter-238",
+        "number": "238",
+        "name": "Highway Construction and Maintenance"
+      },
+      "status": "active",
+      "text": "The commissioner may acquire by purchase, gift or condemnation in the name of the state such real property for any federal surface transportation urban program roadway or facility, or rights of access to and egress from land abutting any federal surface transportation urban program roadway or facility, as is necessary to construct and maintain the improvements to any such roadway or facility in the same manner and with like powers as authorized and exercised by said commissioner in acquiring real property or rights of access to and egress from land abutting state highways for highway purposes.",
+      "href": "?chapter=238&section=section-13a-98e",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-13a-98i",
+      "citation": "13a-98i",
+      "citations": [
+        "13a-98i"
+      ],
+      "heading": "Sec. 13a-98i. Agreements for acceptances and expenditure of funds.",
+      "chapter": {
+        "id": "chapter-238",
+        "number": "238",
+        "name": "Highway Construction and Maintenance"
+      },
+      "status": "active",
+      "text": "(a) The commissioner may enter into agreements for the acceptance and expenditure of funds concerning federal surface transportation urban program roadways or facilities and eligible federal surface transportation rural collector roadways or facilities with the United States Secretary of Transportation or local officials, or both, to develop plans and establish programs for, and construct improvements on or to such roadways or facilities using appropriations made to the Department of Transportation by the General Assembly and apportionments to the Department of Transportation or a municipality by said Secretary of Transportation under the provisions of any act of Congress providing for federal surface transportation funding and all applicable federal regulations. Any municipality becoming a party to an agreement concerning such improvements on locally maintained roadways or facilities shall pay fifty per cent of that portion of the cost thereof, which is not paid by the federal government, including required studies, establishing programs, development of plans, engineering expenses, acquisition of rights-of-way, required municipally-owned utility work and construction activities, provided the municipality may pay up to the entire nonfederal government share on locally maintained roadways or facilities when the commissioner and municipality agree that this action is warranted, necessary and desirable in order to obtain federal funds. The state may pay fifty per cent of that portion of the cost thereof which is not paid by the federal government on locally maintained roadways or facilities and shall pay the entire portion not paid by the federal government on state maintained roadways or facilities.\n\n(b) For locally maintained roadways or facilities, the commissioner and the municipality may agree upon alternate funding percentages.",
+      "href": "?chapter=238&section=section-13a-98i",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-13a-98m",
+      "citation": "13a-98m",
+      "citations": [
+        "13a-98m"
+      ],
+      "heading": "Sec. 13a-98m. Definition.",
+      "chapter": {
+        "id": "chapter-238",
+        "number": "238",
+        "name": "Highway Construction and Maintenance"
+      },
+      "status": "active",
+      "text": "As used in sections 13a-98e, 13a-98f and 13a-98i to 13a-98k, inclusive, “federal surface transportation urban program roadway or facility” means any state or locally maintained roadway or facility that is deemed eligible for surface transportation urban program funding in accordance with the provisions of any act of Congress providing for federal surface transportation funding and all applicable federal regulations.",
+      "href": "?chapter=238&section=section-13a-98m",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-13a-124a",
+      "citation": "13a-124a",
+      "citations": [
+        "13a-124a"
+      ],
+      "heading": "Sec. 13a-124a. Specific service sign on limited access highways. Regulations.",
+      "chapter": {
+        "id": "chapter-238",
+        "number": "238",
+        "name": "Highway Construction and Maintenance"
+      },
+      "status": "active",
+      "text": "(a) As used in this section, “specific service sign” means a rectangular sign with the word GAS, FOOD, LODGING, CAMPING, ATTRACTION or EV CHARGING or any other word permitted in the Federal Highway Administration's Manual on Uniform Traffic Control Devices for Streets and Highways, as amended from time to time, and exit directional information pertaining to the designated motorist service placed on the sign and upon which is mounted separately attached business sign panels showing the brand, symbol, trademark or name, or any combination of these, for the designated service available on a crossroad at or near an interchange or intersection.\n\n(b) The Commissioner of Transportation may enter into an agreement with a qualifying person or company regarding the erection, maintenance and removal of a specific service sign within the rights-of-way of any portion of a state-maintained limited access highway, except a parkway. The commissioner shall adopt regulations, in accordance with the provisions of chapter 54, regarding (1) the design and installation requirements for a specific service sign, (2) the minimum qualifications for a person or company to obtain a specific service sign, (3) the application process to obtain a specific service sign, (4) the financial responsibility of such person or company, and (5) the terms regarding the removal of a specific service sign or revocation of an agreement with such person or company.",
+      "href": "?chapter=238&section=section-13a-124a",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "group-13a-175-to-13a-175b-to-13a-175c-to-13a-175d-to-13a-175e-to-13a-175f-to-13a-175g-to-13a-175h-to-13a-175i-to-13a-175j-to-13a-175k-to-13a-175l-to-13a-175m-to-13a-175n-to-13a-175o",
+      "citation": null,
+      "citations": [
+        "13a-175",
+        "13a-175b",
+        "13a-175c",
+        "13a-175d",
+        "13a-175e",
+        "13a-175f",
+        "13a-175g",
+        "13a-175h",
+        "13a-175i",
+        "13a-175j",
+        "13a-175k",
+        "13a-175l",
+        "13a-175m",
+        "13a-175n",
+        "13a-175o"
+      ],
+      "heading": "Secs. 13a-175, 13a-175b, 13a-175c, 13a-175d, 13a-175e, 13a-175f, 13a-175g, 13a-175h, 13a-175i, 13a-175j, 13a-175k, 13a-175l, 13a-175m, 13a-175n and 13a-175o. Reserved for future use.",
+      "chapter": {
+        "id": "chapter-240",
+        "number": "240",
+        "name": "Highway Financing"
+      },
+      "status": "reserved",
+      "text": "Reserved for future use.",
+      "href": "?chapter=240&section=group-13a-175-to-13a-175b-to-13a-175c-to-13a-175d-to-13a-175e-to-13a-175f-to-13a-175g-to-13a-175h-to-13a-175i-to-13a-175j-to-13a-175k-to-13a-175l-to-13a-175m-to-13a-175n-to-13a-175o"
+    },
+    {
+      "id": "section-13a-175a",
+      "citation": "13a-175a",
+      "citations": [
+        "13a-175a"
+      ],
+      "heading": "Sec. 13a-175a. Allocation of funds. Approval of use of funds for other purposes. Report by towns and districts.",
+      "chapter": {
+        "id": "chapter-240",
+        "number": "240",
+        "name": "Highway Financing"
+      },
+      "status": "active",
+      "text": "(a) For each fiscal year there shall be allocated twelve million five hundred thousand dollars out of the funds appropriated to the Department of Transportation, or from any other source, not otherwise prohibited by law, to be used by the towns (1) for the construction, reconstruction, improvement and maintenance of highways, sections of highways, bridges and structures incidental to highways and bridges, including (A) construction, reconstruction, improvements and maintenance intended to increase resiliency against increased precipitation, flooding, sea level rise and extreme heat, and (B) the plowing of snow, the sanding of icy pavements, the trimming and removal of trees, the installation, replacement and maintenance of traffic signs, signals and markings, (2) for traffic control and vehicular safety programs, traffic and parking planning and administration, and other purposes and programs related to highways, traffic and parking, and (3) for the purposes of providing and operating essential public transportation services and related facilities.\n\n(b) Notwithstanding the provisions of subsection (a) of this section, the Secretary of the Office of Policy and Management, in the secretary's discretion, may approve the use of funds by a town for purposes other than those enumerated in said subsection.\n\n(c) Not later than September 1, 2022, and annually thereafter, each town or district that received funds pursuant to subsection (a) of this section in the preceding fiscal year shall submit a report to the Commissioner of Transportation, in the form and manner prescribed by the commissioner, detailing the amount of such funds expended in such fiscal year for each of the usages enumerated in said subsection or approved pursuant to subsection (b) of this section.\n\n(d) The Secretary of the Office of Policy and Management shall reduce the grant payable to a town or district in accordance with subsection (a) of this section by ten per cent in any fiscal year that the town or district fails to timely submit the report required by subsection (c) of this section. The secretary shall waive such reduction if the town or district submits such report after the due date and provides proof of such submission to the secretary.",
+      "href": "?chapter=240&section=section-13a-175a",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-13a-255",
+      "citation": "13a-255",
+      "citations": [
+        "13a-255"
+      ],
+      "heading": "Sec. 13a-255. Adoption and maintenance of the Connecticut Plane Coordinate System.",
+      "chapter": {
+        "id": "chapter-241",
+        "number": "241",
+        "name": "Miscellaneous Provisions"
+      },
+      "status": "active",
+      "text": "(a) For the purposes of this section:\n\n(1) “NSRS” means the National Spatial Reference System or a successor program;\n\n(2) “Metadata” means the information about a data element that provides context for that data element, such as the geodetic reference system utilized, applicable epoch, statement of relative accuracy and date of observation;\n\n(3) “National Geodetic Survey” or “NGS” means the agency of the National Oceanic and Atmospheric Administration within the United States Department of Commerce, or its successor; and\n\n(4) “Connecticut Plane Coordinate System” or “CPCS” means the system established pursuant to this section that is identical to the state plane coordinate system as defined for the state of Connecticut by the National Geodetic Survey.\n\n(b) The most recent plane coordinates that have been established by the National Geodetic Survey based on the NSRS, for purposes of defining and stating the geographic positions or locations of points in relation to the surface of the earth within the state of Connecticut shall be known as the Connecticut Plane Coordinate System. The official geodetic datums to which geodetic coordinates are referenced within the state of Connecticut, including, but not limited to, latitude, longitude, ellipsoid height, orthometric height or dynamic height, shall be as defined within the NSRS.\n\n(c) The detailed description of the CPCS by the NGS shall be adopted and maintained by the Commissioner of Transportation or the commissioner's designee. Additional systems may be published by the commissioner or the commissioner's designee.\n\n(d) The plane coordinates of a point in relation to the earth's surface, to be used for expressing the geographic position or location of the point in the appropriate zone, if applicable, of the CPCS, shall consist of two distances expressed in meters and decimals of a meter, or international feet and decimals of an international foot. One of these distances, to be known as the “northing or y-coordinate”, shall give the grid distance north of the x-axis of the system origin; the other, to be known as the “easting or x-coordinate”, shall give the grid distance east of the y-axis of the system origin. The x-axis of any zone shall be at right angles to the central meridian of that zone. The y-axis of any zone shall be parallel with the central meridian of that zone. The x-axis shall be perpendicular to the y-axis. When applicable, height shall be the coordinate value of the vertical elements of the NSRS expressed as international feet or meters and identified as an ellipsoid height or an orthometric height. The international foot, typically referred to as the foot, shall be used to express all foot distances and coordinates. A definition of one international foot equals three thousand forty-eight ten-thousandths meters shall be used. Other units may be used in previous or additional coordinate systems as published by the Commissioner of Transportation or the commissioner's designee.\n\n(e) The use of the term “Connecticut Plane Coordinate System” on any map, report of survey or other document shall be limited to coordinates based on the CPCS, as adopted and maintained pursuant to subsection (c) of this section.\n\n(f) For the purposes of describing the location of any survey station or land boundary corner in the state of Connecticut, it shall be considered a complete, legal and satisfactory description of such location to give the position of such survey station or land boundary corner on the system of plane coordinates, with a height if applicable, as defined in this section. The method and source for establishing coordinates shall be described in the land or deed record. In all instances where a reference has been made to coordinates in land surveys or deeds, a statement of the metadata of observations shall be included in the record.\n\n(g) Nothing contained in this section shall require descriptions of real estate to be based only on CPCS.\n\n(h) The commissioner or the commissioner's designee may enter upon private property for the purpose of surveying, establishing or maintaining the survey. The commissioner or the commissioner's designee shall use care so that no unnecessary damage shall result to any private property and the state shall be liable to the owner of such property for any damage so caused.\n\n(i) After the official NGS release or the authorization of any subsequent updates to the Connecticut Plane Coordinate System, and upon the approval of its use or update by the Commissioner of Transportation or the commissioner's designee, new state mapping projects shall be based on said system's current realization unless a different system is determined to be necessary. Mapping coordinates based on the CPCS shall include a statement as to their basis in the metadata. Mapping based on a different system shall contain projection information and a clear statement of purpose regarding the decision to use said system in the metadata. Where feasible, mapping projects based on different systems should also be made available in CPCS unless such provision would create an undue hardship or burden on the project creator. The provisions of this section shall not be construed to prohibit the appropriate use of other datums, geodetic reference frames or plane coordinate systems, nor shall the provisions of this section require the revision of any survey, mapping project, deed, record or other document prepared or recorded that utilized any other coordinate systems previously authorized by the state.",
+      "href": "?chapter=241&section=section-13a-255",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-13a-260",
+      "citation": "13a-260",
+      "citations": [
+        "13a-260"
+      ],
+      "heading": "Sec. 13a-260. Pilot program to test fully autonomous vehicles.",
+      "chapter": {
+        "id": "chapter-241",
+        "number": "241",
+        "name": "Miscellaneous Provisions"
+      },
+      "status": "repealed",
+      "text": "Section 13a-260 is repealed, effective July 1, 2025.",
+      "href": "?chapter=241&section=section-13a-260",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "repealed"
+      }
+    },
+    {
+      "id": "section-13a-262",
+      "citation": "13a-262",
+      "citations": [
+        "13a-262"
+      ],
+      "heading": "Sec. 13a-262. Program re work zone speed control systems in highway work zone.",
+      "chapter": {
+        "id": "chapter-241",
+        "number": "241",
+        "name": "Miscellaneous Provisions"
+      },
+      "status": "active",
+      "text": "(a) The department may establish a program to operate work zone speed control systems in a highway work zone. A work zone speed control system may be used to record the images of motor vehicles traveling on a highway (1) within a highway work zone, and (2) on which the speed limit, established using generally accepted traffic engineering practices, is forty-five miles per hour or greater.\n\n(b) A work zone speed control system may be used provided (1) such system is operated by a work zone speed control system operator, (2) if, in accordance with the manual of uniform traffic control devices as approved and revised by the Office of State Traffic Administration, at least two conspicuous road signs are placed at a reasonable distance in advance of a highway work zone notifying drivers that a work zone speed control system may be in operation, (3) at least one of the signs described in subdivision (2) of this subsection indicates that the work zone speed control system is operational or is not operational, (4) an appropriate sign is conspicuously placed at the end of a highway work zone with a work zone speed control system that is operational, and (5) a notice identifying the location of a work zone speed control system is available on the Internet web site of the department.\n\n(c) A work zone speed control system shall be used in a manner to only record images of motor vehicles that are exceeding the posted highway work zone speed limit by ten miles per hour or more in violation of the provisions of section 13a-263. Any recorded images collected as part of a work zone speed control system shall not be used for any surveillance purpose. At least two days prior to a work zone speed control system becoming operational, the department or work zone speed control system operator shall provide written notice of the date such system will be operational to the Division of State Police and the chief executive officer of the municipality where such system is to be located.\n\n(d) The Commissioner of Transportation may (1) enter into agreements with vendors for the design, operation or maintenance, or any combination thereof, of work zone speed control systems, and (2) retain and employ consultants and assistants on a contract or other basis for rendering legal, financial, professional, technical or other assistance and advice necessary for the design, operation and maintenance of work zone speed control systems. If a vendor provides, deploys or operates a work zone control system, the vendor's fee may not be contingent on the number of violations issued or fines paid pursuant to the provisions of section 13a-263.",
+      "href": "?chapter=241&section=section-13a-262",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    }
+  ]
+}

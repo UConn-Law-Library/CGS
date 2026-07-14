@@ -104,7 +104,7 @@ function normalizeChapter(chapter, title) {
   };
 }
 
-function searchDocument(section, chapter) {
+export function searchDocument(section, chapter) {
   return {
     id: section.id,
     citation: section.citation,

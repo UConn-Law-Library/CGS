@@ -1,0 +1,869 @@
+{
+  "schemaVersion": "1.0.0",
+  "editionYear": 2026,
+  "title": {
+    "id": "title-03",
+    "number": "03",
+    "name": "State Elective Officers"
+  },
+  "removedDocumentIds": [
+    "section-3-13c",
+    "section-3-13i",
+    "section-3-20i",
+    "section-3-20j",
+    "section-3-22f",
+    "section-3-22h",
+    "section-3-22i",
+    "section-3-22k",
+    "section-3-22m",
+    "section-3-22o",
+    "section-3-22p",
+    "section-3-22u",
+    "section-3-24j",
+    "section-3-27a",
+    "section-3-31b",
+    "section-3-37",
+    "section-3-39j",
+    "section-3-39k",
+    "section-3-39l",
+    "section-3-39p",
+    "section-3-39q",
+    "section-3-39r",
+    "section-3-56a",
+    "section-3-65a",
+    "section-3-66a",
+    "section-3-70a",
+    "section-3-114c",
+    "section-3-114m",
+    "section-3-115b",
+    "section-3-122a",
+    "section-3-123f",
+    "section-3-123l",
+    "section-3-123aaa",
+    "section-3-123bbb",
+    "section-3-123eee",
+    "section-3-129g"
+  ],
+  "documents": [
+    {
+      "id": "section-3-13c",
+      "citation": "3-13c",
+      "citations": [
+        "3-13c"
+      ],
+      "heading": "Sec. 3-13c. Trust funds defined.",
+      "chapter": {
+        "id": "chapter-032",
+        "number": "032",
+        "name": "Treasurer"
+      },
+      "status": "active",
+      "text": "As used in sections 3-13 to 3-13e, inclusive, and 3-31b, “trust funds” includes the Connecticut Municipal Employees' Retirement Fund A, the Connecticut Municipal Employees' Retirement Fund B, the Soldiers, Sailors and Marines Fund, the Family and Medical Leave Insurance Trust Fund, the State's Attorneys' Retirement Fund, the Teachers' Annuity Fund, the Teachers' Pension Fund, the Teachers' Survivorship and Dependency Fund, the School Fund, the State Employees Retirement Fund, the Hospital Insurance Fund, the Policemen and Firemen Survivor's Benefit Fund, any trust fund described in subdivision (1) of subsection (b) of section 7-450 that is administered, held or invested by the State Treasurer, the Connecticut Baby Bond Trust, any Climate Change and Coastal Resiliency Reserve Fund created pursuant to section 7-159d, the Early Childhood Education Endowment and all other trust funds administered, held or invested by the State Treasurer.",
+      "href": "?chapter=032&section=section-3-13c",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-3-13i",
+      "citation": "3-13i",
+      "citations": [
+        "3-13i"
+      ],
+      "heading": "Sec. 3-13i. Contracts for services related to investment of trust funds. Procurement procedures.",
+      "chapter": {
+        "id": "chapter-032",
+        "number": "032",
+        "name": "Treasurer"
+      },
+      "status": "active",
+      "text": "(a) On and after January 1, 2001, or on and after the first adoption of an investment policy statement under section 3-13b, whichever is later, any contract for services related to the investment of trust funds, as defined in section 3-13c, shall be subject to the investment policy statement adopted under section 3-13b. No contract for services related to the investment of such funds shall be awarded to a provider of such services until the Treasurer's recommendation of a provider is reviewed by the Investment Advisory Council. The Treasurer shall provide notice of such recommendation at a meeting of the council. Not later than forty-five days after such meeting, the council may file a written review of the Treasurer's recommendation concerning the selection of such provider with the Office of the Treasurer where it shall be available for public inspection. The Treasurer may proceed to award the contract after (1) such forty-five-day period, (2) receipt of the council's written review, or (3) notification by the council that it does not intend to submit a written review, whichever is sooner.\n\n(b) The Treasurer shall establish procurement procedures for the award of any such contract, in accordance with standards set forth in the investment policy statement adopted under section 3-13b, that foster impartial and comprehensive evaluations of potential providers and encourage the selection of the most responsible provider who can provide the best value to the state. Any such contract shall not be considered a personal service agreement, as defined in section 4-212, or a contract for contractual services, as defined in section 4a-50.",
+      "href": "?chapter=032&section=section-3-13i",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-3-13m",
+      "citation": "3-13m",
+      "citations": [
+        "3-13m"
+      ],
+      "heading": "Sec. 3-13m. Prohibition re state or political subdivisions accepting or requiring virtual currency payment, or purchasing, holding, investing in or establishing reserve of virtual currency.",
+      "chapter": {
+        "id": "chapter-032",
+        "number": "032",
+        "name": "Treasurer"
+      },
+      "status": "active",
+      "text": "Neither the state nor any political subdivision of the state shall (1) accept or require payment in the form of virtual currency for an amount due to the state or the political subdivision, or (2) purchase, hold, invest in or establish a reserve of virtual currency. For purposes of this section, “virtual currency” has the same meaning as provided in section 36a-596.",
+      "href": "?chapter=032&section=section-3-13m",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-3-20i",
+      "citation": "3-20i",
+      "citations": [
+        "3-20i"
+      ],
+      "heading": "Sec. 3-20i. Disposition of bond proceeds.",
+      "chapter": {
+        "id": "chapter-032",
+        "number": "032",
+        "name": "Treasurer"
+      },
+      "status": "repealed",
+      "text": "Section 3-20i is repealed, effective June 30, 2025.",
+      "href": "?chapter=032&section=section-3-20i",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "repealed"
+      }
+    },
+    {
+      "id": "section-3-20j",
+      "citation": "3-20j",
+      "citations": [
+        "3-20j"
+      ],
+      "heading": "Sec. 3-20j. Credit revenue bonds.",
+      "chapter": {
+        "id": "chapter-032",
+        "number": "032",
+        "name": "Treasurer"
+      },
+      "status": "active",
+      "text": "(a) As used in this section, the following terms have the following meanings, unless the context clearly indicates a different meaning or intent:\n\n(1) “Credit revenue bonds” means revenue bonds issued pursuant to this section;\n\n(2) “Collection agent” means the financial institution acting as the trustee or agent for the trustee that receives the pledged revenues directed by the state to be paid to it by taxpayers;\n\n(3) “Debt service requirements” means (A) (i) principal and interest with respect to bonds, (ii) interest with respect to bond anticipation notes, and (iii) unrefunded principal with respect to bond anticipation notes, (B) the purchase price of bonds and bond anticipation notes that are subject to purchase or redemption at the option of the bondowner or noteowner, (C) the amounts, if any, required to establish or maintain reserves, sinking funds or other funds or accounts at the respective levels required to be established or maintained therein in accordance with the proceedings authorizing the issuance of bonds, (D) expenses of issuance and administration with respect to bonds and bond anticipation notes, as determined by the Treasurer, (E) the amounts, if any, becoming due and payable under a reimbursement agreement or similar agreement entered into pursuant to authority granted under the proceedings authorizing the issuance of bonds and bond anticipation notes, and (F) any other costs or expenses deemed by the Treasurer to be necessary or proper to be paid in connection with the bonds and bond anticipation notes, including, without limitation, the cost of any credit facility, including, but not limited to, a letter of credit or policy of bond insurance, issued by a financial institution pursuant to an agreement approved pursuant to the proceedings authorizing the issuance of bonds and bond anticipation notes;\n\n(4) “Dedicated savings” for a period means the amounts for such period determined by the Treasurer pursuant to subsection (n) of this section to have been saved by the issuance of credit revenue bonds;\n\n(5) “Pledged revenues” means withholding taxes statutorily pledged to repayment of credit revenue bonds;\n\n(6) “Proceedings” means the proceedings of the State Bond Commission authorizing the issuance of bonds pursuant to this section, the provisions of any resolution or trust indenture securing bonds, that are incorporated into such proceedings, the provisions of any other documents or agreements that are incorporated into such proceedings and, to the extent applicable, a certificate of determination filed by the Treasurer in accordance with this section;\n\n(7) “Trustee” means the financial institution acting as trustee under the trust indenture pursuant to which bonds or notes are issued; and\n\n(8) “Withholding taxes” means taxes required to be deducted and withheld pursuant to sections 12-705 and 12-706 and paid to the Commissioner of Revenue Services pursuant to section 12-707 upon receipt by the state and including penalty and interest charges on such taxes.\n\n(b) Whenever any general statute or public or special act, whether enacted before, on or after October 31, 2017, authorizes general obligation bonds of the state to be issued for any purpose, such general statute or public or special act shall be deemed to have authorized such bonds to be issued as either general obligation bonds or credit revenue bonds under this section. In no event shall the total of the principal amount of general obligation bonds and credit revenue bonds issued pursuant to the authority of any general statute or public or special act exceed the amount authorized thereunder. Except as provided for in this section, all provisions of section 3-20, except subsection (p) of said section, shall apply to such credit revenue bonds.\n\n(c) Bonds issued pursuant to this section shall be special obligations of the state and shall not be payable from or charged upon any funds other than the pledged revenues or other receipts, funds or moneys pledged therefor, nor shall the state or any political subdivision thereof be subject to any liability thereon, except to the extent of such pledged revenues or other receipts, funds or moneys pledged therefor as provided in this section. As part of the contract of the state with the owners of such bonds, all amounts necessary for punctual payment of principal of and interest on such bonds, and redemption premium, if any, with respect to such bonds, is hereby appropriated and the Treasurer shall pay such principal and interest and redemption premium, if any, as the same shall become due but only from such sources. The issuance of bonds issued under this section shall not directly or indirectly or contingently obligate the state or any political subdivision thereof to levy or to pledge any form of taxation whatever therefor, except for taxes included in the pledged revenues, or to make any additional appropriation for their payment. Such bonds shall not constitute a charge, lien or encumbrance, legal or equitable, upon any property of the state or of any political subdivision thereof other than the pledged revenues or other receipts, funds or moneys pledged therefor as provided in this section, and the substance of such limitation shall be plainly stated on the face of each such bond and bond anticipation note.\n\n(d) The state hereby pledges all its right, title and interest to the pledged revenues to secure the due and punctual payment of the principal of and interest on the credit revenue bonds, and redemption premium, if any, with respect to such bonds. Such pledge shall secure all such credit revenue bonds equally, and such pledge is and shall be prior in interest to any other claim of any party to the pledged revenues, including any holder of general obligation bonds of the state. Such bonds also may be secured by a pledge of reserves, sinking funds and any other funds and accounts, including proceeds from investment of any of the foregoing, authorized hereby or by the proceedings authorizing the issuance of such bonds, and by moneys paid under a credit facility including, but not limited to, a letter of credit or policy of bond insurance, issued by a financial institution pursuant to an agreement authorized by such proceedings.\n\n(e) The pledge of the pledged revenues under this section is made by the state by operation of law through this section, and as a statutory lien is effective without any further act or agreement by the state, and shall be valid and binding from the time the pledge is made, and any revenues or other receipts, funds or moneys so pledged and received by the state shall be subject immediately to the lien of such pledge without any physical delivery thereof or further act. The lien of any such pledge shall be valid and binding as against all parties having claims of any kind in tort, contract or otherwise against the state, irrespective of whether such parties have notice thereof.\n\n(f) In the proceedings authorizing any credit revenue bonds, the state shall direct the trustee to establish one or more collection accounts with the collection agent to receive the pledged revenues and shall direct payment of the pledged revenues into such collection accounts of the collection agent. Funds in such collection accounts shall be kept separate and apart from any other funds of the state until disbursed as provided for in the proceedings authorizing such credit revenue bonds. Such proceedings shall provide that no funds from such collection accounts shall be disbursed to the control of the state until and at such times as all current claims of any trustee set out in the proceedings have been satisfied, and thereafter may be disbursed to the control of the state free and clear of any claim by the trustee or the holders of any credit revenue bonds. The agreements with the depositaries establishing the collection accounts may provide for customary settlement terms for the collection of revenues. The expenses of the state in establishing such collection accounts and directing the deposit of pledged revenues therein, including the expenses of the Department of Revenue Services and the office of the Comptroller in establishing mechanisms to verify, allocate, track and audit such accounts and the deposits therein, may be paid as costs of issuance of any bonds issued pursuant to section 3-20 or this section.\n\n(g) The proceedings under which bonds are authorized to be issued, pursuant to this section, may, subject to the provisions of the general statutes, contain any or all of the following:\n\n(1) Covenants that confirm, as part of the contract with the holders of the credit revenue bonds, the agreements of the state set forth in subsections (d) to (f), inclusive, of this section;\n\n(2) Provisions for the execution of reimbursement agreements or similar agreements in connection with credit facilities including, but not limited to, letters of credit or policies of bond insurance, remarketing agreements and agreements for the purpose of moderating interest rate fluctuations, and of such other agreements entered into pursuant to section 3-20a;\n\n(3) Provisions for the collection, custody, investment, reinvestment and use of the pledged revenues or other receipts, funds or moneys pledged therefor;\n\n(4) Provisions regarding the establishment and maintenance of reserves, sinking funds and any other funds and accounts as shall be approved by the State Bond Commission in such amounts as may be established by the State Bond Commission, and the regulation and disposition thereof, including requirements that any such funds and accounts be held separate from or not be commingled with other funds of the state;\n\n(5) Provisions for the issuance of additional bonds on a parity with bonds theretofore issued, including establishment of coverage requirements as a condition of the issuance of such additional bonds;\n\n(6) Provisions regarding the rights and remedies available in case of a default to the bondowners, or any trustee under any contract, loan agreement, document, instrument or trust indenture, including the right to appoint a trustee to represent their interests upon occurrence of an event of default, as defined in said proceedings, provided, if any bonds shall be secured by a trust indenture, the respective owners of such bonds or notes shall have no authority except as set forth in such trust indenture to appoint a separate trustee to represent them, and provided further no such right or remedy shall allow principal and interest on such bonds to be accelerated; and\n\n(7) Provisions or covenants of like or different character from the foregoing which are consistent with this and which the State Bond Commission determines in such proceedings are necessary, convenient or desirable to better secure the bonds, or will tend to make the bonds more marketable, and which are in the best interests of the state. Any provision which may be included in proceedings authorizing the issuance of bonds hereunder may be included in a trust indenture duly approved in accordance with this subsection which secures the bonds and any notes issued in anticipation thereof, and in such case the provisions of such indenture shall be deemed to be a part of such proceedings as though they were expressly included therein.\n\n(h) Bonds issued pursuant to this section shall be secured by a trust indenture, approved by the State Bond Commission, by and between the state and a corporate trustee, which may be any trust company or bank having the powers of a trust company within or without the state. Such trust indenture may contain such provisions for protecting and enforcing the rights and remedies of the bondowners as may be reasonable and proper and not in violation of law, including covenants setting forth the duties of the state in relation to the exercise of its powers pursuant to the pledged revenues and the custody, safeguarding and application of all moneys. The state may provide by such trust indenture for the payment of the pledged revenues or other receipts, funds or moneys to the trustee under such trust indenture or to any other depository, and for the method of disbursement thereof, with such safeguards and restrictions as it may determine, but consistent with the provisions of subsections (d) to (f), inclusive, of this section.\n\n(i) The Treasurer shall have power to purchase bonds of the state issued pursuant to this section out of any funds available therefor. The Treasurer may hold, pledge, cancel or resell such bonds subject to and in accordance with agreements with bondowners.\n\n(j) Bonds issued pursuant to this section are hereby made negotiable instruments within the meaning of and for all purposes of the Uniform Commercial Code, whether or not such bonds are of such form and character as to be negotiable instruments under the terms of the Uniform Commercial Code, subject only to the provisions of such bonds for registration.\n\n(k) Any moneys held by the Treasurer or a trustee pursuant to a trust indenture with respect to bonds issued pursuant to this section, including pledged revenues, other pledged receipts, funds or moneys and proceeds from the sale of such bonds, may, pending the use or application of the proceeds thereof for an authorized purpose, be (1) invested and reinvested in such obligations, securities and investments as are set forth in subsection (f) of section 3-20 and in participation certificates in the Short Term Investment Fund created under section 3-27a, or (2) deposited or redeposited in such bank or banks as shall be provided in the resolution authorizing the issuance of such bonds, the certificate of determination authorizing issuance of such bond anticipation notes or in the indenture securing such bonds. Proceeds from investments authorized by this subsection, less amounts required under the proceedings authorizing the issuance of bonds, shall be credited to the General Fund.\n\n(l) Bonds issued pursuant to this section are hereby made securities in which all public officers and public bodies of the state and its political subdivisions, all insurance companies, credit unions, building and loan associations, investment companies, banking associations, trust companies, executors, administrators, trustees and other fiduciaries and pension, profit-sharing and retirement funds may properly and legally invest funds, including capital in their control or belonging to them. Such bonds are hereby made securities which may properly and legally be deposited with and received by any state or municipal officer or any agency or political subdivision of the state for any purpose for which the deposit of bonds or obligations of the state is now or may hereafter be authorized by law.\n\n(m) The state covenants with the purchasers and all subsequent owners and transferees of bonds issued by the state pursuant to this section, in consideration of the acceptance of the payment for the bonds, until such bonds, together with the interest thereon, with interest on any unpaid installment of interest and all costs and expenses in connection with any action or proceeding on behalf of such owners, are fully met and discharged, or unless expressly permitted or otherwise authorized by the terms of each contract and agreement made or entered into by or on behalf of the state with or for the benefit of such owners, that the state will impose, charge, raise, levy, collect and apply the pledged revenues and other receipts, funds or moneys pledged for the payment of debt service requirements as provided in this section, in such amounts as may be necessary to pay such debt service requirements in each year in which bonds are outstanding and further, that the state (1) will not limit or alter the duties imposed on the Treasurer and other officers of the state by law and by the proceedings authorizing the issuance of bonds with respect to application of pledged revenues or other receipts, funds or moneys pledged for the payment of debt service requirements as provided in said sections; (2) will not alter the provisions establishing collection accounts with the collection agent or the direction of pledged revenues to such collection accounts, or the provisions applying such pledged revenues to the debt service requirements with respect to bonds or notes; (3) will not issue any bonds, notes or other evidences of indebtedness, other than the bonds, having any rights arising out of said sections or secured by any pledge of or other lien or charge on the pledged revenues or other receipts, funds or moneys pledged for the payment of debt service requirements as provided in said sections; (4) will not create or cause to be created any lien or charge on such pledged amounts, other than a lien or pledge created thereon pursuant to said sections, provided nothing in this subsection shall prevent the state from issuing evidences of indebtedness (A) which are secured by a pledge or lien which is and shall on the face thereof be expressly subordinate and junior in all respects to every lien and pledge created by or pursuant to said sections; (B) for which the full faith and credit of the state is pledged and which are not expressly secured by any specific lien or charge on such pledged amounts; or (C) which are secured by a pledge of or lien on moneys or funds derived on or after such date as every pledge or lien thereon created by or pursuant to said sections shall be discharged and satisfied; (5) will carry out and perform, or cause to be carried out and performed, every promise, covenant, agreement or contract made or entered into by the state or on its behalf with the owners of any bonds; (6) will not in any way impair the rights, exemptions or remedies of such owners; and (7) will not limit, modify, rescind, repeal or otherwise alter the rights or obligations of the appropriate officers of the state to impose, maintain, charge or collect the taxes, fees, charges and other receipts constituting the pledged revenues as may be necessary to produce sufficient revenues to fulfill the terms of the proceedings authorizing the issuance of the bonds; and provided further the state may change the rate of withholding taxes, calculation of amounts to which the rate applies, including exemptions and deductions so long as any such change, had it been in effect, would not have reduced the withholding taxes for any twelve consecutive months within the preceding fifteen months to less than an amount three times the maximum debt service payable on bonds issued and outstanding under this section for the current or any future fiscal year. The State Bond Commission is authorized to include this covenant of the state in any agreement with the owner of any such bonds.\n\n(n) At the time of issuance of any credit revenue bonds pursuant to this section, the Treasurer shall determine the amount of principal and interest estimated to be saved by the issuance of credit revenue bonds instead of general obligation bonds, as measured by the difference between the stated principal and interest payable with respect to such credit revenue bonds in each fiscal year during which bonds shall be outstanding, and the principal and interest estimated to be payable in each fiscal year during which such bonds would have been outstanding had such bonds been issued as general obligation bonds payable over the same period on the basis of equal amounts of principal stated to be due in each fiscal year, subject to any specific adjustments which the Treasurer may consider appropriate to take into account in the structure for a specific bond issue, provided in any fiscal year that the Treasurer determines there are no savings, the estimated savings shall be zero for such fiscal year. The Treasurer shall base such determination on such factors as the Treasurer shall deem relevant, which may include advice from financial advisors to the state, historical trading patterns of outstanding state general obligation bonds and spreads to common municipal bond indexes. The Treasurer shall set out such estimated savings for each fiscal year during which each issue of credit revenue bonds shall be stated to be outstanding in a bond determination which shall be filed with the State Bond Commission at or prior to the issuance of such credit revenue bonds, and such amounts shall be dedicated savings for purposes of this section.\n\n(o) For each fiscal year during which credit revenue bonds shall be outstanding, there shall be transferred from the General Fund of the state to the Budget Reserve Fund established pursuant to section 4-30a, at the beginning of such fiscal year, an amount equal to the aggregate dedicated savings for all such bonds issued and to be outstanding in such fiscal year, unless the Governor declares an emergency or the existence of extraordinary circumstances, in which the provisions of section 4-85 are invoked, and at least three-fifths of the members of each chamber of the General Assembly vote to diminish such required transfer during the fiscal year for which the emergency or existence of extraordinary circumstances are determined, or in such other circumstances as may be permitted by the terms of the bonds, notes or other obligations issued pursuant to this section. Amounts so transferred shall not be available for appropriation for any other purpose, but shall only be used as provided in section 4-30a.\n\n(p) (1) Prior to July 1, 2027, net earnings of investments of proceeds of bonds issued pursuant to section 3-20 or pursuant to this section and accrued interest on the issuance of such bonds and premiums on the issuance of such bonds shall be deposited to the credit of the General Fund, after (A) payment of any expenses incurred by the Treasurer or State Bond Commission in connection with such issuance, or (B) application to interest on bonds, notes or other obligations of the state.\n\n(2) On and after July 1, 2027, notwithstanding subsection (f) of section 3-20, (A) net earnings of investments of proceeds of bonds issued pursuant to section 3-20 or pursuant to this section and accrued interest on the issuance of such bonds shall be deposited to the credit of the General Fund, and (B) premiums, net of any original issue discount, on the issuance of such bonds shall, after payment of any expenses incurred by the Treasurer or State Bond Commission in connection with such issuance, be deposited at the direction of the Treasurer to the credit of an account or fund to fund all or a portion of any purpose or project authorized by the State Bond Commission pursuant to any bond act up to the amount authorized by the State Bond Commission, provided the bonds for such purpose or project are unissued, and provided further the certificate of determination the Treasurer files with the secretary of the State Bond Commission for such authorized bonds sets forth the amount of the deposit applied to fund each such purpose and project. Upon such filing, the Treasurer shall record bonds in the amount of net premiums credited to each purpose and project as set forth in the certificate of determination of the Treasurer as deemed issued and retired and the Treasurer shall not thereafter exercise authority to issue bonds in such amount for such purpose or project. Upon such recording by the Treasurer, such bonds shall be deemed to have been issued, retired and no longer authorized for issuance or outstanding for the purposes of section 3-21, and for the purpose of aligning the funding of such authorized purpose and project with amounts generated by net premiums, but shall not constitute an actual bond issuance or bond retirement for any other purposes including, but not limited to, financial reporting purposes.\n\n(q) Any general obligation bonds or notes issued pursuant to section 3-20 may be refunded by credit revenue bonds or notes issued pursuant to this section, and any credit revenue bonds issued pursuant to this section may be refunded by general obligation bonds or notes issued pursuant to subsection (g) of section 3-20 in the manner, and subject to the same conditions, as set out in subsection (g) of section 3-20.",
+      "href": "?chapter=032&section=section-3-20j",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-3-22f",
+      "citation": "3-22f",
+      "citations": [
+        "3-22f"
+      ],
+      "heading": "Sec. 3-22f. Connecticut Higher Education Trust: Definitions.",
+      "chapter": {
+        "id": "chapter-032",
+        "number": "032",
+        "name": "Treasurer"
+      },
+      "status": "active",
+      "text": "As used in sections 3-22f to 3-22p, inclusive:\n\n(1) “Account owner” means the owner or any successor owner of a CHET account;\n\n(2) “CHET account” means an account in the trust, established pursuant to a participation agreement, into which contributions are made for the purpose of meeting the qualified higher education expenses of a designated beneficiary of such account;\n\n(3) “Designated beneficiary” has the same meaning as provided in Section 529 of the Internal Revenue Code;\n\n(4) “Eligible educational institution” has the same meaning as provided in Section 529 of the Internal Revenue Code;\n\n(5) “Internal Revenue Code” means the Internal Revenue Code of 1986, or any subsequent corresponding internal revenue code of the United States, as amended from time to time;\n\n(6) “Participation agreement” means the agreement between the trust and the account owner for participation in a CHET account for a designated beneficiary;\n\n(7) “Qualified higher education expenses” has the same meaning as provided in Section 529 of the Internal Revenue Code; and\n\n(8) “Trust” means the Connecticut Higher Education Trust.",
+      "href": "?chapter=032&section=section-3-22f",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-3-22h",
+      "citation": "3-22h",
+      "citations": [
+        "3-22h"
+      ],
+      "heading": "Sec. 3-22h. Trust authority of the Treasurer.",
+      "chapter": {
+        "id": "chapter-032",
+        "number": "032",
+        "name": "Treasurer"
+      },
+      "status": "active",
+      "text": "The Treasurer, on behalf of the trust and for purposes of the trust, may:\n\n(1) Receive and invest moneys in the trust in any instruments, obligations, securities or property in accordance with section 3-22i;\n\n(2) Establish terms for the participation agreement and the administration of CHET accounts, including, but not limited to, (A) the method of payment into the trust by payroll deduction, transfer from bank accounts or otherwise, (B) the termination, withdrawal or transfer of payments under the trust, including transfers to or from a qualified tuition program established by another state pursuant to Section 529 of the Internal Revenue Code, (C) penalties for distributions not used for qualified higher education expenses, (D) changing of the identity of the designated beneficiary, and (E) any charges or fees in connection with the administration of the trust;\n\n(3) Enter into one or more contractual agreements, including, but not limited to, contracts for legal, actuarial, accounting, custodial, advisory, management, administrative, advertising, marketing and consulting services for the trust and pay for such services from the gains and earnings of the trust;\n\n(4) Procure insurance in connection with the trust's property, assets, activities, or deposits or contributions to the trust;\n\n(5) Apply for, accept and expend gifts, grants, or donations from public or private sources to enable the trust to carry out its objectives;\n\n(6) Adopt regulations in accordance with chapter 54 for purposes of sections 3-22f to 3-22p, inclusive;\n\n(7) Sue and be sued;\n\n(8) Establish one or more funds within the trust and maintain separate accounts for each designated beneficiary; and\n\n(9) Take any other action necessary to carry out the purposes of sections 3-22f to 3-22p, inclusive, and incidental to the duties imposed on the Treasurer pursuant to said sections.",
+      "href": "?chapter=032&section=section-3-22h",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-3-22i",
+      "citation": "3-22i",
+      "citations": [
+        "3-22i"
+      ],
+      "heading": "Sec. 3-22i. Investment of funds in the trust.",
+      "chapter": {
+        "id": "chapter-032",
+        "number": "032",
+        "name": "Treasurer"
+      },
+      "status": "active",
+      "text": "(a) Notwithstanding sections 3-13 to 3-13h, inclusive, the Treasurer shall invest the amounts on deposit in the trust in a manner reasonable and appropriate to achieve the objectives of the trust, exercising the discretion and care of a prudent person in similar circumstances with similar objectives. The Treasurer shall give due consideration to rate of return, risk, term or maturity, diversification of the total portfolio within the trust, liquidity, the projected disbursements and expenditures, and the expected payments, deposits, contributions and gifts to be received. The Treasurer shall not require the trust to invest directly in obligations of the state or any political subdivision of the state or in any investment or other fund administered by the Treasurer.\n\n(b) (1) The Treasurer may retain investment advisors to make such investments on behalf of the Treasurer and may delegate to such advisors the authority to act in place of the Treasurer in (A) the investment or reinvestment of all or parts of the amounts on deposit in the trust, and (B) the holding, purchasing, selling, assigning, transferring or disposing of any or all of the securities and investments in which such amounts have been invested and the proceeds of such securities and investments. Any such investment advisor shall be registered with the Securities and Exchange Commission unless such advisor is exempt from registration pursuant to federal law.\n\n(2) Any investments made by an investment advisor pursuant to this subsection shall be made solely in the interest of account owners and designated beneficiaries and for the exclusive purposes of providing benefits to designated beneficiaries for qualified higher education expenses and for defraying reasonable expenses of administering the trust and CHET accounts. The assets of the trust shall be continuously invested and reinvested in a manner consistent with the objectives of the trust until disbursed, expended on expenses incurred by the operations of the trust or refunded to the account owner or designated beneficiary in accordance with the conditions provided in the participation agreement.",
+      "href": "?chapter=032&section=section-3-22i",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-3-22k",
+      "citation": "3-22k",
+      "citations": [
+        "3-22k"
+      ],
+      "heading": "Sec. 3-22k. Trust financial report.",
+      "chapter": {
+        "id": "chapter-032",
+        "number": "032",
+        "name": "Treasurer"
+      },
+      "status": "active",
+      "text": "On or before December thirty-first, annually, the Treasurer shall submit a financial report, pursuant to section 3-37, to the Governor on the operations of the trust including the receipts, disbursements, assets, investments and liabilities and administrative costs of the trust for the prior fiscal year. The Treasurer shall also submit such report to the Connecticut Higher Education Trust Advisory Committee established pursuant to section 3-22e, and make the report available to each account owner and designated beneficiary.",
+      "href": "?chapter=032&section=section-3-22k",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-3-22m",
+      "citation": "3-22m",
+      "citations": [
+        "3-22m"
+      ],
+      "heading": "Sec. 3-22m. State pledge for purposes of the trust.",
+      "chapter": {
+        "id": "chapter-032",
+        "number": "032",
+        "name": "Treasurer"
+      },
+      "status": "active",
+      "text": "The state pledges to account owners, designated beneficiaries and with any party who enters into contracts with the trust, pursuant to the provisions of sections 3-22f to 3-22p, inclusive, that the state will not limit or alter the rights under said sections vested in the trust or contract with the trust until such obligations are fully met and discharged and such contracts are fully performed on the part of the trust, provided nothing contained in this section shall preclude such limitation or alteration if adequate provision is made by law for the protection of such account owners and designated beneficiaries pursuant to the obligations of the trust or parties who entered into such contracts with the trust. The trust, on behalf of the state, may include this pledge and undertaking for the state in participation agreements and such other obligations or contracts.",
+      "href": "?chapter=032&section=section-3-22m",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-3-22o",
+      "citation": "3-22o",
+      "citations": [
+        "3-22o"
+      ],
+      "heading": "Sec. 3-22o. Compliance with provisions necessary for trust to constitute qualified tuition program and be tax exempt.",
+      "chapter": {
+        "id": "chapter-032",
+        "number": "032",
+        "name": "Treasurer"
+      },
+      "status": "active",
+      "text": "The Treasurer shall take any action necessary to ensure that the trust complies with all applicable requirements of federal and state laws, rules and regulations to the extent necessary for the trust to constitute a qualified tuition program and be exempt from taxation under Section 529 of the Internal Revenue Code.",
+      "href": "?chapter=032&section=section-3-22o",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-3-22p",
+      "citation": "3-22p",
+      "citations": [
+        "3-22p"
+      ],
+      "heading": "Sec. 3-22p. Investments in trust, and certain CHET contributions and distributions, not to be considered for certain programs and purposes.",
+      "chapter": {
+        "id": "chapter-032",
+        "number": "032",
+        "name": "Treasurer"
+      },
+      "status": "active",
+      "text": "(a) Notwithstanding any provision of the general statutes, moneys invested in the Connecticut Higher Education Trust, contributions to a CHET account, distributions from a CHET account for qualified higher education expenses and any other distributions that are not includable in federal gross income under Section 529 of the Internal Revenue Code shall be disregarded for purposes of determining an individual's eligibility for assistance under any means-tested public assistance program administered by the state or any political subdivision thereof.\n\n(b) Notwithstanding any provision of the general statutes, no moneys invested in said trust shall be considered to be an asset for purposes of determining an individual's eligibility for need-based, institutional aid grants offered to an individual at the public eligible educational institutions in the state.\n\n(c) Notwithstanding any provision of the general statutes, an account owner may transfer money from a CHET account via any rollover distribution that is not includable in federal gross income under Section 529 of the Internal Revenue Code.",
+      "href": "?chapter=032&section=section-3-22p",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-3-22u",
+      "citation": "3-22u",
+      "citations": [
+        "3-22u"
+      ],
+      "heading": "Sec. 3-22u. CHET Baby Scholars fund and program.",
+      "chapter": {
+        "id": "chapter-032",
+        "number": "032",
+        "name": "Treasurer"
+      },
+      "status": "repealed",
+      "text": "Section 3-22u is repealed, effective July 1, 2025.",
+      "href": "?chapter=032&section=section-3-22u",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "repealed"
+      }
+    },
+    {
+      "id": "section-3-22v",
+      "citation": "3-22v",
+      "citations": [
+        "3-22v"
+      ],
+      "heading": "Sec. 3-22v. Safe harbor account. Board of trustees. Policies and procedures.",
+      "chapter": {
+        "id": "chapter-032",
+        "number": "032",
+        "name": "Treasurer"
+      },
+      "status": "active",
+      "text": "(a) As used in this section:\n\n(1) “Collateral costs” means any out-of-pocket costs, other than the cost of the procedure itself, necessary to receive reproductive health care services or gender-affirming health care services in the state, including, but not limited to, costs for travel, lodging and meals;\n\n(2) “Gender-affirming health care services” means all medical care relating to the treatment of gender dysphoria, as set forth in the most recent edition of the American Psychiatric Association's “Diagnostic and Statistical Manual of Mental Disorders”, and gender incongruence, as defined in the most recent revision of the “International Statistical Classification of Diseases and Related Health Problems”;\n\n(3) “Nonprofit organization” means an organization that is exempt from taxation pursuant to Section 501(c)(3) of the Internal Revenue Code of 1986, or any subsequent corresponding internal revenue code of the United States, as amended from time to time;\n\n(4) “Patient-identifiable data” means any information that identifies, or may reasonably be used as a basis to identify, an individual patient; and\n\n(5) “Reproductive health care services” means all medical, surgical, counseling or referral services relating to the human reproductive system, including, but not limited to, services relating to fertility, pregnancy, contraception and abortion.\n\n(b) There is established an account to be known as the “safe harbor account”, which shall be a separate, nonlapsing account of the State Treasurer. The account shall contain any funds received from any private contributions, gifts, grants, donations, bequests or devises to the account and all earnings on such funds. The State Treasurer shall invest the moneys deposited in the account in a manner that is reasonable and appropriate to achieve the objectives of such account while exercising the discretion and care of a prudent person in similar circumstances with similar objectives. The State Treasurer shall give due consideration to the rate of return risk, term or maturity, the diversification of the total portfolio within such account, the liquidity of funds, the projected disbursements and expenditures of funds, and the expected payments, deposits, contributions and gifts to be received. The moneys in the account shall be continuously invested and reinvested in a manner consistent with the objectives of the account until disbursed in accordance with this subsection. Any administrative costs associated with maintenance or disbursement of moneys in the account shall be paid from the account and no taxpayer funds shall pay for such administrative costs, except nothing in this subsection shall prohibit the State Treasurer from utilizing available staff resources to administer the account. Moneys in the account shall be expended by the board of trustees, established pursuant to subsection (c) of this section, for the purpose of providing grants to (1) nonprofit organizations that provide funding for reproductive health care services or gender-affirming health care services or the collateral costs incurred by individuals in receiving such services in the state, or (2) nonprofit organizations that serve LGBTQ+ youth or families in the state for the purpose of reimbursing or paying directly to such youth or family members for the collateral costs incurred by such youth or family members in receiving reproductive health care services or gender-affirming health care services in the state.\n\n(c) The safe harbor account shall be administered by a board of trustees consisting of the following members:\n\n(1) The Treasurer, or the Treasurer's designee, who shall serve as chairperson of the board of trustees; and\n\n(2) Four members appointed by the Treasurer, (A) one of whom shall be a provider of reproductive health care services in the state, (B) one of whom shall have experience working with members of the LGBTQ+ community, (C) one of whom shall have experience working with providers of reproductive health care services, and (D) one of whom shall have experience working with providers of health care or mental health services to members of the LGBTQ+ community. When making such appointments, the Treasurer shall use the Treasurer's best efforts to ensure that the board of trustees reflects the racial, gender and geographic diversity of the state.\n\n(d) Not later than September 1, 2025, the board of trustees shall adopt policies and procedures concerning the awarding of grants pursuant to the provisions of this section. Such policies and procedures shall include, but need not be limited to, (1) grant application procedures, including procedures regarding subgrants, (2) eligibility criteria for applicant nonprofit organizations, including, but not limited to, subgrantees, and for individuals served by such grants, (3) eligibility criteria for collateral costs, (4) consideration of need of the individuals served by such grants, including, but not limited to, the urgency or time sensitivity of the circumstances and financial need, and (5) procedures to coordinate with any national network created to perform similar functions to those of the safe harbor account, including, but not limited to, procedures for the acceptance of funding transferred to the safe harbor account for a particular use. Such policies and procedures shall not require the collection or retention of patient-identifiable data in order to receive a grant. Such policies and procedures may be updated as deemed necessary by the board of trustees. In the event that the board of trustees determines that the policies and procedures adopted pursuant to the provisions of this subsection are inadequate with respect to (A) determining the eligibility of a certain health care provider or nonprofit organization for a grant, or (B) whether a certain health care service received by or collateral cost incurred by an individual is eligible to be reimbursed or paid by a health care provider or nonprofit organization using grant moneys received pursuant to this section, the board of trustees may make a fact-based determination as to such eligibility.",
+      "href": "?chapter=032&section=section-3-22v",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-3-24j",
+      "citation": "3-24j",
+      "citations": [
+        "3-24j"
+      ],
+      "heading": "Sec. 3-24j. Definitions.",
+      "chapter": {
+        "id": "chapter-032",
+        "number": "032",
+        "name": "Treasurer"
+      },
+      "status": "active",
+      "text": "As used in this section and sections 3-24k and 3-24 l :\n\n(1) “Community bank” means a bank or out-of-state bank, as those terms are defined in section 36a-2; and\n\n(2) “Community credit union” means a Connecticut credit union or federal credit union, as those terms are defined in section 36a-2.",
+      "href": "?chapter=032&section=section-3-24j",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-3-27a",
+      "citation": "3-27a",
+      "citations": [
+        "3-27a"
+      ],
+      "heading": "Sec. 3-27a. Short Term Investment Fund. Payment of certain interest to board or boards of trustees. Participation certificates.",
+      "chapter": {
+        "id": "chapter-032",
+        "number": "032",
+        "name": "Treasurer"
+      },
+      "status": "active",
+      "text": "There is hereby created a Short Term Investment Fund to be administered by the State Treasurer. The State Treasurer may sell participation certificates of the Short Term Investment Fund for investment to the General Fund, bond funds, the Special Transportation Fund, the Local Bridge Revolving Fund, the Educational Excellence Trust Fund, the Residential Property Tax Revaluation Relief Fund, the Municipal Abandoned Vehicle Trust Fund, the Special Abandoned Property Fund, trust funds administered by the Treasurer and all such other funds the moneys of which by law the Treasurer is responsible for investing. Such participation certificates shall bear and pay such interest and be issued subject to such terms and conditions as shall be determined and established by the State Treasurer. The interest derived from the investment or reinvestment of funds of The University of Connecticut Operating Fund and The University of Connecticut Health Center Operating Fund, The University of Connecticut Research Foundation, The University of Connecticut Health Center Research Foundation, the Connecticut State University System Operating Fund, the Connecticut State University System Research Foundation, and the Connecticut State Community College Operating Fund, as authorized by sections 10a-105, 10a-110a, 10a-130, 10a-99 and 10a-77, respectively, and the Board of Regents for Higher Education for Charter Oak State College educational services account, as authorized by section 10a-143, shall be paid to each board or board of trustees respectively.",
+      "href": "?chapter=032&section=section-3-27a",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-3-31b",
+      "citation": "3-31b",
+      "citations": [
+        "3-31b"
+      ],
+      "heading": "Sec. 3-31b. Combined investment funds. Sale of participation units. Costs charged to income.",
+      "chapter": {
+        "id": "chapter-032",
+        "number": "032",
+        "name": "Treasurer"
+      },
+      "status": "active",
+      "text": "(a) Notwithstanding any provision of the general statutes, the State Treasurer may establish one or more combined investment funds for the purpose of investing funds for which the Treasurer is custodian or trustee, or funds that the Board of Trustees of The University of Connecticut or the Board of Regents for Higher Education request the Treasurer to invest pursuant to this section, provided the Treasurer shall adopt appropriate accounting procedures from which the exact interest of such funds so combined for investment can be determined. The State Treasurer is authorized to sell to all agencies, instrumentalities and political subdivisions of the state, participation units in any such combined investment fund established by him pursuant to this section. Such participation units issued by the Treasurer under the provisions of this section are made legal investments for all the funds of, held by or administered by all agencies, instrumentalities and political subdivisions of the state. The Treasurer may adopt such rules and regulations as may be necessary to administer the provisions of this section.\n\n(b) All costs of operating each such combined investment fund, including the cost of personnel and contractual services shall be paid by the Treasurer charging the income derived from said fund.",
+      "href": "?chapter=032&section=section-3-31b",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-3-37",
+      "citation": "3-37",
+      "citations": [
+        "3-37"
+      ],
+      "heading": "Sec. 3-37. Annual report of Treasurer. Monthly report of Treasurer.",
+      "chapter": {
+        "id": "chapter-032",
+        "number": "032",
+        "name": "Treasurer"
+      },
+      "status": "active",
+      "text": "(a) The Treasurer shall, annually, on or before December thirty-first, submit a final audited report to the Governor and a copy of such report to the Investment Advisory Council, which shall include the following information concerning the activities of the office of the State Treasurer for the immediately preceding fiscal year ending June thirtieth:\n\n(1) Complete financial statements and accompanying footnotes for the combined investment funds prepared in accordance with generally accepted accounting principles, which financial statements shall be audited in accordance with generally accepted auditing standards and supplementary schedules depicting the interests of the component retirement plans and trust funds;\n\n(2) Complete financial statements and accompanying footnotes for the Short Term Investment Fund prepared in accordance with generally accepted accounting principles and supplementary schedules listing all assets held by the Short Term Investment Fund;\n\n(3) A discussion and review of the performance of the combined investment funds and Short Term Investment Fund for such fiscal year in accordance with recognized and appropriate performance presentation and disclosure, including an analysis of the return earned by the portfolio and each combined investment fund as well as the risk profile of the portfolio and each combined investment fund according to investment industry standards;\n\n(4) The activities and transactions in such reasonable detail as is appropriate of the cash management division including information on the state's cash receipts and disbursements for the fiscal year, and the debt management division;\n\n(5) Financial statements and accompanying footnotes as well as a summary of operating results for the Second Injury Fund for such fiscal year;\n\n(6) A financial summary and report on the activities of the state's unclaimed property program for such fiscal year;\n\n(7) For a fiscal year in which the Treasurer used a portion of the remaining balance of the Special Transportation Fund in accordance with the provisions of subsection (d) of section 13b-68 a report on the amount used and the method or methods selected pursuant to said subsection and the amount of the reduction in projected debt service for the specified fiscal years and including a statement that such reduction does not vary by more than the allowable amount set forth in said subsection;\n\n(8) A listing of the companies from which state funds were divested based upon such companies' business in Sudan, pursuant to the provisions of section 3-21e, and any companies identified by the Treasurer as companies from which investment of state funds has been declared impermissible by the Treasurer, pursuant to the provisions of section 3-21e; and\n\n(9) Such other information as the Treasurer deems of interest to the public.\n\n(b) Commencing October 1, 2010, and monthly thereafter, the Treasurer shall submit a report to the chairpersons and ranking members of the joint standing committees of the General Assembly having cognizance of matters relating to finance, revenue and bonding and appropriations and the budgets of state agencies, and to the legislative Office of Fiscal Analysis. Such report shall include the following information for the month two months prior to the month in which the report is submitted: (1) A weekly list of the cash balance, with amount and percentage of sources, such as the common cash pool, bond fund investments and Special Transportation Fund investments, with accompanying footnotes; (2) a year-to-date total, on an ongoing basis, of authorized but unissued bonds, including assumptions in bond issuance, and any changes from month to month in such assumptions; (3) any other debt instruments or commercial paper issued, the types and amounts, with accompanying footnotes; and (4) the amounts in the common cash fund, with all components, such as bank and different investment accounts, and the amounts thereof separately listed.\n\n(c) The reports required pursuant to this section shall be made available to the public in hard copy and accessible electronically by means of the Internet or other media or systems available to the public.",
+      "href": "?chapter=032&section=section-3-37",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-3-39j",
+      "citation": "3-39j",
+      "citations": [
+        "3-39j"
+      ],
+      "heading": "Sec. 3-39j. Achieving a better life experience program: Definitions.",
+      "chapter": {
+        "id": "chapter-032",
+        "number": "032",
+        "name": "Treasurer"
+      },
+      "status": "active",
+      "text": "As used in this section and sections 3-39k to 3-39r, inclusive:\n\n(1) “Achieving a better life experience account” or “ABLE account” means an account established and maintained pursuant to sections 3-39k to 3-39r, inclusive, for the purposes of paying the qualified disability expenses of a designated beneficiary.\n\n(2) “Authorized individual” means an individual or entity who (A) meets the requirements of 26 CFR 1.529A-2 to establish an ABLE account on behalf of an eligible individual, and (B) is authorized by the state's qualified ABLE program to establish or act on behalf of the designated beneficiary with respect to an ABLE account.\n\n(3) “Deposit” means a deposit, payment, contribution, gift or other transfer of funds.\n\n(4) “Designated beneficiary” has the same meaning as provided in Section 529A.\n\n(5) “Eligible individual” has the same meaning as provided in Section 529A.\n\n(6) “Participation agreement” means an agreement between the trust established pursuant to section 3-39k and a designated beneficiary or authorized individual that provides for participation in an ABLE account for the benefit of a designated beneficiary.\n\n(7) “Qualified ABLE program” means any program established and maintained pursuant to Section 529A.\n\n(8) “Qualified disability expenses” has the same meaning as provided in Section 529A.\n\n(9) “Section 529A” means Section 529A of the Internal Revenue Code of 1986, or any subsequent corresponding internal revenue code of the United States, as amended from time to time, and the regulations adopted thereunder by the United States Department of the Treasury and the Internal Revenue Service, as amended from time to time.",
+      "href": "?chapter=032&section=section-3-39j",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-3-39k",
+      "citation": "3-39k",
+      "citations": [
+        "3-39k"
+      ],
+      "heading": "Sec. 3-39k. Achieving a better life experience program: Establishment. Trust. Report.",
+      "chapter": {
+        "id": "chapter-032",
+        "number": "032",
+        "name": "Treasurer"
+      },
+      "status": "active",
+      "text": "(a) The State Treasurer (1) shall establish a qualified ABLE program pursuant to Section 529A and sections 3-39j to 3-39r, inclusive, and (2) may contract with any state with a qualified ABLE program to provide residents of this state with access to such state's program.\n\n(b) (1) Under the program established pursuant to subdivision (1) of subsection (a) of this section: (A) The State Treasurer shall administer individual ABLE accounts to encourage and assist eligible individuals and their families in saving funds to provide support for eligible individuals, (B) a person may make contributions to an individual ABLE account to meet the qualified disability expenses of the designated beneficiary of the account, and (C) the State Treasurer shall designate a director of outreach for the ABLE program from among the existing employees of the office of the State Treasurer, who shall coordinate outreach and marketing efforts concerning ABLE accounts.\n\n(2) For the purposes of such program, there is established within the Office of the State Treasurer the Connecticut Achieving A Better Life Experience Trust. The trust shall constitute an instrumentality of the state and shall perform essential governmental functions, as provided in sections 3-39j to 3-39r, inclusive. The trust shall receive and hold all payments and deposits intended for ABLE accounts as well as gifts, bequests, endowments or federal, state or local grants and any other funds from public or private sources and all earnings, until disbursed in accordance with sections 3-39j to 3-39r, inclusive.\n\n(c) (1) The amounts on deposit in the trust shall not constitute property of the state and the trust shall not be construed to be a department, institution or agency of the state. Amounts on deposit in the trust shall not be commingled with state funds and the state shall have no claim to or against, or interest in, such amounts, except as provided in subdivision (2) of this subsection. Any contract entered into by, or any obligation of, the trust shall not constitute a debt or obligation of the state and the state shall have no obligation to any designated beneficiary or any other person on account of the trust and all amounts obligated to be paid from the trust shall be limited to amounts available for such obligation on deposit in the trust. The amounts on deposit in the trust may only be disbursed in accordance with the provisions of sections 3-39j to 3-39r, inclusive.\n\n(2) The trust shall continue in existence as long as it holds any deposits or other funds or has any obligations and until its existence is terminated by law, and upon termination of the trust, any unclaimed assets of the trust shall be governed by section 3-61a.\n\n(d) The State Treasurer shall be responsible for the receipt, maintenance, administration, investment and disbursements of amounts from the trust. The trust shall not receive deposits in any form other than cash. No authorized individual or designated beneficiary may direct the investment of any contributions or amounts held in the trust other than in the specific fund options provided for by the trust and shall not direct investments in such specific fund options more than two times in any calendar year. No interest, or portion of any interest, in the program shall be used as security for a loan.\n\n(e) A person may make deposits to an ABLE account to meet the qualified disability expenses of the designated beneficiary of the account, provided the trust and deposits meet the other requirements of this section and Section 529A.\n\n(f) On or before December 31, 2017, and annually thereafter, the State Treasurer shall submit (1) in accordance with the provisions of subsection (a) of section 3-37, a report to the Governor on the operations of the trust, including the receipts, disbursements, assets, investments and liabilities and administrative costs of the trust for the prior fiscal year, and (2) in accordance with the provisions of section 11-4a, a report on the trust and any contract entered into pursuant to subdivision (2) of subsection (a) of this section to the joint standing committees of the General Assembly having cognizance of matters relating to finance and public health, and shall make such report available to each authorized individual and designated beneficiary. The report required under subdivision (2) of this subsection shall include, but need not be limited to: (A) The number of ABLE accounts; (B) the total amount of contributions to such accounts; (C) the total amount and nature of distributions from such accounts; and (D) a description of issues relating to the abuse of such accounts, if any.\n\n(g) An ABLE account may be established (1) by the eligible individual, (2) by a person selected by the eligible individual, or (3) if the eligible individual is unable to establish an ABLE account, by an authorized individual.",
+      "href": "?chapter=032&section=section-3-39k",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-3-39l",
+      "citation": "3-39l",
+      "citations": [
+        "3-39l"
+      ],
+      "heading": "Sec. 3-39 l . Trust authority of the State Treasurer.",
+      "chapter": {
+        "id": "chapter-032",
+        "number": "032",
+        "name": "Treasurer"
+      },
+      "status": "active",
+      "text": "The State Treasurer, on behalf of the trust and for purposes of the trust, may:\n\n(1) Receive and invest moneys in the trust in any instruments, obligations, securities or property in accordance with section 3-39m;\n\n(2) Establish terms for the participation agreement and the administration of ABLE accounts, including, but not limited to, (A) the method of payment into an ABLE account by payroll deduction, transfer from bank accounts or otherwise, (B) the termination, withdrawal or transfer of payments under an ABLE account, including transfers to or from a qualified ABLE program established by another state, (C) penalties for distributions not used for qualified disability expenses, and (D) the amount of any charges or fees to be assessed in connection with the administration of the trust;\n\n(3) Enter into one or more contractual agreements, including, but not limited to, contracts for legal, actuarial, accounting, custodial, advisory, management, administrative, advertising, marketing and consulting services for the trust and pay for such services from the gains and earnings of the trust;\n\n(4) Procure insurance in connection with the trust's property, assets, activities or deposits or contributions to the trust;\n\n(5) Apply for, accept and expend gifts, grants or donations from public or private sources to enable the Connecticut Achieving A Better Life Experience Trust to carry out its objectives;\n\n(6) Sue and be sued;\n\n(7) Establish one or more funds within the trust and maintain separate ABLE accounts for each designated beneficiary;\n\n(8) Pay for any fees associated with the administration of individual ABLE accounts; and\n\n(9) Take any other action necessary to carry out the purposes of sections 3-39j to 3-39r, inclusive, and incidental to the duties imposed on the State Treasurer pursuant to said sections.",
+      "href": "?chapter=032&section=section-3-39l",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-3-39p",
+      "citation": "3-39p",
+      "citations": [
+        "3-39p"
+      ],
+      "heading": "Sec. 3-39p. State pledge for purposes of the trust.",
+      "chapter": {
+        "id": "chapter-032",
+        "number": "032",
+        "name": "Treasurer"
+      },
+      "status": "active",
+      "text": "The state pledges to authorized individuals, designated beneficiaries and any party who enters into contracts with the trust, pursuant to the provisions of sections 3-39j to 3-39r, inclusive, that the state will not limit or alter the rights under said sections vested in the trust or contract with the trust until such obligations are fully met and discharged and such contracts are fully performed on the part of the trust, provided nothing in this section shall preclude such limitation or alteration if adequate provision is made by law for the protection of such authorized individuals and designated beneficiaries pursuant to the obligations of the trust or parties who entered into such contracts with the trust. The trust, on behalf of the state, may include a description of such pledge and undertaking for the state in participation agreements and such other obligations or contracts.",
+      "href": "?chapter=032&section=section-3-39p",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-3-39q",
+      "citation": "3-39q",
+      "citations": [
+        "3-39q"
+      ],
+      "heading": "Sec. 3-39q. Compliance with requirements for trust to constitute a qualified ABLE program.",
+      "chapter": {
+        "id": "chapter-032",
+        "number": "032",
+        "name": "Treasurer"
+      },
+      "status": "active",
+      "text": "The State Treasurer shall take any action necessary to ensure that the trust complies with all applicable requirements of state and federal laws, rules and regulations to the extent necessary for the trust to constitute a qualified ABLE program and be exempt from taxation under Section 529A.",
+      "href": "?chapter=032&section=section-3-39q",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-3-39r",
+      "citation": "3-39r",
+      "citations": [
+        "3-39r"
+      ],
+      "heading": "Sec. 3-39r. ABLE account investments, contributions and distributions disregarded for certain programs and purposes.",
+      "chapter": {
+        "id": "chapter-032",
+        "number": "032",
+        "name": "Treasurer"
+      },
+      "status": "active",
+      "text": "(a) Notwithstanding any provision of the general statutes, to the extent permissible under federal law, moneys invested in an individual ABLE account, contributions to an individual ABLE account and distributions for qualified disability expenses pursuant to sections 3-39j to 3-39q, inclusive, shall be disregarded for purposes of determining an individual's eligibility for assistance under any means-tested public assistance program administered by the state or any political subdivision of the state.\n\n(b) Notwithstanding any provision of the general statutes, no moneys invested in the ABLE accounts shall be considered to be an asset for purposes of determining an individual's eligibility for need-based, institutional aid grants offered to an individual at the public eligible educational institutions in the state.",
+      "href": "?chapter=032&section=section-3-39r",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-3-56a",
+      "citation": "3-56a",
+      "citations": [
+        "3-56a"
+      ],
+      "heading": "Sec. 3-56a. Definitions.",
+      "chapter": {
+        "id": "chapter-032",
+        "number": "032",
+        "name": "Treasurer"
+      },
+      "status": "active",
+      "text": "As used in this part, unless the context otherwise requires:\n\n(1) “Apparent owner” means the person whose name appears on the records of the holder as the person entitled to the property held, issued or owing by the holder;\n\n(2) “Banking organization” means any state bank and trust company, national banking association or savings bank engaged in business in this state;\n\n(3) “Business association” means a corporation, joint stock company, partnership, unincorporated association, joint venture, limited liability company, business trust, trust company, safe deposit company, financial organization, insurance company, person engaged in the business of operating or controlling a mutual fund, utility or other business entity consisting of one or more persons, whether or not for profit;\n\n(4) “Financial organization” means any savings and loan association, credit union or investment company;\n\n(5) “Funeral service contract” has the same meaning as provided in section 42-200;\n\n(6) “Gift certificate” means a record evidencing a promise, made for consideration, by the seller or issuer of the record that goods or services will be provided to the owner of the record to the value shown in the record and includes, but is not limited to, a record that contains a microprocessor chip, magnetic stripe or other means for the storage of information that is prefunded and for which the value is decremented upon each use, a gift card, an electronic gift card, stored-value card or certificate, a store card, or a similar record or card, but “gift certificate” does not include prepaid calling cards regulated under section 42-370, prepaid commercial mobile radio services, as defined in 47 CFR 20.3 or general-use prepaid cards, as defined in section 42-460a;\n\n(7) “Holder” means any person in possession of property subject to this part which belongs to another, or who is trustee in case of a trust, or who is indebted to another on an obligation subject to this part;\n\n(8) “Insurance company” means an association, corporation or fraternal or mutual benefit organization, whether or not for profit, engaged in the business of providing life endowments, annuities or insurance, including accident, burial, casualty, credit life, contract performance, dental, disability, fidelity, fire, health, hospitalization, illness, life, malpractice, marine, mortgage, surety, wage protection and workers' compensation insurance;\n\n(9) “Last-known address” means any description, code or other indication of the location of the apparent owner that identifies the state, even if such description, code or indication is insufficient for the purpose of the delivery of first-class United States mail to the apparent owner;\n\n(10) “Mineral” means gas; oil; other gaseous, liquid and solid hydrocarbons; oil shale; cement material; sand and gravel; road material; building stone; chemical raw material; gemstone; fissionable and nonfissionable ores; colloidal and other clay; steam and other geothermal resource; or any other substance defined as a mineral by the law of this state;\n\n(11) “Mineral proceeds” means amounts payable for the extraction, production or sale of minerals, or, upon the abandonment of those payments, all payments that become payable thereafter, and “mineral proceeds” includes amounts payable: (A) For the acquisition and retention of a mineral lease, including bonuses, royalties, compensatory royalties, shut-in royalties, minimum royalties and delay rentals; (B) for the extraction, production or sale of minerals, including net revenue interests, royalties, overriding royalties, extraction payments and production payments; and (C) under an agreement or option, including a joint operating agreement, unit agreement, pooling agreement and farm-out agreement;\n\n(12) “Owner” means a depositor in case of a deposit, a beneficiary in case of a trust, a creditor, claimant or payee in case of other choses in action, or any person having a legal or equitable interest in property subject to this part, or such person's legal representative;\n\n(13) “Person” means any individual, business association, estate, trust, government, governmental subdivision, agency or instrumentality, or any other legal or commercial entity;\n\n(14) “Property” means realty or personalty, tangible or intangible, and includes, but is not limited to, virtual currency;\n\n(15) “Record” means information that is inscribed on a tangible medium or that is stored in an electronic or other medium and is retrievable in perceivable form;\n\n(16) “Treasurer” means the Treasurer of the state of Connecticut;\n\n(17) “Utility” means a person who owns or operates for public use any plant, equipment, real property, franchise or license for the transmission of communications or the production, storage, transmission, sale, delivery or furnishing of electricity, water, steam or gas; and\n\n(18) “Virtual currency” has the same meaning as provided in section 36a-596.",
+      "href": "?chapter=032&section=section-3-56a",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-3-61b",
+      "citation": "3-61b",
+      "citations": [
+        "3-61b"
+      ],
+      "heading": "Sec. 3-61b. Property held pursuant to a funeral service contract presumed abandoned, when.",
+      "chapter": {
+        "id": "chapter-032",
+        "number": "032",
+        "name": "Treasurer"
+      },
+      "status": "active",
+      "text": "(a) Any property held pursuant to a funeral service contract that is in effect on or after July 1, 2025, for the purposes of this part, shall be considered payable or distributable on the earliest of: (1) When the holder has received affirmative notification of the death of a beneficiary associated with a funeral services contract for which the holder is maintaining an escrow account; (2) the date the beneficiary would have attained the age of one hundred ten years; or (3) seventy-five years after the funeral service contract was executed.\n\n(b) Any property held pursuant to a funeral service contract shall be presumed abandoned unless the beneficiary or purchaser has indicated an interest in such property not later than one year after such property becomes payable or distributable pursuant to subsection (a) of this section. If the annual statements that are required to be sent under section 42-202 were returned as undeliverable during the preceding year, the holder shall, for purposes of providing notice to the owner pursuant to section 3-65a, make reasonable efforts to determine a current and proper mailing address for the owner.\n\n(c) Not later than March first of each year, the holder shall obtain from the funeral service establishment a list of all properties held by such holder pursuant to a funeral service contract (1) that was entered into seventy-five years or more ago, (2) for which the funeral service establishment has received affirmative notification of the death of the beneficiary, or (3) for which the beneficiary has reached the age of one hundred ten years.\n\n(d) For purposes of this part, the escrow agent, insurance company or any other person holding or maintaining such property shall be deemed the holder, and the purchaser of such property shall be deemed the owner.",
+      "href": "?chapter=032&section=section-3-61b",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-3-65a",
+      "citation": "3-65a",
+      "citations": [
+        "3-65a"
+      ],
+      "heading": "Sec. 3-65a. Duties of holder of abandoned property.",
+      "chapter": {
+        "id": "chapter-032",
+        "number": "032",
+        "name": "Treasurer"
+      },
+      "status": "active",
+      "text": "(a) Between July first and September thirtieth, inclusive, of the calendar year in which a presumption of abandonment is to take effect, if the owner's claim is not barred by law, the holder shall notify the owner thereof and take reasonable steps to prevent abandonment from being presumed. Such notice shall be provided, at a minimum, by (1) first-class mail directed to the owner's last-known address, if such address is sufficient for the purpose of the delivery of first-class United States mail and the cumulative value of all property belonging to the owner is fifty dollars or greater, and (2) electronic mail directed to the owner's last-known electronic mail address, regardless of the value of the property, if a holder has received an owner's consent for the electronic delivery of any notices that are required by law. Such notice shall inform the owner that evidence of interest must be indicated as required by this part or such property will be transferred to the Treasurer and will be subject to escheat to the state. If the property presumed abandoned is a security, virtual currency or tangible property from a safe deposit box, the holder's notice shall indicate that such property may be liquidated either prior to or following its reporting to the Treasurer and that after such liquidation will be limited to the proceeds of such liquidation. Nothing in this subsection shall be construed to require an owner to consent to the electronic delivery of notices for communications regarding unclaimed property.\n\n(b) Not later than March thirty-first following the close of the calendar year in which property is presumed abandoned, the holder shall pay or deliver such property to the Treasurer and file, on forms that the Treasurer shall provide, a report of unclaimed property. Each report shall be verified and shall include: (1) The name, if known, last-known physical and electronic mail address, if any, and last-known telephone number, if any, of each person appearing to be the owner of such property; (2) in case of unclaimed funds of an insurance company, the full name of the insured or annuitant and beneficiary and his or her last-known address appearing on the insurance company's records; (3) the nature and identifying number, if any, or description of the property and the amount appearing from the records to be due; (4) the date when the property became payable, demandable or returnable and the date of the last transaction with the owner with respect to the property; (5) if the holder is a successor to other holders, or if the holder has changed the holder's name, all prior known names and addresses of each holder of the property; and (6) such other information as the Treasurer may require.\n\n(c) Verification, if made by a partnership, shall be executed by a partner; if made by an unincorporated association or private corporation, by an officer; and if made by a public corporation, by its chief fiscal officer.\n\n(d) (1) The Treasurer shall keep a permanent record of all reports submitted to the Treasurer pursuant to this section.\n\n(2) A holder shall retain the following records for at least ten years after the date any report was filed under this section or the last date a timely report was due to be filed, unless a shorter retention period is provided by the Treasurer: (A) The information required to be included in the report, (B) the date, place and nature of the circumstances that gave rise to the property right, and (C) any documentation concerning items considered for reporting that were not ultimately determined to represent unclaimed property, for verification of whether the holder has complied with its reporting obligation under this section.\n\n(e) Except for claims paid under section 3-67a and except as provided in subsection (e) of section 3-70a, no owner shall be entitled to any interest, income or other increment which may accrue to property presumed abandoned from and after the date of payment or delivery to the Treasurer.\n\n(f) The Treasurer may decline to receive any property the value of which is less than the cost of giving notice or holding sale, or may postpone taking possession until a sufficient sum accumulates.\n\n(g) The Treasurer, or any officer or agency designated by the Treasurer, may examine any person on oath or affirmation, or the records of any person or any agent of the person including, but not limited to, a dividend disbursement agent or transfer agent of a business association, banking organization or insurance company that is the holder of property presumed abandoned to determine whether the person or agent has complied with this part. The Treasurer may conduct the examination even if the person or agent believes the person or agent is not in possession of any property that must be paid, delivered or reported under this part. The Treasurer may bring an action in a court of appropriate jurisdiction to enforce the provisions of this part.\n\n(h) A record of the issuance of a check, draft or similar instrument is prima facie evidence of the obligation represented by the check, draft or similar instrument. In claiming property from a holder who is also the issuer, the Treasurer's burden of proof as to the existence and amount of the property and its abandonment is satisfied by showing issuance of the instrument and passage of the requisite period of abandonment. Defenses of payment, satisfaction, discharge and want of consideration are affirmative defenses that shall be established by the holder.\n\n(i) Notwithstanding the provisions of subsection (b) of this section, the holder of personal property presumed abandoned pursuant to subdivision (5) of subsection (a) of section 3-57a or section 3-57b shall (1) sell such property and pay the proceeds arising from such sale, excluding any charges that may lawfully be withheld, to the Treasurer, unless such property consists of military medals, in which case such property shall not be sold, and (2) provide the Treasurer with records deemed appropriate by the Treasurer of property so presumed abandoned. The holder shall complete the sale of such property and deliver the net proceeds to the Treasurer not later than thirty days after filing the report required under subsection (b) of this section. A holder of tangible, personal property may contract with a third party to store and sell such property and to pay the proceeds arising from such sale, excluding any charges that may be lawfully withheld, to the Treasurer, provided the third party holds a surety bond or other form of insurance coverage with respect to such activities. Any holder who sells property pursuant to subsection (a) of section 3-57a or section 3-57b and remits the excess proceeds to the Treasurer or who transmits tangible, personal property to a bonded or insured third party for such purposes, shall not be responsible for any claims related to the sale or transmission of the property or proceeds to the Treasurer. If the Treasurer exempts any such property from being remitted or sold pursuant to this subsection, whether by regulations or guidelines, the holder of such property may dispose of such property in any manner such holder deems appropriate and such holder shall not be responsible for any claims related to the disposition of such property or any claims to the property itself. For purposes of the sale of personal property presumed abandoned under subdivision (5) of subsection (a) of section 3-57a or section 3-57b, charges that may lawfully be withheld include costs of storage, appraisal, advertising and sales commissions as well as lawful charges owing under the contract governing the safe deposit box rental.\n\n(j) In the event military medals are presumed abandoned pursuant to subdivision (5) of subsection (a) of section 3-57a, a banking or financial organization shall transmit such medals to the Department of Veterans Affairs in accordance with procedures established by the Treasurer. The Treasurer and Commissioner of Veterans Affairs shall enter into a memorandum of understanding concerning the handling of such medals and the Department of Veterans Affairs shall hold such medals in custody pursuant to such memorandum. The Treasurer may make any information obtained pursuant to this section, including any photograph or other visual depiction of a military medal but excluding Social Security numbers, available to the public to facilitate the identification of the original owner of such medal or such owner's heirs or beneficiaries.",
+      "href": "?chapter=032&section=section-3-65a",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-3-66a",
+      "citation": "3-66a",
+      "citations": [
+        "3-66a"
+      ],
+      "heading": "Sec. 3-66a. Maintenance of searchable list and provision of notice by Treasurer.",
+      "chapter": {
+        "id": "chapter-032",
+        "number": "032",
+        "name": "Treasurer"
+      },
+      "status": "active",
+      "text": "(a) The Treasurer shall maintain a readily searchable list of property presumed abandoned and reported or transferred to the Treasurer under this part and for which there is sufficient information for the Treasurer to identify the apparent owner of such property.\n\n(b) The searchable list required under subsection (a) of this section shall contain: (1) The names and the last-known addresses, if any, of all persons reported as the apparent owners of unclaimed property, (2) information concerning the amount and description of such property and the name and address of the holder thereof, and (3) such other information as may be required by the Treasurer.\n\n(c) For properties with a reported value of fifty dollars or more, the Treasurer shall send a notice, in a manner deemed appropriate by the Treasurer, to each person, other than an individual to whom the Treasurer makes or will make a payment pursuant to subsection (f) of section 3-70a, reported as the apparent owner of unclaimed property that was reported or transferred to the Treasurer during the preceding calendar year and for whom the holder of such property has reported a last-known address in this state sufficient to direct the delivery of first-class United States mail or valid electronic mail address to the Treasurer. Such notice shall inform the person that such person may have unclaimed property available to claim and the process by which such person may verify ownership to and claim such property.",
+      "href": "?chapter=032&section=section-3-66a",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-3-70a",
+      "citation": "3-70a",
+      "citations": [
+        "3-70a"
+      ],
+      "heading": "Sec. 3-70a. Claims for abandoned property. Exceptions. Program for donation of claims to charitable causes.",
+      "chapter": {
+        "id": "chapter-032",
+        "number": "032",
+        "name": "Treasurer"
+      },
+      "status": "active",
+      "text": "(a) Any person claiming an interest in property surrendered to the Treasurer under the provisions of this part may claim such property, or the proceeds from the sale thereof, at any time thereafter. Any person claiming an interest in such property shall file a certified claim with the Treasurer, setting forth the facts upon which such party claims to be entitled to recover such property. The Treasurer shall prescribe the form that such a verified claim shall take.\n\n(b) The Treasurer shall consider each claim not later than ninety days after it is filed. The Treasurer may hold hearings on any claim and may refer any claim to the Office of the Claims Commissioner, which shall hold hearings thereon and promptly return the Claims Commissioner's recommendations for the payment or rejection thereof. The Treasurer shall deliver the Treasurer's decision in writing on each claim heard, with a finding of fact and a statement of the reasons for the Treasurer's decision. Any person aggrieved by a decision of the Treasurer may appeal therefrom in accordance with the provisions of section 4-183, except venue for such appeal shall be in the judicial district of New Britain.\n\n(c) (1) (A) No agreement entered into prior to January 1, 2023, to locate property shall be valid if: (i) Such agreement is entered into (I) within two years after the date a report of unclaimed property is required to be filed under section 3-65a, or (II) between the date such a report is required to be filed under said section and the date it is filed under said section, whichever period is longer; (ii) such agreement is entered into within two years after the date of posting of the notice required by section 3-66a; or (iii) pursuant to such agreement, any person undertakes to locate property included in a report of unclaimed property that is required to be filed under section 3-65a for a fee or other compensation exceeding ten per cent of the value of the recoverable property.\n\n(B) No agreement entered into on or after January 1, 2023, to locate property shall be valid if: (i) Such agreement is entered into (I) within two years after the date a report of unclaimed property is required to be filed under section 3-65a, or (II) between the date such a report is required to be filed under said section and the date it is filed under said section, whichever period is longer; or (ii) pursuant to such agreement, any person undertakes to locate property included in a report of unclaimed property that is required to be filed under section 3-65a for a fee or other compensation exceeding ten per cent of the value of the recoverable property.\n\n(2) (A) In addition to the requirements set forth in subparagraph (B) of subdivision (1) of this subsection, an agreement entered into prior to January 1, 2025, to locate property shall be valid only if it is in writing, is signed by the owner and discloses the nature and value of the property, and the owner's share after the fee or compensation has been subtracted is clearly stipulated.\n\n(B) In addition to the requirements set forth in subparagraph (B) of subdivision (1) of this subsection, an agreement entered into on or after January 1, 2025, to locate property shall be valid only if such agreement is in writing, is signed by the owner and clearly and conspicuously discloses (i) the nature and value of the property, (ii) the owner's share after the fee or compensation has been subtracted from such value, and (iii) that the owner may file a claim directly with the Treasurer at no cost and the method through which such claim may be filed.\n\n(3) Any solicitation made to locate unclaimed property shall clearly and conspicuously disclose in a written statement that (A) any individual may search for and file a claim for such property directly with the Treasurer at no cost, and (B) the method through which such claim may be filed.\n\n(4) Any claim for unclaimed property filed with the Treasurer pursuant to an agreement or solicitation under this subsection, shall include an unredacted version of any such agreement or solicitation to permit the Treasurer to determine whether such agreement or solicitation complies with the requirements of this subsection.\n\n(5) The Treasurer may withhold payment of a claim for unclaimed property to anyone other than the owner (A) for failure to comply with the requirements of subdivision (4) of this subsection, or (B) if the Treasurer determines that the solicitation or agreement to locate unclaimed property does not comply with any other requirement of this section.\n\n(6) Nothing in this section shall be construed to prevent an owner from asserting, at any time, that an agreement to locate or to otherwise obtain an interest in unclaimed property is based upon excessive or unjust consideration.\n\n(d) The Treasurer shall pay each claim allowed without deduction for costs of notices or sale or for service charges. The Treasurer shall notify the Commissioner of Revenue Services of the payment of claims of five hundred dollars or more to the domiciliary administrator or executor of a deceased owner.\n\n(e) In the case of any claim allowed under this section for property, funds or money delivered to the Treasurer pursuant to subdivision (1) or (2) of subsection (a) of section 3-57a, the Treasurer shall pay such claim with interest as follows: For each calendar year or portion thereof that the property, funds or money has been paid or delivered to the Treasurer, the Treasurer shall pay interest at a rate that is not less than the deposit index, as determined under section 36a-26, for such year. Such interest shall accrue from the date of payment or delivery of the property, funds or money to the Treasurer until the date of payment or delivery of the property, funds or money to the claimant.\n\n(f) Notwithstanding the provisions of subsection (a) of this section, where the amount of a property reported or transferred to the Treasurer under this part is less than two thousand five hundred dollars, the Treasurer shall pay such amount to an individual if the Treasurer has determined (1) that such individual is the sole owner of such property, and (2) to the Treasurer's satisfaction, the current address of such individual.\n\n(g) The Treasurer may make direct payment to one or more claimants, without such claimant having been granted a decree to transfer personal property, been issued a current fiduciary certificate, or secured any other similar document, for any solely owned unclaimed property of a deceased owner valued at less than five hundred dollars in the aggregate at the time of the claim, subject to the following conditions:\n\n(1) If no affidavit in lieu of administration or similar petition has been filed in a Probate Court or more than one year has passed since the last decree to transfer personal property or any other similar document has been issued, upon a claimant furnishing a certified claim and a sworn affidavit under penalty of perjury showing entitlement to such property. Such affidavit shall be in a form prescribed by the Treasurer and shall include, at a minimum, (A) the claimant's affirmation that the claimant is the sole heir, or (B) attestation from all of the other heirs with a valid claim to the property confirming the rightful distribution of the property under the law.\n\n(2) If a fiduciary of a decedent estate has been appointed by a Probate Court, but the decedent's estate was closed more than one year prior to the discovery of the relevant unclaimed property, upon a claimant's furnishing of a certified claim and a sworn affidavit under penalty of perjury showing entitlement to such property. Such affidavit shall be in a form prescribed by the Treasurer and shall include, at a minimum (A) the claimant's affirmation that the claimant is the previously appointed fiduciary and that the claimant shall distribute the funds as required by law; or (B) attestations from any rightful heir or beneficiary consistent with the provisions of subdivision (1) of this subsection.\n\n(3) The payment of the amount due under this section shall constitute a full acquittance and release of the state for the amount paid. Any claimant paid by the Treasurer in good faith shall be answerable concerning such payment to anyone prejudiced by an improper distribution or payment. Except as provided in this subsection, nothing in this section shall be construed to modify or eliminate any of a claimant's responsibilities under any other state or federal law, including, but not limited to, any obligations under title 45a.\n\n(h) Notwithstanding the provisions of subsection (a) of this section, where the sole owner of the abandoned property is reported as the office of the Secretary of the State, State Comptroller, Attorney General or State Treasurer or a department within the executive branch, as listed in section 4-38c, the Treasurer may submit a report to the Office of Policy and Management identifying the value of each property escheated and the applicable office or department that is the reported owner. Unless the Office of Policy and Management directs otherwise, the property shall escheat to the state, in accordance with this part, three months following the submission of such report and the Treasurer shall reclassify such property as property of the state instead of unclaimed property.\n\n(i) The Treasurer may establish a program that permits the owner of a claim allowed under this section for property, funds or money to donate such claim in its entirety to a charitable cause. The Treasurer shall select one or more of the following to be the recipient of donated payments under this subsection: (1) The organ transplant account established in section 17b-288, (2) the AIDS research education account established in section 19a-32a, (3) the endangered species, natural area preserves and watchable wildlife account established in section 22a-27 l , (4) the breast cancer research and education account established in section 19a-32b, (5) the safety net services account established in section 17b-112f, (6) the Connecticut Baby Bond Trust established in section 3-36b, (7) the mental health community investment account established in section 17a-451g, or (8) the Military Relief Fund established in section 27-100a. An owner's election to donate an allowed claim payment shall be irrevocable and remittance of the donation shall be considered full payment of the allowed claim. The Treasurer shall prescribe the form that such donation election shall take.",
+      "href": "?chapter=032&section=section-3-70a",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-3-99h",
+      "citation": "3-99h",
+      "citations": [
+        "3-99h"
+      ],
+      "heading": "Sec. 3-99h. Benefit corporation registration voucher.",
+      "chapter": {
+        "id": "chapter-033",
+        "number": "033",
+        "name": "Secretary"
+      },
+      "status": "active",
+      "text": "The Secretary of the State shall provide a voucher for the amount of any registration or renewal fee for a (1) benefit corporation, as defined in section 33-1351, provided such corporation submits proof to the Secretary that the corporation meets the parameters of a benefit corporation, as defined in section 33-1351, or (2) a benefit corporation, as defined in section 33-1351, that is certified by an entity recognized by the Secretary for such certification purpose.",
+      "href": "?chapter=033&section=section-3-99h",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-3-114c",
+      "citation": "3-114c",
+      "citations": [
+        "3-114c"
+      ],
+      "heading": "Sec. 3-114c. Recording of cigarette tax revenue and tobacco products tax revenue received at end of fiscal year.",
+      "chapter": {
+        "id": "chapter-034",
+        "number": "034",
+        "name": "Comptroller"
+      },
+      "status": "active",
+      "text": "(a) At the end of each fiscal year, the Comptroller is authorized to record as revenue for such fiscal year the amount of tax revenue received by the Commissioner of Revenue Services under the provisions of chapter 214 as payment for the sale of Connecticut cigarette tax stamps or heat-applied decals sold by said commissioner as provided under section 12-298 prior to the end of such fiscal year, provided payment for such stamps or decals is received by said commissioner not later than five business days after the last day of July immediately following the end of such fiscal year.\n\n(b) At the end of the fiscal year ending June 30, 2026, and each fiscal year thereafter, the Comptroller is authorized to record as revenue for such fiscal year the amount of tax that is required to be paid to the Commissioner of Revenue Services under the provisions of chapter 214a and is received by said commissioner not later than five business days after the last day of July immediately following the end of such fiscal year.",
+      "href": "?chapter=034&section=section-3-114c",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-3-114m",
+      "citation": "3-114m",
+      "citations": [
+        "3-114m"
+      ],
+      "heading": "Sec. 3-114m. Recording of real estate conveyance tax revenue and controlling interest transfer tax received at end of fiscal year.",
+      "chapter": {
+        "id": "chapter-034",
+        "number": "034",
+        "name": "Comptroller"
+      },
+      "status": "active",
+      "text": "(a) At the end of each fiscal year commencing with the fiscal year ending on June 30, 2003, the Comptroller is authorized to record as revenue for such fiscal year the amount of tax that is required to be paid to the Commissioner of Revenue Services under section 12-494 and that is received by the Commissioner of Revenue Services not later than five business days after the last day of July immediately following the end of such fiscal year.\n\n(b) At the end of the fiscal year ending June 30, 2026, and each fiscal year thereafter, the Comptroller is authorized to record as revenue for such fiscal year the amount of tax that is required to be paid to the Commissioner of Revenue Services under the provisions of chapter 228b and is received by said commissioner not later than five business days after the last day of July immediately following the end of such fiscal year.",
+      "href": "?chapter=034&section=section-3-114m",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-3-114t",
+      "citation": "3-114t",
+      "citations": [
+        "3-114t"
+      ],
+      "heading": "Sec. 3-114t. Recording of total THC tax revenue received at end of fiscal year.",
+      "chapter": {
+        "id": "chapter-034",
+        "number": "034",
+        "name": "Comptroller"
+      },
+      "status": "active",
+      "text": "At the close of each fiscal year in which the tax imposed under the provisions of section 12-330 ll are received by the commissioner, the Comptroller is authorized to record as revenue for such fiscal year the amounts of such tax that are received by the Commissioner of Revenue Services not later than five business days from the July thirty-first immediately following the end of such fiscal year.",
+      "href": "?chapter=034&section=section-3-114t",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-3-115b",
+      "citation": "3-115b",
+      "citations": [
+        "3-115b"
+      ],
+      "heading": "Sec. 3-115b. Generally accepted accounting principles.",
+      "chapter": {
+        "id": "chapter-034",
+        "number": "034",
+        "name": "Comptroller"
+      },
+      "status": "active",
+      "text": "(a) Commencing with the fiscal year ending June 30, 2014, the Comptroller, in the Comptroller's sole discretion, may initiate a process intended to result in the implementation of the use of generally accepted accounting principles, as prescribed by the Governmental Accounting Standards Board, with respect to the preparation and maintenance of the annual financial statements of the state pursuant to section 3-115.\n\n(b) Commencing with the fiscal year ending June 30, 2014, the Secretary of the Office of Policy and Management shall initiate a process intended to result in the implementation of generally accepted accounting principles, as prescribed by the Governmental Accounting Standards Board, with respect to the preparation of the biennial budget of the state.",
+      "href": "?chapter=034&section=section-3-115b",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-3-122a",
+      "citation": "3-122a",
+      "citations": [
+        "3-122a"
+      ],
+      "heading": "Sec. 3-122a. Fallen Hero Fund.",
+      "chapter": {
+        "id": "chapter-034",
+        "number": "034",
+        "name": "Comptroller"
+      },
+      "status": "active",
+      "text": "(a) For purposes of this section:\n\n(1) “Dependent child” means a child, whether by blood or adoption, of a first responder who (A) is under the age of twenty-two and was dependent on the earnings of such first responder at the time of such first responder's death, provided a child shall not be considered dependent if such child provides more than half of such child's own support, is married or is legally adopted by another person, or (B) is any age and is physically or mentally incapacitated and was dependent on the earnings of such first responder at the time of such first responder's death.\n\n(2) “Emergency medical technician” has the same meaning as provided in section 20-206jj.\n\n(3) “Firefighter” has the same meaning as provided in section 7-313g.\n\n(4) “First responder” means an emergency medical technician, firefighter, paramedic or police officer.\n\n(5) “Killed in the line of duty” means the death of a first responder while engaged in the performance of such first responder's duties, resulting from an incident, an accident or violence that caused such death or caused injuries that were the direct or proximate cause of such first responder's death, including any death that is determined to be occupationally related by a workers' compensation insurance carrier, an employer to whom a certificate of self-insurance has been issued pursuant to section 31-248 or an administrative law judge for workers' compensation purposes under chapter 568. “Killed in the line of duty” does not include the death of a first responder through such first responder's own wanton or wilful act.\n\n(6) “Paramedic” has the same meaning as provided in section 20-206jj.\n\n(7) “Police officer” has the same meaning as provided in section 7-294a.\n\n(8) “Surviving family” means any person who is a surviving spouse, surviving dependent child, surviving child who is not a dependent child or surviving parent of a first responder killed in the line of duty, or a surviving individual listed on such first responder's most recent beneficiary form on file with such first responder's employer.\n\n(b) There is established a fund to be known as the “Fallen Hero Fund”. The fund may contain any moneys required by law to be deposited in the fund and shall be held by the Treasurer separate and apart from all other moneys, funds and accounts. The interest derived from the investment of the fund shall be credited to the fund. Amounts in the fund may be expended by the Comptroller for purposes of payments pursuant to subsection (c) of this section and reimbursement of municipalities pursuant to subdivision (2) of subsection (c) of section 3-123eee. Any balance remaining in the fund at the end of any fiscal year shall be carried forward in the fund for the fiscal year next succeeding.\n\n(c) (1) After receiving notice, in a form and manner as determined by the Comptroller, from an individual who is a member of the surviving family of a first responder who was killed in the line of duty, the Comptroller shall pay, within available appropriations, a lump sum death benefit totaling one hundred thousand dollars from the fund established in subsection (b) of this section to such surviving family, in accordance with regulations adopted pursuant to subsection (e) of this section, provided the surviving family of a first responder killed in the line of duty shall not receive more than one such lump sum death benefit. Payments shall be made to surviving families in the order in which notices are received until the amount in such fund is depleted.\n\n(2) Any payment made pursuant to subdivision (1) of this subsection shall be in addition to any other benefits for which individuals of such first responder's surviving family are eligible and such payments shall not be reduced or offset due to any other benefits, including, but not limited to, workers' compensation or other survivor benefits.\n\n(d) Not later than July 1, 2025, and annually thereafter, the Comptroller shall submit a report, in accordance with the provisions of section 11-4a, to the joint standing committee of the General Assembly having cognizance of matters relating to public safety and security. Such report shall include a list of all expenditures made from the fund established by subsection (b) of this section during the prior year, the current balance of such fund and information regarding additional amounts needed for such fund.\n\n(e) The Comptroller shall adopt regulations in accordance with the provisions of chapter 54 to implement the provisions of this section, including, but not limited to, application procedures and criteria for awarding grants among individuals who are members of the surviving family, with priority given to awards that would benefit a dependent child or children and a spouse who is a member of the surviving family. The Comptroller may implement policies and procedures necessary to implement the provisions of this section while in the process of adopting such regulations, provided notice of intent to adopt such regulations is published on the eRegulations System not later than twenty days after the date of implementation of such policies and procedures. Any policies and procedures implemented under this subsection shall be valid until the time such regulations are adopted.",
+      "href": "?chapter=034&section=section-3-122a",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-3-123aaa",
+      "citation": "3-123aaa",
+      "citations": [
+        "3-123aaa"
+      ],
+      "heading": "Sec. 3-123aaa. Definitions.",
+      "chapter": {
+        "id": "chapter-034",
+        "number": "034",
+        "name": "Comptroller"
+      },
+      "status": "active",
+      "text": "As used in this section and sections 3-123bbb to 3-123hhh, inclusive:\n\n(1) “First responder” has the same meaning as provided in section 3-122a;\n\n(2) “Health Care Cost Containment Committee” means the committee established in accordance with the ratified agreement between the state and the State Employees Bargaining Agent Coalition pursuant to subsection (f) of section 5-278.\n\n(3) “Killed in the line of duty” has the same meaning as provided in section 3-122a.\n\n(4) “Nonprofit employee” means any employee of a nonprofit employer.\n\n(5) “Nonprofit employer” means (A) a nonprofit corporation, organized under 26 USC 501, as amended from time to time, that (i) has a purchase of service contract, as defined in section 4-70b, or (ii) receives fifty per cent or more of its gross annual revenue from grants or funding from the state, the federal government or a municipality or any combination thereof, or (B) an organization that is tax exempt pursuant to 26 USC 501(c)(5), as amended from time to time.\n\n(6) “Nonstate public employee” means any employee or elected officer of a nonstate public employer.\n\n(7) “Nonstate public employer” means a municipality or other political subdivision of the state, including a board of education, quasi-public agency or public library. A municipality and a board of education may be considered separate employers.\n\n(8) “Partnership plan” means a health care benefit plan offered by the Comptroller to (A) nonstate public employers or nonprofit employers pursuant to section 3-123bbb, (B) graduate assistants at The University of Connecticut and The University of Connecticut Health Center, (C) postdoctoral trainees at The University of Connecticut and The University of Connecticut Health Center, (D) graduate fellows at The University of Connecticut and The University of Connecticut Health Center, and (E) graduate students of The University of Connecticut participating in university-funded internships as part of their graduate program.\n\n(9) “State employee plan” means a self-insured group health care benefits plan established under subsection (m) of section 5-259.",
+      "href": "?chapter=034&section=section-3-123aaa",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-3-123bbb",
+      "citation": "3-123bbb",
+      "citations": [
+        "3-123bbb"
+      ],
+      "heading": "Sec. 3-123bbb. Enrollment procedures and requirements. Comptroller duties.",
+      "chapter": {
+        "id": "chapter-034",
+        "number": "034",
+        "name": "Comptroller"
+      },
+      "status": "active",
+      "text": "(a)(1) Notwithstanding the provisions of title 38a, the Comptroller shall offer to nonstate public employers and nonprofit employers, and their respective retirees, if applicable, coverage under a partnership plan or plans. Such plan or plans may be offered on a fully-insured or risk-pooled basis at the discretion of the Comptroller. Any health insurer, health care center or other entity that contracts with the Comptroller for the purposes of this section and any fully-insured plan offered by the Comptroller under such contract shall be subject to title 38a. Eligible employers shall submit an application to the Comptroller for coverage under any such plan or plans.\n\n(2) Beginning January 1, 2012, the Comptroller shall offer coverage under such plan or plans to nonstate public employers. Beginning January 1, 2013, the Comptroller shall offer coverage under such plan or plans to nonprofit employers.\n\n(b) (1) The Comptroller shall require nonstate public employers and nonprofit employers that elect to obtain coverage under a partnership plan to participate in such plan for not less than two-year intervals, except participation pursuant to an application described in subdivision (2) of subsection (i) of this section may be for one-year intervals. An employer may apply for renewal prior to the expiration of each interval.\n\n(2) The Comptroller shall develop procedures by which:\n\n(A) Such employers may apply to obtain coverage under a partnership plan, including procedures for nonstate public employers that are currently fully insured and procedures for nonstate public employers that are currently self-insured;\n\n(B) Employers receiving coverage for their employees pursuant to a partnership plan may (i) apply for renewal, or (ii) withdraw from such coverage, including, but not limited to, the terms and conditions under which such employers may withdraw prior to the expiration of the interval and the procedure by which any premium payments such employers may be entitled to or premium equivalent payments made in excess of incurred claims shall be refunded to such employer. Any such procedures shall provide that nonstate public employees covered by collective bargaining shall withdraw from such coverage in accordance with chapters 113 and 166;\n\n(C) Nonstate public employers may continue and renew coverage pursuant to subdivision (1) of subsection (i) of this section and initiate and renew enrollment and coverage pursuant to subdivision (2) of subsection (i) of this section; and\n\n(D) The Comptroller may collect payments and fees for unreported claims and expenses.\n\n(c) (1) The initial open enrollment for nonstate public employers shall be for coverage beginning July 1, 2012. Thereafter, open enrollment for nonstate public employers shall be for coverage periods beginning July first.\n\n(2) The initial open enrollment for nonprofit employers shall be for coverage beginning January 1, 2013. Thereafter, open enrollment for nonprofit employers shall be for coverage periods beginning January first and July first.\n\n(d) Nothing in this section or sections 3-123ccc and 3-123ddd shall require the Comptroller to offer coverage to every employer seeking coverage under sections 3-123ccc and 3-123ddd from every partnership plan offered by the Comptroller.\n\n(e) The Comptroller shall create applications for coverage for the purposes of sections 3-123ccc and 3-123ddd and for renewal of a partnership plan. Such applications shall require an employer to disclose whether the employer will offer any other health care benefits plan to the employees who are offered a partnership plan.\n\n(f) No employee shall be enrolled in a partnership plan if such employee is covered through such employee's employer by health insurance plans or insurance arrangements issued to or in accordance with a trust established pursuant to collective bargaining subject to the federal Labor Management Relations Act.\n\n(g) (1) The Comptroller shall take such actions as are necessary to ensure that granting coverage to an employer under sections 3-123ccc and 3-123ddd will not affect the status of the state employee plan as a governmental plan under the Employee Retirement Income Security Act of 1974, as amended from time to time. Such actions may include, but are not limited to, cancelling coverage, with notice, to such employer and discontinuing the acceptance of applications for coverage from nonprofit employers. The Comptroller shall establish the form and time frame for the notice of cancellation to be provided to such employer.\n\n(2) The Comptroller shall resume providing coverage for, or accepting applications for coverage from, nonprofit employers if the Comptroller determines that granting coverage to such employers will not affect the state employee plan's status as a governmental plan under the Employee Retirement Income Security Act of 1974, as amended from time to time.\n\n(3) The Comptroller shall make a public announcement of the Comptroller's decision to discontinue or resume coverage or the acceptance of applications for coverage under a partnership plan or plans.\n\n(h) The Comptroller, in consultation with the Health Care Cost Containment Committee, shall:\n\n(1) Develop and implement patient-centered medical homes for the state employee plan and partnership plans offered under this section, in a manner that will reduce the costs of such plans; and\n\n(2) Review claims data of the state employee plan and partnership plans offered under this section, to target high-cost health care providers and medical conditions and monitor costly trends.\n\n(i) (1) A nonstate public employer that provides coverage pursuant to a partnership plan to a first responder who is killed in the line of duty shall continue to provide such coverage to the survivors of such first responder who were covered under such plan at the time of such first responder's death. Such coverage shall continue without break for a period of one year after such first responder's death, and may be renewed annually for up to five years. Such nonstate public employer shall facilitate continuation and renewal of such coverage.\n\n(2) A nonstate public employer that did not provide coverage pursuant to a partnership plan to a first responder who is killed in the line of duty shall apply for coverage pursuant to a partnership plan for those survivors of such first responder who were receiving health care benefit coverage through a plan offered to such first responder at the time of such first responder's death, at the request of such survivors. The Comptroller shall accept such application upon the terms and conditions applicable to the partnership plan for enrollment and provision of coverage to such survivors for one year. Such enrollment and coverage may be renewed annually for up to five years. Such nonstate public employer shall facilitate initiation and renewal of such enrollment and coverage.",
+      "href": "?chapter=034&section=section-3-123bbb",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-3-123eee",
+      "citation": "3-123eee",
+      "citations": [
+        "3-123eee"
+      ],
+      "heading": "Sec. 3-123eee. Partnership plan premium account. Nonpayment of premium or premium equivalent.",
+      "chapter": {
+        "id": "chapter-034",
+        "number": "034",
+        "name": "Comptroller"
+      },
+      "status": "active",
+      "text": "(a) There is established an account to be known as the “partnership plan premium account”, which shall be a separate, nonlapsing account. All premiums paid by employers and their respective employees and retirees for coverage under a partnership plan pursuant to sections 3-123bbb to 3-123ddd, inclusive, shall be deposited into said account. The account shall be administered by the Comptroller for payment of claims and administrative fees to entities providing coverage or services under partnership plans.\n\n(b) The Comptroller may charge each employer participating in a partnership plan an administrative fee calculated on a per member per month basis, in accordance with the actuarial standards developed under subsection (b) of section 3-123ccc and subsection (c) of section 3-123ddd. In addition, the Comptroller may charge a fluctuating reserves fee the Comptroller deems necessary and in accordance with the actuarial standards developed under subsection (b) of section 3-123ccc and subsection (c) of section 3-123ddd to ensure adequate claims reserves.\n\n(c) (1) Each employer shall pay monthly the amount determined by the Comptroller, pursuant to this section, for coverage of its employees or its employees and retirees, as appropriate, under a partnership plan. An employer may require each covered employee to contribute a portion of the cost of such employee's coverage under the plan, subject to any collective bargaining obligation applicable to such employer, provided no contribution may be required of an individual receiving coverage as described in subsection (i) of section 3-123bbb.\n\n(2) An employer making payments pursuant to subdivision (1) of this subsection for coverage under a partnership plan of an individual or individuals described in subsection (i) of section 3-123bbb shall be reimbursed by the Comptroller for the total cost of such payments from the Fallen Hero Fund established pursuant to subsection (b) of section 3-122a.\n\n(d) If any payment due by an employer under this section is not submitted to the Comptroller by the tenth day after the date such payment is due, interest to be paid by such employer shall be added, retroactive to the date such payment was due, at the prevailing rate of interest as determined by the Comptroller.\n\n(1) The Comptroller may terminate participation in the partnership plan by a nonprofit employer on the basis of nonpayment of premium or premium equivalent, provided at least ten days' advance notice is given to such employer, which may continue the coverage and avoid the effect of the termination by remitting payment in full at any time prior to the effective date of termination.\n\n(2) (A) If a nonstate public employer fails to make premium payments or premium equivalent payments as required by this section, the Comptroller may direct the State Treasurer, or any other officer of the state who is the custodian of any moneys made available by grant, allocation or appropriation payable to such nonstate public employer, to withhold the payment of such moneys until the amount of the premium or premium equivalent or interest due has been paid to the Comptroller, or until the State Treasurer or such custodial officer determines that arrangements have been made, to the satisfaction of the State Treasurer, for the payment of such premium or premium equivalent and interest. Such moneys shall not be withheld if such withholding will adversely affect the receipt of any federal grant or aid in connection with such moneys.\n\n(B) If no grant, allocation or appropriation is payable to such nonstate public employer or is not withheld, pursuant to subparagraph (A) of this subdivision, the Comptroller may terminate participation in a partnership plan by a nonstate public employer on the basis of nonpayment of premium or premium equivalent, provided at least ten days' advance notice is given to such employer, which may continue the coverage and avoid the effect of the termination by remitting payment in full at any time prior to the effective date of termination.\n\n(3) The Comptroller may request the Attorney General to bring an action in the superior court for the judicial district of Hartford to recover any premium or premium equivalent, interest costs, paid claim expenses or equitable relief from a terminated employer.",
+      "href": "?chapter=034&section=section-3-123eee",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-3-123f",
+      "citation": "3-123f",
+      "citations": [
+        "3-123f"
+      ],
+      "heading": "Sec. 3-123f. Capital reserve accounts for the constituent units of the state system of higher education.",
+      "chapter": {
+        "id": "chapter-034",
+        "number": "034",
+        "name": "Comptroller"
+      },
+      "status": "active",
+      "text": "The State Comptroller shall establish a separate, nonlapsing capital reserve account for each constituent unit of the state system of higher education. The proceeds of the sale, pursuant to section 4b-21, of any surplus land or interest in land of any constituent unit of the state system of higher education shall upon deposit in the General Fund be credited to the capital reserve account of the appropriate constituent unit for the purpose of capital projects authorized by the constituent unit.",
+      "href": "?chapter=034&section=section-3-123f",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-3-123l",
+      "citation": "3-123l",
+      "citations": [
+        "3-123l"
+      ],
+      "heading": "Sec. 3-123 l . Funding for fringe benefit cost differential re The University of Connecticut Health Center employees.",
+      "chapter": {
+        "id": "chapter-034",
+        "number": "034",
+        "name": "Comptroller"
+      },
+      "status": "repealed",
+      "text": "Section 3-123 l is repealed, effective July 1, 2025.",
+      "href": "?chapter=034&section=section-3-123l",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "repealed"
+      }
+    },
+    {
+      "id": "section-3-129g",
+      "citation": "3-129g",
+      "citations": [
+        "3-129g"
+      ],
+      "heading": "Sec. 3-129g. Deprivation of, or interference with, rights, privileges and immunities secured by state and federal law. Attorney General's authority to investigate, intervene in or bring an action in the name of the state.",
+      "chapter": {
+        "id": "chapter-035",
+        "number": "035",
+        "name": "Attorney General"
+      },
+      "status": "active",
+      "text": "(a) The Attorney General may investigate, intervene in or bring a civil or administrative action in the name of the state, seeking injunctive or declaratory relief, damages, and any other relief that may be available under law, whenever any person is or has engaged in a practice or pattern of conduct that:\n\n(1) Subjects, or causes to be subjected, other persons to the deprivation of any rights, privileges or immunities secured by the constitutions or laws of this state or the United States; or\n\n(2) Interferes, or attempts to interfere, by threats, intimidation or coercion, with the exercise or enjoyment by other persons of any rights, privileges or immunities secured by the constitutions or laws of this state or the United States.\n\n(b) In conducting any investigation under this section, the Attorney General may issue subpoenas and interrogatories, and otherwise gather information, in the same manner and to the same extent as is provided in section 35-42. No information obtained pursuant to the provisions of this subsection may be used in a criminal proceeding.\n\n(c) If the Attorney General prevails in a civil action brought pursuant to this section, the court shall order the distribution of any award of damages to the injured person. In a matter involving the interference or attempted interference with any right protected by the constitutions of this state or the United States, the court may also award civil penalties against each defendant in an amount not exceeding two thousand five hundred dollars for each violation, provided such violation has been established by clear and convincing evidence. Any civil penalty that is received pursuant to this subsection shall be deposited in the General Fund.\n\n(d) In lieu of bringing a civil action under this section, the Attorney General may accept an assurance of the discontinuance of any allegedly unlawful or unconstitutional practice from any person engaged in such practice. Thereafter, any evidence of a violation of such assurance shall constitute prima facie proof of violation of the applicable law or right in any action commenced by the Attorney General.\n\n(e) Nothing in this section shall limit the right of a person adversely affected by a violation of chapter 814c to file a complaint with the Commission on Human Rights and Opportunities.\n\n(f) Nothing in this section shall limit the jurisdiction of the Commission on Human Rights and Opportunities under chapter 814c.\n\n(g) The Attorney General shall not bring an action under the provisions of this section during the pendency of a matter involving the same parties and the same alleged facts and circumstances before the Commission on Human Rights and Opportunities.\n\n(h) Nothing in this section shall permit the Attorney General to bring an action that would otherwise be barred under the applicable statute of limitations or repose.\n\n(i) The Attorney General shall post on the Attorney General's Internet web site information on how to properly file a complaint with the Commission on Human Rights and Opportunities. The Attorney General may, as appropriate, refer cases to the Commission on Human Rights and Opportunities.\n\n(j) Nothing in this section shall permit the Attorney General to assert any claim against a state agency or a state officer or state employee in such officer's or employee's official capacity, regarding actions or omissions of such state agency, state officer or state employee. If the Attorney General determines that a state officer or state employee is not entitled to indemnification under section 5-141d, the Attorney General may, as relates to such officer or employee, take any action authorized under this section.\n\n(k) With regard to any action brought pursuant to this section against a person for a pattern or practice of conduct in violation of section 46a-64, 46a-64c, 46a-81d or 46a-81e, or, as a result of an investigation conducted pursuant to this section, of a potential violation of section 46a-64, 46a-64c, 46a-81d or 46a-81e, the Attorney General may petition the superior court for the judicial district in which the violation or alleged violation occurred for any relief available under subsection (b) of section 46a-89, in addition to any relief as described in subsection (a) or (c) of this section.",
+      "href": "?chapter=035&section=section-3-129g",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    }
+  ]
+}

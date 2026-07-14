@@ -1,3 +1,5 @@
+import { mergeSupplementSearchShard } from "./supplements.js";
+
 export function normalizeText(value) {
   return String(value ?? "")
     .normalize("NFKD")
@@ -71,10 +73,12 @@ export class SearchRepository {
   #fetch;
   #manifest;
   #shards = new Map();
+  #supplements;
 
-  constructor({ baseUrl = "./data/search/", fetchImpl = globalThis.fetch } = {}) {
+  constructor({ baseUrl = "./data/search/", fetchImpl = globalThis.fetch, supplementRepository = null } = {}) {
     this.#baseUrl = new URL(baseUrl, globalThis.location?.href ?? "http://localhost/");
     this.#fetch = fetchImpl.bind(globalThis);
+    this.#supplements = supplementRepository;
   }
 
   async #json(relativePath) {
@@ -93,7 +97,10 @@ export class SearchRepository {
     if (this.#shards.has(titleId)) return this.#shards.get(titleId);
     const entry = this.#manifest.shards.find((shard) => shard.titleId === titleId);
     if (!entry) throw new Error(`No search shard for ${titleId}`);
-    const promise = this.#json(entry.path).catch((error) => {
+    const promise = Promise.all([
+      this.#json(entry.path),
+      this.#supplements?.loadLatestSearchTitle(titleId) ?? null
+    ]).then(([baseShard, supplementShard]) => mergeSupplementSearchShard(baseShard, supplementShard)).catch((error) => {
       this.#shards.delete(titleId);
       throw error;
     });

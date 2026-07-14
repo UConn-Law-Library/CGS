@@ -9,6 +9,7 @@ import { generateSupplementIndex } from "../scripts/lib/supplement-index.mjs";
 import { classifyChapterOverlay } from "../scripts/lib/supplement-overlay.mjs";
 import { validateSupplement } from "../scripts/lib/supplement-validator.mjs";
 import { validateSchema } from "../scripts/lib/json-schema.mjs";
+import { mergeSupplementSearchShard } from "../src/supplements.js";
 
 const fixture = path.resolve("fixtures/legacy");
 const schemas = path.resolve("schemas");
@@ -76,6 +77,16 @@ test("imports supplements as year-scoped non-destructive citation overlays", asy
   const manifest = JSON.parse(await readFile(path.join(output, "manifest.json"), "utf8"));
   assert.equal(manifest.strategy, "replace-by-citation");
   assert.equal(manifest.counts.sections, 2);
+  assert.equal(manifest.titles[0].searchPath, "search/title-01.json");
+  const search = JSON.parse(await readFile(path.join(output, "search", "title-01.json"), "utf8"));
+  assert.deepEqual(search.removedDocumentIds, ["section-1-1"]);
+  assert.equal(search.documents.find((document) => document.id === "section-1-1").supplement.presentation, "amended");
+  assert.equal(search.documents.find((document) => document.id === "section-1-99").supplement.presentation, "new");
+  assert.deepEqual(search.documents.map((document) => document.id), ["section-1-1", "section-1-99"]);
+  const baseSearch = JSON.parse(await readFile(path.join(base, "search", "title-01.json"), "utf8"));
+  const mergedSearch = mergeSupplementSearchShard(baseSearch, search);
+  assert.equal(mergedSearch.documents.find((document) => document.id === "section-1-1").text, "Supplement replacement text.");
+  assert.ok(mergedSearch.documents.some((document) => document.id === "section-1-99"));
 
   const index = await generateSupplementIndex({
     supplementsDir: path.join(root, "supplements"),

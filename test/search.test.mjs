@@ -68,3 +68,35 @@ test("SearchRepository annotates results with their title for stable routes", as
   const [result] = await repository.search("1-1");
   assert.equal(result.document.title.number, "01");
 });
+
+test("SearchRepository automatically applies the latest supplement search patch", async () => {
+  const responses = new Map([
+    ["https://example.test/data/search/manifest.json", { shards: [{ titleId: "title-01", path: "title-01.json" }] }],
+    ["https://example.test/data/search/title-01.json", {
+      title: { id: "title-01", number: "01", name: "General" },
+      documents: [
+        { ...documents[0], chapter: { id: "chapter-001", number: "001" } },
+        { ...documents[1], chapter: { id: "chapter-002", number: "002" } }
+      ]
+    }]
+  ]);
+  const repository = new SearchRepository({
+    baseUrl: "https://example.test/data/search/",
+    fetchImpl(url) {
+      return Promise.resolve({ ok: true, json: () => Promise.resolve(responses.get(url.href)) });
+    },
+    supplementRepository: {
+      async loadLatestSearchTitle() {
+        return {
+          title: { id: "title-01" },
+          removedDocumentIds: ["section-1-1"],
+          documents: [{ ...documents[0], text: "Current supplement language.", chapter: { id: "chapter-001", number: "001" }, supplement: { editionYear: 2026, presentation: "amended" } }]
+        };
+      }
+    }
+  });
+
+  const shard = await repository.loadTitle("title-01");
+  assert.deepEqual(shard.documents.map((document) => document.chapter.id), ["chapter-002", "chapter-001"]);
+  assert.equal(shard.documents[1].supplement.editionYear, 2026);
+});

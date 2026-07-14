@@ -1,4 +1,5 @@
 import { SearchRepository } from "./search.js";
+import { applyChapterOverlay, SupplementRepository } from "./supplements.js";
 import { ProgressiveSearchClient } from "./search-client.js";
 import {
   findChapter,
@@ -39,7 +40,8 @@ import {
 } from "./secondary-ui.js";
 
 const app = document.querySelector("#app");
-const repository = new SearchRepository();
+const supplementRepository = new SupplementRepository();
+const repository = new SearchRepository({ supplementRepository });
 const searchClient = new ProgressiveSearchClient({ repository });
 const secondaryRepository = new SecondarySourceRepository();
 const deviceState = new DeviceState();
@@ -143,7 +145,7 @@ function settingsPanel() {
     <label class="setting-row"><span><strong>Compact lists</strong><small>Show more items on screen</small></span><input type="checkbox" data-compact-lists${preferences.compactLists ? " checked" : ""}></label>
     <button type="button" class="settings-action update-action" data-apply-update${pwaState.updateAvailable ? "" : " hidden"}>Update available <small>Reload to use the latest published app</small></button>
     <button type="button" class="settings-action" data-install-app${pwaState.installed || !pwaState.installable ? " disabled" : ""}>Install app <small>${escapeHtml(installStatus(pwaState))}</small></button>
-    <button type="button" class="settings-action" data-download-offline${!pwaState.ready || pwaState.busy ? " disabled" : ""}><span data-offline-action-label>${pwaState.complete ? "Refresh offline data" : "Download for offline use"}</span><small>Statutes, search, index, and infractions</small></button>
+    <button type="button" class="settings-action" data-download-offline${!pwaState.ready || pwaState.busy ? " disabled" : ""}><span data-offline-action-label>${pwaState.complete ? "Refresh offline data" : "Download for offline use"}</span><small>Statutes, supplements, search, index, and infractions</small></button>
     <progress class="offline-progress" data-pwa-progress value="${pwaState.cachedFiles}" max="${Math.max(1, pwaState.totalFiles)}"${!pwaState.busy || !pwaState.totalFiles ? " hidden" : ""}>Offline download progress</progress>
     <button type="button" class="settings-action" data-clear-offline${!pwaState.cachedFiles || pwaState.busy ? " disabled" : ""}>Remove offline data <small>Keep the installed app shell</small></button>
     <p class="settings-note" data-pwa-status role="status" aria-live="polite">${escapeHtml(offlineStatus(pwaState))}</p>
@@ -338,13 +340,13 @@ function provisionRoute(title, chapter, section, subsection = null) {
   });
 }
 
-async function referenceMaps(section, catalog) {
-  const values = [
+async function referenceMaps(provisions, catalog) {
+  const values = (Array.isArray(provisions) ? provisions : [provisions]).flatMap((section) => [
     ...section.content.body,
     ...section.content.sourceNotes,
     ...section.content.history,
     ...section.content.annotations.map((annotation) => annotation.text)
-  ];
+  ]);
   const references = extractLegalReferences(values);
   const sections = new Map();
   const chapters = new Map();
@@ -403,6 +405,31 @@ function renderAnnotations(annotations, maps) {
   </details>`;
 }
 
+function supplementLabel(change, { short = false } = {}) {
+  if (!change) return "";
+  const labels = { amended: "Amended", new: "New", repealed: "Repealed" };
+  return short
+    ? `${change.presentation === "amended" ? "" : `${labels[change.presentation]} · `}${change.editionYear} Supp.`
+    : `${labels[change.presentation]} — ${change.editionYear} Supplement`;
+}
+
+function renderPreviousRevision(change, maps) {
+  if (!change?.previousSections?.length) return "";
+  const priorYear = change.editionYear - 1;
+  return `<details class="prior-revision">
+    <summary>Text of the ${priorYear} revision (superseded by the ${change.editionYear} Supplement)</summary>
+    <div>${change.previousSections.map((section) => `<section class="prior-provision">
+      <h2>${escapeHtml(section.heading)}</h2>
+      <div class="statute-text">${section.content.body.map((paragraph) => `<p>${renderLinkedText(paragraph, maps)}</p>`).join("")}</div>
+      <div class="section-notes">
+        ${renderNotes("Source", section.content.sourceNotes, maps, { open: true })}
+        ${renderNotes("History", section.content.history, maps)}
+        ${renderAnnotations(section.content.annotations, maps)}
+      </div>
+    </section>`).join("")}</div>
+  </details>`;
+}
+
 function sectionNavigation(title, chapter, sections, selected) {
   const index = sections.indexOf(selected);
   const previous = index > 0 ? sections[index - 1] : null;
@@ -413,21 +440,22 @@ function sectionNavigation(title, chapter, sections, selected) {
   </nav>`;
 }
 
-function readerSidebar(title, chapter, sections, selected = null) {
+function readerSidebar(title, chapter, sections, selected = null, changeBySection = new Map()) {
   return `<aside class="reader-sidebar" aria-label="Chapter sections">
     <a class="sidebar-parent" href="${escapeHtml(titleRoute(title))}">← ${escapeHtml(titleLabel(title))}</a>
     <h2>${escapeHtml(chapterLabel(chapter))}</h2>
     <p>${escapeHtml(chapter.name)}</p>
     <nav><ol>${sections.map((section) => {
       const active = selected === section;
+      const change = changeBySection.get(section.id);
       return `<li><a${active ? " aria-current=\"page\"" : ""} href="${escapeHtml(provisionRoute(title, chapter, section))}">
-        <strong>${escapeHtml(sectionLabel(section))}</strong><span>${escapeHtml(section.heading.replace(/^Secs?\.\s*[^.]+\.\s*/, ""))}</span>
+        <strong>${escapeHtml(sectionLabel(section))}</strong>${change ? `<span class="supplement-pill supplement-${escapeHtml(change.presentation)}">${escapeHtml(supplementLabel(change, { short: true }))}</span>` : ""}<span>${escapeHtml(section.heading.replace(/^Secs?\.\s*[^.]+\.\s*/, ""))}</span>
       </a></li>`;
     }).join("")}</ol></nav>
   </aside>`;
 }
 
-function renderProvision(title, chapter, section, maps, secondaryContext = null) {
+function renderProvision(title, chapter, section, maps, secondaryContext = null, change = null) {
   const route = provisionRoute(title, chapter, section);
   const absolute = new URL(route, location.href).href;
   const status = section.status === "active" ? section.kind : section.status;
@@ -441,7 +469,7 @@ function renderProvision(title, chapter, section, maps, secondaryContext = null)
   };
   return `<article class="provision" id="${escapeHtml(section.id)}">
     <div class="provision-heading">
-      <p class="eyebrow">${escapeHtml(status)}</p>
+      <p class="eyebrow">${escapeHtml(change ? supplementLabel(change) : status)}</p>
       <h1>${escapeHtml(section.heading)}</h1>
     </div>
     <div class="section-actions" aria-label="Section actions">
@@ -455,18 +483,20 @@ function renderProvision(title, chapter, section, maps, secondaryContext = null)
     <div class="statute-text">${section.content.body.map((paragraph) => renderParagraph(paragraph, maps, title, chapter, section)).join("")}</div>
     ${renderSecondaryContext(secondaryContext)}
     <div class="section-notes">
-      ${renderNotes("Source", section.content.sourceNotes, maps, { open: true })}
-      ${renderNotes("History", section.content.history, maps)}
+      ${renderNotes(change ? `Source (${change.editionYear} Supplement)` : "Source", section.content.sourceNotes, maps, { open: true })}
+      ${renderNotes(change ? `History (${change.editionYear} Supplement)` : "History", section.content.history, maps)}
       ${renderAnnotations(section.content.annotations, maps)}
     </div>
+    ${renderPreviousRevision(change, maps)}
   </article>`;
 }
 
 function renderSearchResults(matches, results) {
   results.innerHTML = matches.map(({ document, score }) => {
     const documentStatus = document.status === "active" ? "" : `<span class="status">${escapeHtml(document.status)}</span>`;
+    const supplement = document.supplement ? `<span class="supplement-pill supplement-${escapeHtml(document.supplement.presentation)}">${escapeHtml(supplementLabel(document.supplement, { short: true }))}</span>` : "";
     const excerpt = document.text.slice(0, 240);
-    return `<li><a href="${escapeHtml(routeForDocument(document))}"><span class="result-citation">${escapeHtml(document.citation ?? document.citations.join("–"))}</span>${escapeHtml(document.heading)} ${documentStatus}</a>
+    return `<li><a href="${escapeHtml(routeForDocument(document))}"><span class="result-citation">${escapeHtml(document.citation ?? document.citations.join("–"))}</span>${escapeHtml(document.heading)} ${documentStatus}${supplement}</a>
       <p>${escapeHtml(titleLabel(document.title))} · ${escapeHtml(chapterLabel(document.chapter))} · ${escapeHtml(excerpt)}${document.text.length > 240 ? "…" : ""}</p><span class="visually-hidden">Relevance ${score}</span></li>`;
   }).join("");
 }
@@ -572,7 +602,22 @@ async function sectionSecondaryContext(title, section, requestedCitation) {
 }
 
 async function renderChapter(catalog, title, chapterMeta, route) {
-  const chapter = await getJson(`./data/${chapterMeta.path}`);
+  const baseChapter = await getJson(`./data/${chapterMeta.path}`);
+  let chapter = baseChapter;
+  let overlay = null;
+  let supplementError = null;
+  try {
+    const latest = await supplementRepository.loadLatestChapter(chapterMeta.number);
+    if (latest.chapter) {
+      const applied = applyChapterOverlay(baseChapter, latest.chapter, latest.edition.editionYear);
+      chapter = applied.chapter;
+      overlay = applied.overlay;
+    }
+  } catch (error) {
+    supplementError = error;
+    console.warn("Could not load the published supplement", error);
+  }
+  const changeBySection = new Map((overlay?.changes ?? []).map((change) => [change.sectionId, { ...change, editionYear: overlay.editionYear }]));
   const selected = route.kind === "section" ? findSection(chapter, route.section) : null;
   if (route.kind === "section" && !selected) return renderNotFound("That provision was not found.");
 
@@ -583,13 +628,13 @@ async function renderChapter(catalog, title, chapterMeta, route) {
 
   const [maps, secondaryContext] = selected
     ? await Promise.all([
-        referenceMaps(selected, catalog),
+        referenceMaps([selected, ...(changeBySection.get(selected.id)?.previousSections ?? [])], catalog),
         sectionSecondaryContext(title, selected, route.section)
       ])
     : [null, null];
   setDocumentTitle(selected ? sectionLabel(selected) : chapterLabel(chapter), titleLabel(title));
   app.innerHTML = `${siteHeader()}<div class="reader-shell" id="main-content">
-    ${readerSidebar(title, chapter, chapter.sections, selected)}
+    ${readerSidebar(title, chapter, chapter.sections, selected, changeBySection)}
     <main class="reader-content">
       ${breadcrumbs([
         { label: "Titles", href: "#/" },
@@ -597,7 +642,8 @@ async function renderChapter(catalog, title, chapterMeta, route) {
         { label: chapterLabel(chapter), href: selected ? chapterRoute(title, chapter) : null },
         ...(selected ? [{ label: sectionLabel(selected) }] : [])
       ])}
-      ${selected ? `${renderProvision(title, chapter, selected, maps, secondaryContext)}${sectionNavigation(title, chapter, chapter.sections, selected)}` : `<div class="chapter-overview"><p class="eyebrow">${chapter.sections.length} provisions</p><h1>${escapeHtml(chapterLabel(chapter))} — ${escapeHtml(chapter.name)}</h1><p>Choose a provision from the chapter list.</p><a href="${escapeHtml(chapter.sourceUrl)}">Official chapter source</a></div>`}
+      ${supplementError ? `<p class="supplement-warning" role="alert">The published supplement could not be loaded. This page is showing the base revision only; reload before relying on it.</p>` : ""}
+      ${selected ? `${renderProvision(title, chapter, selected, maps, secondaryContext, changeBySection.get(selected.id))}${sectionNavigation(title, chapter, chapter.sections, selected)}` : `<div class="chapter-overview"><p class="eyebrow">${chapter.sections.length} provisions</p><h1>${escapeHtml(chapterLabel(chapter))} — ${escapeHtml(chapter.name)}</h1>${overlay?.changes.length ? `<p class="supplement-summary"><strong>${overlay.editionYear} Supplement applied.</strong> ${overlay.changes.length} updated provision${overlay.changes.length === 1 ? "" : "s"} are labeled in the chapter list.</p>` : ""}<p>Choose a provision from the chapter list.</p><a href="${escapeHtml(chapter.sourceUrl)}">Official chapter source</a></div>`}
     </main>
   </div>`;
 

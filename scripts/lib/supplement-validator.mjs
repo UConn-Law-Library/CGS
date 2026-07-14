@@ -2,7 +2,8 @@ import { createHash } from "node:crypto";
 import { readFile, readdir, stat } from "node:fs/promises";
 import path from "node:path";
 import { validateSchema } from "./json-schema.mjs";
-import { classifyChapterOverlay } from "./supplement-overlay.mjs";
+import { applyChapterOverlay, classifyChapterOverlay } from "./supplement-overlay.mjs";
+import { createSupplementSearchPatch } from "./supplement-search.mjs";
 
 async function readJson(file) {
   return JSON.parse(await readFile(file, "utf8"));
@@ -16,6 +17,7 @@ export async function validateSupplement({ supplementDir, baseDataDir, schemaDir
   const manifest = await readJson(path.join(root, "manifest.json"));
   const manifestSchema = await readJson(path.join(schemas, "supplement-manifest.schema.json"));
   const chapterSchema = await readJson(path.join(schemas, "chapter.schema.json"));
+  const searchSchema = await readJson(path.join(schemas, "supplement-search-shard.schema.json"));
   errors.push(...validateSchema(manifest, manifestSchema).map((error) => `manifest.json ${error}`));
 
   const baseCatalog = await readJson(path.join(base, "catalog.json"));
@@ -36,9 +38,22 @@ export async function validateSupplement({ supplementDir, baseDataDir, schemaDir
   let replacements = 0;
   let additions = 0;
 
+  async function validateArtifact(relativePath) {
+    const artifact = artifactByPath.get(relativePath);
+    if (!artifact) {
+      errors.push(`manifest.json: missing artifact record for ${relativePath}`);
+      return;
+    }
+    const bytes = await readFile(path.join(root, ...relativePath.split("/")));
+    if (bytes.byteLength !== artifact.bytes) errors.push(`${relativePath}: byte length does not match manifest`);
+    if (createHash("sha256").update(bytes).digest("hex") !== artifact.sha256) errors.push(`${relativePath}: SHA-256 does not match manifest`);
+  }
+
   for (const title of manifest.titles ?? []) {
     const baseTitle = baseTitles.get(title.id);
     const baseChapters = new Map((baseTitle?.chapters ?? []).map((chapter) => [chapter.id, chapter]));
+    const expectedRemovedIds = [];
+    const expectedDocuments = [];
     for (const entry of title.chapters ?? []) {
       chapters += 1;
       sections += entry.sectionCount ?? 0;
@@ -57,6 +72,10 @@ export async function validateSupplement({ supplementDir, baseDataDir, schemaDir
       const baseChapter = baseEntry ? await readJson(path.join(base, baseEntry.path)) : null;
       try {
         const classification = classifyChapterOverlay(chapter, baseChapter);
+        const consolidated = applyChapterOverlay(baseChapter, chapter, manifest.editionYear);
+        const searchPatch = createSupplementSearchPatch(baseChapter, consolidated, manifest.editionYear);
+        expectedRemovedIds.push(...searchPatch.removedDocumentIds);
+        expectedDocuments.push(...searchPatch.documents);
         replacements += classification.replacements;
         additions += classification.additions;
         if (classification.replacements !== entry.replacementCount || classification.additions !== entry.additionCount) {
@@ -65,14 +84,29 @@ export async function validateSupplement({ supplementDir, baseDataDir, schemaDir
       } catch (error) {
         errors.push(error.message);
       }
+      await validateArtifact(entry.path);
+    }
 
-      const artifact = artifactByPath.get(entry.path);
-      if (!artifact) errors.push(`manifest.json: missing artifact record for ${entry.path}`);
-      else {
-        const bytes = await readFile(chapterFile);
-        if (bytes.byteLength !== artifact.bytes) errors.push(`${entry.path}: byte length does not match manifest`);
-        if (createHash("sha256").update(bytes).digest("hex") !== artifact.sha256) errors.push(`${entry.path}: SHA-256 does not match manifest`);
+    if (typeof title.searchPath !== "string") continue;
+    if (seenPaths.has(title.searchPath)) errors.push(`manifest.json: duplicate search path ${title.searchPath}`);
+    seenPaths.add(title.searchPath);
+    const searchFile = path.join(root, ...title.searchPath.split("/"));
+    const searchShard = await readJson(searchFile).catch((error) => {
+      errors.push(`${title.searchPath}: cannot be read (${error.message})`);
+      return null;
+    });
+    if (searchShard) {
+      errors.push(...validateSchema(searchShard, searchSchema).map((error) => `${title.searchPath} ${error}`));
+      if (searchShard.editionYear !== manifest.editionYear || searchShard.title?.id !== title.id) {
+        errors.push(`${title.searchPath}: manifest identity mismatch`);
       }
+      if (JSON.stringify(searchShard.removedDocumentIds) !== JSON.stringify(expectedRemovedIds)) {
+        errors.push(`${title.searchPath}: removed document ids do not match the consolidated supplement corpus`);
+      }
+      if (JSON.stringify(searchShard.documents) !== JSON.stringify(expectedDocuments)) {
+        errors.push(`${title.searchPath}: documents do not match the consolidated supplement corpus`);
+      }
+      await validateArtifact(title.searchPath);
     }
   }
   for (const artifact of manifest.artifacts ?? []) {

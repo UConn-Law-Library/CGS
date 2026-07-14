@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { applyChapterOverlay, SupplementRepository } from "../src/supplements.js";
+import { applyChapterOverlay, mergeSupplementSearchShard, SupplementRepository } from "../src/supplements.js";
 
 const baseChapter = {
   id: "chapter-001",
@@ -23,10 +23,11 @@ test("applies a selected supplement without mutating the base chapter", () => {
   const result = applyChapterOverlay(baseChapter, overlayChapter, 2026);
   assert.deepEqual(result.chapter.sections.map((section) => section.citation), ["1-1", "1-2", "1-3"]);
   assert.equal(result.chapter.sections[0].text, "replacement");
-  assert.deepEqual(result.overlay.changes, [
-    { sectionId: "section-1-1", kind: "replacement" },
-    { sectionId: "section-1-2", kind: "addition" }
+  assert.deepEqual(result.overlay.changes.map(({ sectionId, kind, presentation }) => ({ sectionId, kind, presentation })), [
+    { sectionId: "section-1-1", kind: "replacement", presentation: "amended" },
+    { sectionId: "section-1-2", kind: "addition", presentation: "new" }
   ]);
+  assert.deepEqual(result.overlay.changes[0].previousSections, [baseChapter.sections[0]]);
   assert.equal(baseChapter.sections.length, 2);
 });
 
@@ -73,7 +74,8 @@ test("splits a reserved grouped placeholder when a supplement fills one citation
   const result = applyChapterOverlay(reservedBase, supplement, 2026);
   assert.deepEqual(result.chapter.sections.map((section) => section.citations), [["4-66i"], ["4-66j"]]);
   assert.equal(result.chapter.sections[1].heading, "Sec. 4-66j. Reserved for future use.");
-  assert.deepEqual(result.overlay.changes, [{ sectionId: "section-4-66i", kind: "replacement" }]);
+  assert.equal(result.overlay.changes[0].presentation, "new");
+  assert.deepEqual(result.overlay.changes[0].previousSections, [reservedBase.sections[0]]);
 });
 
 test("prefers an exact provision over an overlapping reserved placeholder", () => {
@@ -94,7 +96,8 @@ test("prefers an exact provision over an overlapping reserved placeholder", () =
   );
   assert.equal(result.chapter.sections.filter((section) => section.citations.includes("9-163k")).length, 1);
   assert.deepEqual(result.chapter.sections.find((section) => section.status === "reserved").citations, ["9-163", "9-163l"]);
-  assert.deepEqual(result.overlay.changes, [{ sectionId: "section-9-163k", kind: "replacement" }]);
+  assert.equal(result.overlay.changes[0].presentation, "amended");
+  assert.deepEqual(result.overlay.changes[0].previousSections, [exact]);
 });
 
 test("replaces complete standalone provisions with one grouped supplement provision", () => {
@@ -114,14 +117,32 @@ test("replaces complete standalone provisions with one grouped supplement provis
   };
   const result = applyChapterOverlay(base, { id: "chapter-184c", sections: [grouped] }, 2026);
   assert.deepEqual(result.chapter.sections, [grouped]);
-  assert.deepEqual(result.overlay.changes, [{ sectionId: grouped.id, kind: "replacement" }]);
+  assert.equal(result.overlay.changes[0].presentation, "repealed");
+  assert.deepEqual(result.overlay.changes[0].previousSections, base.sections);
+});
+
+test("removes superseded search documents and adds the supplement delta", () => {
+  const base = {
+    title: { id: "title-01" },
+    documents: [
+      { id: "old", chapter: { id: "chapter-001" } },
+      { id: "untouched", chapter: { id: "chapter-002" } }
+    ]
+  };
+  const merged = mergeSupplementSearchShard(base, {
+    title: { id: "title-01" },
+    removedDocumentIds: ["old"],
+    documents: [{ id: "current", chapter: { id: "chapter-001" }, supplement: { editionYear: 2026, presentation: "amended" } }]
+  });
+  assert.deepEqual(merged.documents.map((document) => document.id), ["untouched", "current"]);
 });
 
 test("discovers supplement editions and resolves their chapter artifacts", async () => {
   const responses = new Map([
     ["https://example.test/data/supplements/manifest.json", { editions: [{ editionYear: 2026, path: "2026/manifest.json" }] }],
-    ["https://example.test/data/supplements/2026/manifest.json", { titles: [{ chapters: [{ number: "001", path: "chapters/001.json" }] }] }],
-    ["https://example.test/data/supplements/2026/chapters/001.json", overlayChapter]
+    ["https://example.test/data/supplements/2026/manifest.json", { titles: [{ id: "title-01", searchPath: "search/title-01.json", chapters: [{ number: "001", path: "chapters/001.json" }] }] }],
+    ["https://example.test/data/supplements/2026/chapters/001.json", overlayChapter],
+    ["https://example.test/data/supplements/2026/search/title-01.json", { title: { id: "title-01" }, documents: [] }]
   ]);
   const repository = new SupplementRepository({
     baseUrl: "https://example.test/data/supplements/",
@@ -132,4 +153,6 @@ test("discovers supplement editions and resolves their chapter artifacts", async
   assert.equal((await repository.init()).editions[0].editionYear, 2026);
   assert.equal((await repository.loadChapter(2026, "1")).id, "chapter-001");
   assert.equal(await repository.loadChapter(2026, "999"), null);
+  assert.equal((await repository.loadLatestChapter("001")).edition.editionYear, 2026);
+  assert.equal((await repository.loadLatestSearchTitle("title-01")).title.id, "title-01");
 });

@@ -36,6 +36,18 @@ export function indexRouteHref(letter = null, { topic = null, query = null } = {
   return route;
 }
 
+export function searchRouteHref(query = null) {
+  return query ? `#/search?q=${encodeSegment(query)}` : "#/search";
+}
+
+export function infractionsRouteHref(category = null, { entry = null, query = null } = {}) {
+  let route = "#/infractions";
+  if (category) route += `/${encodeSegment(category)}`;
+  if (entry) route += `/entry/${encodeSegment(entry)}`;
+  if (query) route += `?q=${encodeSegment(query)}`;
+  return route;
+}
+
 export function parseRoute({ hash = "", search = "" } = {}) {
   const query = new URLSearchParams(search);
   if ((!hash || hash === "#" || hash === "#/") && query.has("chapter")) {
@@ -53,6 +65,22 @@ export function parseRoute({ hash = "", search = "" } = {}) {
   const path = hashPath.replace(/^#\/?/, "").replace(/\/$/, "");
   if (!path) return { kind: "home" };
   const parts = path.split("/").map(decodeSegment);
+
+  if (parts[0] === "search" && parts.length === 1) {
+    return { kind: "search", query: new URLSearchParams(hashQuery).get("q") || null };
+  }
+
+  if (parts[0] === "infractions") {
+    const queryValue = new URLSearchParams(hashQuery).get("q") || null;
+    if (parts.length === 1) return { kind: "infractions", category: null, entry: null, query: queryValue };
+    if (parts.length === 2 && parts[1]) return { kind: "infractions", category: parts[1], entry: null, query: queryValue };
+    if (parts.length === 4 && parts[1] && parts[2] === "entry" && parts[3]) {
+      return { kind: "infractions", category: parts[1], entry: parts[3], query: queryValue };
+    }
+    return { kind: "not-found" };
+  }
+
+  if (parts[0] === "bookmarks" && parts.length === 1) return { kind: "bookmarks" };
 
   if (parts[0] === "index") {
     const queryValue = new URLSearchParams(hashQuery).get("q") || null;

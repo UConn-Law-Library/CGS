@@ -36,6 +36,14 @@ export class SecondarySourceRepository {
     return entry ? this.#json(`infractions/${entry.path}`) : { schemaVersion: rootSchema(infractions), titleId, entries: [] };
   }
 
+  async loadAllInfractions() {
+    const { infractions } = await this.init();
+    const shards = await Promise.all(
+      infractions.shards.map((shard) => this.#json(`infractions/${shard.path}`))
+    );
+    return shards.flatMap((shard) => shard.entries);
+  }
+
   async loadFeeRules() {
     return this.#json("infractions/fee-rules.json");
   }

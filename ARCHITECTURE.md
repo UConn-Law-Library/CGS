@@ -61,6 +61,8 @@ Infractions and subject-index records preserve their own publisher, revision or 
 
 The Pages client uses hash routes because GitHub Pages cannot rewrite arbitrary paths to the application shell. Routes identify a title, chapter, section, and optional subsection independently of generated filenames. Direct links therefore survive refreshes and can be shared without adding a hosting service.
 
+The same route layer exposes top-level mobile destinations for statutes, the LCO index, the Judicial Branch infractions schedule, search, and device-local bookmarks. A responsive application shell presents these as persistent bottom navigation on narrow viewports and header navigation on larger screens. Bookmarks and reader preferences use guarded browser storage only; they are never canonical data and never leave the device.
+
 The catalog resolves title and chapter navigation. A reader fetches only the selected chapter artifact, then builds its section index, breadcrumbs, adjacent-section links, internal legal-reference links, and subsection anchors in the browser. Legacy query-string reader links are accepted as an input compatibility layer and immediately canonicalized to the hash route.
 
 The build also derives a script-free discovery hierarchy from the same catalog and chapter artifacts. Static title pages link to static chapter pages; chapter pages expose provision headings, official-source links, and handoff links to the interactive reader. These generated pages plus `sitemap.xml` make the corpus discoverable without treating HTML as another authoritative data source.

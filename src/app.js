@@ -4,9 +4,11 @@ import {
   findChapter,
   findSection,
   findTitle,
+  infractionsRouteHref,
   indexRouteHref,
   parseRoute,
   routeHref,
+  searchRouteHref,
   sectionRouteKey
 } from "./routes.js";
 import {
@@ -17,7 +19,9 @@ import {
   routeForDocument
 } from "./reader.js";
 import { SecondarySourceRepository } from "./secondary-sources.js";
+import { applyPreferences, DeviceState } from "./device-state.js";
 import {
+  formatMoney,
   renderIndexEntry,
   renderIndexReferences,
   renderSecondaryContext,
@@ -29,9 +33,11 @@ const app = document.querySelector("#app");
 const repository = new SearchRepository();
 const searchClient = new ProgressiveSearchClient({ repository });
 const secondaryRepository = new SecondarySourceRepository();
+const deviceState = new DeviceState();
 const catalogPromise = getJson("./data/catalog.json");
 let renderSequence = 0;
 let activeSearchController = null;
+applyPreferences(deviceState.preferences());
 
 async function getJson(path) {
   const response = await fetch(path);
@@ -39,10 +45,54 @@ async function getJson(path) {
   return response.json();
 }
 
+function activeDestination(route = parseRoute(location)) {
+  if (route.kind === "index") return "index";
+  if (route.kind === "infractions") return "infractions";
+  if (route.kind === "bookmarks") return "bookmarks";
+  return "statutes";
+}
+
+function navLink({ href, id, icon, label }, active) {
+  return `<a href="${href}"${active === id ? ` aria-current="page"` : ""}><span aria-hidden="true">${icon}</span><span>${label}</span></a>`;
+}
+
+function settingsPanel() {
+  const preferences = deviceState.preferences();
+  const bookmarkCount = deviceState.bookmarks().length;
+  return `<section class="settings-panel" role="dialog" aria-label="Settings" data-settings-panel hidden>
+    <div class="settings-heading"><strong>Settings</strong><button type="button" class="icon-button" data-close-settings aria-label="Close settings">×</button></div>
+    <div class="setting-group"><span>Theme</span><div class="segmented" role="group" aria-label="Theme">
+      ${["auto", "light", "dark", "oled"].map((theme) => `<button type="button" data-theme-value="${theme}" aria-pressed="${preferences.theme === theme}">${theme[0].toUpperCase()}${theme.slice(1)}</button>`).join("")}
+    </div></div>
+    <div class="setting-row"><span><strong>Text size</strong><small data-text-size-value>${Math.round(preferences.textScale * 100)}%</small></span><div class="text-size-controls"><button type="button" data-text-size="decrease" aria-label="Decrease text size">A−</button><button type="button" data-text-size="increase" aria-label="Increase text size">A+</button></div></div>
+    <label class="setting-row"><span><strong>Compact lists</strong><small>Show more items on screen</small></span><input type="checkbox" data-compact-lists${preferences.compactLists ? " checked" : ""}></label>
+    <button type="button" class="settings-action" data-clear-bookmarks${bookmarkCount ? "" : " disabled"}>Clear bookmarks <small>${bookmarkCount ? `${bookmarkCount} saved` : "None saved"}</small></button>
+    <a class="settings-action" href="./discover/">Static discovery index <small>Script-free browsing</small></a>
+    <p class="settings-note">Installation and full offline data controls will be added with the PWA service-worker phase.</p>
+  </section>`;
+}
+
 function siteHeader() {
+  const route = parseRoute(location);
+  const active = activeDestination(route);
+  const searchValue = route.kind === "search" ? route.query ?? "" : "";
   return `<header class="site-header">
-    <a class="brand" href="#/">Connecticut General Statutes</a>
-    <nav aria-label="Primary"><a href="#/">Browse</a> <a href="#/index">Statutes index</a> <a href="./discover/">Static index</a></nav>
+    <div class="header-bar">
+      <a class="brand" href="#/"><span class="brand-mark" aria-hidden="true">§</span><span>Connecticut General Statutes</span></a>
+      <nav class="app-nav" aria-label="Main sections">
+        ${navLink({ href: "#/", id: "statutes", icon: "§", label: "Statutes" }, active)}
+        ${navLink({ href: "#/index", id: "index", icon: "A–Z", label: "Index" }, active)}
+        ${navLink({ href: "#/infractions", id: "infractions", icon: "⚖", label: "Infractions" }, active)}
+        ${navLink({ href: "#/bookmarks", id: "bookmarks", icon: "★", label: "Bookmarks" }, active)}
+        <button type="button" data-open-settings aria-expanded="false"><span aria-hidden="true">⚙</span><span>Settings</span></button>
+      </nav>
+    </div>
+    <form class="global-search" data-global-search role="search">
+      <label class="visually-hidden" for="global-query">Search statutes</label>
+      <input id="global-query" name="query" type="search" minlength="2" required value="${escapeHtml(searchValue)}" placeholder="Search statutes by citation or keyword">
+      <button type="submit" class="global-search-button">Search</button>
+    </form>
+    ${settingsPanel()}
   </header>`;
 }
 
@@ -179,12 +229,20 @@ function renderProvision(title, chapter, section, maps, secondaryContext = null)
   const absolute = new URL(route, location.href).href;
   const status = section.status === "active" ? section.kind : section.status;
   const email = `mailto:?subject=${encodeURIComponent(section.heading)}&body=${encodeURIComponent(absolute)}`;
+  const bookmark = {
+    id: `statute:${title.id}:${chapter.id}:${section.id}`,
+    type: "statute",
+    title: sectionLabel(section),
+    subtitle: section.heading,
+    href: route
+  };
   return `<article class="provision" id="${escapeHtml(section.id)}">
     <div class="provision-heading">
       <p class="eyebrow">${escapeHtml(status)}</p>
       <h1>${escapeHtml(section.heading)}</h1>
     </div>
     <div class="section-actions" aria-label="Section actions">
+      ${bookmarkButton(bookmark)}
       <button type="button" data-copy-link="${escapeHtml(route)}">Copy link</button>
       <button type="button" data-share-link="${escapeHtml(route)}" data-share-title="${escapeHtml(section.heading)}">Share</button>
       <a href="${escapeHtml(email)}">Email</a>
@@ -212,82 +270,80 @@ function renderSearchResults(matches, results) {
 
 async function renderHome(catalog) {
   setDocumentTitle();
-  app.innerHTML = `${siteHeader()}<header class="masthead" id="main-content">
-      <p class="kicker">UConn Law Library</p>
+  app.innerHTML = `${siteHeader()}<main class="home-page" id="main-content">
+    <header class="home-intro">
+      <p class="eyebrow">UConn Law Library</p>
       <h1>Connecticut General Statutes</h1>
-      <p>Browse and search a static, chapter-level edition with links to the official source.</p>
+      <p>Browse and search the statutes, the official subject index, and the Judicial Branch infraction schedule. Save frequently used material on this device.</p>
     </header>
-    <main>
-      <section class="search-panel" aria-labelledby="search-heading">
-        <h2 id="search-heading">Search the statutes</h2>
-        <form id="search-form">
-          <label for="query">Citation, phrase, or keyword</label>
-          <input id="query" name="query" type="search" minlength="2" required placeholder="Try 1-1 or public records">
-          <label for="title">Limit to a title</label>
-          <select id="title" name="title">
-            <option value="">All titles</option>
-            ${catalog.titles.map((title) => `<option value="${escapeHtml(title.id)}">${escapeHtml(titleLabel(title))} — ${escapeHtml(title.name)}</option>`).join("")}
-          </select>
-          <button type="submit">Search</button>
-        </form>
-        <p id="search-note" class="note">All-title searches stream static title shards and rank matches in the background. Choose a title for the fastest search.</p>
-        <progress id="search-progress" value="0" max="1" hidden>Search progress</progress>
-        <div id="search-status" role="status" aria-live="polite"></div>
-        <ol id="results" class="results"></ol>
-      </section>
-      <section class="data-guides" aria-labelledby="legal-data-heading">
-        <div><p class="eyebrow">Additional official publications</p><h2 id="legal-data-heading">Explore connected legal data</h2></div>
-        <a href="#/index"><strong>General Statutes index</strong><span>Browse 5,652 subject headings and follow citations into the statutes.</span></a>
-        <a href="#/t/14/c/248/s/14-219"><strong>Infractions and fees</strong><span>See linked Judicial Branch schedule entries and Chart B fee rules on statute pages.</span></a>
-      </section>
-      <section class="catalog" aria-labelledby="browse-heading">
-        <div class="section-heading"><div><p class="eyebrow">${catalog.counts.chapters.toLocaleString()} chapters</p><h2 id="browse-heading">Browse titles</h2></div><p>${catalog.counts.sections.toLocaleString()} provisions</p></div>
-        <div class="title-grid">${catalog.titles.map((title) => `<a class="title-card" href="${escapeHtml(titleRoute(title))}"><p>${escapeHtml(titleLabel(title))}</p><h3>${escapeHtml(title.name)}</h3><span>${title.chapters.length} chapter${title.chapters.length === 1 ? "" : "s"}</span></a>`).join("")}</div>
-      </section>
-    </main>
-    <footer>Unofficial access copy. Verify legal text with the Connecticut General Assembly.</footer>`;
+    <section class="destination-grid" aria-label="Explore legal materials">
+      <a href="#browse-titles"><span aria-hidden="true">§</span><strong>Browse statutes</strong><small>Navigate by title, chapter, or section.</small></a>
+      <a href="#/index"><span aria-hidden="true">A–Z</span><strong>Subject index</strong><small>Find statutes by topic in the official LCO index.</small></a>
+      <a href="#/infractions"><span aria-hidden="true">⚖</span><strong>Infraction schedule</strong><small>Review violations, amounts, and linked statutes.</small></a>
+      <a href="#/bookmarks"><span aria-hidden="true">★</span><strong>Bookmarks</strong><small>Return to sections and infractions saved on this device.</small></a>
+    </section>
+    <section class="catalog" id="browse-titles" aria-labelledby="browse-heading">
+      <div class="section-heading"><div><p class="eyebrow">${catalog.counts.chapters.toLocaleString()} chapters</p><h2 id="browse-heading">Statute titles</h2></div><p>${catalog.counts.sections.toLocaleString()} provisions</p></div>
+      <div class="title-grid">${catalog.titles.map((title) => `<a class="title-card" href="${escapeHtml(titleRoute(title))}"><p>${escapeHtml(titleLabel(title))}</p><h3>${escapeHtml(title.name)}</h3><span>${title.chapters.length} chapter${title.chapters.length === 1 ? "" : "s"}</span></a>`).join("")}</div>
+    </section>
+  </main><footer>Unofficial access copy. Verify legal text with the Connecticut General Assembly.</footer>`;
+}
 
-  document.querySelector("#search-form").addEventListener("submit", async (event) => {
-    event.preventDefault();
-    const form = new FormData(event.currentTarget);
-    const query = form.get("query");
-    const title = form.get("title");
-    const status = document.querySelector("#search-status");
-    const results = document.querySelector("#results");
-    const progress = document.querySelector("#search-progress");
-    activeSearchController?.abort();
-    const controller = new AbortController();
-    activeSearchController = controller;
-    status.textContent = "Preparing search…";
-    results.innerHTML = "";
-    results.setAttribute("aria-busy", "true");
-    progress.hidden = false;
-    progress.value = 0;
-    try {
-      const matches = await searchClient.search(query, {
-        titleIds: title ? [title] : undefined,
-        signal: controller.signal,
-        onProgress(update) {
-          if (controller !== activeSearchController) return;
-          progress.max = Math.max(1, update.total);
-          progress.value = update.completed;
-          renderSearchResults(update.results, results);
-          status.textContent = `Searching ${update.completed} of ${update.total} title shard${update.total === 1 ? "" : "s"}… ${update.results.length} match${update.results.length === 1 ? "" : "es"} so far.`;
-        }
-      });
-      if (controller !== activeSearchController) return;
-      status.textContent = `${matches.length} result${matches.length === 1 ? "" : "s"}`;
-      renderSearchResults(matches, results);
-    } catch (error) {
-      if (error.name !== "AbortError" && controller === activeSearchController) status.textContent = error.message;
-    } finally {
-      if (controller === activeSearchController) {
-        results.removeAttribute("aria-busy");
-        progress.hidden = true;
-        activeSearchController = null;
+async function runStatuteSearch(query, titleId = null) {
+  const status = document.querySelector("#search-status");
+  const results = document.querySelector("#results");
+  const progress = document.querySelector("#search-progress");
+  activeSearchController?.abort();
+  const controller = new AbortController();
+  activeSearchController = controller;
+  status.textContent = "Preparing search…";
+  results.innerHTML = "";
+  results.setAttribute("aria-busy", "true");
+  progress.hidden = false;
+  progress.value = 0;
+  try {
+    const matches = await searchClient.search(query, {
+      titleIds: titleId ? [titleId] : undefined,
+      signal: controller.signal,
+      onProgress(update) {
+        if (controller !== activeSearchController) return;
+        progress.max = Math.max(1, update.total);
+        progress.value = update.completed;
+        renderSearchResults(update.results, results);
+        status.textContent = `Searching ${update.completed} of ${update.total} title shard${update.total === 1 ? "" : "s"}… ${update.results.length} match${update.results.length === 1 ? "" : "es"} so far.`;
       }
+    });
+    if (controller !== activeSearchController) return;
+    status.textContent = `${matches.length} result${matches.length === 1 ? "" : "s"}`;
+    renderSearchResults(matches, results);
+  } catch (error) {
+    if (error.name !== "AbortError" && controller === activeSearchController) status.textContent = error.message;
+  } finally {
+    if (controller === activeSearchController) {
+      results.removeAttribute("aria-busy");
+      progress.hidden = true;
+      activeSearchController = null;
     }
-  });
+  }
+}
+
+async function renderSearchPage(catalog, route) {
+  const query = route.query ?? "";
+  setDocumentTitle(query ? `Search: ${query}` : "Search");
+  app.innerHTML = `${siteHeader()}<main class="search-page" id="main-content">
+    <header><p class="eyebrow">Statutes</p><h1>Search results</h1></header>
+    <form class="search-refine" data-search-refine>
+      <label for="search-page-query">Citation, phrase, or keyword</label>
+      <input id="search-page-query" name="query" type="search" minlength="2" required value="${escapeHtml(query)}">
+      <label for="search-title">Limit to a title</label>
+      <select id="search-title" name="title"><option value="">All titles</option>${catalog.titles.map((title) => `<option value="${escapeHtml(title.id)}">${escapeHtml(titleLabel(title))} — ${escapeHtml(title.name)}</option>`).join("")}</select>
+      <button type="submit">Search</button>
+    </form>
+    <progress id="search-progress" value="0" max="1" hidden>Search progress</progress>
+    <div id="search-status" role="status" aria-live="polite">${query ? "Preparing search…" : "Enter at least two characters."}</div>
+    <ol id="results" class="results"></ol>
+  </main><footer>Unofficial access copy. Verify legal text with the Connecticut General Assembly.</footer>`;
+  if (query.length >= 2) await runStatuteSearch(query);
 }
 
 function renderTitle(title) {
@@ -375,6 +431,108 @@ function renderTopic(topic, initialCount = 250) {
   </article>`;
 }
 
+function bookmarkButton(bookmark, className = "") {
+  const saved = deviceState.isBookmarked(bookmark.id);
+  return `<button type="button" class="bookmark-button${className ? ` ${className}` : ""}"
+    data-bookmark-id="${escapeHtml(bookmark.id)}"
+    data-bookmark-type="${escapeHtml(bookmark.type)}"
+    data-bookmark-title="${escapeHtml(bookmark.title)}"
+    data-bookmark-subtitle="${escapeHtml(bookmark.subtitle ?? "")}"
+    data-bookmark-href="${escapeHtml(bookmark.href)}"
+    aria-pressed="${saved}">${saved ? "★ Saved" : "☆ Bookmark"}</button>`;
+}
+
+function groupInfractions(entries) {
+  const groups = new Map();
+  for (const entry of entries) {
+    if (!groups.has(entry.category)) groups.set(entry.category, []);
+    groups.get(entry.category).push(entry);
+  }
+  return [...groups].sort(([left], [right]) => left.localeCompare(right));
+}
+
+function infractionBookmark(entry) {
+  return {
+    id: `infraction:${entry.id}`,
+    type: "infraction",
+    title: `Sec. ${entry.citation}`,
+    subtitle: entry.description,
+    href: infractionsRouteHref(entry.category, { entry: entry.id })
+  };
+}
+
+function renderInfractionListItem(entry) {
+  const href = infractionsRouteHref(entry.category, { entry: entry.id });
+  const total = entry.amounts?.total_due;
+  return `<li class="infraction-card">
+    <a href="${escapeHtml(href)}"><span class="infraction-citation">Sec. ${escapeHtml(entry.citation)}</span><strong>${escapeHtml(entry.description)}</strong>${total != null ? `<small>Total due ${escapeHtml(formatMoney(total))}</small>` : ""}</a>
+    ${bookmarkButton(infractionBookmark(entry), "compact-bookmark")}
+  </li>`;
+}
+
+function amountLabel(key) {
+  return ({ total_due: "Total due", fine: "Fine", fee: "Fee", surcharge: "Surcharge", cost: "Cost" })[key]
+    ?? key.replaceAll("_", " ").replace(/^./, (value) => value.toUpperCase());
+}
+
+function renderInfractionDetail(entry, source) {
+  return `<article class="infraction-detail">
+    <p class="eyebrow">${escapeHtml(entry.category)}</p>
+    <h1>Sec. ${escapeHtml(entry.citation)}</h1>
+    <p class="infraction-description">${escapeHtml(entry.description)}</p>
+    ${entry.subsequent ? `<span class="record-tag">Subsequent offense</span>` : ""}
+    ${Object.keys(entry.amounts ?? {}).length ? `<dl class="amounts">${Object.entries(entry.amounts).map(([key, value]) => `<div><dt>${escapeHtml(amountLabel(key))}</dt><dd>${escapeHtml(formatMoney(value))}</dd></div>`).join("")}</dl>` : `<p>See the official schedule for the applicable amount.</p>`}
+    <div class="section-actions">
+      ${bookmarkButton(infractionBookmark(entry))}
+      ${entry.resolution?.href ? `<a href="${escapeHtml(entry.resolution.href)}">Open statute</a>` : ""}
+      <a href="${escapeHtml(source.url)}">Official schedule</a>
+    </div>
+    <p class="source-note">Judicial Branch schedule effective ${escapeHtml(source.effective ?? "date not stated")} · Source page ${entry.page}</p>
+  </article>`;
+}
+
+async function renderInfractions(route) {
+  const [manifests, entries] = await Promise.all([
+    secondaryRepository.init(),
+    secondaryRepository.loadAllInfractions()
+  ]);
+  const groups = groupInfractions(entries);
+  const selectedGroup = route.category ? groups.find(([category]) => category === route.category) : null;
+  if (route.category && !selectedGroup) return renderNotFound("That infraction category was not found.");
+  const selectedEntry = route.entry ? selectedGroup[1].find((entry) => entry.id === route.entry) : null;
+  if (route.entry && !selectedEntry) return renderNotFound("That infraction entry was not found.");
+  const query = route.query?.trim().toLowerCase() ?? "";
+  const tokens = query.split(/\s+/).filter(Boolean);
+  const filtered = selectedGroup ? selectedGroup[1].filter((entry) => {
+    const text = `${entry.citation} ${entry.description}`.toLowerCase();
+    return tokens.every((token) => text.includes(token));
+  }) : [];
+  const shown = filtered.slice(0, 150);
+  setDocumentTitle(selectedEntry ? `Sec. ${selectedEntry.citation}` : selectedGroup?.[0] ?? "Infractions");
+  app.innerHTML = `${siteHeader()}<main class="infractions-page" id="main-content">
+    ${breadcrumbs([{ label: "Infractions", ...(selectedGroup ? { href: "#/infractions" } : {}) }, ...(selectedGroup ? [{ label: selectedGroup[0], ...(selectedEntry ? { href: infractionsRouteHref(selectedGroup[0]) } : {}) }] : []), ...(selectedEntry ? [{ label: `Sec. ${selectedEntry.citation}` }] : [])])}
+    ${selectedEntry ? renderInfractionDetail(selectedEntry, manifests.infractions.source) : selectedGroup ? `<header class="section-heading"><div><p class="eyebrow">Judicial Branch schedule</p><h1>${escapeHtml(selectedGroup[0])}</h1></div><p>${selectedGroup[1].length.toLocaleString()} entries</p></header>
+      <form class="infraction-search" data-infraction-search>
+        <label for="infraction-query">Search this category</label>
+        <input id="infraction-query" name="query" type="search" value="${escapeHtml(route.query ?? "")}" placeholder="Citation or description">
+        <button type="submit">Search</button>
+      </form>
+      <p class="note">${filtered.length.toLocaleString()} matching entr${filtered.length === 1 ? "y" : "ies"}${filtered.length > shown.length ? `; showing the first ${shown.length}` : ""}.</p>
+      <ol class="infraction-list">${shown.map(renderInfractionListItem).join("")}</ol>` : `<header class="index-intro"><p class="eyebrow">State of Connecticut Judicial Branch</p><h1>Infractions and violations</h1><p>Browse the official mail-in schedule by category, then open an entry for amounts and its linked statute.</p><p class="source-note">Effective ${escapeHtml(manifests.infractions.source.effective ?? "date not stated")} · ${entries.length.toLocaleString()} entries · <a href="${escapeHtml(manifests.infractions.source.url)}">Official schedule (PDF)</a></p></header>
+      <ol class="infraction-categories">${groups.map(([category, values]) => `<li><a href="${escapeHtml(infractionsRouteHref(category))}"><span>${values.length.toLocaleString()} entries</span><strong>${escapeHtml(category)}</strong></a></li>`).join("")}</ol>`}
+  </main><footer>Unofficial access copy. Verify amounts and eligibility with the Judicial Branch.</footer>`;
+  window.scrollTo({ top: 0 });
+}
+
+function renderBookmarks() {
+  const bookmarks = deviceState.bookmarks();
+  setDocumentTitle("Bookmarks");
+  app.innerHTML = `${siteHeader()}<main class="bookmarks-page" id="main-content">
+    <header><p class="eyebrow">Saved on this device</p><h1>Bookmarks</h1><p>Quick links remain in this browser and are never sent to a server.</p></header>
+    ${bookmarks.length ? `<ol class="bookmark-list">${bookmarks.map((bookmark) => `<li><a href="${escapeHtml(bookmark.href)}"><span>${bookmark.type === "infraction" ? "Infraction" : "Statute"}</span><strong>${escapeHtml(bookmark.title)}</strong><small>${escapeHtml(bookmark.subtitle ?? "")}</small></a><button type="button" data-remove-bookmark="${escapeHtml(bookmark.id)}" aria-label="Remove ${escapeHtml(bookmark.title)} from bookmarks">Remove</button></li>`).join("")}</ol>` : `<div class="empty-state"><p>You have not saved any bookmarks.</p><p>Select <strong>☆ Bookmark</strong> on a statute section or infraction to save it here.</p></div>`}
+  </main><footer>Bookmarks are stored only on this device.</footer>`;
+}
+
 async function renderStatutesIndex(route) {
   const manifests = await secondaryRepository.init();
   const available = [...new Set(manifests.index.shards.map((shard) => shard.key))];
@@ -442,6 +600,9 @@ async function renderCurrentRoute() {
     if (sequence !== renderSequence) return;
     if (route.kind === "home") return renderHome(catalog);
     if (route.kind === "not-found") return renderNotFound();
+    if (route.kind === "search") return renderSearchPage(catalog, route);
+    if (route.kind === "infractions") return renderInfractions(route);
+    if (route.kind === "bookmarks") return renderBookmarks();
     if (route.kind === "index") return renderStatutesIndex(route);
 
     let title = route.title ? findTitle(catalog, route.title) : null;
@@ -468,6 +629,65 @@ document.addEventListener("click", async (event) => {
     }
     return;
   }
+  const openSettings = event.target.closest("[data-open-settings]");
+  const closeSettings = event.target.closest("[data-close-settings]");
+  if (openSettings || closeSettings) {
+    const panel = document.querySelector("[data-settings-panel]");
+    const button = document.querySelector("[data-open-settings]");
+    const open = Boolean(openSettings) && panel.hidden;
+    panel.hidden = !open;
+    button.setAttribute("aria-expanded", String(open));
+    if (open) panel.querySelector("button")?.focus();
+    else button.focus();
+    return;
+  }
+  const themeButton = event.target.closest("[data-theme-value]");
+  if (themeButton) {
+    const preferences = deviceState.updatePreferences({ theme: themeButton.dataset.themeValue });
+    applyPreferences(preferences);
+    document.querySelectorAll("[data-theme-value]").forEach((button) => button.setAttribute("aria-pressed", String(button === themeButton)));
+    return;
+  }
+  const textSizeButton = event.target.closest("[data-text-size]");
+  if (textSizeButton) {
+    const current = deviceState.preferences();
+    const direction = textSizeButton.dataset.textSize === "increase" ? 1 : -1;
+    const preferences = deviceState.updatePreferences({ textScale: Math.round((current.textScale + direction * .1) * 10) / 10 });
+    applyPreferences(preferences);
+    document.querySelector("[data-text-size-value]").textContent = `${Math.round(preferences.textScale * 100)}%`;
+    return;
+  }
+  const clearBookmarks = event.target.closest("[data-clear-bookmarks]");
+  if (clearBookmarks) {
+    deviceState.clearBookmarks();
+    if (parseRoute(location).kind === "bookmarks") renderBookmarks();
+    else {
+      clearBookmarks.disabled = true;
+      clearBookmarks.querySelector("small").textContent = "None saved";
+    }
+    return;
+  }
+  const removeBookmark = event.target.closest("[data-remove-bookmark]");
+  if (removeBookmark) {
+    deviceState.removeBookmark(removeBookmark.dataset.removeBookmark);
+    renderBookmarks();
+    return;
+  }
+  const bookmarkButton = event.target.closest("[data-bookmark-id]");
+  if (bookmarkButton) {
+    const saved = deviceState.toggleBookmark({
+      id: bookmarkButton.dataset.bookmarkId,
+      type: bookmarkButton.dataset.bookmarkType,
+      title: bookmarkButton.dataset.bookmarkTitle,
+      subtitle: bookmarkButton.dataset.bookmarkSubtitle,
+      href: bookmarkButton.dataset.bookmarkHref
+    });
+    bookmarkButton.setAttribute("aria-pressed", String(saved));
+    bookmarkButton.textContent = saved ? "★ Saved" : "☆ Bookmark";
+    const status = bookmarkButton.closest(".provision")?.querySelector(".action-status");
+    if (status) status.textContent = saved ? "Bookmark saved on this device." : "Bookmark removed.";
+    return;
+  }
   const copy = event.target.closest("[data-copy-link]");
   const share = event.target.closest("[data-share-link]");
   if (!copy && !share) return;
@@ -480,6 +700,35 @@ document.addEventListener("click", async (event) => {
     if (status) status.textContent = share && navigator.share ? "Share options opened." : "Link copied.";
   } catch (error) {
     if (error.name !== "AbortError" && status) status.textContent = "The link could not be copied automatically.";
+  }
+});
+
+document.addEventListener("change", (event) => {
+  if (!event.target.matches("[data-compact-lists]")) return;
+  applyPreferences(deviceState.updatePreferences({ compactLists: event.target.checked }));
+});
+
+document.addEventListener("submit", (event) => {
+  const form = event.target;
+  if (form.matches("[data-global-search]")) {
+    event.preventDefault();
+    const query = new FormData(form).get("query").trim();
+    location.hash = searchRouteHref(query);
+    return;
+  }
+  if (form.matches("[data-search-refine]")) {
+    event.preventDefault();
+    const values = new FormData(form);
+    const query = values.get("query").trim();
+    history.replaceState(null, "", `${location.pathname}${searchRouteHref(query)}`);
+    runStatuteSearch(query, values.get("title") || null);
+    return;
+  }
+  if (form.matches("[data-infraction-search]")) {
+    event.preventDefault();
+    const route = parseRoute(location);
+    const query = new FormData(form).get("query").trim();
+    location.hash = infractionsRouteHref(route.category, { query });
   }
 });
 

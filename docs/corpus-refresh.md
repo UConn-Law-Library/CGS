@@ -31,6 +31,14 @@ Each run retains:
 
 Snapshots and staging data stay beneath `.crawl/` and are never committed.
 
+## Temporary CGA TLS exception
+
+As of July 14, 2026, `www.cga.ct.gov` serves its leaf certificate without the GoDaddy Secure Certificate Authority G2 intermediate. The Ubuntu Actions runner therefore cannot build the certificate chain and the first production refresh failed with `CERTIFICATE_VERIFY_FAILED: unable to get local issuer certificate` ([run 29300224349](https://github.com/UConn-Law-Library/CGS/actions/runs/29300224349)).
+
+The refresh workflow temporarily passes `--no-ssl-verify` only to the CGA crawler. Raw response snapshots, content hashes, canonical validation, corpus safety thresholds, and mandatory pull-request review remain in force, but they do not replace transport authentication. Do not generalize this exception to other hosts or application traffic.
+
+Remove the exception when CGA serves a complete chain or when the crawler has a reviewed CA-bundle mechanism containing the official GoDaddy intermediate. The crawl step enables shell `pipefail` so any future acquisition failure is reported immediately rather than being masked by log capture through `tee`.
+
 ## Safety policy
 
 [`config/corpus-refresh-policy.json`](../config/corpus-refresh-policy.json) is the reviewed, versioned policy. It limits title membership changes, structural churn, provision count drift, additions, removals, and content changes. A legitimate publication outside those bounds requires a separate policy pull request before rerunning the refresh; workflow inputs cannot bypass the gate.

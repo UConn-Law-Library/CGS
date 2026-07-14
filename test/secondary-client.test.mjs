@@ -24,6 +24,7 @@ test("loads sharded infractions, index letters, and reverse section links", asyn
     fetchImpl(url) { return Promise.resolve(response(values.get(url.href))); }
   });
   assert.equal((await repository.loadInfractions("title-14")).entries[0].id, "infraction-1");
+  assert.deepEqual((await repository.loadAllInfractions()).map((entry) => entry.id), ["infraction-1"]);
   assert.equal((await repository.loadFeeRules()).rules[0].id, "fee-rule-1");
   assert.deepEqual((await repository.loadIndexLetter("M")).map((heading) => heading.id), ["topic-1", "topic-2"]);
   assert.equal((await repository.loadSectionLinks("title-14", "14-1")).infractions[0].id, "infraction-1");

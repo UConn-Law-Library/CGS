@@ -5,9 +5,11 @@ import {
   findChapter,
   findSection,
   findTitle,
+  infractionsRouteHref,
   indexRouteHref,
   parseRoute,
   routeHref,
+  searchRouteHref,
   sectionRouteKey
 } from "../src/routes.js";
 import {
@@ -61,6 +63,19 @@ test("builds and parses index browse, search, and topic routes", () => {
   assert.deepEqual(parseRoute({ hash: "#/index" }), {
     kind: "index", letter: null, topic: null, query: null
   });
+});
+
+test("builds and parses mobile destination routes", () => {
+  assert.equal(searchRouteHref("public records"), "#/search?q=public%20records");
+  assert.deepEqual(parseRoute({ hash: "#/search?q=public%20records" }), {
+    kind: "search", query: "public records"
+  });
+  const detail = infractionsRouteHref("MOTOR VEHICLES", { entry: "infraction-1" });
+  assert.equal(detail, "#/infractions/MOTOR%20VEHICLES/entry/infraction-1");
+  assert.deepEqual(parseRoute({ hash: detail }), {
+    kind: "infractions", category: "MOTOR VEHICLES", entry: "infraction-1", query: null
+  });
+  assert.deepEqual(parseRoute({ hash: "#/bookmarks" }), { kind: "bookmarks" });
 });
 
 test("accepts the Phase 1 query route as a migration fallback", () => {

@@ -119,6 +119,10 @@ Each edition records the exact base schema version and generation timestamp it w
 
 The Phase 7 pipeline migrates the legacy PDF geometry parsers into deterministic, content-addressed ingestion for the official Judicial Branch infractions schedule (Charts A and B) and the three-volume LCO subject index. The reviewed artifacts are published under `public/data/secondary`. Statute pages lazily display linked schedule entries, fee-rule roles, and subject-index records; `#/index` provides alphabetical browsing and letter-scoped client search without a database. Phase 9 adds a weekly, manually dispatchable `Review secondary sources refresh` workflow that retains source PDFs and opens a draft PR only after validation, a bounded diff, and the committed safety policy pass. See [docs/secondary-sources.md](docs/secondary-sources.md) for commands, provenance, artifact contracts, and the refresh runbook.
 
+## Mobile application interface
+
+The interactive client uses a mobile-first application shell modeled on the established CT Statutes navigation: **Statutes**, **Index**, **Infractions**, **Bookmarks**, and **Settings**. Phones keep these destinations in a persistent bottom navigation bar; larger screens place the same navigation in the header. Infractions can be browsed independently by schedule category, while statute sections and individual infractions can be bookmarked locally on the device. Theme, text-size, and list-density preferences are also device-local and require no account or database. Installation, service-worker caching, and offline data controls remain a later PWA increment.
+
 ## Data authority
 
 This project is an access layer, not the official legal source. Canonical artifacts retain source URLs so the interface can link back to the Connecticut General Assembly publication.

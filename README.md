@@ -42,6 +42,17 @@ The checked-in `public/data/` is the complete production baseline: 81 titles, 1,
 
 See [ARCHITECTURE.md](ARCHITECTURE.md) for design constraints, invariants, and the migration path.
 
+## Reader routes
+
+The static client uses stable hash routes so deep links work on GitHub Pages without server-side rewrites:
+
+- `#/t/01` opens Title 1.
+- `#/t/01/c/001` opens Chapter 1.
+- `#/t/01/c/001/s/1-1` opens Section 1-1.
+- `#/t/01/c/001/s/1-1/p/a` focuses subsection (a).
+
+Older `?chapter=001&section=section-1-1` links are translated to the canonical route in the browser. Search results, adjacent-section navigation, breadcrumbs, and recognized section or chapter references all use the same route contract.
+
 ## Commands
 
 | Command | Purpose |

@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://uconn-law-library.github.io/CGS/schemas/secondary-manifest.schema.json",
+  "title": "CGS secondary-source manifest",
+  "type": "object",
+  "required": ["schemaVersion", "generatedAt", "base", "counts", "artifacts"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "base": {
+      "type": "object",
+      "required": ["schemaVersion", "generatedAt", "manifestSha256"],
+      "additionalProperties": false,
+      "properties": {
+        "schemaVersion": { "const": "1.0.0" },
+        "generatedAt": { "type": "string", "format": "date-time" },
+        "manifestSha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+      }
+    },
+    "counts": {
+      "type": "object",
+      "required": ["infractions", "feeRules", "indexHeadings", "indexItems"],
+      "additionalProperties": false,
+      "properties": {
+        "infractions": { "type": "integer", "minimum": 0 },
+        "feeRules": { "type": "integer", "minimum": 0 },
+        "indexHeadings": { "type": "integer", "minimum": 0 },
+        "indexItems": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["path", "bytes", "sha256"],
+        "additionalProperties": false,
+        "properties": {
+          "path": { "type": "string", "minLength": 1 },
+          "bytes": { "type": "integer", "minimum": 1 },
+          "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+        }
+      }
+    }
+  }
+}

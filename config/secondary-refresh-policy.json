@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0.0",
+  "minimumCounts": {
+    "infractions": 1300,
+    "feeRules": 8,
+    "indexHeadings": 4000,
+    "indexItems": 150000
+  },
+  "maximumRemovalPercent": {
+    "infractions": 5,
+    "feeRules": 0,
+    "indexHeadings": 5,
+    "indexEntries": 5
+  },
+  "minimumResolutionPercent": {
+    "infractions": 90,
+    "feeRuleReferences": 85,
+    "indexReferences": 95
+  }
+}

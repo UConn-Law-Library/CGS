@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://uconn-law-library.github.io/CGS/schemas/statutes-index-shard.schema.json",
+  "title": "CGS subject index letter shard",
+  "type": "object",
+  "required": ["schemaVersion", "letter", "headings"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "letter": { "type": "string", "minLength": 1 },
+    "headings": { "type": "array", "items": { "$ref": "#/$defs/heading" } }
+  },
+  "$defs": {
+    "resolution": {
+      "type": "object",
+      "required": ["status"],
+      "additionalProperties": false,
+      "properties": {
+        "status": { "enum": ["exact", "section-only", "unresolved", "not-applicable"] },
+        "href": { "type": "string", "pattern": "^#/t/" }
+      }
+    },
+    "reference": {
+      "type": "object",
+      "required": ["display", "resolution"],
+      "additionalProperties": false,
+      "properties": {
+        "display": { "type": "string", "minLength": 1 },
+        "sectionCitation": { "type": "string", "minLength": 1 },
+        "resolution": { "$ref": "#/$defs/resolution" }
+      }
+    },
+    "see": {
+      "type": "object",
+      "required": ["heading"],
+      "additionalProperties": false,
+      "properties": {
+        "heading": { "type": "string", "minLength": 1 },
+        "subheading": { "type": "string", "minLength": 1 }
+      }
+    },
+    "item": {
+      "type": "object",
+      "required": ["id", "level", "text", "references", "see"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "pattern": "^index-entry-[0-9a-f]{16}$" },
+        "level": { "type": "integer", "minimum": 0 },
+        "text": { "type": "string" },
+        "references": { "type": "array", "items": { "$ref": "#/$defs/reference" } },
+        "see": { "type": "array", "items": { "$ref": "#/$defs/see" } }
+      }
+    },
+    "heading": {
+      "type": "object",
+      "required": ["id", "label", "position", "items"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "pattern": "^topic-[0-9a-f]{16}$" },
+        "label": { "type": "string", "minLength": 1 },
+        "position": { "type": "integer", "minimum": 0 },
+        "items": { "type": "array", "items": { "$ref": "#/$defs/item" } }
+      }
+    }
+  }
+}

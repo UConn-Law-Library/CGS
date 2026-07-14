@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://uconn-law-library.github.io/CGS/schemas/infractions-shard.schema.json",
+  "title": "CGS infraction entries shard",
+  "type": "object",
+  "required": ["schemaVersion", "titleId", "entries"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "titleId": { "type": ["string", "null"] },
+    "entries": { "type": "array", "items": { "$ref": "#/$defs/entry" } }
+  },
+  "$defs": {
+    "resolution": {
+      "type": "object",
+      "required": ["status"],
+      "additionalProperties": false,
+      "properties": {
+        "status": { "enum": ["exact", "section-only", "unresolved"] },
+        "href": { "type": "string", "pattern": "^#/t/" }
+      }
+    },
+    "amounts": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "total_due": { "type": "integer", "minimum": 1 },
+        "fine": { "type": "integer", "minimum": 1 },
+        "fee": { "type": "integer", "minimum": 1 },
+        "z_fee": { "type": "integer", "minimum": 1 },
+        "cost": { "type": "integer", "minimum": 1 },
+        "surcharge": { "type": "integer", "minimum": 1 },
+        "stf": { "type": "integer", "minimum": 1 },
+        "bipsa": { "type": "integer", "minimum": 1 },
+        "mf": { "type": "integer", "minimum": 1 },
+        "plus": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "entry": {
+      "type": "object",
+      "required": ["id", "printedCitation", "citation", "sectionCitation", "description", "category", "subsequent", "page", "amounts", "resolution"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "pattern": "^infraction-[0-9a-f]{16}$" },
+        "printedCitation": { "type": "string", "minLength": 1 },
+        "citation": { "type": "string", "minLength": 1 },
+        "sectionCitation": { "type": "string", "minLength": 1 },
+        "description": { "type": "string", "minLength": 1 },
+        "category": { "type": ["string", "null"] },
+        "subsequent": { "type": "boolean" },
+        "page": { "type": "integer", "minimum": 1 },
+        "amounts": { "$ref": "#/$defs/amounts" },
+        "resolution": { "$ref": "#/$defs/resolution" },
+        "note": { "type": "string", "minLength": 1 }
+      }
+    }
+  }
+}

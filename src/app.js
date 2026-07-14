@@ -1,4 +1,5 @@
 import { SearchRepository } from "./search.js";
+import { ProgressiveSearchClient } from "./search-client.js";
 import {
   findChapter,
   findSection,
@@ -17,8 +18,10 @@ import {
 
 const app = document.querySelector("#app");
 const repository = new SearchRepository();
+const searchClient = new ProgressiveSearchClient({ repository });
 const catalogPromise = getJson("./data/catalog.json");
 let renderSequence = 0;
+let activeSearchController = null;
 
 async function getJson(path) {
   const response = await fetch(path);
@@ -187,6 +190,15 @@ function renderProvision(title, chapter, section, maps) {
   </article>`;
 }
 
+function renderSearchResults(matches, results) {
+  results.innerHTML = matches.map(({ document, score }) => {
+    const documentStatus = document.status === "active" ? "" : `<span class="status">${escapeHtml(document.status)}</span>`;
+    const excerpt = document.text.slice(0, 240);
+    return `<li><a href="${escapeHtml(routeForDocument(document))}"><span class="result-citation">${escapeHtml(document.citation ?? document.citations.join("–"))}</span>${escapeHtml(document.heading)} ${documentStatus}</a>
+      <p>${escapeHtml(titleLabel(document.title))} · ${escapeHtml(chapterLabel(document.chapter))} · ${escapeHtml(excerpt)}${document.text.length > 240 ? "…" : ""}</p><span class="visually-hidden">Relevance ${score}</span></li>`;
+  }).join("");
+}
+
 async function renderHome(catalog) {
   setDocumentTitle();
   app.innerHTML = `${siteHeader()}<header class="masthead" id="main-content">
@@ -207,7 +219,8 @@ async function renderHome(catalog) {
           </select>
           <button type="submit">Search</button>
         </form>
-        <p id="search-note" class="note">All-title searches load each static title shard. Choose a title for the fastest search.</p>
+        <p id="search-note" class="note">All-title searches stream static title shards and rank matches in the background. Choose a title for the fastest search.</p>
+        <progress id="search-progress" value="0" max="1" hidden>Search progress</progress>
         <div id="search-status" role="status" aria-live="polite"></div>
         <ol id="results" class="results"></ol>
       </section>
@@ -225,19 +238,38 @@ async function renderHome(catalog) {
     const title = form.get("title");
     const status = document.querySelector("#search-status");
     const results = document.querySelector("#results");
-    status.textContent = "Searching static data…";
+    const progress = document.querySelector("#search-progress");
+    activeSearchController?.abort();
+    const controller = new AbortController();
+    activeSearchController = controller;
+    status.textContent = "Preparing search…";
     results.innerHTML = "";
+    results.setAttribute("aria-busy", "true");
+    progress.hidden = false;
+    progress.value = 0;
     try {
-      const matches = await repository.search(query, { titleIds: title ? [title] : undefined });
+      const matches = await searchClient.search(query, {
+        titleIds: title ? [title] : undefined,
+        signal: controller.signal,
+        onProgress(update) {
+          if (controller !== activeSearchController) return;
+          progress.max = Math.max(1, update.total);
+          progress.value = update.completed;
+          renderSearchResults(update.results, results);
+          status.textContent = `Searching ${update.completed} of ${update.total} title shard${update.total === 1 ? "" : "s"}… ${update.results.length} match${update.results.length === 1 ? "" : "es"} so far.`;
+        }
+      });
+      if (controller !== activeSearchController) return;
       status.textContent = `${matches.length} result${matches.length === 1 ? "" : "s"}`;
-      results.innerHTML = matches.map(({ document, score }) => {
-        const documentStatus = document.status === "active" ? "" : `<span class="status">${escapeHtml(document.status)}</span>`;
-        const excerpt = document.text.slice(0, 240);
-        return `<li><a href="${escapeHtml(routeForDocument(document))}"><span class="result-citation">${escapeHtml(document.citation ?? document.citations.join("–"))}</span>${escapeHtml(document.heading)} ${documentStatus}</a>
-          <p>${escapeHtml(titleLabel(document.title))} · ${escapeHtml(chapterLabel(document.chapter))} · ${escapeHtml(excerpt)}${document.text.length > 240 ? "…" : ""}</p><span class="visually-hidden">Relevance ${score}</span></li>`;
-      }).join("");
+      renderSearchResults(matches, results);
     } catch (error) {
-      status.textContent = error.message;
+      if (error.name !== "AbortError" && controller === activeSearchController) status.textContent = error.message;
+    } finally {
+      if (controller === activeSearchController) {
+        results.removeAttribute("aria-busy");
+        progress.hidden = true;
+        activeSearchController = null;
+      }
     }
   });
 }
@@ -294,6 +326,8 @@ function renderNotFound(message = "That page was not found.") {
 }
 
 async function renderCurrentRoute() {
+  activeSearchController?.abort();
+  activeSearchController = null;
   const sequence = ++renderSequence;
   try {
     const catalog = await catalogPromise;

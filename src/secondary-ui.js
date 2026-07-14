@@ -1,0 +1,142 @@
+import { escapeHtml } from "./reader.js";
+import { indexRouteHref } from "./routes.js";
+
+const amountLabels = {
+  total_due: "Total due",
+  fine: "Fine",
+  fee: "Fee",
+  z_fee: "Zone fee",
+  cost: "Cost",
+  surcharge: "Surcharge",
+  stf: "Transportation Fund",
+  bipsa: "Brain injury assessment",
+  mf: "Municipal fee",
+  plus: "Additional"
+};
+
+export function formatMoney(cents) {
+  return new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(Number(cents) / 100);
+}
+
+export function topicLetter(label) {
+  return String(label ?? "").trim().toLowerCase().match(/[a-z0-9]/)?.[0] ?? "a";
+}
+
+function renderResolution(display, resolution) {
+  return resolution?.href
+    ? `<a href="${escapeHtml(resolution.href)}">${escapeHtml(display)}</a>`
+    : `<span>${escapeHtml(display)}</span>`;
+}
+
+function renderAmounts(amounts = {}) {
+  const values = Object.entries(amounts);
+  if (!values.length) return "";
+  return `<dl class="amounts">${values.map(([key, value]) =>
+    `<div><dt>${escapeHtml(amountLabels[key] ?? key)}</dt><dd>${escapeHtml(formatMoney(value))}</dd></div>`
+  ).join("")}</dl>`;
+}
+
+function renderInfraction(entry) {
+  return `<li class="secondary-record">
+    <div class="record-heading"><strong>${escapeHtml(entry.citation)}</strong>${entry.subsequent ? `<span class="record-tag">Subsequent offense</span>` : ""}</div>
+    <p>${escapeHtml(entry.description)}</p>
+    ${renderAmounts(entry.amounts)}
+  </li>`;
+}
+
+function renderFeeRule({ rule, roles }) {
+  const roleLabels = roles.map((role) => role === "authority" ? "Fee authority" : "Affected statute");
+  return `<li class="secondary-record">
+    <div class="record-heading"><strong>${renderResolution(rule.authorityCitation, rule.authorityResolution)}</strong>${roleLabels.map((label) => `<span class="record-tag">${escapeHtml(label)}</span>`).join("")}</div>
+    <p>${escapeHtml(rule.description)}</p>
+    <details class="record-detail"><summary>Affected statutes and notes</summary>
+      <p>${escapeHtml(rule.affectedText)}</p>
+      ${rule.comments ? `<p><strong>Comments:</strong> ${escapeHtml(rule.comments)}</p>` : ""}
+    </details>
+  </li>`;
+}
+
+export function renderIndexReferences(references = []) {
+  if (!references.length) return "";
+  return `<span class="index-references">${references.map((reference) =>
+    renderResolution(reference.display, reference.resolution)
+  ).join(", ")}</span>`;
+}
+
+export function renderIndexEntry(entry) {
+  const see = (entry.see ?? []).map((target) =>
+    `See ${target.heading}${target.subheading ? `, at ${target.subheading}` : ""}`
+  );
+  return `<li class="index-entry index-level-${Math.min(4, Math.max(0, Number(entry.level) || 0))}">
+    <span>${escapeHtml(entry.text)}</span>
+    ${renderIndexReferences(entry.references)}
+    ${see.length ? `<span class="index-see">${escapeHtml(see.join("; "))}</span>` : ""}
+  </li>`;
+}
+
+function renderLinkedIndex({ topic, entry }) {
+  const href = indexRouteHref(topicLetter(topic.label), { topic: topic.id });
+  return `<li class="secondary-record">
+    <div class="record-heading"><a href="${escapeHtml(href)}"><strong>${escapeHtml(topic.label)}</strong></a></div>
+    <p>${escapeHtml(entry.text)}</p>
+    ${renderIndexReferences(entry.references)}
+  </li>`;
+}
+
+export function renderSecondaryContext(context) {
+  if (!context) return "";
+  if (context.error) return `<section class="secondary-sources" aria-labelledby="secondary-heading"><h2 id="secondary-heading">Related legal data</h2><p class="secondary-warning">Related records could not be loaded. The statute text above is unaffected.</p></section>`;
+  const total = context.infractions.length + context.feeRules.length + context.indexEntries.length;
+  if (!total) return "";
+  const infractionSource = context.manifests.infractions.source;
+  const indexSource = context.manifests.index.source;
+  return `<section class="secondary-sources" aria-labelledby="secondary-heading">
+    <div class="secondary-heading">
+      <div><p class="eyebrow">Official cross-references</p><h2 id="secondary-heading">Related legal data</h2></div>
+      <p>Derived from official publications; verify amounts and applicability with the linked source.</p>
+    </div>
+    ${context.infractions.length ? `<details class="related-group" open><summary>Infractions schedule <span>${context.infractions.length}</span></summary>
+      <p class="source-note">Judicial Branch schedule effective ${escapeHtml(infractionSource.effective ?? "date not stated")}. <a href="${escapeHtml(infractionSource.url)}">Official schedule (PDF)</a></p>
+      <ol class="secondary-records">${context.infractions.map(renderInfraction).join("")}</ol>
+    </details>` : ""}
+    ${context.feeRules.length ? `<details class="related-group"><summary>Fees and surcharges <span>${context.feeRules.length}</span></summary>
+      <p class="source-note">Chart B revision ${escapeHtml(infractionSource.chartBRevision ?? "not stated")}. Roles describe whether this section creates or is affected by the rule.</p>
+      <ol class="secondary-records">${context.feeRules.map(renderFeeRule).join("")}</ol>
+    </details>` : ""}
+    ${context.indexEntries.length ? `<details class="related-group"><summary>General Statutes index <span>${context.indexEntries.length}</span></summary>
+      <p class="source-note">${escapeHtml(indexSource.revision)}. <a href="${escapeHtml(indexSource.url)}">Official index</a></p>
+      <ol class="secondary-records">${context.indexEntries.map(renderLinkedIndex).join("")}</ol>
+    </details>` : ""}
+  </section>`;
+}
+
+function searchableEntry(entry) {
+  return [
+    entry.text,
+    ...(entry.references ?? []).map((reference) => reference.display),
+    ...(entry.see ?? []).flatMap((target) => [target.heading, target.subheading])
+  ].filter(Boolean).join(" ").toLowerCase();
+}
+
+export function searchIndexTopics(topics, query, limit = 100) {
+  const normalized = String(query ?? "").trim().toLowerCase();
+  const tokens = normalized.split(/\s+/).filter(Boolean);
+  if (!tokens.length) return { results: [], total: 0, truncated: false };
+  const matches = [];
+  for (const topic of topics) {
+    const label = topic.label.toLowerCase();
+    if (tokens.every((token) => label.includes(token))) {
+      matches.push({ topic, entry: null, score: label === normalized ? 0 : 1 });
+    }
+    for (const entry of topic.items) {
+      const text = searchableEntry(entry);
+      if (tokens.every((token) => text.includes(token))) {
+        matches.push({ topic, entry, score: text.startsWith(normalized) ? 2 : 3 });
+      }
+    }
+  }
+  matches.sort((left, right) => left.score - right.score
+    || left.topic.position - right.topic.position
+    || (left.entry?.id ?? "").localeCompare(right.entry?.id ?? ""));
+  return { results: matches.slice(0, limit), total: matches.length, truncated: matches.length > limit };
+}

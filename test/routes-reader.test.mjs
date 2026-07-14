@@ -5,6 +5,7 @@ import {
   findChapter,
   findSection,
   findTitle,
+  indexRouteHref,
   parseRoute,
   routeHref,
   sectionRouteKey
@@ -48,6 +49,17 @@ test("builds and parses stable reader routes", () => {
     chapter: "001",
     section: "1-1",
     subsection: "a"
+  });
+});
+
+test("builds and parses index browse, search, and topic routes", () => {
+  assert.equal(indexRouteHref("M"), "#/index/m");
+  assert.equal(indexRouteHref("m", { query: "motor vehicles" }), "#/index/m?q=motor%20vehicles");
+  assert.deepEqual(parseRoute({ hash: "#/index/m/topic/topic-123?q=motor%20vehicles" }), {
+    kind: "index", letter: "m", topic: "topic-123", query: "motor vehicles"
+  });
+  assert.deepEqual(parseRoute({ hash: "#/index" }), {
+    kind: "index", letter: null, topic: null, query: null
   });
 });
 

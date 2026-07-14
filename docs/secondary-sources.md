@@ -105,4 +105,10 @@ npm run review:secondary -- \
   --summary .crawl/secondary/review.md
 ```
 
-The gate rejects implausibly small datasets, excessive removals, any Chart B rule removal, and citation-resolution regressions below the configured floors. Passing the gate does not publish data automatically; the diff and legal-source changes still require human review. The remaining Phase 7 step is the reviewed first-data pull request that moves approved artifacts from ignored staging into `public/data/secondary`.
+The gate rejects implausibly small datasets, excessive removals, any Chart B rule removal, and citation-resolution regressions below the configured floors. Passing the gate does not publish data automatically; the diff and legal-source changes still require human review. The first reviewed dataset is now published under `public/data/secondary`, establishing the baseline for future refresh diffs.
+
+## Reader integration
+
+The reviewed artifacts are published under `public/data/secondary`. A statute page loads its title-level reverse-link shard on demand, then retrieves only the referenced infraction, fee-rule, and subject-index artifacts. Chart B relationships are labeled as `Fee authority` or `Affected statute`; source dates and official publication links remain visible beside the derived records.
+
+The hash route `#/index` opens the General Statutes index. Alphabetical browsing loads only the selected letter's shards. Search derives the relevant initial letter from the query, searches that letter in memory, and caps the rendered result set at 100. Large headings render 250 entries at a time. These boundaries preserve responsive GitHub Pages behavior without a server or database.

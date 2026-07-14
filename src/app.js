@@ -4,6 +4,7 @@ import {
   findChapter,
   findSection,
   findTitle,
+  indexRouteHref,
   parseRoute,
   routeHref,
   sectionRouteKey
@@ -15,10 +16,19 @@ import {
   renderLinkedText,
   routeForDocument
 } from "./reader.js";
+import { SecondarySourceRepository } from "./secondary-sources.js";
+import {
+  renderIndexEntry,
+  renderIndexReferences,
+  renderSecondaryContext,
+  searchIndexTopics,
+  topicLetter
+} from "./secondary-ui.js";
 
 const app = document.querySelector("#app");
 const repository = new SearchRepository();
 const searchClient = new ProgressiveSearchClient({ repository });
+const secondaryRepository = new SecondarySourceRepository();
 const catalogPromise = getJson("./data/catalog.json");
 let renderSequence = 0;
 let activeSearchController = null;
@@ -32,7 +42,7 @@ async function getJson(path) {
 function siteHeader() {
   return `<header class="site-header">
     <a class="brand" href="#/">Connecticut General Statutes</a>
-    <nav aria-label="Primary"><a href="#/">Browse</a> <a href="./discover/">Static index</a></nav>
+    <nav aria-label="Primary"><a href="#/">Browse</a> <a href="#/index">Statutes index</a> <a href="./discover/">Static index</a></nav>
   </header>`;
 }
 
@@ -164,7 +174,7 @@ function readerSidebar(title, chapter, sections, selected = null) {
   </aside>`;
 }
 
-function renderProvision(title, chapter, section, maps) {
+function renderProvision(title, chapter, section, maps, secondaryContext = null) {
   const route = provisionRoute(title, chapter, section);
   const absolute = new URL(route, location.href).href;
   const status = section.status === "active" ? section.kind : section.status;
@@ -182,6 +192,7 @@ function renderProvision(title, chapter, section, maps) {
     </div>
     <p class="action-status" role="status" aria-live="polite"></p>
     <div class="statute-text">${section.content.body.map((paragraph) => renderParagraph(paragraph, maps, title, chapter, section)).join("")}</div>
+    ${renderSecondaryContext(secondaryContext)}
     <div class="section-notes">
       ${renderNotes("Source", section.content.sourceNotes, maps, { open: true })}
       ${renderNotes("History", section.content.history, maps)}
@@ -223,6 +234,11 @@ async function renderHome(catalog) {
         <progress id="search-progress" value="0" max="1" hidden>Search progress</progress>
         <div id="search-status" role="status" aria-live="polite"></div>
         <ol id="results" class="results"></ol>
+      </section>
+      <section class="data-guides" aria-labelledby="legal-data-heading">
+        <div><p class="eyebrow">Additional official publications</p><h2 id="legal-data-heading">Explore connected legal data</h2></div>
+        <a href="#/index"><strong>General Statutes index</strong><span>Browse 5,652 subject headings and follow citations into the statutes.</span></a>
+        <a href="#/t/14/c/248/s/14-219"><strong>Infractions and fees</strong><span>See linked Judicial Branch schedule entries and Chart B fee rules on statute pages.</span></a>
       </section>
       <section class="catalog" aria-labelledby="browse-heading">
         <div class="section-heading"><div><p class="eyebrow">${catalog.counts.chapters.toLocaleString()} chapters</p><h2 id="browse-heading">Browse titles</h2></div><p>${catalog.counts.sections.toLocaleString()} provisions</p></div>
@@ -283,6 +299,19 @@ function renderTitle(title) {
   </main><footer>Unofficial access copy. Verify legal text with the Connecticut General Assembly.</footer>`;
 }
 
+async function sectionSecondaryContext(title, section, requestedCitation) {
+  const wanted = String(requestedCitation ?? "").toLowerCase();
+  const citation = section.citations.find((value) => value.toLowerCase() === wanted)
+    ?? section.citation
+    ?? section.citations[0];
+  try {
+    return await secondaryRepository.loadSectionContext(title.id, citation);
+  } catch (error) {
+    console.warn("Could not load related legal data", error);
+    return { error };
+  }
+}
+
 async function renderChapter(catalog, title, chapterMeta, route) {
   const chapter = await getJson(`./data/${chapterMeta.path}`);
   const selected = route.kind === "section" ? findSection(chapter, route.section) : null;
@@ -293,7 +322,12 @@ async function renderChapter(catalog, title, chapterMeta, route) {
     history.replaceState(null, "", `${location.pathname}${canonicalRoute}`);
   }
 
-  const maps = selected ? await referenceMaps(selected, catalog) : null;
+  const [maps, secondaryContext] = selected
+    ? await Promise.all([
+        referenceMaps(selected, catalog),
+        sectionSecondaryContext(title, selected, route.section)
+      ])
+    : [null, null];
   setDocumentTitle(selected ? sectionLabel(selected) : chapterLabel(chapter), titleLabel(title));
   app.innerHTML = `${siteHeader()}<div class="reader-shell" id="main-content">
     ${readerSidebar(title, chapter, chapter.sections, selected)}
@@ -304,7 +338,7 @@ async function renderChapter(catalog, title, chapterMeta, route) {
         { label: chapterLabel(chapter), href: selected ? chapterRoute(title, chapter) : null },
         ...(selected ? [{ label: sectionLabel(selected) }] : [])
       ])}
-      ${selected ? `${renderProvision(title, chapter, selected, maps)}${sectionNavigation(title, chapter, chapter.sections, selected)}` : `<div class="chapter-overview"><p class="eyebrow">${chapter.sections.length} provisions</p><h1>${escapeHtml(chapterLabel(chapter))} — ${escapeHtml(chapter.name)}</h1><p>Choose a provision from the chapter list.</p><a href="${escapeHtml(chapter.sourceUrl)}">Official chapter source</a></div>`}
+      ${selected ? `${renderProvision(title, chapter, selected, maps, secondaryContext)}${sectionNavigation(title, chapter, chapter.sections, selected)}` : `<div class="chapter-overview"><p class="eyebrow">${chapter.sections.length} provisions</p><h1>${escapeHtml(chapterLabel(chapter))} — ${escapeHtml(chapter.name)}</h1><p>Choose a provision from the chapter list.</p><a href="${escapeHtml(chapter.sourceUrl)}">Official chapter source</a></div>`}
     </main>
   </div>`;
 
@@ -318,6 +352,79 @@ async function renderChapter(catalog, title, chapterMeta, route) {
   } else {
     window.scrollTo({ top: 0 });
   }
+}
+
+function renderIndexSearchResults(search) {
+  if (!search.results.length) return `<p class="empty-state">No entries in this letter match the search terms.</p>`;
+  return `<div class="index-result-heading"><h2>Search results</h2><p>${search.total.toLocaleString()} match${search.total === 1 ? "" : "es"}${search.truncated ? "; showing the first 100" : ""}</p></div>
+    <ol class="index-search-results">${search.results.map(({ topic, entry }) => {
+      const href = indexRouteHref(topicLetter(topic.label), { topic: topic.id });
+      if (!entry) return `<li><a href="${escapeHtml(href)}"><strong>${escapeHtml(topic.label)}</strong></a><p>Subject heading · ${topic.items.length.toLocaleString()} entries</p></li>`;
+      return `<li><a href="${escapeHtml(href)}"><strong>${escapeHtml(topic.label)}</strong></a><p>${escapeHtml(entry.text)} ${renderIndexReferences(entry.references)}</p></li>`;
+    }).join("")}</ol>`;
+}
+
+function renderTopic(topic, initialCount = 250) {
+  const shown = Math.min(initialCount, topic.items.length);
+  return `<article class="index-topic" id="${escapeHtml(topic.id)}" tabindex="-1">
+    <p class="eyebrow">Subject heading</p>
+    <h2>${escapeHtml(topic.label)}</h2>
+    <p>${topic.items.length.toLocaleString()} index entr${topic.items.length === 1 ? "y" : "ies"}</p>
+    <ol class="index-entries" data-index-entries>${topic.items.slice(0, shown).map(renderIndexEntry).join("")}</ol>
+    ${shown < topic.items.length ? `<button type="button" class="index-more" data-index-more data-shown="${shown}">Show 250 more entries</button>` : ""}
+  </article>`;
+}
+
+async function renderStatutesIndex(route) {
+  const manifests = await secondaryRepository.init();
+  const available = [...new Set(manifests.index.shards.map((shard) => shard.key))];
+  const letter = route.letter ?? "a";
+  if (!available.includes(letter)) return renderNotFound("That index letter was not found.");
+  const topics = await secondaryRepository.loadIndexLetter(letter);
+  const selected = route.topic ? topics.find((topic) => topic.id === route.topic) : null;
+  if (route.topic && !selected) return renderNotFound("That index heading was not found.");
+  const search = route.query ? searchIndexTopics(topics, route.query) : null;
+  const source = manifests.index.source;
+  setDocumentTitle(selected?.label ?? `Statutes index ${letter.toUpperCase()}`);
+  app.innerHTML = `${siteHeader()}<main class="index-page" id="main-content">
+    ${breadcrumbs([{ label: "Titles", href: "#/" }, { label: "General Statutes index", ...(selected || route.query ? { href: indexRouteHref(letter) } : {}) }, ...(selected ? [{ label: selected.label }] : [])])}
+    <header class="index-intro">
+      <p class="eyebrow">Legislative Commissioners' Office</p>
+      <h1>Index to the General Statutes</h1>
+      <p>Browse official subject headings and follow resolved citations into the statute reader. ${escapeHtml(source.revision)}.</p>
+      <p class="source-note"><a href="${escapeHtml(source.url)}">View the official index volumes</a> · ${manifests.index.counts.headings.toLocaleString()} headings · ${manifests.index.counts.items.toLocaleString()} entries</p>
+    </header>
+    <form class="index-search-form" id="index-search-form">
+      <label for="index-query">Search the subject index</label>
+      <input id="index-query" name="query" type="search" minlength="2" required value="${escapeHtml(route.query ?? "")}" placeholder="Try motor vehicles">
+      <button type="submit">Search index</button>
+    </form>
+    <nav class="index-alphabet" aria-label="Index letters">${available.filter((key) => /^[a-z]$/.test(key)).map((key) =>
+      `<a href="${escapeHtml(indexRouteHref(key))}"${key === letter ? ` aria-current="page"` : ""}>${key.toUpperCase()}</a>`
+    ).join("")}</nav>
+    <section class="index-browser" aria-live="polite">
+      ${selected ? renderTopic(selected) : search ? renderIndexSearchResults(search) : `<div class="index-result-heading"><h2>${escapeHtml(letter.toUpperCase())} headings</h2><p>${topics.length.toLocaleString()} subjects</p></div>
+        <ol class="index-headings">${topics.map((topic) => `<li><a href="${escapeHtml(indexRouteHref(letter, { topic: topic.id }))}"><strong>${escapeHtml(topic.label)}</strong><span>${topic.items.length.toLocaleString()} entr${topic.items.length === 1 ? "y" : "ies"}</span></a></li>`).join("")}</ol>`}
+    </section>
+    <aside class="legal-data-note"><strong>About this index</strong><p>This is a derived access copy of the official index, not legal text. Verify coverage and citations with the Legislative Commissioners' Office source.</p></aside>
+  </main><footer>Unofficial access copy. Verify legal text with the Connecticut General Assembly.</footer>`;
+
+  document.querySelector("#index-search-form").addEventListener("submit", (event) => {
+    event.preventDefault();
+    const query = new FormData(event.currentTarget).get("query").trim();
+    location.hash = indexRouteHref(topicLetter(query), { query });
+  });
+  const more = document.querySelector("[data-index-more]");
+  if (more && selected) more.addEventListener("click", () => {
+    const start = Number(more.dataset.shown);
+    const end = Math.min(start + 250, selected.items.length);
+    document.querySelector("[data-index-entries]").insertAdjacentHTML("beforeend", selected.items.slice(start, end).map(renderIndexEntry).join(""));
+    more.dataset.shown = String(end);
+    if (end === selected.items.length) more.remove();
+    else more.textContent = `Show 250 more entries (${(selected.items.length - end).toLocaleString()} remaining)`;
+  });
+  if (selected) document.querySelector(".index-topic")?.focus({ preventScroll: true });
+  window.scrollTo({ top: 0 });
 }
 
 function renderNotFound(message = "That page was not found.") {
@@ -335,6 +442,7 @@ async function renderCurrentRoute() {
     if (sequence !== renderSequence) return;
     if (route.kind === "home") return renderHome(catalog);
     if (route.kind === "not-found") return renderNotFound();
+    if (route.kind === "index") return renderStatutesIndex(route);
 
     let title = route.title ? findTitle(catalog, route.title) : null;
     let chapterMatch = route.chapter ? findChapter(catalog, route.chapter, title) : null;

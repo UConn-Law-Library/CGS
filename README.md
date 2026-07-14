@@ -53,6 +53,10 @@ The static client uses stable hash routes so deep links work on GitHub Pages wit
 
 Older `?chapter=001&section=section-1-1` links are translated to the canonical route in the browser. Search results, adjacent-section navigation, breadcrumbs, and recognized section or chapter references all use the same route contract.
 
+## Search execution
+
+Title-scoped and all-title searches use the same static search shards. The client loads up to six title shards concurrently and sends each completed shard to a Web Worker, which continuously merges a deterministic top-result set. The interface displays results and progress as shards arrive, cancels stale work when a new search or route begins, and falls back to incremental main-thread ranking when workers are unavailable.
+
 ## Commands
 
 | Command | Purpose |

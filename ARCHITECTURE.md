@@ -47,7 +47,7 @@ Identifiers are deterministic. The importer fails on duplicate title, chapter, o
 
 Chapter files are the authoritative content boundary. They are small enough to cache and update independently while preserving the legal hierarchy and annotations. Catalog entries contain navigation metadata only.
 
-Search data is derived, never authoritative. It is sharded by title: 81 requests are a tractable upper bound for an eventual progressive global search, while title-scoped search normally fetches one shard. Search results point back to chapter artifacts.
+Search data is derived, never authoritative. It is sharded by title: title-scoped search fetches one shard, while global search loads a bounded number of shards concurrently and streams each completed shard to a Web Worker. The worker ranks off the UI thread and publishes a deterministic top-result set after every shard. New searches cancel stale processing, previously fetched shards remain cached, and an incremental inline path preserves search when workers are unavailable. Search results point back to chapter artifacts.
 
 ## Client routing and reading
 
@@ -74,7 +74,6 @@ The in-repository schema engine implements the JSON Schema keywords used by thes
 
 ## Next increments
 
-- Move global search into a Web Worker and stream title shard results progressively.
 - Add generated title and chapter discovery pages for stronger no-JavaScript navigation and indexing while retaining the canonical hash route contract.
 - Complete three reviewed manual crawler refreshes, then consider a weekly schedule.
 - Decide how annual supplements should merge with or overlay the canonical current-statutes contract.

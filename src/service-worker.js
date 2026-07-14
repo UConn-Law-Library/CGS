@@ -28,6 +28,7 @@ const SHELL_FILES = [
   "./search-worker.js",
   "./secondary-sources.js",
   "./secondary-ui.js",
+  "./supplement-overlay.js",
   "./supplements.js"
 ];
 
@@ -120,13 +121,22 @@ async function fetchJsonIntoCache(relative, cache) {
   return response.json();
 }
 
-function offlineUrls(baseManifest, secondaryManifest) {
+function offlineUrls(baseManifest, secondaryManifest, supplementArtifacts) {
   return [...new Set([
-    "./data/manifest.json",
     ...baseManifest.artifacts.map((artifact) => `./data/${artifact.path}`),
-    "./data/secondary/manifest.json",
-    ...secondaryManifest.artifacts.map((artifact) => `./data/secondary/${artifact.path}`)
+    ...secondaryManifest.artifacts.map((artifact) => `./data/secondary/${artifact.path}`),
+    ...supplementArtifacts
   ])];
+}
+
+async function supplementOfflineData(index, cache) {
+  const editions = await Promise.all(index.editions.map(async (edition) => {
+    const manifestPath = `./data/supplements/${edition.path}`;
+    const manifest = await fetchJsonIntoCache(manifestPath, cache);
+    const directory = edition.path.slice(0, edition.path.lastIndexOf("/") + 1);
+    return manifest.artifacts.map((artifact) => `./data/supplements/${directory}${artifact.path}`);
+  }));
+  return { cachedManifests: 1 + index.editions.length, artifacts: editions.flat() };
 }
 
 async function cacheOfflineData({ port }) {
@@ -134,17 +144,17 @@ async function cacheOfflineData({ port }) {
   const stagingName = `${OFFLINE_CACHE_PREFIX}${Date.now()}`;
   const cache = await caches.open(stagingName);
   try {
-    const [baseManifest, secondaryManifest] = await Promise.all([
+    const [baseManifest, secondaryManifest, supplementIndex] = await Promise.all([
       fetchJsonIntoCache("./data/manifest.json", cache),
-      fetchJsonIntoCache("./data/secondary/manifest.json", cache)
+      fetchJsonIntoCache("./data/secondary/manifest.json", cache),
+      fetchJsonIntoCache("./data/supplements/manifest.json", cache)
     ]);
-    const urls = offlineUrls(baseManifest, secondaryManifest);
-    let completed = 2;
+    const supplementData = await supplementOfflineData(supplementIndex, cache);
+    const urls = offlineUrls(baseManifest, secondaryManifest, supplementData.artifacts);
+    let completed = 2 + supplementData.cachedManifests;
     let cursor = 0;
-    const pending = urls.filter((url) => !url.endsWith("/manifest.json") || ![
-      "./data/manifest.json", "./data/secondary/manifest.json"
-    ].includes(url));
-    const total = pending.length + 2;
+    const pending = urls;
+    const total = pending.length + completed;
     port.postMessage({ type: "progress", completed, total });
     async function worker() {
       while (cursor < pending.length) {

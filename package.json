@@ -10,6 +10,7 @@
     "import:fixture": "node scripts/import-legacy.mjs --input fixtures/legacy --output public/data",
     "import:legacy": "node scripts/import-legacy.mjs",
     "import:supplement": "node scripts/import-supplement.mjs",
+    "rebuild:supplement-search": "node scripts/rebuild-supplement-search.mjs",
     "secondary:acquire": "python -m secondary_sources.cli acquire",
     "secondary:import": "python -m secondary_sources.cli import",
     "diff:corpus": "node scripts/diff-corpus.mjs",

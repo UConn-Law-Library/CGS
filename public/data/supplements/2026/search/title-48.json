@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0.0",
+  "editionYear": 2026,
+  "title": {
+    "id": "title-48",
+    "number": "48",
+    "name": "Eminent Domain"
+  },
+  "removedDocumentIds": [
+    "section-48-9"
+  ],
+  "documents": [
+    {
+      "id": "section-48-9",
+      "citation": "48-9",
+      "citations": [
+        "48-9"
+      ],
+      "heading": "Sec. 48-9. Condemnation of land and water for state institutions and courthouses.",
+      "chapter": {
+        "id": "chapter-835",
+        "number": "835",
+        "name": "Eminent Domain"
+      },
+      "status": "active",
+      "text": "Subject to the provisions of section 4b-23, the state may take land, or any interest or estate therein, for the site, or for any addition to the site, of any state institution or courthouse, or for any addition to the site of any institution within the Connecticut State University System, Technical Education and Career System or technical college or for the purposes of subsection (e) of section 22a-133m, and also may take water from any river, brook, spring or springs, pond or lake for the purpose of providing such supply of water as the convenience and necessity of such institution may require. The amount of damages for any such taking shall be determined in the manner provided by section 48-10.",
+      "href": "?chapter=835&section=section-48-9",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    }
+  ]
+}

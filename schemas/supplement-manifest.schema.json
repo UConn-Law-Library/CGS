@@ -53,13 +53,14 @@
     },
     "title": {
       "type": "object",
-      "required": ["id", "number", "name", "sourceUrl", "chapters"],
+      "required": ["id", "number", "name", "sourceUrl", "searchPath", "chapters"],
       "additionalProperties": false,
       "properties": {
         "id": { "type": "string", "pattern": "^title-[0-9a-z-]+$" },
         "number": { "type": "string", "pattern": "^[0-9]+[a-z]*$" },
         "name": { "type": "string", "minLength": 1 },
         "sourceUrl": { "type": "string", "format": "uri" },
+        "searchPath": { "type": "string", "pattern": "^search/title-[0-9a-z-]+\\.json$" },
         "chapters": { "type": "array", "items": { "$ref": "#/$defs/chapter" } }
       }
     },
@@ -80,7 +81,7 @@
       "required": ["path", "bytes", "sha256"],
       "additionalProperties": false,
       "properties": {
-        "path": { "type": "string", "pattern": "^chapters/[0-9a-z-]+\\.json$" },
+        "path": { "type": "string", "pattern": "^(?:chapters/[0-9a-z-]+|search/title-[0-9a-z-]+)\\.json$" },
         "bytes": { "type": "integer", "minimum": 1 },
         "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
       }

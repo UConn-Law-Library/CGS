@@ -2,7 +2,8 @@ import { createHash } from "node:crypto";
 import { mkdir, readFile, rename, rm, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { importLegacy, SCHEMA_VERSION } from "./importer.mjs";
-import { classifyChapterOverlay } from "./supplement-overlay.mjs";
+import { applyChapterOverlay, classifyChapterOverlay } from "./supplement-overlay.mjs";
+import { createSupplementSearchPatch } from "./supplement-search.mjs";
 
 const collator = new Intl.Collator("en", { numeric: true, sensitivity: "base" });
 
@@ -77,11 +78,15 @@ export async function importSupplement({ inputDir, outputDir, baseDataDir, editi
       const baseTitle = baseTitles.get(title.id);
       const baseChapters = new Map((baseTitle?.chapters ?? []).map((chapter) => [chapter.id, chapter]));
       const chapters = [];
+      const removedDocumentIds = [];
+      const documents = [];
       for (const chapterEntry of title.chapters) {
         const overlayChapter = await readJson(path.join(temporaryCanonical, chapterEntry.path));
         const baseEntry = baseChapters.get(chapterEntry.id);
         const baseChapter = baseEntry ? await readJson(path.join(base, baseEntry.path)) : null;
         const classification = classifyChapterOverlay(overlayChapter, baseChapter);
+        const consolidated = applyChapterOverlay(baseChapter, overlayChapter, year);
+        const searchPatch = createSupplementSearchPatch(baseChapter, consolidated, year);
         const chapterPath = `chapters/${chapterEntry.number}.json`;
         artifacts.push(await writeJson(staging, chapterPath, overlayChapter));
         chapters.push({
@@ -98,8 +103,18 @@ export async function importSupplement({ inputDir, outputDir, baseDataDir, editi
         sectionCount += chapterEntry.sectionCount;
         replacementCount += classification.replacements;
         additionCount += classification.additions;
+        removedDocumentIds.push(...searchPatch.removedDocumentIds);
+        documents.push(...searchPatch.documents);
       }
-      titles.push({ id: title.id, number: title.number, name: title.name, sourceUrl: title.sourceUrl, chapters });
+      const searchPath = `search/${title.id}.json`;
+      artifacts.push(await writeJson(staging, searchPath, {
+        schemaVersion: SCHEMA_VERSION,
+        editionYear: year,
+        title: { id: title.id, number: title.number, name: title.name },
+        removedDocumentIds,
+        documents
+      }));
+      titles.push({ id: title.id, number: title.number, name: title.name, sourceUrl: title.sourceUrl, searchPath, chapters });
     }
 
     artifacts.sort((left, right) => collator.compare(left.path, right.path));

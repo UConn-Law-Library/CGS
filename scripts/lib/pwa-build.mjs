@@ -24,6 +24,7 @@ export const shellInputs = Object.freeze([
   "secondary-ui.js",
   "service-worker.js",
   "styles.css",
+  "supplement-overlay.js",
   "supplements.js"
 ]);
 

@@ -1,0 +1,1170 @@
+{
+  "schemaVersion": "1.0.0",
+  "editionYear": 2026,
+  "title": {
+    "id": "title-52",
+    "number": "52",
+    "name": "Civil Actions"
+  },
+  "removedDocumentIds": [
+    "section-52-45a",
+    "section-52-46a",
+    "section-52-50",
+    "section-52-57",
+    "section-52-143",
+    "section-52-146c",
+    "section-52-146d",
+    "section-52-146e",
+    "section-52-146f",
+    "section-52-146g",
+    "section-52-146h",
+    "section-52-146i",
+    "section-52-146j",
+    "section-52-146o",
+    "section-52-146w",
+    "section-52-146x",
+    "section-52-155a",
+    "section-52-155b",
+    "section-52-196a",
+    "section-52-261",
+    "section-52-261a",
+    "section-52-278f",
+    "section-52-350f",
+    "section-52-434",
+    "section-52-557b",
+    "section-52-557v",
+    "section-52-571m",
+    "section-52-571n",
+    "group-52-571o-to-52-571p-to-52-571q-to-52-571r-to-52-571s-to-52-571t-to-52-571u-to-52-571v-to-52-571w-to-52-571x-to-52-571y-to-52-571z",
+    "section-52-572w",
+    "section-52-592",
+    "section-52-593a",
+    "section-52-625"
+  ],
+  "documents": [
+    {
+      "id": "section-52-45a",
+      "citation": "52-45a",
+      "citations": [
+        "52-45a"
+      ],
+      "heading": "Sec. 52-45a. (Formerly Sec. 52-89). Commencement of civil actions. Contents and signature of process.",
+      "chapter": {
+        "id": "chapter-896",
+        "number": "896",
+        "name": "Civil Process, Service and Time for Return"
+      },
+      "status": "active",
+      "text": "Civil actions shall be commenced by legal process consisting of a writ of summons or attachment, describing the parties, the court to which it is returnable, the return day, the date and place for the filing of an appearance and information required by the Office of the Chief Court Administrator. The writ shall be accompanied by the plaintiff's complaint. The writ may run into any judicial district and shall be personally signed in ink by the hand of a commissioner of the Superior Court. The writ may also be signed by the hand of a judge, an authorized court employee or clerk of the court. The Chief Court Administrator may prescribe an alternative means for the signing of writs involving Judicial Branch employees.",
+      "href": "?chapter=896&section=section-52-45a",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-52-46a",
+      "citation": "52-46a",
+      "citations": [
+        "52-46a"
+      ],
+      "heading": "Sec. 52-46a. Return of process.",
+      "chapter": {
+        "id": "chapter-896",
+        "number": "896",
+        "name": "Civil Process, Service and Time for Return"
+      },
+      "status": "active",
+      "text": "Process in civil actions returnable to the Supreme Court shall be returned to its clerk at least twenty days before the return day and, if returnable to the Superior Court, except process in summary process actions, the commencement of any civil action containing the issuance of a prejudgment remedy when the defendant in a commercial transaction has waived notice and hearing as provided under chapter 903a and petitions for parentage and support, to the clerk of such court at least six days before the return day.",
+      "href": "?chapter=896&section=section-52-46a",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-52-50",
+      "citation": "52-50",
+      "citations": [
+        "52-50"
+      ],
+      "heading": "Sec. 52-50. Persons to whom process shall be directed.",
+      "chapter": {
+        "id": "chapter-896",
+        "number": "896",
+        "name": "Civil Process, Service and Time for Return"
+      },
+      "status": "active",
+      "text": "(a) All process shall be directed to a state marshal, a constable or other proper officer authorized by statute, or, subject to the provisions of subsection (b) of this section, to an indifferent person. A direction on the process “to any proper officer” shall be sufficient to direct the process to a state marshal, constable or other proper officer.\n\n(b) Process shall not be directed to an indifferent person unless authorized by statute. Any indifferent person who, knowing that he is not authorized to do so under this section or any other provision of the general statutes, serves process shall be guilty of a class A misdemeanor.\n\n(c) Service of motions for modification, motions for contempt and wage withholdings in any matter involving a beneficiary of care or assistance from the state and in other IV-D child support cases may be made by any investigator employed by the Commissioner of Administrative Services or the Commissioner of Social Services.\n\n(d) Service of motions for modification, motions for contempt and wage withholdings in any matter involving child support, including, but not limited to, petitions for support authorized under sections 17b-745 and 46b-215, and those matters involving a beneficiary of care or assistance from the state, and service of other process in IV-D support cases, as defined in subdivision (13) of subsection (b) of section 46b-231, may be made by a support enforcement officer or support services investigator of the Superior Court.\n\n(e) Borough bailiffs may, within their respective boroughs, execute all legal process which state marshals or constables may execute.\n\n(f) (1) Process directed to a state marshal by an attorney-at-law or public agency, as defined in section 52-50a, shall be delivered to such state marshal by either (A) providing the original process printed on paper and personally signed in ink by the issuing authority, along with sufficient copies for the state marshal to effectuate service, except that in matters where the process to be served has been issued by or filed with the Judicial Department before delivery to a state marshal, the original process delivered to such state marshal as prescribed by this subparagraph may be a printed copy of the process as filed with the Judicial Department, or (B) transmitting the process to a state marshal electronically pursuant to the provisions of section 52-50a.\n\n(2) Process directed to a state marshal by parties other than an attorney-at-law or public agency, as defined in section 52-50a, including self-represented parties, which are returnable to a court, agency, board or tribunal, as the case may be, which is located in this state and is established by the general statutes or a special act, shall be delivered to such state marshal by providing the original process printed on paper and personally signed in ink by the issuing authority, along with sufficient copies for the state marshal to effectuate service, except that in matters where the process to be served is on file with the Judicial Department before delivery to a state marshal, the original process delivered to such state marshal as prescribed by this subparagraph may be a printed copy of the process as filed with the Judicial Department.\n\n(3) Process directed to a state marshal which originates from a court or public agency outside of this state, which is established under a law other than the law of this state may be transmitted to a state marshal electronically pursuant to the provisions of section 52-50a.\n\n(4) In the case where sufficient copies of the documents to be served, as provided for in this section, have not been given to a state marshal to effectuate service, a state marshal may charge for the production of actual copies produced as needed to complete service of process, and shall charge the fees provided for in subsection (i) of section 52-50a, subject to the exclusions set forth in said subsection, as if the process were transmitted electronically.",
+      "href": "?chapter=896&section=section-52-50",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-52-50a",
+      "citation": "52-50a",
+      "citations": [
+        "52-50a"
+      ],
+      "heading": "Sec. 52-50a. Receipt of electronic transmission of process by state marshal. When permitted; requirements re; fees for.",
+      "chapter": {
+        "id": "chapter-896",
+        "number": "896",
+        "name": "Civil Process, Service and Time for Return"
+      },
+      "status": "active",
+      "text": "(a) As used in this section:\n\n(1) “Amended process” means, at the direction of the issuing authority, changes made by a state marshal to a process to modify, adjust or correct minor, technical, clerical, typographical or scrivener's errors or conforming changes made during service of process, including adjustments made to the name, alias, agent or addresses of the parties, the court or the return date of the process.\n\n(2) “Attorney-at-law” means an attorney admitted to practice law in this state, another state, district, territory or insular possession of the United States, foreign country or admitted to practice law in a United States federal or tribal court. “Attorney-at-law” includes an individual duly authorized by the attorney-at-law to transmit documents to a state marshal in accordance with the provisions of this section.\n\n(3) “Business day” has the same meaning as provided in section 36a-330.\n\n(4) “Portable document format” means an electronic file format that facilitates document exchange, is designed to be independent of the software, hardware and operating systems used to create the document, and that preserves the fonts, formatting, pagination and graphics of the source document, allowing the document to be viewed as it was intended to appear, regardless of the device or platform.\n\n(5) “Public agency” includes (A) a public agency as defined in section 1-200, (B) a quasi-public agency as defined in section 1-120, and (C) an executive, legislative or judicial agency, department, board, commission, authority, institution or instrumentality of another state or of a county, municipality or other political subdivision of another state.\n\n(6) “Special occasion” means a time when a party authorized to electronically transmit process to a state marshal determines it to be necessary, convenient or desirable to utilize the provisions of this section, subject where applicable to a fee as prescribed by this section, instead of tendering a state marshal an original process printed on paper, along with sufficient copies for service of process.\n\n(b) On any special occasion, an attorney-at-law or public agency may direct process, including, but not limited to, any writ, summons, complaint, subpoena, attachment, execution, application, order, notice, motion or petition, to a state marshal in an electronic format, which clearly and accurately provides an image of the original process, including the signature of the authority issuing such process, provided:\n\n(1) Such attorney-at-law or public agency obtains the permission of the state marshal prior to the electronic transmission of such process for service.\n\n(2) The attorney-at-law or public agency transmits each process to the state marshal in one electronic file per process, in a letter-sized document, in a portable document format, that contains all pages of the document to be served, collated in the proper order for which the attorney-at-law or public agency is directing the state marshal to serve, so that the state marshal may print one electronic file per process, without the need to collate, assemble or print multiple electronic documents in a particular matter before making service.\n\n(3) The attorney-at-law or public agency additionally electronically transmits to the state marshal, a letter, electronic mail or written instruction for service for each process to be served that succinctly provides the necessary information required for the state marshal to make legal service. In matters involving service under chapter 815a, or any other process where personal service is requested, information concerning the profile of the person to be served, when known and available, shall be electronically transmitted to the state marshal. Information electronically transmitted to the state marshal shall include, but is not limited to: (A) Any location where the person is known to spend time, (B) the telephone numbers of the person, (C) the employer, work location and working hours of the person, (D) a photo or physical description of the person, (E) the age or date of birth of the person, (F) the vehicles of the person, including make, model and plate numbers, and (G) safety concerns to be aware of when making service on the person. Such information may be provided by utilizing the respondent profile form accessible electronically on the Internet web site of the Judicial Branch.\n\n(4) The attorney-at-law or public agency does not electronically transmit the same process to more than one state marshal for service.\n\n(5) The attorney-at-law or public agency retains the original process which has been electronically transmitted to the state marshal, and when filed with the court, agency, board or tribunal, as the case may be, where the process is to be returned, the attorney-at-law or public agency causes the same document that was electronically transmitted to the state marshal for service, to be filed, without any alteration or amendment, except that in matters where amendments are made to the process by a state marshal at the time of service, the attorney-at-law or public agency shall file the amended process.\n\n(c) For purposes of a state marshal serving a true and attested copy of any process under any provision of the general statutes, process that is electronically transmitted to a state marshal for service by an attorney-at-law or public agency under the provisions of this section shall be deemed to be an original document in the hands of a state marshal for service.\n\n(d) Except as otherwise provided by law, no state marshal shall be required to accept process in an electronic format. A state marshal may voluntarily elect to receive the electronic transmission of process under the provisions of this section at the request of an attorney-at-law or public agency, subject to the provisions and fees prescribed in this section.\n\n(e) If a state marshal elects to receive the electronic transmission of process, the state marshal shall maintain and monitor an electronic mail address used for the purposes of this section.\n\n(f) An attorney-at-law or public agency shall not transmit process to a state marshal in an electronic format, where the number of pages to be printed in any one matter for all parties to be served exceeds fifty pages in total, or the number of processes for separate matters to be transmitted, within a time period of one week, exceeds five processes, except that a state marshal and an attorney-at-law or public agency may agree to a different number of processes or pages to be accepted by electronic transmission.\n\n(g) (1) The provisions of this section shall not apply for the purposes of personal delivery to a state marshal, pursuant to section 52-593a, before the passage of the time limited by law within which an action may be brought. (2) No process relating to a matter in which a statute of limitations is tolling within sixty days shall be electronically transmitted to a state marshal; such process shall only be delivered to a state marshal for service as original process, printed on paper and personally signed in ink by the issuing authority, along with sufficient copies for the state marshal to effectuate service.\n\n(h) Receipt of electronic process under this section shall occur by reply of the state marshal to the attorney-at-law or public agency transmitting such process. A state marshal electing to receive process in an electronic format from an attorney-at-law or public agency under the provisions of this section may, within two business days after receiving such process, reject any such process for service, if (1) the requirements of subdivision (2) or (3) of subsection (b) of this section have not been met, (2) the process is not signed, or is out of order, (3) the process is not received in a clear and legible format, or cannot be accessed electronically, (4) the lawful deadline for service of the process cannot reasonably be met, or (5) the number of pages or processes to be printed exceeds the limitations prescribed in subsection (f) of this section. A state marshal shall provide notification of the rejection of electronic process for service to the attorney-at-law or public agency by electronic mail.\n\n(i) (1) A state marshal shall receive for each process, in any one matter that is electronically transmitted for service under this section, a fee of fifty dollars, irrespective of the number of persons to be served, as a fee for the receiving and handling electronic process for service. A state marshal shall also receive a fee of one dollar for each page printed under the provisions of this section. Fees assessed pursuant to this section shall not be a taxable cost of the action. Such fees for electronic receipt and handling and printing of process shall be listed on the state marshal's return of service under a separate total segregated from other fees.\n\n(2) A state marshal receiving and printing an electronic process shall charge the fees prescribed by this section and shall not adjust or waive such fees, nor shall such fees be subject to a minimum rate promulgated by the state pursuant to section 6-38a. Fees under this section shall not apply or be charged in the case of the transmittal and printing of executions issued under chapter 832 or 906, warrants issued under chapter 204, ejectments under section 49-22, service of process under a waiver of fees issued pursuant to section 52-259b, capias mittimus orders issued under any provisions of the general statutes or orders of protection and relief under chapter 815a. Fees under this section shall not be considered a fee for copies of writs and complaints pursuant to chapter 901 and shall be in addition to any fee under said chapter payable to the officer serving process.\n\n(j) A state marshal when printing documents for service, as provided by this section, shall print such documents on letter-sized paper. When making service of electronically transmitted documents printed for service under this section, the state marshal shall not be required to send printed documents or a printed return of service back to the attorney-at-law or public agency which electronically transmitted such process, but the state marshal shall electronically transmit the marshal's return of service to such attorney-at-law or public agency. In the event that the process was amended by a state marshal at the time of service, such amended process shall also be returned.\n\n(k) No state marshal shall, in the performance of receiving electronically transmitted process, be liable for damage, errors or omissions related to the electronic transmission, receipt, printing or filing of electronically transmitted process, including, but not limited to: (1) Missing pages in the transmission, (2) the failure to receive the electronic transmission due to electronic or technical malfunctions, or such other similar errors, or (3) erroneous service of process on account of the failure of an attorney-at-law or public agency to comply with the provisions of this section in the transmission and filing of such process.",
+      "href": "?chapter=896&section=section-52-50a",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-52-57",
+      "citation": "52-57",
+      "citations": [
+        "52-57"
+      ],
+      "heading": "Sec. 52-57. Manner of service upon individuals, municipalities, corporations, partnerships and voluntary associations.",
+      "chapter": {
+        "id": "chapter-896",
+        "number": "896",
+        "name": "Civil Process, Service and Time for Return"
+      },
+      "status": "active",
+      "text": "(a) Except as otherwise provided, process in any civil action shall be served by leaving a true and attested copy of it, including the declaration or complaint, with the defendant, or at his usual place of abode, in this state.\n\n(b) Process in civil actions against the following-described classes of defendants shall be served as follows: (1) Against a town, upon its clerk, assistant clerk, deputy clerk, manager or one of its selectmen; (2) against a city, upon its clerk, assistant clerk or deputy clerk or upon its mayor or manager; (3) against a borough, upon its manager, clerk, assistant clerk or deputy clerk or upon the warden or one of its burgesses; (4) against a school district, upon its clerk, assistant clerk, deputy clerk, superintendent, assistant superintendent or deputy superintendent or one of its committee; (5) against a board, commission, department or agency of a town, city or borough, notwithstanding any provision of law, upon the clerk, assistant clerk, deputy clerk of the town, city or borough, provided two copies of such process shall be served upon the clerk and the clerk shall retain one copy and forward the second copy to the board, commission, department or agency; (6) against any other municipal or quasi-municipal corporation, upon its clerk, assistant clerk, deputy clerk or upon its chief presiding officer or managing agent; and (7) against an employee of a town, city or borough in a cause of action arising from the employee's duties or employment, upon the clerk, assistant clerk, deputy clerk of the town, city or borough, provided two copies of such process shall be served upon the clerk and the clerk shall retain one copy and forward the second copy to the employee.\n\n(c) In actions against a private corporation, service of process shall be made either upon the president, the vice president, an assistant vice president, the secretary, the assistant secretary, the treasurer, the assistant treasurer, the cashier, the assistant cashier, the teller or the assistant teller or its general or managing agent or manager or upon any director resident in this state, or the person in charge of the business of the corporation or upon any person who is at the time of service in charge of the office of the corporation in the town in which its principal office or place of business is located. In actions against a private corporation established under the laws of any other state, any foreign country or the United States, service of process may be made upon any of the aforesaid officers or agents, or upon the agent of the corporation appointed pursuant to section 33-922.\n\n(d) In actions against a partnership, service of process may be made by personally serving any process within the state upon any one of the partners or, if none of the partners are residents of the state, service may be made upon the Secretary of the State; provided, prior to the return date, the officer serving the writ shall mail a copy of the writ and the complaint by registered or certified mail, return receipt requested, to the last-known address of every partner named in the writ not personally served. A statement of such mailing and receipt therefor shall be included in the officer's return.\n\n(e) In actions against a voluntary association, service of process may be made upon the presiding officer, secretary or treasurer. If all of such officers are not residents of the state and the voluntary association is doing business, acting or carrying out its operations or its functions within the state, the voluntary association shall be deemed to have appointed the Secretary of the State as its attorney and to have agreed that any process in any civil action brought against it may be served upon the Secretary of the State and that the process shall have the same validity as if served personally upon the presiding officer, secretary or treasurer of the voluntary association. The process shall be served by any officer to whom the process is directed upon the Secretary of the State by leaving with, or at the office of, the Secretary of the State, at least twelve days before the return day of the process, a true and attested copy thereof, and by sending to the defendant at its last-known address by registered or certified mail, postage prepaid, a like true and attested copy with an endorsement thereon of the service upon the Secretary of the State. The officer serving the process upon the Secretary of the State shall leave with the Secretary of the State, at the time of service, a fee of fifty dollars, which fee shall be taxed in favor of the plaintiff in the plaintiff's costs if the plaintiff prevails in the action. The Secretary of the State shall keep a record of each such process and the day and hour of service.\n\n(f) When the other methods of service of process provided under this section or otherwise provided by law cannot be effected, in actions concerning the establishment, enforcement or modification of child support orders other than actions for dissolution of marriage, including, but not limited to, such actions under sections 17b-122, 17b-124 to 17b-132, inclusive, 17b-136 to 17b-138, inclusive, 17b-194 to 17b-197, inclusive, 17b-222 to 17b-250, inclusive, 17b-263, 17b-340 to 17b-350, inclusive, 17b-689b, 17b-743 to 17b-747, inclusive, and 46b-301 to 46b-425, inclusive, and chapters 815, 815p, 815t, 815y and 816, and actions to implement garnishments for support under section 52-362, service of process may be made upon a party to the action by one of the following methods, provided proof of receipt of such process by such party is presented to the court in accordance with rules promulgated by the judges of the Superior Court:\n\n(1) By certified mail to a party to the action addressed to the employer of such party. Any service of process so sent shall include on the outside envelope the words “To be delivered to the employee in accordance with subsection (f) of section 52-57”. The employer shall accept any such service of process sent by certified mail and promptly deliver such certified mail to the employee; or\n\n(2) When a party to an action under this subsection is employed by an employer with fifteen or more employees, by personal service upon an official of the employer designated as an agent to accept service of process in actions brought under this subsection. Each employer with fifteen or more employees doing business in this state shall designate an official to accept service of process for employees who are parties to such actions. The person so served shall promptly deliver such process to the employee.",
+      "href": "?chapter=896&section=section-52-57",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-52-64a",
+      "citation": "52-64a",
+      "citations": [
+        "52-64a"
+      ],
+      "heading": "Sec. 52-64a. Service of writ of summons in civil action naming correction officer or employee of Department of Correction.",
+      "chapter": {
+        "id": "chapter-896",
+        "number": "896",
+        "name": "Civil Process, Service and Time for Return"
+      },
+      "status": "active",
+      "text": "A writ of summons in a civil action naming a correction officer or an employee of the Department of Correction, except where it may be served under the provisions of section 52-64, may be served upon a person designated by the Commissioner of Correction at the correctional facility where the correction officer or employee is assigned who shall act as the agent of the correction officer or employee named in the writ. Service upon such agent shall be deemed to be service upon the correction officer or employee. The provisions of this section shall not be construed as the exclusive or required means of serving a correction officer or employee of the Department of Correction when service cannot be made under section 52-64.",
+      "href": "?chapter=896&section=section-52-64a",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-52-143",
+      "citation": "52-143",
+      "citations": [
+        "52-143"
+      ],
+      "heading": "Sec. 52-143. Subpoenas for witnesses. Penalty for failure to appear and testify.",
+      "chapter": {
+        "id": "chapter-899",
+        "number": "899",
+        "name": "Evidence"
+      },
+      "status": "active",
+      "text": "(a) Subpoenas for witnesses shall be personally signed in ink by the hand of a commissioner of the Superior Court or by the hand of the clerk of the court or an authorized court employee. The Chief Court Administrator may prescribe an alternative means for the signing of such subpoenas involving Judicial Branch employees. Such subpoenas shall be served by an officer, indifferent person or, in any criminal case in which a defendant is represented by a public defender or Division of Public Defender Services assigned counsel, by an investigator of the Division of Public Defender Services. Such subpoenas shall be served not less than eighteen hours prior to the time designated for the person summoned to appear, unless the court orders otherwise.\n\n(b) Any subpoena summoning a police officer as a witness may be served upon the chief of police or any person designated by the chief of police at the appropriate police station who shall act as the agent of the police officer named in the subpoena. Service upon the agent shall be deemed to be service upon the police officer.\n\n(c) Any subpoena summoning a correction officer as a witness may be served upon a person designated by the Commissioner of Correction at the correctional facility where the correction officer is assigned who shall act as the agent of the correction officer named in the subpoena. Service upon the agent shall be deemed to be service upon the correction officer.\n\n(d) Subpoenas for witnesses summoned by the state, including those issued by the Attorney General or an assistant attorney general, or by any public defender or assistant public defender acting in his official capacity may contain this statement: “Notice to the person summoned: Your statutory fees as witness will be paid by the clerk of the court where you are summoned to appear, if you give the clerk this subpoena on the day you appear. If you do not appear in court on the day and at the time stated, or on the day and at the time to which your appearance may have been postponed or continued by order of an officer of the court, the court may order that you be arrested.”\n\n(e) If any person summoned by the state, or by the Attorney General or an assistant attorney general, or by any public defender or assistant public defender acting in his official capacity, by a subpoena containing the statement as provided in subsection (d) of this section, or if any other person upon whom a subpoena is served to appear and testify in a cause pending before any court and to whom one day's attendance and fees for traveling to court have been tendered, fails to appear and testify, without reasonable excuse, he shall be fined not more than twenty-five dollars and pay all damages to the party aggrieved; and the court or judge, on proof of the service of a subpoena containing the statement as provided in subsection (d) of this section, or on proof of the service of a subpoena and the tender of such fees, may issue a capias directed to some proper officer to arrest the witness and bring him before the court to testify.\n\n(f) Any subpoena summoning a physician as a witness may be served upon the office manager or person in charge at the office or principal place of business of such physician who shall act as the agent of the physician named in the subpoena. Service upon the agent shall be deemed to be service upon the physician.",
+      "href": "?chapter=899&section=section-52-143",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-52-146c",
+      "citation": "52-146c",
+      "citations": [
+        "52-146c"
+      ],
+      "heading": "Sec. 52-146c. Privileged communications between psychologist and patient.",
+      "chapter": {
+        "id": "chapter-899",
+        "number": "899",
+        "name": "Evidence"
+      },
+      "status": "repealed",
+      "text": "Section 52-146c is repealed, effective October 1, 2025.",
+      "href": "?chapter=899&section=section-52-146c",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "repealed"
+      }
+    },
+    {
+      "id": "section-52-146d",
+      "citation": "52-146d",
+      "citations": [
+        "52-146d"
+      ],
+      "heading": "Sec. 52-146d. (Formerly Sec. 52-146a). Privileged communications between psychologist or psychiatric mental health provider and patient. Definitions.",
+      "chapter": {
+        "id": "chapter-899",
+        "number": "899",
+        "name": "Evidence"
+      },
+      "status": "active",
+      "text": "As used in this section and sections 52-146e to 52-146j, inclusive:\n\n(1) “Authorized representative” means (A) an individual empowered by a person or patient to assert the confidentiality of communications or records that are privileged under this section and sections 52-146e to 52-146i, inclusive, or (B) if a person or patient is deceased, his or her personal representative or next of kin, or (C) if a person or patient is incompetent to assert or waive his or her privileges under said sections, (i) a guardian or conservator who has been or is appointed to act for the person or patient, or (ii) for the purpose of maintaining confidentiality until a guardian or conservator is appointed, the person's or patient's nearest relative;\n\n(2) “Communication and record” means each oral and written communication and the written record of such communication thereof relating to diagnosis or treatment of a person's or patient's mental condition between the person or patient and a psychologist or psychiatric mental health provider, or between a member of the person's or patient's family and a psychologist or psychiatric mental health provider, or between such person, patient, psychologist, psychiatrist or family member and an individual participating under the supervision of a psychologist or psychiatric mental health provider in the accomplishment of the objectives of diagnosis and treatment, wherever made, including a communication and record that occurs in or is prepared at a mental health facility;\n\n(3) “Consent” means voluntary agreement given in writing by the person or patient or his or her authorized representative;\n\n(4) “Identifiable” and “identify a person or patient” mean information in a communication and record, including (A) the name of the person or patient or other descriptive data from which an individual acquainted with the person or patient might reasonably recognize the person or patient as the person or patient referred to, or (B) a code or number that is in general use outside of the mental health facility that prepared the communication and record, which code or number would identify the person or patient to such persons who understand such code or number;\n\n(5) “Mental health facility” includes any hospital, clinic, ward, psychologist's office, psychiatric mental health provider's office or other facility, public or private, that provides inpatient or outpatient service, in whole or in part, relating to the diagnosis or treatment of a person's or patient's mental condition;\n\n(6) “Patient” means an individual who communicates with or is treated by a psychiatric mental health provider in diagnosis or treatment;\n\n(7) “Person” means an individual who consults a psychologist for purposes of diagnosis or treatment;\n\n(8) “Psychiatric mental health provider” means a physician specializing in psychiatry and licensed under the provisions of sections 20-9 to 20-12, inclusive, an advanced practice registered nurse licensed under chapter 378 who is board certified as a psychiatric mental health provider by a certifying body, including, but not limited to, the American Nurses Credentialing Center or the American Academy of Nurse Practitioners, an individual licensed to practice medicine who devotes a substantial portion of his or her time to the practice of psychiatry or an individual reasonably believed by the patient to be so qualified; and\n\n(9) “Psychologist” means an individual licensed to practice psychology pursuant to chapter 383.",
+      "href": "?chapter=899&section=section-52-146d",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-52-146e",
+      "citation": "52-146e",
+      "citations": [
+        "52-146e"
+      ],
+      "heading": "Sec. 52-146e. Disclosure of communications and records.",
+      "chapter": {
+        "id": "chapter-899",
+        "number": "899",
+        "name": "Evidence"
+      },
+      "status": "active",
+      "text": "(a) Each communication and record shall be confidential and subject to the provisions of sections 52-146d to 52-146j, inclusive. Except as provided in sections 52-146f to 52-146i, inclusive, no individual shall disclose or transmit any communication or record thereof, or the substance or any part or resume thereof, that identifies a person or patient to any individual, corporation or governmental agency without the consent of the person or patient or his or her authorized representative.\n\n(b) Any consent given by a person or patient to waive the confidentiality of a communication or record thereof shall specify to which individual or agency the information may be disclosed and to what use it will be put by such individual or agency. Each person and patient shall be informed that his or her refusal to grant consent will not jeopardize his or her right to obtain present or future treatment except where disclosure of the communication and record is necessary for the treatment.\n\n(c) The person or patient or his or her authorized representative may withdraw any consent given under the provisions of this section at any time in a writing addressed to the individual or office in which the original consent was filed. Withdrawal of consent shall not affect a communication or record thereof disclosed prior to notice of the withdrawal.",
+      "href": "?chapter=899&section=section-52-146e",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-52-146f",
+      "citation": "52-146f",
+      "citations": [
+        "52-146f"
+      ],
+      "heading": "Sec. 52-146f. Consent not required for disclosure, when.",
+      "chapter": {
+        "id": "chapter-899",
+        "number": "899",
+        "name": "Evidence"
+      },
+      "status": "active",
+      "text": "Consent of the person or patient shall not be required for the disclosure or transmission of a communication and record of the person or patient in the following situations:\n\n(1) A psychologist or psychiatric mental health provider may (A) disclose a communication and record to any other individual engaged in the diagnosis or treatment of the person or patient, and (B) transmit the communication and record to another mental health facility to which the person or patient is admitted for diagnosis or treatment if the psychologist or psychiatric mental health provider determines that the disclosure or transmission is needed to accomplish the objectives of diagnosis or treatment of the person or patient. The psychologist or psychiatric mental health provider shall inform the person or patient that the communication and record will be so disclosed or transmitted. For purposes of this subsection, an individual in professional training to become a psychologist or psychiatric mental health provider shall be considered as engaged in the diagnosis or treatment of the person or patient.\n\n(2) A psychologist or psychiatric mental health provider may disclose a communication and record when the psychologist or psychiatric mental health provider determines that there is substantial risk of imminent physical injury by the person or patient to himself, herself or others or when a psychologist or psychiatric mental health provider, in the course of diagnosis or treatment of the person or patient, finds it necessary to disclose the communication and record for the purpose of placing the person or patient in a mental health facility, by certification, commitment or otherwise, provided the provisions of sections 52-146d to 52-146j, inclusive, shall continue in effect after the person or patient is in the facility.\n\n(3) Except as provided in section 17b-225, a psychologist or psychiatric mental health provider may disclose the name, address and fees for services provided by a psychologist or psychiatric mental health provider to a person or patient to any individual or agency involved in the collection of fees for such services. In cases where a dispute arises over the fees or claims or where additional information is needed to substantiate the fee or claim, the disclosure of further information shall be limited to the following: (A) That the individual was in fact a person or patient of the psychologist or psychiatric mental health provider; (B) the diagnosis of the person or patient; (C) the dates and duration of treatment of the person or patient; and (D) a general description of the treatment provided to the person or patient that shall include evidence that a treatment plan exists and has been carried out and evidence to substantiate the necessity for admission and length of stay in a health care institution or facility. If further information is required, the party seeking the information shall proceed in the same manner provided for hospital patients in section 4-105.\n\n(4) A communication and record made by a psychologist or psychiatric mental health provider in the course of a psychological or psychiatric examination ordered by a court or made in connection with the application for the appointment of a conservator by the Probate Court for good cause shown may be disclosed at judicial or administrative proceedings in which the person or patient is a party, or in which the question of his or her incompetence because of mental illness is an issue, or in appropriate pretrial proceedings, provided (A) the court finds that the person or patient has been informed before making the communication to the psychologist or psychiatric mental health provider that any communication made to the psychologist or psychiatric mental health provider shall not be confidential, and (B) the communication and record shall be admissible only on issues involving the person's or patient's mental condition.\n\n(5) A communication and record may be disclosed in a civil proceeding in which the person or patient introduces his or her mental condition as an element of his or her claim or defense, or, after the person's or patient's death, when his or her condition is introduced by a party claiming or defending through or as a beneficiary of the person or patient and the court or judge finds that it is more important to the interests of justice that the communication and record be disclosed than that the relationship between person and psychologist or patient and psychiatric mental health provider be protected.\n\n(6) A communication and record may be disclosed to (A) the Commissioner of Public Health in connection with any inspection, investigation or examination of an institution, as defined in subsection (a) of section 19a-490, authorized under section 19a-498, or (B) the Commissioner of Mental Health and Addiction Services in connection with any inspection, investigation or examination authorized under subsection (f) of section 17a-451.\n\n(7) A communication and record may be disclosed to a member of the immediate family or legal representative of the victim of a homicide committed by the person or patient where such person or patient has, on or after July 1, 1989, been found not guilty of such offense by reason of mental disease or defect pursuant to section 53a-13, provided (A) such family member or legal representative requests the disclosure of such communication and record not later than six years after such finding, and (B) such communication and record shall only be available during the pendency of, and for use in, a civil action relating to such person or patient found not guilty pursuant to section 53a-13.\n\n(8) If a provider of behavioral health services that contracts with the Department of Mental Health and Addiction Services requests payment, the name and address of the person or patient, a general description of the types of services provided, and the amount requested shall be disclosed to the department, provided notification that such disclosure will be made shall be sent, in writing, to the person or patient at the earliest opportunity prior to such disclosure. In cases where a dispute arises over the fees or claims, or where additional information is needed to substantiate the claim, the disclosure of further information shall be limited to additional information necessary to clarify only the following: (A) That the person or patient received the behavioral health services in question, (B) the dates of such services, and (C) a general description of the types of services. Information the department receives pursuant to this subdivision shall be disclosed only to federal or state auditors and only as necessary for the purposes of auditing.",
+      "href": "?chapter=899&section=section-52-146f",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-52-146g",
+      "citation": "52-146g",
+      "citations": [
+        "52-146g"
+      ],
+      "heading": "Sec. 52-146g. Access to communications and records by individuals engaged in research.",
+      "chapter": {
+        "id": "chapter-899",
+        "number": "899",
+        "name": "Evidence"
+      },
+      "status": "active",
+      "text": "(a) An individual engaged in research may have access to a communication and record that identifies a person or patient where needed for such research, if such individual's research plan is first submitted to and approved by the director of the mental health facility or such director's designee.\n\n(b) The communication and record shall not be removed from the mental health facility that prepared them. Coded data or data that does not identify a person or patient may be removed from a mental health facility, provided the key to the code shall remain on the premises of the facility.\n\n(c) The mental health facility and the individual doing the research shall be responsible for the preservation of the anonymity of each person or patient identified in such communication and record and shall not disseminate data that identifies a person or patient except as provided by sections 52-146d to 52-146j, inclusive.",
+      "href": "?chapter=899&section=section-52-146g",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-52-146h",
+      "citation": "52-146h",
+      "citations": [
+        "52-146h"
+      ],
+      "heading": "Sec. 52-146h. Transfer of information to Commissioner of Mental Health and Addiction Services. Storage of communication and record.",
+      "chapter": {
+        "id": "chapter-899",
+        "number": "899",
+        "name": "Evidence"
+      },
+      "status": "active",
+      "text": "(a) Any facility or individual under contract with the Department of Mental Health and Addiction Services to provide behavioral health services shall transmit a communication and record, if requested, to the Commissioner of Mental Health and Addiction Services pursuant to such facility's or individual's obligation under section 17a-451 to maintain the overall responsibility for the care and treatment of individuals with psychiatric disorders or substance use disorders. The Commissioner of Mental Health and Addiction Services may collect and use the communication and record for administration, planning or research, subject to the provisions of section 52-146g. The Commissioner of Mental Health and Addiction Services may enter into contracts within the state and into interstate compacts for the efficient storage and retrieval of the communication and record.\n\n(b) Identifiable data shall be removed from each communication and record before issuance from the individual or facility that prepared such communication and record, and a code, the key to which shall remain in possession of the issuing facility and be otherwise available only to the Commissioner of Mental Health and Addiction Services for purposes of planning, administration or research, shall be the exclusive means of identifying persons and patients. The key to the code shall not be available to any data banks in which the information is stored or to any other individuals, corporations or agencies, private or governmental.",
+      "href": "?chapter=899&section=section-52-146h",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-52-146i",
+      "citation": "52-146i",
+      "citations": [
+        "52-146i"
+      ],
+      "heading": "Sec. 52-146i. Labeling of confidential records.",
+      "chapter": {
+        "id": "chapter-899",
+        "number": "899",
+        "name": "Evidence"
+      },
+      "status": "active",
+      "text": "Each communication and record disclosed to another individual or agency shall bear the following statement: “The confidentiality of this record is required under chapter 899 of the Connecticut general statutes. This material shall not be transmitted to anyone without written consent or other authorization as provided in the aforementioned statutes.” A copy of the consent form specifying to whom and for what specific use the communication and record is transmitted or a statement setting forth any other statutory authorization for transmittal and the limitations imposed thereon shall accompany such communication and record. In cases where the disclosure is made orally, the individual disclosing the communication and record shall inform the recipient that such communication and record is governed by the provisions of sections 52-146d to 52-146j, inclusive.",
+      "href": "?chapter=899&section=section-52-146i",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-52-146j",
+      "citation": "52-146j",
+      "citations": [
+        "52-146j"
+      ],
+      "heading": "Sec. 52-146j. Judicial relief.",
+      "chapter": {
+        "id": "chapter-899",
+        "number": "899",
+        "name": "Evidence"
+      },
+      "status": "active",
+      "text": "(a) Any individual aggrieved by a violation of any provision of sections 52-146d to 52-146i, inclusive, may petition the superior court for the judicial district in which such individual resides, or, in the case of a nonresident of the state, the superior court for the judicial district of Hartford, for appropriate relief, including temporary and permanent injunctions, and the petition shall be privileged with respect to assignment for trial.\n\n(b) Any individual aggrieved by a violation of any provision of sections 52-146d to 52-146i, inclusive, may prove a cause of action for civil damages.",
+      "href": "?chapter=899&section=section-52-146j",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-52-146o",
+      "citation": "52-146o",
+      "citations": [
+        "52-146o"
+      ],
+      "heading": "Sec. 52-146o. Disclosure of patient communication or information by physician, surgeon or health care provider prohibited.",
+      "chapter": {
+        "id": "chapter-899",
+        "number": "899",
+        "name": "Evidence"
+      },
+      "status": "active",
+      "text": "(a) Except as provided in sections 52-146d to 52-146j, inclusive, sections 52-146p, 52-146q and 52-146s and subsection (b) of this section, in any civil action or any proceeding preliminary thereto or in any probate, legislative or administrative proceeding, a physician or surgeon, licensed pursuant to section 20-9, or other licensed health care provider, shall not disclose (1) any communication made to him or her by, or any information obtained by him or her from, a patient or the conservator or guardian of a patient with respect to any actual or supposed physical or mental disease or disorder, or (2) any information obtained by personal examination of a patient, unless the patient or that patient's authorized representative explicitly consents to such disclosure.\n\n(b) Consent of the patient or the patient's authorized representative shall not be required for the disclosure of such communication or information (1) pursuant to any statute or regulation of any state agency or the rules of court, (2) by a physician, surgeon or other licensed health care provider against whom a claim has been made, or there is a reasonable belief will be made, in such action or proceeding, to the physician's, surgeon's or other licensed health care provider's attorney or professional liability insurer or such insurer's agent for use in the defense of such action or proceeding, (3) to the Commissioner of Public Health for records of a patient of a physician, surgeon or health care provider in connection with an investigation of a complaint, if such records are related to the complaint, or (4) if child abuse, abuse of an elderly individual, abuse of an individual who is physically disabled or incompetent or abuse of an individual with intellectual disability is known or in good faith suspected.",
+      "href": "?chapter=899&section=section-52-146o",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-52-146w",
+      "citation": "52-146w",
+      "citations": [
+        "52-146w"
+      ],
+      "heading": "Sec. 52-146w. Disclosure of patient communication or information relating to reproductive health care services or gender-affirming health care services by covered entity or business associate prohibited. Exceptions.",
+      "chapter": {
+        "id": "chapter-899",
+        "number": "899",
+        "name": "Evidence"
+      },
+      "status": "active",
+      "text": "(a) Except as provided in sections 52-146d to 52-146k, inclusive, sections 52-146o, 52-146p, 52-146q and 52-146s and subsection (b) of this section, in any civil action or any proceeding preliminary thereto or in any probate, legislative or administrative proceeding, no covered entity or business associate, as defined in 45 CFR 160.103, shall disclose (1) any communication made to such covered entity or business associate, or any information obtained by such covered entity or business associate from, a patient or the conservator, guardian or other authorized legal representative of a patient relating to reproductive health care services or gender-affirming health care services, as defined in section 52-571m, that are permitted under the laws of this state, or (2) any information obtained by personal examination of a patient relating to such services, that are permitted under the laws of this state, unless the patient or that patient's conservator, guardian or other authorized legal representative explicitly consents in writing to such disclosure. A covered entity shall inform the patient or the patient's conservator, guardian or other authorized legal representative of the patient's right to withhold such written consent. A covered entity or business associate that receives a subpoena for patient information related to reproductive health care services or gender-affirming health care services subject to the provisions of this section that does not fall under any exemption in subsection (b) of this section and is not accompanied by the written consent of the patient or the conservator, guardian or other authorized legal representative of the patient shall provide a copy of the subpoena to the office of the Attorney General not later than seven days after the date of receipt of the subpoena. The office of the Attorney General shall post notice of the methods by which a covered entity and business associate may send the copy of the subpoena.\n\n(b) Written consent of the patient or the patient's conservator, guardian or other authorized legal representative shall not be required for the disclosure of such communication or information (1) pursuant to the laws of this state or the rules of court prescribed by the Judicial Branch, (2) by a covered entity or business associate against whom a claim has been made, or there is a reasonable belief will be made, in such action or proceeding, to the covered entity's or business associate's attorney or professional liability insurer or such insurer's agent for use in the defense of such action or proceeding, (3) to the Commissioner of Public Health for records of a patient of a covered entity in connection with an investigation of a complaint, if such records are related to the complaint, or (4) if child abuse, abuse of an elderly individual, abuse of an individual who is physically disabled or incompetent or abuse of an individual with intellectual disability is known or in good faith suspected.\n\n(c) Nothing in this section shall be construed to impede the lawful sharing of medical records as permitted by state or federal law or the rules of the court prescribed by the Judicial Branch, except in the case of a subpoena commanding the production, copying or inspection of medical records relating to reproductive health care services or gender-affirming health care services, as defined in section 52-571m.",
+      "href": "?chapter=899&section=section-52-146w",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-52-146x",
+      "citation": "52-146x",
+      "citations": [
+        "52-146x"
+      ],
+      "heading": "Sec. 52-146x. Disclosure of patient communication or information relating to gender-affirming health care services or reproductive health care services by covered entity prohibited. Exceptions.",
+      "chapter": {
+        "id": "chapter-899",
+        "number": "899",
+        "name": "Evidence"
+      },
+      "status": "repealed",
+      "text": "Section 52-146x is repealed, effective July 1, 2025.",
+      "href": "?chapter=899&section=section-52-146x",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "repealed"
+      }
+    },
+    {
+      "id": "section-52-155a",
+      "citation": "52-155a",
+      "citations": [
+        "52-155a"
+      ],
+      "heading": "Sec. 52-155a. Limitations on issuance of out-of-state subpoena request relating to reproductive health care services or gender-affirming health care services.",
+      "chapter": {
+        "id": "chapter-899",
+        "number": "899",
+        "name": "Evidence"
+      },
+      "status": "active",
+      "text": "Notwithstanding the provisions of sections 52-155 and 52-657, a judge, justice of the peace, notary public or commissioner of the Superior Court shall not issue a subpoena requested by a commissioner, appointed according to the laws or usages of any other state or government, or by any court of the United States or of any other state or government, when such subpoena relates to reproductive health care services or gender-affirming health care services, as defined in section 52-571m, that are permitted under the laws of this state, unless the subpoena relates to: (1) An out-of-state action founded in tort, contract or statute, for which a similar claim would exist under the laws of this state, brought by a patient or the patient's authorized legal representative, for damages suffered by the patient or damages derived from an individual's loss of consortium of the patient; or (2) an out-of-state action founded in contract, and for which a similar claim would exist under the laws of this state, brought or sought to be enforced by a party with a contractual relationship with the person that is the subject of the subpoena requested by a commissioner appointed according to the laws or usages of another state.",
+      "href": "?chapter=899&section=section-52-155a",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-52-155b",
+      "citation": "52-155b",
+      "citations": [
+        "52-155b"
+      ],
+      "heading": "Sec. 52-155b. Limitations on issuance of out-of-state subpoena request relating to gender-affirming health care services or reproductive health care services.",
+      "chapter": {
+        "id": "chapter-899",
+        "number": "899",
+        "name": "Evidence"
+      },
+      "status": "repealed",
+      "text": "Section 52-155b is repealed, effective July 1, 2025.",
+      "href": "?chapter=899&section=section-52-155b",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "repealed"
+      }
+    },
+    {
+      "id": "section-52-196a",
+      "citation": "52-196a",
+      "citations": [
+        "52-196a"
+      ],
+      "heading": "Sec. 52-196a. Filing of special motion to dismiss based on exercise of certain state or federal constitutional rights in connection with matter of public concern. Court procedure.",
+      "chapter": {
+        "id": "chapter-900",
+        "number": "900",
+        "name": "Court Practice and Procedure"
+      },
+      "status": "active",
+      "text": "(a) As used in this section:\n\n(1) “Matter of public concern” means an issue related to (A) health or safety, (B) environmental, economic or community well-being, (C) the government, zoning and other regulatory matters, (D) a public official or public figure, or (E) an audiovisual work;\n\n(2) “Right of free speech” means (A) communicating, or conduct furthering communication, in a public forum on a matter of public concern, (B) written communication made by an individual, without actual malice, concerning the alleged commission of a crime, or (C) written communication, made by an individual without actual malice, concerning a discriminatory practice as defined in section 46a-51;\n\n(3) “Right to petition the government” means (A) communication in connection with an issue under consideration or review by a legislative, executive, administrative, judicial or other governmental body, (B) communication that is reasonably likely to encourage consideration or review of a matter of public concern by a legislative, executive, administrative, judicial or other governmental body, or (C) communication that is reasonably likely to enlist public participation in an effort to effect consideration of an issue by a legislative, executive, administrative, judicial or other governmental body;\n\n(4) “Right of association” means communication among individuals who join together to collectively express, promote, pursue or defend common interests; and\n\n(5) “Special motion to dismiss” means the motion permitted pursuant to this section.\n\n(b) In any civil action in which a party files a complaint, counterclaim or cross claim against an opposing party that is based on the opposing party's exercise of its right of free speech, right to petition the government, or right of association under the Constitution of the United States or the Constitution of the state in connection with a matter of public concern, such opposing party may file a special motion to dismiss the complaint, counterclaim or cross claim.\n\n(c) Any party filing a special motion to dismiss shall file such motion not later than thirty days after the return date of the complaint, or the filing of a counterclaim or cross claim described in subsection (b) of this section. The court, upon a showing of good cause by a party seeking to file a special motion to dismiss, may extend the time to file a special motion to dismiss.\n\n(d) The court shall stay all discovery upon the filing of a special motion to dismiss. The stay of discovery shall remain in effect until the court grants or denies the special motion to dismiss and any interlocutory appeal thereof. Notwithstanding the entry of an order to stay discovery, the court, upon motion of a party and a showing of good cause, or upon its own motion, may order specified and limited discovery relevant to the special motion to dismiss.\n\n(e) (1) The court shall conduct an expedited hearing on a special motion to dismiss. The expedited hearing shall be held not later than sixty days after the date of filing of such special motion to dismiss, unless, (A) the court orders specified and limited discovery pursuant to subsection (d) of this section, in which case, the expedited hearing shall be held not later than sixty days after the date on which such specified and limited discovery must be completed, (B) the parties agree to a hearing date that is beyond the sixty-day period, (C) the court, for good cause shown, is unable to schedule the hearing during the sixty-day period, or (D) the written communication specified in subdivision (2) or (3) of subsection (a) of this section relates to a pending criminal proceeding or a discriminatory practice complaint pending with the Commission on Human Rights, or the Superior Court if jurisdiction of the discriminatory practice complaint has been released by said commission pursuant to section 46a-100. In the event that a proceeding described in this subparagraph is pending, the expedited hearing shall be held not later than sixty days after the date on which such proceeding is concluded.\n\n(2) When ruling on a special motion to dismiss, the court shall consider pleadings and supporting and opposing affidavits of the parties attesting to the facts upon which liability or a defense, as the case may be, is based.\n\n(3) The court shall grant a special motion to dismiss if the moving party makes an initial showing, by a preponderance of the evidence, that the opposing party's complaint, counterclaim or cross claim is based on the moving party's exercise of its right of free speech, right to petition the government, or right of association under the Constitution of the United States or the Constitution of the state in connection with a matter of public concern, unless the party that brought the complaint, counterclaim or cross claim sets forth with particularity the circumstances giving rise to the complaint, counterclaim or cross claim and demonstrates to the court that there is probable cause, considering all valid defenses, that the party will prevail on the merits of the complaint, counterclaim or cross claim.\n\n(4) The court shall rule on a special motion to dismiss as soon as practicable.\n\n(f) (1) If the court grants a special motion to dismiss under this section, the court shall award the moving party costs and reasonable attorney's fees, including such costs and fees incurred in connection with the filing of the special motion to dismiss.\n\n(2) If the court denies a special motion to dismiss under this section and finds that such special motion to dismiss is frivolous and solely intended to cause unnecessary delay, the court shall award costs and reasonable attorney's fees to the party opposing such special motion to dismiss.\n\n(g) The findings or determinations made pursuant to subsections (e) and (f) of this section shall not be admitted into evidence at any later stage of the proceeding or in any subsequent action.\n\n(h) The provisions of this section shall not: (1) Apply to an enforcement action that is brought in the name of the state or a political subdivision of the state by the Attorney General; (2) affect or limit the authority of a court to award sanctions, costs, attorney's fees or any other relief available under any statute, court rule or other authority; (3) affect, limit or preclude the right of a party filing a special motion to dismiss to any defense, remedy, immunity or privilege otherwise authorized by law; (4) affect the substantive law governing any asserted claim; (5) create a private right of action; or (6) apply to a common law or statutory claim for bodily injury or wrongful death, except the exclusion provided in this subdivision shall not apply to claims for (A) emotional distress unrelated to bodily injury or wrongful death or conjoined with a cause of action other than for bodily injury or wrongful death, or (B) defamation, libel or slander. The provisions of this subdivision shall not prohibit a plaintiff who brings a claim for bodily injury or wrongful death from filing a special motion to dismiss a counterclaim under the provisions of this section.",
+      "href": "?chapter=900&section=section-52-196a",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-52-261",
+      "citation": "52-261",
+      "citations": [
+        "52-261"
+      ],
+      "heading": "Sec. 52-261. Fees and expenses of officers and persons serving process or performing other duties.",
+      "chapter": {
+        "id": "chapter-901",
+        "number": "901",
+        "name": "Damages, Costs and Fees"
+      },
+      "status": "active",
+      "text": "(a) Except as provided in subsection (b) of this section and section 52-261a, each officer or person who serves process, summons or attachments on behalf of: (1) An official of the state or any of its agencies, boards or commissions, or any municipal official acting in his or her official capacity, shall receive a fee of not more than fifty dollars for each process served and an additional fee of fifty dollars for the second and each subsequent service of such process, except that such officer or person shall receive an additional fee of twenty dollars for each subsequent service of such process at the same address or for notification of the office of the Attorney General in dissolution and postjudgment proceedings if a party or child is receiving public assistance; and (2) any person, except a person described in subdivision (1) of this subsection, shall receive a fee of not more than fifty dollars for each process served and an additional fee of fifty dollars for the second and each subsequent service of such process, except that such officer or person shall receive an additional fee of twenty dollars for each subsequent service of such process at the same address or for notification of the office of the Attorney General in dissolution and postjudgment proceedings if a party or child is receiving public assistance. Each such officer or person shall also receive the fee set by the Department of Administrative Services for state employees for each mile of travel, subject to adjustment within thirty days of any revision to the federal General Services Administration mileage reimbursement rate, to be computed from the place where such officer or person received the process to the place of service, and thence in the case of civil process to the place of return. If more than one process is served on one person at one time by any such officer or person, the total cost of travel for the service shall be the same as for the service of one process only, except, if an officer or person is requested by the court or required by law to effectuate in-hand personal service, or for service pursuant to subsection (h) of section 46b-15 or subsection (d) of section 46b-16a, such officer or person shall receive the fee set by the Department of Administrative Services for state employees for each mile of travel, subject to adjustment within thirty days of any revision to the federal General Services Administration mileage reimbursement rate, of each round trip traveled while attempting to effectuate in-hand personal service, to be computed from the place where the process was received to the place of attempted service, and if multiple trips to effectuate service are made, back to the place where process was received and then to the place of the subsequent attempt at service, and thence in the case of civil process to the place of return provided the officer or person shall state in the return of service that in-hand personal service was requested or required, or that in-hand service was made pursuant to subsection (h) of section 46b-15 or subsection (d) of section 46b-16a, and that multiple trips were necessary to effectuate in-hand personal service. The officer or person requesting the receipt of such round trip travel shall make out a bill reciting the dates, times and results of each trip the officer or person traveled while attempting to effectuate in-hand personal service. The officer or person requesting the receipt of such fees for attempted round trip travel may only receive such fees from the Judicial Department when ordered by the court or by law to effectuate in-hand personal service and only when such in-hand personal service is effectuated, when in-hand personal service of process is made pursuant to subsection (h) of section 46b-15 or subsection (d) of section 46b-16a. Such payment from the Judicial Department of attempted round trip travel for in-hand service of process may be limited to three round trips, provided nothing in this section shall limit payment of a greater amount from the Judicial Department to an officer or person serving process. For service made pursuant to subsection (h) of section 46b-15 and subsection (d) of section 46b-16a, which was not effectuated in-hand, regardless of any attempts to effectuate service in-hand, the mileage fee shall be from the place where the process was received to the place of service, and thence in the case of civil process to the place of return. Where the court allows an applicant additional time to make service under subsection (c) of section 46b-15 or subsection (e) of section 46b-16a, for purposes of calculating the mileage fee for multiple trips, such extra time will be considered a continuation of the original attempts at service. Each officer or person who serves process shall also receive the moneys actually paid for town clerk's fees on the service of process. Each officer or person who serves process shall also receive the moneys actually paid for fees for the disclosure or search of records of the Department of Motor Vehicles in connection with the service of process. Any officer or person required to summon jurors by personal service of a warrant to attend court shall receive for the first ten miles of travel while so engaged, such mileage to be computed from the place where such officer or person receives the process to the place of service, twenty-five cents for each mile, and for each additional mile, ten cents. For summoning any juror to attend court otherwise than by personal service of the warrant, such officer or person shall receive only the sum of fifty cents and actual disbursements necessarily expended by such officer or person in making service thereof as directed. Notwithstanding the provisions of this section, for summoning grand jurors, such officer or person shall receive only such officer's or person's actual expenses and such reasonable sum for services as are taxed by the court. The following fees shall be allowed and paid: (A) For taking bail or bail bond, one dollar; (B) for copies of writs and complaints, exclusive of endorsements, one dollar per page, not to exceed a total amount of nine hundred dollars in any particular matter; (C) for endorsements, fifty cents per page or fraction thereof; (D) for service of a warrant for the seizure of intoxicating liquors, or for posting and leaving notices after the seizure, or for the destruction or delivery of any such liquors under order of court, twenty dollars; (E) for the removal and custody of such liquors so seized, reasonable expenses, and twenty dollars; (F) for the levy of an execution, when the money is actually collected and paid over, or the debt or a portion of the debt is secured by the officer, fifteen per cent on the amount of the execution, provided the minimum fee for such execution shall be fifty dollars; (G) on the levy of an execution on real property and on application for sale of personal property attached, to each appraiser, for each half day of actual service, reasonable and customary expenses; (H) for causing an execution levied on real property to be recorded, fees for travel, twenty dollars and costs; (I) for services on an application for the sale of personal property attached, or in selling mortgaged property foreclosed under a decree of court, the same fees as for similar services on executions; (J) for committing any person to a community correctional center, in civil actions, the fee set by the Department of Administrative Services for state employees for each mile of travel, from the place of the court to the community correctional center; (K) for summoning and attending a jury for reassessing damages or benefits on a highway, three dollars a day; (L) for any recording for which the recording fee is not otherwise prescribed by law, fifty dollars, costs and the fee set by the Department of Administrative Services for state employees for each mile of travel; and (M) for postage or international mailing costs incurred pursuant to a court order, actual expenses. The court shall tax as costs a reasonable amount for the care of property held by any officer under attachment or execution. The officer serving any attachment or execution may claim compensation for time and expenses of any person, in keeping, securing or removing property taken thereon, provided such officer shall make out a bill. The bill shall specify the labor done, and by whom, the time spent, the travel, the money paid, if any, and to whom and for what. The compensation for the services shall be reasonable and customary and the amount of expenses and shall be taxed by the court with the costs.\n\n(b) Each officer or person shall receive the following fees: (1) For service and scheduling of an execution on a summary process judgment, or a foreclosure ejectment, not more than one hundred dollars and the fee set by the Department of Administrative Services for state employees for each mile of travel; (2) for removal under section 47a-42 of a defendant or other occupant bound by a summary process judgment, and the possessions and personal effects of such defendant or other occupant, not more than one hundred dollars per hour and the fee set by the Department of Administrative Services for state employees for each mile of travel; (3) for removal and taking of an inventory of possessions and personal effects of a defendant or other occupant bound by a summary process judgment under section 47a-42a, not more than one hundred dollars per hour and the fee set by the Department of Administrative Services for state employees for each mile of travel; (4) for removal under section 49-22 of a defendant or other occupant bound by a foreclosure judgment, and the possessions and personal effects of such defendant or other occupant, not more than one hundred dollars per hour and the fee set by the Department of Administrative Services for state employees for each mile of travel; and (5) for any execution or ejectment, the officer or person serving such execution or ejectment may claim compensation for time and expenses of any mover, locksmith or any other individual, in keeping, securing or removing property and the transportation incidental to such execution of ejectment, provided such officer or person shall make out a bill. The bill shall specify the labor done, and by whom, the time spent, the travel, the money paid, if any, and to whom and for what.",
+      "href": "?chapter=901&section=section-52-261",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-52-261a",
+      "citation": "52-261a",
+      "citations": [
+        "52-261a"
+      ],
+      "heading": "Sec. 52-261a. Fees and expenses of officers and persons serving process or performing other duties for the Judicial Department or Division of Criminal Justice.",
+      "chapter": {
+        "id": "chapter-901",
+        "number": "901",
+        "name": "Damages, Costs and Fees"
+      },
+      "status": "active",
+      "text": "(a) Any process served by any officer or person for the Judicial Department or Division of Criminal Justice shall be served in accordance with the following schedule of fees:\n\n(1) Except as provided in subdivision (3) of this subsection, each officer or person who serves process shall receive a fee of not more than fifty dollars for the service of such process on a person and an additional fee of fifty dollars for the service of such process on each additional person, except that such officer or person shall receive an additional fee of twenty dollars for each subsequent service of such process at the same address.\n\n(2) Except as provided in subdivision (3) of this subsection, in addition to the fee set forth in subdivision (1) of this subsection, each officer or person who serves process shall receive, for each mile of travel, the same amount per mile as provided for state employees pursuant to section 5-141c, subject to adjustment within thirty days of any revision to the federal General Services Administration mileage reimbursement rate, to be computed from the place where such officer or person received the process to the place of service, and thence in the case of civil process to the place of return, provided, if more than one process is served on one person at one time by any such officer or person, the total cost of travel for such service shall be the same as for the service of one process only, except that in the case in which an officer or person is requested or required to effectuate in-hand personal service, such officer shall also receive the fee set by the Department of Administrative Services for state employees for each mile of travel, subject to adjustment within thirty days of any revision to the federal General Services Administration mileage reimbursement rate, for each round trip traveled while attempting to effectuate in-hand personal service, to be computed from the place where the process was received to the place of attempted service, and if multiple trips to effectuate service are made, back to the place where process was received and then to the place of the subsequent attempt at service, and thence in the case of civil process to the place of return, provided the officer or person shall state in the return of service that in-hand personal service was requested or required and that multiple trips were necessary to effectuate in-hand personal service. The officer or person requesting the receipt of such round trip travel shall make out a bill reciting the dates, times and results of each trip the officer or person traveled while attempting to effectuate in-hand personal service. The officer or person requesting the receipt of such attempted round trip travel shall receive such travel fees for attempted service only when in-hand personal service of process is effectuated. Such travel fees paid may be limited to three round trips, provided nothing in this section shall limit payment of a greater amount to an officer or person serving process.\n\n(3) Each officer or person who serves process to enforce the obligation of an attorney pursuant to subdivision (2) of subsection (a) of section 51-81d shall receive the fee set by the Department of Administrative Services for state employees for each mile of travel, subject to adjustment within thirty days of any revision to the federal General Services Administration mileage reimbursement rate, to be computed from the place where such officer or person received the process to the place of service, and thence to the place of return. If more than one process is served on one person at one time by any such officer or person, the total cost of travel for the service shall be the same as for the service of one process only.\n\n(4) Each officer or person who serves process shall also receive the moneys actually paid for town clerk's fees on the service of process.\n\n(5) Each officer or person who serves process shall also receive the moneys actually paid for fees for the disclosure or search of records of the Department of Motor Vehicles in connection with the service of process.\n\n(6) Any officer or person required to summon jurors by personal service of a warrant to attend court shall receive for the first ten miles of travel while so engaged, such mileage to be computed from the place where such officer or person receives the process to the place of service, twenty-five cents for each mile, and for each additional mile, ten cents.\n\n(7) For summoning any juror to attend court otherwise than by personal service of the warrant, such officer or person shall receive only the sum of fifty cents and actual disbursements necessarily expended by such officer or person in making service thereof as directed.\n\n(b) Notwithstanding the provisions of this section, for summoning grand jurors, such officer or person shall receive only such officer's or person's actual expenses and such reasonable sum for services as are taxed by the court.\n\n(c) The following fees shall be allowed and paid: (1) For taking bail or bail bond, one dollar; (2) for copies of writs and complaints, exclusive of endorsements, one dollar per page; (3) for endorsements, fifty cents per page or fraction thereof; (4) for service of a warrant for the seizure of intoxicating liquors, or for posting and leaving notices after the seizure, or for the destruction or delivery of any such liquors under order of court, one dollar; (5) for the removal and custody of such liquors so seized, reasonable expenses and one dollar; (6) for levying an execution, when the money is actually collected and paid over, or the debt secured by the officer to the acceptance of the creditor, fifteen per cent on the amount of the execution; (7) on the levy of an execution on real property and on application for sale of personal property attached, to each appraiser, for each half day of actual service, two dollars, to surveyors when necessarily employed, four dollars per day and to each chain bearer necessarily employed, two dollars per day, which sums, with those paid to the town clerk, shall be, by the officer levying the execution, endorsed thereon, together with such officer's own fees; (8) for causing an execution levied on real property to be recorded, fees for travel and fifty dollars; (9) for services on an application for the sale of personal property attached, or in selling mortgaged property foreclosed under a decree of court, the same fees as for similar services on executions; (10) for committing any person to a community correctional center, in civil actions, the fee set by the Department of Administrative Services for state employees for each mile of travel, from the place of the court to the community correctional center, in lieu of all other expenses; (11) for summoning and attending a jury for reassessing damages or benefits on a highway, three dollars a day; and (12) for any recording for which the recording fee is not otherwise prescribed by law, fifty dollars, costs and the fee set by the Department of Administrative Services for state employees for each mile of travel.\n\n(d) The court shall tax as costs a reasonable amount for the care of property held by any officer under attachment or execution. The officer serving any attachment or execution may claim compensation for time and expenses of any person, in keeping, securing or removing property taken thereon, provided such officer shall make out a bill. The bill shall specify the labor done and by whom, the time spent, the travel, the money paid, if any, and to whom and for what. The compensation for the services shall be fixed on the basis of two dollars per hour and the amount of expenses and shall be taxed by the court with the costs.\n\n(e) The following fees shall be allowed and paid, except to state employees in the classified service: (1) For each arrest in criminal cases, one dollar and fifty cents; (2) for any necessary assistants in making criminal arrests, a reasonable sum, the necessity of such assistance to be proved by the oath of the officer; (3) for travel with a prisoner to court or to a community correctional center, forty cents a mile, provided (A) if more than one prisoner is transported at the same time, the total cost of travel shall be forty cents per mile for each prisoner transported up to a maximum of two dollars per mile, regardless of the number of prisoners transported, and (B) if a prisoner is transported for commitment on more than one mittimus, the total cost of travel shall be the same as for the transportation of one prisoner committed on one mittimus only; (4) for holding a prisoner in custody upon criminal process for each twelve hours or fraction thereof, to be taxed as expenses in the case, one dollar; (5) for holding a prisoner in custody by order of court, one dollar a day; (6) for keepers, for every twelve hours, in lieu of all other expenses, except in special cases to be approved by the court, five dollars; (7) for executing a mittimus of commitment to the Connecticut Correctional Institution, Somers, for each prisoner, one dollar and fifty cents; (8) for transporting any prisoner from a community correctional center to the Connecticut Correctional Institution, Somers, or for transporting any person under commitment from a community correctional center to the John R. Manson Youth Institution, Cheshire, twenty-five cents a mile, to be taxed as expenses, provided, if more than one prisoner or person is transported, the total cost of travel shall be twenty-five cents per mile for each prisoner or person transported up to a maximum of one dollar per mile, regardless of the number of prisoners or persons transported; (9) for taking samples to a state chemist by order of court, two dollars, and for each mile of travel in going and returning, ten cents; and (10) for producing any prisoner, held by criminal process, in court or before a judge under habeas corpus proceedings, twenty-five cents a mile travel and two dollars and fifty cents a day for attendance, to be taxed and allowed by the court or judge.",
+      "href": "?chapter=901&section=section-52-261a",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-52-278f",
+      "citation": "52-278f",
+      "citations": [
+        "52-278f"
+      ],
+      "heading": "Sec. 52-278f. Issuance of prejudgment remedy when defendant in commercial transaction has waived notice and hearing.",
+      "chapter": {
+        "id": "chapter-903a",
+        "number": "903a",
+        "name": "Prejudgment Remedies"
+      },
+      "status": "active",
+      "text": "In an action upon a commercial transaction, as defined in section 52-278a, wherein the defendant has waived his right to a notice and hearing under sections 52-278a to 52-278g, inclusive, the attorney for the plaintiff shall issue the writ for a prejudgment remedy without securing a court order provided that (1) the complaint shall set forth a copy of the waiver; (2) the plaintiff shall file an affidavit sworn to by the plaintiff or any competent affiant setting forth a statement of facts sufficient to show that there is probable cause that a judgment in the amount of the prejudgment remedy sought, or in an amount greater than the amount of the prejudgment remedy sought, taking into account any known defenses, counterclaims or set-offs, will be rendered in the matter in favor of the plaintiff; (3) the plaintiff shall include in the process served on the defendant a notice satisfying the requirements of subsections (b) and (c) of section 52-278e; and (4) service of process of such complaint be returned to the court (A) within twelve days, inclusive, after the earlier of (i) service of process upon the defendant preventing the dissipation of property, or (ii) service of process upon any third person holding property of the defendant, and (B) at least six days before the return date.",
+      "href": "?chapter=903a&section=section-52-278f",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-52-350f",
+      "citation": "52-350f",
+      "citations": [
+        "52-350f"
+      ],
+      "heading": "Sec. 52-350f. Enforcement of money judgment. Costs, fees and interest. Enforcement of money judgment by foreclosure of real property lien; calculation of amount of judgment lien; forms re.",
+      "chapter": {
+        "id": "chapter-906",
+        "number": "906",
+        "name": "Postjudgment Procedures"
+      },
+      "status": "active",
+      "text": "(a) A money judgment may be enforced against any property of the judgment debtor unless the property is exempt from application to the satisfaction of the judgment under section 52-352a, 52-352b, 52-352d or 52-361a or any other provision of the general statutes or federal law. The money judgment may be enforced, by execution or by foreclosure of a real property lien, to the amount of the money judgment with (1) all statutory costs and fees as provided by the general statutes, (2) interest as provided by chapter 673 on the money judgment and on the costs incurred in obtaining the judgment, and (3) any attorney's fees allowed pursuant to section 52-400c.\n\n(b) In an action to enforce a money judgment by foreclosure of a real property lien, the amount of the judgment lien to attach to the property shall be calculated by taking the fair market value of the property, less any priority liens and the amount of any applicable exempt property under sections 52-352b and 52-352d. The Chief Court Administrator shall ensure that any form prescribed by the Judicial Branch relating to an action to enforce a money judgment by foreclosure of a real property lien, including, but not limited to, the foreclosure worksheet, includes the property that is not subject to debt collection under sections 52-352b and 52-352d.",
+      "href": "?chapter=906&section=section-52-350f",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-52-434",
+      "citation": "52-434",
+      "citations": [
+        "52-434"
+      ],
+      "heading": "Sec. 52-434. State referees.",
+      "chapter": {
+        "id": "chapter-910",
+        "number": "910",
+        "name": "Committees, Auditors and Referees"
+      },
+      "status": "active",
+      "text": "(a) Appointment of retired judges and members of the bar. Cases referred. (1) Each judge of the Supreme Court, each judge of the Appellate Court, each judge of the Superior Court and each judge of the Court of Common Pleas who ceases or has ceased to hold office because of retirement other than under the provisions of section 51-49 and who is an elector and a resident of this state shall be a state referee for the remainder of such judge's term of office as a judge and shall be eligible for appointment as a state referee during the remainder of such judge's life in the manner prescribed by law for the appointment of a judge of the court of which such judge is a member. The Superior Court may refer any civil, nonjury case or with the written consent of the parties or their attorneys, any civil jury case pending before the court in which the issues have been closed to a judge trial referee who shall have and exercise the powers of the Superior Court in respect to trial, judgment and appeal in the case, and any proceeding resulting from a demand for a trial de novo pursuant to subsection (e) of section 52-549z may be referred without the consent of the parties to a judge trial referee who has been specifically designated to hear such proceedings pursuant to subsection (b) of this section. The Superior Court may, with the consent of the parties or their attorneys, refer any criminal case to a judge trial referee who shall have and exercise the powers of the Superior Court in respect to trial, judgment, sentencing and appeal in the case, except that the Superior Court may, without the consent of the parties or their attorneys, (A) refer any criminal case, other than a criminal jury trial, to a judge trial referee assigned to a geographical area criminal court session, and (B) refer any criminal case, other than a class A or B felony or capital felony under the provisions of section 53a-54b in effect prior to April 25, 2012, to a judge trial referee to preside over the jury selection process and any voir dire examination conducted in such case, unless good cause is shown not to refer.\n\n(2) Each judge of the Circuit Court who has ceased to hold office because of retirement other than under the provisions of section 51-49 and who is an elector and a resident of this state shall be a state referee for the remainder of such judge's term of office as a judge and shall be eligible for appointment as a state referee during the remainder of such judge's life in the manner prescribed by law for the appointment of a judge of the court of which such judge is a member, to whom the Superior Court may, with the written consent of the parties or their attorneys, refer any case pending in court in which the issues have been closed and which the judges of the Superior Court may establish by rule to be the kind of case which may be heard by such referees who have been appointed judge trial referees pursuant to subsection (b) of this section. The judge trial referee shall hear any such case so referred and report the facts to the court by which the case was referred.\n\n(3) Each judge of the Juvenile Court who ceases or has ceased to hold office because of retirement other than under the provisions of section 51-49 and who is an elector and a resident of this state shall be a state referee for the remainder of such judge's term of office as a judge and shall be eligible for appointment as a state referee during the remainder of such judge's life in the manner prescribed by law for the appointment of a judge of the court of which such judge is a member, to whom a judge before whom any juvenile matter is pending may, with the written consent of the child concerned, either of such child's parents, or such child's guardian or attorney, refer any juvenile matter pending, provided such referee has been appointed a judge trial referee specifically designated to hear juvenile cases pursuant to subsection (b) of this section. The judge trial referee shall hear any matter so referred and report the facts to the court for the district from which the matter was referred.\n\n(4) In addition to the judge trial referees who are appointed pursuant to subdivision (1), (2) or (3) of this subsection, the Chief Justice may appoint, from qualified members of the bar of the state, who are electors and residents of this state, as many state referees as the Chief Justice may from time to time deem advisable or necessary. No appointment of a member of the bar may be for a term of more than three years. Notwithstanding the provisions of subsection (f) of this section, state referees appointed by the Chief Justice from members of the bar shall receive such reasonable compensation and expenses as may be determined by the Chief Justice. The Superior Court may appoint a state referee pursuant to this subdivision to take such evidence as it directs in any civil, nonjury case including, but not limited to, appeals under section 8-8. Any such state referee shall report on such evidence to the court with any findings of fact. The report shall constitute a part of the proceeding upon which the determination of the court shall be made.\n\n(b) Judge trial referees. The Chief Justice may designate, from among the state referees, judge trial referees to whom criminal and civil cases and juvenile matters may be referred. Criminal cases and civil cases of an adversary nature shall be referred only to state referees who are designated as judge trial referees, and proceedings resulting from a demand for a trial de novo pursuant to subsection (e) of section 52-549z shall be referred only to judge trial referees who are specifically designated to hear such proceedings. On or before October first of each year, the Chief Court Administrator shall publish the list of the judge trial referees specifically designated to hear such proceedings. Juvenile matters shall be referred only to judge trial referees who are specifically designated to hear juvenile cases. No designation pursuant to this subsection may be for a term of more than one year.\n\n(c) Hearing rooms. Each hearing by a judge trial referee shall be held in a suitable room, to be provided by the Office of the Chief Court Administrator, in a courthouse in the judicial district where the case is pending unless the parties or their attorneys stipulate in writing that the hearing may be held elsewhere.\n\n(d) Attendance of judicial marshal. Each judge trial referee may have the attendance of a judicial marshal at any hearing before such trial referee. The judicial marshal shall receive the same compensation provided for attendance at regular sessions of the court from which the case was referred and such compensation shall be taxed by the state referee in the same manner as similar costs are taxed by the judges of the court.\n\n(e) Attendance of witnesses. Contempt of power. Each judge trial referee may compel the attendance of any witness summoned to appear before such trial referee at any hearing, in the same manner as the attendance of any witness may be compelled in the Superior Court, and may punish for any act of contempt committed in such trial referee's presence while engaged in the hearing in the same manner and to the same extent as judges of the Superior Court.\n\n(f) Compensation. Each judge trial referee shall receive, for acting as a referee or as a single auditor or committee of any court or for performing duties assigned by the Chief Court Administrator with the approval of the Chief Justice, for each day the judge trial referee is so engaged, in addition to the retirement salary: (1) (A) On and after July 1, 2023, the sum of two hundred ninety-four dollars; (B) on and after July 1, 2024, the sum of three hundred two dollars; and (C) on and after July 1, 2025, the sum of three hundred twelve dollars; and (2) expenses, including mileage. Such amounts shall be taxed by the court making the reference in the same manner as other court expenses.",
+      "href": "?chapter=910&section=section-52-434",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-52-557b",
+      "citation": "52-557b",
+      "citations": [
+        "52-557b"
+      ],
+      "heading": "Sec. 52-557b. “Good samaritan law”. Immunity from liability for emergency medical assistance, first aid or administration of medication. Immunity from liability re automatic external defibrillators. School personnel not required to render emergency first aid or administer medication.",
+      "chapter": {
+        "id": "chapter-925",
+        "number": "925",
+        "name": "Statutory Rights of Action and Defenses"
+      },
+      "status": "active",
+      "text": "(a)(1) A person licensed to practice medicine and surgery under the provisions of chapter 370 or dentistry under the provisions of section 20-106 or members of the same professions licensed to practice in any other state of the United States, a person licensed as a registered nurse under section 20-93 or 20-94 or certified as a licensed practical nurse under section 20-96 or 20-97, a medical technician or any person operating a cardiopulmonary resuscitator or a person trained in cardiopulmonary resuscitation in accordance with the guidelines set forth by the American Red Cross or American Heart Association, or a person operating an automatic external defibrillator, who, voluntarily and gratuitously and other than in the ordinary course of such person's employment or practice, renders emergency medical or professional assistance to a person in need thereof, shall not be liable to such person assisted for civil damages for any personal injuries which result from acts or omissions by such person in rendering the emergency care, which may constitute ordinary negligence. A person or entity that provides or maintains an automatic external defibrillator shall not be liable for the acts or omissions of such person or entity in providing or maintaining the automatic external defibrillator, which may constitute ordinary negligence. A person or entity that provides or maintains an automatic external defibrillator in a cabinet, which also contains an opioid antagonist used to treat or prevent a drug overdose, shall not be liable for the acts or omissions of such person or entity in making available the opioid antagonist, which may constitute ordinary negligence. The immunity provided in this subsection does not apply to acts or omissions constituting gross, wilful or wanton negligence. With respect to the use of an automatic external defibrillator, the immunity provided in this subsection shall only apply to acts or omissions involving the use of an automatic external defibrillator in the rendering of emergency care, except a health club licensed pursuant to section 21a-223, shall not be held liable on and after October 1, 2022, for acts or omissions involving the nonuse of the automatic external defibrillator. Nothing in this subsection shall be construed to exempt paid or volunteer firefighters, police officers or emergency medical services personnel from completing training in cardiopulmonary resuscitation or in the use of an automatic external defibrillator in accordance with the guidelines set forth by the American Red Cross or American Heart Association. For the purposes of this subsection, “automatic external defibrillator” means a device that: (A) Is used to administer an electric shock through the chest wall to the heart; (B) contains internal decision-making electronics, microcomputers or special software that allows it to interpret physiologic signals, make medical diagnosis and, if necessary, apply therapy; (C) guides the user through the process of using the device by audible or visual prompts; and (D) does not require the user to employ any discretion or judgment in its use.\n\n(2) Notwithstanding the provisions of subdivision (1) of this subsection, a person licensed to practice medicine and surgery under the provisions of chapter 370 or dentistry under the provisions of section 20-106 or members of the same professions licensed to practice in any other state of the United States, or a person licensed as a registered nurse under section 20-93 or 20-94 or certified as a licensed practical nurse under section 20-96 or 20-97, who operates an automatic external defibrillator to render emergency medical or professional assistance to a person in need thereof shall not be liable to such person assisted for civil damages for any personal injuries which result from the malfunctioning of the automatic external defibrillator, which malfunctioning was not a result of such health care provider's negligence.\n\n(b) A paid or volunteer firefighter or police officer, a teacher or other school personnel on the school grounds or in the school building or at a school function, a member of a ski patrol, a lifeguard, a conservation officer, patrol officer or special police officer of the Department of Energy and Environmental Protection, or emergency medical service personnel, who (1) has completed a course in first aid offered by the American Red Cross, the American Heart Association, the National Ski Patrol, the Department of Public Health, any director of health or an organization using guidelines for first aid published by the American Heart Association and the American Red Cross, that is certified by the organization or director of health offering the course, and, (2) renders emergency first aid to a person in need thereof, shall not be liable to such person assisted for civil damages for any personal injuries which result from acts or omissions by such person in rendering the emergency first aid, which may constitute ordinary negligence. No paid or volunteer firefighter, police officer or emergency medical service personnel who forcibly enters the residence of any person in order to render emergency first aid to a person whom such firefighter, police officer or emergency medical service personnel reasonably believes to be in need thereof shall be liable to such person for civil damages incurred as a result of such entry. The immunity provided in this subsection does not apply to acts or omissions constituting gross, wilful or wanton negligence.\n\n(c) An employee of a railroad company, including any company operating a commuter rail line, who has successfully completed a course in first aid, offered by the American Red Cross, the American Heart Association, the National Ski Patrol, the Department of Public Health, any director of health or an organization using guidelines for first aid published by the American Heart Association and the American Red Cross, that is certified by the organization or director of health offering the course, and who renders emergency first aid or cardiopulmonary resuscitation to a person in need thereof, shall not be liable to such person assisted for civil damages for any personal injury or death which results from acts or omissions by such employee in rendering the emergency first aid or cardiopulmonary resuscitation which may constitute ordinary negligence. The immunity provided in this subsection does not apply to acts or omissions constituting gross, wilful or wanton negligence.\n\n(d) A railroad company, including any commuter rail line, which provides emergency medical training or equipment to any employee granted immunity pursuant to subsection (c) of this section shall not be liable for civil damages for any injury sustained by a person or for the death of a person which results from the company's acts or omissions in providing such training or equipment or which results from acts or omissions by such employee in rendering emergency first aid or cardiopulmonary resuscitation, which may constitute ordinary negligence. The immunity provided in this subsection does not apply to acts or omissions constituting gross, wilful or wanton negligence.\n\n(e) (1) For purposes of this subsection, “cartridge injector” means an automatic prefilled cartridge injector or similar automatic injectable equipment used to deliver epinephrine in a standard dose for emergency first aid response to allergic reactions.\n\n(2) Any volunteer worker associated with, or any person employed to work for, a program offered to children sixteen years of age or younger by a corporation, other than a licensed health care provider, that is exempt from federal income taxation under Section 501 of the Internal Revenue Code of 1986, or any subsequent corresponding internal revenue code of the United States, as from time to time amended, who (A) has been trained in the use of a cartridge injector by a licensed physician, physician assistant, advanced practice registered nurse or registered nurse, (B) has obtained the consent of a parent or legal guardian to use a cartridge injector on his or her child, and (C) uses a cartridge injector on such child in apparent need thereof participating in such program, shall not be liable to such child assisted or to such child's parent or guardian for civil damages for any personal injury or death which results from acts or omissions by such worker in using a cartridge injector which may constitute ordinary negligence. The immunity provided in this subsection does not apply to acts or omissions constituting gross, wilful or wanton negligence.\n\n(3) A corporation, other than a licensed health care provider, that is exempt from federal income taxation under Section 501 of the Internal Revenue Code of 1986, or any subsequent corresponding internal revenue code of the United States, as from time to time amended, which provides training in the use of cartridge injectors to any volunteer worker granted immunity pursuant to subdivision (2) of this subsection shall not be liable for civil damages for any injury sustained by, or for the death of, a child sixteen years of age or younger who is participating in a program offered by such corporation, which injury or death results from acts or omissions by such worker in using a cartridge injector, which may constitute ordinary negligence. The immunity provided in this subsection does not apply to acts or omissions constituting gross, wilful or wanton negligence.\n\n(f) A teacher or other school personnel, on the school grounds or in the school building or at a school function, who has completed both a course in first aid in accordance with subsection (b) of this section and a course given by the medical advisor of the school or by a licensed physician in the administration of medication, who renders emergency care by administration of medication to a person in need thereof, shall not be liable to the person assisted for civil damages for any injuries which result from acts or omissions by the person in rendering the emergency care of administration of medication, which may constitute ordinary negligence. The immunity provided in this subsection does not apply to acts or omissions constituting gross, wilful or wanton negligence.\n\n(g) The provisions of this section shall not be construed to require any teacher or other school personnel to render emergency first aid or administer medication.\n\n(h) Any person who has completed a course in first aid offered by the American Red Cross, the American Heart Association, the National Ski Patrol, the Department of Public Health, any director of health or by an organization using guidelines for first aid published by the American Heart Association and the American Red Cross, that is certified by the organization or director of health offering the course, or has been trained in the use of a cartridge injector by a licensed physician, physician assistant, advanced practice registered nurse or registered nurse, and who, voluntarily and gratuitously and other than in the ordinary course of such person's employment or practice, renders emergency assistance by using a cartridge injector on another person in need thereof, or any person who is an identified staff member of a before or after school program, day camp or child care facility, as defined in section 19a-900, and who renders emergency assistance by administering epinephrine on another person in need thereof, shall not be liable to such person assisted for civil damages for any personal injuries which result from acts or omissions by such person in using a cartridge injector or administering epinephrine, which may constitute ordinary negligence. The immunity provided in this subsection does not apply to acts or omissions constituting gross, wilful or wanton negligence. For the purposes of this subsection, “cartridge injector” has the same meaning as provided in subdivision (1) of subsection (e) of this section and “epinephrine” means an automatic prefilled cartridge injector or similar automatic injectable equipment, nasal spray or any other medical equipment approved by the United States Food and Drug Administration that is used to deliver epinephrine in a standard dose for an emergency first aid response to allergic reactions.\n\n(i) A school bus driver, on or in the immediate vicinity of a school bus during the provision of school transportation services, who renders emergency care by administration of epinephrine to a student in need thereof who has a medically diagnosed allergic condition that may require prompt treatment in order to protect the student against serious harm or death, shall not be liable to the student assisted for civil damages for any injuries which result from acts or omissions by the school bus driver in rendering the emergency care of administration of epinephrine, which may constitute ordinary negligence. The immunity provided in this subsection does not apply to acts or omissions constituting gross, wilful or wanton negligence. For the purposes of this subsection, “epinephrine” has the same meaning as provided in subsection (h) of this section.",
+      "href": "?chapter=925&section=section-52-557b",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-52-557v",
+      "citation": "52-557v",
+      "citations": [
+        "52-557v"
+      ],
+      "heading": "Sec. 52-557v. Immunity from liability of the state, political subdivisions and employees for emergency administration of epinephrine.",
+      "chapter": {
+        "id": "chapter-925",
+        "number": "925",
+        "name": "Statutory Rights of Action and Defenses"
+      },
+      "status": "active",
+      "text": "(a) A person (1) employed to work for the state or any political subdivision thereof that has acquired and maintains a supply of epinephrine, as defined in section 19a-909, (2) who is trained in the use of epinephrine in accordance with subdivision (2) of subsection (a) of section 19a-909, and (3) provides or administers epinephrine to an individual whom the person believes in good faith is experiencing anaphylaxis during the course of such person's employment, shall not be liable to such individual for civil damages or subject to criminal prosecution for any personal injuries that result from acts or omissions by such person in using epinephrine, which may constitute ordinary negligence. The immunity provided in this subsection shall not apply to wilful or wanton misconduct or acts or omissions constituting gross negligence.\n\n(b) The state or any political subdivision thereof that (1) has acquired and maintains a supply of epinephrine, and (2) employs a person who (A) is trained in the use of epinephrine in accordance with subdivision (2) of subsection (a) of section 19a-909, and (B) provides or administers epinephrine to an individual whom the person believes in good faith is experiencing anaphylaxis during the course of such person's employment, shall not be liable to such individual for civil damages for any personal injuries that result from acts or omissions by such person in using epinephrine, which may constitute ordinary negligence. The immunity provided in this subsection shall not apply to wilful or wanton misconduct or acts or omissions constituting gross negligence.",
+      "href": "?chapter=925&section=section-52-557v",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-52-557w",
+      "citation": "52-557w",
+      "citations": [
+        "52-557w"
+      ],
+      "heading": "Sec. 52-557w. Assumption of risk by person camping at private campground. Exceptions. Written contract re.",
+      "chapter": {
+        "id": "chapter-925",
+        "number": "925",
+        "name": "Statutory Rights of Action and Defenses"
+      },
+      "status": "active",
+      "text": "(a) As used in this section:\n\n(1) “Camper” means any person who uses a private campground for the purpose of camping or recreational vehicle camping;\n\n(2) “Camping” means all aspects of visiting, staying at, using and leaving a private campground, including the use of lodging of all types while at a private campground; and\n\n(3) “Private campground” means any parcel or tract of land, including buildings and other structures on such land, that is owned or operated by a private property owner where five or more campsites are made available for use as temporary living quarters for recreational camping, travel or seasonal use. “Private campground” includes recreational vehicle parks operated by a private property owner.\n\n(b) Each camper shall assume the risk for any injury to their person arising out of the hazards inherent in camping.\n\n(c) Nothing in subsection (b) of this section shall prevent suit or limit the liability of a private campground owner or operator who in the operation of the private campground: (1) Commits an act or omission that constitutes negligence; (2) intentionally causes the injury of another person; (3) acts with a disregard for the safety of the person injured; (4) fails to use a degree of care that an ordinarily careful prudent person would use under similar circumstances; or (5) fails to conspicuously post warning signs of a condition known to be dangerous at the private campground.\n\n(d) Any written contract between a private campground owner and a camper, or an employee or officer of a private campground owner and a camper, shall contain in clearly readable print, a warning notice stating that each camper shall assume the risk for any injury to their person arising out of the hazards inherent in camping.",
+      "href": "?chapter=925&section=section-52-557w",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-52-570g",
+      "citation": "52-570g",
+      "citations": [
+        "52-570g"
+      ],
+      "heading": "Sec. 52-570g. Action in tort brought against an estate.",
+      "chapter": {
+        "id": "chapter-925",
+        "number": "925",
+        "name": "Statutory Rights of Action and Defenses"
+      },
+      "status": "active",
+      "text": "Notwithstanding the requirements of chapter 802b, a claim in tort, to the extent that it is within existing insurance coverage for such tort, brought in Superior Court against an estate, shall not be dismissed for lack of subject matter jurisdiction. Nothing in this section shall allow for recovery beyond the insurance limits for such tort against the estate, nor allow for recovery from the fiduciary, the estate of the decedent or any creditor or beneficiary of the estate and recovery shall be limited to the insurance policy in effect at the time of the tort unless the creditor has otherwise complied with making a claim under chapter 802b.",
+      "href": "?chapter=925&section=section-52-570g",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-52-571m",
+      "citation": "52-571m",
+      "citations": [
+        "52-571m"
+      ],
+      "heading": "Sec. 52-571m. Action to recover damages for judgment entered against a person where liability is based on alleged provision, receipt or assistance in provision or receipt of reproductive health care services or gender-affirming health care services. Definitions. Exceptions.",
+      "chapter": {
+        "id": "chapter-925",
+        "number": "925",
+        "name": "Statutory Rights of Action and Defenses"
+      },
+      "status": "active",
+      "text": "(a) As used in this section:\n\n(1) “Reproductive health care services” includes all medical, surgical, counseling or referral services relating to the human reproductive system, including, but not limited to, services relating to pregnancy, assisted reproduction, contraception or the termination of a pregnancy;\n\n(2) “Gender-affirming health care services” means all supplies, care and services of a medical, behavioral health, mental health, surgical, psychiatric, therapeutic, diagnostic, preventative, rehabilitative or supportive nature, including medication relating to the treatment of gender dysphoria and gender incongruence. “Gender-affirming health care services” does not include “conversion therapy” as defined in section 19a-907; and\n\n(3) “Person” includes an individual, a partnership, an association, a limited liability company or a corporation.\n\n(b) When any person has had a judgment entered against such person, in any state, where liability, in whole or in part, is based on the alleged provision, receipt, assistance in receipt or provision, material support for, or any theory of vicarious, joint, several or conspiracy liability derived therefrom, for reproductive health care services or gender-affirming health care services that are permitted under the laws of this state, such person may recover damages from any party that brought the action leading to that judgment or has sought to enforce that judgment. Recoverable damages shall include: (1) Just damages created by the action that led to that judgment, including, but not limited to, money damages in the amount of the judgment in that other state and costs, expenses and reasonable attorney's fees spent in defending the action that resulted in the entry of a judgment in another state; and (2) costs, expenses and reasonable attorney's fees incurred in bringing an action under this section as may be allowed by the court.\n\n(c) The provisions of this section shall not apply to a judgment entered in another state that is based on: (1) An action founded in tort, contract or statute, and for which a similar claim would exist under the laws of this state, brought by the patient who received the reproductive health care services or gender-affirming health care services upon which the original lawsuit was based or the patient's authorized legal representative, for damages suffered by the patient or damages derived from an individual's loss of consortium of the patient; (2) an action founded in contract, and for which a similar claim would exist under the laws of this state, brought or sought to be enforced by a party with a contractual relationship with the person that is the subject of the judgment entered in another state; or (3) an action where no part of the acts that formed the basis for liability occurred in this state.",
+      "href": "?chapter=925&section=section-52-571m",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-52-571n",
+      "citation": "52-571n",
+      "citations": [
+        "52-571n"
+      ],
+      "heading": "Sec. 52-571n. Action to recover damages for judgment entered against a person where liability is based on alleged provision, receipt or assistance in provision or receipt of gender-affirming health care services or reproductive health care services. Definitions. Exceptions.",
+      "chapter": {
+        "id": "chapter-925",
+        "number": "925",
+        "name": "Statutory Rights of Action and Defenses"
+      },
+      "status": "repealed",
+      "text": "Section 52-571n is repealed, effective July 1, 2025.",
+      "href": "?chapter=925&section=section-52-571n",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "repealed"
+      }
+    },
+    {
+      "id": "section-52-571o",
+      "citation": "52-571o",
+      "citations": [
+        "52-571o"
+      ],
+      "heading": "Sec. 52-571o. Definitions.",
+      "chapter": {
+        "id": "chapter-925",
+        "number": "925",
+        "name": "Statutory Rights of Action and Defenses"
+      },
+      "status": "active",
+      "text": "As used in this section and sections 52-571p and 52-571q:\n\n(1) “Firearm industry member” means a person, firm, corporation, company, partnership, society, joint stock company, trade association, or any other entity or association engaged in the manufacture, distribution, importation, marketing, wholesale or retail sale of firearm industry products.\n\n(2) “Firearm industry product” means any of the following which are or were (A) sold, made or distributed in this state; or (B) possessed in this state and it was known by the firearm industry member that such product would be sold, made, distributed or possessed in this state:\n\n(i) Ammunition or a magazine as those terms are defined in section 29-38m;\n\n(ii) A firearm as defined in section 53a-3;\n\n(iii) An unfinished frame or lower receiver as defined in section 53-206j; or\n\n(iv) A rate of firearm enhancement as defined in section 53-206g.\n\n(3) “Firearm trafficker” means an individual who engages in, conspires to engage in, or attempts to engage in conduct that constitutes firearms trafficking as described in section 53-202aa or trafficking in firearms as described in 18 USC 933.\n\n(4) “Reasonable controls” means procedures, acts and practices that are designed, implemented and enforced to do all of the following:\n\n(A) Prevent the sale or distribution in this state of a firearm industry product to a straw purchaser, a firearm trafficker, a person prohibited from possessing a firearm under state or federal law, or a person about whom a firearm industry member has reasonable cause to believe such person is at substantial risk of using a firearm industry product to harm themself or another or of possessing or using a firearm industry product unlawfully.\n\n(B) Ensure compliance with sections 29-28, 29-36f, 29-37p and 29-38n, as applicable.\n\n(C) Prevent the sale or distribution in this state of a firearm industry product that is designed in a manner that is reasonably foreseeable to promote conversion of a legal firearm industry product into an illegal firearm industry product.\n\n(D) Ensure compliance with section 52-571p.\n\n(5) “Straw purchaser” means an individual who engages in or attempts to engage in conduct that violates subsection (a) of section 29-34, section 29-37e or 18 USC 932.",
+      "href": "?chapter=925&section=section-52-571o",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-52-571p",
+      "citation": "52-571p",
+      "citations": [
+        "52-571p"
+      ],
+      "heading": "Sec. 52-571p. Responsibilities of firearm industry member. Prohibited acts.",
+      "chapter": {
+        "id": "chapter-925",
+        "number": "925",
+        "name": "Statutory Rights of Action and Defenses"
+      },
+      "status": "active",
+      "text": "(a) A firearm industry member shall establish, implement and enforce reasonable controls.\n\n(b) No firearm industry member shall provide a firearm industry product to another firearm industry member when the firearm industry member has reasonable cause to believe that such other firearm industry member is engaged in conduct that is in violation of this section.\n\n(c) No firearm industry member shall purposely and knowingly direct its advertising, marketing or promotions of firearm industry products in this state in a manner that it knows would promote unlawful sales, promote unlawful use or promote unreasonable risk to public safety.\n\n(d) No firearm industry member shall knowingly violate state or federal law relating to the manufacture, distribution, importation, marketing, wholesale or retail sale of firearm industry products.",
+      "href": "?chapter=925&section=section-52-571p",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-52-571q",
+      "citation": "52-571q",
+      "citations": [
+        "52-571q"
+      ],
+      "heading": "Sec. 52-571q. Action based on act or omission by firearm industry member.",
+      "chapter": {
+        "id": "chapter-925",
+        "number": "925",
+        "name": "Statutory Rights of Action and Defenses"
+      },
+      "status": "active",
+      "text": "(a) An act or omission by a firearm industry member that fails to comply with any provision of section 52-571p constitutes a violation of said section and shall be actionable under this section.\n\n(b) Such action may be brought in the superior court for the judicial district where the act, omission or harm is alleged to have occurred by:\n\n(1) A person who has suffered harm in this state because of a firearm industry member's violation of section 52-571p;\n\n(2) The corporation counsel or other chief legal officer of a municipality in the name of the municipality; or\n\n(3) The Attorney General in the name of the state.\n\n(c) Any person bringing an action pursuant to subdivision (1) or (2) of subsection (b) of this section shall provide notice of such action to the Attorney General not later than thirty days after the date of filing such action.\n\n(d) If a court determines that a firearm industry member has violated any provision of section 52-571p, the court may award any or all of the following:\n\n(1) Injunctive relief sufficient to prevent the firearm industry member and any other defendant from further violating the law.\n\n(2) Compensatory damages.\n\n(3) Punitive damages.\n\n(4) Restitution.\n\n(5) Costs and reasonable attorney's fees.\n\n(6) Any other appropriate relief necessary to enforce the provisions of chapter 529 and remedy the harm caused by the conduct.",
+      "href": "?chapter=925&section=section-52-571q",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "group-52-571r-to-52-571s-to-52-571t-to-52-571u-to-52-571v-to-52-571w-to-52-571x-to-52-571y-to-52-571z",
+      "citation": null,
+      "citations": [
+        "52-571r",
+        "52-571s",
+        "52-571t",
+        "52-571u",
+        "52-571v",
+        "52-571w",
+        "52-571x",
+        "52-571y",
+        "52-571z"
+      ],
+      "heading": "Secs. 52-571r, 52-571s, 52-571t, 52-571u, 52-571v, 52-571w, 52-571x, 52-571y and 52-571z. Reserved for future use.",
+      "chapter": {
+        "id": "chapter-925",
+        "number": "925",
+        "name": "Statutory Rights of Action and Defenses"
+      },
+      "status": "reserved",
+      "text": "Reserved for future use.",
+      "href": "?chapter=925&section=group-52-571r-to-52-571s-to-52-571t-to-52-571u-to-52-571v-to-52-571w-to-52-571x-to-52-571y-to-52-571z"
+    },
+    {
+      "id": "section-52-572w",
+      "citation": "52-572w",
+      "citations": [
+        "52-572w"
+      ],
+      "heading": "Sec. 52-572w. Agreement exempting caterer or catering establishment from liability for negligence void as against public policy.",
+      "chapter": {
+        "id": "chapter-925",
+        "number": "925",
+        "name": "Statutory Rights of Action and Defenses"
+      },
+      "status": "active",
+      "text": "(a) Any covenant, agreement or understanding in, in connection with or collateral to any contract or agreement made or entered into with any caterer or catering establishment, as defined in subsection (a) of section 30-22b, that exempts such caterer or catering establishment from liability for damages for bodily injury to persons or damage to property caused by or resulting from the negligence of the caterer or catering establishment, the agents, servants or employees of such caterer or catering establishment or the patrons at the event to which such contract or agreement pertains is against public policy and void.\n\n(b) The provisions of this section shall apply to any covenant, agreement or understanding made or entered into on or after January 1, 2001.",
+      "href": "?chapter=925&section=section-52-572w",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-52-592",
+      "citation": "52-592",
+      "citations": [
+        "52-592"
+      ],
+      "heading": "Sec. 52-592. Accidental failure of suit; allowance of new action.",
+      "chapter": {
+        "id": "chapter-926",
+        "number": "926",
+        "name": "Statute of Limitations"
+      },
+      "status": "active",
+      "text": "(a) If any action, commenced within the time limited by law, has failed one or more times to be tried on its merits because of insufficient service or return of the writ due to unavoidable accident or the default or neglect of the officer to whom it was committed, or because the action has been dismissed for want of jurisdiction, or the action has been otherwise avoided or defeated by the death of a party or for any matter of form; or if, in any such action after a verdict for the plaintiff, the judgment has been set aside, or if a judgment of nonsuit has been rendered or a judgment for the plaintiff reversed, the plaintiff, or, if the plaintiff is dead and the action by law survives, his executor or administrator, may commence a new action, except as provided in subsection (b) of this section, for the same cause at any time within one year after the determination of the original action or after the reversal of the judgment. For purposes of this section, receipt in the underlying action of the summons and complaint by the defendant or the defendant's agent or representative, including the defendant's purported insurer alleged to be obligated to defend the action, shall be a sufficient, but not exclusive means to constitute commencement of the action.\n\n(b) When any action has been brought against an executor or administrator or continued against an executor or administrator after the death of the defendant and has failed for any of the causes listed in subsection (a) of this section, the plaintiff, or his executor or administrator in case a cause of action survives, may commence a new action within six months after the determination of the original action.\n\n(c) If an appeal is had from any such judgment to the Supreme Court or Appellate Court, the time the case is pending upon appeal shall be excluded in computing the time as above limited.\n\n(d) The provisions of this section shall apply to any defendant who files a cross complaint in any action, and to any action between the same parties or the legal representatives of either of them for the same cause of action or subject of action brought to any court in this state, either before dismissal of the original action and its affirmance or within one year after the dismissal and affirmance, and to any action brought to the United States circuit or district court for the district of Connecticut which has been dismissed without trial upon its merits or because of lack of jurisdiction in such court. If such action is within the jurisdiction of any state court, the time for bringing the action to the state court shall commence from the date of dismissal in the United States court, or, if an appeal or writ of error has been taken from the dismissal, from the final determination of the appeal or writ of error.\n\n(e) The provisions of this section shall apply to any claim against the state for which a notice of claim has been properly and timely filed with the Office of the Claims Commissioner in accordance with sections 4-147 and 4-148 and which thereafter has been dismissed by the Office of the Claims Commissioner pursuant to section 4-142.\n\n(f) Nothing in this section shall be construed to (1) designate an insurer as a general or statutory agent for service of process on behalf of the purported insured, (2) affect the requirements of formal service under the applicable procedural provisions of the general statutes or rules of the court, (3) obligate the insurer to serve any complaint, or other legal action, upon the purported insured, (4) alleviate the plaintiff's obligation to properly serve process upon the purported insured within the timeframes prescribed in this section, or (5) be relevant to whether a duty to defend or indemnity coverage may be owed by the served insurer to the purported insured, nor shall any action taken or not taken by the served insurer be deemed an admission or in any way relevant to the issue of whether a duty to defend or indemnity coverage may be owed. The provisions of this section shall apply solely to the question of whether an action was timely commenced for purposes of this savings provision of the general statutes.",
+      "href": "?chapter=926&section=section-52-592",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-52-593a",
+      "citation": "52-593a",
+      "citations": [
+        "52-593a"
+      ],
+      "heading": "Sec. 52-593a. Action not lost where process served after expiration of limitation period.",
+      "chapter": {
+        "id": "chapter-926",
+        "number": "926",
+        "name": "Statute of Limitations"
+      },
+      "status": "active",
+      "text": "(a) Except in the case of an appeal from an administrative agency governed by section 4-183, a cause or right of action shall not be lost because of the passage of the time limited by law within which the action may be brought, if the process to be served is personally delivered to a state marshal, constable or other proper officer within such time and the process is served, as provided by law, within thirty days of the delivery. As used in this subsection, “process to be served” means the original process printed on paper and personally signed in ink by the issuing authority, along with sufficient copies for service.\n\n(b) In any such case, the officer making service shall endorse under oath on such officer's return the date of delivery of the process to such officer for service in accordance with this section.",
+      "href": "?chapter=926&section=section-52-593a",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-52-625",
+      "citation": "52-625",
+      "citations": [
+        "52-625"
+      ],
+      "heading": "Sec. 52-625. Disqualification from appointment as receiver; disclosure of interest.",
+      "chapter": {
+        "id": "chapter-930",
+        "number": "930",
+        "name": "Uniform Commercial Real Estate Receivership Act"
+      },
+      "status": "active",
+      "text": "(a) The court may not appoint a person as receiver unless the person submits to the court a statement under penalty of perjury that the person is not disqualified.\n\n(b) Except as provided in subsection (c) of this section, a person is disqualified from appointment as receiver if the person:\n\n(1) Is an affiliate of a party;\n\n(2) Has an interest materially adverse to an interest of a party;\n\n(3) Has a material financial interest in the outcome of the action, other than compensation the court may allow the receiver;\n\n(4) Has a debtor-creditor relationship with a party; or\n\n(5) Holds an equity interest in a party, other than a noncontrolling interest in a publicly traded company.\n\n(c) A person is not disqualified from appointment as receiver solely because the person:\n\n(1) Was appointed receiver or is owed compensation in an unrelated matter involving a party or was engaged by a party in a matter unrelated to the receivership;\n\n(2) Is an individual obligated to a party on a debt that is not in default and was incurred primarily for personal, family or household purposes; or\n\n(3) Maintains with a party a deposit account, as defined in section 42a-9-102.\n\n(d) A person seeking appointment of a receiver may nominate a person to serve as receiver, but the court is not bound by the nomination.",
+      "href": "?chapter=930&section=section-52-625",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-52-670",
+      "citation": "52-670",
+      "citations": [
+        "52-670"
+      ],
+      "heading": "Sec. 52-670. Short title: Connecticut Uniform Mediation Act.",
+      "chapter": {
+        "id": "chapter-932",
+        "number": "932",
+        "name": "Connecticut Uniform Mediation Act"
+      },
+      "status": "active",
+      "text": "Sections 52-670 to 52-685, inclusive, may be cited as the “Connecticut Uniform Mediation Act”.",
+      "href": "?chapter=932&section=section-52-670",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-52-671",
+      "citation": "52-671",
+      "citations": [
+        "52-671"
+      ],
+      "heading": "Sec. 52-671. Definitions.",
+      "chapter": {
+        "id": "chapter-932",
+        "number": "932",
+        "name": "Connecticut Uniform Mediation Act"
+      },
+      "status": "active",
+      "text": "As used in sections 52-670 to 52-685, inclusive:\n\n(1) “Mediation” means a process in which a mediator facilitates communication and negotiation between parties to assist them in reaching a voluntary agreement regarding their dispute.\n\n(2) “Mediation communication” means a statement, whether oral or in a record or verbal or nonverbal, that occurs during a mediation or is made for purposes of considering, conducting, participating in, initiating, continuing or reconvening a mediation or retaining a mediator.\n\n(3) “Mediator” means an individual who conducts a mediation.\n\n(4) “Nonparty participant” means a person, other than a party or mediator, that participates in a mediation.\n\n(5) “Mediation party” means a person that participates in a mediation and whose agreement is necessary to resolve the dispute.\n\n(6) “Person” means an individual, corporation, business trust, estate, trust, partnership, limited liability company, association, joint venture, government; governmental subdivision, agency, or instrumentality; public corporation or any other legal or commercial entity.\n\n(7) “Proceeding” means:\n\n(A) A judicial, administrative, arbitral or other adjudicative process, including related prehearing and posthearing motions, conferences and discovery; or\n\n(B) A legislative hearing or similar process.\n\n(8) “Record” means information that is inscribed on a tangible medium or that is stored in an electronic or other medium and is retrievable in perceivable form.\n\n(9) “Sign” means:\n\n(A) To execute or adopt a tangible symbol with the present intent to authenticate a record; or\n\n(B) To attach or logically associate an electronic symbol, sound or process to or with a record with the present intent to authenticate a record.",
+      "href": "?chapter=932&section=section-52-671",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-52-672",
+      "citation": "52-672",
+      "citations": [
+        "52-672"
+      ],
+      "heading": "Sec. 52-672. Scope. Exclusions.",
+      "chapter": {
+        "id": "chapter-932",
+        "number": "932",
+        "name": "Connecticut Uniform Mediation Act"
+      },
+      "status": "active",
+      "text": "(a) Except as otherwise provided in subsection (b) or (c) of this section and section 52-681, sections 52-670 to 52-685, inclusive, apply to a mediation in which:\n\n(1) The mediation parties are required to mediate by statute or court or administrative agency rule or referred to mediation by a court, administrative agency or arbitrator;\n\n(2) The mediation parties and the mediator agree to mediate in a record that demonstrates an expectation that mediation communications will be privileged against disclosure; or\n\n(3) The mediation parties use as a mediator an individual who holds himself or herself out as a mediator or the mediation is provided by a person that holds itself out as providing mediation.\n\n(b) Sections 52-670 to 52-685, inclusive, do not apply to a mediation:\n\n(1) Relating to the establishment, negotiation, administration or termination of a collective bargaining relationship;\n\n(2) Relating to a dispute that is pending under or is part of the processes established by a collective bargaining agreement, except that sections 52-670 to 52-685, inclusive, apply to a mediation arising out of a dispute that has been filed with an administrative agency or a court;\n\n(3) Conducted by a judge of the Superior Court or by any Judicial Branch employee who performs mediations in the course of such employee's employment;\n\n(4) Arising from a proceeding governed by chapter 48, 68, 113 or 166;\n\n(5) Commenced prior to October 1, 2025, which is subject to the provisions of section 52-235d;\n\n(6) Commenced prior to October 1, 2025, which is administered under the auspices of section 46b-53a; or\n\n(7) Conducted under the auspices of:\n\n(A) A primary or secondary school if all the parties are students; or\n\n(B) A correctional institution for youths if all the parties are residents of the institution.\n\n(c) If the parties agree in advance in a signed record, or a record of proceeding reflects agreement by the parties, that all or part of a mediation is not privileged, the privileges under sections 52-673 to 52-675, inclusive, do not apply to the mediation or part agreed upon, except that sections 52-673 to 52-675, inclusive, apply to a mediation communication made by a person that has not received actual notice of the agreement before the communication is made.",
+      "href": "?chapter=932&section=section-52-672",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-52-673",
+      "citation": "52-673",
+      "citations": [
+        "52-673"
+      ],
+      "heading": "Sec. 52-673. Privilege against disclosure; admissibility; discovery.",
+      "chapter": {
+        "id": "chapter-932",
+        "number": "932",
+        "name": "Connecticut Uniform Mediation Act"
+      },
+      "status": "active",
+      "text": "(a) Except as otherwise provided in section 52-675, a mediation communication is privileged as provided in subsection (b) of this section and is not subject to discovery or admissible in evidence in a proceeding unless waived or precluded as provided by section 52-674.\n\n(b) In a proceeding, the following privileges apply:\n\n(1) A mediation party may refuse to disclose, and may prevent any other person from disclosing, a mediation communication.\n\n(2) A mediator may refuse to disclose a mediation communication, and may prevent any other person from disclosing a mediation communication of the mediator.\n\n(3) A nonparty participant may refuse to disclose, and may prevent any other person from disclosing, a mediation communication of the nonparty participant.\n\n(c) Evidence or information that is otherwise admissible or subject to discovery does not become inadmissible or protected from discovery solely by reason of its disclosure or use in a mediation.",
+      "href": "?chapter=932&section=section-52-673",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-52-674",
+      "citation": "52-674",
+      "citations": [
+        "52-674"
+      ],
+      "heading": "Sec. 52-674. Waiver and preclusion of privilege.",
+      "chapter": {
+        "id": "chapter-932",
+        "number": "932",
+        "name": "Connecticut Uniform Mediation Act"
+      },
+      "status": "active",
+      "text": "(a) A privilege under section 52-673 may be waived in a record or orally during a proceeding if it is expressly waived by all parties to the mediation and:\n\n(1) In the case of the privilege of a mediator, it is expressly waived by the mediator; and\n\n(2) In the case of the privilege of a nonparty participant, it is expressly waived by the nonparty participant.\n\n(b) A person that discloses or makes a representation about a mediation communication which prejudices another person in a proceeding is precluded from asserting a privilege under section 52-673, but only to the extent necessary for the person prejudiced to respond to the representation or disclosure.\n\n(c) A person that intentionally uses a mediation to plan, attempt to commit or commit a crime, or to conceal an ongoing crime or ongoing criminal activity is precluded from asserting a privilege under section 52-673.",
+      "href": "?chapter=932&section=section-52-674",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-52-675",
+      "citation": "52-675",
+      "citations": [
+        "52-675"
+      ],
+      "heading": "Sec. 52-675. Exceptions to privilege.",
+      "chapter": {
+        "id": "chapter-932",
+        "number": "932",
+        "name": "Connecticut Uniform Mediation Act"
+      },
+      "status": "active",
+      "text": "(a) There is no privilege under section 52-673 for a mediation communication that is:\n\n(1) In an agreement evidenced by a record signed by all parties to the agreement;\n\n(2) Available to the public under the Freedom of Information Act, as defined in section 1-200, or made during a session of a mediation which is open, or is required by law to be open, to the public;\n\n(3) A threat or statement of a plan to inflict bodily injury or commit a crime of violence;\n\n(4) Intentionally used to plan a crime, attempt to commit or commit a crime, or to conceal an ongoing crime or ongoing criminal activity;\n\n(5) Sought or offered to prove or disprove a claim or complaint of professional misconduct or malpractice filed against a mediator;\n\n(6) Except as otherwise provided in subsection (c) of this section, sought or offered to prove or disprove a claim or complaint of professional misconduct or malpractice filed against a mediation party, nonparty participant, or representative of a party based on conduct occurring during a mediation; or\n\n(7) Sought or offered to prove or disprove abuse, neglect, abandonment or exploitation in a proceeding in which a child or adult protective services agency is a party, unless the proceeding is referred by a court to mediation and the child or adult protective services agency participates in the mediation.\n\n(b) There is no privilege under section 52-673 if a court, administrative agency or arbitrator finds, after a hearing in camera, that the party seeking discovery or the proponent of the evidence has shown that the evidence is not otherwise available, that there is a need for the evidence that substantially outweighs the interest in protecting confidentiality, and that the mediation communication is sought or offered in:\n\n(1) A court proceeding involving a felony or misdemeanor; or\n\n(2) Except as otherwise provided in subsection (c) of this section, a proceeding to prove a claim to rescind or reform or a defense to avoid liability on a contract arising out of the mediation.\n\n(c) A mediator may not be compelled to provide evidence of a mediation communication referred to in subdivision (6) of subsection (a) of this section or subdivision (2) of subsection (b) of this section.\n\n(d) If a mediation communication is not privileged under subsection (a) or (b) of this section, only the portion of the communication necessary for the application of the exception from nondisclosure may be admitted. Admission of evidence under subsection (a) or (b) of this section does not render the evidence, or any other mediation communication, discoverable or admissible for any other purpose.",
+      "href": "?chapter=932&section=section-52-675",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-52-676",
+      "citation": "52-676",
+      "citations": [
+        "52-676"
+      ],
+      "heading": "Sec. 52-676. Prohibited mediator reports.",
+      "chapter": {
+        "id": "chapter-932",
+        "number": "932",
+        "name": "Connecticut Uniform Mediation Act"
+      },
+      "status": "active",
+      "text": "(a) Except as required in subsection (b) of this section, a mediator may not make a report, assessment, evaluation, recommendation, finding or other communication regarding a mediation to a court, administrative agency or other authority that may make a ruling on the dispute that is the subject of the mediation.\n\n(b) A mediator may disclose:\n\n(1) Whether the mediation occurred or has terminated, whether a settlement was reached, and attendance;\n\n(2) A mediation communication as permitted under section 52-675; or\n\n(3) A mediation communication evidencing abuse, neglect, abandonment or exploitation of an individual to a public agency responsible for protecting individuals against such mistreatment.\n\n(c) A communication made in violation of subsection (a) of this section may not be considered by a court, administrative agency or arbitrator.",
+      "href": "?chapter=932&section=section-52-676",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-52-677",
+      "citation": "52-677",
+      "citations": [
+        "52-677"
+      ],
+      "heading": "Sec. 52-677. Confidentiality.",
+      "chapter": {
+        "id": "chapter-932",
+        "number": "932",
+        "name": "Connecticut Uniform Mediation Act"
+      },
+      "status": "active",
+      "text": "Unless subject to the Freedom of Information Act, as defined in section 1-200, mediation communications are confidential to the extent agreed by the parties or provided by other law or rule of this state.",
+      "href": "?chapter=932&section=section-52-677",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-52-678",
+      "citation": "52-678",
+      "citations": [
+        "52-678"
+      ],
+      "heading": "Sec. 52-678. Mediator's disclosure of conflicts of interest; background.",
+      "chapter": {
+        "id": "chapter-932",
+        "number": "932",
+        "name": "Connecticut Uniform Mediation Act"
+      },
+      "status": "active",
+      "text": "(a) Before accepting a mediation, an individual who is requested to serve as a mediator shall:\n\n(1) Make an inquiry that is reasonable under the circumstances to determine whether there are any known facts that a reasonable individual would consider likely to affect the impartiality of the mediator, including a financial or personal interest in the outcome of the mediation and an existing or past relationship with a mediation party or foreseeable participant in the mediation; and\n\n(2) Disclose any such known fact to the mediation parties as soon as is practical before accepting a mediation.\n\n(b) If a mediator learns any fact described in subdivision (1) of subsection (a) of this section after accepting a mediation, the mediator shall disclose it as soon as is practicable.\n\n(c) At the request of a mediation party, an individual who is requested to serve as a mediator shall disclose the mediator's qualifications to mediate a dispute.\n\n(d) A person that violates subsection (a), (b) or (g) of this section is precluded by the violation from asserting a privilege under section 52-673.\n\n(e) Subsections (a), (b), (c) and (g) of this section do not apply to a judge acting as a mediator.\n\n(f) Sections 52-670 to 52-685, inclusive, do not require that a mediator have a special qualification by background or profession.\n\n(g) A mediator must be impartial, unless after disclosure of the facts required in subsections (a) and (b) of this section to be disclosed, the parties agree otherwise.\n\n(h) Mediation is deemed to have commenced when the referral or agreement to mediate is made.",
+      "href": "?chapter=932&section=section-52-678",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-52-679",
+      "citation": "52-679",
+      "citations": [
+        "52-679"
+      ],
+      "heading": "Sec. 52-679. Participation in mediation.",
+      "chapter": {
+        "id": "chapter-932",
+        "number": "932",
+        "name": "Connecticut Uniform Mediation Act"
+      },
+      "status": "active",
+      "text": "An attorney or other individual designated by a party may accompany the party to, and participate in, a mediation, provided an accompanying individual who is not an attorney shall not be allowed or authorized to practice law without a license, or attempt to practice law without a license by attempting to provide legal advice to any mediation participant. A waiver of participation given before the mediation may be rescinded.",
+      "href": "?chapter=932&section=section-52-679",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-52-680",
+      "citation": "52-680",
+      "citations": [
+        "52-680"
+      ],
+      "heading": "Sec. 52-680. International commercial mediation.",
+      "chapter": {
+        "id": "chapter-932",
+        "number": "932",
+        "name": "Connecticut Uniform Mediation Act"
+      },
+      "status": "active",
+      "text": "(a) In this section, “Model Law” means the Model Law on International Commercial Conciliation adopted by the United Nations Commission on International Trade Law on June 28, 2002, and recommended by the United Nations General Assembly in a resolution (A/RES/57/18) dated November 19, 2002, and “international commercial mediation” means an international commercial conciliation as defined in Article 1 of the Model Law.\n\n(b) Except as otherwise provided in subsections (c) and (d) of this section, if a mediation is an international commercial mediation, the mediation is governed by the Model Law.\n\n(c) Unless the parties agree in accordance with subsection (c) of section 52-672 that all or part of an international commercial mediation is not privileged, sections 52-673, 52-674 and 52-675 and any applicable definitions in section 52-671 also apply to the mediation and nothing in Article 10 of the Model Law derogates from sections 52-673, 52-674 and 52-675.\n\n(d) If the parties to an international commercial mediation agree under Article 1, subsection (7), of the Model Law that the Model Law does not apply, sections 52-670 to 52-685, inclusive, apply.",
+      "href": "?chapter=932&section=section-52-680",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-52-681",
+      "citation": "52-681",
+      "citations": [
+        "52-681"
+      ],
+      "heading": "Sec. 52-681. Provisions not applicable to certain Probate Court mediation proceedings.",
+      "chapter": {
+        "id": "chapter-932",
+        "number": "932",
+        "name": "Connecticut Uniform Mediation Act"
+      },
+      "status": "active",
+      "text": "Notwithstanding the provisions of sections 52-670 to 52-685, inclusive, any voluntary agreement to enter into mediation in a contested matter before the Probate Court shall be governed by the procedures and administrative requirements prescribed in the rules of said court.",
+      "href": "?chapter=932&section=section-52-681",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-52-682",
+      "citation": "52-682",
+      "citations": [
+        "52-682"
+      ],
+      "heading": "Sec. 52-682. Relation to Electronic Signatures in Global and National Commerce Act.",
+      "chapter": {
+        "id": "chapter-932",
+        "number": "932",
+        "name": "Connecticut Uniform Mediation Act"
+      },
+      "status": "active",
+      "text": "Sections 52-670 to 52-685, inclusive, modify, limit or supersede the federal Electronic Signatures in Global and National Commerce Act, 16 USC 7001 et seq., but sections 52-670 to 52-685, inclusive, do not modify, limit or supersede Section 101(c) of said act or authorize electronic delivery of any of the notices described in Section 103(b) of said act.",
+      "href": "?chapter=932&section=section-52-682",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-52-683",
+      "citation": "52-683",
+      "citations": [
+        "52-683"
+      ],
+      "heading": "Sec. 52-683. Uniformity of application and construction.",
+      "chapter": {
+        "id": "chapter-932",
+        "number": "932",
+        "name": "Connecticut Uniform Mediation Act"
+      },
+      "status": "active",
+      "text": "In applying and construing the uniform provisions of sections 52-670 to 52-685, inclusive, consideration should be given to the need to promote uniformity of the law with respect to its subject matter among states that enact such uniform provisions.",
+      "href": "?chapter=932&section=section-52-683",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-52-684",
+      "citation": "52-684",
+      "citations": [
+        "52-684"
+      ],
+      "heading": "Sec. 52-684. Severability clause.",
+      "chapter": {
+        "id": "chapter-932",
+        "number": "932",
+        "name": "Connecticut Uniform Mediation Act"
+      },
+      "status": "active",
+      "text": "If any provision of sections 52-670 to 52-685, inclusive, or application of sections 52-670 to 52-685, inclusive, to any person or circumstance is held invalid, the invalidity does not affect other provisions or applications of sections 52-670 to 52-685, inclusive, which can be given effect without the invalid provision or application, and to this end the provisions of sections 52-670 to 52-685, inclusive, are severable.",
+      "href": "?chapter=932&section=section-52-684",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-52-685",
+      "citation": "52-685",
+      "citations": [
+        "52-685"
+      ],
+      "heading": "Sec. 52-685. Application of provisions to referral or agreement to mediate.",
+      "chapter": {
+        "id": "chapter-932",
+        "number": "932",
+        "name": "Connecticut Uniform Mediation Act"
+      },
+      "status": "active",
+      "text": "(a) Sections 52-670 to 52-685, inclusive, govern a mediation pursuant to a referral or an agreement to mediate made on or after October 1, 2025.\n\n(b) On and after October 1, 2026, sections 52-670 to 52-685, inclusive, govern an agreement to mediate whenever made.",
+      "href": "?chapter=932&section=section-52-685",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "new"
+      }
+    }
+  ]
+}

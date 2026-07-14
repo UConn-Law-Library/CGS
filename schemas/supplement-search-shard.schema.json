@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://uconn-law-library.github.io/CGS/schemas/supplement-search-shard.schema.json",
+  "title": "CGS supplement title search patch",
+  "type": "object",
+  "required": ["schemaVersion", "editionYear", "title", "removedDocumentIds", "documents"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "editionYear": { "type": "integer", "minimum": 2000 },
+    "title": {
+      "type": "object",
+      "required": ["id", "number", "name"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "pattern": "^title-[0-9a-z-]+$" },
+        "number": { "type": "string", "minLength": 1 },
+        "name": { "type": "string", "minLength": 1 }
+      }
+    },
+    "removedDocumentIds": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    },
+    "documents": { "type": "array", "items": { "$ref": "#/$defs/document" } }
+  },
+  "$defs": {
+    "chapter": {
+      "type": "object",
+      "required": ["id", "number", "name"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "pattern": "^chapter-[0-9a-z-]+$" },
+        "number": { "type": "string", "minLength": 1 },
+        "name": { "type": "string", "minLength": 1 }
+      }
+    },
+    "supplement": {
+      "type": "object",
+      "required": ["editionYear", "presentation"],
+      "additionalProperties": false,
+      "properties": {
+        "editionYear": { "type": "integer", "minimum": 2000 },
+        "presentation": { "enum": ["amended", "new", "repealed"] }
+      }
+    },
+    "document": {
+      "type": "object",
+      "required": ["id", "citation", "citations", "heading", "chapter", "status", "text", "href"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "citation": { "type": ["string", "null"] },
+        "citations": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+        "heading": { "type": "string", "minLength": 1 },
+        "chapter": { "$ref": "#/$defs/chapter" },
+        "status": { "enum": ["active", "mixed", "obsolete", "repealed", "reserved", "transferred"] },
+        "text": { "type": "string" },
+        "href": { "type": "string", "minLength": 1 },
+        "supplement": { "$ref": "#/$defs/supplement" }
+      }
+    }
+  }
+}

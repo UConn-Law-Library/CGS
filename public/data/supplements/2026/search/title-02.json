@@ -1,0 +1,261 @@
+{
+  "schemaVersion": "1.0.0",
+  "editionYear": 2026,
+  "title": {
+    "id": "title-02",
+    "number": "02",
+    "name": "General Assembly and Legislative Agencies"
+  },
+  "removedDocumentIds": [
+    "section-2-24b",
+    "section-2-33b",
+    "section-2-36",
+    "section-2-36b",
+    "section-2-53l",
+    "section-2-90",
+    "section-2-128",
+    "section-2-137"
+  ],
+  "documents": [
+    {
+      "id": "section-2-24b",
+      "citation": "2-24b",
+      "citations": [
+        "2-24b"
+      ],
+      "heading": "Sec. 2-24b. Racial and ethnic impact statement required for certain bills and amendments.",
+      "chapter": {
+        "id": "chapter-016",
+        "number": "016",
+        "name": "General Assembly"
+      },
+      "status": "active",
+      "text": "(a) Beginning with the session of the General Assembly commencing on January 6, 2027, a racial and ethnic impact statement shall be prepared with respect to certain bills and amendments at the request of any member of the General Assembly. With respect to a bill favorably reported during the regular session, any such request shall be made not later than ten days after the deadline for the committee that introduced the bill to vote to report favorably under the joint rules of the House of Representatives and the Senate. With respect to an amendment introduced during the regular session, any such request shall be made at least fifteen days prior to the deadline for adjournment sine die of the regular session. Any such prepared statement shall be made available electronically on the Internet web site of the General Assembly.\n\n(b) The Commission on Racial Equity in Public Health, established pursuant to section 19a-133a, shall develop procedures for a member to request and the commission to prepare a racial and ethnic impact statement. The commission shall memorialize such procedures in a letter to the speaker of the House of Representatives, president pro tempore of the Senate, majority leader of the Senate, minority leader of the Senate, majority leader of the House of Representatives and minority leader of the House of Representatives with a request for such procedures to be included in the joint rules of the House of Representatives and the Senate.\n\n(c) (1) Any public agency, as defined in section 1-200, or quasi-public agency, as defined in section 1-120, receiving a request for records or information by the commission for purposes of preparing a racial and ethnic impact statement pursuant to this section, shall submit, not later than five days after the date of such request and in the manner requested by the commission, such records or information.\n\n(2) If a public agency or quasi-public agency needs additional time to comply with such request, the public agency or quasi-public agency shall specify the reason for such need to the commission not later than two days after the date of the request for records or information. The commission shall provide such public agency or quasi-public agency a reasonable extension of time to fulfill such request.\n\n(3) The commission may copy any records or information obtained pursuant to this subsection for purposes of preparing a racial and ethnic impact statement pursuant to this section.",
+      "href": "?chapter=016&section=section-2-24b",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-2-33b",
+      "citation": "2-33b",
+      "citations": [
+        "2-33b"
+      ],
+      "heading": "Sec. 2-33b. Performance-informed budget review.",
+      "chapter": {
+        "id": "chapter-016",
+        "number": "016",
+        "name": "General Assembly"
+      },
+      "status": "repealed",
+      "text": "Section 2-33b is repealed, effective June 30, 2025.",
+      "href": "?chapter=016&section=section-2-33b",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "repealed"
+      }
+    },
+    {
+      "id": "section-2-36",
+      "citation": "2-36",
+      "citations": [
+        "2-36"
+      ],
+      "heading": "Sec. 2-36. Deficiency bills.",
+      "chapter": {
+        "id": "chapter-016",
+        "number": "016",
+        "name": "General Assembly"
+      },
+      "status": "active",
+      "text": "On the day the Governor submits a budget document to the General Assembly, or a report on the status of the budget enacted in the previous year, pursuant to section 4-71, the Secretary of the Office of Policy and Management shall submit to the Treasurer and the joint standing committee of the General Assembly having cognizance of matters relating to appropriations and the budgets of state agencies, through the Office of Fiscal Analysis, any items to be included in a deficiency bill, which may be passed by the General Assembly to pay expenses of the current fiscal year of the biennium. Each such item shall be accompanied by a statement which explains the need for a deficiency appropriation. Any agency which has an item to be included in the deficiency bill shall, on such day, submit a report to said joint standing committee, through the Office of Fiscal Analysis, concerning any steps taken by the agency to reduce or eliminate the deficiency.",
+      "href": "?chapter=016&section=section-2-36",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-2-36b",
+      "citation": "2-36b",
+      "citations": [
+        "2-36b"
+      ],
+      "heading": "Sec. 2-36b. Legislative committees to meet with Secretary of Office of Policy and Management re report on various state revenue and expenditure issues.",
+      "chapter": {
+        "id": "chapter-016",
+        "number": "016",
+        "name": "General Assembly"
+      },
+      "status": "active",
+      "text": "(a) Not later than December fifteenth each year, the joint standing committees of the General Assembly having cognizance of matters relating to appropriations and the budgets of state agencies and finance, revenue and bonding shall meet with the Secretary of the Office of Policy and Management, the director of the legislative Office of Fiscal Analysis, and such other persons as they deem appropriate, to consider the items submitted pursuant to subsection (b) of this section.\n\n(b) On or before November twentieth, annually, the Secretary of the Office of Policy and Management and the director of the legislative Office of Fiscal Analysis shall each submit the following to the joint standing committees of the General Assembly having cognizance of matters relating to appropriations and the budgets of state agencies and finance, revenue and bonding:\n\n(1) For the current biennium and the next ensuing three fiscal years, a consensus estimate of state revenues developed in accordance with subsection (a) of section 2-36c, an estimate of the level of expenditure change from current year expenditures allowable by consensus revenue estimates in each fund, any changes to current year expenditures necessitated by fixed cost drivers and an estimate of material and likely changes to nonfixed costs;\n\n(2) The projected tax credits to be used in the current biennium and the next ensuing three fiscal years, and the assumptions on which such projections are based;\n\n(3) A summary of any estimated deficiencies in the current fiscal year, the reasons for such deficiencies, and the assumptions upon which such estimates are based;\n\n(4) The projected balance in the Budget Reserve Fund at the end of each uncompleted fiscal year of the current biennium and the next ensuing three fiscal years;\n\n(5) The projected bond authorizations, allocations and issuances in each of the next ensuing five fiscal years and their impact on the debt service of the major funds of the state;\n\n(6) An analysis of revenue and expenditure trends and of the major cost drivers affecting state spending, including identification of any areas of concern and efforts undertaken to address such areas, including, but not limited to, efforts to obtain federal funds; and\n\n(7) An analysis of the state's preparedness for plausible recession scenarios, including estimates of the size of multiyear budget deficits that may result from revenue declines and other contingencies, and an assessment of the sufficiency of the Budget Reserve Fund and other state resources to address such budget deficits.\n\n(c) For purposes of this section, “fixed cost drivers” may include costs related to debt service, pension contributions, retiree health care, entitlement programs and federal mandates.",
+      "href": "?chapter=016&section=section-2-36b",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-2-53l",
+      "citation": "2-53l",
+      "citations": [
+        "2-53l"
+      ],
+      "heading": "Sec. 2-53 l . Electronic databases showing state, quasi-public agency and constituent unit expenditures.",
+      "chapter": {
+        "id": "chapter-016",
+        "number": "016",
+        "name": "General Assembly"
+      },
+      "status": "active",
+      "text": "(a) On or before July 1, 2011, until July 8, 2019, the legislative Office of Fiscal Analysis shall establish and maintain searchable online electronic databases on said office's Internet web site for purposes of posting state expenditures, including state contracts and grants. On and after July 8, 2019, said databases shall be maintained by the office of the Comptroller on said office's publicly accessible Internet web site for purposes of posting expenditures of the state and quasi-public agencies and constituent units of the state system of higher education, including disaggregated payments and data related to state and quasi-public agency and constituent unit contracts and grants, state and quasi-public agency and constituent unit employee payroll and state retiree pensions.\n\n(b) Each budgeted agency, as defined in section 4-69, quasi-public agency, as defined in section 1-120, and constituent unit, as defined in section 10a-1, shall submit, in a timely manner, any information requested by the Comptroller for the purpose of maintaining the electronic databases.\n\n(c) Nothing in this section shall be construed to require a state or quasi-public agency or constituent unit to: (1) Create unavailable financial or management data or an information technology system that does not exist, or (2) disclose consumer, client, patient, student or other information otherwise protected by law from disclosure.",
+      "href": "?chapter=016&section=section-2-53l",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-2-53o",
+      "citation": "2-53o",
+      "citations": [
+        "2-53o"
+      ],
+      "heading": "Sec. 2-53o. Connecticut precious metals working group. Annual report.",
+      "chapter": {
+        "id": "chapter-016",
+        "number": "016",
+        "name": "General Assembly"
+      },
+      "status": "active",
+      "text": "(a) There is established a Connecticut precious metals working group to monitor (1) economic conditions, (2) inflation expectations, (3) precious metals prices and activities, including the market activities of leading commodities exchanges and bullion market associations, and (4) precious metals legislation proposed in or enacted by other states.\n\n(b) The working group shall consist of the following members: (1) Members of the General Assembly, as designated by the chairpersons of the joint standing committees of the General Assembly having cognizance of matters relating to banking, finance, revenue and bonding and commerce; (2) the Treasurer, or the Treasurer's designee; and (3) any individuals such chairpersons deem relevant and necessary to carry out the duties of the working group, including, but not limited to, economists, bankers and residents who are precious metals investors.\n\n(c) The administrative staff of the joint standing committee of the General Assembly having cognizance of matters relating to finance, revenue and bonding shall serve as administrative staff of the working group.\n\n(d) Commencing in calendar year 2026, and annually thereafter, the working group shall submit a report to the joint standing committees of the General Assembly having cognizance of matters relating to banking, finance, revenue and bonding and commerce, summarizing the working group's findings from its monitoring activities and including any recommendations to improve the precious metals market in the state.",
+      "href": "?chapter=016&section=section-2-53o",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-2-56p",
+      "citation": "2-56p",
+      "citations": [
+        "2-56p"
+      ],
+      "heading": "Sec. 2-56p. Codification of public act 25-168*.",
+      "chapter": {
+        "id": "chapter-017",
+        "number": "017",
+        "name": "Legislative Commissioners' Office"
+      },
+      "status": "active",
+      "text": "The Legislative Commissioners' Office shall, in codifying the provisions of public act 25-168, make such technical, grammatical and punctuation changes as are necessary to carry out the purposes of public act 25-168, including, but not limited to, correcting inaccurate internal references.",
+      "href": "?chapter=017&section=section-2-56p",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-2-56q",
+      "citation": "2-56q",
+      "citations": [
+        "2-56q"
+      ],
+      "heading": "Sec. 2-56q. Codification of public act 25-174*.",
+      "chapter": {
+        "id": "chapter-017",
+        "number": "017",
+        "name": "Legislative Commissioners' Office"
+      },
+      "status": "active",
+      "text": "The Legislative Commissioners' Office shall, in codifying the provisions of public act 25-174, make such technical, grammatical and punctuation changes as are necessary to carry out the purposes of public act 25-174, including, but not limited to, correcting inaccurate internal references.",
+      "href": "?chapter=017&section=section-2-56q",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-2-90",
+      "citation": "2-90",
+      "citations": [
+        "2-90"
+      ],
+      "heading": "Sec. 2-90. (Formerly Sec. 4-63). Duties. Powers. Agency reports re corrective action. Applicability of Freedom of Information Act to certain information.",
+      "chapter": {
+        "id": "chapter-023",
+        "number": "023",
+        "name": "Auditors of Public Accounts"
+      },
+      "status": "active",
+      "text": "(a) The Auditors of Public Accounts shall organize the work of their office in such manner as they deem most economical and efficient and, except as provided in subsection (d) of this section, shall determine the scope and frequency of any audit they conduct.\n\n(b) Said auditors, with the Comptroller, shall, at least annually and as frequently as they deem necessary, audit the books and accounts of the Treasurer, including, but not limited to, trust funds, as defined in section 3-13c, and certify the results to the Governor. The auditors shall, at least annually and as frequently as they deem necessary, audit the books and accounts of the Comptroller and certify the results to the Governor. They shall examine and prepare certificates of audit with respect to the financial statements contained in the annual reports of the Treasurer and Comptroller, which certificates shall be made part of such annual reports. In carrying out their responsibilities under this section, said auditors may retain independent auditors to assist them.\n\n(c) (1) Said auditors shall audit, on a biennial basis if deemed most economical and efficient, or as frequently as they deem necessary, the books and accounts, records of operations and activities, systems and data of each officer, department, commission, board and court of the state government, all institutions supported by the state and all public and quasi-public bodies, politic and corporate, created by public or special act of the General Assembly and not required to be audited or subject to reporting requirements, under the provisions of chapter 111, except as provided in subsection (d) of this section.\n\n(2) Each such audit may include an examination of any relevant information concerning the department, commission, board or court of state government being audited that is in the possession or control of a private entity that has a contract with such department, commission, board or court, and such information shall be provided upon demand in a format prescribed by the auditors at no cost to the auditors or the department, commission, board or court.\n\n(3) Each such audit may include an examination of performance in order to determine effectiveness in achieving expressed legislative purposes. The joint standing committee of the General Assembly having cognizance of matters relating to government oversight may request the auditors to perform a limited performance engagement. Not later than sixty days after receipt of such request, the auditors shall respond regarding whether they will perform such limited performance engagement and, if so, the suggested scope and schedule for such engagement. The auditors shall perform any such limited performance engagement within available appropriations. As used in this subdivision, a “limited performance engagement” means a review of a specific program or entity pursuant to an agreement between the chairpersons and ranking members of the joint standing committee of the General Assembly having cognizance of matters relating to government oversight and the auditors concerning the objectives, scope, methodology and timing of such engagement.\n\n(4) The auditors shall report their findings and recommendations to the Governor, the State Comptroller and the joint standing committees of the General Assembly having cognizance of matters relating to appropriations and the budgets of state agencies and government oversight.\n\n(d) Not later than July 1, 2026, and annually thereafter, the auditors shall submit a proposed schedule for the audits they plan to conduct during the following fiscal year to the joint standing committee of the General Assembly having cognizance of matters relating to government oversight.\n\n(e) The Auditors of Public Accounts may enter into such contractual agreements as may be necessary for the discharge of their duties. Any audit or report which is prepared by a person, firm or corporation pursuant to any contract with the Auditors of Public Accounts shall bear the signature of the person primarily responsible for the preparation of such audit or report. As used in this subsection, the term “person” means a natural person.\n\n(f) (1) If the Auditors of Public Accounts discover, or if it should come to their knowledge, that any unauthorized, illegal, irregular or unsafe handling or expenditure of state funds or quasi-public agency funds or any breakdown in the safekeeping of any resources of the state or a quasi-public agency has occurred or is contemplated, they shall forthwith report the facts to the Governor, the State Comptroller, the clerk of each house of the General Assembly, the joint standing committee of the General Assembly having cognizance of matters relating to government oversight and the Attorney General, except that if a matter reported to the Auditors of Public Accounts pursuant to section 4-33a is still under investigation by a state or quasi-public agency, the Auditors of Public Accounts may give the agency a reasonable amount of time to conduct such investigation prior to the auditors reporting the matter to said officials and committee.\n\n(2) If the Auditors of Public Accounts decide to delay reporting such matter in accordance with subdivision (1) of this subsection, the auditors shall immediately notify the Attorney General of such decision.\n\n(3) Any Auditor of Public Accounts neglecting to make the report required under subdivision (1) of this subsection, or any agent of the auditors neglecting to report to the Auditors of Public Accounts any such matter discovered by such agent or coming to such agent's knowledge, shall be fined not more than one hundred dollars or imprisoned not more than six months, or both.\n\n(4) Any state agency or quasi-public agency that is the subject of a report of the Auditors of Public Accounts that contains violations of state statute or regulation, other than only minor or technical recommendations, not later than six months after the issuance of the auditors' report, shall report on the status of any corrective action undertaken by such state agency or quasi-public agency to address such violations, to the auditors, the Governor and the General Assembly, in accordance with the provisions of section 11-4a. Upon the receipt of the agency's report, the joint standing committee of the General Assembly having cognizance of matters relating to government oversight may request the auditors to verify any matter in the agency's corrective action report and the auditors shall have not more than sixty days to respond to such request.\n\n(g) All reports issued or made pursuant to this section shall be retained in the offices of the Auditors of Public Accounts for a period of not less than five years. The auditors shall file one copy of each such report with the State Librarian.\n\n(h) Each state agency shall keep its accounts in such form and by such methods as to exhibit the facts required by said auditors and, the provisions of any other general statute notwithstanding, shall make all records and accounts available to them or their agents, upon demand. Notwithstanding any provision of the general statutes, no state agency may deny the auditors access to their records or accounts.\n\n(i) Where there are statutory requirements of confidentiality with regard to such records and accounts or examinations of nongovernmental entities which are maintained by a state agency, such requirements of confidentiality and the penalties for the violation thereof shall apply to the auditors and to their authorized representatives in the same manner and to the same extent as such requirements of confidentiality and penalties apply to such state agency. In addition, the portion of (1) any audit or report prepared by the Auditors of Public Accounts that concerns the internal control structure of a state information system or the identity of an employee who provides information regarding alleged fraud or weaknesses in the control structure of a state agency that may lead to fraud, or (2) any document that may reveal the identity of such employee, shall not be subject to disclosure under the Freedom of Information Act, as defined in section 1-200.\n\n(j) Said auditors shall audit, in accordance with the provisions of section 10-91g, the records and accounts of any private provider of special education services, as defined in said section. Any private provider of special education services being audited by said auditors shall provide any information said auditors deem necessary to conduct such audit.",
+      "href": "?chapter=023&section=section-2-90",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-2-128",
+      "citation": "2-128",
+      "citations": [
+        "2-128"
+      ],
+      "heading": "Sec. 2-128. Commission duties. Status report. Use of federal funds.",
+      "chapter": {
+        "id": "chapter-023h",
+        "number": "023h",
+        "name": "Commission on Women, Children, Seniors, Equity and Opportunity"
+      },
+      "status": "active",
+      "text": "(a) The Commission on Women, Children, Seniors, Equity and Opportunity shall:\n\n(1) Focus its efforts on the following quality of life desired results for women, children and their families, seniors and members of the African-American, Asian Pacific-American and Latino and Puerto Rican populations of the state: That all such persons are (A) healthy, safe and achieve educational success; (B) free from poverty; and (C) free from discrimination;\n\n(2) With the advice of the executive committee of the commission, make recommendations to the General Assembly and the Governor for new or enhanced policies, programs and services that will foster progress in achieving the desired results described in subdivision (1) of this subsection. Such recommendations shall, when applicable, include, but need not be limited to: (A) Systems innovations, model policies and practices which embed two-generational practice in program, policy and systems change on the state and local levels, in accordance with section 17b-112 l ; (B) strategies for reducing family poverty, promoting parent leadership and family civics; (C) the promotion of youth leadership opportunities that keep youth engaged in the community; and (D) strategies and programs that address equitable access, impede bias, and narrow the opportunity gap for women, children and their families, seniors and members of the African-American, Asian Pacific-American and Latino and Puerto Rican populations of the state. Such recommendations may include other state and national best practices, and recommendations on federal funding maximization;\n\n(3) With the advice of the executive committee of the commission, review and comment, as necessary, on any specific proposed state legislation or recommendations that may affect women, children and their families, seniors and members of the African-American, Asian Pacific-American and Latino and Puerto Rican populations of the state and provide copies of any such comments to members of the General Assembly;\n\n(4) With the advice of the executive committee of the commission, advise the General Assembly concerning the coordination and administration of state programs that affect women, children and their families, seniors and members of the African-American, Asian Pacific-American and Latino and Puerto Rican populations of the state;\n\n(5) Gather and maintain, as necessary, current information regarding women, children and their families, seniors and members of the African-American, Asian Pacific-American and Latino and Puerto Rican populations of the state that can be used to better understand the status, condition, and contributions of such groups. Such information, as appropriate and pertinent to the desired results delineated in subdivision (1) of this subsection, shall be included in the annual report submitted in accordance with subsection (b) of this section and shall be made available to legislators and other interested parties upon request;\n\n(6) Maintain liaisons between women, children and their families, seniors and members of the African-American, Asian Pacific-American and Latino and Puerto Rican populations of the state and government agencies, including the General Assembly;\n\n(7) Conduct educational and outreach activities intended to raise awareness of and address critical issues for women, children and their families, seniors and members of the African-American, Asian Pacific-American and Latino and Puerto Rican populations of the state; and\n\n(8) Consult with (A) at least one organization that advocates for persons with cognitive impairments, physical disabilities or autism spectrum disorder and offers courses that are certified by the Police Officer Standards and Training Council established under section 7-294b, (B) an association of police chiefs in the state, (C) an association of fire chiefs in the state, (D) an association of emergency medical services personnel in the state, and (E) the Office of Emergency Medical Services, to coordinate and identify various education and training programs for first responders concerning techniques for handling incidents, promoting accommodations and enhancing effective interactions and communication between a first responder and a person with a cognitive impairment, physical disability or autism spectrum disorder.\n\n(b) Not later than January first, annually, the executive director of the commission shall submit a status report, organized by subcommission, concerning its efforts in promoting the desired results listed in subdivision (1) of subsection (a) of this section to the joint standing committee of the General Assembly having cognizance of matters relating to appropriations and the budgets of state agencies in accordance with the provisions of section 11-4a. On and after January 1, 2022, such report shall include the status of amendments to the joint rules of the House of Representatives and the Senate concerning the preparation of racial and ethnic impact statements pursuant to section 2-24b.\n\n(c) The Commission on Women, Children, Seniors, Equity and Opportunity may: (1) Request, and shall receive, from any state agency such information and assistance as the commission may require; (2) use such funds as may be available from federal, state or other sources and may enter into contracts to carry out the purposes of the commission; (3) utilize voluntary and uncompensated services of private individuals, state or federal agencies and organizations as may, from time to time, be offered and needed; (4) recommend policies to federal agencies and political subdivisions of the state relative to women, children and their families, seniors and members of the African-American, Asian Pacific-American and Latino and Puerto Rican populations of the state; (5) accept any gift, donation or bequest for the purpose of performing the duties of the commission; (6) hold public hearings; (7) establish task forces or standing committees, as necessary, to perform the duties of the commission; (8) adopt regulations, in accordance with chapter 54, as it may deem necessary to carry out the duties of the commission; and (9) inform leaders of business, education, state and local governments and the communications media of the nature and scope of the problems faced by women, children and their families, seniors and members of the African-American, Asian Pacific-American and Latino and Puerto Rican populations of the state.\n\n(d) The executive director of the commission may enter into any agreement with a state agency for the purpose of maximizing the receipt of federal funds by such state agency, provided such state agency shall utilize any federal funds received as a result of such agreement to perform those statutory duties of such agency that relate to the commission's duties. The commission may accept that portion of federal funds received by any such state agency as a result of any such agreement which federal law otherwise permits to be received by the commission.",
+      "href": "?chapter=023h&section=section-2-128",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-2-137",
+      "citation": "2-137",
+      "citations": [
+        "2-137"
+      ],
+      "heading": "Sec. 2-137. Transforming Children's Behavioral Health Policy and Planning Committee. Membership. Duties. Strategic plan. Reports. Report on behavioral health issues.",
+      "chapter": {
+        "id": "chapter-023j",
+        "number": "023j",
+        "name": "Transforming Children's Behavioral Health Policy and Planning Committee"
+      },
+      "status": "active",
+      "text": "(a) There is established a Transforming Children's Behavioral Health Policy and Planning Committee. The committee shall evaluate the availability and efficacy of prevention, early intervention, and behavioral health treatment services and options for children from birth to age eighteen and make recommendations to the General Assembly and executive agencies regarding the governance and administration of the behavioral health care system for children. The committee shall be within the Legislative Department. For purposes of this section, “behavioral health” means mental health and substance use disorders, as well as overall psychological well-being.\n\n(b) The committee shall consist of the following members:\n\n(1) The chairpersons and ranking members of the joint standing committees of the General Assembly having cognizance of matters relating to public health, human services, children and appropriations and the budgets of state agencies, or their designees;\n\n(2) Three appointed by the speaker of the House of Representatives, one of whom shall be a member of the General Assembly and two of whom shall be providers of behavioral health services for children in the state;\n\n(3) Three appointed by the president pro tempore of the Senate, one of whom shall be a member of the General Assembly and two of whom shall be representatives of private advocacy groups that provide services for children and families in the state;\n\n(4) (A) Two appointed by the chairperson of the committee selected by the speaker of the House of Representatives pursuant to subsection (e) of this section, one of whom shall be a child or youth advocate; (B) two appointed by the chairperson of the committee selected by the president pro tempore of the Senate pursuant to subsection (e) of this section, one of whom shall be a child or youth advocate; and (C) two jointly appointed by the three chairpersons of the committee, as described in subsection (e) of this section, who shall be providers of substance use treatment services to young adults;\n\n(5) Two appointed by the majority leader of the House of Representatives, who shall be representatives of children's hospitals;\n\n(6) One appointed by the majority leader of the Senate, who shall be a representative of public school superintendents in the state;\n\n(7) Two appointed by the minority leader of the House of Representatives, who shall be representatives of families with children who have been diagnosed with behavioral health disorders;\n\n(8) Two appointed by the minority leader of the Senate, who shall be providers of behavioral health services;\n\n(9) Two jointly appointed by the chairpersons of the joint standing committee of the General Assembly having cognizance of matters relating to appropriations and the budgets of state agencies, each of whom shall be a representative of one of the two federally recognized Indian tribes in the state;\n\n(10) The Commissioners of Children and Families, Correction, Developmental Services, Early Childhood, Education, Insurance, Mental Health and Addiction Services, Public Health and Social Services, or their designees;\n\n(11) The Commissioner of Health Strategy, or the commissioner's designee;\n\n(12) The Child Advocate, or the Child Advocate's designee;\n\n(13) The Healthcare Advocate and the Behavioral Health Advocate, or their designees;\n\n(14) The executive director of the Court Support Services Division of the Judicial Branch, or the executive director's designee;\n\n(15) The executive director of the Commission on Women, Children, Seniors, Equity and Opportunity, or the executive director's designee;\n\n(16) The Secretary of the Office of Policy and Management, or the secretary's designee; and\n\n(17) One representative from each administrative services organization under contract with the Department of Social Services to provide such services for recipients of assistance under the HUSKY Health program, who shall be ex-officio, nonvoting members.\n\n(c) Any member of the committee appointed under subdivisions (1) to (8), inclusive, of subsection (b) of this section may be a member of the General Assembly.\n\n(d) Any vacancy shall be filled by the appointing authority.\n\n(e) The chairpersons of the committee shall be (1) the Secretary of the Office of Policy and Management, or the secretary's designee, and (2) two members of the General Assembly, one each selected by the speaker of the House of Representatives and the president pro tempore of the Senate from among the members serving pursuant to subdivision (1), (2) or (3) of subsection (b) of this section. The three chairpersons shall schedule the first meeting of the committee, which shall be held not later than September 1, 2023.\n\n(f) Members of the committee shall serve without compensation, except for necessary expenses incurred in the performance of their duties.\n\n(g) Not later than December 1, 2025, the committee shall report, in accordance with section 11-4a, to the joint standing committees of the General Assembly having cognizance of matters relating to appropriations and the budgets of state agencies, public health, human services and children, and the Office of Policy and Management, regarding the following:\n\n(1) Any statutory and budgetary changes needed concerning the behavioral health system of prevention, development and treatment that the committee recommends to (A) improve developmental and behavioral health outcomes for children; (B) improve transparency and accountability with respect to state-funded services for children and youth with an emphasis on goals identified by the committee for community-based programs and facility-based interventions; and (C) promote the efficient sharing of information by state and state-funded agencies to ensure the regular collection and reporting of data regarding children and families' access to, utilization of and benefit from services necessary to promote public health and behavioral health outcomes for children and youth and their families;\n\n(2) The gaps in services identified by the committee with respect to children and families involved in the behavioral health system, and recommendations to address such gaps in services;\n\n(3) Strengths and barriers identified by the committee that support or impede the behavioral health needs of children and youth with specific recommendations for reforms;\n\n(4) An examination of the way state agencies can work collaboratively through school-based efforts and other processes to improve developmental and behavioral health outcomes for children;\n\n(5) An examination of disproportionate access and outcomes across the behavioral health care system for children of color;\n\n(6) An examination of disproportionate access and outcomes across the behavioral health care system for children with developmental disabilities;\n\n(7) A plan to ensure a quality assurance framework for facilities and programs that are part of the behavioral health care system and are operated privately or by the state that includes data regarding efficacy and outcomes; and\n\n(8) A governance structure for the children's behavioral health system that will best facilitate the public policy and healthcare goals of the state to ensure that all children and families, in urban, rural and all other areas of the state, can access high-quality behavioral health care.\n\n(h) The committee may complete its duties under this section after requesting consultation with one or more organizations that focus on children's behavioral health. The committee may accept administrative support and technical and research assistance from any organization.\n\n(i) The committee shall be given access to data collected by the state on matters related to children's behavioral health from the relevant state agencies or directly from contracted administrative service organizations, as applicable.\n\n(j) The committee may include two or more subcommittees chaired by a member of the committee to inform its recommendations. The subcommittees may focus on: Workforce-related issues, school-based health, prevention, and intermediate or acute care. Any subcommittees may examine gaps, reimbursement rates, parity in the outcomes of services or the efficacy of services.\n\n(k) The committee shall, annually, establish a work plan for reviewing and making follow-up reports on the status or progress of the committee's recommendations and activities. The work plan shall include specific recommendations to improve outcomes related to children's behavioral health and a timeline indicating dates by which specific tasks or outcomes should be achieved.\n\n(l) (1) The committee shall develop a strategic plan that integrates the recommendations identified pursuant to subsection (g) of this section. In developing the plan, the committee may collaborate with any state agency with responsibilities relating to the behavioral health system.\n\n(2) Not later than December 1, 2026, the committee shall report, in accordance with section 11-4a, such plan, together with an account of progress made toward the full implementation of such plan, and any recommendations concerning the implementation of identified goals in the plan to the joint standing committees of the General Assembly having cognizance of matters relating to appropriations and the budgets of state agencies, public health, human services and children, and the Office of Policy and Management.\n\n(m) The committee shall collaborate with the gender responsiveness subcommittee of the Juvenile Justice Policy and Oversight Committee pursuant to subsection (u) of section 46b-121n.\n\n(n) (1) Not later than January 1, 2027, the Transforming Children's Behavioral Health Policy and Planning Committee shall submit a report, in accordance with the provisions of section 11-4a, to the joint standing committees of the General Assembly having cognizance of matters relating to education and children. Such report shall consist of the committee's examination of and recommendations for behavioral health issues impacting students in the state receiving special education that includes, but is not limited to, the following:\n\n(A) The behavioral intervention methods utilized by private providers of special education services and the feasibility and impact of requiring such private providers to utilize evidence-based interventions that are proactive and highly individualized, such as the Assessment of Lagging Skills and Unsolved Problems, including, but not limited to, the feasibility and impact of requiring staff at such private providers to be trained in such evidence-based interventions with an emphasis on problem-solving as the primary goal; and\n\n(B) Best practices for the monitoring and random audits by the Department of Education of the use of physical restraint and seclusion pursuant to section 10-236b for students receiving special education, including, but not limited to, best practices for (i) ensuring the accuracy and consistency of the annual compilation of incidents of physical restraint and seclusions reported to the department pursuant to subsection (l) of said section, (ii) intervention by the department in schools and special education programs that report a high incidence of physical restraint and seclusion, (iii) enforcement of the laws relating to physical restraint and seclusion, such as through site visits of seclusion spaces and review of incident reports and parental notifications, (iv) mandatory training of staff and administrators to reduce reliance on physical restraint and seclusion, and (v) development of uniform rules or regulations applicable to physical restraint and seclusion of any student.\n\n(2) The Department of Education shall submit, in a manner that complies with the requirements of the Family Educational Rights and Privacy Act, 20 USC 1232g, as amended from time to time, all data and information requested by the committee in compiling the report.",
+      "href": "?chapter=023j&section=section-2-137",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-2-150",
+      "citation": "2-150",
+      "citations": [
+        "2-150"
+      ],
+      "heading": "Sec. 2-150. State Historical Commission.",
+      "chapter": {
+        "id": "chapter-023m",
+        "number": "023m",
+        "name": "State Historical Commission"
+      },
+      "status": "active",
+      "text": "(a) There is established a State Historical Commission, which shall be an independent body within the Legislative Department for administrative purposes only. The commission shall examine and make recommendations to the legislative, executive and judicial branches on questions of memorialization and commemoration related to Connecticut and United States history.\n\n(b) The commission shall consist of the following members: (1) One appointed by the speaker of the House of Representatives, who is a representative of CT Humanities; (2) one appointed by the majority leader of the House of Representatives, who is a representative of the Connecticut Library Association; (3) one appointed by the president pro tempore of the Senate, who is a representative of the Connecticut Democracy Center; (4) one appointed by the majority leader of the Senate, who is a representative of the Mashantucket Pequot Tribal Nation; (5) one appointed by the minority leader of the House of Representatives, who is a representative of the Connecticut Museum of Culture and History; (6) one appointed by the minority leader of the Senate, who is a representative of the Mohegan Tribe of Indians of Connecticut; (7) two appointed by the Governor, one of whom is a representative of the Freeman Center for History and Community, Inc.; (8) the Chief Court Administrator, or a designee; (9) the State Historian; (10) the State Librarian; and (11) the State Historic Preservation Officer. Any member of the commission appointed under subdivisions (1) to (6), inclusive, of this subsection may be a member of the General Assembly.\n\n(c) All initial appointments to the commission shall be made not later than September 1, 2025. Appointed members of the commission shall serve for three-year terms which shall commence on the date of appointment. Members shall continue to serve until their successors are appointed.\n\n(d) The speaker of the House of Representatives and the president pro tempore of the Senate shall select the chairperson of the commission from among the members of the commission. Such chairperson shall schedule the first meeting of the commission, which shall be held not later than September 15, 2025.\n\n(e) The administrative staff of the joint standing committee of the General Assembly having cognizance of matters relating to government administration shall serve as administrative staff of the commission.\n\n(f) Any vacancy shall be filled by the appointing authority. Any vacancy occurring other than by expiration of term shall be filled for the balance of the unexpired term.\n\n(g) A majority of the commission shall constitute a quorum for the transaction of any business.\n\n(h) The members of the commission shall serve without compensation, but shall, within the limits of available funds, be reimbursed for expenses necessarily incurred in the performance of their duties.\n\n(i) The commission shall have the following powers and duties: To (1) issue reports and recommendations to all three branches of government concerning historical questions of memorialization and commemoration related to Connecticut and United States history, either upon the request of any executive, legislative or judicial department, board, commission or other agency of the state or upon its own initiative, including, but not limited to, developing the process required under subsection (j) of this section; (2) obtain from any executive, legislative or judicial department, board, commission or other agency of the state such assistance and data as necessary and available to carry out the purposes of this section; (3) accept any gift, donation or bequest for the purpose of performing the duties described in this section; and (4) perform such other acts as may be necessary and appropriate to carry out the duties described in this section.\n\n(j) Not later than January 1, 2026, the commission shall (1) develop a process for identifying and commissioning additional statues to be added to the exterior of the State Capitol building that reflect the diversity, character and accomplishments of the state, and (2) submit a report detailing such process to the State Commission on Capitol Preservation and Restoration for implementation. Thereafter, the commission shall update such process as often as it deems necessary, and submit any revisions to the process to the State Commission on Capitol Preservation and Restoration.\n\n(k) Not later than February 1, 2026, and annually thereafter, the commission shall submit a report, in accordance with the provisions of section 11-4a, to the Governor and the joint standing committee of the General Assembly having cognizance of matters relating to government administration. Such report shall include, but need not be limited to, a summary of the activities of the commission during the prior year and any policy changes and amendments to the general statutes necessary to implement the recommendations of the commission.",
+      "href": "?chapter=023m&section=section-2-150",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "new"
+      }
+    }
+  ]
+}

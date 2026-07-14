@@ -1,0 +1,75 @@
+{
+  "schemaVersion": "1.0.0",
+  "editionYear": 2026,
+  "title": {
+    "id": "title-04d",
+    "number": "04d",
+    "name": "State Information and Telecommunication Systems"
+  },
+  "removedDocumentIds": [
+    "section-4d-80",
+    "section-4d-82a"
+  ],
+  "documents": [
+    {
+      "id": "section-4d-80",
+      "citation": "4d-80",
+      "citations": [
+        "4d-80"
+      ],
+      "heading": "Sec. 4d-80. Commission for Educational Technology.",
+      "chapter": {
+        "id": "chapter-061a",
+        "number": "061a",
+        "name": "Educational Technology"
+      },
+      "status": "active",
+      "text": "(a) There is established a Commission for Educational Technology within the Department of Administrative Services. The commission shall consist of the following members or their designees: (1) The Secretary of the Office of Policy and Management, the Commissioner of Administrative Services, the Commissioner of Education, the Commissioner of Economic and Community Development, the president of The University of Connecticut and the chancellor of the Connecticut State Colleges and Universities, the State Librarian and the Consumer Counsel, (2) one member each representing the Connecticut Conference of Independent Colleges, the Connecticut Association of Boards of Education, the Connecticut Conference of Municipalities, the Connecticut Council of Small Towns, the Connecticut Library Association, the Connecticut Association of Public School Superintendents and the Connecticut Educators Computer Association, (3) a secondary school teacher designated by the Connecticut Education Association and an elementary school teacher designated by the American Federation of Teachers–Connecticut, (4) four members who represent business or have expertise in information technology, two of whom shall be appointed by the Governor, one of whom shall be appointed by the speaker of the House of Representatives and one of whom shall be appointed by the president pro tempore of the Senate, (5) one member who is a chief elected official of a municipality, who shall be appointed by the minority leader of the Senate, and (6) one member who is a representative of small business who shall be appointed by the minority leader of the House of Representatives. The commission shall convene a meeting at least once during each calendar quarter.\n\n(b) The Governor shall appoint a chairperson from among the members of the commission or their designees. Subject to the provisions of chapter 67, and within available appropriations, the commission may appoint an executive director and such other employees as may be necessary for the discharge of the duties of the commission. Notwithstanding any provision of the general statutes, the executive director shall have the option to elect participation in the state employees retirement system, or the alternate retirement program established for eligible employees in higher education.\n\n(c) The commission shall:\n\n(1) Be the principal educational technology policy advisor for state government;\n\n(2) Develop, oversee and direct the attainment of state-wide technology goals including:\n\n(A) Connecting all institutions of higher education, libraries, public elementary and secondary schools, regional educational service centers and other parties through a state-wide high speed, flexible network that will allow for video, voice and data transmission;\n\n(B) Wiring all school classrooms and connecting them to the Internet and to the state-wide high-speed network through wired, wireless, or any other digital transmission technology providing high-speed connectivity;\n\n(C) Providing access for all public schools, public libraries and libraries at institutions of higher education to a core set of on-line full text resources and to the ability to purchase collaboratively for other collections in order to maximize buying power;\n\n(D) Ensuring, in cooperation with the State Board of Education, competency in computing skills by the sixth grade for all students;\n\n(E) Ensuring competency in specific computing skills and the integration of technology into the curriculum for all public school teachers;\n\n(F) Ensuring that institutions of higher education offer a wide range of course and degree programs via the Internet and through other synchronous and asynchronous methods;\n\n(3) Coordinate the activities of all state agencies, educational institutions and other parties involved in the creation and management of a reliable and secure network that will offer connectivity and allow for the transmission of video, voice and data transmission to every library, school, regional educational service center and institution of higher education;\n\n(4) Be the liaison between the Governor and the General Assembly and local, state and federal organizations and entities with respect to educational technology matters;\n\n(5) Develop and maintain a long-range plan and make related recommendations for the coordination of educational technology. The plan shall (A) establish clear goals and a strategy for using telecommunications and information technology to improve education, (B) include a professional development strategy to ensure that teachers and faculty know how to use the new technologies to improve education, (C) include an assessment of the telecommunications, hardware, software and other services that will be needed to improve education, and (D) include an evaluation process that monitors progress towards the specified goals;\n\n(6) Measure the availability and usage of Internet access sites available to the public, including, but not limited to, those maintained by state and local government agencies, libraries, schools, institutions of higher education, nonprofit organizations, businesses and other organizations and recommend strategies for reducing the disparities in Internet accessibility and usage across the state and among all potential users;\n\n(7) Establish methods and procedures to ensure the maximum involvement of members of the public, educators, librarians, representatives of higher education, the legislature and local officials in educational technology matters and organize, as necessary, advisory boards consisting of individuals with expertise in a particular discipline significant to the work of the commission;\n\n(8) Report, on or before January first, annually, in accordance with section 11-4a, on its activities, progress made in the attainment of the state-wide technology goals as outlined in the long-range plan and any recommendations to the joint standing committee of the General Assembly having cognizance of matters relating to education and appropriations and the budgets of state agencies, the State Board of Education, and the Board of Regents for Higher Education. The report shall include recommendations for adjustments to the funding formula for grants pursuant to section 10-262n if there are school districts that are at a disadvantage in terms of wiring their schools and the use of technology in their schools;\n\n(9) Enter into such contractual agreements, in accordance with established procedures, as may be necessary to carry out the provisions of this section;\n\n(10) Take any other action necessary to carry out the provisions of this section.\n\n(d) The Commission for Educational Technology may request any office, department, board, commission or other agency of the state to supply such reports, information and assistance as may be necessary or appropriate in order to carry out its duties and requirements.\n\n(e) For purposes of this section, educational technology includes, but is not limited to: (1) Computer-assisted instruction; (2) information retrieval and data transfer; (3) telecommunications related to voice, data and video transmission of instruction related materials and courses; (4) the development and acquisition of educational software; and (5) the instructional uses of the Internet and other technologies.",
+      "href": "?chapter=061a&section=section-4d-80",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-4d-82a",
+      "citation": "4d-82a",
+      "citations": [
+        "4d-82a"
+      ],
+      "heading": "Sec. 4d-82a. Ed-Net account.",
+      "chapter": {
+        "id": "chapter-061a",
+        "number": "061a",
+        "name": "Educational Technology"
+      },
+      "status": "active",
+      "text": "(a) There is established a separate, nonlapsing account, which shall be known as the “Ed-Net account”. Any reimbursements received by the Department of Administrative Services for costs associated with the Connecticut Education Network shall be deposited in the General Fund and credited to the Ed-Net account to be used by said department to support the costs of said network.\n\n(b) The funds made available to the Department of Administrative Services in subsection (a) of this section, for Ed-Net, may be transferred by said department to state agencies requiring funds for such purpose.",
+      "href": "?chapter=061a&section=section-4d-82a",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-4d-91a",
+      "citation": "4d-91a",
+      "citations": [
+        "4d-91a"
+      ],
+      "heading": "Sec. 4d-91a. Municipal submission of geospatial data file.",
+      "chapter": {
+        "id": "chapter-061b",
+        "number": "061b",
+        "name": "Geospatial Information Systems"
+      },
+      "status": "active",
+      "text": "On or before May 1, 2028, and annually thereafter, each municipality shall submit a geospatial data file of each culvert and bridge within the control and boundaries of such municipality to the regional council of governments of which it is a member in a form and manner prescribed by the Office of Policy and Management, in consultation with the Departments of Transportation and Energy and Environmental Protection. Such geospatial data shall be produced and provided in the plane coordinate system, as described in section 13a-255. Such data file shall include, but need not be limited to, geospatial data pertaining to each culvert and bridge, the locational coordinates of each culvert and bridge, the age and dimensions of each culvert and bridge and any additional information deemed necessary by the Office of Policy and Management, in consultation with the Departments of Transportation and Energy and Environmental Protection. On or before July 1, 2028, and annually thereafter, each regional council of governments shall: (1) Submit such geospatial data file to the Secretary of the Office of Policy and Management, and (2) report each municipality that failed to provide such geospatial data file.",
+      "href": "?chapter=061b&section=section-4d-91a",
+      "supplement": {
+        "editionYear": 2026,
+        "presentation": "new"
+      }
+    }
+  ]
+}

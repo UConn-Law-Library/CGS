@@ -30,6 +30,9 @@ test("service worker declares an offline shell and explicit corpus controls", as
   assert.doesNotMatch(source, /cacheFirst\(request\)/);
   assert.match(source, /baseManifest\.artifacts\.map/);
   assert.match(source, /secondaryManifest\.artifacts\.map/);
+  assert.match(source, /supplementIndex/);
+  assert.match(source, /manifest\.artifacts\.map\(\(artifact\) => `\.\/data\/supplements/);
+  assert.match(source, /\.\/supplement-overlay\.js/);
   assert.match(source, /DOWNLOAD_OFFLINE_DATA/);
   assert.match(source, /CLEAR_OFFLINE_DATA/);
   assert.match(source, /OFFLINE_STATUS/);

@@ -55,7 +55,7 @@ export function statuteMatches(results, limit = 5) {
   return results.slice(0, limit).map(({ document }) => ({
     kind: "Section",
     label: `Sec. ${document.citation ?? document.citations.join("–")}`,
-    subtitle: `${document.heading} · Title ${document.title.number}, Chapter ${document.chapter.number}`,
+    subtitle: `${document.heading} · Title ${document.title.number}, Chapter ${document.chapter.number}${document.supplement ? ` · ${document.supplement.editionYear} Supp.` : ""}`,
     href: routeForDocument(document)
   }));
 }

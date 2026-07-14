@@ -38,6 +38,7 @@ For a reproducible build, pass `--generated-at 2026-07-13T13:33:18Z`. Otherwise 
 - `public/data/manifest.json`: corpus counts plus SHA-256 and byte size for every generated artifact.
 - `public/data/supplements/<year>/manifest.json`: an optional, immutable annual-overlay manifest bound to one reviewed base corpus.
 - `public/data/supplements/<year>/chapters/<chapter>.json`: only the provisions published in that supplement.
+- `public/data/supplements/<year>/search/title-<title>.json`: derived search deltas containing only superseded IDs and changed/new documents.
 - `public/data/secondary/infractions/`: optional title-sharded Judicial Branch Chart A entries and Chart B fee rules.
 - `public/data/secondary/statutes-index/`: optional size-bounded LCO subject-index shards.
 - `public/data/secondary/links/`: derived statute-to-infraction and statute-to-index reverse links.
@@ -62,6 +63,8 @@ Older `?chapter=001&section=section-1-1` links are translated to the canonical r
 
 Title-scoped and all-title searches use the same static search shards. The client loads up to six title shards concurrently and sends each completed shard to a Web Worker, which continuously merges a deterministic top-result set. The interface displays results and progress as shards arrive, cancels stale work when a new search or route begins, and falls back to incremental main-thread ranking when workers are unavailable.
 
+When a supplement is published, the client automatically removes superseded base search documents and adds that edition's changed/new documents. Results therefore match the same latest-supplement view shown by the reader without copying or rewriting the base search corpus.
+
 The global omnibar debounces input and displays mixed quick results while the user types. Title and chapter matches come from the already-loaded catalog, statute sections stream from the progressive worker search, infractions use the cached schedule shards, and index suggestions load only the relevant initial-letter shard. Arrow keys choose a result, Escape closes the panel, Enter opens the selected result or the complete statute-results page, and `/` focuses the omnibar outside another form field.
 
 ## Static discovery pages
@@ -77,6 +80,7 @@ The sitemap defaults to `https://uconn-law-library.github.io/CGS/`. Set `CGS_SIT
 | `npm run import:fixture` | Rebuild `public/data/` from the checked-in fixture |
 | `npm run import:legacy -- --input <dir>` | Import a legacy title-JSON directory |
 | `npm run import:supplement -- --input <dir> --base public/data --output <dir> --year <yyyy>` | Import an annual supplement as a reviewed, year-scoped overlay |
+| `npm run rebuild:supplement-search -- --year <yyyy>` | Rebuild derived search patches for an already reviewed supplement without changing its chapter overlays |
 | `npm run secondary:acquire -- --output <dir>` | Capture the three LCO index PDFs and Judicial Branch infractions PDF by content hash; use `--no-cga-ssl-verify` only for the documented CGA chain issue |
 | `npm run secondary:import -- --sources <manifest> --base public/data --output <dir>` | Parse, resolve, shard, and bind the secondary datasets to the canonical corpus |
 | `npm run diff:secondary -- --before <dir> --after <dir> --json <file> --markdown <file>` | Produce bounded, deterministic secondary-source change reports |
@@ -113,7 +117,7 @@ The replacement crawler lives in [`crawler/`](crawler/README.md). It separates n
 
 ## Annual supplements
 
-Supplements are opt-in, immutable overlays rather than destructive edits to the current-statutes corpus. A provision with the same complete citation set replaces that base provision for the selected edition; a new citation is added. A missing citation never deletes current law, and a partial match against a grouped provision fails validation instead of guessing.
+Supplements are immutable overlays rather than destructive edits to the current-statutes corpus. The reader automatically applies the latest published edition: amended, new, and repealed provisions are labeled in chapter navigation and on the page, while superseded base text, source notes, history, and annotations remain available in a collapsed reference panel. A provision with the same complete citation set replaces that base provision in memory; a new citation is added. A missing citation never deletes current law, and a partial match against a grouped provision fails validation instead of guessing.
 
 Each edition records the exact base schema version and generation timestamp it was reviewed against. A later base refresh therefore requires the overlay to be re-imported and reviewed before publication. The build derives `data/supplements/manifest.json` so the client can discover available editions without a server or database. See [docs/supplements.md](docs/supplements.md) for the artifact contract and review workflow.
 
@@ -127,7 +131,7 @@ The Phase 7 pipeline migrates the legacy PDF geometry parsers into deterministic
 
 The interactive client uses a mobile-first application shell modeled on the established CT Statutes navigation: **Statutes**, **Index**, **Infractions**, **Bookmarks**, and **Settings**. Phones keep these destinations in a persistent bottom navigation bar; larger screens place the same navigation in the header. Infractions can be browsed independently by schedule category, while statute sections and individual infractions can be bookmarked locally on the device. Theme, text-size, and list-density preferences are also device-local and require no account or database.
 
-The same static client is installable as a PWA. Its service worker caches the application shell and recently viewed data automatically. Settings exposes an explicit download for the complete published statutes, search, index, and infractions dataset, along with refresh and removal controls. Full downloads are staged in a separate cache and promoted only after every published artifact succeeds, so an interrupted refresh preserves the previous complete copy and can be retried. The production build fingerprints the complete shell and install icons so installed clients can offer a reload when a new version takes control, and Settings reports browser-provided storage usage and quota when available. All offline data stays in the browser cache; it is derived from the published JSON artifacts and does not introduce a database or hosting service.
+The same static client is installable as a PWA. Its service worker caches the application shell and recently viewed data automatically. Settings exposes an explicit download for the complete published statutes, supplements, search, index, and infractions dataset, along with refresh and removal controls. Full downloads are staged in a separate cache and promoted only after every published artifact succeeds, so an interrupted refresh preserves the previous complete copy and can be retried. The production build fingerprints the complete shell and install icons so installed clients can offer a reload when a new version takes control, and Settings reports browser-provided storage usage and quota when available. All offline data stays in the browser cache; it is derived from the published JSON artifacts and does not introduce a database or hosting service.
 
 ## Data authority
 

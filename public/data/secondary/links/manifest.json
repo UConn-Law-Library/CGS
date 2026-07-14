@@ -1,0 +1,361 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-07-14T00:00:00Z",
+  "shards": [
+    {
+      "titleId": "title-01",
+      "path": "title-01.json",
+      "sectionCount": 269
+    },
+    {
+      "titleId": "title-02",
+      "path": "title-02.json",
+      "sectionCount": 164
+    },
+    {
+      "titleId": "title-03",
+      "path": "title-03.json",
+      "sectionCount": 360
+    },
+    {
+      "titleId": "title-04",
+      "path": "title-04.json",
+      "sectionCount": 384
+    },
+    {
+      "titleId": "title-04a",
+      "path": "title-04a.json",
+      "sectionCount": 86
+    },
+    {
+      "titleId": "title-04b",
+      "path": "title-04b.json",
+      "sectionCount": 96
+    },
+    {
+      "titleId": "title-04d",
+      "path": "title-04d.json",
+      "sectionCount": 36
+    },
+    {
+      "titleId": "title-04e",
+      "path": "title-04e.json",
+      "sectionCount": 55
+    },
+    {
+      "titleId": "title-05",
+      "path": "title-05.json",
+      "sectionCount": 248
+    },
+    {
+      "titleId": "title-06",
+      "path": "title-06.json",
+      "sectionCount": 29
+    },
+    {
+      "titleId": "title-07",
+      "path": "title-07.json",
+      "sectionCount": 1010
+    },
+    {
+      "titleId": "title-08",
+      "path": "title-08.json",
+      "sectionCount": 654
+    },
+    {
+      "titleId": "title-09",
+      "path": "title-09.json",
+      "sectionCount": 588
+    },
+    {
+      "titleId": "title-10",
+      "path": "title-10.json",
+      "sectionCount": 1060
+    },
+    {
+      "titleId": "title-10a",
+      "path": "title-10a.json",
+      "sectionCount": 482
+    },
+    {
+      "titleId": "title-11",
+      "path": "title-11.json",
+      "sectionCount": 75
+    },
+    {
+      "titleId": "title-12",
+      "path": "title-12.json",
+      "sectionCount": 1176
+    },
+    {
+      "titleId": "title-13a",
+      "path": "title-13a.json",
+      "sectionCount": 305
+    },
+    {
+      "titleId": "title-13b",
+      "path": "title-13b.json",
+      "sectionCount": 385
+    },
+    {
+      "titleId": "title-14",
+      "path": "title-14.json",
+      "sectionCount": 694
+    },
+    {
+      "titleId": "title-15",
+      "path": "title-15.json",
+      "sectionCount": 244
+    },
+    {
+      "titleId": "title-16",
+      "path": "title-16.json",
+      "sectionCount": 450
+    },
+    {
+      "titleId": "title-16a",
+      "path": "title-16a.json",
+      "sectionCount": 169
+    },
+    {
+      "titleId": "title-17a",
+      "path": "title-17a.json",
+      "sectionCount": 619
+    },
+    {
+      "titleId": "title-17b",
+      "path": "title-17b.json",
+      "sectionCount": 503
+    },
+    {
+      "titleId": "title-18",
+      "path": "title-18.json",
+      "sectionCount": 138
+    },
+    {
+      "titleId": "title-19",
+      "path": "title-19.json",
+      "sectionCount": 1
+    },
+    {
+      "titleId": "title-19a",
+      "path": "title-19a.json",
+      "sectionCount": 909
+    },
+    {
+      "titleId": "title-20",
+      "path": "title-20.json",
+      "sectionCount": 985
+    },
+    {
+      "titleId": "title-21",
+      "path": "title-21.json",
+      "sectionCount": 108
+    },
+    {
+      "titleId": "title-21a",
+      "path": "title-21a.json",
+      "sectionCount": 443
+    },
+    {
+      "titleId": "title-22",
+      "path": "title-22.json",
+      "sectionCount": 498
+    },
+    {
+      "titleId": "title-22a",
+      "path": "title-22a.json",
+      "sectionCount": 930
+    },
+    {
+      "titleId": "title-23",
+      "path": "title-23.json",
+      "sectionCount": 143
+    },
+    {
+      "titleId": "title-24",
+      "path": "title-24.json",
+      "sectionCount": 3
+    },
+    {
+      "titleId": "title-25",
+      "path": "title-25.json",
+      "sectionCount": 194
+    },
+    {
+      "titleId": "title-26",
+      "path": "title-26.json",
+      "sectionCount": 344
+    },
+    {
+      "titleId": "title-27",
+      "path": "title-27.json",
+      "sectionCount": 299
+    },
+    {
+      "titleId": "title-28",
+      "path": "title-28.json",
+      "sectionCount": 59
+    },
+    {
+      "titleId": "title-29",
+      "path": "title-29.json",
+      "sectionCount": 466
+    },
+    {
+      "titleId": "title-30",
+      "path": "title-30.json",
+      "sectionCount": 174
+    },
+    {
+      "titleId": "title-31",
+      "path": "title-31.json",
+      "sectionCount": 621
+    },
+    {
+      "titleId": "title-32",
+      "path": "title-32.json",
+      "sectionCount": 466
+    },
+    {
+      "titleId": "title-33",
+      "path": "title-33.json",
+      "sectionCount": 552
+    },
+    {
+      "titleId": "title-34",
+      "path": "title-34.json",
+      "sectionCount": 322
+    },
+    {
+      "titleId": "title-35",
+      "path": "title-35.json",
+      "sectionCount": 74
+    },
+    {
+      "titleId": "title-36a",
+      "path": "title-36a.json",
+      "sectionCount": 592
+    },
+    {
+      "titleId": "title-36b",
+      "path": "title-36b.json",
+      "sectionCount": 69
+    },
+    {
+      "titleId": "title-37",
+      "path": "title-37.json",
+      "sectionCount": 12
+    },
+    {
+      "titleId": "title-38a",
+      "path": "title-38a.json",
+      "sectionCount": 1277
+    },
+    {
+      "titleId": "title-40",
+      "path": "title-40.json",
+      "sectionCount": 7
+    },
+    {
+      "titleId": "title-41",
+      "path": "title-41.json",
+      "sectionCount": 7
+    },
+    {
+      "titleId": "title-42",
+      "path": "title-42.json",
+      "sectionCount": 385
+    },
+    {
+      "titleId": "title-42b",
+      "path": "title-42b.json",
+      "sectionCount": 1
+    },
+    {
+      "titleId": "title-43",
+      "path": "title-43.json",
+      "sectionCount": 65
+    },
+    {
+      "titleId": "title-44",
+      "path": "title-44.json",
+      "sectionCount": 5
+    },
+    {
+      "titleId": "title-45a",
+      "path": "title-45a.json",
+      "sectionCount": 799
+    },
+    {
+      "titleId": "title-46a",
+      "path": "title-46a.json",
+      "sectionCount": 148
+    },
+    {
+      "titleId": "title-46b",
+      "path": "title-46b.json",
+      "sectionCount": 484
+    },
+    {
+      "titleId": "title-47",
+      "path": "title-47.json",
+      "sectionCount": 329
+    },
+    {
+      "titleId": "title-47a",
+      "path": "title-47a.json",
+      "sectionCount": 138
+    },
+    {
+      "titleId": "title-48",
+      "path": "title-48.json",
+      "sectionCount": 30
+    },
+    {
+      "titleId": "title-49",
+      "path": "title-49.json",
+      "sectionCount": 162
+    },
+    {
+      "titleId": "title-50",
+      "path": "title-50.json",
+      "sectionCount": 12
+    },
+    {
+      "titleId": "title-50a",
+      "path": "title-50a.json",
+      "sectionCount": 75
+    },
+    {
+      "titleId": "title-51",
+      "path": "title-51.json",
+      "sectionCount": 338
+    },
+    {
+      "titleId": "title-52",
+      "path": "title-52.json",
+      "sectionCount": 784
+    },
+    {
+      "titleId": "title-53",
+      "path": "title-53.json",
+      "sectionCount": 188
+    },
+    {
+      "titleId": "title-53a",
+      "path": "title-53a.json",
+      "sectionCount": 394
+    },
+    {
+      "titleId": "title-54",
+      "path": "title-54.json",
+      "sectionCount": 459
+    },
+    {
+      "titleId": "title-55",
+      "path": "title-55.json",
+      "sectionCount": 1
+    }
+  ]
+}

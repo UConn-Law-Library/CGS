@@ -1,0 +1,280 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-07-14T00:00:00Z",
+  "source": {
+    "name": "Mail-In Violations and Infractions Schedule",
+    "publisher": "State of Connecticut Judicial Branch",
+    "url": "https://www.jud.ct.gov/webforms/forms/infractions.pdf",
+    "effective": "October 1, 2025",
+    "chartBRevision": "10-2025",
+    "pageCount": 76,
+    "files": [
+      {
+        "name": "63874131880d2d1fc96afcdb8c9413ff334d62285bb0d3572f0fb9e63e85ef83.pdf",
+        "url": "https://www.jud.ct.gov/webforms/forms/infractions.pdf",
+        "bytes": 2039843,
+        "sha256": "63874131880d2d1fc96afcdb8c9413ff334d62285bb0d3572f0fb9e63e85ef83"
+      }
+    ]
+  },
+  "counts": {
+    "entries": 1737,
+    "resolved": 1725,
+    "categories": 39,
+    "feeRules": 10,
+    "feeRuleReferences": 234,
+    "feeRuleResolved": 234
+  },
+  "shards": [
+    {
+      "key": "title-01",
+      "path": "title-01.json",
+      "entryCount": 3
+    },
+    {
+      "key": "title-02",
+      "path": "title-02.json",
+      "entryCount": 2
+    },
+    {
+      "key": "title-03",
+      "path": "title-03.json",
+      "entryCount": 1
+    },
+    {
+      "key": "title-04b",
+      "path": "title-04b.json",
+      "entryCount": 14
+    },
+    {
+      "key": "title-07",
+      "path": "title-07.json",
+      "entryCount": 9
+    },
+    {
+      "key": "title-08",
+      "path": "title-08.json",
+      "entryCount": 4
+    },
+    {
+      "key": "title-09",
+      "path": "title-09.json",
+      "entryCount": 3
+    },
+    {
+      "key": "title-10",
+      "path": "title-10.json",
+      "entryCount": 7
+    },
+    {
+      "key": "title-10a",
+      "path": "title-10a.json",
+      "entryCount": 3
+    },
+    {
+      "key": "title-12",
+      "path": "title-12.json",
+      "entryCount": 27
+    },
+    {
+      "key": "title-13a",
+      "path": "title-13a.json",
+      "entryCount": 14
+    },
+    {
+      "key": "title-13b",
+      "path": "title-13b.json",
+      "entryCount": 26
+    },
+    {
+      "key": "title-14",
+      "path": "title-14.json",
+      "entryCount": 781
+    },
+    {
+      "key": "title-15",
+      "path": "title-15.json",
+      "entryCount": 97
+    },
+    {
+      "key": "title-16",
+      "path": "title-16.json",
+      "entryCount": 6
+    },
+    {
+      "key": "title-16a",
+      "path": "title-16a.json",
+      "entryCount": 12
+    },
+    {
+      "key": "title-17a",
+      "path": "title-17a.json",
+      "entryCount": 8
+    },
+    {
+      "key": "title-17b",
+      "path": "title-17b.json",
+      "entryCount": 2
+    },
+    {
+      "key": "title-19a",
+      "path": "title-19a.json",
+      "entryCount": 35
+    },
+    {
+      "key": "title-20",
+      "path": "title-20.json",
+      "entryCount": 26
+    },
+    {
+      "key": "title-21",
+      "path": "title-21.json",
+      "entryCount": 6
+    },
+    {
+      "key": "title-21a",
+      "path": "title-21a.json",
+      "entryCount": 58
+    },
+    {
+      "key": "title-22",
+      "path": "title-22.json",
+      "entryCount": 121
+    },
+    {
+      "key": "title-22a",
+      "path": "title-22a.json",
+      "entryCount": 49
+    },
+    {
+      "key": "title-23",
+      "path": "title-23.json",
+      "entryCount": 78
+    },
+    {
+      "key": "title-25",
+      "path": "title-25.json",
+      "entryCount": 7
+    },
+    {
+      "key": "title-26",
+      "path": "title-26.json",
+      "entryCount": 110
+    },
+    {
+      "key": "title-27",
+      "path": "title-27.json",
+      "entryCount": 1
+    },
+    {
+      "key": "title-28",
+      "path": "title-28.json",
+      "entryCount": 1
+    },
+    {
+      "key": "title-29",
+      "path": "title-29.json",
+      "entryCount": 55
+    },
+    {
+      "key": "title-30",
+      "path": "title-30.json",
+      "entryCount": 15
+    },
+    {
+      "key": "title-31",
+      "path": "title-31.json",
+      "entryCount": 31
+    },
+    {
+      "key": "title-33",
+      "path": "title-33.json",
+      "entryCount": 2
+    },
+    {
+      "key": "title-34",
+      "path": "title-34.json",
+      "entryCount": 2
+    },
+    {
+      "key": "title-35",
+      "path": "title-35.json",
+      "entryCount": 1
+    },
+    {
+      "key": "title-36a",
+      "path": "title-36a.json",
+      "entryCount": 6
+    },
+    {
+      "key": "title-38a",
+      "path": "title-38a.json",
+      "entryCount": 22
+    },
+    {
+      "key": "title-42",
+      "path": "title-42.json",
+      "entryCount": 6
+    },
+    {
+      "key": "title-43",
+      "path": "title-43.json",
+      "entryCount": 2
+    },
+    {
+      "key": "title-45a",
+      "path": "title-45a.json",
+      "entryCount": 4
+    },
+    {
+      "key": "title-46a",
+      "path": "title-46a.json",
+      "entryCount": 4
+    },
+    {
+      "key": "title-46b",
+      "path": "title-46b.json",
+      "entryCount": 4
+    },
+    {
+      "key": "title-47",
+      "path": "title-47.json",
+      "entryCount": 4
+    },
+    {
+      "key": "title-47a",
+      "path": "title-47a.json",
+      "entryCount": 3
+    },
+    {
+      "key": "title-49",
+      "path": "title-49.json",
+      "entryCount": 1
+    },
+    {
+      "key": "title-52",
+      "path": "title-52.json",
+      "entryCount": 3
+    },
+    {
+      "key": "title-53",
+      "path": "title-53.json",
+      "entryCount": 44
+    },
+    {
+      "key": "title-53a",
+      "path": "title-53a.json",
+      "entryCount": 4
+    },
+    {
+      "key": "title-54",
+      "path": "title-54.json",
+      "entryCount": 1
+    },
+    {
+      "key": "unresolved",
+      "path": "unresolved.json",
+      "entryCount": 12
+    }
+  ]
+}

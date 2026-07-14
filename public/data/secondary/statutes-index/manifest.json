@@ -1,0 +1,261 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-07-14T00:00:00Z",
+  "source": {
+    "name": "Index to the General Statutes of Connecticut",
+    "publisher": "Connecticut General Assembly, Legislative Commissioners' Office",
+    "url": "https://www.cga.ct.gov/lco/statutes-index.asp",
+    "revision": "Revision of 1958, revised to January 1, 2025",
+    "pageCount": 2718,
+    "files": [
+      {
+        "name": "a10f3823d6a049965014739ddd99a0ddb89c660211062866bfb8b86b8e5c8187.pdf",
+        "url": "https://www.cga.ct.gov/lco/index/2025/Index A-H.pdf",
+        "bytes": 3965589,
+        "sha256": "a10f3823d6a049965014739ddd99a0ddb89c660211062866bfb8b86b8e5c8187"
+      },
+      {
+        "name": "c2088dbf2d4af7086cc634c171a4a6d80a35375e5d5906e0c9c64e7f99e426da.pdf",
+        "url": "https://www.cga.ct.gov/lco/index/2025/Index I-S.pdf",
+        "bytes": 3783226,
+        "sha256": "c2088dbf2d4af7086cc634c171a4a6d80a35375e5d5906e0c9c64e7f99e426da"
+      },
+      {
+        "name": "f5f7bd01c69d321caa7afcbb47c295ce3096716a7134ffcda7f6ce37b46d305e.pdf",
+        "url": "https://www.cga.ct.gov/lco/index/2025/Index T-Z.pdf",
+        "bytes": 1105977,
+        "sha256": "f5f7bd01c69d321caa7afcbb47c295ce3096716a7134ffcda7f6ce37b46d305e"
+      }
+    ]
+  },
+  "counts": {
+    "headings": 5652,
+    "items": 193922,
+    "references": 166777,
+    "resolved": 164529
+  },
+  "shards": [
+    {
+      "key": "2",
+      "path": "2.json",
+      "headingCount": 2,
+      "itemCount": 3
+    },
+    {
+      "key": "a",
+      "path": "a-01.json",
+      "headingCount": 313,
+      "itemCount": 8996
+    },
+    {
+      "key": "a",
+      "path": "a-02.json",
+      "headingCount": 11,
+      "itemCount": 170
+    },
+    {
+      "key": "b",
+      "path": "b.json",
+      "headingCount": 248,
+      "itemCount": 6793
+    },
+    {
+      "key": "c",
+      "path": "c-01.json",
+      "headingCount": 365,
+      "itemCount": 9063
+    },
+    {
+      "key": "c",
+      "path": "c-02.json",
+      "headingCount": 283,
+      "itemCount": 9055
+    },
+    {
+      "key": "c",
+      "path": "c-03.json",
+      "headingCount": 142,
+      "itemCount": 7055
+    },
+    {
+      "key": "c",
+      "path": "c-04.json",
+      "headingCount": 37,
+      "itemCount": 4494
+    },
+    {
+      "key": "d",
+      "path": "d.json",
+      "headingCount": 238,
+      "itemCount": 6112
+    },
+    {
+      "key": "e",
+      "path": "e-01.json",
+      "headingCount": 63,
+      "itemCount": 8670
+    },
+    {
+      "key": "e",
+      "path": "e-02.json",
+      "headingCount": 168,
+      "itemCount": 7372
+    },
+    {
+      "key": "f",
+      "path": "f.json",
+      "headingCount": 297,
+      "itemCount": 7312
+    },
+    {
+      "key": "g",
+      "path": "g.json",
+      "headingCount": 142,
+      "itemCount": 4505
+    },
+    {
+      "key": "h",
+      "path": "h.json",
+      "headingCount": 248,
+      "itemCount": 7257
+    },
+    {
+      "key": "i",
+      "path": "i-01.json",
+      "headingCount": 145,
+      "itemCount": 9173
+    },
+    {
+      "key": "i",
+      "path": "i-02.json",
+      "headingCount": 61,
+      "itemCount": 631
+    },
+    {
+      "key": "j",
+      "path": "j.json",
+      "headingCount": 64,
+      "itemCount": 2801
+    },
+    {
+      "key": "k",
+      "path": "k.json",
+      "headingCount": 25,
+      "itemCount": 97
+    },
+    {
+      "key": "l",
+      "path": "l.json",
+      "headingCount": 208,
+      "itemCount": 6726
+    },
+    {
+      "key": "m",
+      "path": "m-01.json",
+      "headingCount": 296,
+      "itemCount": 8461
+    },
+    {
+      "key": "m",
+      "path": "m-02.json",
+      "headingCount": 38,
+      "itemCount": 8706
+    },
+    {
+      "key": "m",
+      "path": "m-03.json",
+      "headingCount": 43,
+      "itemCount": 3858
+    },
+    {
+      "key": "n",
+      "path": "n.json",
+      "headingCount": 160,
+      "itemCount": 3532
+    },
+    {
+      "key": "o",
+      "path": "o.json",
+      "headingCount": 107,
+      "itemCount": 985
+    },
+    {
+      "key": "p",
+      "path": "p-01.json",
+      "headingCount": 347,
+      "itemCount": 8756
+    },
+    {
+      "key": "p",
+      "path": "p-02.json",
+      "headingCount": 102,
+      "itemCount": 8385
+    },
+    {
+      "key": "q",
+      "path": "q.json",
+      "headingCount": 10,
+      "itemCount": 166
+    },
+    {
+      "key": "r",
+      "path": "r.json",
+      "headingCount": 268,
+      "itemCount": 5796
+    },
+    {
+      "key": "s",
+      "path": "s-01.json",
+      "headingCount": 318,
+      "itemCount": 9136
+    },
+    {
+      "key": "s",
+      "path": "s-02.json",
+      "headingCount": 266,
+      "itemCount": 7930
+    },
+    {
+      "key": "t",
+      "path": "t.json",
+      "headingCount": 235,
+      "itemCount": 9211
+    },
+    {
+      "key": "u",
+      "path": "u.json",
+      "headingCount": 130,
+      "itemCount": 5329
+    },
+    {
+      "key": "v",
+      "path": "v.json",
+      "headingCount": 84,
+      "itemCount": 1887
+    },
+    {
+      "key": "w",
+      "path": "w.json",
+      "headingCount": 161,
+      "itemCount": 4980
+    },
+    {
+      "key": "x",
+      "path": "x.json",
+      "headingCount": 2,
+      "itemCount": 6
+    },
+    {
+      "key": "y",
+      "path": "y.json",
+      "headingCount": 19,
+      "itemCount": 83
+    },
+    {
+      "key": "z",
+      "path": "z.json",
+      "headingCount": 6,
+      "itemCount": 430
+    }
+  ]
+}

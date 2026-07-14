@@ -75,7 +75,7 @@ The sitemap defaults to `https://uconn-law-library.github.io/CGS/`. Set `CGS_SIT
 | `npm run import:fixture` | Rebuild `public/data/` from the checked-in fixture |
 | `npm run import:legacy -- --input <dir>` | Import a legacy title-JSON directory |
 | `npm run import:supplement -- --input <dir> --base public/data --output <dir> --year <yyyy>` | Import an annual supplement as a reviewed, year-scoped overlay |
-| `npm run secondary:acquire -- --output <dir>` | Capture the three LCO index PDFs and Judicial Branch infractions PDF by content hash |
+| `npm run secondary:acquire -- --output <dir>` | Capture the three LCO index PDFs and Judicial Branch infractions PDF by content hash; use `--no-cga-ssl-verify` only for the documented CGA chain issue |
 | `npm run secondary:import -- --sources <manifest> --base public/data --output <dir>` | Parse, resolve, shard, and bind the secondary datasets to the canonical corpus |
 | `npm run diff:secondary -- --before <dir> --after <dir> --json <file> --markdown <file>` | Produce bounded, deterministic secondary-source change reports |
 | `npm run review:secondary -- --report <file> --policy config/secondary-refresh-policy.json` | Enforce count, removal, and citation-resolution safety thresholds |
@@ -117,7 +117,7 @@ Each edition records the exact base schema version and generation timestamp it w
 
 ## Infractions and General Statutes index
 
-The Phase 7 pipeline migrates the legacy PDF geometry parsers into deterministic, content-addressed ingestion for the official Judicial Branch infractions schedule (Charts A and B) and the three-volume LCO subject index. The reviewed artifacts are published under `public/data/secondary`. Statute pages lazily display linked schedule entries, fee-rule roles, and subject-index records; `#/index` provides alphabetical browsing and letter-scoped client search without a database. See [docs/secondary-sources.md](docs/secondary-sources.md) for commands, provenance, artifact contracts, and the production-scale validation record.
+The Phase 7 pipeline migrates the legacy PDF geometry parsers into deterministic, content-addressed ingestion for the official Judicial Branch infractions schedule (Charts A and B) and the three-volume LCO subject index. The reviewed artifacts are published under `public/data/secondary`. Statute pages lazily display linked schedule entries, fee-rule roles, and subject-index records; `#/index` provides alphabetical browsing and letter-scoped client search without a database. Phase 9 adds a weekly, manually dispatchable `Review secondary sources refresh` workflow that retains source PDFs and opens a draft PR only after validation, a bounded diff, and the committed safety policy pass. See [docs/secondary-sources.md](docs/secondary-sources.md) for commands, provenance, artifact contracts, and the refresh runbook.
 
 ## Data authority
 

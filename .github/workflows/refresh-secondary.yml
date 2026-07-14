@@ -1,0 +1,163 @@
+name: Review secondary sources refresh
+
+on:
+  schedule:
+    - cron: "43 11 * * 3"
+  workflow_dispatch:
+    inputs:
+      create_pull_request:
+        description: Create a draft pull request when meaningful changes pass review
+        required: true
+        default: true
+        type: boolean
+
+permissions:
+  actions: write
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: secondary-sources-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    env:
+      REFRESH_ROOT: .crawl/secondary-refresh
+      SOURCE_DIR: .crawl/secondary-refresh/sources
+      CANDIDATE_DIR: .crawl/secondary-refresh/candidate
+      REPORT_DIR: .crawl/secondary-refresh/reports
+      CREATE_PULL_REQUEST: ${{ github.event_name == 'schedule' || inputs.create_pull_request }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Require the published main baseline
+        run: |
+          if [ "$GITHUB_REF" != "refs/heads/main" ]; then
+            echo "Run secondary-source refreshes from the main branch, not $GITHUB_REF." >&2
+            exit 1
+          fi
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: python -m pip install -r crawler/requirements.txt
+      - run: npm ci
+
+      - name: Acquire official secondary-source PDFs
+        run: |
+          set -o pipefail
+          mkdir -p "$REPORT_DIR"
+          npm run secondary:acquire -- \
+            --output "$SOURCE_DIR" \
+            --no-cga-ssl-verify \
+            2>&1 | tee "$REPORT_DIR/acquisition.log"
+
+      - name: Build and validate candidate artifacts
+        run: |
+          npm run secondary:import -- \
+            --sources "$SOURCE_DIR/manifest.json" \
+            --base public/data \
+            --output "$CANDIDATE_DIR"
+          npm run validate:secondary -- \
+            --data "$CANDIDATE_DIR" \
+            --base public/data
+
+      - name: Generate the secondary-source diff
+        run: |
+          npm run diff:secondary -- \
+            --before public/data/secondary \
+            --after "$CANDIDATE_DIR" \
+            --json "$REPORT_DIR/secondary-diff.json" \
+            --markdown "$REPORT_DIR/secondary-diff.md"
+
+      - name: Apply secondary-source safety policy
+        id: review
+        run: |
+          node scripts/check-secondary-refresh.mjs \
+            --report "$REPORT_DIR/secondary-diff.json" \
+            --policy config/secondary-refresh-policy.json \
+            --summary "$REPORT_DIR/refresh-summary.md" \
+            --state "$REPORT_DIR/refresh-state.json" \
+            --github-output "$GITHUB_OUTPUT"
+
+      - name: Publish review summary
+        if: always()
+        run: |
+          if [ -f "$REPORT_DIR/refresh-summary.md" ]; then
+            cat "$REPORT_DIR/refresh-summary.md" >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Stage and verify candidate artifacts
+        if: steps.review.outputs.has_changes == 'true'
+        run: |
+          rm -rf public/data/secondary
+          cp -a "$CANDIDATE_DIR" public/data/secondary
+          npm run check
+
+      - name: Prepare pull request description
+        if: steps.review.outputs.has_changes == 'true' && env.CREATE_PULL_REQUEST == 'true'
+        run: |
+          {
+            echo "# Automated secondary-source refresh"
+            echo
+            echo "This draft was produced by the reviewed secondary-source workflow. It never writes directly to main."
+            echo
+            cat "$REPORT_DIR/refresh-summary.md"
+            echo
+            cat "$REPORT_DIR/secondary-diff.md"
+            echo
+            echo "The complete reports and content-addressed source PDFs are retained on the [workflow run]($GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)."
+            echo
+            echo "Review the official revisions, legal-data changes, citation resolution, and source links before merging."
+          } > "$REPORT_DIR/pull-request.md"
+
+      - name: Create draft refresh pull request
+        if: steps.review.outputs.has_changes == 'true' && env.CREATE_PULL_REQUEST == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          branch="automation/secondary-refresh-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$branch"
+          git add -- public/data/secondary
+          if git diff --cached --quiet; then
+            echo "The review reported meaningful changes, but no secondary artifacts changed." >&2
+            exit 1
+          fi
+          git commit -m "Refresh secondary sources $(date -u +%Y-%m-%d)"
+          git push origin "$branch"
+          pr_url="$(gh pr create \
+            --base main \
+            --head "$branch" \
+            --draft \
+            --title "Refresh secondary sources $(date -u +%Y-%m-%d)" \
+            --body-file "$REPORT_DIR/pull-request.md")"
+          gh workflow run ci.yml --ref "$branch"
+          echo "Created draft refresh PR: $pr_url" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload refresh reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: secondary-refresh-review-${{ github.run_id }}-${{ github.run_attempt }}
+          path: .crawl/secondary-refresh/reports/
+          if-no-files-found: ignore
+          include-hidden-files: true
+          retention-days: 30
+
+      - name: Upload content-addressed source PDFs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: secondary-refresh-sources-${{ github.run_id }}-${{ github.run_attempt }}
+          path: .crawl/secondary-refresh/sources/
+          if-no-files-found: ignore
+          include-hidden-files: true
+          retention-days: 14

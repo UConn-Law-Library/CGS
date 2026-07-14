@@ -16,7 +16,13 @@ def main():
     acquire.add_argument("--output", default=".crawl/secondary/sources")
     acquire.add_argument("--captured-at")
     acquire.add_argument("--infractions-file", help="use a manually retrieved Judicial Branch PDF")
-    acquire.add_argument("--no-ssl-verify", action="store_true", help="explicit workaround for the CGA certificate chain")
+    acquire.add_argument(
+        "--no-cga-ssl-verify",
+        "--no-ssl-verify",
+        dest="no_cga_ssl_verify",
+        action="store_true",
+        help="explicit CGA-only certificate-chain workaround; Judicial Branch TLS remains verified",
+    )
 
     build = commands.add_parser("import", help="parse PDFs into canonical static artifacts")
     build.add_argument("--sources", help="snapshot manifest produced by the acquire command")
@@ -29,14 +35,15 @@ def main():
 
     args = parser.parse_args()
     if args.command == "acquire":
-        if not args.no_ssl_verify:
-            try:
-                import truststore
-                truststore.inject_into_ssl()
-            except ImportError:
-                pass
+        try:
+            import truststore
+            truststore.inject_into_ssl()
+        except ImportError:
+            pass
         captures, revision = PdfAcquirer(
-            PdfSnapshotStore(Path(args.output)), verify_ssl=not args.no_ssl_verify
+            PdfSnapshotStore(Path(args.output)),
+            verify_ssl=True,
+            cga_verify_ssl=not args.no_cga_ssl_verify,
         ).capture_all(
             args.captured_at, Path(args.infractions_file) if args.infractions_file else None
         )

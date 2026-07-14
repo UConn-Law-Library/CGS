@@ -5,6 +5,7 @@ import json
 import os
 import re
 import tempfile
+import time
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
@@ -122,15 +123,36 @@ class PdfSnapshotStore:
 
 
 class PdfAcquirer:
-    def __init__(self, store: PdfSnapshotStore, session: Optional[requests.Session] = None, verify_ssl=True):
+    def __init__(
+        self,
+        store: PdfSnapshotStore,
+        session: Optional[requests.Session] = None,
+        verify_ssl=True,
+        cga_verify_ssl=None,
+        max_attempts=3,
+        sleeper=time.sleep,
+    ):
         self.store = store
         self.session = session or requests.Session()
         self.verify_ssl = verify_ssl
+        self.cga_verify_ssl = verify_ssl if cga_verify_ssl is None else cga_verify_ssl
+        self.max_attempts = max_attempts
+        self.sleeper = sleeper
         self.session.headers.update({"User-Agent": USER_AGENT})
 
-    def get_bytes(self, url: str) -> bytes:
-        response = self.session.get(url, timeout=60, verify=self.verify_ssl)
-        response.raise_for_status()
+    def _get(self, url: str, verify_ssl):
+        for attempt in range(self.max_attempts):
+            try:
+                response = self.session.get(url, timeout=60, verify=verify_ssl)
+                response.raise_for_status()
+                return response
+            except requests.RequestException:
+                if attempt + 1 == self.max_attempts:
+                    raise
+                self.sleeper(2 ** attempt)
+
+    def get_bytes(self, url: str, verify_ssl=None) -> bytes:
+        response = self._get(url, self.verify_ssl if verify_ssl is None else verify_ssl)
         content_type = (response.headers.get("Content-Type") or "").lower()
         if content_type and "pdf" not in content_type and "octet-stream" not in content_type:
             raise ValueError(f"Expected PDF from {url}, received {content_type!r}")
@@ -138,16 +160,18 @@ class PdfAcquirer:
             raise ValueError(f"Expected PDF bytes from {url}")
         return response.content
 
-    def capture_url(self, url: str, name: str, captured_at: Optional[str] = None):
-        return self.store.capture(url, name, self.get_bytes(url), captured_at or utc_now())
+    def capture_url(self, url: str, name: str, captured_at: Optional[str] = None, verify_ssl=None):
+        return self.store.capture(url, name, self.get_bytes(url, verify_ssl), captured_at or utc_now())
 
     def capture_all(self, captured_at: Optional[str] = None, infractions_file: Optional[Path] = None):
         timestamp = captured_at or utc_now()
-        response = self.session.get(INDEX_PAGE_URL, timeout=60, verify=self.verify_ssl)
-        response.raise_for_status()
+        response = self._get(INDEX_PAGE_URL, self.cga_verify_ssl)
         urls, revision = discover_index_sources(response.text)
         self.store.set_index_revision(revision)
-        captures = [self.capture_url(urls[name], name, timestamp) for name in INDEX_NAMES]
+        captures = [
+            self.capture_url(urls[name], name, timestamp, self.cga_verify_ssl)
+            for name in INDEX_NAMES
+        ]
         if infractions_file:
             captures.append(self.store.capture(
                 INFRACTIONS_URL, "infractions.pdf", Path(infractions_file).read_bytes(), timestamp

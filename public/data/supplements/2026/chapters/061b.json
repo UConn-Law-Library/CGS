@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-061b",
+  "number": "061b",
+  "name": "Geospatial Information Systems",
+  "title": {
+    "id": "title-04d",
+    "number": "04d",
+    "name": "State Information and Telecommunication Systems"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_061b.htm",
+  "sections": [
+    {
+      "id": "section-4d-91a",
+      "kind": "section",
+      "citation": "4d-91a",
+      "citations": [
+        "4d-91a"
+      ],
+      "heading": "Sec. 4d-91a. Municipal submission of geospatial data file.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_061b.htm#sec_4d-91a",
+      "status": "active",
+      "content": {
+        "body": [
+          "On or before May 1, 2028, and annually thereafter, each municipality shall submit a geospatial data file of each culvert and bridge within the control and boundaries of such municipality to the regional council of governments of which it is a member in a form and manner prescribed by the Office of Policy and Management, in consultation with the Departments of Transportation and Energy and Environmental Protection. Such geospatial data shall be produced and provided in the plane coordinate system, as described in section 13a-255. Such data file shall include, but need not be limited to, geospatial data pertaining to each culvert and bridge, the locational coordinates of each culvert and bridge, the age and dimensions of each culvert and bridge and any additional information deemed necessary by the Office of Policy and Management, in consultation with the Departments of Transportation and Energy and Environmental Protection. On or before July 1, 2028, and annually thereafter, each regional council of governments shall: (1) Submit such geospatial data file to the Secretary of the Office of Policy and Management, and (2) report each municipality that failed to provide such geospatial data file."
+        ],
+        "sourceNotes": [
+          "(P.A. 25-33, S. 8.)"
+        ],
+        "history": [
+          "History: P.A. 25-33 effective July 1, 2025."
+        ],
+        "annotations": [],
+        "plainText": "On or before May 1, 2028, and annually thereafter, each municipality shall submit a geospatial data file of each culvert and bridge within the control and boundaries of such municipality to the regional council of governments of which it is a member in a form and manner prescribed by the Office of Policy and Management, in consultation with the Departments of Transportation and Energy and Environmental Protection. Such geospatial data shall be produced and provided in the plane coordinate system, as described in section 13a-255. Such data file shall include, but need not be limited to, geospatial data pertaining to each culvert and bridge, the locational coordinates of each culvert and bridge, the age and dimensions of each culvert and bridge and any additional information deemed necessary by the Office of Policy and Management, in consultation with the Departments of Transportation and Energy and Environmental Protection. On or before July 1, 2028, and annually thereafter, each regional council of governments shall: (1) Submit such geospatial data file to the Secretary of the Office of Policy and Management, and (2) report each municipality that failed to provide such geospatial data file."
+      }
+    }
+  ]
+}

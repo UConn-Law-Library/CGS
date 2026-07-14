@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-588v",
+  "number": "588v",
+  "name": "International Trade",
+  "title": {
+    "id": "title-32",
+    "number": "32",
+    "name": "Commerce and Economic and Community Development"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_588v.htm",
+  "sections": [
+    {
+      "id": "section-32-504",
+      "kind": "section",
+      "citation": "32-504",
+      "citations": [
+        "32-504"
+      ],
+      "heading": "Sec. 32-504. International trade account.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_588v.htm#sec_32-504",
+      "status": "active",
+      "content": {
+        "body": [
+          "There is established an international trade account, which shall be a separate, nonlapsing account. The account may contain any moneys required by law to be deposited in the account, including success fees pursuant to section 32-500 and participation fees pursuant to section 32-506, and any other moneys received by the commissioner from other public or private sources for the purposes of sections 32-500 to 32-512, inclusive. The commissioner shall use the moneys in the account for the purposes of sections 32-500 to 32-512, inclusive."
+        ],
+        "sourceNotes": [
+          "(P.A. 94-237, S. 5, 14; May 25 Sp. Sess. P.A. 94-1, S. 101, 130; P.A. 25-110, S. 115.)"
+        ],
+        "history": [
+          "History: P.A. 94-237 effective July 1, 1994; May Sp. Sess. P.A. 94-1 specified account as separate nonlapsing account within the general fund, effective July 1, 1994; P.A. 25-110 deleted reference to General Fund and made a technical change, effective July 1, 2025."
+        ],
+        "annotations": [],
+        "plainText": "There is established an international trade account, which shall be a separate, nonlapsing account. The account may contain any moneys required by law to be deposited in the account, including success fees pursuant to section 32-500 and participation fees pursuant to section 32-506, and any other moneys received by the commissioner from other public or private sources for the purposes of sections 32-500 to 32-512, inclusive. The commissioner shall use the moneys in the account for the purposes of sections 32-500 to 32-512, inclusive."
+      }
+    }
+  ]
+}

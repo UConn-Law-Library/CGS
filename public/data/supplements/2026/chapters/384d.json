@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-384d",
+  "number": "384d",
+  "name": "Emergency Medical Services Personnel",
+  "title": {
+    "id": "title-20",
+    "number": "20",
+    "name": "Professional and Occupational Licensing, Certification, Title Protection and Registration. Examining Boards"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_384d.htm",
+  "sections": [
+    {
+      "id": "section-20-206ll",
+      "kind": "section",
+      "citation": "20-206ll",
+      "citations": [
+        "20-206ll"
+      ],
+      "heading": "Sec. 20-206 ll . Licensure and certification application. Renewal.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_384d.htm#sec_20-206ll",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) The commissioner shall issue a license as a paramedic to any applicant who furnishes evidence satisfactory to the commissioner that the applicant has met the requirements of section 20-206mm. The commissioner shall develop and provide application forms. The license may be renewed annually pursuant to section 19a-88 for a fee of one hundred fifty-five dollars. No fee shall be required for the application for a license under this section.",
+          "(b) The commissioner shall issue a certification as an emergency medical technician, emergency medical services instructor, emergency medical responder or advanced emergency medical technician to any applicant who furnishes evidence satisfactory to the commissioner that the applicant has met the requirements of section 20-206mm."
+        ],
+        "sourceNotes": [
+          "(P.A. 97-311, S. 11; June Sp. Sess. P.A. 09-3, S. 223; P.A. 15-223, S. 7; 15-244, S. 130; June Sp. Sess. P.A. 15-5, S. 474; P.A. 25-174, S. 187.)"
+        ],
+        "history": [
+          "History: June Sp. Sess. P.A. 09-3 increased fees from $75 to $150; P.A. 15-223 amended Subsec. (a) by deleting reference to Sec. 19a-175, deleted existing Subsec. (b) designator and repositioned existing provision re license renewal to Subsec. (a), and added new Subsec. (b) re certification; P.A. 15-244 amended Subsec. (b) to increase renewal fee from $150 to $155, effective July 1, 2015; June Sp. Sess. P.A. 15-5 changed effective date of P.A. 15-244, S. 130, from July 1, 2015, to October 1, 2015, and applicable to the renewal of a license or certificate that expires on or after that date, effective June 30, 2015; P.A. 25-174 amended Subsec. (a) by deleting application fee and making a conforming change."
+        ],
+        "annotations": [],
+        "plainText": "(a) The commissioner shall issue a license as a paramedic to any applicant who furnishes evidence satisfactory to the commissioner that the applicant has met the requirements of section 20-206mm. The commissioner shall develop and provide application forms. The license may be renewed annually pursuant to section 19a-88 for a fee of one hundred fifty-five dollars. No fee shall be required for the application for a license under this section.\n\n(b) The commissioner shall issue a certification as an emergency medical technician, emergency medical services instructor, emergency medical responder or advanced emergency medical technician to any applicant who furnishes evidence satisfactory to the commissioner that the applicant has met the requirements of section 20-206mm."
+      }
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-art-007",
+  "number": "art-007",
+  "name": "Documents of Title",
+  "title": {
+    "id": "title-42a",
+    "number": "42a",
+    "name": "Uniform Commercial Code"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2026/sup/art_007.htm",
+  "sections": [
+    {
+      "id": "section-42a-7-102",
+      "kind": "section",
+      "citation": "42a-7-102",
+      "citations": [
+        "42a-7-102"
+      ],
+      "heading": "Sec. 42a-7-102. Definitions and index of definitions.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/art_007.htm#sec_42a-7-102",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) In this article, unless the context otherwise requires:",
+          "(1) “Bailee” means a person that by a warehouse receipt, bill of lading or other document of title acknowledges possession of goods and contracts to deliver them.",
+          "(2) “Carrier” means a person that issues a bill of lading.",
+          "(3) “Consignee” means a person named in a bill of lading to which or to whose order the bill promises delivery.",
+          "(4) “Consignor” means a person named in a bill of lading as the person from which the goods have been received for shipment.",
+          "(5) “Delivery order” means a record that contains an order to deliver goods directed to a warehouse, carrier or other person that in the ordinary course of business issues warehouse receipts or bills of lading.",
+          "(6) “Good faith” means honesty in fact and the observance of reasonable commercial standards of fair dealing.",
+          "(7) “Goods” means all things that are treated as movable for the purposes of a contract for storage or transportation.",
+          "(8) “Issuer” means a bailee that issues a document of title or, in the case of an unaccepted delivery order, the person that orders the possessor of goods to deliver. The term includes a person for which an agent or employee purports to act in issuing a document if the agent or employee has real or apparent authority to issue documents, even if the issuer did not receive any goods, the goods were misdescribed, or in any other respect the agent or employee violated the issuer's instructions.",
+          "(9) “Person entitled under the document” means the holder, in the case of a negotiable document of title, or the person to which delivery of the goods is to be made by the terms of, or pursuant to instructions in a record under, a nonnegotiable document of title.",
+          "(10) “Shipper” means a person that enters into a contract of transportation with a carrier.",
+          "(11) “Warehouse” means a person engaged in the business of storing goods for hire.",
+          "(b) Definitions in other articles applying to this article and the sections in which they appear are:",
+          "(1) “Contract for sale”. Section 42a-2-106.",
+          "(2) “Lessee in ordinary course of business”. Section 42a-2A-102.",
+          "(3) “Receipt” of goods. Section 42a-2-103.",
+          "(c) In addition, article 1 contains general definitions and principles of construction and interpretation applicable throughout this article."
+        ],
+        "sourceNotes": [
+          "(1959, P.A. 133, S. 7-102; P.A. 04-64, S. 2; P.A. 25-145, S. 29.)"
+        ],
+        "history": [
+          "History: P.A. 04-64 amended section to adopt the 2003 Revision of Uniform Commercial Code Article 7-Documents of Title; P.A. 25-145 deleted former Subdivs. (10) and (11) defining “record” and “sign”, and redesignated existing Subdivs. (12) and (13) as Subdivs. (10) and (11), effective January 1, 2026."
+        ],
+        "annotations": [],
+        "plainText": "(a) In this article, unless the context otherwise requires:\n\n(1) “Bailee” means a person that by a warehouse receipt, bill of lading or other document of title acknowledges possession of goods and contracts to deliver them.\n\n(2) “Carrier” means a person that issues a bill of lading.\n\n(3) “Consignee” means a person named in a bill of lading to which or to whose order the bill promises delivery.\n\n(4) “Consignor” means a person named in a bill of lading as the person from which the goods have been received for shipment.\n\n(5) “Delivery order” means a record that contains an order to deliver goods directed to a warehouse, carrier or other person that in the ordinary course of business issues warehouse receipts or bills of lading.\n\n(6) “Good faith” means honesty in fact and the observance of reasonable commercial standards of fair dealing.\n\n(7) “Goods” means all things that are treated as movable for the purposes of a contract for storage or transportation.\n\n(8) “Issuer” means a bailee that issues a document of title or, in the case of an unaccepted delivery order, the person that orders the possessor of goods to deliver. The term includes a person for which an agent or employee purports to act in issuing a document if the agent or employee has real or apparent authority to issue documents, even if the issuer did not receive any goods, the goods were misdescribed, or in any other respect the agent or employee violated the issuer's instructions.\n\n(9) “Person entitled under the document” means the holder, in the case of a negotiable document of title, or the person to which delivery of the goods is to be made by the terms of, or pursuant to instructions in a record under, a nonnegotiable document of title.\n\n(10) “Shipper” means a person that enters into a contract of transportation with a carrier.\n\n(11) “Warehouse” means a person engaged in the business of storing goods for hire.\n\n(b) Definitions in other articles applying to this article and the sections in which they appear are:\n\n(1) “Contract for sale”. Section 42a-2-106.\n\n(2) “Lessee in ordinary course of business”. Section 42a-2A-102.\n\n(3) “Receipt” of goods. Section 42a-2-103.\n\n(c) In addition, article 1 contains general definitions and principles of construction and interpretation applicable throughout this article."
+      }
+    },
+    {
+      "id": "section-42a-7-106",
+      "kind": "section",
+      "citation": "42a-7-106",
+      "citations": [
+        "42a-7-106"
+      ],
+      "heading": "Sec. 42a-7-106. Control of electronic document of title.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/art_007.htm#sec_42a-7-106",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) A person has control of an electronic document of title if a system employed for evidencing the transfer of interests in the electronic document reliably establishes that person as the person to which the electronic document was issued or transferred.",
+          "(b) A system satisfies subsection (a) of this section, and a person has control of an electronic document of title, if the document is created, stored and transferred in a manner that:",
+          "(1) A single authoritative copy of the document exists which is unique, identifiable and, except as otherwise provided in subdivisions (4), (5) and (6) of this subsection, unalterable;",
+          "(2) The authoritative copy identifies the person asserting control as:",
+          "(A) The person to which the document was issued; or",
+          "(B) If the authoritative copy indicates that the document has been transferred, the person to which the document was most recently transferred;",
+          "(3) The authoritative copy is communicated to and maintained by the person asserting control or its designated custodian;",
+          "(4) Copies or amendments that add or change an identified transferee of the authoritative copy can be made only with the consent of the person asserting control;",
+          "(5) Each copy of the authoritative copy and any copy of a copy is readily identifiable as a copy that is not the authoritative copy; and",
+          "(6) Any amendment of the authoritative copy is readily identifiable as authorized or unauthorized.",
+          "(c) A system satisfies subsection (a) of this section, and a person has control of an electronic document of title, if an authoritative electronic copy of the document, a record attached to or logically associated with the electronic copy or a system in which the electronic copy is recorded:",
+          "(1) Enables the person readily to identify each electronic copy as either an authoritative copy or a nonauthoritative copy;",
+          "(2) Enables the person readily to identify itself in any way, including by name, identifying number, cryptographic key, office or account number, as the person to which each authoritative electronic copy was issued or transferred; and",
+          "(3) Gives the person exclusive power, subject to subsection (d) of this section, to:",
+          "(A) Prevent others from adding or changing the person to which each authoritative electronic copy has been issued or transferred; and",
+          "(B) Transfer control of each authoritative electronic copy.",
+          "(d) Subject to subsection (e) of this section, a power is exclusive under subparagraphs (A) and (B) of subdivision (3) of subsection (c) of this section even if:",
+          "(1) The authoritative electronic copy, a record attached to or logically associated with the authoritative electronic copy or a system in which the authoritative electronic copy is recorded limits the use of the document of title or has a protocol that is programmed to cause a change, including a transfer or loss of control; or",
+          "(2) The power is shared with another person.",
+          "(e) A power of a person is not shared with another person under subdivision (2) of subsection (d) of this section and the person's power is not exclusive if: (1) The person can exercise the power only if the power also is exercised by the other person; and (2) the other person:",
+          "(A) Can exercise the power without exercise of the power by the person; or",
+          "(B) Is the transferor to the person of an interest in the document of title.",
+          "(f) If a person has the powers specified in subparagraphs (A) and (B) of subdivision (3) of subsection (c) of this section, the powers are presumed to be exclusive.",
+          "(g) A person has control of an electronic document of title if another person, other than the transferor to the person of an interest in the document:",
+          "(1) Has control of the document and acknowledges that it has control on behalf of the person; or",
+          "(2) Obtains control of the document after having acknowledged that it will obtain control of the document on behalf of the person.",
+          "(h) A person that has control under this section is not required to acknowledge that it has control on behalf of another person.",
+          "(i) If a person acknowledges that it has or will obtain control on behalf of another person, unless the person otherwise agrees or law other than this article or article 9 otherwise provides, the person does not owe any duty to the other person and is not required to confirm the acknowledgment to any other person."
+        ],
+        "sourceNotes": [
+          "(P.A. 04-64, S. 6; P.A. 25-145, S. 30.)"
+        ],
+        "history": [
+          "History: P.A. 25-145 amended Subsec. (b) by substituting “transferred in a manner” for “assigned in such a manner” and by making technical changes, added Subsec. (c) re system that satisfies the requirements of Subsec. (a), added Subsecs. (d) to (f) re exclusivity of powers and added Subsecs. (g) to (i) re control of electronic document of title, effective January 1, 2026."
+        ],
+        "annotations": [],
+        "plainText": "(a) A person has control of an electronic document of title if a system employed for evidencing the transfer of interests in the electronic document reliably establishes that person as the person to which the electronic document was issued or transferred.\n\n(b) A system satisfies subsection (a) of this section, and a person has control of an electronic document of title, if the document is created, stored and transferred in a manner that:\n\n(1) A single authoritative copy of the document exists which is unique, identifiable and, except as otherwise provided in subdivisions (4), (5) and (6) of this subsection, unalterable;\n\n(2) The authoritative copy identifies the person asserting control as:\n\n(A) The person to which the document was issued; or\n\n(B) If the authoritative copy indicates that the document has been transferred, the person to which the document was most recently transferred;\n\n(3) The authoritative copy is communicated to and maintained by the person asserting control or its designated custodian;\n\n(4) Copies or amendments that add or change an identified transferee of the authoritative copy can be made only with the consent of the person asserting control;\n\n(5) Each copy of the authoritative copy and any copy of a copy is readily identifiable as a copy that is not the authoritative copy; and\n\n(6) Any amendment of the authoritative copy is readily identifiable as authorized or unauthorized.\n\n(c) A system satisfies subsection (a) of this section, and a person has control of an electronic document of title, if an authoritative electronic copy of the document, a record attached to or logically associated with the electronic copy or a system in which the electronic copy is recorded:\n\n(1) Enables the person readily to identify each electronic copy as either an authoritative copy or a nonauthoritative copy;\n\n(2) Enables the person readily to identify itself in any way, including by name, identifying number, cryptographic key, office or account number, as the person to which each authoritative electronic copy was issued or transferred; and\n\n(3) Gives the person exclusive power, subject to subsection (d) of this section, to:\n\n(A) Prevent others from adding or changing the person to which each authoritative electronic copy has been issued or transferred; and\n\n(B) Transfer control of each authoritative electronic copy.\n\n(d) Subject to subsection (e) of this section, a power is exclusive under subparagraphs (A) and (B) of subdivision (3) of subsection (c) of this section even if:\n\n(1) The authoritative electronic copy, a record attached to or logically associated with the authoritative electronic copy or a system in which the authoritative electronic copy is recorded limits the use of the document of title or has a protocol that is programmed to cause a change, including a transfer or loss of control; or\n\n(2) The power is shared with another person.\n\n(e) A power of a person is not shared with another person under subdivision (2) of subsection (d) of this section and the person's power is not exclusive if: (1) The person can exercise the power only if the power also is exercised by the other person; and (2) the other person:\n\n(A) Can exercise the power without exercise of the power by the person; or\n\n(B) Is the transferor to the person of an interest in the document of title.\n\n(f) If a person has the powers specified in subparagraphs (A) and (B) of subdivision (3) of subsection (c) of this section, the powers are presumed to be exclusive.\n\n(g) A person has control of an electronic document of title if another person, other than the transferor to the person of an interest in the document:\n\n(1) Has control of the document and acknowledges that it has control on behalf of the person; or\n\n(2) Obtains control of the document after having acknowledged that it will obtain control of the document on behalf of the person.\n\n(h) A person that has control under this section is not required to acknowledge that it has control on behalf of another person.\n\n(i) If a person acknowledges that it has or will obtain control on behalf of another person, unless the person otherwise agrees or law other than this article or article 9 otherwise provides, the person does not owe any duty to the other person and is not required to confirm the acknowledgment to any other person."
+      }
+    }
+  ]
+}

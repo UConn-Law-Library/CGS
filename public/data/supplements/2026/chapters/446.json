@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-446",
+  "number": "446",
+  "name": "Nuclear Energy",
+  "title": {
+    "id": "title-22a",
+    "number": "22a",
+    "name": "Environmental Protection"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_446.htm",
+  "sections": [
+    {
+      "id": "section-22a-136",
+      "kind": "section",
+      "citation": "22a-136",
+      "citations": [
+        "22a-136"
+      ],
+      "heading": "Sec. 22a-136. Moratorium on construction of nuclear power facilities.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_446.htm#sec_22a-136",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) As used in this section: (1) “Advanced nuclear reactor” has the same meaning as provided in 42 USC 16271, as amended from time to time, and (2) “high level nuclear waste” means those aqueous wastes resulting from the operation of the first cycle of the solvent extraction system or equivalent and the concentrated wastes of the subsequent extraction cycles or equivalent in a facility for reprocessing irradiated reactor fuel and includes spent fuel assemblies prior to fuel reprocessing.",
+          "(b) No construction shall commence on a new nuclear power facility in the state unless:",
+          "(1) The Commissioner of Energy and Environmental Protection finds that the United States Government, through its authorized agency, has identified and approved a demonstrable technology or means for the disposal of high level nuclear waste;",
+          "(2) The nuclear power facility is proposed to be sited at a nuclear power generating facility operating in the state as of October 1, 2022; or",
+          "(3) The construction is for an advanced nuclear reactor facility and (A) such facility is sited in a municipality that has consented to such facility's development through the affirmative vote of such municipality's legislative body or a referendum held in such municipality, and (B) any additional municipality within the emergency planning zone, as determined by the Nuclear Regulatory Commission, if the proposed facility consents to such facility's development through the affirmative vote of such municipality's legislative body or a referendum held in such municipality.",
+          "(c) The entity proposing such new nuclear power facility, including any advanced nuclear reactor, shall obtain all permits, licenses, permissions or approvals governing the construction, operation and funding of the decommissioning of such nuclear power facility as required by: (1) Any applicable federal statutes, including, but not limited to, the Atomic Energy Act of 1954, the Energy Reorganization Act of 1974, the Low-Level Radioactive Waste Policy Amendments Act of 1985 and the Energy Policy Act of 1992, as amended from time to time; (2) any regulations promulgated or enforced by the United States Nuclear Regulatory Commission, including, but not limited to, those codified in Title X, Parts 20, 30, 40, 50, 52, 53, 70 and 72 of the Code of Federal Regulations, as amended from time to time; and (3) any other federal or state statute, rule or regulation governing the permitting, licensing, construction, operation or decommissioning of such facility."
+        ],
+        "sourceNotes": [
+          "(P.A. 79-487; P.A. 11-80, S. 1; P.A. 22-76, S. 1; P.A. 23-102, S. 34; P.A. 25-173, S. 33.)"
+        ],
+        "history": [
+          "History: Pursuant to P.A. 11-80, “Commissioner of Environmental Protection” was changed editorially by the Revisors to “Commissioner of Energy and Environmental Protection”, effective July 1, 2011; P.A. 22-76 added provision re existing nuclear power generating facilities in the state; P.A. 23-102 added “construction at”; P.A. 25-173 added Subsec. (a) to define “advanced nuclear reactor” and “high level nuclear waste”, designated existing provisions as Subsec. (b) and substantially amended same to include additional conditions for construction of new nuclear power facility in state, and added Subsec. (c) re entity proposing such new nuclear power facility shall obtain all required permits, licenses, permissions or approvals governing the construction, operation and funding of decommissioning of such nuclear power facility."
+        ],
+        "annotations": [],
+        "plainText": "(a) As used in this section: (1) “Advanced nuclear reactor” has the same meaning as provided in 42 USC 16271, as amended from time to time, and (2) “high level nuclear waste” means those aqueous wastes resulting from the operation of the first cycle of the solvent extraction system or equivalent and the concentrated wastes of the subsequent extraction cycles or equivalent in a facility for reprocessing irradiated reactor fuel and includes spent fuel assemblies prior to fuel reprocessing.\n\n(b) No construction shall commence on a new nuclear power facility in the state unless:\n\n(1) The Commissioner of Energy and Environmental Protection finds that the United States Government, through its authorized agency, has identified and approved a demonstrable technology or means for the disposal of high level nuclear waste;\n\n(2) The nuclear power facility is proposed to be sited at a nuclear power generating facility operating in the state as of October 1, 2022; or\n\n(3) The construction is for an advanced nuclear reactor facility and (A) such facility is sited in a municipality that has consented to such facility's development through the affirmative vote of such municipality's legislative body or a referendum held in such municipality, and (B) any additional municipality within the emergency planning zone, as determined by the Nuclear Regulatory Commission, if the proposed facility consents to such facility's development through the affirmative vote of such municipality's legislative body or a referendum held in such municipality.\n\n(c) The entity proposing such new nuclear power facility, including any advanced nuclear reactor, shall obtain all permits, licenses, permissions or approvals governing the construction, operation and funding of the decommissioning of such nuclear power facility as required by: (1) Any applicable federal statutes, including, but not limited to, the Atomic Energy Act of 1954, the Energy Reorganization Act of 1974, the Low-Level Radioactive Waste Policy Amendments Act of 1985 and the Energy Policy Act of 1992, as amended from time to time; (2) any regulations promulgated or enforced by the United States Nuclear Regulatory Commission, including, but not limited to, those codified in Title X, Parts 20, 30, 40, 50, 52, 53, 70 and 72 of the Code of Federal Regulations, as amended from time to time; and (3) any other federal or state statute, rule or regulation governing the permitting, licensing, construction, operation or decommissioning of such facility."
+      }
+    }
+  ]
+}

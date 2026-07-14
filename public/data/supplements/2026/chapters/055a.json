@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-055a",
+  "number": "055a",
+  "name": "Consultants and Personal Service Agreements",
+  "title": {
+    "id": "title-04",
+    "number": "04",
+    "name": "Management of State Agencies"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_055a.htm",
+  "sections": [
+    {
+      "id": "section-4-216b",
+      "kind": "section",
+      "citation": "4-216b",
+      "citations": [
+        "4-216b"
+      ],
+      "heading": "Sec. 4-216b. Inflationary rate increases for non-profit human services providers contracting with state agencies. Required reports.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_055a.htm#sec_4-216b",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) As used in this section, (1) “nonprofit human services provider” means a nonprofit provider that contracts with the state to provide human services that may include, but need not be limited to: (A) Services for persons with a physical disability, (B) services for persons with intellectual disability or developmental disabilities, including, but not limited to, autism spectrum disorder, and (C) behavioral health services; and (2) “state agency” has the same meaning as provided in section 4-37e.",
+          "(b) On July 1, 2027, and annually thereafter, a state agency contracting with a nonprofit human services provider shall increase rates for recurring contracts by the percentage increase in the consumer price index for all urban consumers in the northeast region in the previous calendar year. If such consumer price index decreases, a state agency shall not decrease rates for such provider.",
+          "(c) On July 1, 2027, and annually thereafter, the Commissioner of Social Services shall adjust Medicaid rates for nonprofit human services providers contracting with the Department of Social Services by the percentage rate increase, if any, for state agency contracts pursuant to subsection (b) of this section, unless such adjustment is not permissible under federal law governing the Medicaid program.",
+          "(d) Not later than January 1, 2026, and every three years thereafter, the Secretary of the Office of Policy and Management shall file a report, in accordance with the provisions of section 11-4a, with the joint standing committees of the General Assembly having cognizance of matters relating to appropriations and the budgets of state agencies, human services and public health on state agency contracts with nonprofit human services providers. The report shall include, but need not be limited to, any appropriations needed to ensure that rates for all such contracts in subsequent fiscal years include any increase in the consumer price index for all urban consumers in the northeast region in the previous calendar year."
+        ],
+        "sourceNotes": [
+          "(P.A. 25-151, S. 1.)"
+        ],
+        "history": [
+          "History: P.A. 25-151 effective July 8, 2025."
+        ],
+        "annotations": [],
+        "plainText": "(a) As used in this section, (1) “nonprofit human services provider” means a nonprofit provider that contracts with the state to provide human services that may include, but need not be limited to: (A) Services for persons with a physical disability, (B) services for persons with intellectual disability or developmental disabilities, including, but not limited to, autism spectrum disorder, and (C) behavioral health services; and (2) “state agency” has the same meaning as provided in section 4-37e.\n\n(b) On July 1, 2027, and annually thereafter, a state agency contracting with a nonprofit human services provider shall increase rates for recurring contracts by the percentage increase in the consumer price index for all urban consumers in the northeast region in the previous calendar year. If such consumer price index decreases, a state agency shall not decrease rates for such provider.\n\n(c) On July 1, 2027, and annually thereafter, the Commissioner of Social Services shall adjust Medicaid rates for nonprofit human services providers contracting with the Department of Social Services by the percentage rate increase, if any, for state agency contracts pursuant to subsection (b) of this section, unless such adjustment is not permissible under federal law governing the Medicaid program.\n\n(d) Not later than January 1, 2026, and every three years thereafter, the Secretary of the Office of Policy and Management shall file a report, in accordance with the provisions of section 11-4a, with the joint standing committees of the General Assembly having cognizance of matters relating to appropriations and the budgets of state agencies, human services and public health on state agency contracts with nonprofit human services providers. The report shall include, but need not be limited to, any appropriations needed to ensure that rates for all such contracts in subsequent fiscal years include any increase in the consumer price index for all urban consumers in the northeast region in the previous calendar year."
+      }
+    }
+  ]
+}

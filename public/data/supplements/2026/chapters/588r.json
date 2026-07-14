@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-588r",
+  "number": "588r",
+  "name": "Small Business",
+  "title": {
+    "id": "title-32",
+    "number": "32",
+    "name": "Commerce and Economic and Community Development"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_588r.htm",
+  "sections": [
+    {
+      "id": "section-32-356",
+      "kind": "section",
+      "citation": "32-356",
+      "citations": [
+        "32-356"
+      ],
+      "heading": "Sec. 32-356. Small business incubator account.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_588r.htm#sec_32-356",
+      "status": "active",
+      "content": {
+        "body": [
+          "There is established an account to be known as the “small business incubator account”, which shall be a separate, nonlapsing account. The commissioner may use funds from the account to provide administrative expenses and grants for the purposes of subdivision (1) of subsection (a) of section 32-7f."
+        ],
+        "sourceNotes": [
+          "(P.A. 06-83, S. 5; June Sp. Sess. P.A. 07-4, S. 15; P.A. 11-61, S. 164; P.A. 25-110, S. 114.)"
+        ],
+        "history": [
+          "History: P.A. 06-83 effective July 1, 2006; June Sp. Sess P.A. 07-4 amended Subsec. (b) to permit Department of Economic and Community Development to contract with an entity to operate program, to require department to develop guidelines for provision of grants and for department or operator to provide grants to assist small businesses operating incubator facilities, amended Subsec. (c) and deleted former Subsec. (d) to relieve commissioner from obligation to adopt regulations re process for grant application, redesignated existing Subsec. (e) as Subsec. (d) and amended same to delete provisions re moneys in account, and added new Subsec. (e) establishing Small Business Incubator Advisory Board, effective June 29, 2007; P.A. 11-61 deleted former Subsec. (a) re definition of “incubator facilities”, former Subsec. (b) re establishment of small business incubator program, former Subsec. (c) re grant applications and former Subsec. (e) re Small Business Incubator Advisory Board, and amended existing provisions re small business incubator account to authorize use of account for purposes of Sec. 32-7f(a)(1), delete “pursuant to this section” and make a technical change, effective July 1, 2011; P.A. 25-110 deleted reference to General Fund and made a technical change, effective July 1, 2025."
+        ],
+        "annotations": [],
+        "plainText": "There is established an account to be known as the “small business incubator account”, which shall be a separate, nonlapsing account. The commissioner may use funds from the account to provide administrative expenses and grants for the purposes of subdivision (1) of subsection (a) of section 32-7f."
+      }
+    }
+  ]
+}

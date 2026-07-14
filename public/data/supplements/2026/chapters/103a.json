@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-103a",
+  "number": "103a",
+  "name": "Transit Districts",
+  "title": {
+    "id": "title-07",
+    "number": "07",
+    "name": "Municipalities"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_103a.htm",
+  "sections": [
+    {
+      "id": "section-7-273l",
+      "kind": "section",
+      "citation": "7-273l",
+      "citations": [
+        "7-273l"
+      ],
+      "heading": "Sec. 7-273 l . Application for state funds. Distribution formula. Conditions for receiving funds. Municipal transit service. Regulations.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_103a.htm#sec_7-273l",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) As used in this section, “urbanized area” has the same meaning as provided in 49 USC 5302(24), as amended from time to time, and “rural area” has the same meaning as provided in 49 USC 5302(17), as amended from time to time.",
+          "(b) Each transit district established under this chapter or any special act may (1) impose service charges and user fees on persons using transit systems operated by such district, and (2) apply for funding from the Department of Transportation in accordance with the provisions of this section to finance the construction, acquisition, purchase, lease or operation of a mass transit system and related programs authorized under section 7-273b. Commencing with the fiscal year ending June 30, 1984, and each fiscal year thereafter, the commissioner shall distribute such funds to each transit district located in an urbanized area or a rural area in the same manner as the formula specified under 49 USC 5307, as amended from time to time, or 49 USC 5311, as amended from time to time. Any municipality providing transit service that is not part of a transit district may either establish a transit district under the provisions of this chapter to assume operating control of such service or negotiate an agreement with the Department of Transportation to administer the operation of such service. In the latter case, the department shall provide financial assistance to such municipality according to the formula specified in this section. As a condition of receiving any funds under this subsection, a transit district or municipality shall meet eligibility criteria established by the commissioner, including, but not limited to, deriving a portion of operating costs from service charges, user fees, federal or local subsidies and sources other than from state subsidies.",
+          "(c) The Commissioner of Transportation shall adopt regulations, in accordance with the provisions of chapter 54, to implement the purposes of this section."
+        ],
+        "sourceNotes": [
+          "(P.A. 82-371; P.A. 22-40, S. 26; P.A. 25-65, S. 12.)"
+        ],
+        "history": [
+          "History: P.A. 22-40 added Subsec. (a) re definitions of “urbanized area” and “rural area”, designated existing provisions as Subsec. (b) and amended same to add provision re distribution of funds commencing with fiscal year ending June 30, 1984, until June 30, 2024, replace reference to Urban Mass Transportation Act of 1964 with reference to 49 USC 5307 and 49 USC 5311, delete provisions re operating costs in fiscal years ending June 30, 1984, June 30, 1985 and June 30, 1986, added provision re distribution of funds to transit district in rural area commencing with the fiscal year ending June 30, 2025, and each fiscal year thereafter, replace provision re municipality to derive same percentage of operating costs with provision re eligibility criteria established by commissioner, added Subsec. (c) re distribution of funds to transit district in urbanized area commencing with fiscal year ending June 30, 2025, and each fiscal year thereafter, added Subsec. (d) re grant program, designated existing provision re regulations as Subsec. (e) and made technical and conforming changes, effective July 1, 2022; P.A. 25-65 amended Subsec. (b) by replacing “until June 30, 2024, inclusive” with “and each fiscal year thereafter” and deleting provision re distribution of funds to transit district located in rural area, deleted Subsec. (c) re distribution of funds to transit district in urbanized area commencing with fiscal year ending June 30, 2025, deleted Subsec. (d) re grant program and redesignated Subsec. (e) as Subsec. (c), effective July 1, 2025."
+        ],
+        "annotations": [],
+        "plainText": "(a) As used in this section, “urbanized area” has the same meaning as provided in 49 USC 5302(24), as amended from time to time, and “rural area” has the same meaning as provided in 49 USC 5302(17), as amended from time to time.\n\n(b) Each transit district established under this chapter or any special act may (1) impose service charges and user fees on persons using transit systems operated by such district, and (2) apply for funding from the Department of Transportation in accordance with the provisions of this section to finance the construction, acquisition, purchase, lease or operation of a mass transit system and related programs authorized under section 7-273b. Commencing with the fiscal year ending June 30, 1984, and each fiscal year thereafter, the commissioner shall distribute such funds to each transit district located in an urbanized area or a rural area in the same manner as the formula specified under 49 USC 5307, as amended from time to time, or 49 USC 5311, as amended from time to time. Any municipality providing transit service that is not part of a transit district may either establish a transit district under the provisions of this chapter to assume operating control of such service or negotiate an agreement with the Department of Transportation to administer the operation of such service. In the latter case, the department shall provide financial assistance to such municipality according to the formula specified in this section. As a condition of receiving any funds under this subsection, a transit district or municipality shall meet eligibility criteria established by the commissioner, including, but not limited to, deriving a portion of operating costs from service charges, user fees, federal or local subsidies and sources other than from state subsidies.\n\n(c) The Commissioner of Transportation shall adopt regulations, in accordance with the provisions of chapter 54, to implement the purposes of this section."
+      }
+    }
+  ]
+}

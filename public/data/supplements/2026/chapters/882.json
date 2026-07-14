@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-882",
+  "number": "882",
+  "name": "Superior Court",
+  "title": {
+    "id": "title-51",
+    "number": "51",
+    "name": "Courts"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_882.htm",
+  "sections": [
+    {
+      "id": "section-51-197f",
+      "kind": "section",
+      "citation": "51-197f",
+      "citations": [
+        "51-197f"
+      ],
+      "heading": "Sec. 51-197f. Further review by certification only.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_882.htm#sec_51-197f",
+      "status": "active",
+      "content": {
+        "body": [
+          "Upon final determination of any appeal by the Appellate Court or upon the Appellate Court's denial of a motion to file a late appeal, there shall be no right to further review except the Supreme Court shall have the power to certify cases for its review upon petition by an aggrieved party or by the appellate panel which heard the matter. A vote of three judges of the Supreme Court shall be required to certify a case for review by the Supreme Court, except that if fewer than six judges of said court are available to consider a petition, a vote of two judges of said court shall be required to certify a case, under such other rules as the justices of said court shall establish. The procedure on appeal from the Appellate Court to the Supreme Court shall, except as otherwise provided, be in accordance with the procedure provided by rule or law for the appeal of judgments rendered by the Superior Court, unless modified by rule of the justices of the Supreme Court."
+        ],
+        "sourceNotes": [
+          "(P.A. 77-347, S. 5, 11; June Sp. Sess. P.A. 83-29, S. 7, 82; P.A. 96-179, S. 8; P.A. 12-133, S. 11; P.A. 25-91, S. 14.)"
+        ],
+        "history": [
+          "History: P.A. 77-347 effective July 1, 1978, through June 30, 1979; June Sp. Sess. P.A. 83-29 deleted provisions re appellate session and substituted provisions re appellate court; P.A. 96-179 changed the vote required for certification from two to three justices of the Supreme Court; P.A. 12-133 added provision specifying that if fewer than 6 judges of Supreme Court are available to consider a petition, a vote of 2 judges shall be required to certify a case, and made a technical change, effective July 1, 2012; P.A. 25-91 added “or upon the Appellate Court's denial of a motion to file a late appeal” re no right to further review except through certification by Supreme Court upon petition, effective July 1, 2025."
+        ],
+        "annotations": [],
+        "plainText": "Upon final determination of any appeal by the Appellate Court or upon the Appellate Court's denial of a motion to file a late appeal, there shall be no right to further review except the Supreme Court shall have the power to certify cases for its review upon petition by an aggrieved party or by the appellate panel which heard the matter. A vote of three judges of the Supreme Court shall be required to certify a case for review by the Supreme Court, except that if fewer than six judges of said court are available to consider a petition, a vote of two judges of said court shall be required to certify a case, under such other rules as the justices of said court shall establish. The procedure on appeal from the Appellate Court to the Supreme Court shall, except as otherwise provided, be in accordance with the procedure provided by rule or law for the appeal of judgments rendered by the Superior Court, unless modified by rule of the justices of the Supreme Court."
+      }
+    }
+  ]
+}

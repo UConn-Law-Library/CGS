@@ -43,7 +43,7 @@ For a reproducible build, pass `--generated-at 2026-07-13T13:33:18Z`. Otherwise 
 - `public/data/secondary/links/`: derived statute-to-infraction and statute-to-index reverse links.
 - `schemas/*.schema.json`: the canonical JSON Schema contracts.
 
-The checked-in `public/data/` is the complete production baseline: 81 titles, 1,141 chapters, and 33,013 provisions, regenerated from the reviewed replacement crawler on July 14, 2026. The much smaller `fixtures/legacy/` corpus remains available for isolated importer tests and local pipeline experiments.
+The checked-in `public/data/` is the complete production baseline: 81 titles, 1,141 chapters, and 33,013 provisions, regenerated from the reviewed replacement crawler on July 14, 2026. The separately published 2026 supplement adds 1,952 overlay records spanning 1,967 citations without changing those base chapter artifacts. The much smaller `fixtures/legacy/` corpus remains available for isolated importer tests and local pipeline experiments.
 
 See [ARCHITECTURE.md](ARCHITECTURE.md) for design constraints, invariants, and the migration path.
 
@@ -116,6 +116,8 @@ The replacement crawler lives in [`crawler/`](crawler/README.md). It separates n
 Supplements are opt-in, immutable overlays rather than destructive edits to the current-statutes corpus. A provision with the same complete citation set replaces that base provision for the selected edition; a new citation is added. A missing citation never deletes current law, and a partial match against a grouped provision fails validation instead of guessing.
 
 Each edition records the exact base schema version and generation timestamp it was reviewed against. A later base refresh therefore requires the overlay to be re-imported and reviewed before publication. The build derives `data/supplements/manifest.json` so the client can discover available editions without a server or database. See [docs/supplements.md](docs/supplements.md) for the artifact contract and review workflow.
+
+The reviewed 2026 edition is published under `public/data/supplements/2026`: 1,602 replacement records and 350 additions across 376 chapters. Its fresh official crawl was reconciled citation-for-citation and text-for-text with the legacy PWA dataset; see [reports/2026-supplement-validation.md](reports/2026-supplement-validation.md).
 
 ## Infractions and General Statutes index
 

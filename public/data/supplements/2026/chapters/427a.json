@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-427a",
+  "number": "427a",
+  "name": "Connecticut Fertilizer Law of 2008",
+  "title": {
+    "id": "title-22",
+    "number": "22",
+    "name": "Agriculture. Domestic Animals"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_427a.htm",
+  "sections": [
+    {
+      "id": "section-22-111c",
+      "kind": "section",
+      "citation": "22-111c",
+      "citations": [
+        "22-111c"
+      ],
+      "heading": "Sec. 22-111c. Registration of brands and grades. Fee. Regulations.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_427a.htm#sec_22-111c",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) Each brand and grade of fertilizer shall be registered in the name of the person whose name appears on the label for such fertilizer before being distributed in this state. The application for registration shall be submitted to the commissioner on a form furnished by the commissioner and shall be accompanied by a fee of seventy-five dollars. Said fee shall be established by the commissioner by regulations adopted in accordance with the provisions of section 22-111j, provided such fee does not exceed seventy-five dollars. The application shall include the following information: (1) The net weight; (2) the brand and grade; (3) the guaranteed analysis; and (4) the name and address of the registrant. Upon approval of the application by the commissioner, a copy of the registration shall be furnished to the applicant. All registrations shall expire on June thirtieth of each year.",
+          "(b) A distributor shall not be required to register any fertilizer which is already registered under this chapter by another person, provided the label for such exempted fertilizer does not differ in any material respect to such previously registered fertilizer.",
+          "(c) A distributor shall not be required to register fertilizer formulated according to specifications which are furnished by a consumer prior to mixing; but shall be required to label such fertilizer as provided in subsection (c) of section 22-111d."
+        ],
+        "sourceNotes": [
+          "(February, 1965, P.A. 198, S. 3; P.A. 73-278, S. 2, 21; P.A. 82-91, S. 9, 38; 82-472, S. 173, 183; May Sp. Sess. P.A. 92-6, S. 45, 117; P.A. 09-229, S. 5; P.A. 25-152, S. 2.)"
+        ],
+        "history": [
+          "History: P.A. 73-278 replaced “director”, i.e. director of Connecticut Agricultural Experiment Station, with “commissioner”, i.e. commissioner of agriculture; P.A. 82-91 deleted fee of $10 per major or minor element guaranteed for each brand and grade listed on the application and provided that fee is established by commissioner by regulations; P.A. 82-472 made a technical change in Subsec. (a); May Sp. Sess. P.A. 92-6 amended Subsec. (a) to establish various fees for fertilizer and to provide that the commissioner shall adopt regulations to establish the fees for the period commencing January 1, 1993; P.A. 09-229 deleted “commercial” re fertilizer throughout, amended Subsec. (a) to require registration in name of person whose name appears on fertilizer label, increase application fee from $15 to $75, delete provision re maximum registration cost and delete former Subdiv. (5) re sources, amended Subsec. (b) to exempt distributor fertilizer registration provided label for exempted fertilizer does not differ in material respect to previously registered fertilizer, and made conforming and technical changes, effective July 1, 2009; P.A. 25-152 amended Subsec. (a) to delete reference to January 1, 2010, and add provision limiting fee to not more than $75, effective July 1, 2025."
+        ],
+        "annotations": [],
+        "plainText": "(a) Each brand and grade of fertilizer shall be registered in the name of the person whose name appears on the label for such fertilizer before being distributed in this state. The application for registration shall be submitted to the commissioner on a form furnished by the commissioner and shall be accompanied by a fee of seventy-five dollars. Said fee shall be established by the commissioner by regulations adopted in accordance with the provisions of section 22-111j, provided such fee does not exceed seventy-five dollars. The application shall include the following information: (1) The net weight; (2) the brand and grade; (3) the guaranteed analysis; and (4) the name and address of the registrant. Upon approval of the application by the commissioner, a copy of the registration shall be furnished to the applicant. All registrations shall expire on June thirtieth of each year.\n\n(b) A distributor shall not be required to register any fertilizer which is already registered under this chapter by another person, provided the label for such exempted fertilizer does not differ in any material respect to such previously registered fertilizer.\n\n(c) A distributor shall not be required to register fertilizer formulated according to specifications which are furnished by a consumer prior to mixing; but shall be required to label such fertilizer as provided in subsection (c) of section 22-111d."
+      }
+    },
+    {
+      "id": "section-22-111y",
+      "kind": "section",
+      "citation": "22-111y",
+      "citations": [
+        "22-111y"
+      ],
+      "heading": "Sec. 22-111y. Manure Management Grant Program. Established.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_427a.htm#sec_22-111y",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) There is established the Manure Management Grant Program within the Department of Agriculture. The purpose of such program shall be to support farmers in adopting best practices to maintain manure management systems. The department shall establish the parameters of such grant program, including, but not limited to: (1) Eligibility criteria for such farmers, (2) prioritization rules for the use of funds available to the department for such program, (3) maximum reimbursement amounts under such program, and (4) the application process for said grant program.",
+          "(b) Upon the development of the parameters of such grant program, the department shall post information concerning such program, including all such parameters, on the department's Internet web site."
+        ],
+        "sourceNotes": [
+          "(P.A. 25-152, S. 18.)"
+        ],
+        "history": [
+          "History: P.A. 25-152 effective July 1, 2025."
+        ],
+        "annotations": [],
+        "plainText": "(a) There is established the Manure Management Grant Program within the Department of Agriculture. The purpose of such program shall be to support farmers in adopting best practices to maintain manure management systems. The department shall establish the parameters of such grant program, including, but not limited to: (1) Eligibility criteria for such farmers, (2) prioritization rules for the use of funds available to the department for such program, (3) maximum reimbursement amounts under such program, and (4) the application process for said grant program.\n\n(b) Upon the development of the parameters of such grant program, the department shall post information concerning such program, including all such parameters, on the department's Internet web site."
+      }
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-743f",
+  "number": "743f",
+  "name": "Used Automobile Warranties",
+  "title": {
+    "id": "title-42",
+    "number": "42",
+    "name": "Business, Selling, Trading and Collection Practices"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_743f.htm",
+  "sections": [
+    {
+      "id": "section-42-221",
+      "kind": "section",
+      "citation": "42-221",
+      "citations": [
+        "42-221"
+      ],
+      "heading": "Sec. 42-221. Implied warranties. Express warranties. Exemptions. Waiver.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_743f.htm#sec_42-221",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) A dealer selling a used motor vehicle which has a cash purchase price of three thousand dollars or more shall not exclude, modify, disclaim or limit implied warranties on the motor vehicle.",
+          "(b) Each contract entered into by a dealer for the sale to a consumer of a used motor vehicle which has a cash purchase price of three thousand dollars or more but less than five thousand dollars, shall include an express warranty, covering the full cost of both parts and labor, that the vehicle is mechanically operational and sound and will remain so for at least thirty days or one thousand five hundred miles of operation, whichever period ends first, in the absence of damage resulting from an automobile accident or from misuse of the vehicle by the consumer. Each contract entered into by a dealer for the sale of a used motor vehicle which has a cash purchase price of five thousand dollars or more shall include an express warranty, covering the full cost of both parts and labor, that the vehicle is mechanically operational and sound and will remain so for at least sixty days or three thousand miles of operation, whichever period ends first, in the absence of damage resulting from an automobile accident or from misuse of the vehicle by the consumer. A dealer may not limit a warranty covered by this section by the use of such phrases as “fifty-fifty”, “labor only”, “drive train only”, or other words attempting to disclaim his responsibility.",
+          "(c) The provisions of this section shall not apply to: (1) The sale of a used motor vehicle having a cash purchase price of less than three thousand dollars; (2) the sale of such motor vehicles between dealers; or (3) the sale of a used motor vehicle which is seven years of age or older, which age shall be calculated from the first day in January of the designated model year of such vehicle.",
+          "(d) The consumer may waive a warranty required pursuant to this section only as to a particular defect in the vehicle which the dealer has disclosed to the consumer as being defective. No such waiver shall be effective unless such waiver: (1) Is in writing; (2) is conspicuous, as defined in section 42a-1-201, and is in plain language; (3) identifies the particular disclosed defect in the vehicle for which such warranty is to be waived; (4) states what warranty, if any, shall apply to such disclosed defect; and (5) is signed by both the customer and the dealer prior to sale."
+        ],
+        "sourceNotes": [
+          "(P.A. 87-393, S. 2; P.A. 05-109, S. 50; P.A. 25-145, S. 115.)"
+        ],
+        "history": [
+          "History: P.A. 05-109 amended Subsec. (d)(2) by adding reference to “subsection (b)” of Sec. 42a-1-201; P.A. 25-145 deleted “subdivision (10) of subsection (b)” from reference to Sec. 42a-1-201 in Subsec. (d), effective January 1, 2026."
+        ],
+        "annotations": [],
+        "plainText": "(a) A dealer selling a used motor vehicle which has a cash purchase price of three thousand dollars or more shall not exclude, modify, disclaim or limit implied warranties on the motor vehicle.\n\n(b) Each contract entered into by a dealer for the sale to a consumer of a used motor vehicle which has a cash purchase price of three thousand dollars or more but less than five thousand dollars, shall include an express warranty, covering the full cost of both parts and labor, that the vehicle is mechanically operational and sound and will remain so for at least thirty days or one thousand five hundred miles of operation, whichever period ends first, in the absence of damage resulting from an automobile accident or from misuse of the vehicle by the consumer. Each contract entered into by a dealer for the sale of a used motor vehicle which has a cash purchase price of five thousand dollars or more shall include an express warranty, covering the full cost of both parts and labor, that the vehicle is mechanically operational and sound and will remain so for at least sixty days or three thousand miles of operation, whichever period ends first, in the absence of damage resulting from an automobile accident or from misuse of the vehicle by the consumer. A dealer may not limit a warranty covered by this section by the use of such phrases as “fifty-fifty”, “labor only”, “drive train only”, or other words attempting to disclaim his responsibility.\n\n(c) The provisions of this section shall not apply to: (1) The sale of a used motor vehicle having a cash purchase price of less than three thousand dollars; (2) the sale of such motor vehicles between dealers; or (3) the sale of a used motor vehicle which is seven years of age or older, which age shall be calculated from the first day in January of the designated model year of such vehicle.\n\n(d) The consumer may waive a warranty required pursuant to this section only as to a particular defect in the vehicle which the dealer has disclosed to the consumer as being defective. No such waiver shall be effective unless such waiver: (1) Is in writing; (2) is conspicuous, as defined in section 42a-1-201, and is in plain language; (3) identifies the particular disclosed defect in the vehicle for which such warranty is to be waived; (4) states what warranty, if any, shall apply to such disclosed defect; and (5) is signed by both the customer and the dealer prior to sale."
+      }
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-906",
+  "number": "906",
+  "name": "Postjudgment Procedures",
+  "title": {
+    "id": "title-52",
+    "number": "52",
+    "name": "Civil Actions"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_906.htm",
+  "sections": [
+    {
+      "id": "section-52-350f",
+      "kind": "section",
+      "citation": "52-350f",
+      "citations": [
+        "52-350f"
+      ],
+      "heading": "Sec. 52-350f. Enforcement of money judgment. Costs, fees and interest. Enforcement of money judgment by foreclosure of real property lien; calculation of amount of judgment lien; forms re.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_906.htm#sec_52-350f",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) A money judgment may be enforced against any property of the judgment debtor unless the property is exempt from application to the satisfaction of the judgment under section 52-352a, 52-352b, 52-352d or 52-361a or any other provision of the general statutes or federal law. The money judgment may be enforced, by execution or by foreclosure of a real property lien, to the amount of the money judgment with (1) all statutory costs and fees as provided by the general statutes, (2) interest as provided by chapter 673 on the money judgment and on the costs incurred in obtaining the judgment, and (3) any attorney's fees allowed pursuant to section 52-400c.",
+          "(b) In an action to enforce a money judgment by foreclosure of a real property lien, the amount of the judgment lien to attach to the property shall be calculated by taking the fair market value of the property, less any priority liens and the amount of any applicable exempt property under sections 52-352b and 52-352d. The Chief Court Administrator shall ensure that any form prescribed by the Judicial Branch relating to an action to enforce a money judgment by foreclosure of a real property lien, including, but not limited to, the foreclosure worksheet, includes the property that is not subject to debt collection under sections 52-352b and 52-352d."
+        ],
+        "sourceNotes": [
+          "(P.A. 83-581, S. 5, 40; P.A. 84-527, S. 4; P.A. 92-94, S. 1, 4; P.A. 25-91, S. 26.)"
+        ],
+        "history": [
+          "History: P.A. 84-527 rephrased section and deleted reference to “section 52-257” with respect to the allowance of statutory costs and fees; P.A. 92-94 added reference to Sec. 52-352d; P.A. 25-91 designated existing provision as Subsec. (a) and added Subsec. (b) re enforcement of money judgment by foreclosure of real property lien, effective July 1, 2025."
+        ],
+        "annotations": [],
+        "plainText": "(a) A money judgment may be enforced against any property of the judgment debtor unless the property is exempt from application to the satisfaction of the judgment under section 52-352a, 52-352b, 52-352d or 52-361a or any other provision of the general statutes or federal law. The money judgment may be enforced, by execution or by foreclosure of a real property lien, to the amount of the money judgment with (1) all statutory costs and fees as provided by the general statutes, (2) interest as provided by chapter 673 on the money judgment and on the costs incurred in obtaining the judgment, and (3) any attorney's fees allowed pursuant to section 52-400c.\n\n(b) In an action to enforce a money judgment by foreclosure of a real property lien, the amount of the judgment lien to attach to the property shall be calculated by taking the fair market value of the property, less any priority liens and the amount of any applicable exempt property under sections 52-352b and 52-352d. The Chief Court Administrator shall ensure that any form prescribed by the Judicial Branch relating to an action to enforce a money judgment by foreclosure of a real property lien, including, but not limited to, the foreclosure worksheet, includes the property that is not subject to debt collection under sections 52-352b and 52-352d."
+      }
+    }
+  ]
+}

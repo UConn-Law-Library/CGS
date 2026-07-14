@@ -49,6 +49,8 @@ The crawler's own plausible-count checks and the canonical validator run before 
 
 Refresh pull requests contain only `public/data` changes. Review the corpus summary, full diff artifact, status transitions, representative legal text, and official source links. Merging the pull request invokes the normal Pages deployment.
 
+When supplement editions are published under `public/data/supplements/<year>`, a base-corpus refresh recrawls and re-imports every published edition against the candidate base before staging the pull request. A supplement acquisition, import, or validation failure stops the refresh; the workflow never copies a stale base-bound overlay forward and never silently drops a published edition. Replayable supplement snapshots are retained with the workflow artifacts.
+
 To roll back a bad refresh, revert its merge commit through a pull request. The previous immutable chapter artifacts remain in Git history; no database restoration is involved.
 
 ## Scheduling gate

@@ -1,0 +1,93 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-269",
+  "number": "269",
+  "name": "Uniform Certificate of Title for Vessels Act",
+  "title": {
+    "id": "title-15",
+    "number": "15",
+    "name": "Navigation and Aeronautics"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_269.htm",
+  "sections": [
+    {
+      "id": "section-15-202",
+      "kind": "section",
+      "citation": "15-202",
+      "citations": [
+        "15-202"
+      ],
+      "heading": "Sec. 15-202. Definitions.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_269.htm#sec_15-202",
+      "status": "active",
+      "content": {
+        "body": [
+          "As used in sections 15-201 to 15-232, inclusive:",
+          "(1) “Barge” means a vessel that is not self-propelled or fitted for propulsion by sail, paddle, oar or similar device;",
+          "(2) “Builder's certificate” means a certificate of the facts of build of a vessel described in 46 CFR 67.99;",
+          "(3) “Buyer” means a person that buys or contracts to buy a vessel;",
+          "(4) “Cancel”, with respect to a certificate of title, means to make the certificate of title ineffective;",
+          "(5) “Certificate of origin” means a record created by a manufacturer or importer as the manufacturer's or importer's proof of identity of a vessel. “Certificate of origin” includes a manufacturer's certificate or statement of origin and an importer's certificate or statement of origin. “Certificate of origin” does not include a builder's certificate;",
+          "(6) “Certificate of title” means a record, created by the Department of Motor Vehicles pursuant to section 15-208 or by a governmental agency of another jurisdiction under the law of that jurisdiction, that is designated as a certificate of title by the department or such agency and is evidence of ownership of a vessel;",
+          "(7) “Commissioner” means the Commissioner of Motor Vehicles;",
+          "(8) “Dealer” means a person, including a manufacturer, in the business of selling vessels;",
+          "(9) “Department” means the Department of Motor Vehicles;",
+          "(10) “Documented vessel” means a vessel covered by a certificate of documentation issued pursuant to 46 USC 12105. “Documented vessel” does not include a foreign-documented vessel;",
+          "(11) “Electronic” means relating to technology having electrical, digital, magnetic, wireless, optical, electromagnetic or similar capabilities;",
+          "(12) “Electronic certificate of title” means a certificate of title consisting of information that is stored solely in an electronic medium and is retrievable in perceivable form;",
+          "(13) “Foreign-documented vessel” means a vessel the ownership of which is recorded in a registry maintained by a country other than the United States that identifies each person that has an ownership interest in such vessel and includes a unique alphanumeric designation for the vessel;",
+          "(14) “Good faith” means honesty in fact and the observance of reasonable commercial standards of fair dealing;",
+          "(15) “Hull identification number” means the alphanumeric designation assigned to a vessel pursuant to 33 CFR 181, as amended;",
+          "(16) “Lien creditor”, with respect to a vessel, means:",
+          "(A) A creditor that has acquired a lien on the vessel by attachment, levy or the like;",
+          "(B) An assignee for benefit of creditors from the time of assignment;",
+          "(C) A trustee in bankruptcy from the date of the filing of the petition; or",
+          "(D) A receiver in equity from the time of appointment;",
+          "(17) “Owner” means a person with legal title to a vessel;",
+          "(18) “Owner of record” means the owner indicated in the files of the department or, if the files indicate more than one owner, the owner first indicated;",
+          "(19) “Person” means an individual; corporation; business trust; estate; trust; statutory trust; partnership; limited liability company; association; joint venture; public corporation; government or governmental subdivision, agency or instrumentality; or any other legal or commercial entity;",
+          "(20) “Purchase” means to take by sale, lease, mortgage, pledge, consensual lien, security interest, gift or any other voluntary transaction that creates an interest in a vessel;",
+          "(21) “Purchaser” means a person that takes by purchase;",
+          "(22) “Record” means information inscribed on a tangible medium or stored in an electronic or other medium that is retrievable in perceivable form;",
+          "(23) “Secured party”, with respect to a vessel, means a person:",
+          "(A) In whose favor a security interest is created or provided for under a security agreement, whether or not any obligation to be secured is outstanding;",
+          "(B) Who is a consignor under article 9 of title 42a; or",
+          "(C) Who holds a security interest arising under section 42a-2-401, section 42a-2-505, subdivision (3) of section 42a-2-711 or subsection (d) of section 42a-2A-724;",
+          "(24) “Secured party of record” means the secured party whose name is indicated as the name of the secured party in the files of the department or, if the files indicate more than one secured party, the one first indicated;",
+          "(25) “Security interest” means an interest in a vessel that secures payment or performance of an obligation if the interest is created by contract or arises pursuant to section 42a-2-401, section 42a-2-505, subdivision (3) of section 42a-2-711 or subsection (d) of section 42a-2A-724, including, but not limited to, any interest of a consignor in a vessel in a transaction that is subject to article 9 of title 42a. “Security interest” does not include the special property interest of a buyer of a vessel on identification of that vessel to a contract for sale pursuant to section 42a-2-401, but a buyer may also acquire a security interest by complying with article 9 of title 42a. Except as otherwise provided in section 42a-2-505, the right of a seller or lessor of a vessel under article 2 of title 42a or article 2A of title 42a to retain or acquire possession of the vessel is not a security interest, but a seller or lessor also may acquire a security interest by complying with article 9 of title 42a. The retention or reservation of title by a seller of a vessel notwithstanding shipment or delivery to the buyer under section 42a-2-401 is limited in effect to a reservation of a security interest. Whether a transaction in the form of a lease creates a security interest is determined by section 42a-1-203;",
+          "(26) “Sign” means, with present intent to authenticate or adopt a record, to:",
+          "(A) Make or adopt a tangible symbol; or",
+          "(B) Attach to or logically associate with the record an electronic symbol, sound or process;",
+          "(27) “State” means a state of the United States, the District of Columbia, Puerto Rico, the United States Virgin Islands, or any territory or insular possession subject to the jurisdiction of the United States;",
+          "(28) “State of principal use” means the state on whose waters a vessel is or will be used, operated, navigated or employed more than on the waters of any other state during a calendar year;",
+          "(29) “Title brand” means a designation of previous damage, use or condition that is set forth on a certificate of title issued by another state or other statement which shall be indicated on a certificate of title in accordance with the provisions of section 15-209 and any regulations adopted by the Commissioner of Motor Vehicles under section 15-229;",
+          "(30) “Transfer of ownership” means a voluntary or involuntary conveyance of an interest in a vessel;",
+          "(31) “Vessel” means every description of watercraft, other than a seaplane on water, used or capable of being used as a means of transportation on water;",
+          "(32) “Vessel number” means the alphanumeric designation for a vessel issued pursuant to 46 USC 12301 and chapter 268;",
+          "(33) “Written certificate of title” means a certificate of title consisting of information inscribed on a tangible medium;",
+          "(34) “Agreement” has the same meaning as provided in subdivision (3) of subsection (b) of section 42a-1-201;",
+          "(35) “Buyer in ordinary course of business” has the same meaning as provided in subdivision (9) of subsection (b) of section 42a-1-201;",
+          "(36) “Consumer goods” has the same meaning as provided in section 42a-9-102;",
+          "(37) “Debtor” has the same meaning as provided in section 42a-9-102;",
+          "(38) “Knowledge” has the same meaning as provided in section 42a-1-202;",
+          "(39) “Lease” has the same meaning as provided in subdivision (17) of subsection (a) of section 42a-2A-102;",
+          "(40) “Lessor” has the same meaning as provided in subdivision (23) of subsection (a) of section 42a-2A-102;",
+          "(41) “Notice” has the same meaning as provided in section 42a-1-202;",
+          "(42) “Sale” has the same meaning as provided in subdivision (1) of section 42a-2-106;",
+          "(43) “Security agreement” has the same meaning as provided in section 42a-9-102;",
+          "(44) “Seller” has the same meaning as provided in subdivision (1) of section 42a-2-103;",
+          "(45) “Send” has the same meaning as provided in section 42a-1-201; and",
+          "(46) “Value” has the same meaning as provided in section 42a-1-204."
+        ],
+        "sourceNotes": [
+          "(P.A. 14-63, S. 2; P.A. 25-145, S. 110–112.)"
+        ],
+        "history": [
+          "History: P.A. 14-63 effective January 1, 2016; P.A. 25-145 deleted “subdivision (23) of subsection (a)” in reference to Sec. 42a-9-102 in Subdiv. (36), “subdivision (28) of subsection (a)” in reference to Sec. 42a-9-102 in Subdiv. (37), “subdivision (74) of subsection (a)” in reference to Sec. 42a-9-102 in Subdiv. (43), and “subdivision (36) of subsection (b)” in reference to Sec. 42a-1-201 in Subdiv. (45), effective January 1, 2026."
+        ],
+        "annotations": [],
+        "plainText": "As used in sections 15-201 to 15-232, inclusive:\n\n(1) “Barge” means a vessel that is not self-propelled or fitted for propulsion by sail, paddle, oar or similar device;\n\n(2) “Builder's certificate” means a certificate of the facts of build of a vessel described in 46 CFR 67.99;\n\n(3) “Buyer” means a person that buys or contracts to buy a vessel;\n\n(4) “Cancel”, with respect to a certificate of title, means to make the certificate of title ineffective;\n\n(5) “Certificate of origin” means a record created by a manufacturer or importer as the manufacturer's or importer's proof of identity of a vessel. “Certificate of origin” includes a manufacturer's certificate or statement of origin and an importer's certificate or statement of origin. “Certificate of origin” does not include a builder's certificate;\n\n(6) “Certificate of title” means a record, created by the Department of Motor Vehicles pursuant to section 15-208 or by a governmental agency of another jurisdiction under the law of that jurisdiction, that is designated as a certificate of title by the department or such agency and is evidence of ownership of a vessel;\n\n(7) “Commissioner” means the Commissioner of Motor Vehicles;\n\n(8) “Dealer” means a person, including a manufacturer, in the business of selling vessels;\n\n(9) “Department” means the Department of Motor Vehicles;\n\n(10) “Documented vessel” means a vessel covered by a certificate of documentation issued pursuant to 46 USC 12105. “Documented vessel” does not include a foreign-documented vessel;\n\n(11) “Electronic” means relating to technology having electrical, digital, magnetic, wireless, optical, electromagnetic or similar capabilities;\n\n(12) “Electronic certificate of title” means a certificate of title consisting of information that is stored solely in an electronic medium and is retrievable in perceivable form;\n\n(13) “Foreign-documented vessel” means a vessel the ownership of which is recorded in a registry maintained by a country other than the United States that identifies each person that has an ownership interest in such vessel and includes a unique alphanumeric designation for the vessel;\n\n(14) “Good faith” means honesty in fact and the observance of reasonable commercial standards of fair dealing;\n\n(15) “Hull identification number” means the alphanumeric designation assigned to a vessel pursuant to 33 CFR 181, as amended;\n\n(16) “Lien creditor”, with respect to a vessel, means:\n\n(A) A creditor that has acquired a lien on the vessel by attachment, levy or the like;\n\n(B) An assignee for benefit of creditors from the time of assignment;\n\n(C) A trustee in bankruptcy from the date of the filing of the petition; or\n\n(D) A receiver in equity from the time of appointment;\n\n(17) “Owner” means a person with legal title to a vessel;\n\n(18) “Owner of record” means the owner indicated in the files of the department or, if the files indicate more than one owner, the owner first indicated;\n\n(19) “Person” means an individual; corporation; business trust; estate; trust; statutory trust; partnership; limited liability company; association; joint venture; public corporation; government or governmental subdivision, agency or instrumentality; or any other legal or commercial entity;\n\n(20) “Purchase” means to take by sale, lease, mortgage, pledge, consensual lien, security interest, gift or any other voluntary transaction that creates an interest in a vessel;\n\n(21) “Purchaser” means a person that takes by purchase;\n\n(22) “Record” means information inscribed on a tangible medium or stored in an electronic or other medium that is retrievable in perceivable form;\n\n(23) “Secured party”, with respect to a vessel, means a person:\n\n(A) In whose favor a security interest is created or provided for under a security agreement, whether or not any obligation to be secured is outstanding;\n\n(B) Who is a consignor under article 9 of title 42a; or\n\n(C) Who holds a security interest arising under section 42a-2-401, section 42a-2-505, subdivision (3) of section 42a-2-711 or subsection (d) of section 42a-2A-724;\n\n(24) “Secured party of record” means the secured party whose name is indicated as the name of the secured party in the files of the department or, if the files indicate more than one secured party, the one first indicated;\n\n(25) “Security interest” means an interest in a vessel that secures payment or performance of an obligation if the interest is created by contract or arises pursuant to section 42a-2-401, section 42a-2-505, subdivision (3) of section 42a-2-711 or subsection (d) of section 42a-2A-724, including, but not limited to, any interest of a consignor in a vessel in a transaction that is subject to article 9 of title 42a. “Security interest” does not include the special property interest of a buyer of a vessel on identification of that vessel to a contract for sale pursuant to section 42a-2-401, but a buyer may also acquire a security interest by complying with article 9 of title 42a. Except as otherwise provided in section 42a-2-505, the right of a seller or lessor of a vessel under article 2 of title 42a or article 2A of title 42a to retain or acquire possession of the vessel is not a security interest, but a seller or lessor also may acquire a security interest by complying with article 9 of title 42a. The retention or reservation of title by a seller of a vessel notwithstanding shipment or delivery to the buyer under section 42a-2-401 is limited in effect to a reservation of a security interest. Whether a transaction in the form of a lease creates a security interest is determined by section 42a-1-203;\n\n(26) “Sign” means, with present intent to authenticate or adopt a record, to:\n\n(A) Make or adopt a tangible symbol; or\n\n(B) Attach to or logically associate with the record an electronic symbol, sound or process;\n\n(27) “State” means a state of the United States, the District of Columbia, Puerto Rico, the United States Virgin Islands, or any territory or insular possession subject to the jurisdiction of the United States;\n\n(28) “State of principal use” means the state on whose waters a vessel is or will be used, operated, navigated or employed more than on the waters of any other state during a calendar year;\n\n(29) “Title brand” means a designation of previous damage, use or condition that is set forth on a certificate of title issued by another state or other statement which shall be indicated on a certificate of title in accordance with the provisions of section 15-209 and any regulations adopted by the Commissioner of Motor Vehicles under section 15-229;\n\n(30) “Transfer of ownership” means a voluntary or involuntary conveyance of an interest in a vessel;\n\n(31) “Vessel” means every description of watercraft, other than a seaplane on water, used or capable of being used as a means of transportation on water;\n\n(32) “Vessel number” means the alphanumeric designation for a vessel issued pursuant to 46 USC 12301 and chapter 268;\n\n(33) “Written certificate of title” means a certificate of title consisting of information inscribed on a tangible medium;\n\n(34) “Agreement” has the same meaning as provided in subdivision (3) of subsection (b) of section 42a-1-201;\n\n(35) “Buyer in ordinary course of business” has the same meaning as provided in subdivision (9) of subsection (b) of section 42a-1-201;\n\n(36) “Consumer goods” has the same meaning as provided in section 42a-9-102;\n\n(37) “Debtor” has the same meaning as provided in section 42a-9-102;\n\n(38) “Knowledge” has the same meaning as provided in section 42a-1-202;\n\n(39) “Lease” has the same meaning as provided in subdivision (17) of subsection (a) of section 42a-2A-102;\n\n(40) “Lessor” has the same meaning as provided in subdivision (23) of subsection (a) of section 42a-2A-102;\n\n(41) “Notice” has the same meaning as provided in section 42a-1-202;\n\n(42) “Sale” has the same meaning as provided in subdivision (1) of section 42a-2-106;\n\n(43) “Security agreement” has the same meaning as provided in section 42a-9-102;\n\n(44) “Seller” has the same meaning as provided in subdivision (1) of section 42a-2-103;\n\n(45) “Send” has the same meaning as provided in section 42a-1-201; and\n\n(46) “Value” has the same meaning as provided in section 42a-1-204."
+      }
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-153",
+  "number": "153",
+  "name": "Nominations and Political Parties",
+  "title": {
+    "id": "title-09",
+    "number": "09",
+    "name": "Elections"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_153.htm",
+  "sections": [
+    {
+      "id": "section-9-404c",
+      "kind": "section",
+      "citation": "9-404c",
+      "citations": [
+        "9-404c"
+      ],
+      "heading": "Sec. 9-404c. Registrar's receipt and verification of petitions for candidacies for nomination to state or district office. Filing with Secretary. Tabulation.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_153.htm#sec_9-404c",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) Upon the receipt of any page of a petition proposing a candidacy for a state or district office, the registrar shall forthwith sign and give to the person submitting the petition a receipt, in duplicate, stating the number of pages filed and the date and time of filing. The person or the candidate shall forthwith send one copy of the receipt to the Secretary of the State. The registrar of voters shall indicate on each such petition page the date and time of filing, shall forthwith certify on each such page the number of signers of the page who were enrolled on the last-completed enrollment list of such party in the municipality or political subdivision, as the case may be, and shall forthwith file such certified page in person or by mail, as described in section 9-140b, with the Secretary within seven days after receipt of the page. In checking the signatures on primary petition pages, the registrar shall reject any name which does not appear on the last-completed enrollment list of such party in the municipality or political subdivision, as the case may be. Such rejection shall be indicated by placing a mark in a manner prescribed by the Secretary before the name rejected. The registrar may place a check mark before each name appearing on the enrollment list to indicate approval but shall place no other mark on the page except as provided in this chapter. The registrar shall not reject any name for which the street address on the petition is different from the street address on the enrollment list, if (1) such person is eligible to vote for the candidate or candidates named in the petition in the municipality of the registrar, and (2) the person's date of birth, as shown on the petition page, is the same as the date of birth on the person's registration record.",
+          "(b) Upon the filing of all pages of a petition, the Secretary shall reject any page of the petition which does not contain the certifications required in section 9-404b or which the Secretary determines to have been circulated in violation of any provision of said section, and shall immediately cause the number of certified signatures to be tabulated. Petitions filed with the Secretary shall be preserved for a period of three years and then may be destroyed."
+        ],
+        "sourceNotes": [
+          "(P.A. 03-241, S. 3; P.A. 25-134, S. 13.)"
+        ],
+        "history": [
+          "History: P.A. 03-241 effective January 1, 2004, and applicable to primaries and elections held on or after that date; P.A. 25-134 made a technical change in Subsec. (b)."
+        ],
+        "annotations": [],
+        "plainText": "(a) Upon the receipt of any page of a petition proposing a candidacy for a state or district office, the registrar shall forthwith sign and give to the person submitting the petition a receipt, in duplicate, stating the number of pages filed and the date and time of filing. The person or the candidate shall forthwith send one copy of the receipt to the Secretary of the State. The registrar of voters shall indicate on each such petition page the date and time of filing, shall forthwith certify on each such page the number of signers of the page who were enrolled on the last-completed enrollment list of such party in the municipality or political subdivision, as the case may be, and shall forthwith file such certified page in person or by mail, as described in section 9-140b, with the Secretary within seven days after receipt of the page. In checking the signatures on primary petition pages, the registrar shall reject any name which does not appear on the last-completed enrollment list of such party in the municipality or political subdivision, as the case may be. Such rejection shall be indicated by placing a mark in a manner prescribed by the Secretary before the name rejected. The registrar may place a check mark before each name appearing on the enrollment list to indicate approval but shall place no other mark on the page except as provided in this chapter. The registrar shall not reject any name for which the street address on the petition is different from the street address on the enrollment list, if (1) such person is eligible to vote for the candidate or candidates named in the petition in the municipality of the registrar, and (2) the person's date of birth, as shown on the petition page, is the same as the date of birth on the person's registration record.\n\n(b) Upon the filing of all pages of a petition, the Secretary shall reject any page of the petition which does not contain the certifications required in section 9-404b or which the Secretary determines to have been circulated in violation of any provision of said section, and shall immediately cause the number of certified signatures to be tabulated. Petitions filed with the Secretary shall be preserved for a period of three years and then may be destroyed."
+      }
+    }
+  ]
+}

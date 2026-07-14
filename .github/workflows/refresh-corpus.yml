@@ -30,6 +30,8 @@ jobs:
       SNAPSHOT_DIR: .crawl/refresh/snapshots
       CANONICAL_DIR: .crawl/refresh/canonical
       SECONDARY_SOURCE_DIR: .crawl/refresh/secondary-sources
+      SUPPLEMENT_SOURCE_ROOT: .crawl/refresh/supplement-sources
+      SUPPLEMENT_SNAPSHOT_ROOT: .crawl/refresh/supplement-snapshots
       REPORT_DIR: .crawl/refresh/reports
       CREATE_PULL_REQUEST: ${{ github.event_name == 'schedule' || inputs.create_pull_request }}
     steps:
@@ -107,6 +109,37 @@ jobs:
             --data "$CANONICAL_DIR/secondary" \
             --base "$CANONICAL_DIR"
 
+      - name: Rebind published supplements to the candidate corpus
+        if: steps.review.outputs.has_changes == 'true'
+        run: |
+          set -euo pipefail
+          mapfile -t supplement_years < <(find public/data/supplements -mindepth 1 -maxdepth 1 -type d -printf '%f\n' 2>/dev/null | grep -E '^[0-9]{4}$' | sort || true)
+          if [ "${#supplement_years[@]}" -eq 0 ]; then
+            echo "No published supplement editions require rebinding."
+            exit 0
+          fi
+
+          for year in "${supplement_years[@]}"; do
+            source_dir="$SUPPLEMENT_SOURCE_ROOT/$year"
+            snapshot_dir="$SUPPLEMENT_SNAPSHOT_ROOT/$year"
+            echo "Rebinding the published $year supplement to the candidate corpus."
+            python -m crawler.cgs_crawler.cli \
+              --edition supplement \
+              --supplement-year "$year" \
+              --output "$source_dir" \
+              --snapshots "$snapshot_dir" \
+              --no-ssl-verify \
+              2>&1 | tee "$REPORT_DIR/supplement-$year-crawl.log"
+            npm run import:supplement -- \
+              --input "$source_dir" \
+              --base "$CANONICAL_DIR" \
+              --output "$CANONICAL_DIR/supplements/$year" \
+              --year "$year"
+            npm run validate:supplement -- \
+              --data "$CANONICAL_DIR/supplements/$year" \
+              --base "$CANONICAL_DIR"
+          done
+
       - name: Stage and verify the candidate corpus
         if: steps.review.outputs.has_changes == 'true'
         run: |
@@ -180,6 +213,16 @@ jobs:
         with:
           name: corpus-refresh-secondary-sources-${{ github.run_id }}-${{ github.run_attempt }}
           path: .crawl/refresh/secondary-sources/
+          if-no-files-found: ignore
+          include-hidden-files: true
+          retention-days: 14
+
+      - name: Upload supplement rebinding snapshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: corpus-refresh-supplement-snapshots-${{ github.run_id }}-${{ github.run_attempt }}
+          path: .crawl/refresh/supplement-snapshots/
           if-no-files-found: ignore
           include-hidden-files: true
           retention-days: 14

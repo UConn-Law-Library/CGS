@@ -1,0 +1,255 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-art-002",
+  "number": "art-002",
+  "name": "Sales",
+  "title": {
+    "id": "title-42a",
+    "number": "42a",
+    "name": "Uniform Commercial Code"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2026/sup/art_002.htm",
+  "sections": [
+    {
+      "id": "section-42a-2-102",
+      "kind": "section",
+      "citation": "42a-2-102",
+      "citations": [
+        "42a-2-102"
+      ],
+      "heading": "Sec. 42a-2-102. Scope; certain security and other transactions excluded from this article.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/art_002.htm#sec_42a-2-102",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) Unless the context otherwise requires, and except as provided in subsection (c) of this section, this article applies to transactions in goods and, in the case of a hybrid transaction, it applies to the extent provided in subsection (b) of this section.",
+          "(b) In a hybrid transaction:",
+          "(1) If the sale of goods aspects do not predominate, only the provisions of this article which relate primarily to the sale of goods aspects of the transaction apply, and the provisions that relate primarily to the transaction as a whole do not apply.",
+          "(2) If the sale of goods aspects predominate, this article applies to the transaction but does not preclude application in appropriate circumstances of other law to aspects of the transaction which do not relate to the sale of goods.",
+          "(c) This article does not:",
+          "(1) Apply to a transaction that, even though in the form of an unconditional contract to sell or present sale, operates only to create a security interest; or",
+          "(2) Impair or repeal a statute regulating sales to consumers, farmers or other specified classes of buyers."
+        ],
+        "sourceNotes": [
+          "(1959, P.A. 133, S. 2-102; P.A. 25-145, S. 5.)"
+        ],
+        "history": [
+          "History: P.A. 25-145 redesignated existing provisions as Subsecs. (a) and (c) and added Subsec. (b) re application of article to hybrid transaction, effective January 1, 2026."
+        ],
+        "annotations": [],
+        "plainText": "(a) Unless the context otherwise requires, and except as provided in subsection (c) of this section, this article applies to transactions in goods and, in the case of a hybrid transaction, it applies to the extent provided in subsection (b) of this section.\n\n(b) In a hybrid transaction:\n\n(1) If the sale of goods aspects do not predominate, only the provisions of this article which relate primarily to the sale of goods aspects of the transaction apply, and the provisions that relate primarily to the transaction as a whole do not apply.\n\n(2) If the sale of goods aspects predominate, this article applies to the transaction but does not preclude application in appropriate circumstances of other law to aspects of the transaction which do not relate to the sale of goods.\n\n(c) This article does not:\n\n(1) Apply to a transaction that, even though in the form of an unconditional contract to sell or present sale, operates only to create a security interest; or\n\n(2) Impair or repeal a statute regulating sales to consumers, farmers or other specified classes of buyers."
+      }
+    },
+    {
+      "id": "section-42a-2-106",
+      "kind": "section",
+      "citation": "42a-2-106",
+      "citations": [
+        "42a-2-106"
+      ],
+      "heading": "Sec. 42a-2-106. Definitions: “Contract”; “agreement”; “contract for sale”; “sale”; “present sale”; “conforming” to contract; “termination”; “cancellation”; “hybrid transaction”.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/art_002.htm#sec_42a-2-106",
+      "status": "active",
+      "content": {
+        "body": [
+          "(1) In this article unless the context otherwise requires “contract” and “agreement” are limited to those relating to the present or future sale of goods. “Contract for sale” includes both a present sale of goods and a contract to sell goods at a future time. A “sale” consists in the passing of title from the seller to the buyer for a price as provided by section 42a-2-401. A “present sale” means a sale which is accomplished by the making of the contract.",
+          "(2) Goods or conduct including any part of a performance are “conforming” or conform to the contract when they are in accordance with the obligations under the contract.",
+          "(3) “Termination” occurs when either party pursuant to a power created by agreement or law puts an end to the contract otherwise than for its breach. On “termination” all obligations which are still executory on both sides are discharged but any right based on prior breach or performance survives.",
+          "(4) “Cancellation” occurs when either party puts an end to the contract for breach by the other and its effect is the same as that of “termination” except that the cancelling party also retains any remedy for breach of the whole contract or any unperformed balance.",
+          "(5) “Hybrid transaction” means a single transaction involving a sale of goods and:",
+          "(a) The provision of services;",
+          "(b) A lease of other goods; or",
+          "(c) A sale, lease or license of property other than goods."
+        ],
+        "sourceNotes": [
+          "(1959, P.A. 133, S. 2-106; P.A. 25-145, S. 6.)"
+        ],
+        "history": [
+          "History: P.A. 25-145 added Subsec. (5) defining “hybrid transaction”, effective January 1, 2026."
+        ],
+        "annotations": [],
+        "plainText": "(1) In this article unless the context otherwise requires “contract” and “agreement” are limited to those relating to the present or future sale of goods. “Contract for sale” includes both a present sale of goods and a contract to sell goods at a future time. A “sale” consists in the passing of title from the seller to the buyer for a price as provided by section 42a-2-401. A “present sale” means a sale which is accomplished by the making of the contract.\n\n(2) Goods or conduct including any part of a performance are “conforming” or conform to the contract when they are in accordance with the obligations under the contract.\n\n(3) “Termination” occurs when either party pursuant to a power created by agreement or law puts an end to the contract otherwise than for its breach. On “termination” all obligations which are still executory on both sides are discharged but any right based on prior breach or performance survives.\n\n(4) “Cancellation” occurs when either party puts an end to the contract for breach by the other and its effect is the same as that of “termination” except that the cancelling party also retains any remedy for breach of the whole contract or any unperformed balance.\n\n(5) “Hybrid transaction” means a single transaction involving a sale of goods and:\n\n(a) The provision of services;\n\n(b) A lease of other goods; or\n\n(c) A sale, lease or license of property other than goods."
+      }
+    },
+    {
+      "id": "section-42a-2-201",
+      "kind": "section",
+      "citation": "42a-2-201",
+      "citations": [
+        "42a-2-201"
+      ],
+      "heading": "Sec. 42a-2-201. Formal requirements; statute of frauds.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/art_002.htm#sec_42a-2-201",
+      "status": "active",
+      "content": {
+        "body": [
+          "(1) Except as otherwise provided in this section, a contract for the sale of goods for the price of five hundred dollars or more is not enforceable by way of action or defense unless there is a record sufficient to indicate that a contract for sale has been made between the parties and signed by the party against whom enforcement is sought or by his authorized agent or broker. A record is not insufficient because it omits or incorrectly states a term agreed upon but the contract is not enforceable under this subsection beyond the quantity of goods shown in the record.",
+          "(2) Between merchants if within a reasonable time a record in confirmation of the contract and sufficient against the sender is received and the party receiving it has reason to know its contents, it satisfies the requirements of subsection (1) of this section against the party unless written notice in a record of objection to its contents is given within ten days after it is received.",
+          "(3) A contract which does not satisfy the requirements of subsection (1) of this section but which is valid in other respects is enforceable (a) if the goods are to be specially manufactured for the buyer and are not suitable for sale to others in the ordinary course of the seller's business and the seller, before notice of repudiation is received and under circumstances which reasonably indicate that the goods are for the buyer, has made either a substantial beginning of their manufacture or commitments for their procurement; or (b) if the party against whom enforcement is sought admits in the party's pleading, testimony or otherwise in court that a contract for sale was made, but the contract is not enforceable under this provision beyond the quantity of goods admitted; or (c) with respect to goods for which payment has been made and accepted or which have been received and accepted as provided by section 42a-2-606."
+        ],
+        "sourceNotes": [
+          "(1959, P.A. 133, S. 2-201; P.A. 25-145, S. 7.)"
+        ],
+        "history": [
+          "History: P.A. 25-145 amended Subsecs. (1) and (2) by substituting “record” for “writing”, and made technical changes throughout, effective January 1, 2026."
+        ],
+        "annotations": [],
+        "plainText": "(1) Except as otherwise provided in this section, a contract for the sale of goods for the price of five hundred dollars or more is not enforceable by way of action or defense unless there is a record sufficient to indicate that a contract for sale has been made between the parties and signed by the party against whom enforcement is sought or by his authorized agent or broker. A record is not insufficient because it omits or incorrectly states a term agreed upon but the contract is not enforceable under this subsection beyond the quantity of goods shown in the record.\n\n(2) Between merchants if within a reasonable time a record in confirmation of the contract and sufficient against the sender is received and the party receiving it has reason to know its contents, it satisfies the requirements of subsection (1) of this section against the party unless written notice in a record of objection to its contents is given within ten days after it is received.\n\n(3) A contract which does not satisfy the requirements of subsection (1) of this section but which is valid in other respects is enforceable (a) if the goods are to be specially manufactured for the buyer and are not suitable for sale to others in the ordinary course of the seller's business and the seller, before notice of repudiation is received and under circumstances which reasonably indicate that the goods are for the buyer, has made either a substantial beginning of their manufacture or commitments for their procurement; or (b) if the party against whom enforcement is sought admits in the party's pleading, testimony or otherwise in court that a contract for sale was made, but the contract is not enforceable under this provision beyond the quantity of goods admitted; or (c) with respect to goods for which payment has been made and accepted or which have been received and accepted as provided by section 42a-2-606."
+      }
+    },
+    {
+      "id": "section-42a-2-202",
+      "kind": "section",
+      "citation": "42a-2-202",
+      "citations": [
+        "42a-2-202"
+      ],
+      "heading": "Sec. 42a-2-202. Final expression: Parol or extrinsic evidence.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/art_002.htm#sec_42a-2-202",
+      "status": "active",
+      "content": {
+        "body": [
+          "Terms with respect to which the confirmatory memoranda of the parties agree or which are otherwise set forth in a record intended by the parties as a final expression of their agreement with respect to such terms as are included therein may not be contradicted by evidence of any prior agreement or of a contemporaneous oral agreement but may be explained or supplemented (a) by course of performance, course of dealing or usage of trade as provided by section 42a-1-303; and (b) by evidence of consistent additional terms unless the court finds the record to have been intended also as a complete and exclusive statement of the terms of the agreement."
+        ],
+        "sourceNotes": [
+          "(1959, P.A. 133, S. 2-202; P.A. 05-109, S. 24; P.A. 25-145, S. 8.)"
+        ],
+        "history": [
+          "History: P.A. 05-109 replaced references to Secs. 42a-1-205 and 42a-2-208 with reference to Sec. 42a-1-303 and made a technical change to conform to revisions made to article 1 by the same act; P.A. 25-145 substituted “record” for “writing”, effective January 1, 2026."
+        ],
+        "annotations": [],
+        "plainText": "Terms with respect to which the confirmatory memoranda of the parties agree or which are otherwise set forth in a record intended by the parties as a final expression of their agreement with respect to such terms as are included therein may not be contradicted by evidence of any prior agreement or of a contemporaneous oral agreement but may be explained or supplemented (a) by course of performance, course of dealing or usage of trade as provided by section 42a-1-303; and (b) by evidence of consistent additional terms unless the court finds the record to have been intended also as a complete and exclusive statement of the terms of the agreement."
+      }
+    },
+    {
+      "id": "section-42a-2-203",
+      "kind": "section",
+      "citation": "42a-2-203",
+      "citations": [
+        "42a-2-203"
+      ],
+      "heading": "Sec. 42a-2-203. Seals inoperative.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/art_002.htm#sec_42a-2-203",
+      "status": "active",
+      "content": {
+        "body": [
+          "The affixing of a seal to a record evidencing a contract for sale or an offer to buy or sell goods does not constitute the record a sealed instrument and the law with respect to sealed instruments does not apply to such a contract or offer."
+        ],
+        "sourceNotes": [
+          "(1959, P.A. 133, S. 2-203; P.A. 25-145, S. 9.)"
+        ],
+        "history": [
+          "History: P.A. 25-145 substituted “record” for “writing”, effective January 1, 2026."
+        ],
+        "annotations": [],
+        "plainText": "The affixing of a seal to a record evidencing a contract for sale or an offer to buy or sell goods does not constitute the record a sealed instrument and the law with respect to sealed instruments does not apply to such a contract or offer."
+      }
+    },
+    {
+      "id": "section-42a-2-205",
+      "kind": "section",
+      "citation": "42a-2-205",
+      "citations": [
+        "42a-2-205"
+      ],
+      "heading": "Sec. 42a-2-205. Firm offers.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/art_002.htm#sec_42a-2-205",
+      "status": "active",
+      "content": {
+        "body": [
+          "An offer by a merchant to buy or sell goods in a signed record which by its terms gives assurance that it will be held open is not revocable, for lack of consideration, during the time stated or if no time is stated for a reasonable time, but in no event may such period of irrevocability exceed three months; but any such term of assurance on a form supplied by the offeree must be separately signed by the offeror."
+        ],
+        "sourceNotes": [
+          "(1959, P.A. 133, S. 2-205; P.A. 25-145, S. 10.)"
+        ],
+        "history": [
+          "History: P.A. 25-145 substituted “record” for “writing”, effective January 1, 2026."
+        ],
+        "annotations": [],
+        "plainText": "An offer by a merchant to buy or sell goods in a signed record which by its terms gives assurance that it will be held open is not revocable, for lack of consideration, during the time stated or if no time is stated for a reasonable time, but in no event may such period of irrevocability exceed three months; but any such term of assurance on a form supplied by the offeree must be separately signed by the offeror."
+      }
+    },
+    {
+      "id": "section-42a-2-209",
+      "kind": "section",
+      "citation": "42a-2-209",
+      "citations": [
+        "42a-2-209"
+      ],
+      "heading": "Sec. 42a-2-209. Modification, rescission and waiver.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/art_002.htm#sec_42a-2-209",
+      "status": "active",
+      "content": {
+        "body": [
+          "(1) An agreement modifying a contract within this article needs no consideration to be binding.",
+          "(2) A signed agreement which excludes modification or rescission except by a signed writing or other signed record cannot be otherwise modified or rescinded, but except as between merchants such a requirement on a form supplied by the merchant must be separately signed by the other party.",
+          "(3) The requirements of section 42a-2-201 must be satisfied if the contract as modified is within its provisions.",
+          "(4) Although an attempt at modification or rescission does not satisfy the requirements of subsection (2) or (3) it can operate as a waiver.",
+          "(5) A party who has made a waiver affecting an executory portion of the contract may retract the waiver by reasonable notification received by the other party that strict performance will be required of any term waived, unless the retraction would be unjust in view of a material change of position in reliance on the waiver."
+        ],
+        "sourceNotes": [
+          "(1959, P.A. 133, S. 2-209; P.A. 25-145, S. 11.)"
+        ],
+        "history": [
+          "History: P.A. 25-145 amended Subsec. (2) by adding “or other signed record”, effective January 1, 2026."
+        ],
+        "annotations": [],
+        "plainText": "(1) An agreement modifying a contract within this article needs no consideration to be binding.\n\n(2) A signed agreement which excludes modification or rescission except by a signed writing or other signed record cannot be otherwise modified or rescinded, but except as between merchants such a requirement on a form supplied by the merchant must be separately signed by the other party.\n\n(3) The requirements of section 42a-2-201 must be satisfied if the contract as modified is within its provisions.\n\n(4) Although an attempt at modification or rescission does not satisfy the requirements of subsection (2) or (3) it can operate as a waiver.\n\n(5) A party who has made a waiver affecting an executory portion of the contract may retract the waiver by reasonable notification received by the other party that strict performance will be required of any term waived, unless the retraction would be unjust in view of a material change of position in reliance on the waiver."
+      }
+    },
+    {
+      "id": "section-42a-2-313",
+      "kind": "section",
+      "citation": "42a-2-313",
+      "citations": [
+        "42a-2-313"
+      ],
+      "heading": "Sec. 42a-2-313. Express warranties by affirmation, promise, description, sample.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/art_002.htm#sec_42a-2-313",
+      "status": "active",
+      "content": {
+        "body": [
+          "(1) In this section: (a) “Manufacturer” means a seller involved in the design, assembly or preparation of any goods before such goods are sold or distributed to a consumer at retail. (b) “Seller” means a person who is engaged in the business of selling or transferring ownership of, or contracting to sell or transfer ownership of, goods and includes a manufacturer, wholesaler, distributor or retailer.",
+          "(2) Express warranties by the seller are created as follows: (a) Any affirmation of fact or promise made by the seller to the buyer which relates to the goods and becomes part of the basis of the bargain creates an express warranty that the goods shall conform to the affirmation or promise. (b) Any description of the goods which is made part of the basis of the bargain creates an express warranty that the goods shall conform to the description. (c) Any sample or model which is made part of the basis of the bargain creates an express warranty that the whole of the goods shall conform to the sample or model. (d) Any affirmation of fact or promise made by the seller to repair or replace defective goods creates an express warranty that the defective goods shall be repaired or replaced in conformance with such affirmation or promise.",
+          "(3) It is not necessary to the creation of an express warranty that the seller use formal words such as “warrant” or “guarantee” or that the seller have a specific intention to make a warranty, but an affirmation merely of the value of the goods or a statement purporting to be merely the seller's opinion or commendation of the goods does not create a warranty.",
+          "(4) It is not necessary to the assertion of a claim for breach of an express warranty for the buyer, or the buyer's successor in interest, to have bought the goods directly from, or entered into a sales contract with, the seller."
+        ],
+        "sourceNotes": [
+          "(1959, P.A. 133, S. 2-313; P.A. 25-111, S. 44.)"
+        ],
+        "history": [
+          "History: P.A. 25-111 added new Subsec. (1) defining “manufacturer” and “seller”, redesignated existing Subsecs. (1) and (2) as Subsecs. (2) and (3), added Subsec. (2)(d) re affirmation of fact or promise made by seller to repair or replace defective goods, added Subsec. (4) re nonnecessity of direct purchase from, or contract with, seller and made technical and conforming changes."
+        ],
+        "annotations": [],
+        "plainText": "(1) In this section: (a) “Manufacturer” means a seller involved in the design, assembly or preparation of any goods before such goods are sold or distributed to a consumer at retail. (b) “Seller” means a person who is engaged in the business of selling or transferring ownership of, or contracting to sell or transfer ownership of, goods and includes a manufacturer, wholesaler, distributor or retailer.\n\n(2) Express warranties by the seller are created as follows: (a) Any affirmation of fact or promise made by the seller to the buyer which relates to the goods and becomes part of the basis of the bargain creates an express warranty that the goods shall conform to the affirmation or promise. (b) Any description of the goods which is made part of the basis of the bargain creates an express warranty that the goods shall conform to the description. (c) Any sample or model which is made part of the basis of the bargain creates an express warranty that the whole of the goods shall conform to the sample or model. (d) Any affirmation of fact or promise made by the seller to repair or replace defective goods creates an express warranty that the defective goods shall be repaired or replaced in conformance with such affirmation or promise.\n\n(3) It is not necessary to the creation of an express warranty that the seller use formal words such as “warrant” or “guarantee” or that the seller have a specific intention to make a warranty, but an affirmation merely of the value of the goods or a statement purporting to be merely the seller's opinion or commendation of the goods does not create a warranty.\n\n(4) It is not necessary to the assertion of a claim for breach of an express warranty for the buyer, or the buyer's successor in interest, to have bought the goods directly from, or entered into a sales contract with, the seller."
+      }
+    },
+    {
+      "id": "section-42a-2-402",
+      "kind": "section",
+      "citation": "42a-2-402",
+      "citations": [
+        "42a-2-402"
+      ],
+      "heading": "Sec. 42a-2-402. Rights of seller's creditors against sold goods; right of certain buyers and lessors of goods to file under article 9.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/art_002.htm#sec_42a-2-402",
+      "status": "active",
+      "content": {
+        "body": [
+          "(1) Except as provided in the following subsections, rights of unsecured creditors of the seller with respect to goods which have been identified to a contract for sale are subject to the buyer's rights to recover the goods under sections 42a-2-502 and 42a-2-716.",
+          "(2) Unless the filing provisions of article 9 have been complied with as set out in subsection (3), a creditor of the seller may treat a sale or an identification of goods to a contract for sale as void if as against him a retention of possession by the seller is fraudulent under any rule of law of the state where the goods are situated, except that retention of possession in good faith and current course of trade by a merchant-seller for a commercially reasonable time after a sale or identification is not fraudulent.",
+          "(3) When a seller remains in possession of goods which have been sold or identified to a contract for sale or of goods which, after sale, have been leased back to him, the buyer or lessor of such goods may protect his interest by complying with the filing provisions of article 9. On compliance the buyer or lessor has, against creditors of and purchasers from the seller, the rights of a secured party with a perfected security interest. Such filing does not, of itself, make the interest of the buyer or lessor a security interest, as defined in section 42a-1-201.",
+          "(4) Nothing in this article shall be deemed to impair the rights of creditors of the seller (a) under the provisions of article 9; or (b) where identification to the contract or delivery is made not in current course of trade but in satisfaction of or as security for a preexisting claim for money, security or the like and is made under circumstances which under any rule of law of the state where the goods are situated would apart from this article constitute the transaction a fraudulent transfer or voidable preference."
+        ],
+        "sourceNotes": [
+          "(1959, P.A. 133, S. 2-402; 1961, P.A. 116, S. 1; P.A. 05-109, S. 25; P.A. 25-145, S. 117.)"
+        ],
+        "history": [
+          "History: 1961 act amended section to specify rights of buyers and lessors to file under Art. 9, adding opening clause in Subsec. (2) and inserting new Subsec. (3), renumbering former Subsec. (3) accordingly; P.A. 05-109 made a technical change in Subsec. (3) to conform to revisions made to article 1 by the same act; P.A. 25-145 deleted “by subdivision (35) of subsection (b)” in reference to Sec. 42a-1-201 and made a technical change in Subsec. (3), effective January 1, 2026."
+        ],
+        "annotations": [],
+        "plainText": "(1) Except as provided in the following subsections, rights of unsecured creditors of the seller with respect to goods which have been identified to a contract for sale are subject to the buyer's rights to recover the goods under sections 42a-2-502 and 42a-2-716.\n\n(2) Unless the filing provisions of article 9 have been complied with as set out in subsection (3), a creditor of the seller may treat a sale or an identification of goods to a contract for sale as void if as against him a retention of possession by the seller is fraudulent under any rule of law of the state where the goods are situated, except that retention of possession in good faith and current course of trade by a merchant-seller for a commercially reasonable time after a sale or identification is not fraudulent.\n\n(3) When a seller remains in possession of goods which have been sold or identified to a contract for sale or of goods which, after sale, have been leased back to him, the buyer or lessor of such goods may protect his interest by complying with the filing provisions of article 9. On compliance the buyer or lessor has, against creditors of and purchasers from the seller, the rights of a secured party with a perfected security interest. Such filing does not, of itself, make the interest of the buyer or lessor a security interest, as defined in section 42a-1-201.\n\n(4) Nothing in this article shall be deemed to impair the rights of creditors of the seller (a) under the provisions of article 9; or (b) where identification to the contract or delivery is made not in current course of trade but in satisfaction of or as security for a preexisting claim for money, security or the like and is made under circumstances which under any rule of law of the state where the goods are situated would apart from this article constitute the transaction a fraudulent transfer or voidable preference."
+      }
+    }
+  ]
+}

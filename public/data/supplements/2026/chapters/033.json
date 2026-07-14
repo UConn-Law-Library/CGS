@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-033",
+  "number": "033",
+  "name": "Secretary",
+  "title": {
+    "id": "title-03",
+    "number": "03",
+    "name": "State Elective Officers"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_033.htm",
+  "sections": [
+    {
+      "id": "section-3-99h",
+      "kind": "section",
+      "citation": "3-99h",
+      "citations": [
+        "3-99h"
+      ],
+      "heading": "Sec. 3-99h. Benefit corporation registration voucher.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_033.htm#sec_3-99h",
+      "status": "active",
+      "content": {
+        "body": [
+          "The Secretary of the State shall provide a voucher for the amount of any registration or renewal fee for a (1) benefit corporation, as defined in section 33-1351, provided such corporation submits proof to the Secretary that the corporation meets the parameters of a benefit corporation, as defined in section 33-1351, or (2) a benefit corporation, as defined in section 33-1351, that is certified by an entity recognized by the Secretary for such certification purpose."
+        ],
+        "sourceNotes": [
+          "(P.A. 25-125, S. 5.)"
+        ],
+        "history": [
+          "History: P.A. 25-125 effective July 1, 2025."
+        ],
+        "annotations": [],
+        "plainText": "The Secretary of the State shall provide a voucher for the amount of any registration or renewal fee for a (1) benefit corporation, as defined in section 33-1351, provided such corporation submits proof to the Secretary that the corporation meets the parameters of a benefit corporation, as defined in section 33-1351, or (2) a benefit corporation, as defined in section 33-1351, that is certified by an entity recognized by the Secretary for such certification purpose."
+      }
+    }
+  ]
+}

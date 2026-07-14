@@ -1,0 +1,127 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-art-003",
+  "number": "art-003",
+  "name": "Negotiable Instruments",
+  "title": {
+    "id": "title-42a",
+    "number": "42a",
+    "name": "Uniform Commercial Code"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2026/sup/art_003.htm",
+  "sections": [
+    {
+      "id": "section-42a-3-104",
+      "kind": "section",
+      "citation": "42a-3-104",
+      "citations": [
+        "42a-3-104"
+      ],
+      "heading": "Sec. 42a-3-104. Negotiable instrument.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/art_003.htm#sec_42a-3-104",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) Except as provided in subsections (c) and (d) of this section, “negotiable instrument” means an unconditional promise or order to pay a fixed amount of money, with or without interest or other charges described in the promise or order, if it:",
+          "(1) Is payable to bearer or to order at the time it is issued or first comes into possession of a holder;",
+          "(2) Is payable on demand or at a definite time; and",
+          "(3) Does not state any other undertaking or instruction by the person promising or ordering payment to do any act in addition to the payment of money, but the promise or order may contain (i) an undertaking or power to give, maintain, or protect collateral to secure payment, (ii) an authorization or power to the holder to confess judgment or realize on or dispose of collateral, (iii) a waiver of the benefit of any law intended for the advantage or protection of an obligor, (iv) a term that specifies the law that governs the promise or order, or (v) an undertaking to resolve in a specified forum a dispute concerning the promise or order.",
+          "(b) “Instrument” means a negotiable instrument.",
+          "(c) An order that meets all of the requirements of subsection (a), except paragraph (1), and otherwise falls within the definition of “check” in subsection (f) is a negotiable instrument and a check.",
+          "(d) A promise or order other than a check is not an instrument if, at the time it is issued or first comes into possession of a holder, it contains a conspicuous statement, however expressed, to the effect that the promise or order is not negotiable or is not an instrument governed by this article.",
+          "(e) An instrument is a “note” if it is a promise and is a “draft” if it is an order. If an instrument falls within the definition of both “note” and “draft”, a person entitled to enforce the instrument may treat it as either.",
+          "(f) “Check” means (i) a draft, other than a documentary draft, payable on demand and drawn on a bank or (ii) a cashier's check or teller's check. An instrument may be a check even though it is described on its face by another term, such as “money order”.",
+          "(g) “Cashier's check” means a draft with respect to which the drawer and drawee are the same bank or branches of the same bank.",
+          "(h) “Teller's check” means a draft drawn by a bank (i) on another bank, or (ii) payable at or through a bank.",
+          "(i) “Traveler's check” means an instrument that (i) is payable on demand, (ii) is drawn on or payable at or through a bank, (iii) is designated by the term “traveler's check” or by a substantially similar term, and (iv) requires, as a condition to payment, a countersignature by a person whose specimen signature appears on the instrument.",
+          "(j) “Certificate of deposit” means an instrument containing an acknowledgment by a bank that a sum of money has been received by the bank and a promise by the bank to repay the sum of money. A certificate of deposit is a note of the bank."
+        ],
+        "sourceNotes": [
+          "(1959, P.A. 133, S. 3-104; P.A. 91-304, S. 4; P.A. 25-145, S. 14.)"
+        ],
+        "history": [
+          "History: P.A. 91-304 substantially revised section and added definitions of “cashier's check”, “teller's check” and “traveler's check”; P.A. 25-145 amended Subsec. (a) by redefining “negotiable instrument” in Subdiv. (3) and by making technical changes, effective January 1, 2026."
+        ],
+        "annotations": [],
+        "plainText": "(a) Except as provided in subsections (c) and (d) of this section, “negotiable instrument” means an unconditional promise or order to pay a fixed amount of money, with or without interest or other charges described in the promise or order, if it:\n\n(1) Is payable to bearer or to order at the time it is issued or first comes into possession of a holder;\n\n(2) Is payable on demand or at a definite time; and\n\n(3) Does not state any other undertaking or instruction by the person promising or ordering payment to do any act in addition to the payment of money, but the promise or order may contain (i) an undertaking or power to give, maintain, or protect collateral to secure payment, (ii) an authorization or power to the holder to confess judgment or realize on or dispose of collateral, (iii) a waiver of the benefit of any law intended for the advantage or protection of an obligor, (iv) a term that specifies the law that governs the promise or order, or (v) an undertaking to resolve in a specified forum a dispute concerning the promise or order.\n\n(b) “Instrument” means a negotiable instrument.\n\n(c) An order that meets all of the requirements of subsection (a), except paragraph (1), and otherwise falls within the definition of “check” in subsection (f) is a negotiable instrument and a check.\n\n(d) A promise or order other than a check is not an instrument if, at the time it is issued or first comes into possession of a holder, it contains a conspicuous statement, however expressed, to the effect that the promise or order is not negotiable or is not an instrument governed by this article.\n\n(e) An instrument is a “note” if it is a promise and is a “draft” if it is an order. If an instrument falls within the definition of both “note” and “draft”, a person entitled to enforce the instrument may treat it as either.\n\n(f) “Check” means (i) a draft, other than a documentary draft, payable on demand and drawn on a bank or (ii) a cashier's check or teller's check. An instrument may be a check even though it is described on its face by another term, such as “money order”.\n\n(g) “Cashier's check” means a draft with respect to which the drawer and drawee are the same bank or branches of the same bank.\n\n(h) “Teller's check” means a draft drawn by a bank (i) on another bank, or (ii) payable at or through a bank.\n\n(i) “Traveler's check” means an instrument that (i) is payable on demand, (ii) is drawn on or payable at or through a bank, (iii) is designated by the term “traveler's check” or by a substantially similar term, and (iv) requires, as a condition to payment, a countersignature by a person whose specimen signature appears on the instrument.\n\n(j) “Certificate of deposit” means an instrument containing an acknowledgment by a bank that a sum of money has been received by the bank and a promise by the bank to repay the sum of money. A certificate of deposit is a note of the bank."
+      }
+    },
+    {
+      "id": "section-42a-3-105",
+      "kind": "section",
+      "citation": "42a-3-105",
+      "citations": [
+        "42a-3-105"
+      ],
+      "heading": "Sec. 42a-3-105. Issue of instrument.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/art_003.htm#sec_42a-3-105",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) “Issue” means:",
+          "(1) The first delivery of an instrument by the maker or drawer, whether to a holder or nonholder, for the purpose of giving rights on the instrument to any person; or",
+          "(2) If agreed by the payee, the first transmission by the drawer to the payee of an image of an item and information derived from the item that enables the depositary bank to collect the item by transferring or presenting under federal law an electronic check.",
+          "(b) An unissued instrument, or an unissued incomplete instrument that is completed, is binding on the maker or drawer, but nonissuance is a defense. An instrument that is conditionally issued or is issued for a special purpose is binding on the maker or drawer, but failure of the condition or special purpose to be fulfilled is a defense.",
+          "(c) “Issuer” applies to issued and unissued instruments and means a maker or drawer of an instrument."
+        ],
+        "sourceNotes": [
+          "(1959, P.A. 133, S. 3-105; 1963, P.A. 526, S. 3; P.A. 91-304, S. 5; P.A. 25-145, S. 15.)"
+        ],
+        "history": [
+          "History: 1963 act specified that promise or order is not made conditional by fact that instrument refers to a separate agreement for rights as to prepayment or acceleration in Subdiv. (c); P.A. 91-304 entirely replaced former provisions re unconditional promise or order with provisions re issue of an instrument; P.A. 25-145 amended Subsec. (a) by redesignating existing provision as Subdiv. (1) and making technical changes and adding Subdiv. (2) redefining “issue”, effective January 1, 2026."
+        ],
+        "annotations": [],
+        "plainText": "(a) “Issue” means:\n\n(1) The first delivery of an instrument by the maker or drawer, whether to a holder or nonholder, for the purpose of giving rights on the instrument to any person; or\n\n(2) If agreed by the payee, the first transmission by the drawer to the payee of an image of an item and information derived from the item that enables the depositary bank to collect the item by transferring or presenting under federal law an electronic check.\n\n(b) An unissued instrument, or an unissued incomplete instrument that is completed, is binding on the maker or drawer, but nonissuance is a defense. An instrument that is conditionally issued or is issued for a special purpose is binding on the maker or drawer, but failure of the condition or special purpose to be fulfilled is a defense.\n\n(c) “Issuer” applies to issued and unissued instruments and means a maker or drawer of an instrument."
+      }
+    },
+    {
+      "id": "section-42a-3-401",
+      "kind": "section",
+      "citation": "42a-3-401",
+      "citations": [
+        "42a-3-401"
+      ],
+      "heading": "Sec. 42a-3-401. Signature necessary for liability on instrument.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/art_003.htm#sec_42a-3-401",
+      "status": "active",
+      "content": {
+        "body": [
+          "A person is not liable on an instrument unless (i) the person signed the instrument, or (ii) the person is represented by an agent or representative who signed the instrument and the signature is binding on the represented person under section 42a-3-402."
+        ],
+        "sourceNotes": [
+          "(1959, P.A. 133, S. 3-401; P.A. 91-304, S. 38; P.A. 25-145, S. 16.)"
+        ],
+        "history": [
+          "History: P.A. 91-304 replaced numeric Subsec. indicators with alphabetic Subsec. indicators, amended Subsec. (a) to revise provisions and add provision re signature by agent or represented person and amended Subsec. (b) to revise provisions and add provision authorizing a signature to be made manually or by means of a device or machine; P.A. 25-145 deleted Subsec. (a) designator and former Subsec. (b) re methods for making a signature, effective January 1, 2026."
+        ],
+        "annotations": [],
+        "plainText": "A person is not liable on an instrument unless (i) the person signed the instrument, or (ii) the person is represented by an agent or representative who signed the instrument and the signature is binding on the represented person under section 42a-3-402."
+      }
+    },
+    {
+      "id": "section-42a-3-604",
+      "kind": "section",
+      "citation": "42a-3-604",
+      "citations": [
+        "42a-3-604"
+      ],
+      "heading": "Sec. 42a-3-604. Discharge by cancellation or renunciation.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/art_003.htm#sec_42a-3-604",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) A person entitled to enforce an instrument, with or without consideration, may discharge the obligation of a party to pay the instrument (i) by an intentional voluntary act, such as surrender of the instrument to the party, destruction, mutilation, or cancellation of the instrument, cancellation or striking out of the party's signature, or the addition of words to the instrument indicating discharge, or (ii) by agreeing not to sue or otherwise renouncing rights against the party by a signed writing. The obligation of a party to pay a check is not discharged solely by destruction of the check in connection with a process in which information is extracted from the check and an image of the check is made and, subsequently, the information and image are transmitted for payment.",
+          "(b) Cancellation or striking out of an endorsement pursuant to subsection (a) does not affect the status and rights of a party derived from the endorsement."
+        ],
+        "sourceNotes": [
+          "(1959, P.A. 133, S. 3-604; P.A. 91-304, S. 66; P.A. 25-145, S. 17.)"
+        ],
+        "history": [
+          "History: P.A. 91-304 entirely replaced former provisions re tender of payment with provisions re discharge by cancellation or renunciation, a restatement of Sec. 42a-3-605, revised to 1991; P.A. 25-145 amended Subsec. (a) to add provision re obligation to pay a check not being discharged solely by destruction of check, effective January 1, 2026."
+        ],
+        "annotations": [],
+        "plainText": "(a) A person entitled to enforce an instrument, with or without consideration, may discharge the obligation of a party to pay the instrument (i) by an intentional voluntary act, such as surrender of the instrument to the party, destruction, mutilation, or cancellation of the instrument, cancellation or striking out of the party's signature, or the addition of words to the instrument indicating discharge, or (ii) by agreeing not to sue or otherwise renouncing rights against the party by a signed writing. The obligation of a party to pay a check is not discharged solely by destruction of the check in connection with a process in which information is extracted from the check and an image of the check is made and, subsequently, the information and image are transmitted for payment.\n\n(b) Cancellation or striking out of an endorsement pursuant to subsection (a) does not affect the status and rights of a party derived from the endorsement."
+      }
+    }
+  ]
+}

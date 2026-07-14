@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-941",
+  "number": "941",
+  "name": "Offenses Against Private Property",
+  "title": {
+    "id": "title-53",
+    "number": "53",
+    "name": "Crimes"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_941.htm",
+  "sections": [
+    {
+      "id": "section-53-129a",
+      "kind": "section",
+      "citation": "53-129a",
+      "citations": [
+        "53-129a"
+      ],
+      "heading": "Sec. 53-129a. Defrauding secured party.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_941.htm#sec_53-129a",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) As used in this section:",
+          "(1) “Collateral” has the same meaning as provided in section 42a-9-102;",
+          "(2) “Debtor” has the same meaning as provided in section 42a-9-102;",
+          "(3) “Proceeds” has the same meaning as provided in section 42a-9-102;",
+          "(4) “Security agreement” has the same meaning as provided in section 42a-9-102;",
+          "(5) “Security interest” has the same meaning as provided in section 42a-1-201; and",
+          "(6) “Secured party” has the same meaning as provided in section 42a-9-102.",
+          "(b) No person, with knowledge that a debtor has a duty to account to a secured party for proceeds of collateral, shall, with intent to defraud the secured party, take or secrete any of such proceeds or in any way appropriate the same to his own use or to the use of others.",
+          "(c) No person shall, with intent to defraud a secured party, remove or conceal or aid or abet the removal or concealment of any collateral which is subject to a security interest under a security agreement.",
+          "(d) No person, with knowledge that a sale, exchange or other disposition of collateral is prohibited under the provisions of a security agreement, shall sell, exchange or otherwise dispose of, or aid or abet the sale, exchange or other disposition of, such collateral without informing the person receiving such collateral that such collateral is subject to a security interest, and without informing the secured party of the sale, exchange or other disposition.",
+          "(e) Any person who violates any provision of this section shall be fined not more than five hundred dollars or imprisoned not more than three months or both."
+        ],
+        "sourceNotes": [
+          "(1967, P.A. 372, S. 1; P.A. 77-604, S. 54, 84; P.A. 01-132, S. 177; P.A. 05-109, S. 55; P.A. 11-108, S. 30; P.A. 25-145, S. 120.)"
+        ],
+        "history": [
+          "History: P.A. 77-604 updated references to subsections of Sec. 42a-9-105 in Subsec. (a); P.A. 01-132 amended Subsec. (a) to rephrase, reorganize and alphabetize definitions, insert Subdiv. designators and replace Sec. 42a-9-105(1)(c) with Sec. 42a-9-102(a)(12) as the statutory reference for the definition of “collateral”, replace Sec. 42a-9-105(1)(d) with Sec. 42a-9-102(a)(28) as the statutory reference for the definition of “debtor”, replace Sec. 42a-9-306(1) with Sec. 42a-9-102(a)(64) as the statutory reference for the definition of “proceeds”, replace Sec. 42a-9-105(1)(l) with Sec. 42a-9-102(a)(73) as the statutory reference for the definition of “security agreement” and replace Sec. 42a-9-105(1)(m) with Sec. 42a-9-102(a)(72) as the statutory reference for the definition of “secured party”; P.A. 05-109 amended Subsec. (a)(5) by replacing reference to Sec. 42a-1-201(37) with reference to Sec. 42a-1-201(b)(35); P.A. 11-108 amended Subsec. (a) to replace Sec. 42a-9-102(a)(73) with Sec. 42a-9-102(a)(74) as the statutory reference for the definition of “security agreement” and replace Sec. 42a-9-102(a)(72) with Sec. 42a-9-102(a)(73) as the statutory reference for the definition of “secured party”, effective July 1, 2013; P.A. 25-145 amended Subsec. (a)(1) to (6) by deleting references to section subdesignators while retaining references to section numbers and making technical changes, effective January 1, 2026."
+        ],
+        "annotations": [],
+        "plainText": "(a) As used in this section:\n\n(1) “Collateral” has the same meaning as provided in section 42a-9-102;\n\n(2) “Debtor” has the same meaning as provided in section 42a-9-102;\n\n(3) “Proceeds” has the same meaning as provided in section 42a-9-102;\n\n(4) “Security agreement” has the same meaning as provided in section 42a-9-102;\n\n(5) “Security interest” has the same meaning as provided in section 42a-1-201; and\n\n(6) “Secured party” has the same meaning as provided in section 42a-9-102.\n\n(b) No person, with knowledge that a debtor has a duty to account to a secured party for proceeds of collateral, shall, with intent to defraud the secured party, take or secrete any of such proceeds or in any way appropriate the same to his own use or to the use of others.\n\n(c) No person shall, with intent to defraud a secured party, remove or conceal or aid or abet the removal or concealment of any collateral which is subject to a security interest under a security agreement.\n\n(d) No person, with knowledge that a sale, exchange or other disposition of collateral is prohibited under the provisions of a security agreement, shall sell, exchange or otherwise dispose of, or aid or abet the sale, exchange or other disposition of, such collateral without informing the person receiving such collateral that such collateral is subject to a security interest, and without informing the secured party of the sale, exchange or other disposition.\n\n(e) Any person who violates any provision of this section shall be fined not more than five hundred dollars or imprisoned not more than three months or both."
+      }
+    }
+  ]
+}

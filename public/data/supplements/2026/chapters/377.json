@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-377",
+  "number": "377",
+  "name": "Midwifery",
+  "title": {
+    "id": "title-20",
+    "number": "20",
+    "name": "Professional and Occupational Licensing, Certification, Title Protection and Registration. Examining Boards"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_377.htm",
+  "sections": [
+    {
+      "id": "section-20-86c",
+      "kind": "section",
+      "citation": "20-86c",
+      "citations": [
+        "20-86c"
+      ],
+      "heading": "Sec. 20-86c. Requirements for licensure.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_377.htm#sec_20-86c",
+      "status": "active",
+      "content": {
+        "body": [
+          "The Department of Public Health may issue a license to practice nurse-midwifery to an applicant who (1) is eligible for registered nurse licensure in this state, under section 20-93 or 20-94; (2) holds and maintains current certification from the American Midwifery Certification Board; and (3) has completed thirty hours of education in pharmacology for nurse-midwifery. No fee shall be required for the issuance of a license under this section. No license shall be issued under this section to any applicant against whom professional disciplinary action is pending or who is the subject of an unresolved complaint."
+        ],
+        "sourceNotes": [
+          "(P.A. 83-441, S. 3, 10; P.A. 89-389, S. 9, 22; P.A. 93-381, S. 9, 39; P.A. 95-257, S. 12, 21, 58; P.A. 16-66, S. 17; P.A. 25-168, S. 416.)"
+        ],
+        "history": [
+          "History: P.A. 89-389 deleted the existing section on certification and substituted licensure requirements; P.A. 93-381 replaced department of health services with department of public health and addiction services, effective July 1, 1993; P.A. 95-257 replaced Commissioner and Department of Public Health and Addiction Services with Commissioner and Department of Public Health, effective July 1, 1995; P.A. 16-66 amended Subdiv. (2) to replace “American College of Nurse-Midwives” with “American Midwifery Certification Board”; P.A. 25-168 deleted fee for license issuance and made technical and conforming changes."
+        ],
+        "annotations": [],
+        "plainText": "The Department of Public Health may issue a license to practice nurse-midwifery to an applicant who (1) is eligible for registered nurse licensure in this state, under section 20-93 or 20-94; (2) holds and maintains current certification from the American Midwifery Certification Board; and (3) has completed thirty hours of education in pharmacology for nurse-midwifery. No fee shall be required for the issuance of a license under this section. No license shall be issued under this section to any applicant against whom professional disciplinary action is pending or who is the subject of an unresolved complaint."
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-225",
+  "number": "225",
+  "name": "Admissions and Dues Taxes",
+  "title": {
+    "id": "title-12",
+    "number": "12",
+    "name": "Taxation"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_225.htm",
+  "sections": [
+    {
+      "id": "section-12-543",
+      "kind": "section",
+      "citation": "12-543",
+      "citations": [
+        "12-543"
+      ],
+      "heading": "Sec. 12-543. Dues or initiation fees tax. Nature of tax. Exemptions.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_225.htm#sec_12-543",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) There is hereby imposed a tax equivalent to ten per cent of any amount paid as dues or initiation fees to any social, athletic or sporting club. Such tax shall be imposed upon the club receiving such amounts. Reimbursement for such tax shall be collected by the club from the member. Such reimbursement, termed “tax”, shall be paid by the member to the club charging the dues or initiation fees. Such tax when added to the amounts charged shall be a debt from the member to the club charging such amounts and shall be recoverable at law. The amount of tax reimbursement, when so collected, shall be deemed to be a special fund in trust for the state.",
+          "(b) The following shall be exempt from the dues tax:",
+          "(1) A club if the annual dues of a member enjoying full privileges and any initiation fee required of such a member are each two hundred fifty dollars or less;",
+          "(2) A club sponsored and controlled by a charitable or religious organization, a governmental agency or a nonprofit educational institution;",
+          "(3) Any society, order or association operating under the lodge system or any local fraternal organization among students of a college or university; and",
+          "(4) Lawn bowling clubs."
+        ],
+        "sourceNotes": [
+          "(1971, P.A. 837, S. 5, 6; P.A. 75-473, S. 4, 6; P.A. 82-45, S. 2, 4; P.A. 85-438, S. 1, 2; P.A. 99-121, S. 18, 28; 99-173, S. 53, 65; P.A. 25-168, S. 370.)"
+        ],
+        "history": [
+          "History: P.A. 75-473 deleted reference to life or full dues in Subdiv. (1); P.A. 82-45 eliminated reference to “organization” re imposition of tax on amounts paid to “any social, athletic or sporting club or organization”; P.A. 85-438 exempted clubs from dues tax if members' dues are $100 or less per person, doubling the previously applicable amount; P.A. 99-121 amended Subsec. (a) to add provision re tax reimbursement collected deemed to be a special fund in trust for the state, effective June 3, 1999, and applicable to periods commencing on or after July 1, 1999; P.A. 99-173 amended Subsec. (b) to add new Subdiv. (4) re lawn bowling clubs, effective June 23, 1999, and applicable to sales occurring on or after July 1, 1999; P.A. 25-168 amended Subsec. (b)(1) to increase club exemption threshold from $100 to $250, and made technical changes, effective July 1, 2025."
+        ],
+        "annotations": [],
+        "plainText": "(a) There is hereby imposed a tax equivalent to ten per cent of any amount paid as dues or initiation fees to any social, athletic or sporting club. Such tax shall be imposed upon the club receiving such amounts. Reimbursement for such tax shall be collected by the club from the member. Such reimbursement, termed “tax”, shall be paid by the member to the club charging the dues or initiation fees. Such tax when added to the amounts charged shall be a debt from the member to the club charging such amounts and shall be recoverable at law. The amount of tax reimbursement, when so collected, shall be deemed to be a special fund in trust for the state.\n\n(b) The following shall be exempt from the dues tax:\n\n(1) A club if the annual dues of a member enjoying full privileges and any initiation fee required of such a member are each two hundred fifty dollars or less;\n\n(2) A club sponsored and controlled by a charitable or religious organization, a governmental agency or a nonprofit educational institution;\n\n(3) Any society, order or association operating under the lodge system or any local fraternal organization among students of a college or university; and\n\n(4) Lawn bowling clubs."
+      }
+    }
+  ]
+}

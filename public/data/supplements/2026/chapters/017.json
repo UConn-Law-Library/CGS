@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-017",
+  "number": "017",
+  "name": "Legislative Commissioners' Office",
+  "title": {
+    "id": "title-02",
+    "number": "02",
+    "name": "General Assembly and Legislative Agencies"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_017.htm",
+  "sections": [
+    {
+      "id": "section-2-56p",
+      "kind": "section",
+      "citation": "2-56p",
+      "citations": [
+        "2-56p"
+      ],
+      "heading": "Sec. 2-56p. Codification of public act 25-168*.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_017.htm#sec_2-56p",
+      "status": "active",
+      "content": {
+        "body": [
+          "The Legislative Commissioners' Office shall, in codifying the provisions of public act 25-168, make such technical, grammatical and punctuation changes as are necessary to carry out the purposes of public act 25-168, including, but not limited to, correcting inaccurate internal references."
+        ],
+        "sourceNotes": [
+          "(P.A. 25-168, S. 46.)",
+          "*Note: Public act 25-168 is entitled “An Act Concerning the State Budget for the Biennium Ending June 30, 2027, and Making Appropriations Therefor, and Provisions Related to Revenue and Other Items Implementing the State Budget”. (See Reference Table captioned “Public Acts of 2025” in Volume 3 which lists the sections amended, created or repealed by the act.)"
+        ],
+        "history": [
+          "History: P.A. 25-168 effective June 30, 2025."
+        ],
+        "annotations": [],
+        "plainText": "The Legislative Commissioners' Office shall, in codifying the provisions of public act 25-168, make such technical, grammatical and punctuation changes as are necessary to carry out the purposes of public act 25-168, including, but not limited to, correcting inaccurate internal references."
+      }
+    },
+    {
+      "id": "section-2-56q",
+      "kind": "section",
+      "citation": "2-56q",
+      "citations": [
+        "2-56q"
+      ],
+      "heading": "Sec. 2-56q. Codification of public act 25-174*.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_017.htm#sec_2-56q",
+      "status": "active",
+      "content": {
+        "body": [
+          "The Legislative Commissioners' Office shall, in codifying the provisions of public act 25-174, make such technical, grammatical and punctuation changes as are necessary to carry out the purposes of public act 25-174, including, but not limited to, correcting inaccurate internal references."
+        ],
+        "sourceNotes": [
+          "(P.A. 25-174, S. 200.)",
+          "*Note: Public act 25-174 is entitled “An Act Authorizing and Adjusting Bonds of the State and Concerning Grant Programs, State Grant Commitments for School Building Projects, Revisions to the School Building Projects Statutes and Various Provisions Revising and Implementing the Budget for the Biennium Ending June 30, 2027”. (See Reference Table captioned “Public Acts of 2025” in Volume 3 which lists the sections amended, created or repealed by the act.)"
+        ],
+        "history": [
+          "History: P.A. 25-174 effective June 30, 2025."
+        ],
+        "annotations": [],
+        "plainText": "The Legislative Commissioners' Office shall, in codifying the provisions of public act 25-174, make such technical, grammatical and punctuation changes as are necessary to carry out the purposes of public act 25-174, including, but not limited to, correcting inaccurate internal references."
+      }
+    }
+  ]
+}

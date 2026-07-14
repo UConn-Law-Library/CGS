@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-171",
+  "number": "171",
+  "name": "Town Management",
+  "title": {
+    "id": "title-10",
+    "number": "10",
+    "name": "Education and Culture"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_171.htm",
+  "sections": [
+    {
+      "id": "section-10-244d",
+      "kind": "section",
+      "citation": "10-244d",
+      "citations": [
+        "10-244d"
+      ],
+      "heading": "Sec. 10-244d. Superintendent to provide certain information at meeting of board of education.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_171.htm#sec_10-244d",
+      "status": "active",
+      "content": {
+        "body": [
+          "On or after June first, but prior to September thirtieth annually, the superintendent of schools for each school district shall provide, at a regularly scheduled meeting of the local or regional board of education for the school district, the following:",
+          "(1) The number and names of all community-based organizations with whom the board of education has executed a formal memorandum of understanding, memorandum of agreement or contract to provide support services to students in the school district, disaggregated by school and type of support service provided;",
+          "(2) The workforce development programs offered by the board of education to students in which the board has partnered with an outside entity, including, but not limited to, cooperatives, internships, in-school job training programs provided by businesses and in-school workforce board presentations; and",
+          "(3) Attrition data for certified and noncertified staff, disaggregated by school and subject, not including in-district transfers."
+        ],
+        "sourceNotes": [
+          "(P.A. 25-93, S. 32.)"
+        ],
+        "history": [
+          "History: P.A. 25-93 effective July 1, 2025."
+        ],
+        "annotations": [],
+        "plainText": "On or after June first, but prior to September thirtieth annually, the superintendent of schools for each school district shall provide, at a regularly scheduled meeting of the local or regional board of education for the school district, the following:\n\n(1) The number and names of all community-based organizations with whom the board of education has executed a formal memorandum of understanding, memorandum of agreement or contract to provide support services to students in the school district, disaggregated by school and type of support service provided;\n\n(2) The workforce development programs offered by the board of education to students in which the board has partnered with an outside entity, including, but not limited to, cooperatives, internships, in-school job training programs provided by businesses and in-school workforce board presentations; and\n\n(3) Attrition data for certified and noncertified staff, disaggregated by school and subject, not including in-district transfers."
+      }
+    },
+    {
+      "id": "section-10-248a",
+      "kind": "section",
+      "citation": "10-248a",
+      "citations": [
+        "10-248a"
+      ],
+      "heading": "Sec. 10-248a. Unexpended education funds account.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_171.htm#sec_10-248a",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) For the fiscal year ending June 30, 2024, and each fiscal year thereafter, notwithstanding any provision of the general statutes or any special act, municipal charter, home rule ordinance or other ordinance, a local board of education may deposit into a nonlapsing account any unexpended funds from the prior fiscal year from the budgeted appropriation for education, provided (1) such deposited amount does not exceed two per cent of the total budgeted appropriation for education for such prior fiscal year, (2) each expenditure from such account shall be made only for educational purposes, and (3) each such expenditure shall be authorized by the local board of education for such town.",
+          "(b) For the fiscal year ending June 30, 2026, and each fiscal year thereafter, each local board of education shall compile a report regarding the nonlapsing, unexpended funds account described in this section, including, but not limited to, the total balance of the account, the amount deposited into such account in a fiscal year and an accounting of the expenditures made from such account, and submit such report to the Department of Education."
+        ],
+        "sourceNotes": [
+          "(P.A. 10-108, S. 32; P.A. 19-117, S. 285; P.A. 21-40, S. 9; P.A. 24-45, S. 7; P.A. 25-175, S. 6.)"
+        ],
+        "history": [
+          "History: P.A. 10-108 effective July 1, 2010; P.A. 19-117 replaced “2011” with “2020”, designated existing provision re amount of total budgeted appropriation for education as Subdiv. (1) and amended same to add “deposited” and replace “one per cent” with “two per cent”, and added Subdiv. (2) re expenditures from account to be made only for educational purposes and added Subdiv. (3) re expenditure to be authorized by local board of education, effective July 1, 2019; P.A. 21-40 made a technical change; P.A. 24-45 replaced “June 30, 2020” with “June 30, 2024”, replaced “the board of finance in each town having a board of finance, the board of selectmen in each town having no board of finance or the authority making appropriations for the school district for each town” with “a local board of education” and deleted “for the town,”, effective May 21, 2024; P.A. 25-175 designated existing provisions as Subsec. (a) and added Subsec. (b) re compilation and submission of report regarding the nonlapsing, unexpended funds account, effective July 1, 2025."
+        ],
+        "annotations": [],
+        "plainText": "(a) For the fiscal year ending June 30, 2024, and each fiscal year thereafter, notwithstanding any provision of the general statutes or any special act, municipal charter, home rule ordinance or other ordinance, a local board of education may deposit into a nonlapsing account any unexpended funds from the prior fiscal year from the budgeted appropriation for education, provided (1) such deposited amount does not exceed two per cent of the total budgeted appropriation for education for such prior fiscal year, (2) each expenditure from such account shall be made only for educational purposes, and (3) each such expenditure shall be authorized by the local board of education for such town.\n\n(b) For the fiscal year ending June 30, 2026, and each fiscal year thereafter, each local board of education shall compile a report regarding the nonlapsing, unexpended funds account described in this section, including, but not limited to, the total balance of the account, the amount deposited into such account in a fiscal year and an accounting of the expenditures made from such account, and submit such report to the Department of Education."
+      }
+    }
+  ]
+}

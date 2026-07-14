@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-384",
+  "number": "384",
+  "name": "Veterinary Medicine",
+  "title": {
+    "id": "title-20",
+    "number": "20",
+    "name": "Professional and Occupational Licensing, Certification, Title Protection and Registration. Examining Boards"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_384.htm",
+  "sections": [
+    {
+      "id": "section-20-197a",
+      "kind": "section",
+      "citation": "20-197a",
+      "citations": [
+        "20-197a"
+      ],
+      "heading": "Sec. 20-197a. Dispensing of prescription veterinary drug by person other than veterinarian.",
+      "sourceUrl": "https://www.cga.ct.gov/2026/sup/chap_384.htm#sec_20-197a",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) Notwithstanding the provisions of section 20-14e, a veterinarian licensed in accordance with the provisions of this chapter may authorize a person to dispense a prescription veterinary drug, provided:",
+          "(1) The prescription veterinary drug is dispensed (A) upon the lawful written or oral order of the veterinarian acting in the course of the veterinarian's professional practice, as required under Section 503(f) of the Federal Food, Drug and Cosmetic Act, as amended from time to time, (B) in accordance with all applicable state and federal laws and regulations concerning the dispensing of prescription veterinary drugs, and (C) for an animal for which the veterinarian has access to the animal's medical records and has established a veterinarian-client-patient relationship; and",
+          "(2) The person is working under the direct supervision of a veterinarian described in subparagraph (C) of subdivision (1) of this subsection.",
+          "(b) A veterinarian who authorizes a person to dispense a prescription veterinary drug in accordance with the provisions of subsection (a) of this section shall be responsible for ensuring that all applicable requirements for dispensing such prescription veterinary drug are satisfied.",
+          "(c) The Commissioner of Public Health, in consultation with the Connecticut Board of Veterinary Medicine and the Commissioner of Consumer Protection, may adopt regulations, in accordance with the provisions of chapter 54, to implement the provisions of this section."
+        ],
+        "sourceNotes": [
+          "(P.A. 25-171, S. 2.)"
+        ],
+        "history": [
+          "History: P.A. 25-171 effective July 8, 2025."
+        ],
+        "annotations": [],
+        "plainText": "(a) Notwithstanding the provisions of section 20-14e, a veterinarian licensed in accordance with the provisions of this chapter may authorize a person to dispense a prescription veterinary drug, provided:\n\n(1) The prescription veterinary drug is dispensed (A) upon the lawful written or oral order of the veterinarian acting in the course of the veterinarian's professional practice, as required under Section 503(f) of the Federal Food, Drug and Cosmetic Act, as amended from time to time, (B) in accordance with all applicable state and federal laws and regulations concerning the dispensing of prescription veterinary drugs, and (C) for an animal for which the veterinarian has access to the animal's medical records and has established a veterinarian-client-patient relationship; and\n\n(2) The person is working under the direct supervision of a veterinarian described in subparagraph (C) of subdivision (1) of this subsection.\n\n(b) A veterinarian who authorizes a person to dispense a prescription veterinary drug in accordance with the provisions of subsection (a) of this section shall be responsible for ensuring that all applicable requirements for dispensing such prescription veterinary drug are satisfied.\n\n(c) The Commissioner of Public Health, in consultation with the Connecticut Board of Veterinary Medicine and the Commissioner of Consumer Protection, may adopt regulations, in accordance with the provisions of chapter 54, to implement the provisions of this section."
+      }
+    }
+  ]
+}

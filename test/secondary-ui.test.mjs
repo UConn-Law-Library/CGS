@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { formatMoney, renderSecondaryContext, searchIndexTopics, topicLetter } from "../src/secondary-ui.js";
+import { formatMoney, renderIndexEntry, renderSecondaryContext, searchIndexTopics, topicLetter } from "../src/secondary-ui.js";
 
 test("formats schedule money and derives index letters", () => {
   assert.equal(formatMoney(11700), "$117.00");
@@ -20,6 +20,21 @@ test("searches heading and entry text without loading another letter", () => {
   assert.equal(heading.results[0].entry, null);
   const entry = searchIndexTopics(topics, "14-36");
   assert.equal(entry.results[0].entry.id, "entry-1");
+});
+
+test("renders indented index entries with direct links for structured SEE targets", () => {
+  const html = renderIndexEntry({
+    id: "entry-see",
+    level: 2,
+    text: "Children—See CHILDREN AND MINORS, at Abandonment.",
+    references: [],
+    see: [{ heading: "CHILDREN AND MINORS", subheading: "Abandonment" }]
+  });
+  assert.match(html, /id="entry-see"/);
+  assert.match(html, /index-level-2/);
+  assert.match(html, /class="index-see-link"/);
+  assert.match(html, /#\/index\/c\?heading=CHILDREN%20AND%20MINORS&amp;subheading=Abandonment/);
+  assert.equal((html.match(/CHILDREN AND MINORS/g) ?? []).length, 1);
 });
 
 test("renders linked infractions, fee roles, sources, and index records safely", () => {

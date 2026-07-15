@@ -64,13 +64,36 @@ export function renderIndexReferences(references = []) {
 }
 
 export function renderIndexEntry(entry) {
-  const see = (entry.see ?? []).map((target) =>
-    `See ${target.heading}${target.subheading ? `, at ${target.subheading}` : ""}`
-  );
-  return `<li class="index-entry index-level-${Math.min(4, Math.max(0, Number(entry.level) || 0))}">
-    <span>${escapeHtml(entry.text)}</span>
+  const targets = entry.see ?? [];
+  let text = String(entry.text ?? "");
+  const linked = [];
+  let cursor = 0;
+  const matches = targets.map((target) => {
+    const index = text.toLowerCase().indexOf(String(target.heading).toLowerCase(), cursor);
+    if (index < 0) return null;
+    cursor = index + target.heading.length;
+    return { target, index };
+  }).filter(Boolean).sort((left, right) => left.index - right.index);
+  cursor = 0;
+  for (const { target, index } of matches) {
+    linked.push(escapeHtml(text.slice(cursor, index)));
+    const label = text.slice(index, index + target.heading.length);
+    const href = indexRouteHref(topicLetter(target.heading), {
+      heading: target.heading,
+      subheading: target.subheading
+    });
+    linked.push(`<a class="index-see-link" href="${escapeHtml(href)}">${escapeHtml(label)}</a>`);
+    cursor = index + target.heading.length;
+  }
+  linked.push(escapeHtml(text.slice(cursor)));
+  const unmatched = targets.filter((target) => !matches.some((match) => match.target === target));
+  return `<li id="${escapeHtml(entry.id)}" tabindex="-1" class="index-entry index-level-${Math.min(4, Math.max(0, Number(entry.level) || 0))}">
+    <span>${linked.join("")}</span>
     ${renderIndexReferences(entry.references)}
-    ${see.length ? `<span class="index-see">${escapeHtml(see.join("; "))}</span>` : ""}
+    ${unmatched.length ? `<span class="index-see">${unmatched.map((target) => {
+      const href = indexRouteHref(topicLetter(target.heading), { heading: target.heading, subheading: target.subheading });
+      return `See <a class="index-see-link" href="${escapeHtml(href)}">${escapeHtml(target.heading)}</a>${target.subheading ? `, at ${escapeHtml(target.subheading)}` : ""}`;
+    }).join("; ")}</span>` : ""}
   </li>`;
 }
 

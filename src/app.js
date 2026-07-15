@@ -34,9 +34,11 @@ import {
 } from "./omnisearch.js";
 import {
   formatMoney,
+  groupIndexEntries,
   renderIndexEntry,
   renderIndexReferences,
   renderSecondaryContext,
+  searchIndexEntries,
   searchIndexTopics,
   topicLetter
 } from "./secondary-ui.js";
@@ -56,6 +58,7 @@ let omniTimer = null;
 let omniSelection = -1;
 let pwaState = pwaManager.state;
 const SEARCH_BATCH_SIZE = 50;
+const LARGE_INDEX_TOPIC_THRESHOLD = 200;
 applyPreferences(deviceState.preferences());
 pwaManager.subscribe((state) => {
   pwaState = state;
@@ -820,10 +823,130 @@ function renderIndexSearchResults(search) {
 }
 
 function renderIndexTopic(topic, open = false) {
+  if (topic.items.length > LARGE_INDEX_TOPIC_THRESHOLD) {
+    const href = indexRouteHref(topicLetter(topic.label), { topic: topic.id });
+    return `<a class="index-topic index-topic-link" href="${escapeHtml(href)}">
+      <strong>${escapeHtml(topic.label)}</strong>
+      <span aria-hidden="true">&rarr;</span><span class="visually-hidden">Open topic</span>
+    </a>`;
+  }
   return `<details class="index-topic" id="${escapeHtml(topic.id)}" tabindex="-1"${open ? " open" : ""}>
     <summary><strong>${escapeHtml(topic.label)}</strong></summary>
     <ol class="index-entries">${topic.items.map(renderIndexEntry).join("")}</ol>
   </details>`;
+}
+
+function indexGroupLetter(entry) {
+  return String(entry?.text ?? "").trim().match(/[a-z0-9]/i)?.[0].toUpperCase() ?? "#";
+}
+
+function indexGroupBody(group) {
+  const parent = group[0];
+  const parentHasAnnotations = (parent.references?.length ?? 0) > 0 || (parent.see?.length ?? 0) > 0;
+  return parentHasAnnotations ? group : group.slice(1);
+}
+
+function renderLargeIndexTopic(topic, groups, targetEntry, query = "") {
+  const letters = [...new Set(groups.map((group) => indexGroupLetter(group[0])))];
+  let currentLetter = null;
+  const sections = [];
+  for (const group of groups) {
+    const letter = indexGroupLetter(group[0]);
+    if (letter !== currentLetter) {
+      if (currentLetter !== null) sections.push(`</div></section>`);
+      currentLetter = letter;
+      sections.push(`<section class="index-topic-letter" id="index-topic-letter-${escapeHtml(letter.toLowerCase())}" data-index-topic-letter="${escapeHtml(letter)}" tabindex="-1">
+        <h3>${escapeHtml(letter)}</h3><div class="index-topic-groups">`);
+    }
+    const parent = group[0];
+    if (group.length === 1) {
+      sections.push(`<div class="index-topic-leaf">${renderIndexEntry(parent)}</div>`);
+      continue;
+    }
+    const open = group.some((entry) => entry === targetEntry);
+    sections.push(`<details class="index-subtopic" data-index-group="${escapeHtml(parent.id)}" tabindex="-1"${open ? " open" : ""}>
+      <summary><strong>${escapeHtml(parent.text)}</strong><span>${(group.length - 1).toLocaleString()} subentr${group.length === 2 ? "y" : "ies"}</span></summary>
+      <ol class="index-entries" data-index-group-entries${open ? "" : " hidden"}></ol>
+    </details>`);
+  }
+  if (currentLetter !== null) sections.push(`</div></section>`);
+  return `<section class="index-topic-detail" aria-labelledby="index-topic-heading">
+    <div class="index-result-heading"><h2 id="index-topic-heading">Browse this topic</h2><p>${topic.items.length.toLocaleString()} entries</p></div>
+    <label class="index-topic-search" for="index-topic-query">
+      <span>Search within ${escapeHtml(topic.label)}</span>
+      <input id="index-topic-query" type="search" value="${escapeHtml(query)}" placeholder="Filter this topic" autocomplete="off">
+    </label>
+    <nav class="index-topic-jumps" aria-label="Jump to a topic letter">${letters.map((letter) =>
+      `<button type="button" data-index-jump="${escapeHtml(letter)}">${escapeHtml(letter)}</button>`
+    ).join("")}</nav>
+    <div data-index-topic-results hidden></div>
+    <div data-index-topic-browser>${sections.join("")}</div>
+  </section>`;
+}
+
+function renderSelectedIndexTopic(topic, groups, targetEntry, query = "") {
+  if (topic.items.length > LARGE_INDEX_TOPIC_THRESHOLD) {
+    return renderLargeIndexTopic(topic, groups, targetEntry, query);
+  }
+  return `<section class="index-topic-detail" aria-labelledby="index-topic-heading">
+    <div class="index-result-heading"><h2 id="index-topic-heading">${escapeHtml(topic.label)}</h2><p>${topic.items.length.toLocaleString()} entries</p></div>
+    <ol class="index-entries">${topic.items.map(renderIndexEntry).join("")}</ol>
+  </section>`;
+}
+
+function attachLargeIndexTopic(topic, groups, targetEntry) {
+  const groupById = new Map(groups.map((group) => [group[0].id, group]));
+  const populate = (details) => {
+    const list = details.querySelector("[data-index-group-entries]");
+    if (!list || list.dataset.rendered === "true") return;
+    const group = groupById.get(details.dataset.indexGroup);
+    list.innerHTML = indexGroupBody(group).map(renderIndexEntry).join("");
+    list.dataset.rendered = "true";
+    list.hidden = false;
+  };
+  for (const details of document.querySelectorAll(".index-subtopic")) {
+    if (details.open) populate(details);
+    details.addEventListener("toggle", () => {
+      if (details.open) populate(details);
+    });
+  }
+  for (const button of document.querySelectorAll("[data-index-jump]")) {
+    button.addEventListener("click", () => {
+      const target = document.querySelector(`[data-index-topic-letter="${CSS.escape(button.dataset.indexJump)}"]`);
+      target?.scrollIntoView({ block: "start" });
+      target?.focus({ preventScroll: true });
+    });
+  }
+  const input = document.querySelector("#index-topic-query");
+  const browser = document.querySelector("[data-index-topic-browser]");
+  const results = document.querySelector("[data-index-topic-results]");
+  const updateResults = () => {
+    const query = input.value.trim();
+    if (query.length < 2) {
+      browser.hidden = false;
+      results.hidden = true;
+      results.innerHTML = "";
+      return;
+    }
+    const matches = searchIndexEntries(topic.items, query);
+    browser.hidden = true;
+    results.hidden = false;
+    results.innerHTML = `<div class="index-result-heading"><h3>Topic search results</h3><p>${matches.total.toLocaleString()} match${matches.total === 1 ? "" : "es"}${matches.truncated ? "; showing the first 100" : ""}</p></div>
+      ${matches.results.length ? `<ol class="index-entries index-topic-search-results">${matches.results.map((entry) => renderIndexEntry({ ...entry, level: 0 })).join("")}</ol>` : `<p class="empty-state">No entries in this topic match the search terms.</p>`}`;
+  };
+  input.addEventListener("input", updateResults);
+  updateResults();
+  if (targetEntry) {
+    let target = document.getElementById(targetEntry.id);
+    if (!target) {
+      const group = groups.find((candidate) => candidate.includes(targetEntry));
+      const details = group ? document.querySelector(`[data-index-group="${CSS.escape(group[0].id)}"]`) : null;
+      details?.classList.add("index-entry-target");
+      target = details?.querySelector("summary") ?? details;
+    } else target.classList.add("index-entry-target");
+    target?.scrollIntoView({ block: "center" });
+    target?.focus({ preventScroll: true });
+  } else window.scrollTo({ top: 0 });
 }
 
 function bookmarkButton(bookmark, className = "") {
@@ -938,12 +1061,21 @@ async function renderStatutesIndex(route) {
     ? topics.find((topic) => topic.id === route.topic)
     : route.heading ? topics.find((topic) => topic.label.toLowerCase() === route.heading.toLowerCase()) : null;
   if ((route.topic || route.heading) && !selected) return renderNotFound("That index heading was not found.");
-  const search = route.query ? searchIndexTopics(topics, route.query) : null;
+  const topicGroups = selected ? groupIndexEntries(selected.items) : [];
+  const matchingEntry = selected && route.subheading
+    ? selected.items.find((entry) => entry.text.toLowerCase().includes(route.subheading.toLowerCase()))
+    : null;
+  const search = !selected && route.query ? searchIndexTopics(topics, route.query) : null;
   const source = manifests.index.source;
   setDocumentTitle(selected?.label ?? `Statutes index ${letter.toUpperCase()}`);
   app.innerHTML = `${siteHeader()}<main class="index-page" id="main-content">
     ${breadcrumbs([{ label: "Titles", href: "#/" }, { label: "General Statutes index", ...(selected || route.query ? { href: indexRouteHref(letter) } : {}) }, ...(selected ? [{ label: selected.label }] : [])])}
-    <header class="index-intro">
+    ${selected ? `<header class="index-intro index-topic-intro">
+      <p class="eyebrow">General Statutes index</p>
+      <h1>${escapeHtml(selected.label)}</h1>
+      <p>Browse this subject heading and follow resolved citations into the statute reader.</p>
+      <p class="source-note"><a href="${escapeHtml(indexRouteHref(letter))}">Back to ${escapeHtml(letter.toUpperCase())} headings</a> &middot; <a href="${escapeHtml(source.url)}">Official index volumes</a> &middot; ${escapeHtml(source.revision)}</p>
+    </header>` : `<header class="index-intro">
       <p class="eyebrow">Legislative Commissioners' Office</p>
       <h1>Index to the General Statutes</h1>
       <p>Browse official subject headings and follow resolved citations into the statute reader. ${escapeHtml(source.revision)}.</p>
@@ -953,30 +1085,30 @@ async function renderStatutesIndex(route) {
       <label for="index-query">Search the subject index</label>
       <input id="index-query" name="query" type="search" minlength="2" required value="${escapeHtml(route.query ?? "")}" placeholder="Try motor vehicles">
       <button type="submit">Search index</button>
-    </form>
+    </form>`}
     <nav class="index-alphabet" aria-label="Index letters">${available.filter((key) => /^[a-z]$/.test(key)).map((key) =>
       `<a href="${escapeHtml(indexRouteHref(key))}"${key === letter ? ` aria-current="page"` : ""}>${key.toUpperCase()}</a>`
     ).join("")}</nav>
     <section class="index-browser" aria-live="polite">
-      ${search ? renderIndexSearchResults(search) : `<div class="index-result-heading"><h2>${escapeHtml(letter.toUpperCase())} headings</h2><p>${topics.length.toLocaleString()} subjects on this page</p></div>
-        <div class="index-topic-list">${topics.map((topic) => renderIndexTopic(topic, topic === selected)).join("")}</div>`}
+      ${selected ? renderSelectedIndexTopic(selected, topicGroups, matchingEntry, route.query ?? "")
+        : search ? renderIndexSearchResults(search) : `<div class="index-result-heading"><h2>${escapeHtml(letter.toUpperCase())} headings</h2><p>${topics.length.toLocaleString()} subjects on this page</p></div>
+        <div class="index-topic-list">${topics.map((topic) => renderIndexTopic(topic)).join("")}</div>`}
     </section>
     <aside class="legal-data-note"><strong>About this index</strong><p>This is a derived access copy of the official index, not legal text. Verify coverage and citations with the Legislative Commissioners' Office source.</p></aside>
   </main><footer>Unofficial access copy. Verify legal text with the Connecticut General Assembly.</footer>`;
 
-  document.querySelector("#index-search-form").addEventListener("submit", (event) => {
+  document.querySelector("#index-search-form")?.addEventListener("submit", (event) => {
     event.preventDefault();
     const query = new FormData(event.currentTarget).get("query").trim();
     location.hash = indexRouteHref(topicLetter(query), { query });
   });
-  if (selected && !search) {
-    const matchingEntry = route.subheading
-      ? selected.items.find((entry) => entry.text.toLowerCase().includes(route.subheading.toLowerCase()))
-      : null;
-    const selectedTopic = document.getElementById(selected.id);
-    if (matchingEntry) document.getElementById(matchingEntry.id)?.classList.add("index-entry-target");
-    selectedTopic?.querySelector("summary")?.scrollIntoView({ block: "start" });
-    selectedTopic?.focus({ preventScroll: true });
+  if (selected?.items.length > LARGE_INDEX_TOPIC_THRESHOLD) {
+    attachLargeIndexTopic(selected, topicGroups, matchingEntry);
+  } else if (selected && matchingEntry) {
+    const target = document.getElementById(matchingEntry.id);
+    target?.classList.add("index-entry-target");
+    target?.scrollIntoView({ block: "center" });
+    target?.focus({ preventScroll: true });
   } else window.scrollTo({ top: 0 });
 }
 

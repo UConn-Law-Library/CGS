@@ -10,12 +10,17 @@ test("home statute browsing uses the application route instead of an unknown has
   assert.doesNotMatch(appSource, /href="#browse-titles"/);
 });
 
-test("index letters render collapsed topic groups and chapter settings expose repealed filtering", () => {
+test("index letters render collapsed topics, dedicated large topics, and repealed filtering", () => {
   assert.match(appSource, /<details class="index-topic"/);
-  assert.match(appSource, /renderIndexTopic\(topic, topic === selected\)/);
+  assert.match(appSource, /LARGE_INDEX_TOPIC_THRESHOLD = 200/);
+  assert.match(appSource, /class="index-topic index-topic-link"/);
+  assert.match(appSource, /renderSelectedIndexTopic\(selected, topicGroups, matchingEntry/);
+  assert.match(appSource, /data-index-group-entries/);
+  assert.match(appSource, /Search within \$\{escapeHtml\(topic\.label\)\}/);
   assert.match(appSource, /<summary><strong>\$\{escapeHtml\(topic\.label\)\}<\/strong><\/summary>/);
-  assert.match(appSource, /selectedTopic\?\.querySelector\("summary"\)\?\.scrollIntoView/);
+  assert.match(appSource, /target\?\.scrollIntoView\(\{ block: "center" \}\)/);
   assert.match(stylesSource, /\.index-topic \{[^}]*scroll-margin-top: 8rem;/);
+  assert.match(stylesSource, /\.index-topic-jumps \{[^}]*overflow-x: auto/);
   assert.match(appSource, /data-hide-repealed/);
   assert.match(appSource, /class="section-status-pill">Repealed/);
 });

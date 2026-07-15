@@ -91,6 +91,8 @@ export function parseRoute({ hash = "", search = "" } = {}) {
 
   if (parts[0] === "bookmarks" && parts.length === 1) return { kind: "bookmarks" };
 
+  if (["about", "a"].includes(parts[0]) && parts.length === 1) return { kind: "about" };
+
   if (parts[0] === "index") {
     const parameters = new URLSearchParams(hashQuery);
     const queryValue = parameters.get("q") || null;

@@ -16,6 +16,7 @@ import {
   escapeHtml,
   extractLegalReferences,
   leadingSubsection,
+  navigationSectionLabel,
   navigationSections,
   renderLinkedText,
   routeForDocument
@@ -72,6 +73,7 @@ function activeDestination(route = parseRoute(location)) {
   if (route.kind === "index") return "index";
   if (route.kind === "infractions") return "infractions";
   if (route.kind === "bookmarks") return "bookmarks";
+  if (route.kind === "about") return "settings";
   return "statutes";
 }
 
@@ -154,6 +156,7 @@ function settingsPanel() {
     <p class="settings-note" data-pwa-status role="status" aria-live="polite">${escapeHtml(offlineStatus(pwaState))}</p>
     <p class="settings-note" data-storage-status>${escapeHtml(storageStatus(pwaState))}</p>
     <button type="button" class="settings-action" data-clear-bookmarks${bookmarkCount ? "" : " disabled"}>Clear bookmarks <small>${bookmarkCount ? `${bookmarkCount} saved` : "None saved"}</small></button>
+    <a class="settings-action" href="#/about">About this app <small>Sources, coverage, and project information</small></a>
     <a class="settings-action" href="./discover/">Static discovery index <small>Script-free browsing</small></a>
   </section>`;
 }
@@ -170,7 +173,7 @@ function siteHeader() {
         ${navLink({ href: "#/index", id: "index", icon: "A–Z", label: "Index" }, active)}
         ${navLink({ href: "#/infractions", id: "infractions", icon: "⚖", label: "Infractions" }, active)}
         ${navLink({ href: "#/bookmarks", id: "bookmarks", icon: "★", label: "Bookmarks" }, active)}
-        <button type="button" data-open-settings aria-expanded="false"><span aria-hidden="true">⚙</span><span>Settings</span></button>
+        <button type="button" data-open-settings aria-expanded="false"${active === "settings" ? ` aria-current="page"` : ""}><span aria-hidden="true">⚙</span><span>Settings</span></button>
       </nav>
     </div>
     <form class="global-search" data-global-search role="search">
@@ -454,8 +457,10 @@ function readerSidebar(title, chapter, sections, selected = null, changeBySectio
       const statusPill = change
         ? `<span class="supplement-pill supplement-${escapeHtml(change.presentation)}">${escapeHtml(supplementLabel(change, { short: true }))}</span>`
         : section.status === "repealed" ? `<span class="section-status-pill">Repealed</span>` : "";
-      return `<li><a${active ? " aria-current=\"page\"" : ""} href="${escapeHtml(provisionRoute(title, chapter, section))}">
-        <strong>${escapeHtml(sectionLabel(section))}</strong>${statusPill}<span>${escapeHtml(section.heading.replace(/^Secs?\.\s*[^.]+\.\s*/, ""))}</span>
+      const grouped = section.citations.length > 1;
+      const description = section.heading.replace(/^Secs?\.\s*[^.]+\.\s*/, "");
+      return `<li${grouped ? " class=\"grouped-section\"" : ""}><a${active ? " aria-current=\"page\"" : ""} href="${escapeHtml(provisionRoute(title, chapter, section))}">
+        <strong>${escapeHtml(navigationSectionLabel(section))}</strong>${statusPill}${description !== section.citation ? `<span>${escapeHtml(description)}</span>` : ""}
       </a></li>`;
     }).join("")}</ol></nav>
   </aside>`;
@@ -526,6 +531,115 @@ async function renderHome(catalog) {
       <div class="title-grid">${catalog.titles.map((title) => `<a class="title-card" href="${escapeHtml(titleRoute(title))}"><p>${escapeHtml(titleLabel(title))}</p><h3>${escapeHtml(title.name)}</h3><span>${title.chapters.length} chapter${title.chapters.length === 1 ? "" : "s"}</span></a>`).join("")}</div>
     </section>
   </main><footer>Unofficial access copy. Verify legal text with the Connecticut General Assembly.</footer>`;
+}
+
+function formatSnapshotDate(value) {
+  if (!value) return null;
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return String(value);
+  return new Intl.DateTimeFormat("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    timeZone: "UTC"
+  }).format(date);
+}
+
+function aboutSourceCard({ publisher, name, description, details = [], caveat, url }) {
+  const visibleDetails = details.filter(Boolean);
+  return `<article class="about-source-card">
+    <p class="eyebrow">${escapeHtml(publisher)}</p>
+    <h3>${escapeHtml(name)}</h3>
+    <p>${escapeHtml(description)}</p>
+    ${visibleDetails.length ? `<p class="about-source-details">${visibleDetails.map((detail) => `<span>${escapeHtml(detail)}</span>`).join("")}</p>` : ""}
+    <p class="about-caveat">${escapeHtml(caveat)}</p>
+    <a href="${escapeHtml(url)}" target="_blank" rel="noopener">Official source <span aria-hidden="true">↗</span></a>
+  </article>`;
+}
+
+async function renderAbout(catalog) {
+  const [secondaryResult, supplementResult] = await Promise.allSettled([
+    secondaryRepository.init(),
+    (async () => {
+      const edition = await supplementRepository.latestEdition();
+      return edition ? { edition, manifest: await supplementRepository.loadEdition(edition.editionYear) } : null;
+    })()
+  ]);
+  const secondary = secondaryResult.status === "fulfilled" ? secondaryResult.value : null;
+  const supplement = supplementResult.status === "fulfilled" ? supplementResult.value : null;
+  const statuteDate = formatSnapshotDate(catalog.source?.retrievedAt ?? catalog.generatedAt);
+  const indexSource = secondary?.index?.source ?? {};
+  const infractionSource = secondary?.infractions?.source ?? {};
+  const cards = [
+    aboutSourceCard({
+      publisher: "Connecticut General Assembly",
+      name: "General Statutes",
+      description: "Connecticut General Statutes text organized into canonical title, chapter, and provision artifacts.",
+      details: [statuteDate && `Captured ${statuteDate}`, `${catalog.counts.sections.toLocaleString()} provisions`],
+      caveat: "Changes published after the capture date appear after the next reviewed corpus update.",
+      url: catalog.source?.url ?? "https://www.cga.ct.gov/current/pub/titles.htm"
+    }),
+    ...(supplement ? [aboutSourceCard({
+      publisher: "Connecticut General Assembly",
+      name: `${supplement.edition.editionYear} Supplement`,
+      description: "Sections amended, added, or repealed by the published supplement and consolidated into the reader when applicable.",
+      details: [formatSnapshotDate(supplement.manifest.generatedAt) && `Captured ${formatSnapshotDate(supplement.manifest.generatedAt)}`, `${supplement.manifest.counts.sections.toLocaleString()} provisions`],
+      caveat: `Read the supplement together with the General Statutes revised to January 1, ${supplement.edition.editionYear - 1}.`,
+      url: supplement.manifest.source?.url ?? `https://www.cga.ct.gov/${supplement.edition.editionYear}/sup/titles.htm`
+    })] : []),
+    aboutSourceCard({
+      publisher: indexSource.publisher ?? "Connecticut General Assembly, Legislative Commissioners' Office",
+      name: "Subject index",
+      description: "The official subject index, parsed into letter-level artifacts with resolved links to statute sections.",
+      details: [indexSource.revision, secondary?.index?.counts?.headings && `${secondary.index.counts.headings.toLocaleString()} headings`],
+      caveat: "The index is an access aid rather than legal text and can trail recently enacted legislation.",
+      url: indexSource.url ?? "https://www.cga.ct.gov/lco/statutes-index.asp"
+    }),
+    aboutSourceCard({
+      publisher: infractionSource.publisher ?? "State of Connecticut Judicial Branch",
+      name: "Infractions schedule",
+      description: "Chart A of the Judicial Branch mail-in violations and infractions schedule, with links to relevant statutes.",
+      details: [infractionSource.effective && `Effective ${infractionSource.effective}`, secondary?.infractions?.counts?.entries && `${secondary.infractions.counts.entries.toLocaleString()} entries`],
+      caveat: "Fine amounts and eligibility can change. Confirm them in the current Judicial Branch schedule before relying on this copy.",
+      url: infractionSource.url ?? "https://www.jud.ct.gov/webforms/forms/infractions.pdf"
+    })
+  ];
+  const headingCount = secondary?.index?.counts?.headings;
+  const infractionCount = secondary?.infractions?.counts?.entries;
+  setDocumentTitle("About");
+  app.innerHTML = `${siteHeader()}<main class="about-page" id="main-content">
+    ${breadcrumbs([{ label: "Titles", href: "#/" }, { label: "About" }])}
+    <section class="about-brand" aria-label="UConn School of Law, Law Library and Technology">
+      <div><strong>UCONN</strong><span>School of Law</span></div>
+      <small>Law Library and Technology</small>
+    </section>
+    <header class="about-intro">
+      <p class="eyebrow">About this app</p>
+      <h1>Connecticut General Statutes Explorer</h1>
+      <p>The UConn Law Library provides this mobile-first tool for searching and browsing the Connecticut General Statutes, the official subject index, and the Judicial Branch infraction schedule.</p>
+      <p><a class="primary-link" href="https://library.law.uconn.edu/" target="_blank" rel="noopener">Visit the Law Library <span aria-hidden="true">↗</span></a></p>
+    </header>
+    <ul class="about-counts" aria-label="Published data coverage">
+      <li><strong>${catalog.titles.length.toLocaleString()}</strong><span>titles</span></li>
+      <li><strong>${catalog.counts.chapters.toLocaleString()}</strong><span>chapters</span></li>
+      <li><strong>${catalog.counts.sections.toLocaleString()}</strong><span>provisions</span></li>
+      ${headingCount ? `<li><strong>${headingCount.toLocaleString()}</strong><span>index headings</span></li>` : ""}
+      ${infractionCount ? `<li><strong>${infractionCount.toLocaleString()}</strong><span>infractions</span></li>` : ""}
+    </ul>
+    <section class="about-section" aria-labelledby="about-sources-heading">
+      <div class="about-section-heading"><p class="eyebrow">Provenance</p><h2 id="about-sources-heading">Data and official sources</h2></div>
+      <div class="about-source-list">${cards.join("")}</div>
+    </section>
+    <section class="about-section about-project" aria-labelledby="about-project-heading">
+      <div><p class="eyebrow">Privacy and architecture</p><h2 id="about-project-heading">Built for public access</h2></div>
+      <div>
+        <p>This is a database-free, static Progressive Web App hosted on GitHub Pages. Searches run in the browser, and bookmarks, display preferences, and downloaded offline data remain on this device.</p>
+        <p>Data refreshes are parsed, validated, and reviewed before publication. The application and ingestion tools are maintained in the <a href="https://github.com/UConn-Law-Library/CGS" target="_blank" rel="noopener">public source repository <span aria-hidden="true">↗</span></a>.</p>
+      </div>
+    </section>
+    <aside class="legal-data-note"><strong>Unofficial access copy</strong><p>This application is not legal advice and is not the official legal publication. Verify statute text with the Connecticut General Assembly and infraction information with the Judicial Branch.</p></aside>
+  </main><footer>UConn Law Library · Unofficial access copy.</footer>`;
+  window.scrollTo({ top: 0 });
 }
 
 async function runStatuteSearch(query, titleId = null, { limit = SEARCH_BATCH_SIZE } = {}) {
@@ -707,7 +821,7 @@ function renderIndexSearchResults(search) {
 
 function renderIndexTopic(topic, open = false) {
   return `<details class="index-topic" id="${escapeHtml(topic.id)}" tabindex="-1"${open ? " open" : ""}>
-    <summary><strong>${escapeHtml(topic.label)}</strong><span>${topic.items.length.toLocaleString()} entr${topic.items.length === 1 ? "y" : "ies"}</span></summary>
+    <summary><strong>${escapeHtml(topic.label)}</strong></summary>
     <ol class="index-entries">${topic.items.map(renderIndexEntry).join("")}</ol>
   </details>`;
 }
@@ -859,9 +973,10 @@ async function renderStatutesIndex(route) {
     const matchingEntry = route.subheading
       ? selected.items.find((entry) => entry.text.toLowerCase().includes(route.subheading.toLowerCase()))
       : null;
-    const target = matchingEntry ? document.getElementById(matchingEntry.id) : document.getElementById(selected.id);
-    target?.scrollIntoView({ block: "start" });
-    target?.focus({ preventScroll: true });
+    const selectedTopic = document.getElementById(selected.id);
+    if (matchingEntry) document.getElementById(matchingEntry.id)?.classList.add("index-entry-target");
+    selectedTopic?.querySelector("summary")?.scrollIntoView({ block: "start" });
+    selectedTopic?.focus({ preventScroll: true });
   } else window.scrollTo({ top: 0 });
 }
 
@@ -884,6 +999,7 @@ async function renderCurrentRoute() {
     if (route.kind === "search") return renderSearchPage(catalog, route);
     if (route.kind === "infractions") return renderInfractions(route);
     if (route.kind === "bookmarks") return renderBookmarks();
+    if (route.kind === "about") return renderAbout(catalog);
     if (route.kind === "index") return renderStatutesIndex(route);
 
     let title = route.title ? findTitle(catalog, route.title) : null;

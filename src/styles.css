@@ -373,6 +373,62 @@ footer { padding: 2rem 0; color: var(--muted); border-top: 1px solid var(--line)
 .index-topic summary:focus-visible { outline: 3px solid var(--blue); outline-offset: -3px; }
 .index-topic summary strong { font-size: 1.05rem; font-weight: 850; }
 .index-topic .index-entries { padding-bottom: 1rem; }
+.index-topic-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: .85rem .25rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+.index-topic-link:hover { background: var(--blue-light); }
+.index-topic-link strong { font-size: 1.05rem; font-weight: 850; }
+.index-topic-link > span:not(.visually-hidden) { color: var(--blue); font-size: 1.25rem; font-weight: 850; }
+.index-topic-detail { max-width: 62rem; }
+.index-topic-search {
+  display: grid;
+  gap: .35rem;
+  margin: 1.25rem 0 .75rem;
+  font-weight: 750;
+}
+.index-topic-search input {
+  width: 100%;
+  min-height: 3rem;
+  padding: .65rem .8rem;
+  color: var(--ink);
+  background: var(--white);
+  border: 1px solid var(--line);
+}
+.index-topic-jumps { display: flex; gap: .35rem; padding: .35rem 0 1.25rem; overflow-x: auto; }
+.index-topic-jumps button {
+  flex: 0 0 2.25rem;
+  min-height: 2.25rem;
+  padding: .25rem;
+  color: var(--ink);
+  background: var(--white);
+  border: 1px solid var(--line);
+  font-weight: 800;
+  cursor: pointer;
+}
+.index-topic-jumps button:hover { color: white; background: var(--blue); }
+.index-topic-letter { margin-top: 1.5rem; scroll-margin-top: 11rem; outline: 0; }
+.index-topic-letter > h3 { margin: 0; padding-bottom: .4rem; border-bottom: 2px solid var(--ink); font-size: 1.2rem; }
+.index-topic-groups { border-bottom: 1px solid var(--line); }
+.index-subtopic { border-top: 1px solid var(--line); }
+.index-subtopic summary {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: .85rem .25rem;
+  cursor: pointer;
+}
+.index-subtopic summary:hover { background: var(--blue-light); }
+.index-subtopic summary > span { color: var(--muted); font-size: .8rem; white-space: nowrap; }
+.index-subtopic > .index-entries { padding-bottom: .75rem; }
+.index-topic-leaf > .index-entry { padding-left: .25rem; }
+.index-topic-search-results .index-entry { padding-left: .25rem; }
 .index-entry { padding: .8rem 0; border-top: 1px solid var(--line); }
 .index-level-0 { padding-left: 1.5rem; }
 .index-level-0 > span:first-child { font-weight: 750; }

@@ -69,9 +69,13 @@ export function renderIndexEntry(entry) {
   const linked = [];
   let cursor = 0;
   const matches = targets.map((target) => {
-    const index = text.toLowerCase().indexOf(String(target.heading).toLowerCase(), cursor);
+    const heading = String(target.heading);
+    const exactIndex = text.indexOf(heading, cursor);
+    const index = exactIndex >= 0
+      ? exactIndex
+      : text.toLowerCase().indexOf(heading.toLowerCase(), cursor);
     if (index < 0) return null;
-    cursor = index + target.heading.length;
+    cursor = index + heading.length;
     return { target, index };
   }).filter(Boolean).sort((left, right) => left.index - right.index);
   cursor = 0;
@@ -139,6 +143,26 @@ function searchableEntry(entry) {
     ...(entry.references ?? []).map((reference) => reference.display),
     ...(entry.see ?? []).flatMap((target) => [target.heading, target.subheading])
   ].filter(Boolean).join(" ").toLowerCase();
+}
+
+export function groupIndexEntries(entries = []) {
+  const groups = [];
+  for (const entry of entries) {
+    if (!groups.length || (Number(entry.level) || 0) === 0) groups.push([entry]);
+    else groups.at(-1).push(entry);
+  }
+  return groups;
+}
+
+export function searchIndexEntries(entries, query, limit = 100) {
+  const normalized = String(query ?? "").trim().toLowerCase();
+  const tokens = normalized.split(/\s+/).filter(Boolean);
+  if (!tokens.length) return { results: [], total: 0, truncated: false };
+  const matches = entries.filter((entry) => {
+    const text = searchableEntry(entry);
+    return tokens.every((token) => text.includes(token));
+  });
+  return { results: matches.slice(0, limit), total: matches.length, truncated: matches.length > limit };
 }
 
 export function searchIndexTopics(topics, query, limit = 100) {

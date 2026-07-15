@@ -46,8 +46,15 @@ INDENT_STEP = 9.0
 HEADER_TOP = 110            # page number / INDEX running head sits above this
 BODY_FONT_SIZE_MAX = 9.5    # intro text and letter dividers are larger
 
-# statute section reference, e.g. 15-76, 19a-601(d), 16-245(j)
-SEC_REF_RE = re.compile(r"^(\d+[a-z]{0,3}-\d+[a-z]{0,3})((?:\([^()]*\))*)[,.;]?$")
+# statute section reference, including UCC article segments, e.g. 15-76,
+# 19a-601(d), 42a-1-309, and 42a-2A-102(a)(7)
+SEC_REF_RE = re.compile(
+    r"^(\d+[a-z]{0,3}(?:-\d+[a-z]{0,3})+)((?:\([^()]*\))*)[,.;]?$",
+    re.IGNORECASE,
+)
+PARTIAL_SEC_REF_RE = re.compile(
+    r"\d+[a-z]{0,3}(?:-\d+[a-z]{0,3})*-$", re.IGNORECASE
+)
 # tokens that belong to constitution citations: U.S. Const. Am. XIV:1
 CONST_TOKEN_RE = re.compile(r"^(?:U\.S\.|Ct\.|Const\.|Am\.|[IVXLC]+(?::\d+[a-z]?)?[,.;]?)$")
 CONST_REF_RE = re.compile(
@@ -76,12 +83,23 @@ def token_is_ref(tok):
     return bool(SEC_REF_RE.match(tok) or CONST_TOKEN_RE.match(tok))
 
 
+def normalize_reference_spacing(text):
+    """Remove PDF word gaps inserted immediately after citation hyphens."""
+    return re.sub(
+        r"(\b\d+[a-z]{0,3}(?:-\d+[a-z]{0,3})*-)\s+(?=\d)",
+        r"\1",
+        text,
+        flags=re.IGNORECASE,
+    )
+
+
 def is_ref_only(text):
-    toks = text.split()
+    toks = normalize_reference_spacing(text).split()
     return bool(toks) and all(token_is_ref(t) for t in toks)
 
 
 def has_terminator(text):
+    text = normalize_reference_spacing(text)
     if not text:
         return False
     if text.endswith((".", ",", ";", ":")):
@@ -91,6 +109,7 @@ def has_terminator(text):
 
 def split_refs(text):
     """Split trailing statute/constitution references off an entry text."""
+    text = normalize_reference_spacing(text)
     toks = text.split()
     i = len(toks)
     while i > 0 and token_is_ref(toks[i - 1]):
@@ -195,6 +214,10 @@ class IndexParser:
 
     @staticmethod
     def join_wrapped(cur, text):
+        # A citation split after its final hyphen keeps that hyphen:
+        # "42a-1-" + "309" -> "42a-1-309".
+        if cur.endswith("-") and text[:1].isalnum() and PARTIAL_SEC_REF_RE.search(cur):
+            return cur + text
         # PDF line-break hyphens are soft: "MAM-" + "MOGRAPHIC" -> "MAMMOGRAPHIC"
         if cur.endswith("-") and text[:1].isalpha():
             return cur[:-1] + text

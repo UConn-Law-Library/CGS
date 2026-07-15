@@ -1,6 +1,14 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { formatMoney, renderIndexEntry, renderSecondaryContext, searchIndexTopics, topicLetter } from "../src/secondary-ui.js";
+import {
+  formatMoney,
+  groupIndexEntries,
+  renderIndexEntry,
+  renderSecondaryContext,
+  searchIndexEntries,
+  searchIndexTopics,
+  topicLetter
+} from "../src/secondary-ui.js";
 
 test("formats schedule money and derives index letters", () => {
   assert.equal(formatMoney(11700), "$117.00");
@@ -35,6 +43,33 @@ test("renders indented index entries with direct links for structured SEE target
   assert.match(html, /class="index-see-link"/);
   assert.match(html, /#\/index\/c\?heading=CHILDREN%20AND%20MINORS&amp;subheading=Abandonment/);
   assert.equal((html.match(/CHILDREN AND MINORS/g) ?? []).length, 1);
+});
+
+test("links the exact SEE heading instead of an earlier mixed-case phrase", () => {
+  const html = renderIndexEntry({
+    id: "entry-abandoned",
+    level: 0,
+    text: "Motor vehicles\u2014See MOTOR VEHICLES, at Abandoned.",
+    references: [],
+    see: [{ heading: "MOTOR VEHICLES", subheading: "Abandoned" }]
+  });
+  assert.match(html, /Motor vehicles\u2014See <a class="index-see-link"[^>]*>MOTOR VEHICLES<\/a>/);
+  assert.doesNotMatch(html, /<a class="index-see-link"[^>]*>Motor vehicles<\/a>/);
+});
+
+test("groups large index topics by top-level entry and searches their descendants", () => {
+  const entries = [
+    { id: "acceleration", level: 0, text: "Acceleration", references: [], see: [] },
+    { id: "under-protest", level: 1, text: "Under protest", references: [{ display: "42a-1-308(a)" }], see: [] },
+    { id: "bank", level: 0, text: "Bank", references: [], see: [] }
+  ];
+  assert.deepEqual(groupIndexEntries(entries).map((group) => group.map((entry) => entry.id)), [
+    ["acceleration", "under-protest"],
+    ["bank"]
+  ]);
+  const search = searchIndexEntries(entries, "42a-1-308");
+  assert.equal(search.total, 1);
+  assert.equal(search.results[0].id, "under-protest");
 });
 
 test("renders linked infractions, fee roles, sources, and index records safely", () => {

@@ -9,7 +9,7 @@ import time
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Dict, Optional
+from typing import Dict, Iterable, Optional
 from urllib.parse import urljoin
 
 import requests
@@ -18,7 +18,8 @@ from bs4 import BeautifulSoup
 from . import SCHEMA_VERSION
 
 INDEX_PAGE_URL = "https://www.cga.ct.gov/lco/statutes-index.asp"
-INFRACTIONS_URL = "https://www.jud.ct.gov/webforms/forms/infractions.pdf"
+INFRACTIONS_URL = "https://jud.ct.gov/webforms/forms/infractions.pdf"
+INFRACTIONS_FALLBACK_URLS = ("https://www.jud.ct.gov/webforms/forms/infractions.pdf",)
 INDEX_NAMES = ("Index A-H.pdf", "Index I-S.pdf", "Index T-Z.pdf")
 USER_AGENT = "CGSPagesSecondarySources/1.0 (+https://github.com/UConn-Law-Library/CGS)"
 
@@ -129,7 +130,7 @@ class PdfAcquirer:
         session: Optional[requests.Session] = None,
         verify_ssl=True,
         cga_verify_ssl=None,
-        max_attempts=3,
+        max_attempts=5,
         sleeper=time.sleep,
     ):
         self.store = store
@@ -163,6 +164,25 @@ class PdfAcquirer:
     def capture_url(self, url: str, name: str, captured_at: Optional[str] = None, verify_ssl=None):
         return self.store.capture(url, name, self.get_bytes(url, verify_ssl), captured_at or utc_now())
 
+    def capture_first_available(
+        self,
+        urls: Iterable[str],
+        name: str,
+        captured_at: Optional[str] = None,
+        verify_ssl=None,
+    ):
+        failures = []
+        last_error = None
+        for url in urls:
+            try:
+                return self.capture_url(url, name, captured_at, verify_ssl)
+            except (requests.RequestException, ValueError) as error:
+                failures.append(f"{url}: {error}")
+                last_error = error
+        raise RuntimeError(
+            f"Unable to retrieve {name} from verified official endpoints: {'; '.join(failures)}"
+        ) from last_error
+
     def capture_all(self, captured_at: Optional[str] = None, infractions_file: Optional[Path] = None):
         timestamp = captured_at or utc_now()
         response = self._get(INDEX_PAGE_URL, self.cga_verify_ssl)
@@ -177,5 +197,10 @@ class PdfAcquirer:
                 INFRACTIONS_URL, "infractions.pdf", Path(infractions_file).read_bytes(), timestamp
             ))
         else:
-            captures.append(self.capture_url(INFRACTIONS_URL, "infractions.pdf", timestamp))
+            captures.append(self.capture_first_available(
+                (INFRACTIONS_URL, *INFRACTIONS_FALLBACK_URLS),
+                "infractions.pdf",
+                timestamp,
+                self.verify_ssl,
+            ))
         return captures, revision

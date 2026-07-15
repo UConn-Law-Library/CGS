@@ -4,7 +4,7 @@ import argparse
 import json
 from pathlib import Path
 
-from .acquisition import PdfAcquirer, PdfSnapshotStore
+from .acquisition import INFRACTIONS_URL, PdfAcquirer, PdfSnapshotStore
 from .pipeline import import_pdfs
 
 
@@ -81,7 +81,7 @@ def main():
         index_pdfs=indexes,
         revision=revision,
         generated_at=args.generated_at,
-        infractions_url=infractions_url or "https://www.jud.ct.gov/webforms/forms/infractions.pdf",
+        infractions_url=infractions_url or INFRACTIONS_URL,
         index_urls=index_urls,
     )
     print(

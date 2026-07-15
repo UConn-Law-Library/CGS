@@ -21,7 +21,7 @@ TLS verification is the default. If the known CGA certificate-chain problem pers
 npm run secondary:acquire -- --output .crawl/secondary/sources --no-cga-ssl-verify
 ```
 
-This exception is scoped to `www.cga.ct.gov`. Judicial Branch TLS verification remains enabled. Downloads retry transient failures twice and then fail closed.
+This exception is scoped to `www.cga.ct.gov`. Judicial Branch TLS verification remains enabled. Downloads make five attempts with exponential backoff. The infractions download tries the official `jud.ct.gov` endpoint first and the official `www.jud.ct.gov` endpoint second, preserving the successful URL in the capture manifest. If both verified endpoints fail, acquisition fails closed.
 
 The Judicial Branch sometimes rejects hosted-runner traffic. A manually retrieved official PDF can be supplied without weakening or silently bypassing acquisition:
 

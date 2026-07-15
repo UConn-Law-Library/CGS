@@ -362,12 +362,18 @@ footer { padding: 2rem 0; color: var(--muted); border-top: 1px solid var(--line)
 .index-search-results li { padding: 1rem 0; border-bottom: 1px solid var(--line); }
 .index-search-results p { margin: .35rem 0 0; }
 .index-topic-list { border-bottom: 1px solid var(--line); }
-.index-topic { padding: 1.25rem 0; border-top: 1px solid var(--line); outline: 0; content-visibility: auto; contain-intrinsic-size: auto 30rem; }
+.index-topic { border-top: 1px solid var(--line); outline: 0; }
 .index-topic:first-child { border-top: 0; }
 .index-topic:focus { outline: 3px solid var(--blue); outline-offset: .35rem; }
-.index-topic-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
-.index-topic-heading h2 { margin: 0; font-size: 1.2rem; font-weight: 850; }
-.index-topic-heading span { color: var(--muted); font-size: .78rem; white-space: nowrap; }
+.index-topic summary { display: flex; align-items: baseline; gap: .65rem; padding: .85rem .25rem; cursor: pointer; list-style: none; }
+.index-topic summary::-webkit-details-marker { display: none; }
+.index-topic summary::before { content: "›"; flex: 0 0 auto; color: var(--blue); font-size: 1.35rem; font-weight: 850; line-height: .8; transform: rotate(0); transition: transform .15s ease; }
+.index-topic[open] summary::before { transform: rotate(90deg); }
+.index-topic summary:hover { background: var(--blue-light); }
+.index-topic summary:focus-visible { outline: 3px solid var(--blue); outline-offset: -3px; }
+.index-topic summary strong { font-size: 1.05rem; font-weight: 850; }
+.index-topic summary span { margin-left: auto; color: var(--muted); font-size: .78rem; white-space: nowrap; }
+.index-topic .index-entries { padding-bottom: 1rem; }
 .index-entry { padding: .8rem 0; border-top: 1px solid var(--line); }
 .index-level-0 > span:first-child { font-weight: 750; }
 .index-level-1 { padding-left: 1.5rem; }

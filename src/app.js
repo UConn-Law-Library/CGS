@@ -705,11 +705,11 @@ function renderIndexSearchResults(search) {
     }).join("")}</ol>`;
 }
 
-function renderIndexTopic(topic) {
-  return `<article class="index-topic" id="${escapeHtml(topic.id)}" tabindex="-1">
-    <div class="index-topic-heading"><h2>${escapeHtml(topic.label)}</h2><span>${topic.items.length.toLocaleString()} entr${topic.items.length === 1 ? "y" : "ies"}</span></div>
+function renderIndexTopic(topic, open = false) {
+  return `<details class="index-topic" id="${escapeHtml(topic.id)}" tabindex="-1"${open ? " open" : ""}>
+    <summary><strong>${escapeHtml(topic.label)}</strong><span>${topic.items.length.toLocaleString()} entr${topic.items.length === 1 ? "y" : "ies"}</span></summary>
     <ol class="index-entries">${topic.items.map(renderIndexEntry).join("")}</ol>
-  </article>`;
+  </details>`;
 }
 
 function bookmarkButton(bookmark, className = "") {
@@ -845,7 +845,7 @@ async function renderStatutesIndex(route) {
     ).join("")}</nav>
     <section class="index-browser" aria-live="polite">
       ${search ? renderIndexSearchResults(search) : `<div class="index-result-heading"><h2>${escapeHtml(letter.toUpperCase())} headings</h2><p>${topics.length.toLocaleString()} subjects on this page</p></div>
-        <div class="index-topic-list">${topics.map(renderIndexTopic).join("")}</div>`}
+        <div class="index-topic-list">${topics.map((topic) => renderIndexTopic(topic, topic === selected)).join("")}</div>`}
     </section>
     <aside class="legal-data-note"><strong>About this index</strong><p>This is a derived access copy of the official index, not legal text. Verify coverage and citations with the Legislative Commissioners' Office source.</p></aside>
   </main><footer>Unofficial access copy. Verify legal text with the Connecticut General Assembly.</footer>`;

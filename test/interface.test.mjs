@@ -9,8 +9,9 @@ test("home statute browsing uses the application route instead of an unknown has
   assert.doesNotMatch(appSource, /href="#browse-titles"/);
 });
 
-test("index letters render continuous topic groups and chapter settings expose repealed filtering", () => {
-  assert.match(appSource, /topics\.map\(renderIndexTopic\)/);
+test("index letters render collapsed topic groups and chapter settings expose repealed filtering", () => {
+  assert.match(appSource, /<details class="index-topic"/);
+  assert.match(appSource, /renderIndexTopic\(topic, topic === selected\)/);
   assert.match(appSource, /data-hide-repealed/);
   assert.match(appSource, /class="section-status-pill">Repealed/);
 });

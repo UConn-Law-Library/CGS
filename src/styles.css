@@ -609,6 +609,9 @@ body { color: var(--ink); background: var(--paper); }
 .search-refine, .infraction-search { margin: 1.5rem 0; padding: 1rem; background: var(--surface-raised); border: 1px solid var(--line); border-radius: .8rem; }
 .search-refine label, .infraction-search label { display: block; font-size: .8rem; font-weight: 750; }
 .search-page #search-status { min-height: 1.8rem; color: var(--muted); }
+.search-help { margin: -.75rem 0 1.25rem; color: var(--muted); font-size: .85rem; }
+.search-more { display: block; margin: 1rem auto 0; }
+.search-more[hidden] { display: none; }
 
 .infraction-categories, .infraction-list, .bookmark-list { margin: 1.5rem 0 0; padding: 0; list-style: none; }
 .infraction-categories { display: grid; grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); gap: .65rem; }

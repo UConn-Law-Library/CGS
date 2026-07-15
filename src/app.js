@@ -53,6 +53,7 @@ let activeOmniController = null;
 let omniTimer = null;
 let omniSelection = -1;
 let pwaState = pwaManager.state;
+const SEARCH_BATCH_SIZE = 50;
 applyPreferences(deviceState.preferences());
 pwaManager.subscribe((state) => {
   pwaState = state;
@@ -271,8 +272,8 @@ async function runOmnisearch(query) {
       groups.statutes = statuteMatches(update.results);
       render();
     }
-  }).then((results) => {
-    groups.statutes = statuteMatches(results);
+  }).then((outcome) => {
+    groups.statutes = statuteMatches(outcome.results);
   }).catch((error) => {
     if (error.name !== "AbortError") console.warn("Quick statute search failed", error);
   }).finally(finish);
@@ -522,35 +523,56 @@ async function renderHome(catalog) {
   </main><footer>Unofficial access copy. Verify legal text with the Connecticut General Assembly.</footer>`;
 }
 
-async function runStatuteSearch(query, titleId = null) {
+async function runStatuteSearch(query, titleId = null, { limit = SEARCH_BATCH_SIZE } = {}) {
   const status = document.querySelector("#search-status");
   const results = document.querySelector("#results");
   const progress = document.querySelector("#search-progress");
+  const warning = document.querySelector("#search-supplement-warning");
+  const more = document.querySelector("[data-search-more]");
   activeSearchController?.abort();
   const controller = new AbortController();
   activeSearchController = controller;
   status.textContent = "Preparing search…";
   results.innerHTML = "";
   results.setAttribute("aria-busy", "true");
+  warning.hidden = true;
+  more.hidden = true;
   progress.hidden = false;
   progress.value = 0;
   try {
-    const matches = await searchClient.search(query, {
+    const outcome = await searchClient.search(query, {
       titleIds: titleId ? [titleId] : undefined,
+      limit,
       signal: controller.signal,
       onProgress(update) {
         if (controller !== activeSearchController) return;
         progress.max = Math.max(1, update.total);
         progress.value = update.completed;
         renderSearchResults(update.results, results);
-        status.textContent = `Searching ${update.completed} of ${update.total} title shard${update.total === 1 ? "" : "s"}… ${update.results.length} match${update.results.length === 1 ? "" : "es"} so far.`;
+        warning.hidden = !update.supplementUnavailable;
+        status.textContent = `Searching ${update.completed} of ${update.total} title shard${update.total === 1 ? "" : "s"}… ${update.totalMatches.toLocaleString()} match${update.totalMatches === 1 ? "" : "es"} found so far.`;
       }
     });
     if (controller !== activeSearchController) return;
-    status.textContent = `${matches.length} result${matches.length === 1 ? "" : "s"}`;
+    const { results: matches, totalMatches, supplementUnavailable } = outcome;
+    status.textContent = totalMatches
+      ? `Showing ${matches.length.toLocaleString()} of ${totalMatches.toLocaleString()} result${totalMatches === 1 ? "" : "s"}`
+      : "No results";
+    warning.hidden = !supplementUnavailable;
     renderSearchResults(matches, results);
+    const remaining = Math.min(SEARCH_BATCH_SIZE, totalMatches - matches.length);
+    if (remaining > 0) {
+      more.hidden = false;
+      more.textContent = `Show ${remaining.toLocaleString()} more result${remaining === 1 ? "" : "s"}`;
+      more.dataset.searchQuery = query;
+      more.dataset.searchTitle = titleId ?? "";
+      more.dataset.searchLimit = String(matches.length + remaining);
+    }
   } catch (error) {
-    if (error.name !== "AbortError" && controller === activeSearchController) status.textContent = error.message;
+    if (error.name !== "AbortError" && controller === activeSearchController) {
+      status.textContent = error.message;
+      more.hidden = true;
+    }
   } finally {
     if (controller === activeSearchController) {
       results.removeAttribute("aria-busy");
@@ -567,14 +589,17 @@ async function renderSearchPage(catalog, route) {
     <header><p class="eyebrow">Statutes</p><h1>Search results</h1></header>
     <form class="search-refine" data-search-refine>
       <label for="search-page-query">Citation, phrase, or keyword</label>
-      <input id="search-page-query" name="query" type="search" minlength="2" required value="${escapeHtml(query)}">
+      <input id="search-page-query" name="query" type="search" minlength="2" required aria-describedby="search-help" value="${escapeHtml(query)}">
       <label for="search-title">Limit to a title</label>
       <select id="search-title" name="title"><option value="">All titles</option>${catalog.titles.map((title) => `<option value="${escapeHtml(title.id)}">${escapeHtml(titleLabel(title))} — ${escapeHtml(title.name)}</option>`).join("")}</select>
       <button type="submit">Search</button>
     </form>
+    <p class="search-help" id="search-help">Use AND, OR, NOT, parentheses, and quoted phrases. Multiple words use AND automatically.</p>
     <progress id="search-progress" value="0" max="1" hidden>Search progress</progress>
     <div id="search-status" role="status" aria-live="polite">${query ? "Preparing search…" : "Enter at least two characters."}</div>
+    <p class="supplement-warning" id="search-supplement-warning" role="alert" hidden>The published supplement search data could not be loaded. These results use the base revision and may be incomplete; reload while online before relying on them.</p>
     <ol id="results" class="results"></ol>
+    <button type="button" class="search-more" data-search-more hidden>Show more results</button>
   </main><footer>Unofficial access copy. Verify legal text with the Connecticut General Assembly.</footer>`;
   if (query.length >= 2) await runStatuteSearch(query);
 }
@@ -918,6 +943,13 @@ document.addEventListener("click", async (event) => {
   const omniOption = event.target.closest("[data-omni-option]");
   if (omniOption) {
     closeOmni();
+    return;
+  }
+  const searchMore = event.target.closest("[data-search-more]");
+  if (searchMore) {
+    await runStatuteSearch(searchMore.dataset.searchQuery, searchMore.dataset.searchTitle || null, {
+      limit: Number(searchMore.dataset.searchLimit) || SEARCH_BATCH_SIZE
+    });
     return;
   }
   const skip = event.target.closest("[data-skip-link]");

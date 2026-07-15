@@ -77,6 +77,38 @@ class ParserTests(unittest.TestCase):
         self.assertEqual(headings[0]["items"][0]["r"], [["14-1", "14-1"]])
         self.assertEqual(headings[0]["items"][1]["see"], [["TRANSPORTATION", "Registration"]])
 
+    def test_index_parser_splits_and_links_ucc_entries(self):
+        parser = IndexParser()
+        parser.feed_line(0, "UNIFORM COMMERCIAL CODE")
+        parser.feed_line(0, "Acceleration,")
+        parser.feed_line(1, "Accelerate at will, option to, 42a-1-309")
+        parser.feed_line(1, "Accelerate when insecure, option to, 42a-1-")
+        parser.feed_line(3, "309")
+        parser.feed_line(1, "Under protest, 42a-1-308(a)")
+        parser.feed_line(1, "Consumer, definition, 42a-2A-102(a)(7)")
+        items = parser.finish()[0]["items"]
+        self.assertEqual(
+            [item["t"] for item in items],
+            [
+                "Acceleration",
+                "Accelerate at will, option to",
+                "Accelerate when insecure, option to",
+                "Under protest",
+                "Consumer, definition",
+            ],
+        )
+        self.assertEqual(items[1]["r"], [["42a-1-309", "42a-1-309"]])
+        self.assertEqual(items[2]["r"], [["42a-1-309", "42a-1-309"]])
+        self.assertEqual(items[4]["r"], [["42a-2A-102(a)(7)", "42a-2A-102"]])
+
+    def test_index_parser_normalizes_pdf_spacing_inside_citations(self):
+        parser = IndexParser()
+        parser.feed_line(0, "UNIFORM COMMERCIAL CODE")
+        parser.feed_line(0, "Option to accelerate, 42a-1- 309")
+        item = parser.finish()[0]["items"][0]
+        self.assertEqual(item["t"], "Option to accelerate")
+        self.assertEqual(item["r"], [["42a-1-309", "42a-1-309"]])
+
     def test_index_page_geometry_reads_left_column_before_right(self):
         page = FakePage([
             word("Left", 123, 120), word("entry,", 145, 120), word("14-1", 180, 120),

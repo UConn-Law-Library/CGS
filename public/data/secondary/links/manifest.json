@@ -120,7 +120,7 @@
     {
       "titleId": "title-17a",
       "path": "title-17a.json",
-      "sectionCount": 619
+      "sectionCount": 620
     },
     {
       "titleId": "title-17b",
@@ -140,7 +140,7 @@
     {
       "titleId": "title-19a",
       "path": "title-19a.json",
-      "sectionCount": 909
+      "sectionCount": 910
     },
     {
       "titleId": "title-20",
@@ -165,7 +165,7 @@
     {
       "titleId": "title-22a",
       "path": "title-22a.json",
-      "sectionCount": 930
+      "sectionCount": 932
     },
     {
       "titleId": "title-23",
@@ -268,6 +268,11 @@
       "sectionCount": 385
     },
     {
+      "titleId": "title-42a",
+      "path": "title-42a.json",
+      "sectionCount": 622
+    },
+    {
       "titleId": "title-42b",
       "path": "title-42b.json",
       "sectionCount": 1
@@ -325,7 +330,7 @@
     {
       "titleId": "title-50a",
       "path": "title-50a.json",
-      "sectionCount": 75
+      "sectionCount": 76
     },
     {
       "titleId": "title-51",

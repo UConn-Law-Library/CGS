@@ -6,6 +6,11 @@ export function escapeHtml(value) {
   })[character]);
 }
 
+export function navigationSections(sections, { hideRepealed = false, selected = null } = {}) {
+  if (!hideRepealed) return sections;
+  return sections.filter((section) => section.status !== "repealed" || section === selected);
+}
+
 export function leadingSubsection(value) {
   const match = String(value ?? "").match(/^\s*(\(([a-z0-9ivxlcdm]+)\))\s*/i);
   if (!match) return null;

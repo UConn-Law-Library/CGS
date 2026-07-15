@@ -16,6 +16,7 @@ import {
   escapeHtml,
   extractLegalReferences,
   leadingSubsection,
+  navigationSections,
   renderLinkedText,
   routeForDocument
 } from "../src/reader.js";
@@ -57,11 +58,23 @@ test("builds and parses stable reader routes", () => {
 test("builds and parses index browse, search, and topic routes", () => {
   assert.equal(indexRouteHref("M"), "#/index/m");
   assert.equal(indexRouteHref("m", { query: "motor vehicles" }), "#/index/m?q=motor%20vehicles");
+  assert.equal(
+    indexRouteHref("c", { heading: "CHILDREN AND MINORS", subheading: "Abandonment" }),
+    "#/index/c?heading=CHILDREN%20AND%20MINORS&subheading=Abandonment"
+  );
   assert.deepEqual(parseRoute({ hash: "#/index/m/topic/topic-123?q=motor%20vehicles" }), {
     kind: "index", letter: "m", topic: "topic-123", query: "motor vehicles"
   });
   assert.deepEqual(parseRoute({ hash: "#/index" }), {
     kind: "index", letter: null, topic: null, query: null
+  });
+  assert.deepEqual(parseRoute({ hash: "#/index/c?heading=CHILDREN%20AND%20MINORS&subheading=Abandonment" }), {
+    kind: "index",
+    letter: "c",
+    topic: null,
+    query: null,
+    heading: "CHILDREN AND MINORS",
+    subheading: "Abandonment"
   });
 });
 
@@ -95,6 +108,14 @@ test("normalizes catalog numbers and resolves grouped sections", () => {
   assert.equal(findChapter(catalog, "113").title.id, "title-07");
   assert.equal(findSection(chapter, "1-3").id, "group-1-2-to-1-3");
   assert.equal(sectionRouteKey(chapter.sections[1]), "1-2");
+});
+
+test("filters repealed sections from navigation while preserving a selected direct link", () => {
+  const active = { id: "active", status: "active" };
+  const repealed = { id: "repealed", status: "repealed" };
+  assert.deepEqual(navigationSections([active, repealed]), [active, repealed]);
+  assert.deepEqual(navigationSections([active, repealed], { hideRepealed: true }), [active]);
+  assert.deepEqual(navigationSections([active, repealed], { hideRepealed: true, selected: repealed }), [active, repealed]);
 });
 
 test("recognizes subsection markers and safely renders linked legal references", () => {

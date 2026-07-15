@@ -28,11 +28,20 @@ export function routeHref({ title, chapter, section, subsection } = {}) {
   return route;
 }
 
-export function indexRouteHref(letter = null, { topic = null, query = null } = {}) {
+export function indexRouteHref(letter = null, {
+  topic = null,
+  query = null,
+  heading = null,
+  subheading = null
+} = {}) {
   let route = "#/index";
   if (letter) route += `/${encodeSegment(String(letter).toLowerCase().slice(0, 1))}`;
   if (topic) route += `/topic/${encodeSegment(topic)}`;
-  if (query) route += `?q=${encodeSegment(query)}`;
+  const parameters = new URLSearchParams();
+  if (query) parameters.set("q", query);
+  if (heading) parameters.set("heading", heading);
+  if (subheading) parameters.set("subheading", subheading);
+  if (parameters.size) route += `?${parameters.toString().replaceAll("+", "%20")}`;
   return route;
 }
 
@@ -83,12 +92,17 @@ export function parseRoute({ hash = "", search = "" } = {}) {
   if (parts[0] === "bookmarks" && parts.length === 1) return { kind: "bookmarks" };
 
   if (parts[0] === "index") {
-    const queryValue = new URLSearchParams(hashQuery).get("q") || null;
-    if (parts.length === 1) return { kind: "index", letter: null, topic: null, query: queryValue };
+    const parameters = new URLSearchParams(hashQuery);
+    const queryValue = parameters.get("q") || null;
+    const target = parameters.has("heading") ? {
+      heading: parameters.get("heading"),
+      subheading: parameters.get("subheading") || null
+    } : {};
+    if (parts.length === 1) return { kind: "index", letter: null, topic: null, query: queryValue, ...target };
     if (!/^[a-z0-9]$/i.test(parts[1])) return { kind: "not-found" };
-    if (parts.length === 2) return { kind: "index", letter: parts[1].toLowerCase(), topic: null, query: queryValue };
+    if (parts.length === 2) return { kind: "index", letter: parts[1].toLowerCase(), topic: null, query: queryValue, ...target };
     if (parts.length === 4 && parts[2] === "topic" && parts[3]) {
-      return { kind: "index", letter: parts[1].toLowerCase(), topic: parts[3], query: queryValue };
+      return { kind: "index", letter: parts[1].toLowerCase(), topic: parts[3], query: queryValue, ...target };
     }
     return { kind: "not-found" };
   }

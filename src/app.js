@@ -16,6 +16,7 @@ import {
   escapeHtml,
   extractLegalReferences,
   leadingSubsection,
+  navigationSections,
   renderLinkedText,
   routeForDocument
 } from "./reader.js";
@@ -144,6 +145,7 @@ function settingsPanel() {
     </div></div>
     <div class="setting-row"><span><strong>Text size</strong><small data-text-size-value>${Math.round(preferences.textScale * 100)}%</small></span><div class="text-size-controls"><button type="button" data-text-size="decrease" aria-label="Decrease text size">A−</button><button type="button" data-text-size="increase" aria-label="Increase text size">A+</button></div></div>
     <label class="setting-row"><span><strong>Compact lists</strong><small>Show more items on screen</small></span><input type="checkbox" data-compact-lists${preferences.compactLists ? " checked" : ""}></label>
+    <label class="setting-row"><span><strong>Hide repealed sections</strong><small>Remove them from chapter navigation</small></span><input type="checkbox" data-hide-repealed${preferences.hideRepealedSections ? " checked" : ""}></label>
     <button type="button" class="settings-action update-action" data-apply-update${pwaState.updateAvailable ? "" : " hidden"}>Update available <small>Reload to use the latest published app</small></button>
     <button type="button" class="settings-action" data-install-app${pwaState.installed || !pwaState.installable ? " disabled" : ""}>Install app <small>${escapeHtml(installStatus(pwaState))}</small></button>
     <button type="button" class="settings-action" data-download-offline${!pwaState.ready || pwaState.busy ? " disabled" : ""}><span data-offline-action-label>${pwaState.complete ? "Refresh offline data" : "Download for offline use"}</span><small>Statutes, supplements, search, index, and infractions</small></button>
@@ -449,8 +451,11 @@ function readerSidebar(title, chapter, sections, selected = null, changeBySectio
     <nav><ol>${sections.map((section) => {
       const active = selected === section;
       const change = changeBySection.get(section.id);
+      const statusPill = change
+        ? `<span class="supplement-pill supplement-${escapeHtml(change.presentation)}">${escapeHtml(supplementLabel(change, { short: true }))}</span>`
+        : section.status === "repealed" ? `<span class="section-status-pill">Repealed</span>` : "";
       return `<li><a${active ? " aria-current=\"page\"" : ""} href="${escapeHtml(provisionRoute(title, chapter, section))}">
-        <strong>${escapeHtml(sectionLabel(section))}</strong>${change ? `<span class="supplement-pill supplement-${escapeHtml(change.presentation)}">${escapeHtml(supplementLabel(change, { short: true }))}</span>` : ""}<span>${escapeHtml(section.heading.replace(/^Secs?\.\s*[^.]+\.\s*/, ""))}</span>
+        <strong>${escapeHtml(sectionLabel(section))}</strong>${statusPill}<span>${escapeHtml(section.heading.replace(/^Secs?\.\s*[^.]+\.\s*/, ""))}</span>
       </a></li>`;
     }).join("")}</ol></nav>
   </aside>`;
@@ -511,7 +516,7 @@ async function renderHome(catalog) {
       <p>Browse and search the statutes, the official subject index, and the Judicial Branch infraction schedule. Save frequently used material on this device.</p>
     </header>
     <section class="destination-grid" aria-label="Explore legal materials">
-      <a href="#browse-titles"><span aria-hidden="true">§</span><strong>Browse statutes</strong><small>Navigate by title, chapter, or section.</small></a>
+      <a href="#/" data-browse-statutes><span aria-hidden="true">§</span><strong>Browse statutes</strong><small>Navigate by title, chapter, or section.</small></a>
       <a href="#/index"><span aria-hidden="true">A–Z</span><strong>Subject index</strong><small>Find statutes by topic in the official LCO index.</small></a>
       <a href="#/infractions"><span aria-hidden="true">⚖</span><strong>Infraction schedule</strong><small>Review violations, amounts, and linked statutes.</small></a>
       <a href="#/bookmarks"><span aria-hidden="true">★</span><strong>Bookmarks</strong><small>Return to sections and infractions saved on this device.</small></a>
@@ -657,9 +662,15 @@ async function renderChapter(catalog, title, chapterMeta, route) {
         sectionSecondaryContext(title, selected, route.section)
       ])
     : [null, null];
+  const preferences = deviceState.preferences();
+  const chapterNavigation = navigationSections(chapter.sections, {
+    hideRepealed: preferences.hideRepealedSections,
+    selected
+  });
+  const hiddenRepealed = chapter.sections.length - chapterNavigation.length;
   setDocumentTitle(selected ? sectionLabel(selected) : chapterLabel(chapter), titleLabel(title));
   app.innerHTML = `${siteHeader()}<div class="reader-shell" id="main-content">
-    ${readerSidebar(title, chapter, chapter.sections, selected, changeBySection)}
+    ${readerSidebar(title, chapter, chapterNavigation, selected, changeBySection)}
     <main class="reader-content">
       ${breadcrumbs([
         { label: "Titles", href: "#/" },
@@ -668,7 +679,7 @@ async function renderChapter(catalog, title, chapterMeta, route) {
         ...(selected ? [{ label: sectionLabel(selected) }] : [])
       ])}
       ${supplementError ? `<p class="supplement-warning" role="alert">The published supplement could not be loaded. This page is showing the base revision only; reload before relying on it.</p>` : ""}
-      ${selected ? `${renderProvision(title, chapter, selected, maps, secondaryContext, changeBySection.get(selected.id))}${sectionNavigation(title, chapter, chapter.sections, selected)}` : `<div class="chapter-overview"><p class="eyebrow">${chapter.sections.length} provisions</p><h1>${escapeHtml(chapterLabel(chapter))} — ${escapeHtml(chapter.name)}</h1>${overlay?.changes.length ? `<p class="supplement-summary"><strong>${overlay.editionYear} Supplement applied.</strong> ${overlay.changes.length} updated provision${overlay.changes.length === 1 ? "" : "s"} are labeled in the chapter list.</p>` : ""}<p>Choose a provision from the chapter list.</p><a href="${escapeHtml(chapter.sourceUrl)}">Official chapter source</a></div>`}
+      ${selected ? `${renderProvision(title, chapter, selected, maps, secondaryContext, changeBySection.get(selected.id))}${sectionNavigation(title, chapter, chapterNavigation, selected)}` : `<div class="chapter-overview"><p class="eyebrow">${chapterNavigation.length} provisions${hiddenRepealed ? ` · ${hiddenRepealed} repealed hidden` : ""}</p><h1>${escapeHtml(chapterLabel(chapter))} — ${escapeHtml(chapter.name)}</h1>${overlay?.changes.length ? `<p class="supplement-summary"><strong>${overlay.editionYear} Supplement applied.</strong> ${overlay.changes.length} updated provision${overlay.changes.length === 1 ? "" : "s"} are labeled in the chapter list.</p>` : ""}<p>Choose a provision from the chapter list.</p><a href="${escapeHtml(chapter.sourceUrl)}">Official chapter source</a></div>`}
     </main>
   </div>`;
 
@@ -688,20 +699,16 @@ function renderIndexSearchResults(search) {
   if (!search.results.length) return `<p class="empty-state">No entries in this letter match the search terms.</p>`;
   return `<div class="index-result-heading"><h2>Search results</h2><p>${search.total.toLocaleString()} match${search.total === 1 ? "" : "es"}${search.truncated ? "; showing the first 100" : ""}</p></div>
     <ol class="index-search-results">${search.results.map(({ topic, entry }) => {
-      const href = indexRouteHref(topicLetter(topic.label), { topic: topic.id });
+      const href = indexRouteHref(topicLetter(topic.label), { heading: topic.label });
       if (!entry) return `<li><a href="${escapeHtml(href)}"><strong>${escapeHtml(topic.label)}</strong></a><p>Subject heading · ${topic.items.length.toLocaleString()} entries</p></li>`;
       return `<li><a href="${escapeHtml(href)}"><strong>${escapeHtml(topic.label)}</strong></a><p>${escapeHtml(entry.text)} ${renderIndexReferences(entry.references)}</p></li>`;
     }).join("")}</ol>`;
 }
 
-function renderTopic(topic, initialCount = 250) {
-  const shown = Math.min(initialCount, topic.items.length);
+function renderIndexTopic(topic) {
   return `<article class="index-topic" id="${escapeHtml(topic.id)}" tabindex="-1">
-    <p class="eyebrow">Subject heading</p>
-    <h2>${escapeHtml(topic.label)}</h2>
-    <p>${topic.items.length.toLocaleString()} index entr${topic.items.length === 1 ? "y" : "ies"}</p>
-    <ol class="index-entries" data-index-entries>${topic.items.slice(0, shown).map(renderIndexEntry).join("")}</ol>
-    ${shown < topic.items.length ? `<button type="button" class="index-more" data-index-more data-shown="${shown}">Show 250 more entries</button>` : ""}
+    <div class="index-topic-heading"><h2>${escapeHtml(topic.label)}</h2><span>${topic.items.length.toLocaleString()} entr${topic.items.length === 1 ? "y" : "ies"}</span></div>
+    <ol class="index-entries">${topic.items.map(renderIndexEntry).join("")}</ol>
   </article>`;
 }
 
@@ -813,8 +820,10 @@ async function renderStatutesIndex(route) {
   const letter = route.letter ?? "a";
   if (!available.includes(letter)) return renderNotFound("That index letter was not found.");
   const topics = await secondaryRepository.loadIndexLetter(letter);
-  const selected = route.topic ? topics.find((topic) => topic.id === route.topic) : null;
-  if (route.topic && !selected) return renderNotFound("That index heading was not found.");
+  const selected = route.topic
+    ? topics.find((topic) => topic.id === route.topic)
+    : route.heading ? topics.find((topic) => topic.label.toLowerCase() === route.heading.toLowerCase()) : null;
+  if ((route.topic || route.heading) && !selected) return renderNotFound("That index heading was not found.");
   const search = route.query ? searchIndexTopics(topics, route.query) : null;
   const source = manifests.index.source;
   setDocumentTitle(selected?.label ?? `Statutes index ${letter.toUpperCase()}`);
@@ -835,8 +844,8 @@ async function renderStatutesIndex(route) {
       `<a href="${escapeHtml(indexRouteHref(key))}"${key === letter ? ` aria-current="page"` : ""}>${key.toUpperCase()}</a>`
     ).join("")}</nav>
     <section class="index-browser" aria-live="polite">
-      ${selected ? renderTopic(selected) : search ? renderIndexSearchResults(search) : `<div class="index-result-heading"><h2>${escapeHtml(letter.toUpperCase())} headings</h2><p>${topics.length.toLocaleString()} subjects</p></div>
-        <ol class="index-headings">${topics.map((topic) => `<li><a href="${escapeHtml(indexRouteHref(letter, { topic: topic.id }))}"><strong>${escapeHtml(topic.label)}</strong><span>${topic.items.length.toLocaleString()} entr${topic.items.length === 1 ? "y" : "ies"}</span></a></li>`).join("")}</ol>`}
+      ${search ? renderIndexSearchResults(search) : `<div class="index-result-heading"><h2>${escapeHtml(letter.toUpperCase())} headings</h2><p>${topics.length.toLocaleString()} subjects on this page</p></div>
+        <div class="index-topic-list">${topics.map(renderIndexTopic).join("")}</div>`}
     </section>
     <aside class="legal-data-note"><strong>About this index</strong><p>This is a derived access copy of the official index, not legal text. Verify coverage and citations with the Legislative Commissioners' Office source.</p></aside>
   </main><footer>Unofficial access copy. Verify legal text with the Connecticut General Assembly.</footer>`;
@@ -846,17 +855,14 @@ async function renderStatutesIndex(route) {
     const query = new FormData(event.currentTarget).get("query").trim();
     location.hash = indexRouteHref(topicLetter(query), { query });
   });
-  const more = document.querySelector("[data-index-more]");
-  if (more && selected) more.addEventListener("click", () => {
-    const start = Number(more.dataset.shown);
-    const end = Math.min(start + 250, selected.items.length);
-    document.querySelector("[data-index-entries]").insertAdjacentHTML("beforeend", selected.items.slice(start, end).map(renderIndexEntry).join(""));
-    more.dataset.shown = String(end);
-    if (end === selected.items.length) more.remove();
-    else more.textContent = `Show 250 more entries (${(selected.items.length - end).toLocaleString()} remaining)`;
-  });
-  if (selected) document.querySelector(".index-topic")?.focus({ preventScroll: true });
-  window.scrollTo({ top: 0 });
+  if (selected && !search) {
+    const matchingEntry = route.subheading
+      ? selected.items.find((entry) => entry.text.toLowerCase().includes(route.subheading.toLowerCase()))
+      : null;
+    const target = matchingEntry ? document.getElementById(matchingEntry.id) : document.getElementById(selected.id);
+    target?.scrollIntoView({ block: "start" });
+    target?.focus({ preventScroll: true });
+  } else window.scrollTo({ top: 0 });
 }
 
 function renderNotFound(message = "That page was not found.") {
@@ -950,6 +956,17 @@ document.addEventListener("click", async (event) => {
     await runStatuteSearch(searchMore.dataset.searchQuery, searchMore.dataset.searchTitle || null, {
       limit: Number(searchMore.dataset.searchLimit) || SEARCH_BATCH_SIZE
     });
+    return;
+  }
+  const browseStatutes = event.target.closest("[data-browse-statutes]");
+  if (browseStatutes) {
+    event.preventDefault();
+    const heading = document.querySelector("#browse-heading");
+    heading?.scrollIntoView({ block: "start", behavior: "smooth" });
+    if (heading) {
+      heading.tabIndex = -1;
+      heading.focus({ preventScroll: true });
+    }
     return;
   }
   const skip = event.target.closest("[data-skip-link]");
@@ -1067,8 +1084,15 @@ document.addEventListener("click", async (event) => {
 });
 
 document.addEventListener("change", (event) => {
-  if (!event.target.matches("[data-compact-lists]")) return;
-  applyPreferences(deviceState.updatePreferences({ compactLists: event.target.checked }));
+  if (event.target.matches("[data-compact-lists]")) {
+    applyPreferences(deviceState.updatePreferences({ compactLists: event.target.checked }));
+    return;
+  }
+  if (event.target.matches("[data-hide-repealed]")) {
+    applyPreferences(deviceState.updatePreferences({ hideRepealedSections: event.target.checked }));
+    const route = parseRoute(location);
+    if (["chapter", "section"].includes(route.kind)) renderCurrentRoute();
+  }
 });
 
 document.addEventListener("submit", (event) => {

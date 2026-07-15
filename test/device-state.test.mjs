@@ -21,12 +21,23 @@ test("stores and removes device-local bookmarks", () => {
 
 test("normalizes and applies reader preferences", () => {
   const state = new DeviceState({ storage: memoryStorage() });
-  const preferences = state.updatePreferences({ theme: "oled", textScale: 4, compactLists: true });
-  assert.deepEqual(preferences, { theme: "oled", textScale: 1.25, compactLists: true });
+  const preferences = state.updatePreferences({
+    theme: "oled",
+    textScale: 4,
+    compactLists: true,
+    hideRepealedSections: true
+  });
+  assert.deepEqual(preferences, {
+    theme: "oled",
+    textScale: 1.25,
+    compactLists: true,
+    hideRepealedSections: true
+  });
   const style = { values: new Map(), setProperty(key, value) { this.values.set(key, value); } };
   const root = { dataset: {}, style };
   applyPreferences(preferences, root);
   assert.equal(root.dataset.theme, "oled");
   assert.equal(root.dataset.compactLists, "true");
+  assert.equal(root.dataset.hideRepealedSections, "true");
   assert.equal(style.values.get("--text-scale"), "1.25");
 });

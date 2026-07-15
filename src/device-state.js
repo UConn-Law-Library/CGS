@@ -4,7 +4,8 @@ const PREFERENCES_KEY = "cgs.preferences.v1";
 export const DEFAULT_PREFERENCES = Object.freeze({
   theme: "auto",
   textScale: 1,
-  compactLists: false
+  compactLists: false,
+  hideRepealedSections: false
 });
 
 const themes = new Set(["auto", "light", "dark", "oled"]);
@@ -74,7 +75,12 @@ export class DeviceState {
     const value = this.#read(PREFERENCES_KEY, {});
     const theme = themes.has(value.theme) ? value.theme : DEFAULT_PREFERENCES.theme;
     const textScale = Math.min(1.25, Math.max(.85, Number(value.textScale) || 1));
-    return { theme, textScale, compactLists: Boolean(value.compactLists) };
+    return {
+      theme,
+      textScale,
+      compactLists: Boolean(value.compactLists),
+      hideRepealedSections: Boolean(value.hideRepealedSections)
+    };
   }
 
   updatePreferences(changes) {
@@ -82,6 +88,7 @@ export class DeviceState {
     if (!themes.has(value.theme)) value.theme = DEFAULT_PREFERENCES.theme;
     value.textScale = Math.min(1.25, Math.max(.85, Number(value.textScale) || 1));
     value.compactLists = Boolean(value.compactLists);
+    value.hideRepealedSections = Boolean(value.hideRepealedSections);
     this.#write(PREFERENCES_KEY, value);
     return value;
   }
@@ -90,5 +97,6 @@ export class DeviceState {
 export function applyPreferences(preferences, root = document.documentElement) {
   root.dataset.theme = preferences.theme;
   root.dataset.compactLists = String(preferences.compactLists);
+  root.dataset.hideRepealedSections = String(preferences.hideRepealedSections);
   root.style.setProperty("--text-scale", String(preferences.textScale));
 }

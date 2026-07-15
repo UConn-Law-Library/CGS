@@ -224,7 +224,9 @@ footer { padding: 2rem 0; color: var(--muted); border-top: 1px solid var(--line)
 .reader-sidebar li a:hover, .reader-sidebar li a[aria-current="page"] { background: var(--white); }
 .reader-sidebar li span { display: block; margin-top: .1rem; color: var(--muted); font-size: .82rem; }
 .supplement-pill,
-.reader-sidebar li .supplement-pill {
+.section-status-pill,
+.reader-sidebar li .supplement-pill,
+.reader-sidebar li .section-status-pill {
   display: inline-flex;
   align-items: center;
   width: fit-content;
@@ -241,8 +243,10 @@ footer { padding: 2rem 0; color: var(--muted); border-top: 1px solid var(--line)
   text-transform: uppercase;
   vertical-align: .1em;
 }
-.reader-sidebar li .supplement-pill { margin-left: .35rem; }
-.reader-sidebar li a > strong + .supplement-pill { display: inline-flex; }
+.reader-sidebar li .supplement-pill,
+.reader-sidebar li .section-status-pill { margin-left: .35rem; }
+.reader-sidebar li a > strong + .supplement-pill,
+.reader-sidebar li a > strong + .section-status-pill { display: inline-flex; }
 .reader-content { width: min(54rem, calc(100% - 3rem)); margin-inline: auto; padding: 2rem 0 6rem; }
 .chapter-overview { padding-top: clamp(2rem, 8vw, 8rem); }
 .supplement-summary { max-width: 42rem; padding: 1rem; color: var(--warning-ink); background: var(--warning-surface); border-left: 4px solid var(--warning-line); }
@@ -357,14 +361,21 @@ footer { padding: 2rem 0; color: var(--muted); border-top: 1px solid var(--line)
 .index-headings span { color: var(--muted); font-size: .8rem; white-space: nowrap; }
 .index-search-results li { padding: 1rem 0; border-bottom: 1px solid var(--line); }
 .index-search-results p { margin: .35rem 0 0; }
-.index-topic { outline: 0; }
-.index-topic h2 { margin: .25rem 0; font-size: clamp(2rem, 5vw, 3.25rem); }
+.index-topic-list { border-bottom: 1px solid var(--line); }
+.index-topic { padding: 1.25rem 0; border-top: 1px solid var(--line); outline: 0; content-visibility: auto; contain-intrinsic-size: auto 30rem; }
+.index-topic:first-child { border-top: 0; }
+.index-topic:focus { outline: 3px solid var(--blue); outline-offset: .35rem; }
+.index-topic-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
+.index-topic-heading h2 { margin: 0; font-size: 1.2rem; font-weight: 850; }
+.index-topic-heading span { color: var(--muted); font-size: .78rem; white-space: nowrap; }
 .index-entry { padding: .8rem 0; border-top: 1px solid var(--line); }
+.index-level-0 > span:first-child { font-weight: 750; }
 .index-level-1 { padding-left: 1.5rem; }
 .index-level-2 { padding-left: 3rem; }
 .index-level-3, .index-level-4 { padding-left: 4.5rem; }
 .index-references { display: block; margin-top: .25rem; color: var(--muted); font-size: .9rem; }
 .index-see { display: block; color: var(--muted); font-style: italic; }
+.index-see-link { font-weight: 750; }
 .index-more { margin-top: 1.5rem; padding: .7rem 1rem; }
 .legal-data-note { max-width: 50rem; margin-top: 3rem; padding: 1rem; background: var(--reader-surface); border-left: 4px solid var(--blue); }
 .legal-data-note p { margin-bottom: 0; }

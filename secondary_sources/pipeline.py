@@ -14,10 +14,10 @@ from pathlib import Path
 import pdfplumber
 
 from . import SCHEMA_VERSION
+from .acquisition import INFRACTIONS_URL
 from .infractions_parser import parse_chart_b, parse_schedule, polish_entries
 from .statutes_index_parser import parse_file
 
-INFRACTIONS_URL = "https://www.jud.ct.gov/webforms/forms/infractions.pdf"
 INDEX_URL = "https://www.cga.ct.gov/lco/statutes-index.asp"
 MAX_INDEX_SHARD_BYTES = 2_000_000
 

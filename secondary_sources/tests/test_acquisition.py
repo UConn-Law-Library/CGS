@@ -6,7 +6,13 @@ import unittest
 
 import requests
 
-from secondary_sources.acquisition import PdfAcquirer, PdfSnapshotStore, discover_index_sources
+from secondary_sources.acquisition import (
+    INFRACTIONS_FALLBACK_URLS,
+    INFRACTIONS_URL,
+    PdfAcquirer,
+    PdfSnapshotStore,
+    discover_index_sources,
+)
 
 
 class FakeResponse:
@@ -84,6 +90,41 @@ class AcquisitionTests(unittest.TestCase):
                 sleeper=lambda _: None,
             ).capture_all("2026-01-01T00:00:00Z")
         self.assertEqual([call["verify"] for call in session.calls], [False, False, False, False, True])
+        self.assertEqual(session.calls[-1]["url"], INFRACTIONS_URL)
+
+    def test_judicial_fallback_keeps_tls_verification_enabled(self):
+        html = """
+        <p>THE INDEX, REVISION OF 1958, REVISED TO JANUARY 1, 2025.</p>
+        <a href="index/2025/Index%20A-H.pdf">A-H</a>
+        <a href="index/2025/Index%20I-S.pdf">I-S</a>
+        <a href="index/2025/Index%20T-Z.pdf">T-Z</a>
+        """
+        responses = [FakeResponse(text=html, content_type="text/html")]
+        responses.extend(FakeResponse(content=f"%PDF-index-{index}".encode()) for index in range(3))
+        responses.extend([
+            requests.exceptions.SSLError("primary attempt one"),
+            requests.exceptions.SSLError("primary attempt two"),
+            FakeResponse(content=b"%PDF-official-fallback"),
+        ])
+        session = FakeSession(responses)
+        sleeps = []
+        with tempfile.TemporaryDirectory() as temporary:
+            captures, _ = PdfAcquirer(
+                PdfSnapshotStore(Path(temporary)),
+                session=session,
+                verify_ssl=True,
+                cga_verify_ssl=False,
+                max_attempts=2,
+                sleeper=sleeps.append,
+            ).capture_all("2026-01-01T00:00:00Z")
+        judicial_calls = session.calls[-3:]
+        self.assertEqual(
+            [call["url"] for call in judicial_calls],
+            [INFRACTIONS_URL, INFRACTIONS_URL, INFRACTIONS_FALLBACK_URLS[0]],
+        )
+        self.assertEqual([call["verify"] for call in judicial_calls], [True, True, True])
+        self.assertEqual(captures[-1].url, INFRACTIONS_FALLBACK_URLS[0])
+        self.assertEqual(sleeps, [1])
 
     def test_retries_transient_download_failures(self):
         session = FakeSession([
@@ -101,6 +142,24 @@ class AcquisitionTests(unittest.TestCase):
             ).get_bytes("https://example.test/retry.pdf")
         self.assertEqual(content, b"%PDF-recovered")
         self.assertEqual(sleeps, [1, 2])
+
+    def test_default_retry_budget_uses_four_exponential_backoffs(self):
+        session = FakeSession([
+            requests.ConnectionError("first"),
+            requests.ConnectionError("second"),
+            requests.ConnectionError("third"),
+            requests.ConnectionError("fourth"),
+            FakeResponse(content=b"%PDF-recovered"),
+        ])
+        sleeps = []
+        with tempfile.TemporaryDirectory() as temporary:
+            content = PdfAcquirer(
+                PdfSnapshotStore(Path(temporary)),
+                session=session,
+                sleeper=sleeps.append,
+            ).get_bytes("https://example.test/retry.pdf")
+        self.assertEqual(content, b"%PDF-recovered")
+        self.assertEqual(sleeps, [1, 2, 4, 8])
 
 
 if __name__ == "__main__":

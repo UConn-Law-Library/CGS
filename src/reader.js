@@ -11,6 +11,19 @@ export function navigationSections(sections, { hideRepealed = false, selected = 
   return sections.filter((section) => section.status !== "repealed" || section === selected);
 }
 
+function compactCitation(citation) {
+  return String(citation ?? "").replace(/^[^-]+-/, "");
+}
+
+export function navigationSectionLabel(section) {
+  const citations = section.citations?.filter(Boolean) ?? (section.citation ? [section.citation] : []);
+  if (citations.length > 1) {
+    return `§§ ${compactCitation(citations[0])}-${compactCitation(citations.at(-1))}`;
+  }
+  if (citations.length === 1) return `§ ${compactCitation(citations[0])}`;
+  return section.heading;
+}
+
 export function leadingSubsection(value) {
   const match = String(value ?? "").match(/^\s*(\(([a-z0-9ivxlcdm]+)\))\s*/i);
   if (!match) return null;

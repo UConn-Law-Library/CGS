@@ -16,6 +16,7 @@ import {
   escapeHtml,
   extractLegalReferences,
   leadingSubsection,
+  navigationSectionLabel,
   navigationSections,
   renderLinkedText,
   routeForDocument
@@ -89,6 +90,8 @@ test("builds and parses mobile destination routes", () => {
     kind: "infractions", category: "MOTOR VEHICLES", entry: "infraction-1", query: null
   });
   assert.deepEqual(parseRoute({ hash: "#/bookmarks" }), { kind: "bookmarks" });
+  assert.deepEqual(parseRoute({ hash: "#/about" }), { kind: "about" });
+  assert.deepEqual(parseRoute({ hash: "#/a" }), { kind: "about" });
 });
 
 test("accepts the Phase 1 query route as a migration fallback", () => {
@@ -116,6 +119,11 @@ test("filters repealed sections from navigation while preserving a selected dire
   assert.deepEqual(navigationSections([active, repealed]), [active, repealed]);
   assert.deepEqual(navigationSections([active, repealed], { hideRepealed: true }), [active]);
   assert.deepEqual(navigationSections([active, repealed], { hideRepealed: true, selected: repealed }), [active, repealed]);
+});
+
+test("uses compact section symbols for chapter navigation labels", () => {
+  assert.equal(navigationSectionLabel({ citation: "36-53", citations: ["36-53"] }), "§ 53");
+  assert.equal(navigationSectionLabel({ citation: null, citations: ["36-53", "36-54", "36-93"] }), "§§ 53-93");
 });
 
 test("recognizes subsection markers and safely renders linked legal references", () => {

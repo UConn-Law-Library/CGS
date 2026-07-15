@@ -1,13 +1,15 @@
-import { mergeSearchResults, searchDocuments } from "./search.js";
+import { mergeSearchResults, searchDocumentBatch } from "./search.js";
 
 export function createSearchState({ query, limit = 50, total = 0 } = {}) {
-  return { query, limit, total, processed: 0, results: [] };
+  return { query, limit, total, processed: 0, totalMatches: 0, supplementUnavailable: false, results: [] };
 }
 
 export function addShardToSearch(state, shard) {
   const documents = shard.documents.map((document) => ({ ...document, title: shard.title }));
-  const matches = searchDocuments(documents, state.query, { limit: state.limit });
-  state.results = mergeSearchResults(state.results, matches, { limit: state.limit });
+  const batch = searchDocumentBatch(documents, state.query, { limit: state.limit });
+  state.results = mergeSearchResults(state.results, batch.results, { limit: state.limit });
+  state.totalMatches += batch.totalMatches;
+  state.supplementUnavailable ||= Boolean(shard.supplementUnavailable);
   state.processed += 1;
   return state;
 }
@@ -18,6 +20,8 @@ export function searchUpdate(requestId, state, complete = false) {
     requestId,
     processed: state.processed,
     total: state.total,
+    totalMatches: state.totalMatches,
+    supplementUnavailable: state.supplementUnavailable,
     results: state.results
   };
 }

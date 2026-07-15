@@ -1,4 +1,4 @@
-import { mergeSearchResults, searchDocuments } from "./search.js";
+import { compileSearchQuery, mergeSearchResults, searchDocumentBatch } from "./search.js";
 
 function abortError() {
   return new DOMException("Search cancelled", "AbortError");
@@ -31,6 +31,7 @@ export class ProgressiveSearchClient {
 
   async search(query, { titleIds, limit = 50, onProgress, signal } = {}) {
     if (signal?.aborted) throw abortError();
+    compileSearchQuery(query);
     const manifest = await this.#repository.init();
     const ids = titleIds?.length ? titleIds : manifest.shards.map((shard) => shard.titleId);
     if (signal?.aborted) throw abortError();
@@ -60,16 +61,22 @@ export class ProgressiveSearchClient {
 
   async #searchInline(query, ids, { limit, onProgress, signal }) {
     let results = [];
+    let totalMatches = 0;
+    let supplementUnavailable = false;
     await this.#repository.loadTitles(ids, {
       signal,
       onTitle(shard, progress) {
         const documents = shard.documents.map((document) => ({ ...document, title: shard.title }));
-        results = mergeSearchResults(results, searchDocuments(documents, query, { limit }), { limit });
-        onProgress?.({ ...progress, results, complete: false });
+        const batch = searchDocumentBatch(documents, query, { limit });
+        results = mergeSearchResults(results, batch.results, { limit });
+        totalMatches += batch.totalMatches;
+        supplementUnavailable ||= Boolean(shard.supplementUnavailable);
+        onProgress?.({ ...progress, results, totalMatches, supplementUnavailable, complete: false });
       }
     });
-    onProgress?.({ completed: ids.length, total: ids.length, results, complete: true });
-    return results;
+    const outcome = { results, totalMatches, supplementUnavailable };
+    onProgress?.({ completed: ids.length, total: ids.length, ...outcome, complete: true });
+    return outcome;
   }
 
   #handleMessage(message) {
@@ -78,11 +85,20 @@ export class ProgressiveSearchClient {
     const progress = {
       completed: message.processed,
       total: message.total,
+      totalMatches: message.totalMatches,
+      supplementUnavailable: message.supplementUnavailable,
       results: message.results,
       complete: message.type === "complete"
     };
     pending.onProgress?.(progress);
-    if (message.type === "complete") this.#settle(message.requestId, { resolve: pending.resolve, value: message.results });
+    if (message.type === "complete") this.#settle(message.requestId, {
+      resolve: pending.resolve,
+      value: {
+        results: message.results,
+        totalMatches: message.totalMatches,
+        supplementUnavailable: message.supplementUnavailable
+      }
+    });
   }
 
   #handleWorkerError(error) {

@@ -237,7 +237,7 @@ function statuteChapterColumn(title, selected = null) {
     label: `Chapters in ${titleLabel(title)}`,
     className: "chapters-column",
     heading: `<p class="eyebrow">${escapeHtml(titleLabel(title))}</p><strong>Chapters</strong>`,
-    content: railList(title.chapters.map((chapter) => `<li><a href="${escapeHtml(chapterRoute(title, chapter))}"${selected?.id === chapter.id ? ` aria-current="page"` : ""}><strong>${escapeHtml(chapterLabel(chapter))}</strong><span>${escapeHtml(chapter.name)}</span><small>${chapter.sectionCount} provisions</small></a></li>`))
+    content: railList(title.chapters.map((chapter) => `<li><a href="${escapeHtml(chapterRoute(title, chapter))}"${selected?.id === chapter.id ? ` aria-current="page"` : ""}><strong>${escapeHtml(chapterLabel(chapter))}</strong><span>${escapeHtml(chapter.name)}</span><small>${chapter.sectionCount} provision${chapter.sectionCount === 1 ? "" : "s"}</small></a></li>`))
   };
 }
 
@@ -402,7 +402,11 @@ function titleLabel(title) {
 }
 
 function chapterLabel(chapter) {
-  return `Chapter ${String(chapter.number).replace(/^0+(?=\d)/, "")}`;
+  const number = String(chapter.number);
+  if (number.startsWith("former-")) {
+    return `Former Chapter ${number.slice("former-".length).replace(/^0+(?=\d)/, "")}`;
+  }
+  return `Chapter ${number.replace(/^0+(?=\d)/, "")}`;
 }
 
 function sectionLabel(section) {
@@ -853,11 +857,12 @@ function renderTitle(catalog, title) {
   setDocumentTitle(titleLabel(title));
   const mainContent = `<main class="browse-page application-main" id="main-content">
     ${breadcrumbs([{ label: "Titles", href: titlesRouteHref() }, { label: titleLabel(title) }])}
-    <div class="browse-heading"><div><p class="eyebrow">${title.chapters.length} chapters</p><h1>${escapeHtml(titleLabel(title))} — ${escapeHtml(title.name)}</h1></div><a href="${escapeHtml(title.sourceUrl)}">Official title source</a></div>
-    <ol class="chapter-list">${title.chapters.map((chapter) => `<li><a href="${escapeHtml(chapterRoute(title, chapter))}"><strong>${escapeHtml(chapterLabel(chapter))}</strong><span>${escapeHtml(chapter.name)}</span><small>${chapter.sectionCount} provision${chapter.sectionCount === 1 ? "" : "s"}</small></a></li>`).join("")}</ol>
+    <div class="browse-heading"><div><p class="eyebrow">${title.chapters.length} chapter${title.chapters.length === 1 ? "" : "s"}</p><h1>${escapeHtml(titleLabel(title))} — ${escapeHtml(title.name)}</h1></div><a href="${escapeHtml(title.sourceUrl)}">Official title source</a></div>
+    <p class="desktop-only">Choose a chapter from the chapters column.</p>
+    <ol class="chapter-list mobile-only">${title.chapters.map((chapter) => `<li><a href="${escapeHtml(chapterRoute(title, chapter))}"><strong>${escapeHtml(chapterLabel(chapter))}</strong><span>${escapeHtml(chapter.name)}</span><small>${chapter.sectionCount} provision${chapter.sectionCount === 1 ? "" : "s"}</small></a></li>`).join("")}</ol>
   </main>`;
   app.innerHTML = applicationShell({
-    contextualNavigation: [statuteTitleColumn(catalog, title)],
+    contextualNavigation: [statuteTitleColumn(catalog, title), statuteChapterColumn(title)],
     mainContent,
     columnCount: contextualColumnCount("statutes", { kind: "title" }),
     mobilePresentationMode: "drilldown"

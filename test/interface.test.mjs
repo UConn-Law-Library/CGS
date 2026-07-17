@@ -21,6 +21,7 @@ test("shared application shell provides contextual rails and mobile presentation
   assert.match(appSource, /function applicationShell\(\{[\s\S]*contextualNavigation = \[\],[\s\S]*mainContent,[\s\S]*columnCount = contextualNavigation\.length,[\s\S]*mobilePresentationMode = "focused"/);
   assert.match(appSource, /class="application-shell mobile-\$\{escapeHtml\(mobilePresentationMode\)\}" data-context-columns="\$\{columnCount\}"/);
   assert.match(appSource, /statuteTitleColumn\(catalog, title\)/);
+  assert.match(appSource, /contextualNavigation: \[statuteTitleColumn\(catalog, title\), statuteChapterColumn\(title\)\]/);
   assert.match(appSource, /statuteChapterColumn\(title, chapter\)/);
   assert.match(appSource, /statuteSectionColumn\(title, chapter, chapterNavigation, selected, changeBySection\)/);
   assert.match(stylesSource, /\.context-list a\[aria-current="page"\]/);

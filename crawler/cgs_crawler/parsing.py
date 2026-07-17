@@ -17,6 +17,7 @@ SECTION_KEY_TOKEN_RE = re.compile(SECTION_KEY_PATTERN, re.IGNORECASE)
 SECTION_KEY_PART_RE = re.compile(r"^(.*-)(\d+)([a-z]*)$", re.IGNORECASE)
 SECTION_FRAGMENT_LINK_RE = re.compile(r"#sec[_-]?([0-9]+[a-z]*-[0-9]+[a-z]*(?:-[0-9]+[a-z]*)?)", re.IGNORECASE)
 REPEALED_RE = re.compile(r"\bare repealed\b", re.IGNORECASE)
+FORMER_CHAPTER_RE = re.compile(r"\bformerly published as chapter\s+(\d+[a-z]*)\b", re.IGNORECASE)
 MAX_GROUP_EXPANSION = 5000
 
 SECTION_STATUS_PATTERNS = (
@@ -131,6 +132,33 @@ def extract_chapter_links(html: str, page_url: str) -> List[Tuple[str, str, str,
         return (int(match.group(1)), len(suffix), suffix)
 
     return sorted(chapters, key=order)
+
+
+def extract_inline_title_chapter(
+    html: str,
+    page_url: str,
+    expected_title_key: str,
+) -> Optional[Tuple[str, str, str, str]]:
+    """Represent provisions published directly on a title page as a former chapter.
+
+    Current CGA examples include Titles 4C and 39: they have provision anchors but
+    no chapter links, and their notes identify the provisions' former chapters.
+    Requiring that official note keeps this fallback from inventing chapter identities.
+    """
+    if not extract_section_links(html, page_url, expected_title_key=expected_title_key):
+        return None
+    text = BeautifulSoup(html, "html.parser").get_text(" ", strip=True)
+    match = FORMER_CHAPTER_RE.search(text)
+    if not match:
+        return None
+    number = match.group(1).lower()
+    display_number = number.lstrip("0") or "0"
+    return (
+        f"former-{number}",
+        f"Former Chapter {display_number}",
+        "Repealed and obsolete provisions",
+        normalize_url(page_url),
+    )
 
 
 def _section_key_from_heading(label: str) -> str:

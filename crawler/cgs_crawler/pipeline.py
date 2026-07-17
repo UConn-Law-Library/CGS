@@ -13,6 +13,7 @@ from .fetch import Fetcher
 from .parsing import (
     attach_section_content,
     extract_chapter_links,
+    extract_inline_title_chapter,
     extract_section_links,
     extract_title_links,
     normalize_title_key,
@@ -157,7 +158,13 @@ def crawl(config: CrawlConfig, *, fetcher: Optional[Fetcher] = None) -> Dict[str
             }
             if config.edition == "supplement":
                 title["supplement_year"] = config.supplement_year
-            for chapter_key, chapter_label, chapter_name, chapter_url in extract_chapter_links(fetcher.fetch(url), url):
+            title_html = fetcher.fetch(url)
+            chapter_links = extract_chapter_links(title_html, url)
+            if not chapter_links:
+                inline_chapter = extract_inline_title_chapter(title_html, url, title_key)
+                if inline_chapter:
+                    chapter_links = [inline_chapter]
+            for chapter_key, chapter_label, chapter_name, chapter_url in chapter_links:
                 chapter: Dict[str, object] = {
                     "chapter_key": chapter_key,
                     "label": chapter_label,
@@ -165,7 +172,7 @@ def crawl(config: CrawlConfig, *, fetcher: Optional[Fetcher] = None) -> Dict[str
                     "url": chapter_url,
                     "sections": [],
                 }
-                chapter_html = fetcher.fetch(chapter_url)
+                chapter_html = title_html if chapter_url == url else fetcher.fetch(chapter_url)
                 sections = extract_section_links(chapter_html, chapter_url, expected_title_key=title_key)
                 attach_section_content(chapter_html, sections)
                 chapter["sections"] = sections

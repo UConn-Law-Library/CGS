@@ -3,15 +3,15 @@
   "generatedAt": "2026-07-14T00:27:33Z",
   "counts": {
     "titles": 81,
-    "chapters": 1141,
-    "sections": 33013,
-    "searchDocuments": 33013
+    "chapters": 1143,
+    "sections": 33017,
+    "searchDocuments": 33017
   },
   "artifacts": [
     {
       "path": "catalog.json",
-      "bytes": 336562,
-      "sha256": "d23d8dc7b1875cc02d0fe35c8807fcd972096f62908bf986ec01d9374e8c37c8"
+      "bytes": 337162,
+      "sha256": "0c2c0e04b2ea91d2e66621a23c5f094fac6c736cdf6c9b14b00b0abe5fc0af48"
     },
     {
       "path": "chapters/001.json",
@@ -5719,9 +5719,19 @@
       "sha256": "bd45c5df2e7dbb8e50c1243652f780f8d0edc54868fc6d2045ab8a7ade552a80"
     },
     {
+      "path": "chapters/former-58.json",
+      "bytes": 2101,
+      "sha256": "52110b125c1498d5e0d06b70441dee00ce4d62baf5a65f4cc990926f49369d54"
+    },
+    {
+      "path": "chapters/former-695.json",
+      "bytes": 7045,
+      "sha256": "00edb8f41ff8471a6d5bea6998621ffd6a8dc9479f004928f5e57bcdcdb124e4"
+    },
+    {
       "path": "search/manifest.json",
       "bytes": 8219,
-      "sha256": "d216b5812d2276e7b090e50dde8e820d93a8b962f77d8d5730e1b8d1c0e23d89"
+      "sha256": "deb5c293c7de514100b6d02db9b67a5c5ab65a90ce3a5c3f7a13de86ba7d2f81"
     },
     {
       "path": "search/title-01.json",
@@ -5760,8 +5770,8 @@
     },
     {
       "path": "search/title-04c.json",
-      "bytes": 181,
-      "sha256": "075219bd92cdaab484876eb5a65ad7ffa1b7d83457318f6ae4f45d5c58e338d6"
+      "bytes": 1460,
+      "sha256": "7e0e73036499fc1d32e72f797206e5931ffc54e13f4e51d9614c5943817c7831"
     },
     {
       "path": "search/title-04d.json",
@@ -6005,8 +6015,8 @@
     },
     {
       "path": "search/title-39.json",
-      "bytes": 147,
-      "sha256": "45e472a9d8af8c42b20adcaeb5ddcc8dfa837dcd4a1a6d20fd069e523d63dd62"
+      "bytes": 8154,
+      "sha256": "267e33d8432597356acaa3f67abce96092d258eafbec6cbeec5281e07c5413a9"
     },
     {
       "path": "search/title-40.json",

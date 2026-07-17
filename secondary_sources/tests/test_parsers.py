@@ -77,6 +77,47 @@ class ParserTests(unittest.TestCase):
         self.assertEqual(headings[0]["items"][0]["r"], [["14-1", "14-1"]])
         self.assertEqual(headings[0]["items"][1]["see"], [["TRANSPORTATION", "Registration"]])
 
+    def test_index_parser_links_same_heading_targets_and_preserves_labels(self):
+        parser = IndexParser()
+        parser.feed_line(0, "UNIFORM COMMERCIAL CODE")
+        parser.feed_line(0, "Accessions\u2014See Secured transactions, this heading.")
+        parser.feed_line(
+            0,
+            "Accounts\u2014See Bank deposits and collections, and Secured transactions, this heading.",
+        )
+        parser.feed_line(
+            0,
+            "Bill of exchange\u2014See Negotiable instruments, this heading, at Drafts.",
+        )
+        parser.feed_line(
+            0,
+            "Review\u2014See Occupational Safety and Health Act, this heading, subheading Review commission.",
+        )
+        items = parser.finish()[0]["items"]
+        self.assertEqual(
+            items[0]["see"],
+            [["UNIFORM COMMERCIAL CODE", "Secured transactions", "Secured transactions"]],
+        )
+        self.assertEqual(
+            items[1]["see"],
+            [
+                ["UNIFORM COMMERCIAL CODE", "Bank deposits and collections", "Bank deposits and collections"],
+                ["UNIFORM COMMERCIAL CODE", "Secured transactions", "Secured transactions"],
+            ],
+        )
+        self.assertEqual(
+            items[2]["see"],
+            [["UNIFORM COMMERCIAL CODE", "Negotiable instruments", "Negotiable instruments"]],
+        )
+        self.assertEqual(
+            items[3]["see"],
+            [[
+                "UNIFORM COMMERCIAL CODE",
+                "Occupational Safety and Health Act",
+                "Occupational Safety and Health Act",
+            ]],
+        )
+
     def test_index_parser_splits_and_links_ucc_entries(self):
         parser = IndexParser()
         parser.feed_line(0, "UNIFORM COMMERCIAL CODE")

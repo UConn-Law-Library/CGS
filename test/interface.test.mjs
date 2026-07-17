@@ -38,3 +38,12 @@ test("settings links to a provenance-rich About page", () => {
   assert.match(appSource, /if \(route\.kind === "about"\) return renderAbout\(catalog\)/);
   assert.match(stylesSource, /\.about-source-list \{ display: grid/);
 });
+
+test("statute metadata shares one populated Information and References region", () => {
+  assert.match(appSource, /<h2 id="information-references-heading">Information &amp; References<\/h2>/);
+  assert.match(appSource, /renderInformationReferences\(section, maps, secondaryContext, change\)/);
+  assert.match(appSource, /renderNotes\([^\n]+"Source"[\s\S]*renderSecondaryContext\(secondaryContext\)/);
+  assert.doesNotMatch(appSource, /Official cross-references|Related legal data/);
+  assert.match(stylesSource, /\.information-reference-groups > details \{ border-top: 1px solid var\(--line\); \}/);
+  assert.doesNotMatch(stylesSource, /\.secondary-sources \{ margin-top:/);
+});

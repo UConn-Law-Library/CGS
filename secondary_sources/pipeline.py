@@ -195,7 +195,11 @@ def canonicalize_index(headings, locations):
                 "text": item.get("t") or "",
                 "references": references,
                 "see": [
-                    {"heading": pair[0], **({"subheading": pair[1]} if len(pair) > 1 and pair[1] else {})}
+                    {
+                        "heading": pair[0],
+                        **({"subheading": pair[1]} if len(pair) > 1 and pair[1] else {}),
+                        **({"label": pair[2]} if len(pair) > 2 and pair[2] else {}),
+                    }
                     for pair in item.get("see", [])
                 ],
             }

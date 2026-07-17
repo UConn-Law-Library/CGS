@@ -5,9 +5,16 @@ import test from "node:test";
 const appSource = await readFile(new URL("../src/app.js", import.meta.url), "utf8");
 const stylesSource = await readFile(new URL("../src/styles.css", import.meta.url), "utf8");
 
-test("home statute browsing uses the application route instead of an unknown hash route", () => {
-  assert.match(appSource, /<a href="#\/" data-browse-statutes>/);
+test("home statute browsing uses the dedicated compact titles route", () => {
+  assert.match(appSource, /<a href="\$\{titlesRouteHref\(\)\}">/);
   assert.doesNotMatch(appSource, /href="#browse-titles"/);
+});
+
+test("dense shell exposes bookmark count and device-local activity", () => {
+  assert.match(appSource, /class="nav-badge"/);
+  assert.match(appSource, /Recently viewed/);
+  assert.match(appSource, /Recent bookmarks/);
+  assert.match(appSource, /data-clear-recents/);
 });
 
 test("index letters render collapsed topics, dedicated large topics, and repealed filtering", () => {

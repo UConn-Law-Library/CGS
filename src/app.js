@@ -10,7 +10,8 @@ import {
   parseRoute,
   routeHref,
   searchRouteHref,
-  sectionRouteKey
+  sectionRouteKey,
+  titlesRouteHref
 } from "./routes.js";
 import {
   escapeHtml,
@@ -82,8 +83,9 @@ function activeDestination(route = parseRoute(location)) {
   return "statutes";
 }
 
-function navLink({ href, id, icon, label }, active) {
-  return `<a href="${href}"${active === id ? ` aria-current="page"` : ""}><span aria-hidden="true">${icon}</span><span>${label}</span></a>`;
+function navLink({ href, id, icon, label, badge = null }, active) {
+  const badgeMarkup = badge === null ? "" : `<span class="nav-badge" aria-label="${badge} saved bookmark${badge === 1 ? "" : "s"}">${badge}</span>`;
+  return `<a href="${href}"${active === id ? ` aria-current="page"` : ""}><span aria-hidden="true">${icon}</span><span>${label}</span>${badgeMarkup}</a>`;
 }
 
 function installStatus(state) {
@@ -145,6 +147,7 @@ function updatePwaControls() {
 function settingsPanel() {
   const preferences = deviceState.preferences();
   const bookmarkCount = deviceState.bookmarks().length;
+  const recentCount = deviceState.recents().length;
   return `<section class="settings-panel" role="dialog" aria-label="Settings" data-settings-panel hidden>
     <div class="settings-heading"><strong>Settings</strong><button type="button" class="icon-button" data-close-settings aria-label="Close settings">×</button></div>
     <div class="setting-group"><span>Theme</span><div class="segmented" role="group" aria-label="Theme">
@@ -161,6 +164,7 @@ function settingsPanel() {
     <p class="settings-note" data-pwa-status role="status" aria-live="polite">${escapeHtml(offlineStatus(pwaState))}</p>
     <p class="settings-note" data-storage-status>${escapeHtml(storageStatus(pwaState))}</p>
     <button type="button" class="settings-action" data-clear-bookmarks${bookmarkCount ? "" : " disabled"}>Clear bookmarks <small>${bookmarkCount ? `${bookmarkCount} saved` : "None saved"}</small></button>
+    <button type="button" class="settings-action" data-clear-recents${recentCount ? "" : " disabled"}>Clear recent history <small>${recentCount ? `${recentCount} item${recentCount === 1 ? "" : "s"}` : "No recent history"}</small></button>
     <a class="settings-action" href="#/about">About this app <small>Sources, coverage, and project information</small></a>
     <a class="settings-action" href="./discover/">Static discovery index <small>Script-free browsing</small></a>
   </section>`;
@@ -170,6 +174,7 @@ function siteHeader() {
   const route = parseRoute(location);
   const active = activeDestination(route);
   const searchValue = route.kind === "search" ? route.query ?? "" : "";
+  const bookmarkCount = deviceState.bookmarks().length;
   return `<header class="site-header">
     <div class="header-bar">
       <a class="brand" href="#/"><span class="brand-mark" aria-hidden="true">§</span><span>Connecticut General Statutes</span></a>
@@ -177,7 +182,7 @@ function siteHeader() {
         ${navLink({ href: "#/", id: "statutes", icon: "§", label: "Statutes" }, active)}
         ${navLink({ href: "#/index", id: "index", icon: "A–Z", label: "Index" }, active)}
         ${navLink({ href: "#/infractions", id: "infractions", icon: "⚖", label: "Infractions" }, active)}
-        ${navLink({ href: "#/bookmarks", id: "bookmarks", icon: "★", label: "Bookmarks" }, active)}
+        ${navLink({ href: "#/bookmarks", id: "bookmarks", icon: "★", label: "Bookmarks", badge: bookmarkCount }, active)}
         <button type="button" data-open-settings aria-expanded="false"${active === "settings" ? ` aria-current="page"` : ""}><span aria-hidden="true">⚙</span><span>Settings</span></button>
       </nav>
     </div>
@@ -529,7 +534,22 @@ function renderSearchResults(matches, results) {
   }).join("");
 }
 
+function activityTypeLabel(type) {
+  if (type === "index") return "Index";
+  if (type === "infraction") return "Infraction";
+  return "Statute";
+}
+
+function renderActivityList(items, emptyMessage) {
+  if (!items.length) return `<p class="activity-empty">${escapeHtml(emptyMessage)}</p>`;
+  return `<ol class="activity-list">${items.map((item) => `<li><a href="${escapeHtml(item.href)}">
+    <span>${activityTypeLabel(item.type)}</span><strong>${escapeHtml(item.title)}</strong>${item.subtitle ? `<small>${escapeHtml(item.subtitle)}</small>` : ""}
+  </a></li>`).join("")}</ol>`;
+}
+
 async function renderHome(catalog) {
+  const recents = deviceState.recents().slice(0, 5);
+  const bookmarks = deviceState.bookmarks().slice(0, 5);
   setDocumentTitle();
   app.innerHTML = `${siteHeader()}<main class="home-page" id="main-content">
     <header class="home-intro">
@@ -538,16 +558,25 @@ async function renderHome(catalog) {
       <p>Browse and search the statutes, the official subject index, and the Judicial Branch infraction schedule. Save frequently used material on this device.</p>
     </header>
     <section class="destination-grid" aria-label="Explore legal materials">
-      <a href="#/" data-browse-statutes><span aria-hidden="true">§</span><strong>Browse statutes</strong><small>Navigate by title, chapter, or section.</small></a>
+      <a href="${titlesRouteHref()}"><span aria-hidden="true">§</span><strong>Browse statutes</strong><small>Navigate by title, chapter, or section.</small></a>
       <a href="#/index"><span aria-hidden="true">A–Z</span><strong>Subject index</strong><small>Find statutes by topic in the official LCO index.</small></a>
       <a href="#/infractions"><span aria-hidden="true">⚖</span><strong>Infraction schedule</strong><small>Review violations, amounts, and linked statutes.</small></a>
       <a href="#/bookmarks"><span aria-hidden="true">★</span><strong>Bookmarks</strong><small>Return to sections and infractions saved on this device.</small></a>
     </section>
-    <section class="catalog" id="browse-titles" aria-labelledby="browse-heading">
-      <div class="section-heading"><div><p class="eyebrow">${catalog.counts.chapters.toLocaleString()} chapters</p><h2 id="browse-heading">Statute titles</h2></div><p>${catalog.counts.sections.toLocaleString()} provisions</p></div>
-      <div class="title-grid">${catalog.titles.map((title) => `<a class="title-card" href="${escapeHtml(titleRoute(title))}"><p>${escapeHtml(titleLabel(title))}</p><h3>${escapeHtml(title.name)}</h3><span>${title.chapters.length} chapter${title.chapters.length === 1 ? "" : "s"}</span></a>`).join("")}</div>
+    <section class="home-activity" aria-label="Your activity">
+      <div><div class="section-heading"><div><p class="eyebrow">On this device</p><h2>Recently viewed</h2></div>${recents.length ? `<button type="button" class="text-button" data-clear-recents>Clear</button>` : ""}</div>${renderActivityList(recents, "Sections, index topics, and infractions you open will appear here.")}</div>
+      <div><div class="section-heading"><div><p class="eyebrow">Saved</p><h2>Recent bookmarks</h2></div>${bookmarks.length ? `<a href="#/bookmarks">View all</a>` : ""}</div>${renderActivityList(bookmarks, "Your most recently saved bookmarks will appear here.")}</div>
     </section>
   </main><footer>Unofficial access copy. Verify legal text with the Connecticut General Assembly.</footer>`;
+}
+
+function renderTitles(catalog) {
+  setDocumentTitle("Titles");
+  app.innerHTML = `${siteHeader()}<main class="browse-page titles-page" id="main-content">
+    <header class="browse-heading"><div><p class="eyebrow">${catalog.counts.chapters.toLocaleString()} chapters · ${catalog.counts.sections.toLocaleString()} provisions</p><h1>Statute titles</h1></div></header>
+    <ol class="title-list">${catalog.titles.map((title) => `<li><a href="${escapeHtml(titleRoute(title))}"><strong>${escapeHtml(titleLabel(title))}</strong><span>${escapeHtml(title.name)}</span><small>${title.chapters.length} chapter${title.chapters.length === 1 ? "" : "s"}</small></a></li>`).join("")}</ol>
+  </main><footer>Unofficial access copy. Verify legal text with the Connecticut General Assembly.</footer>`;
+  window.scrollTo({ top: 0 });
 }
 
 function formatSnapshotDate(value) {
@@ -1141,6 +1170,7 @@ async function renderCurrentRoute() {
     const route = parseRoute(location);
     if (sequence !== renderSequence) return;
     if (route.kind === "home") return renderHome(catalog);
+    if (route.kind === "titles") return renderTitles(catalog);
     if (route.kind === "not-found") return renderNotFound();
     if (route.kind === "search") return renderSearchPage(catalog, route);
     if (route.kind === "infractions") return renderInfractions(route);
@@ -1309,6 +1339,16 @@ document.addEventListener("click", async (event) => {
     }
     return;
   }
+  const clearRecents = event.target.closest("[data-clear-recents]");
+  if (clearRecents) {
+    deviceState.clearRecents();
+    if (parseRoute(location).kind === "home") renderHome(await catalogPromise);
+    else {
+      clearRecents.disabled = true;
+      clearRecents.querySelector("small")?.replaceChildren("No recent history");
+    }
+    return;
+  }
   const removeBookmark = event.target.closest("[data-remove-bookmark]");
   if (removeBookmark) {
     deviceState.removeBookmark(removeBookmark.dataset.removeBookmark);
@@ -1326,6 +1366,11 @@ document.addEventListener("click", async (event) => {
     });
     bookmarkButton.setAttribute("aria-pressed", String(saved));
     bookmarkButton.textContent = saved ? "★ Saved" : "☆ Bookmark";
+    document.querySelectorAll(".nav-badge").forEach((badge) => {
+      const count = deviceState.bookmarks().length;
+      badge.textContent = String(count);
+      badge.setAttribute("aria-label", `${count} saved bookmark${count === 1 ? "" : "s"}`);
+    });
     const status = bookmarkButton.closest(".provision")?.querySelector(".action-status");
     if (status) status.textContent = saved ? "Bookmark saved on this device." : "Bookmark removed.";
     return;

@@ -10,7 +10,8 @@ import {
   parseRoute,
   routeHref,
   searchRouteHref,
-  sectionRouteKey
+  sectionRouteKey,
+  titlesRouteHref
 } from "../src/routes.js";
 import {
   escapeHtml,
@@ -80,6 +81,8 @@ test("builds and parses index browse, search, and topic routes", () => {
 });
 
 test("builds and parses mobile destination routes", () => {
+  assert.equal(titlesRouteHref(), "#/titles");
+  assert.deepEqual(parseRoute({ hash: titlesRouteHref() }), { kind: "titles" });
   assert.equal(searchRouteHref("public records"), "#/search?q=public%20records");
   assert.deepEqual(parseRoute({ hash: "#/search?q=public%20records" }), {
     kind: "search", query: "public records"

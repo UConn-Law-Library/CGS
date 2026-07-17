@@ -9,6 +9,7 @@ from crawler.cgs_crawler.pipeline import crawl
 
 TITLE_URL = "https://www.cga.ct.gov/current/pub/title_01.htm"
 CHAPTER_URL = "https://www.cga.ct.gov/current/pub/chap_001.htm"
+TITLE_4C_URL = "https://www.cga.ct.gov/current/pub/title_04c.htm"
 
 
 class MappingFetcher:
@@ -30,6 +31,30 @@ def pages(chapter_html):
 
 
 class PipelineTests(unittest.TestCase):
+    def test_title_level_provisions_are_crawled_as_their_former_chapter(self):
+        title_html = (Path(__file__).parent / "fixtures" / "title_inline_former_chapter.html").read_text(encoding="utf-8")
+        title_pages = {
+            CURRENT_TITLES_URL: '<a href="title_04c.htm">Title 4C</a><a href="title_04c.htm">Business Regulation</a>',
+            TITLE_4C_URL: title_html,
+        }
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            config = CrawlConfig(
+                output_dir=root / "legacy",
+                snapshot_dir=root / "snapshots",
+                only_titles=frozenset({"04c"}),
+                generated_at="2026-01-01T00:00:00Z",
+                fetch=FetchPolicy(delay=0),
+            )
+            result = crawl(config, fetcher=MappingFetcher(title_pages))
+            self.assertEqual(result["counts"], {"titles": 1, "chapters": 1, "sections": 2})
+            title = json.loads((root / "legacy" / "title_04c.json").read_text(encoding="utf-8"))
+            chapter = title["chapters"][0]
+            self.assertEqual(chapter["chapter_key"], "former-58")
+            self.assertEqual(chapter["sections"][0]["section_keys"], ["4c-1", "4c-2"])
+            self.assertEqual(chapter["sections"][0]["content"]["status"], "repealed")
+            self.assertEqual(chapter["sections"][1]["content"]["status"], "obsolete")
+
     def test_pipeline_writes_valid_legacy_adapter_files_transactionally(self):
         chapter = (
             '<p><a href="chap_001.htm#sec_1-1">Sec. 1-1. Construction.</a></p>'

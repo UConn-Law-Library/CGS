@@ -14,7 +14,7 @@ test("aggregates manifest-derived heading counts across letter shards", () => {
 
 test("selects the correct number of contextual columns for each route depth", () => {
   assert.equal(contextualColumnCount("statutes", { kind: "home" }), 1);
-  assert.equal(contextualColumnCount("statutes", { kind: "title" }), 1);
+  assert.equal(contextualColumnCount("statutes", { kind: "title" }), 2);
   assert.equal(contextualColumnCount("statutes", { kind: "chapter" }), 3);
   assert.equal(contextualColumnCount("statutes", { kind: "section" }), 3);
   assert.equal(contextualColumnCount("index", { letter: null }), 1);

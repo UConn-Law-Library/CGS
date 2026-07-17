@@ -75,7 +75,7 @@ function renderDiscoveryIndex(catalog, siteUrl) {
     description: "Static title and chapter index for the Connecticut General Statutes.",
     siteUrl,
     body: `<header class="discovery-intro"><p class="eyebrow">Static index</p><h1>Browse Connecticut General Statutes</h1><p>This index works without JavaScript and links to every title and chapter.</p></header>
-    <section class="catalog" aria-labelledby="titles-heading"><div class="section-heading"><div><p class="eyebrow">${catalog.counts.chapters.toLocaleString("en-US")} chapters</p><h2 id="titles-heading">Titles</h2></div><p>${catalog.counts.sections.toLocaleString("en-US")} provisions</p></div>
+    <section class="catalog" aria-labelledby="titles-heading"><div class="section-heading"><div><p class="eyebrow">${catalog.counts.chapters.toLocaleString("en-US")} chapters</p><h2 id="titles-heading">Titles</h2></div><p>${catalog.counts.sections.toLocaleString("en-US")} sections</p></div>
     <div class="title-grid">${catalog.titles.map((title) => `<a class="title-card" href="${escapeHtml(relativeDirectory(file, titleDiscoveryPath(title)))}"><p>${escapeHtml(label("Title", title.number))}</p><h3>${escapeHtml(title.name)}</h3><span>${title.chapters.length} chapter${title.chapters.length === 1 ? "" : "s"}</span></a>`).join("")}</div></section>`
   });
 }
@@ -93,7 +93,7 @@ function renderTitlePage(title, siteUrl) {
       { label: titleName }
     ],
     body: `<header class="discovery-intro"><p class="eyebrow">${title.chapters.length} chapters</p><h1>${escapeHtml(titleName)} — ${escapeHtml(title.name)}</h1><p><a href="${escapeHtml(title.sourceUrl)}">Official title source</a></p></header>
-    <ol class="chapter-list">${title.chapters.map((chapter) => `<li><a href="${escapeHtml(relativeDirectory(file, chapterDiscoveryPath(title, chapter)))}"><strong>${escapeHtml(label("Chapter", chapter.number))}</strong><span>${escapeHtml(chapter.name)}</span><small>${chapter.sectionCount} provision${chapter.sectionCount === 1 ? "" : "s"}</small></a></li>`).join("")}</ol>`
+    <ol class="chapter-list">${title.chapters.map((chapter) => `<li><a href="${escapeHtml(relativeDirectory(file, chapterDiscoveryPath(title, chapter)))}"><strong>${escapeHtml(label("Chapter", chapter.number))}</strong><span>${escapeHtml(chapter.name)}</span><small>${chapter.sectionCount} section${chapter.sectionCount === 1 ? "" : "s"}</small></a></li>`).join("")}</ol>`
   });
 }
 
@@ -112,7 +112,7 @@ function renderChapterPage(title, chapter, siteUrl) {
       { label: titleName, href: relativeDirectory(file, titleDiscoveryPath(title)) },
       { label: chapterName }
     ],
-    body: `<header class="discovery-intro"><p class="eyebrow">${chapter.sections.length} provisions</p><h1>${escapeHtml(chapterName)} — ${escapeHtml(chapter.name)}</h1><p>${escapeHtml(titleName)} — ${escapeHtml(title.name)}</p><p><a href="${escapeHtml(chapter.sourceUrl)}">Official chapter source</a></p></header>
+    body: `<header class="discovery-intro"><p class="eyebrow">${chapter.sections.length} sections</p><h1>${escapeHtml(chapterName)} — ${escapeHtml(chapter.name)}</h1><p>${escapeHtml(titleName)} — ${escapeHtml(title.name)}</p><p><a href="${escapeHtml(chapter.sourceUrl)}">Official chapter source</a></p></header>
     <ol class="section-index">${chapter.sections.map((section) => {
       const reader = `${home}${routeHref({ title: title.number, chapter: chapter.number, section: sectionRouteKey(section) })}`;
       return `<li><h2>${escapeHtml(section.heading)}</h2><p><a href="${escapeHtml(reader)}">Open in the interactive reader</a> <a href="${escapeHtml(section.sourceUrl)}">Official text</a></p></li>`;

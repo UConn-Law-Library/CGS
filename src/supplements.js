@@ -2,6 +2,27 @@ import { comparableNumber } from "./routes.js";
 
 export { applyChapterOverlay } from "./supplement-overlay.js";
 
+const collator = new Intl.Collator("en", { numeric: true, sensitivity: "base" });
+
+export function mergeSupplementTitleChapters(title, supplementTitle, editionYear) {
+  if (!supplementTitle) return title;
+  const knownIds = new Set(title.chapters.map((chapter) => chapter.id));
+  const knownNumbers = new Set(title.chapters.map((chapter) => comparableNumber(chapter.number)));
+  const additions = supplementTitle.chapters
+    .filter((chapter) => !knownIds.has(chapter.id) && !knownNumbers.has(comparableNumber(chapter.number)))
+    .map((chapter) => ({
+      ...chapter,
+      supplementOnly: true,
+      supplementEditionYear: editionYear
+    }));
+  if (!additions.length) return title;
+  return {
+    ...title,
+    chapters: [...title.chapters, ...additions].sort((left, right) =>
+      collator.compare(comparableNumber(left.number), comparableNumber(right.number)))
+  };
+}
+
 export function mergeSupplementSearchShard(baseShard, supplementShard) {
   if (!supplementShard) return baseShard;
   if (baseShard.title?.id !== supplementShard.title?.id) throw new Error("Supplement search shard does not match base title");
@@ -52,10 +73,11 @@ export class SupplementRepository {
     return this.#manifests.get(entry.editionYear);
   }
 
-  async loadChapter(editionYear, chapterNumber) {
+  async loadChapter(editionYear, chapterNumber, titleId = null) {
     const manifest = await this.loadEdition(editionYear);
     const wanted = comparableNumber(chapterNumber);
-    const chapter = manifest.titles
+    const titles = titleId ? manifest.titles.filter((title) => title.id === titleId) : manifest.titles;
+    const chapter = titles
       .flatMap((title) => title.chapters)
       .find((entry) => comparableNumber(entry.number) === wanted);
     if (!chapter) return null;
@@ -64,9 +86,16 @@ export class SupplementRepository {
     return this.#chapters.get(key);
   }
 
-  async loadLatestChapter(chapterNumber) {
+  async loadLatestChapter(chapterNumber, titleId = null) {
     const edition = await this.latestEdition();
-    return { edition, chapter: edition ? await this.loadChapter(edition.editionYear, chapterNumber) : null };
+    return { edition, chapter: edition ? await this.loadChapter(edition.editionYear, chapterNumber, titleId) : null };
+  }
+
+  async loadLatestTitle(titleId) {
+    const edition = await this.latestEdition();
+    if (!edition) return { edition: null, title: null };
+    const manifest = await this.loadEdition(edition.editionYear);
+    return { edition, title: manifest.titles.find((title) => title.id === titleId) ?? null };
   }
 
   async loadSearchTitle(editionYear, titleId) {

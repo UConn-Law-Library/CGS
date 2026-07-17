@@ -27,6 +27,13 @@ test("shared application shell provides contextual rails and mobile presentation
   assert.match(stylesSource, /\.context-list a\[aria-current="page"\]/);
 });
 
+test("supplement-only chapters resolve before reader routing and section labels avoid provision terminology", () => {
+  assert.match(appSource, /titleWithLatestSupplementChapters\(title\)/);
+  assert.match(appSource, /chapterMeta\.supplementOnly \? null/);
+  assert.match(appSource, /That section was not found\./);
+  assert.doesNotMatch(appSource, />[^<`]*provisions?</i);
+});
+
 test("detail pages record recents only after rendering and mobile readers expose a native chapter sheet", () => {
   assert.match(appSource, /deviceState\.recordRecent\(\{[\s\S]*type: "statute"/);
   assert.match(appSource, /deviceState\.recordRecent\(\{[\s\S]*type: "index"/);

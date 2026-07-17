@@ -81,6 +81,15 @@ test("statute metadata shares one populated Information and References region", 
   assert.doesNotMatch(stylesSource, /\.secondary-sources \{ margin-top:/);
 });
 
+test("amended supplement sections offer an accessible inline language comparison", () => {
+  assert.match(appSource, /data-revision-comparison-toggle aria-expanded="false" aria-controls=/);
+  assert.match(appSource, /<ins class="revision-addition">/);
+  assert.match(appSource, /<del class="revision-deletion">/);
+  assert.match(appSource, /revisionComparison\.setAttribute\("aria-expanded", String\(open\)\)/);
+  assert.match(stylesSource, /\.revision-addition \{ color: var\(--addition-ink\); background: var\(--addition-surface\)/);
+  assert.match(stylesSource, /\.revision-deletion \{ color: var\(--deletion-ink\); background: var\(--deletion-surface\); text-decoration-color: currentColor/);
+});
+
 test("print layout removes application chrome and preserves a readable statute body", () => {
   assert.match(stylesSource, /@media print \{[\s\S]*\.context-column[\s\S]*display: none/);
   assert.match(stylesSource, /\.application-main, \.reader-content\.application-main \{ width: 100%;/);

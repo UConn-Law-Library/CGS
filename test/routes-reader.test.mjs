@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import {
+  chapterDisplayLabel,
   comparableNumber,
   findChapter,
   findSection,
@@ -55,6 +56,13 @@ test("builds and parses stable reader routes", () => {
     section: "1-1",
     subsection: "a"
   });
+});
+
+test("formats UCC article identifiers as article labels", () => {
+  assert.equal(chapterDisplayLabel({ number: "art-001" }), "Article 1");
+  assert.equal(chapterDisplayLabel({ number: "art-002a" }), "Article 2A");
+  assert.equal(chapterDisplayLabel({ number: "319aa" }), "Chapter 319aa");
+  assert.equal(chapterDisplayLabel({ number: "former-58" }), "Former Chapter 58");
 });
 
 test("builds and parses index browse, search, and topic routes", () => {

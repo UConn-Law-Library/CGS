@@ -17,6 +17,21 @@ export function comparableNumber(value) {
     .replace(/^0+(?=\d)/, "");
 }
 
+export function chapterDisplayLabel(chapter) {
+  const number = String(chapter?.number ?? chapter ?? "");
+  const article = number.match(/^art[-_](.+)$/i);
+  if (article) {
+    const display = article[1]
+      .replace(/^0+(?=\d)/, "")
+      .replace(/[a-z]+$/i, (suffix) => suffix.toUpperCase());
+    return `Article ${display}`;
+  }
+  if (number.startsWith("former-")) {
+    return `Former Chapter ${number.slice("former-".length).replace(/^0+(?=\d)/, "")}`;
+  }
+  return `Chapter ${number.replace(/^0+(?=\d)/, "")}`;
+}
+
 export function routeHref({ title, chapter, section, subsection } = {}) {
   if (!title) return "#/";
   let route = `#/t/${encodeSegment(title)}`;

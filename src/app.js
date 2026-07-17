@@ -5,6 +5,7 @@ import {
   findChapter,
   findSection,
   findTitle,
+  chapterDisplayLabel,
   infractionsRouteHref,
   indexRouteHref,
   parseRoute,
@@ -13,6 +14,7 @@ import {
   sectionRouteKey,
   titlesRouteHref
 } from "./routes.js";
+import { diffRevisionText } from "./revision-diff.js";
 import {
   escapeHtml,
   extractLegalReferences,
@@ -402,11 +404,7 @@ function titleLabel(title) {
 }
 
 function chapterLabel(chapter) {
-  const number = String(chapter.number);
-  if (number.startsWith("former-")) {
-    return `Former Chapter ${number.slice("former-".length).replace(/^0+(?=\d)/, "")}`;
-  }
-  return `Chapter ${number.replace(/^0+(?=\d)/, "")}`;
+  return chapterDisplayLabel(chapter);
 }
 
 function sectionLabel(section) {
@@ -541,6 +539,34 @@ function renderPreviousRevision(change, maps) {
   </details>`;
 }
 
+function renderRevisionComparison(section, change, maps) {
+  if (!change?.previousSections?.length) return { button: "", panel: "" };
+  const priorYear = change.editionYear - 1;
+  const id = `revision-comparison-${section.id.replace(/[^a-z0-9_-]/gi, "-")}`;
+  const previousText = change.previousSections
+    .map((previous) => previous.content.body.join("\n\n"))
+    .join("\n\n");
+  const currentText = section.content.body.join("\n\n");
+  const segments = diffRevisionText(previousText, currentText);
+  const diff = segments.map((segment) => {
+    const text = renderLinkedText(segment.text, maps);
+    if (segment.type === "insert") return `<ins class="revision-addition">${text}</ins>`;
+    if (segment.type === "delete") return `<del class="revision-deletion">${text}</del>`;
+    return text;
+  }).join("");
+  const showLabel = `Compare with ${priorYear} text`;
+  const hideLabel = "Hide comparison";
+  return {
+    button: `<button type="button" data-revision-comparison-toggle aria-expanded="false" aria-controls="${escapeHtml(id)}" data-show-label="${escapeHtml(showLabel)}" data-hide-label="${escapeHtml(hideLabel)}">${escapeHtml(showLabel)}</button>`,
+    panel: `<section class="revision-comparison" id="${escapeHtml(id)}" hidden aria-labelledby="${escapeHtml(id)}-heading">
+      <header><p class="eyebrow">Language comparison</p><h2 id="${escapeHtml(id)}-heading" tabindex="-1">${change.editionYear} Supplement compared with ${priorYear}</h2><p>Formatting changes may appear as textual changes. Verify language with the official sources.</p></header>
+      <div class="revision-diff-legend" aria-label="Comparison legend"><span class="revision-addition">Added in ${change.editionYear}</span><span class="revision-deletion">Removed from ${priorYear}</span></div>
+      <div class="statute-text revision-diff-text">${diff}</div>
+      ${renderPreviousRevision(change, maps)}
+    </section>`
+  };
+}
+
 function sectionNavigation(title, chapter, sections, selected) {
   const index = sections.indexOf(selected);
   const previous = index > 0 ? sections[index - 1] : null;
@@ -583,6 +609,7 @@ function renderProvision(title, chapter, section, maps, secondaryContext = null,
     subtitle: section.heading,
     href: route
   };
+  const comparison = renderRevisionComparison(section, change, maps);
   return `<article class="provision" id="${escapeHtml(section.id)}">
     <div class="provision-heading">
       <p class="eyebrow">${escapeHtml(change ? supplementLabel(change) : status)}</p>
@@ -590,6 +617,7 @@ function renderProvision(title, chapter, section, maps, secondaryContext = null,
     </div>
     <div class="section-actions" aria-label="Section actions">
       ${bookmarkButton(bookmark)}
+      ${comparison.button}
       <button type="button" data-copy-link="${escapeHtml(route)}">Copy link</button>
       <button type="button" data-share-link="${escapeHtml(route)}" data-share-title="${escapeHtml(section.heading)}">Share</button>
       <a href="${escapeHtml(email)}">Email</a>
@@ -597,8 +625,8 @@ function renderProvision(title, chapter, section, maps, secondaryContext = null,
     </div>
     <p class="action-status" role="status" aria-live="polite"></p>
     <div class="statute-text">${section.content.body.map((paragraph) => renderParagraph(paragraph, maps, title, chapter, section)).join("")}</div>
+    ${comparison.panel}
     ${renderInformationReferences(section, maps, secondaryContext, change)}
-    ${renderPreviousRevision(change, maps)}
   </article>`;
 }
 
@@ -1424,6 +1452,19 @@ document.addEventListener("pointerdown", (event) => {
 });
 
 document.addEventListener("click", async (event) => {
+  const revisionComparison = event.target.closest("[data-revision-comparison-toggle]");
+  if (revisionComparison) {
+    const panel = document.getElementById(revisionComparison.getAttribute("aria-controls"));
+    if (!panel) return;
+    const open = panel.hidden;
+    panel.hidden = !open;
+    revisionComparison.setAttribute("aria-expanded", String(open));
+    revisionComparison.textContent = open
+      ? revisionComparison.dataset.hideLabel
+      : revisionComparison.dataset.showLabel;
+    if (open) panel.querySelector("h2")?.focus({ preventScroll: true });
+    return;
+  }
   const openChapterSheet = event.target.closest("[data-open-chapter-sheet]");
   if (openChapterSheet) {
     chapterDialogController?.open(openChapterSheet);

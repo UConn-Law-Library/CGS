@@ -1,5 +1,5 @@
 import { SearchRepository } from "./search.js";
-import { applyChapterOverlay, SupplementRepository } from "./supplements.js";
+import { applyChapterOverlay, mergeSupplementTitleChapters, SupplementRepository } from "./supplements.js";
 import { ProgressiveSearchClient } from "./search-client.js";
 import {
   findChapter,
@@ -237,7 +237,7 @@ function statuteChapterColumn(title, selected = null) {
     label: `Chapters in ${titleLabel(title)}`,
     className: "chapters-column",
     heading: `<p class="eyebrow">${escapeHtml(titleLabel(title))}</p><strong>Chapters</strong>`,
-    content: railList(title.chapters.map((chapter) => `<li><a href="${escapeHtml(chapterRoute(title, chapter))}"${selected?.id === chapter.id ? ` aria-current="page"` : ""}><strong>${escapeHtml(chapterLabel(chapter))}</strong><span>${escapeHtml(chapter.name)}</span><small>${chapter.sectionCount} provision${chapter.sectionCount === 1 ? "" : "s"}</small></a></li>`))
+    content: railList(title.chapters.map((chapter) => `<li><a href="${escapeHtml(chapterRoute(title, chapter))}"${selected?.id === chapter.id ? ` aria-current="page"` : ""}><strong>${escapeHtml(chapterLabel(chapter))}</strong><span>${escapeHtml(chapter.name)}</span><small>${chapter.sectionCount} section${chapter.sectionCount === 1 ? "" : "s"}</small></a></li>`))
   };
 }
 
@@ -657,7 +657,7 @@ async function renderHome(catalog) {
 function renderTitles(catalog) {
   setDocumentTitle("Titles");
   app.innerHTML = `${siteHeader()}<main class="browse-page titles-page" id="main-content">
-    <header class="browse-heading"><div><p class="eyebrow">${catalog.counts.chapters.toLocaleString()} chapters · ${catalog.counts.sections.toLocaleString()} provisions</p><h1>Statute titles</h1></div></header>
+    <header class="browse-heading"><div><p class="eyebrow">${catalog.counts.chapters.toLocaleString()} chapters · ${catalog.counts.sections.toLocaleString()} sections</p><h1>Statute titles</h1></div></header>
     <ol class="title-list">${catalog.titles.map((title) => `<li><a href="${escapeHtml(titleRoute(title))}"><strong>${escapeHtml(titleLabel(title))}</strong><span>${escapeHtml(title.name)}</span><small>${title.chapters.length} chapter${title.chapters.length === 1 ? "" : "s"}</small></a></li>`).join("")}</ol>
   </main><footer>Unofficial access copy. Verify legal text with the Connecticut General Assembly.</footer>`;
   window.scrollTo({ top: 0 });
@@ -704,8 +704,8 @@ async function renderAbout(catalog) {
     aboutSourceCard({
       publisher: "Connecticut General Assembly",
       name: "General Statutes",
-      description: "Connecticut General Statutes text organized into canonical title, chapter, and provision artifacts.",
-      details: [statuteDate && `Captured ${statuteDate}`, `${catalog.counts.sections.toLocaleString()} provisions`],
+      description: "Connecticut General Statutes text organized into canonical title, chapter, and section artifacts.",
+      details: [statuteDate && `Captured ${statuteDate}`, `${catalog.counts.sections.toLocaleString()} sections`],
       caveat: "Changes published after the capture date appear after the next reviewed corpus update.",
       url: catalog.source?.url ?? "https://www.cga.ct.gov/current/pub/titles.htm"
     }),
@@ -713,7 +713,7 @@ async function renderAbout(catalog) {
       publisher: "Connecticut General Assembly",
       name: `${supplement.edition.editionYear} Supplement`,
       description: "Sections amended, added, or repealed by the published supplement and consolidated into the reader when applicable.",
-      details: [formatSnapshotDate(supplement.manifest.generatedAt) && `Captured ${formatSnapshotDate(supplement.manifest.generatedAt)}`, `${supplement.manifest.counts.sections.toLocaleString()} provisions`],
+      details: [formatSnapshotDate(supplement.manifest.generatedAt) && `Captured ${formatSnapshotDate(supplement.manifest.generatedAt)}`, `${supplement.manifest.counts.sections.toLocaleString()} sections`],
       caveat: `Read the supplement together with the General Statutes revised to January 1, ${supplement.edition.editionYear - 1}.`,
       url: supplement.manifest.source?.url ?? `https://www.cga.ct.gov/${supplement.edition.editionYear}/sup/titles.htm`
     })] : []),
@@ -752,7 +752,7 @@ async function renderAbout(catalog) {
     <ul class="about-counts" aria-label="Published data coverage">
       <li><strong>${catalog.titles.length.toLocaleString()}</strong><span>titles</span></li>
       <li><strong>${catalog.counts.chapters.toLocaleString()}</strong><span>chapters</span></li>
-      <li><strong>${catalog.counts.sections.toLocaleString()}</strong><span>provisions</span></li>
+      <li><strong>${catalog.counts.sections.toLocaleString()}</strong><span>sections</span></li>
       ${headingCount ? `<li><strong>${headingCount.toLocaleString()}</strong><span>index headings</span></li>` : ""}
       ${infractionCount ? `<li><strong>${infractionCount.toLocaleString()}</strong><span>infractions</span></li>` : ""}
     </ul>
@@ -859,7 +859,7 @@ function renderTitle(catalog, title) {
     ${breadcrumbs([{ label: "Titles", href: titlesRouteHref() }, { label: titleLabel(title) }])}
     <div class="browse-heading"><div><p class="eyebrow">${title.chapters.length} chapter${title.chapters.length === 1 ? "" : "s"}</p><h1>${escapeHtml(titleLabel(title))} — ${escapeHtml(title.name)}</h1></div><a href="${escapeHtml(title.sourceUrl)}">Official title source</a></div>
     <p class="desktop-only">Choose a chapter from the chapters column.</p>
-    <ol class="chapter-list mobile-only">${title.chapters.map((chapter) => `<li><a href="${escapeHtml(chapterRoute(title, chapter))}"><strong>${escapeHtml(chapterLabel(chapter))}</strong><span>${escapeHtml(chapter.name)}</span><small>${chapter.sectionCount} provision${chapter.sectionCount === 1 ? "" : "s"}</small></a></li>`).join("")}</ol>
+    <ol class="chapter-list mobile-only">${title.chapters.map((chapter) => `<li><a href="${escapeHtml(chapterRoute(title, chapter))}"><strong>${escapeHtml(chapterLabel(chapter))}</strong><span>${escapeHtml(chapter.name)}</span><small>${chapter.sectionCount} section${chapter.sectionCount === 1 ? "" : "s"}</small></a></li>`).join("")}</ol>
   </main>`;
   app.innerHTML = applicationShell({
     contextualNavigation: [statuteTitleColumn(catalog, title), statuteChapterColumn(title)],
@@ -883,12 +883,17 @@ async function sectionSecondaryContext(title, section, requestedCitation) {
 }
 
 async function renderChapter(catalog, title, chapterMeta, route) {
-  const baseChapter = await getJson(`./data/${chapterMeta.path}`);
+  const baseChapter = chapterMeta.supplementOnly ? null : await getJson(`./data/${chapterMeta.path}`);
   let chapter = baseChapter;
   let overlay = null;
   let supplementError = null;
   try {
-    const latest = await supplementRepository.loadLatestChapter(chapterMeta.number);
+    const latest = chapterMeta.supplementOnly
+      ? {
+          edition: { editionYear: chapterMeta.supplementEditionYear },
+          chapter: await supplementRepository.loadChapter(chapterMeta.supplementEditionYear, chapterMeta.number, title.id)
+        }
+      : await supplementRepository.loadLatestChapter(chapterMeta.number, title.id);
     if (latest.chapter) {
       const applied = applyChapterOverlay(baseChapter, latest.chapter, latest.edition.editionYear);
       chapter = applied.chapter;
@@ -898,9 +903,10 @@ async function renderChapter(catalog, title, chapterMeta, route) {
     supplementError = error;
     console.warn("Could not load the published supplement", error);
   }
+  if (!chapter) return renderNotFound("That supplement chapter could not be loaded.");
   const changeBySection = new Map((overlay?.changes ?? []).map((change) => [change.sectionId, { ...change, editionYear: overlay.editionYear }]));
   const selected = route.kind === "section" ? findSection(chapter, route.section) : null;
-  if (route.kind === "section" && !selected) return renderNotFound("That provision was not found.");
+  if (route.kind === "section" && !selected) return renderNotFound("That section was not found.");
 
   if (route.legacyQuery) {
     const canonicalRoute = selected ? provisionRoute(title, chapter, selected) : chapterRoute(title, chapter);
@@ -921,7 +927,7 @@ async function renderChapter(catalog, title, chapterMeta, route) {
   const hiddenRepealed = chapter.sections.length - chapterNavigation.length;
   setDocumentTitle(selected ? sectionLabel(selected) : chapterLabel(chapter), titleLabel(title));
   const sectionItems = statuteSectionItems(title, chapter, chapterNavigation, selected, changeBySection);
-  const mobileChapterList = `<section class="mobile-only mobile-section-browser" aria-labelledby="mobile-sections-heading"><div class="section-heading"><div><p class="eyebrow">${chapterNavigation.length} provisions${hiddenRepealed ? ` · ${hiddenRepealed} repealed hidden` : ""}</p><h2 id="mobile-sections-heading">Sections</h2></div></div>${railList(sectionItems)}</section>`;
+  const mobileChapterList = `<section class="mobile-only mobile-section-browser" aria-labelledby="mobile-sections-heading"><div class="section-heading"><div><p class="eyebrow">${chapterNavigation.length} sections${hiddenRepealed ? ` · ${hiddenRepealed} repealed hidden` : ""}</p><h2 id="mobile-sections-heading">Sections</h2></div></div>${railList(sectionItems)}</section>`;
   const mainContent = `<main class="reader-content application-main" id="main-content">
       ${breadcrumbs([
         { label: "Titles", href: titlesRouteHref() },
@@ -930,7 +936,7 @@ async function renderChapter(catalog, title, chapterMeta, route) {
         ...(selected ? [{ label: sectionLabel(selected) }] : [])
       ])}
       ${supplementError ? `<p class="supplement-warning" role="alert">The published supplement could not be loaded. This page is showing the base revision only; reload before relying on it.</p>` : ""}
-      ${selected ? `<div class="mobile-reader-tools"><button type="button" data-open-chapter-sheet aria-haspopup="dialog">Browse chapter</button></div>${renderProvision(title, chapter, selected, maps, secondaryContext, changeBySection.get(selected.id))}${sectionNavigation(title, chapter, chapterNavigation, selected)}${chapterSheet(title, chapter, chapterNavigation, selected, changeBySection)}` : `<div class="chapter-overview"><p class="eyebrow">${chapterNavigation.length} provisions${hiddenRepealed ? ` · ${hiddenRepealed} repealed hidden` : ""}</p><h1>${escapeHtml(chapterLabel(chapter))} — ${escapeHtml(chapter.name)}</h1>${overlay?.changes.length ? `<p class="supplement-summary"><strong>${overlay.editionYear} Supplement applied.</strong> ${overlay.changes.length} updated provision${overlay.changes.length === 1 ? "" : "s"} are labeled in the chapter list.</p>` : ""}<p class="desktop-only">Choose a provision from the sections column.</p><a href="${escapeHtml(chapter.sourceUrl)}">Official chapter source</a></div>${mobileChapterList}`}
+      ${selected ? `<div class="mobile-reader-tools"><button type="button" data-open-chapter-sheet aria-haspopup="dialog">Browse chapter</button></div>${renderProvision(title, chapter, selected, maps, secondaryContext, changeBySection.get(selected.id))}${sectionNavigation(title, chapter, chapterNavigation, selected)}${chapterSheet(title, chapter, chapterNavigation, selected, changeBySection)}` : `<div class="chapter-overview"><p class="eyebrow">${chapterNavigation.length} sections${hiddenRepealed ? ` · ${hiddenRepealed} repealed hidden` : ""}</p><h1>${escapeHtml(chapterLabel(chapter))} — ${escapeHtml(chapter.name)}</h1>${overlay?.changes.length ? `<p class="supplement-summary"><strong>${overlay.editionYear} Supplement applied.</strong> ${overlay.changes.length} updated section${overlay.changes.length === 1 ? "" : "s"} are labeled in the chapter list.</p>` : ""}<p class="desktop-only">Choose a section from the sections column.</p><a href="${escapeHtml(chapter.sourceUrl)}">Official chapter source</a></div>${mobileChapterList}`}
     </main>`;
   app.innerHTML = applicationShell({
     contextualNavigation: [
@@ -1328,6 +1334,16 @@ function renderNotFound(message = "That page was not found.") {
   app.innerHTML = `${siteHeader()}<main class="error" id="main-content"><p class="eyebrow">Not found</p><h1>${escapeHtml(message)}</h1><p><a href="#/">Browse the statutes</a></p></main>`;
 }
 
+async function titleWithLatestSupplementChapters(title) {
+  try {
+    const latest = await supplementRepository.loadLatestTitle(title.id);
+    return mergeSupplementTitleChapters(title, latest.title, latest.edition?.editionYear);
+  } catch (error) {
+    console.warn("Could not load supplement chapter navigation", error);
+    return title;
+  }
+}
+
 async function renderCurrentRoute() {
   closeOmni();
   activeSearchController?.abort();
@@ -1347,6 +1363,8 @@ async function renderCurrentRoute() {
     if (route.kind === "index") return renderStatutesIndex(route);
 
     let title = route.title ? findTitle(catalog, route.title) : null;
+    if (title) title = await titleWithLatestSupplementChapters(title);
+    if (sequence !== renderSequence) return;
     let chapterMatch = route.chapter ? findChapter(catalog, route.chapter, title) : null;
     if (!title && chapterMatch) title = chapterMatch.title;
     if (!title) return renderNotFound("That title was not found.");

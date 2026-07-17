@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { applyChapterOverlay, mergeSupplementSearchShard, SupplementRepository } from "../src/supplements.js";
+import { applyChapterOverlay, mergeSupplementSearchShard, mergeSupplementTitleChapters, SupplementRepository } from "../src/supplements.js";
 
 const baseChapter = {
   id: "chapter-001",
@@ -155,4 +155,31 @@ test("discovers supplement editions and resolves their chapter artifacts", async
   assert.equal(await repository.loadChapter(2026, "999"), null);
   assert.equal((await repository.loadLatestChapter("001")).edition.editionYear, 2026);
   assert.equal((await repository.loadLatestSearchTitle("title-01")).title.id, "title-01");
+});
+
+test("adds supplement-only chapters to title navigation and scopes their lookup", async () => {
+  const supplementChapter = { ...overlayChapter, id: "chapter-art-012a", number: "art-012a" };
+  const responses = new Map([
+    ["https://example.test/data/supplements/manifest.json", { editions: [{ editionYear: 2026, path: "2026/manifest.json" }] }],
+    ["https://example.test/data/supplements/2026/manifest.json", {
+      titles: [{ id: "title-42a", chapters: [{ id: "chapter-art-012a", number: "art-012a", name: "Transition", path: "chapters/art-012a.json", sectionCount: 1 }] }]
+    }],
+    ["https://example.test/data/supplements/2026/chapters/art-012a.json", supplementChapter]
+  ]);
+  const repository = new SupplementRepository({
+    baseUrl: "https://example.test/data/supplements/",
+    fetchImpl(url) {
+      return Promise.resolve({ ok: responses.has(url.href), status: responses.has(url.href) ? 200 : 404, json: () => Promise.resolve(responses.get(url.href)) });
+    }
+  });
+  const latest = await repository.loadLatestTitle("title-42a");
+  const title = mergeSupplementTitleChapters(
+    { id: "title-42a", chapters: [{ id: "chapter-art-010", number: "art-010" }] },
+    latest.title,
+    latest.edition.editionYear
+  );
+  assert.deepEqual(title.chapters.map((chapter) => chapter.number), ["art-010", "art-012a"]);
+  assert.equal(title.chapters[1].supplementOnly, true);
+  assert.equal((await repository.loadLatestChapter("art-012a", "title-42a")).chapter.id, "chapter-art-012a");
+  assert.equal((await repository.loadLatestChapter("art-012a", "title-01")).chapter, null);
 });

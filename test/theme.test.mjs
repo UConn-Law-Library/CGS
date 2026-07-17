@@ -4,7 +4,7 @@ import test from "node:test";
 
 test("Auto theme is present before application JavaScript runs", async () => {
   const html = await readFile(new URL("../src/index.html", import.meta.url), "utf8");
-  assert.match(html, /<html[^>]+data-theme="auto"[^>]+data-compact-lists="false"/);
+  assert.match(html, /<html[^>]+data-theme="auto"[^>]+data-compact-lists="true"/);
 });
 
 test("reader and secondary-source surfaces use theme-aware colors", async () => {

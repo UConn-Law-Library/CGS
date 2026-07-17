@@ -819,9 +819,36 @@ body { color: var(--ink); background: var(--paper); }
 :root[data-compact-lists="true"] .chapter-list a, :root[data-compact-lists="true"] .infraction-card, :root[data-compact-lists="true"] .bookmark-list li { padding-block: .45rem; }
 :root[data-compact-lists="true"] .infraction-categories a { min-height: 3.6rem; padding-block: .6rem; }
 
+h1, h2, h3 { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+h1,
+.discovery-intro h1,
+.browse-heading h1,
+.chapter-overview h1,
+.provision h1,
+.index-intro h1,
+.home-intro h1,
+.search-page h1,
+.infractions-page h1,
+.bookmarks-page h1,
+.about-page h1 {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: clamp(1.55rem, 3vw, 2rem);
+  font-weight: 750;
+  line-height: 1.14;
+  letter-spacing: -.025em;
+}
+.statute-text { font: 1.02rem/1.68 Georgia, "Times New Roman", serif; }
+.browse-heading h1, .chapter-overview h1, .provision h1, .index-intro h1, .home-intro h1, .search-page h1, .infractions-page h1, .bookmarks-page h1, .about-page h1 { margin-top: .3rem; }
+.context-list a[aria-current="page"] { scroll-margin-block: 4rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
+
 @media (max-width: 60rem) {
   body { padding-bottom: calc(4.7rem + env(safe-area-inset-bottom)); }
-  .site-header { padding: .55rem 1rem .7rem; }
+  .site-header { padding: calc(.55rem + env(safe-area-inset-top)) max(1rem, env(safe-area-inset-right)) .7rem max(1rem, env(safe-area-inset-left)); }
   .header-bar { display: block; }
   .brand { min-height: 2.2rem; }
   .site-header .app-nav {
@@ -874,5 +901,10 @@ body { color: var(--ink); background: var(--paper); }
 @media print {
   .site-header, .settings-panel, .context-column, .mobile-reader-tools, .chapter-sheet { display: none; }
   .application-shell { display: block; }
-  body { padding-bottom: 0; }
+  .application-main, .reader-content.application-main { width: 100%; max-width: none; margin: 0; padding: 0; }
+  .section-actions, .action-status, .adjacent, .breadcrumbs { display: none; }
+  .statute-text { font-size: 11pt; line-height: 1.5; }
+  body { padding-bottom: 0; color: #000; background: #fff; }
+  a { color: #000; }
+  footer { display: none; }
 }

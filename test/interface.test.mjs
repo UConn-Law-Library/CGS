@@ -72,3 +72,9 @@ test("statute metadata shares one populated Information and References region", 
   assert.match(stylesSource, /\.information-reference-groups > details \{ border-top: 1px solid var\(--line\); \}/);
   assert.doesNotMatch(stylesSource, /\.secondary-sources \{ margin-top:/);
 });
+
+test("print layout removes application chrome and preserves a readable statute body", () => {
+  assert.match(stylesSource, /@media print \{[\s\S]*\.context-column[\s\S]*display: none/);
+  assert.match(stylesSource, /\.application-main, \.reader-content\.application-main \{ width: 100%;/);
+  assert.match(stylesSource, /\.statute-text \{ font-size: 11pt; line-height: 1\.5; \}/);
+});

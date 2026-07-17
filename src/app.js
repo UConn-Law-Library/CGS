@@ -261,7 +261,7 @@ function statuteSectionColumn(title, chapter, sections, selected, changeBySectio
 
 function chapterSheet(title, chapter, sections, selected, changeBySection) {
   return `<dialog class="chapter-sheet" data-chapter-sheet aria-labelledby="chapter-sheet-title">
-    <div class="chapter-sheet-panel"><header><div><p class="eyebrow">${escapeHtml(titleLabel(title))}</p><h2 id="chapter-sheet-title">${escapeHtml(chapterLabel(chapter))} sections</h2></div><button type="button" data-close-chapter-sheet>Close</button></header>
+    <div class="chapter-sheet-panel"><header><div><p class="eyebrow">${escapeHtml(titleLabel(title))}</p><h2 id="chapter-sheet-title">${escapeHtml(chapterLabel(chapter))} sections</h2></div><button type="button" data-close-chapter-sheet autofocus>Close</button></header>
       ${railList(statuteSectionItems(title, chapter, sections, selected, changeBySection), { className: "chapter-sheet-list" })}
     </div>
   </dialog>`;

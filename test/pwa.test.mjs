@@ -161,6 +161,7 @@ test("an interrupted refresh preserves the last complete offline status", async 
 
 test("heading scale remains compact across app page types", async () => {
   const styles = await readFile(new URL("../src/styles.css", import.meta.url), "utf8");
-  assert.match(styles, /h1 \{ font-size: clamp\(1\.75rem, 5vw, 2\.75rem\)/);
+  assert.match(styles, /font-size: clamp\(1\.55rem, 3vw, 2rem\)/);
+  assert.match(styles, /\.statute-text \{ font: 1\.02rem\/1\.68 Georgia/);
   assert.doesNotMatch(styles, /clamp\([^)]*,\s*(?:4|4\.5|5)rem\)/);
 });

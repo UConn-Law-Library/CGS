@@ -5,9 +5,34 @@ import test from "node:test";
 const appSource = await readFile(new URL("../src/app.js", import.meta.url), "utf8");
 const stylesSource = await readFile(new URL("../src/styles.css", import.meta.url), "utf8");
 
-test("home statute browsing uses the application route instead of an unknown hash route", () => {
-  assert.match(appSource, /<a href="#\/" data-browse-statutes>/);
+test("home statute browsing uses the dedicated compact titles route", () => {
+  assert.match(appSource, /<a href="\$\{titlesRouteHref\(\)\}">/);
   assert.doesNotMatch(appSource, /href="#browse-titles"/);
+});
+
+test("dense shell exposes bookmark count and device-local activity", () => {
+  assert.match(appSource, /class="nav-badge"/);
+  assert.match(appSource, /Recently viewed/);
+  assert.match(appSource, /Recent bookmarks/);
+  assert.match(appSource, /data-clear-recents/);
+});
+
+test("shared application shell provides contextual rails and mobile presentation modes", () => {
+  assert.match(appSource, /function applicationShell\(\{[\s\S]*contextualNavigation = \[\],[\s\S]*mainContent,[\s\S]*columnCount = contextualNavigation\.length,[\s\S]*mobilePresentationMode = "focused"/);
+  assert.match(appSource, /class="application-shell mobile-\$\{escapeHtml\(mobilePresentationMode\)\}" data-context-columns="\$\{columnCount\}"/);
+  assert.match(appSource, /statuteTitleColumn\(catalog, title\)/);
+  assert.match(appSource, /statuteChapterColumn\(title, chapter\)/);
+  assert.match(appSource, /statuteSectionColumn\(title, chapter, chapterNavigation, selected, changeBySection\)/);
+  assert.match(stylesSource, /\.context-list a\[aria-current="page"\]/);
+});
+
+test("detail pages record recents only after rendering and mobile readers expose a native chapter sheet", () => {
+  assert.match(appSource, /deviceState\.recordRecent\(\{[\s\S]*type: "statute"/);
+  assert.match(appSource, /deviceState\.recordRecent\(\{[\s\S]*type: "index"/);
+  assert.match(appSource, /deviceState\.recordRecent\(\{[\s\S]*type: "infraction"/);
+  assert.match(appSource, /<dialog class="chapter-sheet" data-chapter-sheet/);
+  assert.match(appSource, /data-open-chapter-sheet aria-haspopup="dialog"/);
+  assert.match(appSource, /chapterDialogController\?\.close\(\)/);
 });
 
 test("index letters render collapsed topics, dedicated large topics, and repealed filtering", () => {
@@ -46,4 +71,10 @@ test("statute metadata shares one populated Information and References region", 
   assert.doesNotMatch(appSource, /Official cross-references|Related legal data/);
   assert.match(stylesSource, /\.information-reference-groups > details \{ border-top: 1px solid var\(--line\); \}/);
   assert.doesNotMatch(stylesSource, /\.secondary-sources \{ margin-top:/);
+});
+
+test("print layout removes application chrome and preserves a readable statute body", () => {
+  assert.match(stylesSource, /@media print \{[\s\S]*\.context-column[\s\S]*display: none/);
+  assert.match(stylesSource, /\.application-main, \.reader-content\.application-main \{ width: 100%;/);
+  assert.match(stylesSource, /\.statute-text \{ font-size: 11pt; line-height: 1\.5; \}/);
 });

@@ -10,7 +10,8 @@ import {
   parseRoute,
   routeHref,
   searchRouteHref,
-  sectionRouteKey
+  sectionRouteKey,
+  titlesRouteHref
 } from "./routes.js";
 import {
   escapeHtml,
@@ -24,6 +25,8 @@ import {
 import { SecondarySourceRepository } from "./secondary-sources.js";
 import { applyPreferences, DeviceState } from "./device-state.js";
 import { PwaManager } from "./pwa.js";
+import { NativeDialogController } from "./dialog.js";
+import { aggregateShardCounts, contextualColumnCount } from "./context-navigation.js";
 import {
   buildOmniRows,
   findIndexMatches,
@@ -58,6 +61,7 @@ let activeSearchController = null;
 let activeOmniController = null;
 let omniTimer = null;
 let omniSelection = -1;
+let chapterDialogController = null;
 let pwaState = pwaManager.state;
 const SEARCH_BATCH_SIZE = 50;
 const LARGE_INDEX_TOPIC_THRESHOLD = 200;
@@ -82,8 +86,9 @@ function activeDestination(route = parseRoute(location)) {
   return "statutes";
 }
 
-function navLink({ href, id, icon, label }, active) {
-  return `<a href="${href}"${active === id ? ` aria-current="page"` : ""}><span aria-hidden="true">${icon}</span><span>${label}</span></a>`;
+function navLink({ href, id, icon, label, badge = null }, active) {
+  const badgeMarkup = badge === null ? "" : `<span class="nav-badge" aria-label="${badge} saved bookmark${badge === 1 ? "" : "s"}">${badge}</span>`;
+  return `<a href="${href}"${active === id ? ` aria-current="page"` : ""}><span aria-hidden="true">${icon}</span><span>${label}</span>${badgeMarkup}</a>`;
 }
 
 function installStatus(state) {
@@ -145,6 +150,7 @@ function updatePwaControls() {
 function settingsPanel() {
   const preferences = deviceState.preferences();
   const bookmarkCount = deviceState.bookmarks().length;
+  const recentCount = deviceState.recents().length;
   return `<section class="settings-panel" role="dialog" aria-label="Settings" data-settings-panel hidden>
     <div class="settings-heading"><strong>Settings</strong><button type="button" class="icon-button" data-close-settings aria-label="Close settings">×</button></div>
     <div class="setting-group"><span>Theme</span><div class="segmented" role="group" aria-label="Theme">
@@ -161,6 +167,7 @@ function settingsPanel() {
     <p class="settings-note" data-pwa-status role="status" aria-live="polite">${escapeHtml(offlineStatus(pwaState))}</p>
     <p class="settings-note" data-storage-status>${escapeHtml(storageStatus(pwaState))}</p>
     <button type="button" class="settings-action" data-clear-bookmarks${bookmarkCount ? "" : " disabled"}>Clear bookmarks <small>${bookmarkCount ? `${bookmarkCount} saved` : "None saved"}</small></button>
+    <button type="button" class="settings-action" data-clear-recents${recentCount ? "" : " disabled"}>Clear recent history <small>${recentCount ? `${recentCount} item${recentCount === 1 ? "" : "s"}` : "No recent history"}</small></button>
     <a class="settings-action" href="#/about">About this app <small>Sources, coverage, and project information</small></a>
     <a class="settings-action" href="./discover/">Static discovery index <small>Script-free browsing</small></a>
   </section>`;
@@ -170,6 +177,7 @@ function siteHeader() {
   const route = parseRoute(location);
   const active = activeDestination(route);
   const searchValue = route.kind === "search" ? route.query ?? "" : "";
+  const bookmarkCount = deviceState.bookmarks().length;
   return `<header class="site-header">
     <div class="header-bar">
       <a class="brand" href="#/"><span class="brand-mark" aria-hidden="true">§</span><span>Connecticut General Statutes</span></a>
@@ -177,7 +185,7 @@ function siteHeader() {
         ${navLink({ href: "#/", id: "statutes", icon: "§", label: "Statutes" }, active)}
         ${navLink({ href: "#/index", id: "index", icon: "A–Z", label: "Index" }, active)}
         ${navLink({ href: "#/infractions", id: "infractions", icon: "⚖", label: "Infractions" }, active)}
-        ${navLink({ href: "#/bookmarks", id: "bookmarks", icon: "★", label: "Bookmarks" }, active)}
+        ${navLink({ href: "#/bookmarks", id: "bookmarks", icon: "★", label: "Bookmarks", badge: bookmarkCount }, active)}
         <button type="button" data-open-settings aria-expanded="false"${active === "settings" ? ` aria-current="page"` : ""}><span aria-hidden="true">⚙</span><span>Settings</span></button>
       </nav>
     </div>
@@ -193,6 +201,77 @@ function siteHeader() {
     </form>
     ${settingsPanel()}
   </header>`;
+}
+
+function applicationShell({
+  contextualNavigation = [],
+  mainContent,
+  columnCount = contextualNavigation.length,
+  mobilePresentationMode = "focused",
+  footer = "Unofficial access copy. Verify legal text with the Connecticut General Assembly."
+}) {
+  return `${siteHeader()}<div class="application-shell mobile-${escapeHtml(mobilePresentationMode)}" data-context-columns="${columnCount}">
+    ${contextualNavigation.map((column) => `<aside class="context-column ${escapeHtml(column.className ?? "")}" aria-label="${escapeHtml(column.label)}">
+      ${column.heading ? `<div class="context-column-heading">${column.heading}</div>` : ""}${column.content}
+    </aside>`).join("")}
+    ${mainContent}
+  </div><footer>${footer}</footer>`;
+}
+
+function railList(items, { className = "", empty = "No items are available." } = {}) {
+  if (!items.length) return `<p class="context-empty">${escapeHtml(empty)}</p>`;
+  return `<ol class="context-list ${escapeHtml(className)}">${items.join("")}</ol>`;
+}
+
+function statuteTitleColumn(catalog, selected = null) {
+  return {
+    label: "Statute titles",
+    className: "titles-column",
+    heading: `<p class="eyebrow">Statutes</p><strong>Titles</strong>`,
+    content: railList(catalog.titles.map((title) => `<li><a href="${escapeHtml(titleRoute(title))}"${selected?.id === title.id ? ` aria-current="page"` : ""}><strong>${escapeHtml(titleLabel(title))}</strong><span>${escapeHtml(title.name)}</span></a></li>`))
+  };
+}
+
+function statuteChapterColumn(title, selected = null) {
+  return {
+    label: `Chapters in ${titleLabel(title)}`,
+    className: "chapters-column",
+    heading: `<p class="eyebrow">${escapeHtml(titleLabel(title))}</p><strong>Chapters</strong>`,
+    content: railList(title.chapters.map((chapter) => `<li><a href="${escapeHtml(chapterRoute(title, chapter))}"${selected?.id === chapter.id ? ` aria-current="page"` : ""}><strong>${escapeHtml(chapterLabel(chapter))}</strong><span>${escapeHtml(chapter.name)}</span><small>${chapter.sectionCount} provisions</small></a></li>`))
+  };
+}
+
+function statuteSectionItems(title, chapter, sections, selected, changeBySection = new Map()) {
+  return sections.map((section) => {
+    const change = changeBySection.get(section.id);
+    const status = section.status === "repealed" ? `<span class="section-status-pill">Repealed</span>` : "";
+    const supplement = change ? `<span class="supplement-pill supplement-${escapeHtml(change.presentation)}">${escapeHtml(supplementLabel(change, { short: true }))}</span>` : "";
+    return `<li><a href="${escapeHtml(provisionRoute(title, chapter, section))}"${selected?.id === section.id ? ` aria-current="page"` : ""}><strong>${escapeHtml(navigationSectionLabel(section))}</strong>${status}${supplement}<span>${escapeHtml(section.heading)}</span></a></li>`;
+  });
+}
+
+function statuteSectionColumn(title, chapter, sections, selected, changeBySection) {
+  return {
+    label: `Sections in ${chapterLabel(chapter)}`,
+    className: "sections-column",
+    heading: `<p class="eyebrow">${escapeHtml(chapterLabel(chapter))}</p><strong>Sections</strong>`,
+    content: railList(statuteSectionItems(title, chapter, sections, selected, changeBySection))
+  };
+}
+
+function chapterSheet(title, chapter, sections, selected, changeBySection) {
+  return `<dialog class="chapter-sheet" data-chapter-sheet aria-labelledby="chapter-sheet-title">
+    <div class="chapter-sheet-panel"><header><div><p class="eyebrow">${escapeHtml(titleLabel(title))}</p><h2 id="chapter-sheet-title">${escapeHtml(chapterLabel(chapter))} sections</h2></div><button type="button" data-close-chapter-sheet autofocus>Close</button></header>
+      ${railList(statuteSectionItems(title, chapter, sections, selected, changeBySection), { className: "chapter-sheet-list" })}
+    </div>
+  </dialog>`;
+}
+
+function bindChapterSheet() {
+  chapterDialogController?.destroy();
+  chapterDialogController = null;
+  const dialog = document.querySelector("[data-chapter-sheet]");
+  if (dialog) chapterDialogController = new NativeDialogController(dialog);
 }
 
 function omniItems() {
@@ -529,25 +608,55 @@ function renderSearchResults(matches, results) {
   }).join("");
 }
 
+function activityTypeLabel(type) {
+  if (type === "index") return "Index";
+  if (type === "infraction") return "Infraction";
+  return "Statute";
+}
+
+function renderActivityList(items, emptyMessage) {
+  if (!items.length) return `<p class="activity-empty">${escapeHtml(emptyMessage)}</p>`;
+  return `<ol class="activity-list">${items.map((item) => `<li><a href="${escapeHtml(item.href)}">
+    <span>${activityTypeLabel(item.type)}</span><strong>${escapeHtml(item.title)}</strong>${item.subtitle ? `<small>${escapeHtml(item.subtitle)}</small>` : ""}
+  </a></li>`).join("")}</ol>`;
+}
+
 async function renderHome(catalog) {
+  const recents = deviceState.recents().slice(0, 5);
+  const bookmarks = deviceState.bookmarks().slice(0, 5);
   setDocumentTitle();
-  app.innerHTML = `${siteHeader()}<main class="home-page" id="main-content">
+  const mainContent = `<main class="home-page application-main" id="main-content">
     <header class="home-intro">
       <p class="eyebrow">UConn Law Library</p>
       <h1>Connecticut General Statutes</h1>
       <p>Browse and search the statutes, the official subject index, and the Judicial Branch infraction schedule. Save frequently used material on this device.</p>
     </header>
     <section class="destination-grid" aria-label="Explore legal materials">
-      <a href="#/" data-browse-statutes><span aria-hidden="true">§</span><strong>Browse statutes</strong><small>Navigate by title, chapter, or section.</small></a>
+      <a href="${titlesRouteHref()}"><span aria-hidden="true">§</span><strong>Browse statutes</strong><small>Navigate by title, chapter, or section.</small></a>
       <a href="#/index"><span aria-hidden="true">A–Z</span><strong>Subject index</strong><small>Find statutes by topic in the official LCO index.</small></a>
       <a href="#/infractions"><span aria-hidden="true">⚖</span><strong>Infraction schedule</strong><small>Review violations, amounts, and linked statutes.</small></a>
       <a href="#/bookmarks"><span aria-hidden="true">★</span><strong>Bookmarks</strong><small>Return to sections and infractions saved on this device.</small></a>
     </section>
-    <section class="catalog" id="browse-titles" aria-labelledby="browse-heading">
-      <div class="section-heading"><div><p class="eyebrow">${catalog.counts.chapters.toLocaleString()} chapters</p><h2 id="browse-heading">Statute titles</h2></div><p>${catalog.counts.sections.toLocaleString()} provisions</p></div>
-      <div class="title-grid">${catalog.titles.map((title) => `<a class="title-card" href="${escapeHtml(titleRoute(title))}"><p>${escapeHtml(titleLabel(title))}</p><h3>${escapeHtml(title.name)}</h3><span>${title.chapters.length} chapter${title.chapters.length === 1 ? "" : "s"}</span></a>`).join("")}</div>
+    <section class="home-activity" aria-label="Your activity">
+      <div><div class="section-heading"><div><p class="eyebrow">On this device</p><h2>Recently viewed</h2></div>${recents.length ? `<button type="button" class="text-button" data-clear-recents>Clear</button>` : ""}</div>${renderActivityList(recents, "Sections, index topics, and infractions you open will appear here.")}</div>
+      <div><div class="section-heading"><div><p class="eyebrow">Saved</p><h2>Recent bookmarks</h2></div>${bookmarks.length ? `<a href="#/bookmarks">View all</a>` : ""}</div>${renderActivityList(bookmarks, "Your most recently saved bookmarks will appear here.")}</div>
     </section>
+  </main>`;
+  app.innerHTML = applicationShell({
+    contextualNavigation: [statuteTitleColumn(catalog)],
+    mainContent,
+    columnCount: contextualColumnCount("statutes", { kind: "home" }),
+    mobilePresentationMode: "home"
+  });
+}
+
+function renderTitles(catalog) {
+  setDocumentTitle("Titles");
+  app.innerHTML = `${siteHeader()}<main class="browse-page titles-page" id="main-content">
+    <header class="browse-heading"><div><p class="eyebrow">${catalog.counts.chapters.toLocaleString()} chapters · ${catalog.counts.sections.toLocaleString()} provisions</p><h1>Statute titles</h1></div></header>
+    <ol class="title-list">${catalog.titles.map((title) => `<li><a href="${escapeHtml(titleRoute(title))}"><strong>${escapeHtml(titleLabel(title))}</strong><span>${escapeHtml(title.name)}</span><small>${title.chapters.length} chapter${title.chapters.length === 1 ? "" : "s"}</small></a></li>`).join("")}</ol>
   </main><footer>Unofficial access copy. Verify legal text with the Connecticut General Assembly.</footer>`;
+  window.scrollTo({ top: 0 });
 }
 
 function formatSnapshotDate(value) {
@@ -740,13 +849,19 @@ async function renderSearchPage(catalog, route) {
   if (query.length >= 2) await runStatuteSearch(query);
 }
 
-function renderTitle(title) {
+function renderTitle(catalog, title) {
   setDocumentTitle(titleLabel(title));
-  app.innerHTML = `${siteHeader()}<main class="browse-page" id="main-content">
-    ${breadcrumbs([{ label: "Titles", href: "#/" }, { label: titleLabel(title) }])}
+  const mainContent = `<main class="browse-page application-main" id="main-content">
+    ${breadcrumbs([{ label: "Titles", href: titlesRouteHref() }, { label: titleLabel(title) }])}
     <div class="browse-heading"><div><p class="eyebrow">${title.chapters.length} chapters</p><h1>${escapeHtml(titleLabel(title))} — ${escapeHtml(title.name)}</h1></div><a href="${escapeHtml(title.sourceUrl)}">Official title source</a></div>
     <ol class="chapter-list">${title.chapters.map((chapter) => `<li><a href="${escapeHtml(chapterRoute(title, chapter))}"><strong>${escapeHtml(chapterLabel(chapter))}</strong><span>${escapeHtml(chapter.name)}</span><small>${chapter.sectionCount} provision${chapter.sectionCount === 1 ? "" : "s"}</small></a></li>`).join("")}</ol>
-  </main><footer>Unofficial access copy. Verify legal text with the Connecticut General Assembly.</footer>`;
+  </main>`;
+  app.innerHTML = applicationShell({
+    contextualNavigation: [statuteTitleColumn(catalog, title)],
+    mainContent,
+    columnCount: contextualColumnCount("statutes", { kind: "title" }),
+    mobilePresentationMode: "drilldown"
+  });
 }
 
 async function sectionSecondaryContext(title, section, requestedCitation) {
@@ -800,19 +915,38 @@ async function renderChapter(catalog, title, chapterMeta, route) {
   });
   const hiddenRepealed = chapter.sections.length - chapterNavigation.length;
   setDocumentTitle(selected ? sectionLabel(selected) : chapterLabel(chapter), titleLabel(title));
-  app.innerHTML = `${siteHeader()}<div class="reader-shell" id="main-content">
-    ${readerSidebar(title, chapter, chapterNavigation, selected, changeBySection)}
-    <main class="reader-content">
+  const sectionItems = statuteSectionItems(title, chapter, chapterNavigation, selected, changeBySection);
+  const mobileChapterList = `<section class="mobile-only mobile-section-browser" aria-labelledby="mobile-sections-heading"><div class="section-heading"><div><p class="eyebrow">${chapterNavigation.length} provisions${hiddenRepealed ? ` · ${hiddenRepealed} repealed hidden` : ""}</p><h2 id="mobile-sections-heading">Sections</h2></div></div>${railList(sectionItems)}</section>`;
+  const mainContent = `<main class="reader-content application-main" id="main-content">
       ${breadcrumbs([
-        { label: "Titles", href: "#/" },
+        { label: "Titles", href: titlesRouteHref() },
         { label: titleLabel(title), href: titleRoute(title) },
         { label: chapterLabel(chapter), href: selected ? chapterRoute(title, chapter) : null },
         ...(selected ? [{ label: sectionLabel(selected) }] : [])
       ])}
       ${supplementError ? `<p class="supplement-warning" role="alert">The published supplement could not be loaded. This page is showing the base revision only; reload before relying on it.</p>` : ""}
-      ${selected ? `${renderProvision(title, chapter, selected, maps, secondaryContext, changeBySection.get(selected.id))}${sectionNavigation(title, chapter, chapterNavigation, selected)}` : `<div class="chapter-overview"><p class="eyebrow">${chapterNavigation.length} provisions${hiddenRepealed ? ` · ${hiddenRepealed} repealed hidden` : ""}</p><h1>${escapeHtml(chapterLabel(chapter))} — ${escapeHtml(chapter.name)}</h1>${overlay?.changes.length ? `<p class="supplement-summary"><strong>${overlay.editionYear} Supplement applied.</strong> ${overlay.changes.length} updated provision${overlay.changes.length === 1 ? "" : "s"} are labeled in the chapter list.</p>` : ""}<p>Choose a provision from the chapter list.</p><a href="${escapeHtml(chapter.sourceUrl)}">Official chapter source</a></div>`}
-    </main>
-  </div>`;
+      ${selected ? `<div class="mobile-reader-tools"><button type="button" data-open-chapter-sheet aria-haspopup="dialog">Browse chapter</button></div>${renderProvision(title, chapter, selected, maps, secondaryContext, changeBySection.get(selected.id))}${sectionNavigation(title, chapter, chapterNavigation, selected)}${chapterSheet(title, chapter, chapterNavigation, selected, changeBySection)}` : `<div class="chapter-overview"><p class="eyebrow">${chapterNavigation.length} provisions${hiddenRepealed ? ` · ${hiddenRepealed} repealed hidden` : ""}</p><h1>${escapeHtml(chapterLabel(chapter))} — ${escapeHtml(chapter.name)}</h1>${overlay?.changes.length ? `<p class="supplement-summary"><strong>${overlay.editionYear} Supplement applied.</strong> ${overlay.changes.length} updated provision${overlay.changes.length === 1 ? "" : "s"} are labeled in the chapter list.</p>` : ""}<p class="desktop-only">Choose a provision from the sections column.</p><a href="${escapeHtml(chapter.sourceUrl)}">Official chapter source</a></div>${mobileChapterList}`}
+    </main>`;
+  app.innerHTML = applicationShell({
+    contextualNavigation: [
+      statuteTitleColumn(catalog, title),
+      statuteChapterColumn(title, chapter),
+      statuteSectionColumn(title, chapter, chapterNavigation, selected, changeBySection)
+    ],
+    mainContent,
+    columnCount: contextualColumnCount("statutes", route),
+    mobilePresentationMode: selected ? "reader" : "drilldown"
+  });
+  bindChapterSheet();
+  if (selected) {
+    deviceState.recordRecent({
+      id: `statute:${selected.id}`,
+      type: "statute",
+      title: sectionLabel(selected),
+      subtitle: `${titleLabel(title)} · ${chapterLabel(chapter)} — ${selected.heading}`,
+      href: provisionRoute(title, chapter, selected)
+    });
+  }
 
   if (route.subsection) {
     const target = document.querySelector(`#subsection-${CSS.escape(route.subsection.toLowerCase())}`);
@@ -1040,19 +1174,51 @@ async function renderInfractions(route) {
     return tokens.every((token) => text.includes(token));
   }) : [];
   const shown = filtered.slice(0, 150);
+  const categoryItems = groups.map(([category, values]) => `<li><a href="${escapeHtml(infractionsRouteHref(category))}"${selectedGroup?.[0] === category ? ` aria-current="page"` : ""}><strong>${escapeHtml(category)}</strong><span>${values.length.toLocaleString()} entries</span></a></li>`);
+  const entryItems = shown.map((entry) => `<li><a href="${escapeHtml(infractionsRouteHref(selectedGroup[0], { entry: entry.id }))}"${selectedEntry?.id === entry.id ? ` aria-current="page"` : ""}><strong>Sec. ${escapeHtml(entry.citation)}</strong><span>${escapeHtml(entry.description)}</span></a></li>`);
   setDocumentTitle(selectedEntry ? `Sec. ${selectedEntry.citation}` : selectedGroup?.[0] ?? "Infractions");
-  app.innerHTML = `${siteHeader()}<main class="infractions-page" id="main-content">
-    ${breadcrumbs([{ label: "Infractions", ...(selectedGroup ? { href: "#/infractions" } : {}) }, ...(selectedGroup ? [{ label: selectedGroup[0], ...(selectedEntry ? { href: infractionsRouteHref(selectedGroup[0]) } : {}) }] : []), ...(selectedEntry ? [{ label: `Sec. ${selectedEntry.citation}` }] : [])])}
-    ${selectedEntry ? renderInfractionDetail(selectedEntry, manifests.infractions.source) : selectedGroup ? `<header class="section-heading"><div><p class="eyebrow">Judicial Branch schedule</p><h1>${escapeHtml(selectedGroup[0])}</h1></div><p>${selectedGroup[1].length.toLocaleString()} entries</p></header>
+  const mainBody = selectedEntry ? renderInfractionDetail(selectedEntry, manifests.infractions.source) : selectedGroup ? `<header class="section-heading"><div><p class="eyebrow">Judicial Branch schedule</p><h1>${escapeHtml(selectedGroup[0])}</h1></div><p>${selectedGroup[1].length.toLocaleString()} entries</p></header>
       <form class="infraction-search" data-infraction-search>
         <label for="infraction-query">Search this category</label>
         <input id="infraction-query" name="query" type="search" value="${escapeHtml(route.query ?? "")}" placeholder="Citation or description">
         <button type="submit">Search</button>
       </form>
       <p class="note">${filtered.length.toLocaleString()} matching entr${filtered.length === 1 ? "y" : "ies"}${filtered.length > shown.length ? `; showing the first ${shown.length}` : ""}.</p>
-      <ol class="infraction-list">${shown.map(renderInfractionListItem).join("")}</ol>` : `<header class="index-intro"><p class="eyebrow">State of Connecticut Judicial Branch</p><h1>Infractions and violations</h1><p>Browse the official mail-in schedule by category, then open an entry for amounts and its linked statute.</p><p class="source-note">Effective ${escapeHtml(manifests.infractions.source.effective ?? "date not stated")} · ${entries.length.toLocaleString()} entries · <a href="${escapeHtml(manifests.infractions.source.url)}">Official schedule (PDF)</a></p></header>
-      <ol class="infraction-categories">${groups.map(([category, values]) => `<li><a href="${escapeHtml(infractionsRouteHref(category))}"><span>${values.length.toLocaleString()} entries</span><strong>${escapeHtml(category)}</strong></a></li>`).join("")}</ol>`}
-  </main><footer>Unofficial access copy. Verify amounts and eligibility with the Judicial Branch.</footer>`;
+      <section class="desktop-only rail-prompt"><p>Select an entry from the adjacent column.</p></section>
+      <ol class="infraction-list mobile-only">${shown.map(renderInfractionListItem).join("")}</ol>` : `<header class="index-intro"><p class="eyebrow">State of Connecticut Judicial Branch</p><h1>Infractions and violations</h1><p>Browse the official mail-in schedule by category, then open an entry for amounts and its linked statute.</p><p class="source-note">Effective ${escapeHtml(manifests.infractions.source.effective ?? "date not stated")} · ${entries.length.toLocaleString()} entries · <a href="${escapeHtml(manifests.infractions.source.url)}">Official schedule (PDF)</a></p></header>
+      <ol class="infraction-categories mobile-only">${groups.map(([category, values]) => `<li><a href="${escapeHtml(infractionsRouteHref(category))}"><span>${values.length.toLocaleString()} entries</span><strong>${escapeHtml(category)}</strong></a></li>`).join("")}</ol>`;
+  const mainContent = `<main class="infractions-page application-main" id="main-content">
+    ${breadcrumbs([{ label: "Infractions", ...(selectedGroup ? { href: "#/infractions" } : {}) }, ...(selectedGroup ? [{ label: selectedGroup[0], ...(selectedEntry ? { href: infractionsRouteHref(selectedGroup[0]) } : {}) }] : []), ...(selectedEntry ? [{ label: `Sec. ${selectedEntry.citation}` }] : [])])}
+    ${mainBody}
+  </main>`;
+  const contextualNavigation = [{
+    label: "Infraction categories",
+    className: "infraction-categories-column",
+    heading: `<p class="eyebrow">Infractions</p><strong>Categories</strong>`,
+    content: railList(categoryItems)
+  }];
+  if (selectedGroup) contextualNavigation.push({
+    label: `${selectedGroup[0]} infractions`,
+    className: "infraction-entries-column",
+    heading: `<p class="eyebrow">${escapeHtml(selectedGroup[0])}</p><strong>Entries</strong>`,
+    content: railList(entryItems, { empty: "No entries match this search." })
+  });
+  app.innerHTML = applicationShell({
+    contextualNavigation,
+    mainContent,
+    columnCount: contextualColumnCount("infractions", route),
+    mobilePresentationMode: selectedEntry ? "detail" : "drilldown",
+    footer: "Unofficial access copy. Verify amounts and eligibility with the Judicial Branch."
+  });
+  if (selectedEntry) {
+    deviceState.recordRecent({
+      id: `infraction:${selectedEntry.id}`,
+      type: "infraction",
+      title: `Sec. ${selectedEntry.citation}`,
+      subtitle: `${selectedGroup[0]} · ${selectedEntry.description}`,
+      href: infractionsRouteHref(selectedGroup[0], { entry: selectedEntry.id })
+    });
+  }
   window.scrollTo({ top: 0 });
 }
 
@@ -1067,10 +1233,11 @@ function renderBookmarks() {
 
 async function renderStatutesIndex(route) {
   const manifests = await secondaryRepository.init();
-  const available = [...new Set(manifests.index.shards.map((shard) => shard.key))];
-  const letter = route.letter ?? "a";
-  if (!available.includes(letter)) return renderNotFound("That index letter was not found.");
-  const topics = await secondaryRepository.loadIndexLetter(letter);
+  const letterCounts = aggregateShardCounts(manifests.index.shards);
+  const available = [...letterCounts.keys()].filter((key) => /^[a-z]$/.test(key));
+  const letter = route.letter;
+  if (letter && !available.includes(letter)) return renderNotFound("That index letter was not found.");
+  const topics = letter ? await secondaryRepository.loadIndexLetter(letter) : [];
   const selected = route.topic
     ? topics.find((topic) => topic.id === route.topic)
     : route.heading ? topics.find((topic) => topic.label.toLowerCase() === route.heading.toLowerCase()) : null;
@@ -1081,15 +1248,9 @@ async function renderStatutesIndex(route) {
     : null;
   const search = !selected && route.query ? searchIndexTopics(topics, route.query) : null;
   const source = manifests.index.source;
-  setDocumentTitle(selected?.label ?? `Statutes index ${letter.toUpperCase()}`);
-  app.innerHTML = `${siteHeader()}<main class="index-page" id="main-content">
-    ${breadcrumbs([{ label: "Titles", href: "#/" }, { label: "General Statutes index", ...(selected || route.query ? { href: indexRouteHref(letter) } : {}) }, ...(selected ? [{ label: selected.label }] : [])])}
-    ${selected ? `<header class="index-intro index-topic-intro">
-      <p class="eyebrow">General Statutes index</p>
-      <h1>${escapeHtml(selected.label)}</h1>
-      <p>Browse this subject heading and follow resolved citations into the statute reader.</p>
-      <p class="source-note"><a href="${escapeHtml(indexRouteHref(letter))}">Back to ${escapeHtml(letter.toUpperCase())} headings</a> &middot; <a href="${escapeHtml(source.url)}">Official index volumes</a> &middot; ${escapeHtml(source.revision)}</p>
-    </header>` : `<header class="index-intro">
+  const letterItems = available.map((key) => `<li><a href="${escapeHtml(indexRouteHref(key))}"${key === letter ? ` aria-current="page"` : ""}><strong>${key.toUpperCase()}</strong><span>${(letterCounts.get(key) ?? 0).toLocaleString()} headings</span></a></li>`);
+  const headingItems = topics.map((topic) => `<li><a href="${escapeHtml(indexRouteHref(letter, { topic: topic.id }))}"${selected?.id === topic.id ? ` aria-current="page"` : ""}><strong>${escapeHtml(topic.label)}</strong></a></li>`);
+  const indexIntro = `<header class="index-intro">
       <p class="eyebrow">Legislative Commissioners' Office</p>
       <h1>Index to the General Statutes</h1>
       <p>Browse official subject headings and follow resolved citations into the statute reader. ${escapeHtml(source.revision)}.</p>
@@ -1099,17 +1260,39 @@ async function renderStatutesIndex(route) {
       <label for="index-query">Search the subject index</label>
       <input id="index-query" name="query" type="search" minlength="2" required value="${escapeHtml(route.query ?? "")}" placeholder="Try motor vehicles">
       <button type="submit">Search index</button>
-    </form>`}
-    <nav class="index-alphabet" aria-label="Index letters">${available.filter((key) => /^[a-z]$/.test(key)).map((key) =>
-      `<a href="${escapeHtml(indexRouteHref(key))}"${key === letter ? ` aria-current="page"` : ""}>${key.toUpperCase()}</a>`
-    ).join("")}</nav>
-    <section class="index-browser" aria-live="polite">
-      ${selected ? renderSelectedIndexTopic(selected, topicGroups, matchingEntry, route.query ?? "")
-        : search ? renderIndexSearchResults(search) : `<div class="index-result-heading"><h2>${escapeHtml(letter.toUpperCase())} headings</h2><p>${topics.length.toLocaleString()} subjects on this page</p></div>
-        <div class="index-topic-list">${topics.map((topic) => renderIndexTopic(topic)).join("")}</div>`}
-    </section>
+    </form>`;
+  const mainBody = selected ? `<header class="index-intro index-topic-intro">
+      <p class="eyebrow">General Statutes index</p>
+      <h1>${escapeHtml(selected.label)}</h1>
+      <p>Browse this subject heading and follow resolved citations into the statute reader.</p>
+      <p class="source-note"><a href="${escapeHtml(indexRouteHref(letter))}">Back to ${escapeHtml(letter.toUpperCase())} headings</a> &middot; <a href="${escapeHtml(source.url)}">Official index volumes</a> &middot; ${escapeHtml(source.revision)}</p>
+    </header><section class="index-browser" aria-live="polite">${renderSelectedIndexTopic(selected, topicGroups, matchingEntry, route.query ?? "")}</section>`
+    : !letter ? `${indexIntro}<section class="mobile-only mobile-index-browser"><h2>Choose a letter</h2>${railList(letterItems, { className: "mobile-index-list" })}</section>`
+      : `${search ? `<section class="index-browser" aria-live="polite">${renderIndexSearchResults(search)}</section>` : `<section class="desktop-only rail-prompt"><p class="eyebrow">${escapeHtml(letter.toUpperCase())} index</p><h1>Choose a heading</h1><p>Select a subject heading from the adjacent column.</p></section><section class="mobile-only mobile-index-browser"><div class="section-heading"><div><p class="eyebrow">General Statutes index</p><h1>${escapeHtml(letter.toUpperCase())} headings</h1></div><p>${topics.length.toLocaleString()}</p></div>${railList(headingItems, { className: "mobile-index-list" })}</section>`}`;
+  const mainContent = `<main class="index-page application-main" id="main-content">
+    ${breadcrumbs([{ label: "General Statutes index", ...(letter ? { href: indexRouteHref() } : {}) }, ...(letter ? [{ label: letter.toUpperCase(), ...(selected ? { href: indexRouteHref(letter) } : {}) }] : []), ...(selected ? [{ label: selected.label }] : [])])}
+    ${mainBody}
     <aside class="legal-data-note"><strong>About this index</strong><p>This is a derived access copy of the official index, not legal text. Verify coverage and citations with the Legislative Commissioners' Office source.</p></aside>
-  </main><footer>Unofficial access copy. Verify legal text with the Connecticut General Assembly.</footer>`;
+  </main>`;
+  const contextualNavigation = [{
+    label: "Index letters",
+    className: "index-letters-column",
+    heading: `<p class="eyebrow">Subject index</p><strong>Letters</strong>`,
+    content: railList(letterItems)
+  }];
+  if (letter) contextualNavigation.push({
+    label: `${letter.toUpperCase()} index headings`,
+    className: "index-headings-column",
+    heading: `<p class="eyebrow">${escapeHtml(letter.toUpperCase())}</p><strong>Headings</strong>`,
+    content: railList(headingItems)
+  });
+  setDocumentTitle(selected?.label ?? (letter ? `Statutes index ${letter.toUpperCase()}` : "Statutes index"));
+  app.innerHTML = applicationShell({
+    contextualNavigation,
+    mainContent,
+    columnCount: contextualColumnCount("index", route),
+    mobilePresentationMode: selected ? "detail" : "drilldown"
+  });
 
   document.querySelector("#index-search-form")?.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -1124,6 +1307,15 @@ async function renderStatutesIndex(route) {
     target?.scrollIntoView({ block: "center" });
     target?.focus({ preventScroll: true });
   } else window.scrollTo({ top: 0 });
+  if (selected) {
+    deviceState.recordRecent({
+      id: `index:${selected.id}`,
+      type: "index",
+      title: selected.label,
+      subtitle: `General Statutes index · ${letter.toUpperCase()}`,
+      href: indexRouteHref(letter, { topic: selected.id })
+    });
+  }
 }
 
 function renderNotFound(message = "That page was not found.") {
@@ -1141,6 +1333,7 @@ async function renderCurrentRoute() {
     const route = parseRoute(location);
     if (sequence !== renderSequence) return;
     if (route.kind === "home") return renderHome(catalog);
+    if (route.kind === "titles") return renderTitles(catalog);
     if (route.kind === "not-found") return renderNotFound();
     if (route.kind === "search") return renderSearchPage(catalog, route);
     if (route.kind === "infractions") return renderInfractions(route);
@@ -1152,7 +1345,7 @@ async function renderCurrentRoute() {
     let chapterMatch = route.chapter ? findChapter(catalog, route.chapter, title) : null;
     if (!title && chapterMatch) title = chapterMatch.title;
     if (!title) return renderNotFound("That title was not found.");
-    if (route.kind === "title") return renderTitle(title);
+    if (route.kind === "title") return renderTitle(catalog, title);
     if (!chapterMatch) chapterMatch = findChapter(catalog, route.chapter, title);
     if (!chapterMatch) return renderNotFound("That chapter was not found.");
     return renderChapter(catalog, title, chapterMatch.chapter, route);
@@ -1208,6 +1401,23 @@ document.addEventListener("pointerdown", (event) => {
 });
 
 document.addEventListener("click", async (event) => {
+  const openChapterSheet = event.target.closest("[data-open-chapter-sheet]");
+  if (openChapterSheet) {
+    chapterDialogController?.open(openChapterSheet);
+    return;
+  }
+  if (event.target.closest("[data-close-chapter-sheet]")) {
+    chapterDialogController?.close();
+    return;
+  }
+  if (event.target.closest("[data-chapter-sheet] a")) {
+    chapterDialogController?.close();
+    return;
+  }
+  if (event.target.matches?.("[data-chapter-sheet]")) {
+    chapterDialogController?.close();
+    return;
+  }
   const omniOption = event.target.closest("[data-omni-option]");
   if (omniOption) {
     closeOmni();
@@ -1309,6 +1519,16 @@ document.addEventListener("click", async (event) => {
     }
     return;
   }
+  const clearRecents = event.target.closest("[data-clear-recents]");
+  if (clearRecents) {
+    deviceState.clearRecents();
+    if (parseRoute(location).kind === "home") renderHome(await catalogPromise);
+    else {
+      clearRecents.disabled = true;
+      clearRecents.querySelector("small")?.replaceChildren("No recent history");
+    }
+    return;
+  }
   const removeBookmark = event.target.closest("[data-remove-bookmark]");
   if (removeBookmark) {
     deviceState.removeBookmark(removeBookmark.dataset.removeBookmark);
@@ -1326,6 +1546,11 @@ document.addEventListener("click", async (event) => {
     });
     bookmarkButton.setAttribute("aria-pressed", String(saved));
     bookmarkButton.textContent = saved ? "★ Saved" : "☆ Bookmark";
+    document.querySelectorAll(".nav-badge").forEach((badge) => {
+      const count = deviceState.bookmarks().length;
+      badge.textContent = String(count);
+      badge.setAttribute("aria-label", `${count} saved bookmark${count === 1 ? "" : "s"}`);
+    });
     const status = bookmarkButton.closest(".provision")?.querySelector(".action-status");
     if (status) status.textContent = saved ? "Bookmark saved on this device." : "Bookmark removed.";
     return;

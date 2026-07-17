@@ -1,10 +1,12 @@
 const BOOKMARKS_KEY = "cgs.bookmarks.v1";
 const PREFERENCES_KEY = "cgs.preferences.v1";
+const RECENTS_KEY = "cgs.recents.v1";
+const RECENT_LIMIT = 20;
 
 export const DEFAULT_PREFERENCES = Object.freeze({
   theme: "auto",
   textScale: 1,
-  compactLists: false,
+  compactLists: true,
   hideRepealedSections: false
 });
 
@@ -71,6 +73,36 @@ export class DeviceState {
     this.#write(BOOKMARKS_KEY, []);
   }
 
+  recents() {
+    const value = this.#read(RECENTS_KEY, []);
+    return Array.isArray(value)
+      ? value.filter((item) => item?.id && item?.type && item?.title && item?.href && item?.viewedAt)
+        .sort((left, right) => String(right.viewedAt).localeCompare(String(left.viewedAt)))
+        .slice(0, RECENT_LIMIT)
+      : [];
+  }
+
+  recordRecent(item) {
+    if (!item?.id || !item?.type || !item?.title || !item?.href) return this.recents();
+    const recent = {
+      id: String(item.id),
+      type: String(item.type),
+      title: String(item.title),
+      subtitle: String(item.subtitle ?? ""),
+      href: String(item.href),
+      viewedAt: item.viewedAt ?? new Date().toISOString()
+    };
+    const values = [recent, ...this.recents().filter((value) => value.id !== recent.id)]
+      .sort((left, right) => String(right.viewedAt).localeCompare(String(left.viewedAt)))
+      .slice(0, RECENT_LIMIT);
+    this.#write(RECENTS_KEY, values);
+    return values;
+  }
+
+  clearRecents() {
+    this.#write(RECENTS_KEY, []);
+  }
+
   preferences() {
     const value = this.#read(PREFERENCES_KEY, {});
     const theme = themes.has(value.theme) ? value.theme : DEFAULT_PREFERENCES.theme;
@@ -78,7 +110,9 @@ export class DeviceState {
     return {
       theme,
       textScale,
-      compactLists: Boolean(value.compactLists),
+      compactLists: Object.prototype.hasOwnProperty.call(value, "compactLists")
+        ? Boolean(value.compactLists)
+        : DEFAULT_PREFERENCES.compactLists,
       hideRepealedSections: Boolean(value.hideRepealedSections)
     };
   }

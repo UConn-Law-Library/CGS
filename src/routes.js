@@ -28,6 +28,10 @@ export function routeHref({ title, chapter, section, subsection } = {}) {
   return route;
 }
 
+export function titlesRouteHref() {
+  return "#/titles";
+}
+
 export function indexRouteHref(letter = null, {
   topic = null,
   query = null,
@@ -90,6 +94,8 @@ export function parseRoute({ hash = "", search = "" } = {}) {
   }
 
   if (parts[0] === "bookmarks" && parts.length === 1) return { kind: "bookmarks" };
+
+  if (parts[0] === "titles" && parts.length === 1) return { kind: "titles" };
 
   if (["about", "a"].includes(parts[0]) && parts.length === 1) return { kind: "about" };
 

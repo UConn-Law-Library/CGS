@@ -1,6 +1,6 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
-import { routeHref, sectionRouteKey } from "../../src/routes.js";
+import { chapterDisplayLabel, routeHref, sectionRouteKey } from "../../src/routes.js";
 
 const discoveryRoot = "discover/index.html";
 
@@ -93,14 +93,14 @@ function renderTitlePage(title, siteUrl) {
       { label: titleName }
     ],
     body: `<header class="discovery-intro"><p class="eyebrow">${title.chapters.length} chapters</p><h1>${escapeHtml(titleName)} — ${escapeHtml(title.name)}</h1><p><a href="${escapeHtml(title.sourceUrl)}">Official title source</a></p></header>
-    <ol class="chapter-list">${title.chapters.map((chapter) => `<li><a href="${escapeHtml(relativeDirectory(file, chapterDiscoveryPath(title, chapter)))}"><strong>${escapeHtml(label("Chapter", chapter.number))}</strong><span>${escapeHtml(chapter.name)}</span><small>${chapter.sectionCount} section${chapter.sectionCount === 1 ? "" : "s"}</small></a></li>`).join("")}</ol>`
+    <ol class="chapter-list">${title.chapters.map((chapter) => `<li><a href="${escapeHtml(relativeDirectory(file, chapterDiscoveryPath(title, chapter)))}"><strong>${escapeHtml(chapterDisplayLabel(chapter))}</strong><span>${escapeHtml(chapter.name)}</span><small>${chapter.sectionCount} section${chapter.sectionCount === 1 ? "" : "s"}</small></a></li>`).join("")}</ol>`
   });
 }
 
 function renderChapterPage(title, chapter, siteUrl) {
   const file = chapterDiscoveryPath(title, chapter);
   const titleName = label("Title", title.number);
-  const chapterName = label("Chapter", chapter.number);
+  const chapterName = chapterDisplayLabel(chapter);
   const home = relativeFile(file, "index.html");
   return page({
     file,

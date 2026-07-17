@@ -25,6 +25,7 @@ const SHELL_FILES = [
   "./routes.js",
   "./search.js",
   "./search-client.js",
+  "./search-highlight.js",
   "./search-worker.js",
   "./secondary-sources.js",
   "./secondary-ui.js",

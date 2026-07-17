@@ -5,6 +5,7 @@ import {
   findChapter,
   findSection,
   findTitle,
+  chapterDisplayLabel,
   infractionsRouteHref,
   indexRouteHref,
   parseRoute,
@@ -13,15 +14,18 @@ import {
   sectionRouteKey,
   titlesRouteHref
 } from "./routes.js";
+import { diffRevisionText } from "./revision-diff.js";
 import {
   escapeHtml,
   extractLegalReferences,
   leadingSubsection,
+  navigationSectionDescription,
   navigationSectionLabel,
   navigationSections,
   renderLinkedText,
   routeForDocument
 } from "./reader.js";
+import { renderSearchExcerpt, renderSearchHighlight, searchHighlightTerms } from "./search-highlight.js";
 import { SecondarySourceRepository } from "./secondary-sources.js";
 import { applyPreferences, DeviceState } from "./device-state.js";
 import { PwaManager } from "./pwa.js";
@@ -211,11 +215,42 @@ function applicationShell({
   footer = "Unofficial access copy. Verify legal text with the Connecticut General Assembly."
 }) {
   return `${siteHeader()}<div class="application-shell mobile-${escapeHtml(mobilePresentationMode)}" data-context-columns="${columnCount}">
-    ${contextualNavigation.map((column) => `<aside class="context-column ${escapeHtml(column.className ?? "")}" aria-label="${escapeHtml(column.label)}">
+    ${contextualNavigation.map((column) => `<aside class="context-column ${escapeHtml(column.className ?? "")}" data-context-key="${escapeHtml(column.className || column.label)}" aria-label="${escapeHtml(column.label)}">
       ${column.heading ? `<div class="context-column-heading">${column.heading}</div>` : ""}${column.content}
     </aside>`).join("")}
     ${mainContent}
   </div><footer>${footer}</footer>`;
+}
+
+function contextScrollPositions() {
+  return new Map([...document.querySelectorAll(".context-column[data-context-key]")]
+    .map((column) => [column.dataset.contextKey, column.scrollTop]));
+}
+
+function restoreContextScrollPositions(positions) {
+  requestAnimationFrame(() => {
+    for (const column of document.querySelectorAll(".context-column[data-context-key]")) {
+      const previous = positions.get(column.dataset.contextKey);
+      if (previous != null) column.scrollTop = previous;
+      const selected = column.querySelector('[aria-current="page"]');
+      if (selected) {
+        const headingHeight = column.querySelector(".context-column-heading")?.offsetHeight ?? 0;
+        const selectedTop = selected.offsetTop;
+        const selectedBottom = selectedTop + selected.offsetHeight;
+        const visibleTop = column.scrollTop + headingHeight;
+        const visibleBottom = column.scrollTop + column.clientHeight;
+        if (selectedTop < visibleTop || selectedBottom > visibleBottom) {
+          column.scrollTop = Math.max(0, selectedTop - (column.clientHeight - selected.offsetHeight) / 2);
+        }
+      }
+    }
+  });
+}
+
+function mountApplicationShell(options) {
+  const positions = contextScrollPositions();
+  app.innerHTML = applicationShell(options);
+  restoreContextScrollPositions(positions);
 }
 
 function railList(items, { className = "", empty = "No items are available." } = {}) {
@@ -246,7 +281,9 @@ function statuteSectionItems(title, chapter, sections, selected, changeBySection
     const change = changeBySection.get(section.id);
     const status = section.status === "repealed" ? `<span class="section-status-pill">Repealed</span>` : "";
     const supplement = change ? `<span class="supplement-pill supplement-${escapeHtml(change.presentation)}">${escapeHtml(supplementLabel(change, { short: true }))}</span>` : "";
-    return `<li><a href="${escapeHtml(provisionRoute(title, chapter, section))}"${selected?.id === section.id ? ` aria-current="page"` : ""}><strong>${escapeHtml(navigationSectionLabel(section))}</strong>${status}${supplement}<span>${escapeHtml(section.heading)}</span></a></li>`;
+    const description = navigationSectionDescription(section);
+    const showDescription = description && description !== section.citation;
+    return `<li><a href="${escapeHtml(provisionRoute(title, chapter, section))}"${selected?.id === section.id ? ` aria-current="page"` : ""}><strong>${escapeHtml(navigationSectionLabel(section))}</strong>${status}${supplement}${showDescription ? `<span>${escapeHtml(description)}</span>` : ""}</a></li>`;
   });
 }
 
@@ -402,11 +439,7 @@ function titleLabel(title) {
 }
 
 function chapterLabel(chapter) {
-  const number = String(chapter.number);
-  if (number.startsWith("former-")) {
-    return `Former Chapter ${number.slice("former-".length).replace(/^0+(?=\d)/, "")}`;
-  }
-  return `Chapter ${number.replace(/^0+(?=\d)/, "")}`;
+  return chapterDisplayLabel(chapter);
 }
 
 function sectionLabel(section) {
@@ -501,7 +534,7 @@ function renderAnnotations(annotations, maps) {
 
 function renderInformationReferences(section, maps, secondaryContext, change) {
   const groups = [
-    renderNotes(change ? `Source (${change.editionYear} Supplement)` : "Source", section.content.sourceNotes, maps, { open: true }),
+    renderNotes(change ? `Source (${change.editionYear} Supplement)` : "Source", section.content.sourceNotes, maps),
     renderNotes(change ? `History (${change.editionYear} Supplement)` : "History", section.content.history, maps),
     renderAnnotations(section.content.annotations, maps),
     renderSecondaryContext(secondaryContext)
@@ -533,11 +566,37 @@ function renderPreviousRevision(change, maps) {
       <h2>${escapeHtml(section.heading)}</h2>
       <div class="statute-text">${section.content.body.map((paragraph) => `<p>${renderLinkedText(paragraph, maps)}</p>`).join("")}</div>
       <div class="section-notes">
-        ${renderNotes("Source", section.content.sourceNotes, maps, { open: true })}
+        ${renderNotes("Source", section.content.sourceNotes, maps)}
         ${renderNotes("History", section.content.history, maps)}
         ${renderAnnotations(section.content.annotations, maps)}
       </div>
     </section>`).join("")}</div>
+  </details>`;
+}
+
+function renderRevisionComparison(section, change, maps) {
+  if (!change?.previousSections?.length) return "";
+  const priorYear = change.editionYear - 1;
+  const id = `revision-comparison-${section.id.replace(/[^a-z0-9_-]/gi, "-")}`;
+  const previousText = change.previousSections
+    .map((previous) => previous.content.body.join("\n\n"))
+    .join("\n\n");
+  const currentText = section.content.body.join("\n\n");
+  const segments = diffRevisionText(previousText, currentText);
+  const diff = segments.map((segment) => {
+    const text = renderLinkedText(segment.text, maps);
+    if (segment.type === "insert") return `<ins class="revision-addition">${text}</ins>`;
+    if (segment.type === "delete") return `<del class="revision-deletion">${text}</del>`;
+    return text;
+  }).join("");
+  return `<details class="revision-comparison" id="${escapeHtml(id)}">
+    <summary>Compare with ${priorYear} text</summary>
+    <div class="revision-comparison-content" aria-labelledby="${escapeHtml(id)}-heading">
+      <header><p class="eyebrow">Language comparison</p><h2 id="${escapeHtml(id)}-heading">${change.editionYear} Supplement compared with ${priorYear}</h2><p>Formatting changes may appear as textual changes. Verify language with the official sources.</p></header>
+      <div class="revision-diff-legend" aria-label="Comparison legend"><span class="revision-addition">Added in ${change.editionYear}</span><span class="revision-deletion">Removed from ${priorYear}</span></div>
+      <div class="statute-text revision-diff-text">${diff}</div>
+      ${renderPreviousRevision(change, maps)}
+    </div>
   </details>`;
 }
 
@@ -563,9 +622,9 @@ function readerSidebar(title, chapter, sections, selected = null, changeBySectio
         ? `<span class="supplement-pill supplement-${escapeHtml(change.presentation)}">${escapeHtml(supplementLabel(change, { short: true }))}</span>`
         : section.status === "repealed" ? `<span class="section-status-pill">Repealed</span>` : "";
       const grouped = section.citations.length > 1;
-      const description = section.heading.replace(/^Secs?\.\s*[^.]+\.\s*/, "");
+      const description = navigationSectionDescription(section);
       return `<li${grouped ? " class=\"grouped-section\"" : ""}><a${active ? " aria-current=\"page\"" : ""} href="${escapeHtml(provisionRoute(title, chapter, section))}">
-        <strong>${escapeHtml(navigationSectionLabel(section))}</strong>${statusPill}${description !== section.citation ? `<span>${escapeHtml(description)}</span>` : ""}
+        <strong>${escapeHtml(navigationSectionLabel(section))}</strong>${statusPill}${description && description !== section.citation ? `<span>${escapeHtml(description)}</span>` : ""}
       </a></li>`;
     }).join("")}</ol></nav>
   </aside>`;
@@ -583,6 +642,7 @@ function renderProvision(title, chapter, section, maps, secondaryContext = null,
     subtitle: section.heading,
     href: route
   };
+  const comparison = renderRevisionComparison(section, change, maps);
   return `<article class="provision" id="${escapeHtml(section.id)}">
     <div class="provision-heading">
       <p class="eyebrow">${escapeHtml(change ? supplementLabel(change) : status)}</p>
@@ -598,17 +658,17 @@ function renderProvision(title, chapter, section, maps, secondaryContext = null,
     <p class="action-status" role="status" aria-live="polite"></p>
     <div class="statute-text">${section.content.body.map((paragraph) => renderParagraph(paragraph, maps, title, chapter, section)).join("")}</div>
     ${renderInformationReferences(section, maps, secondaryContext, change)}
-    ${renderPreviousRevision(change, maps)}
+    ${comparison}
   </article>`;
 }
 
-function renderSearchResults(matches, results) {
+function renderSearchResults(matches, results, query) {
+  const highlightTerms = searchHighlightTerms(query);
   results.innerHTML = matches.map(({ document, score }) => {
     const documentStatus = document.status === "active" ? "" : `<span class="status">${escapeHtml(document.status)}</span>`;
     const supplement = document.supplement ? `<span class="supplement-pill supplement-${escapeHtml(document.supplement.presentation)}">${escapeHtml(supplementLabel(document.supplement, { short: true }))}</span>` : "";
-    const excerpt = document.text.slice(0, 240);
-    return `<li><a href="${escapeHtml(routeForDocument(document))}"><span class="result-citation">${escapeHtml(document.citation ?? document.citations.join("–"))}</span>${escapeHtml(document.heading)} ${documentStatus}${supplement}</a>
-      <p>${escapeHtml(titleLabel(document.title))} · ${escapeHtml(chapterLabel(document.chapter))} · ${escapeHtml(excerpt)}${document.text.length > 240 ? "…" : ""}</p><span class="visually-hidden">Relevance ${score}</span></li>`;
+    return `<li><a href="${escapeHtml(routeForDocument(document))}"><span class="result-citation">${renderSearchHighlight(document.citation ?? document.citations.join("–"), highlightTerms)}</span>${renderSearchHighlight(document.heading, highlightTerms)} ${documentStatus}${supplement}</a>
+      <p>${escapeHtml(titleLabel(document.title))} · ${escapeHtml(chapterLabel(document.chapter))} · ${renderSearchExcerpt(document.text, highlightTerms)}</p><span class="visually-hidden">Relevance ${score}</span></li>`;
   }).join("");
 }
 
@@ -631,7 +691,6 @@ async function renderHome(catalog) {
   setDocumentTitle();
   const mainContent = `<main class="home-page application-main" id="main-content">
     <header class="home-intro">
-      <p class="eyebrow">UConn Law Library</p>
       <h1>Connecticut General Statutes</h1>
       <p>Browse and search the statutes, the official subject index, and the Judicial Branch infraction schedule. Save frequently used material on this device.</p>
     </header>
@@ -646,7 +705,7 @@ async function renderHome(catalog) {
       <div><div class="section-heading"><div><p class="eyebrow">Saved</p><h2>Recent bookmarks</h2></div>${bookmarks.length ? `<a href="#/bookmarks">View all</a>` : ""}</div>${renderActivityList(bookmarks, "Your most recently saved bookmarks will appear here.")}</div>
     </section>
   </main>`;
-  app.innerHTML = applicationShell({
+  mountApplicationShell({
     contextualNavigation: [statuteTitleColumn(catalog)],
     mainContent,
     columnCount: contextualColumnCount("statutes", { kind: "home" }),
@@ -739,15 +798,14 @@ async function renderAbout(catalog) {
   setDocumentTitle("About");
   app.innerHTML = `${siteHeader()}<main class="about-page" id="main-content">
     ${breadcrumbs([{ label: "Titles", href: "#/" }, { label: "About" }])}
-    <section class="about-brand" aria-label="UConn School of Law, Law Library and Technology">
-      <div><strong>UCONN</strong><span>School of Law</span></div>
-      <small>Law Library and Technology</small>
+    <section class="about-brand">
+      <img src="./wordmark.svg" alt="UConn School of Law, Law Library and Technology">
     </section>
     <header class="about-intro">
       <p class="eyebrow">About this app</p>
       <h1>Connecticut General Statutes Explorer</h1>
       <p>The UConn Law Library provides this mobile-first tool for searching and browsing the Connecticut General Statutes, the official subject index, and the Judicial Branch infraction schedule.</p>
-      <p><a class="primary-link" href="https://library.law.uconn.edu/" target="_blank" rel="noopener">Visit the Law Library <span aria-hidden="true">↗</span></a></p>
+      <p><a class="primary-link" href="https://library.law.uconn.edu/" target="_blank" rel="noopener">Visit the UConn Law Library Website <span aria-hidden="true">↗</span></a></p>
     </header>
     <ul class="about-counts" aria-label="Published data coverage">
       <li><strong>${catalog.titles.length.toLocaleString()}</strong><span>titles</span></li>
@@ -797,7 +855,7 @@ async function runStatuteSearch(query, titleId = null, { limit = SEARCH_BATCH_SI
         if (controller !== activeSearchController) return;
         progress.max = Math.max(1, update.total);
         progress.value = update.completed;
-        renderSearchResults(update.results, results);
+        renderSearchResults(update.results, results, query);
         warning.hidden = !update.supplementUnavailable;
         status.textContent = `Searching ${update.completed} of ${update.total} title shard${update.total === 1 ? "" : "s"}… ${update.totalMatches.toLocaleString()} match${update.totalMatches === 1 ? "" : "es"} found so far.`;
       }
@@ -808,7 +866,7 @@ async function runStatuteSearch(query, titleId = null, { limit = SEARCH_BATCH_SI
       ? `Showing ${matches.length.toLocaleString()} of ${totalMatches.toLocaleString()} result${totalMatches === 1 ? "" : "s"}`
       : "No results";
     warning.hidden = !supplementUnavailable;
-    renderSearchResults(matches, results);
+    renderSearchResults(matches, results, query);
     const remaining = Math.min(SEARCH_BATCH_SIZE, totalMatches - matches.length);
     if (remaining > 0) {
       more.hidden = false;
@@ -837,10 +895,10 @@ async function renderSearchPage(catalog, route) {
   app.innerHTML = `${siteHeader()}<main class="search-page" id="main-content">
     <header><p class="eyebrow">Statutes</p><h1>Search results</h1></header>
     <form class="search-refine" data-search-refine>
-      <label for="search-page-query">Citation, phrase, or keyword</label>
-      <input id="search-page-query" name="query" type="search" minlength="2" required aria-describedby="search-help" value="${escapeHtml(query)}">
-      <label for="search-title">Limit to a title</label>
-      <select id="search-title" name="title"><option value="">All titles</option>${catalog.titles.map((title) => `<option value="${escapeHtml(title.id)}">${escapeHtml(titleLabel(title))} — ${escapeHtml(title.name)}</option>`).join("")}</select>
+      <div class="search-field search-query-field"><label for="search-page-query">Citation, phrase, or keyword</label>
+        <input id="search-page-query" name="query" type="search" minlength="2" required aria-describedby="search-help" value="${escapeHtml(query)}"></div>
+      <div class="search-field"><label for="search-title">Limit to a title</label>
+        <select id="search-title" name="title"><option value="">All titles</option>${catalog.titles.map((title) => `<option value="${escapeHtml(title.id)}">${escapeHtml(titleLabel(title))} — ${escapeHtml(title.name)}</option>`).join("")}</select></div>
       <button type="submit">Search</button>
     </form>
     <p class="search-help" id="search-help">Use AND, OR, NOT, parentheses, and quoted phrases. Multiple words use AND automatically.</p>
@@ -861,7 +919,7 @@ function renderTitle(catalog, title) {
     <p class="desktop-only">Choose a chapter from the chapters column.</p>
     <ol class="chapter-list mobile-only">${title.chapters.map((chapter) => `<li><a href="${escapeHtml(chapterRoute(title, chapter))}"><strong>${escapeHtml(chapterLabel(chapter))}</strong><span>${escapeHtml(chapter.name)}</span><small>${chapter.sectionCount} section${chapter.sectionCount === 1 ? "" : "s"}</small></a></li>`).join("")}</ol>
   </main>`;
-  app.innerHTML = applicationShell({
+  mountApplicationShell({
     contextualNavigation: [statuteTitleColumn(catalog, title), statuteChapterColumn(title)],
     mainContent,
     columnCount: contextualColumnCount("statutes", { kind: "title" }),
@@ -938,7 +996,7 @@ async function renderChapter(catalog, title, chapterMeta, route) {
       ${supplementError ? `<p class="supplement-warning" role="alert">The published supplement could not be loaded. This page is showing the base revision only; reload before relying on it.</p>` : ""}
       ${selected ? `<div class="mobile-reader-tools"><button type="button" data-open-chapter-sheet aria-haspopup="dialog">Browse chapter</button></div>${renderProvision(title, chapter, selected, maps, secondaryContext, changeBySection.get(selected.id))}${sectionNavigation(title, chapter, chapterNavigation, selected)}${chapterSheet(title, chapter, chapterNavigation, selected, changeBySection)}` : `<div class="chapter-overview"><p class="eyebrow">${chapterNavigation.length} sections${hiddenRepealed ? ` · ${hiddenRepealed} repealed hidden` : ""}</p><h1>${escapeHtml(chapterLabel(chapter))} — ${escapeHtml(chapter.name)}</h1>${overlay?.changes.length ? `<p class="supplement-summary"><strong>${overlay.editionYear} Supplement applied.</strong> ${overlay.changes.length} updated section${overlay.changes.length === 1 ? "" : "s"} are labeled in the chapter list.</p>` : ""}<p class="desktop-only">Choose a section from the sections column.</p><a href="${escapeHtml(chapter.sourceUrl)}">Official chapter source</a></div>${mobileChapterList}`}
     </main>`;
-  app.innerHTML = applicationShell({
+  mountApplicationShell({
     contextualNavigation: [
       statuteTitleColumn(catalog, title),
       statuteChapterColumn(title, chapter),
@@ -1214,7 +1272,7 @@ async function renderInfractions(route) {
     heading: `<p class="eyebrow">${escapeHtml(selectedGroup[0])}</p><strong>Entries</strong>`,
     content: railList(entryItems, { empty: "No entries match this search." })
   });
-  app.innerHTML = applicationShell({
+  mountApplicationShell({
     contextualNavigation,
     mainContent,
     columnCount: contextualColumnCount("infractions", route),
@@ -1298,7 +1356,7 @@ async function renderStatutesIndex(route) {
     content: railList(headingItems)
   });
   setDocumentTitle(selected?.label ?? (letter ? `Statutes index ${letter.toUpperCase()}` : "Statutes index"));
-  app.innerHTML = applicationShell({
+  mountApplicationShell({
     contextualNavigation,
     mainContent,
     columnCount: contextualColumnCount("index", route),

@@ -4,6 +4,7 @@ import test from "node:test";
 
 const appSource = await readFile(new URL("../src/app.js", import.meta.url), "utf8");
 const stylesSource = await readFile(new URL("../src/styles.css", import.meta.url), "utf8");
+const wordmarkSource = await readFile(new URL("../public/wordmark.svg", import.meta.url), "utf8");
 
 test("home statute browsing uses the dedicated compact titles route", () => {
   assert.match(appSource, /<a href="\$\{titlesRouteHref\(\)\}">/);
@@ -15,6 +16,15 @@ test("dense shell exposes bookmark count and device-local activity", () => {
   assert.match(appSource, /Recently viewed/);
   assert.match(appSource, /Recent bookmarks/);
   assert.match(appSource, /data-clear-recents/);
+  assert.doesNotMatch(appSource, /<p class="eyebrow">UConn Law Library<\/p>/);
+});
+
+test("search results use a structured refinement row and highlighted excerpts", () => {
+  assert.match(appSource, /class="search-field search-query-field"/);
+  assert.match(appSource, /renderSearchHighlight\(document\.heading, highlightTerms\)/);
+  assert.match(appSource, /renderSearchExcerpt\(document\.text, highlightTerms\)/);
+  assert.match(stylesSource, /\.search-refine \{ grid-template-columns: minmax\(16rem, 2fr\) minmax\(14rem, 1fr\) auto; \}/);
+  assert.match(stylesSource, /\.results mark \{[^}]*background: var\(--highlight-surface\)/);
 });
 
 test("shared application shell provides contextual rails and mobile presentation modes", () => {
@@ -25,6 +35,9 @@ test("shared application shell provides contextual rails and mobile presentation
   assert.match(appSource, /statuteChapterColumn\(title, chapter\)/);
   assert.match(appSource, /statuteSectionColumn\(title, chapter, chapterNavigation, selected, changeBySection\)/);
   assert.match(stylesSource, /\.context-list a\[aria-current="page"\]/);
+  assert.match(appSource, /data-context-key="\$\{escapeHtml\(column\.className \|\| column\.label\)\}"/);
+  assert.match(appSource, /function mountApplicationShell\(options\)[\s\S]*contextScrollPositions\(\)[\s\S]*restoreContextScrollPositions\(positions\)/);
+  assert.match(appSource, /column\.scrollTop = previous/);
 });
 
 test("supplement-only chapters resolve before reader routing and section labels avoid provision terminology", () => {
@@ -68,6 +81,9 @@ test("settings links to a provenance-rich About page", () => {
   assert.match(appSource, /async function renderAbout\(catalog\)/);
   assert.match(appSource, /Data and official sources/);
   assert.match(appSource, /database-free, static Progressive Web App hosted on GitHub Pages/);
+  assert.match(appSource, /<img src="\.\/wordmark\.svg" alt="UConn School of Law, Law Library and Technology">/);
+  assert.match(appSource, /Visit the UConn Law Library Website/);
+  assert.match(wordmarkSource, /<svg[\s\S]*fill: #ffffff/);
   assert.match(appSource, /if \(route\.kind === "about"\) return renderAbout\(catalog\)/);
   assert.match(stylesSource, /\.about-source-list \{ display: grid/);
 });
@@ -76,9 +92,27 @@ test("statute metadata shares one populated Information and References region", 
   assert.match(appSource, /<h2 id="information-references-heading">Information &amp; References<\/h2>/);
   assert.match(appSource, /renderInformationReferences\(section, maps, secondaryContext, change\)/);
   assert.match(appSource, /renderNotes\([^\n]+"Source"[\s\S]*renderSecondaryContext\(secondaryContext\)/);
+  assert.doesNotMatch(appSource, /renderNotes\([^\n]+"Source"[^\n]+\{ open: true \}/);
   assert.doesNotMatch(appSource, /Official cross-references|Related legal data/);
   assert.match(stylesSource, /\.information-reference-groups > details \{ border-top: 1px solid var\(--line\); \}/);
   assert.doesNotMatch(stylesSource, /\.secondary-sources \{ margin-top:/);
+});
+
+test("amended supplement sections offer a collapsed native language comparison at the bottom", () => {
+  assert.match(appSource, /<details class="revision-comparison" id=/);
+  assert.match(appSource, /<summary>Compare with \$\{priorYear\} text<\/summary>/);
+  assert.match(appSource, /<ins class="revision-addition">/);
+  assert.match(appSource, /<del class="revision-deletion">/);
+  assert.match(appSource, /renderInformationReferences\(section, maps, secondaryContext, change\)\}\s*\$\{comparison\}/);
+  assert.doesNotMatch(appSource, /data-revision-comparison-toggle/);
+  assert.match(stylesSource, /\.revision-addition \{ color: var\(--addition-ink\); background: var\(--addition-surface\)/);
+  assert.match(stylesSource, /\.revision-deletion \{ color: var\(--deletion-ink\); background: var\(--deletion-surface\); text-decoration-color: currentColor/);
+});
+
+test("supplement notices use blue while repealed notices retain warning colors", () => {
+  assert.match(stylesSource, /\.supplement-pill,[\s\S]*color: var\(--blue-dark\);[\s\S]*background: var\(--blue-light\);[\s\S]*border-color: var\(--blue\);/);
+  assert.match(stylesSource, /\.context-list \.section-status-pill \{ color: var\(--warning-ink\); \}/);
+  assert.match(stylesSource, /\.supplement-summary \{[^}]*color: var\(--blue-dark\);[^}]*background: var\(--blue-light\);[^}]*border-left: 4px solid var\(--blue\);/);
 });
 
 test("print layout removes application chrome and preserves a readable statute body", () => {

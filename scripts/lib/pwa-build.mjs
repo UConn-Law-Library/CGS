@@ -18,6 +18,7 @@ export const shellInputs = Object.freeze([
   "reader.js",
   "routes.js",
   "search-client.js",
+  "search-highlight.js",
   "search-worker.js",
   "search.js",
   "secondary-sources.js",

@@ -61,7 +61,7 @@ class PipelineTests(unittest.TestCase):
                 index_headings=[{
                     "h": "MOTOR VEHICLES", "items": [{
                         "l": 0, "t": "Licenses", "r": [["14-1", "14-1"], ["U.S. Const. I:9", None]],
-                        "see": [["TRANSPORTATION", "Licenses"]]
+                        "see": [["MOTOR VEHICLES", "Licenses", "Licenses"]]
                     }]
                 }],
                 index_source={
@@ -75,6 +75,15 @@ class PipelineTests(unittest.TestCase):
             resolved = json.loads((output / "infractions" / "title-14.json").read_text(encoding="utf-8"))
             self.assertEqual(resolved["entries"][0]["amounts"]["total_due"], 11700)
             self.assertEqual(resolved["entries"][0]["resolution"]["status"], "exact")
+            index_shard = next(
+                path for path in (output / "statutes-index").glob("*.json")
+                if path.name != "manifest.json"
+            )
+            index_data = json.loads(index_shard.read_text(encoding="utf-8"))
+            self.assertEqual(
+                index_data["headings"][0]["items"][0]["see"],
+                [{"heading": "MOTOR VEHICLES", "subheading": "Licenses", "label": "Licenses"}],
+            )
             links = json.loads((output / "links" / "title-14.json").read_text(encoding="utf-8"))
             self.assertEqual(len(links["sections"]["14-1"]["infractions"]), 1)
             self.assertEqual(

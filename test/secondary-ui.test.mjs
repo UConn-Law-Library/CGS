@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import {
   formatMoney,
+  findIndexSubheadingEntry,
   groupIndexEntries,
   renderIndexEntry,
   renderSecondaryContext,
@@ -57,6 +58,28 @@ test("links the exact SEE heading instead of an earlier mixed-case phrase", () =
   assert.doesNotMatch(html, /<a class="index-see-link"[^>]*>Motor vehicles<\/a>/);
 });
 
+test("links same-heading SEE labels to the destination subgroup", () => {
+  const entries = [
+    {
+      id: "entry-source",
+      level: 0,
+      text: "Accessions\u2014See Secured transactions, this heading.",
+      references: [],
+      see: [{
+        heading: "UNIFORM COMMERCIAL CODE",
+        subheading: "Secured transactions",
+        label: "Secured transactions"
+      }]
+    },
+    { id: "entry-nested", level: 1, text: "Secured transactions", references: [], see: [] },
+    { id: "entry-target", level: 0, text: "Secured transactions, 42a-9-101 to", references: [], see: [] }
+  ];
+  const html = renderIndexEntry(entries[0]);
+  assert.match(html, /See <a class="index-see-link"[^>]*>Secured transactions<\/a>, this heading/);
+  assert.match(html, /#\/index\/u\?heading=UNIFORM%20COMMERCIAL%20CODE&amp;subheading=Secured%20transactions/);
+  assert.equal(findIndexSubheadingEntry(entries, "Secured transactions").id, "entry-target");
+});
+
 test("groups large index topics by top-level entry and searches their descendants", () => {
   const entries = [
     { id: "acceleration", level: 0, text: "Acceleration", references: [], see: [] },
@@ -82,9 +105,23 @@ test("renders linked infractions, fee roles, sources, and index records safely",
     feeRules: [{ roles: ["affected"], rule: { authorityCitation: "51-56a(c)", authorityResolution: { href: "#/t/51/c/873/s/51-56a" }, description: "Fee", affectedText: "14-1", comments: "", } }],
     indexEntries: [{ topic: { id: "topic-1", label: "MOTOR VEHICLES" }, entry: { text: "Licenses", references: [] } }]
   });
-  assert.match(html, /Related legal data/);
+  assert.doesNotMatch(html, /Related legal data|Official cross-references/);
+  assert.match(html, /Infractions schedule/);
   assert.match(html, /\$117\.00/);
   assert.match(html, /Affected statute/);
   assert.match(html, /#\/index\/m\/topic\/topic-1/);
   assert.match(html, /Unsafe &lt;text&gt;/);
+});
+
+test("omits empty related-record groups without rendering a placeholder", () => {
+  const html = renderSecondaryContext({
+    manifests: {
+      infractions: { source: {} },
+      index: { source: {} }
+    },
+    infractions: [],
+    feeRules: [],
+    indexEntries: []
+  });
+  assert.equal(html, "");
 });

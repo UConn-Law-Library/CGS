@@ -272,19 +272,20 @@ footer { padding: 2rem 0; color: var(--muted); border-top: 1px solid var(--line)
 .subsection-link { margin-right: .2rem; font: 700 .9rem Inter, sans-serif; text-decoration: none; }
 .legal-reference { font-weight: 700; }
 .section-notes { margin-top: 3rem; border-top: 1px solid var(--line); }
-.secondary-sources { margin-top: 3.5rem; border-top: 3px solid var(--blue); }
-.secondary-heading {
+.information-references { margin-top: 3.5rem; border-top: 3px solid var(--blue); }
+.information-references-heading {
   display: grid;
   grid-template-columns: minmax(14rem, 1fr) minmax(14rem, 1.4fr);
   gap: 2rem;
   align-items: end;
   padding: 1.5rem 0;
 }
-.secondary-heading h2 { margin: .2rem 0 0; }
-.secondary-heading > p { margin: 0; color: var(--muted); font-size: .9rem; }
+.information-references-heading h2 { margin: 0; }
+.information-references-heading > p { margin: 0; color: var(--muted); font-size: .9rem; }
+.information-reference-groups > details { border-top: 1px solid var(--line); }
+.information-reference-groups > details:last-child { border-bottom: 1px solid var(--line); }
+.information-reference-groups > .notes { border-bottom: 0; }
 .secondary-warning { padding: 1rem; color: var(--warning-ink); background: var(--warning-surface); border: 1px solid var(--warning-line); }
-.related-group { border-top: 1px solid var(--line); }
-.related-group:last-child { border-bottom: 1px solid var(--line); }
 .related-group > summary { padding: 1rem 0; font-size: 1.05rem; font-weight: 750; cursor: pointer; }
 .related-group > summary span { margin-left: .35rem; color: var(--muted); font-size: .8rem; }
 .source-note { margin-top: 0; color: var(--muted); font-size: .88rem; }
@@ -473,7 +474,7 @@ footer { padding: 2rem 0; color: var(--muted); border-top: 1px solid var(--line)
   .adjacent a:last-child { text-align: left; }
   .site-header { align-items: flex-start; flex-direction: column; padding-block: .8rem; }
   .site-header nav { flex-wrap: wrap; }
-  .secondary-heading { grid-template-columns: 1fr; gap: .5rem; }
+  .information-references-heading { grid-template-columns: 1fr; gap: .5rem; }
   .index-search-form { grid-template-columns: 1fr; }
   .index-search-form label { grid-column: auto; }
   .index-result-heading { display: block; }

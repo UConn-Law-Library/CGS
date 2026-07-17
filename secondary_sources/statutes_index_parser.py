@@ -29,7 +29,8 @@ Output schema:
   t    entry text (refs removed)
   r    statute references: [display, base_section_key | null]
        (null base key for constitution citations)
-  see  cross-references: [target heading, target subheading | null]
+  see  cross-references: [target heading, target subheading | null,
+                          visible label | null]
 
 Dependencies: pip install pdfplumber
 """
@@ -129,7 +130,7 @@ def split_refs(text):
     return desc, refs
 
 
-def split_see(text):
+def split_see(text, current_heading=None):
     """Extract cross-reference targets from '—See X, at Y.' style text."""
     m = re.search(r"\bSee(?:\s+also)?\s+(.+)$", text)
     if not m:
@@ -138,6 +139,18 @@ def split_see(text):
     for part in m.group(1).split(";"):
         part = part.strip().rstrip(".").strip()
         if not part:
+            continue
+        same_heading = re.fullmatch(
+            r"(.+?)(?:,\s*at\s+.+?)?,?\s+this heading(?:,?\s+.+)?",
+            part,
+            flags=re.IGNORECASE,
+        )
+        if same_heading and current_heading:
+            labels = re.split(r",\s+and\s+", same_heading.group(1))
+            for label in labels:
+                label = label.strip().rstrip(",")
+                if label:
+                    targets.append([current_heading, label, label])
             continue
         if ", at " in part:
             head, sub = part.split(", at ", 1)
@@ -173,7 +186,7 @@ class IndexParser:
         item = {"l": self.entry_level, "t": desc if desc else text}
         if refs:
             item["r"] = refs
-        see = split_see(desc)
+        see = split_see(desc, self.heading["h"])
         if see:
             item["see"] = see
         self.heading["items"].append(item)

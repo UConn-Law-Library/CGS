@@ -34,8 +34,10 @@ import {
 } from "./omnisearch.js";
 import {
   formatMoney,
+  findIndexSubheadingEntry,
   groupIndexEntries,
   renderIndexEntry,
+  renderIndexEntryText,
   renderIndexReferences,
   renderSecondaryContext,
   searchIndexEntries,
@@ -414,6 +416,23 @@ function renderAnnotations(annotations, maps) {
   </details>`;
 }
 
+function renderInformationReferences(section, maps, secondaryContext, change) {
+  const groups = [
+    renderNotes(change ? `Source (${change.editionYear} Supplement)` : "Source", section.content.sourceNotes, maps, { open: true }),
+    renderNotes(change ? `History (${change.editionYear} Supplement)` : "History", section.content.history, maps),
+    renderAnnotations(section.content.annotations, maps),
+    renderSecondaryContext(secondaryContext)
+  ].filter(Boolean).join("");
+  if (!groups) return "";
+  return `<section class="information-references" aria-labelledby="information-references-heading">
+    <div class="information-references-heading">
+      <h2 id="information-references-heading">Information &amp; References</h2>
+      <p>Official sources, legislative history, annotations, and related legal records.</p>
+    </div>
+    <div class="information-reference-groups">${groups}</div>
+  </section>`;
+}
+
 function supplementLabel(change, { short = false } = {}) {
   if (!change) return "";
   const labels = { amended: "Amended", new: "New", repealed: "Repealed" };
@@ -495,12 +514,7 @@ function renderProvision(title, chapter, section, maps, secondaryContext = null,
     </div>
     <p class="action-status" role="status" aria-live="polite"></p>
     <div class="statute-text">${section.content.body.map((paragraph) => renderParagraph(paragraph, maps, title, chapter, section)).join("")}</div>
-    ${renderSecondaryContext(secondaryContext)}
-    <div class="section-notes">
-      ${renderNotes(change ? `Source (${change.editionYear} Supplement)` : "Source", section.content.sourceNotes, maps, { open: true })}
-      ${renderNotes(change ? `History (${change.editionYear} Supplement)` : "History", section.content.history, maps)}
-      ${renderAnnotations(section.content.annotations, maps)}
-    </div>
+    ${renderInformationReferences(section, maps, secondaryContext, change)}
     ${renderPreviousRevision(change, maps)}
   </article>`;
 }
@@ -865,7 +879,7 @@ function renderLargeIndexTopic(topic, groups, targetEntry, query = "") {
     }
     const open = group.some((entry) => entry === targetEntry);
     sections.push(`<details class="index-subtopic" data-index-group="${escapeHtml(parent.id)}" tabindex="-1"${open ? " open" : ""}>
-      <summary><strong>${escapeHtml(parent.text)}</strong><span>${(group.length - 1).toLocaleString()} subentr${group.length === 2 ? "y" : "ies"}</span></summary>
+      <summary><strong>${renderIndexEntryText(parent).html}</strong><span>${(group.length - 1).toLocaleString()} subentr${group.length === 2 ? "y" : "ies"}</span></summary>
       <ol class="index-entries" data-index-group-entries${open ? "" : " hidden"}></ol>
     </details>`);
   }
@@ -1063,7 +1077,7 @@ async function renderStatutesIndex(route) {
   if ((route.topic || route.heading) && !selected) return renderNotFound("That index heading was not found.");
   const topicGroups = selected ? groupIndexEntries(selected.items) : [];
   const matchingEntry = selected && route.subheading
-    ? selected.items.find((entry) => entry.text.toLowerCase().includes(route.subheading.toLowerCase()))
+    ? findIndexSubheadingEntry(selected.items, route.subheading)
     : null;
   const search = !selected && route.query ? searchIndexTopics(topics, route.query) : null;
   const source = manifests.index.source;

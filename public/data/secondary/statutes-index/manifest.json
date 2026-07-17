@@ -44,14 +44,14 @@
     {
       "key": "a",
       "path": "a-01.json",
-      "headingCount": 311,
-      "itemCount": 8987
+      "headingCount": 306,
+      "itemCount": 8891
     },
     {
       "key": "a",
       "path": "a-02.json",
-      "headingCount": 13,
-      "itemCount": 228
+      "headingCount": 18,
+      "itemCount": 324
     },
     {
       "key": "b",
@@ -62,14 +62,14 @@
     {
       "key": "c",
       "path": "c-01.json",
-      "headingCount": 359,
-      "itemCount": 9061
+      "headingCount": 358,
+      "itemCount": 9017
     },
     {
       "key": "c",
       "path": "c-02.json",
-      "headingCount": 288,
-      "itemCount": 8784
+      "headingCount": 289,
+      "itemCount": 8828
     },
     {
       "key": "c",
@@ -122,14 +122,14 @@
     {
       "key": "i",
       "path": "i-01.json",
-      "headingCount": 137,
-      "itemCount": 9138
+      "headingCount": 134,
+      "itemCount": 8974
     },
     {
       "key": "i",
       "path": "i-02.json",
-      "headingCount": 69,
-      "itemCount": 790
+      "headingCount": 72,
+      "itemCount": 954
     },
     {
       "key": "j",
@@ -217,9 +217,15 @@
     },
     {
       "key": "t",
-      "path": "t.json",
-      "headingCount": 235,
-      "itemCount": 9234
+      "path": "t-01.json",
+      "headingCount": 229,
+      "itemCount": 9226
+    },
+    {
+      "key": "t",
+      "path": "t-02.json",
+      "headingCount": 6,
+      "itemCount": 8
     },
     {
       "key": "u",

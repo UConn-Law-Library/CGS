@@ -18,6 +18,7 @@ import {
   escapeHtml,
   extractLegalReferences,
   leadingSubsection,
+  navigationSectionDescription,
   navigationSectionLabel,
   navigationSections,
   renderLinkedText,
@@ -132,9 +133,14 @@ test("filters repealed sections from navigation while preserving a selected dire
   assert.deepEqual(navigationSections([active, repealed], { hideRepealed: true, selected: repealed }), [active, repealed]);
 });
 
-test("uses compact section symbols for chapter navigation labels", () => {
-  assert.equal(navigationSectionLabel({ citation: "36-53", citations: ["36-53"] }), "§ 53");
-  assert.equal(navigationSectionLabel({ citation: null, citations: ["36-53", "36-54", "36-93"] }), "§§ 53-93");
+test("uses complete citations and clean descriptions in chapter navigation", () => {
+  assert.equal(navigationSectionLabel({ citation: "36-53", citations: ["36-53"] }), "§ 36-53");
+  assert.equal(navigationSectionLabel({ citation: null, citations: ["36-53", "36-54", "36-93"] }), "§§ 36-53–93");
+  assert.equal(
+    navigationSectionDescription({ heading: "Sec. 9-135b. Preparation and printing of absentee ballots." }),
+    "Preparation and printing of absentee ballots."
+  );
+  assert.equal(navigationSectionDescription({ heading: "Sec. 9-136." }), "");
 });
 
 test("recognizes subsection markers and safely renders linked legal references", () => {

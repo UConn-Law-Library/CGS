@@ -18,10 +18,14 @@ function compactCitation(citation) {
 export function navigationSectionLabel(section) {
   const citations = section.citations?.filter(Boolean) ?? (section.citation ? [section.citation] : []);
   if (citations.length > 1) {
-    return `§§ ${compactCitation(citations[0])}-${compactCitation(citations.at(-1))}`;
+    return `§§ ${citations[0]}–${compactCitation(citations.at(-1))}`;
   }
-  if (citations.length === 1) return `§ ${compactCitation(citations[0])}`;
+  if (citations.length === 1) return `§ ${citations[0]}`;
   return section.heading;
+}
+
+export function navigationSectionDescription(section) {
+  return String(section.heading ?? "").replace(/^Secs?\.\s*[^.]+\.\s*/i, "").trim();
 }
 
 export function leadingSubsection(value) {

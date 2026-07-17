@@ -20,7 +20,7 @@ test("web app manifest keeps every entry point within the Pages scope", async ()
 
 test("service worker declares an offline shell and explicit corpus controls", async () => {
   const source = await readFile(new URL("../src/service-worker.js", import.meta.url), "utf8");
-  for (const shellFile of ["./index.html", "./manifest.webmanifest", "./app.js", "./omnisearch.js", "./pwa.js"]) {
+  for (const shellFile of ["./index.html", "./manifest.webmanifest", "./app.js", "./omnisearch.js", "./pwa.js", "./search-highlight.js"]) {
     assert.match(source, new RegExp(shellFile.replaceAll(".", "\\.")));
   }
   assert.match(source, /request\.mode === "navigate"/);

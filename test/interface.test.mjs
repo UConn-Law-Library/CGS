@@ -17,6 +17,24 @@ test("dense shell exposes bookmark count and device-local activity", () => {
   assert.match(appSource, /data-clear-recents/);
 });
 
+test("shared application shell provides contextual rails and mobile presentation modes", () => {
+  assert.match(appSource, /function applicationShell\(\{[\s\S]*contextualNavigation = \[\],[\s\S]*mainContent,[\s\S]*columnCount = contextualNavigation\.length,[\s\S]*mobilePresentationMode = "focused"/);
+  assert.match(appSource, /class="application-shell mobile-\$\{escapeHtml\(mobilePresentationMode\)\}" data-context-columns="\$\{columnCount\}"/);
+  assert.match(appSource, /statuteTitleColumn\(catalog, title\)/);
+  assert.match(appSource, /statuteChapterColumn\(title, chapter\)/);
+  assert.match(appSource, /statuteSectionColumn\(title, chapter, chapterNavigation, selected, changeBySection\)/);
+  assert.match(stylesSource, /\.context-list a\[aria-current="page"\]/);
+});
+
+test("detail pages record recents only after rendering and mobile readers expose a native chapter sheet", () => {
+  assert.match(appSource, /deviceState\.recordRecent\(\{[\s\S]*type: "statute"/);
+  assert.match(appSource, /deviceState\.recordRecent\(\{[\s\S]*type: "index"/);
+  assert.match(appSource, /deviceState\.recordRecent\(\{[\s\S]*type: "infraction"/);
+  assert.match(appSource, /<dialog class="chapter-sheet" data-chapter-sheet/);
+  assert.match(appSource, /data-open-chapter-sheet aria-haspopup="dialog"/);
+  assert.match(appSource, /chapterDialogController\?\.close\(\)/);
+});
+
 test("index letters render collapsed topics, dedicated large topics, and repealed filtering", () => {
   assert.match(appSource, /<details class="index-topic"/);
   assert.match(appSource, /LARGE_INDEX_TOPIC_THRESHOLD = 200/);

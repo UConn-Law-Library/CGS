@@ -9,7 +9,8 @@ export function aggregateShardCounts(shards = [], countKey = "headingCount") {
 
 export function contextualColumnCount(area, route = {}) {
   if (area === "statutes") {
-    if (route.kind === "home" || route.kind === "title") return 1;
+    if (route.kind === "home") return 1;
+    if (route.kind === "title") return 2;
     if (route.kind === "chapter" || route.kind === "section") return 3;
   }
   if (area === "index") return route.letter ? 2 : 1;

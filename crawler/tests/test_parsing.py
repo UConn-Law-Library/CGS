@@ -6,6 +6,7 @@ from crawler.cgs_crawler.parsing import (
     expand_grouped_section_keys,
     extract_chapter_links,
     extract_grouped_section_content,
+    extract_inline_title_chapter,
     extract_section_links,
     extract_section_text_map,
 )
@@ -24,6 +25,29 @@ class ParsingTests(unittest.TestCase):
             "https://www.cga.ct.gov/current/pub/title_17b.htm",
         )
         self.assertEqual([chapter[0] for chapter in chapters], ["319y", "319aa", "368ll", "588hh"])
+
+    def test_title_level_provisions_use_the_official_former_chapter_note(self):
+        chapter = extract_inline_title_chapter(
+            fixture("title_inline_former_chapter.html"),
+            "https://www.cga.ct.gov/current/pub/title_04c.htm",
+            "04c",
+        )
+        self.assertEqual(
+            chapter,
+            (
+                "former-58",
+                "Former Chapter 58",
+                "Repealed and obsolete provisions",
+                "https://www.cga.ct.gov/current/pub/title_04c.htm",
+            ),
+        )
+        self.assertIsNone(
+            extract_inline_title_chapter(
+                '<a href="#sec_4c-3">Sec. 4c-3. Obsolete.</a>',
+                "https://www.cga.ct.gov/current/pub/title_04c.htm",
+                "04c",
+            )
+        )
 
     def test_visible_heading_wins_over_fragment_and_content_uses_source_anchor(self):
         html = fixture("chapter_fragment_mismatch.html")

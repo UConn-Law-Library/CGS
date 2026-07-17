@@ -724,7 +724,16 @@
       "name": "Business Regulation. Department of Business Regulation",
       "sourceUrl": "https://www.cga.ct.gov/current/pub/title_04c.htm",
       "searchPath": "search/title-04c.json",
-      "chapters": []
+      "chapters": [
+        {
+          "id": "chapter-former-58",
+          "number": "former-58",
+          "name": "Repealed and obsolete provisions",
+          "path": "chapters/former-58.json",
+          "sourceUrl": "https://www.cga.ct.gov/current/pub/title_04c.htm",
+          "sectionCount": 2
+        }
+      ]
     },
     {
       "id": "title-04d",
@@ -7548,7 +7557,16 @@
       "name": "Negotiable Instruments",
       "sourceUrl": "https://www.cga.ct.gov/current/pub/title_39.htm",
       "searchPath": "search/title-39.json",
-      "chapters": []
+      "chapters": [
+        {
+          "id": "chapter-former-695",
+          "number": "former-695",
+          "name": "Repealed and obsolete provisions",
+          "path": "chapters/former-695.json",
+          "sourceUrl": "https://www.cga.ct.gov/current/pub/title_39.htm",
+          "sectionCount": 2
+        }
+      ]
     },
     {
       "id": "title-40",
@@ -9865,7 +9883,7 @@
   ],
   "counts": {
     "titles": 81,
-    "chapters": 1141,
-    "sections": 33013
+    "chapters": 1143,
+    "sections": 33017
   }
 }

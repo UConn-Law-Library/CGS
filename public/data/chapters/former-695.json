@@ -1,13 +1,18 @@
 {
   "schemaVersion": "1.0.0",
+  "id": "chapter-former-695",
+  "number": "former-695",
+  "name": "Repealed and obsolete provisions",
   "title": {
     "id": "title-39",
     "number": "39",
     "name": "Negotiable Instruments"
   },
-  "documents": [
+  "sourceUrl": "https://www.cga.ct.gov/current/pub/title_39.htm",
+  "sections": [
     {
       "id": "group-39-1-to-39-2-to-39-3-to-39-4-to-39-5-to-39-6-to-39-7-to-39-8-to-39-9-to-39-10-to-39-11-to-39-12-to-39-13-to-39-14-to-39-15-to-39-16-to-39-17-to-39-18-to-39-19-to-39-20-to-39-21-to-39-22-to-39-23-to-39-24-to-39-25-to-39-26-to-39-27-to-39-28-to-39-29-to-39-30-to-39-31-to-39-32-to-39-33-to-39-34-to-39-35-to-39-36-to-39-37-to-39-38-to-39-39-to-39-40-to-39-41-to-39-42-to-39-43-to-39-44-to-39-45-to-39-46-to-39-47-to-39-48-to-39-49-to-39-50-to-39-51-to-39-52-to-39-53-to-39-54-to-39-55-to-39-56-to-39-57-to-39-58-to-39-59-to-39-60-to-39-61-to-39-62-to-39-63-to-39-64-to-39-65-to-39-66-to-39-67-to-39-68-to-39-69-to-39-70-to-39-71-to-39-72-to-39-73-to-39-74-to-39-75-to-39-76-to-39-77-to-39-78-to-39-79-to-39-80-to-39-81-to-39-82-to-39-83-to-39-84-to-39-85-to-39-86-to-39-87-to-39-88-to-39-89-to-39-90-to-39-91-to-39-92-to-39-93-to-39-94-to-39-95-to-39-96-to-39-97-to-39-98-to-39-99-to-39-100-to-39-101-to-39-102-to-39-103-to-39-104-to-39-105-to-39-106-to-39-107-to-39-108-to-39-109-to-39-110-to-39-111-to-39-112-to-39-113-to-39-114-to-39-115-to-39-116-to-39-117-to-39-118-to-39-119-to-39-120-to-39-121-to-39-122-to-39-123-to-39-124-to-39-125-to-39-126-to-39-127-to-39-128-to-39-129-to-39-130-to-39-131-to-39-132-to-39-133-to-39-134-to-39-135-to-39-136-to-39-137-to-39-138-to-39-139-to-39-140-to-39-141-to-39-142-to-39-143-to-39-144-to-39-145-to-39-146-to-39-147-to-39-148-to-39-149-to-39-150-to-39-151-to-39-152-to-39-153-to-39-154-to-39-155-to-39-156-to-39-157-to-39-158-to-39-159-to-39-160-to-39-161-to-39-162-to-39-163-to-39-164-to-39-165-to-39-166-to-39-167-to-39-168-to-39-169-to-39-170-to-39-171-to-39-172-to-39-173-to-39-174-to-39-175-to-39-176-to-39-177-to-39-178-to-39-179-to-39-180-to-39-181-to-39-182-to-39-183-to-39-184-to-39-185-to-39-186-to-39-187-to-39-188-to-39-189-to-39-190",
+      "kind": "group",
       "citation": null,
       "citations": [
         "39-1",
@@ -202,17 +207,24 @@
         "39-190"
       ],
       "heading": "Secs. 39-1 to 39-190. Act of 1897.",
-      "chapter": {
-        "id": "chapter-former-695",
-        "number": "former-695",
-        "name": "Repealed and obsolete provisions"
-      },
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/title_39.htm#secs_39-1_to_39-190",
       "status": "repealed",
-      "text": "Sections 39-1 to 39-190, inclusive, are repealed.\n\nNote: These sections were formerly published as chapter 695.",
-      "href": "?chapter=former-695&section=group-39-1-to-39-2-to-39-3-to-39-4-to-39-5-to-39-6-to-39-7-to-39-8-to-39-9-to-39-10-to-39-11-to-39-12-to-39-13-to-39-14-to-39-15-to-39-16-to-39-17-to-39-18-to-39-19-to-39-20-to-39-21-to-39-22-to-39-23-to-39-24-to-39-25-to-39-26-to-39-27-to-39-28-to-39-29-to-39-30-to-39-31-to-39-32-to-39-33-to-39-34-to-39-35-to-39-36-to-39-37-to-39-38-to-39-39-to-39-40-to-39-41-to-39-42-to-39-43-to-39-44-to-39-45-to-39-46-to-39-47-to-39-48-to-39-49-to-39-50-to-39-51-to-39-52-to-39-53-to-39-54-to-39-55-to-39-56-to-39-57-to-39-58-to-39-59-to-39-60-to-39-61-to-39-62-to-39-63-to-39-64-to-39-65-to-39-66-to-39-67-to-39-68-to-39-69-to-39-70-to-39-71-to-39-72-to-39-73-to-39-74-to-39-75-to-39-76-to-39-77-to-39-78-to-39-79-to-39-80-to-39-81-to-39-82-to-39-83-to-39-84-to-39-85-to-39-86-to-39-87-to-39-88-to-39-89-to-39-90-to-39-91-to-39-92-to-39-93-to-39-94-to-39-95-to-39-96-to-39-97-to-39-98-to-39-99-to-39-100-to-39-101-to-39-102-to-39-103-to-39-104-to-39-105-to-39-106-to-39-107-to-39-108-to-39-109-to-39-110-to-39-111-to-39-112-to-39-113-to-39-114-to-39-115-to-39-116-to-39-117-to-39-118-to-39-119-to-39-120-to-39-121-to-39-122-to-39-123-to-39-124-to-39-125-to-39-126-to-39-127-to-39-128-to-39-129-to-39-130-to-39-131-to-39-132-to-39-133-to-39-134-to-39-135-to-39-136-to-39-137-to-39-138-to-39-139-to-39-140-to-39-141-to-39-142-to-39-143-to-39-144-to-39-145-to-39-146-to-39-147-to-39-148-to-39-149-to-39-150-to-39-151-to-39-152-to-39-153-to-39-154-to-39-155-to-39-156-to-39-157-to-39-158-to-39-159-to-39-160-to-39-161-to-39-162-to-39-163-to-39-164-to-39-165-to-39-166-to-39-167-to-39-168-to-39-169-to-39-170-to-39-171-to-39-172-to-39-173-to-39-174-to-39-175-to-39-176-to-39-177-to-39-178-to-39-179-to-39-180-to-39-181-to-39-182-to-39-183-to-39-184-to-39-185-to-39-186-to-39-187-to-39-188-to-39-189-to-39-190"
+      "content": {
+        "body": [
+          "Sections 39-1 to 39-190, inclusive, are repealed.",
+          "Note: These sections were formerly published as chapter 695."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 6292–6481; 1959, P.A. 133, S. 10-102.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 39-1 to 39-190, inclusive, are repealed.\n\nNote: These sections were formerly published as chapter 695."
+      }
     },
     {
       "id": "group-39-191-to-39-192-to-39-193",
+      "kind": "group",
       "citation": null,
       "citations": [
         "39-191",
@@ -220,14 +232,20 @@
         "39-193"
       ],
       "heading": "Secs. 39-191 to 39-193. General provisions.",
-      "chapter": {
-        "id": "chapter-former-695",
-        "number": "former-695",
-        "name": "Repealed and obsolete provisions"
-      },
+      "sourceUrl": "https://www.cga.ct.gov/current/pub/title_39.htm#secs_39-191_to_39-193",
       "status": "repealed",
-      "text": "Sections 39-191 to 39-193, inclusive, are repealed.\n\nNote: These sections were formerly published as chapter 696.",
-      "href": "?chapter=former-695&section=group-39-191-to-39-192-to-39-193"
+      "content": {
+        "body": [
+          "Sections 39-191 to 39-193, inclusive, are repealed.",
+          "Note: These sections were formerly published as chapter 696."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 6482–6484; 1959, P.A. 133, S. 10-102.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 39-191 to 39-193, inclusive, are repealed.\n\nNote: These sections were formerly published as chapter 696."
+      }
     }
   ]
 }

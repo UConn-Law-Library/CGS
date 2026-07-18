@@ -94,7 +94,17 @@ test("builds and parses mobile destination routes", () => {
   assert.deepEqual(parseRoute({ hash: titlesRouteHref() }), { kind: "titles" });
   assert.equal(searchRouteHref("public records"), "#/search?q=public%20records");
   assert.deepEqual(parseRoute({ hash: "#/search?q=public%20records" }), {
-    kind: "search", query: "public records"
+    kind: "search", query: "public records", title: null, chapter: null, status: null,
+    supplement: null, field: "statute", within: null, sort: "relevance"
+  });
+  const filteredSearch = searchRouteHref("public NEAR/5 records", {
+    title: "title-01", chapter: "001", status: "active", supplement: "updated",
+    field: "history", within: "tax*", sort: "citation"
+  });
+  assert.equal(filteredSearch, "#/search?q=public%20NEAR%2F5%20records&title=title-01&chapter=001&status=active&supplement=updated&field=history&within=tax*&sort=citation");
+  assert.deepEqual(parseRoute({ hash: filteredSearch }), {
+    kind: "search", query: "public NEAR/5 records", title: "title-01", chapter: "001",
+    status: "active", supplement: "updated", field: "history", within: "tax*", sort: "citation"
   });
   const detail = infractionsRouteHref("MOTOR VEHICLES", { entry: "infraction-1" });
   assert.equal(detail, "#/infractions/MOTOR%20VEHICLES/entry/infraction-1");

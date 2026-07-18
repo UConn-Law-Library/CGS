@@ -50,12 +50,28 @@ test("mobile chapter sheet closes and restores focus", async ({ page }, testInfo
 
 test("Boolean full-text search highlights phrase matches and can show more", async ({ page }) => {
   await openApp(page, "#/search?q=%22Effective%20January%22");
-  await expect(page.locator("#search-status")).toContainText(/Showing 50 of \d+ results/);
+  await expect(page.locator("#search-status")).toContainText(/Showing 50 of [\d,]+ results/);
   await expect(page.locator("#results mark").first()).toHaveText(/Effective January/i);
   const more = page.getByRole("button", { name: /Show 50 more results/ });
   await expect(more).toBeVisible();
   await more.click();
   await expect(page.locator("#search-status")).toContainText(/Showing 100 of \d+ results/);
+});
+
+test("Search v2 preserves filters, explains the query, searches within results, and records history", async ({ page }) => {
+  await openApp(page, "#/search?q=public&title=title-01&field=heading&sort=citation");
+  await expect(page.locator("#search-title")).toHaveValue("title-01");
+  await expect(page.locator("#search-field")).toHaveValue("heading");
+  await expect(page.locator("#search-sort")).toHaveValue("citation");
+  await expect(page.getByRole("heading", { level: 2, name: "public" })).toBeVisible();
+  await expect(page.locator("#search-status")).toContainText(/Showing|No results/);
+
+  await page.locator("#search-within-query").fill("records");
+  await page.locator("[data-search-within]").getByRole("button", { name: "Apply" }).click();
+  await expect(page).toHaveURL(/within=records/);
+  await expect(page.getByRole("heading", { level: 2, name: "public AND records" })).toBeVisible();
+  await page.locator(".search-history").click();
+  await expect(page.locator(".search-history-list a").first()).toHaveAttribute("href", /within=records/);
 });
 
 test("bookmarks remain available on the device-local bookmarks page", async ({ page }) => {

@@ -4,6 +4,7 @@ import path from "node:path";
 import { generateDiscovery } from "./lib/discovery.mjs";
 import { stampServiceWorker } from "./lib/pwa-build.mjs";
 import { generateSupplementIndex } from "./lib/supplement-index.mjs";
+import { generateSearchV2Artifacts } from "./lib/search-v2-artifacts.mjs";
 
 const root = process.cwd();
 const output = path.join(root, "dist");
@@ -20,5 +21,12 @@ const supplementIndex = await generateSupplementIndex({
   outputDir: path.join(output, "data", "supplements"),
   generatedAt: catalog.generatedAt
 });
+const searchV2 = await generateSearchV2Artifacts({
+  catalog,
+  dataDirectory,
+  supplementsDir: path.join(dataDirectory, "supplements"),
+  outputDir: path.join(output, "data", "search-v2"),
+  generatedAt: catalog.generatedAt
+});
 const buildId = await stampServiceWorker(output);
-console.log(`Built static site at ${output} with ${discovery.pages} indexed URLs, ${supplementIndex.editions.length} supplement editions, and PWA build ${buildId}`);
+console.log(`Built static site at ${output} with ${discovery.pages} indexed URLs, ${supplementIndex.editions.length} supplement editions, ${searchV2.counts.documents} extended search documents, and PWA build ${buildId}`);

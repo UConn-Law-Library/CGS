@@ -1,7 +1,9 @@
 const BOOKMARKS_KEY = "cgs.bookmarks.v1";
 const PREFERENCES_KEY = "cgs.preferences.v1";
 const RECENTS_KEY = "cgs.recents.v1";
+const SEARCH_HISTORY_KEY = "cgs.search-history.v1";
 const RECENT_LIMIT = 20;
+const SEARCH_HISTORY_LIMIT = 20;
 
 export const DEFAULT_PREFERENCES = Object.freeze({
   theme: "auto",
@@ -101,6 +103,34 @@ export class DeviceState {
 
   clearRecents() {
     this.#write(RECENTS_KEY, []);
+  }
+
+  searchHistory() {
+    const value = this.#read(SEARCH_HISTORY_KEY, []);
+    return Array.isArray(value)
+      ? value.filter((item) => item?.query && item?.href && item?.searchedAt)
+        .sort((left, right) => String(right.searchedAt).localeCompare(String(left.searchedAt)))
+        .slice(0, SEARCH_HISTORY_LIMIT)
+      : [];
+  }
+
+  recordSearch(item) {
+    if (!item?.query || !item?.href) return this.searchHistory();
+    const search = {
+      query: String(item.query),
+      description: String(item.description ?? ""),
+      href: String(item.href),
+      searchedAt: item.searchedAt ?? new Date().toISOString()
+    };
+    const values = [search, ...this.searchHistory().filter((value) => value.href !== search.href)]
+      .sort((left, right) => String(right.searchedAt).localeCompare(String(left.searchedAt)))
+      .slice(0, SEARCH_HISTORY_LIMIT);
+    this.#write(SEARCH_HISTORY_KEY, values);
+    return values;
+  }
+
+  clearSearchHistory() {
+    this.#write(SEARCH_HISTORY_KEY, []);
   }
 
   preferences() {

@@ -5,11 +5,12 @@ function escapePattern(value) {
   return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
-export function searchHighlightTerms(query) {
+export function searchHighlightTerms(query, { within = null } = {}) {
   try {
-    return compileSearchQuery(query).positives
+    return [...compileSearchQuery(query).positives, ...(within ? compileSearchQuery(within).positives : [])]
       .map(({ value }) => value)
       .filter(Boolean)
+      .filter((value, index, values) => values.indexOf(value) === index)
       .sort((left, right) => right.length - left.length);
   } catch {
     return [];

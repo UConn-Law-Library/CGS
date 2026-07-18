@@ -1,4 +1,4 @@
-import { SearchRepository } from "./search.js";
+import { explainSearchQuery, normalizeSearchOptions, SearchRepository } from "./search.js";
 import { applyChapterOverlay, mergeSupplementTitleChapters, SupplementRepository } from "./supplements.js";
 import { ProgressiveSearchClient } from "./search-client.js";
 import {
@@ -155,6 +155,7 @@ function settingsPanel() {
   const preferences = deviceState.preferences();
   const bookmarkCount = deviceState.bookmarks().length;
   const recentCount = deviceState.recents().length;
+  const searchHistoryCount = deviceState.searchHistory().length;
   return `<section class="settings-panel" role="dialog" aria-label="Settings" data-settings-panel hidden>
     <div class="settings-heading"><strong>Settings</strong><button type="button" class="icon-button" data-close-settings aria-label="Close settings">×</button></div>
     <div class="setting-group"><span>Theme</span><div class="segmented" role="group" aria-label="Theme">
@@ -172,6 +173,7 @@ function settingsPanel() {
     <p class="settings-note" data-storage-status>${escapeHtml(storageStatus(pwaState))}</p>
     <button type="button" class="settings-action" data-clear-bookmarks${bookmarkCount ? "" : " disabled"}>Clear bookmarks <small>${bookmarkCount ? `${bookmarkCount} saved` : "None saved"}</small></button>
     <button type="button" class="settings-action" data-clear-recents${recentCount ? "" : " disabled"}>Clear recent history <small>${recentCount ? `${recentCount} item${recentCount === 1 ? "" : "s"}` : "No recent history"}</small></button>
+    <button type="button" class="settings-action" data-clear-search-history${searchHistoryCount ? "" : " disabled"}>Clear search history <small>${searchHistoryCount ? `${searchHistoryCount} search${searchHistoryCount === 1 ? "" : "es"}` : "No search history"}</small></button>
     <a class="settings-action" href="#/about">About this app <small>Sources, coverage, and project information</small></a>
     <a class="settings-action" href="./discover/">Static discovery index <small>Script-free browsing</small></a>
   </section>`;
@@ -662,13 +664,32 @@ function renderProvision(title, chapter, section, maps, secondaryContext = null,
   </article>`;
 }
 
-function renderSearchResults(matches, results, query) {
-  const highlightTerms = searchHighlightTerms(query);
-  results.innerHTML = matches.map(({ document, score }) => {
+const SEARCH_FIELD_LABELS = {
+  statute: "Statute text",
+  citation: "Citation",
+  heading: "Heading",
+  body: "Body",
+  history: "History",
+  annotations: "Annotations"
+};
+
+function searchResultContext(document, searchOptions) {
+  if (searchOptions.field === "history") return document.history ?? "";
+  if (searchOptions.field === "annotations") return document.annotations ?? "";
+  return document.text ?? "";
+}
+
+function renderSearchResults(matches, results, query, searchOptions = {}) {
+  const options = normalizeSearchOptions(searchOptions);
+  const highlightTerms = searchHighlightTerms(query, { within: options.within });
+  results.innerHTML = matches.map(({ document, score, matchedFields = [] }) => {
     const documentStatus = document.status === "active" ? "" : `<span class="status">${escapeHtml(document.status)}</span>`;
     const supplement = document.supplement ? `<span class="supplement-pill supplement-${escapeHtml(document.supplement.presentation)}">${escapeHtml(supplementLabel(document.supplement, { short: true }))}</span>` : "";
-    return `<li><a href="${escapeHtml(routeForDocument(document))}"><span class="result-citation">${renderSearchHighlight(document.citation ?? document.citations.join("–"), highlightTerms)}</span>${renderSearchHighlight(document.heading, highlightTerms)} ${documentStatus}${supplement}</a>
-      <p>${escapeHtml(titleLabel(document.title))} · ${escapeHtml(chapterLabel(document.chapter))} · ${renderSearchExcerpt(document.text, highlightTerms)}</p><span class="visually-hidden">Relevance ${score}</span></li>`;
+    const field = ["all", "statute"].includes(options.field) && matchedFields.length
+      ? `<span class="result-match-field">${escapeHtml(matchedFields.map((name) => SEARCH_FIELD_LABELS[name] ?? name).join(", "))}</span>`
+      : "";
+    return `<li><a href="${escapeHtml(routeForDocument(document))}"><span class="result-citation">${renderSearchHighlight(document.citation ?? document.citations.join("–"), highlightTerms)}</span>${renderSearchHighlight(document.heading, highlightTerms)} ${documentStatus}${supplement}${field}</a>
+      <p>${escapeHtml(titleLabel(document.title))} · ${escapeHtml(chapterLabel(document.chapter))} · ${renderSearchExcerpt(searchResultContext(document, options), highlightTerms)}</p><span class="visually-hidden">Relevance ${score}</span></li>`;
   }).join("");
 }
 
@@ -830,7 +851,58 @@ async function renderAbout(catalog) {
   window.scrollTo({ top: 0 });
 }
 
-async function runStatuteSearch(query, titleId = null, { limit = SEARCH_BATCH_SIZE } = {}) {
+function selectAttribute(value, selectedValue) {
+  return String(value ?? "") === String(selectedValue ?? "") ? " selected" : "";
+}
+
+function searchRouteOptions(route = {}) {
+  return {
+    title: route.title ?? null,
+    chapter: route.chapter ?? null,
+    status: route.status ?? null,
+    supplement: route.supplement ?? null,
+    field: route.field ?? "statute",
+    within: route.within ?? null,
+    sort: route.sort ?? "relevance"
+  };
+}
+
+function searchDescription(query, routeOptions = {}) {
+  const options = normalizeSearchOptions(routeOptions);
+  const parts = [explainSearchQuery(query, options)];
+  if (routeOptions.title) parts.push(`Title ${routeOptions.title.replace(/^title-/u, "")}`);
+  if (options.chapter) parts.push(`Chapter ${options.chapter}`);
+  if (options.field !== "statute") parts.push(SEARCH_FIELD_LABELS[options.field] ?? options.field);
+  if (options.status) parts.push(options.status);
+  if (options.supplement) parts.push(options.supplement === "updated" ? "Supplement updated" : "Base revision only");
+  if (options.sort === "citation") parts.push("Citation order");
+  return parts.join(" · ");
+}
+
+function searchHistoryMarkup() {
+  const searches = deviceState.searchHistory().slice(0, 8);
+  if (!searches.length) return `<p class="search-history-empty">Completed searches on this device will appear here.</p>`;
+  return `<ol class="search-history-list">${searches.map((item) => `<li><a href="${escapeHtml(item.href)}"><strong>${escapeHtml(item.query)}</strong>${item.description ? `<small>${escapeHtml(item.description)}</small>` : ""}</a></li>`).join("")}</ol>`;
+}
+
+function queryExplanationMarkup(query, routeOptions = {}) {
+  if (!query) return "";
+  try {
+    const options = normalizeSearchOptions(routeOptions);
+    const filters = [];
+    if (routeOptions.title) filters.push(`Title ${routeOptions.title.replace(/^title-/u, "")}`);
+    if (options.chapter) filters.push(`Chapter ${options.chapter}`);
+    if (options.field !== "statute") filters.push(`${SEARCH_FIELD_LABELS[options.field] ?? options.field} field`);
+    if (options.status) filters.push(`${options.status} sections`);
+    if (options.supplement) filters.push(options.supplement === "updated" ? "supplement-updated sections" : "base revision only");
+    return `<section class="query-explanation" aria-labelledby="query-explanation-heading"><p class="eyebrow">Query interpretation</p><h2 id="query-explanation-heading">${escapeHtml(explainSearchQuery(query, options))}</h2>${filters.length ? `<p>${filters.map((value) => escapeHtml(value)).join(" · ")}</p>` : ""}<p>Sorted by ${options.sort === "citation" ? "citation" : "relevance"}. Exact terms are used; fuzzy matching and stemming are off.</p></section>`;
+  } catch (error) {
+    return `<section class="query-explanation query-explanation-error" role="alert"><strong>Query could not be interpreted</strong><p>${escapeHtml(error.message)}</p></section>`;
+  }
+}
+
+async function runStatuteSearch(query, routeOptions = {}, { limit = SEARCH_BATCH_SIZE } = {}) {
+  const options = normalizeSearchOptions(routeOptions);
   const status = document.querySelector("#search-status");
   const results = document.querySelector("#results");
   const progress = document.querySelector("#search-progress");
@@ -848,14 +920,20 @@ async function runStatuteSearch(query, titleId = null, { limit = SEARCH_BATCH_SI
   progress.value = 0;
   try {
     const outcome = await searchClient.search(query, {
-      titleIds: titleId ? [titleId] : undefined,
+      titleIds: routeOptions.title ? [routeOptions.title] : undefined,
+      chapter: options.chapter,
+      status: options.status,
+      supplement: options.supplement,
+      field: options.field,
+      within: options.within,
+      sort: options.sort,
       limit,
       signal: controller.signal,
       onProgress(update) {
         if (controller !== activeSearchController) return;
         progress.max = Math.max(1, update.total);
         progress.value = update.completed;
-        renderSearchResults(update.results, results, query);
+        renderSearchResults(update.results, results, query, options);
         warning.hidden = !update.supplementUnavailable;
         status.textContent = `Searching ${update.completed} of ${update.total} title shard${update.total === 1 ? "" : "s"}… ${update.totalMatches.toLocaleString()} match${update.totalMatches === 1 ? "" : "es"} found so far.`;
       }
@@ -866,13 +944,15 @@ async function runStatuteSearch(query, titleId = null, { limit = SEARCH_BATCH_SI
       ? `Showing ${matches.length.toLocaleString()} of ${totalMatches.toLocaleString()} result${totalMatches === 1 ? "" : "s"}`
       : "No results";
     warning.hidden = !supplementUnavailable;
-    renderSearchResults(matches, results, query);
+    renderSearchResults(matches, results, query, options);
+    const href = searchRouteHref(query, { ...options, title: routeOptions.title });
+    deviceState.recordSearch({ query, href, description: searchDescription(query, { ...options, title: routeOptions.title }) });
+    const history = document.querySelector("[data-search-history]");
+    if (history) history.innerHTML = searchHistoryMarkup();
     const remaining = Math.min(SEARCH_BATCH_SIZE, totalMatches - matches.length);
     if (remaining > 0) {
       more.hidden = false;
       more.textContent = `Show ${remaining.toLocaleString()} more result${remaining === 1 ? "" : "s"}`;
-      more.dataset.searchQuery = query;
-      more.dataset.searchTitle = titleId ?? "";
       more.dataset.searchLimit = String(matches.length + remaining);
     }
   } catch (error) {
@@ -891,24 +971,42 @@ async function runStatuteSearch(query, titleId = null, { limit = SEARCH_BATCH_SI
 
 async function renderSearchPage(catalog, route) {
   const query = route.query ?? "";
+  const options = searchRouteOptions(route);
+  const selectedTitle = catalog.titles.find((title) => title.id === options.title) ?? null;
   setDocumentTitle(query ? `Search: ${query}` : "Search");
   app.innerHTML = `${siteHeader()}<main class="search-page" id="main-content">
-    <header><p class="eyebrow">Statutes</p><h1>Search results</h1></header>
-    <form class="search-refine" data-search-refine>
-      <div class="search-field search-query-field"><label for="search-page-query">Citation, phrase, or keyword</label>
-        <input id="search-page-query" name="query" type="search" minlength="2" required aria-describedby="search-help" value="${escapeHtml(query)}"></div>
-      <div class="search-field"><label for="search-title">Limit to a title</label>
-        <select id="search-title" name="title"><option value="">All titles</option>${catalog.titles.map((title) => `<option value="${escapeHtml(title.id)}">${escapeHtml(titleLabel(title))} — ${escapeHtml(title.name)}</option>`).join("")}</select></div>
-      <button type="submit">Search</button>
+    <header><p class="eyebrow">Statutes</p><h1>Search</h1><p>Search the full statute text and, when selected, legislative history and annotations.</p></header>
+    <form class="search-refine search-v2-refine" data-search-refine>
+      <div class="search-primary-controls">
+        <div class="search-field search-query-field"><label for="search-page-query">Citation, phrase, or keyword</label>
+          <input id="search-page-query" name="query" type="search" minlength="2" required aria-describedby="search-help" value="${escapeHtml(query)}"></div>
+        <div class="search-field"><label for="search-title">Title</label>
+          <select id="search-title" name="title"><option value="">All titles</option>${catalog.titles.map((title) => `<option value="${escapeHtml(title.id)}"${selectAttribute(title.id, options.title)}>${escapeHtml(titleLabel(title))} — ${escapeHtml(title.name)}</option>`).join("")}</select></div>
+        <div class="search-field"><label for="search-chapter">Chapter</label>
+          <select id="search-chapter" name="chapter"${selectedTitle ? "" : " disabled"}><option value="">All chapters</option>${selectedTitle?.chapters.map((chapter) => `<option value="${escapeHtml(chapter.number)}"${selectAttribute(chapter.number, options.chapter)}>${escapeHtml(chapterLabel(chapter))} — ${escapeHtml(chapter.name)}</option>`).join("") ?? ""}</select></div>
+        <button type="submit">Search</button>
+      </div>
+      <details class="search-advanced"${options.field !== "statute" || options.status || options.supplement || options.sort !== "relevance" ? " open" : ""}>
+        <summary>Advanced search options</summary>
+        <div class="search-filter-grid">
+          <div class="search-field"><label for="search-field">Search field</label><select id="search-field" name="field">${[["statute", "Statute text"], ["citation", "Citation"], ["heading", "Heading"], ["body", "Body"], ["history", "History"], ["annotations", "Annotations"], ["all", "All fields"]].map(([value, label]) => `<option value="${value}"${selectAttribute(value, options.field)}>${label}</option>`).join("")}</select></div>
+          <div class="search-field"><label for="search-status-filter">Section status</label><select id="search-status-filter" name="status"><option value="">Any status</option>${["active", "mixed", "obsolete", "repealed", "reserved", "transferred"].map((value) => `<option value="${value}"${selectAttribute(value, options.status)}>${value[0].toUpperCase()}${value.slice(1)}</option>`).join("")}</select></div>
+          <div class="search-field"><label for="search-supplement-filter">Supplement</label><select id="search-supplement-filter" name="supplement"><option value="">Base and supplement</option><option value="updated"${selectAttribute("updated", options.supplement)}>Updated by supplement</option><option value="base"${selectAttribute("base", options.supplement)}>Base revision only</option></select></div>
+          <div class="search-field"><label for="search-sort">Sort</label><select id="search-sort" name="sort"><option value="relevance"${selectAttribute("relevance", options.sort)}>Relevance</option><option value="citation"${selectAttribute("citation", options.sort)}>Citation</option></select></div>
+        </div>
+      </details>
     </form>
-    <p class="search-help" id="search-help">Use AND, OR, NOT, parentheses, and quoted phrases. Multiple words use AND automatically.</p>
+    <p class="search-help" id="search-help">Use AND, OR, NOT, parentheses, quoted phrases, NEAR/n proximity, and a trailing wildcard such as <code>regulat*</code>. Multiple words use AND automatically. Fuzzy matching and stemming are not applied.</p>
+    ${queryExplanationMarkup(query, options)}
+    ${query ? `<form class="search-within" data-search-within><label for="search-within-query">Search within these results</label><div><input id="search-within-query" name="within" type="search" minlength="2" value="${escapeHtml(options.within ?? "")}" placeholder="Add another term or Boolean query"><button type="submit">Apply</button></div>${options.within ? `<a href="${escapeHtml(searchRouteHref(query, { ...options, within: null }))}">Clear within search</a>` : ""}</form>` : ""}
     <progress id="search-progress" value="0" max="1" hidden>Search progress</progress>
     <div id="search-status" role="status" aria-live="polite">${query ? "Preparing search…" : "Enter at least two characters."}</div>
     <p class="supplement-warning" id="search-supplement-warning" role="alert" hidden>The published supplement search data could not be loaded. These results use the base revision and may be incomplete; reload while online before relying on them.</p>
     <ol id="results" class="results"></ol>
     <button type="button" class="search-more" data-search-more hidden>Show more results</button>
+    <details class="search-history"><summary>Recent searches on this device</summary><div data-search-history>${searchHistoryMarkup()}</div></details>
   </main><footer>Unofficial access copy. Verify legal text with the Connecticut General Assembly.</footer>`;
-  if (query.length >= 2) await runStatuteSearch(query);
+  if (query.length >= 2) await runStatuteSearch(query, options);
 }
 
 function renderTitle(catalog, title) {
@@ -1506,7 +1604,8 @@ document.addEventListener("click", async (event) => {
   }
   const searchMore = event.target.closest("[data-search-more]");
   if (searchMore) {
-    await runStatuteSearch(searchMore.dataset.searchQuery, searchMore.dataset.searchTitle || null, {
+    const route = parseRoute(location);
+    await runStatuteSearch(route.query, searchRouteOptions(route), {
       limit: Number(searchMore.dataset.searchLimit) || SEARCH_BATCH_SIZE
     });
     return;
@@ -1610,6 +1709,17 @@ document.addEventListener("click", async (event) => {
     }
     return;
   }
+  const clearSearchHistory = event.target.closest("[data-clear-search-history]");
+  if (clearSearchHistory) {
+    deviceState.clearSearchHistory();
+    if (parseRoute(location).kind === "search") {
+      const history = document.querySelector("[data-search-history]");
+      if (history) history.innerHTML = searchHistoryMarkup();
+    }
+    clearSearchHistory.disabled = true;
+    clearSearchHistory.querySelector("small")?.replaceChildren("No search history");
+    return;
+  }
   const removeBookmark = event.target.closest("[data-remove-bookmark]");
   if (removeBookmark) {
     deviceState.removeBookmark(removeBookmark.dataset.removeBookmark);
@@ -1651,7 +1761,16 @@ document.addEventListener("click", async (event) => {
   }
 });
 
-document.addEventListener("change", (event) => {
+document.addEventListener("change", async (event) => {
+  if (event.target.matches("#search-title")) {
+    const chapterSelect = document.querySelector("#search-chapter");
+    const catalog = await catalogPromise;
+    const title = catalog.titles.find((candidate) => candidate.id === event.target.value);
+    const options = [new Option("All chapters", ""), ...(title?.chapters ?? []).map((chapter) => new Option(`${chapterLabel(chapter)} — ${chapter.name}`, chapter.number))];
+    chapterSelect.replaceChildren(...options);
+    chapterSelect.disabled = !title;
+    return;
+  }
   if (event.target.matches("[data-compact-lists]")) {
     applyPreferences(deviceState.updatePreferences({ compactLists: event.target.checked }));
     return;
@@ -1663,7 +1782,7 @@ document.addEventListener("change", (event) => {
   }
 });
 
-document.addEventListener("submit", (event) => {
+document.addEventListener("submit", async (event) => {
   const form = event.target;
   if (form.matches("[data-global-search]")) {
     event.preventDefault();
@@ -1675,9 +1794,26 @@ document.addEventListener("submit", (event) => {
   if (form.matches("[data-search-refine]")) {
     event.preventDefault();
     const values = new FormData(form);
-    const query = values.get("query").trim();
-    history.replaceState(null, "", `${location.pathname}${searchRouteHref(query)}`);
-    runStatuteSearch(query, values.get("title") || null);
+    const query = String(values.get("query") ?? "").trim();
+    const href = searchRouteHref(query, {
+      title: values.get("title") || null,
+      chapter: values.get("chapter") || null,
+      status: values.get("status") || null,
+      supplement: values.get("supplement") || null,
+      field: values.get("field") || "statute",
+      sort: values.get("sort") || "relevance"
+    });
+    if (location.hash === href) await renderCurrentRoute();
+    else location.hash = href;
+    return;
+  }
+  if (form.matches("[data-search-within]")) {
+    event.preventDefault();
+    const route = parseRoute(location);
+    const within = String(new FormData(form).get("within") ?? "").trim();
+    const href = searchRouteHref(route.query, { ...searchRouteOptions(route), within: within || null });
+    if (location.hash === href) await renderCurrentRoute();
+    else location.hash = href;
     return;
   }
   if (form.matches("[data-infraction-search]")) {

@@ -35,6 +35,7 @@ For a reproducible build, pass `--generated-at 2026-07-13T13:33:18Z`. Otherwise 
 - `public/data/chapters/<chapter>.json`: canonical chapter content; this is the primary durable unit.
 - `public/data/search/manifest.json`: discoverable search-shard metadata.
 - `public/data/search/title-<title>.json`: compact title-level full-text search documents.
+- `dist/data/search-v2/title-<title>.json`: build-derived auxiliary history and annotation fields, joined only when a search needs them and never requiring a database.
 - `public/data/manifest.json`: corpus counts plus SHA-256 and byte size for every generated artifact.
 - `public/data/supplements/<year>/manifest.json`: an optional, immutable annual-overlay manifest bound to one reviewed base corpus.
 - `public/data/supplements/<year>/chapters/<chapter>.json`: only the provisions published in that supplement.
@@ -61,7 +62,9 @@ Older `?chapter=001&section=section-1-1` links are translated to the canonical r
 
 ## Search execution
 
-Title-scoped and all-title searches use the same static search shards. The client loads up to six title shards concurrently and sends each completed shard to a Web Worker, which continuously merges a deterministic top-result set. The interface displays results and progress as shards arrive, cancels stale work when a new search or route begins, and falls back to incremental main-thread ranking when workers are unavailable. Full-text queries support `AND`, `OR`, unary `NOT`, parentheses, and quoted phrases; adjacent terms use `AND` implicitly. Results are presented in batches of 50 with the exact total match count, so larger result sets remain available without rendering them all at once.
+Title-scoped and all-title searches use static title shards. The client loads up to six shards concurrently and sends each completed shard to a Web Worker, which continuously merges a deterministic top-result set. The interface displays results and progress as shards arrive, cancels stale work when a new search or route begins, and falls back to incremental main-thread ranking when workers are unavailable. The build also derives auxiliary history and annotation shards; the browser loads and joins those fields only for searches that need them.
+
+Search v2 supports `AND`, `OR`, unary `NOT`, parentheses, quoted phrases, `NEAR/n` proximity from 1 to 100 words, and one trailing prefix wildcard such as `regulat*`; adjacent terms use `AND` implicitly. Ordinary terms match exact normalized tokens. Fuzzy matching and stemming remain off. The default Statute text scope searches citations, headings, and bodies without loading reference fields. Researchers can filter by title, chapter, section status, supplement state, or field (citation, heading, body, history, annotations, or all), search within an existing result set, and sort by relevance or legal citation. The page shows its parsed Boolean interpretation, preserves every filter in the hash URL, and stores up to 20 deduplicated completed searches locally on the device. Results are presented in batches of 50 with the exact total match count, so larger result sets remain available without rendering them all at once.
 
 When a supplement is published, the client automatically removes superseded base search documents and adds that edition's changed/new documents. Results therefore match the same latest-supplement view shown by the reader without copying or rewriting the base search corpus. If a supplement search patch cannot be loaded, the base-revision results remain available and the interface displays an explicit warning rather than failing the entire search.
 

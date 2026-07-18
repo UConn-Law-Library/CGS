@@ -92,10 +92,29 @@ The sitemap defaults to `https://uconn-law-library.github.io/CGS/`. Set `CGS_SIT
 | `npm run validate:supplement -- --data <dir> --base public/data` | Validate one supplement and its base-corpus binding |
 | `npm run validate:secondary -- --data <dir> --base public/data` | Validate secondary-source schemas, links, counts, hashes, and base binding |
 | `npm test` | Run importer, validator, and client search tests |
+| `npm run test:browser` | Run desktop/mobile browser, accessibility, interaction, print, and visual-regression tests |
+| `npm run test:browser:update` | Intentionally update reviewed Playwright visual baselines |
 | `npm run build` | Assemble the GitHub Pages artifact in `dist/` |
 | `npm run dev` | Serve `dist/` locally at `http://localhost:4173` |
 | `npm run check` | Run the complete CI verification sequence |
 | `npm run check:fixture` | Rebuild fixture data, then run the complete verification sequence |
+
+## Browser and accessibility quality gate
+
+The Playwright suite exercises the built Pages artifact in Chromium at a 1440x1000 desktop viewport and a 390x844 mobile viewport. It covers representative WCAG scans, accessible structure, keyboard and focus restoration, contextual navigation, chapter dialogs, Boolean search, bookmarks, print mode, offline reopening, and reviewed visual baselines.
+
+Install the pinned browser once, then run the suite:
+
+```sh
+npx playwright install chromium
+npm run test:browser
+```
+
+Failed runs retain screenshots, video, traces, and an HTML report under ignored local directories. CI uploads the same diagnostics for 14 days. Update screenshot baselines only after reviewing the rendered differences:
+
+```sh
+npm run test:browser:update
+```
 
 ## Review a data refresh
 

@@ -21,12 +21,18 @@
     "validate": "node scripts/validate.mjs --data public/data --schemas schemas",
     "validate:supplement": "node scripts/validate-supplement.mjs --base public/data --schemas schemas",
     "validate:secondary": "node scripts/validate-secondary.mjs --base public/data --schemas schemas",
-    "test": "node --test --test-isolation=none",
+    "test": "node --test --test-isolation=none \"test/*.test.mjs\"",
+    "test:browser": "playwright test",
+    "test:browser:update": "playwright test --update-snapshots",
     "test:crawler": "python -m unittest discover -s crawler/tests -v",
     "test:secondary": "python -m unittest discover -s secondary_sources/tests -v",
     "build": "node scripts/build-site.mjs",
     "dev": "node scripts/serve.mjs",
     "check": "npm run validate && npm test && npm run test:crawler && npm run test:secondary && npm run build",
     "check:fixture": "npm run import:fixture && npm run check"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.12.1",
+    "@playwright/test": "^1.61.1"
   }
 }

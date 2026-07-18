@@ -1,6 +1,8 @@
 import assert from "node:assert/strict";
+import { createHash, webcrypto } from "node:crypto";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
+import vm from "node:vm";
 import { PwaManager } from "../src/pwa.js";
 
 test("web app manifest keeps every entry point within the Pages scope", async () => {
@@ -20,7 +22,7 @@ test("web app manifest keeps every entry point within the Pages scope", async ()
 
 test("service worker declares an offline shell and explicit corpus controls", async () => {
   const source = await readFile(new URL("../src/service-worker.js", import.meta.url), "utf8");
-  for (const shellFile of ["./index.html", "./manifest.webmanifest", "./app.js", "./dialog.js", "./context-navigation.js", "./omnisearch.js", "./pwa.js", "./revision-diff.js", "./search-highlight.js", "./data/catalog.json"]) {
+  for (const shellFile of ["./index.html", "./manifest.webmanifest", "./app.js", "./dialog.js", "./context-navigation.js", "./omnisearch.js", "./offline-integrity.js", "./pwa.js", "./revision-diff.js", "./search-highlight.js", "./data/catalog.json"]) {
     assert.match(source, new RegExp(shellFile.replaceAll(".", "\\.")));
   }
   assert.match(source, /request\.mode === "navigate"/);
@@ -34,15 +36,44 @@ test("service worker declares an offline shell and explicit corpus controls", as
   assert.match(source, /\.\/data\/search-v2\/manifest\.json/);
   assert.match(source, /secondaryManifest\.artifacts\.map/);
   assert.match(source, /supplementIndex/);
-  assert.match(source, /manifest\.artifacts\.map\(\(artifact\) => `\.\/data\/supplements/);
+  assert.match(source, /manifest\.artifacts\.map\(\(artifact\) => artifactTask\(`\.\/data\/supplements/);
   assert.match(source, /\.\/supplement-overlay\.js/);
   assert.match(source, /DOWNLOAD_OFFLINE_DATA/);
+  assert.match(source, /REPAIR_OFFLINE_DATA/);
   assert.match(source, /CLEAR_OFFLINE_DATA/);
   assert.match(source, /OFFLINE_STATUS/);
   assert.match(source, /OFFLINE_CACHE_PREFIX/);
   assert.match(source, /ACTIVE_CACHE_URL/);
   assert.match(source, /control\.put\(scopedUrl\(ACTIVE_CACHE_URL\)/);
+  assert.match(source, /CgsOfflineIntegrity\.verifyArtifactBytes/);
+  assert.match(source, /__CGS_CORPUS_GENERATED_AT__/);
+  assert.match(source, /compatibilityFor/);
   assert.match(source, /catch \(error\) \{\s+await caches\.delete\(stagingName\)/);
+});
+
+test("offline artifacts are checked against manifest byte counts and SHA-256 hashes", async () => {
+  const source = await readFile(new URL("../src/offline-integrity.js", import.meta.url), "utf8");
+  const scope = { crypto: webcrypto };
+  scope.globalThis = scope;
+  vm.runInNewContext(source, scope);
+  const bytes = new TextEncoder().encode("verified offline artifact");
+  const expected = {
+    path: "./data/example.json",
+    bytes: bytes.byteLength,
+    sha256: createHash("sha256").update(bytes).digest("hex")
+  };
+
+  const verified = await scope.CgsOfflineIntegrity.verifyArtifactBytes(bytes.buffer, expected, webcrypto);
+  assert.equal(verified.bytes, bytes.byteLength);
+  assert.equal(verified.sha256, expected.sha256);
+  await assert.rejects(
+    scope.CgsOfflineIntegrity.verifyArtifactBytes(bytes.buffer, { ...expected, bytes: expected.bytes + 1 }, webcrypto),
+    /expected .* bytes/i
+  );
+  await assert.rejects(
+    scope.CgsOfflineIntegrity.verifyArtifactBytes(bytes.buffer, { ...expected, sha256: "0".repeat(64) }, webcrypto),
+    /SHA-256 does not match/i
+  );
 });
 
 test("committed PNG install icons have their declared dimensions", async () => {
@@ -94,6 +125,104 @@ test("reports browser storage usage when the estimate API is available", async (
   await manager.refreshStorageEstimate();
   assert.equal(manager.state.storageUsage, 12_582_912);
   assert.equal(manager.state.storageQuota, 104_857_600);
+});
+
+test("requests persistent storage before downloading offline data and exposes the result", async () => {
+  class TestMessageChannel {
+    constructor() {
+      this.port1 = {};
+      this.port2 = { reply: (data) => this.port1.onmessage({ data }) };
+    }
+  }
+  const messages = [];
+  const target = {
+    postMessage({ type }, [port]) {
+      messages.push(type);
+      if (type === "OFFLINE_STATUS") {
+        port.reply({ type: "complete", result: { cachedFiles: 0, totalFiles: 0, complete: false } });
+      } else {
+        port.reply({ type: "complete", result: { cachedFiles: 5, totalFiles: 5, complete: true } });
+      }
+    }
+  };
+  let persisted = false;
+  let persistCalls = 0;
+  const registration = { active: target };
+  const manager = new PwaManager({
+    navigatorObject: {
+      storage: {
+        async persisted() { return persisted; },
+        async persist() { persistCalls += 1; persisted = true; return true; }
+      },
+      serviceWorker: {
+        controller: target,
+        addEventListener() {},
+        async register() { return registration; },
+        ready: Promise.resolve(registration)
+      }
+    },
+    windowObject: { addEventListener() {}, matchMedia() { return { matches: false }; } },
+    MessageChannelClass: TestMessageChannel
+  });
+  await manager.init();
+  await manager.downloadOfflineData();
+
+  assert.equal(persistCalls, 1);
+  assert.equal(manager.state.persistentStorageSupported, true);
+  assert.equal(manager.state.persistentStorageGranted, true);
+  assert.equal(manager.state.complete, true);
+  assert.deepEqual(messages, ["OFFLINE_STATUS", "DOWNLOAD_OFFLINE_DATA"]);
+});
+
+test("repair uses its explicit worker request and preserves the active copy until completion", async () => {
+  class TestMessageChannel {
+    constructor() {
+      this.port1 = {};
+      this.port2 = { reply: (data) => this.port1.onmessage({ data }) };
+    }
+  }
+  const messages = [];
+  const target = {
+    postMessage({ type }, [port]) {
+      messages.push(type);
+      if (type === "OFFLINE_STATUS") {
+        port.reply({ type: "complete", result: {
+          cachedFiles: 12,
+          totalFiles: 12,
+          complete: true,
+          compatibility: { compatible: false, reason: "Old corpus" }
+        } });
+      } else {
+        port.reply({ type: "complete", result: {
+          cachedFiles: 14,
+          totalFiles: 14,
+          complete: true,
+          verifiedFiles: 10,
+          compatibility: { compatible: true, reason: null }
+        } });
+      }
+    }
+  };
+  const registration = { active: target };
+  const manager = new PwaManager({
+    navigatorObject: {
+      serviceWorker: {
+        controller: target,
+        addEventListener() {},
+        async register() { return registration; },
+        ready: Promise.resolve(registration)
+      }
+    },
+    windowObject: { addEventListener() {}, matchMedia() { return { matches: false }; } },
+    MessageChannelClass: TestMessageChannel
+  });
+  await manager.init();
+  await manager.repairOfflineData();
+
+  assert.deepEqual(messages, ["OFFLINE_STATUS", "REPAIR_OFFLINE_DATA"]);
+  assert.equal(manager.state.cachedFiles, 14);
+  assert.equal(manager.state.verifiedFiles, 10);
+  assert.equal(manager.state.compatibility.compatible, true);
 });
 
 test("offers a reload when an installed app receives a new worker", async () => {

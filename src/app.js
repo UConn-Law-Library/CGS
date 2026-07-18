@@ -104,9 +104,51 @@ function installStatus(state) {
 function offlineStatus(state) {
   if (state.error) return state.error;
   if (state.busy && state.totalFiles) return `Downloading ${state.cachedFiles.toLocaleString()} of ${state.totalFiles.toLocaleString()} files…`;
+  if (state.complete && state.compatibility?.compatible === false) return `${state.cachedFiles.toLocaleString()} files available offline; repair required`;
   if (state.complete) return `${state.cachedFiles.toLocaleString()} files available offline`;
   if (state.ready) return "Download the complete published dataset";
   return state.supported ? "Preparing offline storage…" : "Offline storage is unavailable";
+}
+
+function persistenceStatus(state) {
+  if (!state.persistentStorageSupported) return "Persistent storage is not supported by this browser.";
+  if (state.persistentStorageGranted === true) return "Persistent browser storage is granted.";
+  if (state.persistentStorageGranted === false) return "Persistent storage was not granted; the browser may evict downloaded data when space is needed.";
+  return "Persistent storage will be requested when offline data is downloaded.";
+}
+
+function revisionValue(value) {
+  return value ? escapeHtml(String(value)) : "Not reported";
+}
+
+function offlineRevisionMarkup(state) {
+  const current = state.currentRelease;
+  const currentRows = current ? `<dt>Application shell</dt><dd>${revisionValue(current.shellBuildId)}</dd>
+    <dt>Expected corpus</dt><dd>${revisionValue(current.corpus?.generatedAt)} · schema ${revisionValue(current.corpus?.schemaVersion)}</dd>` : "";
+  if (!state.complete) {
+    return `<dl class="offline-release-list">${currentRows || "<dt>Application release</dt><dd>Available after the offline worker is ready.</dd>"}</dl>`;
+  }
+  const supplementRows = (state.supplements ?? []).map((edition) =>
+    `<dt>${escapeHtml(String(edition.editionYear))} supplement</dt><dd>${revisionValue(edition.generatedAt)} · schema ${revisionValue(edition.schemaVersion)}</dd>`
+  ).join("");
+  const verification = state.verifiedFiles
+    ? `${state.verifiedFiles.toLocaleString()} artifacts (${escapeHtml(formatStorage(state.verifiedBytes) ?? `${state.verifiedBytes} bytes`)})`
+    : "Not recorded by this offline data format";
+  return `<dl class="offline-release-list">
+    ${currentRows}
+    <dt>Downloaded</dt><dd>${revisionValue(state.downloadedAt)}</dd>
+    <dt>Downloaded by shell</dt><dd>${revisionValue(state.shellBuildId)}</dd>
+    <dt>Corpus</dt><dd>${revisionValue(state.corpus?.generatedAt)} · schema ${revisionValue(state.corpus?.schemaVersion)}</dd>
+    <dt>Secondary sources</dt><dd>${revisionValue(state.secondary?.generatedAt)} · schema ${revisionValue(state.secondary?.schemaVersion)}</dd>
+    <dt>Search index</dt><dd>${revisionValue(state.search?.generatedAt)} · schema ${revisionValue(state.search?.schemaVersion)}</dd>
+    ${supplementRows}
+    <dt>SHA-256 verified</dt><dd>${verification}</dd>
+  </dl>`;
+}
+
+function offlineCompatibilityWarning(state) {
+  if (state.compatibility?.compatible !== false) return "";
+  return `${state.compatibility.reason ?? "The downloaded corpus is incompatible with this application release."} Repair offline data before relying on offline access.`;
 }
 
 function formatStorage(bytes) {
@@ -132,9 +174,13 @@ function storageStatus(state) {
 function updatePwaControls() {
   const install = document.querySelector("[data-install-app]");
   const download = document.querySelector("[data-download-offline]");
+  const repair = document.querySelector("[data-repair-offline]");
   const clear = document.querySelector("[data-clear-offline]");
   const status = document.querySelector("[data-pwa-status]");
+  const persistence = document.querySelector("[data-persistence-status]");
   const storage = document.querySelector("[data-storage-status]");
+  const release = document.querySelector("[data-offline-release]");
+  const warning = document.querySelector("[data-offline-compatibility]");
   const update = document.querySelector("[data-apply-update]");
   const progress = document.querySelector("[data-pwa-progress]");
   if (!install) return;
@@ -142,9 +188,15 @@ function updatePwaControls() {
   install.querySelector("small").textContent = installStatus(pwaState);
   download.disabled = !pwaState.ready || pwaState.busy;
   download.querySelector("[data-offline-action-label]").textContent = pwaState.complete ? "Refresh offline data" : "Download for offline use";
+  repair.disabled = !pwaState.ready || pwaState.busy || !pwaState.complete;
   clear.disabled = !pwaState.cachedFiles || pwaState.busy;
   status.textContent = offlineStatus(pwaState);
+  persistence.textContent = persistenceStatus(pwaState);
   storage.textContent = storageStatus(pwaState);
+  release.innerHTML = offlineRevisionMarkup(pwaState);
+  const warningText = offlineCompatibilityWarning(pwaState);
+  warning.hidden = !warningText;
+  warning.textContent = warningText;
   update.hidden = !pwaState.updateAvailable;
   progress.hidden = !pwaState.busy || !pwaState.totalFiles;
   progress.max = Math.max(1, pwaState.totalFiles);
@@ -168,9 +220,13 @@ function settingsPanel() {
     <button type="button" class="settings-action" data-install-app${pwaState.installed || !pwaState.installable ? " disabled" : ""}>Install app <small>${escapeHtml(installStatus(pwaState))}</small></button>
     <button type="button" class="settings-action" data-download-offline${!pwaState.ready || pwaState.busy ? " disabled" : ""}><span data-offline-action-label>${pwaState.complete ? "Refresh offline data" : "Download for offline use"}</span><small>Statutes, supplements, search, index, and infractions</small></button>
     <progress class="offline-progress" data-pwa-progress value="${pwaState.cachedFiles}" max="${Math.max(1, pwaState.totalFiles)}"${!pwaState.busy || !pwaState.totalFiles ? " hidden" : ""}>Offline download progress</progress>
+    <button type="button" class="settings-action" data-repair-offline${!pwaState.ready || pwaState.busy || !pwaState.complete ? " disabled" : ""}>Repair offline data <small>Re-download and verify every published artifact</small></button>
     <button type="button" class="settings-action" data-clear-offline${!pwaState.cachedFiles || pwaState.busy ? " disabled" : ""}>Remove offline data <small>Keep the installed app shell</small></button>
+    <p class="offline-compatibility-warning" data-offline-compatibility role="alert"${offlineCompatibilityWarning(pwaState) ? "" : " hidden"}>${escapeHtml(offlineCompatibilityWarning(pwaState))}</p>
     <p class="settings-note" data-pwa-status role="status" aria-live="polite">${escapeHtml(offlineStatus(pwaState))}</p>
+    <p class="settings-note" data-persistence-status>${escapeHtml(persistenceStatus(pwaState))}</p>
     <p class="settings-note" data-storage-status>${escapeHtml(storageStatus(pwaState))}</p>
+    <details class="offline-release-details"><summary>Offline release details</summary><div data-offline-release>${offlineRevisionMarkup(pwaState)}</div></details>
     <button type="button" class="settings-action" data-clear-bookmarks${bookmarkCount ? "" : " disabled"}>Clear bookmarks <small>${bookmarkCount ? `${bookmarkCount} saved` : "None saved"}</small></button>
     <button type="button" class="settings-action" data-clear-recents${recentCount ? "" : " disabled"}>Clear recent history <small>${recentCount ? `${recentCount} item${recentCount === 1 ? "" : "s"}` : "No recent history"}</small></button>
     <button type="button" class="settings-action" data-clear-search-history${searchHistoryCount ? "" : " disabled"}>Clear search history <small>${searchHistoryCount ? `${searchHistoryCount} search${searchHistoryCount === 1 ? "" : "es"}` : "No search history"}</small></button>
@@ -1684,6 +1740,15 @@ document.addEventListener("click", async (event) => {
   if (clearOffline) {
     try {
       await pwaManager.clearOfflineData();
+    } catch {
+      // PwaManager exposes the failure in the live settings status.
+    }
+    return;
+  }
+  const repairOffline = event.target.closest("[data-repair-offline]");
+  if (repairOffline) {
+    try {
+      await pwaManager.repairOfflineData();
     } catch {
       // PwaManager exposes the failure in the live settings status.
     }

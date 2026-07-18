@@ -8,10 +8,27 @@ const initialState = Object.freeze({
   cachedFiles: 0,
   totalFiles: 0,
   complete: false,
+  persistentStorageSupported: false,
+  persistentStorageGranted: null,
   storageUsage: null,
   storageQuota: null,
+  downloadedAt: null,
+  verifiedFiles: 0,
+  verifiedBytes: 0,
+  corpus: null,
+  secondary: null,
+  search: null,
+  supplements: [],
+  shellBuildId: null,
+  currentRelease: null,
+  compatibility: { compatible: null, reason: null },
   error: null
 });
+
+const offlineStateKeys = [
+  "cachedFiles", "totalFiles", "complete", "downloadedAt", "verifiedFiles", "verifiedBytes",
+  "corpus", "secondary", "search", "supplements", "shellBuildId", "currentRelease", "compatibility"
+];
 
 export class PwaManager {
   #navigator;
@@ -64,6 +81,7 @@ export class PwaManager {
       if (this.#hadController) this.#update({ updateAvailable: true });
       this.#hadController = true;
     });
+    await this.refreshPersistenceStatus();
     if (!this.state.supported) return this.state;
     try {
       this.#registration = await this.#navigator.serviceWorker.register("./service-worker.js", { scope: "./" });
@@ -108,6 +126,39 @@ export class PwaManager {
     return this.state;
   }
 
+  async refreshPersistenceStatus() {
+    const storage = this.#navigator?.storage;
+    const supported = typeof storage?.persist === "function";
+    let granted = null;
+    try {
+      if (typeof storage?.persisted === "function") granted = Boolean(await storage.persisted());
+    } catch {
+      // Persistence reporting is optional and must not block the app.
+    }
+    this.#update({ persistentStorageSupported: supported, persistentStorageGranted: granted });
+    return this.state;
+  }
+
+  async requestPersistentStorage() {
+    const storage = this.#navigator?.storage;
+    if (typeof storage?.persist !== "function") {
+      this.#update({ persistentStorageSupported: false, persistentStorageGranted: null });
+      return null;
+    }
+    try {
+      if (typeof storage.persisted === "function" && await storage.persisted()) {
+        this.#update({ persistentStorageSupported: true, persistentStorageGranted: true });
+        return true;
+      }
+      const granted = Boolean(await storage.persist());
+      this.#update({ persistentStorageSupported: true, persistentStorageGranted: granted });
+      return granted;
+    } catch {
+      this.#update({ persistentStorageSupported: true, persistentStorageGranted: false });
+      return false;
+    }
+  }
+
   applyUpdate() {
     if (!this.state.updateAvailable) return false;
     this.#window?.location?.reload?.();
@@ -115,14 +166,19 @@ export class PwaManager {
   }
 
   async downloadOfflineData({ refresh = false } = {}) {
-    const previous = {
-      cachedFiles: this.state.cachedFiles,
-      totalFiles: this.state.totalFiles,
-      complete: this.state.complete
-    };
+    return this.#downloadOfflineData({ type: "DOWNLOAD_OFFLINE_DATA", action: refresh ? "Refresh" : "Download" });
+  }
+
+  async repairOfflineData() {
+    return this.#downloadOfflineData({ type: "REPAIR_OFFLINE_DATA", action: "Repair" });
+  }
+
+  async #downloadOfflineData({ type, action }) {
+    const previous = Object.fromEntries(offlineStateKeys.map((key) => [key, this.state[key]]));
     this.#update({ busy: true, error: null });
     try {
-      const result = await this.#request("DOWNLOAD_OFFLINE_DATA", { refresh }, (progress) => {
+      await this.requestPersistentStorage();
+      const result = await this.#request(type, {}, (progress) => {
         this.#update({ cachedFiles: progress.completed, totalFiles: progress.total });
       });
       this.#update({ ...result, busy: false, error: null });
@@ -135,7 +191,7 @@ export class PwaManager {
       this.#update({
         ...previous,
         busy: false,
-        error: `Download interrupted. ${recovery} Select download to retry. ${error.message}`
+        error: `${action} interrupted. ${recovery} Select ${action.toLowerCase()} to retry. ${error.message}`
       });
       await this.refreshStorageEstimate();
       throw error;

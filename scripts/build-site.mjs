@@ -28,5 +28,8 @@ const searchV2 = await generateSearchV2Artifacts({
   outputDir: path.join(output, "data", "search-v2"),
   generatedAt: catalog.generatedAt
 });
-const buildId = await stampServiceWorker(output);
+const buildId = await stampServiceWorker(output, undefined, {
+  corpusGeneratedAt: catalog.generatedAt,
+  corpusSchemaVersion: catalog.schemaVersion
+});
 console.log(`Built static site at ${output} with ${discovery.pages} indexed URLs, ${supplementIndex.editions.length} supplement editions, ${searchV2.counts.documents} extended search documents, and PWA build ${buildId}`);

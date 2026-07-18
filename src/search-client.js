@@ -1,4 +1,4 @@
-import { compileSearchQuery, mergeSearchResults, searchDocumentBatch } from "./search.js";
+import { explainSearchQuery, mergeSearchResults, normalizeSearchOptions, searchDocumentBatch } from "./search.js";
 
 function abortError() {
   return new DOMException("Search cancelled", "AbortError");
@@ -29,13 +29,14 @@ export class ProgressiveSearchClient {
     this.#worker?.addEventListener("error", (event) => this.#handleWorkerError(event));
   }
 
-  async search(query, { titleIds, limit = 50, onProgress, signal } = {}) {
+  async search(query, { titleIds, limit = 50, onProgress, signal, ...options } = {}) {
     if (signal?.aborted) throw abortError();
-    compileSearchQuery(query);
+    const searchOptions = normalizeSearchOptions(options);
+    explainSearchQuery(query, searchOptions);
     const manifest = await this.#repository.init();
     const ids = titleIds?.length ? titleIds : manifest.shards.map((shard) => shard.titleId);
     if (signal?.aborted) throw abortError();
-    if (!this.#worker) return this.#searchInline(query, ids, { limit, onProgress, signal });
+    if (!this.#worker) return this.#searchInline(query, ids, { limit, onProgress, signal, searchOptions });
 
     const requestId = ++this.#nextRequestId;
     return new Promise((resolve, reject) => {
@@ -45,10 +46,11 @@ export class ProgressiveSearchClient {
       };
       signal?.addEventListener("abort", onAbort, { once: true });
       this.#pending.set(requestId, { resolve, reject, onProgress, signal, onAbort });
-      this.#worker.postMessage({ type: "start", requestId, query, limit, total: ids.length });
+      this.#worker.postMessage({ type: "start", requestId, query, limit, total: ids.length, searchOptions });
 
       this.#repository.loadTitles(ids, {
         signal,
+        includeAuxiliary: ["all", "history", "annotations"].includes(searchOptions.field),
         onTitle: (shard) => this.#worker?.postMessage({ type: "shard", requestId, shard })
       }).then(() => {
         if (!signal?.aborted) this.#worker?.postMessage({ type: "finish", requestId });
@@ -59,16 +61,17 @@ export class ProgressiveSearchClient {
     });
   }
 
-  async #searchInline(query, ids, { limit, onProgress, signal }) {
+  async #searchInline(query, ids, { limit, onProgress, signal, searchOptions }) {
     let results = [];
     let totalMatches = 0;
     let supplementUnavailable = false;
     await this.#repository.loadTitles(ids, {
       signal,
+      includeAuxiliary: ["all", "history", "annotations"].includes(searchOptions.field),
       onTitle(shard, progress) {
         const documents = shard.documents.map((document) => ({ ...document, title: shard.title }));
-        const batch = searchDocumentBatch(documents, query, { limit });
-        results = mergeSearchResults(results, batch.results, { limit });
+        const batch = searchDocumentBatch(documents, query, { limit, ...searchOptions });
+        results = mergeSearchResults(results, batch.results, { limit, sort: searchOptions.sort });
         totalMatches += batch.totalMatches;
         supplementUnavailable ||= Boolean(shard.supplementUnavailable);
         onProgress?.({ ...progress, results, totalMatches, supplementUnavailable, complete: false });

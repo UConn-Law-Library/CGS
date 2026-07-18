@@ -19,11 +19,14 @@ test("dense shell exposes bookmark count and device-local activity", () => {
   assert.doesNotMatch(appSource, /<p class="eyebrow">UConn Law Library<\/p>/);
 });
 
-test("search results use a structured refinement row and highlighted excerpts", () => {
+test("Search v2 uses structured filters, highlighted field-aware excerpts, and local history", () => {
   assert.match(appSource, /class="search-field search-query-field"/);
   assert.match(appSource, /renderSearchHighlight\(document\.heading, highlightTerms\)/);
-  assert.match(appSource, /renderSearchExcerpt\(document\.text, highlightTerms\)/);
-  assert.match(stylesSource, /\.search-refine \{ grid-template-columns: minmax\(16rem, 2fr\) minmax\(14rem, 1fr\) auto; \}/);
+  assert.match(appSource, /renderSearchExcerpt\(searchResultContext\(document, options\), highlightTerms\)/);
+  assert.match(appSource, /NEAR\/n proximity/);
+  assert.match(appSource, /data-search-within/);
+  assert.match(appSource, /deviceState\.recordSearch/);
+  assert.match(stylesSource, /\.search-primary-controls \{ display: grid;/);
   assert.match(stylesSource, /\.results mark \{[^}]*background: var\(--highlight-surface\)/);
 });
 

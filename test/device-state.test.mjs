@@ -83,11 +83,33 @@ test("deduplicates, orders, limits, and clears recent items", () => {
   assert.deepEqual(state.recents(), []);
 });
 
-test("storage failures remain non-fatal for preferences, bookmarks, and recents", () => {
+test("deduplicates, orders, limits, and clears device-local search history", () => {
+  const state = new DeviceState({ storage: memoryStorage() });
+  for (let index = 0; index < 22; index += 1) {
+    state.recordSearch({
+      query: `query ${index}`,
+      description: `Search ${index}`,
+      href: `#/search?q=query%20${index}`,
+      searchedAt: new Date(Date.UTC(2026, 0, index + 1)).toISOString()
+    });
+  }
+  assert.equal(state.searchHistory().length, 20);
+  assert.equal(state.searchHistory()[0].query, "query 21");
+  state.recordSearch({ query: "query 10 updated", href: "#/search?q=query%2010", searchedAt: "2026-12-31T00:00:00.000Z" });
+  assert.equal(state.searchHistory()[0].query, "query 10 updated");
+  assert.equal(state.searchHistory().filter((item) => item.href === "#/search?q=query%2010").length, 1);
+  state.clearSearchHistory();
+  assert.deepEqual(state.searchHistory(), []);
+});
+
+test("storage failures remain non-fatal for preferences, bookmarks, recents, and search history", () => {
   const state = new DeviceState({ storage: failingStorage() });
   assert.equal(state.preferences().compactLists, true);
   assert.deepEqual(state.bookmarks(), []);
   assert.equal(state.recordRecent({ id: "x", type: "statute", title: "X", href: "#/x" }).length, 1);
   assert.deepEqual(state.recents(), []);
   assert.doesNotThrow(() => state.clearRecents());
+  assert.equal(state.recordSearch({ query: "public", href: "#/search?q=public" }).length, 1);
+  assert.deepEqual(state.searchHistory(), []);
+  assert.doesNotThrow(() => state.clearSearchHistory());
 });

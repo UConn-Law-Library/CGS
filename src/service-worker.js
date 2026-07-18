@@ -128,10 +128,11 @@ async function fetchJsonIntoCache(relative, cache) {
   return response.json();
 }
 
-function offlineUrls(baseManifest, secondaryManifest, supplementArtifacts) {
+function offlineUrls(baseManifest, secondaryManifest, searchV2Manifest, supplementArtifacts) {
   return [...new Set([
     ...baseManifest.artifacts.map((artifact) => `./data/${artifact.path}`),
     ...secondaryManifest.artifacts.map((artifact) => `./data/secondary/${artifact.path}`),
+    ...searchV2Manifest.shards.map((artifact) => `./data/search-v2/${artifact.path}`),
     ...supplementArtifacts
   ])];
 }
@@ -151,14 +152,15 @@ async function cacheOfflineData({ port }) {
   const stagingName = `${OFFLINE_CACHE_PREFIX}${Date.now()}`;
   const cache = await caches.open(stagingName);
   try {
-    const [baseManifest, secondaryManifest, supplementIndex] = await Promise.all([
+    const [baseManifest, secondaryManifest, searchV2Manifest, supplementIndex] = await Promise.all([
       fetchJsonIntoCache("./data/manifest.json", cache),
       fetchJsonIntoCache("./data/secondary/manifest.json", cache),
+      fetchJsonIntoCache("./data/search-v2/manifest.json", cache),
       fetchJsonIntoCache("./data/supplements/manifest.json", cache)
     ]);
     const supplementData = await supplementOfflineData(supplementIndex, cache);
-    const urls = offlineUrls(baseManifest, secondaryManifest, supplementData.artifacts);
-    let completed = 2 + supplementData.cachedManifests;
+    const urls = offlineUrls(baseManifest, secondaryManifest, searchV2Manifest, supplementData.artifacts);
+    let completed = 3 + supplementData.cachedManifests;
     let cursor = 0;
     const pending = urls;
     const total = pending.length + completed;

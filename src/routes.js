@@ -64,8 +64,13 @@ export function indexRouteHref(letter = null, {
   return route;
 }
 
-export function searchRouteHref(query = null) {
-  return query ? `#/search?q=${encodeSegment(query)}` : "#/search";
+export function searchRouteHref(query = null, options = {}) {
+  const parameters = new URLSearchParams();
+  if (query) parameters.set("q", query);
+  for (const key of ["title", "chapter", "status", "supplement", "field", "within", "sort"]) {
+    if (options[key] && !({ field: "statute", sort: "relevance" }[key] === options[key])) parameters.set(key, options[key]);
+  }
+  return parameters.size ? `#/search?${parameters.toString().replaceAll("+", "%20")}` : "#/search";
 }
 
 export function infractionsRouteHref(category = null, { entry = null, query = null } = {}) {
@@ -95,7 +100,18 @@ export function parseRoute({ hash = "", search = "" } = {}) {
   const parts = path.split("/").map(decodeSegment);
 
   if (parts[0] === "search" && parts.length === 1) {
-    return { kind: "search", query: new URLSearchParams(hashQuery).get("q") || null };
+    const parameters = new URLSearchParams(hashQuery);
+    return {
+      kind: "search",
+      query: parameters.get("q") || null,
+      title: parameters.get("title") || null,
+      chapter: parameters.get("chapter") || null,
+      status: parameters.get("status") || null,
+      supplement: parameters.get("supplement") || null,
+      field: parameters.get("field") || "statute",
+      within: parameters.get("within") || null,
+      sort: parameters.get("sort") || "relevance"
+    };
   }
 
   if (parts[0] === "infractions") {

@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { compileSearchQuery, normalizeText, scoreDocument, SearchRepository, searchDocuments, tokenize } from "../src/search.js";
+import { compileSearchQuery, explainSearchQuery, normalizeSearchOptions, normalizeText, scoreDocument, SearchRepository, searchDocuments, tokenize } from "../src/search.js";
 
 const documents = [
   {
@@ -61,6 +61,39 @@ test("reports malformed Boolean expressions", () => {
   assert.throws(() => compileSearchQuery("public AND"), /missing a term/i);
   assert.throws(() => compileSearchQuery('"public records'), /unclosed quoted phrase/i);
   assert.throws(() => compileSearchQuery("public OR (records"), /unclosed parenthesis/i);
+  assert.throws(() => compileSearchQuery("pub*lic"), /trailing asterisk/i);
+  assert.throws(() => compileSearchQuery("public NEAR/0 records"), /between 1 and 100/i);
+});
+
+test("supports proximity, trailing-prefix, and exact-term searching", () => {
+  const values = [
+    { ...documents[0], id: "near", text: "public agency records are available" },
+    { ...documents[0], id: "far", text: "public notices from every state and municipal agency describe records" },
+    { ...documents[0], id: "prefix", heading: "Regulations and regulatory proceedings", text: "none" }
+  ];
+  assert.deepEqual(searchDocuments(values, "public NEAR/3 records").map(({ document }) => document.id), ["near"]);
+  assert.deepEqual(searchDocuments(values, "regulat*").map(({ document }) => document.id), ["prefix"]);
+  assert.deepEqual(searchDocuments(values, "regulate").map(({ document }) => document.id), []);
+  assert.equal(explainSearchQuery("public records OR notice*"), "public AND records OR notice*");
+});
+
+test("filters fields, chapters, status, and supplement state and can search within results", () => {
+  const values = [
+    { ...documents[0], id: "active-supplement", chapter: { id: "chapter-001", number: "001" }, history: "Public Acts 2026", annotations: "Supreme Court construction", supplement: { editionYear: 2026 } },
+    { ...documents[1], id: "repealed-base", chapter: { id: "chapter-002", number: "002" }, history: "Repealed in 1990", annotations: "Former statute" }
+  ];
+  assert.deepEqual(searchDocuments(values, "supreme", { field: "annotations" }).map(({ document }) => document.id), ["active-supplement"]);
+  assert.deepEqual(searchDocuments(values, "repealed", { field: "history", chapter: "002", status: "repealed", supplement: "base" }).map(({ document }) => document.id), ["repealed-base"]);
+  assert.deepEqual(searchDocuments(values, "public", { within: "2026", field: "history" }).map(({ document }) => document.id), ["active-supplement"]);
+  assert.deepEqual(normalizeSearchOptions({ field: "unknown", sort: "unknown" }), { field: "statute", status: null, supplement: null, sort: "relevance", chapter: null, within: null });
+});
+
+test("sorts results by legal citation when requested", () => {
+  const values = [
+    { ...documents[0], id: "ten", citation: "10-2", citations: ["10-2"], text: "shared term" },
+    { ...documents[0], id: "two", citation: "2-9", citations: ["2-9"], text: "shared term" }
+  ];
+  assert.deepEqual(searchDocuments(values, "shared", { sort: "citation" }).map(({ document }) => document.id), ["two", "ten"]);
 });
 
 test("SearchRepository calls fetch with the global receiver", async () => {
@@ -91,7 +124,7 @@ test("SearchRepository annotates results with their title for stable routes", as
     }
   });
 
-  const [result] = await repository.search("1-1");
+  const [result] = await repository.search("1-1", { field: "citation" });
   assert.equal(result.document.title.number, "01");
 });
 

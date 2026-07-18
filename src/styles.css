@@ -828,6 +828,27 @@ body { color: var(--ink); background: var(--paper); }
 .search-refine label { margin-bottom: .35rem; }
 .search-refine input, .search-refine select { width: 100%; }
 .search-refine button { min-width: 7rem; }
+.search-v2-refine { display: block; }
+.search-primary-controls { display: grid; grid-template-columns: minmax(15rem, 2fr) minmax(12rem, 1fr) minmax(12rem, 1fr) auto; gap: .75rem; align-items: end; }
+.search-advanced { margin-top: 1rem; padding-top: .8rem; border-top: 1px solid var(--line); }
+.search-advanced summary, .search-history summary { color: var(--blue); cursor: pointer; font-weight: 750; }
+.search-filter-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .75rem; margin-top: .85rem; }
+.query-explanation { margin: 1rem 0; padding: .9rem 1rem; background: var(--soft-surface); border-left: .25rem solid var(--blue); border-radius: .3rem; }
+.query-explanation h2 { margin: .15rem 0 .3rem; font-size: 1rem; line-height: 1.4; }
+.query-explanation p { margin: .25rem 0; color: var(--muted); font-size: .82rem; }
+.query-explanation-error { border-left-color: var(--danger); }
+.search-within { margin: 1rem 0; padding: .8rem 1rem; background: var(--surface-raised); border: 1px solid var(--line); border-radius: .7rem; }
+.search-within label { display: block; margin-bottom: .35rem; font-size: .8rem; font-weight: 750; }
+.search-within > div { display: flex; gap: .55rem; }
+.search-within input { min-width: 0; flex: 1; }
+.search-within > a { display: inline-block; margin-top: .5rem; font-size: .8rem; }
+.search-history { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--line); }
+.search-history-list { margin: .75rem 0 0; padding: 0; list-style: none; }
+.search-history-list li + li { border-top: 1px solid var(--line); }
+.search-history-list a { display: flex; padding: .6rem 0; flex-direction: column; color: var(--ink); text-decoration: none; }
+.search-history-list a:hover strong { color: var(--blue); }
+.search-history-list small, .search-history-empty { color: var(--muted); font-size: .78rem; }
+.result-match-field { display: inline-block; margin-left: .4rem; padding: .12rem .38rem; color: var(--muted); background: var(--soft-surface); border: 1px solid var(--line); border-radius: 999px; font-size: .68rem; font-weight: 650; text-decoration: none; }
 .search-page #search-status { min-height: 1.8rem; color: var(--muted); }
 .search-help { margin: -.75rem 0 1.25rem; color: var(--muted); font-size: .85rem; }
 .search-more { display: block; margin: 1rem auto 0; }
@@ -920,6 +941,8 @@ h1,
   .home-page, .search-page, .infractions-page, .bookmarks-page, .about-page { padding-top: 1.4rem; }
   .about-counts { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .about-project { grid-template-columns: 1fr; gap: .5rem; }
+  .search-primary-controls { grid-template-columns: minmax(0, 2fr) minmax(10rem, 1fr); }
+  .search-filter-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 36rem) {
@@ -931,6 +954,8 @@ h1,
   .compact-bookmark, .bookmark-list button { min-height: 2.6rem; }
   .about-counts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .search-refine, .infraction-search { grid-template-columns: 1fr; }
+  .search-primary-controls, .search-filter-grid { grid-template-columns: 1fr; }
+  .search-within > div { align-items: stretch; flex-direction: column; }
   .title-list a { grid-template-columns: 1fr; gap: .12rem; }
 }
 

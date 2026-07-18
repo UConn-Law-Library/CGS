@@ -4,7 +4,7 @@ import { expectNoHighImpactAccessibilityViolations, openApp } from "./helpers.mj
 const representativeRoutes = [
   { name: "Home", route: "#/", heading: "Connecticut General Statutes" },
   { name: "Statute reader", route: "#/t/17b/c/319v/s/17b-238", heading: /Sec\. 17b-238/ },
-  { name: "Search results", route: "#/search?q=%22Effective%20January%22", heading: "Search results" },
+  { name: "Search results", route: "#/search?q=%22Effective%20January%22", heading: "Search" },
   { name: "Statutes index", route: "#/index", heading: "Index to the General Statutes" },
   { name: "Infractions", route: "#/infractions", heading: "Infractions and violations" }
 ];

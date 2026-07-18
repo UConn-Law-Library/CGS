@@ -1,13 +1,13 @@
 import { mergeSearchResults, searchDocumentBatch } from "./search.js";
 
-export function createSearchState({ query, limit = 50, total = 0 } = {}) {
-  return { query, limit, total, processed: 0, totalMatches: 0, supplementUnavailable: false, results: [] };
+export function createSearchState({ query, limit = 50, total = 0, searchOptions = {} } = {}) {
+  return { query, limit, total, searchOptions, processed: 0, totalMatches: 0, supplementUnavailable: false, results: [] };
 }
 
 export function addShardToSearch(state, shard) {
   const documents = shard.documents.map((document) => ({ ...document, title: shard.title }));
-  const batch = searchDocumentBatch(documents, state.query, { limit: state.limit });
-  state.results = mergeSearchResults(state.results, batch.results, { limit: state.limit });
+  const batch = searchDocumentBatch(documents, state.query, { limit: state.limit, ...state.searchOptions });
+  state.results = mergeSearchResults(state.results, batch.results, { limit: state.limit, sort: state.searchOptions.sort });
   state.totalMatches += batch.totalMatches;
   state.supplementUnavailable ||= Boolean(shard.supplementUnavailable);
   state.processed += 1;

@@ -19,9 +19,12 @@ const SHELL_FILES = [
   "./styles.css",
   "./app.js",
   "./device-state.js",
+  "./dialog.js",
+  "./context-navigation.js",
   "./omnisearch.js",
   "./pwa.js",
   "./reader.js",
+  "./revision-diff.js",
   "./routes.js",
   "./search.js",
   "./search-client.js",
@@ -30,7 +33,8 @@ const SHELL_FILES = [
   "./secondary-sources.js",
   "./secondary-ui.js",
   "./supplement-overlay.js",
-  "./supplements.js"
+  "./supplements.js",
+  "./data/catalog.json"
 ];
 
 self.addEventListener("install", (event) => {
@@ -89,6 +93,8 @@ async function dataNetworkFirst(request) {
   } catch (error) {
     const visited = await runtime.match(request);
     if (visited) return visited;
+    const essential = await (await caches.open(SHELL_CACHE)).match(request);
+    if (essential) return essential;
     const activeName = await activeOfflineCacheName();
     const downloaded = activeName ? await (await caches.open(activeName)).match(request) : null;
     if (downloaded) return downloaded;

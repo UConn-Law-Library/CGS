@@ -704,6 +704,13 @@ body { color: var(--ink); background: var(--paper); }
 .offline-progress { display: block; width: 100%; height: .4rem; margin: .75rem 0; accent-color: var(--blue); }
 .offline-progress[hidden] { display: none; }
 .settings-note { margin: 1rem 0 0; color: var(--muted); font-size: .8rem; }
+.offline-compatibility-warning { margin: 1rem 0 0; padding: .7rem; color: var(--warning-ink); background: var(--warning-surface); border-left: .25rem solid var(--warning-line); border-radius: .35rem; font-size: .8rem; line-height: 1.45; }
+.offline-compatibility-warning[hidden] { display: none; }
+.offline-release-details { margin-top: 1rem; padding-top: .8rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .8rem; }
+.offline-release-details summary { color: var(--ink); cursor: pointer; font-weight: 750; }
+.offline-release-list { display: grid; grid-template-columns: minmax(7rem, auto) minmax(0, 1fr); gap: .35rem .75rem; margin: .75rem 0 0; overflow-wrap: anywhere; }
+.offline-release-list dt { font-weight: 750; }
+.offline-release-list dd { margin: 0; font-variant-numeric: tabular-nums; }
 
 .nav-badge {
   display: inline-grid;

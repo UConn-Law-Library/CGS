@@ -23,6 +23,14 @@ test("Settings closes and restores focus to its trigger", async ({ page }) => {
   await expect(trigger).toBeFocused();
 });
 
+test("About links to the deployed GitHub release", async ({ page }) => {
+  await openApp(page, "#/about");
+  const release = page.locator(".about-version a");
+  await expect(release).toHaveText(/^v\d+\.\d+\.\d+ ↗$/);
+  const version = (await release.textContent()).trim().split(" ")[0];
+  await expect(release).toHaveAttribute("href", `https://github.com/UConn-Law-Library/CGS/releases/tag/${version}`);
+});
+
 test("desktop contextual rail retains its scroll position after section navigation", async ({ page }, testInfo) => {
   test.skip(isMobileProject(testInfo), "Contextual rails are a desktop presentation.");
   await openApp(page, "#/t/17b/c/319v/s/17b-238");

@@ -30,6 +30,7 @@ const SHELL_FILES = [
   "./offline-integrity.js",
   "./pwa.js",
   "./reader.js",
+  "./release.js",
   "./revision-diff.js",
   "./routes.js",
   "./search.js",

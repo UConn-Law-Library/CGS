@@ -17,6 +17,7 @@ export const shellInputs = Object.freeze([
   "offline-integrity.js",
   "pwa.js",
   "reader.js",
+  "release.js",
   "routes.js",
   "search-client.js",
   "search-highlight.js",

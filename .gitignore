@@ -8,3 +8,4 @@ test-results/
 .crawl/
 __pycache__/
 *.py[cod]
+docs/50-state-expansion-plan.md

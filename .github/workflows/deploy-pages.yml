@@ -16,8 +16,41 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  version:
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Determine application version
+        id: version
+        shell: bash
+        run: |
+          set -euo pipefail
+          current="$(git tag --points-at "$GITHUB_SHA" --list 'v*' --sort=-version:refname | grep -E '^v[0-9]+\.[0-9]+\.[0-9]+$' | head -n 1 || true)"
+          latest="$(git tag --list 'v*' --sort=-version:refname | grep -E '^v[0-9]+\.[0-9]+\.[0-9]+$' | head -n 1 || true)"
+          package_version="v$(node -p "JSON.parse(require('fs').readFileSync('package.json', 'utf8')).version")"
+
+          if [[ -n "$current" ]]; then
+            version="$current"
+          elif [[ "$GITHUB_EVENT_NAME" == "workflow_dispatch" ]]; then
+            version="${latest:-$package_version}"
+          elif [[ -n "$latest" && "$latest" =~ ^v([0-9]+)\.([0-9]+)\.([0-9]+)$ ]]; then
+            version="v${BASH_REMATCH[1]}.${BASH_REMATCH[2]}.$((BASH_REMATCH[3] + 1))"
+          else
+            version="$package_version"
+          fi
+
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          echo "Deploying application release $version"
+
   build:
     runs-on: ubuntu-latest
+    needs: version
+    env:
+      CGS_APP_VERSION: ${{ needs.version.outputs.version }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -38,6 +71,9 @@ jobs:
 
   browser:
     runs-on: windows-latest
+    needs: version
+    env:
+      CGS_APP_VERSION: ${{ needs.version.outputs.version }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -58,6 +94,46 @@ jobs:
           if-no-files-found: ignore
           retention-days: 14
 
+  publish-release:
+    runs-on: ubuntu-latest
+    needs:
+      - version
+      - build
+      - browser
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Publish patch release
+        if: github.event_name == 'push'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_VERSION: ${{ needs.version.outputs.version }}
+        run: |
+          set -euo pipefail
+          if git rev-parse "refs/tags/$RELEASE_VERSION" >/dev/null 2>&1; then
+            tagged_sha="$(git rev-list -n 1 "$RELEASE_VERSION")"
+            if [[ "$tagged_sha" != "$GITHUB_SHA" ]]; then
+              echo "Tag $RELEASE_VERSION already points to $tagged_sha, not $GITHUB_SHA" >&2
+              exit 1
+            fi
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git tag -a "$RELEASE_VERSION" "$GITHUB_SHA" -m "Release $RELEASE_VERSION"
+            git push origin "refs/tags/$RELEASE_VERSION"
+          fi
+
+          if ! gh release view "$RELEASE_VERSION" >/dev/null 2>&1; then
+            gh release create "$RELEASE_VERSION" --verify-tag --latest --generate-notes --title "CGS $RELEASE_VERSION"
+          fi
+      - name: Reuse the current release for a manual deployment
+        if: github.event_name == 'workflow_dispatch'
+        run: echo "Deploying ${{ needs.version.outputs.version }} without creating a new release."
+
   deploy:
     environment:
       name: github-pages
@@ -66,6 +142,7 @@ jobs:
     needs:
       - build
       - browser
+      - publish-release
     steps:
       - name: Deploy to GitHub Pages
         id: deployment

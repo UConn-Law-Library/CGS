@@ -17,6 +17,10 @@ npm run dev
 
 `npm run check` validates every checked-in artifact, runs the tests, and assembles `dist/` exactly as GitHub Pages will serve it. Use `npm run check:fixture` to first replace `public/data/` with the small legacy fixture.
 
+## Release versioning
+
+The About page displays the version of the deployed GitHub release. Each push to `main`—including every merged pull request—is treated as the next patch release: after the production and browser checks pass, the Pages workflow increments the latest stable tag (for example, `v1.0.0` to `v1.0.1`), publishes generated GitHub release notes, stamps that version into the site, and deploys the same tested build. Manually dispatched deployments reuse the current release number instead of incrementing it.
+
 ## Import the complete legacy corpus
 
 The old repository is an input only. This command reads it and replaces this repository's generated `public/data/` directory; it does not write to the legacy repository.

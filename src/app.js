@@ -31,6 +31,7 @@ import { applyPreferences, DeviceState } from "./device-state.js";
 import { PwaManager } from "./pwa.js";
 import { NativeDialogController } from "./dialog.js";
 import { aggregateShardCounts, contextualColumnCount } from "./context-navigation.js";
+import { APP_VERSION } from "./release.js";
 import {
   buildOmniRows,
   findIndexMatches,
@@ -882,6 +883,7 @@ async function renderAbout(catalog) {
       <p class="eyebrow">About this app</p>
       <h1>Connecticut General Statutes Explorer</h1>
       <p>The UConn Law Library provides this mobile-first tool for searching and browsing the Connecticut General Statutes, the official subject index, and the Judicial Branch infraction schedule.</p>
+      <p class="about-version">Release <a href="https://github.com/UConn-Law-Library/CGS/releases/tag/${encodeURIComponent(APP_VERSION)}" target="_blank" rel="noopener">${escapeHtml(APP_VERSION)} <span aria-hidden="true">↗</span></a></p>
       <p><a class="primary-link" href="https://library.law.uconn.edu/" target="_blank" rel="noopener">Visit the UConn Law Library Website <span aria-hidden="true">↗</span></a></p>
     </header>
     <ul class="about-counts" aria-label="Published data coverage">

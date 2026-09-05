@@ -81,7 +81,6 @@ test("infractions categories are one alphabetical column", () => {
 
 test("settings links to a provenance-rich About page", () => {
   assert.match(appSource, /href="#\/about">About this app/);
-  assert.match(appSource, /async function renderAbout\(catalog\)/);
   assert.match(appSource, /Data and official sources/);
   assert.match(appSource, /database-free, static Progressive Web App hosted on GitHub Pages/);
   assert.match(appSource, /<img src="\.\/wordmark\.svg" alt="UConn School of Law, Law Library and Technology">/);
@@ -89,7 +88,6 @@ test("settings links to a provenance-rich About page", () => {
   assert.match(appSource, /class="about-version">Release/);
   assert.match(appSource, /releases\/tag\/\$\{encodeURIComponent\(APP_VERSION\)\}/);
   assert.match(wordmarkSource, /<svg[\s\S]*fill: #ffffff/);
-  assert.match(appSource, /if \(route\.kind === "about"\) return renderAbout\(catalog\)/);
   assert.match(stylesSource, /\.about-source-list \{ display: grid/);
   assert.match(stylesSource, /\.about-version \{ display: flex/);
 });

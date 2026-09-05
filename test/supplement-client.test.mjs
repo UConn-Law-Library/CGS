@@ -2,6 +2,37 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { applyChapterOverlay, mergeSupplementSearchShard, mergeSupplementTitleChapters, SupplementRepository } from "../src/supplements.js";
 
+test("supplement manifests, chapters, and search shards retry failures and share successful requests", async () => {
+  const calls = new Map();
+  const repository = new SupplementRepository({
+    fetchImpl: async (url) => {
+      const path = url.pathname;
+      const count = (calls.get(path) ?? 0) + 1;
+      calls.set(path, count);
+      if (count === 1) return { ok: false, status: 503 };
+      const value = path.endsWith("/supplements/manifest.json")
+        ? { editions: [{ editionYear: 2026, path: "2026/manifest.json" }] }
+        : path.endsWith("/2026/manifest.json")
+          ? { titles: [{ id: "title-01", searchPath: "search/title-01.json", chapters: [{ number: "001", path: "chapters/001.json" }] }] }
+          : { id: "recovered" };
+      return { ok: true, json: async () => value };
+    }
+  });
+  for (const load of [
+    () => repository.init(),
+    () => repository.loadEdition(2026),
+    () => repository.loadChapter(2026, "001"),
+    () => repository.loadLatestSearchTitle("title-01")
+  ]) {
+    await assert.rejects(load(), /503/);
+    const first = await load();
+    const [second, third] = await Promise.all([load(), load()]);
+    assert.equal(second, first);
+    assert.equal(third, first);
+  }
+  assert.deepEqual([...calls.values()], [2, 2, 2, 2]);
+});
+
 const baseChapter = {
   id: "chapter-001",
   sourceUrl: "https://example.test/current",

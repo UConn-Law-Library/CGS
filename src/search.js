@@ -420,10 +420,14 @@ export class SearchRepository {
           .then((shard) => ({ shard, unavailable: false }))
           .catch(() => ({ shard: null, unavailable: true }))
         : Promise.resolve({ shard: null, unavailable: false });
-      const promise = Promise.all([this.#json(entry.path), supplement]).then(([baseShard, supplementResult]) => ({
-        ...mergeSupplementSearchShard(baseShard, supplementResult.shard),
-        supplementUnavailable: supplementResult.unavailable
-      })).catch((error) => {
+      const promise = Promise.all([this.#json(entry.path), supplement]).then(([baseShard, supplementResult]) => {
+        // A base-only fallback must not prevent the next search from retrying the supplement.
+        if (supplementResult.unavailable) this.#shards.delete(titleId);
+        return {
+          ...mergeSupplementSearchShard(baseShard, supplementResult.shard),
+          supplementUnavailable: supplementResult.unavailable
+        };
+      }).catch((error) => {
         this.#shards.delete(titleId);
         throw error;
       });

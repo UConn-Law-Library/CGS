@@ -11,6 +11,14 @@ const CONTROL_CACHE = "cgs-data-control-v1";
 const OFFLINE_CACHE_PREFIX = "cgs-data-offline-";
 const METADATA_URL = "./__offline-metadata__";
 const ACTIVE_CACHE_URL = "./__active-offline-cache__";
+let offlineOperation = Promise.resolve();
+
+function serializeOfflineOperation(operation) {
+  const task = offlineOperation.then(operation);
+  // Keep later requests runnable even when a download fails.
+  offlineOperation = task.catch(() => {});
+  return task;
+}
 const SHELL_FILES = [
   "./",
   "./index.html",
@@ -207,7 +215,7 @@ function compatibilityFor(metadata) {
 
 async function cacheOfflineData({ port }) {
   await cleanupOfflineCaches(await activeOfflineCacheName());
-  const stagingName = `${OFFLINE_CACHE_PREFIX}${Date.now()}`;
+  const stagingName = `${OFFLINE_CACHE_PREFIX}${crypto.randomUUID()}`;
   const cache = await caches.open(stagingName);
   try {
     const [baseManifest, secondaryManifest, searchV2Manifest, supplementIndex] = await Promise.all([
@@ -292,8 +300,7 @@ async function offlineStatus() {
 self.addEventListener("message", (event) => {
   const port = event.ports[0];
   if (!port) return;
-  const task = (async () => {
-    if (event.data?.type === "OFFLINE_STATUS") return offlineStatus();
+  const task = event.data?.type === "OFFLINE_STATUS" ? offlineStatus() : serializeOfflineOperation(async () => {
     if (["DOWNLOAD_OFFLINE_DATA", "REPAIR_OFFLINE_DATA"].includes(event.data?.type)) {
       return cacheOfflineData({ port });
     }
@@ -319,7 +326,7 @@ self.addEventListener("message", (event) => {
       };
     }
     throw new Error("Unknown offline request.");
-  })();
+  });
   event.waitUntil(task.then(
     (result) => port.postMessage({ type: "complete", result }),
     (error) => port.postMessage({ type: "error", message: error.message })

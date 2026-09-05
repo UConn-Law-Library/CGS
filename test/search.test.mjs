@@ -161,6 +161,7 @@ test("SearchRepository automatically applies the latest supplement search patch"
 });
 
 test("SearchRepository preserves base search when supplement data is unavailable", async () => {
+  let supplementCalls = 0;
   const responses = new Map([
     ["https://example.test/data/search/manifest.json", { shards: [{ titleId: "title-01", path: "title-01.json" }] }],
     ["https://example.test/data/search/title-01.json", { title: { id: "title-01" }, documents }]
@@ -172,7 +173,8 @@ test("SearchRepository preserves base search when supplement data is unavailable
     },
     supplementRepository: {
       async loadLatestSearchTitle() {
-        throw new Error("supplement unavailable");
+        if (++supplementCalls === 1) throw new Error("supplement unavailable");
+        return { title: { id: "title-01" }, removedDocumentIds: documents.map((document) => document.id), documents: [{ id: "recovered" }] };
       }
     }
   });
@@ -180,4 +182,9 @@ test("SearchRepository preserves base search when supplement data is unavailable
   const shard = await repository.loadTitle("title-01");
   assert.equal(shard.documents.length, documents.length);
   assert.equal(shard.supplementUnavailable, true);
+  const recovered = await repository.loadTitle("title-01");
+  assert.equal(recovered.supplementUnavailable, false);
+  assert.deepEqual(recovered.documents.map((document) => document.id), ["recovered"]);
+  assert.equal(await repository.loadTitle("title-01"), recovered);
+  assert.equal(supplementCalls, 2);
 });

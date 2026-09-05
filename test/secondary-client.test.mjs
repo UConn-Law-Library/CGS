@@ -6,6 +6,30 @@ function response(value) {
   return { ok: value !== undefined, status: value === undefined ? 404 : 200, json: () => Promise.resolve(value) };
 }
 
+test("secondary requests recover after a failed initialization and shard fetch", async () => {
+  const calls = new Map();
+  const repository = new SecondarySourceRepository({
+    fetchImpl: async (url) => {
+      const path = url.pathname;
+      const count = (calls.get(path) ?? 0) + 1;
+      calls.set(path, count);
+      if (count === 1 && /(?:links\/manifest|fee-rules)\.json$/.test(path)) {
+        throw new Error("temporary outage");
+      }
+      return response({ shards: [], rules: [{ id: "recovered" }] });
+    }
+  });
+  await assert.rejects(repository.init(), /temporary outage/);
+  assert.ok((await repository.init()).links);
+  await assert.rejects(repository.loadFeeRules(), /temporary outage/);
+  const results = await Promise.all([repository.loadFeeRules(), repository.loadFeeRules()]);
+  assert.equal(results[0].rules[0].id, "recovered");
+  assert.equal(results[0], results[1]);
+  assert.equal(calls.get("/data/secondary/manifest.json"), 1);
+  assert.equal(calls.get("/data/secondary/links/manifest.json"), 2);
+  assert.equal(calls.get("/data/secondary/infractions/fee-rules.json"), 2);
+});
+
 test("loads sharded infractions, index letters, and reverse section links", async () => {
   const base = "https://example.test/data/secondary/";
   const values = new Map([

@@ -15,7 +15,10 @@ export class SecondarySourceRepository {
         const response = await this.#fetch(new URL(relativePath, this.#baseUrl));
         if (!response.ok) throw new Error(`Could not load secondary source ${relativePath} (${response.status})`);
         return response.json();
-      })());
+      })().catch((error) => {
+        this.#cache.delete(relativePath);
+        throw error;
+      }));
     }
     return this.#cache.get(relativePath);
   }
@@ -26,7 +29,10 @@ export class SecondarySourceRepository {
       this.#json("infractions/manifest.json"),
       this.#json("statutes-index/manifest.json"),
       this.#json("links/manifest.json")
-    ]).then(([root, infractions, index, links]) => ({ root, infractions, index, links }));
+    ]).then(([root, infractions, index, links]) => ({ root, infractions, index, links })).catch((error) => {
+      this.#manifests = undefined;
+      throw error;
+    });
     return this.#manifests;
   }
 

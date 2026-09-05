@@ -60,6 +60,16 @@ export class SupplementRepository {
     return this.#index;
   }
 
+  #cachedJson(cache, key, path) {
+    if (!cache.has(key)) {
+      cache.set(key, this.#json(path).catch((error) => {
+        cache.delete(key);
+        throw error;
+      }));
+    }
+    return cache.get(key);
+  }
+
   async latestEdition() {
     const index = await this.init();
     return [...index.editions].sort((left, right) => right.editionYear - left.editionYear)[0] ?? null;
@@ -69,8 +79,7 @@ export class SupplementRepository {
     const index = await this.init();
     const entry = index.editions.find((edition) => edition.editionYear === Number(editionYear));
     if (!entry) throw new Error(`Supplement edition ${editionYear} is not available`);
-    if (!this.#manifests.has(entry.editionYear)) this.#manifests.set(entry.editionYear, this.#json(entry.path));
-    return this.#manifests.get(entry.editionYear);
+    return this.#cachedJson(this.#manifests, entry.editionYear, entry.path);
   }
 
   async loadChapter(editionYear, chapterNumber, titleId = null) {
@@ -82,8 +91,7 @@ export class SupplementRepository {
       .find((entry) => comparableNumber(entry.number) === wanted);
     if (!chapter) return null;
     const key = `${editionYear}:${chapter.path}`;
-    if (!this.#chapters.has(key)) this.#chapters.set(key, this.#json(`${editionYear}/${chapter.path}`));
-    return this.#chapters.get(key);
+    return this.#cachedJson(this.#chapters, key, `${editionYear}/${chapter.path}`);
   }
 
   async loadLatestChapter(chapterNumber, titleId = null) {
@@ -103,8 +111,7 @@ export class SupplementRepository {
     const title = manifest.titles.find((entry) => entry.id === titleId);
     if (!title?.searchPath) return null;
     const key = `${editionYear}:${title.searchPath}`;
-    if (!this.#searchShards.has(key)) this.#searchShards.set(key, this.#json(`${editionYear}/${title.searchPath}`));
-    return this.#searchShards.get(key);
+    return this.#cachedJson(this.#searchShards, key, `${editionYear}/${title.searchPath}`);
   }
 
   async loadLatestSearchTitle(titleId) {

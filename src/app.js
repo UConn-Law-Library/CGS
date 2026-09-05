@@ -824,7 +824,7 @@ function aboutSourceCard({ publisher, name, description, details = [], caveat, u
   </article>`;
 }
 
-async function renderAbout(catalog) {
+async function renderAbout(catalog, sequence) {
   const [secondaryResult, supplementResult] = await Promise.allSettled([
     secondaryRepository.init(),
     (async () => {
@@ -832,6 +832,7 @@ async function renderAbout(catalog) {
       return edition ? { edition, manifest: await supplementRepository.loadEdition(edition.editionYear) } : null;
     })()
   ]);
+  if (sequence !== renderSequence) return;
   const secondary = secondaryResult.status === "fulfilled" ? secondaryResult.value : null;
   const supplement = supplementResult.status === "fulfilled" ? supplementResult.value : null;
   const statuteDate = formatSnapshotDate(catalog.source?.retrievedAt ?? catalog.generatedAt);
@@ -1096,8 +1097,9 @@ async function sectionSecondaryContext(title, section, requestedCitation) {
   }
 }
 
-async function renderChapter(catalog, title, chapterMeta, route) {
+async function renderChapter(catalog, title, chapterMeta, route, sequence) {
   const baseChapter = chapterMeta.supplementOnly ? null : await getJson(`./data/${chapterMeta.path}`);
+  if (sequence !== renderSequence) return;
   let chapter = baseChapter;
   let overlay = null;
   let supplementError = null;
@@ -1117,6 +1119,7 @@ async function renderChapter(catalog, title, chapterMeta, route) {
     supplementError = error;
     console.warn("Could not load the published supplement", error);
   }
+  if (sequence !== renderSequence) return;
   if (!chapter) return renderNotFound("That supplement chapter could not be loaded.");
   const changeBySection = new Map((overlay?.changes ?? []).map((change) => [change.sectionId, { ...change, editionYear: overlay.editionYear }]));
   const selected = route.kind === "section" ? findSection(chapter, route.section) : null;
@@ -1133,6 +1136,7 @@ async function renderChapter(catalog, title, chapterMeta, route) {
         sectionSecondaryContext(title, selected, route.section)
       ])
     : [null, null];
+  if (sequence !== renderSequence) return;
   const preferences = deviceState.preferences();
   const chapterNavigation = navigationSections(chapter.sections, {
     hideRepealed: preferences.hideRepealedSections,
@@ -1382,11 +1386,12 @@ function renderInfractionDetail(entry, source) {
   </article>`;
 }
 
-async function renderInfractions(route) {
+async function renderInfractions(route, sequence) {
   const [manifests, entries] = await Promise.all([
     secondaryRepository.init(),
     secondaryRepository.loadAllInfractions()
   ]);
+  if (sequence !== renderSequence) return;
   const groups = groupInfractions(entries);
   const selectedGroup = route.category ? groups.find(([category]) => category === route.category) : null;
   if (route.category && !selectedGroup) return renderNotFound("That infraction category was not found.");
@@ -1456,13 +1461,15 @@ function renderBookmarks() {
   </main><footer>Bookmarks are stored only on this device.</footer>`;
 }
 
-async function renderStatutesIndex(route) {
+async function renderStatutesIndex(route, sequence) {
   const manifests = await secondaryRepository.init();
+  if (sequence !== renderSequence) return;
   const letterCounts = aggregateShardCounts(manifests.index.shards);
   const available = [...letterCounts.keys()].filter((key) => /^[a-z]$/.test(key));
   const letter = route.letter;
   if (letter && !available.includes(letter)) return renderNotFound("That index letter was not found.");
   const topics = letter ? await secondaryRepository.loadIndexLetter(letter) : [];
+  if (sequence !== renderSequence) return;
   const selected = route.topic
     ? topics.find((topic) => topic.id === route.topic)
     : route.heading ? topics.find((topic) => topic.label.toLowerCase() === route.heading.toLowerCase()) : null;
@@ -1567,14 +1574,14 @@ async function renderCurrentRoute() {
     const catalog = await catalogPromise;
     const route = parseRoute(location);
     if (sequence !== renderSequence) return;
-    if (route.kind === "home") return renderHome(catalog);
+    if (route.kind === "home") return await renderHome(catalog);
     if (route.kind === "titles") return renderTitles(catalog);
     if (route.kind === "not-found") return renderNotFound();
-    if (route.kind === "search") return renderSearchPage(catalog, route);
-    if (route.kind === "infractions") return renderInfractions(route);
+    if (route.kind === "search") return await renderSearchPage(catalog, route);
+    if (route.kind === "infractions") return await renderInfractions(route, sequence);
     if (route.kind === "bookmarks") return renderBookmarks();
-    if (route.kind === "about") return renderAbout(catalog);
-    if (route.kind === "index") return renderStatutesIndex(route);
+    if (route.kind === "about") return await renderAbout(catalog, sequence);
+    if (route.kind === "index") return await renderStatutesIndex(route, sequence);
 
     let title = route.title ? findTitle(catalog, route.title) : null;
     if (title) title = await titleWithLatestSupplementChapters(title);
@@ -1585,8 +1592,9 @@ async function renderCurrentRoute() {
     if (route.kind === "title") return renderTitle(catalog, title);
     if (!chapterMatch) chapterMatch = findChapter(catalog, route.chapter, title);
     if (!chapterMatch) return renderNotFound("That chapter was not found.");
-    return renderChapter(catalog, title, chapterMatch.chapter, route);
+    return await renderChapter(catalog, title, chapterMatch.chapter, route, sequence);
   } catch (error) {
+    if (sequence !== renderSequence) return;
     app.innerHTML = `<main class="error" id="main-content"><h1>Unable to load the statutes</h1><p>${escapeHtml(error.message)}</p></main>`;
   }
 }

@@ -1,6 +1,17 @@
 import { expect, test } from "@playwright/test";
 import { isMobileProject, openApp } from "./helpers.mjs";
 
+test("statute ranges link both endpoints and navigate to the referenced section", async ({ page }) => {
+  await openApp(page, "#/t/04/c/050/s/4-66aa");
+  const statute = page.locator("article.provision .statute-text");
+  await expect(statute.getByRole("link", { name: "10-409", exact: true })).toHaveAttribute("href", "#/t/10/c/184b/s/10-409");
+  const endpoint = statute.getByRole("link", { name: "10-415", exact: true });
+  await expect(endpoint).toHaveAttribute("href", "#/t/10/c/184b/s/10-415");
+  await endpoint.click();
+  await expect(page).toHaveURL(/#\/t\/10\/c\/184b\/s\/10-415$/);
+  await expect(page.getByRole("heading", { level: 1, name: /Sec\. 10-415\./ })).toBeVisible();
+});
+
 test("Home exposes the core application destinations", async ({ page }) => {
   await openApp(page);
   await expect(page.locator(".home-intro")).toMatchAriaSnapshot(`

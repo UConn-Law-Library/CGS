@@ -34,16 +34,39 @@ export function leadingSubsection(value) {
   return { label: match[1], key: match[2].toLowerCase(), text: String(value).slice(match[0].length) };
 }
 
-const legalReferencePattern = /\b(section(?:s)?)\s+(\d+[a-z]*-\d+[a-z0-9-]*)|\b(chapter(?:s)?)\s+(\d+[a-z]*)/gi;
+const sectionCitation = String.raw`\d+[a-z]*-\d+[a-z0-9]*(?:-\d+[a-z0-9]*)*(?![\w-])`;
+const chapterCitation = String.raw`\d+[a-z]*(?![\w-])`;
+const referenceSeparator = String.raw`(?:\s+(?:to|through|and|or)\s+|\s*,\s*(?:(?:and|or)\s+)?|\s*[–—]\s*)`;
+
+// Share citation spans between discovery and rendering so every displayed link
+// also has its destination loaded. Continue only through a citation list/range.
+function* legalReferences(text) {
+  const start = new RegExp(String.raw`\bsections?\s+(${sectionCitation})|\bchapters?\s+(${chapterCitation})`, "gi");
+  for (const match of text.matchAll(start)) {
+    const kind = match[1] ? "sections" : "chapters";
+    const target = match[1] ?? match[2];
+    let end = match.index + match[0].length;
+    yield { kind, target, index: end - target.length, end };
+
+    const continuation = new RegExp(
+      String.raw`(?:\s*\([a-z0-9]+\))*(?:\s*,\s*inclusive\b)?${referenceSeparator}(${kind === "sections" ? sectionCitation : chapterCitation})`,
+      "iy"
+    );
+    continuation.lastIndex = end;
+    let next;
+    while ((next = continuation.exec(text))) {
+      end = continuation.lastIndex;
+      yield { kind, target: next[1], index: end - next[1].length, end };
+    }
+  }
+}
 
 export function extractLegalReferences(values) {
   const sections = new Set();
   const chapters = new Set();
   for (const value of values) {
-    legalReferencePattern.lastIndex = 0;
-    for (const match of String(value ?? "").matchAll(legalReferencePattern)) {
-      if (match[2]) sections.add(match[2].toLowerCase());
-      if (match[4]) chapters.add(match[4].toLowerCase());
+    for (const { kind, target } of legalReferences(String(value ?? ""))) {
+      (kind === "sections" ? sections : chapters).add(target.toLowerCase());
     }
   }
   return { sections: [...sections], chapters: [...chapters] };
@@ -53,16 +76,13 @@ export function renderLinkedText(value, { sections = new Map(), chapters = new M
   const text = String(value ?? "");
   const parts = [];
   let cursor = 0;
-  legalReferencePattern.lastIndex = 0;
-  for (const match of text.matchAll(legalReferencePattern)) {
-    parts.push(escapeHtml(text.slice(cursor, match.index)));
-    const label = match[1] ?? match[3];
-    const target = match[2] ?? match[4];
-    const href = match[2] ? sections.get(target.toLowerCase()) : chapters.get(target.toLowerCase());
-    parts.push(`${escapeHtml(label)} ${href
+  for (const { kind, target, index, end } of legalReferences(text)) {
+    parts.push(escapeHtml(text.slice(cursor, index)));
+    const href = (kind === "sections" ? sections : chapters).get(target.toLowerCase());
+    parts.push(href
       ? `<a class="legal-reference" href="${escapeHtml(href)}">${escapeHtml(target)}</a>`
-      : escapeHtml(target)}`);
-    cursor = match.index + match[0].length;
+      : escapeHtml(target));
+    cursor = end;
   }
   parts.push(escapeHtml(text.slice(cursor)));
   return parts.join("");

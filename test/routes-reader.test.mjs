@@ -183,3 +183,46 @@ test("uses canonical reader routes for annotated search documents", () => {
     chapter: { number: "001" }
   }), "#/t/01/c/001/s/1-1");
 });
+
+test("links both endpoints of the section range in 4-66aa", () => {
+  const text = "historic preservation activities as provided in sections 10-409 to 10-415 , inclusive;";
+  assert.deepEqual(extractLegalReferences([text]), {
+    sections: ["10-409", "10-415"], chapters: []
+  });
+  assert.equal(renderLinkedText(text, {
+    sections: new Map([
+      ["10-409", "#/t/10/c/184b/s/10-409"],
+      ["10-415", "#/t/10/c/184b/s/10-415"]
+    ])
+  }), 'historic preservation activities as provided in sections <a class="legal-reference" href="#/t/10/c/184b/s/10-409">10-409</a> to <a class="legal-reference" href="#/t/10/c/184b/s/10-415">10-415</a> , inclusive;');
+});
+
+test("discovers citation lists, subsection-qualified references, and chapter ranges", () => {
+  assert.deepEqual(extractLegalReferences([
+    "Sections 4-66aa(a)(1), 4-66cc and 10-409 through 10-415, inclusive, or 22-26j.",
+    "Chapters 50, 184b and 422 to 425; sections 42a-9-101–42a-9-103.",
+    "Section 4-66AA and section 4a-1; chapters 50—54."
+  ]), {
+    sections: ["4-66aa", "4-66cc", "10-409", "10-415", "22-26j", "42a-9-101", "42a-9-103", "4a-1"],
+    chapters: ["50", "184b", "422", "425", "54"]
+  });
+});
+
+test("preserves citation list formatting and escapes text and destinations", () => {
+  const text = "SECTIONS\n4-66AA(a),\t4-66cc & <unsafe>; chapters 50 and 184b.";
+  const maps = {
+    sections: new Map([["4-66aa", '#/example?x="&y=1']]),
+    chapters: new Map([["184b", "#/t/10/c/184b"]])
+  };
+  assert.equal(renderLinkedText(text, maps), 'SECTIONS\n<a class="legal-reference" href="#/example?x=&quot;&amp;y=1">4-66AA</a>(a),\t4-66cc &amp; &lt;unsafe&gt;; chapters 50 and <a class="legal-reference" href="#/t/10/c/184b">184b</a>.');
+  assert.equal(renderLinkedText(text), escapeHtml(text));
+});
+
+test("stops citation lists at unrelated prose and does not infer bare references", () => {
+  assert.deepEqual(extractLegalReferences([
+    "Section 4-66aa applies to special act 75-93 and 10-415 is mentioned later.",
+    "Sections 10-409 to 10-415, inclusive; special act 75-93.",
+    "Chapters 50 and section 4-66cc. 2026-01-01 and 10-409.",
+    "Chapter 42a-9-101 is not a chapter number."
+  ]), { sections: ["4-66aa", "10-409", "10-415", "4-66cc"], chapters: ["50"] });
+});

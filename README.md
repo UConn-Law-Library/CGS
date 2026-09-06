@@ -64,6 +64,8 @@ The static client uses stable hash routes so deep links work on GitHub Pages wit
 
 Older `?chapter=001&section=section-1-1` links are translated to the canonical route in the browser. Search results, adjacent-section navigation, breadcrumbs, and recognized section or chapter references all use the same route contract.
 
+Public Act references in statute text, source notes, and history (including `public act 93-336` and `P.A. 93-336`) open the [CGA act lookup](https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Public+Act&which_year=1993&bill_num=336) in a new tab. This official lookup provides links to act text and legislative history and lists the matching sessions when an act number is shared. Links cover 1991 through the current year, matching the lookup's available years; older references remain plain text. Public Act lists and source-note citations with an omitted repeated `P.A.` are recognized. These external destinations require an internet connection.
+
 ## Search execution
 
 Title-scoped and all-title searches use static title shards. The client loads up to six shards concurrently and sends each completed shard to a Web Worker, which continuously merges a deterministic top-result set. The interface displays results and progress as shards arrive, cancels stale work when a new search or route begins, and falls back to incremental main-thread ranking when workers are unavailable. The build also derives auxiliary history and annotation shards; the browser loads and joins those fields only for searches that need them.

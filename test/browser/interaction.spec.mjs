@@ -12,6 +12,19 @@ test("statute ranges link both endpoints and navigate to the referenced section"
   await expect(page.getByRole("heading", { level: 1, name: /Sec\. 10-415\./ })).toBeVisible();
 });
 
+test("Public Act references link to CGA from statute text and reference notes", async ({ page }) => {
+  await openApp(page, "#/t/04a/c/058/s/4a-52a");
+  const href = "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Public+Act&which_year=1993&bill_num=336";
+  const act = page.locator("article.provision .statute-text").getByRole("link", { name: "93-336", exact: true });
+  await expect(act).toHaveAttribute("href", href);
+  await expect(act).toHaveAttribute("target", "_blank");
+  await expect(act).toHaveAttribute("rel", "noopener noreferrer");
+  const notes = page.locator(".information-references");
+  await expect(notes.locator(`a[href="${href}"]`)).toHaveCount(1);
+  await expect(notes.locator('a[href*="which_year=1993&bill_num=201"]')).toHaveCount(2);
+  await expect(notes.getByRole("link", { name: "88-192", exact: true })).toHaveCount(0);
+});
+
 test("Home exposes the core application destinations", async ({ page }) => {
   await openApp(page);
   await expect(page.locator(".home-intro")).toMatchAriaSnapshot(`

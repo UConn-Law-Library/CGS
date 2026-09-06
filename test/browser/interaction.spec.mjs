@@ -25,6 +25,24 @@ test("Public Act references link to CGA from statute text and reference notes", 
   await expect(notes.getByRole("link", { name: "88-192", exact: true })).toHaveCount(0);
 });
 
+test("abbreviated See references in 2-71h link to the referenced statutes", async ({ page }) => {
+  await openApp(page, "#/t/02/c/018a/s/2-71h");
+  const statute = page.locator("article.provision .statute-text");
+  for (const [citation, href] of [
+    ["4b-54", "#/t/04b/c/060/s/4b-54"],
+    ["5-142", "#/t/05/c/065/s/5-142"],
+    ["5-145a", "#/t/05/c/065/s/5-145a"],
+    ["29-8a", "#/t/29/c/529/s/29-8a"],
+    ["53-39a", "#/t/53/c/939/s/53-39a"]
+  ]) {
+    await expect(statute.getByRole("link", { name: citation, exact: true })).toHaveAttribute("href", href);
+  }
+  await expect(statute.locator("p").filter({ hasText: "See Sec. 4b-54(b)" })).toBeVisible();
+  await statute.getByRole("link", { name: "4b-54", exact: true }).click();
+  await expect(page).toHaveURL(/#\/t\/04b\/c\/060\/s\/4b-54$/);
+  await expect(page.getByRole("heading", { level: 1, name: /Sec\. 4b-54\./ })).toBeVisible();
+});
+
 test("Home exposes the core application destinations", async ({ page }) => {
   await openApp(page);
   await expect(page.locator(".home-intro")).toMatchAriaSnapshot(`

@@ -226,3 +226,49 @@ test("stops citation lists at unrelated prose and does not infer bare references
     "Chapter 42a-9-101 is not a chapter number."
   ]), { sections: ["4-66aa", "10-409", "10-415", "4-66cc"], chapters: ["50"] });
 });
+
+test("links the abbreviated See references at the end of 2-71h", () => {
+  const values = [
+    "See Sec. 4b-54(b) for powers and duties re paintings, portraits, statues or tablets to be hung or placed at the State Capitol.",
+    "See Sec. 5-142(a) re injuries sustained by State Capitol Police.",
+    "See Sec. 5-145a re disability or death resulting from hypertension or heart disease suffered by State Capitol Police.",
+    "See Secs. 29-8a and 53-39a re indemnification of State Capitol Police."
+  ];
+  const destinations = [
+    ["4b-54", "#/t/04b/c/060/s/4b-54"],
+    ["5-142", "#/t/05/c/065/s/5-142"],
+    ["5-145a", "#/t/05/c/065/s/5-145a"],
+    ["29-8a", "#/t/29/c/529/s/29-8a"],
+    ["53-39a", "#/t/53/c/939/s/53-39a"]
+  ];
+  assert.deepEqual(extractLegalReferences(values), {
+    sections: destinations.map(([citation]) => citation), chapters: []
+  });
+  const text = values.join("\n");
+  const html = renderLinkedText(text, { sections: new Map(destinations) });
+  for (const [citation, href] of destinations) {
+    assert.ok(html.includes(`<a class="legal-reference" href="${href}">${citation}</a>`));
+  }
+  assert.ok(html.includes('>4b-54</a>(b)'));
+  assert.ok(html.includes('>5-142</a>(a)'));
+  assert.equal(html.replace(/<a\b[^>]*>([^<]*)<\/a>/g, "$1"), text);
+});
+
+test("recognizes abbreviated ranges and history references with varied casing and spacing", () => {
+  assert.deepEqual(extractLegalReferences([
+    "See sec.4b-54(b); SEC.\n5-142(a).",
+    "See Secs. 10-409 to 10-415, inclusive, and 5-145a.",
+    "History: P.A. 83-13 deleted reference to a special policeman under Sec. 29-18 in Subsec. (a).",
+    "See SECS.\t29-8a and 53-39a; section 4b-54."
+  ]), {
+    sections: ["4b-54", "5-142", "10-409", "10-415", "5-145a", "29-18", "29-8a", "53-39a"], chapters: []
+  });
+});
+
+test("does not treat subsection abbreviations as section labels and preserves unresolved citations", () => {
+  const text = "Subsec. 4b-54; Subsecs. 5-142 and 5-145a; 29-8a. See Sec. 999-1(b). <unsafe>";
+  assert.deepEqual(extractLegalReferences([text]), { sections: ["999-1"], chapters: [] });
+  assert.equal(renderLinkedText(text, {
+    sections: new Map([["4b-54", "#/t/04b/c/060/s/4b-54"]])
+  }), escapeHtml(text));
+});

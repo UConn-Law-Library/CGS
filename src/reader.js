@@ -41,7 +41,7 @@ const referenceSeparator = String.raw`(?:\s+(?:to|through|and|or)\s+|\s*,\s*(?:(
 // Share citation spans between discovery and rendering so every displayed link
 // also has its destination loaded. Continue only through a citation list/range.
 function* legalReferences(text) {
-  const start = new RegExp(String.raw`\bsections?\s+(${sectionCitation})|\bchapters?\s+(${chapterCitation})`, "gi");
+  const start = new RegExp(String.raw`\b(?:sections?\s+|secs?\.\s*)(${sectionCitation})|\bchapters?\s+(${chapterCitation})`, "gi");
   for (const match of text.matchAll(start)) {
     const kind = match[1] ? "sections" : "chapters";
     const target = match[1] ?? match[2];

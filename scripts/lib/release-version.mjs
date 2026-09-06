@@ -12,13 +12,17 @@ export function normalizeReleaseVersion(value) {
   return version.startsWith("v") ? version : `v${version}`;
 }
 
-export async function stampReleaseVersion(directory, value) {
+export async function stampReleaseVersion(directory, value, updates = []) {
   const version = normalizeReleaseVersion(value);
   const releasePath = path.join(directory, "release.js");
   const source = await readFile(releasePath, "utf8");
   if (!source.includes(VERSION_PLACEHOLDER)) {
     throw new Error(`Application release placeholder is missing: ${VERSION_PLACEHOLDER}`);
   }
-  await writeFile(releasePath, source.replaceAll(VERSION_PLACEHOLDER, version), "utf8");
+  const updatesPlaceholder = "/* __CGS_RECENT_UPDATES__ */ []";
+  if (!source.includes(updatesPlaceholder)) throw new Error("Recent updates placeholder is missing");
+  const stamped = source.replaceAll(VERSION_PLACEHOLDER, version)
+    .replace(updatesPlaceholder, () => JSON.stringify(updates));
+  await writeFile(releasePath, stamped, "utf8");
   return version;
 }

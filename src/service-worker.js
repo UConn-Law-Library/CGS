@@ -39,6 +39,7 @@ const SHELL_FILES = [
   "./pwa.js",
   "./reader.js",
   "./release.js",
+  "./site-updates.js",
   "./revision-diff.js",
   "./routes.js",
   "./search.js",

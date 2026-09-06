@@ -1,0 +1,43 @@
+{
+  "fc4f31acc215e98ba1494d4340ca959f4b49491c": {
+    "category": "Enhancement",
+    "title": "Open referenced Public Acts",
+    "summary": "Public Act references from 1991 onward now link to the General Assembly’s act lookup from statute text, source notes, and history."
+  },
+  "5eb9d2509ff977316e301be43bb1072d28f2bb8b": {
+    "category": "Bug fix",
+    "title": "Follow every citation in a range or list",
+    "summary": "Both ends of ranges such as “10-409 to 10-415” are now clickable, along with additional section and chapter references in lists."
+  },
+  "db82e16efd882b8fd06ad004f335e3bdde161c90": {
+    "category": "Bug fix",
+    "title": "More reliable navigation and recovery",
+    "summary": "Rapid navigation now keeps the selected page in view. Failed data requests can be retried, and offline operations are coordinated to protect downloaded data."
+  },
+  "e40db5742ca12a502e8d016dfce6f740a2cfe69f": { "hidden": true },
+  "b05fe32728266704a94d415d75c60b84ed6a982d": {
+    "category": "Enhancement",
+    "title": "See which release you’re using",
+    "summary": "The About page displays the site’s release version and links to its GitHub release notes."
+  },
+  "f7fa56f46d0cc8a1e4a66c2963a745c40774a62e": {
+    "category": "Bug fix",
+    "title": "Stronger offline reliability",
+    "summary": "Downloaded data is checked for integrity, and Settings provides storage, repair, and release information."
+  },
+  "29bcba34294a52d4f2faa214224ff19a468487e1": {
+    "category": "Enhancement",
+    "title": "More ways to search the statutes",
+    "summary": "Search supports Boolean and proximity queries, field filters, searching within results, and device-local search history."
+  },
+  "f5b995719e9387f8de5a25db16f8f0e25c92a5ba": {
+    "category": "Maintenance",
+    "title": "Accessibility checks before publication",
+    "summary": "Automated browser checks help catch accessibility and interface problems before updates are published."
+  },
+  "34791777d74ef21e2ae0762e81d4a60bb1353b10": {
+    "category": "Enhancement",
+    "title": "Refined statute browsing and search",
+    "summary": "Updated the statute navigation and search interface for easier browsing."
+  }
+}

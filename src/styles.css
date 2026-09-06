@@ -820,6 +820,18 @@ body { color: var(--ink); background: var(--paper); }
 .about-counts span { color: var(--muted); font-size: .72rem; }
 .about-section { margin-top: 2.5rem; }
 .about-section-heading h2, .about-project h2 { margin: .2rem 0 1rem; font-size: clamp(1.35rem, 4vw, 1.8rem); }
+.about-updates-intro { margin: -.4rem 0 1.2rem; color: var(--muted); }
+.about-update-list { margin: 0; padding: 0; list-style: none; }
+.about-update { padding: 1.1rem 0 1.1rem 1.2rem; border-left: 2px solid var(--line); overflow-wrap: anywhere; }
+.about-update + .about-update { border-top: 1px solid var(--line); }
+.about-update-meta { display: flex; flex-wrap: wrap; align-items: center; gap: .65rem; color: var(--muted); font-size: .78rem; }
+.about-update-category { padding: .15rem .5rem; border-radius: 999px; color: var(--blue); background: var(--blue-light); font-weight: 750; }
+.about-update h3 { margin: .6rem 0 .35rem; font-size: 1.05rem; }
+.about-update p { max-width: 52rem; margin: .35rem 0 .6rem; }
+.about-update-commit { font-size: .78rem; }
+.about-updates-more { margin-top: .75rem; }
+.about-updates-more > summary { width: fit-content; padding: .65rem 0; color: var(--blue); cursor: pointer; font-weight: 750; }
+.about-updates-history { margin-bottom: 0; font-size: .85rem; }
 .about-source-list { display: grid; gap: .75rem; }
 .about-source-card { padding: 1.15rem; background: var(--surface-raised); border: 1px solid var(--line); border-radius: .8rem; }
 .about-source-card h3 { margin: .2rem 0 .35rem; font-size: 1.15rem; }

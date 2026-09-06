@@ -43,6 +43,23 @@ test("Settings reports persistent-storage and release status", async ({ page }) 
     .toContainText(/Expected corpus|Application release/);
 });
 
+test("About retains recent updates offline", async ({ context, page }) => {
+  await openApp(page, "#/about");
+  await waitForOfflineWorker(page);
+  const updates = page.getByRole("region", { name: "Recent updates" });
+  const before = await updates.textContent();
+  await context.setOffline(true);
+  try {
+    await page.reload();
+    await expect(updates).toBeVisible();
+    await expect(updates).toHaveText(before);
+    await updates.locator("summary").click();
+    await expect(updates.getByRole("list", { name: "Earlier updates", exact: true })).toBeVisible();
+  } finally {
+    await context.setOffline(false);
+  }
+});
+
 test("an incompatible downloaded corpus is identified and can be repaired", async ({ page }) => {
   await openApp(page);
   await waitForOfflineWorker(page);

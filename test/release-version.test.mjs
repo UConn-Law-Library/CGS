@@ -14,9 +14,15 @@ test("normalizes stable and prerelease semantic versions", () => {
 test("stamps the deployed release module", async () => {
   const directory = await mkdtemp(path.join(os.tmpdir(), "cgs-release-version-"));
   try {
-    await writeFile(path.join(directory, "release.js"), 'export const APP_VERSION = "__CGS_APP_VERSION__";\n', "utf8");
-    assert.equal(await stampReleaseVersion(directory, "1.0.1"), "v1.0.1");
-    assert.equal(await readFile(path.join(directory, "release.js"), "utf8"), 'export const APP_VERSION = "v1.0.1";\n');
+    const source = await readFile(new URL("../src/release.js", import.meta.url), "utf8");
+    await writeFile(path.join(directory, "release.js"), source, "utf8");
+    const updates = [{ title: 'Fix "$&" and <markup>', commit: "a".repeat(40), date: "2026-09-05" }];
+    assert.equal(await stampReleaseVersion(directory, "1.0.1", updates), "v1.0.1");
+    const stamped = await readFile(path.join(directory, "release.js"), "utf8");
+    const release = await import(`data:text/javascript,${encodeURIComponent(stamped)}`);
+    assert.equal(release.APP_VERSION, "v1.0.1");
+    assert.deepEqual(release.RECENT_UPDATES, updates);
+    assert.doesNotMatch(stamped, /__CGS_/);
   } finally {
     await rm(directory, { recursive: true, force: true });
   }

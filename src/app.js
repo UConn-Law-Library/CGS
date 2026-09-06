@@ -31,7 +31,8 @@ import { applyPreferences, DeviceState } from "./device-state.js";
 import { PwaManager } from "./pwa.js";
 import { NativeDialogController } from "./dialog.js";
 import { aggregateShardCounts, contextualColumnCount } from "./context-navigation.js";
-import { APP_VERSION } from "./release.js";
+import { APP_VERSION, RECENT_UPDATES } from "./release.js";
+import { renderSiteUpdates } from "./site-updates.js";
 import {
   buildOmniRows,
   findIndexMatches,
@@ -894,6 +895,7 @@ async function renderAbout(catalog, sequence) {
       ${headingCount ? `<li><strong>${headingCount.toLocaleString()}</strong><span>index headings</span></li>` : ""}
       ${infractionCount ? `<li><strong>${infractionCount.toLocaleString()}</strong><span>infractions</span></li>` : ""}
     </ul>
+    ${renderSiteUpdates(RECENT_UPDATES)}
     <section class="about-section" aria-labelledby="about-sources-heading">
       <div class="about-section-heading"><p class="eyebrow">Provenance</p><h2 id="about-sources-heading">Data and official sources</h2></div>
       <div class="about-source-list">${cards.join("")}</div>

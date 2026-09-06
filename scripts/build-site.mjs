@@ -4,6 +4,7 @@ import path from "node:path";
 import { generateDiscovery } from "./lib/discovery.mjs";
 import { stampServiceWorker } from "./lib/pwa-build.mjs";
 import { stampReleaseVersion } from "./lib/release-version.mjs";
+import { readRecentUpdates } from "./lib/site-updates.mjs";
 import { generateSupplementIndex } from "./lib/supplement-index.mjs";
 import { generateSearchV2Artifacts } from "./lib/search-v2-artifacts.mjs";
 
@@ -14,7 +15,8 @@ await mkdir(output, { recursive: true });
 await cp(path.join(root, "src"), output, { recursive: true });
 await cp(path.join(root, "public"), output, { recursive: true });
 const packageMetadata = JSON.parse(await readFile(path.join(root, "package.json"), "utf8"));
-const appVersion = await stampReleaseVersion(output, process.env.CGS_APP_VERSION ?? packageMetadata.version);
+const updates = await readRecentUpdates(root);
+const appVersion = await stampReleaseVersion(output, process.env.CGS_APP_VERSION ?? packageMetadata.version, updates);
 const dataDirectory = path.join(root, "public", "data");
 const catalog = JSON.parse(await readFile(path.join(dataDirectory, "catalog.json"), "utf8"));
 const siteUrl = process.env.CGS_SITE_URL ?? "https://uconn-law-library.github.io/CGS/";

@@ -2,6 +2,7 @@ import { expect, test } from "@playwright/test";
 import { expectNoHighImpactAccessibilityViolations, openApp } from "./helpers.mjs";
 
 const representativeRoutes = [
+  { name: "About", route: "#/about", heading: "Connecticut General Statutes Explorer" },
   { name: "Home", route: "#/", heading: "Connecticut General Statutes" },
   { name: "Statute reader", route: "#/t/17b/c/319v/s/17b-238", heading: /Sec\. 17b-238/ },
   { name: "Search results", route: "#/search?q=%22Effective%20January%22", heading: "Search" },

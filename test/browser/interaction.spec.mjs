@@ -55,6 +55,24 @@ test("About links to the deployed GitHub release", async ({ page }) => {
   await expect(release).toHaveAttribute("href", `https://github.com/UConn-Law-Library/CGS/releases/tag/${version}`);
 });
 
+test("About shows recent updates and expands earlier changes", async ({ page }, testInfo) => {
+  await openApp(page, "#/about");
+  const updates = page.getByRole("region", { name: "Recent updates" });
+  await expect(updates.getByRole("heading", { name: "Recent updates", exact: true })).toBeVisible();
+  const recent = updates.getByRole("list", { name: "Latest updates", exact: true });
+  await expect(recent.locator("li")).toHaveCount(3);
+  const latestTitle = await page.evaluate(async () => (await import("/release.js")).RECENT_UPDATES[0].title);
+  await expect(recent.getByRole("heading", { level: 3 }).first()).toHaveText(latestTitle);
+  await expect(recent.locator("time").first()).toHaveAttribute("datetime", /^\d{4}-\d{2}-\d{2}$/);
+  await expect(recent.getByRole("link").first()).toHaveAttribute("href", /^https:\/\/github\.com\/UConn-Law-Library\/CGS\/commit\/[a-f0-9]{40}$/);
+  await updates.screenshot({ path: testInfo.outputPath("recent-updates.png") });
+  const earlier = updates.getByRole("list", { name: "Earlier updates", exact: true });
+  await expect(earlier).toBeHidden();
+  await updates.locator("summary").click();
+  await expect(earlier).toBeVisible();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth)).toBeLessThanOrEqual(1);
+});
+
 test("desktop contextual rail retains its scroll position after section navigation", async ({ page }, testInfo) => {
   test.skip(isMobileProject(testInfo), "Contextual rails are a desktop presentation.");
   await openApp(page, "#/t/17b/c/319v/s/17b-238");

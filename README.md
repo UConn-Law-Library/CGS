@@ -21,6 +21,8 @@ npm run dev
 
 The About page displays the version of the deployed GitHub release. Each push to `main`—including every merged pull request—is treated as the next patch release: after the production and browser checks pass, the Pages workflow increments the latest stable tag (for example, `v1.0.0` to `v1.0.1`), publishes generated GitHub release notes, stamps that version into the site, and deploys the same tested build. Manually dispatched deployments reuse the current release number instead of incrementing it.
 
+The About page also shows up to eight recent updates from commits included in the deployed checkout, with dates, categories, and commit links. The latest three are visible initially; earlier entries expand on demand. Builds read Git history locally and embed the entries in the offline application shell, without browser requests to GitHub. Use a Git checkout with full history when building (`fetch-depth: 0` in CI). Merge commits are omitted. New commits appear automatically using their subjects; `config/site-updates.json` supplies optional reader-friendly titles, summaries, categories, or `hidden: true` overrides keyed by full commit SHA. Commit dates identify when changes were recorded, not when they were deployed.
+
 ## Import the complete legacy corpus
 
 The old repository is an input only. This command reads it and replaces this repository's generated `public/data/` directory; it does not write to the legacy repository.

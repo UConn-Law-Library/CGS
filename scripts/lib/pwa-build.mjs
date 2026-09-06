@@ -6,6 +6,7 @@ export const shellInputs = Object.freeze([
   "404.html",
   "app.js",
   "device-state.js",
+  "navigation-history.js",
   "apple-touch-icon.png",
   "icon-192.png",
   "icon-512.png",

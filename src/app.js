@@ -33,6 +33,7 @@ import { NativeDialogController } from "./dialog.js";
 import { aggregateShardCounts, contextualColumnCount } from "./context-navigation.js";
 import { APP_VERSION, RECENT_UPDATES } from "./release.js";
 import { renderSiteUpdates } from "./site-updates.js";
+import { NavigationHistory } from "./navigation-history.js";
 import {
   buildOmniRows,
   findIndexMatches,
@@ -60,6 +61,8 @@ const repository = new SearchRepository({ supplementRepository });
 const searchClient = new ProgressiveSearchClient({ repository });
 const secondaryRepository = new SecondarySourceRepository();
 const deviceState = new DeviceState();
+const navigationHistory = new NavigationHistory();
+let lastRecordedPage = null;
 const pwaManager = new PwaManager();
 const catalogPromise = getJson("./data/catalog.json");
 let renderSequence = 0;
@@ -89,6 +92,7 @@ function activeDestination(route = parseRoute(location)) {
   if (route.kind === "infractions") return "infractions";
   if (route.kind === "bookmarks") return "bookmarks";
   if (route.kind === "about") return "settings";
+  if (route.kind === "history") return "history";
   return "statutes";
 }
 
@@ -254,6 +258,7 @@ function siteHeader() {
       </nav>
     </div>
     <form class="global-search" data-global-search role="search">
+      <button type="button" class="navigation-back" data-go-back aria-label="Go back" title="Go back to the previous page"${navigationHistory.canGoBack ? "" : " disabled"}><span aria-hidden="true">←</span><span class="back-label"> Back</span></button>
       <label class="visually-hidden" for="global-query">Search statutes, index topics, and infractions</label>
       <div class="global-search-field">
         <input id="global-query" name="query" type="search" minlength="2" required value="${escapeHtml(searchValue)}" placeholder="Search statutes, index, and infractions" autocomplete="off" spellcheck="false"
@@ -262,6 +267,7 @@ function siteHeader() {
         <div class="omni-panel" id="omni-results" role="listbox" hidden data-omni-panel></div>
       </div>
       <button type="submit" class="global-search-button">Search</button>
+      <a class="navigation-history" href="#/history"${route.kind === "history" ? ' aria-current="page"' : ""}>History</a>
     </form>
     ${settingsPanel()}
   </header>`;
@@ -801,6 +807,19 @@ function renderTitles(catalog) {
   window.scrollTo({ top: 0 });
 }
 
+function renderHistory() {
+  setDocumentTitle("History");
+  const pages = deviceState.pageHistory();
+  app.innerHTML = `${siteHeader()}<main class="history-page browse-page" id="main-content">
+    <header class="section-heading"><div><p class="eyebrow">On this device</p><h1>History</h1></div>
+      <button type="button" class="text-button" data-clear-page-history${pages.length ? "" : " disabled"}>Clear history</button></header>
+    <p>Your last 100 visited pages, most recent first. Revisiting a page moves it to the top. Saved only in this browser.</p>
+    ${pages.length ? `<ol class="page-history-list">${pages.map((item) => `<li><a href="${escapeHtml(item.href)}"><strong>${escapeHtml(item.title)}</strong><time datetime="${escapeHtml(item.viewedAt)}">${escapeHtml(new Date(item.viewedAt).toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short" }))}</time></a></li>`).join("")}</ol>`
+      : '<p class="empty-state" role="status">No browsing history yet. Pages you visit will appear here.</p>'}
+  </main>`;
+  window.scrollTo({ top: 0 });
+}
+
 function formatSnapshotDate(value) {
   if (!value) return null;
   const date = new Date(value);
@@ -1129,7 +1148,7 @@ async function renderChapter(catalog, title, chapterMeta, route, sequence) {
 
   if (route.legacyQuery) {
     const canonicalRoute = selected ? provisionRoute(title, chapter, selected) : chapterRoute(title, chapter);
-    history.replaceState(null, "", `${location.pathname}${canonicalRoute}`);
+    history.replaceState(history.state, "", `${location.pathname}${canonicalRoute}`);
   }
 
   const [maps, secondaryContext] = selected
@@ -1568,6 +1587,7 @@ async function titleWithLatestSupplementChapters(title) {
 }
 
 async function renderCurrentRoute() {
+  navigationHistory.sync();
   closeOmni();
   activeSearchController?.abort();
   activeSearchController = null;
@@ -1582,6 +1602,7 @@ async function renderCurrentRoute() {
     if (route.kind === "search") return await renderSearchPage(catalog, route);
     if (route.kind === "infractions") return await renderInfractions(route, sequence);
     if (route.kind === "bookmarks") return renderBookmarks();
+    if (route.kind === "history") return renderHistory();
     if (route.kind === "about") return await renderAbout(catalog, sequence);
     if (route.kind === "index") return await renderStatutesIndex(route, sequence);
 
@@ -1597,7 +1618,15 @@ async function renderCurrentRoute() {
     return await renderChapter(catalog, title, chapterMatch.chapter, route, sequence);
   } catch (error) {
     if (sequence !== renderSequence) return;
-    app.innerHTML = `<main class="error" id="main-content"><h1>Unable to load the statutes</h1><p>${escapeHtml(error.message)}</p></main>`;
+    app.innerHTML = `${siteHeader()}<main class="error" id="main-content"><h1>Unable to load the statutes</h1><p>${escapeHtml(error.message)}</p></main>`;
+  } finally {
+    if (sequence === renderSequence) {
+      const href = location.hash || "#/";
+      if (parseRoute(location).kind !== "history" && !app.querySelector("main.error") && href !== lastRecordedPage) {
+        deviceState.recordPage({ href, title: document.title.replace(/ · Connecticut General Statutes$/, "") });
+      }
+      lastRecordedPage = href;
+    }
   }
 }
 
@@ -1648,6 +1677,16 @@ document.addEventListener("pointerdown", (event) => {
 });
 
 document.addEventListener("click", async (event) => {
+  if (event.target.closest("[data-go-back]")) {
+    navigationHistory.back();
+    return;
+  }
+  if (event.target.closest("[data-clear-page-history]")) {
+    deviceState.clearPageHistory();
+    deviceState.clearRecents();
+    renderHistory();
+    return;
+  }
   const openChapterSheet = event.target.closest("[data-open-chapter-sheet]");
   if (openChapterSheet) {
     chapterDialogController?.open(openChapterSheet);

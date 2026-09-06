@@ -2,6 +2,8 @@ const BOOKMARKS_KEY = "cgs.bookmarks.v1";
 const PREFERENCES_KEY = "cgs.preferences.v1";
 const RECENTS_KEY = "cgs.recents.v1";
 const SEARCH_HISTORY_KEY = "cgs.search-history.v1";
+const PAGE_HISTORY_KEY = "cgs.page-history.v1";
+const PAGE_HISTORY_LIMIT = 100;
 const RECENT_LIMIT = 20;
 const SEARCH_HISTORY_LIMIT = 20;
 
@@ -24,6 +26,7 @@ function safeParse(value, fallback) {
 
 export class DeviceState {
   #storage;
+  #pageHistory = [];
 
   constructor({ storage } = {}) {
     try {
@@ -103,6 +106,27 @@ export class DeviceState {
 
   clearRecents() {
     this.#write(RECENTS_KEY, []);
+  }
+
+  pageHistory() {
+    const value = this.#read(PAGE_HISTORY_KEY, this.#pageHistory);
+    return Array.isArray(value) ? value.filter((item) =>
+      typeof item?.href === "string" && item.href.startsWith("#/")
+      && typeof item.title === "string" && item.title
+      && typeof item.viewedAt === "string" && Number.isFinite(Date.parse(item.viewedAt))
+    ).slice(0, PAGE_HISTORY_LIMIT) : [];
+  }
+
+  recordPage({ href, title, viewedAt = new Date().toISOString() }) {
+    if (typeof href !== "string" || !href.startsWith("#/") || !title || !Number.isFinite(Date.parse(viewedAt))) return;
+    this.#pageHistory = [{ href, title: String(title), viewedAt },
+      ...this.pageHistory().filter((item) => item.href !== href)].slice(0, PAGE_HISTORY_LIMIT);
+    this.#write(PAGE_HISTORY_KEY, this.#pageHistory);
+  }
+
+  clearPageHistory() {
+    this.#pageHistory = [];
+    this.#write(PAGE_HISTORY_KEY, []);
   }
 
   searchHistory() {

@@ -31,6 +31,7 @@ for (const [name, destination, path] of [
     await expect(page.getByRole("heading", { level: 1, name: "Bookmarks", exact: true })).toBeVisible();
     await expect(page).toHaveTitle(/Bookmarks/);
     await expect(page).toHaveURL(/#\/bookmarks$/);
+    expect(await page.evaluate((href) => JSON.parse(localStorage.getItem("cgs.page-history.v1") ?? "[]").some((item) => item.href === href), destination)).toBe(false);
   });
 }
 

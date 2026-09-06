@@ -57,6 +57,8 @@ See [ARCHITECTURE.md](ARCHITECTURE.md) for design constraints, invariants, and t
 
 ## Reader routes
 
+The header includes a Back button for returning through this tab's app navigation and a History link. History keeps the last 100 distinct visited pages, including titles, chapters, sections, searches, index pages, and infractions, with the latest visit time. It persists locally in this browser; Clear history removes it and the home page's recently viewed items. Back follows browser history, works after reload, and is disabled on the tab's first app page.
+
 The static client uses stable hash routes so deep links work on GitHub Pages without server-side rewrites:
 
 - `#/t/01` opens Title 1.

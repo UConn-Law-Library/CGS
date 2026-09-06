@@ -125,6 +125,7 @@ export function parseRoute({ hash = "", search = "" } = {}) {
   }
 
   if (parts[0] === "bookmarks" && parts.length === 1) return { kind: "bookmarks" };
+  if (parts[0] === "history" && parts.length === 1) return { kind: "history" };
 
   if (parts[0] === "titles" && parts.length === 1) return { kind: "titles" };
 

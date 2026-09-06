@@ -32,6 +32,7 @@ const SHELL_FILES = [
   "./styles.css",
   "./app.js",
   "./device-state.js",
+  "./navigation-history.js",
   "./dialog.js",
   "./context-navigation.js",
   "./omnisearch.js",

@@ -17,6 +17,31 @@ function failingStorage() {
   };
 }
 
+test("page history is bounded, persistent, deduplicated, and rejects unsafe links", () => {
+  const storage = memoryStorage();
+  const state = new DeviceState({ storage });
+  for (let index = 0; index < 105; index++) state.recordPage({ href: `#/t/${index}`, title: `Title ${index}` });
+  state.recordPage({ href: "#/t/10", title: "Title 10 revisited" });
+  const restored = new DeviceState({ storage });
+  assert.equal(restored.pageHistory().length, 100);
+  assert.equal(restored.pageHistory()[0].title, "Title 10 revisited");
+  assert.equal(restored.pageHistory().filter((item) => item.href === "#/t/10").length, 1);
+  state.recordPage({ href: "javascript:alert(1)", title: "Unsafe" });
+  assert.equal(state.pageHistory().length, 100);
+  state.clearPageHistory();
+  assert.deepEqual(restored.pageHistory(), []);
+  storage.setItem("cgs.page-history.v1", JSON.stringify([{ href: "https://example.com", title: "External", viewedAt: new Date().toISOString() }, null]));
+  assert.deepEqual(state.pageHistory(), []);
+});
+
+test("page history remains usable in memory when browser storage is blocked", () => {
+  const state = new DeviceState({ storage: failingStorage() });
+  state.recordPage({ href: "#/titles", title: "Titles" });
+  assert.equal(state.pageHistory()[0].title, "Titles");
+  state.clearPageHistory();
+  assert.deepEqual(state.pageHistory(), []);
+});
+
 test("stores and removes device-local bookmarks", () => {
   const state = new DeviceState({ storage: memoryStorage() });
   const bookmark = { id: "statute:1-1", type: "statute", title: "Sec. 1-1", href: "#/t/1/c/1/s/1-1" };

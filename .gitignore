@@ -9,3 +9,4 @@ test-results/
 __pycache__/
 *.py[cod]
 docs/50-state-expansion-plan.md
+docs/frcp-pwa-build-prompt.md

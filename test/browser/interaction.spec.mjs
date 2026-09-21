@@ -150,6 +150,31 @@ test("bookmarks remain available on the device-local bookmarks page", async ({ p
   await expect(page.getByRole("link", { name: /Sec\. 1-34/ })).toBeVisible();
 });
 
+test("a targeted statute paragraph exposes and copies its citation", async ({ page }) => {
+  await page.addInitScript(() => {
+    Object.defineProperty(navigator, "clipboard", {
+      configurable: true,
+      value: {
+        async writeText(value) {
+          window.__copiedCitation = value;
+        }
+      }
+    });
+  });
+  await openApp(page, "#/t/01/c/006/s/1-34/p/1");
+
+  const targeted = page.locator("#subsection-1");
+  const copyCitation = targeted.getByRole("button", { name: "Copy C.G.S. § 1-34(1)" });
+  await expect(targeted).toHaveClass(/subsection-target/);
+  await expect(copyCitation).toBeVisible();
+  await expect(page.locator("#subsection-2 .copy-citation")).toBeHidden();
+
+  await copyCitation.click();
+  await expect(copyCitation).toHaveText("Copied");
+  await expect(page.locator(".action-status")).toHaveText("C.G.S. § 1-34(1) copied.");
+  await expect.poll(() => page.evaluate(() => window.__copiedCitation)).toBe("C.G.S. § 1-34(1)");
+});
+
 test("print mode keeps statute text and removes application chrome", async ({ page }) => {
   await openApp(page, "#/t/01/c/006/s/1-34");
   await page.emulateMedia({ media: "print" });

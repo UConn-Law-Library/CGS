@@ -23,7 +23,8 @@ import {
   navigationSectionLabel,
   navigationSections,
   renderLinkedText,
-  routeForDocument
+  routeForDocument,
+  subsectionCitation
 } from "./reader.js";
 import { renderSearchExcerpt, renderSearchHighlight, searchHighlightTerms } from "./search-highlight.js";
 import { SecondarySourceRepository } from "./secondary-sources.js";
@@ -576,8 +577,10 @@ function renderParagraph(text, maps, title, chapter, section) {
   const subsection = leadingSubsection(text);
   if (!subsection) return `<p>${renderLinkedText(text, maps)}</p>`;
   const href = provisionRoute(title, chapter, section, subsection.key);
+  const citation = subsectionCitation(section, subsection);
   return `<p id="subsection-${escapeHtml(subsection.key)}" class="statute-paragraph">
-    <a class="subsection-link" href="${escapeHtml(href)}" aria-label="Link to subsection ${escapeHtml(subsection.label)}">${escapeHtml(subsection.label)}</a>
+    <a class="subsection-link" href="${escapeHtml(href)}" aria-label="Link to subsection ${escapeHtml(subsection.label)}"${citation ? ` title="Link to ${escapeHtml(citation)}"` : ""}>${escapeHtml(subsection.label)}</a>
+    ${citation ? `<button class="copy-citation" type="button" data-copy-citation="${escapeHtml(citation)}" aria-label="Copy ${escapeHtml(citation)}">Copy citation</button>` : ""}
     ${renderLinkedText(subsection.text, maps)}
   </p>`;
 }
@@ -1201,6 +1204,7 @@ async function renderChapter(catalog, title, chapterMeta, route, sequence) {
   if (route.subsection) {
     const target = document.querySelector(`#subsection-${CSS.escape(route.subsection.toLowerCase())}`);
     if (target) {
+      target.classList.add("subsection-target");
       target.tabIndex = -1;
       target.scrollIntoView({ block: "center" });
       target.focus({ preventScroll: true });
@@ -1860,6 +1864,21 @@ document.addEventListener("click", async (event) => {
     });
     const status = bookmarkButton.closest(".provision")?.querySelector(".action-status");
     if (status) status.textContent = saved ? "Bookmark saved on this device." : "Bookmark removed.";
+    return;
+  }
+  const copyCitation = event.target.closest("[data-copy-citation]");
+  if (copyCitation) {
+    const status = copyCitation.closest(".provision")?.querySelector(".action-status");
+    try {
+      await navigator.clipboard.writeText(copyCitation.dataset.copyCitation);
+      copyCitation.textContent = "Copied";
+      if (status) status.textContent = `${copyCitation.dataset.copyCitation} copied.`;
+      window.setTimeout(() => {
+        if (copyCitation.isConnected) copyCitation.textContent = "Copy citation";
+      }, 1200);
+    } catch {
+      if (status) status.textContent = "The citation could not be copied automatically.";
+    }
     return;
   }
   const copy = event.target.closest("[data-copy-link]");

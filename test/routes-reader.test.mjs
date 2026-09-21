@@ -22,7 +22,8 @@ import {
   navigationSectionLabel,
   navigationSections,
   renderLinkedText,
-  routeForDocument
+  routeForDocument,
+  subsectionCitation
 } from "../src/reader.js";
 
 const catalog = {
@@ -171,6 +172,15 @@ test("recognizes subsection markers and safely renders linked legal references",
   assert.match(rendered, /href="#\/t\/07\/c\/113">113<\/a>/);
   assert.match(rendered, /&lt;unsafe&gt;/);
   assert.equal(escapeHtml('"<&'), "&quot;&lt;&amp;");
+});
+
+test("formats paragraph-level Connecticut General Statutes citations", () => {
+  assert.equal(
+    subsectionCitation({ citation: "4-66a", citations: ["4-66a"] }, { label: "(a)" }),
+    "C.G.S. § 4-66a(a)"
+  );
+  assert.equal(subsectionCitation({ citations: ["1-34"] }, "(1)"), "C.G.S. § 1-34(1)");
+  assert.equal(subsectionCitation({}, "(a)"), null);
 });
 
 test("uses canonical reader routes for annotated search documents", () => {

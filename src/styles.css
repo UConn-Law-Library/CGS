@@ -275,8 +275,20 @@ footer { padding: 2rem 0; color: var(--muted); border-top: 1px solid var(--line)
 .action-status { min-height: 1.5rem; margin: 0; color: var(--muted); font-size: .85rem; }
 .statute-text { font: 1.08rem/1.75 Georgia, serif; }
 .statute-text p { scroll-margin-top: 2rem; }
-.statute-paragraph:target, .statute-paragraph:focus { padding: .4rem; color: var(--highlight-ink); background: var(--highlight-surface); outline: 0; }
+.statute-paragraph:target, .statute-paragraph:focus, .statute-paragraph.subsection-target { padding: .4rem; color: var(--highlight-ink); background: var(--highlight-surface); outline: 0; }
 .subsection-link { margin-right: .2rem; font: 700 .9rem Inter, sans-serif; text-decoration: none; }
+.copy-citation {
+  display: none;
+  margin-right: .2rem;
+  padding: .08rem .35rem;
+  color: var(--blue-dark);
+  background: var(--blue-light);
+  border: 0;
+  border-radius: .25rem;
+  cursor: pointer;
+  font: 700 .72rem Inter, sans-serif;
+}
+.statute-paragraph.subsection-target .copy-citation { display: inline-block; }
 .legal-reference { font-weight: 700; }
 .section-notes { margin-top: 3rem; border-top: 1px solid var(--line); }
 .information-references { margin-top: 3.5rem; border-top: 3px solid var(--blue); }

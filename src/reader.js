@@ -34,6 +34,12 @@ export function leadingSubsection(value) {
   return { label: match[1], key: match[2].toLowerCase(), text: String(value).slice(match[0].length) };
 }
 
+export function subsectionCitation(section, subsection) {
+  const citation = section?.citation ?? section?.citations?.find(Boolean);
+  if (!citation) return null;
+  return `C.G.S. § ${citation}${String(subsection?.label ?? subsection ?? "").trim()}`;
+}
+
 const sectionCitation = String.raw`\d+[a-z]*-\d+[a-z0-9]*(?:-\d+[a-z0-9]*)*(?![\w-])`;
 const chapterCitation = String.raw`\d+[a-z]*(?![\w-])`;
 const referenceSeparator = String.raw`(?:\s+(?:to|through|and|or)\s+|\s*,\s*(?:(?:and|or)\s+)?|\s*[–—]\s*)`;

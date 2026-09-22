@@ -26,7 +26,7 @@ No pull request is created when only generation timestamps changed. A failing sa
 
 Each run retains:
 
-- `corpus-refresh-review-*` for 30 days, containing the crawler log, full JSON and Markdown corpus diffs, concise review summary, and safety state;
+- `corpus-refresh-review-*` for 30 days, containing the crawler log, full JSON and Markdown corpus diffs, concise review summary, safety state, and secondary-link rebinding reports when statutes change;
 - `corpus-refresh-snapshots-*` for 14 days, containing the content-addressed HTML and URL manifest required for offline replay.
 
 Snapshots and staging data stay beneath `.crawl/` and are never committed.
@@ -65,4 +65,6 @@ The initial gate completed with three clean full-corpus refreshes. Each run acqu
 
 The workflow is scheduled for Mondays at 10:17 UTC. Scheduled runs always enable draft-pull-request creation when meaningful changes pass policy; manual dispatches retain the explicit toggle. The existing `corpus-refresh` concurrency group serializes scheduled and manual runs, and `cancel-in-progress: false` prevents a later trigger from discarding an active evidentiary crawl.
 
-When the primary corpus changes, the workflow reacquires the official index and infractions PDFs and rebuilds `public/data/secondary` against the candidate base before the full verification and PR steps. The content-addressed PDFs are retained as `corpus-refresh-secondary-sources-*` artifacts for 14 days. A secondary-source acquisition or resolution failure stops the corpus refresh rather than publishing stale links or deleting the reviewed secondary dataset.
+When the primary corpus changes, the workflow runs `secondary:rebind` to rebuild statute resolutions and reverse links from the already-published records in `public/data/secondary`. This step runs offline, preserves the reviewed text, fees, IDs, and source provenance, and binds the result to the candidate base. It validates both datasets, retains a `secondary-rebind-diff` and safety review with the corpus reports, and includes those results in the draft PR. A validation or resolution-policy failure stops publication.
+
+The corpus workflow does not download secondary PDFs. New index and infractions editions are acquired only by the independently scheduled and manually dispatchable `Review secondary sources refresh` workflow. A Judicial or LCO PDF outage cannot block the statute refresh, and the published secondary dataset is never silently discarded.

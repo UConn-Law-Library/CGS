@@ -2,20 +2,25 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 from pathlib import Path
 
-from .acquisition import INFRACTIONS_URL, PdfAcquirer, PdfSnapshotStore
-from .pipeline import import_pdfs
+from .acquisition import INFRACTIONS_URL, PdfAcquirer, PdfSnapshotStore, VerifiedCurlSession
+from .pipeline import import_pdfs, rebind_artifacts
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Acquire and import CGS secondary-source PDFs")
+    parser = argparse.ArgumentParser(description="Acquire, import, and rebind CGS secondary sources")
     commands = parser.add_subparsers(dest="command", required=True)
 
     acquire = commands.add_parser("acquire", help="capture all four official PDFs content-addressably")
     acquire.add_argument("--output", default=".crawl/secondary/sources")
     acquire.add_argument("--captured-at")
     acquire.add_argument("--infractions-file", help="use a manually retrieved Judicial Branch PDF")
+    acquire.add_argument(
+        "--judicial-client", choices=("requests", "windows-curl"), default="requests",
+        help="use Windows native curl/Schannel for the Judicial PDF on Windows runners",
+    )
     acquire.add_argument(
         "--no-cga-ssl-verify",
         "--no-ssl-verify",
@@ -33,8 +38,29 @@ def main():
     build.add_argument("--output", default=".crawl/secondary/canonical")
     build.add_argument("--generated-at")
 
+    rebind = commands.add_parser("rebind", help="resolve published records against a new base without downloading PDFs")
+    rebind.add_argument("--input", default="public/data/secondary")
+    rebind.add_argument("--base", default="public/data")
+    rebind.add_argument("--output", default=".crawl/secondary/rebound")
+    rebind.add_argument("--generated-at")
+
     args = parser.parse_args()
+    if args.command == "rebind":
+        manifest = rebind_artifacts(
+            input_dir=args.input, base_data_dir=args.base, output_dir=args.output,
+            generated_at=args.generated_at,
+        )
+        print(
+            f"Rebound {manifest['counts']['infractions']} published infractions and "
+            f"{manifest['counts']['indexHeadings']} index headings into {args.output}; no PDFs acquired"
+        )
+        return
     if args.command == "acquire":
+        judicial_session = None
+        if args.judicial_client == "windows-curl":
+            if os.name != "nt":
+                parser.error("--judicial-client windows-curl requires Windows")
+            judicial_session = VerifiedCurlSession(Path(os.environ["SystemRoot"]) / "System32" / "curl.exe")
         try:
             import truststore
             truststore.inject_into_ssl()
@@ -42,6 +68,7 @@ def main():
             pass
         captures, revision = PdfAcquirer(
             PdfSnapshotStore(Path(args.output)),
+            judicial_session=judicial_session,
             verify_ssl=True,
             cga_verify_ssl=not args.no_cga_ssl_verify,
         ).capture_all(

@@ -13,6 +13,7 @@
     "rebuild:supplement-search": "node scripts/rebuild-supplement-search.mjs",
     "secondary:acquire": "python -m secondary_sources.cli acquire",
     "secondary:import": "python -m secondary_sources.cli import",
+    "secondary:rebind": "python -m secondary_sources.cli rebind",
     "diff:corpus": "node scripts/diff-corpus.mjs",
     "diff:secondary": "node scripts/diff-secondary.mjs",
     "review:refresh": "node scripts/check-corpus-refresh.mjs",

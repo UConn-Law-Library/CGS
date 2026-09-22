@@ -16,6 +16,8 @@ test("weekly corpus refreshes retain the reviewed publication safeguards", () =>
   assert.match(workflow, /import:supplement[\s\S]*?--base "\$CANONICAL_DIR"[\s\S]*?--output "\$CANONICAL_DIR\/supplements\/\$year"/);
   assert.match(workflow, /validate:supplement[\s\S]*?--data "\$CANONICAL_DIR\/supplements\/\$year"[\s\S]*?--base "\$CANONICAL_DIR"/);
   assert.match(workflow, /corpus-refresh-supplement-snapshots/);
-  assert.match(workflow, /--no-cga-ssl-verify/);
+  assert.match(workflow, /secondary:rebind[\s\S]*?--input public\/data\/secondary/);
+  assert.match(workflow, /secondary-rebind-diff\.json[\s\S]*?--policy config\/secondary-refresh-policy\.json/);
+  assert.doesNotMatch(workflow, /secondary:acquire|secondary:import|SECONDARY_SOURCE_DIR|corpus-refresh-secondary-sources/);
   assert.doesNotMatch(workflow, /git push\s+origin\s+main/);
 });

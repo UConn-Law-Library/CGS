@@ -3,6 +3,8 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
+from unittest.mock import patch
+from subprocess import CompletedProcess, TimeoutExpired
 
 import requests
 
@@ -11,6 +13,7 @@ from secondary_sources.acquisition import (
     INFRACTIONS_URL,
     PdfAcquirer,
     PdfSnapshotStore,
+    VerifiedCurlSession,
     discover_index_sources,
 )
 
@@ -160,6 +163,80 @@ class AcquisitionTests(unittest.TestCase):
             ).get_bytes("https://example.test/retry.pdf")
         self.assertEqual(content, b"%PDF-recovered")
         self.assertEqual(sleeps, [1, 2, 4, 8])
+
+    def test_native_client_is_scoped_to_verified_judicial_downloads(self):
+        general = FakeSession([FakeResponse(content=b"%PDF-index")])
+        judicial = FakeSession([
+            requests.exceptions.SSLError("primary TLS failure"),
+            FakeResponse(content=b"%PDF-judicial"),
+        ])
+        with tempfile.TemporaryDirectory() as temporary:
+            acquirer = PdfAcquirer(
+                PdfSnapshotStore(Path(temporary)), session=general, judicial_session=judicial,
+                cga_verify_ssl=False, max_attempts=1,
+            )
+            acquirer.capture_url("https://www.cga.ct.gov/index.pdf", "Index A-H.pdf", verify_ssl=False)
+            capture = acquirer.capture_first_available(
+                (INFRACTIONS_URL, *INFRACTIONS_FALLBACK_URLS), "infractions.pdf", verify_ssl=True,
+            )
+            self.assertEqual(capture.url, INFRACTIONS_FALLBACK_URLS[0])
+        self.assertEqual([call["verify"] for call in general.calls], [False])
+        self.assertEqual([call["verify"] for call in judicial.calls], [True, True])
+
+    def test_native_curl_keeps_binary_pdf_and_rejects_insecure_requests(self):
+        content = b"%PDF-1.7\n\xff\x00fixture"
+        client = VerifiedCurlSession("native-curl")
+
+        def run(command, **kwargs):
+            self.assertEqual(command[:2], ["native-curl", "--disable"])
+            self.assertIn("--fail", command)
+            self.assertEqual(command[command.index("--proto") + 1], "=https")
+            self.assertEqual(command[command.index("--proto-redir") + 1], "=https")
+            self.assertNotIn("--insecure", command)
+            self.assertNotIn("--ssl-no-revoke", command)
+            Path(command[command.index("--output") + 1]).write_bytes(content)
+            return CompletedProcess(command, 0, f"application/pdf\n{INFRACTIONS_URL}", "")
+
+        with patch("secondary_sources.acquisition.subprocess.run", side_effect=run) as mocked:
+            response = client.get(INFRACTIONS_URL, timeout=60, verify=True)
+            self.assertEqual(response.content, content)
+            self.assertEqual(response.headers["Content-Type"], "application/pdf")
+            self.assertEqual(mocked.call_args.kwargs["timeout"], 70)
+        with self.assertRaisesRegex(ValueError, "requires verified TLS"):
+            client.get(INFRACTIONS_URL, timeout=60, verify=False)
+
+    def test_native_curl_failures_are_retriable_and_fail_closed(self):
+        client = VerifiedCurlSession("native-curl")
+        failures = [
+            CompletedProcess([], 35, "", "TLS handshake failure"),
+            TimeoutExpired("native-curl", 70),
+            FileNotFoundError("native client missing"),
+        ]
+        for failure in failures:
+            with self.subTest(failure=failure):
+                options = {"side_effect": failure} if isinstance(failure, Exception) else {"return_value": failure}
+                with patch("secondary_sources.acquisition.subprocess.run", **options):
+                    with tempfile.TemporaryDirectory() as temporary:
+                        store = PdfSnapshotStore(Path(temporary))
+                        acquirer = PdfAcquirer(store, judicial_session=client, max_attempts=1)
+                        with self.assertRaisesRegex(RuntimeError, "verified official endpoints"):
+                            acquirer.capture_first_available(
+                                (INFRACTIONS_URL, *INFRACTIONS_FALLBACK_URLS), "infractions.pdf", verify_ssl=True,
+                            )
+                        self.assertFalse((Path(temporary) / "manifest.json").exists())
+
+    def test_native_curl_html_response_cannot_be_captured_as_a_pdf(self):
+        def run(command, **kwargs):
+            Path(command[command.index("--output") + 1]).write_bytes(b"<html>Blocked</html>")
+            return CompletedProcess(command, 0, f"text/html\n{INFRACTIONS_URL}", "")
+
+        with patch("secondary_sources.acquisition.subprocess.run", side_effect=run):
+            with tempfile.TemporaryDirectory() as temporary:
+                acquirer = PdfAcquirer(
+                    PdfSnapshotStore(Path(temporary)), judicial_session=VerifiedCurlSession("native-curl"),
+                )
+                with self.assertRaisesRegex(ValueError, "Expected PDF"):
+                    acquirer.capture_url(INFRACTIONS_URL, "infractions.pdf", verify_ssl=True)
 
 
 if __name__ == "__main__":

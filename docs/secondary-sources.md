@@ -23,7 +23,15 @@ npm run secondary:acquire -- --output .crawl/secondary/sources --no-cga-ssl-veri
 
 This exception is scoped to `www.cga.ct.gov`. Judicial Branch TLS verification remains enabled. Downloads make five attempts with exponential backoff. The infractions download tries the official `jud.ct.gov` endpoint first and the official `www.jud.ct.gov` endpoint second, preserving the successful URL in the capture manifest. If both verified endpoints fail, acquisition fails closed.
 
-The Judicial Branch sometimes rejects hosted-runner traffic. A manually retrieved official PDF can be supplied without weakening or silently bypassing acquisition:
+The standalone refresh uses a Windows runner and the system `curl.exe` (Schannel) for the Judicial PDF. This avoids the Python/OpenSSL TLS handshake failures observed on the Ubuntu runner. CGA discovery and index acquisition continue to use the Python client. To reproduce the workflow on Windows:
+
+```sh
+npm run secondary:acquire -- --output .crawl/secondary/sources --judicial-client windows-curl --no-cga-ssl-verify
+```
+
+The native client verifies certificates, accepts only HTTPS URLs and redirects, ignores local curl configuration, and checks both the response content type and PDF signature before capture. It uses the same retries and official-host fallback as the default Python client. It does not fall back to insecure TLS or a previously captured PDF when the current download fails.
+
+If the official endpoints are unavailable, a manually retrieved official PDF can still be supplied explicitly:
 
 ```sh
 npm run secondary:acquire -- --output .crawl/secondary/sources --infractions-file <infractions.pdf>
@@ -48,6 +56,23 @@ npm run validate:secondary -- \
 ```
 
 The import is transactional and binds every derived artifact to the exact canonical base manifest. A later statute refresh therefore requires a new resolution and review pass.
+
+## Rebinding after statute changes
+
+Refreshing statute links does not require downloading or parsing the PDFs again:
+
+```sh
+npm run secondary:rebind -- \
+  --input public/data/secondary \
+  --base .crawl/refresh/canonical \
+  --output .crawl/refresh/canonical/secondary
+
+npm run validate:secondary -- \
+  --data .crawl/refresh/canonical/secondary \
+  --base .crawl/refresh/canonical
+```
+
+Rebinding verifies the published artifact hashes and counts before rebuilding citation resolutions, title shards, reverse links, and the base-manifest binding. Printed text, integer-cent amounts, record IDs, heading order, source revisions, and source PDF hashes remain unchanged. Removed citations become unresolved; newly available citations acquire links. The output directory must be separate from the input. The corpus workflow validates the input and candidate, produces a secondary-link diff, and applies the secondary-source safety policy before creating its draft PR. A validation or policy failure still stops publication.
 
 Monetary values are integer cents. A citation resolution is `exact`, `section-only`, `unresolved`, or `not-applicable`; the importer never trims or guesses its way to a statute. Resolved references contain a canonical reader link, while reverse-link shards let a statute page discover associated infractions and index entries without changing its chapter artifact.
 
@@ -123,7 +148,7 @@ Every run retains `secondary-refresh-review-*` reports for 30 days and `secondar
 
 The Judicial Branch source fails closed if a hosted runner cannot retrieve a verified PDF. Inspect `acquisition.log` and the partial source artifact, then use the documented local fallback with an official manually retrieved `infractions.pdf` and submit the resulting data as a normal reviewed PR. Never substitute an unofficial mirror or disable Judicial Branch TLS verification.
 
-Primary corpus refreshes also reacquire and re-import the secondary sources against the candidate corpus whenever statute data changes. This keeps canonical links and the recorded base-manifest identity synchronized in a single PR.
+Only this standalone workflow acquires new secondary-source editions. Primary corpus refreshes rebind the already-published records offline against the candidate statutes and include the link-change report in their draft PR. An unavailable Judicial or LCO PDF therefore cannot block a statute refresh. Rebinding updates artifact generation times and the base binding; it does not represent a new PDF acquisition or change the recorded source revisions.
 
 ## Reader integration
 

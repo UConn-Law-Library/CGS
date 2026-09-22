@@ -4,6 +4,7 @@ import hashlib
 import json
 import os
 import re
+import subprocess
 import tempfile
 import time
 from dataclasses import dataclass
@@ -123,11 +124,47 @@ class PdfSnapshotStore:
                 os.remove(temporary)
 
 
+class VerifiedCurlSession:
+    """Use the runner's native curl TLS stack without allowing insecure requests."""
+
+    def __init__(self, executable):
+        self.executable = str(executable)
+        self.headers = {}
+
+    def get(self, url, timeout, verify):
+        if verify is not True:
+            raise ValueError("The native Judicial Branch client requires verified TLS")
+        with tempfile.TemporaryDirectory(prefix="cgs-pdf-") as temporary:
+            destination = Path(temporary) / "download.pdf"
+            command = [
+                self.executable, "--disable", "--silent", "--show-error", "--fail",
+                "--location", "--proto", "=https", "--proto-redir", "=https",
+                "--max-time", str(timeout), "--user-agent", self.headers.get("User-Agent", USER_AGENT),
+                "--output", str(destination), "--write-out", "%{content_type}\n%{url_effective}", url,
+            ]
+            try:
+                result = subprocess.run(command, capture_output=True, text=True, timeout=timeout + 10)
+            except (OSError, subprocess.TimeoutExpired) as error:
+                raise requests.RequestException(f"Native HTTPS download failed: {error}") from error
+            if result.returncode:
+                raise requests.RequestException(
+                    f"Native HTTPS download failed (curl {result.returncode}): {result.stderr.strip()}"
+                )
+            metadata = result.stdout.splitlines()
+            response = requests.Response()
+            response.status_code = 200  # --fail has already rejected HTTP errors.
+            response.headers["Content-Type"] = metadata[0] if metadata else ""
+            response.url = metadata[1] if len(metadata) > 1 else url
+            response._content = destination.read_bytes()
+            return response
+
+
 class PdfAcquirer:
     def __init__(
         self,
         store: PdfSnapshotStore,
         session: Optional[requests.Session] = None,
+        judicial_session=None,
         verify_ssl=True,
         cga_verify_ssl=None,
         max_attempts=5,
@@ -135,16 +172,19 @@ class PdfAcquirer:
     ):
         self.store = store
         self.session = session or requests.Session()
+        self.judicial_session = judicial_session or self.session
         self.verify_ssl = verify_ssl
         self.cga_verify_ssl = verify_ssl if cga_verify_ssl is None else cga_verify_ssl
         self.max_attempts = max_attempts
         self.sleeper = sleeper
         self.session.headers.update({"User-Agent": USER_AGENT})
+        self.judicial_session.headers.update({"User-Agent": USER_AGENT})
 
     def _get(self, url: str, verify_ssl):
+        session = self.judicial_session if url in (INFRACTIONS_URL, *INFRACTIONS_FALLBACK_URLS) else self.session
         for attempt in range(self.max_attempts):
             try:
-                response = self.session.get(url, timeout=60, verify=verify_ssl)
+                response = session.get(url, timeout=60, verify=verify_ssl)
                 response.raise_for_status()
                 return response
             except requests.RequestException:

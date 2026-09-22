@@ -22,8 +22,11 @@ concurrency:
 
 jobs:
   refresh:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     timeout-minutes: 180
+    defaults:
+      run:
+        shell: bash
     env:
       REFRESH_ROOT: .crawl/secondary-refresh
       SOURCE_DIR: .crawl/secondary-refresh/sources
@@ -50,11 +53,13 @@ jobs:
       - run: npm ci
 
       - name: Acquire official secondary-source PDFs
+        id: acquire
         run: |
           set -o pipefail
           mkdir -p "$REPORT_DIR"
           npm run secondary:acquire -- \
             --output "$SOURCE_DIR" \
+            --judicial-client windows-curl \
             --no-cga-ssl-verify \
             2>&1 | tee "$REPORT_DIR/acquisition.log"
 
@@ -91,6 +96,8 @@ jobs:
         run: |
           if [ -f "$REPORT_DIR/refresh-summary.md" ]; then
             cat "$REPORT_DIR/refresh-summary.md" >> "$GITHUB_STEP_SUMMARY"
+          elif [ "${{ steps.acquire.outcome }}" = "failure" ]; then
+            echo "Secondary-source acquisition failed. See the acquisition log and captured source PDFs in this run's artifacts. No data was published; the statute refresh runs independently." >> "$GITHUB_STEP_SUMMARY"
           fi
 
       - name: Stage and verify candidate artifacts

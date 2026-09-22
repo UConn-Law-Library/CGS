@@ -145,7 +145,7 @@ test("Search v2 preserves filters, explains the query, searches within results, 
 test("bookmarks remain available on the device-local bookmarks page", async ({ page }) => {
   await openApp(page, "#/t/01/c/006/s/1-34");
   await page.getByRole("button", { name: /Bookmark/ }).click();
-  await page.getByRole("link", { name: /Bookmarks 1 saved bookmark/ }).click();
+  await page.getByRole("navigation", { name: "Main sections" }).getByRole("link", { name: /^Bookmarks/ }).click();
   await expect(page.getByRole("heading", { level: 1, name: "Bookmarks" })).toBeVisible();
   await expect(page.getByRole("link", { name: /Sec\. 1-34/ })).toBeVisible();
 });

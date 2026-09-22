@@ -80,7 +80,7 @@ test("infractions categories are one alphabetical column", () => {
 });
 
 test("settings links to a provenance-rich About page", () => {
-  assert.match(appSource, /href="#\/about">About this app/);
+  assert.match(appSource, /href="#\/about"><strong class="settings-about-title">About this app<\/strong>/);
   assert.match(appSource, /Data and official sources/);
   assert.match(appSource, /Searches run in your browser\./);
   assert.match(appSource, /GitHub Pages hosts the app\./);

@@ -1,0 +1,27 @@
+name: Diagnose secondary-source HTTPS
+
+on:
+  push:
+    branches: [fix/secondary-hosted-refresh]
+    paths:
+      - .github/workflows/diagnose-secondary-hosts.yml
+      - .github/scripts/probe-secondary-hosts.py
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Probe verified official endpoints
+        run: python .github/scripts/probe-secondary-hosts.py

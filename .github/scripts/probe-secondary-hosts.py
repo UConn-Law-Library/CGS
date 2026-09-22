@@ -39,4 +39,27 @@ for host in ["jud.ct.gov", "www.jud.ct.gov"]:
                 print(f"SHA256 {hashlib.sha256(content).hexdigest()}", flush=True)
                 success = True
                 break
+
+import ssl
+import urllib.request
+
+if os.name == "nt":
+    suites = subprocess.run([
+        "powershell", "-NoProfile", "-Command", "Get-TlsCipherSuite | Select-Object -ExpandProperty Name"
+    ], capture_output=True, text=True)
+    print("SCHANNEL CIPHERS\n" + suites.stdout + suites.stderr, flush=True)
+for mode in ["Python default", "Python plus AES256-SHA256"]:
+    context = ssl.create_default_context()
+    if mode.endswith("AES256-SHA256"):
+        ciphers = [item["name"] for item in context.get_ciphers() if item["protocol"] != "TLSv1.3"]
+        context.set_ciphers(":".join(ciphers + ["AES256-SHA256"]))
+    print(f"{mode} ciphers: {[item['name'] for item in context.get_ciphers()]}", flush=True)
+    try:
+        request = urllib.request.Request("https://www.jud.ct.gov/webforms/forms/infractions.pdf", headers={"User-Agent": agent})
+        with urllib.request.urlopen(request, context=context, timeout=20) as response:
+            content = response.read()
+        print(f"{mode}: pdf={content.startswith(b'%PDF-')} bytes={len(content)}", flush=True)
+    except Exception as error:
+        print(f"{mode}: {type(error).__name__}: {error}", flush=True)
+
 raise SystemExit(0 if success else 1)

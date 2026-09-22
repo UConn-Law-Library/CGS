@@ -190,6 +190,7 @@ class AcquisitionTests(unittest.TestCase):
         def run(command, **kwargs):
             self.assertEqual(command[:2], ["native-curl", "--disable"])
             self.assertIn("--fail", command)
+            self.assertIn("--tlsv1.2", command)
             self.assertEqual(command[command.index("--proto") + 1], "=https")
             self.assertEqual(command[command.index("--proto-redir") + 1], "=https")
             self.assertNotIn("--insecure", command)

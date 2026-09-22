@@ -138,7 +138,7 @@ class VerifiedCurlSession:
             destination = Path(temporary) / "download.pdf"
             command = [
                 self.executable, "--disable", "--silent", "--show-error", "--fail",
-                "--location", "--proto", "=https", "--proto-redir", "=https",
+                "--location", "--proto", "=https", "--proto-redir", "=https", "--tlsv1.2",
                 "--max-time", str(timeout), "--user-agent", self.headers.get("User-Agent", USER_AGENT),
                 "--output", str(destination), "--write-out", "%{content_type}\n%{url_effective}", url,
             ]

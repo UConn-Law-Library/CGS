@@ -224,6 +224,8 @@ function settingsPanel() {
     <label class="setting-row"><span><strong>Compact lists</strong><small>Show more items on screen</small></span><input type="checkbox" data-compact-lists${preferences.compactLists ? " checked" : ""}></label>
     <label class="setting-row"><span><strong>Hide repealed sections</strong><small>Remove them from chapter navigation</small></span><input type="checkbox" data-hide-repealed${preferences.hideRepealedSections ? " checked" : ""}></label>
     <button type="button" class="settings-action update-action" data-apply-update${pwaState.updateAvailable ? "" : " hidden"}>Update available <small>Reload to use the latest published app</small></button>
+    <a class="settings-action" href="#/about"><strong class="settings-about-title">About this app</strong> <small>Sources, coverage, and project information</small></a>
+    <details class="install-app-menu"><summary>Install App</summary>
     <button type="button" class="settings-action" data-install-app${pwaState.installed || !pwaState.installable ? " disabled" : ""}>Install app <small>${escapeHtml(installStatus(pwaState))}</small></button>
     <button type="button" class="settings-action" data-download-offline${!pwaState.ready || pwaState.busy ? " disabled" : ""}><span data-offline-action-label>${pwaState.complete ? "Refresh offline data" : "Download for offline use"}</span><small>Statutes, supplements, search, index, and infractions</small></button>
     <progress class="offline-progress" data-pwa-progress value="${pwaState.cachedFiles}" max="${Math.max(1, pwaState.totalFiles)}"${!pwaState.busy || !pwaState.totalFiles ? " hidden" : ""}>Offline download progress</progress>
@@ -234,11 +236,10 @@ function settingsPanel() {
     <p class="settings-note" data-persistence-status>${escapeHtml(persistenceStatus(pwaState))}</p>
     <p class="settings-note" data-storage-status>${escapeHtml(storageStatus(pwaState))}</p>
     <details class="offline-release-details"><summary>Offline release details</summary><div data-offline-release>${offlineRevisionMarkup(pwaState)}</div></details>
+    </details>
     <button type="button" class="settings-action" data-clear-bookmarks${bookmarkCount ? "" : " disabled"}>Clear bookmarks <small>${bookmarkCount ? `${bookmarkCount} saved` : "None saved"}</small></button>
     <button type="button" class="settings-action" data-clear-recents${recentCount ? "" : " disabled"}>Clear recent history <small>${recentCount ? `${recentCount} item${recentCount === 1 ? "" : "s"}` : "No recent history"}</small></button>
     <button type="button" class="settings-action" data-clear-search-history${searchHistoryCount ? "" : " disabled"}>Clear search history <small>${searchHistoryCount ? `${searchHistoryCount} search${searchHistoryCount === 1 ? "" : "es"}` : "No search history"}</small></button>
-    <a class="settings-action" href="#/about">About this app <small>Sources, coverage, and project information</small></a>
-    <a class="settings-action" href="./discover/">Static discovery index <small>Script-free browsing</small></a>
   </section>`;
 }
 
@@ -835,16 +836,46 @@ function formatSnapshotDate(value) {
   }).format(date);
 }
 
-function aboutSourceCard({ publisher, name, description, details = [], caveat, url }) {
+function aboutSourceCard({ publisher, name, description, details = [], caveat, url, refresh = false }) {
   const visibleDetails = details.filter(Boolean);
   return `<article class="about-source-card">
     <p class="eyebrow">${escapeHtml(publisher)}</p>
     <h3>${escapeHtml(name)}</h3>
     <p>${escapeHtml(description)}</p>
     ${visibleDetails.length ? `<p class="about-source-details">${visibleDetails.map((detail) => `<span>${escapeHtml(detail)}</span>`).join("")}</p>` : ""}
+    ${refresh ? `<p class="about-caveat" data-${refresh}-refresh aria-live="polite">Latest update check: loading… <a href="https://github.com/UConn-Law-Library/CGS/actions/workflows/refresh-${refresh}.yml" target="_blank" rel="noopener">View refresh runs ↗</a></p>` : ""}
     <p class="about-caveat">${escapeHtml(caveat)}</p>
     <a href="${escapeHtml(url)}" target="_blank" rel="noopener">Official source <span aria-hidden="true">↗</span></a>
   </article>`;
+}
+
+async function updateRefreshStatus(sequence, source) {
+  const targets = document.querySelectorAll(`[data-${source}-refresh]`);
+  if (!targets.length) return;
+  try {
+    const response = await fetch(`https://api.github.com/repos/UConn-Law-Library/CGS/actions/workflows/refresh-${source}.yml/runs?branch=main&status=completed&per_page=1`, {
+      signal: AbortSignal.timeout(8000),
+      headers: { Accept: "application/vnd.github+json" }
+    });
+    if (!response.ok) throw new Error("Refresh history unavailable");
+    const { workflow_runs: runs } = await response.json();
+    const run = runs?.[0];
+    if (!run || !Number.isFinite(new Date(run.updated_at).getTime()) || !Number.isSafeInteger(run.id)) throw new Error("No completed refresh run");
+    if (sequence !== renderSequence) return;
+    const result = run.conclusion === "success" ? "completed successfully" : String(run.conclusion ?? "unknown result").replaceAll("_", " ");
+    for (const target of targets) {
+      target.replaceChildren(document.createTextNode(`Latest update check: ${formatSnapshotDate(run.updated_at)} (${result}). `));
+      const link = document.createElement("a");
+      link.href = `https://github.com/UConn-Law-Library/CGS/actions/runs/${run.id}`;
+      link.target = "_blank";
+      link.rel = "noopener";
+      link.textContent = "View refresh run ↗";
+      target.append(link);
+    }
+  } catch {
+    if (sequence !== renderSequence) return;
+    for (const target of targets) target.firstChild.textContent = "Latest update check: unavailable. ";
+  }
 }
 
 async function renderAbout(catalog, sequence) {
@@ -865,6 +896,7 @@ async function renderAbout(catalog, sequence) {
     aboutSourceCard({
       publisher: "Connecticut General Assembly",
       name: "General Statutes",
+      refresh: "corpus",
       description: "Browse the Connecticut General Statutes by title, chapter, and section.",
       details: [statuteDate && `Captured ${statuteDate}`, `${catalog.counts.sections.toLocaleString()} sections`],
       caveat: "Changes published after the capture date appear after the next reviewed corpus update.",
@@ -881,6 +913,7 @@ async function renderAbout(catalog, sequence) {
     aboutSourceCard({
       publisher: indexSource.publisher ?? "Connecticut General Assembly, Legislative Commissioners' Office",
       name: "Subject index",
+      refresh: "secondary",
       description: "Browse the official subject index alphabetically and open linked statute sections.",
       details: [indexSource.revision, secondary?.index?.counts?.headings && `${secondary.index.counts.headings.toLocaleString()} headings`],
       caveat: "The index is an access aid rather than legal text and can trail recently enacted legislation.",
@@ -889,6 +922,7 @@ async function renderAbout(catalog, sequence) {
     aboutSourceCard({
       publisher: infractionSource.publisher ?? "State of Connecticut Judicial Branch",
       name: "Infractions schedule",
+      refresh: "secondary",
       description: "Chart A of the Judicial Branch mail-in violations and infractions schedule, with links to relevant statutes.",
       details: [infractionSource.effective && `Effective ${infractionSource.effective}`, secondary?.infractions?.counts?.entries && `${secondary.infractions.counts.entries.toLocaleString()} entries`],
       caveat: "Fine amounts and eligibility can change. Confirm them in the current Judicial Branch schedule before relying on this copy.",
@@ -931,6 +965,8 @@ async function renderAbout(catalog, sequence) {
     </section>
     <aside class="legal-data-note"><strong>Unofficial access copy</strong><p>This application is not legal advice and is not the official legal publication. Verify statute text with the Connecticut General Assembly and infraction information with the Judicial Branch.</p></aside>
   </main><footer>UConn Law Library · Unofficial access copy.</footer>`;
+  void updateRefreshStatus(sequence, "corpus");
+  void updateRefreshStatus(sequence, "secondary");
   window.scrollTo({ top: 0 });
 }
 

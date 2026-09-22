@@ -35,6 +35,7 @@ test("Settings reports persistent-storage and release status", async ({ page }) 
   await openApp(page);
   await waitForOfflineWorker(page);
   await page.locator("[data-open-settings]").first().click();
+  await page.locator(".install-app-menu > summary").click();
 
   await expect(page.locator("[data-persistence-status]"))
     .toContainText(/Persistent (?:browser )?storage|Your browser may delete downloaded data when it needs more space\./i);
@@ -99,6 +100,7 @@ test("an incompatible downloaded corpus is identified and can be repaired", asyn
     await page.reload();
     await expect(page.locator("#main-content")).toBeVisible();
     await page.locator("[data-open-settings]").first().click();
+  await page.locator(".install-app-menu > summary").click();
 
     await expect(page.locator("[data-offline-compatibility]"))
       .toContainText(/offline corpus revision differs/i);

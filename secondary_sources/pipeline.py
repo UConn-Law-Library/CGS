@@ -258,17 +258,91 @@ def build_artifacts(
     index_source,
     generated_at=None,
 ):
+    return _build_canonical_artifacts(
+        output_dir=output_dir, base_data_dir=base_data_dir,
+        infractions=canonicalize_infractions(infractions_entries, {}),
+        fee_rules=canonicalize_fee_rules(
+            infractions_fee_rules or [], {}, infractions_source.get("chartBRevision")
+        ),
+        topics=canonicalize_index(index_headings, {}),
+        infractions_source=infractions_source, index_source=index_source, generated_at=generated_at,
+    )
+
+
+def rebind_artifacts(*, input_dir, base_data_dir, output_dir, generated_at=None):
+    """Rebuild links from verified published records, retaining their source evidence and IDs."""
+    source = Path(input_dir).resolve()
+    output = Path(output_dir).resolve()
+    if output == source or source.is_relative_to(output) or output.is_relative_to(source):
+        raise ValueError("Rebinding output must be separate from the published secondary sources")
+    manifest = json.loads((source / "manifest.json").read_text(encoding="utf-8"))
+    if manifest["schemaVersion"] != SCHEMA_VERSION:
+        raise ValueError("Unsupported secondary-source schema version")
+    verified = {}
+    for artifact in manifest["artifacts"]:
+        relative = artifact["path"]
+        target = (source / relative).resolve()
+        if not target.is_relative_to(source) or relative in verified:
+            raise ValueError(f"Invalid secondary-source artifact path: {relative}")
+        content = target.read_bytes()
+        if len(content) != artifact["bytes"] or digest_bytes(content) != artifact["sha256"]:
+            raise ValueError(f"Secondary-source artifact integrity check failed: {relative}")
+        verified[relative] = content
+
+    def read_artifact(relative):
+        if relative not in verified:
+            raise ValueError(f"Secondary-source artifact is not in the manifest: {relative}")
+        return json.loads(verified[relative])
+
+    infractions_manifest = read_artifact("infractions/manifest.json")
+    index_manifest = read_artifact("statutes-index/manifest.json")
+    infractions = [
+        entry for shard in infractions_manifest["shards"]
+        for entry in read_artifact(f"infractions/{shard['path']}")["entries"]
+    ]
+    fee_rules = read_artifact("infractions/fee-rules.json")["rules"]
+    topics = [
+        topic for shard in index_manifest["shards"]
+        for topic in read_artifact(f"statutes-index/{shard['path']}")["headings"]
+    ]
+    topics.sort(key=lambda topic: topic["position"])
+    counts = {
+        "infractions": len(infractions), "feeRules": len(fee_rules),
+        "indexHeadings": len(topics), "indexItems": sum(len(topic["items"]) for topic in topics),
+    }
+    if counts != manifest["counts"]:
+        raise ValueError("Published secondary-source counts do not match the manifest")
+    return _build_canonical_artifacts(
+        output_dir=output, base_data_dir=base_data_dir,
+        infractions=infractions, fee_rules=fee_rules, topics=topics,
+        infractions_source=infractions_manifest["source"], index_source=index_manifest["source"],
+        generated_at=generated_at,
+    )
+
+
+def _build_canonical_artifacts(
+    *, output_dir, base_data_dir, infractions, fee_rules, topics,
+    infractions_source, index_source, generated_at=None,
+):
     output = Path(output_dir).resolve()
     base = Path(base_data_dir).resolve()
     if output == base or base.is_relative_to(output):
         raise ValueError("Secondary-source output cannot replace the base corpus")
     timestamp = iso_timestamp(generated_at)
     catalog, locations, base_manifest_sha = load_locations(base)
-    infractions = canonicalize_infractions(infractions_entries, locations)
-    fee_rules = canonicalize_fee_rules(
-        infractions_fee_rules or [], locations, infractions_source.get("chartBRevision")
-    )
-    topics = canonicalize_index(index_headings, locations)
+    for entry in infractions:
+        entry["resolution"] = resolution(entry["citation"], entry["sectionCitation"], locations)
+    for rule in fee_rules:
+        rule["authorityResolution"] = resolution(rule["authorityCitation"], rule["sectionCitation"], locations)
+        for reference in rule["affectedReferences"]:
+            reference["resolution"] = resolution(reference["display"], reference["sectionCitation"], locations)
+    for topic in topics:
+        for item in topic["items"]:
+            for reference in item["references"]:
+                reference["resolution"] = (
+                    resolution(reference["display"], reference["sectionCitation"], locations)
+                    if reference.get("sectionCitation") else {"status": "not-applicable"}
+                )
     staging = output.with_name(f"{output.name}.staging-{os.getpid()}")
     if staging.exists():
         shutil.rmtree(staging)

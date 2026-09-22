@@ -29,7 +29,6 @@ jobs:
       LEGACY_DIR: .crawl/refresh/legacy
       SNAPSHOT_DIR: .crawl/refresh/snapshots
       CANONICAL_DIR: .crawl/refresh/canonical
-      SECONDARY_SOURCE_DIR: .crawl/refresh/secondary-sources
       SUPPLEMENT_SOURCE_ROOT: .crawl/refresh/supplement-sources
       SUPPLEMENT_SNAPSHOT_ROOT: .crawl/refresh/supplement-snapshots
       REPORT_DIR: .crawl/refresh/reports
@@ -86,28 +85,40 @@ jobs:
             --state "$REPORT_DIR/refresh-state.json" \
             --github-output "$GITHUB_OUTPUT"
 
-      - name: Publish review summary
-        if: always()
-        run: |
-          if [ -f "$REPORT_DIR/refresh-summary.md" ]; then
-            cat "$REPORT_DIR/refresh-summary.md" >> "$GITHUB_STEP_SUMMARY"
-          fi
-
       - name: Rebind secondary sources to the candidate corpus
         if: steps.review.outputs.has_changes == 'true'
         run: |
-          set -o pipefail
-          npm run secondary:acquire -- \
-            --output "$SECONDARY_SOURCE_DIR" \
-            --no-cga-ssl-verify \
-            2>&1 | tee "$REPORT_DIR/secondary-acquisition.log"
-          npm run secondary:import -- \
-            --sources "$SECONDARY_SOURCE_DIR/manifest.json" \
+          if [ ! -d public/data/secondary ]; then
+            echo "No published secondary sources require rebinding."
+            exit 0
+          fi
+          npm run validate:secondary -- --data public/data/secondary --base public/data
+          npm run secondary:rebind -- \
+            --input public/data/secondary \
             --base "$CANONICAL_DIR" \
             --output "$CANONICAL_DIR/secondary"
           npm run validate:secondary -- \
             --data "$CANONICAL_DIR/secondary" \
             --base "$CANONICAL_DIR"
+          npm run diff:secondary -- \
+            --before public/data/secondary \
+            --after "$CANONICAL_DIR/secondary" \
+            --json "$REPORT_DIR/secondary-rebind-diff.json" \
+            --markdown "$REPORT_DIR/secondary-rebind-diff.md"
+          npm run review:secondary -- \
+            --report "$REPORT_DIR/secondary-rebind-diff.json" \
+            --policy config/secondary-refresh-policy.json \
+            --summary "$REPORT_DIR/secondary-rebind-summary.md" \
+            --state "$REPORT_DIR/secondary-rebind-state.json"
+
+      - name: Publish review summaries
+        if: always()
+        run: |
+          for report in refresh-summary.md secondary-rebind-summary.md; do
+            if [ -f "$REPORT_DIR/$report" ]; then
+              cat "$REPORT_DIR/$report" >> "$GITHUB_STEP_SUMMARY"
+            fi
+          done
 
       - name: Rebind published supplements to the candidate corpus
         if: steps.review.outputs.has_changes == 'true'
@@ -157,6 +168,13 @@ jobs:
             echo
             cat "$REPORT_DIR/refresh-summary.md"
             echo
+            if [ -f "$REPORT_DIR/secondary-rebind-summary.md" ]; then
+              echo "Secondary-source records were preserved; only their links to the candidate statutes were rebuilt offline."
+              echo
+              cat "$REPORT_DIR/secondary-rebind-summary.md"
+              cat "$REPORT_DIR/secondary-rebind-diff.md"
+              echo
+            fi
             echo "The complete corpus diff and replayable raw snapshots are retained as artifacts on the [workflow run]($GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)."
             echo
             echo "Review the legal-text changes, status transitions, and official source links before merging."
@@ -203,16 +221,6 @@ jobs:
         with:
           name: corpus-refresh-snapshots-${{ github.run_id }}-${{ github.run_attempt }}
           path: .crawl/refresh/snapshots/
-          if-no-files-found: ignore
-          include-hidden-files: true
-          retention-days: 14
-
-      - name: Upload corpus-rebinding source PDFs
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: corpus-refresh-secondary-sources-${{ github.run_id }}-${{ github.run_attempt }}
-          path: .crawl/refresh/secondary-sources/
           if-no-files-found: ignore
           include-hidden-files: true
           retention-days: 14

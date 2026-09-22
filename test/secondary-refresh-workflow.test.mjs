@@ -10,6 +10,9 @@ test("secondary-source refreshes remain review-gated and database-free", () => {
   assert.match(workflow, /--before public\/data\/secondary[\s\S]*?--after "\$CANDIDATE_DIR"/);
   assert.match(workflow, /--policy config\/secondary-refresh-policy\.json/);
   assert.match(workflow, /--no-cga-ssl-verify/);
+  assert.match(workflow, /runs-on: windows-latest/);
+  assert.match(workflow, /defaults:\s*\n\s*run:\s*\n\s*shell: bash/);
+  assert.match(workflow, /--judicial-client windows-curl/);
   assert.doesNotMatch(workflow, /\s--no-ssl-verify/);
   assert.match(workflow, /git add -- public\/data\/secondary/);
   assert.match(workflow, /gh pr create[\s\S]*?--base main[\s\S]*?--draft/);

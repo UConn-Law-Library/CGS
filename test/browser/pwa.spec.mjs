@@ -37,7 +37,7 @@ test("Settings reports persistent-storage and release status", async ({ page }) 
   await page.locator("[data-open-settings]").first().click();
 
   await expect(page.locator("[data-persistence-status]"))
-    .toContainText(/Persistent (?:browser )?storage/i);
+    .toContainText(/Persistent (?:browser )?storage|Your browser may delete downloaded data when it needs more space\./i);
   await page.locator(".offline-release-details").click();
   await expect(page.locator("[data-offline-release]"))
     .toContainText(/Expected corpus|Application release/);

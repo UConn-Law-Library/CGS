@@ -120,7 +120,7 @@ function offlineStatus(state) {
 function persistenceStatus(state) {
   if (!state.persistentStorageSupported) return "Persistent storage is not supported by this browser.";
   if (state.persistentStorageGranted === true) return "Persistent browser storage is granted.";
-  if (state.persistentStorageGranted === false) return "Persistent storage was not granted; the browser may evict downloaded data when space is needed.";
+  if (state.persistentStorageGranted === false) return "Your browser may delete downloaded data when it needs more space.";
   return "Persistent storage will be requested when offline data is downloaded.";
 }
 
@@ -227,8 +227,8 @@ function settingsPanel() {
     <button type="button" class="settings-action" data-install-app${pwaState.installed || !pwaState.installable ? " disabled" : ""}>Install app <small>${escapeHtml(installStatus(pwaState))}</small></button>
     <button type="button" class="settings-action" data-download-offline${!pwaState.ready || pwaState.busy ? " disabled" : ""}><span data-offline-action-label>${pwaState.complete ? "Refresh offline data" : "Download for offline use"}</span><small>Statutes, supplements, search, index, and infractions</small></button>
     <progress class="offline-progress" data-pwa-progress value="${pwaState.cachedFiles}" max="${Math.max(1, pwaState.totalFiles)}"${!pwaState.busy || !pwaState.totalFiles ? " hidden" : ""}>Offline download progress</progress>
-    <button type="button" class="settings-action" data-repair-offline${!pwaState.ready || pwaState.busy || !pwaState.complete ? " disabled" : ""}>Repair offline data <small>Re-download and verify every published artifact</small></button>
-    <button type="button" class="settings-action" data-clear-offline${!pwaState.cachedFiles || pwaState.busy ? " disabled" : ""}>Remove offline data <small>Keep the installed app shell</small></button>
+    <button type="button" class="settings-action" data-repair-offline${!pwaState.ready || pwaState.busy || !pwaState.complete ? " disabled" : ""}>Repair offline data <small>Download every file again and check for errors</small></button>
+    <button type="button" class="settings-action" data-clear-offline${!pwaState.cachedFiles || pwaState.busy ? " disabled" : ""}>Remove offline data <small>Keep the installed app</small></button>
     <p class="offline-compatibility-warning" data-offline-compatibility role="alert"${offlineCompatibilityWarning(pwaState) ? "" : " hidden"}>${escapeHtml(offlineCompatibilityWarning(pwaState))}</p>
     <p class="settings-note" data-pwa-status role="status" aria-live="polite">${escapeHtml(offlineStatus(pwaState))}</p>
     <p class="settings-note" data-persistence-status>${escapeHtml(persistenceStatus(pwaState))}</p>
@@ -865,7 +865,7 @@ async function renderAbout(catalog, sequence) {
     aboutSourceCard({
       publisher: "Connecticut General Assembly",
       name: "General Statutes",
-      description: "Connecticut General Statutes text organized into canonical title, chapter, and section artifacts.",
+      description: "Browse the Connecticut General Statutes by title, chapter, and section.",
       details: [statuteDate && `Captured ${statuteDate}`, `${catalog.counts.sections.toLocaleString()} sections`],
       caveat: "Changes published after the capture date appear after the next reviewed corpus update.",
       url: catalog.source?.url ?? "https://www.cga.ct.gov/current/pub/titles.htm"
@@ -881,7 +881,7 @@ async function renderAbout(catalog, sequence) {
     aboutSourceCard({
       publisher: indexSource.publisher ?? "Connecticut General Assembly, Legislative Commissioners' Office",
       name: "Subject index",
-      description: "The official subject index, parsed into letter-level artifacts with resolved links to statute sections.",
+      description: "Browse the official subject index alphabetically and open linked statute sections.",
       details: [indexSource.revision, secondary?.index?.counts?.headings && `${secondary.index.counts.headings.toLocaleString()} headings`],
       caveat: "The index is an access aid rather than legal text and can trail recently enacted legislation.",
       url: indexSource.url ?? "https://www.cga.ct.gov/lco/statutes-index.asp"
@@ -925,7 +925,7 @@ async function renderAbout(catalog, sequence) {
     <section class="about-section about-project" aria-labelledby="about-project-heading">
       <div><p class="eyebrow">Privacy and architecture</p><h2 id="about-project-heading">Built for public access</h2></div>
       <div>
-        <p>This is a database-free, static Progressive Web App hosted on GitHub Pages. Searches run in the browser, and bookmarks, display preferences, and downloaded offline data remain on this device.</p>
+        <p>Searches run in your browser. Your bookmarks, display preferences, and downloaded offline data stay on this device. GitHub Pages hosts the app.</p>
         <p>Data refreshes are parsed, validated, and reviewed before publication. The application and ingestion tools are maintained in the <a href="https://github.com/UConn-Law-Library/CGS" target="_blank" rel="noopener">public source repository <span aria-hidden="true">↗</span></a>.</p>
       </div>
     </section>
@@ -1018,7 +1018,7 @@ async function runStatuteSearch(query, routeOptions = {}, { limit = SEARCH_BATCH
         progress.value = update.completed;
         renderSearchResults(update.results, results, query, options);
         warning.hidden = !update.supplementUnavailable;
-        status.textContent = `Searching ${update.completed} of ${update.total} title shard${update.total === 1 ? "" : "s"}… ${update.totalMatches.toLocaleString()} match${update.totalMatches === 1 ? "" : "es"} found so far.`;
+        status.textContent = `Searching ${update.completed} of ${update.total} statute title${update.total === 1 ? "" : "s"}… ${update.totalMatches.toLocaleString()} match${update.totalMatches === 1 ? "" : "es"} found so far.`;
       }
     });
     if (controller !== activeSearchController) return;
@@ -1510,7 +1510,7 @@ async function renderStatutesIndex(route, sequence) {
   const indexIntro = `<header class="index-intro">
       <p class="eyebrow">Legislative Commissioners' Office</p>
       <h1>Index to the General Statutes</h1>
-      <p>Browse official subject headings and follow resolved citations into the statute reader. ${escapeHtml(source.revision)}.</p>
+      <p>Browse official subject headings and open linked statute sections. ${escapeHtml(source.revision)}.</p>
       <p class="source-note"><a href="${escapeHtml(source.url)}">View the official index volumes</a> · ${manifests.index.counts.headings.toLocaleString()} headings · ${manifests.index.counts.items.toLocaleString()} entries</p>
     </header>
     <form class="index-search-form" id="index-search-form">
@@ -1521,7 +1521,7 @@ async function renderStatutesIndex(route, sequence) {
   const mainBody = selected ? `<header class="index-intro index-topic-intro">
       <p class="eyebrow">General Statutes index</p>
       <h1>${escapeHtml(selected.label)}</h1>
-      <p>Browse this subject heading and follow resolved citations into the statute reader.</p>
+      <p>Browse this subject heading and open linked statute sections.</p>
       <p class="source-note"><a href="${escapeHtml(indexRouteHref(letter))}">Back to ${escapeHtml(letter.toUpperCase())} headings</a> &middot; <a href="${escapeHtml(source.url)}">Official index volumes</a> &middot; ${escapeHtml(source.revision)}</p>
     </header><section class="index-browser" aria-live="polite">${renderSelectedIndexTopic(selected, topicGroups, matchingEntry, route.query ?? "")}</section>`
     : !letter ? `${indexIntro}<section class="mobile-only mobile-index-browser"><h2>Choose a letter</h2>${railList(letterItems, { className: "mobile-index-list" })}</section>`

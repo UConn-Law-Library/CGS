@@ -82,7 +82,8 @@ test("infractions categories are one alphabetical column", () => {
 test("settings links to a provenance-rich About page", () => {
   assert.match(appSource, /href="#\/about">About this app/);
   assert.match(appSource, /Data and official sources/);
-  assert.match(appSource, /database-free, static Progressive Web App hosted on GitHub Pages/);
+  assert.match(appSource, /Searches run in your browser\./);
+  assert.match(appSource, /GitHub Pages hosts the app\./);
   assert.match(appSource, /<img src="\.\/wordmark\.svg" alt="UConn School of Law, Law Library and Technology">/);
   assert.match(appSource, /Visit the UConn Law Library Website/);
   assert.match(appSource, /class="about-version">Release/);

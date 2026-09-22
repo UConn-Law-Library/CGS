@@ -19,7 +19,6 @@ export function renderSiteUpdates(updates = []) {
   const earlier = updates.slice(3);
   return `<section class="about-section about-updates" aria-labelledby="about-updates-heading">
     <div class="about-section-heading"><p class="eyebrow">Changelog</p><h2 id="about-updates-heading">Recent updates</h2></div>
-    <p class="about-updates-intro">Bug fixes, enhancements, and maintenance included in this version of the site.</p>
     ${recent.length ? `<ol class="about-update-list" aria-label="Latest updates">${recent.map(renderUpdate).join("")}</ol>`
       : `<p>Update details are unavailable in this build. Browse the full history on GitHub.</p>`}
     ${earlier.length ? `<details class="about-updates-more"><summary>Show ${earlier.length} earlier ${earlier.length === 1 ? "update" : "updates"}</summary><ol class="about-update-list" start="4" aria-label="Earlier updates">${earlier.map(renderUpdate).join("")}</ol></details>` : ""}

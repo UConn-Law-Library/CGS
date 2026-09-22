@@ -22,7 +22,7 @@
   },
   "f7fa56f46d0cc8a1e4a66c2963a745c40774a62e": {
     "category": "Bug fix",
-    "title": "Stronger offline reliability",
+    "title": "Check and repair offline downloads",
     "summary": "Downloaded data is checked for integrity, and Settings provides storage, repair, and release information."
   },
   "29bcba34294a52d4f2faa214224ff19a468487e1": {
@@ -37,7 +37,7 @@
   },
   "34791777d74ef21e2ae0762e81d4a60bb1353b10": {
     "category": "Enhancement",
-    "title": "Refined statute browsing and search",
-    "summary": "Updated the statute navigation and search interface for easier browsing."
+    "title": "Highlight search terms and keep your place in navigation",
+    "summary": "Search results highlight matching terms and show excerpts around them. Navigation columns remember their scroll positions as you browse."
   }
 }

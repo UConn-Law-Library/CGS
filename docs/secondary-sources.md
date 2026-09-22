@@ -23,13 +23,15 @@ npm run secondary:acquire -- --output .crawl/secondary/sources --no-cga-ssl-veri
 
 This exception is scoped to `www.cga.ct.gov`. Judicial Branch TLS verification remains enabled. Downloads make five attempts with exponential backoff. The infractions download tries the official `jud.ct.gov` endpoint first and the official `www.jud.ct.gov` endpoint second, preserving the successful URL in the capture manifest. If both verified endpoints fail, acquisition fails closed.
 
-The standalone refresh uses a Windows runner and the system `curl.exe` (Schannel) for the Judicial PDF. This avoids the Python/OpenSSL TLS handshake failures observed on the Ubuntu runner. CGA discovery and index acquisition continue to use the Python client. To reproduce the workflow on Windows:
+The standalone refresh pins `ubuntu-24.04` and uses system curl for the Judicial PDF. CGA discovery and index acquisition continue to use the Python client. To reproduce the workflow with curl installed:
 
 ```sh
-npm run secondary:acquire -- --output .crawl/secondary/sources --judicial-client windows-curl --no-cga-ssl-verify
+npm run secondary:acquire -- --output .crawl/secondary/sources --judicial-client curl --no-cga-ssl-verify
 ```
 
-The native client verifies certificates, accepts only HTTPS URLs and redirects, ignores local curl configuration, and checks both the response content type and PDF signature before capture. It uses the same retries and official-host fallback as the default Python client. It does not fall back to insecure TLS or a previously captured PDF when the current download fails.
+The Judicial endpoint negotiated TLS 1.2 with `AES256-SHA256` in the [hosted-runner diagnostic](https://github.com/UConn-Law-Library/CGS/actions/runs/35741641573). Ubuntu system curl verified the certificate and downloaded the PDF from both official hosts; the Windows Server runner reset both connections. Changing the runner to Windows alone did not fix acquisition. Python's default TLS context excludes ciphers without forward secrecy, including this RSA key-exchange suite ([Python SSL documentation](https://docs.python.org/3.12/library/ssl.html#ssl.SSLContext)). This compatibility choice is limited to the public Judicial PDF client; it does not change system TLS policy or disable certificate checks. The older suite lacks forward secrecy and should be retired when the publisher supports a compatible modern suite.
+
+The curl client requires TLS 1.2 or newer, verifies certificates, accepts only HTTPS URLs and redirects, ignores local curl configuration, and checks both the response content type and PDF signature before capture. It uses the same retries and official-host fallback as the default Python client. It does not fall back to insecure TLS or a previously captured PDF when the current download fails. `windows-curl` remains available for compatible Windows installations, but is not used on hosted Windows runners.
 
 If the official endpoints are unavailable, a manually retrieved official PDF can still be supplied explicitly:
 
@@ -143,6 +145,8 @@ The `Review secondary sources refresh` GitHub Actions workflow runs Wednesdays a
 3. validates schemas, provenance, hashes, counts, links, and base identity;
 4. compares the candidate with `public/data/secondary` and applies `config/secondary-refresh-policy.json`;
 5. runs the complete project check and, only for meaningful passing changes, creates a draft data PR without writing to `main`.
+
+To test workflow changes before merging, select the proposed branch and clear **Create a draft pull request**. This preview performs acquisition, import, validation, diffing, and the safety review without pushing a data branch or opening a PR. Publishing runs still require `main`; scheduled runs continue to publish draft PRs for meaningful passing changes.
 
 Every run retains `secondary-refresh-review-*` reports for 30 days and `secondary-refresh-sources-*` PDFs for 14 days. An unchanged run creates no branch or PR. A policy failure creates no PR and requires review of the uploaded report; legitimate threshold changes belong in a separate policy PR.
 

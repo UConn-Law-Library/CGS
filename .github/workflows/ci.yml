@@ -32,6 +32,9 @@ jobs:
     needs: verify
     steps:
       - uses: actions/checkout@v4
+        with:
+          # The About-page build and browser tests use recent Git history.
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: 24

@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       create_pull_request:
-        description: Create a draft pull request when meaningful changes pass review
+        description: Create a draft pull request (requires main; disable to preview a branch)
         required: true
         default: true
         type: boolean
@@ -22,7 +22,7 @@ concurrency:
 
 jobs:
   refresh:
-    runs-on: windows-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 180
     defaults:
       run:
@@ -35,10 +35,10 @@ jobs:
       CREATE_PULL_REQUEST: ${{ github.event_name == 'schedule' || inputs.create_pull_request }}
     steps:
       - uses: actions/checkout@v4
-      - name: Require the published main baseline
+      - name: Require main for publication
         run: |
-          if [ "$GITHUB_REF" != "refs/heads/main" ]; then
-            echo "Run secondary-source refreshes from the main branch, not $GITHUB_REF." >&2
+          if [ "$GITHUB_REF" != "refs/heads/main" ] && [ "$CREATE_PULL_REQUEST" = "true" ]; then
+            echo "Publishing secondary-source refreshes requires main. Disable create_pull_request to preview a branch." >&2
             exit 1
           fi
       - uses: actions/setup-node@v4
@@ -57,9 +57,10 @@ jobs:
         run: |
           set -o pipefail
           mkdir -p "$REPORT_DIR"
+          curl --version
           npm run secondary:acquire -- \
             --output "$SOURCE_DIR" \
-            --judicial-client windows-curl \
+            --judicial-client curl \
             --no-cga-ssl-verify \
             2>&1 | tee "$REPORT_DIR/acquisition.log"
 

@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import shutil
 from pathlib import Path
 
 from .acquisition import INFRACTIONS_URL, PdfAcquirer, PdfSnapshotStore, VerifiedCurlSession
@@ -18,8 +19,8 @@ def main():
     acquire.add_argument("--captured-at")
     acquire.add_argument("--infractions-file", help="use a manually retrieved Judicial Branch PDF")
     acquire.add_argument(
-        "--judicial-client", choices=("requests", "windows-curl"), default="requests",
-        help="use Windows native curl/Schannel for the Judicial PDF on Windows runners",
+        "--judicial-client", choices=("requests", "curl", "windows-curl"), default="requests",
+        help="use curl from PATH for the Judicial PDF; windows-curl selects Windows system curl",
     )
     acquire.add_argument(
         "--no-cga-ssl-verify",
@@ -57,7 +58,12 @@ def main():
         return
     if args.command == "acquire":
         judicial_session = None
-        if args.judicial_client == "windows-curl":
+        if args.judicial_client == "curl":
+            executable = shutil.which("curl")
+            if not executable:
+                parser.error("--judicial-client curl requires curl in PATH")
+            judicial_session = VerifiedCurlSession(executable)
+        elif args.judicial_client == "windows-curl":
             if os.name != "nt":
                 parser.error("--judicial-client windows-curl requires Windows")
             judicial_session = VerifiedCurlSession(Path(os.environ["SystemRoot"]) / "System32" / "curl.exe")

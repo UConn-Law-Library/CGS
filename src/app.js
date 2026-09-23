@@ -76,6 +76,7 @@ let pendingClearAction = null;
 let pwaState = pwaManager.state;
 const SEARCH_BATCH_SIZE = 50;
 const LARGE_INDEX_TOPIC_THRESHOLD = 200;
+const FEEDBACK_ENDPOINT = "https://formsubmit.co/lawlibraryadministration@uconn.edu";
 applyPreferences(deviceState.preferences());
 pwaManager.subscribe((state) => {
   pwaState = state;
@@ -243,6 +244,7 @@ function settingsPanel() {
       <button type="button" class="settings-action" data-clear-recents${recentCount ? "" : " disabled"}>Clear recent history <small>${recentCount ? `${recentCount} item${recentCount === 1 ? "" : "s"}` : "No recent history"}</small></button>
       <button type="button" class="settings-action" data-clear-search-history${searchHistoryCount ? "" : " disabled"}>Clear search history <small>${searchHistoryCount ? `${searchHistoryCount} search${searchHistoryCount === 1 ? "" : "es"}` : "No search history"}</small></button>
     </details>
+    <button type="button" class="settings-action feedback-action" data-open-feedback>Submit feedback <small>Share a comment with the Law Library</small></button>
   </section>`;
 }
 
@@ -278,6 +280,15 @@ function siteHeader() {
   </header><dialog class="clear-data-dialog" data-clear-data-dialog aria-labelledby="clear-data-title">
     <h2 id="clear-data-title">Clear data?</h2><p data-clear-data-message></p>
     <div class="clear-data-dialog-actions"><button type="button" data-cancel-clear>Cancel</button><button type="button" data-confirm-clear>Clear data</button></div>
+  </dialog><dialog class="feedback-dialog" data-feedback-dialog aria-labelledby="feedback-title">
+    <h2 id="feedback-title">Submit feedback</h2>
+    <form action="${FEEDBACK_ENDPOINT}" method="POST" data-feedback-form>
+      <input type="hidden" name="_subject" value="Connecticut General Statutes feedback">
+      <label for="feedback-name">Name</label><input id="feedback-name" name="name" type="text" autocomplete="name" maxlength="120" required>
+      <label for="feedback-email">Email</label><input id="feedback-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+      <label for="feedback-message">Feedback</label><textarea id="feedback-message" name="message" rows="6" maxlength="5000" required></textarea>
+      <div class="feedback-dialog-actions"><button type="button" data-close-feedback>Cancel</button><button type="submit">Send feedback</button></div>
+    </form>
   </dialog>`;
 }
 
@@ -1738,6 +1749,7 @@ async function clearDeviceData(action, button) {
 }
 
 document.addEventListener("input", (event) => {
+  if (event.target.matches("[data-feedback-form] input, [data-feedback-form] textarea")) event.target.setCustomValidity("");
   if (event.target.matches("[data-omni-input]")) scheduleOmnisearch(event.target);
 });
 
@@ -1897,6 +1909,18 @@ document.addEventListener("click", async (event) => {
     button.setAttribute("aria-expanded", String(open));
     if (open) panel.querySelector("button")?.focus();
     else button.focus();
+    return;
+  }
+  const openFeedback = event.target.closest("[data-open-feedback]");
+  if (openFeedback) {
+    const dialog = document.querySelector("[data-feedback-dialog]");
+    dialog.addEventListener("close", () => openFeedback.isConnected && openFeedback.focus(), { once: true });
+    dialog.showModal();
+    dialog.querySelector("[name=name]").focus();
+    return;
+  }
+  if (event.target.closest("[data-close-feedback]")) {
+    document.querySelector("[data-feedback-dialog]").close();
     return;
   }
   const themeButton = event.target.closest("[data-theme-value]");
@@ -2075,6 +2099,20 @@ document.addEventListener("change", async (event) => {
 
 document.addEventListener("submit", async (event) => {
   const form = event.target;
+  if (form.matches("[data-feedback-form]")) {
+    const values = new FormData(form);
+    for (const field of ["name", "email", "message"]) {
+      const value = String(values.get(field) ?? "").trim();
+      const input = form.elements.namedItem(field);
+      input.setCustomValidity(value ? "" : "Please enter a value.");
+      if (!value) {
+        event.preventDefault();
+        input.reportValidity();
+        return;
+      }
+    }
+    return;
+  }
   if (form.matches("[data-global-search]")) {
     event.preventDefault();
     const query = new FormData(form).get("query").trim();

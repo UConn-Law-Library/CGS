@@ -131,6 +131,44 @@ test("desktop navigation panes resize and stay collapsed until shown again", asy
   expect(await firstPane.evaluate((element) => element.getBoundingClientRect().width)).toBeCloseTo(resizedWidth, 0);
 });
 
+test("pane toggle stays clear of the navigation scrollbar", async ({ page }, testInfo) => {
+  test.skip(isMobileProject(testInfo), "Contextual rails are a desktop presentation.");
+  await page.setViewportSize({ width: 1031, height: 910 });
+  await openApp(page);
+  const paneEdge = await page.locator(".context-column").first().evaluate((element) => element.getBoundingClientRect().right);
+  const toggle = page.getByRole("button", { name: "Hide navigation panes" });
+  const toggleBox = await toggle.boundingBox();
+  expect(toggleBox.x).toBeGreaterThan(paneEdge);
+});
+
+test("Settings feedback form posts to the Law Library through FormSubmit", async ({ page }) => {
+  let submission;
+  await page.route("https://formsubmit.co/**", async (route) => {
+    submission = { url: route.request().url(), method: route.request().method(), body: route.request().postData() };
+    await route.fulfill({ status: 200, contentType: "text/html", body: "<title>Feedback received</title>" });
+  });
+  await openApp(page);
+  await page.getByRole("button", { name: "Settings" }).click();
+  const feedbackButton = page.getByRole("button", { name: /Submit feedback/ });
+  await feedbackButton.click();
+  const dialog = page.getByRole("dialog", { name: "Submit feedback" });
+  await expect(dialog).toBeVisible();
+  await dialog.getByRole("button", { name: "Cancel" }).click();
+  await expect(feedbackButton).toBeFocused();
+  await feedbackButton.click();
+  await dialog.getByRole("textbox", { name: "Name" }).fill("Jane Reader");
+  await dialog.getByRole("textbox", { name: "Email" }).fill("jane@example.edu");
+  await dialog.getByRole("textbox", { name: "Feedback" }).fill("Please improve the chapter navigation.");
+  await dialog.getByRole("button", { name: "Send feedback" }).click();
+  await expect.poll(() => submission?.method).toBe("POST");
+  expect(submission.url).toBe("https://formsubmit.co/lawlibraryadministration@uconn.edu");
+  const body = new URLSearchParams(submission.body);
+  expect(body.get("name")).toBe("Jane Reader");
+  expect(body.get("email")).toBe("jane@example.edu");
+  expect(body.get("message")).toBe("Please improve the chapter navigation.");
+  expect(body.get("_subject")).toBe("Connecticut General Statutes feedback");
+});
+
 test("Clear Data actions require confirmation", async ({ page }) => {
   await page.addInitScript(() => {
     localStorage.setItem("cgs.bookmarks.v1", JSON.stringify([{ id: "saved", href: "#/t/02c/c/028a/s/2c-21" }]));

@@ -72,6 +72,7 @@ let activeOmniController = null;
 let omniTimer = null;
 let omniSelection = -1;
 let chapterDialogController = null;
+let pendingClearAction = null;
 let pwaState = pwaManager.state;
 const SEARCH_BATCH_SIZE = 50;
 const LARGE_INDEX_TOPIC_THRESHOLD = 200;
@@ -237,9 +238,11 @@ function settingsPanel() {
     <p class="settings-note" data-storage-status>${escapeHtml(storageStatus(pwaState))}</p>
     <details class="offline-release-details"><summary>Offline release details</summary><div data-offline-release>${offlineRevisionMarkup(pwaState)}</div></details>
     </details>
-    <button type="button" class="settings-action" data-clear-bookmarks${bookmarkCount ? "" : " disabled"}>Clear bookmarks <small>${bookmarkCount ? `${bookmarkCount} saved` : "None saved"}</small></button>
-    <button type="button" class="settings-action" data-clear-recents${recentCount ? "" : " disabled"}>Clear recent history <small>${recentCount ? `${recentCount} item${recentCount === 1 ? "" : "s"}` : "No recent history"}</small></button>
-    <button type="button" class="settings-action" data-clear-search-history${searchHistoryCount ? "" : " disabled"}>Clear search history <small>${searchHistoryCount ? `${searchHistoryCount} search${searchHistoryCount === 1 ? "" : "es"}` : "No search history"}</small></button>
+    <details class="clear-data-menu"><summary>Clear Data</summary>
+      <button type="button" class="settings-action" data-clear-bookmarks${bookmarkCount ? "" : " disabled"}>Clear bookmarks <small>${bookmarkCount ? `${bookmarkCount} saved` : "None saved"}</small></button>
+      <button type="button" class="settings-action" data-clear-recents${recentCount ? "" : " disabled"}>Clear recent history <small>${recentCount ? `${recentCount} item${recentCount === 1 ? "" : "s"}` : "No recent history"}</small></button>
+      <button type="button" class="settings-action" data-clear-search-history${searchHistoryCount ? "" : " disabled"}>Clear search history <small>${searchHistoryCount ? `${searchHistoryCount} search${searchHistoryCount === 1 ? "" : "es"}` : "No search history"}</small></button>
+    </details>
   </section>`;
 }
 
@@ -272,7 +275,10 @@ function siteHeader() {
       <a class="navigation-history" href="#/history"${route.kind === "history" ? ' aria-current="page"' : ""}>History</a>
     </form>
     ${settingsPanel()}
-  </header>`;
+  </header><dialog class="clear-data-dialog" data-clear-data-dialog aria-labelledby="clear-data-title">
+    <h2 id="clear-data-title">Clear data?</h2><p data-clear-data-message></p>
+    <div class="clear-data-dialog-actions"><button type="button" data-cancel-clear>Cancel</button><button type="button" data-confirm-clear>Clear data</button></div>
+  </dialog>`;
 }
 
 function applicationShell({
@@ -282,10 +288,23 @@ function applicationShell({
   mobilePresentationMode = "focused",
   footer = "Unofficial access copy. Verify legal text with the Connecticut General Assembly."
 }) {
-  return `${siteHeader()}<div class="application-shell mobile-${escapeHtml(mobilePresentationMode)}" data-context-columns="${columnCount}">
-    ${contextualNavigation.map((column) => `<aside class="context-column ${escapeHtml(column.className ?? "")}" data-context-key="${escapeHtml(column.className || column.label)}" aria-label="${escapeHtml(column.label)}">
+  const layout = deviceState.navigationLayout();
+  const defaults = { 1: [256], 2: [208, 272], 3: [176, 208, 240] };
+  const paneWidths = (defaults[columnCount] ?? []).map((width, index) => layout.widths[index] ?? width);
+  const maxTotal = Math.max(144 * columnCount, window.innerWidth - 320 - 6 * columnCount);
+  let excess = Math.max(0, paneWidths.reduce((total, width) => total + width, 0) - maxTotal);
+  for (let index = paneWidths.length - 1; index >= 0 && excess > 0; index -= 1) {
+    const reduction = Math.min(excess, paneWidths[index] - 144);
+    paneWidths[index] -= reduction;
+    excess -= reduction;
+  }
+  const widths = paneWidths.map((width, index) => `--context-width-${index + 1}:${width}px`).join(";");
+  const totalWidth = paneWidths.reduce((total, width) => total + width, 6 * columnCount);
+  return `${siteHeader()}<div class="application-shell mobile-${escapeHtml(mobilePresentationMode)}" data-context-columns="${columnCount}" id="context-navigation" data-navigation-collapsed="${layout.collapsed}" style="${widths};--context-total-width:${totalWidth}px">
+    ${columnCount ? `<button type="button" class="context-collapse-toggle" data-toggle-navigation aria-controls="context-navigation" aria-expanded="${!layout.collapsed}" aria-label="${layout.collapsed ? "Show navigation panes" : "Hide navigation panes"}" title="${layout.collapsed ? "Show navigation panes" : "Hide navigation panes"}"><span aria-hidden="true">${layout.collapsed ? "›" : "‹"}</span></button>` : ""}
+    ${contextualNavigation.map((column, index) => `<aside class="context-column ${escapeHtml(column.className ?? "")}" data-context-key="${escapeHtml(column.className || column.label)}" aria-label="${escapeHtml(column.label)}">
       ${column.heading ? `<div class="context-column-heading">${column.heading}</div>` : ""}${column.content}
-    </aside>`).join("")}
+    </aside><div class="context-resizer" role="separator" tabindex="0" aria-orientation="vertical" aria-label="Resize ${escapeHtml(column.label)} pane" aria-valuemin="144" aria-valuemax="420" aria-valuenow="${paneWidths[index]}" data-resize-pane="${index}"></div>`).join("")}
     ${mainContent}
   </div><footer>${footer}</footer>`;
 }
@@ -1670,6 +1689,54 @@ async function renderCurrentRoute() {
   }
 }
 
+function resizeContextPane(handle, width, { save = false } = {}) {
+  const shell = handle.closest(".application-shell");
+  if (!shell || matchMedia("(max-width: 60rem)").matches) return;
+  const index = Number(handle.dataset.resizePane);
+  const panes = [...shell.querySelectorAll(".context-column")];
+  const otherWidths = panes.reduce((total, pane, paneIndex) => total + (paneIndex === index ? 0 : pane.getBoundingClientRect().width), 0);
+  const maxWidth = Math.max(144, Math.min(420, shell.getBoundingClientRect().width - otherWidths - panes.length * 6 - 320));
+  const nextWidth = Math.round(Math.max(144, Math.min(maxWidth, width)));
+  shell.style.setProperty(`--context-width-${index + 1}`, `${nextWidth}px`);
+  shell.style.setProperty("--context-total-width", `${panes.reduce((total, pane, paneIndex) => total + (paneIndex === index ? nextWidth : pane.getBoundingClientRect().width), 6 * panes.length)}px`);
+  handle.setAttribute("aria-valuenow", String(nextWidth));
+  if (save) {
+    const widths = deviceState.navigationLayout().widths;
+    widths[index] = nextWidth;
+    deviceState.updateNavigationLayout({ widths });
+  }
+}
+
+async function clearDeviceData(action, button) {
+  if (action === "bookmarks") {
+    deviceState.clearBookmarks();
+    document.querySelectorAll(".nav-badge").forEach((badge) => {
+      badge.textContent = "0";
+      badge.setAttribute("aria-label", "0 saved bookmarks");
+    });
+    if (parseRoute(location).kind === "bookmarks") renderBookmarks();
+    else {
+      button.disabled = true;
+      button.querySelector("small").textContent = "None saved";
+    }
+  } else if (action === "recents") {
+    deviceState.clearRecents();
+    if (parseRoute(location).kind === "home") renderHome(await catalogPromise);
+    else {
+      button.disabled = true;
+      button.querySelector("small")?.replaceChildren("No recent history");
+    }
+  } else if (action === "search-history") {
+    deviceState.clearSearchHistory();
+    if (parseRoute(location).kind === "search") {
+      const history = document.querySelector("[data-search-history]");
+      if (history) history.innerHTML = searchHistoryMarkup();
+    }
+    button.disabled = true;
+    button.querySelector("small")?.replaceChildren("No search history");
+  }
+}
+
 document.addEventListener("input", (event) => {
   if (event.target.matches("[data-omni-input]")) scheduleOmnisearch(event.target);
 });
@@ -1681,6 +1748,13 @@ document.addEventListener("focusin", (event) => {
 });
 
 document.addEventListener("keydown", (event) => {
+  const resizeHandle = event.target.closest?.("[data-resize-pane]");
+  if (resizeHandle && (event.key === "ArrowLeft" || event.key === "ArrowRight")) {
+    event.preventDefault();
+    const pane = resizeHandle.previousElementSibling;
+    resizeContextPane(resizeHandle, pane.getBoundingClientRect().width + (event.key === "ArrowRight" ? 16 : -16), { save: true });
+    return;
+  }
   const input = event.target.closest?.("[data-omni-input]");
   if (input) {
     if (event.key === "ArrowDown" || event.key === "ArrowUp") {
@@ -1716,7 +1790,42 @@ document.addEventListener("pointerdown", (event) => {
   if (!event.target.closest("[data-global-search]")) closeOmni();
 });
 
+let resizingPane = null;
+document.addEventListener("pointerdown", (event) => {
+  const handle = event.target.closest("[data-resize-pane]");
+  if (!handle || matchMedia("(max-width: 60rem)").matches) return;
+  event.preventDefault();
+  resizingPane = { handle, pointerId: event.pointerId, startX: event.clientX, startWidth: handle.previousElementSibling.getBoundingClientRect().width };
+  handle.setPointerCapture(event.pointerId);
+  document.body.classList.add("resizing-context");
+});
+document.addEventListener("pointermove", (event) => {
+  if (!resizingPane || resizingPane.pointerId !== event.pointerId) return;
+  resizeContextPane(resizingPane.handle, resizingPane.startWidth + event.clientX - resizingPane.startX);
+});
+function finishContextResize(event) {
+  if (!resizingPane || resizingPane.pointerId !== event.pointerId) return;
+  const { handle } = resizingPane;
+  resizeContextPane(handle, handle.previousElementSibling.getBoundingClientRect().width, { save: true });
+  resizingPane = null;
+  document.body.classList.remove("resizing-context");
+}
+document.addEventListener("pointerup", finishContextResize);
+document.addEventListener("pointercancel", finishContextResize);
+
 document.addEventListener("click", async (event) => {
+  const navigationToggle = event.target.closest("[data-toggle-navigation]");
+  if (navigationToggle) {
+    const shell = document.querySelector(".application-shell");
+    const collapsed = shell.dataset.navigationCollapsed !== "true";
+    shell.dataset.navigationCollapsed = String(collapsed);
+    navigationToggle.setAttribute("aria-expanded", String(!collapsed));
+    navigationToggle.setAttribute("aria-label", collapsed ? "Show navigation panes" : "Hide navigation panes");
+    navigationToggle.title = collapsed ? "Show navigation panes" : "Hide navigation panes";
+    navigationToggle.querySelector("span").textContent = collapsed ? "›" : "‹";
+    deviceState.updateNavigationLayout({ collapsed });
+    return;
+  }
   if (event.target.closest("[data-go-back]")) {
     navigationHistory.back();
     return;
@@ -1847,33 +1956,44 @@ document.addEventListener("click", async (event) => {
   }
   const clearBookmarks = event.target.closest("[data-clear-bookmarks]");
   if (clearBookmarks) {
-    deviceState.clearBookmarks();
-    if (parseRoute(location).kind === "bookmarks") renderBookmarks();
-    else {
-      clearBookmarks.disabled = true;
-      clearBookmarks.querySelector("small").textContent = "None saved";
-    }
+    pendingClearAction = { action: "bookmarks", button: clearBookmarks };
+    const dialog = document.querySelector("[data-clear-data-dialog]");
+    dialog.querySelector("[data-clear-data-message]").textContent = "Clear all saved bookmarks from this device? This cannot be undone.";
+    dialog.showModal();
     return;
   }
   const clearRecents = event.target.closest("[data-clear-recents]");
   if (clearRecents) {
-    deviceState.clearRecents();
-    if (parseRoute(location).kind === "home") renderHome(await catalogPromise);
-    else {
-      clearRecents.disabled = true;
-      clearRecents.querySelector("small")?.replaceChildren("No recent history");
+    if (clearRecents.closest(".clear-data-menu")) {
+      pendingClearAction = { action: "recents", button: clearRecents };
+      const dialog = document.querySelector("[data-clear-data-dialog]");
+      dialog.querySelector("[data-clear-data-message]").textContent = "Clear all recently viewed items from this device? This cannot be undone.";
+      dialog.showModal();
+    } else {
+      await clearDeviceData("recents", clearRecents);
     }
     return;
   }
   const clearSearchHistory = event.target.closest("[data-clear-search-history]");
   if (clearSearchHistory) {
-    deviceState.clearSearchHistory();
-    if (parseRoute(location).kind === "search") {
-      const history = document.querySelector("[data-search-history]");
-      if (history) history.innerHTML = searchHistoryMarkup();
-    }
-    clearSearchHistory.disabled = true;
-    clearSearchHistory.querySelector("small")?.replaceChildren("No search history");
+    pendingClearAction = { action: "search-history", button: clearSearchHistory };
+    const dialog = document.querySelector("[data-clear-data-dialog]");
+    dialog.querySelector("[data-clear-data-message]").textContent = "Clear all saved search history from this device? This cannot be undone.";
+    dialog.showModal();
+    return;
+  }
+  if (event.target.closest("[data-cancel-clear]")) {
+    document.querySelector("[data-clear-data-dialog]").close();
+    pendingClearAction?.button.focus();
+    pendingClearAction = null;
+    return;
+  }
+  if (event.target.closest("[data-confirm-clear]")) {
+    const pending = pendingClearAction;
+    pendingClearAction = null;
+    document.querySelector("[data-clear-data-dialog]").close();
+    if (pending) await clearDeviceData(pending.action, pending.button);
+    document.querySelector(".clear-data-menu > summary")?.focus();
     return;
   }
   const removeBookmark = event.target.closest("[data-remove-bookmark]");

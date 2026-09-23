@@ -103,6 +103,63 @@ test("desktop contextual rail retains its scroll position after section navigati
   expect(Math.abs(after - before)).toBeLessThanOrEqual(2);
 });
 
+test("desktop navigation panes resize and stay collapsed until shown again", async ({ page }, testInfo) => {
+  test.skip(isMobileProject(testInfo), "Contextual rails are a desktop presentation.");
+  await openApp(page, "#/t/02c/c/028a/s/2c-21");
+  const firstPane = page.locator(".context-column").first();
+  const firstResize = page.getByRole("separator", { name: /Resize.*pane/ }).first();
+  const initialWidth = await firstPane.evaluate((element) => element.getBoundingClientRect().width);
+  const bounds = await firstResize.boundingBox();
+  await page.mouse.move(bounds.x + bounds.width / 2, bounds.y + 100);
+  await page.mouse.down();
+  await page.mouse.move(bounds.x + bounds.width / 2 + 48, bounds.y + 100);
+  await page.mouse.up();
+  const resizedWidth = await firstPane.evaluate((element) => element.getBoundingClientRect().width);
+  expect(resizedWidth).toBeGreaterThan(initialWidth + 30);
+
+  const hidePanes = page.getByRole("button", { name: "Hide navigation panes" });
+  await expect(hidePanes).toHaveText("‹");
+  await hidePanes.click();
+  await expect(firstPane).toBeHidden();
+  await expect(page.getByRole("heading", { level: 1, name: /Sec\. 2c-21/ })).toBeVisible();
+  await page.reload();
+  const showPanes = page.getByRole("button", { name: "Show navigation panes" });
+  await expect(showPanes).toHaveText("›");
+  await expect(firstPane).toBeHidden();
+  await showPanes.click();
+  await expect(firstPane).toBeVisible();
+  expect(await firstPane.evaluate((element) => element.getBoundingClientRect().width)).toBeCloseTo(resizedWidth, 0);
+});
+
+test("Clear Data actions require confirmation", async ({ page }) => {
+  await page.addInitScript(() => {
+    localStorage.setItem("cgs.bookmarks.v1", JSON.stringify([{ id: "saved", href: "#/t/02c/c/028a/s/2c-21" }]));
+    localStorage.setItem("cgs.recents.v1", JSON.stringify([{ id: "viewed", type: "statute", title: "Viewed", href: "#/t/02c/c/028a/s/2c-21", viewedAt: new Date().toISOString() }]));
+    localStorage.setItem("cgs.search-history.v1", JSON.stringify([{ query: "law", href: "#/search?q=law", searchedAt: new Date().toISOString() }]));
+  });
+  await openApp(page, "#/t/02c/c/028a/s/2c-21");
+  await page.getByRole("button", { name: "Settings" }).click();
+  const menu = page.locator(".clear-data-menu");
+  await expect(menu.getByRole("button", { name: /Clear bookmarks/ })).toBeHidden();
+  await menu.locator("summary").click();
+  for (const [buttonName, storageKey] of [
+    ["Clear bookmarks", "cgs.bookmarks.v1"],
+    ["Clear recent history", "cgs.recents.v1"],
+    ["Clear search history", "cgs.search-history.v1"]
+  ]) {
+    const button = menu.getByRole("button", { name: new RegExp(buttonName) });
+    await button.click();
+    const dialog = page.getByRole("dialog", { name: "Clear data?" });
+    await expect(dialog).toBeVisible();
+    await dialog.getByRole("button", { name: "Cancel" }).click();
+    expect(await page.evaluate((key) => JSON.parse(localStorage.getItem(key)).length, storageKey)).toBeGreaterThan(0);
+    await button.click();
+    await dialog.getByRole("button", { name: "Clear data" }).click();
+    expect(await page.evaluate((key) => JSON.parse(localStorage.getItem(key)).length, storageKey)).toBe(0);
+    await expect(button).toBeDisabled();
+  }
+});
+
 test("mobile chapter sheet closes and restores focus", async ({ page }, testInfo) => {
   test.skip(!isMobileProject(testInfo), "The chapter sheet is a mobile reader control.");
   await openApp(page, "#/t/17b/c/319v/s/17b-238");

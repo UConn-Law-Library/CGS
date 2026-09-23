@@ -3,6 +3,7 @@ const PREFERENCES_KEY = "cgs.preferences.v1";
 const RECENTS_KEY = "cgs.recents.v1";
 const SEARCH_HISTORY_KEY = "cgs.search-history.v1";
 const PAGE_HISTORY_KEY = "cgs.page-history.v1";
+const NAVIGATION_LAYOUT_KEY = "cgs.navigation-layout.v1";
 const PAGE_HISTORY_LIMIT = 100;
 const RECENT_LIMIT = 20;
 const SEARCH_HISTORY_LIMIT = 20;
@@ -155,6 +156,24 @@ export class DeviceState {
 
   clearSearchHistory() {
     this.#write(SEARCH_HISTORY_KEY, []);
+  }
+
+  navigationLayout() {
+    const value = this.#read(NAVIGATION_LAYOUT_KEY, {});
+    return {
+      collapsed: value?.collapsed === true,
+      widths: Array.from({ length: 3 }, (_, index) => {
+        const width = Number(value?.widths?.[index]);
+        return Number.isFinite(width) && width >= 144 && width <= 420 ? Math.round(width) : null;
+      })
+    };
+  }
+
+  updateNavigationLayout(changes) {
+    const layout = { ...this.navigationLayout(), ...changes };
+    layout.collapsed = Boolean(layout.collapsed);
+    this.#write(NAVIGATION_LAYOUT_KEY, layout);
+    return this.navigationLayout();
   }
 
   preferences() {

@@ -1,6 +1,21 @@
 import { expect, test } from "@playwright/test";
 import { isMobileProject, openApp } from "./helpers.mjs";
 
+async function textContrastRatios(locator, childSelector = null) {
+  return locator.evaluate((element, selector) => {
+    const luminance = (value) => value.match(/\d+/g).slice(0, 3).map((part) => {
+      const channel = Number(part) / 255;
+      return channel <= .04045 ? channel / 12.92 : ((channel + .055) / 1.055) ** 2.4;
+    }).reduce((sum, channel, index) => sum + channel * [.2126, .7152, .0722][index], 0);
+    const background = luminance(getComputedStyle(element).backgroundColor);
+    const nodes = selector ? [element, ...element.querySelectorAll(selector)] : [element];
+    return nodes.map((node) => {
+      const foreground = luminance(getComputedStyle(node).color);
+      return (Math.max(background, foreground) + .05) / (Math.min(background, foreground) + .05);
+    });
+  }, childSelector);
+}
+
 test("statute ranges link both endpoints and navigate to the referenced section", async ({ page }) => {
   await openApp(page, "#/t/04/c/050/s/4-66aa");
   const statute = page.locator("article.provision .statute-text");
@@ -63,6 +78,97 @@ test("Settings closes and restores focus to its trigger", async ({ page }) => {
   await page.getByRole("button", { name: "Close settings" }).click();
   await expect(page.getByRole("dialog", { name: "Settings" })).toBeHidden();
   await expect(trigger).toBeFocused();
+});
+
+test("Text size slider follows Font and persists its value", async ({ page }) => {
+  await openApp(page);
+  await page.getByRole("button", { name: "Settings" }).click();
+  const font = page.getByLabel("Font", { exact: true });
+  const slider = page.getByLabel("Text size");
+  expect(await font.evaluate((element) => Boolean(element.closest(".setting-group").nextElementSibling.querySelector("[data-text-size]")))).toBe(true);
+  await slider.fill("1.2");
+  await expect(page.locator("[data-text-size-value]")).toHaveText("120%");
+  await expect.poll(() => page.evaluate(() => getComputedStyle(document.documentElement).fontSize)).toBe("19.2px");
+  await page.reload();
+  await page.getByRole("button", { name: "Settings" }).click();
+  await expect(page.getByLabel("Text size")).toHaveValue("1.2");
+  await expect(page.locator("[data-text-size-value]")).toHaveText("120%");
+});
+
+test("Hide repealed sections keeps Settings open and focused after the chapter redraws", async ({ page }) => {
+  await openApp(page, "#/t/03/c/033/s/3-99h");
+  const settingsButton = page.getByRole("button", { name: "Settings", exact: true });
+  await settingsButton.click();
+  const checkbox = page.locator("input[data-hide-repealed]");
+  await checkbox.check();
+  await expect(page.getByRole("dialog", { name: "Settings" })).toBeVisible();
+  await expect(settingsButton).toHaveAttribute("aria-expanded", "true");
+  await expect(checkbox).toBeChecked();
+  await expect(checkbox).toBeFocused();
+  await checkbox.uncheck();
+  await expect(page.getByRole("dialog", { name: "Settings" })).toBeVisible();
+  await expect(checkbox).not.toBeChecked();
+});
+
+test("Compact lists changes chapter navigation density", async ({ page }, testInfo) => {
+  await openApp(page, "#/t/02/c/017");
+  const row = page.locator(isMobileProject(testInfo) ? ".mobile-section-browser .context-list a" : ".context-column .context-list a").first();
+  const compactHeight = (await row.boundingBox()).height;
+  await page.getByRole("button", { name: "Settings" }).click();
+  await page.locator("input[data-compact-lists]").uncheck();
+  const comfortableHeight = (await row.boundingBox()).height;
+  expect(comfortableHeight).toBeGreaterThan(compactHeight + 5);
+  await page.locator("input[data-compact-lists]").check();
+  expect((await row.boundingBox()).height).toBe(compactHeight);
+});
+
+test("feedback action keeps readable hover contrast in light and dark themes", async ({ page }, testInfo) => {
+  test.skip(isMobileProject(testInfo), "Hover is a desktop interaction");
+  await openApp(page);
+  await page.getByRole("button", { name: "Settings" }).click();
+  const feedback = page.locator("[data-open-feedback]");
+  for (const theme of ["light", "dark"]) {
+    await page.locator(`[data-theme-value="${theme}"]`).click();
+    await feedback.hover();
+    const ratios = await textContrastRatios(feedback, "small");
+    expect(ratios.every((ratio) => ratio >= 4.5), `${theme} hover contrast: ${ratios.join(", ")}`).toBe(true);
+  }
+});
+
+test("section action buttons have readable contrast in dark mode", async ({ page }) => {
+  await openApp(page, "#/t/03/c/033/s/3-99h");
+  await page.getByRole("button", { name: "Settings" }).click();
+  await page.locator('[data-theme-value="dark"]').click();
+  for (const button of await page.locator(".section-actions button").all()) {
+    const ratio = (await textContrastRatios(button))[0];
+    expect(ratio, `Contrast of ${await button.innerText()}: ${ratio}`).toBeGreaterThanOrEqual(4.5);
+  }
+});
+
+test("font and line spacing settings apply across the app and survive reload", async ({ page }) => {
+  await openApp(page, "#/t/02c/c/028a/s/2c-21");
+  const statute = page.locator(".statute-text").first();
+  const originalFont = await statute.evaluate((element) => getComputedStyle(element).fontFamily);
+  const originalSpacing = await statute.evaluate((element) => getComputedStyle(element).lineHeight);
+  await page.getByRole("button", { name: "Settings" }).click();
+  await page.getByLabel("Font", { exact: true }).selectOption("atkinson");
+  await expect.poll(() => statute.evaluate((element) => getComputedStyle(element).fontFamily)).toContain("Atkinson Hyperlegible");
+  await expect.poll(() => page.locator(".brand").evaluate((element) => getComputedStyle(element).fontFamily)).toContain("Atkinson Hyperlegible");
+  for (const [profile, family] of [["atkinson", "Atkinson Hyperlegible"], ["lexend", "Lexend"], ["inclusive", "Inclusive Sans"]]) {
+    await page.getByLabel("Font", { exact: true }).selectOption(profile);
+    expect(await page.evaluate(async (name) => (await document.fonts.load(`16px "${name}"`)).length, family)).toBeGreaterThan(0);
+  }
+  await page.getByLabel("Font", { exact: true }).selectOption("atkinson");
+  await page.getByLabel("Line spacing").fill("1.9");
+  await expect(page.locator("[data-line-spacing-value]")).toHaveText("1.90×");
+  expect(await statute.evaluate((element) => getComputedStyle(element).lineHeight)).not.toBe(originalSpacing);
+  await page.reload();
+  await expect(page.locator(".statute-text").first()).toBeVisible();
+  await page.getByRole("button", { name: "Settings" }).click();
+  await expect(page.getByLabel("Font", { exact: true })).toHaveValue("atkinson");
+  await expect(page.getByLabel("Line spacing")).toHaveValue("1.9");
+  await page.getByLabel("Font", { exact: true }).selectOption("default");
+  await expect.poll(() => page.locator(".statute-text").first().evaluate((element) => getComputedStyle(element).fontFamily)).toBe(originalFont);
 });
 
 test("About links to the deployed GitHub release", async ({ page }) => {

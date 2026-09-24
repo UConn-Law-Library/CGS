@@ -11,11 +11,20 @@ const SEARCH_HISTORY_LIMIT = 20;
 export const DEFAULT_PREFERENCES = Object.freeze({
   theme: "auto",
   textScale: 1,
+  fontProfile: "default",
+  lineSpacing: 1.55,
   compactLists: true,
   hideRepealedSections: false
 });
 
 const themes = new Set(["auto", "light", "dark", "oled"]);
+const fontProfiles = new Set(["default", "atkinson", "lexend", "inclusive"]);
+
+function normalizeLineSpacing(value) {
+  if (value === null || value === undefined || value === "") return DEFAULT_PREFERENCES.lineSpacing;
+  const spacing = Number(value);
+  return Number.isFinite(spacing) ? Math.round(Math.min(2.2, Math.max(1.2, spacing)) * 20) / 20 : DEFAULT_PREFERENCES.lineSpacing;
+}
 
 function safeParse(value, fallback) {
   try {
@@ -183,6 +192,8 @@ export class DeviceState {
     return {
       theme,
       textScale,
+      fontProfile: fontProfiles.has(value.fontProfile) ? value.fontProfile : DEFAULT_PREFERENCES.fontProfile,
+      lineSpacing: normalizeLineSpacing(value.lineSpacing),
       compactLists: Object.prototype.hasOwnProperty.call(value, "compactLists")
         ? Boolean(value.compactLists)
         : DEFAULT_PREFERENCES.compactLists,
@@ -194,6 +205,8 @@ export class DeviceState {
     const value = { ...this.preferences(), ...changes };
     if (!themes.has(value.theme)) value.theme = DEFAULT_PREFERENCES.theme;
     value.textScale = Math.min(1.25, Math.max(.85, Number(value.textScale) || 1));
+    if (!fontProfiles.has(value.fontProfile)) value.fontProfile = DEFAULT_PREFERENCES.fontProfile;
+    value.lineSpacing = normalizeLineSpacing(value.lineSpacing);
     value.compactLists = Boolean(value.compactLists);
     value.hideRepealedSections = Boolean(value.hideRepealedSections);
     this.#write(PREFERENCES_KEY, value);
@@ -203,7 +216,10 @@ export class DeviceState {
 
 export function applyPreferences(preferences, root = document.documentElement) {
   root.dataset.theme = preferences.theme;
+  root.dataset.fontProfile = preferences.fontProfile;
   root.dataset.compactLists = String(preferences.compactLists);
   root.dataset.hideRepealedSections = String(preferences.hideRepealedSections);
   root.style.setProperty("--text-scale", String(preferences.textScale));
+  root.style.setProperty("--line-spacing", String(preferences.lineSpacing));
+  root.style.setProperty("--line-spacing-factor", String(preferences.lineSpacing / DEFAULT_PREFERENCES.lineSpacing));
 }

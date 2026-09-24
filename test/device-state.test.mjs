@@ -56,12 +56,16 @@ test("normalizes and applies reader preferences", () => {
   const preferences = state.updatePreferences({
     theme: "oled",
     textScale: 4,
+    fontProfile: "atkinson",
+    lineSpacing: 2.8,
     compactLists: true,
     hideRepealedSections: true
   });
   assert.deepEqual(preferences, {
     theme: "oled",
     textScale: 1.25,
+    fontProfile: "atkinson",
+    lineSpacing: 2.2,
     compactLists: true,
     hideRepealedSections: true
   });
@@ -69,9 +73,25 @@ test("normalizes and applies reader preferences", () => {
   const root = { dataset: {}, style };
   applyPreferences(preferences, root);
   assert.equal(root.dataset.theme, "oled");
+  assert.equal(root.dataset.fontProfile, "atkinson");
   assert.equal(root.dataset.compactLists, "true");
   assert.equal(root.dataset.hideRepealedSections, "true");
   assert.equal(style.values.get("--text-scale"), "1.25");
+  assert.equal(style.values.get("--line-spacing"), "2.2");
+  assert.equal(style.values.get("--line-spacing-factor"), String(2.2 / 1.55));
+});
+
+test("font and line spacing preferences persist and reject unsupported values", () => {
+  const storage = memoryStorage();
+  const state = new DeviceState({ storage });
+  assert.equal(state.preferences().fontProfile, "default");
+  assert.equal(state.preferences().lineSpacing, 1.55);
+  state.updatePreferences({ fontProfile: "inclusive", lineSpacing: 1.85 });
+  assert.equal(new DeviceState({ storage }).preferences().fontProfile, "inclusive");
+  assert.equal(new DeviceState({ storage }).preferences().lineSpacing, 1.85);
+  state.updatePreferences({ fontProfile: "unknown", lineSpacing: "invalid" });
+  assert.equal(state.preferences().fontProfile, "default");
+  assert.equal(state.preferences().lineSpacing, 1.55);
 });
 
 test("uses compact lists by default while preserving an explicit comfortable preference", () => {

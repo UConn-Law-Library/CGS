@@ -1,3 +1,53 @@
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("./fonts/AtkinsonHyperlegible-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("./fonts/AtkinsonHyperlegible-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("./fonts/AtkinsonHyperlegible-Italic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("./fonts/AtkinsonHyperlegible-BoldItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: Lexend;
+  src: url("./fonts/Lexend-wght.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inclusive Sans";
+  src: url("./fonts/InclusiveSans-wght.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inclusive Sans";
+  src: url("./fonts/InclusiveSans-Italic-wght.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 300 700;
+  font-display: swap;
+}
+
 :root {
   color-scheme: light;
   --ink: #172538;
@@ -16,7 +66,7 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { margin: 0; line-height: 1.55; }
+body { margin: 0; line-height: var(--line-spacing, 1.55); }
 a { color: var(--blue); text-underline-offset: .18em; }
 button, input, select { font: inherit; }
 :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
@@ -271,6 +321,7 @@ footer { padding: 2rem 0; color: var(--muted); border-top: 1px solid var(--line)
   font-weight: 700;
   text-decoration: none;
 }
+.section-actions button { color: var(--paper); }
 .section-actions a { background: var(--surface-raised); }
 .action-status { min-height: 1.5rem; margin: 0; color: var(--muted); font-size: .85rem; }
 .statute-text { font: 1.08rem/1.75 Georgia, serif; }
@@ -530,6 +581,8 @@ footer { padding: 2rem 0; color: var(--muted); border-top: 1px solid var(--line)
 /* Mobile application shell */
 :root {
   --text-scale: 1;
+  --line-spacing: 1.55;
+  --line-spacing-factor: 1;
   --app-header: #071525;
   --app-nav: #08111e;
   --surface-raised: #fff;
@@ -713,13 +766,19 @@ body { color: var(--ink); background: var(--paper); }
 .settings-panel .icon-button { color: var(--ink); background: transparent; border: 0; font-size: 1.5rem; }
 .setting-group, .setting-row, .settings-action { padding: .9rem 0; border-bottom: 1px solid var(--line); }
 .setting-group > span, .setting-row strong { display: block; font-weight: 750; }
+.typography-setting > label, .setting-row-label label { display: block; font-weight: 750; }
+.typography-setting select { width: 100%; margin-top: .5rem; color: var(--ink); background: var(--surface-raised); border-color: var(--line); }
+.setting-row-label { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
+.setting-row-label output { color: var(--muted); font-variant-numeric: tabular-nums; }
+.typography-setting input[type="range"] { display: block; width: 100%; margin: .5rem 0 0; padding: 0; accent-color: var(--blue); }
 .setting-row small, .settings-action small { display: block; color: var(--muted); font-size: .75rem; }
 .segmented { display: grid; grid-template-columns: repeat(4, 1fr); gap: .3rem; margin-top: .55rem; }
 .segmented button { color: var(--ink); background: var(--soft-surface); border-color: var(--line); font-size: .8rem; }
 .segmented button[aria-pressed="true"] { color: white; background: #0b5fa5; }
-.text-size-controls { display: flex; gap: .35rem; }
 .settings-action { display: block; width: 100%; color: var(--ink); background: transparent; border: 0; border-radius: 0; text-align: left; text-decoration: none; }
 .settings-action[hidden] { display: none; }
+.settings-panel .settings-action:is(:hover, :focus-visible):not(:disabled) { color: var(--ink); background: var(--blue-light); }
+.settings-panel .settings-action:is(:hover, :focus-visible):not(:disabled) small { color: var(--ink); }
 .settings-about-title { color: var(--blue); font-weight: 800; }
 .install-app-menu { padding-block: .9rem; border-block: 1px solid var(--line); }
 .install-app-menu > summary { cursor: pointer; font-weight: 750; }
@@ -973,6 +1032,12 @@ body.resizing-context { cursor: col-resize; user-select: none; }
 :root[data-compact-lists="true"] .title-card { min-height: 7rem; }
 :root[data-compact-lists="true"] .chapter-list a, :root[data-compact-lists="true"] .infraction-card, :root[data-compact-lists="true"] .bookmark-list li { padding-block: .45rem; }
 :root[data-compact-lists="true"] .infraction-categories a { min-height: 3.6rem; padding-block: .6rem; }
+:root[data-compact-lists="true"] .context-column .context-list a { padding-block: .3rem; }
+:root[data-compact-lists="true"] .context-column .context-list span,
+:root[data-compact-lists="true"] .context-column .context-list small { margin-top: .05rem; }
+:root[data-compact-lists="true"] .mobile-section-browser .context-list a,
+:root[data-compact-lists="true"] .mobile-index-browser .context-list a,
+:root[data-compact-lists="true"] .chapter-sheet .context-list a { min-height: 2.75rem; padding-block: .45rem; }
 
 h1, h2, h3 { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
 h1,
@@ -992,7 +1057,14 @@ h1,
   line-height: 1.14;
   letter-spacing: -.025em;
 }
-.statute-text { font: 1.02rem/1.68 Georgia, "Times New Roman", serif; }
+.statute-text { font: 1.02rem/1.68 Georgia, "Times New Roman", serif; line-height: calc(1.68 * var(--line-spacing-factor)); }
+.infraction-description { line-height: calc(1.6 * var(--line-spacing-factor)); }
+
+:root[data-font-profile="atkinson"] { --app-font: "Atkinson Hyperlegible", sans-serif; }
+:root[data-font-profile="lexend"] { --app-font: Lexend, sans-serif; }
+:root[data-font-profile="inclusive"] { --app-font: "Inclusive Sans", sans-serif; }
+:root[data-font-profile]:not([data-font-profile="default"]) body,
+:root[data-font-profile]:not([data-font-profile="default"]) body * { font-family: var(--app-font) !important; }
 .browse-heading h1, .chapter-overview h1, .provision h1, .index-intro h1, .home-intro h1, .search-page h1, .infractions-page h1, .bookmarks-page h1, .about-page h1 { margin-top: .3rem; }
 .context-list a[aria-current="page"] { scroll-margin-block: 4rem; }
 

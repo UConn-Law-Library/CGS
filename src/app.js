@@ -222,7 +222,18 @@ function settingsPanel() {
     <div class="setting-group"><span>Theme</span><div class="segmented" role="group" aria-label="Theme">
       ${["auto", "light", "dark", "oled"].map((theme) => `<button type="button" data-theme-value="${theme}" aria-pressed="${preferences.theme === theme}">${theme[0].toUpperCase()}${theme.slice(1)}</button>`).join("")}
     </div></div>
-    <div class="setting-row"><span><strong>Text size</strong><small data-text-size-value>${Math.round(preferences.textScale * 100)}%</small></span><div class="text-size-controls"><button type="button" data-text-size="decrease" aria-label="Decrease text size">A−</button><button type="button" data-text-size="increase" aria-label="Increase text size">A+</button></div></div>
+    <div class="setting-group typography-setting"><label for="font-profile">Font</label><select id="font-profile" data-font-profile>
+      <option value="default"${preferences.fontProfile === "default" ? " selected" : ""}>Default</option>
+      <option value="atkinson"${preferences.fontProfile === "atkinson" ? " selected" : ""}>Atkinson Hyperlegible Font</option>
+      <option value="lexend"${preferences.fontProfile === "lexend" ? " selected" : ""}>Lexend</option>
+      <option value="inclusive"${preferences.fontProfile === "inclusive" ? " selected" : ""}>Inclusive Sans</option>
+    </select></div>
+    <div class="setting-group typography-setting"><div class="setting-row-label"><label for="text-size">Text size</label><output for="text-size" data-text-size-value>${Math.round(preferences.textScale * 100)}%</output></div>
+      <input id="text-size" type="range" min="0.85" max="1.25" step="0.05" value="${preferences.textScale}" data-text-size>
+    </div>
+    <div class="setting-group typography-setting"><div class="setting-row-label"><label for="line-spacing">Line spacing</label><output for="line-spacing" data-line-spacing-value>${preferences.lineSpacing.toFixed(2)}×</output></div>
+      <input id="line-spacing" type="range" min="1.2" max="2.2" step="0.05" value="${preferences.lineSpacing}" data-line-spacing>
+    </div>
     <label class="setting-row"><span><strong>Compact lists</strong><small>Show more items on screen</small></span><input type="checkbox" data-compact-lists${preferences.compactLists ? " checked" : ""}></label>
     <label class="setting-row"><span><strong>Hide repealed sections</strong><small>Remove them from chapter navigation</small></span><input type="checkbox" data-hide-repealed${preferences.hideRepealedSections ? " checked" : ""}></label>
     <button type="button" class="settings-action update-action" data-apply-update${pwaState.updateAvailable ? "" : " hidden"}>Update available <small>Reload to use the latest published app</small></button>
@@ -1749,6 +1760,18 @@ async function clearDeviceData(action, button) {
 }
 
 document.addEventListener("input", (event) => {
+  if (event.target.matches("[data-text-size]")) {
+    const preferences = deviceState.updatePreferences({ textScale: event.target.value });
+    applyPreferences(preferences);
+    document.querySelector("[data-text-size-value]").textContent = `${Math.round(preferences.textScale * 100)}%`;
+    return;
+  }
+  if (event.target.matches("[data-line-spacing]")) {
+    const preferences = deviceState.updatePreferences({ lineSpacing: event.target.value });
+    applyPreferences(preferences);
+    document.querySelector("[data-line-spacing-value]").textContent = `${preferences.lineSpacing.toFixed(2)}×`;
+    return;
+  }
   if (event.target.matches("[data-feedback-form] input, [data-feedback-form] textarea")) event.target.setCustomValidity("");
   if (event.target.matches("[data-omni-input]")) scheduleOmnisearch(event.target);
 });
@@ -1930,15 +1953,6 @@ document.addEventListener("click", async (event) => {
     document.querySelectorAll("[data-theme-value]").forEach((button) => button.setAttribute("aria-pressed", String(button === themeButton)));
     return;
   }
-  const textSizeButton = event.target.closest("[data-text-size]");
-  if (textSizeButton) {
-    const current = deviceState.preferences();
-    const direction = textSizeButton.dataset.textSize === "increase" ? 1 : -1;
-    const preferences = deviceState.updatePreferences({ textScale: Math.round((current.textScale + direction * .1) * 10) / 10 });
-    applyPreferences(preferences);
-    document.querySelector("[data-text-size-value]").textContent = `${Math.round(preferences.textScale * 100)}%`;
-    return;
-  }
   const applyUpdate = event.target.closest("[data-apply-update]");
   if (applyUpdate) {
     pwaManager.applyUpdate();
@@ -2077,6 +2091,10 @@ document.addEventListener("click", async (event) => {
 });
 
 document.addEventListener("change", async (event) => {
+  if (event.target.matches("[data-font-profile]")) {
+    applyPreferences(deviceState.updatePreferences({ fontProfile: event.target.value }));
+    return;
+  }
   if (event.target.matches("#search-title")) {
     const chapterSelect = document.querySelector("#search-chapter");
     const catalog = await catalogPromise;
@@ -2093,7 +2111,19 @@ document.addEventListener("change", async (event) => {
   if (event.target.matches("[data-hide-repealed]")) {
     applyPreferences(deviceState.updatePreferences({ hideRepealedSections: event.target.checked }));
     const route = parseRoute(location);
-    if (["chapter", "section"].includes(route.kind)) renderCurrentRoute();
+    if (["chapter", "section"].includes(route.kind)) {
+      const currentHash = location.hash;
+      const scrollTop = event.target.closest("[data-settings-panel]").scrollTop;
+      await renderCurrentRoute();
+      if (location.hash !== currentHash) return;
+      const panel = document.querySelector("[data-settings-panel]");
+      if (!panel) return;
+      panel.hidden = false;
+      document.querySelector("[data-open-settings]")?.setAttribute("aria-expanded", "true");
+      panel.querySelector("[data-hide-repealed]")?.focus({ preventScroll: true });
+      panel.scrollTop = scrollTop;
+    }
+    return;
   }
 });
 

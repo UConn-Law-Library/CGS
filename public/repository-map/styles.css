@@ -1,0 +1,57 @@
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("../fonts/AtkinsonHyperlegible-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("../fonts/AtkinsonHyperlegible-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light;
+  font-family: "Atkinson Hyperlegible", Arial, sans-serif;
+  line-height: 1.55;
+  color: #172538;
+  background: #f6f3ec;
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 0; }
+a { color: #0b3b70; text-underline-offset: .16em; overflow-wrap: anywhere; }
+:focus-visible { outline: 3px solid #f0a202; outline-offset: 3px; }
+.skip-link { position: absolute; left: .75rem; top: -4rem; z-index: 2; padding: .5rem .75rem; color: #fff; background: #071e38; }
+.skip-link:focus { top: .5rem; }
+.page-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .25rem 1rem; padding: .7rem clamp(.75rem, 2vw, 1.5rem); color: #fff; background: #071e38; }
+.page-header strong { font: 700 1.05rem Georgia, serif; }
+.page-header a { color: #fff; font-size: .87rem; }
+.content { width: min(100%, 76rem); min-width: 0; margin: 0 auto; padding: clamp(.75rem, 2vw, 1.5rem); overflow-wrap: break-word; }
+.content > :first-child { margin-top: .35rem; }
+h1, h2, h3 { line-height: 1.2; color: #071e38; scroll-margin-top: 1rem; }
+h1 { font-size: clamp(1.7rem, 3vw, 2.25rem); }
+h2 { margin-top: 2.2rem; padding-bottom: .3rem; border-bottom: 1px solid #d8d5ce; font-size: clamp(1.3rem, 2.4vw, 1.65rem); }
+h3 { font-size: 1.15rem; }
+p, li { max-width: 85ch; }
+pre { max-width: 100%; overflow-x: auto; padding: .8rem; border: 1px solid #d8d5ce; border-radius: .35rem; background: #fff; font-size: .85rem; }
+:not(pre) > code { padding: .1em .25em; border-radius: .2rem; background: #e9eef3; font-size: .9em; }
+.diagram { min-width: 0; margin: 1rem 0 1.5rem; padding: .6rem; border: 1px solid #d8d5ce; border-radius: .45rem; background: #fff; }
+.diagram-status { margin: .4rem .5rem; color: #596777; }
+.diagram-error .diagram-status { color: #8a321e; }
+.diagram-viewport { min-width: 0; max-width: 100%; overflow-x: auto; overflow-y: hidden; }
+.diagram-viewport svg { display: block; max-width: none !important; height: auto; }
+.diagram-source { margin: .65rem .5rem .1rem; color: #596777; font-size: .85rem; }
+.diagram-source summary { width: fit-content; cursor: pointer; }
+.diagram-source pre { margin: .55rem 0; white-space: pre; }
+.table-scroll { width: 100%; max-width: 100%; overflow-x: auto; }
+table { min-width: 36rem; width: 100%; border-collapse: collapse; background: #fff; }
+th, td { padding: .55rem .7rem; border: 1px solid #d8d5ce; text-align: left; vertical-align: top; }
+th { background: #e9eef3; }
+tr:nth-child(even) { background: #f8f9fa; }
+.page-footer { padding: 1rem clamp(.75rem, 2vw, 1.5rem); border-top: 1px solid #d8d5ce; color: #596777; font-size: .85rem; }
+.no-script { padding: .75rem; }
+@media (max-width: 40rem) {
+  .diagram { padding: .35rem; }
+  .page-header strong { font-size: 1rem; }
+}

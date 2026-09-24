@@ -6,7 +6,7 @@ The repository turns the legacy title-level JSON export into versioned, canonica
 
 ## Quick start
 
-Requirements: Node.js 24 or newer. The static platform has no npm dependencies. Crawler and PDF-ingestion tests additionally require Python 3.12 and the packages in `crawler/requirements.txt`.
+Requirements: Node.js 24 or newer. The published site has no runtime npm installation; `npm ci` installs locked build and test tools, including the Markdown and Mermaid renderers for the repository map. Crawler and PDF-ingestion tests additionally require Python 3.12 and the packages in `crawler/requirements.txt`.
 
 ```sh
 npm ci
@@ -57,6 +57,7 @@ The checked-in `public/data/` contains the complete production statute data: 81 
 
 See [ARCHITECTURE.md](ARCHITECTURE.md) for design constraints, invariants, and the migration path.
 See [the repository map](docs/repository-map.md) for the source, runtime, build, and deployment flows.
+The build also publishes that Markdown document as a standalone, embeddable page at `https://uconn-law-library.github.io/CGS/repository-map/`. Changes to `docs/repository-map.md` appear there after the next successful Pages deployment; no separate HTML copy is maintained.
 
 ## Reader routes
 

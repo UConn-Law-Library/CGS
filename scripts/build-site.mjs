@@ -7,6 +7,7 @@ import { stampReleaseVersion } from "./lib/release-version.mjs";
 import { readRecentUpdates } from "./lib/site-updates.mjs";
 import { generateSupplementIndex } from "./lib/supplement-index.mjs";
 import { generateSearchV2Artifacts } from "./lib/search-v2-artifacts.mjs";
+import { buildRepositoryMap } from "./lib/build-repository-map.mjs";
 
 const root = process.cwd();
 const output = path.join(root, "dist");
@@ -37,4 +38,5 @@ const buildId = await stampServiceWorker(output, undefined, {
   corpusGeneratedAt: catalog.generatedAt,
   corpusSchemaVersion: catalog.schemaVersion
 });
-console.log(`Built static site ${appVersion} at ${output} with ${discovery.pages} indexed URLs, ${supplementIndex.editions.length} supplement editions, ${searchV2.counts.documents} extended search documents, and PWA build ${buildId}`);
+const repositoryMap = await buildRepositoryMap({ root, output });
+console.log(`Built static site ${appVersion} at ${output} with ${discovery.pages} indexed URLs, ${supplementIndex.editions.length} supplement editions, ${searchV2.counts.documents} extended search documents, ${repositoryMap.diagrams} repository map diagrams, and PWA build ${buildId}`);

@@ -25,7 +25,7 @@ The About page displays the version of the deployed GitHub release. Each push to
 
 The About page also shows up to eight recent updates from commits included in the deployed checkout, with dates, categories, and commit links. The latest three are visible initially; earlier entries expand on demand. Builds read Git history locally and embed the entries in the offline application shell, without browser requests to GitHub. Use a Git checkout with full history when building (`fetch-depth: 0` in CI). Merge commits are omitted. New commits appear automatically using their subjects; `config/site-updates.json` supplies optional reader-friendly titles, summaries, categories, or `hidden: true` overrides keyed by full commit SHA. Commit dates identify when changes were recorded, not when they were deployed.
 
-## Import the complete legacy corpus
+## Import legacy statute data
 
 The old repository is an input only. This command reads it and replaces this repository's generated `public/data/` directory; it does not write to the legacy repository.
 
@@ -44,8 +44,8 @@ For a reproducible build, pass `--generated-at 2026-07-13T13:33:18Z`. Otherwise 
 - `public/data/search/manifest.json`: discoverable search-shard metadata.
 - `public/data/search/title-<title>.json`: compact title-level full-text search documents.
 - `dist/data/search-v2/title-<title>.json`: build-derived auxiliary history and annotation fields, joined only when a search needs them and never requiring a database.
-- `public/data/manifest.json`: corpus counts plus SHA-256 and byte size for every generated artifact.
-- `public/data/supplements/<year>/manifest.json`: an optional, immutable annual-overlay manifest bound to one reviewed base corpus.
+- `public/data/manifest.json`: statute data counts plus SHA-256 and byte size for every generated artifact.
+- `public/data/supplements/<year>/manifest.json`: an optional, immutable annual-overlay manifest bound to one reviewed version of the base statute data.
 - `public/data/supplements/<year>/chapters/<chapter>.json`: only the provisions published in that supplement.
 - `public/data/supplements/<year>/search/title-<title>.json`: derived search deltas containing only superseded IDs and changed/new documents.
 - `public/data/secondary/infractions/`: optional title-sharded Judicial Branch Chart A entries and Chart B fee rules.
@@ -53,9 +53,10 @@ For a reproducible build, pass `--generated-at 2026-07-13T13:33:18Z`. Otherwise 
 - `public/data/secondary/links/`: derived statute-to-infraction and statute-to-index reverse links.
 - `schemas/*.schema.json`: the canonical JSON Schema contracts.
 
-The checked-in `public/data/` is the complete production baseline: 81 titles, 1,141 chapters, and 33,013 provisions, regenerated from the reviewed replacement crawler on July 14, 2026. The separately published 2026 supplement adds 1,952 overlay records spanning 1,967 citations without changing those base chapter artifacts. The much smaller `fixtures/legacy/` corpus remains available for isolated importer tests and local pipeline experiments.
+The checked-in `public/data/` contains the complete production statute data: 81 titles, 1,141 chapters, and 33,013 provisions, regenerated from the reviewed replacement crawler on July 14, 2026. The separately published 2026 supplement adds 1,952 overlay records spanning 1,967 citations without changing those base chapter artifacts. The much smaller `fixtures/legacy/` dataset remains available for isolated importer tests and local pipeline experiments.
 
 See [ARCHITECTURE.md](ARCHITECTURE.md) for design constraints, invariants, and the migration path.
+See [the repository map](docs/repository-map.md) for the source, runtime, build, and deployment flows.
 
 ## Reader routes
 
@@ -78,7 +79,7 @@ Title-scoped and all-title searches use static title shards. The client loads up
 
 Search v2 supports `AND`, `OR`, unary `NOT`, parentheses, quoted phrases, `NEAR/n` proximity from 1 to 100 words, and one trailing prefix wildcard such as `regulat*`; adjacent terms use `AND` implicitly. Ordinary terms match exact normalized tokens. Fuzzy matching and stemming remain off. The default Statute text scope searches citations, headings, and bodies without loading reference fields. Researchers can filter by title, chapter, section status, supplement state, or field (citation, heading, body, history, annotations, or all), search within an existing result set, and sort by relevance or legal citation. The page shows its parsed Boolean interpretation, preserves every filter in the hash URL, and stores up to 20 deduplicated completed searches locally on the device. Results are presented in batches of 50 with the exact total match count, so larger result sets remain available without rendering them all at once.
 
-When a supplement is published, the client automatically removes superseded base search documents and adds that edition's changed/new documents. Results therefore match the same latest-supplement view shown by the reader without copying or rewriting the base search corpus. If a supplement search patch cannot be loaded, the base-revision results remain available and the interface displays an explicit warning rather than failing the entire search.
+When a supplement is published, the client automatically removes superseded base search documents and adds that edition's changed/new documents. Results therefore match the same latest-supplement view shown by the reader without copying or rewriting the base search data. If a supplement search patch cannot be loaded, the base-revision results remain available and the interface displays an explicit warning rather than failing the entire search.
 
 The global omnibar debounces input and displays mixed quick results while the user types. Title and chapter matches come from the already-loaded catalog, statute sections stream from the progressive worker search, infractions use the cached schedule shards, and index suggestions load only the relevant initial-letter shard. Arrow keys choose a result, Escape closes the panel, Enter opens the selected result or the complete statute-results page, and `/` focuses the omnibar outside another form field.
 
@@ -97,15 +98,15 @@ The sitemap defaults to `https://uconn-law-library.github.io/CGS/`. Set `CGS_SIT
 | `npm run import:supplement -- --input <dir> --base public/data --output <dir> --year <yyyy>` | Import an annual supplement as a reviewed, year-scoped overlay |
 | `npm run rebuild:supplement-search -- --year <yyyy>` | Rebuild derived search patches for an already reviewed supplement without changing its chapter overlays |
 | `npm run secondary:acquire -- --output <dir>` | Capture the three LCO index PDFs and Judicial Branch infractions PDF by content hash; use `--no-cga-ssl-verify` only for the documented CGA chain issue |
-| `npm run secondary:import -- --sources <manifest> --base public/data --output <dir>` | Parse, resolve, shard, and bind the secondary datasets to the canonical corpus |
+| `npm run secondary:import -- --sources <manifest> --base public/data --output <dir>` | Parse, resolve, shard, and bind the secondary datasets to the base statute data |
 | `npm run secondary:rebind -- --input public/data/secondary --base <candidate-base> --output <dir>` | Rebuild statute links from published secondary records offline, preserving source revisions and content |
 | `npm run diff:secondary -- --before <dir> --after <dir> --json <file> --markdown <file>` | Produce bounded, deterministic secondary-source change reports |
 | `npm run review:secondary -- --report <file> --policy config/secondary-refresh-policy.json` | Enforce count, removal, and citation-resolution safety thresholds |
-| `npm run diff:corpus -- --before <dir> --after <dir> [--titles 1,42a]` | Report corpus additions, removals, edits, moves, and status transitions |
+| `npm run diff:corpus -- --before <dir> --after <dir> [--titles 1,42a]` | Report statute additions, removals, edits, moves, and status transitions |
 | `npm run review:refresh -- --report <diff.json> --policy config/corpus-refresh-policy.json` | Apply the versioned production-refresh safety policy |
 | `npm run crawl -- --titles 1 --output .crawl/legacy --snapshots .crawl/snapshots` | Crawl current CGA source into an isolated legacy-adapter directory |
 | `npm run validate` | Validate schemas, references, counts, and content hashes |
-| `npm run validate:supplement -- --data <dir> --base public/data` | Validate one supplement and its base-corpus binding |
+| `npm run validate:supplement -- --data <dir> --base public/data` | Validate one supplement and its binding to the base statute data |
 | `npm run validate:secondary -- --data <dir> --base public/data` | Validate secondary-source schemas, links, counts, hashes, and base binding |
 | `npm test` | Run importer, validator, and client search tests |
 | `npm run test:browser` | Run desktop/mobile browser, accessibility, interaction, print, and visual-regression tests |
@@ -144,7 +145,7 @@ npm run diff:corpus -- --before public/data --after .refresh/data --markdown .re
 
 The diff uses citations as stable identities, so a provision moved to another chapter is reported as a location change instead of a removal and addition.
 
-Production refreshes use the weekly and manually dispatchable `Review corpus refresh` GitHub Actions workflow. It performs a complete crawl, retains replayable raw snapshots as temporary artifacts, validates a staged canonical corpus, enforces the committed safety policy, and opens a draft data pull request only when meaningful changes exist. See [docs/corpus-refresh.md](docs/corpus-refresh.md) for the three-run reliability record, prerequisites, and review runbook.
+Production statute data refreshes use the weekly and manually dispatchable GitHub Actions workflow named `Review corpus refresh`. It performs a complete crawl, retains replayable raw snapshots as temporary artifacts, validates staged statute data, enforces the committed safety policy, and opens a draft data pull request only when meaningful changes exist. See [docs/corpus-refresh.md](docs/corpus-refresh.md) for the three-run reliability record, prerequisites, and review runbook.
 
 ## Crawler
 
@@ -152,7 +153,7 @@ The replacement crawler lives in [`crawler/`](crawler/README.md). It separates n
 
 ## Annual supplements
 
-Supplements are immutable overlays rather than destructive edits to the current-statutes corpus. The reader automatically applies the latest published edition: amended, new, and repealed provisions are labeled in chapter navigation and on the page, while superseded base text, source notes, history, and annotations remain available in a collapsed reference panel. A provision with the same complete citation set replaces that base provision in memory; a new citation is added. A missing citation never deletes current law, and a partial match against a grouped provision fails validation instead of guessing.
+Supplements are immutable overlays on the base statute data. The reader automatically applies the latest published edition: amended, new, and repealed provisions are labeled in chapter navigation and on the page, while superseded base text, source notes, history, and annotations remain available in a collapsed reference panel. A provision with the same complete citation set replaces that base provision in memory; a new citation is added. A missing citation never deletes current law, and a partial match against a grouped provision fails validation instead of guessing.
 
 Each edition records the exact base schema version and generation timestamp it was reviewed against. A later base refresh therefore requires the overlay to be re-imported and reviewed before publication. The build derives `data/supplements/manifest.json` so the client can discover available editions without a server or database. See [docs/supplements.md](docs/supplements.md) for the artifact contract and review workflow.
 
@@ -166,7 +167,7 @@ The Phase 7 pipeline migrates the legacy PDF geometry parsers into deterministic
 
 The interactive client uses a mobile-first application shell modeled on the established CT Statutes navigation: **Statutes**, **Index**, **Infractions**, **Bookmarks**, and **Settings**. Phones keep these destinations in a persistent bottom navigation bar; larger screens place the same navigation in the header. Infractions can be browsed independently by schedule category, while statute sections and individual infractions can be bookmarked locally on the device. Theme, text-size, list-density, and repealed-section navigation preferences are also device-local and require no account or database.
 
-The same static client is installable as a PWA. Its service worker caches the application shell and recently viewed data automatically. Settings exposes an explicit download for the complete published statutes, supplements, search, index, and infractions dataset, along with refresh, SHA-256-verified repair, and removal controls. Full downloads are staged in a separate cache and promoted only after every published artifact matches the byte count and hash in its manifest, so an interrupted refresh preserves the previous complete copy and can be retried. The app requests persistent browser storage where supported and reports whether the browser granted it, along with browser-provided storage usage and quota. Settings also shows the exact downloaded corpus, supplement, search, secondary-source, and application-shell revisions and warns when downloaded data is incompatible with the running release. The production build fingerprints the complete shell and install icons so installed clients can offer a reload when a new version takes control. All offline data stays in the browser cache; it is derived from the published JSON artifacts and does not introduce a database or hosting service.
+The same static client is installable as a PWA. Its service worker caches the application shell and recently viewed data automatically. Settings exposes an explicit download for the complete published statutes, supplements, search, index, and infractions dataset, along with refresh, SHA-256-verified repair, and removal controls. Full downloads are staged in a separate cache and promoted only after every published artifact matches the byte count and hash in its manifest, so an interrupted refresh preserves the previous complete copy and can be retried. The app requests persistent browser storage where supported and reports whether the browser granted it, along with browser-provided storage usage and quota. Settings also shows the exact downloaded statute data, supplement, search, secondary-source, and application-shell revisions and warns when downloaded data is incompatible with the running release. The production build fingerprints the complete shell and install icons so installed clients can offer a reload when a new version takes control. All offline data stays in the browser cache; it is derived from the published JSON artifacts and does not introduce a database or hosting service.
 
 ## Data authority
 

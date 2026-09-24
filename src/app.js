@@ -324,9 +324,9 @@ function applicationShell({
   const totalWidth = paneWidths.reduce((total, width) => total + width, 6 * columnCount);
   return `${siteHeader()}<div class="application-shell mobile-${escapeHtml(mobilePresentationMode)}" data-context-columns="${columnCount}" id="context-navigation" data-navigation-collapsed="${layout.collapsed}" style="${widths};--context-total-width:${totalWidth}px">
     ${columnCount ? `<button type="button" class="context-collapse-toggle" data-toggle-navigation aria-controls="context-navigation" aria-expanded="${!layout.collapsed}" aria-label="${layout.collapsed ? "Show navigation panes" : "Hide navigation panes"}" title="${layout.collapsed ? "Show navigation panes" : "Hide navigation panes"}"><span aria-hidden="true">${layout.collapsed ? "›" : "‹"}</span></button>` : ""}
-    ${contextualNavigation.map((column, index) => `<aside class="context-column ${escapeHtml(column.className ?? "")}" data-context-key="${escapeHtml(column.className || column.label)}" aria-label="${escapeHtml(column.label)}">
+    ${contextualNavigation.map((column, index) => `<aside class="context-column ${escapeHtml(column.className ?? "")}" id="context-pane-${index + 1}" data-context-key="${escapeHtml(column.className || column.label)}" aria-label="${escapeHtml(column.label)}">
       ${column.heading ? `<div class="context-column-heading">${column.heading}</div>` : ""}${column.content}
-    </aside><div class="context-resizer" role="separator" tabindex="0" aria-orientation="vertical" aria-label="Resize ${escapeHtml(column.label)} pane" aria-valuemin="144" aria-valuemax="420" aria-valuenow="${paneWidths[index]}" data-resize-pane="${index}"></div>`).join("")}
+    </aside><div class="context-resizer" role="separator" tabindex="0" aria-orientation="vertical" aria-label="Resize ${escapeHtml(column.label)} pane" aria-controls="context-pane-${index + 1}" aria-valuemin="144" aria-valuemax="420" aria-valuenow="${paneWidths[index]}" data-resize-pane="${index}"></div>`).join("")}
     ${mainContent}
   </div><footer>${footer}</footer>`;
 }

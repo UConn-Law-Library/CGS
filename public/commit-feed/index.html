@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Recent development activity for the Connecticut General Statutes project.">
+  <title>CGS Development Activity</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./feed.js" defer></script>
+</head>
+<body>
+  <main class="feed" aria-labelledby="feed-title">
+    <header class="feed-header">
+      <div class="heading-row">
+        <div class="heading-copy">
+          <div class="eyebrow">
+            <svg class="github-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.56.1.76-.24.76-.54v-2.1c-3.1.68-3.76-1.32-3.76-1.32-.5-1.29-1.24-1.63-1.24-1.63-1.02-.7.08-.68.08-.68 1.12.08 1.71 1.14 1.71 1.14 1 .1 1.78-.71 2.02-1.1-2.48-.28-5.08-1.25-5.08-5.49 0-1.21.43-2.2 1.14-2.97-.11-.28-.49-1.41.11-2.94 0 0 .93-.3 3.05 1.13A10.5 10.5 0 0 1 12 6.5c.94 0 1.88.13 2.76.37 2.12-1.43 3.05-1.13 3.05-1.13.6 1.53.22 2.66.11 2.94.72.77 1.14 1.76 1.14 2.97 0 4.25-2.6 5.2-5.09 5.48.39.34.62.82.62 1.66v3.2c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z"/></svg>
+            <span>GitHub activity</span>
+            <span class="branch" aria-label="Branch: main"><span class="branch-dot" aria-hidden="true"></span>main</span>
+          </div>
+          <h1 id="feed-title">CGS Development Activity</h1>
+          <p class="subtitle">Recent updates to the Connecticut General Statutes project</p>
+        </div>
+        <a class="all-link" href="https://github.com/UConn-Law-Library/CGS/commits/main/" target="_blank" rel="noopener noreferrer">View all commits <span aria-hidden="true">↗</span></a>
+      </div>
+    </header>
+
+    <p class="status" id="feed-status" role="status" aria-live="polite">Loading recent commits…</p>
+    <ol class="commit-list" id="commit-list" aria-label="Recent commits" hidden></ol>
+    <p class="feed-footnote" id="feed-footnote" hidden>Updates come from GitHub. Times are shown in your local time zone.</p>
+    <noscript><p class="status">JavaScript is required to show recent commits. <a href="https://github.com/UConn-Law-Library/CGS/commits/main/">View the commit history on GitHub</a>.</p></noscript>
+  </main>
+</body>
+</html>

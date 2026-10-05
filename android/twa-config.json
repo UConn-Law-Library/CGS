@@ -1,0 +1,9 @@
+{
+  "applicationId": "edu.uconn.law.cgs",
+  "startUrl": "https://uconn-law-library.github.io/CGS/",
+  "versionCode": 1,
+  "versionName": "1.0.0",
+  "minSdk": 23,
+  "compileSdk": 36,
+  "targetSdk": 36
+}

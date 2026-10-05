@@ -173,3 +173,10 @@ The same static client is installable as a PWA. Its service worker caches the ap
 ## Data authority
 
 This project is an access layer, not the official legal source. Canonical artifacts retain source URLs so the interface can link back to the Connecticut General Assembly publication.
+
+## Android distribution
+
+The optional [Android Trusted Web Activity wrapper](android/README.md) loads the
+production GitHub Pages app and reuses its PWA storage and update behavior. Normal
+web/content deployments do not require a Play Store release. See the Android guide
+for builds, signing, origin-root Digital Asset Links setup, and submission prerequisites.

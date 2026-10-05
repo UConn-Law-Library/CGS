@@ -1,0 +1,100 @@
+import groovy.json.JsonOutput
+import groovy.json.JsonSlurper
+
+plugins {
+    id 'com.android.application'
+}
+
+def config = new JsonSlurper().parse(rootProject.file('twa-config.json'))
+def pwa = new JsonSlurper().parse(rootProject.file('../src/manifest.webmanifest'))
+def start = new URI(config.startUrl)
+if (start.scheme != 'https' || !start.host || start.port != -1 || start.userInfo ||
+        start.query || start.fragment || !start.path.endsWith('/')) {
+    throw new GradleException('startUrl must be an HTTPS directory URL with no port, credentials, query, or fragment.')
+}
+def origin = "https://${start.host}"
+def statements = JsonOutput.toJson([[
+    relation: ['delegate_permission/common.handle_all_urls'],
+    target: [namespace: 'web', site: origin]
+]])
+
+// Optional upload signing. An ordinary build is deliberately unsigned for release.
+def signingNames = ['CGS_UPLOAD_STORE_FILE', 'CGS_UPLOAD_STORE_PASSWORD',
+                    'CGS_UPLOAD_KEY_ALIAS', 'CGS_UPLOAD_KEY_PASSWORD']
+def signing = signingNames.collectEntries { [(it): System.getenv(it)] }
+def signRelease = signing.values().every { it }
+if (signing.values().any { it } && !signRelease) {
+    throw new GradleException('Upload signing requires all four CGS_UPLOAD_* environment variables.')
+}
+if (providers.gradleProperty('requireReleaseSigning').orNull == 'true' && !signRelease) {
+    throw new GradleException('Release signing is required, but CGS_UPLOAD_* variables are missing.')
+}
+
+android {
+    namespace = config.applicationId
+    compileSdk = config.compileSdk
+    buildToolsVersion = '36.0.0'
+
+    defaultConfig {
+        applicationId = config.applicationId
+        minSdk = config.minSdk
+        targetSdk = config.targetSdk
+        versionCode = config.versionCode
+        versionName = config.versionName
+        manifestPlaceholders = [startUrl: config.startUrl, host: start.host, scopePath: start.path]
+        resValue 'string', 'app_name', pwa.name
+        resValue 'string', 'asset_statements', statements.replace('"', '\\"')
+        resValue 'color', 'theme_color', pwa.theme_color
+        resValue 'color', 'background_color', pwa.background_color
+    }
+    buildFeatures { resValues = true }
+    signingConfigs {
+        if (signRelease) {
+            upload {
+                storeFile = file(signing.CGS_UPLOAD_STORE_FILE)
+                storePassword = signing.CGS_UPLOAD_STORE_PASSWORD
+                keyAlias = signing.CGS_UPLOAD_KEY_ALIAS
+                keyPassword = signing.CGS_UPLOAD_KEY_PASSWORD
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled = false
+            if (signRelease) signingConfig = signingConfigs.upload
+        }
+    }
+    lint { abortOnError = true }
+}
+
+// Reuse only branding assets; never package the web UI, service worker, or corpus.
+abstract class PwaResources extends DefaultTask {
+    @InputFile abstract RegularFileProperty getLegacyIcon()
+    @InputFile abstract RegularFileProperty getMaskableIcon()
+    @OutputDirectory abstract DirectoryProperty getOutputDirectory()
+
+    @TaskAction void generate() {
+        def output = outputDirectory.get().asFile.toPath()
+        ['mipmap-nodpi', 'drawable-nodpi'].each {
+            java.nio.file.Files.createDirectories(output.resolve(it))
+        }
+        java.nio.file.Files.copy(legacyIcon.get().asFile.toPath(),
+            output.resolve('mipmap-nodpi/ic_launcher.png'), java.nio.file.StandardCopyOption.REPLACE_EXISTING)
+        java.nio.file.Files.copy(maskableIcon.get().asFile.toPath(),
+            output.resolve('drawable-nodpi/ic_launcher_foreground.png'), java.nio.file.StandardCopyOption.REPLACE_EXISTING)
+    }
+}
+def pwaResources = tasks.register('syncPwaResources', PwaResources) {
+    legacyIcon = rootProject.layout.projectDirectory.file('../src/icon-512.png')
+    maskableIcon = rootProject.layout.projectDirectory.file('../src/icon-maskable-512.png')
+    outputDirectory = layout.buildDirectory.dir('generated/pwa-res')
+}
+androidComponents {
+    onVariants(selector().all()) { variant ->
+        variant.sources.res.addGeneratedSourceDirectory(pwaResources) { it.outputDirectory }
+    }
+}
+
+dependencies {
+    implementation 'com.google.androidbrowserhelper:androidbrowserhelper:2.7.3'
+}

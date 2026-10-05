@@ -11,3 +11,6 @@
 *.txt text eol=lf
 *.yml text eol=lf
 *.yaml text eol=lf
+android/gradlew text eol=lf
+android/gradlew.bat text eol=crlf
+*.gradle text eol=lf

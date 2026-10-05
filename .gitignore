@@ -10,3 +10,22 @@ __pycache__/
 *.py[cod]
 docs/50-state-expansion-plan.md
 docs/frcp-pwa-build-prompt.md
+
+# Android output and machine-local configuration / signing material
+android/.gradle/
+android/.gradle-user-home/
+android/.idea/
+android/**/build/
+android/local.properties
+android/signing.properties
+android/keystore.properties
+android/.env*
+android/*.iml
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.pem
+*.key
+android/*service-account*.json
+android/*credentials*.json

@@ -19,8 +19,8 @@ Act IDs are scoped to their session (`pa-2026-regular-151`) because special sess
 
 CGA publishes acts only as PDFs, so the crawler extracts their text (`crawler/cgs_crawler/act_text.py`). The PDFs are born-digital:
 
-- Language an act adds is underlined. The underlines are thin filled rectangles drawn under the line, and the extractor marks the characters above them as inserted. The app renders them as `<ins>`, underlined and announced to screen readers.
-- Language an act deletes stays in the text inside `[brackets]` and is kept as written.
+- Language an act adds is underlined in the PDF. The underlines are thin filled rectangles drawn under the line, and the extractor marks the characters above them as inserted. The app renders them as `<ins>`, highlighted in green like the supplement comparison and announced to screen readers.
+- Language an act deletes stays in the text inside `[brackets]` and is kept as written. The app renders it as `<del>`, struck through in red and announced to screen readers. The brackets are hidden on screen but kept in copied text; a deletion can continue across paragraphs and table cells.
 - The running header (`Substitute Senate Bill No. 1`) and footer (`Public Act No. 26-68  2 of 745`) are removed. Footers are checked against the act and page count, and the first page's bill line, act line, and title are checked against the act.
 - `Sec. N.` paragraphs become anchors (`?section=N`), each with its `(Effective ...)` date. Section numbers must run 1, 2, 3, so a quoted section of another act is not mistaken for one of this act's.
 - Tables drawn with borders are read cell by cell. Borderless tables (rate schedules, town grant lists, budget line items) are rebuilt from column positions, so their layout can differ from the PDF; the text of every cell is kept.

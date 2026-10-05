@@ -158,7 +158,7 @@ test("links acts with text to the reader and flags matches found only in the tex
   assert.match(html, /class="act-pdf" href="https:\/\/www\.cga\.ct\.gov\/act\/15\.pdf"/);
 });
 
-test("renders act text with added language, tables, sections, and statute links", () => {
+test("renders act text with added and deleted language, tables, sections, and statute links", () => {
   const document = {
     sections: [{ number: "1", anchor: "sec-1", effective: "Effective October 1, 2026" }],
     blocks: [
@@ -170,12 +170,31 @@ test("renders act text with added language, tables, sections, and statute links"
   };
   const maps = { sections: new Map([["22a-245", "#/t/22a/c/446d/s/22a-245"]]), chapters: new Map() };
   const html = renderActDocument(document, maps);
-  assert.match(html, /<p id="sec-1" class="act-section-start" tabindex="-1">Section 1\. Section <a class="legal-reference" href="#\/t\/22a\/c\/446d\/s\/22a-245">22a-245<\/a> is amended to read &lt;b&gt;: \[five\] <ins>four<\/ins> days\.<\/p>/);
-  assert.match(html, /role="region" tabindex="0" aria-label="Table from page 2 of the act"><table class="act-table"><tbody><tr><td>Year one<\/td><td><ins>Ninety per cent<\/ins><\/td><\/tr>/);
+  assert.match(html, /<p id="sec-1" class="act-section-start" tabindex="-1">Section 1\. Section <a class="legal-reference" href="#\/t\/22a\/c\/446d\/s\/22a-245">22a-245<\/a> is amended to read &lt;b&gt;: <del class="revision-deletion"><span class="act-bracket" aria-hidden="true">\[<\/span>five<span class="act-bracket" aria-hidden="true">\]<\/span><\/del> <ins class="revision-addition">four<\/ins> days\.<\/p>/);
+  assert.match(html, /role="region" tabindex="0" aria-label="Table from page 2 of the act"><table class="act-table"><tbody><tr><td>Year one<\/td><td><ins class="revision-addition">Ninety per cent<\/ins><\/td><\/tr>/);
   assert.match(html, /<p class="act-action">Governor&#39;s Action:<br>Approved June 2, 2026<\/p>/);
   const sections = renderActSections(document, (section) => `#/acts/2026-regular/pa-83?section=${section.number}`);
   assert.match(sections, /<details class="act-sections" open>/);
   assert.match(sections, /<a href="#\/acts\/2026-regular\/pa-83\?section=1">Sec\. 1<\/a> <small>Effective October 1, 2026<\/small>/);
+});
+
+test("continues a deletion across paragraphs and table cells", () => {
+  const html = renderActDocument({
+    sections: [],
+    blocks: [
+      { type: "p", page: 1, runs: ["Kept [(a) Removed"] },
+      { type: "p", page: 1, runs: ["(b) Also removed."] },
+      { type: "table", page: 1, rows: [[["Gone]"], ["Kept too"]]] },
+      { type: "p", page: 1, runs: ["Trailing [", { ins: "new" }] },
+      { type: "p", page: 1, runs: ["] after"] }
+    ]
+  });
+  const bracket = (value) => `<span class="act-bracket" aria-hidden="true">${value}</span>`;
+  assert.ok(html.includes(`<p>Kept <del class="revision-deletion">${bracket("[")}(a) Removed</del></p>`), html);
+  assert.ok(html.includes(`<p><del class="revision-deletion">(b) Also removed.</del></p>`), html);
+  assert.ok(html.includes(`<td><del class="revision-deletion">Gone${bracket("]")}</del></td><td>Kept too</td>`), html);
+  assert.ok(html.includes(`<p>Trailing <del class="revision-deletion">${bracket("[")}</del><ins class="revision-addition">new</ins></p>`), html);
+  assert.ok(html.includes(`<p><del class="revision-deletion">${bracket("]")}</del> after</p>`), html);
 });
 
 test("highlights query words, including longer words they begin", () => {

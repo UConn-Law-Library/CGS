@@ -204,19 +204,44 @@ export function renderActsTable(acts, caption, { session = null, query = null, t
   </table></div>`;
 }
 
-function renderRuns(runs, maps) {
-  return runs.map((run) => typeof run === "string"
-    ? renderLinkedText(run, maps)
-    : `<ins>${renderLinkedText(run.ins, maps)}</ins>`).join("");
+// The act's brackets stay in the page, so copied text keeps the act's own
+// [deleted] convention, but only the red strikethrough shows.
+const bracket = (value) => `<span class="act-bracket" aria-hidden="true">${value}</span>`;
+
+/**
+ * Render runs as HTML. Added language becomes <ins>, and [bracketed] deleted
+ * language becomes <del>. A deletion can continue into later paragraphs and
+ * table cells, so `state.deleting` carries an open bracket between calls; each
+ * piece is closed where it ends, keeping the HTML valid.
+ */
+function renderRuns(runs, maps, state) {
+  return runs.map((run) => {
+    if (typeof run !== "string") return `<ins class="revision-addition">${renderLinkedText(run.ins, maps)}</ins>`;
+    const parts = run.split(/([[\]])/);
+    return parts.map((part, index) => {
+      if (part === "[" || part === "]") {
+        state.deleting = part === "[";
+        // A bracket with no deleted text beside it in this run still needs a home.
+        const neighbor = parts[part === "[" ? index + 1 : index - 1];
+        return neighbor ? "" : `<del class="revision-deletion">${bracket(part)}</del>`;
+      }
+      if (!part) return "";
+      if (!state.deleting) return renderLinkedText(part, maps);
+      const open = parts[index - 1] === "[" ? bracket("[") : "";
+      const close = parts[index + 1] === "]" ? bracket("]") : "";
+      return `<del class="revision-deletion">${open}${renderLinkedText(part, maps)}${close}</del>`;
+    }).join("");
+  }).join("");
 }
 
-function renderActTable(block, maps) {
-  const rows = block.rows.map((row) => `<tr>${row.map((cell) => `<td>${renderRuns(cell, maps)}</td>`).join("")}</tr>`).join("");
+function renderActTable(block, maps, state) {
+  const rows = block.rows.map((row) => `<tr>${row.map((cell) => `<td>${renderRuns(cell, maps, state)}</td>`).join("")}</tr>`).join("");
   return `<div class="act-table-wrap" role="region" tabindex="0" aria-label="Table from page ${block.page} of the act"><table class="act-table"><tbody>${rows}</tbody></table></div>`;
 }
 
-/** The act's body: paragraphs with added language in <ins>, tables, and the Governor's action. */
+/** The act's body: paragraphs with added and deleted language marked, tables, and the Governor's action. */
 export function renderActDocument(document, maps = {}) {
+  const state = { deleting: false };
   const parts = [];
   let action = [];
   const flushAction = () => {
@@ -225,12 +250,12 @@ export function renderActDocument(document, maps = {}) {
   };
   for (const block of document.blocks) {
     if (block.type === "action") {
-      action.push(renderRuns(block.runs, maps));
+      action.push(renderRuns(block.runs, maps, state));
       continue;
     }
     flushAction();
-    if (block.type === "table") parts.push(renderActTable(block, maps));
-    else parts.push(`<p${block.anchor ? ` id="${escapeHtml(block.anchor)}" class="act-section-start" tabindex="-1"` : ""}>${renderRuns(block.runs, maps)}</p>`);
+    if (block.type === "table") parts.push(renderActTable(block, maps, state));
+    else parts.push(`<p${block.anchor ? ` id="${escapeHtml(block.anchor)}" class="act-section-start" tabindex="-1"` : ""}>${renderRuns(block.runs, maps, state)}</p>`);
   }
   flushAction();
   return `<div class="act-document statute-text" data-act-text>${parts.join("")}</div>`;

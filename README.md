@@ -167,7 +167,7 @@ The Phase 7 pipeline migrates the legacy PDF geometry parsers into deterministic
 
 ## Public and Special Acts
 
-`#/acts` lists the acts passed by the General Assembly that the statute text does not yet reflect. Each act opens in the app with its full text, extracted from the CGA PDF with added language underlined and deleted language in brackets, plus its sections, effective dates, and links to the PDF and bill status page. The list searches act text as well as titles. A weekly, manually dispatchable `Review acts refresh` workflow captures the CGA list, extracts the text of new or changed acts, and opens a draft PR when anything changes. Published sessions are kept after the CGA page moves on to a new session, and are retired by hand once the statute text includes them. See [docs/acts.md](docs/acts.md).
+`#/acts` lists the acts passed by the General Assembly that the statute text does not yet reflect. Each act opens in the app with its full text, extracted from the CGA PDF with added language highlighted in green and deleted language struck through in red, plus its sections, effective dates, and links to the PDF and bill status page. The list searches act text as well as titles. A weekly, manually dispatchable `Review acts refresh` workflow captures the CGA list, extracts the text of new or changed acts, and opens a draft PR when anything changes. Published sessions are kept after the CGA page moves on to a new session, and are retired by hand once the statute text includes them. See [docs/acts.md](docs/acts.md).
 
 ## Mobile application interface
 

@@ -1019,11 +1019,16 @@ body.resizing-context { cursor: col-resize; user-select: none; }
 .act-header h1 { margin-bottom: .35rem; }
 .act-heading-title { max-width: 56rem; margin-top: 0; font-weight: 650; line-height: calc(1.45 * var(--line-spacing-factor)); }
 .act-currency, .act-details { max-width: 56rem; color: var(--muted); font-size: .92rem; }
-.act-legend ins, .act-document ins { text-decoration: underline; text-decoration-thickness: .08em; text-underline-offset: .18em; background: none; }
-/* Announce added language, which screen readers do not otherwise distinguish. */
-.act-document ins::before, .act-document ins::after { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(100%); white-space: nowrap; }
+.act-legend .revision-addition, .act-legend .revision-deletion { padding: 0 .2em; }
+.act-document ins, .act-document del { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+/* Announce changes, which screen readers do not otherwise distinguish. */
+.act-document ins::before, .act-document ins::after, .act-document del::before, .act-document del::after { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(100%); white-space: nowrap; }
 .act-document ins::before { content: " [added: "; }
 .act-document ins::after { content: " end added] "; }
+.act-document del::before { content: " [deleted: "; }
+.act-document del::after { content: " end deleted] "; }
+/* The act's own brackets remain in copied text but not on screen. */
+.act-bracket { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(100%); white-space: nowrap; }
 .act-document { max-width: 52rem; margin-top: 1.5rem; }
 .act-document p { margin: 0 0 1rem; overflow-wrap: anywhere; }
 .act-document .act-section-start { margin-top: 1.6rem; scroll-margin-top: 8rem; }
@@ -1193,6 +1198,8 @@ h1,
   .statute-text { font-size: 11pt; line-height: 1.5; }
   .act-sections { display: none; }
   .act-table-wrap { overflow: visible; }
+  /* Keep additions distinct when printed without background colors. */
+  .act-document ins { text-decoration: underline; }
   body { padding-bottom: 0; color: #000; background: #fff; }
   a { color: #000; }
   footer { display: none; }

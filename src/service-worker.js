@@ -4,7 +4,9 @@ const BUILD_ID = "__CGS_BUILD_ID__";
 const CORPUS_GENERATED_AT = "__CGS_CORPUS_GENERATED_AT__";
 const CORPUS_SCHEMA_VERSION = "__CGS_CORPUS_SCHEMA_VERSION__";
 const OFFLINE_FORMAT_VERSION = 2;
-const SHELL_CACHE = `cgs-shell-${BUILD_ID}`;
+// CacheStorage is origin-wide. The older /CT-Statutes/ app owns cgs-shell-*.
+const SHELL_CACHE_PREFIX = `cgs-pages-shell-${encodeURIComponent(new URL(self.registration.scope).pathname)}-`;
+const SHELL_CACHE = `${SHELL_CACHE_PREFIX}${BUILD_ID}`;
 const LEGACY_DATA_CACHE = "cgs-data-v1";
 const RUNTIME_DATA_CACHE = "cgs-data-runtime-v1";
 const CONTROL_CACHE = "cgs-data-control-v1";
@@ -73,7 +75,7 @@ self.addEventListener("activate", (event) => {
   event.waitUntil((async () => {
     const names = await caches.keys();
     await Promise.all(names
-      .filter((name) => name.startsWith("cgs-shell-") && name !== SHELL_CACHE)
+      .filter((name) => name.startsWith(SHELL_CACHE_PREFIX) && name !== SHELL_CACHE)
       .map((name) => caches.delete(name)));
     await cleanupOfflineCaches(await activeOfflineCacheName());
     await self.clients.claim();
@@ -99,6 +101,15 @@ async function activeOfflineCacheName() {
   if (active) return active.text();
   const legacy = await caches.open(LEGACY_DATA_CACHE);
   return await legacy.match(scopedUrl(METADATA_URL)) ? LEGACY_DATA_CACHE : null;
+}
+
+async function clearScopedLegacyData() {
+  // The old /CT-Statutes/ app also uses cgs-data-v1. Remove only our entries.
+  const legacy = await caches.open(LEGACY_DATA_CACHE);
+  const requests = await legacy.keys();
+  await Promise.all(requests
+    .filter((request) => request.url.startsWith(self.registration.scope))
+    .map((request) => legacy.delete(request)));
 }
 
 async function cleanupOfflineCaches(activeName = null) {
@@ -283,7 +294,7 @@ async function cacheOfflineData({ port }) {
     const control = await caches.open(CONTROL_CACHE);
     await control.put(scopedUrl(ACTIVE_CACHE_URL), new Response(stagingName));
     await caches.delete(RUNTIME_DATA_CACHE);
-    await caches.delete(LEGACY_DATA_CACHE);
+    await clearScopedLegacyData();
     await cleanupOfflineCaches(stagingName);
     return {
       ...metadata,
@@ -316,8 +327,9 @@ self.addEventListener("message", (event) => {
     if (event.data?.type === "CLEAR_OFFLINE_DATA") {
       const names = await caches.keys();
       await Promise.all(names
-        .filter((name) => name === LEGACY_DATA_CACHE || name === RUNTIME_DATA_CACHE || name === CONTROL_CACHE || name.startsWith(OFFLINE_CACHE_PREFIX))
+        .filter((name) => name === RUNTIME_DATA_CACHE || name === CONTROL_CACHE || name.startsWith(OFFLINE_CACHE_PREFIX))
         .map((name) => caches.delete(name)));
+      await clearScopedLegacyData();
       return {
         cachedFiles: 0,
         totalFiles: 0,

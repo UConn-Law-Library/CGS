@@ -17,7 +17,10 @@ async function offlineWorker() {
         const entries = new Map();
         stores.set(name, {
           put: async (request, response) => entries.set(key(request), response.clone()),
-          match: async (request) => entries.get(key(request))?.clone()
+          match: async (request) => entries.get(key(request))?.clone(),
+          keys: async () => [...entries.keys()].map((url) => new Request(url)),
+          delete: async (request) => entries.delete(key(request)),
+          addAll: async (urls) => urls.forEach((url) => entries.set(new URL(url, scope).href, new Response("shell")))
         });
       }
       // Deleted caches remain usable through existing handles, like CacheStorage.
@@ -36,7 +39,12 @@ async function offlineWorker() {
   let artifactFetch = async () => new Response(content);
   const sandbox = {
     caches, Request, Response, URL, crypto: webcrypto,
-    self: { registration: { scope }, addEventListener: (type, handler) => handlers.set(type, handler) },
+    self: {
+      registration: { scope },
+      addEventListener: (type, handler) => handlers.set(type, handler),
+      skipWaiting: async () => {},
+      clients: { claim: async () => {} }
+    },
     importScripts() {},
     fetch: async (request) => {
       const path = request.url.slice(scope.length);
@@ -50,6 +58,12 @@ async function offlineWorker() {
   vm.runInContext(await readFile(new URL("../src/offline-integrity.js", import.meta.url), "utf8"), sandbox);
   vm.runInContext(await readFile(new URL("../src/service-worker.js", import.meta.url), "utf8"), sandbox);
   return {
+    caches, scope,
+    async lifecycle(type) {
+      let completion;
+      handlers.get(type)({ waitUntil: (task) => { completion = task; } });
+      await completion;
+    },
     get manifestRequests() { return manifestRequests; },
     set artifactFetch(fetch) { artifactFetch = fetch; },
     goodResponse: () => new Response(content),
@@ -125,3 +139,45 @@ test("a failed refresh preserves the complete copy and does not block queued rep
   assert.deepEqual(await worker.activeArtifact(), { revision: "verified" });
   assert.equal((await worker.request("OFFLINE_STATUS")).result.complete, true);
 });
+
+test("shell installation and cleanup coexist with other same-origin statute apps", async () => {
+  const worker = await offlineWorker();
+  const ownPrefix = `cgs-pages-shell-${encodeURIComponent('/CGS/')}-`;
+  const oldOwn = `${ownPrefix}old`;
+  const otherScope = `cgs-pages-shell-${encodeURIComponent('/another-app/')}-old`;
+  for (const name of ['cgs-shell-v5', 'cgsr-shell-v2', oldOwn, otherScope]) {
+    await worker.caches.open(name);
+  }
+  await worker.lifecycle('install');
+  await worker.lifecycle('activate');
+  const names = await worker.caches.keys();
+  assert.ok(names.includes('cgs-shell-v5'));
+  assert.ok(names.includes('cgsr-shell-v2'));
+  assert.ok(names.includes(otherScope));
+  assert.ok(!names.includes(oldOwn));
+  const current = names.find(name => name.startsWith(ownPrefix));
+  assert.ok(current);
+  // The other deployed app's cleanup rule must not delete our new shell.
+  for (const name of names.filter(name => name.startsWith('cgs-shell-'))) {
+    await worker.caches.delete(name);
+  }
+  assert.ok(await (await worker.caches.open(current)).match(`${worker.scope}index.html`));
+});
+
+for (const operation of ['DOWNLOAD_OFFLINE_DATA', 'CLEAR_OFFLINE_DATA']) {
+  test(`${operation} preserves other apps' entries in the shared legacy cache`, async () => {
+    const worker = await offlineWorker();
+    const legacy = await worker.caches.open('cgs-data-v1');
+    const foreignUrl = 'https://example.test/CT-Statutes/data/title-01.json';
+    const ownUrl = `${worker.scope}data/legacy.json`;
+    await legacy.put(foreignUrl, new Response('other app'));
+    await legacy.put(ownUrl, new Response('our old data'));
+    await legacy.put(`${worker.scope}__offline-metadata__`, Response.json({ complete: true }));
+    assert.equal((await worker.request('OFFLINE_STATUS')).result.complete, true);
+    assert.equal((await worker.request(operation)).type, 'complete');
+    assert.ok((await worker.caches.keys()).includes('cgs-data-v1'));
+    assert.equal(await (await legacy.match(foreignUrl)).text(), 'other app');
+    assert.equal(await legacy.match(ownUrl), undefined);
+    assert.equal(await legacy.match(`${worker.scope}__offline-metadata__`), undefined);
+  });
+}

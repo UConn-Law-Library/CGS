@@ -14,7 +14,13 @@
       "title": "AN ACT CONCERNING THE REALLOCATION OF CERTAIN STATE FUNDS AND VARIOUS PROVISIONS RELATING TO EDUCATION, PUBLIC SAFETY, GENERAL GOVERNMENT, ELECTIONS, INTERMEDIATE CARE FACILITIES AND WAREHOUSE DISTRIBUTION CENTERS.",
       "bill": "SB 298",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00298&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00001-R00SB-00298-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00001-R00SB-00298-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-1.json",
+        "bytes": 284517,
+        "sha256": "4ef4c08dd81ca38a1002b6bb8afe6226c54afc86eee9c571ec1b3e436edb3431",
+        "pages": 123
+      }
     },
     {
       "id": "pa-2026-regular-2",
@@ -24,7 +30,13 @@
       "title": "AN ACT CONCERNING REDEMPTION OF OUT-OF-STATE BEVERAGE CONTAINERS.",
       "bill": "SB 299",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00299&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00002-R00SB-00299-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00002-R00SB-00299-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-2.json",
+        "bytes": 38974,
+        "sha256": "c8ae96f4fc866cbc015ea75e8efbcb2dbf934187d7fa9f590433d9a597c4cc97",
+        "pages": 18
+      }
     },
     {
       "id": "pa-2026-regular-3",
@@ -34,7 +46,13 @@
       "title": "AN ACT ESTABLISHING CONNECTICUT VACCINE STANDARDS.",
       "bill": "HB 5044",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05044&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00003-R00HB-05044-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00003-R00HB-05044-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-3.json",
+        "bytes": 52545,
+        "sha256": "ed6b0048de2c2720df57cdb2b7be8f217ae0db5b8fa7651cb5399342cb280797",
+        "pages": 23
+      }
     },
     {
       "id": "pa-2026-regular-4",
@@ -44,7 +62,13 @@
       "title": "AN ACT CONCERNING THE LEGISLATIVE COMMISSIONERS' RECOMMENDATIONS FOR TECHNICAL REVISIONS TO THE HIGHER EDUCATION STATUTES.",
       "bill": "SB 150",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00150&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00004-R00SB-00150-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00004-R00SB-00150-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-4.json",
+        "bytes": 8054,
+        "sha256": "76084c458c77172291cf393b1399338f6e5c4e8dda698e64a7806669f6827719",
+        "pages": 4
+      }
     },
     {
       "id": "pa-2026-regular-5",
@@ -54,7 +78,13 @@
       "title": "AN ACT CONCERNING FEMALE GENITAL MUTILATION.",
       "bill": "SB 259",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00259&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00005-R00SB-00259-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00005-R00SB-00259-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-5.json",
+        "bytes": 8024,
+        "sha256": "06400e68a4502db1f2efee17e23d70fc1394baefa299b502881527ea5973d036",
+        "pages": 4
+      }
     },
     {
       "id": "pa-2026-regular-6",
@@ -64,7 +94,13 @@
       "title": "AN ACT CONCERNING CREDIT CARDS AND HEALTH AND VETERINARY CARE SERVICES.",
       "bill": "HB 5127",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05127&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00006-R00HB-05127-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00006-R00HB-05127-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-6.json",
+        "bytes": 12923,
+        "sha256": "924cf2d345a05e4299b17987af388093d2e4cfc2c9cd60f5bb5efcbe419fca75",
+        "pages": 7
+      }
     },
     {
       "id": "pa-2026-regular-7",
@@ -74,7 +110,13 @@
       "title": "AN ACT CONCERNING UTILITY CONNECTIONS FOR ACCESSORY DWELLING UNITS.",
       "bill": "HB 5288",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05288&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00007-R00HB-05288-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00007-R00HB-05288-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-7.json",
+        "bytes": 28803,
+        "sha256": "413e3b4991a5899349b08a9720542d47f67585189437baefdf75bee96de38762",
+        "pages": 13
+      }
     },
     {
       "id": "pa-2026-regular-8",
@@ -84,7 +126,13 @@
       "title": "AN ACT CONCERNING CANNABIS, HEMP AND INFUSED BEVERAGE REGULATION.",
       "bill": "HB 5350",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05350&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00008-R00HB-05350-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00008-R00HB-05350-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-8.json",
+        "bytes": 520461,
+        "sha256": "9d063da787b68593ae1fb6206c630ae554b2d67f8bca89a1b0489f080007496a",
+        "pages": 232
+      }
     },
     {
       "id": "pa-2026-regular-9",
@@ -94,7 +142,13 @@
       "title": "AN ACT CONCERNING THE ENFORCEMENT OF ZONING REGULATIONS.",
       "bill": "HB 5391",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05391&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00009-R00HB-05391-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00009-R00HB-05391-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-9.json",
+        "bytes": 5682,
+        "sha256": "020f2671fc5b9d2cc48e60697f2c8d63e77babf853fba72adbfc0c67ad58ac60",
+        "pages": 3
+      }
     },
     {
       "id": "pa-2026-regular-10",
@@ -104,7 +158,13 @@
       "title": "AN ACT UPDATING PRISON RAPE ELIMINATION STANDARDS.",
       "bill": "SB 89",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00089&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00010-R00SB-00089-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00010-R00SB-00089-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-10.json",
+        "bytes": 13508,
+        "sha256": "9f4a42cea613651f476c2c14d97e3e46b9a75d1cbc05cdce5daefeb1746827ea",
+        "pages": 7
+      }
     },
     {
       "id": "pa-2026-regular-11",
@@ -114,7 +174,13 @@
       "title": "AN ACT CONCERNING THE REVISOR'S TECHNICAL REVISIONS TO THE GENERAL STATUTES.",
       "bill": "SB 473",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00473&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00011-R00SB-00473-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00011-R00SB-00473-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-11.json",
+        "bytes": 18109,
+        "sha256": "e616e73e50cf5cc8ec32fb791aeef1c9a476e8c7d5f41e9ff705321583f4658b",
+        "pages": 8
+      }
     },
     {
       "id": "pa-2026-regular-12",
@@ -124,7 +190,13 @@
       "title": "AN ACT CONCERNING WORKFORCE DEVELOPMENT AND WORKING CONDITIONS IN THE STATE.",
       "bill": "HB 5003",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05003&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00012-R00HB-05003-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00012-R00HB-05003-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-12.json",
+        "bytes": 276484,
+        "sha256": "b7ff993db549dd2ea45b228bc65e90504416f980f154f20d30fd1522b24d1985",
+        "pages": 124
+      }
     },
     {
       "id": "pa-2026-regular-13",
@@ -134,7 +206,13 @@
       "title": "AN ACT CONCERNING VARIOUS REVISIONS TO THE PUBLIC HEALTH STATUTES.",
       "bill": "HB 5514",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05514&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00013-R00HB-05514-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00013-R00HB-05514-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-13.json",
+        "bytes": 157624,
+        "sha256": "164e23fffa38621e5df85c751823a2aae16b21ae5ac0fac70f57758586980ca8",
+        "pages": 73
+      }
     },
     {
       "id": "pa-2026-regular-14",
@@ -144,7 +222,13 @@
       "title": "AN ACT CONCERNING DEMOCRACY AND GOVERNMENT ACCOUNTABILITY AND THE USE AND RETENTION OF DATA DERIVED FROM AUTOMATED LICENSE PLATE READER SYSTEMS.",
       "bill": "SB 397",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00397&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00014-R00SB-00397-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00014-R00SB-00397-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-14.json",
+        "bytes": 92291,
+        "sha256": "bdccd4ec37aa30aec802a0165d1a8293c42ea53ae750163ccebeb60b0c0ba2b7",
+        "pages": 42
+      }
     },
     {
       "id": "pa-2026-regular-15",
@@ -154,7 +238,13 @@
       "title": "AN ACT CONCERNING ONLINE SAFETY.",
       "bill": "SB 5",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00005&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00015-R00SB-00005-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00015-R00SB-00005-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-15.json",
+        "bytes": 161278,
+        "sha256": "54e7782ddbbce8089f6559f85c9e56f43a394d598503adf683f3c6ea92a50485",
+        "pages": 74
+      }
     },
     {
       "id": "pa-2026-regular-16",
@@ -164,7 +254,13 @@
       "title": "AN ACT CONCERNING CONSUMER PROTECTIONS REGARDING RESIDENTIAL SOLAR AND ENERGY STORAGE SYSTEMS.",
       "bill": "SB 233",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00233&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00016-R00SB-00233-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00016-R00SB-00233-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-16.json",
+        "bytes": 45815,
+        "sha256": "e6594453bd9fbe8300f0dd7c35ff1fbab92c33da1aa1954a33d2924a3358c17d",
+        "pages": 21
+      }
     },
     {
       "id": "pa-2026-regular-17",
@@ -174,7 +270,13 @@
       "title": "AN ACT AUTHORIZING THE COMPTROLLER TO WITHHOLD PAYMENT FOR VIOLATIONS OF THE PREVAILING WAGE STATUTES.",
       "bill": "SB 268",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00268&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00017-R00SB-00268-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00017-R00SB-00268-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-17.json",
+        "bytes": 6804,
+        "sha256": "65e2723ac0fde8a1ecc7d90da5cfe7a8afb3c5f3f027c5d5c8f164638a713fe4",
+        "pages": 4
+      }
     },
     {
       "id": "pa-2026-regular-18",
@@ -184,7 +286,13 @@
       "title": "AN ACT CONCERNING DUAL ENROLLMENT PROGRAMS.",
       "bill": "SB 427",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00427&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00018-R00SB-00427-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00018-R00SB-00427-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-18.json",
+        "bytes": 5506,
+        "sha256": "99fe84bbf1d1f64289c3871f3c6c2f94b49374dcfd10941e8c2cff633ead2aed",
+        "pages": 3
+      }
     },
     {
       "id": "pa-2026-regular-19",
@@ -194,7 +302,13 @@
       "title": "AN ACT DESIGNATING VARIOUS DAYS AND MONTHS.",
       "bill": "SB 458",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00458&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00019-R00SB-00458-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00019-R00SB-00458-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-19.json",
+        "bytes": 7238,
+        "sha256": "bb18de51a0bacb90676744a0d640c35469bbf020b54bfca795a6a69406576c0c",
+        "pages": 4
+      }
     },
     {
       "id": "pa-2026-regular-20",
@@ -204,7 +318,13 @@
       "title": "AN ACT CONCERNING REQUIREMENTS FOR CERTAIN EXCAVATION PROJECTS.",
       "bill": "SB 321",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00321&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00020-R00SB-00321-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00020-R00SB-00321-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-20.json",
+        "bytes": 7346,
+        "sha256": "2a10d2a5164fef0bd848c0521be979a8eb56da2999efd25b97c74d26c2bef6ed",
+        "pages": 4
+      }
     },
     {
       "id": "pa-2026-regular-21",
@@ -214,7 +334,13 @@
       "title": "AN ACT SUPPORTING COMMUTERS AND MICROTRANSIT SERVICES AND CONCERNING PUBLIC TRANSPORTATION.",
       "bill": "SB 9",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00009&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00021-R00SB-00009-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00021-R00SB-00009-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-21.json",
+        "bytes": 18063,
+        "sha256": "a3bdf38f8ec0855a4b60f6cc8d99452bca6672325e636b163bb69da5f721bcfb",
+        "pages": 9
+      }
     },
     {
       "id": "pa-2026-regular-22",
@@ -224,7 +350,13 @@
       "title": "AN ACT CONCERNING HOSPITAL SALE-LEASEBACK TRANSACTIONS AND ATTESTATIONS CONCERNING LACK OF A CONTROLLING INTEREST OF A HOSPITAL OR OF INTERFERENCE WITH THE PROFESSIONAL JUDGMENT AND CLINICAL DECISIONS OF CERTAIN HEALTH CARE PROVIDERS OF A HOSPITAL BY A PRIVATE EQUITY ENTITY.",
       "bill": "SB 196",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00196&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00022-R00SB-00196-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00022-R00SB-00196-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-22.json",
+        "bytes": 5747,
+        "sha256": "fe242bbe037eeffb61fb16232f584258c0e84281a2a6aee803708fce5221077b",
+        "pages": 3
+      }
     },
     {
       "id": "pa-2026-regular-23",
@@ -234,7 +366,13 @@
       "title": "AN ACT CONCERNING CONTINUING REAL ESTATE EDUCATION REQUIREMENTS, PUBLIC MARKETING OF CERTAIN REAL ESTATE LISTINGS AND REVISING THE TITLE OF A REAL ESTATE SALESPERSON TO A REAL ESTATE AGENT.",
       "bill": "SB 340",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00340&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00023-R00SB-00340-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00023-R00SB-00340-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-23.json",
+        "bytes": 111458,
+        "sha256": "39af8f51f297454e938a9571221420bd0b89cb58a1c5c6ca87c1077d26a7c1de",
+        "pages": 52
+      }
     },
     {
       "id": "pa-2026-regular-24",
@@ -244,7 +382,13 @@
       "title": "AN ACT REVISING VARIOUS MOTOR VEHICLE STATUTES, IMPLEMENTING THE RECOMMENDATIONS OF THE DEPARTMENT OF MOTOR VEHICLES AND CONCERNING YOUTH INSTRUCTION PERMITS, AUTOMOBILE DEALERS AND MANUFACTURERS AND THE TOWING AND STORAGE OF MOTOR VEHICLES.",
       "bill": "SB 413",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00413&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00024-R00SB-00413-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00024-R00SB-00413-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-24.json",
+        "bytes": 143930,
+        "sha256": "6b396eb95186e65d7146090633925ca0a4c5e1b9712f83b2503afdb934cdaf47",
+        "pages": 64
+      }
     },
     {
       "id": "pa-2026-regular-25",
@@ -254,7 +398,13 @@
       "title": "AN ACT CONCERNING MUNICIPAL CAMP SAFETY.",
       "bill": "SB 157",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00157&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00025-R00SB-00157-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00025-R00SB-00157-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-25.json",
+        "bytes": 6840,
+        "sha256": "851d3cd5e04e54795068cf20b58cc81f95a5f45ba7f2f71a1ed6b7360b11435f",
+        "pages": 4
+      }
     },
     {
       "id": "pa-2026-regular-26",
@@ -264,7 +414,13 @@
       "title": "AN ACT CONCERNING CHILD WELFARE ACCOUNTABILITY AND TRANSPARENCY.",
       "bill": "HB 5004",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05004&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00026-R00HB-05004-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00026-R00HB-05004-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-26.json",
+        "bytes": 65955,
+        "sha256": "2b2e838203cfefc0a266625f16ea4221b279aff137cc3695dc6d5e0522f228e8",
+        "pages": 30
+      }
     },
     {
       "id": "pa-2026-regular-27",
@@ -274,7 +430,13 @@
       "title": "AN ACT REQUIRING TRANSPARENCY AND ADDITIONAL OVERSIGHT OF THE DISTRIBUTION OF CERTAIN LEGISLATIVELY DIRECTED FUNDS AND APPROPRIATIONS FOR OTHER EXPENSES.",
       "bill": "HB 5039",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05039&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00027-R00HB-05039-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00027-R00HB-05039-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-27.json",
+        "bytes": 23679,
+        "sha256": "8e848b7e62e335bc84da23a43032088c0e2ae09bc55856909dd0de33ddabafdb",
+        "pages": 11
+      }
     },
     {
       "id": "pa-2026-regular-28",
@@ -284,7 +446,13 @@
       "title": "AN ACT CONCERNING THE USE OF TECHNOLOGY FOR VIRTUAL MONITORING IN RESIDENTIAL CARE HOMES.",
       "bill": "HB 5142",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05142&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00028-R00HB-05142-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00028-R00HB-05142-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-28.json",
+        "bytes": 9919,
+        "sha256": "07b82207216fb4d9dff0cf131773d381aa3815f647e33fb9465aafef1475c166",
+        "pages": 5
+      }
     },
     {
       "id": "pa-2026-regular-29",
@@ -294,7 +462,13 @@
       "title": "AN ACT CONCERNING THE DEPARTMENT OF DEVELOPMENTAL SERVICES' RECOMMENDATIONS REGARDING VARIOUS REVISIONS TO DEVELOPMENTAL SERVICES STATUTES.",
       "bill": "HB 5240",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05240&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00029-R00HB-05240-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00029-R00HB-05240-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-29.json",
+        "bytes": 19046,
+        "sha256": "5e1bbd2d5bf73bfa98d02f5fd1e36064a5ce2b66f46205122c31bbcf374a094d",
+        "pages": 9
+      }
     },
     {
       "id": "pa-2026-regular-30",
@@ -304,7 +478,13 @@
       "title": "AN ACT CONCERNING THE LEGISLATIVE COMMISSIONERS' RECOMMENDATIONS FOR TECHNICAL REVISIONS TO STATUTES CONCERNING ENERGY AND TECHNOLOGY.",
       "bill": "HB 5246",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05246&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00030-R00HB-05246-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00030-R00HB-05246-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-30.json",
+        "bytes": 5096,
+        "sha256": "038a668b18d71591fa6a93ec8785cbc438be20a22bd7c9ff1cee1c8bc75510fe",
+        "pages": 3
+      }
     },
     {
       "id": "pa-2026-regular-31",
@@ -314,7 +494,13 @@
       "title": "AN ACT CONCERNING COURT-ORDERED ACCOUNTINGS OF COMMON INTEREST COMMUNITY FINANCIAL RECORDS AND REVISING THE DISCLOSURE REQUIREMENTS RELATING TO COMMON INTEREST COMMUNITIES.",
       "bill": "HB 5265",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05265&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00031-R00HB-05265-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00031-R00HB-05265-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-31.json",
+        "bytes": 8101,
+        "sha256": "55d6fc2f9fb817c197d7315c926f7f96b7ca35bf40e543814195333e170c4f6e",
+        "pages": 4
+      }
     },
     {
       "id": "pa-2026-regular-32",
@@ -324,7 +510,13 @@
       "title": "AN ACT CONCERNING THE NONISSUANCE OF A STANDING CRIMINAL PROTECTIVE ORDER IN THE CASE OF A FAMILY VIOLENCE CRIME.",
       "bill": "HB 5311",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05311&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00032-R00HB-05311-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00032-R00HB-05311-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-32.json",
+        "bytes": 3053,
+        "sha256": "e44a120088ef6b338771dfc864b59716fbb0c6d8f07f8cde8e421711bea12409",
+        "pages": 2
+      }
     },
     {
       "id": "pa-2026-regular-33",
@@ -334,7 +526,13 @@
       "title": "AN ACT CONCERNING HEALTH COVERAGE MANDATES FOR CERTAIN HEALTH CONDITIONS.",
       "bill": "HB 5374",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05374&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00033-R00HB-05374-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00033-R00HB-05374-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-33.json",
+        "bytes": 21591,
+        "sha256": "8d827885103e19cc267fe1e190b71a7f4af4289eb50084fe82cb3ef58c3fcb7f",
+        "pages": 10
+      }
     },
     {
       "id": "pa-2026-regular-34",
@@ -344,7 +542,13 @@
       "title": "AN ACT CONCERNING THE LEGISLATIVE COMMISSIONERS' RECOMMENDATIONS FOR MINOR AND TECHNICAL REVISIONS TO STATUTES CONCERNING LABOR.",
       "bill": "HB 5383",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05383&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00034-R00HB-05383-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00034-R00HB-05383-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-34.json",
+        "bytes": 5574,
+        "sha256": "f3046b63f0df37500734bc56a4bef6bc0b7afe63aeb5289953b6a447cb04ee31",
+        "pages": 3
+      }
     },
     {
       "id": "pa-2026-regular-35",
@@ -354,7 +558,13 @@
       "title": "AN ACT CONCERNING ASSORTED MEASURES RECOGNIZING AND HONORING THE HEROISM OF VETERANS AND MEMBERS OF THE ARMED FORCES AND MAKING VARIOUS REVISIONS TO STATUTES RELATED TO VETERANS' AND MILITARY AFFAIRS.",
       "bill": "HB 5406",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05406&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00035-R00HB-05406-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00035-R00HB-05406-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-35.json",
+        "bytes": 108533,
+        "sha256": "ec7aa204195a0b4f6e40a14c2d365e1dd62a95a96a0574290fff2953567d317d",
+        "pages": 50
+      }
     },
     {
       "id": "pa-2026-regular-36",
@@ -364,7 +574,13 @@
       "title": "AN ACT ESTABLISHING AN ACCOUNT TO PROVIDE PATIENT LIFTS TO CERTAIN HEALTH CARE OFFICES AND FACILITIES.",
       "bill": "HB 5421",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05421&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00036-R00HB-05421-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00036-R00HB-05421-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-36.json",
+        "bytes": 2714,
+        "sha256": "d0900a3517258996edcbc801bdbcd73c72e68837aaeb04df5e4ba6e6dc2a57ec",
+        "pages": 2
+      }
     },
     {
       "id": "pa-2026-regular-37",
@@ -374,7 +590,13 @@
       "title": "AN ACT CONCERNING THE PROVISION OF PARENT-MANAGED LEARNING.",
       "bill": "HB 5468",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05468&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00037-R00HB-05468-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00037-R00HB-05468-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-37.json",
+        "bytes": 36655,
+        "sha256": "f9854e58f70ed81b0fab3a184886aca6eb06ca2ce31be528d061341b9f64704d",
+        "pages": 17
+      }
     },
     {
       "id": "pa-2026-regular-38",
@@ -384,7 +606,13 @@
       "title": "AN ACT CONCERNING THE DEPARTMENT OF MENTAL HEALTH AND ADDICTION SERVICES' RECOMMENDATIONS REGARDING ACCESS TO OPIOID OVERDOSE REVERSAL MEDICATION AND VARIOUS REVISIONS TO MENTAL HEALTH AND ADDICTION STATUTES.",
       "bill": "HB 5515",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05515&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00038-R00HB-05515-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00038-R00HB-05515-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-38.json",
+        "bytes": 59668,
+        "sha256": "a072bcd9af91b9ae0dcd02f2b75d4f89dab99356d7ddb25db119ba65556c3d2b",
+        "pages": 26
+      }
     },
     {
       "id": "pa-2026-regular-39",
@@ -394,7 +622,13 @@
       "title": "AN ACT CONCERNING THE DEPARTMENT OF DEVELOPMENTAL SERVICES' ABUSE AND NEGLECT INVESTIGATIONS.",
       "bill": "HB 5558",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05558&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00039-R00HB-05558-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00039-R00HB-05558-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-39.json",
+        "bytes": 9959,
+        "sha256": "2268371284d0597d60c419823149a695d2693e3141e5676f60af5e6f0a26de2c",
+        "pages": 5
+      }
     },
     {
       "id": "pa-2026-regular-40",
@@ -404,7 +638,13 @@
       "title": "AN ACT CONCERNING HEALTH CARE IN THE DEPARTMENT OF CORRECTION FACILITIES.",
       "bill": "HB 5567",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05567&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00040-R00HB-05567-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00040-R00HB-05567-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-40.json",
+        "bytes": 77855,
+        "sha256": "2309cce5691963c3706cdaad7ee0f10d55c2634555bf1493377b7a44db480224",
+        "pages": 37
+      }
     },
     {
       "id": "pa-2026-regular-41",
@@ -414,7 +654,13 @@
       "title": "AN ACT CONCERNING CONVERTIBLE PISTOLS, UNFINISHED FRAMES OR UNFINISHED LOWER RECEIVERS, VOLUNTARY RELINQUISHMENT OF FIREARMS AND AMMUNITION AND REFUNDABILITY OF PERMITS FOR SALE AT RETAIL OF FIREARMS AND FOR CARRYING OF PISTOLS AND REVOLVERS.",
       "bill": "HB 5043",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05043&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00041-R00HB-05043-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00041-R00HB-05043-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-41.json",
+        "bytes": 41200,
+        "sha256": "2a360824b90d7832a875441189890ecbcf3f2a13dc2c43c80e22d957cda518c9",
+        "pages": 19
+      }
     },
     {
       "id": "pa-2026-regular-42",
@@ -424,7 +670,13 @@
       "title": "AN ACT CONCERNING ABSENTEE VOTING FOR ALL AND VARIOUS OTHER REFORMS RELATED TO THE ADMINISTRATION OF ELECTIONS.",
       "bill": "HB 5001",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05001&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00042-R00HB-05001-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00042-R00HB-05001-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-42.json",
+        "bytes": 260495,
+        "sha256": "900a15d7e11f8a7e1ef1dfbe468f4c35481e1a706b9e010326487e8d0c9e5b52",
+        "pages": 112
+      }
     },
     {
       "id": "pa-2026-regular-43",
@@ -434,7 +686,13 @@
       "title": "AN ACT CONCERNING THE LEGISLATIVE COMMISSIONERS' RECOMMENDATIONS FOR MINOR AND TECHNICAL REVISIONS TO STATUTES CONCERNING CONSUMER PROTECTION.",
       "bill": "HB 5126",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05126&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00043-R00HB-05126-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00043-R00HB-05126-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-43.json",
+        "bytes": 23197,
+        "sha256": "5d491ee6925d62b3d6a2516a5d6960e33169e41370567adb22a587a2ed05794c",
+        "pages": 12
+      }
     },
     {
       "id": "pa-2026-regular-44",
@@ -444,7 +702,13 @@
       "title": "AN ACT REQUIRING FEAR OF RETALIATION TRAINING FOR PERSONS PROVIDING ASSISTED LIVING SERVICES IN MANAGED RESIDENTIAL COMMUNITIES.",
       "bill": "HB 5141",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05141&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00044-R00HB-05141-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00044-R00HB-05141-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-44.json",
+        "bytes": 2200,
+        "sha256": "3f14bb8bc6803ed829bfc2fc2dd6b42f231cf3460c89494c7355a34c768a342c",
+        "pages": 2
+      }
     },
     {
       "id": "pa-2026-regular-45",
@@ -454,7 +718,13 @@
       "title": "AN ACT CONCERNING THE DEPARTMENT OF EMERGENCY SERVICES AND PUBLIC PROTECTION'S RECOMMENDATIONS REGARDING VARIOUS STATUTES RELATING TO PUBLIC SAFETY.",
       "bill": "HB 5291",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05291&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00045-R00HB-05291-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00045-R00HB-05291-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-45.json",
+        "bytes": 80796,
+        "sha256": "c314eaab65d08fa72c4b1cec6c71756a88453c97cdb7b5356a0a2914adf69a8d",
+        "pages": 36
+      }
     },
     {
       "id": "pa-2026-regular-46",
@@ -464,7 +734,13 @@
       "title": "AN ACT CONCERNING ADVANCED NUCLEAR ENERGY.",
       "bill": "HB 5336",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05336&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00046-R00HB-05336-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00046-R00HB-05336-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-46.json",
+        "bytes": 2975,
+        "sha256": "990c9fa3db397e71f50019aa4a9cef307bcedbc48aa2d3223c54af9c0badc022",
+        "pages": 2
+      }
     },
     {
       "id": "pa-2026-regular-47",
@@ -474,7 +750,13 @@
       "title": "AN ACT CONCERNING THE RECOMMENDATIONS OF THE INSURANCE AND REAL ESTATE COMMITTEE WORKING GROUPS.",
       "bill": "HB 5375",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05375&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00047-R00HB-05375-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00047-R00HB-05375-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-47.json",
+        "bytes": 6303,
+        "sha256": "0c2b257721e1eab10462481d6212fe209adc7359301ce3dea5b300732a863424",
+        "pages": 4
+      }
     },
     {
       "id": "pa-2026-regular-48",
@@ -484,7 +766,13 @@
       "title": "AN ACT CONCERNING THE RECOMMENDATIONS OF THE DEPARTMENT OF CHILDREN AND FAMILIES AND THE DATA LINK CONNECTICUT SYSTEM.",
       "bill": "SB 155",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00155&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00048-R00SB-00155-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00048-R00SB-00155-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-48.json",
+        "bytes": 49288,
+        "sha256": "91d1f77ebeb3c6d9d0bdcf24feec25e77a9ebe3222e680467c525054214adabd",
+        "pages": 22
+      }
     },
     {
       "id": "pa-2026-regular-49",
@@ -494,7 +782,13 @@
       "title": "AN ACT CONCERNING OVERSIGHT OVER HIGHER EDUCATION.",
       "bill": "SB 423",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00423&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00049-R00SB-00423-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00049-R00SB-00423-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-49.json",
+        "bytes": 10239,
+        "sha256": "b68745543784a9f9fbe1c816445bffe3ef808b9e33f4d14f4d6297fa751b6805",
+        "pages": 5
+      }
     },
     {
       "id": "pa-2026-regular-50",
@@ -504,7 +798,13 @@
       "title": "AN ACT REQUIRING TRAINING FOR HOMEMAKER-COMPANION AGENCY EMPLOYEES.",
       "bill": "HB 5143",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05143&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00050-R00HB-05143-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00050-R00HB-05143-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-50.json",
+        "bytes": 9181,
+        "sha256": "b14d273387e3fa0dd001ca570bb702fa5f05c3fdd585f6fd91803804fc0325c5",
+        "pages": 5
+      }
     },
     {
       "id": "pa-2026-regular-51",
@@ -514,7 +814,13 @@
       "title": "AN ACT CONCERNING DATA SECURITY, PAYROLL PROCESSING, CONSUMER FRAUD PROTECTION, MORTGAGE LOANS AND EMPLOYEE CREDIT RATES.",
       "bill": "HB 5208",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05208&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00051-R00HB-05208-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00051-R00HB-05208-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-51.json",
+        "bytes": 12051,
+        "sha256": "4bdf46658e9cb16c5364007f6bf683b1a6b1fde2681ae8f77085db97e87ea9a3",
+        "pages": 6
+      }
     },
     {
       "id": "pa-2026-regular-52",
@@ -524,7 +830,13 @@
       "title": "AN ACT CONCERNING THE LEGISLATIVE COMMISSIONERS' RECOMMENDATIONS FOR TECHNICAL REVISIONS TO THE EDUCATION AND EARLY CHILDHOOD STATUTES.",
       "bill": "HB 5215",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05215&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00052-R00HB-05215-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00052-R00HB-05215-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-52.json",
+        "bytes": 31808,
+        "sha256": "29b74ac91c00e209ce908db68c23dcce8624cb2d770e6399639953fbed2271a3",
+        "pages": 15
+      }
     },
     {
       "id": "pa-2026-regular-53",
@@ -534,7 +846,13 @@
       "title": "AN ACT CONCERNING GAMING.",
       "bill": "HB 5229",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05229&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00053-R00HB-05229-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00053-R00HB-05229-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-53.json",
+        "bytes": 19764,
+        "sha256": "10e9e5e43d00d1ab1bd496e1144913fe166c3a9acc00e92ce04fc97d068252fd",
+        "pages": 10
+      }
     },
     {
       "id": "pa-2026-regular-54",
@@ -544,7 +862,13 @@
       "title": "AN ACT CONCERNING THE DEPARTMENT OF DEVELOPMENTAL SERVICES' RECOMMENDATIONS REGARDING THE INDEPENDENT MORTALITY REVIEW BOARD AND FATALITY REVIEW BOARD.",
       "bill": "HB 5239",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05239&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00054-R00HB-05239-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00054-R00HB-05239-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-54.json",
+        "bytes": 6808,
+        "sha256": "1521821f7247fc0a93825662e1220fe4e972efb88fb9644e375919d20de55fad",
+        "pages": 4
+      }
     },
     {
       "id": "pa-2026-regular-55",
@@ -554,7 +878,13 @@
       "title": "AN ACT ESTABLISHING A CIVIL ACTION FOR THE OFFICE OF THE ATTORNEY GENERAL AND A PRIVATE RIGHT OF ACTION FOR VICTIMS OF UNLAWFUL DISSEMINATION OF A SYNTHETICALLY CREATED INTIMATE IMAGE.",
       "bill": "HB 5312",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05312&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00055-R00HB-05312-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00055-R00HB-05312-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-55.json",
+        "bytes": 7114,
+        "sha256": "5616e8499284872f3979aa9b4da3612fb757ad50a5e50d8fe074c130a7eb7b65",
+        "pages": 4
+      }
     },
     {
       "id": "pa-2026-regular-56",
@@ -564,7 +894,13 @@
       "title": "AN ACT CONCERNING RETURN OF HEALTH CARE PROVIDER PAYMENTS.",
       "bill": "HB 5377",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05377&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00056-R00HB-05377-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00056-R00HB-05377-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-56.json",
+        "bytes": 10762,
+        "sha256": "5a5e2a879b45fbd427c2bf940b5716537ff09c0aa3d858a61e0c9dec97d4442b",
+        "pages": 6
+      }
     },
     {
       "id": "pa-2026-regular-57",
@@ -574,7 +910,13 @@
       "title": "AN ACT CONCERNING UNLAWFUL FUNERAL SERVICE PRACTICES.",
       "bill": "HB 5381",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05381&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00057-R00HB-05381-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00057-R00HB-05381-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-57.json",
+        "bytes": 15831,
+        "sha256": "dedbc974987f4f2f24f5a640e7bd47d9e8a9c6f52382c9393dba0899531df047",
+        "pages": 8
+      }
     },
     {
       "id": "pa-2026-regular-58",
@@ -584,7 +926,13 @@
       "title": "AN ACT CONCERNING REVISIONS TO THE STATE BUILDING CODE, STATE FIRE PREVENTION CODE AND FIRE SAFETY CODE.",
       "bill": "HB 5401",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05401&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00058-R00HB-05401-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00058-R00HB-05401-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-58.json",
+        "bytes": 9107,
+        "sha256": "0789695c07132279568bfd4b7fb55512b486b7757a9fbf504ca20ceb21e628b1",
+        "pages": 5
+      }
     },
     {
       "id": "pa-2026-regular-59",
@@ -594,7 +942,13 @@
       "title": "AN ACT CONCERNING COOPERATIVE CORPORATIONS.",
       "bill": "HB 5431",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05431&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00059-R00HB-05431-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00059-R00HB-05431-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-59.json",
+        "bytes": 14468,
+        "sha256": "736f45339cb9fc30800beffa96e958b349322f55e87bd32fbe6f640e4b2040a9",
+        "pages": 7
+      }
     },
     {
       "id": "pa-2026-regular-60",
@@ -604,7 +958,13 @@
       "title": "AN ACT CONCERNING CERTAIN BOATING REGULATIONS.",
       "bill": "HB 5332",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05332&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00060-R00HB-05332-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00060-R00HB-05332-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-60.json",
+        "bytes": 7475,
+        "sha256": "34136d8adc45edd6c149dea4975cb2f6b732056a1daa4b67a531b22535025a02",
+        "pages": 4
+      }
     },
     {
       "id": "pa-2026-regular-61",
@@ -614,7 +974,13 @@
       "title": "AN ACT CONCERNING RIPARIAN AREAS.",
       "bill": "HB 5334",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05334&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00061-R00HB-05334-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00061-R00HB-05334-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-61.json",
+        "bytes": 1393,
+        "sha256": "ae8764996c436b2960e754e45b86088b833d95c77902725b85ed7e2c9e7f2fd8",
+        "pages": 1
+      }
     },
     {
       "id": "pa-2026-regular-62",
@@ -624,7 +990,13 @@
       "title": "AN ACT IMPLEMENTING RECOMMENDATIONS OF THE TRANSFORMING CHILDREN'S BEHAVIORAL HEALTH POLICY AND PLANNING COMMITTEE.",
       "bill": "HB 5447",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05447&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00062-R00HB-05447-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00062-R00HB-05447-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-62.json",
+        "bytes": 6082,
+        "sha256": "ee2cbb7cd85b8b86e1d3ddac23702568097bd353e75aeb3dae2589f2c047f3bb",
+        "pages": 3
+      }
     },
     {
       "id": "pa-2026-regular-63",
@@ -634,7 +1006,13 @@
       "title": "AN ACT IMPLEMENTING RECOMMENDATIONS FROM THE DEPARTMENT OF TRANSPORTATION AND CONCERNING VEGETATION MANAGEMENT GUIDELINES, TRANSPORTATION NETWORK COMPANIES AND RIDER SAFETY, TRAFFIC SIGNAL MODERNIZATION GRANT PROGRAM, ENCAMPMENTS, MARINE PILOT LICENSE FEES, MOTOR VEHICLE MECHANICAL EQUIPMENT, DISTRACTED DRIVING, A TASK FORCE TO STUDY ACCESS TO PARKING FOR HOME HEALTH AGENCIES AND A WORKING GROUP TO STUDY USE OF ALTERNATIVE FUELS AND TECHNOLOGIES IN SCHOOL BUS FLEETS.",
       "bill": "HB 5464",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05464&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00063-R00HB-05464-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00063-R00HB-05464-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-63.json",
+        "bytes": 131370,
+        "sha256": "24cc5f1846d5cc88ba7ae768649d84ec1bdd4ef75f21faadb3fe65a4ebcbecff",
+        "pages": 59
+      }
     },
     {
       "id": "pa-2026-regular-64",
@@ -644,7 +1022,13 @@
       "title": "AN ACT CONCERNING CONSUMER PRIVACY AND PROTECTION.",
       "bill": "SB 4",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00004&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00064-R00SB-00004-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00064-R00SB-00004-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-64.json",
+        "bytes": 90152,
+        "sha256": "29da0e1b06db07e31187912b4a0807432fa322e6d1d1f703f9176904ae0284c8",
+        "pages": 41
+      }
     },
     {
       "id": "pa-2026-regular-65",
@@ -654,7 +1038,13 @@
       "title": "AN ACT CONCERNING A RAPID RESPONSE PROGRAM FOR CERTAIN AQUATIC INVASIVE SPECIES.",
       "bill": "HB 5525",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05525&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00065-R00HB-05525-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00065-R00HB-05525-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-65.json",
+        "bytes": 7370,
+        "sha256": "e93d76432aaf338b37a6b9d588daa83008d2cd544333ecfda955437aee84608d",
+        "pages": 4
+      }
     },
     {
       "id": "pa-2026-regular-66",
@@ -664,7 +1054,13 @@
       "title": "AN ACT IMPLEMENTING THE RECOMMENDATIONS OF THE OFFICE OF STATE ETHICS FOR REVISIONS TO THE STATE CODES OF ETHICS, REDEFINING \"GIFT\" FOR PURPOSES OF SAID CODES AND INCREASING VARIOUS MONETARY THRESHOLDS IN SAID CODES.",
       "bill": "HB 5532",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05532&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00066-R00HB-05532-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00066-R00HB-05532-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-66.json",
+        "bytes": 53133,
+        "sha256": "e96bbf7cfd717bd9175dbef7a19baab2274b660f3819d1859512127eaa378cf6",
+        "pages": 24
+      }
     },
     {
       "id": "pa-2026-regular-67",
@@ -674,7 +1070,13 @@
       "title": "AN ACT DESIGNATING THE STATE AS THE BIRTHPLACE OF THE BOYS AND GIRLS CLUB MOVEMENT, THE STATE AMPHIBIAN AND THE STATE ROCK.",
       "bill": "HB 5534",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05534&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00067-R00HB-05534-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00067-R00HB-05534-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-67.json",
+        "bytes": 1805,
+        "sha256": "2f96d8188b7f6d8ca8395fa3bbcb492419a5a5aeddfc4b3310e683c7ecd7e249",
+        "pages": 1
+      }
     },
     {
       "id": "pa-2026-regular-68",
@@ -684,7 +1086,13 @@
       "title": "AN ACT MAKING ADJUSTMENTS TO THE STATE BUDGET FOR THE BIENNIUM ENDING JUNE 30, 2027, MAKING DEFICIENCY APPROPRIATIONS FOR THE FISCAL YEAR ENDING JUNE 30, 2026, AUTHORIZING AND ADJUSTING BONDS OF THE STATE AND CONCERNING PROVISIONS RELATING TO REVENUE, SCHOOL CONSTRUCTION AND OTHER ITEMS TO IMPLEMENT THE STATE BUDGET.",
       "bill": "SB 1",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00001&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00068-R00SB-00001-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00068-R00SB-00001-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-68.json",
+        "bytes": 1612506,
+        "sha256": "0215822554e3353e54504dda9d6dbc9fc6698ca0a161cc1954f2055937165dab",
+        "pages": 745
+      }
     },
     {
       "id": "pa-2026-regular-69",
@@ -694,7 +1102,13 @@
       "title": "AN ACT CONCERNING THE INSURANCE DEPARTMENT'S RECOMMENDATIONS FOR REVISIONS TO THE INSURANCE STATUTES.",
       "bill": "HB 5373",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05373&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00069-R00HB-05373-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00069-R00HB-05373-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-69.json",
+        "bytes": 117825,
+        "sha256": "e62bd63e7c2893e7355e95f6834163e05536c26264715eaeecea2555bf26774e",
+        "pages": 53
+      }
     },
     {
       "id": "pa-2026-regular-70",
@@ -704,7 +1118,13 @@
       "title": "AN ACT CONCERNING OVERSIGHT OF EFFORTS TO PREVENT HUMAN TRAFFICKING AND THE USE OF CONFIDENTIAL CRISIS HOTLINES AT CORRECTIONAL INSTITUTIONS.",
       "bill": "HB 5476",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05476&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00070-R00HB-05476-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00070-R00HB-05476-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-70.json",
+        "bytes": 34771,
+        "sha256": "36a96dcdb77cc46b570b2692c032da14f0a0660b57adfd6033d823a7e5e02e10",
+        "pages": 16
+      }
     },
     {
       "id": "pa-2026-regular-71",
@@ -714,7 +1134,13 @@
       "title": "AN ACT CONCERNING A PILOT PROGRAM TO TREAT CERTAIN MEDICAID PATIENTS AT A SHORT-TERM HOSPITAL SPECIAL HOSPICE.",
       "bill": "HB 5481",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05481&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00071-R00HB-05481-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00071-R00HB-05481-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-71.json",
+        "bytes": 2285,
+        "sha256": "a55b3d5513ecb684b09a4fb840ce3fa8a718593b77e5019b8022a8de1a5f9ad6",
+        "pages": 2
+      }
     },
     {
       "id": "pa-2026-regular-72",
@@ -724,7 +1150,13 @@
       "title": "AN ACT CONCERNING VARIOUS REVISIONS TO HUMAN SERVICES STATUTES.",
       "bill": "HB 5562",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05562&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00072-R00HB-05562-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00072-R00HB-05562-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-72.json",
+        "bytes": 46268,
+        "sha256": "68446b6635db2564113c76bf547ee24887d6bce48ea8e5c4395f2ff2cf25f7e9",
+        "pages": 21
+      }
     },
     {
       "id": "pa-2026-regular-73",
@@ -734,7 +1166,13 @@
       "title": "AN ACT CONCERNING THE ELECTRONIC SURVEILLANCE OF EMPLOYEES.",
       "bill": "SB 472",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00472&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00073-R00SB-00472-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00073-R00SB-00472-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-73.json",
+        "bytes": 5163,
+        "sha256": "11c1418f86e16cdd57892e6b4a2f419920745fb15fd1652baa7ab6e9b3c5f1d4",
+        "pages": 3
+      }
     },
     {
       "id": "pa-2026-regular-74",
@@ -744,7 +1182,13 @@
       "title": "AN ACT CONCERNING PUBLIC HEARINGS FOR CERTAIN RATE INCREASES AT ASSISTED LIVING FACILITIES, MUNICIPAL AGENTS FOR AGING, EMERGENCY POWER GENERATOR REQUIREMENTS FOR CERTAIN MULTIFAMILY HOUSING PROJECTS, PERSONAL PROTECTIVE EQUIPMENT FOR HOME HEALTH AIDE EMPLOYEES, THE NURSING HOME BED MORATORIUM AND NURSING HOME RESIDENT DATA.",
       "bill": "SB 123",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00123&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00074-R00SB-00123-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00074-R00SB-00123-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-74.json",
+        "bytes": 29358,
+        "sha256": "f0f76aeac9338dc44e0c27b6cfd1b8c92c9e12c6db2060386fd1e24654373f74",
+        "pages": 13
+      }
     },
     {
       "id": "pa-2026-regular-75",
@@ -754,7 +1198,13 @@
       "title": "AN ACT CONCERNING REVISIONS TO AQUACULTURE-RELATED STATUTES AND PROVIDING FOR CERTAIN FARMING-RELATED PROGRAMS.",
       "bill": "SB 148",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00148&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00075-R00SB-00148-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00075-R00SB-00148-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-75.json",
+        "bytes": 59641,
+        "sha256": "f7fd148f2365f50cbab4003ee172111349675536dcf08803837100fdfab880f0",
+        "pages": 26
+      }
     },
     {
       "id": "pa-2026-regular-76",
@@ -764,7 +1214,13 @@
       "title": "AN ACT CONCERNING THE FAILURE TO FILE FOR CERTAIN GRAND LIST EXEMPTIONS, A MUNICIPAL OPTION TO ABATE DELINQUENT PROPERTY TAXES ON CERTAIN PARCELS OF LAND, ALLOCATIONS OF CERTAIN STATE FUNDS AND ITEMS IMPLEMENTING THE STATE BUDGET FOR THE BIENNIUM ENDING JUNE 30, 2027.",
       "bill": "SB 477",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00477&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00076-R00SB-00477-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00076-R00SB-00477-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-76.json",
+        "bytes": 248048,
+        "sha256": "1bfe8b2eb9eae420be09d0dcaac93ff5dd95403b77be7e92b7935924a452649e",
+        "pages": 112
+      }
     },
     {
       "id": "pa-2026-regular-77",
@@ -774,7 +1230,13 @@
       "title": "AN ACT REVISING AND CONSOLIDATING THE HATE CRIMES STATUTES.",
       "bill": "SB 90",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00090&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00077-R00SB-00090-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00077-R00SB-00090-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-77.json",
+        "bytes": 96207,
+        "sha256": "f53196e8d2fb7e3646acc13b0b9087f356fc1a9920bb829c369c286962c40d5f",
+        "pages": 42
+      }
     },
     {
       "id": "pa-2026-regular-78",
@@ -784,7 +1246,13 @@
       "title": "AN ACT ESTABLISHING THE CONNECTICUT-GERMANY AND CONNECTICUT-INDIA TRADE COMMISSIONS.",
       "bill": "SB 132",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00132&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00078-R00SB-00132-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00078-R00SB-00132-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-78.json",
+        "bytes": 17775,
+        "sha256": "1f7f16342ff0df45f85f9e1b54d0568ab1314bacaf67c46598a03d24cd5de137",
+        "pages": 9
+      }
     },
     {
       "id": "pa-2026-regular-79",
@@ -794,7 +1262,13 @@
       "title": "AN ACT CONCERNING THE COMMUNITY BANK AND CREDIT UNION INVESTMENT PROGRAM, MORTGAGE PAYMENTS, PENALTIES FOR VIOLATIONS OF RENTAL SECURITY DEPOSIT REQUIREMENTS, CERTAIN APPROVALS BY THE BANKING COMMISSIONER, CONNECTICUT BRANCH APPLICATIONS AND SECURED CREDIT CARDS.",
       "bill": "SB 218",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00218&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00079-R00SB-00218-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00079-R00SB-00218-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-79.json",
+        "bytes": 16768,
+        "sha256": "487d8057d5538a851b2f312d0246e4a46a0c18c7203d54db87bfaf3806010b17",
+        "pages": 8
+      }
     },
     {
       "id": "pa-2026-regular-80",
@@ -804,7 +1278,13 @@
       "title": "AN ACT CONCERNING THE RESPONSIBILITIES AND DUTIES OF THE STATE MARSHAL COMMISSION, THE STATE MARSHALS ADVISORY BOARD AND STATE MARSHALS.",
       "bill": "SB 291",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00291&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00080-R00SB-00291-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00080-R00SB-00291-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-80.json",
+        "bytes": 29158,
+        "sha256": "a3140ba683e54eb093af83b333c624a86acfe49104d2f326f89a011637d55fc3",
+        "pages": 13
+      }
     },
     {
       "id": "pa-2026-regular-81",
@@ -814,7 +1294,13 @@
       "title": "AN ACT CONCERNING TRADE NAMES, FRAUDULENT FILINGS, IMPERMISSIBLE BUSINESS SOLICITATIONS, DISSOLUTION OF CORPORATIONS, THE ISSUANCE OF AN APOSTILLE AND FEES CHARGED BY A NOTARY.",
       "bill": "SB 294",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00294&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00081-R00SB-00294-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00081-R00SB-00294-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-81.json",
+        "bytes": 34428,
+        "sha256": "cfaf4cbb875d896152ecb482dd7ab38be9b86376b0a4c8d09bfbfdf7c24590ff",
+        "pages": 16
+      }
     },
     {
       "id": "pa-2026-regular-82",
@@ -824,7 +1310,13 @@
       "title": "AN ACT CONCERNING RECOMMENDATIONS FROM THE DEPARTMENT OF CONSUMER PROTECTION WITH RESPECT TO THE CONNECTICUT UNFAIR TRADE PRACTICES ACT AND SPORTS WAGERING.",
       "bill": "SB 296",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00296&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00082-R00SB-00296-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00082-R00SB-00296-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-82.json",
+        "bytes": 13903,
+        "sha256": "2a3f7f44c332bf84d1428b05eee53c5536935061b3d1b7c07dfdb471f3258179",
+        "pages": 7
+      }
     },
     {
       "id": "pa-2026-regular-83",
@@ -834,7 +1326,13 @@
       "title": "AN ACT CONCERNING MODIFICATIONS TO THE FIREFIGHTERS CANCER RELIEF FUND.",
       "bill": "SB 349",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00349&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00083-R00SB-00349-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00083-R00SB-00349-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-83.json",
+        "bytes": 4023,
+        "sha256": "d63cc94f79400e30aae4c17d8f500d781c5880f1b52467bce4a63999ebddbfa6",
+        "pages": 2
+      }
     },
     {
       "id": "pa-2026-regular-84",
@@ -844,7 +1342,13 @@
       "title": "AN ACT ESTABLISHING VARIOUS REQUIREMENTS REGARDING ELEVATORS.",
       "bill": "SB 369",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00369&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00084-R00SB-00369-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00084-R00SB-00369-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-84.json",
+        "bytes": 9329,
+        "sha256": "5bdaaa3aa09b3ca0f61ea0c7c0b6412ab0ef776572ccb46529d2ccae75851123",
+        "pages": 5
+      }
     },
     {
       "id": "pa-2026-regular-85",
@@ -854,7 +1358,13 @@
       "title": "AN ACT IMPLEMENTING THE RECOMMENDATIONS OF THE OFFICE OF WORKFORCE STRATEGY RELATED TO HIGHER EDUCATION.",
       "bill": "SB 383",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00383&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00085-R00SB-00383-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00085-R00SB-00383-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-85.json",
+        "bytes": 12384,
+        "sha256": "237b3afbb5c3fe8787de3a633180f693e4372add855cf8cbef013c1717132169",
+        "pages": 6
+      }
     },
     {
       "id": "pa-2026-regular-86",
@@ -864,7 +1374,13 @@
       "title": "AN ACT CONCERNING SPECIAL ELECTIONS TO FILL VACANCIES DUE TO THE DEATH OF CERTAIN ELECTED OFFICIALS.",
       "bill": "SB 393",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00393&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00086-R00SB-00393-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00086-R00SB-00393-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-86.json",
+        "bytes": 9982,
+        "sha256": "75fbfcaeaa56d9a225ee58c570a5767d09fea9f80033599a9949359e5cd24d02",
+        "pages": 5
+      }
     },
     {
       "id": "pa-2026-regular-87",
@@ -874,7 +1390,13 @@
       "title": "AN ACT CONCERNING PROBATE COURT OPERATIONS.",
       "bill": "SB 400",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00400&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00087-R00SB-00400-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00087-R00SB-00400-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-87.json",
+        "bytes": 24443,
+        "sha256": "4babbfdf5a73459566d50ca4d4731a8dbdd6eb8b214c848647625eb56317f783",
+        "pages": 11
+      }
     },
     {
       "id": "pa-2026-regular-88",
@@ -884,7 +1406,13 @@
       "title": "AN ACT CONCERNING MEDICAID REIMBURSEMENT FOR EMERGENCY MEDICAL TRANSPORTATION.",
       "bill": "SB 429",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00429&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00088-R00SB-00429-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00088-R00SB-00429-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-88.json",
+        "bytes": 3073,
+        "sha256": "683cfca19d3b80703f5bcad6a490a3dadeea470a467541f8638c1d731cff33c6",
+        "pages": 2
+      }
     },
     {
       "id": "pa-2026-regular-89",
@@ -894,7 +1422,13 @@
       "title": "AN ACT CONCERNING ELECTRONIC SURVEILLANCE DEVICES AND SYSTEMS AND SELF-SERVICE KIOSKS IN EMPLOYEE LOUNGES.",
       "bill": "SB 439",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00439&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00089-R00SB-00439-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00089-R00SB-00439-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-89.json",
+        "bytes": 4375,
+        "sha256": "3120fb97fba668990c7c351f640fed46f9ea674d89e220ffaed095f084ecaf7c",
+        "pages": 3
+      }
     },
     {
       "id": "pa-2026-regular-90",
@@ -904,7 +1438,13 @@
       "title": "AN ACT CONCERNING THE RELEASE OF LIGHTER-THAN-AIR BALLOONS.",
       "bill": "SB 452",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00452&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00090-R00SB-00452-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00090-R00SB-00452-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-90.json",
+        "bytes": 2727,
+        "sha256": "1ef61352993d4f58a0e1c41b94bdf7710d53099f32ec27166bcfd73ebf11eb47",
+        "pages": 2
+      }
     },
     {
       "id": "pa-2026-regular-91",
@@ -914,7 +1454,13 @@
       "title": "AN ACT CONCERNING THE PAYMENT OF NONPROFIT HUMAN SERVICES PROVIDERS.",
       "bill": "SB 468",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00468&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00091-R00SB-00468-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00091-R00SB-00468-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-91.json",
+        "bytes": 1936,
+        "sha256": "1f47a6628a535a86811eb74655c8bd9865396531e382599a615dd89081e6e2b9",
+        "pages": 1
+      }
     },
     {
       "id": "pa-2026-regular-92",
@@ -924,7 +1470,13 @@
       "title": "AN ACT CONCERNING JUDICIAL BRANCH OPERATIONS.",
       "bill": "SB 475",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00475&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00092-R00SB-00475-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00092-R00SB-00475-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-92.json",
+        "bytes": 124440,
+        "sha256": "0659163ceae36c9076228524c1208d3ba35c4e7d2f18386c315b1d49b439bce6",
+        "pages": 55
+      }
     },
     {
       "id": "pa-2026-regular-93",
@@ -934,7 +1486,13 @@
       "title": "AN ACT CONCERNING CONSUMER SAFEGUARDS FOR LONG-TERM CARE POLICIES.",
       "bill": "SB 478",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00478&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00093-R00SB-00478-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00093-R00SB-00478-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-93.json",
+        "bytes": 15181,
+        "sha256": "200a743e92fc6d8c5ebdc3d346c76dac2ec1c83bfcccc70e6727c24a9f94deaa",
+        "pages": 7
+      }
     },
     {
       "id": "pa-2026-regular-94",
@@ -944,7 +1502,13 @@
       "title": "AN ACT IMPLEMENTING THE TREASURER'S RECOMMENDATIONS FOR REVISIONS TO THE UNCLAIMED PROPERTY PROGRAM AND SECOND INJURY FUND.",
       "bill": "SB 488",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00488&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00094-R00SB-00488-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00094-R00SB-00488-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-94.json",
+        "bytes": 46590,
+        "sha256": "5e40f084cc2bddffe275907e06fcd8963b8872e9990436ddf786255e45d6dc1d",
+        "pages": 21
+      }
     },
     {
       "id": "pa-2026-regular-95",
@@ -954,7 +1518,13 @@
       "title": "AN ACT CONCERNING THE SUSPENSION OF AN OPERATOR'S LICENSE FOR REPEATEDLY FAILING TO STOP FOR A SCHOOL BUS.",
       "bill": "SB 508",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00508&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00095-R00SB-00508-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00095-R00SB-00508-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-95.json",
+        "bytes": 5396,
+        "sha256": "fce52fa2cac5d51a67d3d190b25115743a2dfa403aefff95ad5bcce1ebf7005c",
+        "pages": 3
+      }
     },
     {
       "id": "pa-2026-regular-96",
@@ -964,7 +1534,13 @@
       "title": "AN ACT CONCERNING ADDRESS VERIFICATION REFORMS FOR REGISTRANTS.",
       "bill": "SB 509",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00509&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00096-R00SB-00509-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00096-R00SB-00509-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-96.json",
+        "bytes": 17343,
+        "sha256": "8008255b7f57e55c5dc0f320d1fdecce4e2c2a96b09bd9169254f9868cd4c9c6",
+        "pages": 8
+      }
     },
     {
       "id": "pa-2026-regular-97",
@@ -974,7 +1550,13 @@
       "title": "AN ACT NAMING THE CONNECTICUT NATIONAL GUARD READINESS CENTER IN THE TOWN OF PUTNAM.",
       "bill": "HB 5295",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05295&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00097-R00HB-05295-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00097-R00HB-05295-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-97.json",
+        "bytes": 1479,
+        "sha256": "73dbf975fe125446c86bea4ab5caef41354f055e4ddf6c365ded30583f16f28d",
+        "pages": 1
+      }
     },
     {
       "id": "pa-2026-regular-98",
@@ -984,7 +1566,13 @@
       "title": "AN ACT CONCERNING THE PREVENTION OF HUMAN TRAFFICKING.",
       "bill": "SB 116",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00116&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00098-R00SB-00116-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00098-R00SB-00116-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-98.json",
+        "bytes": 13087,
+        "sha256": "603489e56d3410651418ef5f0805cb739cd56c35174a65a332610a789a31a062",
+        "pages": 6
+      }
     },
     {
       "id": "pa-2026-regular-99",
@@ -994,7 +1582,13 @@
       "title": "AN ACT CONCERNING THE MODIFICATIONS TO THE GOVERNOR'S WORKFORCE COUNCIL.",
       "bill": "SB 346",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00346&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00099-R00SB-00346-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00099-R00SB-00346-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-99.json",
+        "bytes": 7463,
+        "sha256": "4d799727fcb2a775229495eb2d4eedba40339fff16e06adba118dc341a7979e7",
+        "pages": 4
+      }
     },
     {
       "id": "pa-2026-regular-100",
@@ -1004,7 +1598,13 @@
       "title": "AN ACT CONCERNING CONSUMER PROTECTION, CANNABIS, DATA PRIVACY, FIRE INSPECTIONS, CRIMINAL MISCHIEF AND ARTIFICIAL INTELLIGENCE.",
       "bill": "HB 5222",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05222&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00100-R00HB-05222-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00100-R00HB-05222-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-100.json",
+        "bytes": 343258,
+        "sha256": "ebdce0c7930c2a4a1e1cd450f2c99cd8b46bb68ad2e2f23f550204479f15d48a",
+        "pages": 154
+      }
     },
     {
       "id": "pa-2026-regular-101",
@@ -1014,7 +1614,13 @@
       "title": "AN ACT CONCERNING THE REGULATION OF STRIPED BASS FISHING IN THE STATE, A WORKING GROUP CONCERNING THE WILDLIFE CONSERVATION PROGRAM AND PROCEDURES CONCERNING THE ESTABLISHMENT OF FISH PASSAGES.",
       "bill": "HB 5333",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05333&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00101-R00HB-05333-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00101-R00HB-05333-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-101.json",
+        "bytes": 16126,
+        "sha256": "b9590ab7f11f29b65f857f9301f4f82058ae648683a0a29bb4b20b1ca0a4e24f",
+        "pages": 8
+      }
     },
     {
       "id": "pa-2026-regular-102",
@@ -1024,7 +1630,13 @@
       "title": "AN ACT ESTABLISHING A NONPROFIT PROVIDER ADVISORY BOARD AND PROHIBITING AUTO INSURANCE PENALTIES ON VOLUNTEER DRIVERS PROVIDING TRANSPORTATION TO NONPROFIT ORGANIZATIONS.",
       "bill": "SB 87",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00087&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00102-R00SB-00087-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00102-R00SB-00087-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-102.json",
+        "bytes": 6865,
+        "sha256": "0f4260fbdf395982829719c36d857754fa02915d76afa4334be0790f8d227e48",
+        "pages": 4
+      }
     },
     {
       "id": "pa-2026-regular-103",
@@ -1034,7 +1646,13 @@
       "title": "AN ACT REQUIRING NURSING HOMES TO ANNUALLY REPORT CERTAIN OWNERSHIP INFORMATION REGARDING INVESTMENT ENTITIES, ACQUIRE, IF FEASIBLE, A SURETY BOND OR A SIMILAR FORM OF SECURITY IN AN AMOUNT EQUAL TO NINETY DAYS OF OPERATING COSTS, MAINTAIN FULL GOVERNANCE CONTROL AND AUTHORITY OVER NURSING HOME ASSETS AND ACTIVITIES AND ANNUALLY ATTEST THAT NO INVESTMENT ENTITY HAS CONTROL OVER NURSING HOME RESIDENT HEALTH, SAFETY OR CARE.",
       "bill": "SB 125",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00125&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00103-R00SB-00125-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00103-R00SB-00125-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-103.json",
+        "bytes": 10580,
+        "sha256": "a89ac4fc1925012da3a6c1f9157a458f1a1242d804e789ecd2664edd418001ff",
+        "pages": 5
+      }
     },
     {
       "id": "pa-2026-regular-104",
@@ -1044,7 +1662,13 @@
       "title": "AN ACT ESTABLISHING AN AIRPORT DEVELOPMENT ZONE IN THE TOWN OF PLAINVILLE.",
       "bill": "SB 134",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00134&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00104-R00SB-00134-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00104-R00SB-00134-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-104.json",
+        "bytes": 3447,
+        "sha256": "ee87bec7332f8a0676400c7f11893b66f43e10a8ea89e42e2f2f8fb29efe12c8",
+        "pages": 2
+      }
     },
     {
       "id": "pa-2026-regular-105",
@@ -1054,7 +1678,13 @@
       "title": "AN ACT IMPLEMENTING THE RECOMMENDATIONS OF THE OFFICE OF EARLY CHILDHOOD.",
       "bill": "SB 137",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00137&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00105-R00SB-00137-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00105-R00SB-00137-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-105.json",
+        "bytes": 24803,
+        "sha256": "16e2a3f4318edd0a215123aa8f1dfdd80a71242445a9268a9bccb87a1ba95703",
+        "pages": 12
+      }
     },
     {
       "id": "pa-2026-regular-106",
@@ -1064,7 +1694,13 @@
       "title": "AN ACT IMPLEMENTING THE RECOMMENDATIONS OF THE DEPARTMENT OF EDUCATION.",
       "bill": "SB 138",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00138&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00106-R00SB-00138-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00106-R00SB-00138-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-106.json",
+        "bytes": 19590,
+        "sha256": "a2c72c2ae437496cf3cad011c2493e7d9401a21ffb2159c76c526c14004cff6f",
+        "pages": 9
+      }
     },
     {
       "id": "pa-2026-regular-107",
@@ -1074,7 +1710,13 @@
       "title": "AN ACT CONCERNING A STUDY ON THE NEED FOR EXTENDED PRODUCER RESPONSIBILITY FOR ELECTRONIC NICOTINE DELIVERY SYSTEMS AND VAPOR PRODUCTS AND INCLUDING AEROSOL PAINTS UNDER THE PAINT STEWARDSHIP PROGRAM.",
       "bill": "SB 147",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00147&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00107-R00SB-00147-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00107-R00SB-00147-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-107.json",
+        "bytes": 17567,
+        "sha256": "f5ae0c804bf441f0cc60f1949da9afd3c36db8178d18de49f00c04674a268b6f",
+        "pages": 8
+      }
     },
     {
       "id": "pa-2026-regular-108",
@@ -1084,7 +1726,13 @@
       "title": "AN ACT CONCERNING THE PSYCHEDELIC-ASSISTED THERAPY PILOT PROGRAM.",
       "bill": "SB 191",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00191&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00108-R00SB-00191-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00108-R00SB-00191-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-108.json",
+        "bytes": 2762,
+        "sha256": "a2a6c1b4b3fdc101f9550639375eca8dc90ed10ff605147cdcc15193c57215d9",
+        "pages": 2
+      }
     },
     {
       "id": "pa-2026-regular-109",
@@ -1094,7 +1742,13 @@
       "title": "AN ACT IMPLEMENTING THE RECOMMENDATIONS OF THE AUDITORS OF PUBLIC ACCOUNTS.",
       "bill": "SB 247",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00247&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00109-R00SB-00247-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00109-R00SB-00247-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-109.json",
+        "bytes": 30120,
+        "sha256": "8e23a24103c4cc21ed8236dd5e4d5ce9d715700828e1262258d854184b2c09b1",
+        "pages": 14
+      }
     },
     {
       "id": "pa-2026-regular-110",
@@ -1104,7 +1758,13 @@
       "title": "AN ACT IMPLEMENTING THE DEPARTMENT OF ADMINISTRATIVE SERVICES' RECOMMENDATIONS REGARDING THE CODE OFFICIAL CAREER PATHWAY, THE FIRE SAFETY CODE, BURN INJURY REPORTS AND STATE BUILDING CODE PROVISIONS RELATING TO ACCESSIBILITY.",
       "bill": "SB 277",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00277&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00110-R00SB-00277-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00110-R00SB-00277-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-110.json",
+        "bytes": 9304,
+        "sha256": "8a227815828f836f97ba6dd0d56fe5512f6eefbd5a76a70bd0e5d8fad21620b5",
+        "pages": 5
+      }
     },
     {
       "id": "pa-2026-regular-111",
@@ -1114,7 +1774,13 @@
       "title": "AN ACT APPROPRIATING FUNDS TO THE NEGLECTED CEMETERY ACCOUNT AND CONCERNING CARE AND MAINTENANCE OF WARTIME VETERANS' GRAVES.",
       "bill": "SB 282",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00282&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00111-R00SB-00282-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00111-R00SB-00282-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-111.json",
+        "bytes": 6863,
+        "sha256": "f1ce44a78fe05e56d0cc11062e7cc14ddaed2e86d5aaf45dd5c294255bbc4aa5",
+        "pages": 4
+      }
     },
     {
       "id": "pa-2026-regular-112",
@@ -1124,7 +1790,13 @@
       "title": "AN ACT CONCERNING ANIMAL WELFARE.",
       "bill": "SB 318",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00318&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00112-R00SB-00318-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00112-R00SB-00318-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-112.json",
+        "bytes": 4144,
+        "sha256": "11d83a8e107d20c7cd4a2e1eafeb5518f44b871a9f0eadb57b275af10d46ea84",
+        "pages": 2
+      }
     },
     {
       "id": "pa-2026-regular-113",
@@ -1134,7 +1806,13 @@
       "title": "AN ACT CONCERNING UTILITY CHARGES FOR RESIDENTIAL DWELLING UNITS.",
       "bill": "SB 335",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00335&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00113-R00SB-00335-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00113-R00SB-00335-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-113.json",
+        "bytes": 3267,
+        "sha256": "e5cc6a7875a15f7888dd0f8f9e775d7026b2db1aee63e475a1954d947f953ec4",
+        "pages": 2
+      }
     },
     {
       "id": "pa-2026-regular-114",
@@ -1144,7 +1822,13 @@
       "title": "AN ACT CONCERNING REVISIONS TO STATUTES RELATING TO MUNICIPAL PROPERTY TAX ASSESSMENT.",
       "bill": "SB 362",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00362&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00114-R00SB-00362-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00114-R00SB-00362-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-114.json",
+        "bytes": 65593,
+        "sha256": "e1779b068267c8ce781528b45cf4a5d938f9cb1ec029ee72ac4e259b2f1f764f",
+        "pages": 30
+      }
     },
     {
       "id": "pa-2026-regular-115",
@@ -1154,7 +1838,13 @@
       "title": "AN ACT CONCERNING THE HOURLY COMPENSATION FOR ADJUNCT FIRE INSTRUCTORS.",
       "bill": "SB 370",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00370&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00115-R00SB-00370-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00115-R00SB-00370-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-115.json",
+        "bytes": 1382,
+        "sha256": "fe3d43d54c0da1b6580611c52aa62f72a382264b0a963344f0842042ac442e69",
+        "pages": 1
+      }
     },
     {
       "id": "pa-2026-regular-116",
@@ -1164,7 +1854,13 @@
       "title": "AN ACT CONCERNING SCHOOL MAPPING DATA SERVICES.",
       "bill": "SB 375",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00375&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00116-R00SB-00375-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00116-R00SB-00375-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-116.json",
+        "bytes": 5373,
+        "sha256": "8fc4eb0733faa724f85c0adf55fac0263a585a9762294c440b86aadd03525c76",
+        "pages": 3
+      }
     },
     {
       "id": "pa-2026-regular-117",
@@ -1174,7 +1870,13 @@
       "title": "AN ACT CONCERNING THE AVAILABILITY OF BREAST CANCER SCREENING, DIAGNOSIS AND TREATMENT SERVICES FOR WOMEN COMMITTED TO THE CUSTODY OF THE DEPARTMENT OF CORRECTION.",
       "bill": "SB 391",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00391&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00117-R00SB-00391-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00117-R00SB-00391-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-117.json",
+        "bytes": 2001,
+        "sha256": "960a590f6f43c690ebbcd71c223dc28b08fda3b720fbeb0cf92c30823f145ca3",
+        "pages": 2
+      }
     },
     {
       "id": "pa-2026-regular-118",
@@ -1184,7 +1886,13 @@
       "title": "AN ACT CONCERNING THE LEGISLATIVE COMMISSIONERS' RECOMMENDATIONS FOR TECHNICAL AND MINOR REVISIONS TO THE GOVERNMENT ADMINISTRATION STATUTES.",
       "bill": "SB 470",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00470&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00118-R00SB-00470-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00118-R00SB-00470-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-118.json",
+        "bytes": 8051,
+        "sha256": "0c4bf0f7262387f2886f91840018b3ee6a33262786c301f5a4b20593472bc60d",
+        "pages": 4
+      }
     },
     {
       "id": "pa-2026-regular-119",
@@ -1194,7 +1902,13 @@
       "title": "AN ACT ESTABLISHING THE CRIME OF DIGITAL DEFRAUDING.",
       "bill": "SB 483",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00483&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00119-R00SB-00483-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00119-R00SB-00483-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-119.json",
+        "bytes": 2933,
+        "sha256": "303d4e91678c8966760a69454984d700ff0ef0f977711e748f19bb04f5cc7b35",
+        "pages": 2
+      }
     },
     {
       "id": "pa-2026-regular-120",
@@ -1204,7 +1918,13 @@
       "title": "AN ACT CONCERNING DISTRACTED DRIVING AND THE SAFE OPERATION OF A MOTOR VEHICLE IN A HIGHWAY WORK ZONE.",
       "bill": "SB 484",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00484&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00120-R00SB-00484-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00120-R00SB-00484-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-120.json",
+        "bytes": 5876,
+        "sha256": "1f26b17d739f6ce2818206a16b6347f1a7867fda8f4a94f2828b27e10294b9de",
+        "pages": 3
+      }
     },
     {
       "id": "pa-2026-regular-121",
@@ -1214,7 +1934,13 @@
       "title": "AN ACT CONCERNING ECONOMIC DEVELOPMENT AND COMPREHENSIVE ENERGY STRATEGY.",
       "bill": "SB 306",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00306&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00121-R00SB-00306-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00121-R00SB-00306-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-121.json",
+        "bytes": 8885,
+        "sha256": "bf090b760be2c819bea8ec751068c4ad7262821cee19a9a4edda4c5bf2afd4ee",
+        "pages": 5
+      }
     },
     {
       "id": "pa-2026-regular-122",
@@ -1224,7 +1950,13 @@
       "title": "AN ACT CONCERNING THE DEPARTMENT OF ECONOMIC AND COMMUNITY DEVELOPMENT'S RECOMMENDATIONS FOR REVISIONS TO THE COMMERCE STATUTES AND PROHIBITING SCHOLARSHIP DISPLACEMENT FOR CERTAIN STUDENTS AT PUBLIC INSTITUTIONS OF HIGHER EDUCATION.",
       "bill": "SB 307",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00307&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00122-R00SB-00307-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00122-R00SB-00307-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-122.json",
+        "bytes": 128932,
+        "sha256": "50116fd154ac9f44f2b8cc1413a43e459e6e2ba44a8320a67144e44136e13d5f",
+        "pages": 59
+      }
     },
     {
       "id": "pa-2026-regular-123",
@@ -1234,7 +1966,13 @@
       "title": "AN ACT REQUIRING THE PUBLIC UTILITIES REGULATORY COMMISSION TO REPORT ON THE REVIEW PROCESS FOR CERTAIN WATER COMPANIES THAT REQUEST TO CEASE OPERATIONS.",
       "bill": "HB 5145",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05145&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00123-R00HB-05145-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00123-R00HB-05145-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-123.json",
+        "bytes": 3119,
+        "sha256": "8098eeab008ece9eed651be30ae610052e8037ca16fa8e32dd917e81895ea107",
+        "pages": 2
+      }
     },
     {
       "id": "pa-2026-regular-124",
@@ -1244,7 +1982,13 @@
       "title": "AN ACT CONCERNING MINOR REVISIONS TO DEPARTMENT OF ENERGY AND ENVIRONMENTAL PROTECTION RELATED STATUTES.",
       "bill": "HB 5153",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05153&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00124-R00HB-05153-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00124-R00HB-05153-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-124.json",
+        "bytes": 33711,
+        "sha256": "f9fa457dca2f56225f9bc7e59c4191894dea92580a49c9d8fb61c5e47355434b",
+        "pages": 15
+      }
     },
     {
       "id": "pa-2026-regular-125",
@@ -1254,7 +1998,13 @@
       "title": "AN ACT CONCERNING THE EDUCATION OF HOMELESS CHILDREN AND YOUTH.",
       "bill": "HB 5259",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05259&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00125-R00HB-05259-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00125-R00HB-05259-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-125.json",
+        "bytes": 1950,
+        "sha256": "2af9014ebb3b7ca9a1a03649b8f54956c3d55e9680e9d3a0003cff3341fc627b",
+        "pages": 2
+      }
     },
     {
       "id": "pa-2026-regular-126",
@@ -1264,7 +2014,13 @@
       "title": "AN ACT IMPLEMENTING THE RECOMMENDATIONS OF THE CONTINUING LEGISLATIVE COMMITTEE ON PLANNING AND DEVELOPMENT CONCERNING THE STATE PLAN OF CONSERVATION AND DEVELOPMENT.",
       "bill": "HB 5282",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05282&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00126-R00HB-05282-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00126-R00HB-05282-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-126.json",
+        "bytes": 9017,
+        "sha256": "fee0bc48b78420625d518c3e59f8fa9d703b8542e2da103040019b4fecc27ee1",
+        "pages": 5
+      }
     },
     {
       "id": "pa-2026-regular-127",
@@ -1274,7 +2030,13 @@
       "title": "AN ACT CONCERNING RENEWABLE POWER GENERATION.",
       "bill": "HB 5340",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05340&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00127-R00HB-05340-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00127-R00HB-05340-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-127.json",
+        "bytes": 88385,
+        "sha256": "29e7c6723b314f1ed8329b879e2163946e4ecf07597ac2f9c960c9b73e3ea187",
+        "pages": 40
+      }
     },
     {
       "id": "pa-2026-regular-128",
@@ -1284,7 +2046,13 @@
       "title": "AN ACT CONCERNING A POLICE OFFICER TRAINING PROGRAM AND THE ROUNDING OF CERTAIN CASH PURCHASES.",
       "bill": "HB 5349",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05349&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00128-R00HB-05349-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00128-R00HB-05349-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-128.json",
+        "bytes": 5777,
+        "sha256": "94b4bca9b3334666b81e6e22546e09d499740259448e6412ee4084254ac9c74a",
+        "pages": 3
+      }
     },
     {
       "id": "pa-2026-regular-129",
@@ -1294,7 +2062,13 @@
       "title": "AN ACT CONCERNING STERILE CULTIVARS, APPLICATION REQUIREMENTS FOR THE USE OF CERTAIN MATERIALS AS FILL AND THE REVISION OF CERTAIN HOUSING-RELATED STATUTES.",
       "bill": "HB 5521",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05521&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00129-R00HB-05521-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00129-R00HB-05521-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-129.json",
+        "bytes": 26331,
+        "sha256": "4e0810bbcdae27d3e3d77ebaee32fdbfb378733f6148caf6ec4ecf1617470915",
+        "pages": 13
+      }
     },
     {
       "id": "pa-2026-regular-130",
@@ -1304,7 +2078,13 @@
       "title": "AN ACT CONCERNING VARIOUS CRIMINAL LAW AND CRIMINAL JUSTICE PROPOSALS, CERTIFICATES OF APPROVAL FOR AIRPORTS, HELIPORTS, VERTIPORTS, RESTRICTED LANDING AREAS AND OTHER AIR NAVIGATION FACILITIES, POLICE COLLABORATION WITH SOCIAL WORKERS, SURVEILLANCE PRICING, EDUCATION COST SHARING AND WITHHOLDING OF TAXES FROM LUMP SUM PAYMENTS.",
       "bill": "HB 5563",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05563&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00130-R00HB-05563-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00130-R00HB-05563-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-130.json",
+        "bytes": 72435,
+        "sha256": "c233b888f89d1480d2341059f19d804d2667aff1ec2917a550b950bf24c79f3f",
+        "pages": 32
+      }
     },
     {
       "id": "pa-2026-regular-131",
@@ -1314,7 +2094,13 @@
       "title": "AN ACT CONCERNING A TEST BED TECHNOLOGIES PROGRAM.",
       "bill": "HB 5247",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05247&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00131-R00HB-05247-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00131-R00HB-05247-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-131.json",
+        "bytes": 9581,
+        "sha256": "8ecf4ce8acd074fd347ebdf4e420167e6b35952c8848ca5434772fb58975e282",
+        "pages": 5
+      }
     },
     {
       "id": "pa-2026-regular-132",
@@ -1324,7 +2110,13 @@
       "title": "AN ACT CONCERNING THE PROCESS FOR INITIATING LOCAL LEGISLATION IN THE GENERAL ASSEMBLY.",
       "bill": "HB 5256",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05256&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00132-R00HB-05256-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00132-R00HB-05256-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-132.json",
+        "bytes": 3048,
+        "sha256": "cd437058c0a9f7082ec8738de915c20f301df10ae53e79eb6d92b67a431b4996",
+        "pages": 2
+      }
     },
     {
       "id": "pa-2026-regular-133",
@@ -1334,7 +2126,13 @@
       "title": "AN ACT CONCERNING THE AUTHORITY OF THE STATE ELECTIONS ENFORCEMENT COMMISSION AND MANDATORY DISMISSAL OF COMPLAINTS.",
       "bill": "HB 5352",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05352&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00133-R00HB-05352-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00133-R00HB-05352-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-133.json",
+        "bytes": 7033,
+        "sha256": "d8a67ea9d44e85804bb838ab14b6379ffb69790d91c2d469789ddf0e2db606c8",
+        "pages": 4
+      }
     },
     {
       "id": "pa-2026-regular-134",
@@ -1344,7 +2142,13 @@
       "title": "AN ACT CONCERNING THE PROPERTY TAX EXEMPTION FOR AND TAX AGREEMENTS RELATED TO CERTAIN CLASS I RENEWABLE ENERGY SOURCES.",
       "bill": "HB 5442",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05442&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00134-R00HB-05442-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00134-R00HB-05442-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-134.json",
+        "bytes": 19578,
+        "sha256": "dac9093fbb34e5997a984d104b3cf8abea4c8b6d9e10afe479a46e357eeb7593",
+        "pages": 9
+      }
     },
     {
       "id": "pa-2026-regular-135",
@@ -1354,7 +2158,13 @@
       "title": "AN ACT CONCERNING THE DESIGNATION OF A DEPARTMENT OF ECONOMIC AND COMMUNITY DEVELOPMENT EMPLOYEE FOR THE PURPOSE OF PROVIDING CONCIERGE SERVICES TO SMALL BUSINESSES.",
       "bill": "HB 5467",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05467&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00135-R00HB-05467-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00135-R00HB-05467-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-135.json",
+        "bytes": 4665,
+        "sha256": "8a9d6f4a34d6cea60d1fd4ddb2b6aacf0f8f7a92a3b84aa1dcefa127c874e1d4",
+        "pages": 3
+      }
     },
     {
       "id": "pa-2026-regular-136",
@@ -1364,7 +2174,13 @@
       "title": "AN ACT AUTHORIZING CERTAIN MUNICIPAL EMPLOYEES TO SERVE ON MUNICIPAL BOARDS OF FINANCE.",
       "bill": "SB 444",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00444&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00136-R00SB-00444-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00136-R00SB-00444-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-136.json",
+        "bytes": 6259,
+        "sha256": "dd5c56ea03d54f4255a42d5a8c34329f623cfb7435c5f899a014d9d0f0a114cb",
+        "pages": 3
+      }
     },
     {
       "id": "pa-2026-regular-137",
@@ -1374,7 +2190,13 @@
       "title": "AN ACT CONCERNING THE RECOMMENDATIONS OF THE INTERGOVERNMENTAL POLICY AND PLANNING DIVISION WITHIN THE OFFICE OF POLICY AND MANAGEMENT.",
       "bill": "SB 449",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00449&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00137-R00SB-00449-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00137-R00SB-00449-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-137.json",
+        "bytes": 6859,
+        "sha256": "170bfa02a0d8f70b5589bf81872b6542de4666c756299d0dc2eb0d07f3a30a36",
+        "pages": 4
+      }
     },
     {
       "id": "pa-2026-regular-138",
@@ -1384,7 +2206,13 @@
       "title": "AN ACT CONCERNING THE LEGISLATIVE COMMISSIONERS' RECOMMENDATIONS FOR TECHNICAL REVISIONS TO STATUTES RELATING TO PLANNING AND DEVELOPMENT.",
       "bill": "HB 5287",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05287&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00138-R00HB-05287-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00138-R00HB-05287-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-138.json",
+        "bytes": 2655,
+        "sha256": "9b3094354472f62236fda87452e3c076d9b764e6cd0ff44ff339bec571615a13",
+        "pages": 2
+      }
     },
     {
       "id": "pa-2026-regular-139",
@@ -1394,7 +2222,13 @@
       "title": "AN ACT CONCERNING VARIOUS REVISIONS TO THE EDUCATION STATUTES.",
       "bill": "HB 5323",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05323&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00139-R00HB-05323-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00139-R00HB-05323-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-139.json",
+        "bytes": 36994,
+        "sha256": "1f3ce5408596345e6e47902fab06b01bb64bbc916950796435365c8c255109d3",
+        "pages": 17
+      }
     },
     {
       "id": "pa-2026-regular-140",
@@ -1404,7 +2238,13 @@
       "title": "AN ACT CONCERNING THE REPORTING OF ADVERTISING PURCHASED BY THE STATE.",
       "bill": "HB 5343",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05343&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00140-R00HB-05343-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00140-R00HB-05343-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-140.json",
+        "bytes": 4321,
+        "sha256": "6ece44ab6d93655ba4d33c0244a29bfdb3a43353fc05254d06e6ae3e7a9d68bf",
+        "pages": 3
+      }
     },
     {
       "id": "pa-2026-regular-141",
@@ -1414,7 +2254,13 @@
       "title": "AN ACT CONCERNING JUSTICES OF THE PEACE.",
       "bill": "HB 5509",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05509&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00141-R00HB-05509-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00141-R00HB-05509-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-141.json",
+        "bytes": 20944,
+        "sha256": "4b065b28f4bcac38a9b0be7c306fc3529a598e32618cf55e96c455b40d7d4977",
+        "pages": 10
+      }
     },
     {
       "id": "pa-2026-regular-142",
@@ -1424,7 +2270,13 @@
       "title": "AN ACT CONCERNING THE DEPARTMENT OF PUBLIC HEALTH'S RECOMMENDATIONS REGARDING SUBSURFACE SEWAGE ENFORCEMENT OFFICERS, WATER OPERATOR APPRENTICES AND VARIOUS REVISIONS TO THE ENVIRONMENTAL HEALTH AND DRINKING WATER STATUTES.",
       "bill": "HB 5518",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05518&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00142-R00HB-05518-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00142-R00HB-05518-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-142.json",
+        "bytes": 100896,
+        "sha256": "05ee0e3d34c9e48b4b21cc0571b151d64b2de1295c8b54bb67f6eab97c9c3889",
+        "pages": 46
+      }
     },
     {
       "id": "pa-2026-regular-143",
@@ -1434,7 +2286,13 @@
       "title": "AN ACT CONCERNING MEDICAID PROVIDER AUDITS.",
       "bill": "HB 5354",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05354&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00143-R00HB-05354-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00143-R00HB-05354-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-143.json",
+        "bytes": 1929,
+        "sha256": "80c1efe5f2581cf9dadf4fe4b02ea0422b9ee55a88de335064f3151e47bf9278",
+        "pages": 1
+      }
     },
     {
       "id": "pa-2026-regular-144",
@@ -1444,7 +2302,13 @@
       "title": "AN ACT CONCERNING STATE-WIDE FIRE PROTECTION.",
       "bill": "HB 5460",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05460&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00144-R00HB-05460-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00144-R00HB-05460-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-144.json",
+        "bytes": 40030,
+        "sha256": "d22ee0971ae6c3b075baef6c3964a9e295dc6aa03084059ec4fa07022a890996",
+        "pages": 19
+      }
     },
     {
       "id": "pa-2026-regular-145",
@@ -1454,7 +2318,13 @@
       "title": "AN ACT CONCERNING CENTRALIZATION OF WORKFORCE DEVELOPMENT INFORMATION.",
       "bill": "HB 5491",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05491&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00145-R00HB-05491-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00145-R00HB-05491-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-145.json",
+        "bytes": 1665,
+        "sha256": "de2e8b319cc5c61c39e4585c8c05c175219c70dc4a7291d269578f72d4816da6",
+        "pages": 1
+      }
     },
     {
       "id": "pa-2026-regular-146",
@@ -1464,7 +2334,13 @@
       "title": "AN ACT CONCERNING A FIVE-YEAR MEDICAID RATE REVIEW, DENTAL REPRESENTATION ON A MEDICAL ASSISTANCE OVERSIGHT COUNCIL, BIOMARKER TESTING AND OPIOID PRESCRIPTION COVERAGE REQUIREMENTS AND A STUDY CONCERNING PAYMENT OF SPOUSES FOR STATE-SUBSIDIZED HOME CARE.",
       "bill": "HB 5561",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05561&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00146-R00HB-05561-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00146-R00HB-05561-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-146.json",
+        "bytes": 13954,
+        "sha256": "50945ce896ff95e73aa7e328e1a637c062540a871c89af233669e6d44a6ff69f",
+        "pages": 7
+      }
     },
     {
       "id": "pa-2026-regular-147",
@@ -1474,7 +2350,13 @@
       "title": "AN ACT AUTHORIZING THE COMMISSIONER OF MOTOR VEHICLES TO ISSUE PERMITS ALLOWING ORGAN TRANSPORT VEHICLES TO USE CERTAIN LIGHTS.",
       "bill": "SB 407",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00407&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00147-R00SB-00407-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00147-R00SB-00407-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-147.json",
+        "bytes": 10296,
+        "sha256": "c7ad6d60cc287b43831ff62b651a45b5f578bf7e1108af3c7235569bb8804103",
+        "pages": 5
+      }
     },
     {
       "id": "pa-2026-regular-148",
@@ -1484,7 +2366,13 @@
       "title": "AN ACT CONCERNING THE STATE'S BOTTLE BILL.",
       "bill": "SB 457",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00457&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00148-R00SB-00457-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00148-R00SB-00457-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-148.json",
+        "bytes": 4204,
+        "sha256": "a9534564bde37e9cbc882e182cf425a7e4c2d4a0b27979154dd4a9cd4c70a153",
+        "pages": 3
+      }
     },
     {
       "id": "pa-2026-regular-149",
@@ -1494,7 +2382,13 @@
       "title": "AN ACT CONCERNING STUDENT LITERACY, ASPIRING EDUCATORS, AMERICAN SIGN LANGUAGE AS PART OF THE WORLD LANGUAGES CURRICULUM AND THE PARAEDUCATOR HEALTH BENEFIT PLAN SUBSIDY PROGRAM.",
       "bill": "SB 220",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00220&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00149-R00SB-00220-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00149-R00SB-00220-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-149.json",
+        "bytes": 16438,
+        "sha256": "2b55b51a1db21d0ebce49b18d677037a7560a000a973cb5c6f9d238c12b8914e",
+        "pages": 8
+      }
     },
     {
       "id": "pa-2026-regular-150",
@@ -1504,7 +2398,13 @@
       "title": "AN ACT ADOPTING THE INTEGRATED SETTING STANDARD OF THE AMERICANS WITH DISABILITIES ACT FOR PUBLIC ENTITIES.",
       "bill": "SB 430",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00430&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00150-R00SB-00430-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00150-R00SB-00430-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-150.json",
+        "bytes": 2959,
+        "sha256": "3a7c2bc0bb272af1abe6dc7399d7300c18c65354f82da764f1204b868c89f167",
+        "pages": 2
+      }
     },
     {
       "id": "pa-2026-regular-151",
@@ -1514,7 +2414,13 @@
       "title": "AN ACT CONCERNING A PLAN TO REVISE THE DEFINITION OF INTELLECTUAL DISABILITY AND THE ESTABLISHMENT OF WORKING GROUPS ON AMERICAN SIGN LANGUAGE EDUCATION AND NONEMERGENCY MEDICAL TRANSPORTATION REIMBURSEMENT.",
       "bill": "HB 5557",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05557&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00151-R00HB-05557-PA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00151-R00HB-05557-PA.pdf",
+      "text": {
+        "path": "2026-regular/text/pa-151.json",
+        "bytes": 8737,
+        "sha256": "6e03e895b7fb47d0640d934a8e2925b47999f4103e9c50dd59a12440f48e4c5e",
+        "pages": 5
+      }
     },
     {
       "id": "sa-2026-regular-1",
@@ -1524,7 +2430,13 @@
       "title": "AN ACT ESTABLISHING THE FEDERAL CUTS RESPONSE FUND.",
       "bill": "SB 83",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00083&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00001-R00SB-00083-SA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00001-R00SB-00083-SA.pdf",
+      "text": {
+        "path": "2026-regular/text/sa-1.json",
+        "bytes": 5203,
+        "sha256": "cce2ca871f7be3d00e2d11bf08a238eee3aae22c6ab566674fb145062f897fef",
+        "pages": 3
+      }
     },
     {
       "id": "sa-2026-regular-2",
@@ -1534,7 +2446,13 @@
       "title": "AN ACT AMENDING A PRIOR CONVEYANCE OF STATE LAND TO THE BRIDGEPORT PORT AUTHORITY.",
       "bill": "SB 519",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00519&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00002-R00SB-00519-SA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00002-R00SB-00519-SA.pdf",
+      "text": {
+        "path": "2026-regular/text/sa-2.json",
+        "bytes": 4930,
+        "sha256": "b76e24e41e768440cb4a6e227e67339ecd848f9f8c0075337c86c998f48de688",
+        "pages": 3
+      }
     },
     {
       "id": "sa-2026-regular-3",
@@ -1544,7 +2462,13 @@
       "title": "AN ACT REPEALING A CONVEYANCE OF A PARCEL OF STATE LAND TO THE TOWN OF CANTON.",
       "bill": "SB 520",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00520&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00003-R00SB-00520-SA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00003-R00SB-00520-SA.pdf",
+      "text": {
+        "path": "2026-regular/text/sa-3.json",
+        "bytes": 990,
+        "sha256": "10f72943a428393ed27c2a5eebdda5466270cf3889ded4233a0d5dd88cd74b60",
+        "pages": 1
+      }
     },
     {
       "id": "sa-2026-regular-4",
@@ -1554,7 +2478,13 @@
       "title": "AN ACT REQUIRING A STUDY OF NATURAL GAS RATES FOR COMMERCIAL AND AGRICULTURAL CUSTOMERS.",
       "bill": "SB 246",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00246&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00004-R00SB-00246-SA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00004-R00SB-00246-SA.pdf",
+      "text": {
+        "path": "2026-regular/text/sa-4.json",
+        "bytes": 1950,
+        "sha256": "0467051131e3570b1022239e671960edbb41dbe12974e5ea16a44bd5612ab47f",
+        "pages": 1
+      }
     },
     {
       "id": "sa-2026-regular-5",
@@ -1564,7 +2494,13 @@
       "title": "AN ACT ESTABLISHING A TASK FORCE TO STUDY THE VOLUNTARY SURRENDER OF INFANTS.",
       "bill": "SB 156",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00156&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00005-R00SB-00156-SA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00005-R00SB-00156-SA.pdf",
+      "text": {
+        "path": "2026-regular/text/sa-5.json",
+        "bytes": 5177,
+        "sha256": "ff271e5040402f79cf23892d5857b282a3154d64fc991e6ed474ae88969c9ccd",
+        "pages": 3
+      }
     },
     {
       "id": "sa-2026-regular-6",
@@ -1574,7 +2510,13 @@
       "title": "AN ACT CONVEYING A PARCEL OF STATE LAND TO THE NORTHWEST RESOURCE RECOVERY AUTHORITY.",
       "bill": "SB 521",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00521&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00006-R00SB-00521-SA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00006-R00SB-00521-SA.pdf",
+      "text": {
+        "path": "2026-regular/text/sa-6.json",
+        "bytes": 3186,
+        "sha256": "f0450589e91e144911e6251ffb9aff05f7a137cf52749477b03afaf87fb57549",
+        "pages": 2
+      }
     },
     {
       "id": "sa-2026-regular-7",
@@ -1584,7 +2526,13 @@
       "title": "AN ACT CONCERNING A STUDY OF THE REMEDIATION AND DEVELOPMENT OF BROWNFIELDS IN THIS STATE.",
       "bill": "HB 5146",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05146&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00007-R00HB-05146-SA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00007-R00HB-05146-SA.pdf",
+      "text": {
+        "path": "2026-regular/text/sa-7.json",
+        "bytes": 2119,
+        "sha256": "7852b1c1bf02abdef0bb3adaf85487917f81a75f666a4e593b168727875229fa",
+        "pages": 2
+      }
     },
     {
       "id": "sa-2026-regular-8",
@@ -1594,7 +2542,13 @@
       "title": "AN ACT CONCERNING THE DEVELOPMENT AND IMPLEMENTATION OF A PLAN FOR THE USE OF UNIFORM STATE-WIDE CASE IDENTIFICATION CODES IN DOMESTIC VIOLENCE CASES.",
       "bill": "HB 5313",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05313&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00008-R00HB-05313-SA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00008-R00HB-05313-SA.pdf",
+      "text": {
+        "path": "2026-regular/text/sa-8.json",
+        "bytes": 3451,
+        "sha256": "52b5d293a7010b4cac4a093afad16e26979dbc590734bae4bf86e1c1c86489ed",
+        "pages": 2
+      }
     },
     {
       "id": "sa-2026-regular-9",
@@ -1604,7 +2558,13 @@
       "title": "AN ACT DISSOLVING THE BROOKLYN FIRE DISTRICT.",
       "bill": "HB 5450",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05450&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00009-R00HB-05450-SA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00009-R00HB-05450-SA.pdf",
+      "text": {
+        "path": "2026-regular/text/sa-9.json",
+        "bytes": 1402,
+        "sha256": "1d6818c06f1b43b7a978bc2a2ba00d6a024847d429498638d568391819f224eb",
+        "pages": 1
+      }
     },
     {
       "id": "sa-2026-regular-10",
@@ -1614,7 +2574,13 @@
       "title": "AN ACT CONCERNING PESTICIDE REPORTING MODERNIZATION.",
       "bill": "HB 5155",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05155&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00010-R00HB-05155-SA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00010-R00HB-05155-SA.pdf",
+      "text": {
+        "path": "2026-regular/text/sa-10.json",
+        "bytes": 4370,
+        "sha256": "a34cc40256f4fdd88c488940f0e4e6b5244a9e748295cdb32bb05359314f27a8",
+        "pages": 3
+      }
     },
     {
       "id": "sa-2026-regular-11",
@@ -1624,7 +2590,13 @@
       "title": "AN ACT ESTABLISHING A TASK FORCE TO STUDY METHODS AND PROGRAMS FOR IMPROVING AFFORDABILITY FOR CHILDREN, FAMILIES AND YOUNG PROFESSIONALS.",
       "bill": "HB 5163",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05163&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00011-R00HB-05163-SA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00011-R00HB-05163-SA.pdf",
+      "text": {
+        "path": "2026-regular/text/sa-11.json",
+        "bytes": 6760,
+        "sha256": "072e2b9f6e5b966b375e6a64b56b2016f864ccb4c58bd97ae75da43a617d6556",
+        "pages": 4
+      }
     },
     {
       "id": "sa-2026-regular-12",
@@ -1634,7 +2606,13 @@
       "title": "AN ACT CONCERNING SUPPORTED DECISION-MAKING STUDY.",
       "bill": "HB 5485",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05485&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00012-R00HB-05485-SA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00012-R00HB-05485-SA.pdf",
+      "text": {
+        "path": "2026-regular/text/sa-12.json",
+        "bytes": 5035,
+        "sha256": "581ec7cf3b741ada2e3ec50318bed0354849e7852876ff1e534e73841baaf478",
+        "pages": 3
+      }
     },
     {
       "id": "sa-2026-regular-13",
@@ -1644,7 +2622,13 @@
       "title": "AN ACT CONCERNING A STUDY OF TRIPLE BOTTOM LINE JUSTICE.",
       "bill": "HB 5241",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05241&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00013-R00HB-05241-SA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00013-R00HB-05241-SA.pdf",
+      "text": {
+        "path": "2026-regular/text/sa-13.json",
+        "bytes": 2400,
+        "sha256": "070e2cd5a7c8a576d38f531302e2aecd834535a8f863bffa885a26e80405726c",
+        "pages": 2
+      }
     },
     {
       "id": "sa-2026-regular-14",
@@ -1654,7 +2638,13 @@
       "title": "AN ACT CONVEYING A PARCEL OF STATE LAND TO THE TOWN OF WOODBURY.",
       "bill": "HB 5572",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05572&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00014-R00HB-05572-SA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00014-R00HB-05572-SA.pdf",
+      "text": {
+        "path": "2026-regular/text/sa-14.json",
+        "bytes": 3091,
+        "sha256": "61590d4119e58734e93f5a2068c799d900d897336617afe62883ca72a1a6caf4",
+        "pages": 2
+      }
     },
     {
       "id": "sa-2026-regular-15",
@@ -1664,7 +2654,13 @@
       "title": "AN ACT CONVEYING A PARCEL OF STATE LAND TO THE CITY OF TORRINGTON.",
       "bill": "HB 5573",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05573&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00015-R00HB-05573-SA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00015-R00HB-05573-SA.pdf",
+      "text": {
+        "path": "2026-regular/text/sa-15.json",
+        "bytes": 3354,
+        "sha256": "8607483caa970faae4c5af15cc1a01804e8af4c7f5aefae2bd2b452315e8d43c",
+        "pages": 2
+      }
     },
     {
       "id": "sa-2026-regular-16",
@@ -1674,7 +2670,13 @@
       "title": "AN ACT AMENDING A CONVEYANCE OF A PARCEL OF STATE LAND TO THE TOWN OF HAMDEN.",
       "bill": "HB 5574",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05574&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00016-R00HB-05574-SA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00016-R00HB-05574-SA.pdf",
+      "text": {
+        "path": "2026-regular/text/sa-16.json",
+        "bytes": 3146,
+        "sha256": "ddb2f8049edc300ef3abd60a5bef3871b2b006d7c302e906db756979c999cd56",
+        "pages": 2
+      }
     },
     {
       "id": "sa-2026-regular-17",
@@ -1684,7 +2686,13 @@
       "title": "AN ACT CONVEYING A PARCEL OF STATE LAND TO THE CITY OF SHELTON.",
       "bill": "HB 5575",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05575&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00017-R00HB-05575-SA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00017-R00HB-05575-SA.pdf",
+      "text": {
+        "path": "2026-regular/text/sa-17.json",
+        "bytes": 2636,
+        "sha256": "1069802f4e2f29a1fe0f7dea246a09513bdd018021cd7e39ff635ef2db9dcf66",
+        "pages": 2
+      }
     },
     {
       "id": "sa-2026-regular-18",
@@ -1694,7 +2702,13 @@
       "title": "AN ACT AMENDING A CONVEYANCE OF A PARCEL OF LAND TO THE TOWN OF SOMERS.",
       "bill": "HB 5577",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05577&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00018-R00HB-05577-SA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00018-R00HB-05577-SA.pdf",
+      "text": {
+        "path": "2026-regular/text/sa-18.json",
+        "bytes": 4140,
+        "sha256": "753dcbc2221bab19615e42a03274c671b00bbc29b0db20f4b6a58cd4dba6afbd",
+        "pages": 2
+      }
     },
     {
       "id": "sa-2026-regular-19",
@@ -1704,7 +2718,13 @@
       "title": "AN ACT AMENDING A CONVEYANCE OF A PARCEL OF STATE LAND TO THE CHESPROCOTT HEALTH DISTRICT.",
       "bill": "HB 5578",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05578&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00019-R00HB-05578-SA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00019-R00HB-05578-SA.pdf",
+      "text": {
+        "path": "2026-regular/text/sa-19.json",
+        "bytes": 4565,
+        "sha256": "272400f6c37271194538bcc9ef3044b3c4bd2bbda779370b1f4fdb6f2cb60165",
+        "pages": 3
+      }
     },
     {
       "id": "sa-2026-regular-20",
@@ -1714,7 +2734,13 @@
       "title": "AN ACT AMENDING A CONVEYANCE OF PARCELS OF STATE LAND TO THE TOWN OF CHESHIRE.",
       "bill": "HB 5579",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05579&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00020-R00HB-05579-SA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00020-R00HB-05579-SA.pdf",
+      "text": {
+        "path": "2026-regular/text/sa-20.json",
+        "bytes": 3807,
+        "sha256": "3882bcd0d00c241686fcbb12bd3e910fd23f17737fa780c588036b271b4508b0",
+        "pages": 2
+      }
     },
     {
       "id": "sa-2026-regular-21",
@@ -1724,7 +2750,13 @@
       "title": "AN ACT AMENDING A PRIOR CONVEYANCE OF A PARCEL OF STATE LAND TO THE TOWN OF STRATFORD TO PERMIT THE PARCEL TO BE SOLD, TRANSFERRED OR LEASED.",
       "bill": "HB 5580",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05580&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00021-R00HB-05580-SA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00021-R00HB-05580-SA.pdf",
+      "text": {
+        "path": "2026-regular/text/sa-21.json",
+        "bytes": 2822,
+        "sha256": "1631aa1752f83dcadd0b7d8c11c2e412a739ab5e58603c803cac539034f304fa",
+        "pages": 2
+      }
     },
     {
       "id": "sa-2026-regular-22",
@@ -1734,7 +2766,13 @@
       "title": "AN ACT AMENDING A PRIOR CONVEYANCE OF A PARCEL OF STATE LAND TO THE TOWN OF ROCKY HILL.",
       "bill": "HB 5581",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05581&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00022-R00HB-05581-SA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00022-R00HB-05581-SA.pdf",
+      "text": {
+        "path": "2026-regular/text/sa-22.json",
+        "bytes": 3750,
+        "sha256": "d4a9c2ae2e25d0505a446b92cceb255babeb2d2c717bfd91cd65e31de25eb933",
+        "pages": 2
+      }
     },
     {
       "id": "sa-2026-regular-23",
@@ -1744,7 +2782,13 @@
       "title": "AN ACT REQUIRING THE DEPARTMENT OF ECONOMIC AND COMMUNITY DEVELOPMENT TO DEVELOP A PLAN TO ESTABLISH AN ARTIFICIAL INTELLIGENCE SMALL BUSINESS PROGRAM.",
       "bill": "SB 417",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00417&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00023-R00SB-00417-SA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00023-R00SB-00417-SA.pdf",
+      "text": {
+        "path": "2026-regular/text/sa-23.json",
+        "bytes": 3230,
+        "sha256": "ad6c8bf50b270ba90385d8efbb017695335a74190d9bc3737de8f216d6a57fdf",
+        "pages": 2
+      }
     },
     {
       "id": "sa-2026-regular-24",
@@ -1754,7 +2798,13 @@
       "title": "AN ACT ESTABLISHING A WORKING GROUP TO STUDY STATE-WIDE MARKETING AND TOURISM IN THE STATE.",
       "bill": "SB 305",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00305&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00024-R00SB-00305-SA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00024-R00SB-00305-SA.pdf",
+      "text": {
+        "path": "2026-regular/text/sa-24.json",
+        "bytes": 3203,
+        "sha256": "f382ddfb1d797f6376d4f33a08c50fabee568504db7209566163afea5986d5fc",
+        "pages": 2
+      }
     },
     {
       "id": "sa-2026-regular-25",
@@ -1764,7 +2814,13 @@
       "title": "AN ACT CONCERNING RESOURCE RECOVERY FACILITIES IN THE STATE.",
       "bill": "SB 317",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00317&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00025-R00SB-00317-SA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00025-R00SB-00317-SA.pdf",
+      "text": {
+        "path": "2026-regular/text/sa-25.json",
+        "bytes": 2637,
+        "sha256": "01b1c4c616aa3fcfb655884018cf5bc96d24bb95576e20602f0b5b5290da680f",
+        "pages": 2
+      }
     },
     {
       "id": "sa-2026-regular-26",
@@ -1774,7 +2830,13 @@
       "title": "AN ACT ESTABLISHING A WORKING GROUP TO STUDY ROADSIDE SAFETY CONCERNS ASSOCIATED WITH WRECKERS AND TOWING AND RECOVERY PROFESSIONALS.",
       "bill": "SB 367",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00367&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00026-R00SB-00367-SA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00026-R00SB-00367-SA.pdf",
+      "text": {
+        "path": "2026-regular/text/sa-26.json",
+        "bytes": 3764,
+        "sha256": "594169c1368141a792b7ccd4adf53c6dcad7bc0a37e6dc70fc73ee74798b81c6",
+        "pages": 2
+      }
     },
     {
       "id": "sa-2026-regular-27",
@@ -1784,7 +2846,13 @@
       "title": "AN ACT CONCERNING PALLIATIVE AND HOSPICE CARE IN LITCHFIELD COUNTY.",
       "bill": "SB 431",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00431&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00027-R00SB-00431-SA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00027-R00SB-00431-SA.pdf",
+      "text": {
+        "path": "2026-regular/text/sa-27.json",
+        "bytes": 2109,
+        "sha256": "df4a225ecaad78c119ea264cd055912fc72f9ab382b77ff88bd20ee391b34635",
+        "pages": 2
+      }
     },
     {
       "id": "sa-2026-regular-28",
@@ -1794,7 +2862,13 @@
       "title": "AN ACT AMENDING A CONVEYANCE OF A PARCEL OF STATE LAND IN THE CITY OF MIDDLETOWN.",
       "bill": "SB 518",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=SB00518&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00028-R00SB-00518-SA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00028-R00SB-00518-SA.pdf",
+      "text": {
+        "path": "2026-regular/text/sa-28.json",
+        "bytes": 3853,
+        "sha256": "6418a7dbe401cb772647f48c8a1888e231cbb6b9fa4382d7cb32e298036bc9b6",
+        "pages": 2
+      }
     },
     {
       "id": "sa-2026-regular-29",
@@ -1804,7 +2878,13 @@
       "title": "AN ACT REQUIRING AN EVALUATION OF THE APPOINTMENT OF A RECEIVER TO MANAGE HOSPITALS IN FINANCIAL DISTRESS OR OPERATIONAL CRISIS.",
       "bill": "HB 5165",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05165&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00029-R00HB-05165-SA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00029-R00HB-05165-SA.pdf",
+      "text": {
+        "path": "2026-regular/text/sa-29.json",
+        "bytes": 2805,
+        "sha256": "11a066d7c964676d53bdb57bd21ed94a056785143c56ca79c5dd76e2f1442f09",
+        "pages": 2
+      }
     },
     {
       "id": "sa-2026-regular-30",
@@ -1814,7 +2894,13 @@
       "title": "AN ACT ESTABLISHING A WORKING GROUP TO DEVELOP AN ECONOMIC DEVELOPMENT AND TOURISM PLAN FOR THE GREATER MYSTIC AREA.",
       "bill": "HB 5243",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05243&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00030-R00HB-05243-SA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00030-R00HB-05243-SA.pdf",
+      "text": {
+        "path": "2026-regular/text/sa-30.json",
+        "bytes": 3973,
+        "sha256": "0da08b65098e71ff4aa2cc93a7b08de84b9a23a9cc02bd873ecdd98ff962c092",
+        "pages": 2
+      }
     },
     {
       "id": "sa-2026-regular-31",
@@ -1824,7 +2910,13 @@
       "title": "AN ACT REQUIRING A STUDY TO ESTABLISH A PROGRAM TO PROVIDE STIPENDS FOR THE CONNECTICUT CIVIL AIR PATROL.",
       "bill": "HB 5493",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05493&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00031-R00HB-05493-SA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00031-R00HB-05493-SA.pdf",
+      "text": {
+        "path": "2026-regular/text/sa-31.json",
+        "bytes": 2251,
+        "sha256": "f5f8ca6c6efddde76c9b34bdf3658afd524148c072358946f8148ca6b32fd7cf",
+        "pages": 2
+      }
     },
     {
       "id": "sa-2026-regular-32",
@@ -1834,7 +2926,13 @@
       "title": "AN ACT CONCERNING CONVEYANCE OF PARCELS OF STATE LAND IN THE TOWN OF DERBY.",
       "bill": "HB 5583",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05583&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00032-R00HB-05583-SA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00032-R00HB-05583-SA.pdf",
+      "text": {
+        "path": "2026-regular/text/sa-32.json",
+        "bytes": 2653,
+        "sha256": "dc19c5880adfec99a6fe26a6725b79d9c89a31fefa9cd8f956eb44d85f154d7b",
+        "pages": 2
+      }
     },
     {
       "id": "sa-2026-regular-33",
@@ -1844,7 +2942,13 @@
       "title": "AN ACT CONCERNING THE AIR PERMITS OF CERTAIN CREMATORIES.",
       "bill": "HB 5331",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05331&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00033-R00HB-05331-SA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00033-R00HB-05331-SA.pdf",
+      "text": {
+        "path": "2026-regular/text/sa-33.json",
+        "bytes": 5429,
+        "sha256": "f317671f1cfc01936b397b7702cd317bc1cc3fa71e9568f3776308326f299ca2",
+        "pages": 3
+      }
     },
     {
       "id": "sa-2026-regular-34",
@@ -1854,7 +2958,13 @@
       "title": "AN ACT ESTABLISHING A TASK FORCE TO STUDY UNDUE DELAY IN WORKERS' COMPENSATION CLAIMS BY POLICE OFFICERS AND FIREFIGHTERS.",
       "bill": "HB 5385",
       "billUrl": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&bill_num=HB05385&which_year=2026",
-      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00034-R00HB-05385-SA.pdf"
+      "url": "https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00034-R00HB-05385-SA.pdf",
+      "text": {
+        "path": "2026-regular/text/sa-34.json",
+        "bytes": 3997,
+        "sha256": "aaf753bf8d7db8bea90c7f22652e618abb9e537d18d3f4f55afd25a62782bc1d",
+        "pages": 2
+      }
     }
   ]
 }

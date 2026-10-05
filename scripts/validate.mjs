@@ -33,7 +33,7 @@ try {
     console.error(errors.map((error) => `- ${error}`).join("\n"));
     process.exitCode = 1;
   } else {
-    console.log(`Validated ${result.counts.titles} titles, ${result.counts.chapters} chapters, ${result.counts.sections} provisions, ${supplements.editions} supplement editions, ${secondary.counts.infractions} infractions, ${secondary.counts.indexHeadings} index headings, and ${acts.counts.acts} Public and Special Acts.`);
+    console.log(`Validated ${result.counts.titles} titles, ${result.counts.chapters} chapters, ${result.counts.sections} provisions, ${supplements.editions} supplement editions, ${secondary.counts.infractions} infractions, ${secondary.counts.indexHeadings} index headings, and ${acts.counts.acts} Public and Special Acts (${acts.counts.textActs} with text).`);
   }
 } catch (error) {
   console.error(error.stack ?? error.message);

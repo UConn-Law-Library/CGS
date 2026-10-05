@@ -90,6 +90,14 @@ export function actsRouteHref({ session = null, type = null, query = null, sort 
   return parameters.size ? `#/acts?${parameters.toString().replaceAll("+", "%20")}` : "#/acts";
 }
 
+export function actRouteHref(session, act, { section = null, query = null } = {}) {
+  const parameters = new URLSearchParams();
+  if (section) parameters.set("section", section);
+  if (query) parameters.set("q", query);
+  const route = `#/acts/${encodeURIComponent(session)}/${act.type === "public" ? "pa" : "sa"}-${act.number}`;
+  return parameters.size ? `${route}?${parameters.toString().replaceAll("+", "%20")}` : route;
+}
+
 export function parseRoute({ hash = "", search = "" } = {}) {
   const query = new URLSearchParams(search);
   if ((!hash || hash === "#" || hash === "#/") && query.has("chapter")) {
@@ -131,6 +139,19 @@ export function parseRoute({ hash = "", search = "" } = {}) {
       return { kind: "infractions", category: parts[1], entry: parts[3], query: queryValue };
     }
     return { kind: "not-found" };
+  }
+
+  if (parts[0] === "acts" && parts.length === 3) {
+    const act = parts[2].match(/^(pa|sa)-(\d+)$/);
+    if (!parts[1] || !act) return { kind: "not-found" };
+    const parameters = new URLSearchParams(hashQuery);
+    return {
+      kind: "act",
+      session: parts[1],
+      act: `${act[1]}-${parts[1]}-${Number(act[2])}`,
+      section: parameters.get("section") || null,
+      query: parameters.get("q") || null
+    };
   }
 
   if (parts[0] === "acts" && parts.length === 1) {

@@ -23,13 +23,14 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-24.04
-    timeout-minutes: 30
+    timeout-minutes: 60
     defaults:
       run:
         shell: bash
     env:
       REFRESH_ROOT: .crawl/acts-refresh
       SNAPSHOT_DIR: .crawl/acts-refresh/snapshots
+      PDF_CACHE: .crawl/acts-refresh/pdfs
       REPORT_DIR: .crawl/acts-refresh/reports
       CREATE_PULL_REQUEST: ${{ github.event_name == 'schedule' || inputs.create_pull_request }}
     steps:
@@ -52,14 +53,17 @@ jobs:
       - run: npm ci
 
       # Published sessions are kept when the page moves to a new session, and an
-      # act that disappears from the page fails the run for manual review.
-      - name: Acquire the Public and Special Acts list
+      # act that disappears from the page fails the run for manual review. Act
+      # texts are extracted only from new or changed PDFs.
+      - name: Acquire the Public and Special Acts list and texts
         run: |
           set -o pipefail
           mkdir -p "$REPORT_DIR"
           python -m crawler.cgs_crawler.acts \
             --output public/data/acts \
             --snapshots "$SNAPSHOT_DIR" \
+            --pdf-cache "$PDF_CACHE" \
+            --report "$REPORT_DIR/text-report.json" \
             --no-ssl-verify \
             2>&1 | tee "$REPORT_DIR/acquisition.log"
 
@@ -79,10 +83,21 @@ jobs:
               const after = JSON.parse(readFileSync("public/data/acts/manifest.json", "utf8"));
               const rows = after.sessions.map((session) => {
                 const previous = before.sessions.find((entry) => entry.id === session.id)?.counts ?? { acts: 0, publicActs: 0, specialActs: 0 };
-                return `| ${session.name} | ${previous.acts} | ${session.counts.acts} | ${session.counts.publicActs} | ${session.counts.specialActs} |`;
+                return `| ${session.name} | ${previous.acts} | ${session.counts.acts} | ${session.counts.publicActs} | ${session.counts.specialActs} | ${previous.textActs ?? 0} | ${session.counts.textActs} |`;
               });
               const retired = before.sessions.filter((entry) => !after.sessions.some((session) => session.id === entry.id)).map((entry) => `- Retired ${entry.name}`);
-              console.log(["## Public and Special Acts", "", "| Session | Before | After | Public | Special |", "| --- | ---: | ---: | ---: | ---: |", ...rows, "", ...retired].join("\n"));
+              const changedTexts = execFileSync("git", ["status", "--porcelain", "--untracked-files=all", "--", "public/data/acts"], { encoding: "utf8" })
+                .split("\n").filter((line) => line.includes("/text/")).length;
+              const { textFailures = [] } = JSON.parse(readFileSync(`${process.env.REPORT_DIR}/text-report.json`, "utf8"));
+              const failures = textFailures.length
+                ? ["", "### Acts without text", "", "These acts link to their PDF only:", "", ...textFailures.map((failure) => `- ${failure.citation}: ${failure.reason}`)]
+                : [];
+              console.log([
+                "## Public and Special Acts", "",
+                "| Session | Acts before | Acts after | Public | Special | Texts before | Texts after |",
+                "| --- | ---: | ---: | ---: | ---: | ---: | ---: |",
+                ...rows, "", `${changedTexts} act text file(s) added, changed, or removed.`, ...retired, ...failures
+              ].join("\n"));
             ' > "$REPORT_DIR/refresh-summary.md"
           fi
 
@@ -113,7 +128,7 @@ jobs:
             echo
             echo "The captured page is retained on the [workflow run]($GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)."
             echo
-            echo "Spot-check new acts against the official list before merging."
+            echo "Spot-check new acts against the official list, and new act texts against their PDFs, before merging."
           } > "$REPORT_DIR/pull-request.md"
           branch="automation/acts-refresh-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
           git config user.name "github-actions[bot]"

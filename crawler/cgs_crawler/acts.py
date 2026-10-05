@@ -19,6 +19,7 @@ from urllib.parse import urljoin
 
 from bs4 import BeautifulSoup
 
+from .act_text import PdfCache, acquire_texts, search_index, text_bytes, text_path
 from .config import FetchPolicy
 from .fetch import Fetcher
 from .snapshots import SnapshotStore
@@ -120,19 +121,38 @@ def json_bytes(value) -> bytes:
     return (json.dumps(value, ensure_ascii=False, indent=2) + "\n").encode("utf-8")
 
 
+def read_verified(directory: Path, relative: str, sha256: str) -> bytes:
+    content = (directory / relative).read_bytes()
+    if hashlib.sha256(content).hexdigest() != sha256:
+        raise RuntimeError(f"Published acts file failed its integrity check: {relative}")
+    return content
+
+
 def read_published(directory: Path) -> Dict[str, dict]:
-    """Read previously published sessions, verifying each recorded digest."""
+    """Read previously published sessions, verifying each recorded digest.
+
+    Each session's acts are returned without their text references, which
+    stay under "published"; the text documents are under "texts".
+    """
     manifest_path = directory / "manifest.json"
     if not manifest_path.is_file():
         return {}
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     published = {}
     for entry in manifest.get("sessions", []):
-        content = (directory / entry["path"]).read_bytes()
-        if hashlib.sha256(content).hexdigest() != entry["sha256"]:
-            raise RuntimeError(f"Published acts file failed its integrity check: {entry['path']}")
-        value = json.loads(content)
-        published[entry["id"]] = {"session": value["session"], "acts": value["acts"], "updatedAt": entry["updatedAt"]}
+        value = json.loads(read_verified(directory, entry["path"], entry["sha256"]))
+        texts = {
+            act["id"]: json.loads(read_verified(directory, act["text"]["path"], act["text"]["sha256"]))
+            for act in value["acts"]
+            if act.get("text")
+        }
+        published[entry["id"]] = {
+            "session": value["session"],
+            "acts": [{key: item for key, item in act.items() if key != "text"} for act in value["acts"]],
+            "updatedAt": entry["updatedAt"],
+            "published": value["acts"],
+            "texts": texts,
+        }
     return published
 
 
@@ -169,10 +189,42 @@ def merge_sessions(
 
 def counts_for(acts: List[dict]) -> dict:
     public = sum(1 for act in acts if act["type"] == "public")
-    return {"acts": len(acts), "publicActs": public, "specialActs": len(acts) - public}
+    with_text = sum(1 for act in acts if act.get("text"))
+    return {"acts": len(acts), "publicActs": public, "specialActs": len(acts) - public, "textActs": with_text}
 
 
-def write_published(sessions: List[dict], output_dir: Path, source_url: str = ACTS_URL) -> dict:
+def identity(relative: str, content: bytes) -> dict:
+    return {"path": relative, "bytes": len(content), "sha256": hashlib.sha256(content).hexdigest()}
+
+
+def attach_texts(sessions: List[dict], texts: Dict[str, dict], *, retrieved_at: str) -> List[dict]:
+    """Reference each act's text document, and date a session whose texts changed."""
+    attached = []
+    for value in sessions:
+        acts = []
+        for act in value["acts"]:
+            act = {key: item for key, item in act.items() if key != "text"}
+            document = texts.get(act["id"])
+            if document:
+                reference = identity(text_path(value["session"]["id"], act), text_bytes(document))
+                act["text"] = {**reference, "pages": document["source"]["pages"]}
+            acts.append(act)
+        changed = acts != value.get("published", acts)
+        attached.append({**value, "acts": acts, "updatedAt": retrieved_at if changed else value["updatedAt"]})
+    return attached
+
+
+def write_published(
+    sessions: List[dict],
+    output_dir: Path,
+    source_url: str = ACTS_URL,
+    texts: Optional[Dict[str, dict]] = None,
+) -> dict:
+    """Write each session, its act texts and search index, and the manifest.
+
+    Acts carry text references from attach_texts; ``texts`` supplies the documents.
+    """
+    texts = texts or {}
     output_dir.mkdir(parents=True, exist_ok=True)
     entries = []
     artifacts = []
@@ -181,12 +233,35 @@ def write_published(sessions: List[dict], output_dir: Path, source_url: str = AC
         relative = f"{session['id']}.json"
         content = json_bytes({"schemaVersion": SCHEMA_VERSION, "session": session, "acts": value["acts"]})
         (output_dir / relative).write_bytes(content)
-        identity = {"path": relative, "bytes": len(content), "sha256": hashlib.sha256(content).hexdigest()}
-        artifacts.append(identity)
-        entries.append({**session, "updatedAt": value["updatedAt"], **identity, "counts": counts_for(value["acts"])})
-    for stale in output_dir.glob("*.json"):
-        if stale.name != "manifest.json" and stale.name not in {artifact["path"] for artifact in artifacts}:
+        artifacts.append(identity(relative, content))
+        entry = {**session, "updatedAt": value["updatedAt"], **identity(relative, content), "counts": counts_for(value["acts"])}
+        indexed = []
+        for act in value["acts"]:
+            if not act.get("text"):
+                continue
+            text = text_bytes(texts[act["id"]])
+            if identity(act["text"]["path"], text) != {key: act["text"][key] for key in ("path", "bytes", "sha256")}:
+                raise RuntimeError(f"{act['citation']}: text does not match its reference")
+            target = output_dir / act["text"]["path"]
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_bytes(text)
+            artifacts.append(identity(act["text"]["path"], text))
+            indexed.append((act, texts[act["id"]]))
+        if indexed:
+            search_relative = f"{session['id']}/search.json"
+            index = search_index(session["id"], indexed)
+            search = (json.dumps(index, ensure_ascii=False, separators=(",", ":")) + "\n").encode("utf-8")
+            (output_dir / search_relative).write_bytes(search)
+            artifacts.append(identity(search_relative, search))
+            entry["search"] = identity(search_relative, search)
+        entries.append(entry)
+    current = {artifact["path"] for artifact in artifacts} | {"manifest.json"}
+    for stale in output_dir.rglob("*.json"):
+        if stale.relative_to(output_dir).as_posix() not in current:
             stale.unlink()
+    for directory in sorted((path for path in output_dir.rglob("*") if path.is_dir()), reverse=True):
+        if not any(directory.iterdir()):
+            directory.rmdir()
     all_acts = [act for value in sessions for act in value["acts"]]
     manifest = {
         "schemaVersion": SCHEMA_VERSION,
@@ -213,34 +288,58 @@ def parser() -> argparse.ArgumentParser:
     value.add_argument("--retrieved-at", help="ISO-8601 timestamp recorded for changed sessions")
     value.add_argument("--retire", action="append", default=[], help="drop a published session id, such as 2025-regular")
     value.add_argument("--allow-removals", action="store_true", help="accept acts that no longer appear on the page")
+    value.add_argument("--no-text", action="store_true", help="keep published act texts without checking the PDFs")
+    value.add_argument("--refresh-text", action="store_true", help="extract every act's text again")
+    value.add_argument("--pdf-cache", type=Path, default=Path(".crawl/acts-pdfs"), help="where downloaded act PDFs are kept")
+    value.add_argument("--report", type=Path, help="write the acts whose text could not be extracted to this JSON file")
     value.add_argument("--no-ssl-verify", action="store_true")
     return value
 
 
 def main() -> None:
     args = parser().parse_args()
+    if not args.no_ssl_verify:
+        try:
+            import truststore
+            truststore.inject_into_ssl()
+        except ImportError:
+            pass
+    snapshots = SnapshotStore(args.snapshots)
     if args.html:
         html = args.html.read_text(encoding="utf-8")
     else:
-        if not args.no_ssl_verify:
-            try:
-                import truststore
-                truststore.inject_into_ssl()
-            except ImportError:
-                pass
-        fetcher = Fetcher(FetchPolicy(delay=0, jitter=0, verify_ssl=not args.no_ssl_verify), SnapshotStore(args.snapshots))
-        html = fetcher.fetch(ACTS_URL)
+        html = Fetcher(FetchPolicy(delay=0, jitter=0, verify_ssl=not args.no_ssl_verify), snapshots).fetch(ACTS_URL)
     parsed = parse_acts_page(html)
+    published = read_published(args.previous or args.output)
+    retrieved_at = iso_timestamp(args.retrieved_at)
     sessions = merge_sessions(
         parsed,
-        read_published(args.previous or args.output),
-        retrieved_at=iso_timestamp(args.retrieved_at),
+        published,
+        retrieved_at=retrieved_at,
         retire=args.retire,
         allow_removals=args.allow_removals,
     )
-    manifest = write_published(sessions, args.output)
+    previous_texts = {act_id: document for value in published.values() for act_id, document in value["texts"].items()}
+    failures = []
+    if args.no_text:
+        texts = previous_texts
+    else:
+        # One PDF at a time, with a pause between requests to CGA.
+        fetcher = Fetcher(FetchPolicy(delay=0.5, jitter=0.25, verify_ssl=not args.no_ssl_verify), snapshots)
+        acts = [act for value in sessions for act in value["acts"]]
+        texts, failures = acquire_texts(acts, previous_texts, fetcher, cache=PdfCache(args.pdf_cache), refresh=args.refresh_text)
+    manifest = write_published(attach_texts(sessions, texts, retrieved_at=retrieved_at), args.output, texts=texts)
+    if args.report:
+        args.report.parent.mkdir(parents=True, exist_ok=True)
+        args.report.write_text(json.dumps({"textFailures": failures}, indent=2) + "\n", encoding="utf-8")
     found = ", ".join(f"{entry['session']['name']} ({len(entry['acts'])})" for entry in parsed) or "no acts"
-    print(f"Page lists {found}; published {manifest['counts']['acts']} acts across {manifest['counts']['sessions']} session(s) to {args.output}")
+    counts = manifest["counts"]
+    print(
+        f"Page lists {found}; published {counts['acts']} acts ({counts['textActs']} with text) "
+        f"across {counts['sessions']} session(s) to {args.output}"
+    )
+    for failure in failures:
+        print(f"WARNING: {failure['citation']} has no text: {failure['reason']}")
 
 
 if __name__ == "__main__":

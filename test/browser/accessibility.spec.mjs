@@ -8,7 +8,8 @@ const representativeRoutes = [
   { name: "Search results", route: "#/search?q=%22Effective%20January%22", heading: "Search" },
   { name: "Statutes index", route: "#/index", heading: "Index to the General Statutes" },
   { name: "Infractions", route: "#/infractions", heading: "Infractions and violations" },
-  { name: "Public and Special Acts", route: "#/acts", heading: "Public and Special Acts" }
+  { name: "Public and Special Acts", route: "#/acts", heading: "Public and Special Acts" },
+  { name: "Public Act text", route: "#/acts/2026-regular/pa-83?q=firefighters", heading: "P.A. 26-83" }
 ];
 
 for (const { name, route, heading } of representativeRoutes) {

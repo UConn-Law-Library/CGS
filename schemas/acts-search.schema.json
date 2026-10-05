@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://uconn-law-library.github.io/CGS/schemas/acts-search.schema.json",
+  "title": "CGS word index of the act texts in one legislative session",
+  "description": "terms maps each lowercased token to the ascending indexes, in acts, of the acts whose text contains it.",
+  "type": "object",
+  "required": ["schemaVersion", "session", "acts", "terms"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "session": { "type": "string", "pattern": "^\\d{4}-[a-z0-9-]+$" },
+    "acts": { "type": "array", "uniqueItems": true, "items": { "type": "string", "pattern": "^(?:pa|sa)-\\d{4}-[a-z0-9-]+-\\d+$" } },
+    "terms": { "type": "object" }
+  }
+}

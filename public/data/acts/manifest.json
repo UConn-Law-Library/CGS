@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-10-05T16:19:16Z",
+  "source": {
+    "publisher": "Connecticut General Assembly",
+    "name": "Public and Special Acts",
+    "url": "https://www.cga.ct.gov/asp/CGATodayFileCopies/CGAAllPA.asp"
+  },
+  "counts": {
+    "sessions": 1,
+    "acts": 185,
+    "publicActs": 151,
+    "specialActs": 34
+  },
+  "sessions": [
+    {
+      "id": "2026-regular",
+      "year": 2026,
+      "name": "2026 Regular Session",
+      "updatedAt": "2026-10-05T16:19:16Z",
+      "path": "2026-regular.json",
+      "bytes": 91194,
+      "sha256": "3550dd0411f6693700471d4b58924c419f2feebbfc740cc1092b3b12cb126986",
+      "counts": {
+        "acts": 185,
+        "publicActs": 151,
+        "specialActs": 34
+      }
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "2026-regular.json",
+      "bytes": 91194,
+      "sha256": "3550dd0411f6693700471d4b58924c419f2feebbfc740cc1092b3b12cb126986"
+    }
+  ]
+}

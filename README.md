@@ -51,6 +51,7 @@ For a reproducible build, pass `--generated-at 2026-07-13T13:33:18Z`. Otherwise 
 - `public/data/secondary/infractions/`: optional title-sharded Judicial Branch Chart A entries and Chart B fee rules.
 - `public/data/secondary/statutes-index/`: optional size-bounded LCO subject-index shards.
 - `public/data/secondary/links/`: derived statute-to-infraction and statute-to-index reverse links.
+- `public/data/acts/`: per-session lists of Public and Special Acts not yet reflected in the statute text.
 - `schemas/*.schema.json`: the canonical JSON Schema contracts.
 
 The checked-in `public/data/` contains the complete production statute data: 81 titles, 1,141 chapters, and 33,013 provisions, regenerated from the reviewed replacement crawler on July 14, 2026. The separately published 2026 supplement adds 1,952 overlay records spanning 1,967 citations without changing those base chapter artifacts. The much smaller `fixtures/legacy/` dataset remains available for isolated importer tests and local pipeline experiments.
@@ -163,6 +164,10 @@ The reviewed 2026 edition is published under `public/data/supplements/2026`: 1,6
 ## Infractions and General Statutes index
 
 The Phase 7 pipeline migrates the legacy PDF geometry parsers into deterministic, content-addressed ingestion for the official Judicial Branch infractions schedule (Charts A and B) and the three-volume LCO subject index. The reviewed artifacts are published under `public/data/secondary`. Statute pages lazily display linked schedule entries, fee-rule roles, and subject-index records; `#/index` provides alphabetical browsing and letter-scoped client search without a database. Each letter page lists its subject headings as collapsed disclosure tabs whose indented subheadings expand in place, and structured `SEE` references link directly to and open their referenced index heading. Phase 9 adds a weekly, manually dispatchable `Review secondary sources refresh` workflow that retains source PDFs and opens a draft PR only after validation, a bounded diff, and the committed safety policy pass. See [docs/secondary-sources.md](docs/secondary-sources.md) for commands, provenance, artifact contracts, and the refresh runbook.
+
+## Public and Special Acts
+
+`#/acts` lists the acts passed by the General Assembly that the statute text does not yet reflect, with links to each act and its bill status page. A weekly, manually dispatchable `Review acts refresh` workflow captures the CGA list and opens a draft PR when it changes. Published sessions are kept after the CGA page moves on to a new session, and are retired by hand once the statute text includes them. See [docs/acts.md](docs/acts.md).
 
 ## Mobile application interface
 

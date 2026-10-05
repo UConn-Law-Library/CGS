@@ -1,0 +1,142 @@
+name: Review acts refresh
+
+on:
+  schedule:
+    - cron: "29 11 * * 2"
+  workflow_dispatch:
+    inputs:
+      create_pull_request:
+        description: Create a draft pull request (requires main; disable to preview a branch)
+        required: true
+        default: true
+        type: boolean
+
+permissions:
+  actions: write
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: acts-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    defaults:
+      run:
+        shell: bash
+    env:
+      REFRESH_ROOT: .crawl/acts-refresh
+      SNAPSHOT_DIR: .crawl/acts-refresh/snapshots
+      REPORT_DIR: .crawl/acts-refresh/reports
+      CREATE_PULL_REQUEST: ${{ github.event_name == 'schedule' || inputs.create_pull_request }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Require main for publication
+        run: |
+          if [ "$GITHUB_REF" != "refs/heads/main" ] && [ "$CREATE_PULL_REQUEST" = "true" ]; then
+            echo "Publishing acts refreshes requires main. Disable create_pull_request to preview a branch." >&2
+            exit 1
+          fi
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: python -m pip install -r crawler/requirements.txt
+      - run: npm ci
+
+      # Published sessions are kept when the page moves to a new session, and an
+      # act that disappears from the page fails the run for manual review.
+      - name: Acquire the Public and Special Acts list
+        run: |
+          set -o pipefail
+          mkdir -p "$REPORT_DIR"
+          python -m crawler.cgs_crawler.acts \
+            --output public/data/acts \
+            --snapshots "$SNAPSHOT_DIR" \
+            --no-ssl-verify \
+            2>&1 | tee "$REPORT_DIR/acquisition.log"
+
+      - name: Summarize changes
+        id: review
+        run: |
+          if git diff --quiet -- public/data/acts && [ -z "$(git ls-files --others --exclude-standard -- public/data/acts)" ]; then
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
+            echo "The Public and Special Acts list is unchanged." > "$REPORT_DIR/refresh-summary.md"
+          else
+            echo "has_changes=true" >> "$GITHUB_OUTPUT"
+            node --input-type=module -e '
+              import { readFileSync } from "node:fs";
+              import { execFileSync } from "node:child_process";
+              let before = { sessions: [] };
+              try { before = JSON.parse(execFileSync("git", ["show", "HEAD:public/data/acts/manifest.json"], { encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] })); } catch {}
+              const after = JSON.parse(readFileSync("public/data/acts/manifest.json", "utf8"));
+              const rows = after.sessions.map((session) => {
+                const previous = before.sessions.find((entry) => entry.id === session.id)?.counts ?? { acts: 0, publicActs: 0, specialActs: 0 };
+                return `| ${session.name} | ${previous.acts} | ${session.counts.acts} | ${session.counts.publicActs} | ${session.counts.specialActs} |`;
+              });
+              const retired = before.sessions.filter((entry) => !after.sessions.some((session) => session.id === entry.id)).map((entry) => `- Retired ${entry.name}`);
+              console.log(["## Public and Special Acts", "", "| Session | Before | After | Public | Special |", "| --- | ---: | ---: | ---: | ---: |", ...rows, "", ...retired].join("\n"));
+            ' > "$REPORT_DIR/refresh-summary.md"
+          fi
+
+      - name: Publish review summary
+        if: always()
+        run: |
+          if [ -f "$REPORT_DIR/refresh-summary.md" ]; then
+            cat "$REPORT_DIR/refresh-summary.md" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "Acts acquisition failed. See the acquisition log and captured page in this run's artifacts. No data was published." >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Verify the candidate data
+        if: steps.review.outputs.has_changes == 'true'
+        run: npm run check
+
+      - name: Create draft refresh pull request
+        if: steps.review.outputs.has_changes == 'true' && env.CREATE_PULL_REQUEST == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          {
+            echo "# Automated Public and Special Acts refresh"
+            echo
+            echo "This draft was produced by the acts refresh workflow. It never writes directly to main."
+            echo
+            cat "$REPORT_DIR/refresh-summary.md"
+            echo
+            echo "The captured page is retained on the [workflow run]($GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)."
+            echo
+            echo "Spot-check new acts against the official list before merging."
+          } > "$REPORT_DIR/pull-request.md"
+          branch="automation/acts-refresh-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$branch"
+          git add -- public/data/acts
+          git commit -m "Refresh Public and Special Acts $(date -u +%Y-%m-%d)"
+          git push origin "$branch"
+          pr_url="$(gh pr create \
+            --base main \
+            --head "$branch" \
+            --draft \
+            --title "Refresh Public and Special Acts $(date -u +%Y-%m-%d)" \
+            --body-file "$REPORT_DIR/pull-request.md")"
+          gh workflow run ci.yml --ref "$branch"
+          echo "Created draft refresh PR: $pr_url" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload refresh reports and captured page
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: acts-refresh-${{ github.run_id }}-${{ github.run_attempt }}
+          path: .crawl/acts-refresh/
+          if-no-files-found: ignore
+          include-hidden-files: true
+          retention-days: 30

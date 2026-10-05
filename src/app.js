@@ -1,7 +1,9 @@
 import { explainSearchQuery, normalizeSearchOptions, SearchRepository } from "./search.js";
 import { applyChapterOverlay, mergeSupplementTitleChapters, SupplementRepository } from "./supplements.js";
 import { ProgressiveSearchClient } from "./search-client.js";
+import { ACT_SORTS, ACT_TYPES, ActsRepository, actsCountLabel, actsCurrencyNote, filterActs, normalizeActsOptions, renderActsTable } from "./acts.js";
 import {
+  actsRouteHref,
   findChapter,
   findSection,
   findTitle,
@@ -61,6 +63,7 @@ const supplementRepository = new SupplementRepository();
 const repository = new SearchRepository({ supplementRepository });
 const searchClient = new ProgressiveSearchClient({ repository });
 const secondaryRepository = new SecondarySourceRepository();
+const actsRepository = new ActsRepository();
 const deviceState = new DeviceState();
 const navigationHistory = new NavigationHistory();
 let lastRecordedPage = null;
@@ -93,6 +96,7 @@ async function getJson(path) {
 function activeDestination(route = parseRoute(location)) {
   if (route.kind === "index") return "index";
   if (route.kind === "infractions") return "infractions";
+  if (route.kind === "acts") return "acts";
   if (route.kind === "bookmarks") return "bookmarks";
   if (route.kind === "about") return "settings";
   if (route.kind === "history") return "history";
@@ -240,7 +244,7 @@ function settingsPanel() {
     <a class="settings-action" href="#/about"><strong class="settings-about-title">About this app</strong> <small>Sources, coverage, and project information</small></a>
     <details class="install-app-menu"><summary>Install App</summary>
     <button type="button" class="settings-action" data-install-app${pwaState.installed || !pwaState.installable ? " disabled" : ""}>Install app <small>${escapeHtml(installStatus(pwaState))}</small></button>
-    <button type="button" class="settings-action" data-download-offline${!pwaState.ready || pwaState.busy ? " disabled" : ""}><span data-offline-action-label>${pwaState.complete ? "Refresh offline data" : "Download for offline use"}</span><small>Statutes, supplements, search, index, and infractions</small></button>
+    <button type="button" class="settings-action" data-download-offline${!pwaState.ready || pwaState.busy ? " disabled" : ""}><span data-offline-action-label>${pwaState.complete ? "Refresh offline data" : "Download for offline use"}</span><small>Statutes, supplements, search, index, infractions, and acts</small></button>
     <progress class="offline-progress" data-pwa-progress value="${pwaState.cachedFiles}" max="${Math.max(1, pwaState.totalFiles)}"${!pwaState.busy || !pwaState.totalFiles ? " hidden" : ""}>Offline download progress</progress>
     <button type="button" class="settings-action" data-repair-offline${!pwaState.ready || pwaState.busy || !pwaState.complete ? " disabled" : ""}>Repair offline data <small>Download every file again and check for errors</small></button>
     <button type="button" class="settings-action" data-clear-offline${!pwaState.cachedFiles || pwaState.busy ? " disabled" : ""}>Remove offline data <small>Keep the installed app</small></button>
@@ -271,6 +275,7 @@ function siteHeader() {
         ${navLink({ href: "#/", id: "statutes", icon: "§", label: "Statutes" }, active)}
         ${navLink({ href: "#/index", id: "index", icon: "A–Z", label: "Index" }, active)}
         ${navLink({ href: "#/infractions", id: "infractions", icon: "⚖", label: "Infractions" }, active)}
+        ${navLink({ href: "#/acts", id: "acts", icon: "PA", label: "Acts" }, active)}
         ${navLink({ href: "#/bookmarks", id: "bookmarks", icon: "★", label: "Bookmarks", badge: bookmarkCount }, active)}
         <button type="button" data-open-settings aria-expanded="false"${active === "settings" ? ` aria-current="page"` : ""}><span aria-hidden="true">⚙</span><span>Settings</span></button>
       </nav>
@@ -822,12 +827,13 @@ async function renderHome(catalog) {
   const mainContent = `<main class="home-page application-main" id="main-content">
     <header class="home-intro">
       <h1>Connecticut General Statutes</h1>
-      <p>Browse and search the statutes, the official subject index, and the Judicial Branch infraction schedule. Save frequently used material on this device.</p>
+      <p>Browse and search the statutes, the official subject index, the Judicial Branch infraction schedule, and recent Public and Special Acts. Save frequently used material on this device.</p>
     </header>
     <section class="destination-grid" aria-label="Explore legal materials">
       <a href="${titlesRouteHref()}"><span aria-hidden="true">§</span><strong>Browse statutes</strong><small>Navigate by title, chapter, or section.</small></a>
       <a href="#/index"><span aria-hidden="true">A–Z</span><strong>Subject index</strong><small>Find statutes by topic in the official LCO index.</small></a>
       <a href="#/infractions"><span aria-hidden="true">⚖</span><strong>Infraction schedule</strong><small>Review violations, amounts, and linked statutes.</small></a>
+      <a href="#/acts"><span aria-hidden="true">PA</span><strong>Public and Special Acts</strong><small>See recent laws not yet reflected in the statute text.</small></a>
       <a href="#/bookmarks"><span aria-hidden="true">★</span><strong>Bookmarks</strong><small>Return to sections and infractions saved on this device.</small></a>
     </section>
     <section class="home-activity" aria-label="Your activity">
@@ -920,16 +926,18 @@ async function updateRefreshStatus(sequence, source) {
 }
 
 async function renderAbout(catalog, sequence) {
-  const [secondaryResult, supplementResult] = await Promise.allSettled([
+  const [secondaryResult, supplementResult, actsResult] = await Promise.allSettled([
     secondaryRepository.init(),
     (async () => {
       const edition = await supplementRepository.latestEdition();
       return edition ? { edition, manifest: await supplementRepository.loadEdition(edition.editionYear) } : null;
-    })()
+    })(),
+    actsRepository.manifest()
   ]);
   if (sequence !== renderSequence) return;
   const secondary = secondaryResult.status === "fulfilled" ? secondaryResult.value : null;
   const supplement = supplementResult.status === "fulfilled" ? supplementResult.value : null;
+  const acts = actsResult.status === "fulfilled" ? actsResult.value : null;
   const statuteDate = formatSnapshotDate(catalog.source?.retrievedAt ?? catalog.generatedAt);
   const indexSource = secondary?.index?.source ?? {};
   const infractionSource = secondary?.infractions?.source ?? {};
@@ -950,6 +958,15 @@ async function renderAbout(catalog, sequence) {
       details: [formatSnapshotDate(supplement.manifest.generatedAt) && `Captured ${formatSnapshotDate(supplement.manifest.generatedAt)}`, `${supplement.manifest.counts.sections.toLocaleString()} sections`],
       caveat: `Read the supplement together with the General Statutes revised to January 1, ${supplement.edition.editionYear - 1}.`,
       url: supplement.manifest.source?.url ?? `https://www.cga.ct.gov/${supplement.edition.editionYear}/sup/titles.htm`
+    })] : []),
+    ...(acts?.sessions.length ? [aboutSourceCard({
+      publisher: acts.source.publisher,
+      name: acts.source.name,
+      refresh: "acts",
+      description: "Acts passed by the General Assembly, with links to each act and its bill history, for laws not yet reflected in the statute text.",
+      details: [`Updated ${formatSnapshotDate(acts.generatedAt)}`, ...acts.sessions.map((session) => `${session.name}: ${actsCountLabel(session.counts)}`)],
+      caveat: "Public Acts may take effect before revised statute text is published. Check each act's effective dates.",
+      url: acts.source.url
     })] : []),
     aboutSourceCard({
       publisher: indexSource.publisher ?? "Connecticut General Assembly, Legislative Commissioners' Office",
@@ -981,7 +998,7 @@ async function renderAbout(catalog, sequence) {
     <header class="about-intro">
       <p class="eyebrow">About this app</p>
       <h1>Connecticut General Statutes Explorer</h1>
-      <p>The UConn Law Library provides this mobile-first tool for searching and browsing the Connecticut General Statutes, the official subject index, and the Judicial Branch infraction schedule.</p>
+      <p>The UConn Law Library provides this mobile-first tool for searching and browsing the Connecticut General Statutes, the official subject index, the Judicial Branch infraction schedule, and recent Public and Special Acts.</p>
       <p class="about-version">Release <a href="https://github.com/UConn-Law-Library/CGS/releases/tag/${encodeURIComponent(APP_VERSION)}" target="_blank" rel="noopener">${escapeHtml(APP_VERSION)} <span aria-hidden="true">↗</span></a></p>
       <p><a class="primary-link" href="https://library.law.uconn.edu/" target="_blank" rel="noopener">Visit the UConn Law Library Website <span aria-hidden="true">↗</span></a></p>
     </header>
@@ -1008,6 +1025,7 @@ async function renderAbout(catalog, sequence) {
   </main><footer>UConn Law Library · Unofficial access copy.</footer>`;
   void updateRefreshStatus(sequence, "corpus");
   void updateRefreshStatus(sequence, "secondary");
+  void updateRefreshStatus(sequence, "acts");
   window.scrollTo({ top: 0 });
 }
 
@@ -1554,6 +1572,53 @@ async function renderInfractions(route, sequence) {
   window.scrollTo({ top: 0 });
 }
 
+async function renderActs(route, sequence) {
+  const options = normalizeActsOptions(route);
+  const [{ manifest, entry, acts }, supplementEdition] = await Promise.all([
+    actsRepository.loadSession(options.session),
+    supplementRepository.latestEdition().catch(() => null)
+  ]);
+  if (sequence !== renderSequence) return;
+  if (options.session && !entry) return renderNotFound("That legislative session is not in the acts list.");
+  setDocumentTitle("Public and Special Acts");
+  const officialList = `<a href="${escapeHtml(manifest.source.url)}" target="_blank" rel="noopener">Official list <span aria-hidden="true">↗</span></a>`;
+  if (!entry) {
+    app.innerHTML = `${siteHeader()}<main class="acts-page browse-page" id="main-content">
+      <header class="index-intro"><p class="eyebrow">${escapeHtml(manifest.source.publisher)}</p><h1>Public and Special Acts</h1></header>
+      <p class="empty-state" role="status">No acts have been published yet. ${officialList}</p>
+    </main>`;
+    return;
+  }
+  const shown = filterActs(acts, options);
+  const sessionField = manifest.sessions.length > 1
+    ? `<div class="search-field"><label for="acts-session">Session</label><select id="acts-session" name="session">${manifest.sessions.map((session) => `<option value="${escapeHtml(session.id)}"${selectAttribute(session.id, entry.id)}>${escapeHtml(session.name)}</option>`).join("")}</select></div>`
+    : "";
+  app.innerHTML = `${siteHeader()}<main class="acts-page browse-page" id="main-content">
+    <header class="index-intro">
+      <p class="eyebrow">${escapeHtml(manifest.source.publisher)}</p>
+      <h1>Public and Special Acts</h1>
+      <p>${escapeHtml(actsCurrencyNote(entry, supplementEdition?.editionYear))}</p>
+      <p class="source-note">${escapeHtml(entry.name)} · ${escapeHtml(actsCountLabel(entry.counts))} · Updated ${escapeHtml(formatSnapshotDate(entry.updatedAt))} · ${officialList}</p>
+    </header>
+    <aside class="acts-guidance" aria-label="Reading these acts">
+      <p><strong>Public Acts</strong> change the General Statutes. Until revised statute text is published, read an act together with the sections it amends, and check the effective date of each section.</p>
+      <p><strong>Special Acts</strong> apply to particular people, places, or programs and are not added to the General Statutes.</p>
+    </aside>
+    <form class="search-refine search-v2-refine acts-filter${sessionField ? " acts-filter-sessions" : ""}" data-acts-filter role="search" aria-label="Filter acts">
+      <div class="search-primary-controls">
+        <div class="search-field"><label for="acts-query">Search acts</label><input id="acts-query" name="query" type="search" value="${escapeHtml(options.query ?? "")}" placeholder="Title, act, or bill number" autocomplete="off"></div>
+        ${sessionField}
+        <div class="search-field"><label for="acts-type">Type</label><select id="acts-type" name="type"><option value="">All acts</option>${Object.entries(ACT_TYPES).map(([value, label]) => `<option value="${value}"${selectAttribute(value, options.type)}>${label}</option>`).join("")}</select></div>
+        <div class="search-field"><label for="acts-sort">Sort</label><select id="acts-sort" name="sort">${Object.entries(ACT_SORTS).map(([value, label]) => `<option value="${value}"${selectAttribute(value, options.sort)}>${label}</option>`).join("")}</select></div>
+        <button type="submit">Apply</button>
+      </div>
+    </form>
+    <p class="note" role="status">${shown.length === acts.length ? `Showing all ${acts.length.toLocaleString()} acts.` : `Showing ${shown.length.toLocaleString()} of ${acts.length.toLocaleString()} acts.`}${options.query || options.type ? ` <a href="${escapeHtml(actsRouteHref({ session: options.session }))}">Clear filters</a>` : ""}</p>
+    ${shown.length ? renderActsTable(shown, `${entry.name} acts`) : `<p class="empty-state">No acts match these filters.</p>`}
+  </main><footer>Unofficial access copy. Verify act text and effective dates with the Connecticut General Assembly.</footer>`;
+  window.scrollTo({ top: 0 });
+}
+
 function renderBookmarks() {
   const bookmarks = deviceState.bookmarks();
   setDocumentTitle("Bookmarks");
@@ -1682,6 +1747,7 @@ async function renderCurrentRoute() {
     if (route.kind === "not-found") return renderNotFound();
     if (route.kind === "search") return await renderSearchPage(catalog, route);
     if (route.kind === "infractions") return await renderInfractions(route, sequence);
+    if (route.kind === "acts") return await renderActs(route, sequence);
     if (route.kind === "bookmarks") return renderBookmarks();
     if (route.kind === "history") return renderHistory();
     if (route.kind === "about") return await renderAbout(catalog, sequence);
@@ -2171,6 +2237,19 @@ document.addEventListener("submit", async (event) => {
     const route = parseRoute(location);
     const within = String(new FormData(form).get("within") ?? "").trim();
     const href = searchRouteHref(route.query, { ...searchRouteOptions(route), within: within || null });
+    if (location.hash === href) await renderCurrentRoute();
+    else location.hash = href;
+    return;
+  }
+  if (form.matches("[data-acts-filter]")) {
+    event.preventDefault();
+    const values = new FormData(form);
+    const href = actsRouteHref({
+      session: values.get("session") || parseRoute(location).session,
+      type: values.get("type") || null,
+      query: String(values.get("query") ?? "").trim() || null,
+      sort: values.get("sort") || null
+    });
     if (location.hash === href) await renderCurrentRoute();
     else location.hash = href;
     return;

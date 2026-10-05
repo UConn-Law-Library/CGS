@@ -4,6 +4,7 @@ import path from "node:path";
 
 export const shellInputs = Object.freeze([
   "404.html",
+  "acts.js",
   "app.js",
   "device-state.js",
   "navigation-history.js",

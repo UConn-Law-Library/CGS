@@ -58,6 +58,7 @@ const SHELL_FILES = [
   "./search-worker.js",
   "./secondary-sources.js",
   "./secondary-ui.js",
+  "./acts.js",
   "./supplement-overlay.js",
   "./supplements.js",
   "./data/catalog.json"
@@ -171,10 +172,11 @@ function artifactTask(prefix, artifact) {
   };
 }
 
-function offlineArtifacts(baseManifest, secondaryManifest, searchV2Manifest, supplementArtifacts) {
+function offlineArtifacts(baseManifest, secondaryManifest, searchV2Manifest, supplementArtifacts, actsManifest) {
   const tasks = [
     ...baseManifest.artifacts.map((artifact) => artifactTask("./data/", artifact)),
     ...secondaryManifest.artifacts.map((artifact) => artifactTask("./data/secondary/", artifact)),
+    ...actsManifest.artifacts.map((artifact) => artifactTask("./data/acts/", artifact)),
     ...searchV2Manifest.shards.map((artifact) => artifactTask("./data/search-v2/", artifact)),
     ...supplementArtifacts
   ];
@@ -238,15 +240,16 @@ async function cacheOfflineData({ port }) {
   const stagingName = `${OFFLINE_CACHE_PREFIX}${crypto.randomUUID()}`;
   const cache = await caches.open(stagingName);
   try {
-    const [baseManifest, secondaryManifest, searchV2Manifest, supplementIndex] = await Promise.all([
+    const [baseManifest, secondaryManifest, searchV2Manifest, supplementIndex, actsManifest] = await Promise.all([
       fetchJsonIntoCache("./data/manifest.json", cache),
       fetchJsonIntoCache("./data/secondary/manifest.json", cache),
       fetchJsonIntoCache("./data/search-v2/manifest.json", cache),
-      fetchJsonIntoCache("./data/supplements/manifest.json", cache)
+      fetchJsonIntoCache("./data/supplements/manifest.json", cache),
+      fetchJsonIntoCache("./data/acts/manifest.json", cache)
     ]);
     const supplementData = await supplementOfflineData(supplementIndex, cache);
-    const artifacts = offlineArtifacts(baseManifest, secondaryManifest, searchV2Manifest, supplementData.artifacts);
-    let completed = 4 + supplementData.cachedManifests;
+    const artifacts = offlineArtifacts(baseManifest, secondaryManifest, searchV2Manifest, supplementData.artifacts, actsManifest);
+    let completed = 5 + supplementData.cachedManifests;
     let cursor = 0;
     let verifiedBytes = 0;
     const pending = artifacts;

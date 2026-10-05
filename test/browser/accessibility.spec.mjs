@@ -7,7 +7,8 @@ const representativeRoutes = [
   { name: "Statute reader", route: "#/t/17b/c/319v/s/17b-238", heading: /Sec\. 17b-238/ },
   { name: "Search results", route: "#/search?q=%22Effective%20January%22", heading: "Search" },
   { name: "Statutes index", route: "#/index", heading: "Index to the General Statutes" },
-  { name: "Infractions", route: "#/infractions", heading: "Infractions and violations" }
+  { name: "Infractions", route: "#/infractions", heading: "Infractions and violations" },
+  { name: "Public and Special Acts", route: "#/acts", heading: "Public and Special Acts" }
 ];
 
 for (const { name, route, heading } of representativeRoutes) {

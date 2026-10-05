@@ -19,6 +19,19 @@ for (const { name, route, heading } of representativeRoutes) {
   });
 }
 
+test.describe("dark color scheme", () => {
+  test.use({ colorScheme: "dark" });
+
+  for (const { name, route, heading } of representativeRoutes) {
+    test(`${name} has no serious or critical WCAG violations`, async ({ page }) => {
+      await openApp(page, route);
+      await expect(page.getByRole("heading", { level: 1, name: heading })).toBeVisible();
+      await expect(page.locator("html")).toHaveCSS("color-scheme", "dark");
+      await expectNoHighImpactAccessibilityViolations(page);
+    });
+  }
+});
+
 test("Settings remains accessible while expanded", async ({ page }) => {
   await openApp(page);
   const settingsButton = page.getByRole("button", { name: "Settings" });

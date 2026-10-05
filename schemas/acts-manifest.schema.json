@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://uconn-law-library.github.io/CGS/schemas/acts-manifest.schema.json",
+  "title": "CGS Public and Special Acts manifest",
+  "type": "object",
+  "required": ["schemaVersion", "generatedAt", "source", "counts", "sessions", "artifacts"],
+  "additionalProperties": false,
+  "$defs": {
+    "counts": {
+      "type": "object",
+      "required": ["acts", "publicActs", "specialActs"],
+      "additionalProperties": false,
+      "properties": {
+        "acts": { "type": "integer", "minimum": 0 },
+        "publicActs": { "type": "integer", "minimum": 0 },
+        "specialActs": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "artifact": {
+      "type": "object",
+      "required": ["path", "bytes", "sha256"],
+      "additionalProperties": false,
+      "properties": {
+        "path": { "type": "string", "pattern": "^[a-z0-9-]+\\.json$" },
+        "bytes": { "type": "integer", "minimum": 1 },
+        "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+      }
+    }
+  },
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "source": {
+      "type": "object",
+      "required": ["publisher", "name", "url"],
+      "additionalProperties": false,
+      "properties": {
+        "publisher": { "type": "string", "minLength": 1 },
+        "name": { "type": "string", "minLength": 1 },
+        "url": { "type": "string", "format": "uri" }
+      }
+    },
+    "counts": {
+      "type": "object",
+      "required": ["sessions", "acts", "publicActs", "specialActs"],
+      "additionalProperties": false,
+      "properties": {
+        "sessions": { "type": "integer", "minimum": 0 },
+        "acts": { "type": "integer", "minimum": 0 },
+        "publicActs": { "type": "integer", "minimum": 0 },
+        "specialActs": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "sessions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "year", "name", "updatedAt", "path", "bytes", "sha256", "counts"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "pattern": "^\\d{4}-[a-z0-9-]+$" },
+          "year": { "type": "integer", "minimum": 1900 },
+          "name": { "type": "string", "minLength": 1 },
+          "updatedAt": { "type": "string", "format": "date-time" },
+          "path": { "type": "string", "pattern": "^[a-z0-9-]+\\.json$" },
+          "bytes": { "type": "integer", "minimum": 1 },
+          "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+          "counts": { "$ref": "#/$defs/counts" }
+        }
+      }
+    },
+    "artifacts": { "type": "array", "items": { "$ref": "#/$defs/artifact" } }
+  }
+}

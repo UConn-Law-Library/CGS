@@ -3,6 +3,7 @@ import path from "node:path";
 import { validateCorpus } from "./lib/validator.mjs";
 import { validateSupplements } from "./lib/supplement-validator.mjs";
 import { validateSecondarySources } from "./lib/secondary-validator.mjs";
+import { validateActs } from "./lib/acts-validator.mjs";
 
 function valueAfter(flag) {
   const index = process.argv.indexOf(flag);
@@ -26,12 +27,13 @@ try {
     baseDataDir: dataDir,
     schemaDir
   });
-  const errors = [...result.errors, ...supplements.errors, ...secondary.errors];
+  const acts = await validateActs({ actsDir: path.join(dataDir, "acts"), schemaDir });
+  const errors = [...result.errors, ...supplements.errors, ...secondary.errors, ...acts.errors];
   if (errors.length) {
     console.error(errors.map((error) => `- ${error}`).join("\n"));
     process.exitCode = 1;
   } else {
-    console.log(`Validated ${result.counts.titles} titles, ${result.counts.chapters} chapters, ${result.counts.sections} provisions, ${supplements.editions} supplement editions, ${secondary.counts.infractions} infractions, and ${secondary.counts.indexHeadings} index headings.`);
+    console.log(`Validated ${result.counts.titles} titles, ${result.counts.chapters} chapters, ${result.counts.sections} provisions, ${supplements.editions} supplement editions, ${secondary.counts.infractions} infractions, ${secondary.counts.indexHeadings} index headings, and ${acts.counts.acts} Public and Special Acts.`);
   }
 } catch (error) {
   console.error(error.stack ?? error.message);

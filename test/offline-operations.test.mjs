@@ -33,7 +33,8 @@ async function offlineWorker() {
     ["data/manifest.json", { schemaVersion: "1.0.0", generatedAt: "2026-01-01", artifacts: [artifact] }],
     ["data/secondary/manifest.json", { artifacts: [] }],
     ["data/search-v2/manifest.json", { shards: [] }],
-    ["data/supplements/manifest.json", { editions: [] }]
+    ["data/supplements/manifest.json", { editions: [] }],
+    ["data/acts/manifest.json", { artifacts: [] }]
   ]);
   let manifestRequests = 0;
   let artifactFetch = async () => new Response(content);

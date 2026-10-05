@@ -81,6 +81,15 @@ export function infractionsRouteHref(category = null, { entry = null, query = nu
   return route;
 }
 
+export function actsRouteHref({ session = null, type = null, query = null, sort = null } = {}) {
+  const parameters = new URLSearchParams();
+  if (session) parameters.set("session", session);
+  if (type) parameters.set("type", type);
+  if (query) parameters.set("q", query);
+  if (sort && sort !== "newest") parameters.set("sort", sort);
+  return parameters.size ? `#/acts?${parameters.toString().replaceAll("+", "%20")}` : "#/acts";
+}
+
 export function parseRoute({ hash = "", search = "" } = {}) {
   const query = new URLSearchParams(search);
   if ((!hash || hash === "#" || hash === "#/") && query.has("chapter")) {
@@ -122,6 +131,17 @@ export function parseRoute({ hash = "", search = "" } = {}) {
       return { kind: "infractions", category: parts[1], entry: parts[3], query: queryValue };
     }
     return { kind: "not-found" };
+  }
+
+  if (parts[0] === "acts" && parts.length === 1) {
+    const parameters = new URLSearchParams(hashQuery);
+    return {
+      kind: "acts",
+      session: parameters.get("session") || null,
+      type: parameters.get("type") || null,
+      query: parameters.get("q") || null,
+      sort: parameters.get("sort") || null
+    };
   }
 
   if (parts[0] === "bookmarks" && parts.length === 1) return { kind: "bookmarks" };

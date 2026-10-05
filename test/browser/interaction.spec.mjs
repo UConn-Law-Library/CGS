@@ -62,9 +62,9 @@ test("Home exposes the core application destinations", async ({ page }) => {
   await openApp(page);
   await expect(page.locator(".home-intro")).toMatchAriaSnapshot(`
     - heading "Connecticut General Statutes" [level=1]
-    - paragraph: Browse and search the statutes, the official subject index, and the Judicial Branch infraction schedule. Save frequently used material on this device.
+    - paragraph: Browse and search the statutes, the official subject index, the Judicial Branch infraction schedule, and recent Public and Special Acts. Save frequently used material on this device.
   `);
-  for (const name of ["Statutes", "Index", "Infractions", "Bookmarks", "Settings"]) {
+  for (const name of ["Statutes", "Index", "Infractions", "Acts", "Bookmarks", "Settings"]) {
     await expect(page.getByRole(name === "Settings" ? "button" : "link", { name: new RegExp(name) }).first()).toBeVisible();
   }
   const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);

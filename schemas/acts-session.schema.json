@@ -32,7 +32,18 @@
           "title": { "type": "string", "minLength": 1 },
           "bill": { "type": "string", "pattern": "^(?:HB|SB) \\d+$" },
           "billUrl": { "type": "string", "format": "uri", "pattern": "^https://www\\.cga\\.ct\\.gov/" },
-          "url": { "type": "string", "format": "uri", "pattern": "^https://www\\.cga\\.ct\\.gov/" }
+          "url": { "type": "string", "format": "uri", "pattern": "^https://www\\.cga\\.ct\\.gov/" },
+          "text": {
+            "type": "object",
+            "required": ["path", "bytes", "sha256", "pages"],
+            "additionalProperties": false,
+            "properties": {
+              "path": { "type": "string", "pattern": "^\\d{4}-[a-z0-9-]+/text/(?:pa|sa)-\\d+\\.json$" },
+              "bytes": { "type": "integer", "minimum": 1 },
+              "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+              "pages": { "type": "integer", "minimum": 1 }
+            }
+          }
         }
       }
     }

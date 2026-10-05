@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://uconn-law-library.github.io/CGS/schemas/acts-text.schema.json",
+  "title": "CGS text of one Public or Special Act, extracted from the CGA PDF",
+  "type": "object",
+  "required": ["schemaVersion", "id", "citation", "extractorVersion", "source", "front", "sections", "blocks"],
+  "additionalProperties": false,
+  "$defs": {
+    "run": {
+      "description": "Plain text, or {\"ins\": text} for language the act adds (underlined in the PDF).",
+      "type": ["string", "object"],
+      "minLength": 1,
+      "required": ["ins"],
+      "additionalProperties": false,
+      "properties": {
+        "ins": { "type": "string", "minLength": 1 }
+      }
+    },
+    "runs": { "type": "array", "items": { "$ref": "#/$defs/run" } }
+  },
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "id": { "type": "string", "pattern": "^(?:pa|sa)-\\d{4}-[a-z0-9-]+-\\d+$" },
+    "citation": { "type": "string", "pattern": "^(?:P|S)\\.A\\. \\d{2}-\\d+(?: \\(.+\\))?$" },
+    "extractorVersion": { "type": "integer", "minimum": 1 },
+    "source": {
+      "type": "object",
+      "required": ["url", "bytes", "sha256", "pages"],
+      "additionalProperties": false,
+      "properties": {
+        "url": { "type": "string", "format": "uri", "pattern": "^https://www\\.cga\\.ct\\.gov/" },
+        "bytes": { "type": "integer", "minimum": 1 },
+        "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        "pages": { "type": "integer", "minimum": 1 },
+        "lastModified": { "type": "string", "minLength": 1 }
+      }
+    },
+    "front": {
+      "type": "object",
+      "required": ["bill", "act", "title"],
+      "additionalProperties": false,
+      "properties": {
+        "notice": { "type": "string", "minLength": 1 },
+        "bill": { "type": "string", "minLength": 1 },
+        "act": { "type": "string", "pattern": "^(?:Public|Special) Act No\\. \\d+-\\d+$" },
+        "title": { "type": "string", "minLength": 1 }
+      }
+    },
+    "approved": { "type": "string", "minLength": 1 },
+    "sections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["number", "anchor"],
+        "additionalProperties": false,
+        "properties": {
+          "number": { "type": "string", "pattern": "^\\d+$" },
+          "anchor": { "type": "string", "pattern": "^sec-\\d+$" },
+          "effective": { "type": "string", "pattern": "^Effective " }
+        }
+      }
+    },
+    "blocks": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["type", "page"],
+        "additionalProperties": false,
+        "properties": {
+          "type": { "enum": ["p", "table", "action"] },
+          "page": { "type": "integer", "minimum": 1 },
+          "anchor": { "type": "string", "pattern": "^sec-\\d+$" },
+          "section": { "type": "string", "pattern": "^\\d+$" },
+          "runs": { "$ref": "#/$defs/runs" },
+          "rows": { "type": "array", "minItems": 1, "items": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/runs" } } }
+        }
+      }
+    }
+  }
+}

@@ -40,6 +40,31 @@ test("Public Act references link to CGA from statute text and reference notes", 
   await expect(notes.getByRole("link", { name: "88-192", exact: true })).toHaveCount(0);
 });
 
+test("act text search opens the act with matches highlighted, sections, and statute links", async ({ page }) => {
+  await openApp(page, "#/acts");
+  await page.getByLabel("Search acts").fill("reverse vending machine");
+  await page.getByRole("button", { name: "Apply" }).click();
+  const row = page.getByRole("row").filter({ hasText: "P.A. 26-2" });
+  await expect(row.getByText("Search words appear in the act's text")).toBeVisible();
+  await row.getByRole("link", { name: /REDEMPTION OF OUT-OF-STATE BEVERAGE CONTAINERS/ }).click();
+  await expect(page).toHaveURL(/#\/acts\/2026-regular\/pa-2\?q=reverse%20vending%20machine$/);
+  await expect(page.getByRole("heading", { level: 1, name: "P.A. 26-2" })).toBeVisible();
+  await expect(page.getByRole("status").filter({ hasText: /matches for “reverse vending machine” highlighted/ })).toBeVisible();
+  const text = page.locator("[data-act-text]");
+  await expect(text.locator("mark").first()).toBeInViewport();
+  await expect(text.locator("ins").first()).toBeVisible();
+  await expect(page.getByRole("link", { name: "Official PDF" })).toHaveAttribute("href", /2026PA-00002-R00SB-00299-PA\.pdf$/);
+
+  await page.locator(".act-sections").getByRole("link", { name: "Sec. 3", exact: true }).click();
+  await expect(page).toHaveURL(/\?section=3&q=/);
+  await expect(page.locator("#sec-3")).toBeFocused();
+  await expect(page.locator("#sec-3")).toBeInViewport();
+
+  await page.locator("#sec-1").getByRole("link", { name: "22a-245", exact: true }).click();
+  await expect(page).toHaveURL(/#\/t\/22a\/c\/446d\/s\/22a-245$/);
+  await expect(page.getByRole("heading", { level: 1, name: /Sec\. 22a-245\./ })).toBeVisible();
+});
+
 test("abbreviated See references in 2-71h link to the referenced statutes", async ({ page }) => {
   await openApp(page, "#/t/02/c/018a/s/2-71h");
   const statute = page.locator("article.provision .statute-text");

@@ -8,12 +8,13 @@
   "$defs": {
     "counts": {
       "type": "object",
-      "required": ["acts", "publicActs", "specialActs"],
+      "required": ["acts", "publicActs", "specialActs", "textActs"],
       "additionalProperties": false,
       "properties": {
         "acts": { "type": "integer", "minimum": 0 },
         "publicActs": { "type": "integer", "minimum": 0 },
-        "specialActs": { "type": "integer", "minimum": 0 }
+        "specialActs": { "type": "integer", "minimum": 0 },
+        "textActs": { "type": "integer", "minimum": 0 }
       }
     },
     "artifact": {
@@ -21,7 +22,7 @@
       "required": ["path", "bytes", "sha256"],
       "additionalProperties": false,
       "properties": {
-        "path": { "type": "string", "pattern": "^[a-z0-9-]+\\.json$" },
+        "path": { "type": "string", "pattern": "^[a-z0-9-]+(?:/[a-z0-9-]+)*\\.json$" },
         "bytes": { "type": "integer", "minimum": 1 },
         "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
       }
@@ -42,13 +43,14 @@
     },
     "counts": {
       "type": "object",
-      "required": ["sessions", "acts", "publicActs", "specialActs"],
+      "required": ["sessions", "acts", "publicActs", "specialActs", "textActs"],
       "additionalProperties": false,
       "properties": {
         "sessions": { "type": "integer", "minimum": 0 },
         "acts": { "type": "integer", "minimum": 0 },
         "publicActs": { "type": "integer", "minimum": 0 },
-        "specialActs": { "type": "integer", "minimum": 0 }
+        "specialActs": { "type": "integer", "minimum": 0 },
+        "textActs": { "type": "integer", "minimum": 0 }
       }
     },
     "sessions": {
@@ -65,7 +67,8 @@
           "path": { "type": "string", "pattern": "^[a-z0-9-]+\\.json$" },
           "bytes": { "type": "integer", "minimum": 1 },
           "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
-          "counts": { "$ref": "#/$defs/counts" }
+          "counts": { "$ref": "#/$defs/counts" },
+          "search": { "$ref": "#/$defs/artifact" }
         }
       }
     },

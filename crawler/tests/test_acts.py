@@ -3,7 +3,8 @@ from pathlib import Path
 import tempfile
 import unittest
 
-from crawler.cgs_crawler.acts import merge_sessions, parse_acts_page, read_published, write_published
+from crawler.cgs_crawler.act_text import text_bytes
+from crawler.cgs_crawler.acts import attach_texts, merge_sessions, parse_acts_page, read_published, write_published
 
 FIXTURES = Path(__file__).parent / "fixtures"
 PAGE_URL = "https://www.cga.ct.gov/asp/CGATodayFileCopies/CGAAllPA.asp"
@@ -93,7 +94,7 @@ class PublishTests(unittest.TestCase):
             root = Path(directory)
             parsed = parse_acts_page(fixture_page(), PAGE_URL)
             manifest = write_published(merge_sessions(parsed, {}, retrieved_at="2026-10-05T00:00:00Z"), root)
-            self.assertEqual(manifest["counts"], {"sessions": 1, "acts": 3, "publicActs": 2, "specialActs": 1})
+            self.assertEqual(manifest["counts"], {"sessions": 1, "acts": 3, "publicActs": 2, "specialActs": 1, "textActs": 0})
             self.assertEqual(manifest["generatedAt"], "2026-10-05T00:00:00Z")
             before = {path.name: path.read_bytes() for path in root.iterdir()}
             write_published(merge_sessions(parsed, read_published(root), retrieved_at="2026-10-12T00:00:00Z"), root)
@@ -107,6 +108,70 @@ class PublishTests(unittest.TestCase):
             write_published(merge_sessions([], read_published(root), retrieved_at="2026-10-05T00:00:00Z", retire=["2026-regular"]), root)
             self.assertEqual(sorted(path.name for path in root.iterdir()), ["manifest.json"])
             self.assertEqual(json.loads((root / "manifest.json").read_text(encoding="utf-8"))["sessions"], [])
+
+
+def text_for(value, words="Redemption centers"):
+    return {
+        "schemaVersion": "1.0.0", "id": value["id"], "citation": value["citation"], "extractorVersion": 1,
+        "source": {"url": value["url"], "bytes": 100, "sha256": "0" * 64, "pages": 2},
+        "front": {"bill": "House Bill No. 1", "act": "Public Act No. 26-1", "title": value["title"]},
+        "sections": [{"number": "1", "anchor": "sec-1"}],
+        "blocks": [{"type": "p", "page": 1, "anchor": "sec-1", "section": "1", "runs": [f"Section 1. {words}"]}],
+    }
+
+
+class TextPublishTests(unittest.TestCase):
+    def publish(self, root, texts, published=None, retrieved_at="2026-10-05T00:00:00Z", **merge):
+        sessions = merge_sessions([{"session": SESSION, "acts": [act(1), act(2)]}], published or {}, retrieved_at=retrieved_at, **merge)
+        return write_published(attach_texts(sessions, texts, retrieved_at=retrieved_at), root, texts=texts)
+
+    def test_writes_texts_and_a_search_index_as_artifacts(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            texts = {"pa-2026-regular-1": text_for(act(1))}
+            manifest = self.publish(root, texts)
+            session = json.loads((root / "2026-regular.json").read_text(encoding="utf-8"))
+            reference = session["acts"][0]["text"]
+            self.assertEqual(reference["path"], "2026-regular/text/pa-1.json")
+            self.assertEqual(reference["pages"], 2)
+            self.assertNotIn("text", session["acts"][1])
+            self.assertEqual((root / reference["path"]).read_bytes(), text_bytes(texts["pa-2026-regular-1"]))
+            index = json.loads((root / "2026-regular/search.json").read_text(encoding="utf-8"))
+            self.assertEqual(index["acts"], ["pa-2026-regular-1"])
+            self.assertEqual(index["terms"]["redemption"], [0])
+            self.assertEqual(manifest["sessions"][0]["counts"]["textActs"], 1)
+            self.assertEqual(manifest["sessions"][0]["search"]["path"], "2026-regular/search.json")
+            self.assertEqual(sorted(artifact["path"] for artifact in manifest["artifacts"]), ["2026-regular.json", "2026-regular/search.json", "2026-regular/text/pa-1.json"])
+
+    def test_dates_a_session_only_when_its_texts_change(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            texts = {"pa-2026-regular-1": text_for(act(1))}
+            self.publish(root, texts)
+            published = read_published(root)
+            self.assertEqual(published["2026-regular"]["texts"], texts)
+            self.assertNotIn("text", published["2026-regular"]["acts"][0])
+            manifest = self.publish(root, texts, published, retrieved_at="2026-10-12T00:00:00Z")
+            self.assertEqual(manifest["sessions"][0]["updatedAt"], "2026-10-05T00:00:00Z")
+            changed = {"pa-2026-regular-1": text_for(act(1), "Bottle bill")}
+            manifest = self.publish(root, changed, read_published(root), retrieved_at="2026-10-19T00:00:00Z")
+            self.assertEqual(manifest["sessions"][0]["updatedAt"], "2026-10-19T00:00:00Z")
+
+    def test_removes_texts_that_are_no_longer_published(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            self.publish(root, {"pa-2026-regular-1": text_for(act(1))})
+            self.publish(root, {}, read_published(root))
+            self.assertEqual(sorted(path.relative_to(root).as_posix() for path in root.rglob("*")), ["2026-regular.json", "manifest.json"])
+
+    def test_reading_detects_a_corrupted_text(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            self.publish(root, {"pa-2026-regular-1": text_for(act(1))})
+            target = root / "2026-regular/text/pa-1.json"
+            target.write_bytes(target.read_bytes().replace(b"Redemption", b"Reduction"))
+            with self.assertRaisesRegex(RuntimeError, "integrity check: 2026-regular/text/pa-1.json"):
+                read_published(root)
 
 
 if __name__ == "__main__":

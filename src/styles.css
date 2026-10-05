@@ -1010,6 +1010,35 @@ body.resizing-context { cursor: col-resize; user-select: none; }
 .acts-table tbody th a { display: block; }
 .acts-table .act-bill { margin-top: .2rem; color: var(--muted); font-size: .82rem; font-weight: 600; }
 .acts-table td { line-height: calc(1.5 * var(--line-spacing-factor)); overflow-wrap: anywhere; }
+.acts-table .act-links { display: flex; flex-wrap: wrap; gap: 0 .75rem; }
+.acts-table .act-links a { display: inline-flex; min-width: 1.75rem; min-height: 1.75rem; align-items: center; }
+.acts-table .act-pdf { color: var(--muted); font-size: .82rem; font-weight: 600; }
+.acts-table .act-title-link { color: inherit; text-decoration-color: var(--line); }
+.acts-table .act-title-link:hover { text-decoration-color: currentColor; }
+.act-text-match { display: block; margin-top: .25rem; color: var(--muted); font-size: .8rem; }
+.act-header h1 { margin-bottom: .35rem; }
+.act-heading-title { max-width: 56rem; margin-top: 0; font-weight: 650; line-height: calc(1.45 * var(--line-spacing-factor)); }
+.act-currency, .act-details { max-width: 56rem; color: var(--muted); font-size: .92rem; }
+.act-legend ins, .act-document ins { text-decoration: underline; text-decoration-thickness: .08em; text-underline-offset: .18em; background: none; }
+/* Announce added language, which screen readers do not otherwise distinguish. */
+.act-document ins::before, .act-document ins::after { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(100%); white-space: nowrap; }
+.act-document ins::before { content: " [added: "; }
+.act-document ins::after { content: " end added] "; }
+.act-document { max-width: 52rem; margin-top: 1.5rem; }
+.act-document p { margin: 0 0 1rem; overflow-wrap: anywhere; }
+.act-document .act-section-start { margin-top: 1.6rem; scroll-margin-top: 8rem; }
+.act-document .act-section-start:focus { outline: 0; }
+.act-document .act-section-start:focus-visible { outline: 2px solid var(--blue); outline-offset: .3rem; }
+.act-document mark { padding: 0 .1em; color: var(--highlight-ink); background: var(--highlight-surface); border-radius: .15rem; }
+.act-document .act-action { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--line); font-family: inherit; }
+.act-table-wrap { max-width: 100%; margin: 0 0 1.2rem; overflow-x: auto; }
+.act-table-wrap:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.act-table { border-collapse: collapse; font: .92rem/1.45 system-ui, sans-serif; }
+.act-table td { padding: .3rem .6rem; border-bottom: 1px solid var(--line); font-variant-numeric: tabular-nums; vertical-align: top; }
+.act-sections { max-width: 56rem; margin: 1rem 0; padding: .7rem 1rem; border: 1px solid var(--line); border-radius: .5rem; }
+.act-sections summary { color: var(--blue); cursor: pointer; font-weight: 750; }
+.act-sections ol { display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: .3rem 1.2rem; margin: .7rem 0 0; padding: 0; list-style: none; }
+.act-sections small { color: var(--muted); }
 .search-within { margin: 1rem 0; padding: .8rem 1rem; background: var(--surface-raised); border: 1px solid var(--line); border-radius: .7rem; }
 .search-within label { display: block; margin-bottom: .35rem; font-size: .8rem; font-weight: 750; }
 .search-within > div { display: flex; gap: .55rem; }
@@ -1150,6 +1179,8 @@ h1,
   .acts-table tbody th { width: 6.5rem; }
   .acts-table tbody th, .acts-table td { padding: .65rem .4rem; }
   .acts-table td { font-size: .9rem; }
+  .act-sections ol { grid-template-columns: 1fr; }
+  .act-table td { padding: .3rem .4rem; }
   .search-within > div { align-items: stretch; flex-direction: column; }
   .title-list a { grid-template-columns: 1fr; gap: .12rem; }
 }
@@ -1160,6 +1191,8 @@ h1,
   .application-main, .reader-content.application-main { width: 100%; max-width: none; margin: 0; padding: 0; }
   .section-actions, .action-status, .adjacent, .breadcrumbs { display: none; }
   .statute-text { font-size: 11pt; line-height: 1.5; }
+  .act-sections { display: none; }
+  .act-table-wrap { overflow: visible; }
   body { padding-bottom: 0; color: #000; background: #fff; }
   a { color: #000; }
   footer { display: none; }

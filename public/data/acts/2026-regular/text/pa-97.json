@@ -1,0 +1,7 @@
+{"schemaVersion":"1.0.0","id":"pa-2026-regular-97","citation":"P.A. 26-97","extractorVersion":1,"source":{"url":"https://www.cga.ct.gov/2026/act/pa/pdf/2026PA-00097-R00HB-05295-PA.pdf","bytes":78105,"sha256":"04c8ff52be175c2eab8eb0d57db1d4fc4c12753de343965af322e34bd27493fa","pages":1,"lastModified":"Thu, 04 Jun 2026 18:37:48 GMT"},"front":{"bill":"House Bill No. 5295","act":"Public Act No. 26-97","title":"AN ACT NAMING THE CONNECTICUT NATIONAL GUARD READINESS CENTER IN THE TOWN OF PUTNAM."},"approved":"Approved June 4, 2026","sections":[{"number":"1","anchor":"sec-1","effective":"Effective October 1, 2026"},{"number":"2","anchor":"sec-2","effective":"Effective July 1, 2026"}],"blocks":[
+{"type":"p","page":1,"runs":["Be it enacted by the Senate and House of Representatives in General Assembly convened:"]},
+{"type":"p","page":1,"runs":["Section 1. (NEW) (Effective October 1, 2026) The state military readiness center in Putnam shall be named the John N. Dempsey Putnam National Guard Readiness Center in honor of John N. Dempsey, who served as mayor of and state representative for the town of Putnam and as the eighty-first governor and captain-general of Connecticut."],"anchor":"sec-1","section":"1"},
+{"type":"p","page":1,"runs":["Sec. 2. Section 17 of public act 26-35 is repealed. (Effective July 1, 2026)"],"anchor":"sec-2","section":"2"},
+{"type":"action","page":1,"runs":["Governor's Action:"]},
+{"type":"action","page":1,"runs":["Approved June 4, 2026"]}
+]}

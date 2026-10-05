@@ -1,0 +1,7 @@
+{"schemaVersion":"1.0.0","id":"sa-2026-regular-9","citation":"S.A. 26-9","extractorVersion":1,"source":{"url":"https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00009-R00HB-05450-SA.pdf","bytes":75812,"sha256":"d4c0303866919f3712a87d64323a3fa7014e6349746ea94b8cd497c91dfbcf46","pages":1,"lastModified":"Wed, 27 May 2026 12:10:43 GMT"},"front":{"bill":"House Bill No. 5450","act":"Special Act No. 26-9","title":"AN ACT DISSOLVING THE BROOKLYN FIRE DISTRICT."},"approved":"Approved May 26, 2026","sections":[{"number":"1","anchor":"sec-1","effective":"Effective October 1, 2026"},{"number":"2","anchor":"sec-2","effective":"Effective October 1, 2026"}],"blocks":[
+{"type":"p","page":1,"runs":["Be it enacted by the Senate and House of Representatives in General Assembly convened:"]},
+{"type":"p","page":1,"runs":["Section 1. (Effective October 1, 2026) The Brooklyn Fire District, established pursuant to number 41 of the special acts of 1899, is hereby dissolved. The funds and tangible property held by said fire district shall be transferred to the town of Brooklyn for the benefit of said town."],"anchor":"sec-1","section":"1"},
+{"type":"p","page":1,"runs":["Sec. 2. Number 41 of the special acts of 1899 is repealed. (Effective October 1, 2026)"],"anchor":"sec-2","section":"2"},
+{"type":"action","page":1,"runs":["Governor's Action:"]},
+{"type":"action","page":1,"runs":["Approved May 26, 2026"]}
+]}

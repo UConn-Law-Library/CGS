@@ -1,0 +1,6 @@
+{"schemaVersion":"1.0.0","id":"sa-2026-regular-3","citation":"S.A. 26-3","extractorVersion":1,"source":{"url":"https://www.cga.ct.gov/2026/act/sa/pdf/2026SA-00003-R00SB-00520-SA.pdf","bytes":73454,"sha256":"237b27c31316a559050d012dba1e5990c951c0bd464fb2430cac93b64ab88b7d","pages":1,"lastModified":"Mon, 11 May 2026 20:51:21 GMT"},"front":{"bill":"Senate Bill No. 520","act":"Special Act No. 26-3","title":"AN ACT REPEALING A CONVEYANCE OF A PARCEL OF STATE LAND TO THE TOWN OF CANTON."},"approved":"Approved May 11, 2026","sections":[{"number":"1","anchor":"sec-1","effective":"Effective from passage"}],"blocks":[
+{"type":"p","page":1,"runs":["Be it enacted by the Senate and House of Representatives in General Assembly convened:"]},
+{"type":"p","page":1,"runs":["Section 1. Special act 24-20 is repealed. (Effective from passage)"],"anchor":"sec-1","section":"1"},
+{"type":"action","page":1,"runs":["Governor's Action:"]},
+{"type":"action","page":1,"runs":["Approved May 11, 2026"]}
+]}

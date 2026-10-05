@@ -1,8 +1,22 @@
 import { explainSearchQuery, normalizeSearchOptions, SearchRepository } from "./search.js";
 import { applyChapterOverlay, mergeSupplementTitleChapters, SupplementRepository } from "./supplements.js";
 import { ProgressiveSearchClient } from "./search-client.js";
-import { ACT_SORTS, ACT_TYPES, ActsRepository, actsCountLabel, actsCurrencyNote, filterActs, normalizeActsOptions, renderActsTable } from "./acts.js";
 import {
+  ACT_SORTS,
+  ACT_TYPES,
+  ActsRepository,
+  actsCountLabel,
+  actsCurrencyNote,
+  actTextPattern,
+  filterActs,
+  matchActText,
+  normalizeActsOptions,
+  renderActDocument,
+  renderActSections,
+  renderActsTable
+} from "./acts.js";
+import {
+  actRouteHref,
   actsRouteHref,
   findChapter,
   findSection,
@@ -96,7 +110,7 @@ async function getJson(path) {
 function activeDestination(route = parseRoute(location)) {
   if (route.kind === "index") return "index";
   if (route.kind === "infractions") return "infractions";
-  if (route.kind === "acts") return "acts";
+  if (route.kind === "acts" || route.kind === "act") return "acts";
   if (route.kind === "bookmarks") return "bookmarks";
   if (route.kind === "about") return "settings";
   if (route.kind === "history") return "history";
@@ -963,7 +977,7 @@ async function renderAbout(catalog, sequence) {
       publisher: acts.source.publisher,
       name: acts.source.name,
       refresh: "acts",
-      description: "Acts passed by the General Assembly, with links to each act and its bill history, for laws not yet reflected in the statute text.",
+      description: "Acts passed by the General Assembly, with the text of each act and links to its PDF and bill history, for laws not yet reflected in the statute text.",
       details: [`Updated ${formatSnapshotDate(acts.generatedAt)}`, ...acts.sessions.map((session) => `${session.name}: ${actsCountLabel(session.counts)}`)],
       caveat: "Public Acts may take effect before revised statute text is published. Check each act's effective dates.",
       url: acts.source.url
@@ -1589,7 +1603,12 @@ async function renderActs(route, sequence) {
     </main>`;
     return;
   }
-  const shown = filterActs(acts, options);
+  // The word index is only needed to search the act text.
+  const searchIndex = options.query ? await actsRepository.loadSearchIndex(entry).catch(() => null) : null;
+  if (sequence !== renderSequence) return;
+  const textMatches = matchActText(searchIndex, options.query);
+  const shown = filterActs(acts, options, textMatches);
+  const textSearchNote = options.query && entry.search && !searchIndex ? " Act text could not be searched." : "";
   const sessionField = manifest.sessions.length > 1
     ? `<div class="search-field"><label for="acts-session">Session</label><select id="acts-session" name="session">${manifest.sessions.map((session) => `<option value="${escapeHtml(session.id)}"${selectAttribute(session.id, entry.id)}>${escapeHtml(session.name)}</option>`).join("")}</select></div>`
     : "";
@@ -1603,20 +1622,156 @@ async function renderActs(route, sequence) {
     <aside class="acts-guidance" aria-label="Reading these acts">
       <p><strong>Public Acts</strong> change the General Statutes. Until revised statute text is published, read an act together with the sections it amends, and check the effective date of each section.</p>
       <p><strong>Special Acts</strong> apply to particular people, places, or programs and are not added to the General Statutes.</p>
+      ${entry.counts.textActs ? `<p>Select an act to read its text here. Search matches words in each act's title and text.</p>` : ""}
     </aside>
     <form class="search-refine search-v2-refine acts-filter${sessionField ? " acts-filter-sessions" : ""}" data-acts-filter role="search" aria-label="Filter acts">
       <div class="search-primary-controls">
-        <div class="search-field"><label for="acts-query">Search acts</label><input id="acts-query" name="query" type="search" value="${escapeHtml(options.query ?? "")}" placeholder="Title, act, or bill number" autocomplete="off"></div>
+        <div class="search-field"><label for="acts-query">Search acts</label><input id="acts-query" name="query" type="search" value="${escapeHtml(options.query ?? "")}" placeholder="${entry.counts.textActs ? "Words, act, or bill number" : "Title, act, or bill number"}" autocomplete="off"></div>
         ${sessionField}
         <div class="search-field"><label for="acts-type">Type</label><select id="acts-type" name="type"><option value="">All acts</option>${Object.entries(ACT_TYPES).map(([value, label]) => `<option value="${value}"${selectAttribute(value, options.type)}>${label}</option>`).join("")}</select></div>
         <div class="search-field"><label for="acts-sort">Sort</label><select id="acts-sort" name="sort">${Object.entries(ACT_SORTS).map(([value, label]) => `<option value="${value}"${selectAttribute(value, options.sort)}>${label}</option>`).join("")}</select></div>
         <button type="submit">Apply</button>
       </div>
     </form>
-    <p class="note" role="status">${shown.length === acts.length ? `Showing all ${acts.length.toLocaleString()} acts.` : `Showing ${shown.length.toLocaleString()} of ${acts.length.toLocaleString()} acts.`}${options.query || options.type ? ` <a href="${escapeHtml(actsRouteHref({ session: options.session }))}">Clear filters</a>` : ""}</p>
-    ${shown.length ? renderActsTable(shown, `${entry.name} acts`) : `<p class="empty-state">No acts match these filters.</p>`}
+    <p class="note" role="status">${shown.length === acts.length ? `Showing all ${acts.length.toLocaleString()} acts.` : `Showing ${shown.length.toLocaleString()} of ${acts.length.toLocaleString()} acts.`}${escapeHtml(textSearchNote)}${options.query || options.type ? ` <a href="${escapeHtml(actsRouteHref({ session: options.session }))}">Clear filters</a>` : ""}</p>
+    ${shown.length ? renderActsTable(shown, `${entry.name} acts`, { session: entry.id, query: options.query, textMatches }) : `<p class="empty-state">No acts match these filters.</p>`}
   </main><footer>Unofficial access copy. Verify act text and effective dates with the Connecticut General Assembly.</footer>`;
   window.scrollTo({ top: 0 });
+}
+
+// Acts cite many titles; rather than load every cited title to resolve its
+// sections up front, link citations to a search and resolve them on click.
+function actReferenceMaps(catalog) {
+  return {
+    sections: { get: (citation) => findTitle(catalog, citation.split("-")[0]) ? searchRouteHref(citation) : undefined },
+    chapters: {
+      get: (number) => {
+        const match = findChapter(catalog, number);
+        return match ? chapterRoute(match.title, match.chapter) : undefined;
+      }
+    }
+  };
+}
+
+async function statuteCitationHref(catalog, citation) {
+  const title = findTitle(catalog, citation.split("-")[0]);
+  if (!title) return null;
+  const shard = await repository.loadTitle(title.id);
+  const document = shard.documents.find((candidate) => candidate.citations.some((value) => value.toLowerCase() === citation));
+  return document ? routeHref({
+    title: title.number,
+    chapter: document.chapter.number,
+    section: document.citation ?? document.citations[0] ?? document.id
+  }) : null;
+}
+
+function highlightActText(root, pattern) {
+  if (!pattern) return 0;
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+  const nodes = [];
+  while (walker.nextNode()) nodes.push(walker.currentNode);
+  let count = 0;
+  for (const node of nodes) {
+    const text = node.nodeValue;
+    const matches = [...text.matchAll(pattern)];
+    if (!matches.length) continue;
+    const fragment = document.createDocumentFragment();
+    let cursor = 0;
+    for (const match of matches) {
+      fragment.append(text.slice(cursor, match.index));
+      const mark = document.createElement("mark");
+      mark.textContent = match[0];
+      fragment.append(mark);
+      cursor = match.index + match[0].length;
+    }
+    fragment.append(text.slice(cursor));
+    node.replaceWith(fragment);
+    count += matches.length;
+  }
+  return count;
+}
+
+function showActTarget(route) {
+  const target = route.section ? document.getElementById(`sec-${route.section}`) : document.querySelector("[data-act-text] mark");
+  if (!target) {
+    window.scrollTo({ top: 0 });
+    return;
+  }
+  // Jump straight there; a smooth scroll through a long act is slow.
+  target.scrollIntoView({ block: route.section ? "start" : "center", behavior: "instant" });
+  if (route.section) target.focus({ preventScroll: true });
+}
+
+async function renderAct(catalog, route, sequence) {
+  const [{ manifest, entry, acts }, supplementEdition] = await Promise.all([
+    actsRepository.loadSession(route.session),
+    supplementRepository.latestEdition().catch(() => null)
+  ]);
+  if (sequence !== renderSequence) return;
+  const act = entry ? acts.find((value) => value.id === route.act) : null;
+  if (!act) return renderNotFound("That act is not in the acts list.");
+  // Moving between sections of the act already on screen only scrolls.
+  const shown = app.querySelector("[data-act-page]");
+  if (shown?.dataset.actPage === act.id && shown.dataset.actQuery === (route.query ?? "")) return showActTarget(route);
+
+  setDocumentTitle(act.citation, "Public and Special Acts");
+  const listHref = actsRouteHref({ session: entry.id === manifest.sessions[0]?.id ? null : entry.id });
+  const officialLinks = `<a href="${escapeHtml(act.url)}" target="_blank" rel="noopener">Official PDF <span aria-hidden="true">↗</span></a> · <a href="${escapeHtml(act.billUrl)}" target="_blank" rel="noopener">${escapeHtml(act.bill)} bill status <span aria-hidden="true">↗</span></a>`;
+  const currency = act.type === "special"
+    ? "Special Acts apply to particular people, places, or programs and are not added to the General Statutes."
+    : actsCurrencyNote(entry, supplementEdition?.editionYear);
+  const page = (body) => `${siteHeader()}<main class="acts-page act-page browse-page" id="main-content" data-act-page="${escapeHtml(act.id)}" data-act-query="${escapeHtml(route.query ?? "")}">
+    ${breadcrumbs([{ label: "Public and Special Acts", href: listHref }, { label: act.citation }])}
+    <header class="index-intro act-header">
+      <p class="eyebrow">${escapeHtml(entry.name)}</p>
+      <h1>${escapeHtml(act.citation)}</h1>
+      <p class="act-heading-title">${escapeHtml(act.title)}</p>
+      <p class="source-note">${officialLinks}</p>
+    </header>
+    <p class="act-currency">${escapeHtml(currency)}</p>
+    ${body}
+  </main><footer>Unofficial access copy. The General Assembly's PDF is the official text of the act.</footer>`;
+
+  let text = null;
+  if (act.text) {
+    try {
+      text = await actsRepository.loadActText(act);
+    } catch (error) {
+      console.warn("Could not load the act text", error);
+    }
+    if (sequence !== renderSequence) return;
+  }
+  if (!text) {
+    app.innerHTML = page(`<p class="empty-state" role="status">${act.text ? "The text of this act could not be loaded." : "The text of this act is not available in the app."} Read the <a href="${escapeHtml(act.url)}" target="_blank" rel="noopener">official PDF <span aria-hidden="true">↗</span></a>.</p>`);
+    window.scrollTo({ top: 0 });
+    return;
+  }
+
+  const details = [text.front.notice, text.front.bill, text.approved, `${text.source.pages.toLocaleString()} page${text.source.pages === 1 ? "" : "s"}`].filter(Boolean);
+  const pattern = actTextPattern(route.query);
+  app.innerHTML = page(`
+    <p class="act-details">${details.map(escapeHtml).join(" · ")}</p>
+    <aside class="acts-guidance act-legend" aria-label="How this text marks changes">
+      <p>Language the act adds is <ins>underlined</ins>. Language it deletes is in [brackets].</p>
+      <p>This text was extracted from the PDF. Tables may be laid out differently than in the PDF.</p>
+    </aside>
+    ${renderActSections(text, (section) => actRouteHref(entry.id, act, { section: section.number, query: route.query }))}
+    ${pattern ? `<p class="note" role="status" data-act-highlight-status></p>` : ""}
+    ${renderActDocument(text, actReferenceMaps(catalog))}`);
+  const body = app.querySelector("[data-act-text]");
+  if (pattern) {
+    const count = highlightActText(body, pattern);
+    app.querySelector("[data-act-highlight-status]").innerHTML = `${count ? `${count.toLocaleString()} match${count === 1 ? "" : "es"} for “${escapeHtml(route.query)}” highlighted.` : `No matches for “${escapeHtml(route.query)}” in this act.`} <a href="${escapeHtml(actRouteHref(entry.id, act))}">Clear highlighting</a>`;
+  }
+  body.addEventListener("click", async (event) => {
+    const link = event.target.closest('a.legal-reference[href^="#/search?"]');
+    if (!link || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    const citation = link.textContent.trim().toLowerCase();
+    const href = await statuteCitationHref(catalog, citation).catch(() => null);
+    location.hash = href ?? link.getAttribute("href");
+  });
+  showActTarget(route);
 }
 
 function renderBookmarks() {
@@ -1748,6 +1903,7 @@ async function renderCurrentRoute() {
     if (route.kind === "search") return await renderSearchPage(catalog, route);
     if (route.kind === "infractions") return await renderInfractions(route, sequence);
     if (route.kind === "acts") return await renderActs(route, sequence);
+    if (route.kind === "act") return await renderAct(catalog, route, sequence);
     if (route.kind === "bookmarks") return renderBookmarks();
     if (route.kind === "history") return renderHistory();
     if (route.kind === "about") return await renderAbout(catalog, sequence);

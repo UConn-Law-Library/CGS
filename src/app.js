@@ -1752,7 +1752,7 @@ async function renderAct(catalog, route, sequence) {
   app.innerHTML = page(`
     <p class="act-details">${details.map(escapeHtml).join(" · ")}</p>
     <aside class="acts-guidance act-legend" aria-label="How this text marks changes">
-      <p>Language the act adds is <ins>underlined</ins>. Language it deletes is in [brackets].</p>
+      <p>Language the act adds is <ins class="revision-addition">highlighted in green</ins>. Language it deletes is <del class="revision-deletion">struck through in red</del>; the PDF shows these as underlined and [bracketed] text.</p>
       <p>This text was extracted from the PDF. Tables may be laid out differently than in the PDF.</p>
     </aside>
     ${renderActSections(text, (section) => actRouteHref(entry.id, act, { section: section.number, query: route.query }))}

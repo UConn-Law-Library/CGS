@@ -14,6 +14,7 @@ from crawler.cgs_crawler.act_text import (
     borderless_table,
     extract_act,
     runs_text,
+    effective_index,
     search_index,
     text_bytes,
     text_document,
@@ -135,6 +136,25 @@ class SearchAndSerializationTests(unittest.TestCase):
         self.assertEqual(index["terms"]["act"], [0, 1])
         self.assertEqual(index["terms"]["redemption"], [0])
         self.assertEqual(index["terms"]["22a-245"], [1])
+
+    def test_effective_index_groups_sections_by_effective_date(self):
+        document = {
+            "approved": "Approved June 4, 2026",
+            "sections": [
+                {"number": "1", "anchor": "sec-1", "effective": "Effective July 1, 2026"},
+                {"number": "2", "anchor": "sec-2", "effective": "Effective from passage"},
+                {"number": "3", "anchor": "sec-3", "effective": "Effective July 1, 2026"},
+            ],
+        }
+        index = effective_index("2026-regular", [({"id": "a"}, document), ({"id": "b"}, {"sections": []})])
+        self.assertEqual(index["session"], "2026-regular")
+        self.assertEqual(index["acts"], [
+            {"id": "a", "approved": "Approved June 4, 2026", "dates": [
+                {"effective": "Effective July 1, 2026", "sections": ["1", "3"]},
+                {"effective": "Effective from passage", "sections": ["2"]},
+            ]},
+            {"id": "b", "dates": []},
+        ])
 
     def test_text_files_hold_one_block_per_line(self):
         document = text_document(ACT, PDF, HEADERS, extract_act(PDF, citation="Public Act No. 26-83"))

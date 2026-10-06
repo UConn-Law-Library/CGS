@@ -68,7 +68,8 @@
           "bytes": { "type": "integer", "minimum": 1 },
           "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
           "counts": { "$ref": "#/$defs/counts" },
-          "search": { "$ref": "#/$defs/artifact" }
+          "search": { "$ref": "#/$defs/artifact" },
+          "effective": { "$ref": "#/$defs/artifact" }
         }
       }
     },

@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://uconn-law-library.github.io/CGS/schemas/acts-effective.schema.json",
+  "title": "CGS effective dates of the act sections in one legislative session",
+  "description": "acts lists the session's acts with text, in order. Each act's sections are grouped by their effective-date wording, in order of first appearance; effective is null for sections that state no date.",
+  "type": "object",
+  "required": ["schemaVersion", "session", "acts"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "session": { "type": "string", "pattern": "^\\d{4}-[a-z0-9-]+$" },
+    "acts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "dates"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "pattern": "^(?:pa|sa)-\\d{4}-[a-z0-9-]+-\\d+$" },
+          "approved": { "type": "string", "minLength": 1 },
+          "dates": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["effective", "sections"],
+              "additionalProperties": false,
+              "properties": {
+                "effective": { "type": ["string", "null"], "minLength": 1 },
+                "sections": { "type": "array", "minItems": 1, "items": { "type": "string", "pattern": "^\\d+$" } }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -19,7 +19,7 @@ from urllib.parse import urljoin
 
 from bs4 import BeautifulSoup
 
-from .act_text import PdfCache, acquire_texts, search_index, text_bytes, text_path
+from .act_text import PdfCache, acquire_texts, effective_index, search_index, text_bytes, text_path
 from .config import FetchPolicy
 from .fetch import Fetcher
 from .snapshots import SnapshotStore
@@ -220,7 +220,7 @@ def write_published(
     source_url: str = ACTS_URL,
     texts: Optional[Dict[str, dict]] = None,
 ) -> dict:
-    """Write each session, its act texts and search index, and the manifest.
+    """Write each session, its act texts, search and effective-date indexes, and the manifest.
 
     Acts carry text references from attach_texts; ``texts`` supplies the documents.
     """
@@ -254,6 +254,11 @@ def write_published(
             (output_dir / search_relative).write_bytes(search)
             artifacts.append(identity(search_relative, search))
             entry["search"] = identity(search_relative, search)
+            effective_relative = f"{session['id']}/effective.json"
+            effective = (json.dumps(effective_index(session["id"], indexed), ensure_ascii=False, separators=(",", ":")) + "\n").encode("utf-8")
+            (output_dir / effective_relative).write_bytes(effective)
+            artifacts.append(identity(effective_relative, effective))
+            entry["effective"] = identity(effective_relative, effective)
         entries.append(entry)
     current = {artifact["path"] for artifact in artifacts} | {"manifest.json"}
     for stale in output_dir.rglob("*.json"):

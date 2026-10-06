@@ -9,7 +9,9 @@ const representativeRoutes = [
   { name: "Statutes index", route: "#/index", heading: "Index to the General Statutes" },
   { name: "Infractions", route: "#/infractions", heading: "Infractions and violations" },
   { name: "Public and Special Acts", route: "#/acts", heading: "Public and Special Acts" },
-  { name: "Public Act text", route: "#/acts/2026-regular/pa-83?q=firefighters", heading: "P.A. 26-83" }
+  { name: "Public Act text", route: "#/acts/2026-regular/pa-83?q=firefighters", heading: "P.A. 26-83" },
+  { name: "Public Acts by effective date", route: "#/acts?view=effective", heading: "Public and Special Acts" },
+  { name: "Public Act sections effective on one date", route: "#/acts/2026-regular/pa-1?sections=1-19,25", heading: "P.A. 26-1" }
 ];
 
 for (const { name, route, heading } of representativeRoutes) {

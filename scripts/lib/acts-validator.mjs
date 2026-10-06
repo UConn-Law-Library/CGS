@@ -57,6 +57,30 @@ function validateText(document, act, label) {
   return errors;
 }
 
+function validateEffective(index, entry, textActs, texts, label) {
+  const errors = [];
+  if (index.session !== entry.id) errors.push(`${label}: lists ${index.session}, not ${entry.id}`);
+  if (index.acts.map((act) => act.id).join() !== textActs.map((act) => act.id).join()) {
+    errors.push(`${label}: acts must list the session's acts with text, in order`);
+  }
+  for (const act of index.acts) {
+    const document = texts.get(act.id);
+    if (!document) continue;
+    const expected = new Map();
+    for (const section of document.sections) {
+      const effective = section.effective ?? null;
+      if (!expected.has(effective)) expected.set(effective, []);
+      expected.get(effective).push(section.number);
+    }
+    const listed = act.dates.map(({ effective, sections }) => [effective, sections.join()]);
+    const actual = [...expected].map(([effective, sections]) => [effective, sections.join()]);
+    if (JSON.stringify(listed) !== JSON.stringify(actual) || (act.approved ?? null) !== (document.approved ?? null)) {
+      errors.push(`${label}: ${act.id} does not match its text's sections and effective dates`);
+    }
+  }
+  return errors;
+}
+
 function validateSearch(index, entry, textActs, label) {
   const errors = [];
   if (index.session !== entry.id) errors.push(`${label}: indexes ${index.session}, not ${entry.id}`);
@@ -79,8 +103,8 @@ export async function validateActs({ actsDir, schemaDir }) {
   if (!(await stat(root).catch(() => null))?.isDirectory()) {
     return { errors: [], present: false, counts: { sessions: 0, acts: 0, textActs: 0 } };
   }
-  const [manifestSchema, sessionSchema, textSchema, searchSchema] = await Promise.all(
-    ["acts-manifest", "acts-session", "acts-text", "acts-search"].map((name) => readJson(path.join(schemaDir, `${name}.schema.json`)))
+  const [manifestSchema, sessionSchema, textSchema, searchSchema, effectiveSchema] = await Promise.all(
+    ["acts-manifest", "acts-session", "acts-text", "acts-search", "acts-effective"].map((name) => readJson(path.join(schemaDir, `${name}.schema.json`)))
   );
   const manifest = await readJson(path.join(root, "manifest.json"));
   const errors = validateSchema(manifest, manifestSchema).map((error) => `acts/manifest.json ${error}`);
@@ -95,6 +119,7 @@ export async function validateActs({ actsDir, schemaDir }) {
   };
   const sessionIds = new Set();
   const allActs = [];
+  const texts = new Map();
   for (const entry of manifest.sessions) {
     const label = `acts/${entry.path}`;
     if (sessionIds.has(entry.id)) errors.push(`acts/manifest.json lists session ${entry.id} more than once`);
@@ -122,6 +147,7 @@ export async function validateActs({ actsDir, schemaDir }) {
       if (!document) continue;
       const textErrors = validateSchema(document, textSchema).map((error) => `${textLabel} ${error}`);
       errors.push(...(textErrors.length ? textErrors : validateText(document, act, textLabel)));
+      if (!textErrors.length) texts.set(act.id, document);
     }
     if (!sameCounts(countActs(session.acts), entry.counts)) errors.push(`${label}: counts do not match the manifest`);
     const textActs = session.acts.filter((act) => act.text);
@@ -137,10 +163,22 @@ export async function validateActs({ actsDir, schemaDir }) {
         errors.push(...(searchErrors.length ? searchErrors : validateSearch(index, entry, textActs, searchLabel)));
       }
     }
+    if (textActs.length && !entry.effective) errors.push(`${label}: acts have text but the session has no effective-date index`);
+    if (!textActs.length && entry.effective) errors.push(`${label}: the session has an effective-date index but no act text`);
+    if (entry.effective) {
+      const effectiveLabel = `acts/${entry.effective.path}`;
+      if (entry.effective.path !== `${entry.id}/effective.json`) errors.push(`${effectiveLabel}: is not where ${entry.id}'s effective-date index belongs`);
+      reference(entry.effective, `${effectiveLabel}: effective entry`);
+      const index = await readArtifact(root, entry.effective, effectiveLabel, errors);
+      if (index) {
+        const effectiveErrors = validateSchema(index, effectiveSchema).map((error) => `${effectiveLabel} ${error}`);
+        errors.push(...(effectiveErrors.length ? effectiveErrors : validateEffective(index, entry, textActs, texts, effectiveLabel)));
+      }
+    }
     allActs.push(...session.acts);
   }
   for (const artifact of manifest.artifacts) {
-    if (!referenced.has(artifact.path)) errors.push(`acts/manifest.json artifact ${artifact.path} is not a session file, act text, or search index`);
+    if (!referenced.has(artifact.path)) errors.push(`acts/manifest.json artifact ${artifact.path} is not a session file, act text, search index, or effective-date index`);
   }
   if (manifest.counts.sessions !== manifest.sessions.length || !sameCounts(countActs(allActs), manifest.counts)) {
     errors.push("acts/manifest.json aggregate counts do not match the session files");

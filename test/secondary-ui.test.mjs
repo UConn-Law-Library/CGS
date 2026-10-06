@@ -113,6 +113,19 @@ test("renders linked infractions, fee roles, sources, and index records safely",
   assert.match(html, /Unsafe &lt;text&gt;/);
 });
 
+test("renders a deferred index group with its count and an empty list to fill on open", () => {
+  const html = renderSecondaryContext({
+    manifests: { infractions: { source: {} }, index: { source: { revision: "Revised 2025", url: "https://example.test/index" } } },
+    infractions: [],
+    feeRules: [],
+    indexEntries: null,
+    indexLinks: [{ topicId: "topic-1", entryId: "entry-1" }, { topicId: "topic-2", entryId: "entry-2" }],
+    indexKey: "title-14:14-1"
+  });
+  assert.match(html, /<details class="related-group" data-deferred-index="title-14:14-1"><summary>General Statutes index <span>2<\/span>/);
+  assert.match(html, /<ol class="secondary-records" data-linked-index><\/ol>/);
+});
+
 test("omits empty related-record groups without rendering a placeholder", () => {
   const html = renderSecondaryContext({
     manifests: {

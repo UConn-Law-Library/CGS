@@ -72,6 +72,7 @@ import {
   renderIndexEntry,
   renderIndexEntryText,
   renderIndexReferences,
+  renderLinkedIndexEntries,
   renderSecondaryContext,
   searchIndexEntries,
   searchIndexTopics,
@@ -90,11 +91,13 @@ let lastRecordedPage = null;
 const pwaManager = new PwaManager();
 const catalogPromise = getJson("./data/catalog.json");
 let renderSequence = 0;
+let hasRendered = false;
 let activeSearchController = null;
 let activeOmniController = null;
 let omniTimer = null;
 let omniSelection = -1;
 let chapterDialogController = null;
+const deferredIndexLinks = new Map();
 let pendingClearAction = null;
 let pwaState = pwaManager.state;
 const SEARCH_BATCH_SIZE = 50;
@@ -625,21 +628,22 @@ async function referenceMaps(provisions, catalog) {
 
   for (const citation of references.sections) {
     const title = findTitle(catalog, citation.split("-")[0]);
-    if (title) referencedTitles.set(title.id, title);
+    if (!title) continue;
+    if (!referencedTitles.has(title.id)) referencedTitles.set(title.id, { title, citations: [] });
+    referencedTitles.get(title.id).citations.push(citation);
   }
 
-  await Promise.all([...referencedTitles.values()].map(async (title) => {
-    const shard = await repository.loadTitle(title.id);
-    for (const document of shard.documents) {
-      for (const citation of document.citations) {
-        if (references.sections.includes(citation.toLowerCase())) {
-          sections.set(citation.toLowerCase(), routeHref({
-            title: title.number,
-            chapter: document.chapter.number,
-            section: document.citation ?? document.citations[0] ?? document.id
-          }));
-        }
+  await Promise.all([...referencedTitles.values()].map(async ({ title, citations }) => {
+    try {
+      const routes = await repository.loadCitations(title.id);
+      for (const citation of citations) {
+        const route = routes[citation];
+        if (route) sections.set(citation, routeHref({ title: title.number, chapter: route[0], section: route[1] }));
       }
+    } catch (error) {
+      // Without the lookup (e.g. older offline data), a search still finds the section.
+      console.warn("Could not load citation routes", error);
+      for (const citation of citations) sections.set(citation, searchRouteHref(citation));
     }
   }));
 
@@ -1239,7 +1243,10 @@ async function sectionSecondaryContext(title, section, requestedCitation) {
     ?? section.citation
     ?? section.citations[0];
   try {
-    return await secondaryRepository.loadSectionContext(title.id, citation);
+    const context = await secondaryRepository.loadSectionContext(title.id, citation, { includeIndexEntries: false });
+    context.indexKey = `${title.id}:${citation}`;
+    deferredIndexLinks.set(context.indexKey, context.indexLinks);
+    return context;
   } catch (error) {
     console.warn("Could not load related legal data", error);
     return { error };
@@ -1716,13 +1723,8 @@ function actReferenceMaps(catalog) {
 async function statuteCitationHref(catalog, citation) {
   const title = findTitle(catalog, citation.split("-")[0]);
   if (!title) return null;
-  const shard = await repository.loadTitle(title.id);
-  const document = shard.documents.find((candidate) => candidate.citations.some((value) => value.toLowerCase() === citation));
-  return document ? routeHref({
-    title: title.number,
-    chapter: document.chapter.number,
-    section: document.citation ?? document.citations[0] ?? document.id
-  }) : null;
+  const route = (await repository.loadCitations(title.id))[citation];
+  return route ? routeHref({ title: title.number, chapter: route[0], section: route[1] }) : null;
 }
 
 function highlightActText(root, pattern) {
@@ -1955,7 +1957,47 @@ async function titleWithLatestSupplementChapters(title) {
   }
 }
 
+function announceRoute() {
+  let announcer = document.querySelector("[data-route-announcer]");
+  if (!announcer) {
+    announcer = document.createElement("div");
+    announcer.className = "visually-hidden";
+    announcer.dataset.routeAnnouncer = "";
+    announcer.setAttribute("aria-live", "polite");
+    announcer.setAttribute("aria-atomic", "true");
+    document.body.append(announcer);
+  }
+  announcer.textContent = "";
+  requestAnimationFrame(() => { announcer.textContent = document.title; });
+}
+
+// Re-rendering replaces the element that had focus. A link chosen in a
+// navigation pane keeps focus in that pane so the next item is one key away;
+// otherwise focus moves to the new page's heading, which screen readers announce.
+function restoreRouteFocus(priorFocus) {
+  const active = document.activeElement;
+  if (active && active !== document.body && active.isConnected) return;
+  const pane = priorFocus?.closest?.(".context-column[data-context-key]");
+  const href = priorFocus?.getAttribute?.("href");
+  if (pane && href) {
+    const match = [...document.querySelectorAll(".context-column[data-context-key] a[href]")]
+      .find((link) => link.getAttribute("href") === href && link.closest(".context-column").dataset.contextKey === pane.dataset.contextKey);
+    if (match) {
+      match.focus({ preventScroll: true });
+      announceRoute();
+      return;
+    }
+  }
+  const heading = app.querySelector("main h1");
+  if (!heading) return;
+  if (!heading.hasAttribute("tabindex")) heading.tabIndex = -1;
+  heading.focus({ preventScroll: true });
+}
+
 async function renderCurrentRoute() {
+  const priorFocus = document.activeElement;
+  const initialRender = !hasRendered;
+  hasRendered = true;
   navigationHistory.sync();
   closeOmni();
   activeSearchController?.abort();
@@ -1997,6 +2039,7 @@ async function renderCurrentRoute() {
         deviceState.recordPage({ href, title: document.title.replace(/ · Connecticut General Statutes$/, "") });
       }
       lastRecordedPage = href;
+      if (!initialRender) restoreRouteFocus(priorFocus);
     }
   }
 }
@@ -2066,6 +2109,30 @@ document.addEventListener("input", (event) => {
   if (event.target.matches("[data-omni-input]")) scheduleOmnisearch(event.target);
 });
 
+// Index entries load when their group is first opened; the shards are large.
+document.addEventListener("toggle", async (event) => {
+  const group = event.target;
+  if (!group.matches?.("details[data-deferred-index]") || !group.open) return;
+  const key = group.dataset.deferredIndex;
+  const links = deferredIndexLinks.get(key) ?? [];
+  group.removeAttribute("data-deferred-index");
+  const list = group.querySelector("[data-linked-index]");
+  list.setAttribute("aria-busy", "true");
+  list.innerHTML = `<li class="related-loading" role="status">Loading index entries…</li>`;
+  try {
+    const entries = await secondaryRepository.loadLinkedIndexEntries(links);
+    if (!list.isConnected) return;
+    list.innerHTML = renderLinkedIndexEntries(entries);
+  } catch (error) {
+    console.warn("Could not load index entries", error);
+    if (!list.isConnected) return;
+    group.dataset.deferredIndex = key;
+    list.innerHTML = `<li class="related-loading" role="status">Index entries could not be loaded. Close and reopen this group to try again.</li>`;
+  } finally {
+    list.removeAttribute("aria-busy");
+  }
+}, true);
+
 document.addEventListener("focusin", (event) => {
   if (event.target.matches("[data-omni-input]") && event.target.value.trim().length >= 2) {
     scheduleOmnisearch(event.target, 0);
@@ -2102,6 +2169,11 @@ document.addEventListener("keydown", (event) => {
     }
     return;
   }
+  if (event.key === "Escape" && settingsPanelOpen() && !document.querySelector("dialog[open]")) {
+    event.preventDefault();
+    closeSettingsPanel();
+    return;
+  }
   const inField = /^(input|select|textarea)$/i.test(document.activeElement?.tagName ?? "");
   if (event.key === "/" && !inField && !event.metaKey && !event.ctrlKey && !event.altKey) {
     event.preventDefault();
@@ -2111,8 +2183,26 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
+function settingsPanelOpen() {
+  const panel = document.querySelector("[data-settings-panel]");
+  return Boolean(panel && !panel.hidden);
+}
+
+function closeSettingsPanel({ restoreFocus = true } = {}) {
+  const panel = document.querySelector("[data-settings-panel]");
+  const button = document.querySelector("[data-open-settings]");
+  if (!panel || panel.hidden) return;
+  panel.hidden = true;
+  button?.setAttribute("aria-expanded", "false");
+  if (restoreFocus) button?.focus();
+}
+
 document.addEventListener("pointerdown", (event) => {
   if (!event.target.closest("[data-global-search]")) closeOmni();
+  // Dialogs opened from Settings sit outside the panel but belong to it.
+  if (settingsPanelOpen() && !event.target.closest("[data-settings-panel], [data-open-settings], dialog")) {
+    closeSettingsPanel({ restoreFocus: false });
+  }
 });
 
 let resizingPane = null;
@@ -2216,12 +2306,11 @@ document.addEventListener("click", async (event) => {
   const closeSettings = event.target.closest("[data-close-settings]");
   if (openSettings || closeSettings) {
     const panel = document.querySelector("[data-settings-panel]");
-    const button = document.querySelector("[data-open-settings]");
-    const open = Boolean(openSettings) && panel.hidden;
-    panel.hidden = !open;
-    button.setAttribute("aria-expanded", String(open));
-    if (open) panel.querySelector("button")?.focus();
-    else button.focus();
+    if (openSettings && panel.hidden) {
+      panel.hidden = false;
+      openSettings.setAttribute("aria-expanded", "true");
+      panel.querySelector("button")?.focus();
+    } else closeSettingsPanel();
     return;
   }
   const openFeedback = event.target.closest("[data-open-feedback]");
@@ -2488,6 +2577,19 @@ document.addEventListener("submit", async (event) => {
     location.hash = infractionsRouteHref(route.category, { query });
   }
 });
+
+// On phones the header is pinned, but with large text it can cover much of the
+// screen; past a quarter of the viewport it scrolls away with the page instead.
+const compactLayout = matchMedia("(max-width: 60rem)");
+function updateHeaderPinning() {
+  const header = document.querySelector(".site-header");
+  if (!header) return;
+  const tall = compactLayout.matches && header.offsetHeight > innerHeight * 0.25;
+  if (tall !== document.documentElement.hasAttribute("data-static-header")) {
+    document.documentElement.toggleAttribute("data-static-header", tall);
+  }
+}
+new ResizeObserver(updateHeaderPinning).observe(document.body);
 
 window.addEventListener("hashchange", renderCurrentRoute);
 renderCurrentRoute();

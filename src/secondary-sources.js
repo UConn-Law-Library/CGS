@@ -89,12 +89,14 @@ export class SecondarySourceRepository {
     return shard.sections[citation] ?? emptySectionLinks();
   }
 
-  async loadSectionContext(titleId, citation) {
+  // Index shards are large, so callers may defer them: `indexEntries` is then
+  // null and `indexLinks` holds what loadLinkedIndexEntries needs later.
+  async loadSectionContext(titleId, citation, { includeIndexEntries = true } = {}) {
     const [manifests, links] = await Promise.all([this.init(), this.loadSectionLinks(titleId, citation)]);
     const [infractionShard, feeArtifact, indexEntries] = await Promise.all([
       links.infractions.length ? this.loadInfractions(titleId) : Promise.resolve({ entries: [] }),
       links.feeRules.length ? this.loadFeeRules() : Promise.resolve({ rules: [] }),
-      this.loadLinkedIndexEntries(links.indexEntries)
+      includeIndexEntries ? this.loadLinkedIndexEntries(links.indexEntries) : Promise.resolve(null)
     ]);
     const infractionIds = new Set(links.infractions.map((link) => link.id));
     const feeRoles = new Map();
@@ -109,7 +111,8 @@ export class SecondarySourceRepository {
       feeRules: feeArtifact.rules
         .filter((rule) => feeRoles.has(rule.id))
         .map((rule) => ({ rule, roles: [...feeRoles.get(rule.id)].sort() })),
-      indexEntries
+      indexEntries,
+      indexLinks: links.indexEntries
     };
   }
 }

@@ -54,8 +54,11 @@ test("About retains recent updates offline", async ({ context, page }) => {
     await page.reload();
     await expect(updates).toBeVisible();
     await expect(updates).toHaveText(before);
-    await updates.locator("summary").click();
-    await expect(updates.getByRole("list", { name: "Earlier updates", exact: true })).toBeVisible();
+    // Builds with three or fewer updates in their checkout have nothing to expand.
+    if (await updates.locator("summary").count()) {
+      await updates.locator("summary").click();
+      await expect(updates.getByRole("list", { name: "Earlier updates", exact: true })).toBeVisible();
+    }
   } finally {
     await context.setOffline(false);
   }

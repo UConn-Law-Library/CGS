@@ -250,13 +250,19 @@ test("About shows recent updates and expands earlier changes", async ({ page }, 
   const updates = page.getByRole("region", { name: "Recent updates" });
   await expect(updates.getByRole("heading", { name: "Recent updates", exact: true })).toBeVisible();
   const recent = updates.getByRole("list", { name: "Latest updates", exact: true });
-  await expect(recent.locator("li")).toHaveCount(3);
-  const latestTitle = await page.evaluate(async () => (await import("/release.js")).RECENT_UPDATES[0].title);
-  await expect(recent.getByRole("heading", { level: 3 }).first()).toHaveText(latestTitle);
+  // The build embeds history from its own checkout, which may hold only a few
+  // commits (pull-request merge builds in CI expose three), so expect what it embedded.
+  const embedded = await page.evaluate(async () => (await import("/release.js")).RECENT_UPDATES.map(({ title }) => title));
+  await expect(recent.locator("li")).toHaveCount(Math.min(3, embedded.length));
+  await expect(recent.getByRole("heading", { level: 3 }).first()).toHaveText(embedded[0]);
   await expect(recent.locator("time").first()).toHaveAttribute("datetime", /^\d{4}-\d{2}-\d{2}$/);
   await expect(recent.getByRole("link").first()).toHaveAttribute("href", /^https:\/\/github\.com\/UConn-Law-Library\/CGS\/commit\/[a-f0-9]{40}$/);
   await updates.screenshot({ path: testInfo.outputPath("recent-updates.png") });
   const earlier = updates.getByRole("list", { name: "Earlier updates", exact: true });
+  if (embedded.length <= 3) {
+    await expect(updates.locator("summary")).toHaveCount(0);
+    return;
+  }
   await expect(earlier).toBeHidden();
   await updates.locator("summary").click();
   await expect(earlier).toBeVisible();
@@ -454,4 +460,60 @@ test("the search shortcut moves focus to the omnisearch field", async ({ page })
   await openApp(page);
   await page.keyboard.press("/");
   await expect(page.locator("#global-query")).toBeFocused();
+});
+
+test("a statute section loads without full-text search or subject-index shards", async ({ page }) => {
+  const requested = [];
+  page.on("request", (request) => requested.push(new URL(request.url()).pathname));
+  await openApp(page, "#/t/17b/c/319v/s/17b-238");
+  const statute = page.locator("article.provision .statute-text");
+  await expect(statute.getByRole("link", { name: "17b-239", exact: true }).first()).toHaveAttribute("href", "#/t/17b/c/319v/s/17b-239");
+  expect(requested.filter((path) => /\/data\/search\/title-|\/statutes-index\/(?!manifest)/.test(path))).toEqual([]);
+
+  const indexGroup = page.locator("details[data-deferred-index]");
+  await indexGroup.locator("summary").click();
+  await expect(page.locator("[data-linked-index] .secondary-record").first()).toBeVisible();
+  expect(requested.some((path) => /\/statutes-index\/(?!manifest)/.test(path))).toBe(true);
+});
+
+test("keyboard navigation moves focus to the new page heading", async ({ page }) => {
+  await openApp(page);
+  await page.locator('.app-nav a[href="#/acts"]').focus();
+  await page.keyboard.press("Enter");
+  await expect(page.getByRole("heading", { level: 1, name: "Public and Special Acts" })).toBeFocused();
+});
+
+test("choosing a section from the pane keeps focus in the pane and announces the page", async ({ page }, testInfo) => {
+  test.skip(isMobileProject(testInfo), "Navigation panes are desktop only.");
+  await openApp(page, "#/t/17b/c/319v/s/17b-238");
+  await page.locator('.sections-column a[href="#/t/17b/c/319v/s/17b-239"]').focus();
+  await page.keyboard.press("Enter");
+  await expect(page.getByRole("heading", { level: 1, name: /Sec\. 17b-239\./ })).toBeVisible();
+  await expect(page.locator('.sections-column a[href="#/t/17b/c/319v/s/17b-239"]')).toBeFocused();
+  await expect(page.locator("[data-route-announcer]")).toHaveText(/Sec\. 17b-239/);
+});
+
+test("Settings closes with Escape or a click outside the panel", async ({ page }) => {
+  await openApp(page);
+  const button = page.getByRole("button", { name: "Settings" });
+  const panel = page.getByRole("dialog", { name: "Settings" });
+  await button.click();
+  await expect(panel).toBeVisible();
+  await page.keyboard.press("Escape");
+  await expect(panel).toBeHidden();
+  await expect(button).toBeFocused();
+  await button.click();
+  // On phones the open panel covers the page, so press outside it directly.
+  await page.locator("main").dispatchEvent("pointerdown");
+  await expect(panel).toBeHidden();
+});
+
+test("the header and pages reflow without sideways scrolling at 200% text", async ({ page }, testInfo) => {
+  test.skip(!isMobileProject(testInfo), "Checks the phone layout.");
+  for (const route of ["#/t/17b/c/319v/s/17b-238", "#/search?q=negligence", "#/index", "#/infractions"]) {
+    await openApp(page, route);
+    await page.addStyleTag({ content: "html { font-size: 32px !important; }" });
+    await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth)).toBe(0);
+    await expect(page.locator(".site-header")).toHaveCSS("position", "relative");
+  }
 });

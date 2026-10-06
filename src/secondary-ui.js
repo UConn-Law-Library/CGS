@@ -117,10 +117,16 @@ function renderLinkedIndex({ topic, entry }) {
   </li>`;
 }
 
+export function renderLinkedIndexEntries(entries) {
+  return entries.map(renderLinkedIndex).join("");
+}
+
 export function renderSecondaryContext(context) {
   if (!context) return "";
   if (context.error) return `<p class="secondary-warning">Related records could not be loaded. The statute text above is unaffected.</p>`;
-  const total = context.infractions.length + context.feeRules.length + context.indexEntries.length;
+  const deferredIndex = !context.indexEntries;
+  const indexCount = context.indexEntries?.length ?? context.indexLinks?.length ?? 0;
+  const total = context.infractions.length + context.feeRules.length + indexCount;
   if (!total) return "";
   const infractionSource = context.manifests.infractions.source;
   const indexSource = context.manifests.index.source;
@@ -132,9 +138,9 @@ export function renderSecondaryContext(context) {
       <p class="source-note">Chart B revision ${escapeHtml(infractionSource.chartBRevision ?? "not stated")}. Roles describe whether this section creates or is affected by the rule.</p>
       <ol class="secondary-records">${context.feeRules.map(renderFeeRule).join("")}</ol>
     </details>` : ""}
-    ${context.indexEntries.length ? `<details class="related-group"><summary>General Statutes index <span>${context.indexEntries.length}</span></summary>
+    ${indexCount ? `<details class="related-group"${deferredIndex ? ` data-deferred-index="${escapeHtml(context.indexKey ?? "")}"` : ""}><summary>General Statutes index <span>${indexCount}</span></summary>
       <p class="source-note">${escapeHtml(indexSource.revision)}. <a href="${escapeHtml(indexSource.url)}">Official index</a></p>
-      <ol class="secondary-records">${context.indexEntries.map(renderLinkedIndex).join("")}</ol>
+      <ol class="secondary-records" data-linked-index>${deferredIndex ? "" : renderLinkedIndexEntries(context.indexEntries)}</ol>
     </details>` : ""}`;
 }
 

@@ -46,12 +46,28 @@ function auxiliaryDocument(section) {
   };
 }
 
+function sectionRouteKey(section) {
+  return section.citation ?? section.citations?.[0] ?? section.id;
+}
+
+// Maps each citation to the chapter and route key of its section, so the reader
+// can link cross-references without downloading a title's full-text search shard.
+function addCitations(citations, chapterNumber, sections) {
+  for (const section of sections) {
+    const route = [chapterNumber, sectionRouteKey(section)];
+    for (const citation of section.citations ?? [section.citation].filter(Boolean)) {
+      citations[String(citation).toLowerCase()] = route;
+    }
+  }
+}
+
 export async function generateSearchV2Artifacts({ catalog, dataDirectory, supplementsDir, outputDir, generatedAt }) {
   const supplement = await latestSupplement(supplementsDir);
   const supplementTitles = new Map((supplement?.manifest?.titles ?? []).map((title) => [title.id, title]));
   const catalogTitles = new Map(catalog.titles.map((title) => [title.id, title]));
   const titleIds = [...new Set([...catalogTitles.keys(), ...supplementTitles.keys()])];
   const shards = [];
+  const citationShards = [];
   let documentCount = 0;
 
   for (const titleId of titleIds) {
@@ -60,6 +76,7 @@ export async function generateSearchV2Artifacts({ catalog, dataDirectory, supple
     const overlayEntries = [...(supplementTitle?.chapters ?? [])];
     const usedOverlays = new Set();
     const documents = [];
+    const citations = {};
 
     for (const chapterEntry of title?.chapters ?? []) {
       const baseChapter = await readJson(path.join(dataDirectory, ...chapterEntry.path.split("/")));
@@ -72,12 +89,14 @@ export async function generateSearchV2Artifacts({ catalog, dataDirectory, supple
         chapter = applyChapterOverlay(baseChapter, overlay, supplement.editionYear).chapter;
       }
       documents.push(...chapter.sections.map(auxiliaryDocument));
+      addCitations(citations, chapterEntry.number, chapter.sections);
     }
 
     for (const overlayEntry of overlayEntries.filter((entry) => !usedOverlays.has(entry.id))) {
       const overlay = await readJson(path.join(supplement.root, ...overlayEntry.path.split("/")));
       const chapter = applyChapterOverlay(null, overlay, supplement.editionYear).chapter;
       documents.push(...chapter.sections.map(auxiliaryDocument));
+      addCitations(citations, chapter.number ?? overlayEntry.number, chapter.sections);
     }
 
     const relativePath = `${titleId}.json`;
@@ -92,6 +111,12 @@ export async function generateSearchV2Artifacts({ catalog, dataDirectory, supple
     });
     shards.push({ titleId, ...artifact, documentCount: documents.length });
     documentCount += documents.length;
+    const citationArtifact = await writeJson(outputDir, `citations/${titleId}.json`, {
+      schemaVersion: catalog.schemaVersion,
+      titleId,
+      sections: citations
+    });
+    citationShards.push({ titleId, ...citationArtifact });
   }
 
   const manifest = {
@@ -99,7 +124,8 @@ export async function generateSearchV2Artifacts({ catalog, dataDirectory, supple
     generatedAt,
     supplementEditionYear: supplement?.editionYear ?? null,
     counts: { titles: shards.length, documents: documentCount },
-    shards
+    shards,
+    citationShards
   };
   await writeJson(outputDir, "manifest.json", manifest, { pretty: true });
   return manifest;

@@ -372,6 +372,7 @@ export class SearchRepository {
   #auxiliaryManifest;
   #shards = new Map();
   #auxiliaryShards = new Map();
+  #citationShards = new Map();
   #supplements;
 
   constructor({
@@ -408,6 +409,23 @@ export class SearchRepository {
     });
     this.#auxiliaryShards.set(titleId, promise);
     return promise;
+  }
+
+  // Citation -> [chapter number, section route key] for one title.
+  async loadCitations(titleId) {
+    if (!this.#citationShards.has(titleId)) {
+      const promise = (async () => {
+        this.#auxiliaryManifest ??= await this.#json("manifest.json", this.#auxiliaryBaseUrl);
+        const entry = this.#auxiliaryManifest.citationShards?.find((shard) => shard.titleId === titleId);
+        if (!entry) throw new Error(`No citation shard for ${titleId}`);
+        return (await this.#json(entry.path, this.#auxiliaryBaseUrl)).sections;
+      })().catch((error) => {
+        this.#citationShards.delete(titleId);
+        throw error;
+      });
+      this.#citationShards.set(titleId, promise);
+    }
+    return this.#citationShards.get(titleId);
   }
 
   async loadTitle(titleId, { includeAuxiliary = false } = {}) {

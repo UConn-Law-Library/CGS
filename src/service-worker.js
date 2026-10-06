@@ -178,6 +178,7 @@ function offlineArtifacts(baseManifest, secondaryManifest, searchV2Manifest, sup
     ...secondaryManifest.artifacts.map((artifact) => artifactTask("./data/secondary/", artifact)),
     ...actsManifest.artifacts.map((artifact) => artifactTask("./data/acts/", artifact)),
     ...searchV2Manifest.shards.map((artifact) => artifactTask("./data/search-v2/", artifact)),
+    ...(searchV2Manifest.citationShards ?? []).map((artifact) => artifactTask("./data/search-v2/", artifact)),
     ...supplementArtifacts
   ];
   return [...new Map(tasks.map((task) => [task.path, task])).values()];

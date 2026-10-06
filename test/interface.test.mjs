@@ -76,7 +76,7 @@ test("index letters render collapsed topics, dedicated large topics, and repeale
 
 test("infractions categories are one alphabetical column", () => {
   assert.match(appSource, /return \[\.\.\.groups\]\.sort\(\(\[left\], \[right\]\) => left\.localeCompare\(right\)\)/);
-  assert.match(stylesSource, /\.infraction-categories \{[^}]*grid-template-columns: 1fr/);
+  assert.match(stylesSource, /\.infraction-categories \{[^}]*grid-template-columns: minmax\(0, 1fr\)/);
 });
 
 test("settings links to a provenance-rich About page", () => {

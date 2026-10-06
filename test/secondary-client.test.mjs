@@ -57,6 +57,7 @@ test("loads sharded infractions, index letters, and reverse section links", asyn
   assert.equal(context.infractions[0].id, "infraction-1");
   assert.deepEqual(context.feeRules[0].roles, ["affected"]);
   assert.equal(context.indexEntries[0].entry.id, "entry-1");
+  assert.equal(context.indexLinks[0].entryId, "entry-1");
   assert.deepEqual((await repository.loadSectionLinks("title-99", "99-1")).infractions, []);
   assert.deepEqual((await repository.loadSectionLinks("title-99", "99-1")).feeRules, []);
 });
@@ -74,4 +75,27 @@ test("returns an empty infraction shard for a title without entries", async () =
     fetchImpl(url) { return Promise.resolve(response(values.get(url.href))); }
   });
   assert.deepEqual((await repository.loadInfractions("title-1")).entries, []);
+});
+
+test("defers index shards until the caller asks for the linked entries", async () => {
+  const base = "https://example.test/data/secondary/";
+  const requested = [];
+  const values = new Map([
+    [`${base}manifest.json`, { schemaVersion: "1.0.0" }],
+    [`${base}infractions/manifest.json`, { shards: [] }],
+    [`${base}statutes-index/manifest.json`, { shards: [] }],
+    [`${base}links/manifest.json`, { shards: [{ titleId: "title-14", path: "title-14.json" }] }],
+    [`${base}statutes-index/m-01.json`, { headings: [{ id: "topic-1", label: "MOTOR VEHICLES", items: [{ id: "entry-1" }] }] }],
+    [`${base}links/title-14.json`, { sections: { "14-1": { infractions: [], feeRules: [], indexEntries: [{ topicId: "topic-1", entryId: "entry-1", shard: "statutes-index/m-01.json" }] } } }]
+  ]);
+  const repository = new SecondarySourceRepository({
+    baseUrl: base,
+    fetchImpl(url) { requested.push(url.href); return Promise.resolve(response(values.get(url.href))); }
+  });
+  const context = await repository.loadSectionContext("title-14", "14-1", { includeIndexEntries: false });
+  assert.equal(context.indexEntries, null);
+  assert.equal(context.indexLinks.length, 1);
+  assert.ok(!requested.some((href) => href.includes("statutes-index/m-01.json")));
+  const entries = await repository.loadLinkedIndexEntries(context.indexLinks);
+  assert.equal(entries[0].topic.label, "MOTOR VEHICLES");
 });

@@ -250,13 +250,19 @@ test("About shows recent updates and expands earlier changes", async ({ page }, 
   const updates = page.getByRole("region", { name: "Recent updates" });
   await expect(updates.getByRole("heading", { name: "Recent updates", exact: true })).toBeVisible();
   const recent = updates.getByRole("list", { name: "Latest updates", exact: true });
-  await expect(recent.locator("li")).toHaveCount(3);
-  const latestTitle = await page.evaluate(async () => (await import("/release.js")).RECENT_UPDATES[0].title);
-  await expect(recent.getByRole("heading", { level: 3 }).first()).toHaveText(latestTitle);
+  // The build embeds history from its own checkout, which may hold only a few
+  // commits (pull-request merge builds in CI expose three), so expect what it embedded.
+  const embedded = await page.evaluate(async () => (await import("/release.js")).RECENT_UPDATES.map(({ title }) => title));
+  await expect(recent.locator("li")).toHaveCount(Math.min(3, embedded.length));
+  await expect(recent.getByRole("heading", { level: 3 }).first()).toHaveText(embedded[0]);
   await expect(recent.locator("time").first()).toHaveAttribute("datetime", /^\d{4}-\d{2}-\d{2}$/);
   await expect(recent.getByRole("link").first()).toHaveAttribute("href", /^https:\/\/github\.com\/UConn-Law-Library\/CGS\/commit\/[a-f0-9]{40}$/);
   await updates.screenshot({ path: testInfo.outputPath("recent-updates.png") });
   const earlier = updates.getByRole("list", { name: "Earlier updates", exact: true });
+  if (embedded.length <= 3) {
+    await expect(updates.locator("summary")).toHaveCount(0);
+    return;
+  }
   await expect(earlier).toBeHidden();
   await updates.locator("summary").click();
   await expect(earlier).toBeVisible();

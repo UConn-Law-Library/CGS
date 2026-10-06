@@ -8,12 +8,21 @@ import {
   ActsRepository,
   actsCurrencyNote,
   actTextPattern,
+  effectiveDateOptions,
+  effectiveRows,
   filterActs,
   matchActText,
   normalizeActsOptions,
+  parseEffective,
+  parseSectionsParameter,
   renderActDocument,
   renderActSections,
   renderActsTable,
+  renderEffectiveTable,
+  sectionsLabel,
+  sentenceCaseTitle,
+  sectionsParameter,
+  sectionsSummary,
   tokenizeActText
 } from "../src/acts.js";
 import { actRouteHref, actsRouteHref, parseRoute } from "../src/routes.js";
@@ -43,9 +52,9 @@ const acts = [
 test("round-trips acts routes and normalizes unknown options", () => {
   const href = actsRouteHref({ session: "2026-regular", type: "special", query: "state land", sort: "number" });
   assert.equal(href, "#/acts?session=2026-regular&type=special&q=state%20land&sort=number");
-  assert.deepEqual(parseRoute({ hash: href }), { kind: "acts", session: "2026-regular", type: "special", query: "state land", sort: "number" });
+  assert.deepEqual(parseRoute({ hash: href }), { kind: "acts", session: "2026-regular", type: "special", query: "state land", sort: "number", order: null, view: null, on: null });
   assert.equal(actsRouteHref({ sort: "newest" }), "#/acts");
-  assert.deepEqual(normalizeActsOptions({ type: "secret", sort: "random", query: "  " }), { session: null, type: null, query: null, sort: "newest" });
+  assert.deepEqual(normalizeActsOptions({ type: "secret", sort: "random", query: "  " }), { session: null, type: null, query: null, sort: "newest", order: "asc", view: "acts", on: null });
 });
 
 test("lists public acts before special acts, newest first by default", () => {
@@ -127,8 +136,8 @@ test("validates the published acts and detects tampering", async (t) => {
 test("round-trips act routes", () => {
   const href = actRouteHref("2026-regular", act(15, "special"), { section: "3", query: "state land" });
   assert.equal(href, "#/acts/2026-regular/sa-15?section=3&q=state%20land");
-  assert.deepEqual(parseRoute({ hash: href }), { kind: "act", session: "2026-regular", act: "sa-2026-regular-15", section: "3", query: "state land" });
-  assert.deepEqual(parseRoute({ hash: "#/acts/2026-regular/pa-007" }), { kind: "act", session: "2026-regular", act: "pa-2026-regular-7", section: null, query: null });
+  assert.deepEqual(parseRoute({ hash: href }), { kind: "act", session: "2026-regular", act: "sa-2026-regular-15", section: "3", sections: null, query: "state land" });
+  assert.deepEqual(parseRoute({ hash: "#/acts/2026-regular/pa-007" }), { kind: "act", session: "2026-regular", act: "pa-2026-regular-7", section: null, sections: null, query: null });
   assert.deepEqual(parseRoute({ hash: "#/acts/2026-regular/hb-5" }), { kind: "not-found" });
 });
 
@@ -212,7 +221,7 @@ async function rehash(root, relative, change) {
   const identity = { bytes: bytes.length, sha256: createHash("sha256").update(bytes).digest("hex") };
   const manifestFile = path.join(root, "manifest.json");
   const manifest = JSON.parse(await readFile(manifestFile, "utf8"));
-  for (const record of [...manifest.artifacts, ...manifest.sessions, ...manifest.sessions.map((entry) => entry.search).filter(Boolean)]) {
+  for (const record of [...manifest.artifacts, ...manifest.sessions, ...manifest.sessions.flatMap((entry) => [entry.search, entry.effective]).filter(Boolean)]) {
     if (record.path === relative) Object.assign(record, identity);
   }
   await writeFile(manifestFile, `${JSON.stringify(manifest, null, 2)}\n`);
@@ -245,4 +254,139 @@ test("validates act texts and the search index", async (t) => {
   assert.ok(errors.some((error) => error.includes(`text is for ${withText.id}0, not ${withText.id}`)), errors.join("\n"));
   assert.ok(errors.some((error) => error.includes('term "zzzz" must list ascending act positions')), errors.join("\n"));
   assert.equal(errors.filter((error) => error.includes("SHA-256")).length, 0, errors.join("\n"));
+});
+
+test("round-trips the effective-date view and act section selections", () => {
+  const href = actsRouteHref({ view: "effective", query: "tax", on: "2026-10-01" });
+  assert.equal(href, "#/acts?view=effective&q=tax&on=2026-10-01");
+  assert.deepEqual(parseRoute({ hash: href }), { kind: "acts", session: null, type: null, query: "tax", sort: null, order: null, view: "effective", on: "2026-10-01" });
+  assert.equal(actsRouteHref({ view: "effective", sort: "effective", order: "asc" }), "#/acts?view=effective");
+  assert.equal(actsRouteHref({ view: "effective", sort: "act", order: "desc" }), "#/acts?view=effective&sort=act&order=desc");
+  assert.deepEqual(normalizeActsOptions({ view: "effective", on: "2026-10-01" }), { session: null, type: null, query: null, sort: "effective", order: "asc", view: "effective", on: "2026-10-01" });
+  assert.equal(normalizeActsOptions({ view: "effective", sort: "newest", order: "desc" }).sort, "effective");
+  assert.equal(normalizeActsOptions({ view: "effective", sort: "act", order: "desc" }).order, "desc");
+  assert.equal(normalizeActsOptions({ sort: "act", order: "desc" }).sort, "newest");
+  assert.equal(normalizeActsOptions({ view: "other", on: "October" }).view, "acts");
+  assert.equal(normalizeActsOptions({ on: "October" }).on, null);
+  assert.equal(normalizeActsOptions({ on: "passage" }).on, null);
+  const act150 = actRouteHref("2026-regular", act(150), { sections: "1-3,7" });
+  assert.equal(act150, "#/acts/2026-regular/pa-150?sections=1-3,7");
+  assert.equal(parseRoute({ hash: act150 }).sections, "1-3,7");
+});
+
+test("reads effective dates, placing from passage on the approval date", () => {
+  assert.deepEqual(parseEffective("Effective July 1, 2026"), { date: "2026-07-01", fromPassage: false, label: "July 1, 2026", qualifier: "" });
+  assert.deepEqual(parseEffective("Effective from passage", "Approved June 4, 2026"), { date: "2026-06-04", fromPassage: true, label: "June 4, 2026", qualifier: "" });
+  assert.equal(parseEffective("Effective October 1, 2026, and applicable to sales occurring on or after October 1, 2026").qualifier, "Applicable to sales occurring on or after October 1, 2026");
+  assert.equal(parseEffective("Effective from passage and applicable to any civil action pending", "Approved June 4, 2026").qualifier, "Applicable to any civil action pending");
+  assert.deepEqual(parseEffective("Effective from passage"), { date: null, fromPassage: true, label: "Effective from passage", qualifier: "" });
+  assert.deepEqual(parseEffective(null), { date: null, fromPassage: false, label: "No effective date stated", qualifier: "" });
+  assert.equal(parseEffective("Effective upon a future event").label, "Effective upon a future event");
+});
+
+const effectiveIndex = {
+  acts: [
+    { id: "pa-2026-regular-150", approved: "Approved June 4, 2026", dates: [{ effective: "Effective October 1, 2026", sections: ["1", "2"] }, { effective: "Effective from passage", sections: ["3"] }, { effective: "Effective upon a future event", sections: ["4"] }] },
+    { id: "pa-2026-regular-15", approved: "Approved May 1, 2026", dates: [{ effective: "Effective October 1, 2026", sections: ["1"] }, { effective: "Effective July 1, 2026, and applicable to sales", sections: ["2", "3", "5"] }] }
+  ]
+};
+const publicActs = acts.filter((value) => value.type === "public");
+const rowSummary = (rows) => rows.map((row) => `${row.act.citation} ${row.label} ${row.sections.join()}`);
+
+test("lists effective dates one row per act and date, sorted by either column", () => {
+  assert.deepEqual(rowSummary(effectiveRows(publicActs, effectiveIndex)), [
+    "P.A. 26-150 June 4, 2026 3",
+    "P.A. 26-15 July 1, 2026 2,3,5",
+    "P.A. 26-15 October 1, 2026 1",
+    "P.A. 26-150 October 1, 2026 1,2",
+    "P.A. 26-150 Effective upon a future event 4"
+  ]);
+  assert.deepEqual(rowSummary(effectiveRows(publicActs, effectiveIndex, { order: "desc" })), [
+    "P.A. 26-15 October 1, 2026 1",
+    "P.A. 26-150 October 1, 2026 1,2",
+    "P.A. 26-15 July 1, 2026 2,3,5",
+    "P.A. 26-150 June 4, 2026 3",
+    "P.A. 26-150 Effective upon a future event 4"
+  ]);
+  assert.deepEqual(rowSummary(effectiveRows(publicActs, effectiveIndex, { sort: "act", order: "desc" })), [
+    "P.A. 26-150 June 4, 2026 3",
+    "P.A. 26-150 October 1, 2026 1,2",
+    "P.A. 26-150 Effective upon a future event 4",
+    "P.A. 26-15 July 1, 2026 2,3,5",
+    "P.A. 26-15 October 1, 2026 1"
+  ]);
+  assert.deepEqual(effectiveDateOptions(effectiveRows(publicActs, effectiveIndex)), [["2026-06-04", "June 4, 2026"], ["2026-07-01", "July 1, 2026"], ["2026-10-01", "October 1, 2026"]]);
+  assert.deepEqual(effectiveRows(acts, null), []);
+});
+
+test("renders the effective-date table with dates, sentence-case titles, and sortable headings", () => {
+  const rows = effectiveRows(publicActs, effectiveIndex, { sort: "act", order: "desc" });
+  const sortHref = (sort, order) => `#sort=${sort}-${order}`;
+  const html = renderEffectiveTable(rows, "Public Acts by effective date", { session: "2026-regular", sort: "act", order: "desc", sortHref });
+  assert.match(html, /<th scope="col" aria-sort="descending"><a class="sort-link" href="#sort=act-asc" data-sort-column="act">Public Act<span class="sort-arrow" aria-hidden="true">▼<\/span><span class="visually-hidden">, sort ascending<\/span><\/a><\/th>/);
+  assert.match(html, /<th scope="col"><a class="sort-link" href="#sort=effective-asc" data-sort-column="effective">Effective<span class="visually-hidden">, sort ascending<\/span><\/a><\/th><th scope="col">Title<\/th><th scope="col">Sections<\/th>/);
+  assert.match(html, /<td class="act-effective"><time datetime="2026-06-04">June 4, 2026<\/time><\/td>\s*<td class="act-effective-title">An act adopting the integrated setting standard\.<\/td>/);
+  assert.match(html, /<a href="#\/acts\/2026-regular\/pa-15\?sections=2-3,5">Secs\. 2–3, 5<\/a><small>Applicable to sales<\/small>/);
+  assert.match(html, /<td class="act-effective">Effective upon a future event<\/td>/);
+});
+
+test("shows act titles in sentence case, keeping proper names", () => {
+  assert.equal(sentenceCaseTitle("AN ACT CONCERNING THE OFFICE OF EARLY CHILDHOOD."), "An act concerning the Office of Early Childhood.");
+  assert.equal(sentenceCaseTitle("AN ACT ESTABLISHING THE CONNECTICUT-GERMANY AND CONNECTICUT-INDIA TRADE COMMISSIONS."), "An act establishing the Connecticut-Germany and Connecticut-India trade commissions.");
+  assert.equal(sentenceCaseTitle("AN ACT ADOPTING THE INTEGRATED SETTING STANDARD OF THE AMERICANS WITH DISABILITIES ACT FOR PUBLIC ENTITIES."), "An act adopting the integrated setting standard of the Americans with Disabilities Act for public entities.");
+  assert.equal(sentenceCaseTitle("AN ACT MAKING ADJUSTMENTS FOR THE BIENNIUM ENDING JUNE 30, 2027, AND CERTAIN CLASS I RENEWABLE ENERGY SOURCES."), "An act making adjustments for the biennium ending June 30, 2027, and certain Class I renewable energy sources.");
+  assert.equal(sentenceCaseTitle("AN ACT CONCERNING MEDICAID IN THE TOWN OF PUTNAM, AS THE GOVERNOR MAY DIRECT."), "An act concerning Medicaid in the town of Putnam, as the Governor may direct.");
+  assert.equal(sentenceCaseTitle("AN ACT CONCERNING REDEMPTION CENTERS."), "An act concerning redemption centers.");
+});
+
+test("names, links, and parses runs of section numbers", () => {
+  assert.equal(sectionsLabel(["4"]), "Sec. 4");
+  assert.equal(sectionsLabel(["1", "2", "3", "7", "9", "10"]), "Secs. 1–3, 7, 9–10");
+  assert.equal(sectionsParameter(["1", "2", "3", "7"]), "1-3,7");
+  assert.deepEqual([...parseSectionsParameter("1-3,7")], ["1", "2", "3", "7"]);
+  for (const invalid of [null, "", "3-1", "a", "1,,2", "1-99999"]) assert.equal(parseSectionsParameter(invalid), null, invalid);
+  assert.equal(sectionsSummary(["1", "2"], 6), "Secs. 1–2 of 6 sections");
+  assert.equal(sectionsSummary(["1", "3", "5", "7", "9", "11", "13"], 20), "7 of 20 sections");
+});
+
+test("shows only the selected sections of an act", () => {
+  const document = {
+    sections: [{ number: "1", anchor: "sec-1", effective: "Effective July 1, 2026" }, { number: "2", anchor: "sec-2", effective: "Effective October 1, 2026" }],
+    blocks: [
+      { type: "p", page: 1, runs: ["Be it enacted"] },
+      { type: "p", page: 1, anchor: "sec-1", section: "1", runs: ["Section 1. First [deleted"] },
+      { type: "p", page: 1, section: "1", runs: ["still deleted]."] },
+      { type: "p", page: 1, anchor: "sec-2", section: "2", runs: ["Sec. 2. Second."] },
+      { type: "table", page: 2, section: "2", rows: [[["Cell"]]] },
+      { type: "action", page: 2, runs: ["Approved June 2, 2026"] }
+    ]
+  };
+  const html = renderActDocument(document, {}, { sections: new Set(["2"]) });
+  assert.doesNotMatch(html, /Be it enacted|First|still deleted|act-action/);
+  assert.match(html, /<p id="sec-2" class="act-section-start" tabindex="-1">Sec\. 2\. Second\.<\/p>/);
+  assert.match(html, /<td>Cell<\/td>/);
+  const first = renderActDocument(document, {}, { sections: new Set(["1"]) });
+  assert.match(first, /<p><del class="revision-deletion">still deleted<span class="act-bracket" aria-hidden="true">\]<\/span><\/del>\.<\/p>/);
+  const jump = renderActSections(document, (section) => `#s${section.number}`, { sections: new Set(["2"]) });
+  assert.match(jump, /1 section and effective dates/);
+  assert.doesNotMatch(jump, /#s1/);
+});
+
+test("validates the effective-date index against the act texts", async (t) => {
+  const temporary = await mkdtemp(path.join(os.tmpdir(), "cgs-acts-effective-"));
+  t.after(() => rm(temporary, { recursive: true, force: true }));
+  await cp(path.resolve("public/data/acts"), temporary, { recursive: true });
+  const manifest = JSON.parse(await readFile(path.join(temporary, "manifest.json"), "utf8"));
+  const entry = manifest.sessions[0];
+  assert.equal(entry.effective.path, `${entry.id}/effective.json`);
+  let changedId;
+  await rehash(temporary, entry.effective.path, (value) => {
+    const changed = JSON.parse(value);
+    const target = changed.acts.find((candidate) => candidate.dates.length);
+    changedId = target.id;
+    target.dates[0].effective = "Effective someday";
+    return `${JSON.stringify(changed)}\n`;
+  });
+  const { errors } = await validateActs({ actsDir: temporary, schemaDir: path.resolve("schemas") });
+  assert.deepEqual(errors, [`acts/${entry.effective.path}: ${changedId} does not match its text's sections and effective dates`]);
 });

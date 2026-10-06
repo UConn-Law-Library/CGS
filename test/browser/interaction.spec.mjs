@@ -40,6 +40,47 @@ test("Public Act references link to CGA from statute text and reference notes", 
   await expect(notes.getByRole("link", { name: "88-192", exact: true })).toHaveCount(0);
 });
 
+test("the effective-date view lists Public Act sections by date and opens only those sections", async ({ page }) => {
+  await openApp(page, "#/acts");
+  await page.getByRole("navigation", { name: "Acts view" }).getByRole("link", { name: "By effective date" }).click();
+  await expect(page).toHaveURL(/#\/acts\?view=effective$/);
+  await expect(page.getByRole("status").filter({ hasText: /^Showing all \d+ effective dates in \d+ Public Acts\.$/ })).toBeVisible();
+  const table = page.locator(".acts-effective-table");
+  await expect(table.locator("thead th[aria-sort]")).toHaveText(/^Effective/);
+  const actHeading = table.getByRole("link", { name: /^Public Act/ });
+  await actHeading.scrollIntoViewIfNeeded();
+  const scrolled = await page.evaluate(() => window.scrollY);
+  await actHeading.click();
+  await expect(page).toHaveURL(/#\/acts\?view=effective&sort=act$/);
+  // Sorting keeps the reader's place and focus on the heading.
+  expect(await page.evaluate(() => window.scrollY)).toBe(scrolled);
+  await expect(actHeading).toBeFocused();
+  await table.getByRole("link", { name: /^Public Act/ }).click();
+  await expect(page).toHaveURL(/#\/acts\?view=effective&sort=act&order=desc$/);
+  await expect(table.locator("thead th[aria-sort=descending]")).toHaveText(/^Public Act/);
+  await expect(table.locator("tbody th").first()).toHaveText("P.A. 26-151");
+  await page.getByLabel("Effective").selectOption({ label: "July 1, 2026" });
+  await page.getByLabel("Search Public Acts").fill("PA 26-150");
+  const apply = page.getByRole("button", { name: "Apply" });
+  await apply.click();
+  await expect(page).toHaveURL(/#\/acts\?view=effective&q=PA%2026-150&sort=act&order=desc&on=2026-07-01$/);
+  // Filtering keeps the form where the reader left it.
+  await expect(apply).toBeFocused();
+  await expect(apply).toBeInViewport();
+  const row = page.getByRole("row").filter({ hasText: "P.A. 26-150" });
+  await expect(row).toHaveCount(1);
+  await expect(row.getByRole("cell").nth(0)).toHaveText("July 1, 2026");
+  await expect(row.getByRole("cell").nth(1)).toHaveText("An act adopting the integrated setting standard of the Americans with Disabilities Act for public entities.");
+  await row.getByRole("link", { name: "Secs. 1–2" }).click();
+
+  await expect(page).toHaveURL(/#\/acts\/2026-regular\/pa-150\?sections=1-2$/);
+  await expect(page.getByRole("status").filter({ hasText: "Showing Secs. 1–2 of" })).toContainText("Effective July 1, 2026");
+  await expect(page.locator("#sec-1")).toBeVisible();
+  await page.getByRole("link", { name: "Show the whole act" }).click();
+  await expect(page).toHaveURL(/#\/acts\/2026-regular\/pa-150$/);
+  await expect(page.locator(".act-selection")).toHaveCount(0);
+});
+
 test("act text search opens the act with matches highlighted, sections, and statute links", async ({ page }) => {
   await openApp(page, "#/acts");
   await page.getByLabel("Search acts").fill("reverse vending machine");

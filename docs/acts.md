@@ -11,9 +11,10 @@ public/data/acts/
   2026-regular.json              the acts of one session; an act with text has a "text" reference
   2026-regular/text/pa-2.json    the text of one act
   2026-regular/search.json       word index of the session's act texts
+  2026-regular/effective.json    each act's sections grouped by effective date
 ```
 
-Act IDs are scoped to their session (`pa-2026-regular-151`) because special sessions number their acts separately; special-session citations carry a suffix such as `P.A. 26-2 (June Sp. Sess.)`. `npm run validate` checks every schema (`schemas/acts-*.schema.json`), digest, ID, and count, including that each text belongs to its act and that the search index covers exactly the acts with text. The offline download includes every listed artifact.
+Act IDs are scoped to their session (`pa-2026-regular-151`) because special sessions number their acts separately; special-session citations carry a suffix such as `P.A. 26-2 (June Sp. Sess.)`. `npm run validate` checks every schema (`schemas/acts-*.schema.json`), digest, ID, and count, including that each text belongs to its act that the search index covers exactly the acts with text, and that the effective-date index matches each text's sections. The offline download includes every listed artifact.
 
 ## Act text
 
@@ -29,6 +30,14 @@ CGA publishes acts only as PDFs, so the crawler extracts their text (`crawler/cg
 Extraction is all or nothing. Every non-whitespace character in the PDF must land in the text or in a removed header or footer; otherwise, or if a page has no text layer or unmapped glyphs, the act is published without text and the list links its PDF as before.
 
 Each text file records the PDF's URL, size, SHA-256, `Last-Modified`, and page count, and the extractor version. A later run sends a `HEAD` request per act and reuses the published text while the PDF's size and `Last-Modified` are unchanged and the extractor version is current. Text files hold one block per line so a changed act produces a readable diff.
+
+## Effective dates
+
+The list's **By effective date** view (`#/acts?view=effective`) lists one row per Public Act and effective date, with the date, the act's title in sentence case, and the sections that take effect then. It loads `effective.json` rather than every act's text. The index groups an act's sections by their exact `(Effective ...)` wording, so sections with the same date but different "applicable to" terms get separate rows, and those terms appear under the sections. Sections effective from passage show the date the act was approved; a section whose effective date is an event rather than a date shows its wording and sorts last. The **Effective** filter (`&on=2026-10-01`) narrows the table to one date.
+
+The Public Act and Effective column headings sort the table (`&sort=act`, `&order=desc`); the default is soonest date first. Titles keep the capitals of the proper names listed in `PROPER_NAMES` in `src/acts.js`; add a name there when a new session's titles use one.
+
+Each row's sections link to `#/acts/<session>/<pa|sa>-<number>?sections=1-3,7`, which shows only those sections of the act, with a link back to the whole act.
 
 ## Search
 
@@ -67,4 +76,4 @@ python -m crawler.cgs_crawler.acts --retire 2026-regular --output public/data/ac
 npm run validate
 ```
 
-Retiring removes the session's texts and search index too. The page's currency note compares each session's year with the latest published supplement. A session that the supplement already covers is described as "should already be reflected", which is a cue to retire it.
+Retiring removes the session's texts, search index, and effective-date index too. The page's currency note compares each session's year with the latest published supplement. A session that the supplement already covers is described as "should already be reflected", which is a cue to retire it.

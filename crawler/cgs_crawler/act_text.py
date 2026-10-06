@@ -647,6 +647,26 @@ def search_index(session_id: str, entries: List[Tuple[dict, dict]]) -> dict:
     }
 
 
+def effective_index(session_id: str, entries: List[Tuple[dict, dict]]) -> dict:
+    """List when each act's sections take effect, so the app can tabulate
+    effective dates without loading every act's text.
+
+    ``entries`` holds (act, text document) pairs. Each act's sections are
+    grouped by their effective-date wording, in order of first appearance.
+    """
+    acts = []
+    for act, document in entries:
+        groups: Dict[Optional[str], List[str]] = {}
+        for section in document["sections"]:
+            groups.setdefault(section.get("effective"), []).append(section["number"])
+        acts.append({
+            "id": act["id"],
+            **({"approved": document["approved"]} if document.get("approved") else {}),
+            "dates": [{"effective": effective, "sections": sections} for effective, sections in groups.items()],
+        })
+    return {"schemaVersion": TEXT_SCHEMA_VERSION, "session": session_id, "acts": acts}
+
+
 def unchanged(headers, source: dict) -> bool:
     """Whether a HEAD response describes the PDF a text was extracted from."""
     length = headers.get("Content-Length")

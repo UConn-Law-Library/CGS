@@ -4,16 +4,22 @@ import { ProgressiveSearchClient } from "./search-client.js";
 import {
   ACT_SORTS,
   ACT_TYPES,
+  ACT_VIEWS,
   ActsRepository,
   actsCountLabel,
   actsCurrencyNote,
   actTextPattern,
+  effectiveDateOptions,
+  effectiveRows,
   filterActs,
   matchActText,
   normalizeActsOptions,
+  parseSectionsParameter,
   renderActDocument,
   renderActSections,
-  renderActsTable
+  renderActsTable,
+  renderEffectiveTable,
+  sectionsSummary
 } from "./acts.js";
 import {
   actRouteHref,
@@ -116,6 +122,16 @@ function activeDestination(route = parseRoute(location)) {
   if (route.kind === "history") return "history";
   return "statutes";
 }
+
+const svgIcon = (paths) => `<svg class="glyph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false">${paths}</svg>`;
+const icons = {
+  document: svgIcon(`<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/>`),
+  scale: svgIcon(`<path d="M12 3v18M8 21h8M5 7h14"/><path d="M2 15l3-8 3 8M16 15l3-8 3 8"/><path d="M2 15a3 3 0 0 0 6 0M16 15a3 3 0 0 0 6 0"/>`),
+  bookmark: svgIcon(`<path d="M6 3h12v18l-6-4-6 4z"/>`),
+  bookmarkFilled: svgIcon(`<path d="M6 3h12v18l-6-4-6 4z" fill="currentColor"/>`)
+};
+
+const bookmarkButtonLabel = (saved) => `<span aria-hidden="true">${saved ? icons.bookmarkFilled : icons.bookmark}</span>${saved ? "Saved" : "Bookmark"}`;
 
 function navLink({ href, id, icon, label, badge = null }, active) {
   const badgeMarkup = badge === null ? "" : `<span class="nav-badge" aria-label="${badge} saved bookmark${badge === 1 ? "" : "s"}">${badge}</span>`;
@@ -288,9 +304,9 @@ function siteHeader() {
       <nav class="app-nav" aria-label="Main sections">
         ${navLink({ href: "#/", id: "statutes", icon: "§", label: "Statutes" }, active)}
         ${navLink({ href: "#/index", id: "index", icon: "A–Z", label: "Index" }, active)}
-        ${navLink({ href: "#/infractions", id: "infractions", icon: "⚖", label: "Infractions" }, active)}
-        ${navLink({ href: "#/acts", id: "acts", icon: "PA", label: "Acts" }, active)}
-        ${navLink({ href: "#/bookmarks", id: "bookmarks", icon: "★", label: "Bookmarks", badge: bookmarkCount }, active)}
+        ${navLink({ href: "#/infractions", id: "infractions", icon: icons.scale, label: "Infractions" }, active)}
+        ${navLink({ href: "#/acts", id: "acts", icon: icons.document, label: "Acts" }, active)}
+        ${navLink({ href: "#/bookmarks", id: "bookmarks", icon: icons.bookmark, label: "Bookmarks", badge: bookmarkCount }, active)}
         <button type="button" data-open-settings aria-expanded="false"${active === "settings" ? ` aria-current="page"` : ""}><span aria-hidden="true">⚙</span><span>Settings</span></button>
       </nav>
     </div>
@@ -846,9 +862,9 @@ async function renderHome(catalog) {
     <section class="destination-grid" aria-label="Explore legal materials">
       <a href="${titlesRouteHref()}"><span aria-hidden="true">§</span><strong>Browse statutes</strong><small>Navigate by title, chapter, or section.</small></a>
       <a href="#/index"><span aria-hidden="true">A–Z</span><strong>Subject index</strong><small>Find statutes by topic in the official LCO index.</small></a>
-      <a href="#/infractions"><span aria-hidden="true">⚖</span><strong>Infraction schedule</strong><small>Review violations, amounts, and linked statutes.</small></a>
-      <a href="#/acts"><span aria-hidden="true">PA</span><strong>Public and Special Acts</strong><small>See recent laws not yet reflected in the statute text.</small></a>
-      <a href="#/bookmarks"><span aria-hidden="true">★</span><strong>Bookmarks</strong><small>Return to sections and infractions saved on this device.</small></a>
+      <a href="#/infractions"><span aria-hidden="true">${icons.scale}</span><strong>Infraction schedule</strong><small>Review violations, amounts, and linked statutes.</small></a>
+      <a href="#/acts"><span aria-hidden="true">${icons.document}</span><strong>Public and Special Acts</strong><small>See recent laws not yet reflected in the statute text.</small></a>
+      <a href="#/bookmarks"><span aria-hidden="true">${icons.bookmark}</span><strong>Bookmarks</strong><small>Return to sections and infractions saved on this device.</small></a>
     </section>
     <section class="home-activity" aria-label="Your activity">
       <div><div class="section-heading"><div><p class="eyebrow">On this device</p><h2>Recently viewed</h2></div>${recents.length ? `<button type="button" class="text-button" data-clear-recents>Clear</button>` : ""}</div>${renderActivityList(recents, "Sections, index topics, and infractions you open will appear here.")}</div>
@@ -1468,7 +1484,7 @@ function bookmarkButton(bookmark, className = "") {
     data-bookmark-title="${escapeHtml(bookmark.title)}"
     data-bookmark-subtitle="${escapeHtml(bookmark.subtitle ?? "")}"
     data-bookmark-href="${escapeHtml(bookmark.href)}"
-    aria-pressed="${saved}">${saved ? "★ Saved" : "☆ Bookmark"}</button>`;
+    aria-pressed="${saved}">${bookmarkButtonLabel(saved)}</button>`;
 }
 
 function groupInfractions(entries) {
@@ -1603,16 +1619,54 @@ async function renderActs(route, sequence) {
     </main>`;
     return;
   }
-  // The word index is only needed to search the act text.
-  const searchIndex = options.query ? await actsRepository.loadSearchIndex(entry).catch(() => null) : null;
+  const effectiveView = options.view === "effective";
+  // The word index is only needed to search the act text, and the
+  // effective-date index only for the effective-date view.
+  const [searchIndex, effectiveIndex] = await Promise.all([
+    options.query ? actsRepository.loadSearchIndex(entry).catch(() => null) : null,
+    effectiveView ? actsRepository.loadEffectiveIndex(entry).catch(() => null) : null
+  ]);
   if (sequence !== renderSequence) return;
   const textMatches = matchActText(searchIndex, options.query);
-  const shown = filterActs(acts, options, textMatches);
+  const shown = filterActs(acts, effectiveView ? { ...options, type: "public" } : options, textMatches);
   const textSearchNote = options.query && entry.search && !searchIndex ? " Act text could not be searched." : "";
   const sessionField = manifest.sessions.length > 1
     ? `<div class="search-field"><label for="acts-session">Session</label><select id="acts-session" name="session">${manifest.sessions.map((session) => `<option value="${escapeHtml(session.id)}"${selectAttribute(session.id, entry.id)}>${escapeHtml(session.name)}</option>`).join("")}</select></div>`
     : "";
-  app.innerHTML = `${siteHeader()}<main class="acts-page browse-page" id="main-content">
+  const viewLinks = Object.entries(ACT_VIEWS).map(([view, label]) =>
+    `<a href="${escapeHtml(actsRouteHref({ session: options.session, query: options.query, view }))}"${view === options.view ? ` aria-current="page"` : ""}>${label}</a>`).join("");
+  const clearFilters = (filtered) => filtered ? ` <a href="${escapeHtml(actsRouteHref({ session: options.session, view: options.view, ...(effectiveView ? { sort: options.sort, order: options.order } : {}) }))}">Clear filters</a>` : "";
+  let filterFields;
+  let results;
+  if (effectiveView) {
+    const allRows = effectiveRows(acts.filter((act) => act.type === "public"), effectiveIndex);
+    const rows = effectiveRows(shown, effectiveIndex, options).filter((row) => !options.on || row.date === options.on);
+    const sortHref = (sort, order) => actsRouteHref({ session: options.session, query: options.query, view: "effective", on: options.on, sort, order });
+    filterFields = `<input type="hidden" name="view" value="effective"><input type="hidden" name="sort" value="${options.sort}"><input type="hidden" name="order" value="${options.order}">
+        <div class="search-field"><label for="acts-on">Effective</label><select id="acts-on" name="on"><option value="">All dates</option>${effectiveDateOptions(allRows).map(([value, label]) => `<option value="${value}"${selectAttribute(value, options.on)}>${escapeHtml(label)}</option>`).join("")}</select></div>`;
+    const publicActs = entry.counts.publicActs.toLocaleString();
+    const status = rows.length === allRows.length
+      ? `Showing all ${allRows.length.toLocaleString()} effective dates in ${publicActs} Public Acts.`
+      : `Showing ${rows.length.toLocaleString()} of ${allRows.length.toLocaleString()} effective dates in ${publicActs} Public Acts.`;
+    results = !effectiveIndex
+      ? `<p class="empty-state" role="status">${entry.effective ? "Effective dates could not be loaded." : "Effective dates are not available for this session."}</p>`
+      : `<p class="note" role="status">${status}${escapeHtml(textSearchNote)}${clearFilters(options.query || options.on)}</p>
+    ${rows.length ? renderEffectiveTable(rows, `${entry.name} Public Acts by effective date`, { session: entry.id, sort: options.sort, order: options.order, sortHref }) : `<p class="empty-state">No effective dates match these filters.</p>`}`;
+  } else {
+    filterFields = `<div class="search-field"><label for="acts-type">Type</label><select id="acts-type" name="type"><option value="">All acts</option>${Object.entries(ACT_TYPES).map(([value, label]) => `<option value="${value}"${selectAttribute(value, options.type)}>${label}</option>`).join("")}</select></div>
+        <div class="search-field"><label for="acts-sort">Sort</label><select id="acts-sort" name="sort">${Object.entries(ACT_SORTS).map(([value, label]) => `<option value="${value}"${selectAttribute(value, options.sort)}>${label}</option>`).join("")}</select></div>`;
+    results = `<p class="note" role="status">${shown.length === acts.length ? `Showing all ${acts.length.toLocaleString()} acts.` : `Showing ${shown.length.toLocaleString()} of ${acts.length.toLocaleString()} acts.`}${escapeHtml(textSearchNote)}${clearFilters(options.query || options.type)}</p>
+    ${shown.length ? renderActsTable(shown, `${entry.name} acts`, { session: entry.id, query: options.query, textMatches }) : `<p class="empty-state">No acts match these filters.</p>`}`;
+  }
+  // Sorting or filtering the list on screen keeps the reader's place, and
+  // focus on the control they used: a sort heading or a filter field or button.
+  const refining = app.querySelector("[data-acts-view]")?.dataset.actsView === options.view;
+  const focused = document.activeElement;
+  const refocus = focused?.dataset?.sortColumn ? `[data-sort-column="${focused.dataset.sortColumn}"]`
+    : focused?.closest?.("[data-acts-filter]") ? (focused.id ? `#${focused.id}` : "[data-acts-filter] button[type=submit]")
+    : null;
+  const scrollTop = window.scrollY;
+  app.innerHTML = `${siteHeader()}<main class="acts-page browse-page" id="main-content" data-acts-view="${options.view}">
     <header class="index-intro">
       <p class="eyebrow">${escapeHtml(manifest.source.publisher)}</p>
       <h1>Public and Special Acts</h1>
@@ -1622,21 +1676,27 @@ async function renderActs(route, sequence) {
     <aside class="acts-guidance" aria-label="Reading these acts">
       <p><strong>Public Acts</strong> change the General Statutes. Until revised statute text is published, read an act together with the sections it amends, and check the effective date of each section.</p>
       <p><strong>Special Acts</strong> apply to particular people, places, or programs and are not added to the General Statutes.</p>
-      ${entry.counts.textActs ? `<p>Select an act to read its text here. Search matches words in each act's title and text.</p>` : ""}
+      ${effectiveView
+        ? `<p>Each row lists the sections of a Public Act that take effect on one date. Select the sections to read only that text. Sections effective from passage are listed under the date the act was approved. Select a column heading to sort by it.</p>`
+        : entry.counts.textActs ? `<p>Select an act to read its text here. Search matches words in each act's title and text.</p>` : ""}
     </aside>
-    <form class="search-refine search-v2-refine acts-filter${sessionField ? " acts-filter-sessions" : ""}" data-acts-filter role="search" aria-label="Filter acts">
+    <nav class="acts-views" aria-label="Acts view">${viewLinks}</nav>
+    <form class="search-refine search-v2-refine acts-filter${sessionField ? " acts-filter-sessions" : ""}${effectiveView ? " acts-filter-effective" : ""}" data-acts-filter role="search" aria-label="Filter acts">
       <div class="search-primary-controls">
-        <div class="search-field"><label for="acts-query">Search acts</label><input id="acts-query" name="query" type="search" value="${escapeHtml(options.query ?? "")}" placeholder="${entry.counts.textActs ? "Words, act, or bill number" : "Title, act, or bill number"}" autocomplete="off"></div>
+        <div class="search-field"><label for="acts-query">Search ${effectiveView ? "Public Acts" : "acts"}</label><input id="acts-query" name="query" type="search" value="${escapeHtml(options.query ?? "")}" placeholder="${entry.counts.textActs ? "Words, act, or bill number" : "Title, act, or bill number"}" autocomplete="off"></div>
         ${sessionField}
-        <div class="search-field"><label for="acts-type">Type</label><select id="acts-type" name="type"><option value="">All acts</option>${Object.entries(ACT_TYPES).map(([value, label]) => `<option value="${value}"${selectAttribute(value, options.type)}>${label}</option>`).join("")}</select></div>
-        <div class="search-field"><label for="acts-sort">Sort</label><select id="acts-sort" name="sort">${Object.entries(ACT_SORTS).map(([value, label]) => `<option value="${value}"${selectAttribute(value, options.sort)}>${label}</option>`).join("")}</select></div>
+        ${filterFields}
         <button type="submit">Apply</button>
       </div>
     </form>
-    <p class="note" role="status">${shown.length === acts.length ? `Showing all ${acts.length.toLocaleString()} acts.` : `Showing ${shown.length.toLocaleString()} of ${acts.length.toLocaleString()} acts.`}${escapeHtml(textSearchNote)}${options.query || options.type ? ` <a href="${escapeHtml(actsRouteHref({ session: options.session }))}">Clear filters</a>` : ""}</p>
-    ${shown.length ? renderActsTable(shown, `${entry.name} acts`, { session: entry.id, query: options.query, textMatches }) : `<p class="empty-state">No acts match these filters.</p>`}
+    ${results}
   </main><footer>Unofficial access copy. Verify act text and effective dates with the Connecticut General Assembly.</footer>`;
-  window.scrollTo({ top: 0 });
+  if (!refining) {
+    window.scrollTo({ top: 0 });
+    return;
+  }
+  window.scrollTo({ top: scrollTop });
+  if (refocus) app.querySelector(refocus)?.focus({ preventScroll: true });
 }
 
 // Acts cite many titles; rather than load every cited title to resolve its
@@ -1711,8 +1771,9 @@ async function renderAct(catalog, route, sequence) {
   const act = entry ? acts.find((value) => value.id === route.act) : null;
   if (!act) return renderNotFound("That act is not in the acts list.");
   // Moving between sections of the act already on screen only scrolls.
+  const sections = parseSectionsParameter(route.sections);
   const shown = app.querySelector("[data-act-page]");
-  if (shown?.dataset.actPage === act.id && shown.dataset.actQuery === (route.query ?? "")) return showActTarget(route);
+  if (shown?.dataset.actPage === act.id && shown.dataset.actQuery === (route.query ?? "") && shown.dataset.actSections === (sections ? route.sections : "")) return showActTarget(route);
 
   setDocumentTitle(act.citation, "Public and Special Acts");
   const listHref = actsRouteHref({ session: entry.id === manifest.sessions[0]?.id ? null : entry.id });
@@ -1720,7 +1781,7 @@ async function renderAct(catalog, route, sequence) {
   const currency = act.type === "special"
     ? "Special Acts apply to particular people, places, or programs and are not added to the General Statutes."
     : actsCurrencyNote(entry, supplementEdition?.editionYear);
-  const page = (body) => `${siteHeader()}<main class="acts-page act-page browse-page" id="main-content" data-act-page="${escapeHtml(act.id)}" data-act-query="${escapeHtml(route.query ?? "")}">
+  const page = (body) => `${siteHeader()}<main class="acts-page act-page browse-page" id="main-content" data-act-page="${escapeHtml(act.id)}" data-act-query="${escapeHtml(route.query ?? "")}" data-act-sections="${escapeHtml(sections ? route.sections : "")}">
     ${breadcrumbs([{ label: "Public and Special Acts", href: listHref }, { label: act.citation }])}
     <header class="index-intro act-header">
       <p class="eyebrow">${escapeHtml(entry.name)}</p>
@@ -1749,15 +1810,22 @@ async function renderAct(catalog, route, sequence) {
 
   const details = [text.front.notice, text.front.bill, text.approved, `${text.source.pages.toLocaleString()} page${text.source.pages === 1 ? "" : "s"}`].filter(Boolean);
   const pattern = actTextPattern(route.query);
+  const selected = sections ? text.sections.filter((section) => sections.has(section.number)) : [];
+  const shownSections = selected.length ? sections : null;
+  const selectedDates = new Set(selected.map((section) => section.effective ?? "No effective date stated"));
+  const selection = selected.length
+    ? `<p class="note act-selection" role="status">Showing ${escapeHtml(sectionsSummary(selected.map((section) => section.number), text.sections.length))}${selectedDates.size === 1 ? ` · ${escapeHtml([...selectedDates][0])}` : ""}. <a href="${escapeHtml(actRouteHref(entry.id, act, { query: route.query }))}">Show the whole act</a></p>`
+    : "";
   app.innerHTML = page(`
     <p class="act-details">${details.map(escapeHtml).join(" · ")}</p>
     <aside class="acts-guidance act-legend" aria-label="How this text marks changes">
       <p>Language the act adds is <ins class="revision-addition">highlighted in green</ins>. Language it deletes is <del class="revision-deletion">struck through in red</del>; the PDF shows these as underlined and [bracketed] text.</p>
       <p>This text was extracted from the PDF. Tables may be laid out differently than in the PDF.</p>
     </aside>
-    ${renderActSections(text, (section) => actRouteHref(entry.id, act, { section: section.number, query: route.query }))}
+    ${selection}
+    ${renderActSections(text, (section) => actRouteHref(entry.id, act, { section: section.number, sections: shownSections ? route.sections : null, query: route.query }), { sections: shownSections })}
     ${pattern ? `<p class="note" role="status" data-act-highlight-status></p>` : ""}
-    ${renderActDocument(text, actReferenceMaps(catalog))}`);
+    ${renderActDocument(text, actReferenceMaps(catalog), { sections: shownSections })}`);
   const body = app.querySelector("[data-act-text]");
   if (pattern) {
     const count = highlightActText(body, pattern);
@@ -2272,7 +2340,7 @@ document.addEventListener("click", async (event) => {
       href: bookmarkButton.dataset.bookmarkHref
     });
     bookmarkButton.setAttribute("aria-pressed", String(saved));
-    bookmarkButton.textContent = saved ? "★ Saved" : "☆ Bookmark";
+    bookmarkButton.innerHTML = bookmarkButtonLabel(saved);
     document.querySelectorAll(".nav-badge").forEach((badge) => {
       const count = deviceState.bookmarks().length;
       badge.textContent = String(count);
@@ -2404,7 +2472,10 @@ document.addEventListener("submit", async (event) => {
       session: values.get("session") || parseRoute(location).session,
       type: values.get("type") || null,
       query: String(values.get("query") ?? "").trim() || null,
-      sort: values.get("sort") || null
+      sort: values.get("sort") || null,
+      order: values.get("order") || null,
+      view: values.get("view") || null,
+      on: values.get("on") || null
     });
     if (location.hash === href) await renderCurrentRoute();
     else location.hash = href;

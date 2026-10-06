@@ -141,7 +141,10 @@ class TextPublishTests(unittest.TestCase):
             self.assertEqual(index["terms"]["redemption"], [0])
             self.assertEqual(manifest["sessions"][0]["counts"]["textActs"], 1)
             self.assertEqual(manifest["sessions"][0]["search"]["path"], "2026-regular/search.json")
-            self.assertEqual(sorted(artifact["path"] for artifact in manifest["artifacts"]), ["2026-regular.json", "2026-regular/search.json", "2026-regular/text/pa-1.json"])
+            effective = json.loads((root / "2026-regular/effective.json").read_text(encoding="utf-8"))
+            self.assertEqual(effective["acts"], [{"id": "pa-2026-regular-1", "dates": [{"effective": None, "sections": ["1"]}]}])
+            self.assertEqual(manifest["sessions"][0]["effective"]["path"], "2026-regular/effective.json")
+            self.assertEqual(sorted(artifact["path"] for artifact in manifest["artifacts"]), ["2026-regular.json", "2026-regular/effective.json", "2026-regular/search.json", "2026-regular/text/pa-1.json"])
 
     def test_dates_a_session_only_when_its_texts_change(self):
         with tempfile.TemporaryDirectory() as directory:

@@ -81,21 +81,25 @@ export function infractionsRouteHref(category = null, { entry = null, query = nu
   return route;
 }
 
-export function actsRouteHref({ session = null, type = null, query = null, sort = null } = {}) {
+export function actsRouteHref({ session = null, type = null, query = null, sort = null, order = null, view = null, on = null } = {}) {
   const parameters = new URLSearchParams();
+  if (view && view !== "acts") parameters.set("view", view);
   if (session) parameters.set("session", session);
   if (type) parameters.set("type", type);
   if (query) parameters.set("q", query);
-  if (sort && sort !== "newest") parameters.set("sort", sort);
+  if (sort && sort !== (view === "effective" ? "effective" : "newest")) parameters.set("sort", sort);
+  if (order === "desc") parameters.set("order", order);
+  if (on) parameters.set("on", on);
   return parameters.size ? `#/acts?${parameters.toString().replaceAll("+", "%20")}` : "#/acts";
 }
 
-export function actRouteHref(session, act, { section = null, query = null } = {}) {
+export function actRouteHref(session, act, { section = null, sections = null, query = null } = {}) {
   const parameters = new URLSearchParams();
+  if (sections) parameters.set("sections", sections);
   if (section) parameters.set("section", section);
   if (query) parameters.set("q", query);
   const route = `#/acts/${encodeURIComponent(session)}/${act.type === "public" ? "pa" : "sa"}-${act.number}`;
-  return parameters.size ? `${route}?${parameters.toString().replaceAll("+", "%20")}` : route;
+  return parameters.size ? `${route}?${parameters.toString().replaceAll("+", "%20").replaceAll("%2C", ",")}` : route;
 }
 
 export function parseRoute({ hash = "", search = "" } = {}) {
@@ -150,6 +154,7 @@ export function parseRoute({ hash = "", search = "" } = {}) {
       session: parts[1],
       act: `${act[1]}-${parts[1]}-${Number(act[2])}`,
       section: parameters.get("section") || null,
+      sections: parameters.get("sections") || null,
       query: parameters.get("q") || null
     };
   }
@@ -161,7 +166,10 @@ export function parseRoute({ hash = "", search = "" } = {}) {
       session: parameters.get("session") || null,
       type: parameters.get("type") || null,
       query: parameters.get("q") || null,
-      sort: parameters.get("sort") || null
+      sort: parameters.get("sort") || null,
+      order: parameters.get("order") || null,
+      view: parameters.get("view") || null,
+      on: parameters.get("on") || null
     };
   }
 

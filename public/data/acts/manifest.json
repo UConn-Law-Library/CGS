@@ -32,6 +32,11 @@
         "path": "2026-regular/search.json",
         "bytes": 578280,
         "sha256": "a895bf8a5f905e45fc528321c572a96f130c839a972147cea8de33e9e99faed8"
+      },
+      "effective": {
+        "path": "2026-regular/effective.json",
+        "bytes": 43897,
+        "sha256": "853750006d3d8e21bdafa1623583326117a2a999eed7ea4917ddd855d486c892"
       }
     }
   ],
@@ -970,6 +975,11 @@
       "path": "2026-regular/search.json",
       "bytes": 578280,
       "sha256": "a895bf8a5f905e45fc528321c572a96f130c839a972147cea8de33e9e99faed8"
+    },
+    {
+      "path": "2026-regular/effective.json",
+      "bytes": 43897,
+      "sha256": "853750006d3d8e21bdafa1623583326117a2a999eed7ea4917ddd855d486c892"
     }
   ]
 }

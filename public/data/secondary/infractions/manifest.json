@@ -1,25 +1,25 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-07-14T00:00:00Z",
+  "generatedAt": "2026-10-07T19:01:39.809792Z",
   "source": {
     "name": "Mail-In Violations and Infractions Schedule",
     "publisher": "State of Connecticut Judicial Branch",
-    "url": "https://www.jud.ct.gov/webforms/forms/infractions.pdf",
-    "effective": "October 1, 2025",
-    "chartBRevision": "10-2025",
-    "pageCount": 76,
+    "url": "https://jud.ct.gov/webforms/forms/infractions.pdf",
+    "effective": "October 1, 2026",
+    "chartBRevision": "10-2026",
+    "pageCount": 79,
     "files": [
       {
-        "name": "63874131880d2d1fc96afcdb8c9413ff334d62285bb0d3572f0fb9e63e85ef83.pdf",
-        "url": "https://www.jud.ct.gov/webforms/forms/infractions.pdf",
-        "bytes": 2039843,
-        "sha256": "63874131880d2d1fc96afcdb8c9413ff334d62285bb0d3572f0fb9e63e85ef83"
+        "name": "e811247e8ed6fade0ec76008fc9b6d81513ca25ba704ab517b3c47bc6ae8cb20.pdf",
+        "url": "https://jud.ct.gov/webforms/forms/infractions.pdf",
+        "bytes": 2413389,
+        "sha256": "e811247e8ed6fade0ec76008fc9b6d81513ca25ba704ab517b3c47bc6ae8cb20"
       }
     ]
   },
   "counts": {
-    "entries": 1737,
-    "resolved": 1725,
+    "entries": 1793,
+    "resolved": 1779,
     "categories": 39,
     "feeRules": 10,
     "feeRuleReferences": 234,
@@ -79,7 +79,7 @@
     {
       "key": "title-13a",
       "path": "title-13a.json",
-      "entryCount": 14
+      "entryCount": 16
     },
     {
       "key": "title-13b",
@@ -89,12 +89,12 @@
     {
       "key": "title-14",
       "path": "title-14.json",
-      "entryCount": 781
+      "entryCount": 838
     },
     {
       "key": "title-15",
       "path": "title-15.json",
-      "entryCount": 97
+      "entryCount": 98
     },
     {
       "key": "title-16",
@@ -134,17 +134,17 @@
     {
       "key": "title-21a",
       "path": "title-21a.json",
-      "entryCount": 58
+      "entryCount": 57
     },
     {
       "key": "title-22",
       "path": "title-22.json",
-      "entryCount": 121
+      "entryCount": 119
     },
     {
       "key": "title-22a",
       "path": "title-22a.json",
-      "entryCount": 49
+      "entryCount": 47
     },
     {
       "key": "title-23",
@@ -174,7 +174,7 @@
     {
       "key": "title-29",
       "path": "title-29.json",
-      "entryCount": 55
+      "entryCount": 54
     },
     {
       "key": "title-30",
@@ -274,7 +274,7 @@
     {
       "key": "unresolved",
       "path": "unresolved.json",
-      "entryCount": 12
+      "entryCount": 14
     }
   ]
 }

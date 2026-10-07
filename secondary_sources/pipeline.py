@@ -15,7 +15,7 @@ import pdfplumber
 
 from . import SCHEMA_VERSION
 from .acquisition import INFRACTIONS_URL
-from .infractions_parser import parse_chart_b, parse_schedule, polish_entries
+from .infractions_parser import clean_citation, parse_chart_b, parse_schedule, polish_entries
 from .statutes_index_parser import parse_file
 
 INDEX_URL = "https://www.cga.ct.gov/lco/statutes-index.asp"
@@ -80,6 +80,26 @@ def resolution(display_citation, section_citation, locations):
     normalized_display = str(display_citation or "").lower().rstrip("*")
     status = "exact" if normalized_display == section_citation.lower() else "section-only"
     return {"status": status, "href": target["href"]}
+
+
+def rebase_infraction(entry, locations):
+    """Move a citation's base to the section it actually names.
+
+    A citation printed without its parentheses reads too greedily: "14-296aab1A"
+    is 14-296aa(b)(1)(A), but its printed base "14-296aab" is no section. When
+    the printed base is unknown, the longest shorter base that is a section wins.
+    """
+    section = entry["sectionCitation"]
+    if section in locations or section.startswith("pa"):
+        return
+    base = section
+    while base and base[-1].isalpha():
+        base = base[:-1]
+        if base in locations:
+            printed = entry["printedCitation"]
+            entry["sectionCitation"] = base
+            entry["citation"] = clean_citation(f"{base}({printed[len(base):]}", base)
+            return
 
 
 def cents(value):
@@ -331,6 +351,7 @@ def _build_canonical_artifacts(
     timestamp = iso_timestamp(generated_at)
     catalog, locations, base_manifest_sha = load_locations(base)
     for entry in infractions:
+        rebase_infraction(entry, locations)
         entry["resolution"] = resolution(entry["citation"], entry["sectionCitation"], locations)
     for rule in fee_rules:
         rule["authorityResolution"] = resolution(rule["authorityCitation"], rule["sectionCitation"], locations)

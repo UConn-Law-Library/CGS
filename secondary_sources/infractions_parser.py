@@ -13,8 +13,8 @@ Each schedule row becomes an entry:
   amounts      column values (total_due, fine, fee, z_fee, cost, surcharge,
                stf, bipsa, mf, plus) where present
   category     schedule category heading (e.g. "MOTOR VEHICLES")
-  subsequent   True when the citation carries the schedule's "*" marker
-               (2nd/subsequent-offense rows)
+  subsequent   True when the citation carries the schedule's "*" (2nd/
+               subsequent offense) or "^" (3rd/subsequent offense) marker
 
 Dependencies:
   pip install pdfplumber
@@ -24,8 +24,6 @@ from __future__ import annotations
 
 import re
 
-FIRST_SCHEDULE_PAGE = 5  # 0-based; pages before this are cover/TOC/preface
-
 # Statute citation at the start of a row, e.g. "14-100a(d1B*", "36a-787", "14-26(b)*".
 # Section letters are lowercase in the schedule; uppercase Z/SZ suffixes are
 # construction-zone / school-zone fee variants, not part of the section number.
@@ -33,6 +31,12 @@ STAT_RE = re.compile(r"^(\d+[a-z]{0,2}-\d+[a-z]{0,3})\S*$")
 # Public act citation, e.g. "PA25-55(3(b(1" = PA 25-55 Sec. 3(b)(1). These rows
 # cite session law not yet folded into the C.G.S. crawl, so they never link.
 PA_STAT_RE = re.compile(r"^PA(\d+-\d+)\S*$")
+# A citation too wide for its column prints flush against the description, so
+# both read as one word, e.g. "14-296aab1A*ZViolation" or "21a-421hhha2AGift,".
+# Citations never contain a capital followed by lowercase letters, so that
+# marks where the description begins.
+FUSED_ROW_RE = re.compile(r"^((?:PA)?\d+[a-z]{0,2}-\d+\S*?)([A-Z][a-z]+\S*)$")
+OFFENSE_MARKERS = "*^"
 AMOUNT_RE = re.compile(r"^\d{1,3}(?:,\d{3})*\.\d{2}$")
 
 # x coordinate that separates description text from the amount columns
@@ -80,8 +84,7 @@ def page_lines(page, tolerance=2.0):
 def header_centers(lines):
     """Locate the amount-column header row and return each column's center x."""
     for ws in lines:
-        texts = [w["text"] for w in ws]
-        if "STAT" in texts and "FINE" in texts:
+        if is_header_line(ws):
             centers = []
             i = 0
             for tok in HEADER_TOKENS:
@@ -121,8 +124,10 @@ def clean_citation(stat_no, base):
     in `subsequent`/description; here we rebuild "14-296aa(b)" etc.
     """
     rest = stat_no[len(base):]
-    rest = rest.rstrip("*")
+    rest = re.sub(r"-[A-Z]$", "", rest)             # conduct variant, e.g. "14-296aae*-A"
+    rest = rest.rstrip(OFFENSE_MARKERS)
     rest = re.sub(r"(?:SZ|Z)+$", "", rest)          # zone-fee variant markers
+    rest = rest.rstrip(OFFENSE_MARKERS)
     rest = re.sub(r"(?:1st|2nd|3rd|\dth)$", "", rest)  # offense ordinals
     if not rest.startswith("("):
         return base + rest
@@ -210,14 +215,36 @@ def is_category(ws):
     return bool(letters) and letters.upper() == letters
 
 
+def is_header_line(ws):
+    texts = [w["text"] for w in ws]
+    return "STAT" in texts and "FINE" in texts
+
+
+def split_fused_row_start(ws):
+    """Split a citation printed flush against its description into two words."""
+    first = ws[0]
+    m = FUSED_ROW_RE.match(first["text"]) if first["x0"] <= ROW_START_X else None
+    if not m:
+        return ws
+    citation, word = m.groups()
+    return [{**first, "text": citation}, {**first, "text": word}] + ws[1:]
+
+
 def parse_schedule(pdf):
     entries = []
     category = None
     current = None
+    # The cover, contents and preface run a varying number of pages, so the
+    # schedule begins wherever its column header first appears.
+    started = False
 
-    for page_idx in range(FIRST_SCHEDULE_PAGE, len(pdf.pages)):
+    for page_idx in range(len(pdf.pages)):
         page = pdf.pages[page_idx]
         lines = page_lines(page)
+        if not started:
+            if not any(is_header_line(ws) for ws in lines):
+                continue
+            started = True
         if any(w["text"] == "B" and ws[0]["text"] == "CHART"
                for ws in lines[:2] for w in ws):
             break  # Chart B (fee cross-reference tables) ends the schedule
@@ -240,6 +267,7 @@ def parse_schedule(pdf):
             if len(ws) == 1 and re.fullmatch(r"\d{1,3}", text):
                 continue
 
+            ws = split_fused_row_start(ws)
             left = [w for w in ws if w["x0"] < AMOUNT_ZONE_X]
             right = [w for w in ws if w["x0"] >= AMOUNT_ZONE_X]
 
@@ -264,7 +292,7 @@ def parse_schedule(pdf):
                     "description": " ".join(w["text"] for w in left[1:]),
                     "amounts": {},
                     "category": category,
-                    "subsequent": "*" in stat_no,
+                    "subsequent": any(mark in stat_no for mark in OFFENSE_MARKERS),
                     "page": page_idx + 1,
                 }
                 assign_amounts(current, right, centers)

@@ -44,8 +44,49 @@ class ParserTests(unittest.TestCase):
         self.assertEqual(entries[0]["amounts"]["total_due"], 117.0)
         self.assertEqual(entries[0]["amounts"]["fine"], 50.0)
 
+    def test_infractions_schedule_starts_at_its_header_whatever_the_preface_length(self):
+        headers = [word("STAT", 18, 10), word("NO", 40, 10), word("FINE", 472, 10)]
+        preface = FakePage([word("Preface", 18, 10), word("14-50b(a)", 18, 30), word("requires", 72, 30)])
+        first_row = [word("13a-26b(b)", 18, 45), word("Illegal", 72, 45), word("operation", 110, 45)]
+        pdf = FakePdf([FakePage(), preface, preface, FakePage(headers + first_row)])
+        entries = parse_schedule(pdf)
+        self.assertEqual([entry["stat_no"] for entry in entries], ["13a-26b(b)"])
+        self.assertEqual(entries[0]["page"], 4)
+
+    def test_infractions_parser_splits_a_citation_printed_flush_against_its_description(self):
+        headers = [word("STAT", 18, 10), word("NO", 40, 10), word("FINE", 472, 10)]
+        rows = [
+            word("14-296aab1A*ZViolation", 18, 45, 101.7), word("of", 103.7, 45),
+            word("14-296aab1A*", 112, 45), word("in", 170, 45), word("a", 180, 45), word("zone", 190, 45),
+            word("21a-421hhha2AGift,", 18, 60, 86.7), word("sell", 88.8, 60),
+            word("PA26-63(6a2A*Prohibited", 18, 75, 105.3), word("use", 107.3, 75),
+        ]
+        entries = parse_schedule(FakePdf([FakePage(headers + rows)]))
+        polish_entries(entries)
+        self.assertEqual(
+            [(entry["stat_no"], entry["description"]) for entry in entries],
+            [
+                ("14-296aab1A*Z", "Violation of 14-296aab1A* in a zone"),
+                ("21a-421hhha2A", "Gift, sell"),
+                ("PA26-63(6a2A*", "Prohibited use"),
+            ],
+        )
+        self.assertEqual(entries[2]["citation"], "PA 26-63(6)(a)(2)(A)")
+
+    def test_infractions_parser_treats_caret_as_a_subsequent_offense_marker(self):
+        headers = [word("STAT", 18, 10), word("NO", 40, 10), word("FINE", 472, 10)]
+        rows = [
+            word("14-296aa(f1^", 18, 45), word("Distracted", 72, 45),
+            word("14-296aa(f1^Z", 18, 60), word("Violation", 72, 60),
+        ]
+        entries = parse_schedule(FakePdf([FakePage(headers + rows)]))
+        self.assertEqual([entry["citation"] for entry in entries], ["14-296aa(f)(1)", "14-296aa(f)(1)"])
+        self.assertTrue(all(entry["subsequent"] for entry in entries))
+
     def test_citation_cleanup_preserves_section_and_rebuilds_subsections(self):
         self.assertEqual(clean_citation("14-100a(d1B*", "14-100a"), "14-100a(d)(1)(B)")
+        self.assertEqual(clean_citation("14-218a*Z", "14-218a"), "14-218a")
+        self.assertEqual(clean_citation("14-296aa(e*Z-A", "14-296aa"), "14-296aa(e)")
 
     def test_chart_b_parser_retains_cross_page_prose_and_derives_references(self):
         first = FakePage([

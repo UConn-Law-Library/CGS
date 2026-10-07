@@ -4,7 +4,7 @@ import subprocess
 import tempfile
 import unittest
 
-from secondary_sources.pipeline import build_artifacts
+from secondary_sources.pipeline import build_artifacts, rebase_infraction
 
 
 def source_file(name):
@@ -107,6 +107,22 @@ class PipelineTests(unittest.TestCase):
                 for path in second.rglob("*.json")
             }
             self.assertEqual(first_files, second_files)
+
+    def test_rebases_a_parenthesis_less_citation_onto_the_section_it_names(self):
+        locations = {"14-296aa": {}, "14-163c": {}}
+        cases = [
+            # (printed, parsed section, parsed citation) -> (section, citation)
+            (("14-296aab1A^Z", "14-296aab", "14-296aab1A"), ("14-296aa", "14-296aa(b)(1)(A)")),
+            (("14-296aae*Z-A", "14-296aae", "14-296aae"), ("14-296aa", "14-296aa(e)")),
+            # a printed base that is a real section is left alone
+            (("14-163c8b1", "14-163c", "14-163c8b1"), ("14-163c", "14-163c8b1")),
+            # public act rows never resolve against the C.G.S.
+            (("PA26-63(6a2A", "pa26-63", "PA 26-63(6)(a)(2)(A)"), ("pa26-63", "PA 26-63(6)(a)(2)(A)")),
+        ]
+        for (printed, section, citation), expected in cases:
+            entry = {"printedCitation": printed, "sectionCitation": section, "citation": citation}
+            rebase_infraction(entry, locations)
+            self.assertEqual((entry["sectionCitation"], entry["citation"]), expected)
 
 
 if __name__ == "__main__":

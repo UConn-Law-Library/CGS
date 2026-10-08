@@ -347,6 +347,49 @@ test("Settings feedback form posts to the Law Library through FormSubmit", async
   expect(body.get("_subject")).toBe("Connecticut General Statutes feedback");
 });
 
+test("offline feedback stays in the dialog instead of leaving the app", async ({ page, context }) => {
+  let posted = false;
+  await page.route("https://formsubmit.co/**", (route) => { posted = true; return route.abort(); });
+  await openApp(page);
+  await page.getByRole("button", { name: "Settings" }).click();
+  await page.getByRole("button", { name: /Submit feedback/ }).click();
+  const dialog = page.getByRole("dialog", { name: "Submit feedback" });
+  await dialog.getByRole("textbox", { name: "Name" }).fill("Jane Reader");
+  await dialog.getByRole("textbox", { name: "Email" }).fill("jane@example.edu");
+  await dialog.getByRole("textbox", { name: "Feedback" }).fill("Kept while offline.");
+  await context.setOffline(true);
+  await dialog.getByRole("button", { name: "Send feedback" }).click();
+  await expect(dialog.getByRole("status")).toHaveText(/offline.*still here/i);
+  await expect(dialog.getByRole("textbox", { name: "Feedback" })).toHaveValue("Kept while offline.");
+  expect(posted).toBe(false);
+  await context.setOffline(false);
+});
+
+test("focus rings and form field edges reach 3:1 against their surfaces in every theme", async ({ page }) => {
+  await openApp(page, "#/acts");
+  const ratio = (locator, property) => locator.evaluate((element, colorProperty) => {
+    const luminance = (value) => value.match(/[\d.]+/g).slice(0, 3).map((part) => {
+      const channel = Number(part) / 255;
+      return channel <= .04045 ? channel / 12.92 : ((channel + .055) / 1.055) ** 2.4;
+    }).reduce((sum, channel, index) => sum + channel * [.2126, .7152, .0722][index], 0);
+    let surface = element.parentElement;
+    while (surface && getComputedStyle(surface).backgroundColor === "rgba(0, 0, 0, 0)") surface = surface.parentElement;
+    const back = luminance(getComputedStyle(surface ?? document.body).backgroundColor);
+    const edge = luminance(getComputedStyle(element)[colorProperty]);
+    return (Math.max(back, edge) + .05) / (Math.min(back, edge) + .05);
+  }, property);
+  const field = page.locator("main select").first();
+  for (const theme of ["light", "dark", "oled"]) {
+    await page.evaluate((value) => { document.documentElement.dataset.theme = value; }, theme);
+    expect(await ratio(field, "borderTopColor"), `${theme} field edge`).toBeGreaterThanOrEqual(3);
+    await field.focus();
+    await page.keyboard.press("Shift+Tab");
+    await page.keyboard.press("Tab");
+    expect(await field.evaluate((element) => element.matches(":focus-visible") && getComputedStyle(element).outlineStyle)).toBe("solid");
+    expect(await ratio(field, "outlineColor"), `${theme} focus ring`).toBeGreaterThanOrEqual(3);
+  }
+});
+
 test("Clear Data actions require confirmation", async ({ page }) => {
   await page.addInitScript(() => {
     localStorage.setItem("cgs.bookmarks.v1", JSON.stringify([{ id: "saved", href: "#/t/02c/c/028a/s/2c-21" }]));
@@ -469,6 +512,10 @@ test("a statute section loads without full-text search or subject-index shards",
   const statute = page.locator("article.provision .statute-text");
   await expect(statute.getByRole("link", { name: "17b-239", exact: true }).first()).toHaveAttribute("href", "#/t/17b/c/319v/s/17b-239");
   expect(requested.filter((path) => /\/data\/search\/title-|\/statutes-index\/(?!manifest)/.test(path))).toEqual([]);
+  // Each data file arrives once: the early chapter request is the one the page uses.
+  const dataRequests = requested.filter((path) => path.includes("/data/"));
+  expect(dataRequests.filter((path, index) => dataRequests.indexOf(path) !== index)).toEqual([]);
+  expect(dataRequests).toContain("/data/chapters/319v.json");
 
   const indexGroup = page.locator("details[data-deferred-index]");
   await indexGroup.locator("summary").click();
@@ -506,6 +553,69 @@ test("Settings closes with Escape or a click outside the panel", async ({ page }
   // On phones the open panel covers the page, so press outside it directly.
   await page.locator("main").dispatchEvent("pointerdown");
   await expect(panel).toBeHidden();
+});
+
+test("narrower desktop windows give the reading column room by dropping outer panes", async ({ page }, testInfo) => {
+  test.skip(isMobileProject(testInfo), "Contextual rails are a desktop presentation.");
+  await openApp(page, "#/t/17b/c/319v/s/17b-238");
+  const panes = page.locator(".context-column");
+  await expect(panes).toHaveCount(3);
+  for (const pane of await panes.all()) await expect(pane).toBeVisible();
+  const layout = () => page.evaluate(() => ({
+    overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
+    reading: document.querySelector("main").getBoundingClientRect().width,
+    rem: parseFloat(getComputedStyle(document.documentElement).fontSize)
+  }));
+  // A window resize refits the panes without a new render.
+  await page.setViewportSize({ width: 1024, height: 900 });
+  await expect(page.locator(".titles-column")).toBeHidden();
+  await expect(page.locator(".chapters-column")).toBeHidden();
+  await expect(page.locator(".sections-column")).toBeVisible();
+  await expect(page.getByRole("navigation", { name: "Breadcrumb" }).getByRole("link", { name: "Chapter 319v" })).toBeVisible();
+  let measured = await layout();
+  expect(measured.overflow).toBe(0);
+  expect(measured.reading).toBeGreaterThanOrEqual(33.5 * measured.rem);
+  await page.setViewportSize({ width: 1100, height: 900 });
+  await expect(page.locator(".context-column:not([hidden])")).toHaveCount(2);
+  measured = await layout();
+  expect(measured.overflow).toBe(0);
+  expect(measured.reading).toBeGreaterThanOrEqual(33.5 * measured.rem);
+});
+
+test("the bottom bar keeps its labels on 360px and 375px phones", async ({ page }, testInfo) => {
+  test.skip(!isMobileProject(testInfo), "Checks the phone layout.");
+  for (const width of [360, 375]) {
+    await page.setViewportSize({ width, height: 780 });
+    await openApp(page);
+    for (const item of await page.locator(".app-nav > a, .app-nav > button").all()) {
+      const fit = await item.evaluate((element) => {
+        const label = element.querySelector("span:nth-child(2)").getBoundingClientRect();
+        return { label: label.width, item: element.getBoundingClientRect().width };
+      });
+      expect(fit.label, `label shown at ${width}px`).toBeGreaterThan(10);
+      expect(fit.label, `label fits its column at ${width}px`).toBeLessThanOrEqual(fit.item);
+    }
+  }
+});
+
+test("a subsection link opens with the subsection clear of the sticky header and panes", async ({ page }, testInfo) => {
+  await openApp(page, "#/t/17b/c/319v/s/17b-238/p/b");
+  const target = page.locator(".statute-paragraph.subsection-target");
+  await expect(target).toBeVisible();
+  const layout = await page.evaluate(() => {
+    const header = document.querySelector(".site-header").getBoundingClientRect().bottom;
+    const tools = document.querySelector(".mobile-reader-tools");
+    const covered = tools && getComputedStyle(tools).display !== "none" ? Math.max(header, tools.getBoundingClientRect().bottom) : header;
+    const pane = document.querySelector(".context-column:not([hidden])");
+    return {
+      covered,
+      target: document.querySelector(".subsection-target").getBoundingClientRect().top,
+      paneTop: pane && getComputedStyle(pane).display !== "none" ? pane.getBoundingClientRect().top : null,
+      header
+    };
+  });
+  expect(layout.target).toBeGreaterThanOrEqual(layout.covered);
+  if (!isMobileProject(testInfo)) expect(Math.round(layout.paneTop)).toBe(Math.round(layout.header));
 });
 
 test("the header and pages reflow without sideways scrolling at 200% text", async ({ page }, testInfo) => {

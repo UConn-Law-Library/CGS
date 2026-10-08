@@ -116,6 +116,37 @@ async function getJson(path) {
   return response.json();
 }
 
+// fetch() rejects with a TypeError when the request never reaches a server; HTTP errors
+// arrive as our own Error with the status in its message.
+function loadFailureKind(error) {
+  if (!navigator.onLine) return "offline";
+  return error instanceof TypeError ? "network" : "server";
+}
+
+function loadFailurePage(error) {
+  const kind = loadFailureKind(error);
+  const heading = kind === "offline" ? "This page isn’t saved for offline use" : "The statutes could not be loaded";
+  const message = {
+    offline: "You’re offline, and this part of the statutes hasn’t been downloaded to this device. The page will load again when you reconnect. To read without a connection later, choose Download for offline use in Settings.",
+    network: "The statute data could not be reached. Check your connection and try again.",
+    server: "The statute data could not be loaded from the server. Try again in a moment."
+  }[kind];
+  return `<main class="error load-failure" id="main-content" data-load-failure>
+    <h1>${heading}</h1>
+    <p>${message}</p>
+    <p><button type="button" data-retry-route>Try again</button></p>
+    <p class="load-failure-detail">Technical detail: ${escapeHtml(error.message)}</p>
+  </main>`;
+}
+
+function searchFailureMessage(error) {
+  return {
+    offline: "You’re offline, and the search data hasn’t been downloaded to this device. Reconnect and search again.",
+    network: "The search data could not be reached. Check your connection and search again.",
+    server: `Search could not finish because its data did not load (${error.message}). Try again in a moment.`
+  }[loadFailureKind(error)];
+}
+
 function activeDestination(route = parseRoute(location)) {
   if (route.kind === "index") return "index";
   if (route.kind === "infractions") return "infractions";
@@ -257,7 +288,7 @@ function settingsPanel() {
   return `<section class="settings-panel" role="dialog" aria-label="Settings" data-settings-panel hidden>
     <div class="settings-heading"><strong>Settings</strong><button type="button" class="icon-button" data-close-settings aria-label="Close settings">×</button></div>
     <div class="setting-group"><span>Theme</span><div class="segmented" role="group" aria-label="Theme">
-      ${["auto", "light", "dark", "oled"].map((theme) => `<button type="button" data-theme-value="${theme}" aria-pressed="${preferences.theme === theme}">${theme[0].toUpperCase()}${theme.slice(1)}</button>`).join("")}
+      ${Object.entries({ auto: "Auto", light: "Light", dark: "Dark", oled: "OLED" }).map(([theme, label]) => `<button type="button" data-theme-value="${theme}" aria-pressed="${preferences.theme === theme}">${label}</button>`).join("")}
     </div></div>
     <div class="setting-group typography-setting"><label for="font-profile">Font</label><select id="font-profile" data-font-profile>
       <option value="default"${preferences.fontProfile === "default" ? " selected" : ""}>Default</option>
@@ -336,6 +367,7 @@ function siteHeader() {
       <label for="feedback-name">Name</label><input id="feedback-name" name="name" type="text" autocomplete="name" maxlength="120" required>
       <label for="feedback-email">Email</label><input id="feedback-email" name="email" type="email" autocomplete="email" maxlength="254" required>
       <label for="feedback-message">Feedback</label><textarea id="feedback-message" name="message" rows="6" maxlength="5000" required></textarea>
+      <p class="feedback-status" data-feedback-status role="status"></p>
       <div class="feedback-dialog-actions"><button type="button" data-close-feedback>Cancel</button><button type="submit">Send feedback</button></div>
     </form>
   </dialog>`;
@@ -346,25 +378,24 @@ function applicationShell({
   mainContent,
   columnCount = contextualNavigation.length,
   mobilePresentationMode = "focused",
-  footer = "Unofficial access copy. Verify legal text with the Connecticut General Assembly."
+  footer = "Unofficial access copy. Verify legal text with the Connecticut General Assembly.",
+  viewport
 }) {
   const layout = deviceState.navigationLayout();
   const defaults = { 1: [256], 2: [208, 272], 3: [176, 208, 240] };
   const paneWidths = (defaults[columnCount] ?? []).map((width, index) => layout.widths[index] ?? width);
-  const maxTotal = Math.max(144 * columnCount, window.innerWidth - 320 - 6 * columnCount);
-  let excess = Math.max(0, paneWidths.reduce((total, width) => total + width, 0) - maxTotal);
-  for (let index = paneWidths.length - 1; index >= 0 && excess > 0; index -= 1) {
-    const reduction = Math.min(excess, paneWidths[index] - 144);
-    paneWidths[index] -= reduction;
-    excess -= reduction;
-  }
-  const widths = paneWidths.map((width, index) => `--context-width-${index + 1}:${width}px`).join(";");
-  const totalWidth = paneWidths.reduce((total, width) => total + width, 6 * columnCount);
-  return `${siteHeader()}<div class="application-shell mobile-${escapeHtml(mobilePresentationMode)}" data-context-columns="${columnCount}" id="context-navigation" data-navigation-collapsed="${layout.collapsed}" style="${widths};--context-total-width:${totalWidth}px">
+  const fit = contextFit(paneWidths, viewport.width, viewport.rem);
+  const style = [
+    ...fit.widths.map((width, index) => `--context-width-${index + 1}:${width}px`),
+    `--context-tracks:${fit.tracks}`,
+    `--context-total-width:${fit.total}px`
+  ].join(";");
+  const hidden = (index) => index < fit.first ? " hidden" : "";
+  return `${siteHeader()}<div class="application-shell mobile-${escapeHtml(mobilePresentationMode)}" data-context-columns="${columnCount}" data-context-widths="${paneWidths.join(",")}" id="context-navigation" data-navigation-collapsed="${layout.collapsed}" style="${style}">
     ${columnCount ? `<button type="button" class="context-collapse-toggle" data-toggle-navigation aria-controls="context-navigation" aria-expanded="${!layout.collapsed}" aria-label="${layout.collapsed ? "Show navigation panes" : "Hide navigation panes"}" title="${layout.collapsed ? "Show navigation panes" : "Hide navigation panes"}"><span aria-hidden="true">${layout.collapsed ? "›" : "‹"}</span></button>` : ""}
-    ${contextualNavigation.map((column, index) => `<aside class="context-column ${escapeHtml(column.className ?? "")}" id="context-pane-${index + 1}" data-context-key="${escapeHtml(column.className || column.label)}" aria-label="${escapeHtml(column.label)}">
+    ${contextualNavigation.map((column, index) => `<aside class="context-column ${escapeHtml(column.className ?? "")}" id="context-pane-${index + 1}" data-context-key="${escapeHtml(column.className || column.label)}" aria-label="${escapeHtml(column.label)}"${hidden(index)}>
       ${column.heading ? `<div class="context-column-heading">${column.heading}</div>` : ""}${column.content}
-    </aside><div class="context-resizer" role="separator" tabindex="0" aria-orientation="vertical" aria-label="Resize ${escapeHtml(column.label)} pane" aria-controls="context-pane-${index + 1}" aria-valuemin="144" aria-valuemax="420" aria-valuenow="${paneWidths[index]}" data-resize-pane="${index}"></div>`).join("")}
+    </aside><div class="context-resizer" role="separator" tabindex="0" aria-orientation="vertical" aria-label="Resize ${escapeHtml(column.label)} pane" aria-controls="context-pane-${index + 1}" aria-valuemin="144" aria-valuemax="420" aria-valuenow="${fit.widths[index]}" data-resize-pane="${index}"${hidden(index)}></div>`).join("")}
     ${mainContent}
   </div><footer>${footer}</footer>`;
 }
@@ -396,9 +427,65 @@ function restoreContextScrollPositions(positions) {
 
 function mountApplicationShell(options) {
   const positions = contextScrollPositions();
-  app.innerHTML = applicationShell(options);
+  // Measured while the outgoing page's layout is still current, so fitting the panes into the
+  // new page costs no extra layout pass over it.
+  const viewport = {
+    width: document.documentElement.clientWidth,
+    rem: parseFloat(getComputedStyle(document.documentElement).fontSize)
+  };
+  app.innerHTML = applicationShell({ ...options, viewport });
   restoreContextScrollPositions(positions);
 }
+
+// Statute text keeps about a 64-character measure beside the panes: 36rem for the reading
+// column, gutters included. When the panes and that column don't fit side by side, the
+// outermost level of the hierarchy gives way first (titles, then chapters); the breadcrumb
+// still reaches it. Measured in rem, so a larger text size keeps fewer panes.
+const READING_COLUMN_MIN_REM = 36;
+const CONTEXT_PANE_MIN = 144;
+const CONTEXT_RESIZER = 6;
+
+function readingColumnMinimum() {
+  return READING_COLUMN_MIN_REM * parseFloat(getComputedStyle(document.documentElement).fontSize);
+}
+
+// Which panes fit beside the reading column, at what widths: `first` is the first pane shown.
+function contextFit(widths, shellWidth, rem) {
+  const available = shellWidth - READING_COLUMN_MIN_REM * rem;
+  const span = (from) => widths.slice(from).reduce((total, width) => total + width + CONTEXT_RESIZER, 0);
+  let first = 0;
+  while (first < widths.length - 1 && span(first) > available) first += 1;
+  // Even one pane can be too wide for a narrow window; it shrinks rather than squeezing the text.
+  const fitted = widths.map((width, index) => index === widths.length - 1 && span(first) > available
+    ? Math.max(CONTEXT_PANE_MIN, Math.floor(available) - CONTEXT_RESIZER)
+    : width);
+  return {
+    first,
+    widths: fitted,
+    tracks: fitted.slice(first).map((_, offset) => `var(--context-width-${first + offset + 1}) ${CONTEXT_RESIZER}px`).join(" "),
+    total: fitted.slice(first).reduce((total, width) => total + width + CONTEXT_RESIZER, 0)
+  };
+}
+
+function fitContextColumns(shell = document.querySelector(".application-shell")) {
+  const columns = shell ? [...shell.querySelectorAll(".context-column")] : [];
+  if (!columns.length) return;
+  const fit = contextFit(shell.dataset.contextWidths.split(",").map(Number), shell.clientWidth, parseFloat(getComputedStyle(document.documentElement).fontSize));
+  columns.forEach((column, index) => {
+    column.hidden = index < fit.first;
+    column.nextElementSibling.hidden = index < fit.first;
+    shell.style.setProperty(`--context-width-${index + 1}`, `${fit.widths[index]}px`);
+  });
+  shell.style.setProperty("--context-tracks", fit.tracks);
+  shell.style.setProperty("--context-total-width", `${fit.total}px`);
+}
+
+let contextFitFrame = 0;
+function scheduleContextFit() {
+  cancelAnimationFrame(contextFitFrame);
+  contextFitFrame = requestAnimationFrame(() => fitContextColumns());
+}
+window.addEventListener("resize", scheduleContextFit);
 
 function railList(items, { className = "", empty = "No items are available." } = {}) {
   if (!items.length) return `<p class="context-empty">${escapeHtml(empty)}</p>`;
@@ -758,26 +845,6 @@ function sectionNavigation(title, chapter, sections, selected) {
     ${previous ? `<a rel="prev" href="${escapeHtml(provisionRoute(title, chapter, previous))}"><span>Previous</span>${escapeHtml(sectionLabel(previous))}</a>` : "<span></span>"}
     ${next ? `<a rel="next" href="${escapeHtml(provisionRoute(title, chapter, next))}"><span>Next</span>${escapeHtml(sectionLabel(next))}</a>` : ""}
   </nav>`;
-}
-
-function readerSidebar(title, chapter, sections, selected = null, changeBySection = new Map()) {
-  return `<aside class="reader-sidebar" aria-label="Chapter sections">
-    <a class="sidebar-parent" href="${escapeHtml(titleRoute(title))}">← ${escapeHtml(titleLabel(title))}</a>
-    <h2>${escapeHtml(chapterLabel(chapter))}</h2>
-    <p>${escapeHtml(chapter.name)}</p>
-    <nav><ol>${sections.map((section) => {
-      const active = selected === section;
-      const change = changeBySection.get(section.id);
-      const statusPill = change
-        ? `<span class="supplement-pill supplement-${escapeHtml(change.presentation)}">${escapeHtml(supplementLabel(change, { short: true }))}</span>`
-        : section.status === "repealed" ? `<span class="section-status-pill">Repealed</span>` : "";
-      const grouped = section.citations.length > 1;
-      const description = navigationSectionDescription(section);
-      return `<li${grouped ? " class=\"grouped-section\"" : ""}><a${active ? " aria-current=\"page\"" : ""} href="${escapeHtml(provisionRoute(title, chapter, section))}">
-        <strong>${escapeHtml(navigationSectionLabel(section))}</strong>${statusPill}${description && description !== section.citation ? `<span>${escapeHtml(description)}</span>` : ""}
-      </a></li>`;
-    }).join("")}</ol></nav>
-  </aside>`;
 }
 
 function renderProvision(title, chapter, section, maps, secondaryContext = null, change = null) {
@@ -1169,7 +1236,7 @@ async function runStatuteSearch(query, routeOptions = {}, { limit = SEARCH_BATCH
     }
   } catch (error) {
     if (error.name !== "AbortError" && controller === activeSearchController) {
-      status.textContent = error.message;
+      status.textContent = searchFailureMessage(error);
       more.hidden = true;
     }
   } finally {
@@ -1253,19 +1320,46 @@ async function sectionSecondaryContext(title, section, requestedCitation) {
   }
 }
 
+// A chapter file is the largest download on a statute page, so the router starts it as soon as
+// the catalog names it, and renderChapter takes over that request rather than starting another.
+// Only the latest one is kept, so a request abandoned by navigation is not held in memory.
+const pendingChapterLoads = new Map();
+
+function prefetchChapter(path) {
+  if (pendingChapterLoads.has(path)) return;
+  pendingChapterLoads.clear();
+  const load = getJson(`./data/${path}`);
+  load.catch(() => {});
+  pendingChapterLoads.set(path, load);
+}
+
+function loadChapter(path) {
+  const pending = pendingChapterLoads.get(path);
+  pendingChapterLoads.delete(path);
+  return pending ?? getJson(`./data/${path}`);
+}
+
 async function renderChapter(catalog, title, chapterMeta, route, sequence) {
-  const baseChapter = chapterMeta.supplementOnly ? null : await getJson(`./data/${chapterMeta.path}`);
+  if (route.kind === "section") {
+    // The section's reference links and related sources need these; fetch them with the chapter.
+    repository.loadCitations(title.id).catch(() => {});
+    secondaryRepository.loadSectionLinks(title.id, route.section).catch(() => {});
+  }
+  // The base chapter and its supplement download together; a supplement failure is reported
+  // on the page below rather than replacing it.
+  const basePromise = chapterMeta.supplementOnly ? Promise.resolve(null) : loadChapter(chapterMeta.path);
+  const latestPromise = chapterMeta.supplementOnly
+    ? supplementRepository.loadChapter(chapterMeta.supplementEditionYear, chapterMeta.number, title.id)
+      .then((supplementChapter) => ({ edition: { editionYear: chapterMeta.supplementEditionYear }, chapter: supplementChapter }))
+    : supplementRepository.loadLatestChapter(chapterMeta.number, title.id);
+  latestPromise.catch(() => {});
+  const baseChapter = await basePromise;
   if (sequence !== renderSequence) return;
   let chapter = baseChapter;
   let overlay = null;
   let supplementError = null;
   try {
-    const latest = chapterMeta.supplementOnly
-      ? {
-          edition: { editionYear: chapterMeta.supplementEditionYear },
-          chapter: await supplementRepository.loadChapter(chapterMeta.supplementEditionYear, chapterMeta.number, title.id)
-        }
-      : await supplementRepository.loadLatestChapter(chapterMeta.number, title.id);
+    const latest = await latestPromise;
     if (latest.chapter) {
       const applied = applyChapterOverlay(baseChapter, latest.chapter, latest.edition.editionYear);
       chapter = applied.chapter;
@@ -1338,7 +1432,8 @@ async function renderChapter(catalog, title, chapterMeta, route, sequence) {
     if (target) {
       target.classList.add("subsection-target");
       target.tabIndex = -1;
-      target.scrollIntoView({ block: "center" });
+      // Start, not center: a long subsection would otherwise open with its first lines hidden.
+      target.scrollIntoView({ block: "start" });
       target.focus({ preventScroll: true });
     }
   } else {
@@ -1849,7 +1944,7 @@ function renderBookmarks() {
   setDocumentTitle("Bookmarks");
   app.innerHTML = `${siteHeader()}<main class="bookmarks-page" id="main-content">
     <header><p class="eyebrow">Saved on this device</p><h1>Bookmarks</h1><p>Quick links remain in this browser and are never sent to a server.</p></header>
-    ${bookmarks.length ? `<ol class="bookmark-list">${bookmarks.map((bookmark) => `<li><a href="${escapeHtml(bookmark.href)}"><span>${bookmark.type === "infraction" ? "Infraction" : "Statute"}</span><strong>${escapeHtml(bookmark.title)}</strong><small>${escapeHtml(bookmark.subtitle ?? "")}</small></a><button type="button" data-remove-bookmark="${escapeHtml(bookmark.id)}" aria-label="Remove ${escapeHtml(bookmark.title)} from bookmarks">Remove</button></li>`).join("")}</ol>` : `<div class="empty-state"><p>You have not saved any bookmarks.</p><p>Select <strong>☆ Bookmark</strong> on a statute section or infraction to save it here.</p></div>`}
+    ${bookmarks.length ? `<ol class="bookmark-list">${bookmarks.map((bookmark) => `<li><a href="${escapeHtml(bookmark.href)}"><span>${bookmark.type === "infraction" ? "Infraction" : "Statute"}</span><strong>${escapeHtml(bookmark.title)}</strong><small>${escapeHtml(bookmark.subtitle ?? "")}</small></a><button type="button" data-remove-bookmark="${escapeHtml(bookmark.id)}" aria-label="Remove ${escapeHtml(bookmark.title)} from bookmarks">Remove</button></li>`).join("")}</ol>` : `<div class="empty-state"><p>You have not saved any bookmarks.</p><p>Select <strong>Bookmark</strong> on a statute section or infraction to save it here.</p></div>`}
   </main><footer>Bookmarks are stored only on this device.</footer>`;
 }
 
@@ -1892,7 +1987,7 @@ async function renderStatutesIndex(route, sequence) {
       <p class="source-note"><a href="${escapeHtml(indexRouteHref(letter))}">Back to ${escapeHtml(letter.toUpperCase())} headings</a> &middot; <a href="${escapeHtml(source.url)}">Official index volumes</a> &middot; ${escapeHtml(source.revision)}</p>
     </header><section class="index-browser" aria-live="polite">${renderSelectedIndexTopic(selected, topicGroups, matchingEntry, route.query ?? "")}</section>`
     : !letter ? `${indexIntro}<section class="mobile-only mobile-index-browser"><h2>Choose a letter</h2>${railList(letterItems, { className: "mobile-index-list" })}</section>`
-      : `${search ? `<section class="index-browser" aria-live="polite">${renderIndexSearchResults(search)}</section>` : `<section class="desktop-only rail-prompt"><p class="eyebrow">${escapeHtml(letter.toUpperCase())} index</p><h1>Choose a heading</h1><p>Select a subject heading from the adjacent column.</p></section><section class="mobile-only mobile-index-browser"><div class="section-heading"><div><p class="eyebrow">General Statutes index</p><h1>${escapeHtml(letter.toUpperCase())} headings</h1></div><p>${topics.length.toLocaleString()}</p></div>${railList(headingItems, { className: "mobile-index-list" })}</section>`}`;
+      : `${search ? `<section class="index-browser" aria-live="polite">${renderIndexSearchResults(search)}</section>` : `<section class="desktop-only rail-prompt"><p class="eyebrow">${escapeHtml(letter.toUpperCase())} index</p><h1>Choose a heading</h1><p>Select a subject heading from the adjacent column.</p></section><section class="mobile-only mobile-index-browser"><div class="section-heading"><div><p class="eyebrow">General Statutes index</p><h1>${escapeHtml(letter.toUpperCase())} headings</h1></div><p>${topics.length.toLocaleString()} heading${topics.length === 1 ? "" : "s"}</p></div>${railList(headingItems, { className: "mobile-index-list" })}</section>`}`;
   const mainContent = `<main class="index-page application-main" id="main-content">
     ${breadcrumbs([{ label: "General Statutes index", ...(letter ? { href: indexRouteHref() } : {}) }, ...(letter ? [{ label: letter.toUpperCase(), ...(selected ? { href: indexRouteHref(letter) } : {}) }] : []), ...(selected ? [{ label: selected.label }] : [])])}
     ${mainBody}
@@ -2004,8 +2099,14 @@ async function renderCurrentRoute() {
   activeSearchController = null;
   const sequence = ++renderSequence;
   try {
-    const catalog = await catalogPromise;
     const route = parseRoute(location);
+    // Statute pages need the supplement manifests as well as the catalog; fetch them together.
+    if (["title", "chapter", "section"].includes(route.kind)) {
+      supplementRepository.latestEdition()
+        .then((edition) => edition && supplementRepository.loadEdition(edition.editionYear))
+        .catch(() => {});
+    }
+    const catalog = await catalogPromise;
     if (sequence !== renderSequence) return;
     if (route.kind === "home") return await renderHome(catalog);
     if (route.kind === "titles") return renderTitles(catalog);
@@ -2020,6 +2121,8 @@ async function renderCurrentRoute() {
     if (route.kind === "index") return await renderStatutesIndex(route, sequence);
 
     let title = route.title ? findTitle(catalog, route.title) : null;
+    const baseMatch = route.chapter ? findChapter(catalog, route.chapter, title) : null;
+    if (baseMatch && !baseMatch.chapter.supplementOnly) prefetchChapter(baseMatch.chapter.path);
     if (title) title = await titleWithLatestSupplementChapters(title);
     if (sequence !== renderSequence) return;
     let chapterMatch = route.chapter ? findChapter(catalog, route.chapter, title) : null;
@@ -2031,7 +2134,8 @@ async function renderCurrentRoute() {
     return await renderChapter(catalog, title, chapterMatch.chapter, route, sequence);
   } catch (error) {
     if (sequence !== renderSequence) return;
-    app.innerHTML = `${siteHeader()}<main class="error" id="main-content"><h1>Unable to load the statutes</h1><p>${escapeHtml(error.message)}</p></main>`;
+    setDocumentTitle("Could not load");
+    app.innerHTML = `${siteHeader()}${loadFailurePage(error)}`;
   } finally {
     if (sequence === renderSequence) {
       const href = location.hash || "#/";
@@ -2048,12 +2152,16 @@ function resizeContextPane(handle, width, { save = false } = {}) {
   const shell = handle.closest(".application-shell");
   if (!shell || matchMedia("(max-width: 60rem)").matches) return;
   const index = Number(handle.dataset.resizePane);
-  const panes = [...shell.querySelectorAll(".context-column")];
-  const otherWidths = panes.reduce((total, pane, paneIndex) => total + (paneIndex === index ? 0 : pane.getBoundingClientRect().width), 0);
-  const maxWidth = Math.max(144, Math.min(420, shell.getBoundingClientRect().width - otherWidths - panes.length * 6 - 320));
-  const nextWidth = Math.round(Math.max(144, Math.min(maxWidth, width)));
+  const resized = handle.previousElementSibling;
+  const panes = [...shell.querySelectorAll(".context-column:not([hidden])")];
+  const otherWidths = panes.reduce((total, pane) => total + (pane === resized ? 0 : pane.getBoundingClientRect().width), 0);
+  const maxWidth = Math.max(CONTEXT_PANE_MIN, Math.min(420, shell.clientWidth - otherWidths - panes.length * CONTEXT_RESIZER - readingColumnMinimum()));
+  const nextWidth = Math.round(Math.max(CONTEXT_PANE_MIN, Math.min(maxWidth, width)));
   shell.style.setProperty(`--context-width-${index + 1}`, `${nextWidth}px`);
-  shell.style.setProperty("--context-total-width", `${panes.reduce((total, pane, paneIndex) => total + (paneIndex === index ? nextWidth : pane.getBoundingClientRect().width), 6 * panes.length)}px`);
+  shell.style.setProperty("--context-total-width", `${otherWidths + nextWidth + panes.length * CONTEXT_RESIZER}px`);
+  const intended = shell.dataset.contextWidths.split(",");
+  intended[index] = String(nextWidth);
+  shell.dataset.contextWidths = intended.join(",");
   handle.setAttribute("aria-valuenow", String(nextWidth));
   if (save) {
     const widths = deviceState.navigationLayout().widths;
@@ -2096,6 +2204,7 @@ document.addEventListener("input", (event) => {
   if (event.target.matches("[data-text-size]")) {
     const preferences = deviceState.updatePreferences({ textScale: event.target.value });
     applyPreferences(preferences);
+    scheduleContextFit();
     document.querySelector("[data-text-size-value]").textContent = `${Math.round(preferences.textScale * 100)}%`;
     return;
   }
@@ -2105,7 +2214,11 @@ document.addEventListener("input", (event) => {
     document.querySelector("[data-line-spacing-value]").textContent = `${preferences.lineSpacing.toFixed(2)}×`;
     return;
   }
-  if (event.target.matches("[data-feedback-form] input, [data-feedback-form] textarea")) event.target.setCustomValidity("");
+  if (event.target.matches("[data-feedback-form] input, [data-feedback-form] textarea")) {
+    event.target.setCustomValidity("");
+    const status = event.target.form.querySelector("[data-feedback-status]");
+    if (status) status.textContent = "";
+  }
   if (event.target.matches("[data-omni-input]")) scheduleOmnisearch(event.target);
 });
 
@@ -2317,8 +2430,13 @@ document.addEventListener("click", async (event) => {
   if (openFeedback) {
     const dialog = document.querySelector("[data-feedback-dialog]");
     dialog.addEventListener("close", () => openFeedback.isConnected && openFeedback.focus(), { once: true });
+    dialog.querySelector("[data-feedback-status]").textContent = "";
     dialog.showModal();
     dialog.querySelector("[name=name]").focus();
+    return;
+  }
+  if (event.target.closest("[data-retry-route]")) {
+    renderCurrentRoute();
     return;
   }
   if (event.target.closest("[data-close-feedback]")) {
@@ -2520,6 +2638,12 @@ document.addEventListener("submit", async (event) => {
         return;
       }
     }
+    // Sending navigates to the form service, so offline the browser would show its own
+    // error page and the message would be lost. Keep the dialog open with the text intact.
+    if (!navigator.onLine) {
+      event.preventDefault();
+      form.querySelector("[data-feedback-status]").textContent = "You’re offline. Your message is still here; send it once you reconnect.";
+    }
     return;
   }
   if (form.matches("[data-global-search]")) {
@@ -2584,6 +2708,12 @@ const compactLayout = matchMedia("(max-width: 60rem)");
 function updateHeaderPinning() {
   const header = document.querySelector(".site-header");
   if (!header) return;
+  // Sticky panes, the phone chapter bar, and subsection links sit just below the header,
+  // whose height changes with the window and the text size.
+  const height = `${header.offsetHeight}px`;
+  if (document.documentElement.style.getPropertyValue("--header-height") !== height) {
+    document.documentElement.style.setProperty("--header-height", height);
+  }
   const tall = compactLayout.matches && header.offsetHeight > innerHeight * 0.25;
   if (tall !== document.documentElement.hasAttribute("data-static-header")) {
     document.documentElement.toggleAttribute("data-static-header", tall);
@@ -2592,4 +2722,8 @@ function updateHeaderPinning() {
 new ResizeObserver(updateHeaderPinning).observe(document.body);
 
 window.addEventListener("hashchange", renderCurrentRoute);
+// A page that failed only because the connection dropped loads itself again on reconnect.
+window.addEventListener("online", () => {
+  if (app.querySelector("[data-load-failure]")) renderCurrentRoute();
+});
 renderCurrentRoute();

@@ -45,7 +45,7 @@ test("shared application shell provides contextual rails and mobile presentation
 
 test("supplement-only chapters resolve before reader routing and section labels avoid provision terminology", () => {
   assert.match(appSource, /titleWithLatestSupplementChapters\(title\)/);
-  assert.match(appSource, /chapterMeta\.supplementOnly \? null/);
+  assert.match(appSource, /chapterMeta\.supplementOnly \? Promise\.resolve\(null\)/);
   assert.match(appSource, /That section was not found\./);
   assert.doesNotMatch(appSource, />[^<`]*provisions?</i);
 });
@@ -117,7 +117,8 @@ test("amended supplement sections offer a collapsed native language comparison a
 test("supplement notices use blue while repealed notices retain warning colors", () => {
   assert.match(stylesSource, /\.supplement-pill,[\s\S]*color: var\(--blue-dark\);[\s\S]*background: var\(--blue-light\);[\s\S]*border-color: var\(--blue\);/);
   assert.match(stylesSource, /\.context-list \.section-status-pill \{ color: var\(--warning-ink\); \}/);
-  assert.match(stylesSource, /\.supplement-summary \{[^}]*color: var\(--blue-dark\);[^}]*background: var\(--blue-light\);[^}]*border-left: 4px solid var\(--blue\);/);
+  assert.match(stylesSource, /\.supplement-summary \{[^}]*color: var\(--blue-dark\);[^}]*background: var\(--blue-light\);/);
+  assert.doesNotMatch(stylesSource, /border-left: (?:[2-9]px|\.25rem) solid/);
 });
 
 test("print layout removes application chrome and preserves a readable statute body", () => {

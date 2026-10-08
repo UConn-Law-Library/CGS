@@ -33,6 +33,21 @@ test("supplement manifests, chapters, and search shards retry failures and share
   assert.deepEqual([...calls.values()], [2, 2, 2, 2]);
 });
 
+test("callers that arrive together share one supplement index request", async () => {
+  let calls = 0;
+  const repository = new SupplementRepository({
+    fetchImpl: async () => {
+      calls += 1;
+      await new Promise((resolve) => setTimeout(resolve, 5));
+      return { ok: true, json: async () => ({ editions: [{ editionYear: 2026, path: "2026/manifest.json" }] }) };
+    }
+  });
+  const [first, second, edition] = await Promise.all([repository.init(), repository.init(), repository.latestEdition()]);
+  assert.equal(first, second);
+  assert.equal(edition.editionYear, 2026);
+  assert.equal(calls, 1);
+});
+
 const baseChapter = {
   id: "chapter-001",
   sourceUrl: "https://example.test/current",

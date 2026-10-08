@@ -49,6 +49,26 @@ test("a failed chapter load displays an error and can be retried", async ({ page
   expect(errors).toEqual([]);
 });
 
+test("a failed load explains itself and retries in place", async ({ page }) => {
+  await openApp(page, "#/bookmarks");
+  await page.route("**/data/chapters/001.json", (route) => route.fulfill({ status: 503, body: "Unavailable" }), { times: 1 });
+  await page.evaluate(() => { location.hash = "#/t/01/c/001"; });
+  await expect(page.getByRole("heading", { level: 1, name: "The statutes could not be loaded" })).toBeFocused();
+  await expect(page.locator(".load-failure-detail")).toContainText("503");
+  await expect(page).toHaveTitle(/^Could not load/);
+  await page.getByRole("button", { name: "Try again" }).click();
+  await expect(page.getByRole("heading", { level: 1, name: /Chapter 1/ })).toBeVisible();
+  await expect(page).toHaveURL(/#\/t\/01\/c\/001$/);
+});
+
+test("the not-found page keeps its styles and home link at any path depth", async ({ page }) => {
+  await page.goto("/a/b/missing");
+  await expect(page.getByRole("heading", { level: 1, name: "Page not found" })).toBeVisible();
+  expect(await page.locator("main").evaluate((main) => getComputedStyle(main).textAlign)).toBe("center");
+  await expect(page.getByRole("link", { name: /Return to the Connecticut General Statutes/ }))
+    .toHaveJSProperty("href", new URL("/", page.url()).href);
+});
+
 test("a late chapter failure cannot replace the current page with an error", async ({ page }) => {
   const errors = [];
   page.on("pageerror", (error) => errors.push(error.message));

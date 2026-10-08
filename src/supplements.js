@@ -55,8 +55,12 @@ export class SupplementRepository {
     return response.json();
   }
 
-  async init() {
-    this.#index ??= await this.#json("manifest.json");
+  // Cached as the request, so concurrent callers share one download; a failure clears it.
+  init() {
+    this.#index ??= this.#json("manifest.json").catch((error) => {
+      this.#index = undefined;
+      throw error;
+    });
     return this.#index;
   }
 

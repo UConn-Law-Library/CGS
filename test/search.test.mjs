@@ -112,6 +112,35 @@ test("SearchRepository calls fetch with the global receiver", async () => {
   assert.deepEqual(await repository.init(), { shards: [] });
 });
 
+test("SearchRepository shares one manifest request among callers that arrive together", async () => {
+  const calls = new Map();
+  let failNext = true;
+  const repository = new SearchRepository({
+    baseUrl: "https://example.test/data/search/",
+    auxiliaryBaseUrl: "https://example.test/data/search-v2/",
+    async fetchImpl(url) {
+      calls.set(url.pathname, (calls.get(url.pathname) ?? 0) + 1);
+      await new Promise((resolve) => setTimeout(resolve, 5));
+      if (url.pathname.endsWith("/search-v2/manifest.json") && failNext) {
+        failNext = false;
+        return { ok: false, status: 503 };
+      }
+      const value = url.pathname.endsWith("/search/manifest.json")
+        ? { shards: [] }
+        : url.pathname.endsWith("/search-v2/manifest.json")
+          ? { citationShards: ["title-01", "title-02", "title-03"].map((titleId) => ({ titleId, path: `citations/${titleId}.json` })) }
+          : { sections: { "1-1": ["001", "1-1"] } };
+      return { ok: true, json: async () => value };
+    }
+  });
+  await Promise.all([repository.init(), repository.init(), repository.init()]);
+  assert.equal(calls.get("/data/search/manifest.json"), 1);
+  await assert.rejects(Promise.all(["title-01", "title-02"].map((titleId) => repository.loadCitations(titleId))), /503/);
+  const loaded = await Promise.all(["title-01", "title-02", "title-03"].map((titleId) => repository.loadCitations(titleId)));
+  assert.deepEqual(loaded[2], { "1-1": ["001", "1-1"] });
+  assert.equal(calls.get("/data/search-v2/manifest.json"), 2, "one failed request, then one shared retry");
+});
+
 test("SearchRepository annotates results with their title for stable routes", async () => {
   const responses = new Map([
     ["https://example.test/data/search/manifest.json", { shards: [{ titleId: "title-01", path: "title-01.json" }] }],

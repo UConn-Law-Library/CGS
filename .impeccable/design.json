@@ -1,0 +1,1320 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-08T00:48:11.513Z",
+  "title": "Design System: Connecticut General Statutes",
+  "extensions": {
+    "colorMeta": {
+      "reading-room-navy": {
+        "role": "primary",
+        "displayName": "Reading Room Navy",
+        "canonical": "#0b3b70",
+        "oklch": "oklch(35.4% 0.104 254.7)",
+        "tonalRamp": [
+          "#000b20",
+          "#00234c",
+          "#113f75",
+          "#315f97",
+          "#5382bd",
+          "#77a8e5",
+          "#a7ceff",
+          "#e4f0ff"
+        ]
+      },
+      "navy-deep": {
+        "role": "primary",
+        "displayName": "Navy Deep",
+        "canonical": "#062b54",
+        "oklch": "oklch(29.0% 0.085 254.5)",
+        "tonalRamp": [
+          "#000b20",
+          "#00234b",
+          "#1d406b",
+          "#3b5f8d",
+          "#5d83b2",
+          "#80a7d9",
+          "#a7ceff",
+          "#e4f0ff"
+        ]
+      },
+      "navy-wash": {
+        "role": "primary",
+        "displayName": "Navy Wash",
+        "canonical": "#dceafb",
+        "oklch": "oklch(93.2% 0.028 253.2)",
+        "tonalRamp": [
+          "#040c16",
+          "#1b2531",
+          "#36414e",
+          "#535f6d",
+          "#758291",
+          "#99a6b6",
+          "#beccdd",
+          "#e3f0ff"
+        ]
+      },
+      "on-navy": {
+        "role": "neutral",
+        "displayName": "On Navy",
+        "canonical": "#ffffff",
+        "oklch": "oklch(100.0% 0.000 89.9)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#808080",
+          "#a4a4a4",
+          "#cacaca",
+          "#eeeeee"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#172538",
+        "oklch": "oklch(26.2% 0.041 256.3)",
+        "tonalRamp": [
+          "#020b1c",
+          "#172538",
+          "#324155",
+          "#4f5f75",
+          "#718299",
+          "#94a6bf",
+          "#bacce6",
+          "#e4f0ff"
+        ]
+      },
+      "muted-ink": {
+        "role": "neutral",
+        "displayName": "Muted Ink",
+        "canonical": "#596777",
+        "oklch": "oklch(50.8% 0.031 251.9)",
+        "tonalRamp": [
+          "#030c18",
+          "#192533",
+          "#344150",
+          "#515f6f",
+          "#738293",
+          "#97a6b8",
+          "#bdccdf",
+          "#e3f0ff"
+        ]
+      },
+      "reading-room-paper": {
+        "role": "neutral",
+        "displayName": "Reading Room Paper",
+        "canonical": "#f6f3ec",
+        "oklch": "oklch(96.5% 0.010 87.5)",
+        "tonalRamp": [
+          "#0d0b07",
+          "#26241f",
+          "#423f3a",
+          "#605d57",
+          "#83807a",
+          "#a7a49e",
+          "#cdcac3",
+          "#f1eee7"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Surface",
+        "canonical": "#ffffff",
+        "oklch": "oklch(100.0% 0.000 89.9)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#808080",
+          "#a4a4a4",
+          "#cacaca",
+          "#eeeeee"
+        ]
+      },
+      "pane-surface": {
+        "role": "neutral",
+        "displayName": "Pane Surface",
+        "canonical": "#eeeae1",
+        "oklch": "oklch(93.8% 0.013 86.8)",
+        "tonalRamp": [
+          "#0d0b06",
+          "#27241d",
+          "#433f38",
+          "#615d56",
+          "#838078",
+          "#a8a49c",
+          "#cecac1",
+          "#f2eee5"
+        ]
+      },
+      "soft-surface": {
+        "role": "neutral",
+        "displayName": "Soft Surface",
+        "canonical": "#edf2f7",
+        "oklch": "oklch(95.9% 0.009 247.9)",
+        "tonalRamp": [
+          "#080c0f",
+          "#212428",
+          "#3c4044",
+          "#5a5e62",
+          "#7c8185",
+          "#a0a5aa",
+          "#c6cbd0",
+          "#eaeff4"
+        ]
+      },
+      "ledger-surface": {
+        "role": "neutral",
+        "displayName": "Ledger Surface",
+        "canonical": "#f2f5f8",
+        "oklch": "oklch(96.9% 0.005 247.9)",
+        "tonalRamp": [
+          "#090b0d",
+          "#222426",
+          "#3e4042",
+          "#5b5e60",
+          "#7e8083",
+          "#a2a5a8",
+          "#c8cbce",
+          "#eceff2"
+        ]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "#d8d5ce",
+        "oklch": "oklch(87.3% 0.010 87.5)",
+        "tonalRamp": [
+          "#0d0b07",
+          "#26241f",
+          "#423f3a",
+          "#605d57",
+          "#83807a",
+          "#a7a49e",
+          "#cdcac3",
+          "#f1eee7"
+        ]
+      },
+      "field-edge": {
+        "role": "neutral",
+        "displayName": "Field Edge",
+        "canonical": "#727d8a",
+        "oklch": "oklch(58.5% 0.024 252.6)",
+        "tonalRamp": [
+          "#050c15",
+          "#1c252f",
+          "#37414c",
+          "#545f6b",
+          "#76818f",
+          "#9aa6b4",
+          "#c0ccda",
+          "#e4f0ff"
+        ]
+      },
+      "signal-amber": {
+        "role": "tertiary",
+        "displayName": "Signal Amber",
+        "canonical": "#a86200",
+        "oklch": "oklch(56.3% 0.128 63.8)",
+        "tonalRamp": [
+          "#150700",
+          "#371d00",
+          "#5e3400",
+          "#874e00",
+          "#b46d19",
+          "#dc9246",
+          "#ffba79",
+          "#ffead8"
+        ]
+      },
+      "signal-amber-bright": {
+        "role": "tertiary",
+        "displayName": "Signal Amber Bright",
+        "canonical": "#f0a202",
+        "oklch": "oklch(77.0% 0.162 74.4)",
+        "tonalRamp": [
+          "#130900",
+          "#341f00",
+          "#583800",
+          "#7f5300",
+          "#ac7300",
+          "#dc9400",
+          "#ffbc5a",
+          "#ffebd2"
+        ]
+      },
+      "header-night": {
+        "role": "neutral",
+        "displayName": "Header Night",
+        "canonical": "#071525",
+        "oklch": "oklch(19.3% 0.038 252.7)",
+        "tonalRamp": [
+          "#010b1b",
+          "#162536",
+          "#314154",
+          "#4e5f73",
+          "#708297",
+          "#94a7bd",
+          "#b9cde3",
+          "#e3f0ff"
+        ]
+      },
+      "tab-bar-night": {
+        "role": "neutral",
+        "displayName": "Tab Bar Night",
+        "canonical": "#08111e",
+        "oklch": "oklch(17.6% 0.030 257.3)",
+        "tonalRamp": [
+          "#040b18",
+          "#1b2533",
+          "#364050",
+          "#535e6f",
+          "#758193",
+          "#99a6b8",
+          "#beccdf",
+          "#e5efff"
+        ]
+      },
+      "header-ink": {
+        "role": "neutral",
+        "displayName": "Header Ink",
+        "canonical": "#dce8f7",
+        "oklch": "oklch(92.6% 0.024 254.0)",
+        "tonalRamp": [
+          "#050c15",
+          "#1c2530",
+          "#37414d",
+          "#545f6b",
+          "#77818f",
+          "#9aa6b4",
+          "#c0ccda",
+          "#e4f0ff"
+        ]
+      },
+      "header-accent": {
+        "role": "secondary",
+        "displayName": "Header Accent",
+        "canonical": "#b8d7ff",
+        "oklch": "oklch(87.0% 0.065 254.9)",
+        "tonalRamp": [
+          "#000a20",
+          "#0b2442",
+          "#274161",
+          "#445f82",
+          "#6682a7",
+          "#89a7cd",
+          "#afcdf5",
+          "#e4f0ff"
+        ]
+      },
+      "header-accent-hover": {
+        "role": "secondary",
+        "displayName": "Header Accent Hover",
+        "canonical": "#dceafb",
+        "oklch": "oklch(93.2% 0.028 253.2)",
+        "tonalRamp": [
+          "#040c16",
+          "#1b2531",
+          "#36414e",
+          "#535f6d",
+          "#758291",
+          "#99a6b6",
+          "#beccdd",
+          "#e3f0ff"
+        ]
+      },
+      "highlight-surface": {
+        "role": "semantic",
+        "displayName": "Highlight",
+        "canonical": "#fff1b8",
+        "oklch": "oklch(95.6% 0.074 95.9)",
+        "tonalRamp": [
+          "#0f0b00",
+          "#2c2300",
+          "#4c3f03",
+          "#6a5d28",
+          "#8d804b",
+          "#b2a56e",
+          "#d9cb93",
+          "#fdefb6"
+        ]
+      },
+      "highlight-ink": {
+        "role": "semantic",
+        "displayName": "Highlight Ink",
+        "canonical": "#4a3500",
+        "oklch": "oklch(34.4% 0.071 84.0)",
+        "tonalRamp": [
+          "#110a00",
+          "#302100",
+          "#513c09",
+          "#705a2b",
+          "#947d4e",
+          "#baa171",
+          "#e0c796",
+          "#ffecc8"
+        ]
+      },
+      "warning-surface": {
+        "role": "semantic",
+        "displayName": "Warning Surface",
+        "canonical": "#fff1d7",
+        "oklch": "oklch(96.2% 0.037 83.0)",
+        "tonalRamp": [
+          "#120a00",
+          "#2d220d",
+          "#493e29",
+          "#685c46",
+          "#8b7f67",
+          "#b0a38b",
+          "#d6c9b0",
+          "#fbedd3"
+        ]
+      },
+      "warning-ink": {
+        "role": "semantic",
+        "displayName": "Warning Ink",
+        "canonical": "#4a3500",
+        "oklch": "oklch(34.4% 0.071 84.0)",
+        "tonalRamp": [
+          "#110a00",
+          "#302100",
+          "#513c09",
+          "#705a2b",
+          "#947d4e",
+          "#baa171",
+          "#e0c796",
+          "#ffecc8"
+        ]
+      },
+      "warning-line": {
+        "role": "semantic",
+        "displayName": "Warning Line",
+        "canonical": "#e2b45f",
+        "oklch": "oklch(79.4% 0.116 81.1)",
+        "tonalRamp": [
+          "#120900",
+          "#312100",
+          "#543b00",
+          "#7a5700",
+          "#a37819",
+          "#ca9c47",
+          "#f1c36e",
+          "#ffeccb"
+        ]
+      },
+      "addition-surface": {
+        "role": "semantic",
+        "displayName": "Addition Surface",
+        "canonical": "#dcfce7",
+        "oklch": "oklch(96.2% 0.043 156.7)",
+        "tonalRamp": [
+          "#001005",
+          "#102a1b",
+          "#2c4736",
+          "#496554",
+          "#6b8876",
+          "#8fad9a",
+          "#b4d4bf",
+          "#d8f8e3"
+        ]
+      },
+      "addition-ink": {
+        "role": "semantic",
+        "displayName": "Addition Ink",
+        "canonical": "#14532d",
+        "oklch": "oklch(39.3% 0.090 152.5)",
+        "tonalRamp": [
+          "#001004",
+          "#002d13",
+          "#0b4d27",
+          "#306c44",
+          "#549066",
+          "#78b589",
+          "#9edcaf",
+          "#c6ffd5"
+        ]
+      },
+      "deletion-surface": {
+        "role": "semantic",
+        "displayName": "Deletion Surface",
+        "canonical": "#fee2e2",
+        "oklch": "oklch(93.6% 0.031 17.7)",
+        "tonalRamp": [
+          "#160607",
+          "#321e1e",
+          "#4f393a",
+          "#6e5757",
+          "#927979",
+          "#b79d9d",
+          "#dec3c3",
+          "#ffe8e8"
+        ]
+      },
+      "deletion-ink": {
+        "role": "semantic",
+        "displayName": "Deletion Ink",
+        "canonical": "#991b1b",
+        "oklch": "oklch(44.4% 0.161 26.9)",
+        "tonalRamp": [
+          "#1f0000",
+          "#4b0003",
+          "#7d0009",
+          "#a52926",
+          "#cf5149",
+          "#f9776c",
+          "#ffb5ac",
+          "#ffe9e6"
+        ]
+      },
+      "danger": {
+        "role": "semantic",
+        "displayName": "Danger",
+        "canonical": "#9c2f2f",
+        "oklch": "oklch(47.1% 0.145 24.6)",
+        "tonalRamp": [
+          "#1f0001",
+          "#4b0006",
+          "#7b0713",
+          "#9f3232",
+          "#c85853",
+          "#f27d76",
+          "#ffb5ae",
+          "#ffe9e6"
+        ]
+      },
+      "wordmark-plate": {
+        "role": "neutral",
+        "displayName": "Wordmark Plate",
+        "canonical": "#000e2f",
+        "oklch": "oklch(17.6% 0.071 259.7)",
+        "tonalRamp": [
+          "#000925",
+          "#0e2346",
+          "#294065",
+          "#465e86",
+          "#6781ab",
+          "#8ba6d2",
+          "#b0ccf9",
+          "#e5efff"
+        ]
+      },
+      "print-ink": {
+        "role": "neutral",
+        "displayName": "Print Ink",
+        "canonical": "#000000",
+        "oklch": "oklch(0.0% 0.000 0.0)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#808080",
+          "#a4a4a4",
+          "#cacaca",
+          "#eeeeee"
+        ]
+      },
+      "night-paper": {
+        "role": "theme",
+        "displayName": "Night Paper",
+        "canonical": "#10141b",
+        "oklch": "oklch(19.0% 0.016 261.6)",
+        "tonalRamp": [
+          "#080b12",
+          "#20242c",
+          "#3b4048",
+          "#595e67",
+          "#7b808a",
+          "#9fa5af",
+          "#c5cbd5",
+          "#e9eff9"
+        ]
+      },
+      "night-surface": {
+        "role": "theme",
+        "displayName": "Night Surface",
+        "canonical": "#171c25",
+        "oklch": "oklch(22.6% 0.019 262.1)",
+        "tonalRamp": [
+          "#070b13",
+          "#1f242d",
+          "#3a404a",
+          "#585e69",
+          "#7a808c",
+          "#9ea5b1",
+          "#c4cbd7",
+          "#e8effc"
+        ]
+      },
+      "night-pane": {
+        "role": "theme",
+        "displayName": "Night Pane",
+        "canonical": "#1d2530",
+        "oklch": "oklch(26.2% 0.024 256.4)",
+        "tonalRamp": [
+          "#050b15",
+          "#1d2530",
+          "#38404c",
+          "#555e6b",
+          "#77818f",
+          "#9ba6b4",
+          "#c1ccda",
+          "#e5f0ff"
+        ]
+      },
+      "night-ledger": {
+        "role": "theme",
+        "displayName": "Night Ledger",
+        "canonical": "#242d39",
+        "oklch": "oklch(29.4% 0.025 255.7)",
+        "tonalRamp": [
+          "#050b16",
+          "#1c2530",
+          "#37414d",
+          "#545f6c",
+          "#768190",
+          "#9aa6b5",
+          "#c0ccdb",
+          "#e4f0ff"
+        ]
+      },
+      "night-ink": {
+        "role": "theme",
+        "displayName": "Night Ink",
+        "canonical": "#f4f7fb",
+        "oklch": "oklch(97.5% 0.006 255.5)",
+        "tonalRamp": [
+          "#090b0e",
+          "#222427",
+          "#3e4043",
+          "#5b5e61",
+          "#7e8084",
+          "#a2a5a8",
+          "#c8cbcf",
+          "#eceff3"
+        ]
+      },
+      "night-muted-ink": {
+        "role": "theme",
+        "displayName": "Night Muted Ink",
+        "canonical": "#a8b5c5",
+        "oklch": "oklch(76.8% 0.027 253.6)",
+        "tonalRamp": [
+          "#040c16",
+          "#1b2531",
+          "#36414e",
+          "#535f6d",
+          "#758191",
+          "#99a6b6",
+          "#bfccdc",
+          "#e4f0ff"
+        ]
+      },
+      "night-navy": {
+        "role": "theme",
+        "displayName": "Night Navy",
+        "canonical": "#8dbbf4",
+        "oklch": "oklch(78.1% 0.096 254.2)",
+        "tonalRamp": [
+          "#000b1f",
+          "#00234b",
+          "#164071",
+          "#355f92",
+          "#5783b8",
+          "#7aa8e0",
+          "#a6ceff",
+          "#e4f0ff"
+        ]
+      },
+      "night-navy-deep": {
+        "role": "theme",
+        "displayName": "Night Navy Deep",
+        "canonical": "#b8d7ff",
+        "oklch": "oklch(87.0% 0.065 254.9)",
+        "tonalRamp": [
+          "#000a20",
+          "#0b2442",
+          "#274161",
+          "#445f82",
+          "#6682a7",
+          "#89a7cd",
+          "#afcdf5",
+          "#e4f0ff"
+        ]
+      },
+      "night-navy-wash": {
+        "role": "theme",
+        "displayName": "Night Navy Wash",
+        "canonical": "#203b59",
+        "oklch": "oklch(34.6% 0.062 252.3)",
+        "tonalRamp": [
+          "#000b1e",
+          "#0a2541",
+          "#264160",
+          "#436080",
+          "#6583a5",
+          "#89a8cb",
+          "#aecef3",
+          "#e3f0ff"
+        ]
+      },
+      "night-on-navy": {
+        "role": "theme",
+        "displayName": "Night On Navy",
+        "canonical": "#071525",
+        "oklch": "oklch(19.3% 0.038 252.7)",
+        "tonalRamp": [
+          "#010b1b",
+          "#162536",
+          "#314154",
+          "#4e5f73",
+          "#708297",
+          "#94a7bd",
+          "#b9cde3",
+          "#e3f0ff"
+        ]
+      },
+      "night-hairline": {
+        "role": "theme",
+        "displayName": "Night Hairline",
+        "canonical": "#303947",
+        "oklch": "oklch(34.2% 0.028 259.1)",
+        "tonalRamp": [
+          "#050b17",
+          "#1c2431",
+          "#37404f",
+          "#545e6d",
+          "#778191",
+          "#9aa5b6",
+          "#c0cbdd",
+          "#e5efff"
+        ]
+      },
+      "night-field-edge": {
+        "role": "theme",
+        "displayName": "Night Field Edge",
+        "canonical": "#7d8a9b",
+        "oklch": "oklch(62.9% 0.030 255.2)",
+        "tonalRamp": [
+          "#040b17",
+          "#1a2532",
+          "#354150",
+          "#535f6f",
+          "#758192",
+          "#98a6b7",
+          "#beccde",
+          "#e4f0ff"
+        ]
+      },
+      "night-highlight-surface": {
+        "role": "theme",
+        "displayName": "Night Highlight Surface",
+        "canonical": "#594800",
+        "oklch": "oklch(40.7% 0.083 93.4)",
+        "tonalRamp": [
+          "#100b00",
+          "#2d2300",
+          "#4d3e00",
+          "#6e5c1d",
+          "#917f42",
+          "#b6a466",
+          "#ddca8b",
+          "#ffeeb6"
+        ]
+      },
+      "night-highlight-ink": {
+        "role": "theme",
+        "displayName": "Night Highlight Ink",
+        "canonical": "#fff4b8",
+        "oklch": "oklch(96.2% 0.077 98.9)",
+        "tonalRamp": [
+          "#0f0b00",
+          "#2b2400",
+          "#4a4000",
+          "#695e26",
+          "#8c8149",
+          "#b0a66d",
+          "#d7cc91",
+          "#fbf0b4"
+        ]
+      },
+      "night-warning-surface": {
+        "role": "theme",
+        "displayName": "Night Warning Surface",
+        "canonical": "#4a3514",
+        "oklch": "oklch(34.5% 0.056 76.2)",
+        "tonalRamp": [
+          "#130900",
+          "#332000",
+          "#513b1b",
+          "#705938",
+          "#947c5a",
+          "#b9a07d",
+          "#e0c6a2",
+          "#ffebd0"
+        ]
+      },
+      "night-warning-ink": {
+        "role": "theme",
+        "displayName": "Night Warning Ink",
+        "canonical": "#ffe0a3",
+        "oklch": "oklch(91.8% 0.085 83.9)",
+        "tonalRamp": [
+          "#110a00",
+          "#302100",
+          "#533b00",
+          "#74591c",
+          "#987c41",
+          "#bea065",
+          "#e5c68a",
+          "#ffecc8"
+        ]
+      },
+      "night-warning-line": {
+        "role": "theme",
+        "displayName": "Night Warning Line",
+        "canonical": "#8c672c",
+        "oklch": "oklch(54.0% 0.089 76.4)",
+        "tonalRamp": [
+          "#130900",
+          "#332000",
+          "#573900",
+          "#7a5618",
+          "#9f793f",
+          "#c59d63",
+          "#ecc388",
+          "#ffebd0"
+        ]
+      },
+      "night-addition-surface": {
+        "role": "theme",
+        "displayName": "Night Addition Surface",
+        "canonical": "#12351f",
+        "oklch": "oklch(29.6% 0.057 153.4)",
+        "tonalRamp": [
+          "#001004",
+          "#082c16",
+          "#264931",
+          "#44674e",
+          "#668b70",
+          "#8ab094",
+          "#afd6b9",
+          "#d2fadd"
+        ]
+      },
+      "night-addition-ink": {
+        "role": "theme",
+        "displayName": "Night Addition Ink",
+        "canonical": "#bbf7d0",
+        "oklch": "oklch(92.5% 0.081 156.0)",
+        "tonalRamp": [
+          "#001005",
+          "#002d16",
+          "#0f4c2d",
+          "#336b4a",
+          "#568f6c",
+          "#7ab490",
+          "#a0dbb5",
+          "#c4ffd9"
+        ]
+      },
+      "night-deletion-surface": {
+        "role": "theme",
+        "displayName": "Night Deletion Surface",
+        "canonical": "#451a1a",
+        "oklch": "oklch(28.3% 0.067 22.3)",
+        "tonalRamp": [
+          "#1f0002",
+          "#3f1415",
+          "#5e302f",
+          "#7f4e4c",
+          "#a5716e",
+          "#cb9592",
+          "#f3bab7",
+          "#ffe8e7"
+        ]
+      },
+      "night-deletion-ink": {
+        "role": "theme",
+        "displayName": "Night Deletion Ink",
+        "canonical": "#fecaca",
+        "oklch": "oklch(88.5% 0.059 18.3)",
+        "tonalRamp": [
+          "#1e0003",
+          "#3c1619",
+          "#5b3234",
+          "#7c5051",
+          "#a17273",
+          "#c79696",
+          "#efbcbc",
+          "#ffe8e8"
+        ]
+      },
+      "night-danger": {
+        "role": "theme",
+        "displayName": "Night Danger",
+        "canonical": "#f08a84",
+        "oklch": "oklch(74.1% 0.125 24.1)",
+        "tonalRamp": [
+          "#1f0001",
+          "#4b0007",
+          "#74191c",
+          "#983b39",
+          "#c05f5b",
+          "#e9837e",
+          "#ffb4af",
+          "#ffe8e6"
+        ]
+      },
+      "night-header": {
+        "role": "theme",
+        "displayName": "Night Header",
+        "canonical": "#0a0d12",
+        "oklch": "oklch(15.8% 0.012 260.6)",
+        "tonalRamp": [
+          "#080b10",
+          "#21242a",
+          "#3c4046",
+          "#5a5e64",
+          "#7c8087",
+          "#a0a5ac",
+          "#c6cbd2",
+          "#eaeff7"
+        ]
+      },
+      "night-tab-bar": {
+        "role": "theme",
+        "displayName": "Night Tab Bar",
+        "canonical": "#090c11",
+        "oklch": "oklch(15.3% 0.012 260.4)",
+        "tonalRamp": [
+          "#080b10",
+          "#21242a",
+          "#3c4046",
+          "#5a5e64",
+          "#7c8087",
+          "#a0a5ac",
+          "#c6cbd2",
+          "#eaeff7"
+        ]
+      },
+      "night-header-field-edge": {
+        "role": "theme",
+        "displayName": "Night Header Field Edge",
+        "canonical": "#6b7483",
+        "oklch": "oklch(55.7% 0.026 260.7)",
+        "tonalRamp": [
+          "#060b16",
+          "#1d2431",
+          "#38404e",
+          "#555e6d",
+          "#788190",
+          "#9ca5b5",
+          "#c1cbdc",
+          "#e6efff"
+        ]
+      },
+      "oled-surface": {
+        "role": "theme",
+        "displayName": "OLED Surface",
+        "canonical": "#080808",
+        "oklch": "oklch(13.4% 0.000 89.9)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#808080",
+          "#a4a4a4",
+          "#cacaca",
+          "#eeeeee"
+        ]
+      },
+      "oled-pane": {
+        "role": "theme",
+        "displayName": "OLED Pane",
+        "canonical": "#111111",
+        "oklch": "oklch(17.8% 0.000 89.9)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#808080",
+          "#a4a4a4",
+          "#cacaca",
+          "#eeeeee"
+        ]
+      },
+      "oled-ledger": {
+        "role": "theme",
+        "displayName": "OLED Ledger",
+        "canonical": "#151515",
+        "oklch": "oklch(19.6% 0.000 89.9)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#808080",
+          "#a4a4a4",
+          "#cacaca",
+          "#eeeeee"
+        ]
+      },
+      "oled-hairline": {
+        "role": "theme",
+        "displayName": "OLED Hairline",
+        "canonical": "#292929",
+        "oklch": "oklch(28.1% 0.000 89.9)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#808080",
+          "#a4a4a4",
+          "#cacaca",
+          "#eeeeee"
+        ]
+      }
+    },
+    "themes": {
+      "description": "Light values are the frontmatter. Dark and OLED override these CSS custom properties on :root; the header frame tokens (--header-*) never change.",
+      "dark": {
+        "--ink": "#f4f7fb",
+        "--muted": "#a8b5c5",
+        "--blue": "#8dbbf4",
+        "--blue-dark": "#b8d7ff",
+        "--blue-light": "#203b59",
+        "--on-blue": "#071525",
+        "--paper": "#10141b",
+        "--white": "#171c25",
+        "--surface-raised": "#171c25",
+        "--soft-surface": "#1d2530",
+        "--reader-surface": "#1d2530",
+        "--amount-surface": "#242d39",
+        "--highlight-surface": "#594800",
+        "--highlight-ink": "#fff4b8",
+        "--warning-surface": "#4a3514",
+        "--warning-ink": "#ffe0a3",
+        "--warning-line": "#8c672c",
+        "--addition-surface": "#12351f",
+        "--addition-ink": "#bbf7d0",
+        "--deletion-surface": "#451a1a",
+        "--deletion-ink": "#fecaca",
+        "--danger": "#f08a84",
+        "--line": "#303947",
+        "--field-line": "#7d8a9b",
+        "--focus-page": "#f0a202",
+        "--header-field-line": "#6b7483",
+        "--app-header": "#0a0d12",
+        "--app-nav": "#090c11",
+        "--shadow": "0 .75rem 2rem #0008"
+      },
+      "oled": {
+        "--ink": "#f4f7fb",
+        "--muted": "#a8b5c5",
+        "--blue": "#8dbbf4",
+        "--blue-dark": "#b8d7ff",
+        "--blue-light": "#203b59",
+        "--on-blue": "#071525",
+        "--paper": "#000",
+        "--white": "#080808",
+        "--surface-raised": "#080808",
+        "--soft-surface": "#111",
+        "--reader-surface": "#111",
+        "--amount-surface": "#151515",
+        "--highlight-surface": "#594800",
+        "--highlight-ink": "#fff4b8",
+        "--warning-surface": "#4a3514",
+        "--warning-ink": "#ffe0a3",
+        "--warning-line": "#8c672c",
+        "--addition-surface": "#12351f",
+        "--addition-ink": "#bbf7d0",
+        "--deletion-surface": "#451a1a",
+        "--deletion-ink": "#fecaca",
+        "--danger": "#f08a84",
+        "--line": "#292929",
+        "--field-line": "#7d8a9b",
+        "--focus-page": "#f0a202",
+        "--header-field-line": "#6b7483",
+        "--app-header": "#000",
+        "--app-nav": "#000",
+        "--shadow": "0 .75rem 2rem #0008"
+      }
+    },
+    "typographyMeta": {
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Page titles, including statute section headings."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Section headings within a page and dialog titles (1.25–1.35rem)."
+      },
+      "subtitle": {
+        "displayName": "Subtitle",
+        "purpose": "Card and list-group headings (1.05–1.15rem)."
+      },
+      "reading": {
+        "displayName": "Reading",
+        "purpose": "Statute, act, and infraction text, in a reading column up to 54rem wide."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Interface prose and descriptions."
+      },
+      "small-reading": {
+        "displayName": "Small Reading",
+        "purpose": "Annotation paragraphs and loading notes."
+      },
+      "ui": {
+        "displayName": "UI",
+        "purpose": "Compact controls: section actions, breadcrumbs."
+      },
+      "meta": {
+        "displayName": "Meta",
+        "purpose": "Secondary lines, dates, counts, pane descriptions."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Uppercase status or provenance line above a heading; must carry information."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Uppercase pills and tags; the interface's smallest size."
+      },
+      "tab-label": {
+        "displayName": "Tab Label",
+        "purpose": "Phone tab bar labels only (0.65rem, 700), following the platform tab-bar convention."
+      }
+    },
+    "tokens": {
+      "cssCustomProperties": {
+        "--font-ui": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Noto Sans\", \"Helvetica Neue\", Arial, sans-serif",
+        "--font-reading": "Georgia, \"Noto Serif\", \"Times New Roman\", serif",
+        "--text-caption": ".75rem",
+        "--text-meta": ".8125rem",
+        "--text-ui": ".875rem",
+        "--text-small-reading": ".9375rem",
+        "--measure-reading": "54rem",
+        "--focus": "var(--focus-page)",
+        "--focus-on-dark": "#f0a202"
+      }
+    },
+    "shadows": [
+      {
+        "name": "overlay",
+        "value": "0 .75rem 2rem #071e3822",
+        "dark": "0 .75rem 2rem #0008",
+        "purpose": "Settings panel, search suggestions, dialogs."
+      },
+      {
+        "name": "sheet",
+        "value": "0 -1rem 3rem #0005",
+        "purpose": "Phone chapter sheet rising from the bottom."
+      },
+      {
+        "name": "tab",
+        "value": "0 2px 6px #0002",
+        "purpose": "The pane-collapse toggle over the pane edge."
+      }
+    ],
+    "focus": [
+      {
+        "name": "focus-ring",
+        "value": "outline: 3px solid var(--focus); outline-offset: 3px",
+        "purpose": "Every focusable element; --focus is #a86200 on light pages and #f0a202 on the dark frame and in dark themes."
+      }
+    ],
+    "motion": [
+      {
+        "name": "disclosure-turn",
+        "value": "transform .15s ease",
+        "purpose": "Index topic chevrons rotating open; the system's only transition."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "@media (prefers-reduced-motion: reduce) { transitions and animations .01ms; scroll-behavior auto }",
+        "purpose": "Honors the OS setting."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "narrow-phone",
+        "value": "36rem",
+        "purpose": "Single-column cards and forms; acts table becomes cards."
+      },
+      {
+        "name": "phone",
+        "value": "44rem",
+        "purpose": "Stacked headings and forms."
+      },
+      {
+        "name": "compact",
+        "value": "60rem",
+        "purpose": "Below: single column, bottom tab bar. Above: pane browser."
+      },
+      {
+        "name": "reading-container",
+        "value": "@container reading (max-width: 40rem)",
+        "purpose": "Components inside the reading column stack when the column is narrow."
+      },
+      {
+        "name": "tab-labels",
+        "value": "@container app-nav (max-width: 21.75rem | 22.2rem Inclusive Sans | 23rem Lexend)",
+        "purpose": "Tab bar drops to icons when the widest label no longer fits."
+      }
+    ],
+    "layout": {
+      "readingColumnMin": "36rem (panes give way first); reading width up to 54rem",
+      "paneDefaults": "176px / 208px / 240px, resizable 144–420px, 6px dividers",
+      "widths": {
+        "reading": "up to 54rem",
+        "interface": "54rem",
+        "home": "64rem",
+        "page": "72rem"
+      }
+    }
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Filled navy action, such as Bookmark, Copy link, Search, and Apply.",
+      "html": "<button class=\"ds-btn-primary\" type=\"button\">Copy link</button>",
+      "css": ".ds-btn-primary { min-height: 2.5rem; padding: .5rem .8rem; color: var(--on-blue, #fff); background: var(--blue, #0b3b70); border: 1px solid var(--blue, #0b3b70); border-radius: .25rem; font: 700 .875rem/1.2 -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; cursor: pointer; } .ds-btn-primary:hover { background: var(--blue-dark, #062b54); } .ds-btn-primary:focus-visible { outline: 3px solid var(--focus, #a86200); outline-offset: 3px; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Outlined navy action beside filled ones, such as Email and Official source.",
+      "html": "<a class=\"ds-btn-secondary\" href=\"#\">Official source</a>",
+      "css": ".ds-btn-secondary { display: inline-flex; align-items: center; min-height: 2.5rem; padding: .5rem .8rem; color: var(--blue, #0b3b70); background: var(--surface-raised, #fff); border: 1px solid var(--blue, #0b3b70); border-radius: .25rem; font: 700 .875rem/1.2 -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; text-decoration: none; } .ds-btn-secondary:hover { background: var(--blue-light, #dceafb); } .ds-btn-secondary:focus-visible { outline: 3px solid var(--focus, #a86200); outline-offset: 3px; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Search and filter fields; 3:1 edge on every surface.",
+      "html": "<label class=\"ds-field\"><span>Search acts</span><input placeholder=\"Words, act, or bill number\"></label>",
+      "css": ".ds-field { display: grid; gap: .35rem; font: 700 .8125rem/1.3 -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: var(--ink, #172538); } .ds-field input { min-height: 3rem; padding: .7rem .85rem; color: var(--ink, #172538); background: var(--surface-raised, #fff); border: 1px solid var(--field-line, #727d8a); border-radius: .25rem; font: 400 1rem -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; } .ds-field input:focus-visible { outline: 3px solid var(--focus, #a86200); outline-offset: 3px; }"
+    },
+    {
+      "name": "Header Navigation",
+      "kind": "nav",
+      "refersTo": "nav-item-active",
+      "description": "Destinations on the dark frame; the current one is a light pill.",
+      "html": "<nav class=\"ds-nav\"><a aria-current=\"page\" href=\"#\">Statutes</a><a href=\"#\">Index</a><a href=\"#\">Acts</a></nav>",
+      "css": ".ds-nav { display: flex; gap: .2rem; padding: .45rem .85rem; background: var(--app-header, #071525); } .ds-nav a { display: flex; align-items: center; min-height: 2.55rem; padding: .45rem .7rem; color: var(--header-ink, #dce8f7); border-radius: .65rem; font: 700 .8125rem/1 -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; text-decoration: none; } .ds-nav a:hover, .ds-nav a[aria-current=page] { color: var(--header-accent-ink, #071525); background: var(--header-accent, #b8d7ff); } .ds-nav a:focus-visible { outline: 3px solid #f0a202; outline-offset: 3px; }"
+    },
+    {
+      "name": "Status Pills",
+      "kind": "chip",
+      "refersTo": "chip-supplement",
+      "description": "Supplement (blue) and repealed (amber) markers on sections.",
+      "html": "<span class=\"ds-pill ds-pill-supp\">2026 Supp.</span> <span class=\"ds-pill ds-pill-repealed\">Repealed</span>",
+      "css": ".ds-pill { display: inline-flex; align-items: center; padding: .12rem .45rem; border-radius: 999px; font: 700 .75rem/1.35 -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; letter-spacing: .02em; text-transform: uppercase; } .ds-pill-supp { color: var(--blue-dark, #062b54); background: var(--blue-light, #dceafb); border: 1px solid var(--blue, #0b3b70); } .ds-pill-repealed { color: var(--warning-ink, #4a3500); background: var(--warning-surface, #fff1d7); border: 1px solid var(--warning-line, #e2b45f); }"
+    },
+    {
+      "name": "Callout",
+      "kind": "card",
+      "refersTo": "callout",
+      "description": "Tinted note with no stripe and no shadow, such as the supplement summary.",
+      "html": "<p class=\"ds-callout\"><strong>2026 Supplement applied.</strong> 14 updated sections are labeled in the chapter list.</p>",
+      "css": ".ds-callout { max-width: 42rem; margin: 0; padding: 1rem; color: var(--blue-dark, #062b54); background: var(--blue-light, #dceafb); border-radius: .5rem; font: 400 1rem/1.55 -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }"
+    },
+    {
+      "name": "Pane List Item",
+      "kind": "custom",
+      "refersTo": "pane-item-current",
+      "description": "Section in the navigation pane; the current one is washed navy with a 4px leading marker.",
+      "html": "<ol class=\"ds-pane\"><li><a href=\"#\"><strong>§ 17b-237</strong><span>State aid toward support of children at center.</span></a></li><li><a aria-current=\"page\" href=\"#\"><strong>§ 17b-238</strong><span>State payments to hospitals.</span></a></li></ol>",
+      "css": ".ds-pane { margin: 0; padding: 0; list-style: none; width: 15rem; background: var(--reader-surface, #eeeae1); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; } .ds-pane li + li { border-top: 1px solid var(--line, #d8d5ce); } .ds-pane a { display: block; padding: .55rem .65rem; color: var(--ink, #172538); text-decoration: none; } .ds-pane a:hover { background: var(--surface-raised, #fff); } .ds-pane a[aria-current=page] { background: var(--blue-light, #dceafb); box-shadow: inset 4px 0 0 var(--blue, #0b3b70); } .ds-pane strong { display: block; font-size: .8125rem; } .ds-pane span { display: block; margin-top: .12rem; color: var(--muted, #596777); font-size: .75rem; line-height: 1.3; }"
+    },
+    {
+      "name": "Statute Paragraph",
+      "kind": "custom",
+      "refersTo": "reading",
+      "description": "Reading-font statute text with a subsection self-link and bold citation links.",
+      "html": "<p class=\"ds-statute\"><a class=\"ds-sub\" href=\"#\">(a)</a> The Commissioner of Social Services shall establish annually the cost of services for which payment is to be made under the provisions of section <a class=\"ds-cite\" href=\"#\">17b-239</a>.</p>",
+      "css": ".ds-statute { max-width: 54rem; margin: 0; color: var(--ink, #172538); font: 400 1.02rem/1.68 Georgia, 'Noto Serif', 'Times New Roman', serif; } .ds-sub { margin-right: .2rem; color: var(--blue, #0b3b70); font: 700 .875rem -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; text-decoration: none; } .ds-cite { color: var(--blue, #0b3b70); font-weight: 700; text-underline-offset: .18em; } .ds-statute a:focus-visible { outline: 3px solid var(--focus, #a86200); outline-offset: 3px; }"
+    },
+    {
+      "name": "Amendment Marks",
+      "kind": "custom",
+      "refersTo": "addition-surface",
+      "description": "Inserted and struck language in acts and supplement comparisons.",
+      "html": "<p class=\"ds-amend\">payment shall be made <del>within thirty days</del> <ins>within fifteen days</ins> of receipt.</p>",
+      "css": ".ds-amend { max-width: 54rem; margin: 0; color: var(--ink, #172538); font: 400 1.02rem/1.68 Georgia, 'Noto Serif', serif; } .ds-amend ins { color: var(--addition-ink, #14532d); background: var(--addition-surface, #dcfce7); text-decoration: none; } .ds-amend del { color: var(--deletion-ink, #991b1b); background: var(--deletion-surface, #fee2e2); text-decoration-thickness: .12em; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Public Reading Room",
+    "overview": "A reading room is open to anyone, quiet, well lit, and has nothing for sale. This reader works the same way: warm paper surfaces, a book serif for the law itself, and an interface that steps back so the statute text sits at the center. A resident checking a ticket on a phone and a clerk pulling a citation at a desk get the same room. Nothing in the design asks for attention the text has not earned.\n\nThe mood is precise and trustworthy. Precision shows up as exact citations, provenance on every page, consistent states, and a fixed reading measure. Trust shows up as restraint: no gradients, no glows, no decorative motion. Color carries meaning (navy for action and the current place, blue for supplement changes, amber for repealed text and warnings, green and red for added and deleted language), never ornament.\n\nThe room is lit from the page, not the chrome. The dark header and tab bar are a frame; everything you read sits on Reading Room Paper or a white surface, flat, separated by hairlines and quiet tints. Shadows exist only for things that float above the page.",
+    "keyCharacteristics": [
+      "Flat paper surfaces with hairline borders; tints, not shadows, group content.",
+      "Each device's own UI face for the interface; Georgia for statute and act text.",
+      "A wide reading column (up to 54rem) so a desktop screen holds more of each section; it never drops below 36rem beside the panes.",
+      "Color is semantic: navy acts, blue marks supplements, amber warns, green adds, red deletes.",
+      "A dark frame (header, tab bar) that never changes with theme; light, dark, and OLED themes for everything inside it.",
+      "Accessibility is structural: 3:1 boundaries on fields and focus, reading-comfort controls, screen-reader text for amendments."
+    ],
+    "rules": [
+      {
+        "name": "The Meaning-Only Color Rule",
+        "body": "Every hue says something: navy is action or \"you are here\", blue is a supplement change, amber is caution or repeal, green and red are added and deleted language. Never use one of these colors for decoration, and never introduce a hue without a meaning.",
+        "section": "colors"
+      },
+      {
+        "name": "The Twin Themes Rule",
+        "body": "Dark values exist twice, once for the Dark and OLED settings and once for Auto under `prefers-color-scheme`. Change both together; `test/theme.test.mjs` fails if they drift.",
+        "section": "colors"
+      },
+      {
+        "name": "The Twelve-Pixel Floor Rule",
+        "body": "Nothing in the interface is set below the caption size (0.75rem). The one exception is the phone tab bar's labels (0.65rem), which follow the platform tab-bar convention and whose icon-only cutoffs were measured against that size.",
+        "section": "typography"
+      },
+      {
+        "name": "The Three Weights Rule",
+        "body": "Use 400, 600, and 700 only. The system faces carry those weights; Windows renders 800 and above as Segoe UI Black.",
+        "section": "typography"
+      },
+      {
+        "name": "The Reading Column Rule",
+        "body": "Legal text runs up to 54rem wide so a desktop screen shows more of a section and needs less scrolling; beside the panes it never drops below 36rem, because the panes give way first. Headings and actions in the reader share that column so everything lines up. *(Chosen with the user: more text per screen over a short measure.)*",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat-By-Default Rule",
+        "body": "Nothing at rest casts a shadow. If a card needs separation, give it a border or a tint, not elevation. *(Confirmed with the user.)*",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** take every color from a token; the header and tab bar use the frame tokens, which stay the same in every theme.",
+      "**Do** keep statute, act, and infraction text in the Reading font, in the reading column (up to 54rem).",
+      "**Do** set sizes from the role tokens (caption 0.75rem, meta 0.8125rem, ui 0.875rem, small reading 0.9375rem, body 1rem).",
+      "**Do** use a 3px Signal Amber focus outline, #a86200 on page surfaces and #f0a202 on the dark frame.",
+      "**Do** give every input and select a Field Edge (#727d8a) border.",
+      "**Do** show selection on page surfaces as a navy fill with on-navy text, and in the header as a Header Accent pill.",
+      "**Do** mark supplement changes in blue, repealed text and warnings in amber, and amendments in green and red, with screen-reader text for each.",
+      "**Do** let outer navigation panes give way before the reading column drops below 36rem."
+    ],
+    "donts": [
+      "**Don't** put a resting shadow on cards or panels; shadows are for floating layers only.",
+      "**Don't** add colored side stripes to callouts, cards, or alerts. Use a tint, plus a full 1px border for warnings and errors.",
+      "**Don't** ship a webfont for the default interface, or use weights above 700.",
+      "**Don't** set interface text below 0.75rem; the tab bar labels are the only exception.",
+      "**Don't** add gradients, glows, or decorative motion.",
+      "**Don't** add a label above a heading that only repeats the heading. Labels carry status, counts, or provenance.",
+      "**Don't** change a dark-theme token in one block without the other."
+    ]
+  }
+}

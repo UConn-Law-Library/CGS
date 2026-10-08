@@ -393,15 +393,28 @@ export class SearchRepository {
     return response.json();
   }
 
-  async init() {
-    this.#manifest ??= await this.#json("manifest.json");
+  // Manifests are cached as the request, not the result, so callers that arrive together
+  // share one download; a failure clears the cache so the next call retries.
+  init() {
+    this.#manifest ??= this.#json("manifest.json").catch((error) => {
+      this.#manifest = undefined;
+      throw error;
+    });
     return this.#manifest;
   }
 
+  #loadAuxiliaryManifest() {
+    this.#auxiliaryManifest ??= this.#json("manifest.json", this.#auxiliaryBaseUrl).catch((error) => {
+      this.#auxiliaryManifest = undefined;
+      throw error;
+    });
+    return this.#auxiliaryManifest;
+  }
+
   async #loadAuxiliaryTitle(titleId) {
-    this.#auxiliaryManifest ??= await this.#json("manifest.json", this.#auxiliaryBaseUrl);
+    const auxiliary = await this.#loadAuxiliaryManifest();
     if (this.#auxiliaryShards.has(titleId)) return this.#auxiliaryShards.get(titleId);
-    const entry = this.#auxiliaryManifest.shards.find((shard) => shard.titleId === titleId);
+    const entry = auxiliary.shards.find((shard) => shard.titleId === titleId);
     if (!entry) throw new Error(`No extended search shard for ${titleId}`);
     const promise = this.#json(entry.path, this.#auxiliaryBaseUrl).catch((error) => {
       this.#auxiliaryShards.delete(titleId);
@@ -415,8 +428,8 @@ export class SearchRepository {
   async loadCitations(titleId) {
     if (!this.#citationShards.has(titleId)) {
       const promise = (async () => {
-        this.#auxiliaryManifest ??= await this.#json("manifest.json", this.#auxiliaryBaseUrl);
-        const entry = this.#auxiliaryManifest.citationShards?.find((shard) => shard.titleId === titleId);
+        const auxiliary = await this.#loadAuxiliaryManifest();
+        const entry = auxiliary.citationShards?.find((shard) => shard.titleId === titleId);
         if (!entry) throw new Error(`No citation shard for ${titleId}`);
         return (await this.#json(entry.path, this.#auxiliaryBaseUrl)).sections;
       })().catch((error) => {
@@ -429,9 +442,9 @@ export class SearchRepository {
   }
 
   async loadTitle(titleId, { includeAuxiliary = false } = {}) {
-    await this.init();
+    const manifest = await this.init();
     if (!this.#shards.has(titleId)) {
-      const entry = this.#manifest.shards.find((shard) => shard.titleId === titleId);
+      const entry = manifest.shards.find((shard) => shard.titleId === titleId);
       if (!entry) throw new Error(`No search shard for ${titleId}`);
       const supplement = this.#supplements
         ? this.#supplements.loadLatestSearchTitle(titleId)

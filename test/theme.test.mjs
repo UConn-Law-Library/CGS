@@ -18,7 +18,15 @@ test("reader and secondary-source surfaces use theme-aware colors", async () => 
     "--warning-ink"
   ]) assert.match(styles, new RegExp(property));
   assert.match(styles, /\.legal-data-note[^}]+background: var\(--reader-surface\)/);
-  assert.match(styles, /\.reader-sidebar \{[^}]+background: var\(--reader-surface\)/);
+  assert.match(styles, /\.context-column \{[^}]+background: var\(--reader-surface\)/);
   assert.match(styles, /\.amounts div[^}]+background: var\(--amount-surface\)/);
   assert.doesNotMatch(styles, /:root\[data-theme="dark"\] \.legal-data-note/);
+});
+
+test("Auto dark mode uses exactly the Dark theme's tokens", async () => {
+  const styles = await readFile(new URL("../src/styles.css", import.meta.url), "utf8");
+  const declarations = (block) => block.match(/--[\w-]+:\s*[^;]+;|color-scheme:\s*[^;]+;/g).map((line) => line.replace(/\s+/g, " ")).sort();
+  const dark = styles.match(/:root\[data-theme="dark"\], :root\[data-theme="oled"\] \{([^}]+)\}/)[1];
+  const auto = styles.match(/@media \(prefers-color-scheme: dark\) \{\s*:root\[data-theme="auto"\] \{([^}]+)\}/)[1];
+  assert.deepEqual(declarations(auto), declarations(dark));
 });

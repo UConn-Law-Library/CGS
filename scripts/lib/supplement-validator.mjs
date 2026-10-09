@@ -4,6 +4,7 @@ import path from "node:path";
 import { validateSchema } from "./json-schema.mjs";
 import { applyChapterOverlay, classifyChapterOverlay } from "./supplement-overlay.mjs";
 import { createSupplementSearchPatch } from "./supplement-search.mjs";
+import { supersededSupplementError } from "./supplement-retirement.mjs";
 
 async function readJson(file) {
   return JSON.parse(await readFile(file, "utf8"));
@@ -30,6 +31,8 @@ export async function validateSupplement({ supplementDir, baseDataDir, schemaDir
   ) {
     errors.push("manifest.json: base corpus identity does not match the current canonical corpus");
   }
+  const superseded = supersededSupplementError(manifest.editionYear, baseCatalog);
+  if (superseded) errors.push(`manifest.json: ${superseded}`);
   const baseTitles = new Map(baseCatalog.titles.map((title) => [title.id, title]));
   const artifactByPath = new Map((manifest.artifacts ?? []).map((artifact) => [artifact.path, artifact]));
   const seenPaths = new Set();

@@ -26,6 +26,10 @@ export async function validateCorpus({ dataDir, schemaDir }) {
   pushSchemaErrors(errors, "catalog.json", catalog, schemas.catalog);
   pushSchemaErrors(errors, "manifest.json", manifest, schemas["build-manifest"]);
   pushSchemaErrors(errors, "search/manifest.json", searchManifest, schemas["search-manifest"]);
+  // An edition is revised to January 1 of its year, so it cannot be captured before that year.
+  if (catalog.source?.revisionYear > new Date(catalog.source?.retrievedAt).getUTCFullYear()) {
+    errors.push(`catalog.json: revision year ${catalog.source.revisionYear} is later than the capture date ${catalog.source.retrievedAt}`);
+  }
 
   const chapterIds = new Set();
   const chapterPaths = new Set();

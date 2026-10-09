@@ -11,7 +11,8 @@ import {
   exampleCycle,
   publicationCycle,
   publicationForYear,
-  regularSessionMonth
+  regularSessionMonth,
+  statuteTextEdition
 } from "./publications.js";
 
 const short = (year) => String(year).slice(-2);
@@ -117,12 +118,15 @@ function formatDate(value) {
 const count = (value) => Number(value ?? 0).toLocaleString("en-US");
 
 // What the app's published data contains, from the same manifests the reader uses. The base
-// corpus is CGA's current edition; when a supplement is merged, its manifest is bound to that
-// base, and LCO directs that a supplement be read with the revision of the year before it.
-// Pass undefined for a source that could not be loaded: it is reported as unknown, never absent.
+// corpus is CGA's current edition, and its catalog records the year it is revised to; when a
+// supplement is merged, its manifest is bound to that base. Legislation is covered through the
+// year before the newer of the two. Pass undefined for a source that could not be loaded: it is
+// reported as unknown, never absent.
 export function describeCoverage({ catalog = null, supplement, acts } = {}) {
   const supplementYear = supplement?.edition?.editionYear ?? supplement?.manifest?.editionYear ?? null;
-  const baseYear = supplementYear ? supplementYear - 1 : null;
+  const baseYear = catalog?.source?.revisionYear ?? null;
+  const textEdition = statuteTextEdition({ baseRevisionYear: baseYear, supplementYear });
+  const covered = textEdition?.legislationThrough ?? null;
   const sessions = acts?.sessions ?? [];
   return {
     base: catalog ? {
@@ -150,8 +154,9 @@ export function describeCoverage({ catalog = null, supplement, acts } = {}) {
         publicActs: session.counts?.publicActs ?? 0,
         specialActs: session.counts?.specialActs ?? 0
       })),
-      // Legislation the supplement covers, but whose acts the app does not list.
-      unlistedCoveredYear: supplementYear && !sessions.some((session) => session.year === supplementYear - 1) ? supplementYear - 1 : null
+      // Legislation the statute text covers, but whose acts the app does not list.
+      unlistedCoveredYear: covered !== null && !sessions.some((session) => session.year === covered) ? covered : null,
+      coveredBy: textEdition?.label ?? null
     } : null
   };
 }
@@ -436,13 +441,13 @@ function renderCoverage({ coverage, example, appBase }) {
     ? `<p>The ${escapeHtml(base.label)}${base.year ? ` (revised to January 1, ${base.year})` : ""}, as published on the General Assembly’s website${base.capturedAt ? ` and captured ${escapeHtml(base.capturedAt)}` : ""}${base.sections ? `: ${count(base.sections)} sections` : ""}.</p>`
     : unknown;
   const supplementApp = supplement
-    ? `<p>Merged into the statute text section by section: ${count(supplement.replacements)} sections replaced and ${count(supplement.additions)} added. Each is labeled “${supplement.year} Supp.”, and the superseded ${supplement.year - 1} text stays available in a comparison panel. Sections the Supplement does not include keep their ${supplement.year - 1} text.</p>`
+    ? `<p>Merged into the statute text section by section: ${count(supplement.replacements)} sections replaced and ${count(supplement.additions)} added. Each is labeled “${supplement.year} Supp.”, and the superseded ${base?.year ?? supplement.year - 1} text stays available in a comparison panel. Sections the Supplement does not include keep their ${base?.year ?? supplement.year - 1} text.</p>`
     : supplement === null ? "<p>No supplement is merged into the statute text.</p>" : unknown;
   const sessions = acts?.sessions ?? [];
   const actsApp = acts
     ? sessions.length
       ? `<p>${sessions.map((session) => `${escapeHtml(session.name)}: ${count(session.acts)} acts (${count(session.publicActs)} public, ${count(session.specialActs)} special)`).join("; ")}, with act text and effective dates in the ${link(actsRouteHref(), "Acts list")}.</p>
-        <p>Acts are <strong>not merged</strong> into the statute text. When a listed act states that it amends or repeals a section, that section’s page shows a notice linking to the act, and the chapter list marks it. Only the sessions named here are included.${acts.unlistedCoveredYear ? ` Acts of the ${acts.unlistedCoveredYear} sessions are not listed; their codified changes appear through the ${supplement.year} Supplement.` : ""}</p>`
+        <p>Acts are <strong>not merged</strong> into the statute text. When a listed act states that it amends or repeals a section, that section’s page shows a notice linking to the act, and the chapter list marks it. Only the sessions named here are included.${acts.unlistedCoveredYear ? ` Acts of the ${acts.unlistedCoveredYear} sessions are not listed; their codified changes appear through the ${acts.coveredBy}.` : ""}</p>`
       : "<p>No Public Acts are listed.</p>"
     : acts === null ? "<p>No Public Acts are listed.</p>" : unknown;
   return guideSection("coverage", "This app", "What does the CGS Explorer include?", `

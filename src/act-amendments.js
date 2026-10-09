@@ -5,6 +5,8 @@
 // it shows (amendmentsForSection). Only a clause that names a section "of the general
 // statutes" counts: new sections, uncodified provisions, and changes to other acts do not.
 
+import { statuteTextEdition } from "./publications.js";
+
 // Title 42a (the UCC) numbers sections by article: 42a-9-204, 42a-12A-301.
 const CITATION = String.raw`\d+[a-z]*-(?:\d+[a-z]*-)?\d+[a-z]*`;
 // "section 1-1", "sections 1-1 and 1-2", "sections 1-1 to 1-5, inclusive," ending at "of the
@@ -115,17 +117,18 @@ export function citationInRange(citation, from, to) {
   return afterStart !== null && beforeEnd !== null && afterStart >= 0 && beforeEnd <= 0;
 }
 
-// Sessions whose acts the statute text cannot reflect yet: the latest supplement covers
-// legislation through the year before its edition (as actsCurrencyNote describes).
-export function pendingSessionIds(index, supplementEditionYear = null) {
-  const covered = supplementEditionYear ? supplementEditionYear - 1 : null;
+// Sessions whose acts the statute text cannot reflect yet: the newest edition in it, the base
+// revision or a later supplement, covers legislation through the year before its own (as
+// actsCurrencyNote describes).
+export function pendingSessionIds(index, { supplementEditionYear = null, baseRevisionYear = null } = {}) {
+  const covered = statuteTextEdition({ baseRevisionYear, supplementYear: supplementEditionYear })?.legislationThrough ?? null;
   return new Set((index?.sessions ?? []).filter((session) => covered === null || session.year > covered).map((session) => session.id));
 }
 
 // Every pending act section that amends or repeals the given statute section, in act order.
-export function amendmentsForSection(index, section, { supplementEditionYear = null } = {}) {
+export function amendmentsForSection(index, section, { supplementEditionYear = null, baseRevisionYear = null } = {}) {
   if (!index || !section) return [];
-  const pending = pendingSessionIds(index, supplementEditionYear);
+  const pending = pendingSessionIds(index, { supplementEditionYear, baseRevisionYear });
   const citations = [...new Set((section.citations?.length ? section.citations : [section.citation]).filter(Boolean).map((citation) => citation.toLowerCase()))];
   const found = new Map();
   for (const citation of citations) {

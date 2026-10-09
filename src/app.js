@@ -1077,6 +1077,16 @@ async function updateRefreshStatus(sequence, source) {
   }
 }
 
+// The editions the statute text reflects: the base revision the catalog records and the latest
+// supplement merged over it. Act notices and currency notes judge which sessions are pending
+// from the later of the two.
+function statuteTextYears(catalog, supplementEdition) {
+  return {
+    baseRevisionYear: catalog?.source?.revisionYear ?? null,
+    supplementEditionYear: supplementEdition?.editionYear ?? null
+  };
+}
+
 async function loadLatestSupplement() {
   const edition = await supplementRepository.latestEdition();
   return edition ? { edition, manifest: await supplementRepository.loadEdition(edition.editionYear) } : null;
@@ -1093,6 +1103,7 @@ async function renderAbout(catalog, sequence) {
   const supplement = supplementResult.status === "fulfilled" ? supplementResult.value : null;
   const acts = actsResult.status === "fulfilled" ? actsResult.value : null;
   const statuteDate = formatSnapshotDate(catalog.source?.retrievedAt ?? catalog.generatedAt);
+  const revisionYear = catalog.source?.revisionYear ?? null;
   const indexSource = secondary?.index?.source ?? {};
   const infractionSource = secondary?.infractions?.source ?? {};
   const cards = [
@@ -1101,7 +1112,7 @@ async function renderAbout(catalog, sequence) {
       name: "General Statutes",
       refresh: "corpus",
       description: "Browse the Connecticut General Statutes by title, chapter, and section.",
-      details: [statuteDate && `Captured ${statuteDate}`, `${catalog.counts.sections.toLocaleString()} sections`],
+      details: [revisionYear && `Revised to January 1, ${revisionYear}`, statuteDate && `Captured ${statuteDate}`, `${catalog.counts.sections.toLocaleString()} sections`],
       caveat: "Changes published after the capture date appear after the next reviewed corpus update.",
       url: catalog.source?.url ?? "https://www.cga.ct.gov/current/pub/titles.htm"
     }),
@@ -1110,7 +1121,9 @@ async function renderAbout(catalog, sequence) {
       name: `${supplement.edition.editionYear} Supplement`,
       description: "Sections amended, added, or repealed by the published supplement and consolidated into the reader when applicable.",
       details: [formatSnapshotDate(supplement.manifest.generatedAt) && `Captured ${formatSnapshotDate(supplement.manifest.generatedAt)}`, `${supplement.manifest.counts.sections.toLocaleString()} sections`],
-      caveat: `Read the supplement together with the General Statutes revised to January 1, ${supplement.edition.editionYear - 1}.`,
+      caveat: revisionYear
+        ? `Read the supplement together with the General Statutes revised to January 1, ${revisionYear}.`
+        : "Read the supplement together with the General Statutes revision it supplements.",
       url: supplement.manifest.source?.url ?? `https://www.cga.ct.gov/${supplement.edition.editionYear}/sup/titles.htm`
     })] : []),
     ...(acts?.sessions.length ? [aboutSourceCard({
@@ -1458,7 +1471,7 @@ async function renderChapter(catalog, title, chapterMeta, route, sequence) {
   const [amendmentIndex, latestEdition] = await amendmentsPromise;
   if (sequence !== renderSequence) return;
   const pendingBySection = new Map(chapter.sections
-    .map((section) => [section.id, amendmentsForSection(amendmentIndex, section, { supplementEditionYear: latestEdition?.editionYear ?? null })])
+    .map((section) => [section.id, amendmentsForSection(amendmentIndex, section, statuteTextYears(catalog, latestEdition))])
     .filter(([, amendments]) => amendments.length));
   const selected = route.kind === "section" ? findSection(chapter, route.section) : null;
   if (route.kind === "section" && !selected) return renderNotFound("That section was not found.");
@@ -1794,9 +1807,10 @@ async function renderInfractions(route, sequence) {
 
 async function renderActs(route, sequence) {
   const options = normalizeActsOptions(route);
-  const [{ manifest, entry, acts }, supplementEdition] = await Promise.all([
+  const [{ manifest, entry, acts }, supplementEdition, catalog] = await Promise.all([
     actsRepository.loadSession(options.session),
-    supplementRepository.latestEdition().catch(() => null)
+    supplementRepository.latestEdition().catch(() => null),
+    catalogPromise.catch(() => null)
   ]);
   if (sequence !== renderSequence) return;
   if (options.session && !entry) return renderNotFound("That legislative session is not in the acts list.");
@@ -1860,7 +1874,7 @@ async function renderActs(route, sequence) {
     <header class="index-intro">
       <p class="eyebrow">${escapeHtml(manifest.source.publisher)}</p>
       <h1>Public and Special Acts</h1>
-      <p>${escapeHtml(actsCurrencyNote(entry, supplementEdition?.editionYear))}</p>
+      <p>${escapeHtml(actsCurrencyNote(entry, statuteTextYears(catalog, supplementEdition)))}</p>
       <p class="source-note">${escapeHtml(entry.name)} · ${escapeHtml(actsCountLabel(entry.counts))} · Updated ${escapeHtml(formatSnapshotDate(entry.updatedAt))} · ${officialList}</p>
     </header>
     <aside class="acts-guidance" aria-label="Reading these acts">
@@ -1966,7 +1980,7 @@ async function renderAct(catalog, route, sequence) {
   const officialLinks = `<a href="${escapeHtml(act.url)}" target="_blank" rel="noopener">Official PDF <span aria-hidden="true">↗</span></a> · <a href="${escapeHtml(act.billUrl)}" target="_blank" rel="noopener">${escapeHtml(act.bill)} bill status <span aria-hidden="true">↗</span></a>`;
   const currency = act.type === "special"
     ? "Special Acts apply to particular people, places, or programs and are not added to the General Statutes."
-    : actsCurrencyNote(entry, supplementEdition?.editionYear);
+    : actsCurrencyNote(entry, statuteTextYears(catalog, supplementEdition));
   const page = (body) => `${siteHeader()}<main class="acts-page act-page browse-page" id="main-content" data-act-page="${escapeHtml(act.id)}" data-act-query="${escapeHtml(route.query ?? "")}" data-act-sections="${escapeHtml(sections ? route.sections : "")}">
     ${breadcrumbs([{ label: "Public and Special Acts", href: listHref }, { label: act.citation }])}
     <header class="index-intro act-header">

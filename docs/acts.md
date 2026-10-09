@@ -1,6 +1,6 @@
 # Public and Special Acts
 
-`#/acts` lists the acts passed by the General Assembly, from the CGA's [Public and Special Acts](https://www.cga.ct.gov/asp/CGATodayFileCopies/CGAAllPA.asp) page. Each act opens at `#/acts/<session>/<pa|sa>-<number>` (for example `#/acts/2026-regular/pa-2`), which shows the act's text in the app, its sections and their effective dates, and links to the act PDF and the bill status page. The list covers laws that LCO has not yet folded into the statute text, so the pages state which supplement the app's statute text includes and which session it reflects.
+`#/acts` lists the acts passed by the General Assembly, from the CGA's [Public and Special Acts](https://www.cga.ct.gov/asp/CGATodayFileCopies/CGAAllPA.asp) page. Each act opens at `#/acts/<session>/<pa|sa>-<number>` (for example `#/acts/2026-regular/pa-2`), which shows the act's text in the app, its sections and their effective dates, and links to the act PDF and the bill status page. The list covers laws that LCO has not yet folded into the statute text, so the pages state which edition the app's statute text includes (the base revision, or a later supplement merged over it) and which session it reflects.
 
 ## Artifacts
 
@@ -55,7 +55,7 @@ The reverse direction runs from a statute section to the acts that change it. `n
 - "Sections 20-324g and 42-103b to 42-103m, inclusive, of the general statutes are repealed" repeals each section listed. Ranges are kept as ranges and matched in citation order (1-1z comes before 1-1aa).
 - New sections ("(NEW)"), uncodified sections (which begin with their effective date), changes to other acts ("section 140 of public act 25-168"), and Special Acts are not indexed.
 
-A statute page shows a notice under its heading for each act section that amends or repeals it, with its scope, its effective date, and a link to that act section. The notice says "a recent Public Act" rather than naming a year, so it reads correctly in any cycle; each act's citation carries its year. The chapter list marks the section "Recent Act", and the chapter overview counts the sections. Only sessions the published supplement cannot include yet appear, by the same rule as the list's currency note. A notice comes from an act's own amending clause, so an act that affects a section without amending it (a "notwithstanding" provision, for example) produces none.
+A statute page shows a notice under its heading for each act section that amends or repeals it, with its scope, its effective date, and a link to that act section. The notice says "a recent Public Act" rather than naming a year, so it reads correctly in any cycle; each act's citation carries its year. The chapter list marks the section "Recent Act", and the chapter overview counts the sections. Only sessions the statute text cannot include yet appear, by the same rule as the list's currency note: the newest edition in the text, either the base revision that `catalog.json` records (`source.revisionYear`) or a later supplement, covers legislation through the year before its own. A notice comes from an act's own amending clause, so an act that affects a section without amending it (a "notwithstanding" provision, for example) produces none.
 
 ## Refresh
 
@@ -88,4 +88,6 @@ python -m crawler.cgs_crawler.acts --retire 2026-regular --output public/data/ac
 npm run validate
 ```
 
-Retiring removes the session's texts, search index, and effective-date index too. The page's currency note compares each session's year with the latest published supplement. A session that the supplement already covers is described as "should already be reflected", which is a cue to retire it.
+Retiring removes the session's texts, search index, and effective-date index too. The page's currency note compares each session's year with the newest edition in the statute text: the base revision recorded in `catalog.json`, or the latest supplement when it is later. A session that edition already covers is described as "should already be reflected", which is a cue to retire it.
+
+A new full revision covers two years of sessions at once. After the refresh that imports the 2027 revision merges, for example, retire every 2025 and 2026 session still listed (special sessions included), as [docs/corpus-refresh.md](corpus-refresh.md#a-new-full-revision) describes.

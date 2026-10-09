@@ -59,6 +59,8 @@ const SHELL_FILES = [
   "./secondary-sources.js",
   "./secondary-ui.js",
   "./acts.js",
+  "./guide.js",
+  "./publications.js",
   "./supplement-overlay.js",
   "./supplements.js",
   "./data/catalog.json"

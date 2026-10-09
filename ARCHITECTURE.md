@@ -69,7 +69,9 @@ The installable PWA is still entirely static. A service worker precaches the ver
 
 The catalog resolves title and chapter navigation. A reader fetches only the selected chapter artifact, then builds its section index, breadcrumbs, adjacent-section links, internal legal-reference links, and subsection anchors in the browser. Legacy query-string reader links are accepted as an input compatibility layer and immediately canonicalized to the hash route.
 
-The build also derives a script-free discovery hierarchy from the same catalog and chapter artifacts. Static title pages link to static chapter pages; chapter pages expose provision headings, official-source links, and handoff links to the interactive reader. These generated pages plus `sitemap.xml` make the corpus discoverable without treating HTML as another authoritative data source.
+`#/guide` ("Understanding the Statutes") explains how bills become law, the revision and supplement cycle, and what the published data covers. Its module loads only on that route. Edition years and "published" or "anticipated" labels come from `PUBLISHED_EDITIONS` in `src/publications.js`, which lists only editions confirmed on cga.ct.gov; add a year there when CGA publishes a new edition. Coverage statements are derived from the catalog, supplement, and acts manifests rather than written into the page.
+
+The build also derives a script-free discovery hierarchy from the same catalog and chapter artifacts, plus a static copy of the guide with every detail expanded. Static title pages link to static chapter pages; chapter pages expose provision headings, official-source links, and handoff links to the interactive reader. These generated pages plus `sitemap.xml` make the corpus discoverable without treating HTML as another authoritative data source.
 
 ## Validation layers
 

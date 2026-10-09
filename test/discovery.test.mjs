@@ -57,7 +57,7 @@ test("generates script-free discovery pages, sitemap, and robots metadata", asyn
     siteUrl: "https://example.test/CGS/"
   });
 
-  assert.deepEqual(summary, { pages: 4, titles: 1, chapters: 1 });
+  assert.deepEqual(summary, { pages: 5, titles: 1, chapters: 1 });
   assert.equal(titleDiscoveryPath(title), "discover/titles/01/index.html");
   assert.equal(chapterDiscoveryPath(title, title.chapters[0]), "discover/titles/01/chapters/001/index.html");
 
@@ -69,10 +69,21 @@ test("generates script-free discovery pages, sitemap, and robots metadata", asyn
   assert.match(chapterPage, /Sec\. 1-1\. Words &amp; phrases\./);
   assert.match(chapterPage, /\.\.\/\.\.\/\.\.\/\.\.\/\.\.\/index\.html#\/t\/01\/c\/001\/s\/1-1/);
   assert.match(chapterPage, /https:\/\/example\.test\/chap_001\.htm#sec_1-1/);
-  assert.doesNotMatch(index + titlePage + chapterPage, /<script\b/i);
+  const guidePage = await readFile(path.join(output, "discover", "understanding-the-statutes", "index.html"), "utf8");
+  assert.match(index, /href="\.\/understanding-the-statutes\/"/);
+  assert.match(guidePage, /<h1>Understanding the Statutes<\/h1>/);
+  // Every detail is open in the static copy, and its contents use in-page anchors.
+  assert.doesNotMatch(guidePage, /\shidden[\s>]|<button\b|aria-pressed/);
+  assert.match(guidePage, /href="#guide-cycle"/);
+  assert.match(guidePage, /href="\.\.\/\.\.\/index\.html#\/guide"/);
+  // Without supplement or acts data the page says so instead of claiming coverage.
+  assert.match(guidePage, /No supplement is merged into the statute text\./);
+  assert.match(guidePage, /No Public Acts are listed\./);
+  assert.doesNotMatch(index + titlePage + chapterPage + guidePage, /<script\b/i);
 
   const sitemap = await readFile(path.join(output, "sitemap.xml"), "utf8");
-  assert.equal((sitemap.match(/<url>/g) ?? []).length, 4);
+  assert.equal((sitemap.match(/<url>/g) ?? []).length, 5);
+  assert.match(sitemap, /https:\/\/example\.test\/CGS\/discover\/understanding-the-statutes\//);
   assert.match(sitemap, /https:\/\/example\.test\/CGS\/discover\/titles\/01\/chapters\/001\//);
   assert.equal(
     await readFile(path.join(output, "robots.txt"), "utf8"),

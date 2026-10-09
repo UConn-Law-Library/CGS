@@ -34,7 +34,8 @@ async function offlineWorker() {
     ["data/secondary/manifest.json", { artifacts: [] }],
     ["data/search-v2/manifest.json", { shards: [] }],
     ["data/supplements/manifest.json", { editions: [] }],
-    ["data/acts/manifest.json", { artifacts: [] }]
+    ["data/acts/manifest.json", { artifacts: [] }],
+    ["data/acts/amendments.json", { sessions: [], acts: {}, citations: {}, ranges: [] }]
   ]);
   let manifestRequests = 0;
   let artifactFetch = async () => new Response(content);

@@ -8,6 +8,7 @@ import { readRecentUpdates } from "./lib/site-updates.mjs";
 import { generateSupplementIndex } from "./lib/supplement-index.mjs";
 import { generateSearchV2Artifacts } from "./lib/search-v2-artifacts.mjs";
 import { buildRepositoryMap } from "./lib/build-repository-map.mjs";
+import { generateActAmendments } from "./lib/act-amendments-artifact.mjs";
 
 const root = process.cwd();
 const output = path.join(root, "dist");
@@ -36,13 +37,17 @@ const searchV2 = await generateSearchV2Artifacts({
   outputDir: path.join(output, "data", "search-v2"),
   generatedAt: catalog.generatedAt
 });
+const actAmendments = await generateActAmendments({
+  actsDir: path.join(dataDirectory, "acts"),
+  outputDir: path.join(output, "data", "acts")
+});
 await addLoadHints(output, catalog);
 const buildId = await stampServiceWorker(output, undefined, {
   corpusGeneratedAt: catalog.generatedAt,
   corpusSchemaVersion: catalog.schemaVersion
 });
 const repositoryMap = await buildRepositoryMap({ root, output });
-console.log(`Built static site ${appVersion} at ${output} with ${discovery.pages} indexed URLs, ${supplementIndex.editions.length} supplement editions, ${searchV2.counts.documents} extended search documents, ${repositoryMap.diagrams} repository map diagrams, and PWA build ${buildId}`);
+console.log(`Built static site ${appVersion} at ${output} with ${discovery.pages} indexed URLs, ${supplementIndex.editions.length} supplement editions, ${searchV2.counts.documents} extended search documents, ${actAmendments.counts.citations} sections amended by listed acts, ${repositoryMap.diagrams} repository map diagrams, and PWA build ${buildId}`);
 
 // Without hints the browser finds each module only after parsing the one that imports it, and
 // the catalog only after every module has run. Preloading them from index.html lets the whole

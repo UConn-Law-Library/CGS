@@ -38,6 +38,7 @@ import {
   titlesRouteHref
 } from "./routes.js";
 import { diffRevisionText } from "./revision-diff.js";
+import { amendmentsForSection } from "./act-amendments.js";
 import {
   escapeHtml,
   extractLegalReferences,
@@ -516,30 +517,46 @@ function statuteChapterColumn(title, selected = null) {
   };
 }
 
-function statuteSectionItems(title, chapter, sections, selected, changeBySection = new Map()) {
+// A section that a listed Public Act amends or repeals, before the statute text shows it. The
+// wording says "recent" rather than a year; each act's citation carries its year.
+function pendingActPill(amendments = []) {
+  if (!amendments.length) return "";
+  const repealed = amendments.every((amendment) => amendment.action === "repealed");
+  return `<span class="section-status-pill act-pending-pill"><span aria-hidden="true">Recent Act</span><span class="visually-hidden">${repealed ? "Repealed" : "Amended"} by ${amendments.length === 1 ? "a recent Public Act" : "recent Public Acts"}</span></span>`;
+}
+
+function statuteSectionItems(title, chapter, sections, selected, changeBySection = new Map(), pendingBySection = new Map()) {
   return sections.map((section) => {
     const change = changeBySection.get(section.id);
     const status = section.status === "repealed" ? `<span class="section-status-pill">Repealed</span>` : "";
     const supplement = change ? `<span class="supplement-pill supplement-${escapeHtml(change.presentation)}">${escapeHtml(supplementLabel(change, { short: true }))}</span>` : "";
     const description = navigationSectionDescription(section);
     const showDescription = description && description !== section.citation;
-    return `<li><a href="${escapeHtml(provisionRoute(title, chapter, section))}"${selected?.id === section.id ? ` aria-current="page"` : ""}><strong>${escapeHtml(navigationSectionLabel(section))}</strong>${status}${supplement}${showDescription ? `<span>${escapeHtml(description)}</span>` : ""}</a></li>`;
+    return `<li><a href="${escapeHtml(provisionRoute(title, chapter, section))}"${selected?.id === section.id ? ` aria-current="page"` : ""}><strong>${escapeHtml(navigationSectionLabel(section))}</strong>${status}${supplement}${pendingActPill(pendingBySection.get(section.id))}${showDescription ? `<span>${escapeHtml(description)}</span>` : ""}</a></li>`;
   });
 }
 
-function statuteSectionColumn(title, chapter, sections, selected, changeBySection) {
+function pendingChapterSummary(pendingBySection) {
+  if (!pendingBySection.size) return "";
+  const all = [...pendingBySection.values()].flat();
+  const count = pendingBySection.size;
+  const oneAct = new Set(all.map((amendment) => amendment.citation)).size === 1;
+  return `<p class="pending-amendments-summary"><strong>${oneAct ? "A recent Public Act changes" : "Recent Public Acts change"} ${count} section${count === 1 ? "" : "s"} in this chapter.</strong> ${count === 1 ? "It is" : "They are"} marked “Recent Act” in the list. The text shown does not include those changes yet.</p>`;
+}
+
+function statuteSectionColumn(title, chapter, sections, selected, changeBySection, pendingBySection) {
   return {
     label: `Sections in ${chapterLabel(chapter)}`,
     className: "sections-column",
     heading: `<p class="eyebrow">${escapeHtml(chapterLabel(chapter))}</p><strong>Sections</strong>`,
-    content: railList(statuteSectionItems(title, chapter, sections, selected, changeBySection))
+    content: railList(statuteSectionItems(title, chapter, sections, selected, changeBySection, pendingBySection))
   };
 }
 
-function chapterSheet(title, chapter, sections, selected, changeBySection) {
+function chapterSheet(title, chapter, sections, selected, changeBySection, pendingBySection) {
   return `<dialog class="chapter-sheet" data-chapter-sheet aria-labelledby="chapter-sheet-title">
     <div class="chapter-sheet-panel"><header><div><p class="eyebrow">${escapeHtml(titleLabel(title))}</p><h2 id="chapter-sheet-title">${escapeHtml(chapterLabel(chapter))} sections</h2></div><button type="button" data-close-chapter-sheet autofocus>Close</button></header>
-      ${railList(statuteSectionItems(title, chapter, sections, selected, changeBySection), { className: "chapter-sheet-list" })}
+      ${railList(statuteSectionItems(title, chapter, sections, selected, changeBySection, pendingBySection), { className: "chapter-sheet-list" })}
     </div>
   </dialog>`;
 }
@@ -853,7 +870,33 @@ function sectionNavigation(title, chapter, sections, selected) {
   </nav>`;
 }
 
-function renderProvision(title, chapter, section, maps, secondaryContext = null, change = null) {
+function pendingAmendmentLine(amendment) {
+  const href = actRouteHref(amendment.session, { type: "public", number: amendment.number }, { section: amendment.section });
+  const what = amendment.action === "repealed" ? "Repeals this section"
+    : amendment.scope?.startsWith("adds ") ? `Adds to this section: ${amendment.scope.slice("adds ".length)}`
+      : amendment.scope ? `Amends ${amendment.scope}` : "Amends this section";
+  const effective = amendment.effective === "Effective from passage" && amendment.approved
+    ? `Effective from passage (approved ${amendment.approved})`
+    : amendment.effective ?? "Effective date not stated in the act text";
+  return `<li><a href="${escapeHtml(href)}">${escapeHtml(amendment.citation)}, § ${escapeHtml(amendment.section)}</a><span>${escapeHtml(what)}. ${escapeHtml(effective)}.</span></li>`;
+}
+
+// Listed Public Acts that change this section after the statute text was published.
+function renderPendingAmendments(amendments = []) {
+  if (!amendments.length) return "";
+  const repealed = amendments.every((amendment) => amendment.action === "repealed");
+  const heading = amendments.length === 1
+    ? `A recent Public Act ${repealed ? "repeals" : "amends"} this section`
+    : `Recent Public Acts ${repealed ? "repeal" : "change"} this section`;
+  return `<aside class="pending-amendments" aria-labelledby="pending-amendments-heading">
+    <h2 id="pending-amendments-heading">${escapeHtml(heading)}</h2>
+    <p>The text below does not include ${amendments.length === 1 ? "this change" : "these changes"} yet. Read the act with this section, and check when each change takes effect.</p>
+    <ul>${amendments.map(pendingAmendmentLine).join("")}</ul>
+    <p class="pending-amendments-note">An act can also affect this section without amending it. <a href="${escapeHtml(guideRouteHref("research"))}">How to check whether a section is current</a></p>
+  </aside>`;
+}
+
+function renderProvision(title, chapter, section, maps, secondaryContext = null, change = null, amendments = []) {
   const route = provisionRoute(title, chapter, section);
   const absolute = new URL(route, location.href).href;
   const status = section.status === "active" ? section.kind : section.status;
@@ -871,6 +914,7 @@ function renderProvision(title, chapter, section, maps, secondaryContext = null,
       <p class="eyebrow">${escapeHtml(change ? supplementLabel(change) : status)}</p>
       <h1>${escapeHtml(section.heading)}</h1>
     </div>
+    ${renderPendingAmendments(amendments)}
     <div class="section-actions" aria-label="Section actions">
       ${bookmarkButton(bookmark)}
       <button type="button" data-copy-link="${escapeHtml(route)}">Copy link</button>
@@ -1385,6 +1429,13 @@ async function renderChapter(catalog, title, chapterMeta, route, sequence) {
       .then((supplementChapter) => ({ edition: { editionYear: chapterMeta.supplementEditionYear }, chapter: supplementChapter }))
     : supplementRepository.loadLatestChapter(chapterMeta.number, title.id);
   latestPromise.catch(() => {});
+  // Which sections listed acts change. It loads with the chapter; if it fails, the page shows
+  // no act notices rather than failing.
+  const amendmentsPromise = Promise.all([actsRepository.amendments(), supplementRepository.latestEdition()])
+    .catch((error) => {
+      console.warn("Could not load the acts amendment index", error);
+      return [null, null];
+    });
   const baseChapter = await basePromise;
   if (sequence !== renderSequence) return;
   let chapter = baseChapter;
@@ -1404,6 +1455,11 @@ async function renderChapter(catalog, title, chapterMeta, route, sequence) {
   if (sequence !== renderSequence) return;
   if (!chapter) return renderNotFound("That supplement chapter could not be loaded.");
   const changeBySection = new Map((overlay?.changes ?? []).map((change) => [change.sectionId, { ...change, editionYear: overlay.editionYear }]));
+  const [amendmentIndex, latestEdition] = await amendmentsPromise;
+  if (sequence !== renderSequence) return;
+  const pendingBySection = new Map(chapter.sections
+    .map((section) => [section.id, amendmentsForSection(amendmentIndex, section, { supplementEditionYear: latestEdition?.editionYear ?? null })])
+    .filter(([, amendments]) => amendments.length));
   const selected = route.kind === "section" ? findSection(chapter, route.section) : null;
   if (route.kind === "section" && !selected) return renderNotFound("That section was not found.");
 
@@ -1426,7 +1482,7 @@ async function renderChapter(catalog, title, chapterMeta, route, sequence) {
   });
   const hiddenRepealed = chapter.sections.length - chapterNavigation.length;
   setDocumentTitle(selected ? sectionLabel(selected) : chapterLabel(chapter), titleLabel(title));
-  const sectionItems = statuteSectionItems(title, chapter, chapterNavigation, selected, changeBySection);
+  const sectionItems = statuteSectionItems(title, chapter, chapterNavigation, selected, changeBySection, pendingBySection);
   const mobileChapterList = `<section class="mobile-only mobile-section-browser" aria-labelledby="mobile-sections-heading"><div class="section-heading"><div><p class="eyebrow">${chapterNavigation.length} sections${hiddenRepealed ? ` · ${hiddenRepealed} repealed hidden` : ""}</p><h2 id="mobile-sections-heading">Sections</h2></div></div>${railList(sectionItems)}</section>`;
   const mainContent = `<main class="reader-content application-main" id="main-content">
       ${breadcrumbs([
@@ -1436,13 +1492,13 @@ async function renderChapter(catalog, title, chapterMeta, route, sequence) {
         ...(selected ? [{ label: sectionLabel(selected) }] : [])
       ])}
       ${supplementError ? `<p class="supplement-warning" role="alert">The published supplement could not be loaded. This page is showing the base revision only; reload before relying on it.</p>` : ""}
-      ${selected ? `<div class="mobile-reader-tools"><button type="button" data-open-chapter-sheet aria-haspopup="dialog">Browse chapter</button></div>${renderProvision(title, chapter, selected, maps, secondaryContext, changeBySection.get(selected.id))}${sectionNavigation(title, chapter, chapterNavigation, selected)}${chapterSheet(title, chapter, chapterNavigation, selected, changeBySection)}` : `<div class="chapter-overview"><p class="eyebrow">${chapterNavigation.length} sections${hiddenRepealed ? ` · ${hiddenRepealed} repealed hidden` : ""}</p><h1>${escapeHtml(chapterLabel(chapter))} — ${escapeHtml(chapter.name)}</h1>${overlay?.changes.length ? `<p class="supplement-summary"><strong>${overlay.editionYear} Supplement applied.</strong> ${overlay.changes.length} updated section${overlay.changes.length === 1 ? "" : "s"} are labeled in the chapter list.</p>` : ""}<p class="desktop-only">Choose a section from the sections column.</p><a href="${escapeHtml(chapter.sourceUrl)}">Official chapter source</a></div>${mobileChapterList}`}
+      ${selected ? `<div class="mobile-reader-tools"><button type="button" data-open-chapter-sheet aria-haspopup="dialog">Browse chapter</button></div>${renderProvision(title, chapter, selected, maps, secondaryContext, changeBySection.get(selected.id), pendingBySection.get(selected.id))}${sectionNavigation(title, chapter, chapterNavigation, selected)}${chapterSheet(title, chapter, chapterNavigation, selected, changeBySection, pendingBySection)}` : `<div class="chapter-overview"><p class="eyebrow">${chapterNavigation.length} sections${hiddenRepealed ? ` · ${hiddenRepealed} repealed hidden` : ""}</p><h1>${escapeHtml(chapterLabel(chapter))} — ${escapeHtml(chapter.name)}</h1>${overlay?.changes.length ? `<p class="supplement-summary"><strong>${overlay.editionYear} Supplement applied.</strong> ${overlay.changes.length} updated section${overlay.changes.length === 1 ? "" : "s"} are labeled in the chapter list.</p>` : ""}${pendingChapterSummary(pendingBySection)}<p class="desktop-only">Choose a section from the sections column.</p><a href="${escapeHtml(chapter.sourceUrl)}">Official chapter source</a></div>${mobileChapterList}`}
     </main>`;
   mountApplicationShell({
     contextualNavigation: [
       statuteTitleColumn(catalog, title),
       statuteChapterColumn(title, chapter),
-      statuteSectionColumn(title, chapter, chapterNavigation, selected, changeBySection)
+      statuteSectionColumn(title, chapter, chapterNavigation, selected, changeBySection, pendingBySection)
     ],
     mainContent,
     columnCount: contextualColumnCount("statutes", route),

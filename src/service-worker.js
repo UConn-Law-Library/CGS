@@ -59,6 +59,7 @@ const SHELL_FILES = [
   "./secondary-sources.js",
   "./secondary-ui.js",
   "./acts.js",
+  "./act-amendments.js",
   "./guide.js",
   "./publications.js",
   "./supplement-overlay.js",
@@ -243,16 +244,18 @@ async function cacheOfflineData({ port }) {
   const stagingName = `${OFFLINE_CACHE_PREFIX}${crypto.randomUUID()}`;
   const cache = await caches.open(stagingName);
   try {
+    // The acts amendment index is derived at build time, so no manifest lists it.
     const [baseManifest, secondaryManifest, searchV2Manifest, supplementIndex, actsManifest] = await Promise.all([
       fetchJsonIntoCache("./data/manifest.json", cache),
       fetchJsonIntoCache("./data/secondary/manifest.json", cache),
       fetchJsonIntoCache("./data/search-v2/manifest.json", cache),
       fetchJsonIntoCache("./data/supplements/manifest.json", cache),
-      fetchJsonIntoCache("./data/acts/manifest.json", cache)
+      fetchJsonIntoCache("./data/acts/manifest.json", cache),
+      fetchJsonIntoCache("./data/acts/amendments.json", cache)
     ]);
     const supplementData = await supplementOfflineData(supplementIndex, cache);
     const artifacts = offlineArtifacts(baseManifest, secondaryManifest, searchV2Manifest, supplementData.artifacts, actsManifest);
-    let completed = 5 + supplementData.cachedManifests;
+    let completed = 6 + supplementData.cachedManifests;
     let cursor = 0;
     let verifiedBytes = 0;
     const pending = artifacts;

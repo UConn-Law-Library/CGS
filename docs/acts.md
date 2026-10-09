@@ -45,6 +45,18 @@ Searching the list matches each word against act titles, citations, and bills, a
 
 Statute citations in an act's text link to the section in the app. To keep act pages light, the link resolves its title's section list only when it is followed; without JavaScript it falls back to a statute search for the citation.
 
+## Statute pages
+
+The reverse direction runs from a statute section to the acts that change it. `npm run build` reads every published act text and writes `data/acts/amendments.json` (`scripts/lib/act-amendments-artifact.mjs`). The file is derived and never checked in, so each acts refresh updates it on the next deploy.
+
+`src/act-amendments.js` reads the opening clause of each Public Act section:
+
+- "Section 22a-245 of the 2026 supplement to the general statutes is repealed and the following is substituted in lieu thereof" or "... is amended by adding subsection (g)" amends the section. A clause that begins "Subsection (c) of section ..." records that scope.
+- "Sections 20-324g and 42-103b to 42-103m, inclusive, of the general statutes are repealed" repeals each section listed. Ranges are kept as ranges and matched in citation order (1-1z comes before 1-1aa).
+- New sections ("(NEW)"), uncodified sections (which begin with their effective date), changes to other acts ("section 140 of public act 25-168"), and Special Acts are not indexed.
+
+A statute page shows a notice under its heading for each act section that amends or repeals it, with its scope, its effective date, and a link to that act section. The notice says "a recent Public Act" rather than naming a year, so it reads correctly in any cycle; each act's citation carries its year. The chapter list marks the section "Recent Act", and the chapter overview counts the sections. Only sessions the published supplement cannot include yet appear, by the same rule as the list's currency note. A notice comes from an act's own amending clause, so an act that affects a section without amending it (a "notwithstanding" provision, for example) produces none.
+
 ## Refresh
 
 `Review acts refresh` (`.github/workflows/refresh-acts.yml`) runs weekly and on demand. It runs:

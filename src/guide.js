@@ -442,7 +442,7 @@ function renderCoverage({ coverage, example, appBase }) {
   const actsApp = acts
     ? sessions.length
       ? `<p>${sessions.map((session) => `${escapeHtml(session.name)}: ${count(session.acts)} acts (${count(session.publicActs)} public, ${count(session.specialActs)} special)`).join("; ")}, with act text and effective dates in the ${link(actsRouteHref(), "Acts list")}.</p>
-        <p>Acts are <strong>not merged</strong> into the statute text, and a statute page does not show whether a listed act amends it. Only the sessions named here are included.${acts.unlistedCoveredYear ? ` Acts of the ${acts.unlistedCoveredYear} sessions are not listed; their codified changes appear through the ${supplement.year} Supplement.` : ""}</p>`
+        <p>Acts are <strong>not merged</strong> into the statute text. When a listed act states that it amends or repeals a section, that section’s page shows a notice linking to the act, and the chapter list marks it. Only the sessions named here are included.${acts.unlistedCoveredYear ? ` Acts of the ${acts.unlistedCoveredYear} sessions are not listed; their codified changes appear through the ${supplement.year} Supplement.` : ""}</p>`
       : "<p>No Public Acts are listed.</p>"
     : acts === null ? "<p>No Public Acts are listed.</p>" : unknown;
   return guideSection("coverage", "This app", "What does the CGS Explorer include?", `
@@ -479,6 +479,7 @@ function renderCoverage({ coverage, example, appBase }) {
         <li>The statute text is a copy captured on a specific date. Corrections the General Assembly publishes later appear after the app’s next reviewed update.</li>
         <li>When an amendment takes effect after the revision date, the app shows both versions in one section, as the official text does, marked “See end of section for amended version and effective date.”</li>
         <li>Uncodified provisions appear only in act text, and only for the sessions the Acts list includes.</li>
+        <li>Act notices on statute pages come from each act’s statement of the sections it amends or repeals. An act can still affect a section without amending it, for example through a “notwithstanding” provision, so a page without a notice is not proof that nothing changed.</li>
         <li>Each section shows its source: a “${supplement ? `${supplement.year} Supp.` : "Supplement"}” label for supplement text, and an Official source link to the General Assembly page it came from.</li>
       </ul>
     </div>
@@ -503,7 +504,7 @@ const RESEARCH_STEPS = Object.freeze([
   },
   {
     title: (e) => `Check whether ${e.supplementYear} Public Acts amend it`,
-    body: (e, appBase) => `<p>Look for the section in LCO’s ${external(OFFICIAL_LINKS.referenceTables, "General Statutes Amended or Repealed")} table for ${e.supplementYear} once it is published, and search the text of ${e.supplementYear} acts for the section number. In this app, <a href="${appBase}${escapeHtml(actsRouteHref())}">search the Acts list</a> for the section number.</p>
+    body: (e, appBase) => `<p>Look for the section in LCO’s ${external(OFFICIAL_LINKS.referenceTables, "General Statutes Amended or Repealed")} table for ${e.supplementYear} once it is published, and search the text of ${e.supplementYear} acts for the section number. In this app, a section that a listed act amends or repeals shows a notice under its heading, and you can <a href="${appBase}${escapeHtml(actsRouteHref())}">search the Acts list</a> for the section number.</p>
       <p class="guide-caution"><strong>A section-number search is not exhaustive.</strong> It finds acts that cite the section. It can miss uncodified provisions that affect the same subject, acts from sessions not searched, and changes to related sections or definitions the section relies on.</p>`,
     question: (e) => `Does a ${e.supplementYear} Public Act amend the section?`,
     yes: () => "Read the act with the section, then check its effective dates in step 4.",

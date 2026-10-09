@@ -281,6 +281,19 @@ footer { padding: 2rem 0; color: var(--muted); border-top: 1px solid var(--line)
 .chapter-overview { padding-top: clamp(2rem, 8vw, 8rem); }
 .supplement-summary { max-width: 42rem; padding: 1rem; color: var(--blue-dark); background: var(--blue-light); border-radius: .5rem; }
 .supplement-warning { padding: 1rem; color: var(--warning-ink); background: var(--warning-surface); border: 1px solid var(--warning-line); }
+/* A listed Public Act changes this section after the published text: amber, for caution. */
+.pending-amendments, .pending-amendments-summary { max-width: var(--measure-reading); color: var(--warning-ink); background: var(--warning-surface); border: 1px solid var(--warning-line); border-radius: .5rem; }
+.pending-amendments { margin: 1rem 0 0; padding: .9rem 1rem; }
+.pending-amendments h2 { margin: 0 0 .35rem; font-size: 1.05rem; }
+.pending-amendments p { margin: 0; font-size: var(--text-small-reading); }
+.pending-amendments ul { display: grid; gap: .45rem; margin: .7rem 0; padding: 0; list-style: none; }
+.pending-amendments li { display: grid; gap: .1rem; }
+.pending-amendments li a { width: fit-content; color: inherit; font-weight: 700; }
+.pending-amendments li span { font-size: var(--text-ui); }
+.pending-amendments .pending-amendments-note { font-size: var(--text-meta); }
+.pending-amendments a { color: inherit; }
+.pending-amendments-summary { padding: 1rem; }
+.context-list .act-pending-pill span { margin: 0; color: inherit; font-size: inherit; }
 
 .provision { padding-top: .5rem; }
 .provision-heading { padding-bottom: 1rem; border-bottom: 2px solid var(--ink); }

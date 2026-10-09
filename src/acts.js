@@ -34,6 +34,11 @@ export class ActsRepository {
     return this.#json("manifest.json");
   }
 
+  // Derived at build time from the act texts: which statute sections each act changes.
+  amendments() {
+    return this.#json("amendments.json", "the acts amendment index");
+  }
+
   async loadSession(sessionId = null) {
     const manifest = await this.manifest();
     const entry = sessionId ? manifest.sessions.find((session) => session.id === sessionId) : manifest.sessions[0];

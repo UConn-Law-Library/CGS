@@ -36,7 +36,7 @@ test("shared application shell provides contextual rails and mobile presentation
   assert.match(appSource, /statuteTitleColumn\(catalog, title\)/);
   assert.match(appSource, /contextualNavigation: \[statuteTitleColumn\(catalog, title\), statuteChapterColumn\(title\)\]/);
   assert.match(appSource, /statuteChapterColumn\(title, chapter\)/);
-  assert.match(appSource, /statuteSectionColumn\(title, chapter, chapterNavigation, selected, changeBySection\)/);
+  assert.match(appSource, /statuteSectionColumn\(title, chapter, chapterNavigation, selected, changeBySection, pendingBySection\)/);
   assert.match(stylesSource, /\.context-list a\[aria-current="page"\]/);
   assert.match(appSource, /data-context-key="\$\{escapeHtml\(column\.className \|\| column\.label\)\}"/);
   assert.match(appSource, /function mountApplicationShell\(options\)[\s\S]*contextScrollPositions\(\)[\s\S]*restoreContextScrollPositions\(positions\)/);

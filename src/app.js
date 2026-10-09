@@ -28,6 +28,7 @@ import {
   findSection,
   findTitle,
   chapterDisplayLabel,
+  guideRouteHref,
   infractionsRouteHref,
   indexRouteHref,
   parseRoute,
@@ -99,6 +100,7 @@ let omniSelection = -1;
 let chapterDialogController = null;
 const deferredIndexLinks = new Map();
 let pendingClearAction = null;
+let unmountGuide = null;
 let pwaState = pwaManager.state;
 const SEARCH_BATCH_SIZE = 50;
 const LARGE_INDEX_TOPIC_THRESHOLD = 200;
@@ -153,6 +155,8 @@ function activeDestination(route = parseRoute(location)) {
   if (route.kind === "acts" || route.kind === "act") return "acts";
   if (route.kind === "bookmarks") return "bookmarks";
   if (route.kind === "about") return "settings";
+  // Reached from Home, Settings, About, and Acts; no tab claims it.
+  if (route.kind === "guide") return "guide";
   if (route.kind === "history") return "history";
   return "statutes";
 }
@@ -162,6 +166,7 @@ const icons = {
   document: svgIcon(`<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/>`),
   scale: svgIcon(`<path d="M12 3v18M8 21h8M5 7h14"/><path d="M2 15l3-8 3 8M16 15l3-8 3 8"/><path d="M2 15a3 3 0 0 0 6 0M16 15a3 3 0 0 0 6 0"/>`),
   bookmark: svgIcon(`<path d="M6 3h12v18l-6-4-6 4z"/>`),
+  timeline: svgIcon(`<path d="M3 12h18"/><circle cx="6" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="18" cy="12" r="2"/><path d="M6 5v3M12 16v3M18 5v3"/>`),
   bookmarkFilled: svgIcon(`<path d="M6 3h12v18l-6-4-6 4z" fill="currentColor"/>`)
 };
 
@@ -306,6 +311,7 @@ function settingsPanel() {
     <label class="setting-row"><span><strong>Hide repealed sections</strong><small>Remove them from chapter navigation</small></span><input type="checkbox" data-hide-repealed${preferences.hideRepealedSections ? " checked" : ""}></label>
     <button type="button" class="settings-action update-action" data-apply-update${pwaState.updateAvailable ? "" : " hidden"}>Update available <small>Reload to use the latest published app</small></button>
     <a class="settings-action" href="#/about"><strong class="settings-about-title">About this app</strong> <small>Sources, coverage, and project information</small></a>
+    <a class="settings-action" href="${guideRouteHref()}"><strong class="settings-about-title">Understanding the Statutes</strong> <small>How laws are enacted, codified, and published</small></a>
     <details class="install-app-menu"><summary>Install App</summary>
     <button type="button" class="settings-action" data-install-app${pwaState.installed || !pwaState.installable ? " disabled" : ""}>Install app <small>${escapeHtml(installStatus(pwaState))}</small></button>
     <button type="button" class="settings-action" data-download-offline${!pwaState.ready || pwaState.busy ? " disabled" : ""}><span data-offline-action-label>${pwaState.complete ? "Refresh offline data" : "Download for offline use"}</span><small>Statutes, supplements, search, index, infractions, and acts</small></button>
@@ -936,6 +942,7 @@ async function renderHome(catalog) {
       <a href="#/infractions"><span aria-hidden="true">${icons.scale}</span><strong>Infraction schedule</strong><small>Review violations, amounts, and linked statutes.</small></a>
       <a href="#/acts"><span aria-hidden="true">${icons.document}</span><strong>Public and Special Acts</strong><small>See recent laws not yet reflected in the statute text.</small></a>
       <a href="#/bookmarks"><span aria-hidden="true">${icons.bookmark}</span><strong>Bookmarks</strong><small>Return to sections and infractions saved on this device.</small></a>
+      <a href="${guideRouteHref()}"><span aria-hidden="true">${icons.timeline}</span><strong>Understanding the Statutes</strong><small>How bills become law and how current the published text is.</small></a>
     </section>
     <section class="home-activity" aria-label="Your activity">
       <div><div class="section-heading"><div><p class="eyebrow">On this device</p><h2>Recently viewed</h2></div>${recents.length ? `<button type="button" class="text-button" data-clear-recents>Clear</button>` : ""}</div>${renderActivityList(recents, "Sections, index topics, and infractions you open will appear here.")}</div>
@@ -1026,13 +1033,15 @@ async function updateRefreshStatus(sequence, source) {
   }
 }
 
+async function loadLatestSupplement() {
+  const edition = await supplementRepository.latestEdition();
+  return edition ? { edition, manifest: await supplementRepository.loadEdition(edition.editionYear) } : null;
+}
+
 async function renderAbout(catalog, sequence) {
   const [secondaryResult, supplementResult, actsResult] = await Promise.allSettled([
     secondaryRepository.init(),
-    (async () => {
-      const edition = await supplementRepository.latestEdition();
-      return edition ? { edition, manifest: await supplementRepository.loadEdition(edition.editionYear) } : null;
-    })(),
+    loadLatestSupplement(),
     actsRepository.manifest()
   ]);
   if (sequence !== renderSequence) return;
@@ -1102,6 +1111,7 @@ async function renderAbout(catalog, sequence) {
       <p>The UConn Law Library provides this mobile-first tool for searching and browsing the Connecticut General Statutes, the official subject index, the Judicial Branch infraction schedule, and recent Public and Special Acts.</p>
       <p class="about-version">Release <a href="https://github.com/UConn-Law-Library/CGS/releases/tag/${encodeURIComponent(APP_VERSION)}" target="_blank" rel="noopener">${escapeHtml(APP_VERSION)} <span aria-hidden="true">↗</span></a></p>
       <p><a class="primary-link" href="https://library.law.uconn.edu/" target="_blank" rel="noopener">Visit the UConn Law Library Website <span aria-hidden="true">↗</span></a></p>
+      <p>New to Connecticut’s statutes? <a href="${guideRouteHref()}">Understanding the Statutes</a> explains how laws are enacted, codified, and published, and what this app’s data covers.</p>
     </header>
     <ul class="about-counts" aria-label="Published data coverage">
       <li><strong>${catalog.titles.length.toLocaleString()}</strong><span>titles</span></li>
@@ -1128,6 +1138,28 @@ async function renderAbout(catalog, sequence) {
   void updateRefreshStatus(sequence, "secondary");
   void updateRefreshStatus(sequence, "acts");
   window.scrollTo({ top: 0 });
+}
+
+// The guide's code loads only on its own route, so other pages don't download it.
+async function renderGuide(catalog, route, sequence) {
+  const [guide, [supplementResult, actsResult]] = await Promise.all([
+    import("./guide.js"),
+    Promise.allSettled([loadLatestSupplement(), actsRepository.manifest()])
+  ]);
+  if (sequence !== renderSequence) return;
+  // A source that failed to load is unknown (undefined), which the guide says, rather than absent.
+  const coverage = guide.describeCoverage({
+    catalog,
+    supplement: supplementResult.status === "fulfilled" ? supplementResult.value : undefined,
+    acts: actsResult.status === "fulfilled" ? actsResult.value : undefined
+  });
+  setDocumentTitle("Understanding the Statutes");
+  app.innerHTML = `${siteHeader()}<main class="guide-page" id="main-content">
+    ${breadcrumbs([{ label: "Home", href: "#/" }, { label: "Understanding the Statutes" }])}
+    ${guide.renderGuide({ coverage })}
+  </main><footer>Unofficial access copy. Verify the law in effect with the Connecticut General Assembly.</footer>`;
+  unmountGuide = guide.mountGuide(app.querySelector(".guide-page"), { scrollTo: route.part });
+  if (!route.part) window.scrollTo({ top: 0 });
 }
 
 function selectAttribute(value, selectedValue) {
@@ -1778,6 +1810,7 @@ async function renderActs(route, sequence) {
     <aside class="acts-guidance" aria-label="Reading these acts">
       <p><strong>Public Acts</strong> change the General Statutes. Until revised statute text is published, read an act together with the sections it amends, and check the effective date of each section.</p>
       <p><strong>Special Acts</strong> apply to particular people, places, or programs and are not added to the General Statutes.</p>
+      <p><a href="${guideRouteHref("public-acts")}">How Public Acts become statute text</a></p>
       ${effectiveView
         ? `<p>Each row lists the sections of a Public Act that take effect on one date. Select the sections to read only that text. Sections effective from passage are listed under the date the act was approved. Select a column heading to sort by it.</p>`
         : entry.counts.textActs ? `<p>Select an act to read its text here. Search matches words in each act's title and text.</p>` : ""}
@@ -2095,6 +2128,8 @@ async function renderCurrentRoute() {
   hasRendered = true;
   navigationHistory.sync();
   closeOmni();
+  unmountGuide?.();
+  unmountGuide = null;
   activeSearchController?.abort();
   activeSearchController = null;
   const sequence = ++renderSequence;
@@ -2118,6 +2153,7 @@ async function renderCurrentRoute() {
     if (route.kind === "bookmarks") return renderBookmarks();
     if (route.kind === "history") return renderHistory();
     if (route.kind === "about") return await renderAbout(catalog, sequence);
+    if (route.kind === "guide") return await renderGuide(catalog, route, sequence);
     if (route.kind === "index") return await renderStatutesIndex(route, sequence);
 
     let title = route.title ? findTitle(catalog, route.title) : null;

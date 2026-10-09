@@ -1,8 +1,10 @@
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
-import { chapterDisplayLabel, routeHref, sectionRouteKey } from "../../src/routes.js";
+import { chapterDisplayLabel, guideRouteHref, routeHref, sectionRouteKey } from "../../src/routes.js";
+import { describeCoverage, renderGuide } from "../../src/guide.js";
 
 const discoveryRoot = "discover/index.html";
+const guideFile = "discover/understanding-the-statutes/index.html";
 
 export function escapeHtml(value) {
   return String(value ?? "").replace(/[&<>'"]/g, (character) => ({
@@ -74,7 +76,7 @@ function renderDiscoveryIndex(catalog, siteUrl) {
     title: "Browse titles",
     description: "Static title and chapter index for the Connecticut General Statutes.",
     siteUrl,
-    body: `<header class="discovery-intro"><p class="eyebrow">Static index</p><h1>Browse Connecticut General Statutes</h1><p>This index works without JavaScript and links to every title and chapter.</p></header>
+    body: `<header class="discovery-intro"><p class="eyebrow">Static index</p><h1>Browse Connecticut General Statutes</h1><p>This index works without JavaScript and links to every title and chapter. New to the statutes? Read <a href="${escapeHtml(relativeDirectory(file, guideFile))}">Understanding the Statutes</a>.</p></header>
     <section class="catalog" aria-labelledby="titles-heading"><div class="section-heading"><div><p class="eyebrow">${catalog.counts.chapters.toLocaleString("en-US")} chapters</p><h2 id="titles-heading">Titles</h2></div><p>${catalog.counts.sections.toLocaleString("en-US")} sections</p></div>
     <div class="title-grid">${catalog.titles.map((title) => `<a class="title-card" href="${escapeHtml(relativeDirectory(file, titleDiscoveryPath(title)))}"><p>${escapeHtml(label("Title", title.number))}</p><h3>${escapeHtml(title.name)}</h3><span>${title.chapters.length} chapter${title.chapters.length === 1 ? "" : "s"}</span></a>`).join("")}</div></section>`
   });
@@ -120,6 +122,43 @@ function renderChapterPage(title, chapter, siteUrl) {
   });
 }
 
+async function readJsonIfPresent(file) {
+  try {
+    return JSON.parse(await readFile(file, "utf8"));
+  } catch (error) {
+    if (error.code === "ENOENT") return null;
+    throw error;
+  }
+}
+
+// The same coverage the app reports, read from the published manifests.
+async function publishedCoverage(catalog, dataDirectory) {
+  const supplementsDirectory = path.join(dataDirectory, "supplements");
+  const years = (await readdir(supplementsDirectory, { withFileTypes: true }).catch(() => []))
+    .filter((entry) => entry.isDirectory() && /^d{4}$/.test(entry.name))
+    .map((entry) => Number(entry.name));
+  const latest = years.length ? Math.max(...years) : null;
+  const manifest = latest ? await readJsonIfPresent(path.join(supplementsDirectory, String(latest), "manifest.json")) : null;
+  return describeCoverage({
+    catalog,
+    supplement: manifest ? { edition: { editionYear: latest }, manifest } : null,
+    acts: await readJsonIfPresent(path.join(dataDirectory, "acts", "manifest.json"))
+  });
+}
+
+function renderGuidePage(coverage, siteUrl) {
+  const home = relativeFile(guideFile, "index.html");
+  return page({
+    file: guideFile,
+    title: "Understanding the Statutes",
+    description: "How Connecticut bills become law, how Public Acts are codified into the General Statutes, the biennial revision and supplement cycle, and what this app's data covers.",
+    siteUrl,
+    breadcrumbs: [{ label: "Understanding the Statutes" }],
+    body: `<div class="guide-page">${renderGuide({ coverage, interactive: false, appBase: home })}
+    <p><a href="${escapeHtml(home + guideRouteHref())}">Open the interactive version</a></p></div>`
+  });
+}
+
 async function write(output, file, content) {
   const target = path.join(output, ...file.split("/"));
   await mkdir(path.dirname(target), { recursive: true });
@@ -128,8 +167,9 @@ async function write(output, file, content) {
 
 export async function generateDiscovery({ catalog, dataDirectory, output, siteUrl }) {
   const normalizedSiteUrl = new URL(siteUrl.endsWith("/") ? siteUrl : `${siteUrl}/`);
-  const pages = ["index.html", discoveryRoot];
+  const pages = ["index.html", discoveryRoot, guideFile];
   await write(output, discoveryRoot, renderDiscoveryIndex(catalog, normalizedSiteUrl));
+  await write(output, guideFile, renderGuidePage(await publishedCoverage(catalog, dataDirectory), normalizedSiteUrl));
 
   for (const title of catalog.titles) {
     const titleFile = titleDiscoveryPath(title);
@@ -148,5 +188,5 @@ export async function generateDiscovery({ catalog, dataDirectory, output, siteUr
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((url) => `  <url><loc>${escapeHtml(url)}</loc></url>`).join("\n")}\n</urlset>\n`;
   await write(output, "sitemap.xml", sitemap);
   await write(output, "robots.txt", `User-agent: *\nAllow: /\nSitemap: ${new URL("sitemap.xml", normalizedSiteUrl).href}\n`);
-  return { pages: pages.length, titles: catalog.titles.length, chapters: pages.length - catalog.titles.length - 2 };
+  return { pages: pages.length, titles: catalog.titles.length, chapters: pages.length - catalog.titles.length - 3 };
 }

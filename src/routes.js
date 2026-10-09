@@ -47,6 +47,10 @@ export function titlesRouteHref() {
   return "#/titles";
 }
 
+export function guideRouteHref(part = null) {
+  return part ? `#/guide?part=${encodeSegment(part)}` : "#/guide";
+}
+
 export function indexRouteHref(letter = null, {
   topic = null,
   query = null,
@@ -179,6 +183,10 @@ export function parseRoute({ hash = "", search = "" } = {}) {
   if (parts[0] === "titles" && parts.length === 1) return { kind: "titles" };
 
   if (["about", "a"].includes(parts[0]) && parts.length === 1) return { kind: "about" };
+
+  if (parts[0] === "guide" && parts.length === 1) {
+    return { kind: "guide", part: new URLSearchParams(hashQuery).get("part") || null };
+  }
 
   if (parts[0] === "index") {
     const parameters = new URLSearchParams(hashQuery);

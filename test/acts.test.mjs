@@ -81,9 +81,9 @@ test("matches special-session citations", () => {
 
 test("states whether the statute text reflects a session", () => {
   const session = { year: 2026, name: "2026 Regular Session" };
-  assert.match(actsCurrencyNote(session, 2026), /2026 Supplement, which reflects legislation through the 2025 session\. Acts from the 2026 Regular Session are not yet reflected/);
-  assert.match(actsCurrencyNote({ year: 2025, name: "2025 Regular Session" }, 2026), /should already be reflected in the 2026 Supplement/);
-  assert.match(actsCurrencyNote(session, null), /may not yet be reflected/);
+  assert.match(actsCurrencyNote(session, { supplementEditionYear: 2026, baseRevisionYear: 2025 }), /2026 Supplement, which reflects legislation through the 2025 session\. Acts from the 2026 Regular Session are not yet reflected/);
+  assert.match(actsCurrencyNote({ year: 2025, name: "2025 Regular Session" }, { supplementEditionYear: 2026, baseRevisionYear: 2025 }), /should already be reflected in the 2026 Supplement/);
+  assert.match(actsCurrencyNote(session), /may not yet be reflected/);
 });
 
 test("renders an escaped, labeled table", () => {

@@ -1,3 +1,4 @@
+import { statuteTextEdition } from "./publications.js";
 import { escapeHtml, renderLinkedText } from "./reader.js";
 import { actRouteHref } from "./routes.js";
 
@@ -177,13 +178,15 @@ export function filterActs(acts, options = {}, textMatches = null) {
     || direction * (left.number - right.number));
 }
 
-export function actsCurrencyNote(session, supplementEditionYear = null) {
-  const covered = supplementEditionYear ? supplementEditionYear - 1 : null;
-  if (covered !== null && session.year > covered) {
-    return `The statute text in this app includes the ${supplementEditionYear} Supplement, which reflects legislation through the ${covered} session. Acts from the ${session.name} are not yet reflected in that text.`;
+// Whether a session's acts can be in the statute text, judged by the newest edition in it: the
+// base revision the catalog records or the supplement merged over it, whichever is later.
+export function actsCurrencyNote(session, { supplementEditionYear = null, baseRevisionYear = null } = {}) {
+  const edition = statuteTextEdition({ baseRevisionYear, supplementYear: supplementEditionYear });
+  if (edition && session.year > edition.legislationThrough) {
+    return `The statute text in this app includes the ${edition.label}, which reflects legislation through the ${edition.legislationThrough} session. Acts from the ${session.name} are not yet reflected in that text.`;
   }
-  if (covered !== null) {
-    return `Acts from the ${session.name} should already be reflected in the ${supplementEditionYear} Supplement text in this app.`;
+  if (edition) {
+    return `Acts from the ${session.name} should already be reflected in the ${edition.label} text in this app.`;
   }
   return `Acts from the ${session.name} may not yet be reflected in the statute text in this app.`;
 }

@@ -24,6 +24,16 @@ export function editionLabel(year) {
   return editionType(year) === "revision" ? `${year} General Statutes` : `${year} Supplement`;
 }
 
+// The newest edition in the app's statute text: the base revision the corpus records, or a later
+// supplement merged over it. Legislation is covered through the year before that edition. Null
+// when neither year is known.
+export function statuteTextEdition({ baseRevisionYear = null, supplementYear = null } = {}) {
+  const years = [baseRevisionYear, supplementYear].filter(Number.isInteger);
+  if (!years.length) return null;
+  const year = Math.max(...years);
+  return { year, label: editionLabel(year), legislationThrough: year - 1 };
+}
+
 export function latestPublishedYear(editions = PUBLISHED_EDITIONS) {
   return editions.reduce((latest, edition) => Math.max(latest, edition.year), -Infinity);
 }

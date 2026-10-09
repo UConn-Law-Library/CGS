@@ -143,7 +143,17 @@ function assertSafePaths(inputDir, outputDir) {
   }
 }
 
-export async function importLegacy({ inputDir, outputDir, generatedAt } = {}) {
+// The edition the crawl captured: the year its titles page is "revised to January 1" of. A
+// supplement crawl falls back to its supplement year.
+function revisionYearOf(legacyIndex, requested) {
+  const value = Number(requested ?? legacyIndex?.source?.revision_year ?? legacyIndex?.source?.supplement_year);
+  if (!Number.isInteger(value) || value < 1900) {
+    throw new Error("Legacy input does not state its revision year (source.revision_year); pass --revision-year");
+  }
+  return value;
+}
+
+export async function importLegacy({ inputDir, outputDir, generatedAt, revisionYear } = {}) {
   if (!inputDir) throw new Error("inputDir is required");
   if (!outputDir) throw new Error("outputDir is required");
   assertSafePaths(inputDir, outputDir);
@@ -169,6 +179,7 @@ export async function importLegacy({ inputDir, outputDir, generatedAt } = {}) {
   const source = {
     name: "Connecticut General Statutes legacy JSON",
     url: sourceUrl,
+    revisionYear: revisionYearOf(legacyIndex, revisionYear),
     retrievedAt: timestamp
   };
 

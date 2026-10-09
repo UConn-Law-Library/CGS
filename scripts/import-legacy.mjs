@@ -20,7 +20,12 @@ try {
   const args = parseArgs(process.argv.slice(2));
   const inputDir = path.resolve(args.input ?? "fixtures/legacy");
   const outputDir = path.resolve(args.output ?? "public/data");
-  const result = await importLegacy({ inputDir, outputDir, generatedAt: args["generated-at"] });
+  const result = await importLegacy({
+    inputDir,
+    outputDir,
+    generatedAt: args["generated-at"],
+    revisionYear: args["revision-year"] ? Number(args["revision-year"]) : undefined
+  });
   console.log(`Imported ${result.titles} titles, ${result.chapters} chapters, and ${result.sections} provisions.`);
   console.log(`Wrote ${result.artifacts} artifacts to ${result.outputDir}`);
 } catch (error) {

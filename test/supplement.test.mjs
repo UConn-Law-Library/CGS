@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { mkdtemp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
+import { cp, mkdtemp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import test from "node:test";
@@ -7,8 +7,12 @@ import { importLegacy } from "../scripts/lib/importer.mjs";
 import { importSupplement } from "../scripts/lib/supplement-importer.mjs";
 import { generateSupplementIndex } from "../scripts/lib/supplement-index.mjs";
 import { classifyChapterOverlay } from "../scripts/lib/supplement-overlay.mjs";
-import { validateSupplement } from "../scripts/lib/supplement-validator.mjs";
+import { validateSupplement, validateSupplements } from "../scripts/lib/supplement-validator.mjs";
+import { planSupplementRebind, renderRetirementSummary } from "../scripts/lib/supplement-retirement.mjs";
 import { validateSchema } from "../scripts/lib/json-schema.mjs";
+import { amendmentsForSection, pendingSessionIds } from "../src/act-amendments.js";
+import { actsCurrencyNote } from "../src/acts.js";
+import { describeCoverage } from "../src/guide.js";
 import { mergeSupplementSearchShard } from "../src/supplements.js";
 
 const fixture = path.resolve("fixtures/legacy");
@@ -100,6 +104,80 @@ test("imports supplements as year-scoped non-destructive citation overlays", asy
   await writeFile(path.join(base, "manifest.json"), `${await readFile(path.join(base, "manifest.json"), "utf8")}\n`, "utf8");
   const stale = await validateSupplement({ supplementDir: output, baseDataDir: base, schemaDir: schemas });
   assert.match(stale.errors.join("\n"), /base corpus identity does not match/);
+});
+
+// The weekly refresh after CGA publishes the 2027 revision: the published data is the 2025
+// revision with the 2026 Supplement merged, and the candidate base is revised to January 1, 2027.
+test("a 2027 revision retires the 2026 Supplement and codifies the 2026 acts", async (t) => {
+  const root = await mkdtemp(path.join(os.tmpdir(), "cgs-new-revision-"));
+  t.after(() => rm(root, { recursive: true, force: true }));
+  const published = path.join(root, "published");
+  const candidate = path.join(root, "candidate");
+  await importLegacy({ inputDir: fixture, outputDir: published, generatedAt: "2026-07-14T00:00:00Z" });
+  await importSupplement({
+    inputDir: await supplementInput(root),
+    outputDir: path.join(published, "supplements", "2026"),
+    baseDataDir: published,
+    editionYear: 2026,
+    generatedAt: "2026-08-01T00:00:00Z"
+  });
+  assert.deepEqual((await validateSupplements({ supplementsDir: path.join(published, "supplements"), baseDataDir: published, schemaDir: schemas })).errors, []);
+  await importLegacy({ inputDir: fixture, outputDir: candidate, generatedAt: "2027-07-14T00:00:00Z", revisionYear: 2027 });
+  const candidateCatalog = JSON.parse(await readFile(path.join(candidate, "catalog.json"), "utf8"));
+  assert.equal(candidateCatalog.source.revisionYear, 2027);
+
+  // The refresh retires the superseded supplement instead of rebinding it, and says so.
+  const plan = await planSupplementRebind({ supplementsDir: path.join(published, "supplements"), baseDataDir: candidate });
+  assert.deepEqual(plan, { baseRevisionYear: 2027, rebind: [], retire: [2026] });
+  const summary = renderRetirementSummary(plan);
+  assert.match(summary, /## Retired supplements/);
+  assert.match(summary, /revised to January 1, 2027, which already contains the changes in the 2026 Supplement/);
+  assert.match(summary, /removes `public\/data\/supplements\/2026`/);
+
+  // Carrying it forward anyway fails the import and the ordinary validate run.
+  await assert.rejects(() => importSupplement({
+    inputDir: path.join(root, "supplement"),
+    outputDir: path.join(root, "rebound"),
+    baseDataDir: candidate,
+    editionYear: 2026
+  }), /the 2026 Supplement is superseded by the base corpus, revised to January 1, 2027/);
+  await cp(path.join(published, "supplements"), path.join(candidate, "supplements"), { recursive: true });
+  const carried = await validateSupplements({ supplementsDir: path.join(candidate, "supplements"), baseDataDir: candidate, schemaDir: schemas });
+  assert.match(carried.errors.join("\n"), /supplements\/2026\/manifest\.json: the 2026 Supplement is superseded by the base corpus, revised to January 1, 2027; retire supplements\/2026/);
+
+  // A supplement newer than the base is never dropped: it must rebind.
+  await mkdir(path.join(published, "supplements", "2028"));
+  assert.deepEqual(await planSupplementRebind({ supplementsDir: path.join(published, "supplements"), baseDataDir: candidate }), {
+    baseRevisionYear: 2027,
+    rebind: [2028],
+    retire: [2026]
+  });
+
+  // The 2026 acts are now in the statute text, even if the old supplement were still listed.
+  const index = {
+    sessions: [{ id: "2026-regular", year: 2026 }, { id: "2027-regular", year: 2027 }],
+    acts: {
+      "2026-regular/1": { session: "2026-regular", number: 1 },
+      "2027-regular/1": { session: "2027-regular", number: 1 }
+    },
+    citations: {
+      "1-1": [{ act: "2026-regular/1", section: "1", action: "amended" }, { act: "2027-regular/1", section: "1", action: "amended" }]
+    },
+    ranges: []
+  };
+  assert.deepEqual([...pendingSessionIds(index, { supplementEditionYear: 2026, baseRevisionYear: 2025 })], ["2026-regular", "2027-regular"]);
+  for (const years of [{ baseRevisionYear: 2027 }, { supplementEditionYear: 2026, baseRevisionYear: 2027 }]) {
+    assert.deepEqual([...pendingSessionIds(index, years)], ["2027-regular"]);
+    assert.deepEqual(amendmentsForSection(index, { citations: ["1-1"] }, years).map((act) => act.session), ["2027-regular"]);
+  }
+  const years = { baseRevisionYear: 2027, supplementEditionYear: null };
+  assert.match(actsCurrencyNote({ year: 2026, name: "2026 Regular Session" }, years), /should already be reflected in the 2027 General Statutes text/);
+  assert.match(actsCurrencyNote({ year: 2027, name: "2027 Regular Session" }, years), /includes the 2027 General Statutes, which reflects legislation through the 2026 session/);
+  const coverage = describeCoverage({ catalog: candidateCatalog, supplement: null, acts: { sessions: [{ id: "2027-regular", year: 2027 }] } });
+  assert.equal(coverage.base.year, 2027);
+  assert.equal(coverage.base.label, "2027 General Statutes");
+  assert.equal(coverage.acts.unlistedCoveredYear, 2026);
+  assert.equal(coverage.acts.coveredBy, "2027 General Statutes");
 });
 
 test("rejects partial overlays of grouped base provisions", async (t) => {

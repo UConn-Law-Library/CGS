@@ -1,4 +1,4 @@
-import { isExactActQuery, matchActText, matchesActMetadata, sentenceCaseTitle } from "./acts.js";
+import { filterActs, isExactActQuery, matchActText, matchesActMetadata, sentenceCaseTitle } from "./acts.js";
 import { routeForDocument } from "./reader.js";
 import { actRouteHref, actsRouteHref, indexRouteHref, infractionsRouteHref, routeHref } from "./routes.js";
 import { searchIndexTopics, topicLetter } from "./secondary-ui.js";
@@ -61,20 +61,23 @@ export function statuteMatches(results, limit = 5) {
   }));
 }
 
-export function findInfractionMatches(entries, query, limit = 3) {
+/** Every schedule entry whose citation, description, or category contains each word. */
+export function matchInfractions(entries, query) {
   const tokens = tokensFor(query);
   if (!tokens.length) return [];
   return entries
     .filter((entry) => includesTokens(`${entry.citation} ${entry.description} ${entry.category}`, tokens))
     .sort((left, right) => scoreLabel(left.citation, query) - scoreLabel(right.citation, query)
-      || left.citation.localeCompare(right.citation))
-    .slice(0, limit)
-    .map((entry) => ({
-      kind: "Infraction",
-      label: `Sec. ${entry.citation}`,
-      subtitle: `${entry.description} · ${entry.category}`,
-      href: infractionsRouteHref(entry.category, { entry: entry.id })
-    }));
+      || left.citation.localeCompare(right.citation));
+}
+
+export function findInfractionMatches(entries, query, limit = 3) {
+  return matchInfractions(entries, query).slice(0, limit).map((entry) => ({
+    kind: "Infraction",
+    label: `Sec. ${entry.citation}`,
+    subtitle: `${entry.description} · ${entry.category}`,
+    href: infractionsRouteHref(entry.category, { entry: entry.id })
+  }));
 }
 
 export function indexLetterForQuery(query) {
@@ -127,6 +130,39 @@ export function findActMatches(sessions, query, limit = 3) {
         : actsRouteHref({ session: entry.id, query: act.citation }),
       exact
     }));
+}
+
+/**
+ * The acts list searches one session at a time. For each session with matching
+ * acts, how many that list shows and a link to it; the newest session's link
+ * leaves the session out, since the list opens on it.
+ */
+export function actSearchLinks(sessions, query) {
+  const value = String(query ?? "").trim();
+  if (!value) return [];
+  return sessions.flatMap(({ entry, acts, index }, order) => {
+    const count = filterActs(acts, { query: value }, matchActText(index, value)).length;
+    return count ? [{ session: entry, count, href: actsRouteHref({ session: order ? entry.id : null, query: value }) }] : [];
+  });
+}
+
+/**
+ * The words of a statute search, for the sources that match words only (acts
+ * and infractions): quotes, trailing wildcards, and AND drop away. Null when the
+ * query uses OR, NOT, NEAR/n, or parentheses, which those sources cannot apply.
+ */
+export function plainSearchWords(query) {
+  const value = String(query ?? "");
+  if (/[()]/.test(value)) return null;
+  const words = [];
+  for (const word of value.replaceAll('"', " ").split(/\s+/).filter(Boolean)) {
+    const upper = word.toUpperCase();
+    if (upper === "OR" || upper === "NOT" || /^NEAR\/\d+$/.test(upper)) return null;
+    if (upper === "AND") continue;
+    const stripped = word.replace(/\*$/, "");
+    if (stripped) words.push(stripped);
+  }
+  return words.length ? words.join(" ") : null;
 }
 
 export function buildOmniRows({ statutes = [], titles = [], chapters = [], acts = [], index = [], infractions = [] } = {}) {

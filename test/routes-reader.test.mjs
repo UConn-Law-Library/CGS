@@ -112,6 +112,12 @@ test("builds and parses mobile destination routes", () => {
   assert.deepEqual(parseRoute({ hash: detail }), {
     kind: "infractions", category: "MOTOR VEHICLES", entry: "infraction-1", query: null
   });
+  // A search of every category, the target of the search page's infractions link.
+  const allCategories = infractionsRouteHref(null, { query: "beverage containers" });
+  assert.equal(allCategories, "#/infractions?q=beverage%20containers");
+  assert.deepEqual(parseRoute({ hash: allCategories }), {
+    kind: "infractions", category: null, entry: null, query: "beverage containers"
+  });
   assert.deepEqual(parseRoute({ hash: "#/bookmarks" }), { kind: "bookmarks" });
   assert.deepEqual(parseRoute({ hash: "#/about" }), { kind: "about" });
   assert.deepEqual(parseRoute({ hash: "#/a" }), { kind: "about" });

@@ -60,12 +60,15 @@ import { APP_VERSION, RECENT_UPDATES } from "./release.js";
 import { renderSiteUpdates } from "./site-updates.js";
 import { NavigationHistory } from "./navigation-history.js";
 import {
+  actSearchLinks,
   buildOmniRows,
   findActMatches,
   findIndexMatches,
   findInfractionMatches,
   findNavigationMatches,
   indexLetterForQuery,
+  matchInfractions,
+  plainSearchWords,
   statuteMatches
 } from "./omnisearch.js";
 import {
@@ -596,9 +599,9 @@ function renderOmniPanel(query, groups, { completed = 0, total = 0, pending = fa
       <span class="omni-kind">${escapeHtml(row.kind)}</span>
       <strong class="omni-main">${escapeHtml(row.label)}</strong>
       <small class="omni-sub">${escapeHtml(row.subtitle)}</small>
-    </a>`).join("") : `<p class="omni-empty">${pending ? "Searching published legal data…" : "No quick matches. Press Enter for complete statute results."}</p>`;
+    </a>`).join("") : `<p class="omni-empty">${pending ? "Searching published legal data…" : "No quick matches. Press Enter for complete search results."}</p>`;
   const progress = pending && total ? `Searching ${completed} of ${total} statute titles…` : pending ? "Searching published legal data…" : `${rows.length} quick match${rows.length === 1 ? "" : "es"}`;
-  panel.innerHTML = `${body}<div class="omni-foot"><span>${escapeHtml(progress)}</span><span>Enter: full statute results · ↑↓: choose · Esc: close</span></div>`;
+  panel.innerHTML = `${body}<div class="omni-foot"><span>${escapeHtml(progress)}</span><span>Enter: full search results · ↑↓: choose · Esc: close</span></div>`;
   panel.hidden = false;
   input.setAttribute("aria-expanded", "true");
   omniSelection = previousHref ? omniItems().findIndex((item) => item.getAttribute("href") === previousHref) : -1;
@@ -1335,7 +1338,7 @@ async function renderSearchPage(catalog, route) {
   const selectedTitle = catalog.titles.find((title) => title.id === options.title) ?? null;
   setDocumentTitle(query ? `Search: ${query}` : "Search");
   app.innerHTML = `${siteHeader()}<main class="search-page" id="main-content">
-    <header><p class="eyebrow">Statutes</p><h1>Search</h1><p>Search the full statute text and, when selected, legislative history and annotations.</p></header>
+    <header><p class="eyebrow">Statutes, acts, and infractions</p><h1>Search</h1><p>Search the full statute text and, when selected, legislative history and annotations. Matching Public and Special Acts and infractions are listed under “Also found in”; the filters below apply to statutes only.</p></header>
     <form class="search-refine search-v2-refine" data-search-refine>
       <div class="search-primary-controls">
         <div class="search-field search-query-field"><label for="search-page-query">Citation, phrase, or keyword</label>
@@ -1359,6 +1362,7 @@ async function renderSearchPage(catalog, route) {
     <p class="search-help" id="search-help">Use AND, OR, NOT, parentheses, quoted phrases, NEAR/n proximity, and a trailing wildcard such as <code>regulat*</code>. Multiple words use AND automatically. Fuzzy matching and stemming are not applied.</p>
     ${queryExplanationMarkup(query, options)}
     ${query ? `<form class="search-within" data-search-within><label for="search-within-query">Search within these results</label><div><input id="search-within-query" name="within" type="search" minlength="2" value="${escapeHtml(options.within ?? "")}" placeholder="Add another term or Boolean query"><button type="submit">Apply</button></div>${options.within ? `<a href="${escapeHtml(searchRouteHref(query, { ...options, within: null }))}">Clear within search</a>` : ""}</form>` : ""}
+    ${query.length >= 2 ? alsoFoundMarkup(query) : ""}
     <progress id="search-progress" value="0" max="1" hidden>Search progress</progress>
     <div id="search-status" role="status" aria-live="polite">${query ? "Preparing search…" : "Enter at least two characters."}</div>
     <p class="supplement-warning" id="search-supplement-warning" role="alert" hidden>The published supplement search data could not be loaded. These results use the base revision and may be incomplete; reload while online before relying on them.</p>
@@ -1366,7 +1370,55 @@ async function renderSearchPage(catalog, route) {
     <button type="button" class="search-more" data-search-more hidden>Show more results</button>
     <details class="search-history"><summary>Recent searches on this device</summary><div data-search-history>${searchHistoryMarkup()}</div></details>
   </main><footer>Unofficial access copy. Verify legal text with the Connecticut General Assembly.</footer>`;
-  if (query.length >= 2) await runStatuteSearch(query, options);
+  if (query.length < 2) return;
+  // Acts and infractions fill in beside the statute search, which does not wait for them.
+  searchOtherSources(query);
+  await runStatuteSearch(query, options);
+}
+
+// Groups for acts and infractions, filled in as their data loads. Each stays
+// hidden until it has a match, and a group whose data fails to load stays hidden.
+function alsoFoundMarkup(query) {
+  if (!plainSearchWords(query)) {
+    return `<p class="also-found-note">Public and Special Acts and infractions are not searched when a query uses OR, NOT, NEAR, or parentheses.</p>`;
+  }
+  return `<section class="also-found" data-also-found aria-labelledby="also-found-heading" hidden>
+    <h2 id="also-found-heading">Also found in</h2>
+    <div class="also-found-groups">
+      <section class="also-found-group" data-also-found-group="acts" aria-labelledby="also-found-acts" hidden></section>
+      <section class="also-found-group" data-also-found-group="infractions" aria-labelledby="also-found-infractions" hidden></section>
+    </div>
+  </section>`;
+}
+
+function fillAlsoFoundGroup(section, name, heading, rows, links) {
+  if (!section.isConnected || !rows.length) return;
+  const group = section.querySelector(`[data-also-found-group="${name}"]`);
+  group.innerHTML = `<h3 id="also-found-${name}">${escapeHtml(heading)}</h3>
+    <ol>${rows.map((row) => `<li><a href="${escapeHtml(row.href)}"><strong>${escapeHtml(row.label)}</strong><small>${escapeHtml(row.subtitle)}</small></a></li>`).join("")}</ol>
+    ${links.map((link) => `<a class="also-found-more" href="${escapeHtml(link.href)}">${escapeHtml(link.label)}</a>`).join("")}`;
+  group.hidden = false;
+  section.hidden = false;
+}
+
+function searchOtherSources(query) {
+  const section = document.querySelector("[data-also-found]");
+  const words = plainSearchWords(query);
+  if (!section || !words) return;
+  actsRepository.loadSearchableSessions().then((sessions) => {
+    const links = actSearchLinks(sessions, words);
+    fillAlsoFoundGroup(section, "acts", "Public and Special Acts", findActMatches(sessions, words), links.map(({ session, count, href }) => ({
+      href,
+      label: `See all ${count.toLocaleString()} matching act${count === 1 ? "" : "s"}${links.length > 1 ? ` in the ${session.name}` : ""}`
+    })));
+  }).catch((error) => console.warn("Could not search the acts", error));
+  secondaryRepository.loadAllInfractions().then((entries) => {
+    const count = matchInfractions(entries, words).length;
+    fillAlsoFoundGroup(section, "infractions", "Infractions", findInfractionMatches(entries, words), [{
+      href: infractionsRouteHref(null, { query: words }),
+      label: `See all ${count.toLocaleString()} matching infraction${count === 1 ? "" : "s"}`
+    }]);
+  }).catch((error) => console.warn("Could not search the infractions", error));
 }
 
 function renderTitle(catalog, title) {
@@ -1701,11 +1753,11 @@ function infractionBookmark(entry) {
   };
 }
 
-function renderInfractionListItem(entry) {
+function renderInfractionListItem(entry, { showCategory = false } = {}) {
   const href = infractionsRouteHref(entry.category, { entry: entry.id });
   const total = entry.amounts?.total_due;
   return `<li class="infraction-card">
-    <a href="${escapeHtml(href)}"><span class="infraction-citation">Sec. ${escapeHtml(entry.citation)}</span><strong>${escapeHtml(entry.description)}</strong>${total != null ? `<small>Total due ${escapeHtml(formatMoney(total))}</small>` : ""}</a>
+    <a href="${escapeHtml(href)}"><span class="infraction-citation">Sec. ${escapeHtml(entry.citation)}${showCategory ? ` · ${escapeHtml(entry.category)}` : ""}</span><strong>${escapeHtml(entry.description)}</strong>${total != null ? `<small>Total due ${escapeHtml(formatMoney(total))}</small>` : ""}</a>
     ${bookmarkButton(infractionBookmark(entry), "compact-bookmark")}
   </li>`;
 }
@@ -1742,26 +1794,33 @@ async function renderInfractions(route, sequence) {
   if (route.category && !selectedGroup) return renderNotFound("That infraction category was not found.");
   const selectedEntry = route.entry ? selectedGroup[1].find((entry) => entry.id === route.entry) : null;
   if (route.entry && !selectedEntry) return renderNotFound("That infraction entry was not found.");
-  const query = route.query?.trim().toLowerCase() ?? "";
-  const tokens = query.split(/\s+/).filter(Boolean);
+  const query = route.query?.trim() ?? "";
+  // Without a category, a query searches every category.
+  const searchingAll = !selectedGroup && Boolean(query);
+  const tokens = query.toLowerCase().split(/\s+/).filter(Boolean);
   const filtered = selectedGroup ? selectedGroup[1].filter((entry) => {
     const text = `${entry.citation} ${entry.description}`.toLowerCase();
     return tokens.every((token) => text.includes(token));
-  }) : [];
+  }) : searchingAll ? matchInfractions(entries, query) : [];
   const shown = filtered.slice(0, 150);
   const categoryItems = groups.map(([category, values]) => `<li><a href="${escapeHtml(infractionsRouteHref(category))}"${selectedGroup?.[0] === category ? ` aria-current="page"` : ""}><strong>${escapeHtml(category)}</strong><span>${values.length.toLocaleString()} entries</span></a></li>`);
-  const entryItems = shown.map((entry) => `<li><a href="${escapeHtml(infractionsRouteHref(selectedGroup[0], { entry: entry.id }))}"${selectedEntry?.id === entry.id ? ` aria-current="page"` : ""}><strong>Sec. ${escapeHtml(entry.citation)}</strong><span>${escapeHtml(entry.description)}</span></a></li>`);
+  const entryItems = shown.map((entry) => `<li><a href="${escapeHtml(infractionsRouteHref(entry.category, { entry: entry.id }))}"${selectedEntry?.id === entry.id ? ` aria-current="page"` : ""}><strong>Sec. ${escapeHtml(entry.citation)}</strong><span>${escapeHtml(entry.description)}</span></a></li>`);
   setDocumentTitle(selectedEntry ? `Sec. ${selectedEntry.citation}` : selectedGroup?.[0] ?? "Infractions");
-  const mainBody = selectedEntry ? renderInfractionDetail(selectedEntry, manifests.infractions.source) : selectedGroup ? `<header class="section-heading"><div><p class="eyebrow">Judicial Branch schedule</p><h1>${escapeHtml(selectedGroup[0])}</h1></div><p>${selectedGroup[1].length.toLocaleString()} entries</p></header>
-      <form class="infraction-search" data-infraction-search>
-        <label for="infraction-query">Search this category</label>
-        <input id="infraction-query" name="query" type="search" value="${escapeHtml(route.query ?? "")}" placeholder="Citation or description">
+  const searchForm = (label, placeholder) => `<form class="infraction-search" data-infraction-search>
+        <label for="infraction-query">${label}</label>
+        <input id="infraction-query" name="query" type="search" value="${escapeHtml(route.query ?? "")}" placeholder="${placeholder}">
         <button type="submit">Search</button>
-      </form>
-      <p class="note">${filtered.length.toLocaleString()} matching entr${filtered.length === 1 ? "y" : "ies"}${filtered.length > shown.length ? `; showing the first ${shown.length}` : ""}.</p>
+      </form>`;
+  const matchCount = (suffix = "") => `<p class="note">${filtered.length.toLocaleString()} matching entr${filtered.length === 1 ? "y" : "ies"}${filtered.length > shown.length ? `; showing the first ${shown.length}` : ""}.${suffix}</p>`;
+  const mainBody = selectedEntry ? renderInfractionDetail(selectedEntry, manifests.infractions.source) : selectedGroup ? `<header class="section-heading"><div><p class="eyebrow">Judicial Branch schedule</p><h1>${escapeHtml(selectedGroup[0])}</h1></div><p>${selectedGroup[1].length.toLocaleString()} entries</p></header>
+      ${searchForm("Search this category", "Citation or description")}
+      ${matchCount(query ? ` <a href="${escapeHtml(infractionsRouteHref(null, { query }))}">Search all categories</a>` : "")}
       <section class="desktop-only rail-prompt"><p>Select an entry from the adjacent column.</p></section>
-      <ol class="infraction-list mobile-only">${shown.map(renderInfractionListItem).join("")}</ol>` : `<header class="index-intro"><p class="eyebrow">State of Connecticut Judicial Branch</p><h1>Infractions and violations</h1><p>Browse the official mail-in schedule by category, then open an entry for amounts and its linked statute.</p><p class="source-note">Effective ${escapeHtml(manifests.infractions.source.effective ?? "date not stated")} · ${entries.length.toLocaleString()} entries · <a href="${escapeHtml(manifests.infractions.source.url)}">Official schedule (PDF)</a></p></header>
-      <ol class="infraction-categories mobile-only">${groups.map(([category, values]) => `<li><a href="${escapeHtml(infractionsRouteHref(category))}"><span>${values.length.toLocaleString()} entries</span><strong>${escapeHtml(category)}</strong></a></li>`).join("")}</ol>`;
+      <ol class="infraction-list mobile-only">${shown.map((entry) => renderInfractionListItem(entry)).join("")}</ol>` : `<header class="index-intro"><p class="eyebrow">State of Connecticut Judicial Branch</p><h1>Infractions and violations</h1><p>Browse the official mail-in schedule by category, or search every category, then open an entry for amounts and its linked statute.</p><p class="source-note">Effective ${escapeHtml(manifests.infractions.source.effective ?? "date not stated")} · ${entries.length.toLocaleString()} entries · <a href="${escapeHtml(manifests.infractions.source.url)}">Official schedule (PDF)</a></p></header>
+      ${searchForm("Search all categories", "Citation, description, or category")}
+      ${searchingAll ? `${matchCount(` <a href="#/infractions">Clear search</a>`)}
+      <ol class="infraction-list">${shown.map((entry) => renderInfractionListItem(entry, { showCategory: true })).join("")}</ol>`
+    : `<ol class="infraction-categories mobile-only">${groups.map(([category, values]) => `<li><a href="${escapeHtml(infractionsRouteHref(category))}"><span>${values.length.toLocaleString()} entries</span><strong>${escapeHtml(category)}</strong></a></li>`).join("")}</ol>`}`;
   const mainContent = `<main class="infractions-page application-main" id="main-content">
     ${breadcrumbs([{ label: "Infractions", ...(selectedGroup ? { href: "#/infractions" } : {}) }, ...(selectedGroup ? [{ label: selectedGroup[0], ...(selectedEntry ? { href: infractionsRouteHref(selectedGroup[0]) } : {}) }] : []), ...(selectedEntry ? [{ label: `Sec. ${selectedEntry.citation}` }] : [])])}
     ${mainBody}

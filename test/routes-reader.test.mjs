@@ -119,8 +119,9 @@ test("builds and parses mobile destination routes", () => {
     kind: "infractions", category: null, entry: null, query: "beverage containers"
   });
   assert.deepEqual(parseRoute({ hash: "#/bookmarks" }), { kind: "bookmarks" });
-  assert.deepEqual(parseRoute({ hash: "#/about" }), { kind: "about" });
-  assert.deepEqual(parseRoute({ hash: "#/a" }), { kind: "about" });
+  assert.deepEqual(parseRoute({ hash: "#/about" }), { kind: "about", section: null });
+  assert.deepEqual(parseRoute({ hash: "#/about?section=sources" }), { kind: "about", section: "sources" });
+  assert.deepEqual(parseRoute({ hash: "#/a" }), { kind: "about", section: null });
 });
 
 test("accepts the Phase 1 query route as a migration fallback", () => {

@@ -55,6 +55,9 @@ test("round-trips acts routes and normalizes unknown options", () => {
   assert.deepEqual(parseRoute({ hash: href }), { kind: "acts", session: "2026-regular", type: "special", query: "state land", sort: "number", order: null, view: null, on: null });
   assert.equal(actsRouteHref({ sort: "newest" }), "#/acts");
   assert.deepEqual(normalizeActsOptions({ type: "secret", sort: "random", query: "  " }), { session: null, type: null, query: null, sort: "newest", order: "asc", view: "acts", on: null });
+  assert.equal(normalizeActsOptions({ view: "effective", on: "2026-05" }).on, "2026-05");
+  assert.equal(normalizeActsOptions({ view: "effective", on: "2026-05-14" }).on, "2026-05");
+  assert.equal(normalizeActsOptions({ view: "effective", on: "May" }).on, null);
 });
 
 test("lists public acts before special acts, newest first by default", () => {
@@ -257,12 +260,12 @@ test("validates act texts and the search index", async (t) => {
 });
 
 test("round-trips the effective-date view and act section selections", () => {
-  const href = actsRouteHref({ view: "effective", query: "tax", on: "2026-10-01" });
-  assert.equal(href, "#/acts?view=effective&q=tax&on=2026-10-01");
-  assert.deepEqual(parseRoute({ hash: href }), { kind: "acts", session: null, type: null, query: "tax", sort: null, order: null, view: "effective", on: "2026-10-01" });
+  const href = actsRouteHref({ view: "effective", query: "tax", on: "2026-10" });
+  assert.equal(href, "#/acts?view=effective&q=tax&on=2026-10");
+  assert.deepEqual(parseRoute({ hash: href }), { kind: "acts", session: null, type: null, query: "tax", sort: null, order: null, view: "effective", on: "2026-10" });
   assert.equal(actsRouteHref({ view: "effective", sort: "effective", order: "asc" }), "#/acts?view=effective");
   assert.equal(actsRouteHref({ view: "effective", sort: "act", order: "desc" }), "#/acts?view=effective&sort=act&order=desc");
-  assert.deepEqual(normalizeActsOptions({ view: "effective", on: "2026-10-01" }), { session: null, type: null, query: null, sort: "effective", order: "asc", view: "effective", on: "2026-10-01" });
+  assert.deepEqual(normalizeActsOptions({ view: "effective", on: "2026-10-01" }), { session: null, type: null, query: null, sort: "effective", order: "asc", view: "effective", on: "2026-10" });
   assert.equal(normalizeActsOptions({ view: "effective", sort: "newest", order: "desc" }).sort, "effective");
   assert.equal(normalizeActsOptions({ view: "effective", sort: "act", order: "desc" }).order, "desc");
   assert.equal(normalizeActsOptions({ sort: "act", order: "desc" }).sort, "newest");
@@ -315,7 +318,7 @@ test("lists effective dates one row per act and date, sorted by either column", 
     "P.A. 26-15 July 1, 2026 2,3,5",
     "P.A. 26-15 October 1, 2026 1"
   ]);
-  assert.deepEqual(effectiveDateOptions(effectiveRows(publicActs, effectiveIndex)), [["2026-06-04", "June 4, 2026"], ["2026-07-01", "July 1, 2026"], ["2026-10-01", "October 1, 2026"]]);
+  assert.deepEqual(effectiveDateOptions(effectiveRows(publicActs, effectiveIndex)), [["2026-06", "June 2026"], ["2026-07", "July 2026"], ["2026-10", "October 2026"]]);
   assert.deepEqual(effectiveRows(acts, null), []);
 });
 

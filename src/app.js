@@ -28,6 +28,7 @@ import {
   findSection,
   findTitle,
   chapterDisplayLabel,
+  aboutRouteHref,
   guideRouteHref,
   infractionsRouteHref,
   indexRouteHref,
@@ -171,7 +172,7 @@ const icons = {
   document: svgIcon(`<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/>`),
   scale: svgIcon(`<path d="M12 3v18M8 21h8M5 7h14"/><path d="M2 15l3-8 3 8M16 15l3-8 3 8"/><path d="M2 15a3 3 0 0 0 6 0M16 15a3 3 0 0 0 6 0"/>`),
   bookmark: svgIcon(`<path d="M6 3h12v18l-6-4-6 4z"/>`),
-  timeline: svgIcon(`<path d="M3 12h18"/><circle cx="6" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="18" cy="12" r="2"/><path d="M6 5v3M12 16v3M18 5v3"/>`),
+  help: svgIcon(`<circle cx="12" cy="12" r="9"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"/><path d="M12 17h.01"/>`),
   bookmarkFilled: svgIcon(`<path d="M6 3h12v18l-6-4-6 4z" fill="currentColor"/>`)
 };
 
@@ -384,12 +385,16 @@ function siteHeader() {
   </dialog>`;
 }
 
+function legalFooter() {
+  return `This application is not legal advice and is not the official legal publication. <a href="${aboutRouteHref("sources")}">Verify information with official sources</a>.`;
+}
+
 function applicationShell({
   contextualNavigation = [],
   mainContent,
   columnCount = contextualNavigation.length,
   mobilePresentationMode = "focused",
-  footer = "Unofficial access copy. Verify legal text with the Connecticut General Assembly.",
+  footer = legalFooter(),
   viewport
 }) {
   const layout = deviceState.navigationLayout();
@@ -532,7 +537,7 @@ function pendingActPill(amendments = []) {
 function statuteSectionItems(title, chapter, sections, selected, changeBySection = new Map(), pendingBySection = new Map()) {
   return sections.map((section) => {
     const change = changeBySection.get(section.id);
-    const status = section.status === "repealed" ? `<span class="section-status-pill">Repealed</span>` : "";
+    const status = section.status === "repealed" ? `<span class="section-status-pill repealed-pill">Repealed</span>` : "";
     const supplement = change ? `<span class="supplement-pill supplement-${escapeHtml(change.presentation)}">${escapeHtml(supplementLabel(change, { short: true }))}</span>` : "";
     const description = navigationSectionDescription(section);
     const showDescription = description && description !== section.citation;
@@ -821,7 +826,7 @@ function supplementLabel(change, { short = false } = {}) {
   if (!change) return "";
   const labels = { amended: "Amended", new: "New", repealed: "Repealed" };
   return short
-    ? `${change.presentation === "amended" ? "" : `${labels[change.presentation]} · `}${change.editionYear} Supp.`
+    ? `${change.presentation === "amended" ? "" : `${labels[change.presentation]} · `}Supplement`
     : `${labels[change.presentation]} — ${change.editionYear} Supplement`;
 }
 
@@ -994,7 +999,7 @@ async function renderHome(catalog) {
       <a href="#/infractions"><span aria-hidden="true">${icons.scale}</span><strong>Infraction schedule</strong><small>Review violations, amounts, and linked statutes.</small></a>
       <a href="#/acts"><span aria-hidden="true">${icons.document}</span><strong>Public and Special Acts</strong><small>See recent laws not yet reflected in the statute text.</small></a>
       <a href="#/bookmarks"><span aria-hidden="true">${icons.bookmark}</span><strong>Bookmarks</strong><small>Return to sections and infractions saved on this device.</small></a>
-      <a href="${guideRouteHref()}"><span aria-hidden="true">${icons.timeline}</span><strong>Understanding the Statutes</strong><small>How bills become law and how current the published text is.</small></a>
+      <a href="${guideRouteHref()}"><span aria-hidden="true">${icons.help}</span><strong>Understanding the Statutes</strong><small>How bills become law and how current the published text is.</small></a>
     </section>
     <section class="home-activity" aria-label="Your activity">
       <div><div class="section-heading"><div><p class="eyebrow">On this device</p><h2>Recently viewed</h2></div>${recents.length ? `<button type="button" class="text-button" data-clear-recents>Clear</button>` : ""}</div>${renderActivityList(recents, "Sections, index topics, and infractions you open will appear here.")}</div>
@@ -1014,7 +1019,7 @@ function renderTitles(catalog) {
   app.innerHTML = `${siteHeader()}<main class="browse-page titles-page" id="main-content">
     <header class="browse-heading"><div><p class="eyebrow">${catalog.counts.chapters.toLocaleString()} chapters · ${catalog.counts.sections.toLocaleString()} sections</p><h1>Statute titles</h1></div></header>
     <ol class="title-list">${catalog.titles.map((title) => `<li><a href="${escapeHtml(titleRoute(title))}"><strong>${escapeHtml(titleLabel(title))}</strong><span>${escapeHtml(title.name)}</span><small>${title.chapters.length} chapter${title.chapters.length === 1 ? "" : "s"}</small></a></li>`).join("")}</ol>
-  </main><footer>Unofficial access copy. Verify legal text with the Connecticut General Assembly.</footer>`;
+  </main><footer>${legalFooter()}</footer>`;
   window.scrollTo({ top: 0 });
 }
 
@@ -1090,7 +1095,7 @@ async function loadLatestSupplement() {
   return edition ? { edition, manifest: await supplementRepository.loadEdition(edition.editionYear) } : null;
 }
 
-async function renderAbout(catalog, sequence) {
+async function renderAbout(catalog, route, sequence) {
   const [secondaryResult, supplementResult, actsResult] = await Promise.allSettled([
     secondaryRepository.init(),
     loadLatestSupplement(),
@@ -1185,11 +1190,16 @@ async function renderAbout(catalog, sequence) {
       </div>
     </section>
     <aside class="legal-data-note"><strong>Unofficial access copy</strong><p>This application is not legal advice and is not the official legal publication. Verify statute text with the Connecticut General Assembly and infraction information with the Judicial Branch.</p></aside>
-  </main><footer>UConn Law Library · Unofficial access copy.</footer>`;
+  </main><footer>${legalFooter()}</footer>`;
   void updateRefreshStatus(sequence, "corpus");
   void updateRefreshStatus(sequence, "secondary");
   void updateRefreshStatus(sequence, "acts");
-  window.scrollTo({ top: 0 });
+  const heading = route.section ? document.getElementById(`about-${route.section}-heading`) : null;
+  if (heading) {
+    heading.closest("section").scrollIntoView({ block: "start", behavior: "instant" });
+    heading.tabIndex = -1;
+    heading.focus({ preventScroll: true });
+  } else window.scrollTo({ top: 0 });
 }
 
 // The guide's code loads only on its own route, so other pages don't download it.
@@ -1209,7 +1219,7 @@ async function renderGuide(catalog, route, sequence) {
   app.innerHTML = `${siteHeader()}<main class="guide-page" id="main-content">
     ${breadcrumbs([{ label: "Home", href: "#/" }, { label: "Understanding the Statutes" }])}
     ${guide.renderGuide({ coverage })}
-  </main><footer>Unofficial access copy. Verify the law in effect with the Connecticut General Assembly.</footer>`;
+  </main><footer>${legalFooter()}</footer>`;
   unmountGuide = guide.mountGuide(app.querySelector(".guide-page"), { scrollTo: route.part });
   if (!route.part) window.scrollTo({ top: 0 });
 }
@@ -1369,7 +1379,7 @@ async function renderSearchPage(catalog, route) {
     <ol id="results" class="results"></ol>
     <button type="button" class="search-more" data-search-more hidden>Show more results</button>
     <details class="search-history"><summary>Recent searches on this device</summary><div data-search-history>${searchHistoryMarkup()}</div></details>
-  </main><footer>Unofficial access copy. Verify legal text with the Connecticut General Assembly.</footer>`;
+  </main><footer>${legalFooter()}</footer>`;
   if (query.length < 2) return;
   // Acts and infractions fill in beside the statute search, which does not wait for them.
   searchOtherSources(query);
@@ -1842,7 +1852,7 @@ async function renderInfractions(route, sequence) {
     mainContent,
     columnCount: contextualColumnCount("infractions", route),
     mobilePresentationMode: selectedEntry ? "detail" : "drilldown",
-    footer: "Unofficial access copy. Verify amounts and eligibility with the Judicial Branch."
+    footer: legalFooter()
   });
   if (selectedEntry) {
     deviceState.recordRecent({
@@ -1894,7 +1904,7 @@ async function renderActs(route, sequence) {
   let results;
   if (effectiveView) {
     const allRows = effectiveRows(acts.filter((act) => act.type === "public"), effectiveIndex);
-    const rows = effectiveRows(shown, effectiveIndex, options).filter((row) => !options.on || row.date === options.on);
+    const rows = effectiveRows(shown, effectiveIndex, options).filter((row) => !options.on || row.date?.startsWith(options.on));
     const sortHref = (sort, order) => actsRouteHref({ session: options.session, query: options.query, view: "effective", on: options.on, sort, order });
     filterFields = `<input type="hidden" name="view" value="effective"><input type="hidden" name="sort" value="${options.sort}"><input type="hidden" name="order" value="${options.order}">
         <div class="search-field"><label for="acts-on">Effective</label><select id="acts-on" name="on"><option value="">All dates</option>${effectiveDateOptions(allRows).map(([value, label]) => `<option value="${value}"${selectAttribute(value, options.on)}>${escapeHtml(label)}</option>`).join("")}</select></div>`;
@@ -1945,7 +1955,7 @@ async function renderActs(route, sequence) {
       </div>
     </form>
     ${results}
-  </main><footer>Unofficial access copy. Verify act text and effective dates with the Connecticut General Assembly.</footer>`;
+  </main><footer>${legalFooter()}</footer>`;
   if (!refining) {
     window.scrollTo({ top: 0 });
     return;
@@ -2041,7 +2051,7 @@ async function renderAct(catalog, route, sequence) {
     </header>
     <p class="act-currency">${escapeHtml(currency)}</p>
     ${body}
-  </main><footer>Unofficial access copy. The General Assembly's PDF is the official text of the act.</footer>`;
+  </main><footer>${legalFooter()}</footer>`;
 
   let text = null;
   if (act.text) {
@@ -2272,7 +2282,7 @@ async function renderCurrentRoute() {
     if (route.kind === "act") return await renderAct(catalog, route, sequence);
     if (route.kind === "bookmarks") return renderBookmarks();
     if (route.kind === "history") return renderHistory();
-    if (route.kind === "about") return await renderAbout(catalog, sequence);
+    if (route.kind === "about") return await renderAbout(catalog, route, sequence);
     if (route.kind === "guide") return await renderGuide(catalog, route, sequence);
     if (route.kind === "index") return await renderStatutesIndex(route, sequence);
 

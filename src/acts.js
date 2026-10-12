@@ -72,7 +72,8 @@ export class ActsRepository {
   }
 }
 
-const EFFECTIVE_ON = /^\d{4}-\d{2}-\d{2}$/;
+// The effective-date filter is a month. A full date from an older link selects its month.
+const EFFECTIVE_ON = /^\d{4}-\d{2}(-\d{2})?$/;
 
 export function normalizeActsOptions({ session = null, type = null, query = null, sort = null, order = null, view = null, on = null } = {}) {
   const effective = view === "effective";
@@ -84,7 +85,7 @@ export function normalizeActsOptions({ session = null, type = null, query = null
     sort: Object.hasOwn(sorts, sort) ? sort : Object.keys(sorts)[0],
     order: effective && order === "desc" ? "desc" : "asc",
     view: effective ? "effective" : "acts",
-    on: EFFECTIVE_ON.test(on ?? "") ? on : null
+    on: EFFECTIVE_ON.test(on ?? "") ? on.slice(0, 7) : null
   };
 }
 
@@ -371,8 +372,12 @@ export function effectiveRows(acts, index, { sort = "effective", order = "asc" }
 }
 
 /** The dates a reader can filter effective-date rows by, in order. */
+/** The distinct months that rows take effect in, as ["YYYY-MM", "May 2026"] pairs. */
 export function effectiveDateOptions(rows) {
-  return [...new Set(rows.map((row) => row.date).filter(Boolean))].sort().map((date) => [date, formatIsoDate(date)]);
+  return [...new Set(rows.map((row) => row.date?.slice(0, 7)).filter(Boolean))].sort().map((month) => {
+    const [year, number] = month.split("-").map(Number);
+    return [month, `${MONTHS[number - 1][0].toUpperCase()}${MONTHS[number - 1].slice(1)} ${year}`];
+  });
 }
 
 // Act titles are printed in capitals. These names keep their capitals when a

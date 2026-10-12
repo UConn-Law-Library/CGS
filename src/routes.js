@@ -47,6 +47,10 @@ export function titlesRouteHref() {
   return "#/titles";
 }
 
+export function aboutRouteHref(section = null) {
+  return section ? `#/about?section=${encodeSegment(section)}` : "#/about";
+}
+
 export function guideRouteHref(part = null) {
   return part ? `#/guide?part=${encodeSegment(part)}` : "#/guide";
 }
@@ -182,7 +186,9 @@ export function parseRoute({ hash = "", search = "" } = {}) {
 
   if (parts[0] === "titles" && parts.length === 1) return { kind: "titles" };
 
-  if (["about", "a"].includes(parts[0]) && parts.length === 1) return { kind: "about" };
+  if (["about", "a"].includes(parts[0]) && parts.length === 1) {
+    return { kind: "about", section: new URLSearchParams(hashQuery).get("section") || null };
+  }
 
   if (parts[0] === "guide" && parts.length === 1) {
     return { kind: "guide", part: new URLSearchParams(hashQuery).get("part") || null };

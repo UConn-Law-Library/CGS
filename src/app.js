@@ -61,6 +61,7 @@ import { renderSiteUpdates } from "./site-updates.js";
 import { NavigationHistory } from "./navigation-history.js";
 import {
   buildOmniRows,
+  findActMatches,
   findIndexMatches,
   findInfractionMatches,
   findNavigationMatches,
@@ -353,9 +354,9 @@ function siteHeader() {
     </div>
     <form class="global-search" data-global-search role="search">
       <button type="button" class="navigation-back" data-go-back aria-label="Go back" title="Go back to the previous page"${navigationHistory.canGoBack ? "" : " disabled"}><span aria-hidden="true">←</span><span class="back-label"> Back</span></button>
-      <label class="visually-hidden" for="global-query">Search statutes, index topics, and infractions</label>
+      <label class="visually-hidden" for="global-query">Search statutes, acts, index topics, and infractions</label>
       <div class="global-search-field">
-        <input id="global-query" name="query" type="search" minlength="2" required value="${escapeHtml(searchValue)}" placeholder="Search statutes, index, and infractions" autocomplete="off" spellcheck="false"
+        <input id="global-query" name="query" type="search" minlength="2" required value="${escapeHtml(searchValue)}" placeholder="Search statutes, acts, index, and infractions" autocomplete="off" spellcheck="false"
           role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="omni-results" data-omni-input>
         <kbd class="omni-shortcut" aria-hidden="true">/</kbd>
         <div class="omni-panel" id="omni-results" role="listbox" hidden data-omni-panel></div>
@@ -633,11 +634,11 @@ async function runOmnisearch(query) {
   activeOmniController = controller;
   const catalog = await catalogPromise;
   if (controller.signal.aborted) return;
-  const groups = { statutes: [], ...findNavigationMatches(catalog, query), index: [], infractions: [] };
+  const groups = { statutes: [], ...findNavigationMatches(catalog, query), acts: [], index: [], infractions: [] };
   const letter = indexLetterForQuery(query);
   let completed = 0;
   let total = 0;
-  let pendingTasks = letter ? 3 : 2;
+  let pendingTasks = letter ? 4 : 3;
   const render = () => renderOmniPanel(query, groups, { completed, total, pending: pendingTasks > 0 });
   const finish = () => {
     pendingTasks -= 1;
@@ -665,11 +666,15 @@ async function runOmnisearch(query) {
     if (!controller.signal.aborted) groups.infractions = findInfractionMatches(entries, query);
   }).catch((error) => console.warn("Quick infraction search failed", error)).finally(finish);
 
+  const acts = actsRepository.loadSearchableSessions().then((sessions) => {
+    if (!controller.signal.aborted) groups.acts = findActMatches(sessions, query);
+  }).catch((error) => console.warn("Quick acts search failed", error)).finally(finish);
+
   const index = letter ? secondaryRepository.loadIndexLetter(letter).then((topics) => {
     if (!controller.signal.aborted) groups.index = findIndexMatches(topics, query);
   }).catch((error) => console.warn("Quick index search failed", error)).finally(finish) : Promise.resolve();
 
-  await Promise.all([statutes, infractions, index]);
+  await Promise.all([statutes, infractions, acts, index]);
   if (activeOmniController === controller) activeOmniController = null;
 }
 

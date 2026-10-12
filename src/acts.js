@@ -55,6 +55,18 @@ export class ActsRepository {
     return entry.search ? this.#json(entry.search.path, "the acts search index") : Promise.resolve(null);
   }
 
+  // Every session's acts and word index, for the omnibar.
+  async loadSearchableSessions() {
+    const manifest = await this.manifest();
+    return Promise.all(manifest.sessions.map(async (entry) => {
+      const [file, index] = await Promise.all([
+        this.#json(entry.path),
+        this.loadSearchIndex(entry).catch(() => null)
+      ]);
+      return { entry, acts: file.acts, index };
+    }));
+  }
+
   loadEffectiveIndex(entry) {
     return entry.effective ? this.#json(entry.effective.path, "the acts' effective dates") : Promise.resolve(null);
   }
@@ -79,8 +91,10 @@ export function normalizeActsOptions({ session = null, type = null, query = null
 const CITATION_QUERY = /^([ps])\.?\s*a\.?\s*(\d{2})\s*-\s*(\d+)$/i;
 const BILL_QUERY = /^([hs]b)\.?\s*0*(\d+)$/i;
 
-function exactQuery(query) {
-  return CITATION_QUERY.test(query) || BILL_QUERY.test(query);
+/** Whether the query names one act or bill, such as "PA 26-15" or "HB 5557". */
+export function isExactActQuery(query) {
+  const value = String(query ?? "").trim();
+  return CITATION_QUERY.test(value) || BILL_QUERY.test(value);
 }
 
 function queryMatcher(query) {
@@ -140,7 +154,7 @@ function termsStartingWith(index, token) {
  */
 export function matchActText(index, query) {
   const value = String(query ?? "").trim();
-  if (!index || !value || exactQuery(value)) return null;
+  if (!index || !value || isExactActQuery(value)) return null;
   const tokens = [...new Set(tokenizeActText(value))];
   if (!tokens.length) return null;
   let matches = null;
@@ -160,7 +174,7 @@ function escapeRegExp(value) {
 /** A pattern that finds the query's words in act text, for highlighting. */
 export function actTextPattern(query) {
   const value = String(query ?? "").trim();
-  if (!value || exactQuery(value)) return null;
+  if (!value || isExactActQuery(value)) return null;
   const tokens = [...new Set(tokenizeActText(value))].sort((left, right) => right.length - left.length);
   if (!tokens.length) return null;
   const words = tokens.map((token) => `${escapeRegExp(token)}${token.length >= 3 ? "[a-z0-9]*" : "(?![a-z0-9])"}`);

@@ -83,7 +83,7 @@ Search v2 supports `AND`, `OR`, unary `NOT`, parentheses, quoted phrases, `NEAR/
 
 When a supplement is published, the client automatically removes superseded base search documents and adds that edition's changed/new documents. Results therefore match the same latest-supplement view shown by the reader without copying or rewriting the base search data. If a supplement search patch cannot be loaded, the base-revision results remain available and the interface displays an explicit warning rather than failing the entire search.
 
-The global omnibar debounces input and displays mixed quick results while the user types. Title and chapter matches come from the already-loaded catalog, statute sections stream from the progressive worker search, infractions use the cached schedule shards, and index suggestions load only the relevant initial-letter shard. Arrow keys choose a result, Escape closes the panel, Enter opens the selected result or the complete statute-results page, and `/` focuses the omnibar outside another form field.
+The global omnibar debounces input and displays mixed quick results while the user types. Title and chapter matches come from the already-loaded catalog, statute sections stream from the progressive worker search, infractions use the cached schedule shards, Public and Special Acts match on citation, bill, title, and the acts' word index, and index suggestions load only the relevant initial-letter shard. Arrow keys choose a result, Escape closes the panel, Enter opens the selected result or the complete statute-results page, and `/` focuses the omnibar outside another form field.
 
 ## Static discovery pages
 

@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import {
   buildOmniRows,
+  findActMatches,
   findIndexMatches,
   findInfractionMatches,
   findNavigationMatches,
@@ -77,4 +78,45 @@ test("keeps quick-result groups in the legacy priority order", () => {
     }).map(({ kind }) => kind),
     ["Section", "Title", "Chapter", "Index", "Infraction"]
   );
+});
+
+const actSessions = [{
+  entry: { id: "2026-regular" },
+  acts: [
+    { id: "pa-2026-regular-2", type: "public", number: 2, citation: "P.A. 26-2", bill: "SB 299", title: "AN ACT CONCERNING REDEMPTION OF OUT-OF-STATE BEVERAGE CONTAINERS.", text: { path: "2026-regular/text/pa-2.json" } },
+    { id: "pa-2026-regular-20", type: "public", number: 20, citation: "P.A. 26-20", bill: "HB 5001", title: "AN ACT CONCERNING THE DEPARTMENT OF TRANSPORTATION.", text: { path: "2026-regular/text/pa-20.json" } },
+    { id: "sa-2026-regular-2", type: "special", number: 2, citation: "S.A. 26-2", bill: "HB 5100", title: "AN ACT CONCERNING A STUDY OF BEVERAGE CONTAINERS.", url: "https://example.test/sa-2.pdf" }
+  ],
+  index: { acts: ["pa-2026-regular-2", "pa-2026-regular-20"], terms: { vending: [0], "22a-245": [0, 1] } }
+}];
+
+test("finds Public and Special Acts by citation, bill, title, and text", () => {
+  const [byCitation] = findActMatches(actSessions, "PA 26-2");
+  assert.equal(byCitation.kind, "Public Act");
+  assert.equal(byCitation.label, "P.A. 26-2");
+  assert.equal(byCitation.href, "#/acts/2026-regular/pa-2");
+  assert.equal(byCitation.exact, true);
+  assert.match(byCitation.subtitle, /^An act concerning redemption .* · SB 299$/);
+
+  assert.deepEqual(findActMatches(actSessions, "sb 299").map(({ label }) => label), ["P.A. 26-2"]);
+  assert.deepEqual(findActMatches(actSessions, "26-2").map(({ label }) => label), ["P.A. 26-2", "S.A. 26-2", "P.A. 26-20"]);
+  assert.equal(findActMatches(actSessions, "26-2")[0].exact, false);
+
+  const titles = findActMatches(actSessions, "beverage containers");
+  assert.deepEqual(titles.map(({ kind }) => kind), ["Public Act", "Special Act"]);
+  // A Special Act without text opens the list filtered to it, with its PDF link.
+  assert.equal(titles[1].href, "#/acts?session=2026-regular&q=S.A.%2026-2");
+
+  const [text] = findActMatches(actSessions, "vending");
+  assert.equal(text.href, "#/acts/2026-regular/pa-2?q=vending");
+  assert.match(text.subtitle, /Found in the act's text$/);
+  assert.equal(findActMatches(actSessions, "22a-245").length, 2);
+  assert.deepEqual(findActMatches(actSessions, "nothing here"), []);
+});
+
+test("puts acts first only when the query names an act or bill", () => {
+  const row = (kind, exact = false) => ({ kind, label: kind, subtitle: "", href: `#/${kind}`, exact });
+  const groups = { statutes: [row("Section")], titles: [row("Title")], index: [row("Index")] };
+  assert.deepEqual(buildOmniRows({ ...groups, acts: [row("Public Act")] }).map(({ kind }) => kind), ["Section", "Title", "Public Act", "Index"]);
+  assert.deepEqual(buildOmniRows({ ...groups, acts: [row("Public Act", true)] }).map(({ kind }) => kind), ["Public Act", "Section", "Title", "Index"]);
 });

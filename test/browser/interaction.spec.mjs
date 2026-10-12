@@ -59,11 +59,11 @@ test("the effective-date view lists Public Act sections by date and opens only t
   await expect(page).toHaveURL(/#\/acts\?view=effective&sort=act&order=desc$/);
   await expect(table.locator("thead th[aria-sort=descending]")).toHaveText(/^Public Act/);
   await expect(table.locator("tbody th").first()).toHaveText("P.A. 26-151");
-  await page.getByLabel("Effective").selectOption({ label: "July 1, 2026" });
+  await page.getByLabel("Effective").selectOption({ label: "July 2026" });
   await page.getByLabel("Search Public Acts").fill("PA 26-150");
   const apply = page.getByRole("button", { name: "Apply" });
   await apply.click();
-  await expect(page).toHaveURL(/#\/acts\?view=effective&q=PA%2026-150&sort=act&order=desc&on=2026-07-01$/);
+  await expect(page).toHaveURL(/#\/acts\?view=effective&q=PA%2026-150&sort=act&order=desc&on=2026-07$/);
   // Filtering keeps the form where the reader left it.
   await expect(apply).toBeFocused();
   await expect(apply).toBeInViewport();

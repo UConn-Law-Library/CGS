@@ -63,7 +63,7 @@ function page({ file, title, description, siteUrl, breadcrumbs = [], body }) {
     ${breadcrumbs.length ? `<nav class="breadcrumbs" aria-label="Breadcrumb"><ol>${breadcrumbs.map((item) => `<li>${item.href ? `<a href="${escapeHtml(item.href)}">${escapeHtml(item.label)}</a>` : `<span aria-current="page">${escapeHtml(item.label)}</span>`}</li>`).join("")}</ol></nav>` : ""}
     ${body}
   </main>
-  <footer>Unofficial access copy. Verify legal text with the Connecticut General Assembly.</footer>
+  <footer>This application is not legal advice and is not the official legal publication. <a href="${escapeHtml(home)}#/about?section=sources">Verify information with official sources</a>.</footer>
 </body>
 </html>
 `;

@@ -71,7 +71,7 @@ test("index letters render collapsed topics, dedicated large topics, and repeale
   assert.match(stylesSource, /\.index-topic \{[^}]*scroll-margin-top: 8rem;/);
   assert.match(stylesSource, /\.index-topic-jumps \{[^}]*overflow-x: auto/);
   assert.match(appSource, /data-hide-repealed/);
-  assert.match(appSource, /class="section-status-pill">Repealed/);
+  assert.match(appSource, /class="section-status-pill repealed-pill">Repealed/);
 });
 
 test("infractions categories are one alphabetical column", () => {

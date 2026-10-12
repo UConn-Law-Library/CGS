@@ -124,7 +124,17 @@ jobs:
         if: steps.review.outputs.has_changes == 'true'
         run: |
           set -euo pipefail
-          mapfile -t supplement_years < <(find public/data/supplements -mindepth 1 -maxdepth 1 -type d -printf '%f\n' 2>/dev/null | grep -E '^[0-9]{4}$' | sort || true)
+          # A supplement the candidate revision already contains is retired (it is not carried
+          # into the candidate); every newer one must rebind, or the refresh stops.
+          node scripts/plan-supplement-rebind.mjs \
+            --supplements public/data/supplements \
+            --base "$CANONICAL_DIR" \
+            --summary "$REPORT_DIR/supplement-retirement.md" \
+            > "$REPORT_DIR/supplement-rebind-years.txt"
+          if [ -f "$REPORT_DIR/supplement-retirement.md" ]; then
+            cat "$REPORT_DIR/supplement-retirement.md" >> "$GITHUB_STEP_SUMMARY"
+          fi
+          mapfile -t supplement_years < "$REPORT_DIR/supplement-rebind-years.txt"
           if [ "${#supplement_years[@]}" -eq 0 ]; then
             echo "No published supplement editions require rebinding."
             exit 0
@@ -154,6 +164,10 @@ jobs:
       - name: Stage and verify the candidate corpus
         if: steps.review.outputs.has_changes == 'true'
         run: |
+          # Public and Special Acts are refreshed by their own workflow and are not bound to the base.
+          if [ -d public/data/acts ]; then
+            cp -a public/data/acts "$CANONICAL_DIR/acts"
+          fi
           rm -rf public/data
           cp -a "$CANONICAL_DIR" public/data
           npm run check
@@ -168,6 +182,10 @@ jobs:
             echo
             cat "$REPORT_DIR/refresh-summary.md"
             echo
+            if [ -f "$REPORT_DIR/supplement-retirement.md" ]; then
+              cat "$REPORT_DIR/supplement-retirement.md"
+              echo
+            fi
             if [ -f "$REPORT_DIR/secondary-rebind-summary.md" ]; then
               echo "Secondary-source records were preserved; only their links to the candidate statutes were rebuilt offline."
               echo

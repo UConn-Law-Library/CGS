@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { mkdtemp, readFile, rm } from "node:fs/promises";
+import { cp, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import test from "node:test";
@@ -47,6 +47,23 @@ test("produces byte-identical output for the same timestamp", async (t) => {
   await importLegacy({ inputDir: fixture, outputDir: first, generatedAt: "2026-01-01T00:00:00Z" });
   await importLegacy({ inputDir: fixture, outputDir: second, generatedAt: "2026-01-01T00:00:00Z" });
   assert.equal(await readFile(path.join(first, "manifest.json"), "utf8"), await readFile(path.join(second, "manifest.json"), "utf8"));
+});
+
+test("records the revision year the crawl captured and refuses input that does not state it", async (t) => {
+  const temporary = await mkdtemp(path.join(os.tmpdir(), "cgs-revision-"));
+  t.after(() => rm(temporary, { recursive: true, force: true }));
+  const catalogOf = async (dir) => JSON.parse(await readFile(path.join(dir, "catalog.json"), "utf8"));
+  await importLegacy({ inputDir: fixture, outputDir: path.join(temporary, "data") });
+  assert.equal((await catalogOf(path.join(temporary, "data"))).source.revisionYear, 2025);
+  await importLegacy({ inputDir: fixture, outputDir: path.join(temporary, "override"), revisionYear: 2027 });
+  assert.equal((await catalogOf(path.join(temporary, "override"))).source.revisionYear, 2027);
+
+  const undated = path.join(temporary, "undated");
+  await cp(fixture, undated, { recursive: true });
+  const index = JSON.parse(await readFile(path.join(undated, "titles_index.json"), "utf8"));
+  delete index.source.revision_year;
+  await writeFile(path.join(undated, "titles_index.json"), JSON.stringify(index), "utf8");
+  await assert.rejects(() => importLegacy({ inputDir: undated, outputDir: path.join(temporary, "out") }), /does not state its revision year/);
 });
 
 test("refuses to overwrite its input directory", async () => {

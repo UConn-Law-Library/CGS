@@ -7,6 +7,7 @@ from crawler.cgs_crawler.parsing import (
     extract_chapter_links,
     extract_grouped_section_content,
     extract_inline_title_chapter,
+    extract_revision_year,
     extract_section_links,
     extract_section_text_map,
 )
@@ -19,6 +20,15 @@ def fixture(name: str) -> str:
 
 
 class ParsingTests(unittest.TestCase):
+    def test_revision_year_comes_from_the_titles_heading_not_the_supplement_note(self):
+        page = (
+            "<h1>GENERAL STATUTES OF CONNECTICUT</h1><h2><i>Revised to January 1, 2025</i></h2>"
+            '<p><a href="/2026/sup/titles.htm">Note: Readers should refer to the 2026 Supplement, '
+            "revised to January 1, 2026, for updated versions of statutes.</a></p>"
+        )
+        self.assertEqual(extract_revision_year(page), 2025)
+        self.assertEqual(extract_revision_year('<p>Revised to January 1, 2025</p>'), None)
+
     def test_multi_letter_chapter_suffixes_sort_in_cga_order(self):
         chapters = extract_chapter_links(
             fixture("title_multi_letter_chapters.html"),

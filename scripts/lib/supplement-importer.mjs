@@ -4,6 +4,7 @@ import path from "node:path";
 import { importLegacy, SCHEMA_VERSION } from "./importer.mjs";
 import { applyChapterOverlay, classifyChapterOverlay } from "./supplement-overlay.mjs";
 import { createSupplementSearchPatch } from "./supplement-search.mjs";
+import { supersededSupplementError } from "./supplement-retirement.mjs";
 
 const collator = new Intl.Collator("en", { numeric: true, sensitivity: "base" });
 
@@ -55,6 +56,8 @@ export async function importSupplement({ inputDir, outputDir, baseDataDir, editi
   if (!Number.isInteger(year) || year < 2000 || year !== sourceYear) {
     throw new Error(`Requested supplement year ${editionYear} does not match source year ${sourceYear}`);
   }
+  const superseded = supersededSupplementError(year, await readJson(path.join(base, "catalog.json")));
+  if (superseded) throw new Error(`Cannot import the supplement: ${superseded}`);
 
   const temporaryCanonical = `${output}.canonical-${process.pid}`;
   const staging = `${output}.staging-${process.pid}`;

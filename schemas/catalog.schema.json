@@ -15,11 +15,12 @@
   "$defs": {
     "source": {
       "type": "object",
-      "required": ["name", "url", "retrievedAt"],
+      "required": ["name", "url", "revisionYear", "retrievedAt"],
       "additionalProperties": false,
       "properties": {
         "name": { "type": "string", "minLength": 1 },
         "url": { "type": "string", "format": "uri" },
+        "revisionYear": { "type": "integer", "minimum": 1900 },
         "retrievedAt": { "type": "string", "format": "date-time" }
       }
     },

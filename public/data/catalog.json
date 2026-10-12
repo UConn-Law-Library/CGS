@@ -4,6 +4,7 @@
   "source": {
     "name": "Connecticut General Statutes legacy JSON",
     "url": "https://www.cga.ct.gov/current/pub/titles.htm",
+    "revisionYear": 2025,
     "retrievedAt": "2026-07-14T00:27:33Z"
   },
   "titles": [

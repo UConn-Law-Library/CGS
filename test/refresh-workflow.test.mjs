@@ -12,7 +12,10 @@ test("weekly corpus refreshes retain the reviewed publication safeguards", () =>
   assert.match(workflow, /gh pr create[\s\S]*?--base main[\s\S]*?--draft/);
   assert.match(workflow, /Rebind secondary sources to the candidate corpus[\s\S]*?--base "\$CANONICAL_DIR"[\s\S]*?--output "\$CANONICAL_DIR\/secondary"/);
   assert.match(workflow, /Rebind published supplements to the candidate corpus/);
-  assert.match(workflow, /find public\/data\/supplements[\s\S]*?--edition supplement[\s\S]*?--supplement-year "\$year"/);
+  assert.match(workflow, /plan-supplement-rebind\.mjs[\s\S]*?--supplements public\/data\/supplements[\s\S]*?--base "\$CANONICAL_DIR"[\s\S]*?--summary "\$REPORT_DIR\/supplement-retirement\.md"/);
+  assert.match(workflow, /mapfile -t supplement_years < "\$REPORT_DIR\/supplement-rebind-years\.txt"[\s\S]*?--edition supplement[\s\S]*?--supplement-year "\$year"/);
+  assert.match(workflow, /Prepare pull request description[\s\S]*?cat "\$REPORT_DIR\/supplement-retirement\.md"/);
+  assert.match(workflow, /cp -a public\/data\/acts "\$CANONICAL_DIR\/acts"[\s\S]*?rm -rf public\/data/);
   assert.match(workflow, /import:supplement[\s\S]*?--base "\$CANONICAL_DIR"[\s\S]*?--output "\$CANONICAL_DIR\/supplements\/\$year"/);
   assert.match(workflow, /validate:supplement[\s\S]*?--data "\$CANONICAL_DIR\/supplements\/\$year"[\s\S]*?--base "\$CANONICAL_DIR"/);
   assert.match(workflow, /corpus-refresh-supplement-snapshots/);

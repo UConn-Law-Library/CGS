@@ -10,6 +10,7 @@ from crawler.cgs_crawler.pipeline import crawl
 TITLE_URL = "https://www.cga.ct.gov/current/pub/title_01.htm"
 CHAPTER_URL = "https://www.cga.ct.gov/current/pub/chap_001.htm"
 TITLE_4C_URL = "https://www.cga.ct.gov/current/pub/title_04c.htm"
+REVISED_2025 = "<h2><i>Revised to January 1, 2025</i></h2>"
 
 
 class MappingFetcher:
@@ -24,7 +25,7 @@ class MappingFetcher:
 
 def pages(chapter_html):
     return {
-        CURRENT_TITLES_URL: '<a href="title_01.htm">Title 1</a><a href="title_01.htm">General Provisions</a>',
+        CURRENT_TITLES_URL: REVISED_2025 + '<a href="title_01.htm">Title 1</a><a href="title_01.htm">General Provisions</a>',
         TITLE_URL: '<a href="chap_001.htm">Chapter 1</a><a href="chap_001.htm">Construction</a>',
         CHAPTER_URL: chapter_html,
     }
@@ -34,7 +35,7 @@ class PipelineTests(unittest.TestCase):
     def test_title_level_provisions_are_crawled_as_their_former_chapter(self):
         title_html = (Path(__file__).parent / "fixtures" / "title_inline_former_chapter.html").read_text(encoding="utf-8")
         title_pages = {
-            CURRENT_TITLES_URL: '<a href="title_04c.htm">Title 4C</a><a href="title_04c.htm">Business Regulation</a>',
+            CURRENT_TITLES_URL: REVISED_2025 + '<a href="title_04c.htm">Title 4C</a><a href="title_04c.htm">Business Regulation</a>',
             TITLE_4C_URL: title_html,
         }
         with tempfile.TemporaryDirectory() as temporary:
@@ -75,6 +76,23 @@ class PipelineTests(unittest.TestCase):
             self.assertEqual(title["chapters"][0]["sections"][0]["content"]["text"], "Statutory text.")
             index = json.loads((root / "legacy" / "titles_index.json").read_text(encoding="utf-8"))
             self.assertEqual(index["source"]["generated_at_utc"], "2026-01-01T00:00:00Z")
+            self.assertEqual(index["source"]["revision_year"], 2025)
+
+    def test_a_current_crawl_that_cannot_state_its_revision_year_fails(self):
+        chapter = '<p class="section"><a id="sec_1-1"></a>Sec. 1-1. Construction. Statutory text.</p>'
+        undated = pages(chapter)
+        undated[CURRENT_TITLES_URL] = undated[CURRENT_TITLES_URL].replace(REVISED_2025, "")
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            config = CrawlConfig(
+                output_dir=root / "legacy",
+                snapshot_dir=root / "snapshots",
+                only_titles=frozenset({"01"}),
+                fetch=FetchPolicy(delay=0),
+            )
+            with self.assertRaisesRegex(RuntimeError, "does not state the revision year"):
+                crawl(config, fetcher=MappingFetcher(undated))
+            self.assertFalse((root / "legacy").exists())
 
     def test_failed_validation_preserves_previous_output(self):
         with tempfile.TemporaryDirectory() as temporary:
@@ -98,7 +116,7 @@ class PipelineTests(unittest.TestCase):
         supplement_title = "https://www.cga.ct.gov/2026/sup/title_01.htm"
         supplement_chapter = "https://www.cga.ct.gov/2026/sup/chap_001.htm"
         supplement_pages = {
-            supplement_titles: '<a href="title_01.htm">Title 1</a><a href="title_01.htm">General Provisions</a>',
+            supplement_titles: '<h2><i>Revised to January 1, 2026</i></h2><a href="title_01.htm">Title 1</a><a href="title_01.htm">General Provisions</a>',
             supplement_title: '<a href="chap_001.htm">Chapter 1</a><a href="chap_001.htm">Construction</a>',
             supplement_chapter: (
                 '<p><a href="chap_001.htm#sec_1-1">Sec. 1-1. Construction.</a></p>'
@@ -122,6 +140,8 @@ class PipelineTests(unittest.TestCase):
             self.assertEqual(overlay["sections"]["1-1"]["c"], "001")
             self.assertTrue((root / "supplement" / "supplement_index.json").is_file())
             self.assertTrue((root / "supplement" / "titles_index.json").is_file())
+            index = json.loads((root / "supplement" / "titles_index.json").read_text(encoding="utf-8"))
+            self.assertEqual(index["source"]["revision_year"], 2026)
 
 
 if __name__ == "__main__":

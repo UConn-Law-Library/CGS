@@ -45,11 +45,31 @@ Remove the exception when CGA serves a complete chain or when the crawler has a 
 
 The crawler's own plausible-count checks and the canonical validator run before the policy gate. After the candidate replaces the working copy, the complete `npm run check` sequence runs again before any branch is pushed.
 
-## Review and rollback
+## Review
 
 Refresh pull requests contain only `public/data` changes. Review the corpus summary, full diff artifact, status transitions, representative legal text, and official source links. Merging the pull request invokes the normal Pages deployment.
 
-When supplement editions are published under `public/data/supplements/<year>`, a base-corpus refresh recrawls and re-imports every published edition against the candidate base before staging the pull request. A supplement acquisition, import, or validation failure stops the refresh; the workflow never copies a stale base-bound overlay forward and never silently drops a published edition. Replayable supplement snapshots are retained with the workflow artifacts.
+When supplement editions are published under `public/data/supplements/<year>`, a base-corpus refresh recrawls and re-imports every published edition later than the candidate's revision year against the candidate base before staging the pull request (`scripts/plan-supplement-rebind.mjs` decides which). A supplement acquisition, import, or validation failure stops the refresh; the workflow never copies a stale base-bound overlay forward and never silently drops a published edition. An edition the candidate revision supersedes is retired instead, as described below. Replayable supplement snapshots are retained with the workflow artifacts.
+
+Public and Special Acts have their own refresh workflow and are not bound to the base; the refresh copies `public/data/acts` into the candidate unchanged.
+
+## A new full revision
+
+CGA publishes a full revision of the General Statutes in odd-numbered years, and `/current/pub/` switches to it. The crawler reads the edition from the titles page heading ("Revised to January 1, 2027") and fails if the page does not state it; the importer records it in `catalog.json` as `source.revisionYear`. The weekly refresh then:
+
+1. diffs the new revision against the published one and applies the safety policy (see below);
+2. retires every published supplement whose year is not later than the new revision year. The 2027 revision supersedes the 2026 Supplement, so the refresh pull request deletes `public/data/supplements/2026` and adds a "Retired supplements" section to its description;
+3. rebinds secondary sources, and any newer supplement, to the new revision as usual.
+
+The app judges which Public Acts are pending from the newer of the base revision year and the supplement year, so once the 2027 revision merges, 2026 acts are no longer reported as pending.
+
+Steps that remain manual:
+
+- **Safety policy.** A revision changes two years of legislation at once, and the current policy is not expected to pass one. Diffing the 2023 revision against the published 2025 revision (October 2026, with source URLs normalized to `/current/pub/`) gave 9.10% changed provisions (limit 35%), 2.36% added (5%), 0.31% removed (2%), a 2.05% provision count delta (5%), 1.51% chapter additions (5%), and no title changes, all passing; but 15.10% of chapters changed metadata (limit 10%), 161 of those 170 only because new sections changed their section count. Settle the chapter-metadata limit in a separate, reviewed policy pull request before the first refresh after a revision; workflow inputs cannot bypass the gate.
+- **Acts sessions.** After the refresh merges, retire every session the revision codifies (for the 2027 revision, the 2025 and 2026 sessions, special sessions included), as [docs/acts.md](acts.md#retiring-a-session) describes: `python -m crawler.cgs_crawler.acts --retire 2026-regular --output public/data/acts --no-text`.
+- **Published editions.** Add the year to `PUBLISHED_EDITIONS` in `src/publications.js` after confirming the edition on cga.ct.gov (`https://www.cga.ct.gov/2027/pub/titles.htm`). The guide's timeline and worked examples follow that list.
+
+## Rollback
 
 To roll back a bad refresh, revert its merge commit through a pull request. The previous immutable chapter artifacts remain in Git history; no database restoration is involved.
 

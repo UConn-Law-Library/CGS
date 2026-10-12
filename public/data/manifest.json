@@ -10,8 +10,8 @@
   "artifacts": [
     {
       "path": "catalog.json",
-      "bytes": 337162,
-      "sha256": "0c2c0e04b2ea91d2e66621a23c5f094fac6c736cdf6c9b14b00b0abe5fc0af48"
+      "bytes": 337188,
+      "sha256": "8072a17440f2aa8cc200079eb105df607bb890856084f4c9ada3e49374e4a563"
     },
     {
       "path": "chapters/001.json",

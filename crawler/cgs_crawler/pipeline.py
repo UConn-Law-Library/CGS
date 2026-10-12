@@ -14,6 +14,7 @@ from .parsing import (
     attach_section_content,
     extract_chapter_links,
     extract_inline_title_chapter,
+    extract_revision_year,
     extract_section_links,
     extract_title_links,
     normalize_title_key,
@@ -48,6 +49,19 @@ def _source(config: CrawlConfig, generated_at: str) -> Dict[str, object]:
     if config.edition == "supplement":
         source["supplement_year"] = config.supplement_year
     return source
+
+
+# Which edition the crawl captured, from the titles page's "Revised to January 1" heading. The
+# corpus refresh compares it with published supplements, so a crawl that cannot state it fails.
+def _revision_year(titles_html: str, config: CrawlConfig) -> int:
+    year = extract_revision_year(titles_html)
+    if year is None:
+        if config.edition == "supplement":
+            return int(config.supplement_year)
+        raise RuntimeError(f"{config.titles_url} does not state the revision year (\"Revised to January 1, YYYY\")")
+    if config.edition == "supplement" and year != config.supplement_year:
+        raise RuntimeError(f"{config.titles_url} is revised to January 1, {year}, not {config.supplement_year}")
+    return year
 
 
 def _validate(index: Dict[str, object], stage: Path, config: CrawlConfig) -> Dict[str, int]:
@@ -140,7 +154,9 @@ def crawl(config: CrawlConfig, *, fetcher: Optional[Fetcher] = None) -> Dict[str
     supplement_sections: Dict[str, Dict[str, object]] = {}
     supplement_chapters: Dict[str, Dict[str, str]] = {}
     try:
-        titles = extract_title_links(fetcher.fetch(config.titles_url), config.titles_url)
+        titles_html = fetcher.fetch(config.titles_url)
+        index["source"]["revision_year"] = _revision_year(titles_html, config)
+        titles = extract_title_links(titles_html, config.titles_url)
         if only_titles:
             titles = [title for title in titles if title[0] in only_titles]
             missing = only_titles - {title[0] for title in titles}

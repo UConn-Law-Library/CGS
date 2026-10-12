@@ -18,6 +18,7 @@ SECTION_KEY_PART_RE = re.compile(r"^(.*-)(\d+)([a-z]*)$", re.IGNORECASE)
 SECTION_FRAGMENT_LINK_RE = re.compile(r"#sec[_-]?([0-9]+[a-z]*-[0-9]+[a-z]*(?:-[0-9]+[a-z]*)?)", re.IGNORECASE)
 REPEALED_RE = re.compile(r"\bare repealed\b", re.IGNORECASE)
 FORMER_CHAPTER_RE = re.compile(r"\bformerly published as chapter\s+(\d+[a-z]*)\b", re.IGNORECASE)
+REVISED_TO_RE = re.compile(r"^revised to january 1,\s*(\d{4})$", re.IGNORECASE)
 MAX_GROUP_EXPANSION = 5000
 
 SECTION_STATUS_PATTERNS = (
@@ -100,6 +101,20 @@ def extract_title_links(html: str, page_url: str) -> List[Tuple[str, str, str, s
         return (int(match.group(1)), match.group(2)) if match else (9999, item[0])
 
     return sorted(titles, key=order)
+
+
+def extract_revision_year(html: str) -> Optional[int]:
+    """The year in a titles page's "Revised to January 1, YYYY" heading.
+
+    Only headings count: the current edition's page also links to the supplement with a note
+    that says "revised to January 1" of the supplement's year.
+    """
+    soup = BeautifulSoup(html, "html.parser")
+    for heading in soup.find_all(("h1", "h2", "h3", "h4")):
+        match = REVISED_TO_RE.match(text_clean(heading.get_text(" ", strip=True)))
+        if match:
+            return int(match.group(1))
+    return None
 
 
 def extract_chapter_links(html: str, page_url: str) -> List[Tuple[str, str, str, str]]:

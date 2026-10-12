@@ -44,6 +44,12 @@ npm run validate:supplement -- --data .crawl/supplement-canonical --base public/
 
 Review the manifest counts and changed chapter files. Once accepted, copy the complete validated output directory to `public/data/supplements/2026`, then run `npm run check`. The ordinary validator discovers every four-digit supplement directory and verifies it during CI and deployment.
 
+## Superseded editions
+
+A supplement is read with the revision published the year before it, and the next full revision contains everything it changed. The base `catalog.json` records the year its edition is revised to (`source.revisionYear`, from the "Revised to January 1, YYYY" heading of CGA's titles page), and a supplement must be later than that year. Import refuses an older or same-year supplement, and validation (both `npm run validate:supplement` and the ordinary `npm run validate`) rejects one with "superseded by the base corpus", so the older text can never be overlaid on a newer revision.
+
+When a corpus refresh imports a new revision, it retires every published supplement the revision supersedes: the edition is left out of the candidate, the refresh pull request deletes `public/data/supplements/<year>`, and its description has a "Retired supplements" section. Every newer edition is still rebound, and a failure to rebind it stops the refresh. See [docs/corpus-refresh.md](corpus-refresh.md#a-new-full-revision).
+
 For a reviewed edition created before search patches were part of the contract, `npm run rebuild:supplement-search -- --year 2026` rebuilds only those derived shards and the manifest integrity records; it does not modify base chapters or supplement overlay chapters.
 
 Phase 11 publishes the first official edition through this review path and makes primary-corpus refreshes re-crawl, re-import, and validate every published supplement against the candidate base before a refresh PR can be opened. Phase 12 adds the automatic consolidated reader, prior-revision reference panels, supplement-aware search, and complete offline caching.

@@ -45,6 +45,8 @@ Searching the list matches each word against act titles, citations, and bills, a
 
 The header search (the omnibar) suggests acts too, from every published session, by the same rules: up to three acts, those whose citation, bill, or title match ahead of those that match only in their text. A query that names an act or bill (`PA 26-2`, `SB 299`) lists the act first, above statute results; a bare `26-2` does not, since it is also a statute citation. A text match opens the act with the matches highlighted, and an act without text opens the list filtered to it.
 
+The full search page (`#/search`, where Enter in the header search goes) lists the same top three acts under "Also found in", below the query and above the statute results, with a "See all N matching acts" link to the list searched for the query. N is the number that list shows. The list searches one session at a time, so when more than one session has matches each gets its own link, and only the newest session's link leaves the session out. The page searches acts with the query's plain words: quotes, a trailing `*`, and `AND` are dropped, and a query that uses `OR`, `NOT`, `NEAR/n`, or parentheses does not search acts at all, since the list cannot apply those operators. The title, chapter, field, status, and supplement filters apply to statutes only. The statute search does not wait for the acts to load, and if they fail to load the acts group is left out.
+
 Statute citations in an act's text link to the section in the app. To keep act pages light, the link resolves its title's section list only when it is followed; without JavaScript it falls back to a statute search for the citation.
 
 ## Statute pages

@@ -1036,6 +1036,18 @@ body.resizing-context { cursor: col-resize; user-select: none; }
 .search-help { margin: -.75rem 0 1.25rem; color: var(--muted); font-size: var(--text-ui); }
 .search-more { display: block; margin: 1rem auto 0; }
 .search-more[hidden] { display: none; }
+.also-found { margin: 1rem 0 1.5rem; padding: .9rem 1rem 1rem; background: var(--surface-raised); border: 1px solid var(--line); border-radius: .8rem; }
+.also-found[hidden], .also-found-group[hidden] { display: none; }
+.also-found h2 { margin: 0 0 .6rem; font-size: 1rem; }
+.also-found-groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); gap: .75rem 1.5rem; }
+.also-found h3 { margin: 0; color: var(--muted); font-size: var(--text-meta); }
+.also-found ol { margin: .3rem 0 .45rem; padding: 0; list-style: none; }
+.also-found li + li { border-top: 1px solid var(--line); }
+.also-found li a { display: flex; padding: .45rem 0; flex-direction: column; gap: .1rem; color: var(--ink); text-decoration: none; }
+.also-found li a:hover strong { color: var(--blue); text-decoration: underline; }
+.also-found li small { color: var(--muted); font-size: var(--text-meta); }
+.also-found-more { display: inline-block; margin-right: 1rem; font-size: var(--text-ui); font-weight: 700; }
+.also-found-note { margin: 1rem 0; color: var(--muted); font-size: var(--text-ui); }
 
 .infraction-categories, .infraction-list, .bookmark-list { margin: 1.5rem 0 0; padding: 0; list-style: none; }
 .infraction-categories { display: grid; grid-template-columns: minmax(0, 1fr); gap: .65rem; }
@@ -1456,6 +1468,9 @@ h1,
   .act-sections ol { grid-template-columns: minmax(0, 1fr); }
   .act-table td { padding: .3rem .4rem; }
   .search-within > div { align-items: stretch; flex-direction: column; }
+  /* Keep the statute results near the top: two rows a group, each "See all" link has the rest. */
+  .also-found li:nth-child(n+3) { display: none; }
+  .also-found li small { display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; }
   .title-list a { grid-template-columns: minmax(0, 1fr); gap: .12rem; }
 }
 

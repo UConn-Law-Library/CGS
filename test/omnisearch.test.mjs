@@ -1,12 +1,15 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import {
+  actSearchLinks,
   buildOmniRows,
   findActMatches,
   findIndexMatches,
   findInfractionMatches,
   findNavigationMatches,
   indexLetterForQuery,
+  matchInfractions,
+  plainSearchWords,
   statuteMatches
 } from "../src/omnisearch.js";
 
@@ -119,4 +122,43 @@ test("puts acts first only when the query names an act or bill", () => {
   const groups = { statutes: [row("Section")], titles: [row("Title")], index: [row("Index")] };
   assert.deepEqual(buildOmniRows({ ...groups, acts: [row("Public Act")] }).map(({ kind }) => kind), ["Section", "Title", "Public Act", "Index"]);
   assert.deepEqual(buildOmniRows({ ...groups, acts: [row("Public Act", true)] }).map(({ kind }) => kind), ["Public Act", "Section", "Title", "Index"]);
+});
+
+test("counts the acts each session's list shows and links to that list", () => {
+  const older = {
+    entry: { id: "2025-regular" },
+    acts: [{ id: "pa-2025-regular-9", type: "public", number: 9, citation: "P.A. 25-9", bill: "HB 6000", title: "AN ACT CONCERNING BEVERAGE CONTAINER DEPOSITS." }],
+    index: null
+  };
+  assert.deepEqual(actSearchLinks([...actSessions, older], "beverage").map(({ session, count, href }) => [session.id, count, href]), [
+    // The list opens on the newest session, so its link names only the query.
+    ["2026-regular", 2, "#/acts?q=beverage"],
+    ["2025-regular", 1, "#/acts?session=2025-regular&q=beverage"]
+  ]);
+  // Text matches count too, as they do in the list.
+  assert.deepEqual(actSearchLinks(actSessions, "22a-245").map(({ count }) => count), [2]);
+  assert.deepEqual(actSearchLinks(actSessions, "PA 26-2").map(({ count }) => count), [1]);
+  assert.deepEqual(actSearchLinks(actSessions, "nothing here"), []);
+});
+
+test("matches infractions across every category, in the quick-result order", () => {
+  const entries = [
+    { id: "b", citation: "22a-245(k)", description: "Bulk bailing of beverage containers", category: "ENVIRONMENTAL PROTECTION" },
+    { id: "a", citation: "14-36", description: "Operating without a license", category: "MOTOR VEHICLES" },
+    { id: "c", citation: "22a-245(a)", description: "Beverage containers without a deposit", category: "CONSUMER PROTECTION" }
+  ];
+  assert.deepEqual(matchInfractions(entries, "beverage containers").map(({ id }) => id), ["c", "b"]);
+  assert.deepEqual(matchInfractions(entries, "motor vehicles").map(({ id }) => id), ["a"]);
+  assert.deepEqual(findInfractionMatches(entries, "beverage containers", 1).map(({ label }) => label), ["Sec. 22a-245(a)"]);
+  assert.deepEqual(matchInfractions(entries, "  "), []);
+});
+
+test("reduces a statute search to the words acts and infractions can match", () => {
+  assert.equal(plainSearchWords("PA 26-2"), "PA 26-2");
+  assert.equal(plainSearchWords('"beverage containers"'), "beverage containers");
+  assert.equal(plainSearchWords("redeem* AND deposit"), "redeem deposit");
+  assert.equal(plainSearchWords("deposit and refund"), "deposit refund");
+  for (const query of ["bottle OR can", "deposit NOT refund", "bottle NEAR/3 deposit", "(bottle) deposit", "AND", "*"]) {
+    assert.equal(plainSearchWords(query), null, query);
+  }
 });

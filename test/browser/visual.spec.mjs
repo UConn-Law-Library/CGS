@@ -14,6 +14,7 @@ test("desktop search-results visual contract", async ({ page }, testInfo) => {
   await page.locator("#search-title").selectOption("title-13b");
   await page.locator("[data-search-refine]").getByRole("button", { name: "Search" }).click();
   await expect(page.locator("#search-status")).toContainText(/Showing \d+ of \d+ results?/);
+  await expect(page.locator('[data-also-found-group="acts"]')).toBeVisible();
   await expect(page).toHaveScreenshot("search-results.png", { fullPage: false });
 });
 

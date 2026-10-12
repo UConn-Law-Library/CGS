@@ -1,5 +1,6 @@
+import { isExactActQuery, matchActText, matchesActMetadata, sentenceCaseTitle } from "./acts.js";
 import { routeForDocument } from "./reader.js";
-import { indexRouteHref, infractionsRouteHref, routeHref } from "./routes.js";
+import { actRouteHref, actsRouteHref, indexRouteHref, infractionsRouteHref, routeHref } from "./routes.js";
 import { searchIndexTopics, topicLetter } from "./secondary-ui.js";
 
 function tokensFor(query) {
@@ -89,6 +90,47 @@ export function findIndexMatches(topics, query, limit = 3) {
   }));
 }
 
-export function buildOmniRows({ statutes = [], titles = [], chapters = [], index = [], infractions = [] } = {}) {
-  return [...statutes, ...titles, ...chapters, ...index, ...infractions];
+/**
+ * Acts whose citation, bill, or title match the query, then acts whose text
+ * does. `sessions` is [{ entry, acts, index }], newest session first. A row
+ * marked `exact` answers a query that names an act or bill ("PA 26-2", "SB 299").
+ */
+export function findActMatches(sessions, query, limit = 3) {
+  const value = String(query ?? "").trim();
+  if (!value) return [];
+  const exact = isExactActQuery(value);
+  const wanted = value.toLowerCase();
+  const matches = [];
+  sessions.forEach(({ entry, acts, index }, sessionOrder) => {
+    const textMatches = matchActText(index, value);
+    for (const act of acts) {
+      const metadata = matchesActMetadata(act, value);
+      if (!metadata && !textMatches?.has(act.id)) continue;
+      // "26-2" or "sb 299" names this act even without the "P.A." prefix.
+      const named = exact || act.citation.match(/\d+-\d+/)?.[0] === wanted || act.bill.toLowerCase() === wanted;
+      matches.push({ entry, act, metadata, sessionOrder, rank: named ? 0 : metadata ? 1 : 2 });
+    }
+  });
+  return matches
+    .sort((left, right) => left.rank - right.rank
+      || (left.act.type === right.act.type ? 0 : left.act.type === "public" ? -1 : 1)
+      || left.sessionOrder - right.sessionOrder
+      || left.act.number - right.act.number)
+    .slice(0, limit)
+    .map(({ entry, act, metadata }) => ({
+      kind: act.type === "public" ? "Public Act" : "Special Act",
+      label: act.citation,
+      subtitle: `${sentenceCaseTitle(act.title)} · ${metadata ? act.bill : "Found in the act's text"}`,
+      // An act without text is listed with its PDF link.
+      href: act.text
+        ? actRouteHref(entry.id, act, { query: metadata ? null : value })
+        : actsRouteHref({ session: entry.id, query: act.citation }),
+      exact
+    }));
+}
+
+export function buildOmniRows({ statutes = [], titles = [], chapters = [], acts = [], index = [], infractions = [] } = {}) {
+  // A query that names an act or bill is looking for that act, not statute text.
+  if (acts.some((row) => row.exact)) return [...acts, ...statutes, ...titles, ...chapters, ...index, ...infractions];
+  return [...statutes, ...titles, ...chapters, ...acts, ...index, ...infractions];
 }

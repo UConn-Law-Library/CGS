@@ -505,6 +505,24 @@ test("the search shortcut moves focus to the omnisearch field", async ({ page })
   await expect(page.locator("#global-query")).toBeFocused();
 });
 
+test("the omnisearch field suggests Public Acts by citation and by text", async ({ page }) => {
+  await openApp(page);
+  const input = page.locator("#global-query");
+  const panel = page.locator("[data-omni-panel]");
+  await input.fill("PA 26-2");
+  const first = panel.getByRole("option").first();
+  await expect(first).toContainText("Public Act");
+  await expect(first).toContainText("P.A. 26-2");
+  await expect(first).toHaveAttribute("href", "#/acts/2026-regular/pa-2");
+
+  await input.fill("reverse vending machine");
+  const textMatch = panel.getByRole("option").filter({ hasText: "P.A. 26-2" });
+  await expect(textMatch).toContainText("Found in the act's text");
+  await textMatch.click();
+  await expect(page).toHaveURL(/#\/acts\/2026-regular\/pa-2\?q=reverse%20vending%20machine$/);
+  await expect(page.getByRole("heading", { level: 1, name: "P.A. 26-2" })).toBeVisible();
+});
+
 test("a statute section loads without full-text search or subject-index shards", async ({ page }) => {
   const requested = [];
   page.on("request", (request) => requested.push(new URL(request.url()).pathname));

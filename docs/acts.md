@@ -43,6 +43,8 @@ Each row's sections link to `#/acts/<session>/<pa|sa>-<number>?sections=1-3,7`, 
 
 Searching the list matches each word against act titles, citations, and bills, and against the session's word index (`search.json`), which the page loads only when there is a query. Index terms are lowercased words; statute and act citations such as `22a-245` and `26-2` are single terms. Query words of three or more characters also match longer words they begin. Opening an act from text-only results highlights the matches.
 
+The header search (the omnibar) suggests acts too, from every published session, by the same rules: up to three acts, those whose citation, bill, or title match ahead of those that match only in their text. A query that names an act or bill (`PA 26-2`, `SB 299`) lists the act first, above statute results; a bare `26-2` does not, since it is also a statute citation. A text match opens the act with the matches highlighted, and an act without text opens the list filtered to it.
+
 Statute citations in an act's text link to the section in the app. To keep act pages light, the link resolves its title's section list only when it is followed; without JavaScript it falls back to a statute search for the citation.
 
 ## Statute pages

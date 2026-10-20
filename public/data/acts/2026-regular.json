@@ -2434,7 +2434,7 @@
       "text": {
         "path": "2026-regular/text/sa-1.json",
         "bytes": 5203,
-        "sha256": "cce2ca871f7be3d00e2d11bf08a238eee3aae22c6ab566674fb145062f897fef",
+        "sha256": "7f3790bc3daa2dd083798915d72aa573a165ba63e89fffce6b67c22836b74938",
         "pages": 3
       }
     },
@@ -2514,7 +2514,7 @@
       "text": {
         "path": "2026-regular/text/sa-6.json",
         "bytes": 3186,
-        "sha256": "f0450589e91e144911e6251ffb9aff05f7a137cf52749477b03afaf87fb57549",
+        "sha256": "c2c3e74b68d9bd617eae4d625392ffc0c111171ca30a4d9ac15bdbeda657c602",
         "pages": 2
       }
     },
@@ -2770,7 +2770,7 @@
       "text": {
         "path": "2026-regular/text/sa-22.json",
         "bytes": 3750,
-        "sha256": "d4a9c2ae2e25d0505a446b92cceb255babeb2d2c717bfd91cd65e31de25eb933",
+        "sha256": "46d4583277e56052a7d0d6507246b48a1ad0aa8b644da2dba413bd7cdfc47f41",
         "pages": 2
       }
     },
@@ -2786,7 +2786,7 @@
       "text": {
         "path": "2026-regular/text/sa-23.json",
         "bytes": 3230,
-        "sha256": "ad6c8bf50b270ba90385d8efbb017695335a74190d9bc3737de8f216d6a57fdf",
+        "sha256": "77646268241cc60887aafc8dacb1507fb48ad86c265ac4d010a2eaf7b61ae1d8",
         "pages": 2
       }
     },
@@ -2930,7 +2930,7 @@
       "text": {
         "path": "2026-regular/text/sa-32.json",
         "bytes": 2653,
-        "sha256": "dc19c5880adfec99a6fe26a6725b79d9c89a31fefa9cd8f956eb44d85f154d7b",
+        "sha256": "d0e94142e1d5b464e0548327aaa986c32575900450875449f76c603c34807f47",
         "pages": 2
       }
     },

@@ -1,4 +1,5 @@
 import { getJson, retryableLoader } from "./data-loader.js";
+import { navigationSectionDescription } from "./reader.js";
 import { findTitle, routeHref } from "./routes.js";
 
 // Autocomplete reads citations and headings only. Full Boolean/body search is explicit.
@@ -45,7 +46,7 @@ export class QuickSearchRepository {
         for (const [section, chapter, heading, citations] of shard.headings) {
           const text = `${citations.join(" ")} ${heading}`.toLowerCase();
           if (!words.every((word) => text.includes(word))) continue;
-          matches.push({ kind: "Section", label: `Sec. ${section}`, subtitle: `${heading} · Title ${title.number}, Chapter ${chapter}`,
+          matches.push({ kind: "Section", label: `Sec. ${section}`, subtitle: `${navigationSectionDescription({ heading })} · Title ${title.number}, Chapter ${chapter}`,
             href: routeHref({ title: title.number, chapter, section }), score: citations.includes(wanted) ? 0 : heading.toLowerCase().startsWith(wanted) ? 1 : 2 });
         }
         matches.sort((a, b) => a.score - b.score || a.label.localeCompare(b.label, "en", { numeric: true }));

@@ -1,5 +1,5 @@
 import { filterActs, isExactActQuery, matchActText, matchesActMetadata, sentenceCaseTitle } from "./acts.js";
-import { routeForDocument } from "./reader.js";
+import { navigationSectionDescription, routeForDocument } from "./reader.js";
 import { actRouteHref, actsRouteHref, indexRouteHref, infractionsRouteHref, routeHref } from "./routes.js";
 import { searchIndexTopics, topicLetter } from "./secondary-ui.js";
 
@@ -56,7 +56,7 @@ export function statuteMatches(results, limit = 5) {
   return results.slice(0, limit).map(({ document }) => ({
     kind: "Section",
     label: `Sec. ${document.citation ?? document.citations.join("–")}`,
-    subtitle: `${document.heading} · Title ${document.title.number}, Chapter ${document.chapter.number}${document.supplement ? ` · ${document.supplement.editionYear} Supp.` : ""}`,
+    subtitle: `${navigationSectionDescription(document)} · Title ${document.title.number}, Chapter ${document.chapter.number}${document.supplement ? ` · ${document.supplement.editionYear} Supp.` : ""}`,
     href: routeForDocument(document)
   }));
 }

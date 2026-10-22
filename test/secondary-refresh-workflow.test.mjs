@@ -9,7 +9,8 @@ test("secondary-source refreshes remain review-gated and database-free", () => {
   assert.match(workflow, /concurrency:\s*\n\s*group: secondary-sources-refresh\s*\n\s*cancel-in-progress: false/);
   assert.match(workflow, /--before public\/data\/secondary[\s\S]*?--after "\$CANDIDATE_DIR"/);
   assert.match(workflow, /--policy config\/secondary-refresh-policy\.json/);
-  assert.match(workflow, /--no-cga-ssl-verify/);
+  assert.doesNotMatch(workflow, /--no-cga-ssl-verify/);
+  assert.match(workflow, /CGS_CA_BUNDLE/);
   assert.match(workflow, /runs-on: ubuntu-24\.04/);
   assert.match(workflow, /defaults:\s*\n\s*run:\s*\n\s*shell: bash/);
   assert.match(workflow, /--judicial-client curl/);

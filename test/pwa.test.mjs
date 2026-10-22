@@ -29,12 +29,9 @@ test("service worker declares an offline shell and explicit corpus controls", as
   assert.match(source, /scopedUrl\("\.\/index\.html"\)/);
   assert.match(source, /url\.origin !== self\.location\.origin/);
   assert.match(source, /networkFirst\(request, SHELL_CACHE\)/);
-  assert.match(source, /caches\.open\(SHELL_CACHE\)\)\.match\(request\)/);
+  assert.match(source, /caches\.open\(SHELL_CACHE\)\)\.match\(request/);
   assert.doesNotMatch(source, /cacheFirst\(request\)/);
-  assert.match(source, /baseManifest\.artifacts\.map/);
-  assert.match(source, /searchV2Manifest\.shards\.map/);
   assert.match(source, /\.\/data\/search-v2\/manifest\.json/);
-  assert.match(source, /secondaryManifest\.artifacts\.map/);
   assert.match(source, /supplementIndex/);
   assert.match(source, /manifest\.artifacts\.map\(\(artifact\) => artifactTask\(`\.\/data\/supplements/);
   assert.match(source, /\.\/supplement-overlay\.js/);

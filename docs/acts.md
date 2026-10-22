@@ -66,7 +66,8 @@ A statute page shows a notice under its heading for each act section that amends
 `Review acts refresh` (`.github/workflows/refresh-acts.yml`) runs weekly and on demand. It runs:
 
 ```sh
-python -m crawler.cgs_crawler.acts --output public/data/acts --pdf-cache .crawl/acts-pdfs --report report.json --no-ssl-verify
+python -m crawler.cgs_crawler.tls --output .crawl/ca-bundle.pem
+python -m crawler.cgs_crawler.acts --output public/data/acts --pdf-cache .crawl/acts-pdfs --report report.json --ca-bundle .crawl/ca-bundle.pem
 ```
 
 then opens a draft pull request only when the published files change. The pull request lists the acts whose text could not be extracted. A session's `updatedAt` changes only when its acts or their texts change, so an unchanged page produces no diff.

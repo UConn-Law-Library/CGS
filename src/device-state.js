@@ -34,9 +34,19 @@ function safeParse(value, fallback) {
   }
 }
 
+function validBookmark(item) {
+  return item && typeof item.id === "string" && item.id.length > 0 && item.id.length <= 1000
+    && ["statute", "infraction"].includes(item.type)
+    && typeof item.title === "string" && item.title.length > 0 && item.title.length <= 5000
+    && typeof item.href === "string" && /^#\/(?:t\/|infractions(?:[/?]|$))/.test(item.href)
+    && item.href.length <= 5000;
+}
+
 export class DeviceState {
   #storage;
   #pageHistory = [];
+  #temporaryBookmarks = null;
+  bookmarksPersisted = true;
 
   constructor({ storage } = {}) {
     try {
@@ -56,15 +66,46 @@ export class DeviceState {
 
   #write(key, value) {
     try {
-      this.#storage?.setItem(key, JSON.stringify(value));
+      if (!this.#storage) return false;
+      this.#storage.setItem(key, JSON.stringify(value));
+      return true;
     } catch {
       // Browsing remains available when storage is unavailable or full.
+      return false;
     }
   }
 
   bookmarks() {
-    const value = this.#read(BOOKMARKS_KEY, []);
-    return Array.isArray(value) ? value.filter((item) => item?.id && item?.href) : [];
+    const value = this.#temporaryBookmarks ?? this.#read(BOOKMARKS_KEY, []);
+    return Array.isArray(value) ? value.filter(validBookmark).map((item) => ({ ...item })) : [];
+  }
+
+  #saveBookmarks(values) {
+    this.bookmarksPersisted = this.#write(BOOKMARKS_KEY, values);
+    this.#temporaryBookmarks = this.bookmarksPersisted ? null : values;
+    return this.bookmarksPersisted;
+  }
+
+  exportBookmarks() {
+    return JSON.stringify({ format: "cgs-bookmarks", version: 1, bookmarks: this.bookmarks() }, null, 2);
+  }
+
+  importBookmarks(text) {
+    if (typeof text !== "string" || text.length > 2_000_000) throw new Error("Choose a bookmark file smaller than 2 MB.");
+    const data = JSON.parse(text);
+    if (data?.format !== "cgs-bookmarks" || data.version !== 1 || !Array.isArray(data.bookmarks)
+      || data.bookmarks.length > 5000 || !data.bookmarks.every(validBookmark)) {
+      throw new Error("This is not a supported CGS bookmark file.");
+    }
+    const merged = new Map(this.bookmarks().map((item) => [item.id, item]));
+    let added = 0;
+    for (const item of data.bookmarks) {
+      if (merged.has(item.id)) continue;
+      merged.set(item.id, { id: item.id, type: item.type, title: item.title, subtitle: String(item.subtitle ?? ""), href: item.href });
+      added++;
+    }
+    const persisted = this.#saveBookmarks([...merged.values()]);
+    return { added, persisted };
   }
 
   isBookmarked(id) {
@@ -72,20 +113,21 @@ export class DeviceState {
   }
 
   toggleBookmark(bookmark) {
+    if (!validBookmark(bookmark)) throw new Error("Invalid bookmark.");
     const values = this.bookmarks();
     const index = values.findIndex((item) => item.id === bookmark.id);
     if (index === -1) values.unshift(bookmark);
     else values.splice(index, 1);
-    this.#write(BOOKMARKS_KEY, values);
-    return index === -1;
+    const persisted = this.#saveBookmarks(values);
+    return { saved: index === -1, persisted };
   }
 
   removeBookmark(id) {
-    this.#write(BOOKMARKS_KEY, this.bookmarks().filter((item) => item.id !== id));
+    return this.#saveBookmarks(this.bookmarks().filter((item) => item.id !== id));
   }
 
   clearBookmarks() {
-    this.#write(BOOKMARKS_KEY, []);
+    return this.#saveBookmarks([]);
   }
 
   recents() {

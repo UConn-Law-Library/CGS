@@ -1,3 +1,4 @@
+import { dataUrl } from "./data-loader.js";
 import { comparableNumber } from "./routes.js";
 
 export { applyChapterOverlay } from "./supplement-overlay.js";
@@ -50,7 +51,7 @@ export class SupplementRepository {
   }
 
   async #json(relativePath) {
-    const response = await this.#fetch(new URL(relativePath, this.#baseUrl));
+    const response = await this.#fetch(dataUrl(new URL(relativePath, this.#baseUrl)), { signal: AbortSignal.timeout(15000) });
     if (!response.ok) throw new Error(`Could not load supplement ${relativePath} (${response.status})`);
     return response.json();
   }

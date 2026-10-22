@@ -618,6 +618,7 @@ export function renderGuide({ coverage = null, interactive = true, appBase = "" 
       <p class="eyebrow">Research guide</p>
       <h1>Understanding the Statutes</h1>
       <p class="guide-lede">Connecticut’s General Statutes are an organized collection of the state’s laws. But laws don’t begin as statutes. They begin as bills, become Public Acts when passed by the legislature, and are incorporated into the General Statutes through a process called codification.</p>
+      ${interactive ? '<p><a href="./discover/understanding-the-statutes/">Read the full guide on one page</a>. All sections are expanded.</p>' : ""}
     </header>
     <nav class="guide-contents" aria-label="On this page"><ol>${contents}</ol></nav>
     ${renderSources({ example })}

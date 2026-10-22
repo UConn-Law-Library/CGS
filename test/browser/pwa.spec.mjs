@@ -83,7 +83,8 @@ test("an incompatible downloaded corpus is identified and can be repaired", asyn
       await control.put(new URL("./__active-offline-cache__", scope), new Response(name));
       const cache = await caches.open(name);
       await cache.put(new URL("./__offline-metadata__", scope), new Response(JSON.stringify({
-        offlineFormatVersion: 2,
+        offlineFormatVersion: current.currentRelease.offlineFormatVersion,
+        dataReleaseId: current.currentRelease.dataReleaseId,
         shellBuildId: "old-shell",
         cachedFiles: 2,
         totalFiles: 2,

@@ -22,5 +22,6 @@ test("mobile statute-reader visual contract", async ({ page }, testInfo) => {
   test.skip(!isMobileProject(testInfo), "Mobile baseline.");
   await openApp(page, "#/t/01/c/004/s/1-24");
   await expect(page.getByRole("heading", { level: 1, name: /Sec\. 1-24/ })).toBeVisible();
+  await expect(page.locator("[data-amendments-status]")).not.toContainText("loading");
   await expect(page).toHaveScreenshot("statute-reader.png", { fullPage: false });
 });

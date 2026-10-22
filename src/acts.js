@@ -1,3 +1,4 @@
+import { dataUrl } from "./data-loader.js";
 import { statuteTextEdition } from "./publications.js";
 import { escapeHtml, renderLinkedText } from "./reader.js";
 import { actRouteHref } from "./routes.js";
@@ -20,7 +21,7 @@ export class ActsRepository {
   #json(relativePath, label = "the acts list") {
     if (!this.#cache.has(relativePath)) {
       this.#cache.set(relativePath, (async () => {
-        const response = await this.#fetch(new URL(relativePath, this.#baseUrl));
+        const response = await this.#fetch(dataUrl(new URL(relativePath, this.#baseUrl)), { signal: AbortSignal.timeout(15000) });
         if (!response.ok) throw new Error(`Could not load ${label} (${response.status})`);
         return response.json();
       })().catch((error) => {

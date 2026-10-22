@@ -13,6 +13,8 @@ export class ProgressiveSearchClient {
   #worker;
   #pending = new Map();
   #nextRequestId = 0;
+  #completedKey = null;
+  #inlineComplete = null;
 
   constructor({
     repository,
@@ -36,7 +38,20 @@ export class ProgressiveSearchClient {
     const manifest = await this.#repository.init();
     const ids = titleIds?.length ? titleIds : manifest.shards.map((shard) => shard.titleId);
     if (signal?.aborted) throw abortError();
-    if (!this.#worker) return this.#searchInline(query, ids, { limit, onProgress, signal, searchOptions });
+    const cacheKey = JSON.stringify([query, ids, searchOptions]);
+    if (!this.#worker) {
+      if (this.#inlineComplete?.key === cacheKey) {
+        const outcome = { ...this.#inlineComplete.outcome, results: this.#inlineComplete.outcome.results.slice(0, limit) };
+        onProgress?.({ ...outcome, completed: ids.length, total: ids.length, complete: true });
+        return outcome;
+      }
+      const outcome = await this.#searchInline(query, ids, {
+        limit: Infinity, signal, searchOptions,
+        onProgress: (update) => onProgress?.({ ...update, results: update.results.slice(0, limit) })
+      });
+      this.#inlineComplete = outcome.supplementUnavailable ? null : { key: cacheKey, outcome };
+      return { ...outcome, results: outcome.results.slice(0, limit) };
+    }
 
     const requestId = ++this.#nextRequestId;
     return new Promise((resolve, reject) => {
@@ -45,8 +60,9 @@ export class ProgressiveSearchClient {
         this.#settle(requestId, { reject, error: abortError() });
       };
       signal?.addEventListener("abort", onAbort, { once: true });
-      this.#pending.set(requestId, { resolve, reject, onProgress, signal, onAbort });
-      this.#worker.postMessage({ type: "start", requestId, query, limit, total: ids.length, searchOptions });
+      this.#pending.set(requestId, { resolve, reject, onProgress, signal, onAbort, cacheKey });
+      this.#worker.postMessage({ type: "start", requestId, query, limit, total: ids.length, searchOptions, cacheKey });
+      if (this.#completedKey === cacheKey) return;
 
       this.#repository.loadTitles(ids, {
         signal,
@@ -85,6 +101,7 @@ export class ProgressiveSearchClient {
   #handleMessage(message) {
     const pending = this.#pending.get(message.requestId);
     if (!pending) return;
+    if (message.type === "complete") this.#completedKey = message.supplementUnavailable ? null : pending.cacheKey;
     const progress = {
       completed: message.processed,
       total: message.total,
@@ -105,6 +122,8 @@ export class ProgressiveSearchClient {
   }
 
   #handleWorkerError(error) {
+    this.#worker?.terminate?.();
+    this.#completedKey = null;
     this.#worker = null;
     for (const [requestId, pending] of this.#pending) {
       this.#settle(requestId, { reject: pending.reject, error: error.error ?? new Error("Search worker failed") });

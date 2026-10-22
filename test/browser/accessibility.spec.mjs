@@ -16,7 +16,7 @@ const representativeRoutes = [
 ];
 
 for (const { name, route, heading } of representativeRoutes) {
-  test(`${name} has no serious or critical WCAG violations`, async ({ page }) => {
+  test(`${name} has no detected WCAG A/AA violations`, async ({ page }) => {
     await openApp(page, route);
     await expect(page.getByRole("heading", { level: 1, name: heading })).toBeVisible();
     await expectNoHighImpactAccessibilityViolations(page);
@@ -27,7 +27,7 @@ test.describe("dark color scheme", () => {
   test.use({ colorScheme: "dark" });
 
   for (const { name, route, heading } of representativeRoutes) {
-    test(`${name} has no serious or critical WCAG violations`, async ({ page }) => {
+    test(`${name} has no detected WCAG A/AA violations`, async ({ page }) => {
       await openApp(page, route);
       await expect(page.getByRole("heading", { level: 1, name: heading })).toBeVisible();
       await expect(page.locator("html")).toHaveCSS("color-scheme", "dark");

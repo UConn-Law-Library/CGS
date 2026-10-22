@@ -6,11 +6,11 @@ The repository turns the legacy title-level JSON export into versioned, canonica
 
 ## Quick start
 
-Requirements: Node.js 24 or newer. The published site has no runtime npm installation; `npm ci` installs locked build and test tools, including the Markdown and Mermaid renderers for the repository map. Crawler and PDF-ingestion tests additionally require Python 3.12 and the packages in `crawler/requirements.txt`.
+Requirements: Node.js 24 or newer. The published site has no runtime npm installation; `npm ci` installs locked build and test tools, including the Markdown and Mermaid renderers for the repository map. Crawler and PDF-ingestion tests additionally require Python 3.12 and the packages in `crawler/requirements-lock.txt`.
 
 ```sh
 npm ci
-python -m pip install -r crawler/requirements.txt
+python -m pip install -r crawler/requirements-lock.txt
 npm run check
 npm run dev
 ```
@@ -101,7 +101,7 @@ The sitemap defaults to `https://uconn-law-library.github.io/CGS/`. Set `CGS_SIT
 | `npm run import:legacy -- --input <dir>` | Import a legacy title-JSON directory |
 | `npm run import:supplement -- --input <dir> --base public/data --output <dir> --year <yyyy>` | Import an annual supplement as a reviewed, year-scoped overlay |
 | `npm run rebuild:supplement-search -- --year <yyyy>` | Rebuild derived search patches for an already reviewed supplement without changing its chapter overlays |
-| `npm run secondary:acquire -- --output <dir>` | Capture the three LCO index PDFs and Judicial Branch infractions PDF by content hash; use `--no-cga-ssl-verify` only for the documented CGA chain issue |
+| `npm run secondary:acquire -- --output <dir>` | Capture the three LCO index PDFs and Judicial Branch infractions PDF by content hash; use the reviewed CA bundle described in `docs/corpus-refresh.md` |
 | `npm run secondary:import -- --sources <manifest> --base public/data --output <dir>` | Parse, resolve, shard, and bind the secondary datasets to the base statute data |
 | `npm run secondary:rebind -- --input public/data/secondary --base <candidate-base> --output <dir>` | Rebuild statute links from published secondary records offline, preserving source revisions and content |
 | `npm run diff:secondary -- --before <dir> --after <dir> --json <file> --markdown <file>` | Produce bounded, deterministic secondary-source change reports |
@@ -127,7 +127,7 @@ The Playwright suite exercises the built Pages artifact in Chromium at a 1440x10
 Install the pinned browser once, then run the suite:
 
 ```sh
-npx playwright install chromium
+npx playwright install chromium firefox webkit
 npm run test:browser
 ```
 
@@ -180,3 +180,11 @@ The same static client is installable as a PWA. Its service worker caches the ap
 ## Data authority
 
 This project is an access layer, not the official legal source. Canonical artifacts retain source URLs so the interface can link back to the Connecticut General Assembly publication.
+
+### Dependency and data review
+
+Python production and tests install `crawler/requirements-lock.txt`, including transitive PDF dependencies. To propose an update, run `python scripts/lock-python.py` (resolves the Python 3.12 Linux production target), review the version changes, and run the Python and browser checks. `crawler/requirements.txt` declares the direct dependency constraints.
+
+Bookmarks can be exported to a local JSON file and imported on another device from Bookmarks. Imports merge valid entries without replacing existing bookmarks. If storage is blocked or full, the app keeps a temporary copy and prompts the reader to export it before reloading or closing the page.
+
+The interactive Understanding the Statutes page links to an expanded, script-free guide. The JavaScript-disabled fallback links to the same page.

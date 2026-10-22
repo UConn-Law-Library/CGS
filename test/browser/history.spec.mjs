@@ -67,7 +67,7 @@ test("a canonicalized legacy link remains the first page of the Back trail", asy
 
 test("failed routes offer Back and do not enter visited-page history", async ({ page }) => {
   await openApp(page, "#/titles");
-  await page.route("**/data/chapters/001.json", (route) => route.fulfill({ status: 503, body: "Unavailable" }));
+  await page.route("**/data/chapters/001.json*", (route) => route.fulfill({ status: 503, body: "Unavailable" }));
   await page.evaluate(() => { location.hash = "#/t/01/c/001"; });
   await expect(page.locator("main.error")).toBeVisible();
   await page.getByRole("button", { name: "Go back", exact: true }).click();

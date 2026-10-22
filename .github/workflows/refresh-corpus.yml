@@ -25,6 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 180
     env:
+      CGS_CA_BUNDLE: .crawl/ca-bundle.pem
       REFRESH_ROOT: .crawl/refresh
       LEGACY_DIR: .crawl/refresh/legacy
       SNAPSHOT_DIR: .crawl/refresh/snapshots
@@ -49,7 +50,8 @@ jobs:
         with:
           python-version: "3.12"
           cache: pip
-      - run: python -m pip install -r crawler/requirements.txt
+      - run: python -m pip install -r crawler/requirements-lock.txt
+      - run: python -m crawler.cgs_crawler.tls --output .crawl/ca-bundle.pem
       - run: npm ci
 
       - name: Crawl the current statutes
@@ -59,7 +61,6 @@ jobs:
           python -m crawler.cgs_crawler.cli \
             --output "$LEGACY_DIR" \
             --snapshots "$SNAPSHOT_DIR" \
-            --no-ssl-verify \
             2>&1 | tee "$REPORT_DIR/crawl.log"
 
       - name: Build and validate the candidate corpus
@@ -149,7 +150,6 @@ jobs:
               --supplement-year "$year" \
               --output "$source_dir" \
               --snapshots "$snapshot_dir" \
-              --no-ssl-verify \
               2>&1 | tee "$REPORT_DIR/supplement-$year-crawl.log"
             npm run import:supplement -- \
               --input "$source_dir" \
@@ -159,6 +159,21 @@ jobs:
             npm run validate:supplement -- \
               --data "$CANONICAL_DIR/supplements/$year" \
               --base "$CANONICAL_DIR"
+            node scripts/review-supplement.mjs \
+              --before "public/data/supplements/$year" \
+              --after "$CANONICAL_DIR/supplements/$year" \
+              --before-base public/data --after-base "$CANONICAL_DIR" \
+              --policy config/supplement-refresh-policy.json \
+              --json "$REPORT_DIR/supplement-$year-diff.json" \
+              --markdown "$REPORT_DIR/supplement-$year-diff.md"
+            cat "$REPORT_DIR/supplement-$year-diff.md" >> "$GITHUB_STEP_SUMMARY"
+          done
+
+      - name: Publish supplement review failures
+        if: failure()
+        run: |
+          for report in "$REPORT_DIR"/supplement-*-diff.md; do
+            if [ -f "$report" ]; then cat "$report" >> "$GITHUB_STEP_SUMMARY"; fi
           done
 
       - name: Stage and verify the candidate corpus
@@ -181,6 +196,9 @@ jobs:
             echo "This draft was produced by the reviewed corpus-refresh workflow. It never writes directly to main."
             echo
             cat "$REPORT_DIR/refresh-summary.md"
+            for report in "$REPORT_DIR"/supplement-*-diff.md; do
+              if [ -f "$report" ]; then cat "$report"; fi
+            done
             echo
             if [ -f "$REPORT_DIR/supplement-retirement.md" ]; then
               cat "$REPORT_DIR/supplement-retirement.md"

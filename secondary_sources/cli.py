@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from crawler.cgs_crawler.tls import tls_verification
+
 import argparse
 import json
 import os
@@ -17,6 +19,7 @@ def main():
     acquire = commands.add_parser("acquire", help="capture all four official PDFs content-addressably")
     acquire.add_argument("--output", default=".crawl/secondary/sources")
     acquire.add_argument("--captured-at")
+    acquire.add_argument("--ca-bundle", type=Path, help="Verified CGA CA bundle (or CGS_CA_BUNDLE)")
     acquire.add_argument("--infractions-file", help="use a manually retrieved Judicial Branch PDF")
     acquire.add_argument(
         "--judicial-client", choices=("requests", "curl", "windows-curl"), default="requests",
@@ -76,7 +79,7 @@ def main():
             PdfSnapshotStore(Path(args.output)),
             judicial_session=judicial_session,
             verify_ssl=True,
-            cga_verify_ssl=not args.no_cga_ssl_verify,
+            cga_verify_ssl=tls_verification(args.ca_bundle, insecure=args.no_cga_ssl_verify),
         ).capture_all(
             args.captured_at, Path(args.infractions_file) if args.infractions_file else None
         )

@@ -1,3 +1,5 @@
+import { diffSupplement, evaluateSupplementDiff, renderSupplementDiff } from "../scripts/lib/supplement-diff.mjs";
+import { generateDiscovery } from "../scripts/lib/discovery.mjs";
 import assert from "node:assert/strict";
 import { cp, mkdtemp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import os from "node:os";
@@ -256,4 +258,47 @@ test("classifies a grouped overlay that exactly spans standalone base provisions
     sections: [{ id: "group-10-511-to-10-511a", citations: ["10-511", "10-511a"] }]
   };
   assert.deepEqual(classifyChapterOverlay(overlayChapter, baseChapter), { replacements: 1, additions: 0 });
+});
+
+test("supplement review reports text, additions, removals and reclassifications; discovery uses the overlay", async (t) => {
+  const root = await mkdtemp(path.join(os.tmpdir(), "cgs-supplement-review-"));
+  t.after(() => rm(root, { recursive: true, force: true }));
+  const base = path.join(root, "base"), candidate = path.join(root, "candidate");
+  await importLegacy({ inputDir: fixture, outputDir: base, generatedAt: "2026-07-14T00:00:00Z" });
+  const before = path.join(base, "supplements", "2026");
+  await importSupplement({ inputDir: await supplementInput(root), outputDir: before, baseDataDir: base, editionYear: 2026, generatedAt: "2026-08-01T00:00:00Z" });
+  await cp(base, candidate, { recursive: true });
+  const after = path.join(candidate, "supplements", "2026");
+  const reportArgs = { before, after, beforeBase: base, afterBase: candidate };
+  const policy = { version: 1, maxRemovedCitations: 0, maxClassificationChanges: 0 };
+  assert.equal(evaluateSupplementDiff(await diffSupplement(reportArgs), policy).passed, true);
+  const overlayPath = path.join(after, "chapters", "001.json");
+  const overlay = JSON.parse(await readFile(overlayPath, "utf8"));
+  overlay.sections[0].content.body = ["Changed legal text for review."];
+  overlay.sections[0].heading = "Changed supplement heading";
+  const removed = overlay.sections.pop();
+  const addition = { ...structuredClone(removed), id: "section-1-98", citation: "1-98", citations: ["1-98"] };
+  overlay.sections.push(addition);
+  await writeFile(overlayPath, JSON.stringify(overlay));
+  const basePath = path.join(candidate, "chapters", "001.json");
+  const chapter = JSON.parse(await readFile(basePath, "utf8"));
+  chapter.sections = chapter.sections.filter((section) => section.id !== "section-1-1");
+  await writeFile(basePath, JSON.stringify(chapter));
+  const report = await diffSupplement(reportArgs);
+  assert.equal(report.added[0].citation, "1-98");
+  assert.equal(report.removed[0].citation, "1-99");
+  assert.ok(report.changed[0].fields.includes("content"));
+  assert.ok(report.changed[0].fields.includes("classification"));
+  const review = evaluateSupplementDiff(report, policy);
+  assert.equal(review.passed, false);
+  assert.equal(review.reasons.length, 2);
+  assert.match(renderSupplementDiff(report, review), /Policy blocked/);
+  const catalog = JSON.parse(await readFile(path.join(candidate, "catalog.json"), "utf8"));
+  const output = path.join(root, "site");
+  await generateDiscovery({ catalog, dataDirectory: candidate, output, siteUrl: "https://example.test/CGS/" });
+  const guide = await readFile(path.join(output, "discover/understanding-the-statutes/index.html"), "utf8");
+  assert.match(guide, /2026 Supplement/);
+  const discovery = await readFile(path.join(output, "discover/titles/01/chapters/001/index.html"), "utf8");
+  assert.match(discovery, /Changed supplement heading/);
+  assert.match(discovery, /s\/1-98/);
 });

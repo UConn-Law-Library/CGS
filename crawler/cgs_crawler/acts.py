@@ -8,6 +8,8 @@ retires them, and refuses to drop an act that disappears from the page.
 
 from __future__ import annotations
 
+from .tls import tls_verification
+
 import argparse
 import hashlib
 import json
@@ -297,7 +299,8 @@ def parser() -> argparse.ArgumentParser:
     value.add_argument("--refresh-text", action="store_true", help="extract every act's text again")
     value.add_argument("--pdf-cache", type=Path, default=Path(".crawl/acts-pdfs"), help="where downloaded act PDFs are kept")
     value.add_argument("--report", type=Path, help="write the acts whose text could not be extracted to this JSON file")
-    value.add_argument("--no-ssl-verify", action="store_true")
+    value.add_argument("--no-ssl-verify", action="store_true", help="Local diagnostic override; forbidden in CI")
+    value.add_argument("--ca-bundle", type=Path, help="Verified CA bundle (or CGS_CA_BUNDLE)")
     return value
 
 
@@ -313,7 +316,7 @@ def main() -> None:
     if args.html:
         html = args.html.read_text(encoding="utf-8")
     else:
-        html = Fetcher(FetchPolicy(delay=0, jitter=0, verify_ssl=not args.no_ssl_verify), snapshots).fetch(ACTS_URL)
+        html = Fetcher(FetchPolicy(delay=0, jitter=0, verify_ssl=tls_verification(args.ca_bundle, insecure=args.no_ssl_verify)), snapshots).fetch(ACTS_URL)
     parsed = parse_acts_page(html)
     published = read_published(args.previous or args.output)
     retrieved_at = iso_timestamp(args.retrieved_at)
@@ -330,7 +333,7 @@ def main() -> None:
         texts = previous_texts
     else:
         # One PDF at a time, with a pause between requests to CGA.
-        fetcher = Fetcher(FetchPolicy(delay=0.5, jitter=0.25, verify_ssl=not args.no_ssl_verify), snapshots)
+        fetcher = Fetcher(FetchPolicy(delay=0.5, jitter=0.25, verify_ssl=tls_verification(args.ca_bundle, insecure=args.no_ssl_verify)), snapshots)
         acts = [act for value in sessions for act in value["acts"]]
         texts, failures = acquire_texts(acts, previous_texts, fetcher, cache=PdfCache(args.pdf_cache), refresh=args.refresh_text)
     manifest = write_published(attach_texts(sessions, texts, retrieved_at=retrieved_at), args.output, texts=texts)

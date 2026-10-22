@@ -15,18 +15,12 @@ Capture the current three index volumes and infractions schedule into a content-
 npm run secondary:acquire -- --output .crawl/secondary/sources
 ```
 
-TLS verification is the default. If the known CGA certificate-chain problem persists after the system trust store is loaded, the same explicit temporary workaround used by the statute crawler is available:
-
-```sh
-npm run secondary:acquire -- --output .crawl/secondary/sources --no-cga-ssl-verify
-```
-
-This exception is scoped to `www.cga.ct.gov`. Judicial Branch TLS verification remains enabled. Downloads make five attempts with exponential backoff. The infractions download tries the official `jud.ct.gov` endpoint first and the official `www.jud.ct.gov` endpoint second, preserving the successful URL in the capture manifest. If both verified endpoints fail, acquisition fails closed.
+TLS verification is required for production acquisition. Build the reviewed CGA bundle with `python -m crawler.cgs_crawler.tls`, then pass `--ca-bundle .crawl/ca-bundle.pem` or set `CGS_CA_BUNDLE`. See [authenticated acquisition](corpus-refresh.md#authenticated-cga-acquisition). Judicial Branch verification remains enabled independently. Downloads retry with backoff and fail if authentication or acquisition fails.
 
 The standalone refresh pins `ubuntu-24.04` and uses system curl for the Judicial PDF. CGA discovery and index acquisition continue to use the Python client. To reproduce the workflow with curl installed:
 
 ```sh
-npm run secondary:acquire -- --output .crawl/secondary/sources --judicial-client curl --no-cga-ssl-verify
+npm run secondary:acquire -- --output .crawl/secondary/sources --judicial-client curl --ca-bundle .crawl/ca-bundle.pem
 ```
 
 The Judicial endpoint negotiated TLS 1.2 with `AES256-SHA256` in the [hosted-runner diagnostic](https://github.com/UConn-Law-Library/CGS/actions/runs/35741641573). Ubuntu system curl verified the certificate and downloaded the PDF from both official hosts; the Windows Server runner reset both connections. Changing the runner to Windows alone did not fix acquisition. Python's default TLS context excludes ciphers without forward secrecy, including this RSA key-exchange suite ([Python SSL documentation](https://docs.python.org/3.12/library/ssl.html#ssl.SSLContext)). This compatibility choice is limited to the public Judicial PDF client; it does not change system TLS policy or disable certificate checks. The older suite lacks forward secrecy and should be retired when the publisher supports a compatible modern suite.

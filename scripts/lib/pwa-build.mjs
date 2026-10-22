@@ -7,6 +7,16 @@ export const shellInputs = Object.freeze([
   "act-amendments.js",
   "acts.js",
   "app.js",
+  "omnisearch-controller.js",
+  "about-page.js",
+  "shell.js",
+  "bookmark-page.js",
+  "bookmark-controls.js",
+  "data-loader.js",
+  "quick-search.js",
+  "dialog.js",
+  "context-navigation.js",
+  "revision-diff.js",
   "device-state.js",
   "guide.js",
   "navigation-history.js",
@@ -43,6 +53,7 @@ export async function stampServiceWorker(directory, inputs = shellInputs, releas
     hash.update(relative);
     hash.update(await readFile(path.join(directory, relative)));
   }
+  hash.update(release.dataReleaseId ?? "");
   const buildId = hash.digest("hex").slice(0, 12);
   const workerPath = path.join(directory, "service-worker.js");
   const source = await readFile(workerPath, "utf8");
@@ -52,7 +63,8 @@ export async function stampServiceWorker(directory, inputs = shellInputs, releas
   const stamped = source
     .replaceAll("__CGS_BUILD_ID__", buildId)
     .replaceAll("__CGS_CORPUS_GENERATED_AT__", release.corpusGeneratedAt ?? "unknown")
-    .replaceAll("__CGS_CORPUS_SCHEMA_VERSION__", release.corpusSchemaVersion ?? "unknown");
+    .replaceAll("__CGS_CORPUS_SCHEMA_VERSION__", release.corpusSchemaVersion ?? "unknown")
+    .replaceAll("__CGS_DATA_RELEASE_ID__", release.dataReleaseId ?? "unknown");
   await writeFile(workerPath, stamped, "utf8");
   return buildId;
 }

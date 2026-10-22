@@ -20,6 +20,7 @@ const initialState = Object.freeze({
   search: null,
   supplements: [],
   shellBuildId: null,
+  dataReleaseId: null,
   currentRelease: null,
   compatibility: { compatible: null, reason: null },
   error: null
@@ -27,7 +28,7 @@ const initialState = Object.freeze({
 
 const offlineStateKeys = [
   "cachedFiles", "totalFiles", "complete", "downloadedAt", "verifiedFiles", "verifiedBytes",
-  "corpus", "secondary", "search", "supplements", "shellBuildId", "currentRelease", "compatibility"
+  "corpus", "secondary", "search", "supplements", "shellBuildId", "dataReleaseId", "currentRelease", "compatibility"
 ];
 
 export class PwaManager {

@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
 
-const appSource = await readFile(new URL("../src/app.js", import.meta.url), "utf8");
+const appSource = (await Promise.all(["app.js", "about-page.js", "shell.js", "bookmark-page.js", "bookmark-controls.js"].map((file) => readFile(new URL(`../src/${file}`, import.meta.url), "utf8")))).join("\n");
 const stylesSource = await readFile(new URL("../src/styles.css", import.meta.url), "utf8");
 const wordmarkSource = await readFile(new URL("../public/wordmark.svg", import.meta.url), "utf8");
 

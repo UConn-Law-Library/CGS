@@ -68,6 +68,7 @@ export async function generateSearchV2Artifacts({ catalog, dataDirectory, supple
   const titleIds = [...new Set([...catalogTitles.keys(), ...supplementTitles.keys()])];
   const shards = [];
   const citationShards = [];
+  const headingShards = [];
   let documentCount = 0;
 
   for (const titleId of titleIds) {
@@ -77,6 +78,13 @@ export async function generateSearchV2Artifacts({ catalog, dataDirectory, supple
     const usedOverlays = new Set();
     const documents = [];
     const citations = {};
+    const headings = [];
+    const addHeadings = (chapter) => {
+      for (const section of chapter.sections) headings.push([
+        sectionRouteKey(section), chapter.number, section.heading,
+        section.citations ?? [section.citation].filter(Boolean)
+      ]);
+    };
 
     for (const chapterEntry of title?.chapters ?? []) {
       const baseChapter = await readJson(path.join(dataDirectory, ...chapterEntry.path.split("/")));
@@ -90,6 +98,7 @@ export async function generateSearchV2Artifacts({ catalog, dataDirectory, supple
       }
       documents.push(...chapter.sections.map(auxiliaryDocument));
       addCitations(citations, chapterEntry.number, chapter.sections);
+      addHeadings(chapter);
     }
 
     for (const overlayEntry of overlayEntries.filter((entry) => !usedOverlays.has(entry.id))) {
@@ -97,6 +106,7 @@ export async function generateSearchV2Artifacts({ catalog, dataDirectory, supple
       const chapter = applyChapterOverlay(null, overlay, supplement.editionYear).chapter;
       documents.push(...chapter.sections.map(auxiliaryDocument));
       addCitations(citations, chapter.number ?? overlayEntry.number, chapter.sections);
+      addHeadings(chapter);
     }
 
     const relativePath = `${titleId}.json`;
@@ -117,6 +127,7 @@ export async function generateSearchV2Artifacts({ catalog, dataDirectory, supple
       sections: citations
     });
     citationShards.push({ titleId, ...citationArtifact });
+    headingShards.push({ titleId, ...await writeJson(outputDir, `headings/${titleId}.json`, { headings }) });
   }
 
   const manifest = {
@@ -125,7 +136,8 @@ export async function generateSearchV2Artifacts({ catalog, dataDirectory, supple
     supplementEditionYear: supplement?.editionYear ?? null,
     counts: { titles: shards.length, documents: documentCount },
     shards,
-    citationShards
+    citationShards,
+    headingShards
   };
   await writeJson(outputDir, "manifest.json", manifest, { pretty: true });
   return manifest;

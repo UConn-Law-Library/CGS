@@ -1,0 +1,17 @@
+# Resolved for Python 3.12; update with scripts/lock-python.py.
+beautifulsoup4==4.15.0
+certifi==2026.10.19
+cffi==2.1.1
+charset-normalizer==3.5.2
+cryptography==50.0.2
+idna==3.20
+pdfminer.six==20260107
+pdfplumber==0.11.10
+pillow==12.2.0
+pycparser==3.11
+pypdfium2==5.14.0
+requests==2.34.2
+soupsieve==3.0.4
+truststore==0.10.5
+typing_extensions==4.16.0
+urllib3==2.8.0

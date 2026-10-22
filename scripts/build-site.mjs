@@ -9,6 +9,7 @@ import { generateSupplementIndex } from "./lib/supplement-index.mjs";
 import { generateSearchV2Artifacts } from "./lib/search-v2-artifacts.mjs";
 import { buildRepositoryMap } from "./lib/build-repository-map.mjs";
 import { generateActAmendments } from "./lib/act-amendments-artifact.mjs";
+import { generateDataRelease } from "./lib/data-release.mjs";
 
 const root = process.cwd();
 const output = path.join(root, "dist");
@@ -41,8 +42,12 @@ const actAmendments = await generateActAmendments({
   actsDir: path.join(dataDirectory, "acts"),
   outputDir: path.join(output, "data", "acts")
 });
-await addLoadHints(output, catalog);
+const dataRelease = await generateDataRelease(path.join(output, "data"));
+const loaderPath = path.join(output, "data-loader.js");
+await writeFile(loaderPath, (await readFile(loaderPath, "utf8")).replaceAll("__CGS_DATA_RELEASE_ID__", dataRelease.id));
+await addLoadHints(output, catalog, dataRelease.id);
 const buildId = await stampServiceWorker(output, undefined, {
+  dataReleaseId: dataRelease.id,
   corpusGeneratedAt: catalog.generatedAt,
   corpusSchemaVersion: catalog.schemaVersion
 });
@@ -54,7 +59,7 @@ console.log(`Built static site ${appVersion} at ${output} with ${discovery.pages
 // module graph and the catalog download in parallel with app.js. A statute link also starts its
 // supplement manifests and chapter file, which app.js would otherwise request only after the
 // catalog has arrived and all of its code has run.
-async function addLoadHints(directory, catalog) {
+async function addLoadHints(directory, catalog, dataReleaseId) {
   const modules = new Set();
   const pending = ["app.js"];
   while (pending.length) {
@@ -88,10 +93,10 @@ async function addLoadHints(directory, catalog) {
     const files = ${JSON.stringify(statuteFiles)};
     const chapter = route[1] && decodeURIComponent(route[1]);
     if (chapter && !${JSON.stringify(supplementOnly)}.includes(chapter)) files.push("./data/chapters/" + chapter + ".json");
-    for (const href of files) document.head.append(Object.assign(document.createElement("link"), { rel: "preload", as: "fetch", crossOrigin: "anonymous", href }));
+    for (const href of files) document.head.append(Object.assign(document.createElement("link"), { rel: "preload", as: "fetch", crossOrigin: "anonymous", href: href + "?release=${dataReleaseId}" }));
   })();`;
   const hints = [
-    `<link rel="preload" href="./data/catalog.json" as="fetch" crossorigin>`,
+    `<link rel="preload" href="./data/catalog.json?release=${dataReleaseId}" as="fetch" crossorigin>`,
     ...[...modules].sort().map((module) => `<link rel="modulepreload" href="./${module}">`),
     `<script>\n  ${statuteHints}\n  </script>`
   ].join("\n  ");

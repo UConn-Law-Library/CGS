@@ -31,13 +31,16 @@ Each run retains:
 
 Snapshots and staging data stay beneath `.crawl/` and are never committed.
 
-## Temporary CGA TLS exception
+## Authenticated CGA acquisition
 
-As of July 14, 2026, `www.cga.ct.gov` serves its leaf certificate without the GoDaddy Secure Certificate Authority G2 intermediate. The Ubuntu Actions runner therefore cannot build the certificate chain and the first production refresh failed with `CERTIFICATE_VERIFY_FAILED: unable to get local issuer certificate` ([run 29300224349](https://github.com/UConn-Law-Library/CGS/actions/runs/29300224349)).
+All production acquisition verifies TLS. Refresh workflows build `.crawl/ca-bundle.pem` from the locked `certifi` roots and the reviewed Go Daddy G2 intermediate in `config/certs/`. The intermediate's DER fingerprint is checked before the bundle is used. See [certificate provenance and review](../config/certs/README.md).
 
-The refresh workflow temporarily passes `--no-ssl-verify` only to the CGA crawler. Raw response snapshots, content hashes, canonical validation, corpus safety thresholds, and mandatory pull-request review remain in force, but they do not replace transport authentication. Do not generalize this exception to other hosts or application traffic.
+```sh
+python -m crawler.cgs_crawler.tls --output .crawl/ca-bundle.pem
+python -m crawler.cgs_crawler.cli --ca-bundle .crawl/ca-bundle.pem --output .crawl/corpus
+```
 
-Remove the exception when CGA serves a complete chain or when the crawler has a reviewed CA-bundle mechanism containing the official GoDaddy intermediate. The crawl step enables shell `pipefail` so any future acquisition failure is reported immediately rather than being masked by log capture through `tee`.
+`--ca-bundle` or `CGS_CA_BUNDLE` selects the bundle. A missing bundle, changed certificate, or failed server authentication stops acquisition. The legacy insecure CLI flags remain for local diagnostics but are rejected in CI. Never publish data acquired with those overrides. Content hashes identify captured bytes; they do not authenticate the server. Shell `pipefail` propagates acquisition errors through log capture.
 
 ## Safety policy
 
@@ -88,3 +91,9 @@ The workflow is scheduled for Mondays at 10:17 UTC. Scheduled runs always enable
 When the primary corpus changes, the workflow runs `secondary:rebind` to rebuild statute resolutions and reverse links from the already-published records in `public/data/secondary`. This step runs offline, preserves the reviewed text, fees, IDs, and source provenance, and binds the result to the candidate base. It validates both datasets, retains a `secondary-rebind-diff` and safety review with the corpus reports, and includes those results in the draft PR. A validation or resolution-policy failure stops publication.
 
 The corpus workflow does not download secondary PDFs. New index and infractions editions are acquired only by the independently scheduled and manually dispatchable `Review secondary sources refresh` workflow. A Judicial or LCO PDF outage cannot block the statute refresh, and the published secondary dataset is never silently discarded.
+
+## Supplement content gate
+
+Every rebound edition gets a separate `supplement-<year>-diff.json` and Markdown report. These compare citation additions, removals, headings, status, legal content, and the replacement/addition classifications computed against each base. Refresh PRs include the summary; retained JSON contains the full before/after records. `config/supplement-refresh-policy.json` blocks any removal or classification change by default. Legitimate changes require a separately reviewed policy update. Superseded editions follow the explicit retirement policy above.
+
+Discovery pages apply the same supplement overlay algorithm as the reader, including supplement-only chapters, so their section listings reflect the published consolidated view.

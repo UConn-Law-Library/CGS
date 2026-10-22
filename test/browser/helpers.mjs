@@ -12,7 +12,7 @@ export async function expectNoHighImpactAccessibilityViolations(page) {
   const results = await new AxeBuilder({ page })
     .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22aa"])
     .analyze();
-  const violations = results.violations.filter(({ impact }) => ["critical", "serious"].includes(impact));
+  const violations = results.violations;
   expect(violations, violations.map(({ id, help, nodes }) =>
     `${id}: ${help}\n${nodes.map(({ target, failureSummary }) => `  ${target.join(" ")}: ${failureSummary}`).join("\n")}`
   ).join("\n\n")).toEqual([]);

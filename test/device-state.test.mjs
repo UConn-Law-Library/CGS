@@ -45,9 +45,9 @@ test("page history remains usable in memory when browser storage is blocked", ()
 test("stores and removes device-local bookmarks", () => {
   const state = new DeviceState({ storage: memoryStorage() });
   const bookmark = { id: "statute:1-1", type: "statute", title: "Sec. 1-1", href: "#/t/1/c/1/s/1-1" };
-  assert.equal(state.toggleBookmark(bookmark), true);
+  assert.deepEqual(state.toggleBookmark(bookmark), { saved: true, persisted: true });
   assert.equal(state.isBookmarked(bookmark.id), true);
-  assert.equal(state.toggleBookmark(bookmark), false);
+  assert.deepEqual(state.toggleBookmark(bookmark), { saved: false, persisted: true });
   assert.deepEqual(state.bookmarks(), []);
 });
 

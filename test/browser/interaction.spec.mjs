@@ -392,7 +392,7 @@ test("focus rings and form field edges reach 3:1 against their surfaces in every
 
 test("Clear Data actions require confirmation", async ({ page }) => {
   await page.addInitScript(() => {
-    localStorage.setItem("cgs.bookmarks.v1", JSON.stringify([{ id: "saved", href: "#/t/02c/c/028a/s/2c-21" }]));
+    localStorage.setItem("cgs.bookmarks.v1", JSON.stringify([{ id: "saved", type: "statute", title: "Saved statute", href: "#/t/02c/c/028a/s/2c-21" }]));
     localStorage.setItem("cgs.recents.v1", JSON.stringify([{ id: "viewed", type: "statute", title: "Viewed", href: "#/t/02c/c/028a/s/2c-21", viewedAt: new Date().toISOString() }]));
     localStorage.setItem("cgs.search-history.v1", JSON.stringify([{ query: "law", href: "#/search?q=law", searchedAt: new Date().toISOString() }]));
   });

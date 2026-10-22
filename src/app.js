@@ -1,3 +1,9 @@
+import { createOmnisearchController } from "./omnisearch-controller.js";
+import { createAboutPage, formatSnapshotDate } from "./about-page.js";
+import { createShell, icons, bookmarkButtonLabel } from "./shell.js";
+import { QuickSearchRepository } from "./quick-search.js";
+import { renderBookmarkPage } from "./bookmark-page.js";
+import { bindBookmarkControls } from "./bookmark-controls.js";
 import { explainSearchQuery, normalizeSearchOptions, SearchRepository } from "./search.js";
 import { applyChapterOverlay, mergeSupplementTitleChapters, SupplementRepository } from "./supplements.js";
 import { ProgressiveSearchClient } from "./search-client.js";
@@ -57,20 +63,14 @@ import { applyPreferences, DeviceState } from "./device-state.js";
 import { PwaManager } from "./pwa.js";
 import { NativeDialogController } from "./dialog.js";
 import { aggregateShardCounts, contextualColumnCount } from "./context-navigation.js";
-import { APP_VERSION, RECENT_UPDATES } from "./release.js";
-import { renderSiteUpdates } from "./site-updates.js";
 import { NavigationHistory } from "./navigation-history.js";
+import { getJson, retryableLoader } from "./data-loader.js";
 import {
   actSearchLinks,
-  buildOmniRows,
   findActMatches,
-  findIndexMatches,
   findInfractionMatches,
-  findNavigationMatches,
-  indexLetterForQuery,
   matchInfractions,
-  plainSearchWords,
-  statuteMatches
+  plainSearchWords
 } from "./omnisearch.js";
 import {
   formatMoney,
@@ -90,39 +90,33 @@ const app = document.querySelector("#app");
 const supplementRepository = new SupplementRepository();
 const repository = new SearchRepository({ supplementRepository });
 const searchClient = new ProgressiveSearchClient({ repository });
+const quickSearch = new QuickSearchRepository(repository);
 const secondaryRepository = new SecondarySourceRepository();
 const actsRepository = new ActsRepository();
 const deviceState = new DeviceState();
 const navigationHistory = new NavigationHistory();
 let lastRecordedPage = null;
 const pwaManager = new PwaManager();
-const catalogPromise = getJson("./data/catalog.json");
+const loadCatalog = retryableLoader(() => getJson("./data/catalog.json"));
 let renderSequence = 0;
 let hasRendered = false;
 let activeSearchController = null;
-let activeOmniController = null;
-let omniTimer = null;
-let omniSelection = -1;
 let chapterDialogController = null;
 const deferredIndexLinks = new Map();
 let pendingClearAction = null;
 let unmountGuide = null;
 let pwaState = pwaManager.state;
+const { closeOmni, scheduleOmnisearch, moveOmniSelection, selectedOmniItem } = createOmnisearchController({ loadCatalog, quickSearch, secondaryRepository, actsRepository });
 const SEARCH_BATCH_SIZE = 50;
 const LARGE_INDEX_TOPIC_THRESHOLD = 200;
-const FEEDBACK_ENDPOINT = "https://formsubmit.co/lawlibraryadministration@uconn.edu";
+const { siteHeader, updatePwaControls } = createShell({ deviceState, navigationHistory, getPwaState: () => pwaState });
+const renderAbout = createAboutPage({ app, secondaryRepository, actsRepository, loadLatestSupplement, setDocumentTitle, siteHeader, breadcrumbs, legalFooter, isCurrent: (sequence) => sequence === renderSequence });
 applyPreferences(deviceState.preferences());
 pwaManager.subscribe((state) => {
   pwaState = state;
   updatePwaControls();
 });
 pwaManager.init();
-
-async function getJson(path) {
-  const response = await fetch(path);
-  if (!response.ok) throw new Error(`Could not load ${path} (${response.status})`);
-  return response.json();
-}
 
 // fetch() rejects with a TypeError when the request never reaches a server; HTTP errors
 // arrive as our own Error with the status in its message.
@@ -153,236 +147,6 @@ function searchFailureMessage(error) {
     network: "The search data could not be reached. Check your connection and search again.",
     server: `Search could not finish because its data did not load (${error.message}). Try again in a moment.`
   }[loadFailureKind(error)];
-}
-
-function activeDestination(route = parseRoute(location)) {
-  if (route.kind === "index") return "index";
-  if (route.kind === "infractions") return "infractions";
-  if (route.kind === "acts" || route.kind === "act") return "acts";
-  if (route.kind === "bookmarks") return "bookmarks";
-  if (route.kind === "about") return "settings";
-  // Reached from Home, Settings, About, and Acts; no tab claims it.
-  if (route.kind === "guide") return "guide";
-  if (route.kind === "history") return "history";
-  return "statutes";
-}
-
-const svgIcon = (paths) => `<svg class="glyph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false">${paths}</svg>`;
-const icons = {
-  document: svgIcon(`<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/>`),
-  scale: svgIcon(`<path d="M12 3v18M8 21h8M5 7h14"/><path d="M2 15l3-8 3 8M16 15l3-8 3 8"/><path d="M2 15a3 3 0 0 0 6 0M16 15a3 3 0 0 0 6 0"/>`),
-  bookmark: svgIcon(`<path d="M6 3h12v18l-6-4-6 4z"/>`),
-  help: svgIcon(`<circle cx="12" cy="12" r="9"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"/><path d="M12 17h.01"/>`),
-  bookmarkFilled: svgIcon(`<path d="M6 3h12v18l-6-4-6 4z" fill="currentColor"/>`)
-};
-
-const bookmarkButtonLabel = (saved) => `<span aria-hidden="true">${saved ? icons.bookmarkFilled : icons.bookmark}</span>${saved ? "Saved" : "Bookmark"}`;
-
-function navLink({ href, id, icon, label, badge = null }, active) {
-  const badgeMarkup = badge === null ? "" : `<span class="nav-badge" aria-label="${badge} saved bookmark${badge === 1 ? "" : "s"}">${badge}</span>`;
-  return `<a href="${href}"${active === id ? ` aria-current="page"` : ""}><span aria-hidden="true">${icon}</span><span>${label}</span>${badgeMarkup}</a>`;
-}
-
-function installStatus(state) {
-  if (state.installed) return "Installed on this device";
-  if (state.installable) return "Ready to install";
-  return state.supported ? "Use the browser menu if unavailable" : "Not supported by this browser";
-}
-
-function offlineStatus(state) {
-  if (state.error) return state.error;
-  if (state.busy && state.totalFiles) return `Downloading ${state.cachedFiles.toLocaleString()} of ${state.totalFiles.toLocaleString()} files…`;
-  if (state.complete && state.compatibility?.compatible === false) return `${state.cachedFiles.toLocaleString()} files available offline; repair required`;
-  if (state.complete) return `${state.cachedFiles.toLocaleString()} files available offline`;
-  if (state.ready) return "Download the complete published dataset";
-  return state.supported ? "Preparing offline storage…" : "Offline storage is unavailable";
-}
-
-function persistenceStatus(state) {
-  if (!state.persistentStorageSupported) return "Persistent storage is not supported by this browser.";
-  if (state.persistentStorageGranted === true) return "Persistent browser storage is granted.";
-  if (state.persistentStorageGranted === false) return "Your browser may delete downloaded data when it needs more space.";
-  return "Persistent storage will be requested when offline data is downloaded.";
-}
-
-function revisionValue(value) {
-  return value ? escapeHtml(String(value)) : "Not reported";
-}
-
-function offlineRevisionMarkup(state) {
-  const current = state.currentRelease;
-  const currentRows = current ? `<dt>Application shell</dt><dd>${revisionValue(current.shellBuildId)}</dd>
-    <dt>Expected corpus</dt><dd>${revisionValue(current.corpus?.generatedAt)} · schema ${revisionValue(current.corpus?.schemaVersion)}</dd>` : "";
-  if (!state.complete) {
-    return `<dl class="offline-release-list">${currentRows || "<dt>Application release</dt><dd>Available after the offline worker is ready.</dd>"}</dl>`;
-  }
-  const supplementRows = (state.supplements ?? []).map((edition) =>
-    `<dt>${escapeHtml(String(edition.editionYear))} supplement</dt><dd>${revisionValue(edition.generatedAt)} · schema ${revisionValue(edition.schemaVersion)}</dd>`
-  ).join("");
-  const verification = state.verifiedFiles
-    ? `${state.verifiedFiles.toLocaleString()} artifacts (${escapeHtml(formatStorage(state.verifiedBytes) ?? `${state.verifiedBytes} bytes`)})`
-    : "Not recorded by this offline data format";
-  return `<dl class="offline-release-list">
-    ${currentRows}
-    <dt>Downloaded</dt><dd>${revisionValue(state.downloadedAt)}</dd>
-    <dt>Downloaded by shell</dt><dd>${revisionValue(state.shellBuildId)}</dd>
-    <dt>Corpus</dt><dd>${revisionValue(state.corpus?.generatedAt)} · schema ${revisionValue(state.corpus?.schemaVersion)}</dd>
-    <dt>Secondary sources</dt><dd>${revisionValue(state.secondary?.generatedAt)} · schema ${revisionValue(state.secondary?.schemaVersion)}</dd>
-    <dt>Search index</dt><dd>${revisionValue(state.search?.generatedAt)} · schema ${revisionValue(state.search?.schemaVersion)}</dd>
-    ${supplementRows}
-    <dt>SHA-256 verified</dt><dd>${verification}</dd>
-  </dl>`;
-}
-
-function offlineCompatibilityWarning(state) {
-  if (state.compatibility?.compatible !== false) return "";
-  return `${state.compatibility.reason ?? "The downloaded corpus is incompatible with this application release."} Repair offline data before relying on offline access.`;
-}
-
-function formatStorage(bytes) {
-  if (!Number.isFinite(bytes)) return null;
-  const units = ["B", "KB", "MB", "GB"];
-  let value = bytes;
-  let unit = 0;
-  while (value >= 1024 && unit < units.length - 1) {
-    value /= 1024;
-    unit += 1;
-  }
-  return `${value >= 10 || unit === 0 ? Math.round(value) : value.toFixed(1)} ${units[unit]}`;
-}
-
-function storageStatus(state) {
-  const usage = formatStorage(state.storageUsage);
-  const quota = formatStorage(state.storageQuota);
-  if (usage && quota) return `Browser storage for this site: ${usage} used of ${quota}`;
-  if (usage) return `Browser storage for this site: ${usage} used`;
-  return "Storage usage is not reported by this browser.";
-}
-
-function updatePwaControls() {
-  const install = document.querySelector("[data-install-app]");
-  const download = document.querySelector("[data-download-offline]");
-  const repair = document.querySelector("[data-repair-offline]");
-  const clear = document.querySelector("[data-clear-offline]");
-  const status = document.querySelector("[data-pwa-status]");
-  const persistence = document.querySelector("[data-persistence-status]");
-  const storage = document.querySelector("[data-storage-status]");
-  const release = document.querySelector("[data-offline-release]");
-  const warning = document.querySelector("[data-offline-compatibility]");
-  const update = document.querySelector("[data-apply-update]");
-  const progress = document.querySelector("[data-pwa-progress]");
-  if (!install) return;
-  install.disabled = pwaState.installed || !pwaState.installable;
-  install.querySelector("small").textContent = installStatus(pwaState);
-  download.disabled = !pwaState.ready || pwaState.busy;
-  download.querySelector("[data-offline-action-label]").textContent = pwaState.complete ? "Refresh offline data" : "Download for offline use";
-  repair.disabled = !pwaState.ready || pwaState.busy || !pwaState.complete;
-  clear.disabled = !pwaState.cachedFiles || pwaState.busy;
-  status.textContent = offlineStatus(pwaState);
-  persistence.textContent = persistenceStatus(pwaState);
-  storage.textContent = storageStatus(pwaState);
-  release.innerHTML = offlineRevisionMarkup(pwaState);
-  const warningText = offlineCompatibilityWarning(pwaState);
-  warning.hidden = !warningText;
-  warning.textContent = warningText;
-  update.hidden = !pwaState.updateAvailable;
-  progress.hidden = !pwaState.busy || !pwaState.totalFiles;
-  progress.max = Math.max(1, pwaState.totalFiles);
-  progress.value = pwaState.cachedFiles;
-}
-
-function settingsPanel() {
-  const preferences = deviceState.preferences();
-  const bookmarkCount = deviceState.bookmarks().length;
-  const recentCount = deviceState.recents().length;
-  const searchHistoryCount = deviceState.searchHistory().length;
-  return `<section class="settings-panel" role="dialog" aria-label="Settings" data-settings-panel hidden>
-    <div class="settings-heading"><strong>Settings</strong><button type="button" class="icon-button" data-close-settings aria-label="Close settings">×</button></div>
-    <div class="setting-group"><span>Theme</span><div class="segmented" role="group" aria-label="Theme">
-      ${Object.entries({ auto: "Auto", light: "Light", dark: "Dark", oled: "OLED" }).map(([theme, label]) => `<button type="button" data-theme-value="${theme}" aria-pressed="${preferences.theme === theme}">${label}</button>`).join("")}
-    </div></div>
-    <div class="setting-group typography-setting"><label for="font-profile">Font</label><select id="font-profile" data-font-profile>
-      <option value="default"${preferences.fontProfile === "default" ? " selected" : ""}>Default</option>
-      <option value="atkinson"${preferences.fontProfile === "atkinson" ? " selected" : ""}>Atkinson Hyperlegible Font</option>
-      <option value="lexend"${preferences.fontProfile === "lexend" ? " selected" : ""}>Lexend</option>
-      <option value="inclusive"${preferences.fontProfile === "inclusive" ? " selected" : ""}>Inclusive Sans</option>
-    </select></div>
-    <div class="setting-group typography-setting"><div class="setting-row-label"><label for="text-size">Text size</label><output for="text-size" data-text-size-value>${Math.round(preferences.textScale * 100)}%</output></div>
-      <input id="text-size" type="range" min="0.85" max="1.25" step="0.05" value="${preferences.textScale}" data-text-size>
-    </div>
-    <div class="setting-group typography-setting"><div class="setting-row-label"><label for="line-spacing">Line spacing</label><output for="line-spacing" data-line-spacing-value>${preferences.lineSpacing.toFixed(2)}×</output></div>
-      <input id="line-spacing" type="range" min="1.2" max="2.2" step="0.05" value="${preferences.lineSpacing}" data-line-spacing>
-    </div>
-    <label class="setting-row"><span><strong>Compact lists</strong><small>Show more items on screen</small></span><input type="checkbox" data-compact-lists${preferences.compactLists ? " checked" : ""}></label>
-    <label class="setting-row"><span><strong>Hide repealed sections</strong><small>Remove them from chapter navigation</small></span><input type="checkbox" data-hide-repealed${preferences.hideRepealedSections ? " checked" : ""}></label>
-    <button type="button" class="settings-action update-action" data-apply-update${pwaState.updateAvailable ? "" : " hidden"}>Update available <small>Reload to use the latest published app</small></button>
-    <a class="settings-action" href="#/about"><strong class="settings-about-title">About this app</strong> <small>Sources, coverage, and project information</small></a>
-    <a class="settings-action" href="${guideRouteHref()}"><strong class="settings-about-title">Understanding the Statutes</strong> <small>How laws are enacted, codified, and published</small></a>
-    <details class="install-app-menu"><summary>Install App</summary>
-    <button type="button" class="settings-action" data-install-app${pwaState.installed || !pwaState.installable ? " disabled" : ""}>Install app <small>${escapeHtml(installStatus(pwaState))}</small></button>
-    <button type="button" class="settings-action" data-download-offline${!pwaState.ready || pwaState.busy ? " disabled" : ""}><span data-offline-action-label>${pwaState.complete ? "Refresh offline data" : "Download for offline use"}</span><small>Statutes, supplements, search, index, infractions, and acts</small></button>
-    <progress class="offline-progress" data-pwa-progress value="${pwaState.cachedFiles}" max="${Math.max(1, pwaState.totalFiles)}"${!pwaState.busy || !pwaState.totalFiles ? " hidden" : ""}>Offline download progress</progress>
-    <button type="button" class="settings-action" data-repair-offline${!pwaState.ready || pwaState.busy || !pwaState.complete ? " disabled" : ""}>Repair offline data <small>Download every file again and check for errors</small></button>
-    <button type="button" class="settings-action" data-clear-offline${!pwaState.cachedFiles || pwaState.busy ? " disabled" : ""}>Remove offline data <small>Keep the installed app</small></button>
-    <p class="offline-compatibility-warning" data-offline-compatibility role="alert"${offlineCompatibilityWarning(pwaState) ? "" : " hidden"}>${escapeHtml(offlineCompatibilityWarning(pwaState))}</p>
-    <p class="settings-note" data-pwa-status role="status" aria-live="polite">${escapeHtml(offlineStatus(pwaState))}</p>
-    <p class="settings-note" data-persistence-status>${escapeHtml(persistenceStatus(pwaState))}</p>
-    <p class="settings-note" data-storage-status>${escapeHtml(storageStatus(pwaState))}</p>
-    <details class="offline-release-details"><summary>Offline release details</summary><div data-offline-release>${offlineRevisionMarkup(pwaState)}</div></details>
-    </details>
-    <details class="clear-data-menu"><summary>Clear Data</summary>
-      <button type="button" class="settings-action" data-clear-bookmarks${bookmarkCount ? "" : " disabled"}>Clear bookmarks <small>${bookmarkCount ? `${bookmarkCount} saved` : "None saved"}</small></button>
-      <button type="button" class="settings-action" data-clear-recents${recentCount ? "" : " disabled"}>Clear recent history <small>${recentCount ? `${recentCount} item${recentCount === 1 ? "" : "s"}` : "No recent history"}</small></button>
-      <button type="button" class="settings-action" data-clear-search-history${searchHistoryCount ? "" : " disabled"}>Clear search history <small>${searchHistoryCount ? `${searchHistoryCount} search${searchHistoryCount === 1 ? "" : "es"}` : "No search history"}</small></button>
-    </details>
-    <button type="button" class="settings-action feedback-action" data-open-feedback>Submit feedback <small>Share a comment with the Law Library</small></button>
-  </section>`;
-}
-
-function siteHeader() {
-  const route = parseRoute(location);
-  const active = activeDestination(route);
-  const searchValue = route.kind === "search" ? route.query ?? "" : "";
-  const bookmarkCount = deviceState.bookmarks().length;
-  return `<header class="site-header">
-    <div class="header-bar">
-      <a class="brand" href="#/"><span class="brand-mark" aria-hidden="true">§</span><span>Connecticut General Statutes</span></a>
-      <nav class="app-nav" aria-label="Main sections">
-        ${navLink({ href: "#/", id: "statutes", icon: "§", label: "Statutes" }, active)}
-        ${navLink({ href: "#/index", id: "index", icon: "A–Z", label: "Index" }, active)}
-        ${navLink({ href: "#/infractions", id: "infractions", icon: icons.scale, label: "Infractions" }, active)}
-        ${navLink({ href: "#/acts", id: "acts", icon: icons.document, label: "Acts" }, active)}
-        ${navLink({ href: "#/bookmarks", id: "bookmarks", icon: icons.bookmark, label: "Bookmarks", badge: bookmarkCount }, active)}
-        <button type="button" data-open-settings aria-expanded="false"${active === "settings" ? ` aria-current="page"` : ""}><span aria-hidden="true">⚙</span><span>Settings</span></button>
-      </nav>
-    </div>
-    <form class="global-search" data-global-search role="search">
-      <button type="button" class="navigation-back" data-go-back aria-label="Go back" title="Go back to the previous page"${navigationHistory.canGoBack ? "" : " disabled"}><span aria-hidden="true">←</span><span class="back-label"> Back</span></button>
-      <label class="visually-hidden" for="global-query">Search statutes, acts, index topics, and infractions</label>
-      <div class="global-search-field">
-        <input id="global-query" name="query" type="search" minlength="2" required value="${escapeHtml(searchValue)}" placeholder="Search statutes, acts, index, and infractions" autocomplete="off" spellcheck="false"
-          role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="omni-results" data-omni-input>
-        <kbd class="omni-shortcut" aria-hidden="true">/</kbd>
-        <div class="omni-panel" id="omni-results" role="listbox" hidden data-omni-panel></div>
-      </div>
-      <button type="submit" class="global-search-button">Search</button>
-      <a class="navigation-history" href="#/history"${route.kind === "history" ? ' aria-current="page"' : ""}>History</a>
-    </form>
-    ${settingsPanel()}
-  </header><dialog class="clear-data-dialog" data-clear-data-dialog aria-labelledby="clear-data-title">
-    <h2 id="clear-data-title">Clear data?</h2><p data-clear-data-message></p>
-    <div class="clear-data-dialog-actions"><button type="button" data-cancel-clear>Cancel</button><button type="button" data-confirm-clear>Clear data</button></div>
-  </dialog><dialog class="feedback-dialog" data-feedback-dialog aria-labelledby="feedback-title">
-    <h2 id="feedback-title">Submit feedback</h2>
-    <form action="${FEEDBACK_ENDPOINT}" method="POST" data-feedback-form>
-      <input type="hidden" name="_subject" value="Connecticut General Statutes feedback">
-      <label for="feedback-name">Name</label><input id="feedback-name" name="name" type="text" autocomplete="name" maxlength="120" required>
-      <label for="feedback-email">Email</label><input id="feedback-email" name="email" type="email" autocomplete="email" maxlength="254" required>
-      <label for="feedback-message">Feedback</label><textarea id="feedback-message" name="message" rows="6" maxlength="5000" required></textarea>
-      <p class="feedback-status" data-feedback-status role="status"></p>
-      <div class="feedback-dialog-actions"><button type="button" data-close-feedback>Cancel</button><button type="submit">Send feedback</button></div>
-    </form>
-  </dialog>`;
 }
 
 function legalFooter() {
@@ -541,7 +305,7 @@ function statuteSectionItems(title, chapter, sections, selected, changeBySection
     const supplement = change ? `<span class="supplement-pill supplement-${escapeHtml(change.presentation)}">${escapeHtml(supplementLabel(change, { short: true }))}</span>` : "";
     const description = navigationSectionDescription(section);
     const showDescription = description && description !== section.citation;
-    return `<li><a href="${escapeHtml(provisionRoute(title, chapter, section))}"${selected?.id === section.id ? ` aria-current="page"` : ""}><strong>${escapeHtml(navigationSectionLabel(section))}</strong>${status}${supplement}${pendingActPill(pendingBySection.get(section.id))}${showDescription ? `<span>${escapeHtml(description)}</span>` : ""}</a></li>`;
+    return `<li><a href="${escapeHtml(provisionRoute(title, chapter, section))}"${selected?.id === section.id ? ` aria-current="page"` : ""}><strong>${escapeHtml(navigationSectionLabel(section))}</strong>${status}${supplement}<span data-act-notice-for="${escapeHtml(section.id)}">${pendingActPill(pendingBySection.get(section.id))}</span>${showDescription ? `<span>${escapeHtml(description)}</span>` : ""}</a></li>`;
   });
 }
 
@@ -575,127 +339,6 @@ function bindChapterSheet() {
   chapterDialogController = null;
   const dialog = document.querySelector("[data-chapter-sheet]");
   if (dialog) chapterDialogController = new NativeDialogController(dialog);
-}
-
-function omniItems() {
-  return [...document.querySelectorAll("[data-omni-option]")];
-}
-
-function closeOmni({ abort = true } = {}) {
-  clearTimeout(omniTimer);
-  omniTimer = null;
-  if (abort) activeOmniController?.abort();
-  if (abort) activeOmniController = null;
-  const input = document.querySelector("[data-omni-input]");
-  const panel = document.querySelector("[data-omni-panel]");
-  if (panel) panel.hidden = true;
-  input?.setAttribute("aria-expanded", "false");
-  input?.removeAttribute("aria-activedescendant");
-  omniSelection = -1;
-}
-
-function renderOmniPanel(query, groups, { completed = 0, total = 0, pending = false } = {}) {
-  const input = document.querySelector("[data-omni-input]");
-  const panel = document.querySelector("[data-omni-panel]");
-  if (!input || !panel || input.value.trim() !== query) return;
-  const previousHref = omniItems()[omniSelection]?.getAttribute("href") ?? null;
-  const rows = buildOmniRows(groups);
-  const body = rows.length ? rows.map((row, index) => `<a class="omni-item" id="omni-option-${index}" role="option" aria-selected="false" data-omni-option href="${escapeHtml(row.href)}">
-      <span class="omni-kind">${escapeHtml(row.kind)}</span>
-      <strong class="omni-main">${escapeHtml(row.label)}</strong>
-      <small class="omni-sub">${escapeHtml(row.subtitle)}</small>
-    </a>`).join("") : `<p class="omni-empty">${pending ? "Searching published legal data…" : "No quick matches. Press Enter for complete search results."}</p>`;
-  const progress = pending && total ? `Searching ${completed} of ${total} statute titles…` : pending ? "Searching published legal data…" : `${rows.length} quick match${rows.length === 1 ? "" : "es"}`;
-  panel.innerHTML = `${body}<div class="omni-foot"><span>${escapeHtml(progress)}</span><span>Enter: full search results · ↑↓: choose · Esc: close</span></div>`;
-  panel.hidden = false;
-  input.setAttribute("aria-expanded", "true");
-  omniSelection = previousHref ? omniItems().findIndex((item) => item.getAttribute("href") === previousHref) : -1;
-  if (omniSelection >= 0) {
-    const active = omniItems()[omniSelection];
-    active.classList.add("selected");
-    active.setAttribute("aria-selected", "true");
-    input.setAttribute("aria-activedescendant", active.id);
-  } else {
-    input.removeAttribute("aria-activedescendant");
-  }
-}
-
-function moveOmniSelection(delta) {
-  const input = document.querySelector("[data-omni-input]");
-  const items = omniItems();
-  if (!items.length) return false;
-  omniSelection = (omniSelection + delta + items.length) % items.length;
-  items.forEach((item, index) => {
-    const selected = index === omniSelection;
-    item.classList.toggle("selected", selected);
-    item.setAttribute("aria-selected", String(selected));
-  });
-  const active = items[omniSelection];
-  input?.setAttribute("aria-activedescendant", active.id);
-  active.scrollIntoView({ block: "nearest" });
-  return true;
-}
-
-async function runOmnisearch(query) {
-  activeOmniController?.abort();
-  const controller = new AbortController();
-  activeOmniController = controller;
-  const catalog = await catalogPromise;
-  if (controller.signal.aborted) return;
-  const groups = { statutes: [], ...findNavigationMatches(catalog, query), acts: [], index: [], infractions: [] };
-  const letter = indexLetterForQuery(query);
-  let completed = 0;
-  let total = 0;
-  let pendingTasks = letter ? 4 : 3;
-  const render = () => renderOmniPanel(query, groups, { completed, total, pending: pendingTasks > 0 });
-  const finish = () => {
-    pendingTasks -= 1;
-    if (!controller.signal.aborted) render();
-  };
-  render();
-
-  const statutes = searchClient.search(query, {
-    limit: 5,
-    signal: controller.signal,
-    onProgress(update) {
-      if (controller.signal.aborted) return;
-      completed = update.completed;
-      total = update.total;
-      groups.statutes = statuteMatches(update.results);
-      render();
-    }
-  }).then((outcome) => {
-    groups.statutes = statuteMatches(outcome.results);
-  }).catch((error) => {
-    if (error.name !== "AbortError") console.warn("Quick statute search failed", error);
-  }).finally(finish);
-
-  const infractions = secondaryRepository.loadAllInfractions().then((entries) => {
-    if (!controller.signal.aborted) groups.infractions = findInfractionMatches(entries, query);
-  }).catch((error) => console.warn("Quick infraction search failed", error)).finally(finish);
-
-  const acts = actsRepository.loadSearchableSessions().then((sessions) => {
-    if (!controller.signal.aborted) groups.acts = findActMatches(sessions, query);
-  }).catch((error) => console.warn("Quick acts search failed", error)).finally(finish);
-
-  const index = letter ? secondaryRepository.loadIndexLetter(letter).then((topics) => {
-    if (!controller.signal.aborted) groups.index = findIndexMatches(topics, query);
-  }).catch((error) => console.warn("Quick index search failed", error)).finally(finish) : Promise.resolve();
-
-  await Promise.all([statutes, infractions, acts, index]);
-  if (activeOmniController === controller) activeOmniController = null;
-}
-
-function scheduleOmnisearch(input, delay = 180) {
-  clearTimeout(omniTimer);
-  activeOmniController?.abort();
-  activeOmniController = null;
-  const query = input.value.trim();
-  if (query.length < 2) return closeOmni();
-  omniTimer = setTimeout(() => {
-    omniTimer = null;
-    runOmnisearch(query);
-  }, delay);
 }
 
 function breadcrumbs(items) {
@@ -737,7 +380,7 @@ function provisionRoute(title, chapter, section, subsection = null) {
   });
 }
 
-async function referenceMaps(provisions, catalog) {
+async function referenceMaps(provisions, catalog, { resolve = true } = {}) {
   const values = (Array.isArray(provisions) ? provisions : [provisions]).flatMap((section) => [
     ...section.content.body,
     ...section.content.sourceNotes,
@@ -755,6 +398,13 @@ async function referenceMaps(provisions, catalog) {
     if (!referencedTitles.has(title.id)) referencedTitles.set(title.id, { title, citations: [] });
     referencedTitles.get(title.id).citations.push(citation);
   }
+
+  for (const citation of references.sections) sections.set(citation, searchRouteHref(citation));
+  for (const number of references.chapters) {
+    const match = findChapter(catalog, number);
+    if (match) chapters.set(number, chapterRoute(match.title, match.chapter));
+  }
+  if (!resolve) return { sections, chapters };
 
   await Promise.all([...referencedTitles.values()].map(async ({ title, citations }) => {
     try {
@@ -810,7 +460,7 @@ function renderInformationReferences(section, maps, secondaryContext, change) {
     renderNotes(change ? `Source (${change.editionYear} Supplement)` : "Source", section.content.sourceNotes, maps),
     renderNotes(change ? `History (${change.editionYear} Supplement)` : "History", section.content.history, maps),
     renderAnnotations(section.content.annotations, maps),
-    renderSecondaryContext(secondaryContext)
+    `<div data-secondary-references>${secondaryContext ? renderSecondaryContext(secondaryContext) : '<p role="status">Related references loading…</p>'}</div>`
   ].filter(Boolean).join("");
   if (!groups) return "";
   return `<section class="information-references" aria-labelledby="information-references-heading">
@@ -927,7 +577,7 @@ function renderProvision(title, chapter, section, maps, secondaryContext = null,
       <p class="eyebrow">${escapeHtml(change ? supplementLabel(change) : status)}</p>
       <h1>${escapeHtml(section.heading)}</h1>
     </div>
-    ${renderPendingAmendments(amendments)}
+    <div data-amendments-status><p role="status">Amendment information loading…</p></div>
     <div class="section-actions" aria-label="Section actions">
       ${bookmarkButton(bookmark)}
       <button type="button" data-copy-link="${escapeHtml(route)}">Copy link</button>
@@ -1036,60 +686,6 @@ function renderHistory() {
   window.scrollTo({ top: 0 });
 }
 
-function formatSnapshotDate(value) {
-  if (!value) return null;
-  const date = new Date(value);
-  if (Number.isNaN(date.getTime())) return String(value);
-  return new Intl.DateTimeFormat("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-    timeZone: "UTC"
-  }).format(date);
-}
-
-function aboutSourceCard({ publisher, name, description, details = [], caveat, url, refresh = false }) {
-  const visibleDetails = details.filter(Boolean);
-  return `<article class="about-source-card">
-    <p class="eyebrow">${escapeHtml(publisher)}</p>
-    <h3>${escapeHtml(name)}</h3>
-    <p>${escapeHtml(description)}</p>
-    ${visibleDetails.length ? `<p class="about-source-details">${visibleDetails.map((detail) => `<span>${escapeHtml(detail)}</span>`).join("")}</p>` : ""}
-    ${refresh ? `<p class="about-caveat" data-${refresh}-refresh aria-live="polite">Latest update check: loading… <a href="https://github.com/UConn-Law-Library/CGS/actions/workflows/refresh-${refresh}.yml" target="_blank" rel="noopener">View refresh runs ↗</a></p>` : ""}
-    <p class="about-caveat">${escapeHtml(caveat)}</p>
-    <a href="${escapeHtml(url)}" target="_blank" rel="noopener">Official source <span aria-hidden="true">↗</span></a>
-  </article>`;
-}
-
-async function updateRefreshStatus(sequence, source) {
-  const targets = document.querySelectorAll(`[data-${source}-refresh]`);
-  if (!targets.length) return;
-  try {
-    const response = await fetch(`https://api.github.com/repos/UConn-Law-Library/CGS/actions/workflows/refresh-${source}.yml/runs?branch=main&status=completed&per_page=1`, {
-      signal: AbortSignal.timeout(8000),
-      headers: { Accept: "application/vnd.github+json" }
-    });
-    if (!response.ok) throw new Error("Refresh history unavailable");
-    const { workflow_runs: runs } = await response.json();
-    const run = runs?.[0];
-    if (!run || !Number.isFinite(new Date(run.updated_at).getTime()) || !Number.isSafeInteger(run.id)) throw new Error("No completed refresh run");
-    if (sequence !== renderSequence) return;
-    const result = run.conclusion === "success" ? "completed successfully" : String(run.conclusion ?? "unknown result").replaceAll("_", " ");
-    for (const target of targets) {
-      target.replaceChildren(document.createTextNode(`Latest update check: ${formatSnapshotDate(run.updated_at)} (${result}). `));
-      const link = document.createElement("a");
-      link.href = `https://github.com/UConn-Law-Library/CGS/actions/runs/${run.id}`;
-      link.target = "_blank";
-      link.rel = "noopener";
-      link.textContent = "View refresh run ↗";
-      target.append(link);
-    }
-  } catch {
-    if (sequence !== renderSequence) return;
-    for (const target of targets) target.firstChild.textContent = "Latest update check: unavailable. ";
-  }
-}
-
 // The editions the statute text reflects: the base revision the catalog records and the latest
 // supplement merged over it. Act notices and currency notes judge which sessions are pending
 // from the later of the two.
@@ -1103,116 +699,6 @@ function statuteTextYears(catalog, supplementEdition) {
 async function loadLatestSupplement() {
   const edition = await supplementRepository.latestEdition();
   return edition ? { edition, manifest: await supplementRepository.loadEdition(edition.editionYear) } : null;
-}
-
-async function renderAbout(catalog, route, sequence) {
-  const [secondaryResult, supplementResult, actsResult] = await Promise.allSettled([
-    secondaryRepository.init(),
-    loadLatestSupplement(),
-    actsRepository.manifest()
-  ]);
-  if (sequence !== renderSequence) return;
-  const secondary = secondaryResult.status === "fulfilled" ? secondaryResult.value : null;
-  const supplement = supplementResult.status === "fulfilled" ? supplementResult.value : null;
-  const acts = actsResult.status === "fulfilled" ? actsResult.value : null;
-  const statuteDate = formatSnapshotDate(catalog.source?.retrievedAt ?? catalog.generatedAt);
-  const revisionYear = catalog.source?.revisionYear ?? null;
-  const indexSource = secondary?.index?.source ?? {};
-  const infractionSource = secondary?.infractions?.source ?? {};
-  const cards = [
-    aboutSourceCard({
-      publisher: "Connecticut General Assembly",
-      name: "General Statutes",
-      refresh: "corpus",
-      description: "Browse the Connecticut General Statutes by title, chapter, and section.",
-      details: [revisionYear && `Revised to January 1, ${revisionYear}`, statuteDate && `Captured ${statuteDate}`, `${catalog.counts.sections.toLocaleString()} sections`],
-      caveat: "Changes published after the capture date appear after the next reviewed corpus update.",
-      url: catalog.source?.url ?? "https://www.cga.ct.gov/current/pub/titles.htm"
-    }),
-    ...(supplement ? [aboutSourceCard({
-      publisher: "Connecticut General Assembly",
-      name: `${supplement.edition.editionYear} Supplement`,
-      description: "Sections amended, added, or repealed by the published supplement and consolidated into the reader when applicable.",
-      details: [formatSnapshotDate(supplement.manifest.generatedAt) && `Captured ${formatSnapshotDate(supplement.manifest.generatedAt)}`, `${supplement.manifest.counts.sections.toLocaleString()} sections`],
-      caveat: revisionYear
-        ? `Read the supplement together with the General Statutes revised to January 1, ${revisionYear}.`
-        : "Read the supplement together with the General Statutes revision it supplements.",
-      url: supplement.manifest.source?.url ?? `https://www.cga.ct.gov/${supplement.edition.editionYear}/sup/titles.htm`
-    })] : []),
-    ...(acts?.sessions.length ? [aboutSourceCard({
-      publisher: acts.source.publisher,
-      name: acts.source.name,
-      refresh: "acts",
-      description: "Acts passed by the General Assembly, with the text of each act and links to its PDF and bill history, for laws not yet reflected in the statute text.",
-      details: [`Updated ${formatSnapshotDate(acts.generatedAt)}`, ...acts.sessions.map((session) => `${session.name}: ${actsCountLabel(session.counts)}`)],
-      caveat: "Public Acts may take effect before revised statute text is published. Check each act's effective dates.",
-      url: acts.source.url
-    })] : []),
-    aboutSourceCard({
-      publisher: indexSource.publisher ?? "Connecticut General Assembly, Legislative Commissioners' Office",
-      name: "Subject index",
-      refresh: "secondary",
-      description: "Browse the official subject index alphabetically and open linked statute sections.",
-      details: [indexSource.revision, secondary?.index?.counts?.headings && `${secondary.index.counts.headings.toLocaleString()} headings`],
-      caveat: "The index is an access aid rather than legal text and can trail recently enacted legislation.",
-      url: indexSource.url ?? "https://www.cga.ct.gov/lco/statutes-index.asp"
-    }),
-    aboutSourceCard({
-      publisher: infractionSource.publisher ?? "State of Connecticut Judicial Branch",
-      name: "Infractions schedule",
-      refresh: "secondary",
-      description: "Chart A of the Judicial Branch mail-in violations and infractions schedule, with links to relevant statutes.",
-      details: [infractionSource.effective && `Effective ${infractionSource.effective}`, secondary?.infractions?.counts?.entries && `${secondary.infractions.counts.entries.toLocaleString()} entries`],
-      caveat: "Fine amounts and eligibility can change. Confirm them in the current Judicial Branch schedule before relying on this copy.",
-      url: infractionSource.url ?? "https://www.jud.ct.gov/webforms/forms/infractions.pdf"
-    })
-  ];
-  const headingCount = secondary?.index?.counts?.headings;
-  const infractionCount = secondary?.infractions?.counts?.entries;
-  setDocumentTitle("About");
-  app.innerHTML = `${siteHeader()}<main class="about-page" id="main-content">
-    ${breadcrumbs([{ label: "Titles", href: "#/" }, { label: "About" }])}
-    <section class="about-brand">
-      <img src="./wordmark.svg" alt="UConn School of Law, Law Library and Technology">
-    </section>
-    <header class="about-intro">
-      <p class="eyebrow">About this app</p>
-      <h1>Connecticut General Statutes Explorer</h1>
-      <p>The UConn Law Library provides this mobile-first tool for searching and browsing the Connecticut General Statutes, the official subject index, the Judicial Branch infraction schedule, and recent Public and Special Acts.</p>
-      <p class="about-version">Release <a href="https://github.com/UConn-Law-Library/CGS/releases/tag/${encodeURIComponent(APP_VERSION)}" target="_blank" rel="noopener">${escapeHtml(APP_VERSION)} <span aria-hidden="true">↗</span></a></p>
-      <p><a class="primary-link" href="https://library.law.uconn.edu/" target="_blank" rel="noopener">Visit the UConn Law Library Website <span aria-hidden="true">↗</span></a></p>
-      <p>New to Connecticut’s statutes? <a href="${guideRouteHref()}">Understanding the Statutes</a> explains how laws are enacted, codified, and published, and what this app’s data covers.</p>
-    </header>
-    <ul class="about-counts" aria-label="Published data coverage">
-      <li><strong>${catalog.titles.length.toLocaleString()}</strong><span>titles</span></li>
-      <li><strong>${catalog.counts.chapters.toLocaleString()}</strong><span>chapters</span></li>
-      <li><strong>${catalog.counts.sections.toLocaleString()}</strong><span>sections</span></li>
-      ${headingCount ? `<li><strong>${headingCount.toLocaleString()}</strong><span>index headings</span></li>` : ""}
-      ${infractionCount ? `<li><strong>${infractionCount.toLocaleString()}</strong><span>infractions</span></li>` : ""}
-    </ul>
-    ${renderSiteUpdates(RECENT_UPDATES)}
-    <section class="about-section" aria-labelledby="about-sources-heading">
-      <div class="about-section-heading"><p class="eyebrow">Provenance</p><h2 id="about-sources-heading">Data and official sources</h2></div>
-      <div class="about-source-list">${cards.join("")}</div>
-    </section>
-    <section class="about-section about-project" aria-labelledby="about-project-heading">
-      <div><p class="eyebrow">Privacy and architecture</p><h2 id="about-project-heading">Built for public access</h2></div>
-      <div>
-        <p>Searches run in your browser. Your bookmarks, display preferences, and downloaded offline data stay on this device. GitHub Pages hosts the app.</p>
-        <p>Data refreshes are parsed, validated, and reviewed before publication. The application and ingestion tools are maintained in the <a href="https://github.com/UConn-Law-Library/CGS" target="_blank" rel="noopener">public source repository <span aria-hidden="true">↗</span></a>.</p>
-      </div>
-    </section>
-    <aside class="legal-data-note"><strong>Unofficial access copy</strong><p>This application is not legal advice and is not the official legal publication. Verify statute text with the Connecticut General Assembly and infraction information with the Judicial Branch.</p></aside>
-  </main><footer>${legalFooter()}</footer>`;
-  void updateRefreshStatus(sequence, "corpus");
-  void updateRefreshStatus(sequence, "secondary");
-  void updateRefreshStatus(sequence, "acts");
-  const heading = route.section ? document.getElementById(`about-${route.section}-heading`) : null;
-  if (heading) {
-    heading.closest("section").scrollIntoView({ block: "start", behavior: "instant" });
-    heading.tabIndex = -1;
-    heading.focus({ preventScroll: true });
-  } else window.scrollTo({ top: 0 });
 }
 
 // The guide's code loads only on its own route, so other pages don't download it.
@@ -1509,20 +995,17 @@ async function renderChapter(catalog, title, chapterMeta, route, sequence) {
       .then((supplementChapter) => ({ edition: { editionYear: chapterMeta.supplementEditionYear }, chapter: supplementChapter }))
     : supplementRepository.loadLatestChapter(chapterMeta.number, title.id);
   latestPromise.catch(() => {});
-  // Which sections listed acts change. It loads with the chapter; if it fails, the page shows
-  // no act notices rather than failing.
-  const amendmentsPromise = Promise.all([actsRepository.amendments(), supplementRepository.latestEdition()])
-    .catch((error) => {
-      console.warn("Could not load the acts amendment index", error);
-      return [null, null];
-    });
+  const amendmentsPromise = actsRepository.amendments()
+    .then((index) => ({ index })).catch((error) => ({ error }));
   const baseChapter = await basePromise;
   if (sequence !== renderSequence) return;
   let chapter = baseChapter;
   let overlay = null;
   let supplementError = null;
+  let latestEdition = null;
   try {
     const latest = await latestPromise;
+    latestEdition = latest.edition;
     if (latest.chapter) {
       const applied = applyChapterOverlay(baseChapter, latest.chapter, latest.edition.editionYear);
       chapter = applied.chapter;
@@ -1535,11 +1018,7 @@ async function renderChapter(catalog, title, chapterMeta, route, sequence) {
   if (sequence !== renderSequence) return;
   if (!chapter) return renderNotFound("That supplement chapter could not be loaded.");
   const changeBySection = new Map((overlay?.changes ?? []).map((change) => [change.sectionId, { ...change, editionYear: overlay.editionYear }]));
-  const [amendmentIndex, latestEdition] = await amendmentsPromise;
-  if (sequence !== renderSequence) return;
-  const pendingBySection = new Map(chapter.sections
-    .map((section) => [section.id, amendmentsForSection(amendmentIndex, section, statuteTextYears(catalog, latestEdition))])
-    .filter(([, amendments]) => amendments.length));
+  const pendingBySection = new Map();
   const selected = route.kind === "section" ? findSection(chapter, route.section) : null;
   if (route.kind === "section" && !selected) return renderNotFound("That section was not found.");
 
@@ -1548,12 +1027,9 @@ async function renderChapter(catalog, title, chapterMeta, route, sequence) {
     history.replaceState(history.state, "", `${location.pathname}${canonicalRoute}`);
   }
 
-  const [maps, secondaryContext] = selected
-    ? await Promise.all([
-        referenceMaps([selected, ...(changeBySection.get(selected.id)?.previousSections ?? [])], catalog),
-        sectionSecondaryContext(title, selected, route.section)
-      ])
-    : [null, null];
+  const provisions = selected ? [selected, ...(changeBySection.get(selected.id)?.previousSections ?? [])] : [];
+  const maps = selected ? await referenceMaps(provisions, catalog, { resolve: false }) : null;
+  const secondaryContext = null;
   if (sequence !== renderSequence) return;
   const preferences = deviceState.preferences();
   const chapterNavigation = navigationSections(chapter.sections, {
@@ -1572,7 +1048,8 @@ async function renderChapter(catalog, title, chapterMeta, route, sequence) {
         ...(selected ? [{ label: sectionLabel(selected) }] : [])
       ])}
       ${supplementError ? `<p class="supplement-warning" role="alert">The published supplement could not be loaded. This page is showing the base revision only; reload before relying on it.</p>` : ""}
-      ${selected ? `<div class="mobile-reader-tools"><button type="button" data-open-chapter-sheet aria-haspopup="dialog">Browse chapter</button></div>${renderProvision(title, chapter, selected, maps, secondaryContext, changeBySection.get(selected.id), pendingBySection.get(selected.id))}${sectionNavigation(title, chapter, chapterNavigation, selected)}${chapterSheet(title, chapter, chapterNavigation, selected, changeBySection, pendingBySection)}` : `<div class="chapter-overview"><p class="eyebrow">${chapterNavigation.length} sections${hiddenRepealed ? ` · ${hiddenRepealed} repealed hidden` : ""}</p><h1>${escapeHtml(chapterLabel(chapter))} — ${escapeHtml(chapter.name)}</h1>${overlay?.changes.length ? `<p class="supplement-summary"><strong>${overlay.editionYear} Supplement applied.</strong> ${overlay.changes.length} updated section${overlay.changes.length === 1 ? "" : "s"} are labeled in the chapter list.</p>` : ""}${pendingChapterSummary(pendingBySection)}<p class="desktop-only">Choose a section from the sections column.</p><a href="${escapeHtml(chapter.sourceUrl)}">Official chapter source</a></div>${mobileChapterList}`}
+      <p class="source-note">Text: ${escapeHtml(String(catalog.source?.revisionYear ?? "Published"))} revision${latestEdition && !supplementError ? ` with the ${latestEdition.editionYear} Supplement` : ""}. Captured ${escapeHtml(formatSnapshotDate(catalog.source?.retrievedAt ?? catalog.generatedAt) ?? "date unavailable")}.</p>
+      ${selected ? `<div class="mobile-reader-tools"><button type="button" data-open-chapter-sheet aria-haspopup="dialog">Browse chapter</button></div>${renderProvision(title, chapter, selected, maps, secondaryContext, changeBySection.get(selected.id), pendingBySection.get(selected.id))}${sectionNavigation(title, chapter, chapterNavigation, selected)}${chapterSheet(title, chapter, chapterNavigation, selected, changeBySection, pendingBySection)}` : `<div class="chapter-overview"><p class="eyebrow">${chapterNavigation.length} sections${hiddenRepealed ? ` · ${hiddenRepealed} repealed hidden` : ""}</p><h1>${escapeHtml(chapterLabel(chapter))} — ${escapeHtml(chapter.name)}</h1>${overlay?.changes.length ? `<p class="supplement-summary"><strong>${overlay.editionYear} Supplement applied.</strong> ${overlay.changes.length} updated section${overlay.changes.length === 1 ? "" : "s"} are labeled in the chapter list.</p>` : ""}<div data-amendments-status><p role="status">Amendment information loading…</p></div><p class="desktop-only">Choose a section from the sections column.</p><a href="${escapeHtml(chapter.sourceUrl)}">Official chapter source</a></div>${mobileChapterList}`}
     </main>`;
   mountApplicationShell({
     contextualNavigation: [
@@ -1585,7 +1062,38 @@ async function renderChapter(catalog, title, chapterMeta, route, sequence) {
     mobilePresentationMode: selected ? "reader" : "drilldown"
   });
   bindChapterSheet();
+  // Enrich the mounted reader without replacing its text, focus, or open disclosures.
+  amendmentsPromise.then(({ index, error }) => {
+    if (sequence !== renderSequence) return;
+    const slot = app.querySelector("[data-amendments-status]");
+    if (error || supplementError) {
+      slot.innerHTML = '<p class="supplement-warning" role="status">Amendment information is unavailable. Check the official acts before relying on this text.</p>';
+      return;
+    }
+    for (const section of chapter.sections) {
+      const amendments = amendmentsForSection(index, section, statuteTextYears(catalog, latestEdition));
+      if (amendments.length) pendingBySection.set(section.id, amendments);
+    }
+    slot.innerHTML = (selected ? renderPendingAmendments(pendingBySection.get(selected.id)) : pendingChapterSummary(pendingBySection))
+      || '<p class="source-note">No amendments found in the listed acts. Other acts may affect this section; verify with official sources.</p>';
+    for (const marker of app.querySelectorAll("[data-act-notice-for]")) {
+      marker.innerHTML = pendingActPill(pendingBySection.get(marker.dataset.actNoticeFor));
+    }
+  });
   if (selected) {
+    referenceMaps(provisions, catalog).then((resolved) => {
+      if (sequence !== renderSequence) return;
+      for (const link of app.querySelectorAll(".provision a.legal-reference")) {
+        const key = link.textContent.toLowerCase();
+        const href = resolved.sections.get(key) ?? resolved.chapters.get(key);
+        if (href) link.setAttribute("href", href);
+      }
+    }).catch((error) => console.warn("Could not enrich references", error));
+    sectionSecondaryContext(title, selected, route.section).then((context) => {
+      if (sequence !== renderSequence) return;
+      app.querySelector("[data-secondary-references]").innerHTML = renderSecondaryContext(context);
+    });
+
     deviceState.recordRecent({
       id: `statute:${selected.id}`,
       type: "statute",
@@ -1884,7 +1392,7 @@ async function renderActs(route, sequence) {
   const [{ manifest, entry, acts }, supplementEdition, catalog] = await Promise.all([
     actsRepository.loadSession(options.session),
     supplementRepository.latestEdition().catch(() => null),
-    catalogPromise.catch(() => null)
+    loadCatalog().catch(() => null)
   ]);
   if (sequence !== renderSequence) return;
   if (options.session && !entry) return renderNotFound("That legislative session is not in the acts list.");
@@ -2117,12 +1625,8 @@ async function renderAct(catalog, route, sequence) {
 }
 
 function renderBookmarks() {
-  const bookmarks = deviceState.bookmarks();
   setDocumentTitle("Bookmarks");
-  app.innerHTML = `${siteHeader()}<main class="bookmarks-page" id="main-content">
-    <header><p class="eyebrow">Saved on this device</p><h1>Bookmarks</h1><p>Quick links remain in this browser and are never sent to a server.</p></header>
-    ${bookmarks.length ? `<ol class="bookmark-list">${bookmarks.map((bookmark) => `<li><a href="${escapeHtml(bookmark.href)}"><span>${bookmark.type === "infraction" ? "Infraction" : "Statute"}</span><strong>${escapeHtml(bookmark.title)}</strong><small>${escapeHtml(bookmark.subtitle ?? "")}</small></a><button type="button" data-remove-bookmark="${escapeHtml(bookmark.id)}" aria-label="Remove ${escapeHtml(bookmark.title)} from bookmarks">Remove</button></li>`).join("")}</ol>` : `<div class="empty-state"><p>You have not saved any bookmarks.</p><p>Select <strong>Bookmark</strong> on a statute section or infraction to save it here.</p></div>`}
-  </main><footer>Bookmarks are stored only on this device.</footer>`;
+  app.innerHTML = renderBookmarkPage(deviceState, siteHeader());
 }
 
 async function renderStatutesIndex(route, sequence) {
@@ -2285,7 +1789,7 @@ async function renderCurrentRoute() {
         .then((edition) => edition && supplementRepository.loadEdition(edition.editionYear))
         .catch(() => {});
     }
-    const catalog = await catalogPromise;
+    const catalog = await loadCatalog();
     if (sequence !== renderSequence) return;
     if (route.kind === "home") return await renderHome(catalog);
     if (route.kind === "titles") return renderTitles(catalog);
@@ -2364,7 +1868,7 @@ async function clearDeviceData(action, button) {
     }
   } else if (action === "recents") {
     deviceState.clearRecents();
-    if (parseRoute(location).kind === "home") renderHome(await catalogPromise);
+    if (parseRoute(location).kind === "home") renderHome(await loadCatalog());
     else {
       button.disabled = true;
       button.querySelector("small")?.replaceChildren("No recent history");
@@ -2447,7 +1951,7 @@ document.addEventListener("keydown", (event) => {
       return;
     }
     if (event.key === "Enter") {
-      const selected = omniSelection >= 0 ? omniItems()[omniSelection] : null;
+      const selected = selectedOmniItem();
       const query = input.value.trim();
       if (!selected && query.length < 2) return;
       event.preventDefault();
@@ -2711,32 +2215,6 @@ document.addEventListener("click", async (event) => {
     document.querySelector(".clear-data-menu > summary")?.focus();
     return;
   }
-  const removeBookmark = event.target.closest("[data-remove-bookmark]");
-  if (removeBookmark) {
-    deviceState.removeBookmark(removeBookmark.dataset.removeBookmark);
-    renderBookmarks();
-    return;
-  }
-  const bookmarkButton = event.target.closest("[data-bookmark-id]");
-  if (bookmarkButton) {
-    const saved = deviceState.toggleBookmark({
-      id: bookmarkButton.dataset.bookmarkId,
-      type: bookmarkButton.dataset.bookmarkType,
-      title: bookmarkButton.dataset.bookmarkTitle,
-      subtitle: bookmarkButton.dataset.bookmarkSubtitle,
-      href: bookmarkButton.dataset.bookmarkHref
-    });
-    bookmarkButton.setAttribute("aria-pressed", String(saved));
-    bookmarkButton.innerHTML = bookmarkButtonLabel(saved);
-    document.querySelectorAll(".nav-badge").forEach((badge) => {
-      const count = deviceState.bookmarks().length;
-      badge.textContent = String(count);
-      badge.setAttribute("aria-label", `${count} saved bookmark${count === 1 ? "" : "s"}`);
-    });
-    const status = bookmarkButton.closest(".provision")?.querySelector(".action-status");
-    if (status) status.textContent = saved ? "Bookmark saved on this device." : "Bookmark removed.";
-    return;
-  }
   const copyCitation = event.target.closest("[data-copy-citation]");
   if (copyCitation) {
     const status = copyCitation.closest(".provision")?.querySelector(".action-status");
@@ -2774,7 +2252,7 @@ document.addEventListener("change", async (event) => {
   }
   if (event.target.matches("#search-title")) {
     const chapterSelect = document.querySelector("#search-chapter");
-    const catalog = await catalogPromise;
+    const catalog = await loadCatalog();
     const title = catalog.titles.find((candidate) => candidate.id === event.target.value);
     const options = [new Option("All chapters", ""), ...(title?.chapters ?? []).map((chapter) => new Option(`${chapterLabel(chapter)} — ${chapter.name}`, chapter.number))];
     chapterSelect.replaceChildren(...options);
@@ -2907,3 +2385,5 @@ window.addEventListener("online", () => {
   if (app.querySelector("[data-load-failure]")) renderCurrentRoute();
 });
 renderCurrentRoute();
+
+bindBookmarkControls({ state: deviceState, render: renderBookmarks, buttonLabel: bookmarkButtonLabel });

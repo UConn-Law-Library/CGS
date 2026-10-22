@@ -47,7 +47,7 @@ test("a search that names an act lists it under the acts group", async ({ page }
 });
 
 test("a source that fails to load drops its group without breaking the search", async ({ page }) => {
-  await page.route("**/data/acts/manifest.json", (route) => route.abort());
+  await page.route("**/data/acts/manifest.json*", (route) => route.abort());
   // One title keeps the statute search short; acts and infractions ignore the filter.
   await openApp(page, "#/search?q=beverage%20containers&title=title-22a");
   await expect(page.locator("#search-status")).toContainText(/Showing \d+ of \d+ results?/);

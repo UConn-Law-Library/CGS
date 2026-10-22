@@ -4,7 +4,7 @@ import { readFile } from "node:fs/promises";
 import test from "node:test";
 import vm from "node:vm";
 
-async function offlineWorker() {
+async function offlineWorker({ timeout = 15000 } = {}) {
   const stores = new Map();
   const handlers = new Map();
   const scope = "https://example.test/CGS/";
@@ -20,7 +20,7 @@ async function offlineWorker() {
           match: async (request) => entries.get(key(request))?.clone(),
           keys: async () => [...entries.keys()].map((url) => new Request(url)),
           delete: async (request) => entries.delete(key(request)),
-          addAll: async (urls) => urls.forEach((url) => entries.set(new URL(url, scope).href, new Response("shell")))
+          addAll: async (urls) => urls.forEach((url) => entries.set(new URL(url, scope).href, new Response(JSON.stringify(manifests.get(url.replace("./", "")) ?? "shell"))))
         });
       }
       // Deleted caches remain usable through existing handles, like CacheStorage.
@@ -30,6 +30,7 @@ async function offlineWorker() {
   const content = JSON.stringify({ revision: "verified" });
   const artifact = { path: "fixture.json", bytes: Buffer.byteLength(content), sha256: createHash("sha256").update(content).digest("hex") };
   const manifests = new Map([
+    ["data/catalog.json", { titles: [] }],
     ["data/manifest.json", { schemaVersion: "1.0.0", generatedAt: "2026-01-01", artifacts: [artifact] }],
     ["data/secondary/manifest.json", { artifacts: [] }],
     ["data/search-v2/manifest.json", { shards: [] }],
@@ -37,12 +38,19 @@ async function offlineWorker() {
     ["data/acts/manifest.json", { artifacts: [] }],
     ["data/acts/amendments.json", { sessions: [], acts: {}, citations: {}, ranges: [] }]
   ]);
+  const artifacts = [...manifests].map(([path, value]) => {
+    const bytes = JSON.stringify(value);
+    return { path: path.slice(5), bytes: Buffer.byteLength(bytes), sha256: createHash("sha256").update(bytes).digest("hex") };
+  });
+  const release = { id: "__CGS_DATA_RELEASE_ID__", artifacts: [...artifacts, artifact] };
+  manifests.set("data/release.json", release);
   let manifestRequests = 0;
   let artifactFetch = async () => new Response(content);
   const sandbox = {
-    caches, Request, Response, URL, crypto: webcrypto,
+    caches, Request, Response, URL, crypto: webcrypto, AbortController, setTimeout, clearTimeout,
     self: {
       registration: { scope },
+      location: { origin: new URL(scope).origin },
       addEventListener: (type, handler) => handlers.set(type, handler),
       skipWaiting: async () => {},
       clients: { claim: async () => {} }
@@ -58,9 +66,16 @@ async function offlineWorker() {
   };
   vm.createContext(sandbox);
   vm.runInContext(await readFile(new URL("../src/offline-integrity.js", import.meta.url), "utf8"), sandbox);
-  vm.runInContext(await readFile(new URL("../src/service-worker.js", import.meta.url), "utf8"), sandbox);
+  vm.runInContext((await readFile(new URL("../src/service-worker.js", import.meta.url), "utf8")).replaceAll("timeout = 15000", `timeout = ${timeout}`), sandbox);
+  const shell = await caches.open(`cgs-pages-shell-${encodeURIComponent('/CGS/')}-__CGS_BUILD_ID__`);
+  await shell.put(`${scope}data/release.json`, Response.json(release));
   return {
     caches, scope,
+    async fetchArtifact(query = "") {
+      let response;
+      handlers.get("fetch")({ request: new Request(`${scope}data/fixture.json${query}`), respondWith: (task) => { response = task; } });
+      return response;
+    },
     async lifecycle(type) {
       let completion;
       handlers.get(type)({ waitUntil: (task) => { completion = task; } });
@@ -147,7 +162,9 @@ test("shell installation and cleanup coexist with other same-origin statute apps
   const ownPrefix = `cgs-pages-shell-${encodeURIComponent('/CGS/')}-`;
   const oldOwn = `${ownPrefix}old`;
   const otherScope = `cgs-pages-shell-${encodeURIComponent('/another-app/')}-old`;
-  for (const name of ['cgs-shell-v5', 'cgsr-shell-v2', oldOwn, otherScope]) {
+  const oldRuntime = `cgs-data-runtime-${encodeURIComponent('/CGS/')}-old`;
+  const foreignRuntime = `cgs-data-runtime-${encodeURIComponent('/another-app/')}-old`;
+  for (const name of ['cgs-shell-v5', 'cgsr-shell-v2', oldOwn, otherScope, oldRuntime, foreignRuntime]) {
     await worker.caches.open(name);
   }
   await worker.lifecycle('install');
@@ -157,6 +174,8 @@ test("shell installation and cleanup coexist with other same-origin statute apps
   assert.ok(names.includes('cgsr-shell-v2'));
   assert.ok(names.includes(otherScope));
   assert.ok(!names.includes(oldOwn));
+  assert.ok(!names.includes(oldRuntime));
+  assert.ok(names.includes(foreignRuntime));
   const current = names.find(name => name.startsWith(ownPrefix));
   assert.ok(current);
   // The other deployed app's cleanup rule must not delete our new shell.
@@ -183,3 +202,31 @@ for (const operation of ['DOWNLOAD_OFFLINE_DATA', 'CLEAR_OFFLINE_DATA']) {
     assert.equal(await legacy.match(`${worker.scope}__offline-metadata__`), undefined);
   });
 }
+
+for (const failure of ["503", "timeout", "changed bytes"]) {
+  test(`visited data recovers from ${failure} within the same release`, async () => {
+    const worker = await offlineWorker({ timeout: 20 });
+    assert.deepEqual(await (await worker.fetchArtifact()).json(), { revision: "verified" });
+    worker.artifactFetch = failure === "timeout" ? () => new Promise(() => {})
+      : failure === "503" ? async () => new Response("unavailable", { status: 503 })
+      : async () => new Response('{"revision":"new generation"}');
+    assert.deepEqual(await (await worker.fetchArtifact()).json(), { revision: "verified" });
+  });
+}
+
+test("an old complete dataset cannot supply bytes to a new release", async () => {
+  const worker = await offlineWorker();
+  const active = await worker.caches.open("cgs-data-offline-old");
+  await active.put(`${worker.scope}__offline-metadata__`, Response.json({ complete: true, offlineFormatVersion: 3, dataReleaseId: "old-release" }));
+  await active.put(`${worker.scope}data/fixture.json`, new Response("old content"));
+  const control = await worker.caches.open("cgs-data-control-v1");
+  await control.put(`${worker.scope}__active-offline-cache__`, new Response("cgs-data-offline-old"));
+  worker.artifactFetch = async () => new Response("unavailable", { status: 503 });
+  assert.equal((await worker.request("OFFLINE_STATUS")).result.compatibility.compatible, false);
+  await assert.rejects(worker.fetchArtifact(), /503/);
+});
+
+test("a tab from a previous release must reload after worker activation", async () => {
+  const worker = await offlineWorker();
+  assert.equal((await worker.fetchArtifact("?release=previous-generation")).status, 409);
+});

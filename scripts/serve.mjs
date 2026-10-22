@@ -5,6 +5,8 @@ import { createServer } from "node:http";
 import path from "node:path";
 
 const root = path.resolve("dist");
+const baseIndex = process.argv.indexOf("--base-path");
+const basePath = baseIndex >= 0 ? process.argv[baseIndex + 1] : null;
 const mime = new Map([
   [".css", "text/css; charset=utf-8"],
   [".html", "text/html; charset=utf-8"],
@@ -15,7 +17,8 @@ const mime = new Map([
 
 const server = createServer(async (request, response) => {
   const url = new URL(request.url, "http://localhost");
-  const requested = decodeURIComponent(url.pathname).replace(/^\/+/, "") || "index.html";
+  const pathname = basePath && url.pathname.startsWith(basePath) ? url.pathname.slice(basePath.length) : url.pathname;
+  const requested = decodeURIComponent(pathname).replace(/^\/+/, "") || "index.html";
   let file = path.resolve(root, requested);
   if (!file.startsWith(`${root}${path.sep}`) && file !== root) {
     response.writeHead(403).end("Forbidden");

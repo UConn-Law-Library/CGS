@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from .tls import tls_verification
+
 import argparse
 import json
 from pathlib import Path
@@ -23,7 +25,8 @@ def parser() -> argparse.ArgumentParser:
     value.add_argument("--backoff", type=float, default=1.0)
     value.add_argument("--delay", type=float, default=0.3)
     value.add_argument("--jitter", type=float, default=0.2)
-    value.add_argument("--no-ssl-verify", action="store_true")
+    value.add_argument("--no-ssl-verify", action="store_true", help="Local diagnostic override; forbidden in CI")
+    value.add_argument("--ca-bundle", type=Path, help="Verified CA bundle (or CGS_CA_BUNDLE)")
     return value
 
 
@@ -52,7 +55,7 @@ def main() -> None:
             backoff=args.backoff,
             delay=args.delay,
             jitter=args.jitter,
-            verify_ssl=not args.no_ssl_verify,
+            verify_ssl=tls_verification(args.ca_bundle, insecure=args.no_ssl_verify),
         ),
     )
     print(json.dumps(crawl(config), indent=2))

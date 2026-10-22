@@ -48,11 +48,13 @@ export default defineConfig({
         hasTouch: true,
         isMobile: true
       }
-    }
+    },
+    { name: "firefox-smoke", testMatch: /cross-browser\.spec\.mjs/, use: { browserName: "firefox", viewport: { width: 1440, height: 1000 } } },
+    { name: "webkit-smoke", testMatch: /cross-browser\.spec\.mjs/, use: { browserName: "webkit", viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true } }
   ],
   snapshotPathTemplate: "{testDir}/{testFileDir}/{testFileName}-snapshots/{projectName}/{arg}{ext}",
   webServer: {
-    command: "npm run build && npm run dev",
+    command: "npm run build && node scripts/serve.mjs --base-path /CGS/",
     url: baseURL,
     reuseExistingServer: !process.env.CI,
     timeout: 120_000

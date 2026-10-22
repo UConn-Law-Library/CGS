@@ -1,6 +1,7 @@
 import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { chapterDisplayLabel, guideRouteHref, routeHref, sectionRouteKey } from "../../src/routes.js";
+import { consolidatedCorpus } from "./consolidated-corpus.mjs";
 import { describeCoverage, renderGuide } from "../../src/guide.js";
 
 const discoveryRoot = "discover/index.html";
@@ -135,7 +136,7 @@ async function readJsonIfPresent(file) {
 async function publishedCoverage(catalog, dataDirectory) {
   const supplementsDirectory = path.join(dataDirectory, "supplements");
   const years = (await readdir(supplementsDirectory, { withFileTypes: true }).catch(() => []))
-    .filter((entry) => entry.isDirectory() && /^d{4}$/.test(entry.name))
+    .filter((entry) => entry.isDirectory() && /^\d{4}$/.test(entry.name))
     .map((entry) => Number(entry.name));
   const latest = years.length ? Math.max(...years) : null;
   const manifest = latest ? await readJsonIfPresent(path.join(supplementsDirectory, String(latest), "manifest.json")) : null;
@@ -166,22 +167,29 @@ async function write(output, file, content) {
 }
 
 export async function generateDiscovery({ catalog, dataDirectory, output, siteUrl }) {
+  const consolidated = await consolidatedCorpus(catalog, dataDirectory);
+  const baseCatalog = catalog;
+  catalog = consolidated.catalog;
   const normalizedSiteUrl = new URL(siteUrl.endsWith("/") ? siteUrl : `${siteUrl}/`);
   const pages = ["index.html", discoveryRoot, guideFile];
-  await write(output, discoveryRoot, renderDiscoveryIndex(catalog, normalizedSiteUrl));
-  await write(output, guideFile, renderGuidePage(await publishedCoverage(catalog, dataDirectory), normalizedSiteUrl));
+  await write(output, guideFile, renderGuidePage(await publishedCoverage(baseCatalog, dataDirectory), normalizedSiteUrl));
 
   for (const title of catalog.titles) {
     const titleFile = titleDiscoveryPath(title);
     pages.push(titleFile);
-    await write(output, titleFile, renderTitlePage(title, normalizedSiteUrl));
     await Promise.all(title.chapters.map(async (chapterMeta) => {
-      const chapter = JSON.parse(await readFile(path.join(dataDirectory, ...chapterMeta.path.split("/")), "utf8"));
+      const chapter = await consolidated.loadChapter(title, chapterMeta);
+      chapterMeta.sectionCount = chapter.sections.length;
       const chapterFile = chapterDiscoveryPath(title, chapterMeta);
       pages.push(chapterFile);
       await write(output, chapterFile, renderChapterPage(title, chapter, normalizedSiteUrl));
     }));
+    await write(output, titleFile, renderTitlePage(title, normalizedSiteUrl));
   }
+
+  catalog.counts.chapters = catalog.titles.reduce((total, title) => total + title.chapters.length, 0);
+  catalog.counts.sections = catalog.titles.reduce((total, title) => total + title.chapters.reduce((count, chapter) => count + chapter.sectionCount, 0), 0);
+  await write(output, discoveryRoot, renderDiscoveryIndex(catalog, normalizedSiteUrl));
 
   pages.sort();
   const urls = pages.map((file) => new URL(publicPath(file), normalizedSiteUrl).href);

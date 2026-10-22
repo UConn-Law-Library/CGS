@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { ProgressiveSearchClient } from "../src/search-client.js";
 import { mergeSearchResults, searchDocuments } from "../src/search.js";
-import { addShardToSearch, createSearchState, searchUpdate } from "../src/search-worker.js";
+import { createSearchWorkerHandler, addShardToSearch, createSearchState, searchUpdate } from "../src/search-worker.js";
 
 function shard(number, documents) {
   return {
@@ -150,4 +150,23 @@ test("progressive client reports Boolean syntax errors before starting a worker"
 
   await assert.rejects(client.search("public AND"), /Boolean search is missing a term/);
   assert.equal(initialized, false);
+});
+
+test("worker pagination reuses a completed ranking without loading shards again", async () => {
+  let scans = 0, listener;
+  const handle = createSearchWorkerHandler((data) => queueMicrotask(() => listener({ data })));
+  const worker = { addEventListener(type, callback) { if (type === "message") listener = callback; }, postMessage: handle };
+  const repository = {
+    async init() { return { shards: [{ titleId: "title-01" }] }; },
+    async loadTitles(ids, { onTitle }) {
+      scans++;
+      onTitle(shard("01", [document("a", "1-1", "public"), document("b", "1-2", "public")]));
+    }
+  };
+  const client = new ProgressiveSearchClient({ repository, workerFactory: () => worker });
+  assert.equal((await client.search("public", { limit: 1 })).results.length, 1);
+  assert.equal((await client.search("public", { limit: 2 })).results.length, 2);
+  assert.equal(scans, 1);
+  await client.search("public AND records");
+  assert.equal(scans, 2);
 });

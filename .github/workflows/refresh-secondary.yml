@@ -28,6 +28,7 @@ jobs:
       run:
         shell: bash
     env:
+      CGS_CA_BUNDLE: .crawl/ca-bundle.pem
       REFRESH_ROOT: .crawl/secondary-refresh
       SOURCE_DIR: .crawl/secondary-refresh/sources
       CANDIDATE_DIR: .crawl/secondary-refresh/candidate
@@ -49,7 +50,8 @@ jobs:
         with:
           python-version: "3.12"
           cache: pip
-      - run: python -m pip install -r crawler/requirements.txt
+      - run: python -m pip install -r crawler/requirements-lock.txt
+      - run: python -m crawler.cgs_crawler.tls --output .crawl/ca-bundle.pem
       - run: npm ci
 
       - name: Acquire official secondary-source PDFs
@@ -61,7 +63,6 @@ jobs:
           npm run secondary:acquire -- \
             --output "$SOURCE_DIR" \
             --judicial-client curl \
-            --no-cga-ssl-verify \
             2>&1 | tee "$REPORT_DIR/acquisition.log"
 
       - name: Build and validate candidate artifacts

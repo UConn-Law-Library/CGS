@@ -375,9 +375,11 @@ def _append_classified(
         source.append(text)
     elif "history-first" in classes or "history" in classes:
         history.append(text)
-    elif "annotation-first" in classes:
+    # CGA publishes editorial cross-references separately from case annotations.
+    # Both belong to the reader's annotations, never the statutory body/search text.
+    elif "annotation-first" in classes or "cross-ref-first" in classes:
         annotations.append({"first": True, "text": text})
-    elif "annotation" in classes:
+    elif "annotation" in classes or "cross-ref" in classes:
         annotations.append({"first": False, "text": text})
     else:
         body.append(text)

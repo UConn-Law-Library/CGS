@@ -108,7 +108,9 @@ test("act text search opens the act with matches highlighted, sections, and stat
 
 test("abbreviated See references in 2-71h link to the referenced statutes", async ({ page }) => {
   await openApp(page, "#/t/02/c/018a/s/2-71h");
-  const statute = page.locator("article.provision .statute-text");
+  const statute = page.locator("article.provision .annotations");
+  await statute.locator("summary").click();
+  await expect(page.locator("article.provision .statute-text")).not.toContainText("See Sec.");
   for (const [citation, href] of [
     ["4b-54", "#/t/04b/c/060/s/4b-54"],
     ["5-142", "#/t/05/c/065/s/5-142"],
@@ -122,6 +124,20 @@ test("abbreviated See references in 2-71h link to the referenced statutes", asyn
   await statute.getByRole("link", { name: "4b-54", exact: true }).click();
   await expect(page).toHaveURL(/#\/t\/04b\/c\/060\/s\/4b-54$/);
   await expect(page.getByRole("heading", { level: 1, name: /Sec\. 4b-54\./ })).toBeVisible();
+});
+
+test("51-277 editorial cross-reference appears only in Annotations", async ({ page }) => {
+  await openApp(page, "#/t/51/c/886/s/51-277");
+  const note = "See Sec. 31-290d re workers' compensation fraud unit within the office of the Chief State's Attorney in the Division of Criminal Justice.";
+  await expect(page.locator("article.provision .statute-text")).not.toContainText(note);
+  const annotations = page.locator("article.provision .annotations");
+  await annotations.locator("summary").click();
+  await expect(annotations.locator("p").first()).toHaveText(note);
+  await expect(annotations.getByText("Cited. 234 C. 539.", { exact: true })).toBeVisible();
+  const reference = annotations.getByRole("link", { name: "31-290d", exact: true });
+  await expect(reference).toHaveAttribute("href", "#/t/31/c/568/s/31-290d");
+  await reference.click();
+  await expect(page.getByRole("heading", { level: 1, name: /Sec\. 31-290d\./ })).toBeVisible();
 });
 
 test("Home exposes the core application destinations", async ({ page }) => {

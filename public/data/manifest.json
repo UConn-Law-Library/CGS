@@ -155,8 +155,8 @@
     },
     {
       "path": "chapters/018a.json",
-      "bytes": 116380,
-      "sha256": "2741a03f4ee497930a74a91e64fc3d4f422243fb8ab46e96fd5900dbc3e9d927"
+      "bytes": 116242,
+      "sha256": "fd9ac583dc87957bbd765e38082c4b88a63d8ff4772d11cc0d78ab69d0482df2"
     },
     {
       "path": "chapters/019.json",
@@ -5230,8 +5230,8 @@
     },
     {
       "path": "chapters/886.json",
-      "bytes": 198695,
-      "sha256": "f7b398a68546742f2b4714609232c996284bd5d99fa9784ea5037d4a03a3b198"
+      "bytes": 198530,
+      "sha256": "312884f9974916a2f61db43627e06fe1456f19f9eafd6d504a9ebde47c0025a9"
     },
     {
       "path": "chapters/887.json",
@@ -5740,8 +5740,8 @@
     },
     {
       "path": "search/title-02.json",
-      "bytes": 373209,
-      "sha256": "d477679b7b220ded95cfe2c82c89517143bfce3afcec8b0127d0411576723bf6"
+      "bytes": 372816,
+      "sha256": "7a6c64cbc5e853365b33c96b25749b1f65808aff18e2630f87895b55ef97f6d1"
     },
     {
       "path": "search/title-02c.json",
@@ -6110,8 +6110,8 @@
     },
     {
       "path": "search/title-51.json",
-      "bytes": 827574,
-      "sha256": "2f223f1a7030e72100e215dda94f35586c2012e8b0f8c1c9ad92b2585a0664fb"
+      "bytes": 827033,
+      "sha256": "c13455bd935243453f5d0cb5e05bae870bb55766c9ef2e109ecafeeba6cbb5c0"
     },
     {
       "path": "search/title-52.json",

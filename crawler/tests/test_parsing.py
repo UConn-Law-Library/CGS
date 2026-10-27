@@ -85,6 +85,40 @@ class ParsingTests(unittest.TestCase):
         self.assertIn("On and after July 1, 2025", content["10-145a"]["text"])
         self.assertIn("Replacement subsection text", content["10-145a"]["text"])
 
+    def test_cross_references_are_annotations_not_statutory_text(self):
+        html = fixture("chapter_cross_references.html")
+        content = extract_section_text_map(html, [{
+            "section_key": "51-277",
+            "label": "Sec. 51-277. Powers and duties of division.",
+            "url": "https://www.cga.ct.gov/current/pub/chap_886.htm#sec_51-277",
+        }])["51-277"]
+        self.assertEqual(content["body_paragraphs"], [
+            "(a) The division shall exercise all powers and duties conferred upon it by this chapter.",
+            "(b) See section 31-290d for additional duties.",
+        ])
+        self.assertEqual(content["text"], "\n\n".join(content["body_paragraphs"]))
+        self.assertEqual(content["source"], ["(P.A. 73-122, S. 3, 27.)"])
+        self.assertEqual(content["history"], ["History: P.A. 05-288 made a technical change."])
+        self.assertEqual(content["annotations"], [
+            {"first": True, "text": "See Sec. 31-290d re workers' compensation fraud unit within the office of the Chief State's Attorney in the Division of Criminal Justice."},
+            {"first": False, "text": "See Sec. 2-1 re additional information."},
+            {"first": True, "text": "Cited. 234 C. 539."},
+            {"first": False, "text": "Cited. 43 CS 38."},
+        ])
+
+    def test_grouped_cross_references_are_annotations(self):
+        content = extract_grouped_section_content(fixture("chapter_cross_references.html"), {
+            "label": "Secs. 51-278 and 51-279.",
+            "url": "https://www.cga.ct.gov/current/pub/chap_886.htm#secs_51-278_51-279",
+        })
+        self.assertEqual(content["body_paragraphs"], ["Sections 51-278 and 51-279 are repealed."])
+        self.assertEqual(content["text"], "Sections 51-278 and 51-279 are repealed.")
+        self.assertEqual(content["annotations"], [
+            {"first": True, "text": "See Sec. 51-277 re powers and duties."},
+            {"first": False, "text": "See Sec. 51-275 re definitions."},
+            {"first": True, "text": "Cited. 100 C. 1."},
+        ])
+
     def test_group_expansion_and_legal_statuses(self):
         self.assertEqual(
             expand_grouped_section_keys("secs_20-341s_to_20-341bb"),

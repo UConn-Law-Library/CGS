@@ -1,12 +1,20 @@
 import io
+import os
+from pathlib import Path
+import tempfile
 from types import SimpleNamespace
 import unittest
 from unittest.mock import patch
 
+from crawler.cgs_crawler.tls import prepare_ca_bundle
 from secondary_sources.cli import main
 
 
 class AcquisitionCliTests(unittest.TestCase):
+    def setUp(self):
+        self.enterContext(patch.dict(os.environ))
+        os.environ.pop("CGS_CA_BUNDLE", None)
+
     def run_acquire(self, client, executable):
         with patch("sys.argv", ["secondary", "acquire", "--judicial-client", client]), \
                 patch("secondary_sources.cli.shutil.which", return_value=executable), \
@@ -23,6 +31,16 @@ class AcquisitionCliTests(unittest.TestCase):
         self.assertEqual(arguments["judicial_session"].executable, "/usr/bin/curl")
         self.assertIs(arguments["verify_ssl"], True)
         self.assertIs(arguments["cga_verify_ssl"], True)
+
+    def test_environment_ca_bundle_keeps_cga_and_judicial_tls_verified(self):
+        with tempfile.TemporaryDirectory() as directory:
+            bundle = prepare_ca_bundle(Path(directory) / "ca.pem")
+            with patch.dict(os.environ, {"CGS_CA_BUNDLE": str(bundle)}):
+                for client, executable in (("requests", None), ("curl", "/usr/bin/curl")):
+                    with self.subTest(client=client):
+                        arguments = self.run_acquire(client, executable)
+                        self.assertIs(arguments["verify_ssl"], True)
+                        self.assertEqual(arguments["cga_verify_ssl"], str(bundle.resolve()))
 
     def test_missing_curl_fails_without_silently_changing_client(self):
         with patch("sys.stderr", new_callable=io.StringIO) as error:

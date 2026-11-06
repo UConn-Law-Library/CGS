@@ -14,7 +14,8 @@ export const DEFAULT_PREFERENCES = Object.freeze({
   fontProfile: "default",
   lineSpacing: 1.55,
   compactLists: true,
-  hideRepealedSections: false
+  hideRepealedSections: false,
+  subtleNotices: false
 });
 
 const themes = new Set(["auto", "light", "dark", "oled"]);
@@ -239,7 +240,8 @@ export class DeviceState {
       compactLists: Object.prototype.hasOwnProperty.call(value, "compactLists")
         ? Boolean(value.compactLists)
         : DEFAULT_PREFERENCES.compactLists,
-      hideRepealedSections: Boolean(value.hideRepealedSections)
+      hideRepealedSections: Boolean(value.hideRepealedSections),
+      subtleNotices: value.subtleNotices === true
     };
   }
 
@@ -251,6 +253,7 @@ export class DeviceState {
     value.lineSpacing = normalizeLineSpacing(value.lineSpacing);
     value.compactLists = Boolean(value.compactLists);
     value.hideRepealedSections = Boolean(value.hideRepealedSections);
+    value.subtleNotices = value.subtleNotices === true;
     this.#write(PREFERENCES_KEY, value);
     return value;
   }
@@ -261,6 +264,7 @@ export function applyPreferences(preferences, root = document.documentElement) {
   root.dataset.fontProfile = preferences.fontProfile;
   root.dataset.compactLists = String(preferences.compactLists);
   root.dataset.hideRepealedSections = String(preferences.hideRepealedSections);
+  root.dataset.subtleNotices = String(preferences.subtleNotices);
   root.style.setProperty("--text-scale", String(preferences.textScale));
   root.style.setProperty("--line-spacing", String(preferences.lineSpacing));
   root.style.setProperty("--line-spacing-factor", String(preferences.lineSpacing / DEFAULT_PREFERENCES.lineSpacing));

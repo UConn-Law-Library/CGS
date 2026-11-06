@@ -23,6 +23,13 @@ test("Back follows the browser trail across reload, forward, and a new branch", 
   await page.getByRole("button", { name: "Go back", exact: true }).click();
   await expect(page).toHaveURL(/#\/titles$/);
   await expect(page.getByRole("button", { name: "Go back", exact: true })).toBeDisabled();
+
+  await page.locator(".site-header .brand").click();
+  await expect(page.locator(".home-page")).toBeVisible();
+  const homeBack = page.locator(".site-header").getByRole("button", { name: "Go back", exact: true });
+  await expect(homeBack).toBeEnabled();
+  await homeBack.click();
+  await expect(page).toHaveURL(/#\/titles$/);
 });
 
 test("History persists visited pages, reopens them, and clears without deleting bookmarks", async ({ page }, testInfo) => {

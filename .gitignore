@@ -4,6 +4,7 @@ coverage/
 playwright-report/
 test-results/
 *.log
+.taste-skill/
 .DS_Store
 .crawl/
 __pycache__/

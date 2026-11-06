@@ -1,5 +1,9 @@
 # CGS
 
+This branch contains an isolated [UI/UX modernization prototype](docs/modernization-prototype.md),
+including the audit, local preview instructions, screenshots, validation results,
+and an incremental rollout recommendation. It has not been deployed.
+
 A database-free, GitHub Pages-only platform for publishing and searching the Connecticut General Statutes.
 
 The repository turns the legacy title-level JSON export into versioned, canonical, chapter-level artifacts. The browser reads those static artifacts directly; there is no API server, database, hosted search service, or runtime build step.

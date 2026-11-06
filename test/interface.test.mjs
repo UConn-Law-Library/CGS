@@ -7,7 +7,7 @@ const stylesSource = await readFile(new URL("../src/styles.css", import.meta.url
 const wordmarkSource = await readFile(new URL("../public/wordmark.svg", import.meta.url), "utf8");
 
 test("home statute browsing uses the dedicated compact titles route", () => {
-  assert.match(appSource, /<a href="\$\{titlesRouteHref\(\)\}">/);
+  assert.match(appSource, /<a data-destination="statutes" href="\$\{titlesRouteHref\(\)\}">/);
   assert.doesNotMatch(appSource, /href="#browse-titles"/);
 });
 
@@ -71,7 +71,7 @@ test("index letters render collapsed topics, dedicated large topics, and repeale
   assert.match(stylesSource, /\.index-topic \{[^}]*scroll-margin-top: 8rem;/);
   assert.match(stylesSource, /\.index-topic-jumps \{[^}]*overflow-x: auto/);
   assert.match(appSource, /data-hide-repealed/);
-  assert.match(appSource, /class="section-status-pill repealed-pill">Repealed/);
+  assert.match(appSource, /repealed: "Repealed", transferred: "Transferred"/);
 });
 
 test("infractions categories are one alphabetical column", () => {

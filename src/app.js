@@ -109,7 +109,7 @@ let pwaState = pwaManager.state;
 const { closeOmni, scheduleOmnisearch, moveOmniSelection, selectedOmniItem } = createOmnisearchController({ loadCatalog, quickSearch, secondaryRepository, actsRepository });
 const SEARCH_BATCH_SIZE = 50;
 const LARGE_INDEX_TOPIC_THRESHOLD = 200;
-const { siteHeader, updatePwaControls } = createShell({ deviceState, navigationHistory, getPwaState: () => pwaState });
+const { siteHeader, globalSearch, updatePwaControls } = createShell({ deviceState, navigationHistory, getPwaState: () => pwaState });
 const renderAbout = createAboutPage({ app, secondaryRepository, actsRepository, loadLatestSupplement, setDocumentTitle, siteHeader, breadcrumbs, legalFooter, isCurrent: (sequence) => sequence === renderSequence });
 applyPreferences(deviceState.preferences());
 pwaManager.subscribe((state) => {
@@ -171,7 +171,7 @@ function applicationShell({
     `--context-total-width:${fit.total}px`
   ].join(";");
   const hidden = (index) => index < fit.first ? " hidden" : "";
-  return `${siteHeader()}<div class="application-shell mobile-${escapeHtml(mobilePresentationMode)}" data-context-columns="${columnCount}" data-context-widths="${paneWidths.join(",")}" id="context-navigation" data-navigation-collapsed="${layout.collapsed}" style="${style}">
+  return `${siteHeader({ showSearch: mobilePresentationMode !== "home" })}<div class="application-shell mobile-${escapeHtml(mobilePresentationMode)}" data-context-columns="${columnCount}" data-context-widths="${paneWidths.join(",")}" id="context-navigation" data-navigation-collapsed="${layout.collapsed}" style="${style}">
     ${columnCount ? `<button type="button" class="context-collapse-toggle" data-toggle-navigation aria-controls="context-navigation" aria-expanded="${!layout.collapsed}" aria-label="${layout.collapsed ? "Show navigation panes" : "Hide navigation panes"}" title="${layout.collapsed ? "Show navigation panes" : "Hide navigation panes"}"><span aria-hidden="true">${layout.collapsed ? "›" : "‹"}</span></button>` : ""}
     ${contextualNavigation.map((column, index) => `<aside class="context-column ${escapeHtml(column.className ?? "")}" id="context-pane-${index + 1}" data-context-key="${escapeHtml(column.className || column.label)}" aria-label="${escapeHtml(column.label)}"${hidden(index)}>
       ${column.heading ? `<div class="context-column-heading">${column.heading}</div>` : ""}${column.content}
@@ -182,13 +182,14 @@ function applicationShell({
 
 function contextScrollPositions() {
   return new Map([...document.querySelectorAll(".context-column[data-context-key]")]
-    .map((column) => [column.dataset.contextKey, column.scrollTop]));
+    .map((column) => [column.dataset.contextKey, (column.querySelector(':scope > [id^="rail-"]') ?? column).scrollTop]));
 }
 
 function restoreContextScrollPositions(positions) {
   requestAnimationFrame(() => {
-    for (const column of document.querySelectorAll(".context-column[data-context-key]")) {
-      const previous = positions.get(column.dataset.contextKey);
+    for (const pane of document.querySelectorAll(".context-column[data-context-key]")) {
+      const column = pane.querySelector(':scope > [id^="rail-"]') ?? pane;
+      const previous = positions.get(pane.dataset.contextKey);
       if (previous != null) column.scrollTop = previous;
       const selected = column.querySelector('[aria-current="page"]');
       if (selected) {
@@ -272,12 +273,20 @@ function railList(items, { className = "", empty = "No items are available." } =
   return `<ol class="context-list ${escapeHtml(className)}">${items.join("")}</ol>`;
 }
 
+// One small, local list filter shared by navigation panes and touch browse lists.
+// It only filters rendered headings; full-text search remains in its existing worker.
+function browseFilter(id, label, target) {
+  return `<div class="browse-filter"><label for="${id}">${escapeHtml(label)}</label>
+    <input id="${id}" type="search" placeholder="Number or heading" data-filter-list="${target}" aria-controls="${target}" autocomplete="off">
+    <p class="browse-filter-status" role="status" aria-live="polite" data-filter-status="${target}"></p></div>`;
+}
+
 function statuteTitleColumn(catalog, selected = null) {
   return {
     label: "Statute titles",
     className: "titles-column",
-    heading: `<p class="eyebrow">Statutes</p><strong>Titles</strong>`,
-    content: railList(catalog.titles.map((title) => `<li><a href="${escapeHtml(titleRoute(title))}"${selected?.id === title.id ? ` aria-current="page"` : ""}><strong>${escapeHtml(titleLabel(title))}</strong><span>${escapeHtml(title.name)}</span></a></li>`))
+    heading: `<p class="eyebrow">Statutes</p><strong>Titles</strong>${browseFilter("rail-title-filter", "Filter titles", "rail-titles")}`,
+    content: `<div id="rail-titles">${railList(catalog.titles.map((title) => `<li><a href="${escapeHtml(titleRoute(title))}"${selected?.id === title.id ? ` aria-current="page"` : ""}><strong>${escapeHtml(titleLabel(title))}</strong><span>${escapeHtml(title.name)}</span></a></li>`))}</div>`
   };
 }
 
@@ -285,8 +294,8 @@ function statuteChapterColumn(title, selected = null) {
   return {
     label: `Chapters in ${titleLabel(title)}`,
     className: "chapters-column",
-    heading: `<p class="eyebrow">${escapeHtml(titleLabel(title))}</p><strong>Chapters</strong>`,
-    content: railList(title.chapters.map((chapter) => `<li><a href="${escapeHtml(chapterRoute(title, chapter))}"${selected?.id === chapter.id ? ` aria-current="page"` : ""}><strong>${escapeHtml(chapterLabel(chapter))}</strong><span>${escapeHtml(chapter.name)}</span><small>${chapter.sectionCount} section${chapter.sectionCount === 1 ? "" : "s"}</small></a></li>`))
+    heading: `<p class="eyebrow">${escapeHtml(titleLabel(title))}</p><strong>Chapters</strong>${browseFilter("rail-chapter-filter", "Filter chapters", "rail-chapters")}`,
+    content: `<div id="rail-chapters">${railList(title.chapters.map((chapter) => `<li><a href="${escapeHtml(chapterRoute(title, chapter))}"${selected?.id === chapter.id ? ` aria-current="page"` : ""}><strong>${escapeHtml(chapterLabel(chapter))}</strong><span>${escapeHtml(chapter.name)}</span><small>${chapter.sectionCount} section${chapter.sectionCount === 1 ? "" : "s"}</small></a></li>`))}</div>`
   };
 }
 
@@ -295,41 +304,66 @@ function statuteChapterColumn(title, selected = null) {
 function pendingActPill(amendments = []) {
   if (!amendments.length) return "";
   const repealed = amendments.every((amendment) => amendment.action === "repealed");
-  return `<span class="section-status-pill act-pending-pill"><span aria-hidden="true">Recent Act</span><span class="visually-hidden">${repealed ? "Repealed" : "Amended"} by ${amendments.length === 1 ? "a recent Public Act" : "recent Public Acts"}</span></span>`;
+  const description = `${repealed ? "Repealed" : "Amended"} by ${amendments.length === 1 ? "a recent Public Act" : "recent Public Acts"}`;
+  return `<span class="section-status-pill act-pending-pill navigation-notice" title="${description}"><span class="navigation-notice-label" aria-hidden="true">Recent Act</span><span class="visually-hidden">${description}</span></span>`;
 }
 
 function statuteSectionItems(title, chapter, sections, selected, changeBySection = new Map(), pendingBySection = new Map()) {
   return sections.map((section) => {
     const change = changeBySection.get(section.id);
-    const status = section.status === "repealed" ? `<span class="section-status-pill repealed-pill">Repealed</span>` : "";
-    const supplement = change ? `<span class="supplement-pill supplement-${escapeHtml(change.presentation)}">${escapeHtml(supplementLabel(change, { short: true }))}</span>` : "";
+    const statusLabel = { repealed: "Repealed", transferred: "Transferred" }[section.status];
+    const status = statusLabel ? `<span class="section-status-pill ${section.status}-pill navigation-notice" title="${statusLabel}"><span class="navigation-notice-label">${statusLabel}</span></span>` : "";
+    const supplementText = change ? escapeHtml(supplementLabel(change, { short: true })) : "";
+    const supplement = change ? `<span class="supplement-pill supplement-${escapeHtml(change.presentation)} navigation-notice" title="${supplementText}"><span class="navigation-notice-label">${supplementText}</span></span>` : "";
+    const label = navigationSectionLabel(section);
     const description = navigationSectionDescription(section);
-    const showDescription = description && description !== section.citation;
-    return `<li><a href="${escapeHtml(provisionRoute(title, chapter, section))}"${selected?.id === section.id ? ` aria-current="page"` : ""}><strong>${escapeHtml(navigationSectionLabel(section))}</strong>${status}${supplement}<span data-act-notice-for="${escapeHtml(section.id)}">${pendingActPill(pendingBySection.get(section.id))}</span>${showDescription ? `<span>${escapeHtml(description)}</span>` : ""}</a></li>`;
+    const shortDescription = description.split(/(?<=\.)\s+/, 1)[0];
+    const showDescription = shortDescription && description !== section.citation && label !== section.heading;
+    const shortLabel = label === section.heading ? label.split(/(?<=\.)\s+/, 1)[0] : label;
+    return `<li data-filter-heading="${escapeHtml(section.heading)}"><a class="section-navigation-link" href="${escapeHtml(provisionRoute(title, chapter, section))}"${selected?.id === section.id ? ` aria-current="page"` : ""}><strong>${escapeHtml(shortLabel)}</strong><span class="section-navigation-notices">${status}${supplement}<span data-act-notice-for="${escapeHtml(section.id)}">${pendingActPill(pendingBySection.get(section.id))}</span></span>${showDescription ? `<span class="section-navigation-description">${escapeHtml(shortDescription)}</span>` : ""}</a></li>`;
   });
 }
 
-function pendingChapterSummary(pendingBySection) {
+function chapterSupplementSummary(title, chapter, overlay, changeBySection) {
+  if (!changeBySection.size) return "";
+  const updated = [];
+  const added = [];
+  for (const section of chapter.sections) {
+    const change = changeBySection.get(section.id);
+    if (change) (change.presentation === "new" ? added : updated).push(section);
+  }
+  const groups = [["Updated sections", updated], ["New sections", added]];
+  return `<div class="supplement-summary"><strong>${overlay.editionYear} Supplement applied.</strong>
+    ${groups.filter(([, sections]) => sections.length).map(([label, sections]) =>
+      `<details class="chapter-change-list"><summary>${label} (${sections.length})</summary>${railList(statuteSectionItems(title, chapter, sections, null, changeBySection))}</details>`
+    ).join("")}</div>`;
+}
+
+function pendingChapterSummary(title, chapter, changeBySection, pendingBySection) {
   if (!pendingBySection.size) return "";
   const all = [...pendingBySection.values()].flat();
   const count = pendingBySection.size;
   const oneAct = new Set(all.map((amendment) => amendment.citation)).size === 1;
-  return `<p class="pending-amendments-summary"><strong>${oneAct ? "A recent Public Act changes" : "Recent Public Acts change"} ${count} section${count === 1 ? "" : "s"} in this chapter.</strong> ${count === 1 ? "It is" : "They are"} marked “Recent Act” in the list. The text shown does not include those changes yet.</p>`;
+  const sections = chapter.sections.filter((section) => pendingBySection.has(section.id));
+  return `<div class="pending-amendments-summary"><details class="chapter-change-list"><summary>${oneAct ? "A recent Public Act changes" : "Recent Public Acts change"} ${count} section${count === 1 ? "" : "s"} in this chapter.</summary>
+    ${railList(statuteSectionItems(title, chapter, sections, null, changeBySection, pendingBySection))}</details>
+    <p>The statute text does not include those changes yet.</p></div>`;
 }
 
 function statuteSectionColumn(title, chapter, sections, selected, changeBySection, pendingBySection) {
   return {
     label: `Sections in ${chapterLabel(chapter)}`,
     className: "sections-column",
-    heading: `<p class="eyebrow">${escapeHtml(chapterLabel(chapter))}</p><strong>Sections</strong>`,
-    content: railList(statuteSectionItems(title, chapter, sections, selected, changeBySection, pendingBySection))
+    heading: `<p class="eyebrow">${escapeHtml(chapterLabel(chapter))}</p><strong>Sections</strong>${browseFilter("rail-section-filter", "Filter sections", "rail-sections")}`,
+    content: `<div id="rail-sections">${railList(statuteSectionItems(title, chapter, sections, selected, changeBySection, pendingBySection))}</div>`
   };
 }
 
 function chapterSheet(title, chapter, sections, selected, changeBySection, pendingBySection) {
   return `<dialog class="chapter-sheet" data-chapter-sheet aria-labelledby="chapter-sheet-title">
     <div class="chapter-sheet-panel"><header><div><p class="eyebrow">${escapeHtml(titleLabel(title))}</p><h2 id="chapter-sheet-title">${escapeHtml(chapterLabel(chapter))} sections</h2></div><button type="button" data-close-chapter-sheet autofocus>Close</button></header>
-      ${railList(statuteSectionItems(title, chapter, sections, selected, changeBySection, pendingBySection), { className: "chapter-sheet-list" })}
+      ${browseFilter("sheet-section-filter", "Filter chapter sections", "sheet-sections")}
+      <div id="sheet-sections">${railList(statuteSectionItems(title, chapter, sections, selected, changeBySection, pendingBySection), { className: "chapter-sheet-list" })}</div>
     </div>
   </dialog>`;
 }
@@ -580,6 +614,7 @@ function renderProvision(title, chapter, section, maps, secondaryContext = null,
     <div data-amendments-status><p role="status">Amendment information loading…</p></div>
     <div class="section-actions" aria-label="Section actions">
       ${bookmarkButton(bookmark)}
+      <button type="button" data-copy-citation="${escapeHtml(`Conn. Gen. Stat. ${section.citation ? `§ ${section.citation}` : sectionLabel(section)}`)}">Copy citation</button>
       <button type="button" data-copy-link="${escapeHtml(route)}">Copy link</button>
       <button type="button" data-share-link="${escapeHtml(route)}" data-share-title="${escapeHtml(section.heading)}">Share</button>
       <a href="${escapeHtml(email)}">Email</a>
@@ -643,13 +678,18 @@ async function renderHome(catalog) {
       <h1>Connecticut General Statutes</h1>
       <p>Browse and search the statutes, the official subject index, the Judicial Branch infraction schedule, and recent Public and Special Acts. Save frequently used material on this device.</p>
     </header>
+    <section class="research-start" aria-labelledby="research-start-heading">
+      <h2 id="research-start-heading">Search Connecticut law</h2>
+      ${globalSearch({ showBack: false })}
+      <p>Try <a href="${searchRouteHref("1-210")}">1-210</a>, <a href="${searchRouteHref('"freedom of information"')}">“freedom of information”</a>, or <a href="${searchRouteHref("landlord AND tenant")}">landlord AND tenant</a></p>
+    </section>
     <section class="destination-grid" aria-label="Explore legal materials">
-      <a href="${titlesRouteHref()}"><span aria-hidden="true">§</span><strong>Browse statutes</strong><small>Navigate by title, chapter, or section.</small></a>
-      <a href="#/index"><span aria-hidden="true">A–Z</span><strong>Subject index</strong><small>Find statutes by topic in the official LCO index.</small></a>
-      <a href="#/infractions"><span aria-hidden="true">${icons.scale}</span><strong>Infraction schedule</strong><small>Review violations, amounts, and linked statutes.</small></a>
-      <a href="#/acts"><span aria-hidden="true">${icons.document}</span><strong>Public and Special Acts</strong><small>See recent laws not yet reflected in the statute text.</small></a>
-      <a href="#/bookmarks"><span aria-hidden="true">${icons.bookmark}</span><strong>Bookmarks</strong><small>Return to sections and infractions saved on this device.</small></a>
-      <a href="${guideRouteHref()}"><span aria-hidden="true">${icons.help}</span><strong>Understanding the Statutes</strong><small>How bills become law and how current the published text is.</small></a>
+      <a data-destination="statutes" href="${titlesRouteHref()}"><span aria-hidden="true">§</span><strong>Browse statutes</strong><small>Navigate by title, chapter, or section.</small></a>
+      <a data-destination="index" href="#/index"><span aria-hidden="true">A–Z</span><strong>Subject index</strong><small>Find statutes by topic in the official LCO index.</small></a>
+      <a data-destination="infractions" href="#/infractions"><span aria-hidden="true">${icons.scale}</span><strong>Infraction schedule</strong><small>Review violations, amounts, and linked statutes.</small></a>
+      <a data-destination="acts" href="#/acts"><span aria-hidden="true">${icons.document}</span><strong>Public and Special Acts</strong><small>See recent laws not yet reflected in the statute text.</small></a>
+      <a data-destination="bookmarks" href="#/bookmarks"><span aria-hidden="true">${icons.bookmark}</span><strong>Bookmarks</strong><small>Return to sections and infractions saved on this device.</small></a>
+      <a data-destination="guide" href="${guideRouteHref()}"><span aria-hidden="true">${icons.help}</span><strong>Understanding the Statutes</strong><small>How bills become law and how current the published text is.</small></a>
     </section>
     <section class="home-activity" aria-label="Your activity">
       <div><div class="section-heading"><div><p class="eyebrow">On this device</p><h2>Recently viewed</h2></div>${recents.length ? `<button type="button" class="text-button" data-clear-recents>Clear</button>` : ""}</div>${renderActivityList(recents, "Sections, index topics, and infractions you open will appear here.")}</div>
@@ -668,7 +708,8 @@ function renderTitles(catalog) {
   setDocumentTitle("Titles");
   app.innerHTML = `${siteHeader()}<main class="browse-page titles-page" id="main-content">
     <header class="browse-heading"><div><p class="eyebrow">${catalog.counts.chapters.toLocaleString()} chapters · ${catalog.counts.sections.toLocaleString()} sections</p><h1>Statute titles</h1></div></header>
-    <ol class="title-list">${catalog.titles.map((title) => `<li><a href="${escapeHtml(titleRoute(title))}"><strong>${escapeHtml(titleLabel(title))}</strong><span>${escapeHtml(title.name)}</span><small>${title.chapters.length} chapter${title.chapters.length === 1 ? "" : "s"}</small></a></li>`).join("")}</ol>
+    ${browseFilter("title-filter", "Find a title", "browse-titles-list")}
+    <ol class="title-list" id="browse-titles-list">${catalog.titles.map((title) => `<li><a href="${escapeHtml(titleRoute(title))}"><strong>${escapeHtml(titleLabel(title))}</strong><span>${escapeHtml(title.name)}</span><small>${title.chapters.length} chapter${title.chapters.length === 1 ? "" : "s"}</small></a></li>`).join("")}</ol>
   </main><footer>${legalFooter()}</footer>`;
   window.scrollTo({ top: 0 });
 }
@@ -767,7 +808,7 @@ function queryExplanationMarkup(query, routeOptions = {}) {
     if (options.field !== "statute") filters.push(`${SEARCH_FIELD_LABELS[options.field] ?? options.field} field`);
     if (options.status) filters.push(`${options.status} sections`);
     if (options.supplement) filters.push(options.supplement === "updated" ? "supplement-updated sections" : "base revision only");
-    return `<section class="query-explanation" aria-labelledby="query-explanation-heading"><p class="eyebrow">Query interpretation</p><h2 id="query-explanation-heading">${escapeHtml(explainSearchQuery(query, options))}</h2>${filters.length ? `<p>${filters.map((value) => escapeHtml(value)).join(" · ")}</p>` : ""}<p>Sorted by ${options.sort === "citation" ? "citation" : "relevance"}. Exact terms are used; fuzzy matching and stemming are off.</p></section>`;
+    return `<section class="query-explanation" aria-labelledby="query-explanation-heading"><p class="eyebrow">Query interpretation</p><h2 id="query-explanation-heading">${escapeHtml(explainSearchQuery(query, options))}</h2>${filters.length ? `<p>${filters.map((value) => escapeHtml(value)).join(" · ")}</p>` : ""}<p>Sorted by ${options.sort === "citation" ? "citation" : "relevance"}.</p></section>`;
   } catch (error) {
     return `<section class="query-explanation query-explanation-error" role="alert"><strong>Query could not be interpreted</strong><p>${escapeHtml(error.message)}</p></section>`;
   }
@@ -814,7 +855,7 @@ async function runStatuteSearch(query, routeOptions = {}, { limit = SEARCH_BATCH
     const { results: matches, totalMatches, supplementUnavailable } = outcome;
     status.textContent = totalMatches
       ? `Showing ${matches.length.toLocaleString()} of ${totalMatches.toLocaleString()} result${totalMatches === 1 ? "" : "s"}`
-      : "No results";
+      : "No results. Try fewer words, check the citation, or broaden the title and chapter filters.";
     warning.hidden = !supplementUnavailable;
     renderSearchResults(matches, results, query, options);
     const href = searchRouteHref(query, { ...options, title: routeOptions.title });
@@ -847,7 +888,7 @@ async function renderSearchPage(catalog, route) {
   const selectedTitle = catalog.titles.find((title) => title.id === options.title) ?? null;
   setDocumentTitle(query ? `Search: ${query}` : "Search");
   app.innerHTML = `${siteHeader()}<main class="search-page" id="main-content">
-    <header><p class="eyebrow">Statutes, acts, and infractions</p><h1>Search</h1><p>Search the full statute text and, when selected, legislative history and annotations. Matching Public and Special Acts and infractions are listed under “Also found in”; the filters below apply to statutes only.</p></header>
+    <header><p class="eyebrow">Statutes, acts, and infractions</p><h1>Search</h1><p>Find sections by citation, phrase, or keyword. Filters apply to statutes; related acts and infractions follow the results.</p></header>
     <form class="search-refine search-v2-refine" data-search-refine>
       <div class="search-primary-controls">
         <div class="search-field search-query-field"><label for="search-page-query">Citation, phrase, or keyword</label>
@@ -866,17 +907,18 @@ async function renderSearchPage(catalog, route) {
           <div class="search-field"><label for="search-supplement-filter">Supplement</label><select id="search-supplement-filter" name="supplement"><option value="">Base and supplement</option><option value="updated"${selectAttribute("updated", options.supplement)}>Updated by supplement</option><option value="base"${selectAttribute("base", options.supplement)}>Base revision only</option></select></div>
           <div class="search-field"><label for="search-sort">Sort</label><select id="search-sort" name="sort"><option value="relevance"${selectAttribute("relevance", options.sort)}>Relevance</option><option value="citation"${selectAttribute("citation", options.sort)}>Citation</option></select></div>
         </div>
+    <details class="search-syntax"><summary>Search syntax and tips</summary><p class="search-help" id="search-help">Use AND, OR, NOT, parentheses, quoted phrases, NEAR/n proximity, and a trailing wildcard such as <code>regulat*</code>. Multiple words use AND automatically. Fuzzy matching and stemming are not applied.</p></details>
       </details>
     </form>
-    <p class="search-help" id="search-help">Use AND, OR, NOT, parentheses, quoted phrases, NEAR/n proximity, and a trailing wildcard such as <code>regulat*</code>. Multiple words use AND automatically. Fuzzy matching and stemming are not applied.</p>
+
     ${queryExplanationMarkup(query, options)}
-    ${query ? `<form class="search-within" data-search-within><label for="search-within-query">Search within these results</label><div><input id="search-within-query" name="within" type="search" minlength="2" value="${escapeHtml(options.within ?? "")}" placeholder="Add another term or Boolean query"><button type="submit">Apply</button></div>${options.within ? `<a href="${escapeHtml(searchRouteHref(query, { ...options, within: null }))}">Clear within search</a>` : ""}</form>` : ""}
-    ${query.length >= 2 ? alsoFoundMarkup(query) : ""}
+    ${query ? `<details class="search-within-disclosure"${options.within ? " open" : ""}><summary>Search within these results</summary><form class="search-within" data-search-within><label for="search-within-query">Search within these results</label><div><input id="search-within-query" name="within" type="search" minlength="2" value="${escapeHtml(options.within ?? "")}" placeholder="Add another term or Boolean query"><button type="submit">Apply</button></div>${options.within ? `<a href="${escapeHtml(searchRouteHref(query, { ...options, within: null }))}">Clear within search</a>` : ""}</form></details>` : ""}
     <progress id="search-progress" value="0" max="1" hidden>Search progress</progress>
     <div id="search-status" role="status" aria-live="polite">${query ? "Preparing search…" : "Enter at least two characters."}</div>
     <p class="supplement-warning" id="search-supplement-warning" role="alert" hidden>The published supplement search data could not be loaded. These results use the base revision and may be incomplete; reload while online before relying on them.</p>
     <ol id="results" class="results"></ol>
     <button type="button" class="search-more" data-search-more hidden>Show more results</button>
+    ${query.length >= 2 ? alsoFoundMarkup(query) : ""}
     <details class="search-history"><summary>Recent searches on this device</summary><div data-search-history>${searchHistoryMarkup()}</div></details>
   </main><footer>${legalFooter()}</footer>`;
   if (query.length < 2) return;
@@ -936,7 +978,8 @@ function renderTitle(catalog, title) {
     ${breadcrumbs([{ label: "Titles", href: titlesRouteHref() }, { label: titleLabel(title) }])}
     <div class="browse-heading"><div><p class="eyebrow">${title.chapters.length} chapter${title.chapters.length === 1 ? "" : "s"}</p><h1>${escapeHtml(titleLabel(title))} — ${escapeHtml(title.name)}</h1></div><a href="${escapeHtml(title.sourceUrl)}">Official title source</a></div>
     <p class="desktop-only">Choose a chapter from the chapters column.</p>
-    <ol class="chapter-list mobile-only">${title.chapters.map((chapter) => `<li><a href="${escapeHtml(chapterRoute(title, chapter))}"><strong>${escapeHtml(chapterLabel(chapter))}</strong><span>${escapeHtml(chapter.name)}</span><small>${chapter.sectionCount} section${chapter.sectionCount === 1 ? "" : "s"}</small></a></li>`).join("")}</ol>
+    <div class="mobile-only">${browseFilter("chapter-filter", "Find a chapter", "browse-chapters-list")}</div>
+    <ol class="chapter-list mobile-only" id="browse-chapters-list">${title.chapters.map((chapter) => `<li><a href="${escapeHtml(chapterRoute(title, chapter))}"><strong>${escapeHtml(chapterLabel(chapter))}</strong><span>${escapeHtml(chapter.name)}</span><small>${chapter.sectionCount} section${chapter.sectionCount === 1 ? "" : "s"}</small></a></li>`).join("")}</ol>
   </main>`;
   mountApplicationShell({
     contextualNavigation: [statuteTitleColumn(catalog, title), statuteChapterColumn(title)],
@@ -1039,7 +1082,7 @@ async function renderChapter(catalog, title, chapterMeta, route, sequence) {
   const hiddenRepealed = chapter.sections.length - chapterNavigation.length;
   setDocumentTitle(selected ? sectionLabel(selected) : chapterLabel(chapter), titleLabel(title));
   const sectionItems = statuteSectionItems(title, chapter, chapterNavigation, selected, changeBySection, pendingBySection);
-  const mobileChapterList = `<section class="mobile-only mobile-section-browser" aria-labelledby="mobile-sections-heading"><div class="section-heading"><div><p class="eyebrow">${chapterNavigation.length} sections${hiddenRepealed ? ` · ${hiddenRepealed} repealed hidden` : ""}</p><h2 id="mobile-sections-heading">Sections</h2></div></div>${railList(sectionItems)}</section>`;
+  const mobileChapterList = `<section class="mobile-only mobile-section-browser" aria-labelledby="mobile-sections-heading"><div class="section-heading"><div><p class="eyebrow">${chapterNavigation.length} sections${hiddenRepealed ? ` · ${hiddenRepealed} repealed hidden` : ""}</p><h2 id="mobile-sections-heading">Sections</h2></div></div>${browseFilter("section-filter", "Find a section", "browse-sections-list")}<div id="browse-sections-list">${railList(sectionItems)}</div></section>`;
   const mainContent = `<main class="reader-content application-main" id="main-content">
       ${breadcrumbs([
         { label: "Titles", href: titlesRouteHref() },
@@ -1049,7 +1092,8 @@ async function renderChapter(catalog, title, chapterMeta, route, sequence) {
       ])}
       ${supplementError ? `<p class="supplement-warning" role="alert">The published supplement could not be loaded. This page is showing the base revision only; reload before relying on it.</p>` : ""}
       <p class="source-note">Text: ${escapeHtml(String(catalog.source?.revisionYear ?? "Published"))} revision${latestEdition && !supplementError ? ` with the ${latestEdition.editionYear} Supplement` : ""}. Captured ${escapeHtml(formatSnapshotDate(catalog.source?.retrievedAt ?? catalog.generatedAt) ?? "date unavailable")}.</p>
-      ${selected ? `<div class="mobile-reader-tools"><button type="button" data-open-chapter-sheet aria-haspopup="dialog">Browse chapter</button></div>${renderProvision(title, chapter, selected, maps, secondaryContext, changeBySection.get(selected.id), pendingBySection.get(selected.id))}${sectionNavigation(title, chapter, chapterNavigation, selected)}${chapterSheet(title, chapter, chapterNavigation, selected, changeBySection, pendingBySection)}` : `<div class="chapter-overview"><p class="eyebrow">${chapterNavigation.length} sections${hiddenRepealed ? ` · ${hiddenRepealed} repealed hidden` : ""}</p><h1>${escapeHtml(chapterLabel(chapter))} — ${escapeHtml(chapter.name)}</h1>${overlay?.changes.length ? `<p class="supplement-summary"><strong>${overlay.editionYear} Supplement applied.</strong> ${overlay.changes.length} updated section${overlay.changes.length === 1 ? "" : "s"} are labeled in the chapter list.</p>` : ""}<div data-amendments-status><p role="status">Amendment information loading…</p></div><p class="desktop-only">Choose a section from the sections column.</p><a href="${escapeHtml(chapter.sourceUrl)}">Official chapter source</a></div>${mobileChapterList}`}
+      <div class="chapter-research-tools"><a href="${escapeHtml(searchRouteHref("", { title: title.id, chapter: chapter.number }))}">Search this chapter</a>${selected ? `<span class="mobile-reader-tools"><button type="button" data-open-chapter-sheet aria-haspopup="dialog">Browse chapter</button></span>` : ""}${selected ? sectionNavigation(title, chapter, chapterNavigation, selected).replace('aria-label="Adjacent sections"', 'aria-label="Section shortcuts"') : ""}</div>
+      ${selected ? `${renderProvision(title, chapter, selected, maps, secondaryContext, changeBySection.get(selected.id), pendingBySection.get(selected.id))}${sectionNavigation(title, chapter, chapterNavigation, selected)}${chapterSheet(title, chapter, chapterNavigation, selected, changeBySection, pendingBySection)}` : `<div class="chapter-overview"><p class="eyebrow">${chapterNavigation.length} sections${hiddenRepealed ? ` · ${hiddenRepealed} repealed hidden` : ""}</p><h1>${escapeHtml(chapterLabel(chapter))} — ${escapeHtml(chapter.name)}</h1>${chapterSupplementSummary(title, chapter, overlay, changeBySection)}<div data-amendments-status><p role="status">Amendment information loading…</p></div><p class="desktop-only">Choose a section from the sections column.</p><a href="${escapeHtml(chapter.sourceUrl)}">Official chapter source</a></div>${mobileChapterList}`}
     </main>`;
   mountApplicationShell({
     contextualNavigation: [
@@ -1074,7 +1118,7 @@ async function renderChapter(catalog, title, chapterMeta, route, sequence) {
       const amendments = amendmentsForSection(index, section, statuteTextYears(catalog, latestEdition));
       if (amendments.length) pendingBySection.set(section.id, amendments);
     }
-    slot.innerHTML = (selected ? renderPendingAmendments(pendingBySection.get(selected.id)) : pendingChapterSummary(pendingBySection))
+    slot.innerHTML = (selected ? renderPendingAmendments(pendingBySection.get(selected.id)) : pendingChapterSummary(title, chapter, changeBySection, pendingBySection))
       || '<p class="source-note">No amendments found in the listed acts. Other acts may affect this section; verify with official sources.</p>';
     for (const marker of app.querySelectorAll("[data-act-notice-for]")) {
       marker.innerHTML = pendingActPill(pendingBySection.get(marker.dataset.actNoticeFor));
@@ -1885,6 +1929,24 @@ async function clearDeviceData(action, button) {
 }
 
 document.addEventListener("input", (event) => {
+  if (event.target.matches("[data-filter-list]")) {
+    const target = document.getElementById(event.target.dataset.filterList);
+    if (!target) return;
+    const words = event.target.value.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
+    const items = [...target.querySelectorAll("li")];
+    let visible = 0;
+    for (const item of items) {
+      const searchable = `${item.textContent} ${item.dataset.filterHeading ?? ""}`.toLocaleLowerCase();
+      const matches = words.every((word) => searchable.includes(word));
+      item.hidden = !matches;
+      if (matches) visible += 1;
+    }
+    const status = document.querySelector(`[data-filter-status="${target.id}"]`);
+    if (status) status.textContent = words.length
+      ? visible ? `${visible} of ${items.length} shown` : "No matching headings. Try a number or fewer words."
+      : "";
+    return;
+  }
   if (event.target.matches("[data-text-size]")) {
     const preferences = deviceState.updatePreferences({ textScale: event.target.value });
     applyPreferences(preferences);
@@ -1937,6 +1999,13 @@ document.addEventListener("focusin", (event) => {
 });
 
 document.addEventListener("keydown", (event) => {
+  // Search inputs consume Escape to clear their value in Chromium. In the
+  // modal chapter sheet Escape consistently dismisses and restores focus.
+  if (event.key === "Escape" && event.target.closest?.("[data-chapter-sheet][open]")) {
+    event.preventDefault();
+    chapterDialogController?.close();
+    return;
+  }
   const resizeHandle = event.target.closest?.("[data-resize-pane]");
   if (resizeHandle && (event.key === "ArrowLeft" || event.key === "ArrowRight")) {
     event.preventDefault();
@@ -2261,6 +2330,10 @@ document.addEventListener("change", async (event) => {
   }
   if (event.target.matches("[data-compact-lists]")) {
     applyPreferences(deviceState.updatePreferences({ compactLists: event.target.checked }));
+    return;
+  }
+  if (event.target.matches("[data-subtle-notices]")) {
+    applyPreferences(deviceState.updatePreferences({ subtleNotices: event.target.checked }));
     return;
   }
   if (event.target.matches("[data-hide-repealed]")) {

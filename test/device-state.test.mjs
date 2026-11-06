@@ -59,7 +59,8 @@ test("normalizes and applies reader preferences", () => {
     fontProfile: "atkinson",
     lineSpacing: 2.8,
     compactLists: true,
-    hideRepealedSections: true
+    hideRepealedSections: true,
+    subtleNotices: true
   });
   assert.deepEqual(preferences, {
     theme: "oled",
@@ -67,7 +68,8 @@ test("normalizes and applies reader preferences", () => {
     fontProfile: "atkinson",
     lineSpacing: 2.2,
     compactLists: true,
-    hideRepealedSections: true
+    hideRepealedSections: true,
+    subtleNotices: true
   });
   const style = { values: new Map(), setProperty(key, value) { this.values.set(key, value); } };
   const root = { dataset: {}, style };
@@ -76,6 +78,7 @@ test("normalizes and applies reader preferences", () => {
   assert.equal(root.dataset.fontProfile, "atkinson");
   assert.equal(root.dataset.compactLists, "true");
   assert.equal(root.dataset.hideRepealedSections, "true");
+  assert.equal(root.dataset.subtleNotices, "true");
   assert.equal(style.values.get("--text-scale"), "1.25");
   assert.equal(style.values.get("--line-spacing"), "2.2");
   assert.equal(style.values.get("--line-spacing-factor"), String(2.2 / 1.55));

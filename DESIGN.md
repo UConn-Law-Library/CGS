@@ -365,6 +365,16 @@ Inserted language sits on the Addition tint and deleted language on the Deletion
 
 ## Do's and Don'ts
 
+### Isolated modernization prototype
+
+On `codex/cgs-reading-room-prototype`, the [prototype design report](docs/modernization-prototype.md)
+documents intentional experiments with neutral header/tab surfaces, sentence-case
+metadata, 44rem reading measure, flat collection links and filterable navigation.
+The final prototype block in `src/styles.css` supersedes the corresponding visual
+rules above on this branch. Semantic palette roles, font preferences, source
+provenance, focus visibility and reduced-motion requirements still apply.
+This addendum does not authorize a production deployment.
+
 ### Do:
 - **Do** take every color from a token; the header and tab bar use the frame tokens, which stay the same in every theme.
 - **Do** keep statute, act, and infraction text in the Reading font, in the reading column (up to 54rem).

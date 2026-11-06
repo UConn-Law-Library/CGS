@@ -288,8 +288,9 @@ test("About shows recent updates and expands earlier changes", async ({ page }, 
 test("desktop contextual rail retains its scroll position after section navigation", async ({ page }, testInfo) => {
   test.skip(isMobileProject(testInfo), "Contextual rails are a desktop presentation.");
   await openApp(page, "#/t/17b/c/319v/s/17b-238");
-  const sections = page.locator(".sections-column");
+  const sections = page.locator("#rail-sections");
   const before = await sections.evaluate((element) => element.scrollTop);
+  expect(before).toBeGreaterThan(0);
   await sections.locator('a[href="#/t/17b/c/319v/s/17b-239"]').click();
   await expect(page).toHaveURL(/#\/t\/17b\/c\/319v\/s\/17b-239$/);
   await expect(page.getByRole("heading", { level: 1, name: /Sec\. 17b-239/ })).toBeVisible();
@@ -466,6 +467,7 @@ test("Search v2 preserves filters, explains the query, searches within results, 
   await expect(page.getByRole("heading", { level: 2, name: "public" })).toBeVisible();
   await expect(page.locator("#search-status")).toContainText(/Showing|No results/);
 
+  await page.locator(".search-within-disclosure > summary").click();
   await page.locator("#search-within-query").fill("records");
   await page.locator("[data-search-within]").getByRole("button", { name: "Apply" }).click();
   await expect(page).toHaveURL(/within=records/);
@@ -515,10 +517,13 @@ test("print mode keeps statute text and removes application chrome", async ({ pa
   await expect(page.locator("article.provision .statute-text")).toBeVisible();
 });
 
-test("the search shortcut moves focus to the omnisearch field", async ({ page }) => {
+test("the search shortcut moves focus to the homepage omnisearch field", async ({ page }) => {
   await openApp(page);
+  await expect(page.locator("[data-omni-input]")).toHaveCount(1);
+  const input = page.locator(".research-start").getByRole("combobox");
+  await expect(input).toBeVisible();
   await page.keyboard.press("/");
-  await expect(page.locator("#global-query")).toBeFocused();
+  await expect(input).toBeFocused();
 });
 
 test("the omnisearch field suggests Public Acts by citation and by text", async ({ page }) => {

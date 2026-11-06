@@ -5,6 +5,7 @@ const FEEDBACK_ENDPOINT = "https://formsubmit.co/lawlibraryadministration@uconn.
 
 const svgIcon = (paths) => `<svg class="glyph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false">${paths}</svg>`;
 export const icons = {
+  settings: svgIcon(`<path d="M4 7h16M4 17h16"/><circle cx="9" cy="7" r="3" fill="var(--surface-raised)"/><circle cx="15" cy="17" r="3" fill="var(--surface-raised)"/>`),
   document: svgIcon(`<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/>`),
   scale: svgIcon(`<path d="M12 3v18M8 21h8M5 7h14"/><path d="M2 15l3-8 3 8M16 15l3-8 3 8"/><path d="M2 15a3 3 0 0 0 6 0M16 15a3 3 0 0 0 6 0"/>`),
   bookmark: svgIcon(`<path d="M6 3h12v18l-6-4-6 4z"/>`),
@@ -166,6 +167,7 @@ function settingsPanel() {
     </div>
     <label class="setting-row"><span><strong>Compact lists</strong><small>Show more items on screen</small></span><input type="checkbox" data-compact-lists${preferences.compactLists ? " checked" : ""}></label>
     <label class="setting-row"><span><strong>Hide repealed sections</strong><small>Remove them from chapter navigation</small></span><input type="checkbox" data-hide-repealed${preferences.hideRepealedSections ? " checked" : ""}></label>
+    <label class="setting-row"><span><strong>Subtle notices</strong><small>Show status tags as colored dots in section lists</small></span><input type="checkbox" data-subtle-notices${preferences.subtleNotices ? " checked" : ""}></label>
     <button type="button" class="settings-action update-action" data-apply-update${pwaState.updateAvailable ? "" : " hidden"}>Update available <small>Reload to use the latest published app</small></button>
     <a class="settings-action" href="#/about"><strong class="settings-about-title">About this app</strong> <small>Sources, coverage, and project information</small></a>
     <a class="settings-action" href="${guideRouteHref()}"><strong class="settings-about-title">Understanding the Statutes</strong> <small>How laws are enacted, codified, and published</small></a>
@@ -190,35 +192,47 @@ function settingsPanel() {
   </section>`;
 }
 
-function siteHeader() {
+function backButton() {
+  return `<button type="button" class="navigation-back" data-go-back aria-label="Go back" title="Go back to the previous page"${navigationHistory.canGoBack ? "" : " disabled"}><span aria-hidden="true">←</span><span class="back-label"> Back</span></button>`;
+}
+
+function globalSearch({ route = parseRoute(location), showBack = true } = {}) {
+  const searchValue = route.kind === "search" ? route.query ?? "" : "";
+  const placeholder = route.kind === "home" ? "Citation or keywords" : "Search statutes, acts, index, and infractions";
+  return `<form class="global-search" data-global-search role="search">
+      ${showBack ? backButton() : ""}
+      <label class="visually-hidden" for="global-query">Search statutes, acts, index topics, and infractions</label>
+      <div class="global-search-field">
+        <input id="global-query" name="query" type="search" minlength="2" required value="${escapeHtml(searchValue)}" placeholder="${placeholder}" autocomplete="off" spellcheck="false"
+          role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="omni-results" data-omni-input>
+        <kbd class="omni-shortcut" aria-hidden="true">/</kbd>
+        <div class="omni-panel" id="omni-results" role="listbox" hidden data-omni-panel></div>
+      </div>
+      <button type="submit" class="global-search-button"><span class="utility-label">Search</span><span class="mobile-utility-icon" aria-hidden="true">${svgIcon('<circle cx="10" cy="10" r="6"/><path d="m15 15 5 5"/>')}</span></button>
+      <a class="navigation-history" href="#/history"${route.kind === "history" ? ' aria-current="page"' : ""}><span class="utility-label">History</span><span class="mobile-utility-icon" aria-hidden="true">${svgIcon('<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>')}</span></a>
+    </form>`;
+}
+
+function siteHeader({ showSearch = true } = {}) {
   const route = parseRoute(location);
   const active = activeDestination(route);
-  const searchValue = route.kind === "search" ? route.query ?? "" : "";
   const bookmarkCount = deviceState.bookmarks().length;
   return `<header class="site-header">
     <div class="header-bar">
-      <a class="brand" href="#/"><span class="brand-mark" aria-hidden="true">§</span><span>Connecticut General Statutes</span></a>
+      <div class="header-identity">
+        <a class="brand" href="#/"><span class="brand-mark" aria-hidden="true">§</span><span><small class="brand-library">UConn Law Library</small>Connecticut General Statutes</span></a>
+        ${showSearch ? "" : backButton()}
+      </div>
       <nav class="app-nav" aria-label="Main sections">
         ${navLink({ href: "#/", id: "statutes", icon: "§", label: "Statutes" }, active)}
         ${navLink({ href: "#/index", id: "index", icon: "A–Z", label: "Index" }, active)}
         ${navLink({ href: "#/infractions", id: "infractions", icon: icons.scale, label: "Infractions" }, active)}
         ${navLink({ href: "#/acts", id: "acts", icon: icons.document, label: "Acts" }, active)}
         ${navLink({ href: "#/bookmarks", id: "bookmarks", icon: icons.bookmark, label: "Bookmarks", badge: bookmarkCount }, active)}
-        <button type="button" data-open-settings aria-expanded="false"${active === "settings" ? ` aria-current="page"` : ""}><span aria-hidden="true">⚙</span><span>Settings</span></button>
+        <button type="button" data-open-settings aria-expanded="false"${active === "settings" ? ` aria-current="page"` : ""}><span aria-hidden="true">${icons.settings}</span><span>Settings</span></button>
       </nav>
     </div>
-    <form class="global-search" data-global-search role="search">
-      <button type="button" class="navigation-back" data-go-back aria-label="Go back" title="Go back to the previous page"${navigationHistory.canGoBack ? "" : " disabled"}><span aria-hidden="true">←</span><span class="back-label"> Back</span></button>
-      <label class="visually-hidden" for="global-query">Search statutes, acts, index topics, and infractions</label>
-      <div class="global-search-field">
-        <input id="global-query" name="query" type="search" minlength="2" required value="${escapeHtml(searchValue)}" placeholder="Search statutes, acts, index, and infractions" autocomplete="off" spellcheck="false"
-          role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="omni-results" data-omni-input>
-        <kbd class="omni-shortcut" aria-hidden="true">/</kbd>
-        <div class="omni-panel" id="omni-results" role="listbox" hidden data-omni-panel></div>
-      </div>
-      <button type="submit" class="global-search-button">Search</button>
-      <a class="navigation-history" href="#/history"${route.kind === "history" ? ' aria-current="page"' : ""}>History</a>
-    </form>
+    ${showSearch ? globalSearch({ route }) : ""}
     ${settingsPanel()}
   </header><dialog class="clear-data-dialog" data-clear-data-dialog aria-labelledby="clear-data-title">
     <h2 id="clear-data-title">Clear data?</h2><p data-clear-data-message></p>
@@ -236,5 +250,5 @@ function siteHeader() {
   </dialog>`;
 }
 
-  return { siteHeader, updatePwaControls };
+  return { siteHeader, globalSearch, updatePwaControls };
 }

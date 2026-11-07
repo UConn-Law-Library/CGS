@@ -1640,6 +1640,30 @@ h1,
   }
   .context-list a[aria-current="page"] { background: var(--soft-surface); box-shadow: none; outline: 1px solid var(--field-line); outline-offset: -1px; }
   .context-list a:hover { background: var(--soft-surface); }
+  /* Page tree navigation: a trunk with rounded elbows into each child row. */
+  .statute-tree-column { --tree-line: var(--field-line); --tree-accent: var(--blue); --tree-indent: .85rem; }
+  .statute-tree { padding: .75rem .5rem 2rem .85rem; }
+  .statute-tree ul { margin: 0; padding: 0; list-style: none; }
+  .statute-tree .tree-root { padding-left: .35rem; border-left: 1px solid var(--tree-line); }
+  .statute-tree .tree-children { margin-left: .7rem; padding-left: var(--tree-indent); }
+  .tree-node, .tree-sections > li { position: relative; }
+  .tree-children > li::before { content: ""; position: absolute; top: 0; left: calc(var(--tree-indent) * -1); width: calc(var(--tree-indent) - .15rem); height: 1.2rem; border-bottom: 1px solid var(--tree-line); border-left: 1px solid var(--tree-line); border-bottom-left-radius: .5rem; }
+  .tree-children > li:not(:last-child)::after { content: ""; position: absolute; top: 0; bottom: 0; left: calc(var(--tree-indent) * -1); border-left: 1px solid var(--tree-line); }
+  .tree-row { display: flex; align-items: flex-start; gap: .1rem; }
+  .statute-tree a { display: block; min-width: 0; padding: .35rem .5rem; color: var(--ink); border-radius: var(--radius-control); text-decoration: none; }
+  .statute-tree a:hover { background: var(--soft-surface); }
+  .statute-tree a:focus-visible, .tree-toggle:focus-visible { outline-offset: -2px; }
+  .statute-tree a[aria-current="page"] { background: var(--soft-surface); box-shadow: none; outline: 1px solid var(--field-line); outline-offset: -1px; }
+  .statute-tree strong { display: block; color: var(--ink); font-size: var(--text-meta); font-weight: 600; line-height: 1.3; overflow-wrap: anywhere; }
+  .statute-tree a > span:not(.navigation-notice) { display: block; margin-top: .05rem; color: var(--muted); font-size: var(--text-caption); line-height: 1.3; overflow-wrap: anywhere; }
+  .tree-row.is-path > a strong { color: var(--blue); }
+  .tree-toggle { display: grid; flex: none; width: 1.75rem; height: 1.75rem; margin-top: .2rem; padding: 0; place-items: center; color: var(--tree-accent); background: transparent; border: 0; border-radius: var(--radius-control); }
+  .tree-toggle:hover { background: var(--soft-surface); }
+  .tree-chevron { width: 1rem; height: 1rem; transform: rotate(-90deg); transition: transform .15s ease; }
+  .tree-toggle[aria-expanded="true"] .tree-chevron { transform: none; }
+  .tree-message { padding: .35rem .5rem; color: var(--muted); font-size: var(--text-caption); }
+  .tree-message a { display: inline; padding: 0; color: var(--blue); text-decoration: underline; }
+  .statute-tree .tree-sections.context-list { padding-block: 0; padding-right: 0; }
   .context-collapse-toggle { top: calc(var(--header-height, 8rem) + .8rem); width: 1.8rem; height: 2.75rem; background: var(--surface-raised); box-shadow: none; }
   .application-main, .home-page.application-main { width: min(64rem, calc(100% - 4rem)); padding-top: 2rem; }
   .reader-content.application-main { width: min(var(--measure-reading), calc(100% - 4rem)); }

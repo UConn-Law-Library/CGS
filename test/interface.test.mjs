@@ -23,7 +23,7 @@ test("Search v2 uses structured filters, highlighted field-aware excerpts, and l
   assert.match(appSource, /class="search-field search-query-field"/);
   assert.match(appSource, /renderSearchHighlight\(document\.heading, highlightTerms\)/);
   assert.match(appSource, /renderSearchExcerpt\(searchResultContext\(document, options\), highlightTerms\)/);
-  assert.match(appSource, /NEAR\/n proximity/);
+  assert.match(appSource, /NEAR\/5/);
   assert.match(appSource, /data-search-within/);
   assert.match(appSource, /deviceState\.recordSearch/);
   assert.match(stylesSource, /\.search-primary-controls \{ display: grid;/);
@@ -103,12 +103,12 @@ test("statute metadata shares one populated Information and References region", 
   assert.doesNotMatch(stylesSource, /\.secondary-sources \{ margin-top:/);
 });
 
-test("amended supplement sections offer a collapsed native language comparison at the bottom", () => {
-  assert.match(appSource, /<details class="revision-comparison" id=/);
-  assert.match(appSource, /<summary>Compare with \$\{priorYear\} text<\/summary>/);
+test("amended supplement sections switch between Supplement, previous text, and a language comparison", () => {
+  assert.match(appSource, /role="tablist" aria-label="Section text version"/);
+  assert.match(appSource, /\["compare", "Compare", renderRevisionComparison\(section, change, maps\)\]/);
   assert.match(appSource, /<ins class="revision-addition">/);
   assert.match(appSource, /<del class="revision-deletion">/);
-  assert.match(appSource, /renderInformationReferences\(section, maps, secondaryContext, change\)\}\s*\$\{comparison\}/);
+  assert.match(appSource, /renderTextViews\(section, change, `<div class="statute-text">/);
   assert.doesNotMatch(appSource, /data-revision-comparison-toggle/);
   assert.match(stylesSource, /\.revision-addition \{ color: var\(--addition-ink\); background: var\(--addition-surface\)/);
   assert.match(stylesSource, /\.revision-deletion \{ color: var\(--deletion-ink\); background: var\(--deletion-surface\); text-decoration-color: currentColor/);

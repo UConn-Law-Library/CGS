@@ -10,6 +10,7 @@ import { generateSearchV2Artifacts } from "./lib/search-v2-artifacts.mjs";
 import { buildRepositoryMap } from "./lib/build-repository-map.mjs";
 import { generateActAmendments } from "./lib/act-amendments-artifact.mjs";
 import { generateDataRelease } from "./lib/data-release.mjs";
+import { applyPreviewNamespace } from "./lib/preview-build.mjs";
 
 const root = process.cwd();
 const output = path.join(root, "dist");
@@ -17,6 +18,7 @@ await rm(output, { recursive: true, force: true });
 await mkdir(output, { recursive: true });
 await cp(path.join(root, "src"), output, { recursive: true });
 await cp(path.join(root, "public"), output, { recursive: true });
+if (process.env.CGS_PREVIEW_BUILD === "true") await applyPreviewNamespace(output);
 const packageMetadata = JSON.parse(await readFile(path.join(root, "package.json"), "utf8"));
 const updates = await readRecentUpdates(root);
 const appVersion = await stampReleaseVersion(output, process.env.CGS_APP_VERSION ?? packageMetadata.version, updates);

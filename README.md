@@ -2,7 +2,19 @@
 
 This branch contains an isolated [UI/UX modernization prototype](docs/modernization-prototype.md),
 including the audit, local preview instructions, screenshots, validation results,
-and an incremental rollout recommendation. It has not been deployed.
+and an incremental rollout recommendation. It has not been deployed to production.
+
+Pushes to this branch publish to the [preview site](https://uconn-law-library.github.io/CGS-Preview/)
+through `publish-preview.yml`. Production still deploys only from `main`, so merging this branch
+into `main` is what puts it live.
+
+`npm run build:preview` builds the same site locally. It sets the preview URL and renames browser
+storage (`cgs-preview.*`), because both sites share an origin and would otherwise share bookmarks,
+settings, and offline data.
+
+Publishing needs a deploy key: add the public key to `UConn-Law-Library/CGS-Preview` as a deploy
+key with write access, and the private key to this repository as the `CGS_PREVIEW_DEPLOY_KEY`
+Actions secret. Without it, the workflow skips publishing and leaves a notice on the run.
 
 A database-free, GitHub Pages-only platform for publishing and searching the Connecticut General Statutes.
 

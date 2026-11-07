@@ -69,7 +69,8 @@ test("normalizes and applies reader preferences", () => {
     lineSpacing: 2.2,
     compactLists: true,
     hideRepealedSections: true,
-    subtleNotices: true
+    subtleNotices: true,
+    navigationTree: false
   });
   const style = { values: new Map(), setProperty(key, value) { this.values.set(key, value); } };
   const root = { dataset: {}, style };

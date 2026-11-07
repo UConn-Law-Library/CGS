@@ -1,0 +1,273 @@
+import { escapeHtml, navigationSectionDescription, navigationSectionLabel } from "./reader.js";
+import { routeHref } from "./routes.js";
+
+// A single navigation pane: Titles > Chapters > Sections, as a collapsible page tree. Offered in
+// Settings beside the three-pane layout. Sections come from the small per-title heading indexes,
+// so browsing or filtering the whole code does not download any chapter text.
+const RAIL_ID = "rail-statute-tree";
+const SECTION_RESULT_LIMIT = 200;
+const MINIMUM_SECTION_QUERY = 2;
+const LOAD_CONCURRENCY = 6;
+const chevron = `<svg class="tree-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>`;
+
+function queryWords(query) {
+  return query.replace(/§/g, " ").toLocaleLowerCase().split(/\s+/).filter(Boolean);
+}
+
+function matchesWords(text, words) {
+  return words.every((word) => text.includes(word));
+}
+
+function plural(count, noun) {
+  return `${count.toLocaleString()} ${noun}${count === 1 ? "" : "s"}`;
+}
+
+export function createStatuteTree({ titleLabel, chapterLabel, titleRoute, chapterRoute, loadHeadings }) {
+  let catalog = null;
+  let current = {};
+  let query = "";
+  let searching = false;
+  let filterTimer = null;
+  let progressTimer = null;
+  // Each mode keeps its own open and closed rows: filtering opens rows that have matches, and
+  // clearing the filter returns to what the person had open.
+  const expanded = new Map();
+  const filterExpanded = new Map();
+  const headings = new Map();
+  const headingLoads = new Map();
+  const failedTitles = new Set();
+
+  const titleKey = (title) => `t:${title.id}`;
+  const chapterKey = (title, chapter) => `c:${title.id}:${chapter.id}`;
+
+  function isOpen(key, byDefault = false) {
+    return (query ? filterExpanded : expanded).get(key) ?? byDefault;
+  }
+
+  function ensureHeadings(title) {
+    if (headings.has(title.id)) return Promise.resolve();
+    if (!headingLoads.has(title.id)) {
+      failedTitles.delete(title.id);
+      headingLoads.set(title.id, loadHeadings(title.id).then((rows) => {
+        headings.set(title.id, rows.map(([section, chapter, heading, citations]) => ({
+          section,
+          chapter,
+          heading,
+          citations,
+          text: `${citations.join(" ")} ${heading}`.toLocaleLowerCase()
+        })));
+      }).catch((error) => {
+        failedTitles.add(title.id);
+        console.warn("Could not load section headings", error);
+      }).finally(() => headingLoads.delete(title.id)));
+    }
+    return headingLoads.get(title.id);
+  }
+
+  function sectionRow(title, chapter, row) {
+    const href = routeHref({ title: title.number, chapter: chapter.number, section: row.section });
+    const description = navigationSectionDescription(row);
+    const label = navigationSectionLabel(row);
+    return `<li><a class="section-navigation-link" href="${escapeHtml(href)}"${href === current.sectionHref ? ' aria-current="page"' : ""}><strong>${escapeHtml(label)}</strong>${description ? `<span>${escapeHtml(description.split(/(?<=\.)\s+/, 1)[0])}</span>` : ""}</a></li>`;
+  }
+
+  function sectionList(items) {
+    return `<ul class="tree-children tree-sections context-list">${items}</ul>`;
+  }
+
+  function allSections(title, chapter) {
+    if (!query && current.chapterId === chapter.id && current.sectionItems) return sectionList(current.sectionItems().join(""));
+    const rows = headings.get(title.id);
+    if (rows) {
+      const items = rows.filter((row) => row.chapter === chapter.number).map((row) => sectionRow(title, chapter, row));
+      return sectionList(items.join("") || '<li class="tree-message">No sections listed.</li>');
+    }
+    if (failedTitles.has(title.id)) {
+      return sectionList(`<li class="tree-message">Sections could not be loaded. <a href="${escapeHtml(chapterRoute(title, chapter))}">Open the chapter</a></li>`);
+    }
+    ensureHeadings(title).then(() => refresh());
+    return sectionList('<li class="tree-message">Loading sections…</li>');
+  }
+
+  function node({ href, label, description, key, open, level, onPath, isCurrent, children }) {
+    return `<li class="tree-node tree-${level}">
+      <div class="tree-row${onPath ? " is-path" : ""}">
+        <a href="${escapeHtml(href)}"${isCurrent ? ' aria-current="page"' : ""}><strong>${escapeHtml(label)}</strong><span>${escapeHtml(description)}</span></a>
+        <button type="button" class="tree-toggle" data-tree-toggle="${escapeHtml(key)}" aria-expanded="${open}" aria-label="${open ? "Collapse" : "Expand"} ${escapeHtml(label)}">${chevron}</button>
+      </div>
+      ${open ? children() : ""}
+    </li>`;
+  }
+
+  function chapterNode(title, chapter, { sectionItems = null, openByDefault = false } = {}) {
+    const key = chapterKey(title, chapter);
+    return node({
+      href: chapterRoute(title, chapter),
+      label: chapterLabel(chapter),
+      description: chapter.name,
+      key,
+      open: isOpen(key, openByDefault),
+      level: "chapter",
+      onPath: current.chapterId === chapter.id,
+      isCurrent: current.chapterId === chapter.id && !current.sectionHref,
+      children: () => sectionItems === null ? allSections(title, chapter) : sectionList(sectionItems)
+    });
+  }
+
+  function titleNode(title, { chapters = null, openByDefault = false } = {}) {
+    const key = titleKey(title);
+    return node({
+      href: titleRoute(title),
+      label: titleLabel(title),
+      description: title.name,
+      key,
+      open: isOpen(key, openByDefault),
+      level: "title",
+      onPath: current.titleId === title.id,
+      isCurrent: current.titleId === title.id && !current.chapterId,
+      children: () => `<ul class="tree-children">${chapters ?? title.chapters.map((chapter) => chapterNode(title, chapter)).join("")}</ul>`
+    });
+  }
+
+  function fullTree() {
+    return `<ul class="tree-root">${catalog.titles.map((title) => titleNode(title)).join("")}</ul>`;
+  }
+
+  // Matches at any level. A row that matches keeps its ancestors, and a row with matching
+  // descendants starts open. A row that only matches itself starts closed and opens in full.
+  function filteredTree() {
+    const words = queryWords(query);
+    const searchSections = query.trim().length >= MINIMUM_SECTION_QUERY;
+    const counts = { titles: 0, chapters: 0, sections: 0, shown: 0 };
+    const nodes = [];
+    for (const title of catalog.titles) {
+      const titleHit = matchesWords(`${titleLabel(title)} ${title.name}`.toLocaleLowerCase(), words);
+      if (titleHit) counts.titles += 1;
+      const rows = searchSections ? headings.get(title.id) ?? [] : [];
+      const chapterNodes = [];
+      for (const chapter of title.chapters) {
+        const chapterHit = matchesWords(`${chapterLabel(chapter)} ${chapter.name}`.toLocaleLowerCase(), words);
+        if (chapterHit) counts.chapters += 1;
+        const hits = rows.filter((row) => row.chapter === chapter.number && matchesWords(row.text, words));
+        counts.sections += hits.length;
+        const room = Math.max(0, SECTION_RESULT_LIMIT - counts.shown);
+        const shown = hits.slice(0, room);
+        counts.shown += shown.length;
+        if (!chapterHit && !shown.length) continue;
+        chapterNodes.push(chapterNode(title, chapter, shown.length
+          ? { sectionItems: shown.map((row) => sectionRow(title, chapter, row)).join(""), openByDefault: true }
+          : {}));
+      }
+      if (!titleHit && !chapterNodes.length) continue;
+      nodes.push(titleNode(title, chapterNodes.length ? { chapters: chapterNodes.join(""), openByDefault: true } : {}));
+    }
+    return { markup: nodes.length ? `<ul class="tree-root">${nodes.join("")}</ul>` : "", counts };
+  }
+
+  function statusText(counts) {
+    const total = counts.titles + counts.chapters + counts.sections;
+    if (searching) return `Searching sections…${total ? ` ${total.toLocaleString()} match${total === 1 ? "" : "es"} so far.` : ""}`;
+    const incomplete = failedTitles.size ? " Some section headings could not be loaded." : "";
+    if (!total) return `No matching titles, chapters, or sections.${incomplete}`;
+    const summary = `${[["title", counts.titles], ["chapter", counts.chapters], ["section", counts.sections]].filter(([, count]) => count).map(([noun, count]) => plural(count, noun)).join(", ")}.`;
+    const capped = counts.sections > counts.shown ? ` Showing the first ${SECTION_RESULT_LIMIT} sections; add a word to narrow them.` : "";
+    return `${summary}${capped}${incomplete}`;
+  }
+
+  function markup() {
+    if (!query.trim()) return { html: fullTree(), status: "" };
+    const { markup: html, counts } = filteredTree();
+    return { html, status: statusText(counts) };
+  }
+
+  function refresh({ focusToggle = null } = {}) {
+    const rail = document.getElementById(RAIL_ID);
+    if (!rail || !catalog) return;
+    const { scrollTop } = rail;
+    const { html, status } = markup();
+    rail.innerHTML = html;
+    rail.scrollTop = scrollTop;
+    const statusElement = document.querySelector("[data-tree-filter-status]");
+    if (statusElement && statusElement.textContent !== status) statusElement.textContent = status;
+    if (focusToggle) rail.querySelector(`[data-tree-toggle="${CSS.escape(focusToggle)}"]`)?.focus({ preventScroll: true });
+  }
+
+  function revealCurrent() {
+    const rail = document.getElementById(RAIL_ID);
+    const row = rail?.querySelector('[aria-current="page"]');
+    if (!row) return;
+    const rowBox = row.getBoundingClientRect();
+    const railBox = rail.getBoundingClientRect();
+    if (rowBox.top < railBox.top || rowBox.bottom > railBox.bottom) rail.scrollTop += rowBox.top - railBox.top - (railBox.height - rowBox.height) / 2;
+  }
+
+  async function loadEveryTitle() {
+    const missing = catalog.titles.filter((title) => !headings.has(title.id) && !failedTitles.has(title.id));
+    if (!missing.length || searching) return;
+    searching = true;
+    let cursor = 0;
+    const scheduleProgress = () => {
+      if (progressTimer || !query.trim()) return;
+      progressTimer = setTimeout(() => {
+        progressTimer = null;
+        if (query.trim()) refresh();
+      }, 250);
+    };
+    const worker = async () => {
+      while (cursor < missing.length) {
+        await ensureHeadings(missing[cursor++]);
+        scheduleProgress();
+      }
+    };
+    await Promise.all(Array.from({ length: LOAD_CONCURRENCY }, worker));
+    searching = false;
+    if (query.trim()) refresh();
+  }
+
+  document.addEventListener("click", (event) => {
+    const toggle = event.target.closest("[data-tree-toggle]");
+    if (!toggle) return;
+    const key = toggle.dataset.treeToggle;
+    (query ? filterExpanded : expanded).set(key, toggle.getAttribute("aria-expanded") !== "true");
+    refresh({ focusToggle: key });
+  });
+
+  document.addEventListener("input", (event) => {
+    if (!event.target.matches("[data-tree-filter]")) return;
+    query = event.target.value;
+    filterExpanded.clear();
+    clearTimeout(filterTimer);
+    filterTimer = setTimeout(() => {
+      if (query.trim().length >= MINIMUM_SECTION_QUERY) loadEveryTitle();
+      refresh();
+      if (!query.trim()) revealCurrent();
+    }, 120);
+  });
+
+  // `next` describes the page being opened: its title, chapter and section, and the section rows
+  // the reader already loaded, which carry notices the heading indexes do not have.
+  function column(nextCatalog, next = {}) {
+    catalog = nextCatalog;
+    current = {
+      titleId: next.title?.id ?? null,
+      chapterId: next.chapter?.id ?? null,
+      sectionHref: next.sectionHref ?? null,
+      sectionItems: next.sectionItems ?? null
+    };
+    if (next.title) expanded.set(titleKey(next.title), true);
+    if (next.title && next.chapter) expanded.set(chapterKey(next.title, next.chapter), true);
+    if (query.trim().length >= MINIMUM_SECTION_QUERY) loadEveryTitle();
+    const { html, status } = markup();
+    return {
+      label: "Statute titles, chapters, and sections",
+      className: "statute-tree-column",
+      defaultWidth: 320,
+      heading: `<strong>Statutes</strong><div class="browse-filter"><label for="statute-tree-filter">Filter titles, chapters, and sections</label>
+        <input id="statute-tree-filter" type="search" value="${escapeHtml(query)}" placeholder="Number or heading" data-tree-filter aria-controls="${RAIL_ID}" autocomplete="off">
+        <p class="browse-filter-status" role="status" aria-live="polite" data-tree-filter-status>${escapeHtml(status)}</p></div>`,
+      content: `<div id="${RAIL_ID}" class="statute-tree">${html}</div>`
+    };
+  }
+
+  return { column, refresh, revealCurrent };
+}

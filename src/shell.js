@@ -176,6 +176,7 @@ function settingsPanel() {
     <label class="setting-row"><span><strong>Compact lists</strong><small>Show more items on screen</small></span><input type="checkbox" data-compact-lists${preferences.compactLists ? " checked" : ""}></label>
     <label class="setting-row"><span><strong>Hide repealed sections</strong><small>Remove them from chapter navigation</small></span><input type="checkbox" data-hide-repealed${preferences.hideRepealedSections ? " checked" : ""}></label>
     <label class="setting-row"><span><strong>Subtle notices</strong><small>Show status tags as colored dots in section lists</small></span><input type="checkbox" data-subtle-notices${preferences.subtleNotices ? " checked" : ""}></label>
+    <label class="setting-row"><span><strong>Page tree navigation</strong><small>On larger screens, browse titles, chapters, and sections in one panel</small></span><input type="checkbox" data-navigation-tree${preferences.navigationTree ? " checked" : ""}></label>
     <button type="button" class="settings-action update-action" data-apply-update${pwaState.updateAvailable ? "" : " hidden"}>Update available <small>Reload to use the latest published app</small></button>
     <a class="settings-action" href="#/about"><strong class="settings-about-title">About this app</strong> <small>Sources, coverage, and project information</small></a>
     <a class="settings-action" href="${guideRouteHref()}"><strong class="settings-about-title">Understanding the Statutes</strong> <small>How laws are enacted, codified, and published</small></a>

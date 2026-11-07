@@ -15,7 +15,8 @@ export const DEFAULT_PREFERENCES = Object.freeze({
   lineSpacing: 1.55,
   compactLists: true,
   hideRepealedSections: false,
-  subtleNotices: false
+  subtleNotices: false,
+  navigationTree: false
 });
 
 const themes = new Set(["auto", "light", "dark", "oled"]);
@@ -217,7 +218,8 @@ export class DeviceState {
       widths: Array.from({ length: 3 }, (_, index) => {
         const width = Number(value?.widths?.[index]);
         return Number.isFinite(width) && width >= 144 && width <= 420 ? Math.round(width) : null;
-      })
+      }),
+      treeWidth: Number.isFinite(value?.treeWidth) && value.treeWidth >= 144 && value.treeWidth <= 420 ? Math.round(value.treeWidth) : null
     };
   }
 
@@ -241,7 +243,8 @@ export class DeviceState {
         ? Boolean(value.compactLists)
         : DEFAULT_PREFERENCES.compactLists,
       hideRepealedSections: Boolean(value.hideRepealedSections),
-      subtleNotices: value.subtleNotices === true
+      subtleNotices: value.subtleNotices === true,
+      navigationTree: value.navigationTree === true
     };
   }
 
@@ -254,6 +257,7 @@ export class DeviceState {
     value.compactLists = Boolean(value.compactLists);
     value.hideRepealedSections = Boolean(value.hideRepealedSections);
     value.subtleNotices = value.subtleNotices === true;
+    value.navigationTree = value.navigationTree === true;
     this.#write(PREFERENCES_KEY, value);
     return value;
   }

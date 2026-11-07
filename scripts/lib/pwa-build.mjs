@@ -10,6 +10,7 @@ export const shellInputs = Object.freeze([
   "omnisearch-controller.js",
   "about-page.js",
   "shell.js",
+  "statute-tree.js",
   "bookmark-page.js",
   "bookmark-controls.js",
   "data-loader.js",

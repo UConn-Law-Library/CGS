@@ -1,6 +1,7 @@
 import { createOmnisearchController } from "./omnisearch-controller.js";
 import { createAboutPage, formatSnapshotDate } from "./about-page.js";
 import { createShell, icons, bookmarkButtonLabel, iconActionLabel } from "./shell.js";
+import { createStatuteTree } from "./statute-tree.js";
 import { QuickSearchRepository } from "./quick-search.js";
 import { renderBookmarkPage } from "./bookmark-page.js";
 import { bindBookmarkControls } from "./bookmark-controls.js";
@@ -91,6 +92,7 @@ const supplementRepository = new SupplementRepository();
 const repository = new SearchRepository({ supplementRepository });
 const searchClient = new ProgressiveSearchClient({ repository });
 const quickSearch = new QuickSearchRepository(repository);
+const statuteTree = createStatuteTree({ titleLabel, chapterLabel, titleRoute, chapterRoute, loadHeadings: (titleId) => quickSearch.loadHeadings(titleId) });
 const secondaryRepository = new SecondarySourceRepository();
 const actsRepository = new ActsRepository();
 const deviceState = new DeviceState();
@@ -163,7 +165,9 @@ function applicationShell({
 }) {
   const layout = deviceState.navigationLayout();
   const defaults = { 1: [256], 2: [208, 272], 3: [176, 208, 240] };
-  const paneWidths = (defaults[columnCount] ?? []).map((width, index) => layout.widths[index] ?? width);
+  const paneWidths = contextualNavigation[0]?.defaultWidth
+    ? [layout.treeWidth ?? contextualNavigation[0].defaultWidth]
+    : (defaults[columnCount] ?? []).map((width, index) => layout.widths[index] ?? width);
   const fit = contextFit(paneWidths, viewport.width, viewport.rem);
   const style = [
     ...fit.widths.map((width, index) => `--context-width-${index + 1}:${width}px`),
@@ -194,7 +198,7 @@ function restoreContextScrollPositions(positions) {
       const selected = column.querySelector('[aria-current="page"]');
       if (selected) {
         const headingHeight = column.querySelector(".context-column-heading")?.offsetHeight ?? 0;
-        const selectedTop = selected.offsetTop;
+        const selectedTop = selected.getBoundingClientRect().top - column.getBoundingClientRect().top + column.scrollTop;
         const selectedBottom = selectedTop + selected.offsetHeight;
         const visibleTop = column.scrollTop + headingHeight;
         const visibleBottom = column.scrollTop + column.clientHeight;
@@ -279,6 +283,12 @@ function browseFilter(id, label, target, placeholder = "Number or heading") {
   return `<div class="browse-filter"><label for="${id}">${escapeHtml(label)}</label>
     <input id="${id}" type="search" placeholder="${escapeHtml(placeholder)}" data-filter-list="${target}" aria-controls="${target}" autocomplete="off">
     <p class="browse-filter-status" role="status" aria-live="polite" data-filter-status="${target}"></p></div>`;
+}
+
+// The three panes are the default. The page tree replaces them when chosen in Settings.
+function statuteNavigation(catalog, route, panes, current = {}) {
+  if (deviceState.preferences().navigationTree) return { contextualNavigation: [statuteTree.column(catalog, current)], columnCount: 1 };
+  return { contextualNavigation: panes(), columnCount: contextualColumnCount("statutes", route) };
 }
 
 function statuteTitleColumn(catalog, selected = null) {
@@ -705,9 +715,8 @@ async function renderHome(catalog) {
     </section>
   </main>`;
   mountApplicationShell({
-    contextualNavigation: [statuteTitleColumn(catalog)],
+    ...statuteNavigation(catalog, { kind: "home" }, () => [statuteTitleColumn(catalog)]),
     mainContent,
-    columnCount: contextualColumnCount("statutes", { kind: "home" }),
     mobilePresentationMode: "home"
   });
 }
@@ -1001,9 +1010,8 @@ function renderTitle(catalog, title) {
     <ol class="chapter-list mobile-only" id="browse-chapters-list">${title.chapters.map((chapter) => `<li><a href="${escapeHtml(chapterRoute(title, chapter))}"><strong>${escapeHtml(chapterLabel(chapter))}</strong><span>${escapeHtml(chapter.name)}</span><small>${chapter.sectionCount} section${chapter.sectionCount === 1 ? "" : "s"}</small></a></li>`).join("")}</ol>
   </main>`;
   mountApplicationShell({
-    contextualNavigation: [statuteTitleColumn(catalog, title), statuteChapterColumn(title)],
+    ...statuteNavigation(catalog, { kind: "title" }, () => [statuteTitleColumn(catalog, title), statuteChapterColumn(title)], { title }),
     mainContent,
-    columnCount: contextualColumnCount("statutes", { kind: "title" }),
     mobilePresentationMode: "drilldown"
   });
 }
@@ -1115,13 +1123,17 @@ async function renderChapter(catalog, title, chapterMeta, route, sequence) {
       ${selected ? `${renderProvision(title, chapter, selected, maps, secondaryContext, changeBySection.get(selected.id), pendingBySection.get(selected.id))}${sectionNavigation(title, chapter, chapterNavigation, selected)}${chapterSheet(title, chapter, chapterNavigation, selected, changeBySection, pendingBySection)}` : `<div class="chapter-overview"><p class="eyebrow">${chapterNavigation.length} sections${hiddenRepealed ? ` · ${hiddenRepealed} repealed hidden` : ""}</p><h1>${escapeHtml(chapterLabel(chapter))} — ${escapeHtml(chapter.name)}</h1>${chapterSupplementSummary(title, chapter, overlay, changeBySection)}<div data-amendments-status><p class="visually-hidden" role="status">Amendment information loading…</p></div><p class="desktop-only">Choose a section from the sections column.</p><a href="${escapeHtml(chapter.sourceUrl)}">Official chapter source</a></div>${mobileChapterList}`}
     </main>`;
   mountApplicationShell({
-    contextualNavigation: [
+    ...statuteNavigation(catalog, route, () => [
       statuteTitleColumn(catalog, title),
       statuteChapterColumn(title, chapter),
       statuteSectionColumn(title, chapter, chapterNavigation, selected, changeBySection, pendingBySection)
-    ],
+    ], {
+      title,
+      chapter,
+      sectionHref: selected ? provisionRoute(title, chapter, selected) : null,
+      sectionItems: () => statuteSectionItems(title, chapter, chapterNavigation, selected, changeBySection, pendingBySection)
+    }),
     mainContent,
-    columnCount: contextualColumnCount("statutes", route),
     mobilePresentationMode: selected ? "reader" : "drilldown"
   });
   bindChapterSheet();
@@ -1141,6 +1153,7 @@ async function renderChapter(catalog, title, chapterMeta, route, sequence) {
     for (const marker of app.querySelectorAll("[data-act-notice-for]")) {
       marker.innerHTML = pendingActPill(pendingBySection.get(marker.dataset.actNoticeFor));
     }
+    statuteTree.revealCurrent();
   });
   if (selected) {
     referenceMaps(provisions, catalog).then((resolved) => {
@@ -1910,9 +1923,13 @@ function resizeContextPane(handle, width, { save = false } = {}) {
   shell.dataset.contextWidths = intended.join(",");
   handle.setAttribute("aria-valuenow", String(nextWidth));
   if (save) {
-    const widths = deviceState.navigationLayout().widths;
-    widths[index] = nextWidth;
-    deviceState.updateNavigationLayout({ widths });
+    if (resized.matches(".statute-tree-column")) {
+      deviceState.updateNavigationLayout({ treeWidth: nextWidth });
+    } else {
+      const widths = deviceState.navigationLayout().widths;
+      widths[index] = nextWidth;
+      deviceState.updateNavigationLayout({ widths });
+    }
   }
 }
 
@@ -1978,6 +1995,20 @@ document.addEventListener("keydown", (event) => {
   selectRevisionView(next);
   next.focus();
 });
+
+// A setting that changes the page re-renders it with the Settings panel still open on that control.
+async function rerenderKeepingSettings(control, selector) {
+  const currentHash = location.hash;
+  const scrollTop = control.closest("[data-settings-panel]").scrollTop;
+  await renderCurrentRoute();
+  if (location.hash !== currentHash) return;
+  const panel = document.querySelector("[data-settings-panel]");
+  if (!panel) return;
+  panel.hidden = false;
+  document.querySelector("[data-open-settings]")?.setAttribute("aria-expanded", "true");
+  panel.querySelector(selector)?.focus({ preventScroll: true });
+  panel.scrollTop = scrollTop;
+}
 
 document.addEventListener("input", (event) => {
   if (event.target.matches("[data-filter-list]")) {
@@ -2397,19 +2428,12 @@ document.addEventListener("change", async (event) => {
   }
   if (event.target.matches("[data-hide-repealed]")) {
     applyPreferences(deviceState.updatePreferences({ hideRepealedSections: event.target.checked }));
-    const route = parseRoute(location);
-    if (["chapter", "section"].includes(route.kind)) {
-      const currentHash = location.hash;
-      const scrollTop = event.target.closest("[data-settings-panel]").scrollTop;
-      await renderCurrentRoute();
-      if (location.hash !== currentHash) return;
-      const panel = document.querySelector("[data-settings-panel]");
-      if (!panel) return;
-      panel.hidden = false;
-      document.querySelector("[data-open-settings]")?.setAttribute("aria-expanded", "true");
-      panel.querySelector("[data-hide-repealed]")?.focus({ preventScroll: true });
-      panel.scrollTop = scrollTop;
-    }
+    if (["chapter", "section"].includes(parseRoute(location).kind)) await rerenderKeepingSettings(event.target, "[data-hide-repealed]");
+    return;
+  }
+  if (event.target.matches("[data-navigation-tree]")) {
+    applyPreferences(deviceState.updatePreferences({ navigationTree: event.target.checked }));
+    if (["home", "title", "chapter", "section"].includes(parseRoute(location).kind)) await rerenderKeepingSettings(event.target, "[data-navigation-tree]");
     return;
   }
 });

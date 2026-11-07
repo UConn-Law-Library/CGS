@@ -504,7 +504,7 @@ const RESEARCH_STEPS = Object.freeze([
     title: (e) => `Check whether the ${e.supplementYear} Supplement updates it`,
     body: (e) => `<p>The Supplement contains the updated versions of sections amended, added, or repealed during the ${e.revisionYear} sessions.</p>`,
     question: (e) => `Does the ${e.supplementYear} Supplement include the section?`,
-    yes: (e) => `Use the Supplement’s text. In this app the section is labeled “${e.supplementYear} Supp.”, and the earlier text is under “Compare with ${e.revisionYear} text.” Continue to step 3.`,
+    yes: (e) => `Use the Supplement’s text. In this app the section is labeled “${e.supplementYear} Supp.”, and the earlier text is under the “${e.revisionYear} text” button. Continue to step 3.`,
     no: (e) => `The ${e.revisionYear} sessions generally did not change it, so the ${e.revisionYear} text carries forward. Continue to step 3: later legislation can still change it.`
   },
   {

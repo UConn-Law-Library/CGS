@@ -358,7 +358,7 @@ Plain and sturdy; their job is to be found and pressed, not admired.
 - **Breadcrumbs:** UI-size links separated by slashes.
 
 ### Statute Reader (signature)
-The core surface. A label line gives status and source ("Amended — 2026 Supplement"), then the headline, a 2px ink rule, a row of actions (Bookmark, Copy link, Share, Email, Official source), and the Reading-font text. Each subsection starts with a small UI-face link to itself. Targeting a subsection washes it in Highlight and reveals a copy-citation chip. Citations within the text are bold navy links. Below the text: the supplement comparison and earlier revisions in collapsed panels, then Information references grouped in disclosure rows.
+The core surface. A label line gives status and source ("Amended — 2026 Supplement"), then the headline, a 2px ink rule, a row of icon actions (Copy citation, Bookmark, Copy link, Email, and Share where the device has a share sheet) with a blue Official source button, a text-version button group on sections with earlier text, and the Reading-font text. Each subsection starts with a small UI-face link to itself. Targeting a subsection washes it in Highlight and reveals a copy-citation chip. Citations within the text are bold navy links. Below the text: the supplement comparison and earlier revisions in collapsed panels, then Information references grouped in disclosure rows.
 
 ### Amendment Marks (signature)
 Inserted language sits on the Addition tint and deleted language on the Deletion tint with a strikethrough. Screen readers announce each change ("added", "deleted"). Printing keeps additions underlined so the marks survive without color.

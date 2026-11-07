@@ -520,7 +520,7 @@ test("print mode keeps statute text and removes application chrome", async ({ pa
 test("the search shortcut moves focus to the homepage omnisearch field", async ({ page }) => {
   await openApp(page);
   await expect(page.locator("[data-omni-input]")).toHaveCount(1);
-  const input = page.locator(".research-start").getByRole("combobox");
+  const input = page.getByRole("banner").getByRole("combobox");
   await expect(input).toBeVisible();
   await page.keyboard.press("/");
   await expect(input).toBeFocused();

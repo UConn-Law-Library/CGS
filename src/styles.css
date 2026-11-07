@@ -280,8 +280,8 @@ footer { padding: 2rem 0; color: var(--muted); border-top: 1px solid var(--line)
   background: var(--blue-light);
   border-color: var(--blue);
 }
-/* A repealed section is no longer in force: neutral gray, so it reads apart from the amber Recent Act caution. */
-.repealed-pill {
+/* Repealed, obsolete, and reserved sections have no text in force: neutral gray, so they read apart from the amber Recent Act caution. */
+.repealed-pill, .obsolete-pill, .reserved-pill {
   color: var(--muted);
   background: var(--amount-surface);
   border-color: var(--field-line);
@@ -896,7 +896,7 @@ body.resizing-context { cursor: col-resize; user-select: none; }
 .context-list .supplement-pill, .context-list .section-status-pill { display: inline-flex; margin: 0 0 0 .25rem; }
 .context-list .supplement-pill { color: var(--blue-dark); }
 .context-list .section-status-pill { color: var(--warning-ink); }
-.context-list .repealed-pill { color: var(--muted); }
+.context-list :is(.repealed-pill, .obsolete-pill, .reserved-pill) { color: var(--muted); }
 .context-empty { padding: 1rem; color: var(--muted); font-size: var(--text-meta); }
 .application-main { width: min(54rem, calc(100% - 2.5rem)); min-width: 0; margin-inline: auto; padding-block: 1.5rem 5rem; container: reading / inline-size; }
 /* The reading column's width depends on the panes beside it, not only the window, so what
@@ -1418,7 +1418,6 @@ h1,
   .global-search { margin-top: .55rem; }
   .navigation-back .back-label { display: none; }
   .navigation-back { min-width: 2.7rem; }
-  .global-search .omni-panel { max-width: calc(100vw - 5.2rem); }
   .settings-panel { top: auto; right: .6rem; bottom: calc(4.8rem + env(safe-area-inset-bottom)); left: .6rem; width: auto; max-height: calc(100vh - 8rem); }
   main:not(.reader-content), footer { width: min(100% - 2rem, 72rem); }
   .destination-grid { grid-template-columns: 1fr 1fr; }
@@ -1582,9 +1581,32 @@ h1,
   .context-column[hidden] { display: none; }
   .context-column-heading { padding: 1rem; }
   .context-column-heading > strong { font-size: 1rem; font-weight: 600; }
-  .context-column-heading .browse-filter { margin-top: .75rem; }
+  .context-column-heading .browse-filter { clear: both; margin-top: .75rem; }
+  /* Floated so a long pane heading wraps around it. Only the first visible pane shows it. */
+  .context-column-heading { display: flow-root; }
+  .navigation-settings-button { display: grid; float: right; width: 2.25rem; height: 2.25rem; min-height: 0; margin: -.25rem -.25rem 0 .25rem; padding: 0; place-items: center; color: var(--muted); background: transparent; border: 0; border-radius: var(--radius-control); }
+  .navigation-settings-button:is(:hover, [aria-expanded="true"]) { color: var(--ink); background: var(--soft-surface); }
+  /* A text button beside the settings icon, shown only while a tree row is open. */
+  .tree-collapse-all { float: right; min-height: 2.25rem; margin: -.25rem 0 0 .25rem; padding: 0 .5rem; color: var(--blue); background: transparent; border: 0; border-radius: var(--radius-control); font-size: var(--text-meta); font-weight: 600; }
+  .tree-collapse-all:hover { background: var(--soft-surface); }
+  .tree-collapse-all[hidden] { display: none; }
+  .context-column:not([hidden]) ~ .context-column .navigation-settings-button { display: none; }
+  .navigation-settings-panel { right: auto; width: min(22rem, calc(100vw - 2rem)); }
+  .navigation-settings-panel .setting-row:last-child { padding-bottom: 0; border-bottom: 0; }
+  .hidden-status-setting { display: block; min-width: 0; margin: 0; padding-inline: 0; border: 0; border-bottom: 1px solid var(--line); }
+  .hidden-status-setting legend { float: left; width: 100%; padding: 0; }
+  .hidden-status-options { display: grid; clear: both; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .25rem 1rem; padding-top: .5rem; }
+  .hidden-status-options label { display: flex; align-items: center; gap: .5rem; min-height: 2.25rem; font-size: var(--text-meta); }
+  /* The rows move to the side panel while one is showing. Phones, and desktop pages without
+     a panel or with it collapsed, keep them in Settings. */
+  @media (min-width: 60.0625rem) {
+    :root:has(.application-shell:not([data-navigation-collapsed="true"]) .context-column:not([hidden])) .settings-panel .navigation-setting-rows { display: none; }
+  }
   .context-column-heading .browse-filter label { font-size: var(--text-caption); }
   .context-column-heading .browse-filter input { padding-inline: .5rem; }
+  .tree-status-filter { display: flex; align-items: center; gap: .5rem; margin-top: .5rem; }
+  .tree-status-filter label { flex: none; color: var(--muted); font-size: var(--text-caption); font-weight: 600; }
+  .tree-status-filter select { flex: 1; min-width: 0; min-height: var(--control-height); padding-inline: .5rem; color: var(--ink); background: var(--surface-raised); border: 1px solid var(--field-line); border-radius: var(--radius-control); font-size: var(--text-meta); }
   .context-list { padding: .4rem; }
   .context-list li + li { border-top: 0; }
   .context-list a { margin-block: .1rem; padding: .7rem .65rem; border-radius: var(--radius-control); }
@@ -1651,6 +1673,7 @@ h1,
   .tree-children > li:not(:last-child)::after { content: ""; position: absolute; top: 0; bottom: 0; left: calc(var(--tree-indent) * -1); border-left: 1px solid var(--tree-line); }
   .tree-row { display: flex; align-items: flex-start; gap: .1rem; }
   .statute-tree a { display: block; min-width: 0; padding: .35rem .5rem; color: var(--ink); border-radius: var(--radius-control); text-decoration: none; }
+  .statute-tree .tree-row > a { flex: 1 1 0; }
   .statute-tree a:hover { background: var(--soft-surface); }
   .statute-tree a:focus-visible, .tree-toggle:focus-visible { outline-offset: -2px; }
   .statute-tree a[aria-current="page"] { background: var(--soft-surface); box-shadow: none; outline: 1px solid var(--field-line); outline-offset: -1px; }
@@ -1772,6 +1795,10 @@ h1,
     .site-header { padding: .65rem 1rem; }
     .brand { min-height: 2.75rem; font-size: var(--text-ui); }
     .brand-library { margin-bottom: .15rem; }
+    /* The brand sits centered with Back in the top corner. The padding matches on both sides
+       so the brand stays centered and wraps before it can run under Back. */
+    .header-identity { justify-content: center; padding-inline: calc(var(--control-height) + .25rem); }
+    .global-search > .navigation-back { position: absolute; top: .65rem; left: 1rem; width: var(--control-height); min-width: 0; padding-inline: 0; }
     .site-header .app-nav { background: var(--surface-raised); border-top-color: var(--line); }
     .site-header .app-nav :is(a, button) { min-height: 3.65rem; font-size: .6875rem; }
     .site-header .app-nav :is(a, button)[aria-current="page"] { background: var(--soft-surface); }

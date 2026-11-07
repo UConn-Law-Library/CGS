@@ -18,6 +18,18 @@ export async function expectNoHighImpactAccessibilityViolations(page) {
   ).join("\n\n")).toEqual([]);
 }
 
+// Opens where the navigation settings live on this page: the side panel's icon, or Settings.
+export async function openNavigationSettings(page) {
+  const paneButton = page.locator("[data-open-navigation-settings]:visible");
+  if (await paneButton.count()) {
+    await paneButton.click();
+    return { trigger: paneButton, panel: page.locator("[data-navigation-settings]") };
+  }
+  const trigger = page.getByRole("button", { name: "Settings", exact: true });
+  await trigger.click();
+  return { trigger, panel: page.locator("[data-settings-panel]") };
+}
+
 export function isMobileProject(testInfo) {
   return testInfo.project.name === "mobile-chromium";
 }

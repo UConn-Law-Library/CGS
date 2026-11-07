@@ -46,6 +46,7 @@ const SHELL_FILES = [
   "./about-page.js",
   "./shell.js",
   "./statute-tree.js",
+  "./group-tree.js",
   "./bookmark-page.js",
   "./bookmark-controls.js",
   "./data-loader.js",

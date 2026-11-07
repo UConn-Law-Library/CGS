@@ -2,6 +2,7 @@ import { createHash } from "node:crypto";
 import { mkdir, readFile, readdir, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { applyChapterOverlay } from "./supplement-overlay.mjs";
+import { sectionStatuses } from "../../src/reader.js";
 
 function comparableNumber(value) {
   return String(value ?? "").trim().toLowerCase().replace(/^0+(?=\d)/, "");
@@ -79,11 +80,20 @@ export async function generateSearchV2Artifacts({ catalog, dataDirectory, supple
     const documents = [];
     const citations = {};
     const headings = [];
-    const addHeadings = (chapter) => {
-      for (const section of chapter.sections) headings.push([
-        sectionRouteKey(section), chapter.number, section.heading,
-        section.citations ?? [section.citation].filter(Boolean)
-      ]);
+    // A fifth entry lists the tags the chapter lists show, so the page tree can show and filter
+    // them without loading every chapter: each status by name ("repealed", "transferred",
+    // "obsolete", "reserved"), and "supplement-<presentation>".
+    const addHeadings = (chapter, overlay = null) => {
+      const supplementBySection = new Map((overlay?.changes ?? []).map((change) => [change.sectionId, change.presentation]));
+      for (const section of chapter.sections) {
+        const tags = sectionStatuses(section);
+        if (supplementBySection.has(section.id)) tags.push(`supplement-${supplementBySection.get(section.id)}`);
+        headings.push([
+          sectionRouteKey(section), chapter.number, section.heading,
+          section.citations ?? [section.citation].filter(Boolean),
+          ...(tags.length ? [tags] : [])
+        ]);
+      }
     };
 
     for (const chapterEntry of title?.chapters ?? []) {
@@ -91,22 +101,25 @@ export async function generateSearchV2Artifacts({ catalog, dataDirectory, supple
       const overlayEntry = overlayEntries.find((entry) =>
         entry.id === chapterEntry.id || comparableNumber(entry.number) === comparableNumber(chapterEntry.number));
       let chapter = baseChapter;
+      let applied = null;
       if (overlayEntry) {
         usedOverlays.add(overlayEntry.id);
         const overlay = await readJson(path.join(supplement.root, ...overlayEntry.path.split("/")));
-        chapter = applyChapterOverlay(baseChapter, overlay, supplement.editionYear).chapter;
+        applied = applyChapterOverlay(baseChapter, overlay, supplement.editionYear);
+        chapter = applied.chapter;
       }
       documents.push(...chapter.sections.map(auxiliaryDocument));
       addCitations(citations, chapterEntry.number, chapter.sections);
-      addHeadings(chapter);
+      addHeadings(chapter, applied?.overlay);
     }
 
     for (const overlayEntry of overlayEntries.filter((entry) => !usedOverlays.has(entry.id))) {
       const overlay = await readJson(path.join(supplement.root, ...overlayEntry.path.split("/")));
-      const chapter = applyChapterOverlay(null, overlay, supplement.editionYear).chapter;
+      const applied = applyChapterOverlay(null, overlay, supplement.editionYear);
+      const { chapter } = applied;
       documents.push(...chapter.sections.map(auxiliaryDocument));
       addCitations(citations, chapter.number ?? overlayEntry.number, chapter.sections);
-      addHeadings(chapter);
+      addHeadings(chapter, applied.overlay);
     }
 
     const relativePath = `${titleId}.json`;

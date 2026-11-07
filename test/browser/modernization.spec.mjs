@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/test";
-import { expectNoHighImpactAccessibilityViolations, isMobileProject, openApp } from "./helpers.mjs";
+import { expectNoHighImpactAccessibilityViolations, isMobileProject, openApp, openNavigationSettings } from "./helpers.mjs";
 
 test("filtered title, chapter and section browsing reaches canonical text", async ({ page }, testInfo) => {
   await openApp(page, "#/titles");
@@ -64,7 +64,7 @@ test("chapter disclosures link to updated, new, and act-affected sections", asyn
 
 test("subtle notices persist and keep transferred and act labels accessible", async ({ page }, testInfo) => {
   await openApp(page, "#/t/04/c/050/s/4-68bb");
-  await page.getByRole("button", { name: "Settings" }).click();
+  await openNavigationSettings(page);
   const toggle = page.getByRole("checkbox", { name: /Subtle notices/ });
   await expect(toggle).not.toBeChecked();
   await toggle.check();

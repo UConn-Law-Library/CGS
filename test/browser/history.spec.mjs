@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/test";
-import { openApp, expectNoHighImpactAccessibilityViolations } from "./helpers.mjs";
+import { isMobileProject, openApp, expectNoHighImpactAccessibilityViolations } from "./helpers.mjs";
 
 test("Back follows the browser trail across reload, forward, and a new branch", async ({ page }) => {
   await openApp(page, "#/titles");
@@ -81,4 +81,42 @@ test("failed routes offer Back and do not enter visited-page history", async ({ 
   await expect(page).toHaveURL(/#\/titles$/);
   await page.getByRole("link", { name: "History", exact: true }).click();
   await expect(page.locator(".page-history-list li")).toHaveCount(1);
+});
+
+test("the phone header centers the brand with Back in the top-left corner", async ({ page }, testInfo) => {
+  test.skip(!isMobileProject(testInfo), "Checks the phone layout.");
+  for (const width of [320, 375, 768]) {
+    await page.setViewportSize({ width, height: 780 });
+    for (const route of ["#/", "#/search"]) {
+      await openApp(page, route);
+      const layout = await page.evaluate(() => {
+        const box = (selector) => document.querySelector(selector).getBoundingClientRect();
+        const brand = box(".site-header .brand");
+        const back = box(".site-header .navigation-back");
+        return { viewport: document.documentElement.clientWidth, brandLeft: brand.left, brandRight: brand.right, brandTop: brand.top, backLeft: back.left, backRight: back.right, backTop: back.top };
+      });
+      expect(Math.abs((layout.brandLeft + layout.brandRight) / 2 - layout.viewport / 2), `brand centered at ${width}px on ${route}`).toBeLessThanOrEqual(1);
+      expect(layout.backLeft, `Back on the left at ${width}px on ${route}`).toBeLessThanOrEqual(17);
+      expect(Math.abs(layout.backTop - layout.brandTop), `Back level with the brand at ${width}px on ${route}`).toBeLessThanOrEqual(1);
+      expect(layout.backRight, `Back clear of the brand at ${width}px on ${route}`).toBeLessThanOrEqual(layout.brandLeft);
+    }
+  }
+});
+
+test("the Statutes tab opens the title list on phones and Home on desktop", async ({ page }, testInfo) => {
+  await openApp(page, "#/acts");
+  const statutes = page.locator(".app-nav > a").first();
+  await statutes.click();
+  if (isMobileProject(testInfo)) {
+    await expect(page).toHaveURL(/#\/titles$/);
+    await expect(page.locator(".titles-page")).toBeVisible();
+    await page.locator(".site-header .brand").click();
+    await expect(page.locator(".home-page")).toBeVisible();
+  } else {
+    await expect(page.locator(".home-page")).toBeVisible();
+  }
+
+  const compact = isMobileProject(testInfo);
+  await page.setViewportSize(compact ? { width: 1280, height: 800 } : { width: 375, height: 780 });
+  await expect(statutes).toHaveAttribute("href", compact ? "#/" : "#/titles");
 });

@@ -14,12 +14,19 @@ export const DEFAULT_PREFERENCES = Object.freeze({
   fontProfile: "default",
   lineSpacing: 1.55,
   compactLists: true,
-  hideRepealedSections: false,
+  hiddenStatuses: Object.freeze([]),
   subtleNotices: false,
   navigationTree: false
 });
 
 const themes = new Set(["auto", "light", "dark", "oled"]);
+// Statuses a person can hide from chapter navigation, in the order Settings lists them.
+export const HIDEABLE_STATUSES = Object.freeze(["repealed", "transferred", "obsolete", "reserved"]);
+
+function normalizeHiddenStatuses(value, legacyHideRepealed = false) {
+  const wanted = Array.isArray(value) ? value : legacyHideRepealed ? ["repealed"] : [];
+  return HIDEABLE_STATUSES.filter((status) => wanted.includes(status));
+}
 const fontProfiles = new Set(["default", "atkinson", "lexend", "inclusive"]);
 
 function normalizeLineSpacing(value) {
@@ -242,7 +249,7 @@ export class DeviceState {
       compactLists: Object.prototype.hasOwnProperty.call(value, "compactLists")
         ? Boolean(value.compactLists)
         : DEFAULT_PREFERENCES.compactLists,
-      hideRepealedSections: Boolean(value.hideRepealedSections),
+      hiddenStatuses: normalizeHiddenStatuses(value.hiddenStatuses, value.hideRepealedSections === true),
       subtleNotices: value.subtleNotices === true,
       navigationTree: value.navigationTree === true
     };
@@ -255,7 +262,8 @@ export class DeviceState {
     if (!fontProfiles.has(value.fontProfile)) value.fontProfile = DEFAULT_PREFERENCES.fontProfile;
     value.lineSpacing = normalizeLineSpacing(value.lineSpacing);
     value.compactLists = Boolean(value.compactLists);
-    value.hideRepealedSections = Boolean(value.hideRepealedSections);
+    value.hiddenStatuses = normalizeHiddenStatuses(value.hiddenStatuses);
+    delete value.hideRepealedSections;
     value.subtleNotices = value.subtleNotices === true;
     value.navigationTree = value.navigationTree === true;
     this.#write(PREFERENCES_KEY, value);
@@ -267,7 +275,6 @@ export function applyPreferences(preferences, root = document.documentElement) {
   root.dataset.theme = preferences.theme;
   root.dataset.fontProfile = preferences.fontProfile;
   root.dataset.compactLists = String(preferences.compactLists);
-  root.dataset.hideRepealedSections = String(preferences.hideRepealedSections);
   root.dataset.subtleNotices = String(preferences.subtleNotices);
   root.style.setProperty("--text-scale", String(preferences.textScale));
   root.style.setProperty("--line-spacing", String(preferences.lineSpacing));

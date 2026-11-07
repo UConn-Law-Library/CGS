@@ -1,7 +1,16 @@
 import { escapeHtml } from "./reader.js";
-import { parseRoute, guideRouteHref } from "./routes.js";
+import { parseRoute, guideRouteHref, titlesRouteHref } from "./routes.js";
+import { HIDEABLE_STATUSES } from "./device-state.js";
+
+const HIDEABLE_STATUS_LABELS = { repealed: "Repealed", transferred: "Transferred", obsolete: "Obsolete", reserved: "Reserved" };
 
 const FEEDBACK_ENDPOINT = "https://formsubmit.co/lawlibraryadministration@uconn.edu";
+
+// Phones have no titles pane beside Home, so the Statutes tab opens the title list directly.
+// The brand still links to Home. app.js updates the link when the layout changes.
+export function statutesNavHref() {
+  return matchMedia("(max-width: 60rem)").matches ? titlesRouteHref() : "#/";
+}
 
 const svgIcon = (paths) => `<svg class="glyph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false">${paths}</svg>`;
 export const icons = {
@@ -150,6 +159,26 @@ function updatePwaControls() {
   progress.value = pwaState.cachedFiles;
 }
 
+function navigationSettingRows() {
+  const preferences = deviceState.preferences();
+  return `<label class="setting-row"><span><strong>Compact lists</strong><small>Show more items on screen</small></span><input type="checkbox" data-compact-lists${preferences.compactLists ? " checked" : ""}></label>
+    <fieldset class="setting-row hidden-status-setting"><legend><strong>Hide sections</strong><small>Remove these from chapter navigation</small></legend><div class="hidden-status-options">${HIDEABLE_STATUSES.map((status) => `<label><input type="checkbox" data-hide-status="${status}"${preferences.hiddenStatuses.includes(status) ? " checked" : ""}>${HIDEABLE_STATUS_LABELS[status]}</label>`).join("")}</div></fieldset>
+    <label class="setting-row"><span><strong>Subtle notices</strong><small>Show status tags as colored dots in section lists</small></span><input type="checkbox" data-subtle-notices${preferences.subtleNotices ? " checked" : ""}></label>
+    <label class="setting-row"><span><strong>Page tree navigation</strong><small>On larger screens, browse the statutes, the index, and infractions in one panel</small></span><input type="checkbox" data-navigation-tree${preferences.navigationTree ? " checked" : ""}></label>`;
+}
+
+// Where a side panel is showing, these settings open from its heading instead of Settings.
+function navigationSettingsButton() {
+  return `<button type="button" class="navigation-settings-button" data-open-navigation-settings aria-haspopup="dialog" aria-expanded="false" aria-controls="navigation-settings" aria-label="Navigation settings" title="Navigation settings"><span aria-hidden="true">${icons.settings}</span></button>`;
+}
+
+function navigationSettingsPanel() {
+  return `<section class="settings-panel navigation-settings-panel" id="navigation-settings" role="dialog" aria-label="Navigation settings" data-navigation-settings hidden>
+    <div class="settings-heading"><strong>Navigation settings</strong><button type="button" class="icon-button" data-close-navigation-settings aria-label="Close navigation settings">×</button></div>
+    ${navigationSettingRows()}
+  </section>`;
+}
+
 function settingsPanel() {
   const pwaState = getPwaState();
   const preferences = deviceState.preferences();
@@ -173,10 +202,7 @@ function settingsPanel() {
     <div class="setting-group typography-setting"><div class="setting-row-label"><label for="line-spacing">Line spacing</label><output for="line-spacing" data-line-spacing-value>${preferences.lineSpacing.toFixed(2)}×</output></div>
       <input id="line-spacing" type="range" min="1.2" max="2.2" step="0.05" value="${preferences.lineSpacing}" data-line-spacing>
     </div>
-    <label class="setting-row"><span><strong>Compact lists</strong><small>Show more items on screen</small></span><input type="checkbox" data-compact-lists${preferences.compactLists ? " checked" : ""}></label>
-    <label class="setting-row"><span><strong>Hide repealed sections</strong><small>Remove them from chapter navigation</small></span><input type="checkbox" data-hide-repealed${preferences.hideRepealedSections ? " checked" : ""}></label>
-    <label class="setting-row"><span><strong>Subtle notices</strong><small>Show status tags as colored dots in section lists</small></span><input type="checkbox" data-subtle-notices${preferences.subtleNotices ? " checked" : ""}></label>
-    <label class="setting-row"><span><strong>Page tree navigation</strong><small>On larger screens, browse titles, chapters, and sections in one panel</small></span><input type="checkbox" data-navigation-tree${preferences.navigationTree ? " checked" : ""}></label>
+    <div class="navigation-setting-rows">${navigationSettingRows()}</div>
     <button type="button" class="settings-action update-action" data-apply-update${pwaState.updateAvailable ? "" : " hidden"}>Update available <small>Reload to use the latest published app</small></button>
     <a class="settings-action" href="#/about"><strong class="settings-about-title">About this app</strong> <small>Sources, coverage, and project information</small></a>
     <a class="settings-action" href="${guideRouteHref()}"><strong class="settings-about-title">Understanding the Statutes</strong> <small>How laws are enacted, codified, and published</small></a>
@@ -240,7 +266,7 @@ function siteHeader() {
         <a class="brand" href="#/"><span class="brand-mark" aria-hidden="true">§</span><span><small class="brand-library">UConn Law Library</small>Connecticut General Statutes</span></a>
       </div>
       <nav class="app-nav" aria-label="Main sections">
-        ${navLink({ href: "#/", id: "statutes", icon: "§", label: "Statutes" }, active)}
+        ${navLink({ href: statutesNavHref(), id: "statutes", icon: "§", label: "Statutes" }, active)}
         ${navLink({ href: "#/index", id: "index", icon: "A–Z", label: "Index" }, active)}
         ${navLink({ href: "#/infractions", id: "infractions", icon: icons.scale, label: "Infractions" }, active)}
         ${navLink({ href: "#/acts", id: "acts", icon: icons.document, label: "Acts" }, active)}
@@ -266,5 +292,5 @@ function siteHeader() {
   </dialog>`;
 }
 
-  return { siteHeader, updatePwaControls };
+  return { siteHeader, navigationSettingsButton, navigationSettingsPanel, updatePwaControls };
 }

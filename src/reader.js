@@ -6,9 +6,29 @@ export function escapeHtml(value) {
   })[character]);
 }
 
-export function navigationSections(sections, { hideRepealed = false, selected = null } = {}) {
-  if (!hideRepealed) return sections;
-  return sections.filter((section) => section.status !== "repealed" || section === selected);
+// Leaves out sections whose every status is hidden. An entry that was "transferred or
+// repealed" stays unless both are hidden. The open section always stays.
+export function navigationSections(sections, { hiddenStatuses = [], selected = null } = {}) {
+  if (!hiddenStatuses.length) return sections;
+  return sections.filter((section) => section === selected || !isHiddenByStatus(sectionStatuses(section), hiddenStatuses));
+}
+
+export function isHiddenByStatus(statuses, hiddenStatuses) {
+  return statuses.length > 0 && statuses.every((status) => hiddenStatuses.includes(status));
+}
+
+const TAGGED_STATUSES = new Set(["repealed", "transferred", "obsolete", "reserved"]);
+const GROUP_DISPOSITION = /^S\s?ections?\s+.{0,300}?\b(?:has|have)\s+been\s+(transferred|repealed)(?:\s+or\s+(transferred|repealed))?\b/i;
+
+// The statuses a section's tags show. Some entries are recorded as active although their text
+// is only a disposition note, such as "Sections 46-1 to 46-8, inclusive, have been transferred
+// or repealed."; that sentence decides their tags. The recorded data is left as published.
+export function sectionStatuses(section) {
+  const status = section?.status;
+  if (TAGGED_STATUSES.has(status)) return [status];
+  if (status && status !== "active") return [];
+  const match = String(section?.content?.body?.[0] ?? "").match(GROUP_DISPOSITION);
+  return match ? [...new Set([match[1], match[2]].filter(Boolean).map((value) => value.toLowerCase()))] : [];
 }
 
 function compactCitation(citation) {
@@ -26,6 +46,14 @@ export function navigationSectionLabel(section) {
 
 export function navigationSectionDescription(section) {
   return String(section.heading ?? "").replace(/^Secs?\.\s*[^.]+\.\s*/i, "").trim();
+}
+
+// The first sentence of a description, for compact navigation rows. A leading
+// "(Formerly Sec. 1-66)." note is skipped, since its periods would end the sentence early.
+export function shortSectionDescription(description) {
+  const text = String(description ?? "");
+  const title = text.replace(/^\(Formerly\b[^()]*\)\.?\s*/i, "");
+  return title ? title.split(/(?<=\.)\s+/, 1)[0] : text;
 }
 
 export function leadingSubsection(value) {

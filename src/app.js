@@ -1,7 +1,8 @@
 import { createOmnisearchController } from "./omnisearch-controller.js";
 import { createAboutPage, formatSnapshotDate } from "./about-page.js";
-import { createShell, icons, bookmarkButtonLabel, iconActionLabel } from "./shell.js";
+import { createShell, icons, bookmarkButtonLabel, iconActionLabel, statutesNavHref } from "./shell.js";
 import { createStatuteTree } from "./statute-tree.js";
+import { createGroupTree } from "./group-tree.js";
 import { QuickSearchRepository } from "./quick-search.js";
 import { renderBookmarkPage } from "./bookmark-page.js";
 import { bindBookmarkControls } from "./bookmark-controls.js";
@@ -55,6 +56,8 @@ import {
   navigationSectionLabel,
   navigationSections,
   renderLinkedText,
+  sectionStatuses,
+  shortSectionDescription,
   routeForDocument,
   subsectionCitation
 } from "./reader.js";
@@ -92,7 +95,60 @@ const supplementRepository = new SupplementRepository();
 const repository = new SearchRepository({ supplementRepository });
 const searchClient = new ProgressiveSearchClient({ repository });
 const quickSearch = new QuickSearchRepository(repository);
-const statuteTree = createStatuteTree({ titleLabel, chapterLabel, titleRoute, chapterRoute, loadHeadings: (titleId) => quickSearch.loadHeadings(titleId) });
+const statuteTree = createStatuteTree({
+  titleLabel,
+  chapterLabel,
+  titleRoute,
+  chapterRoute,
+  loadHeadings: (titleId) => quickSearch.loadHeadings(titleId),
+  // Recent Act tags for heading rows, judged against the same statute text the reader shows.
+  loadPendingActs: async (catalog) => {
+    const [index, edition] = await Promise.all([actsRepository.amendments(), supplementRepository.latestEdition()]);
+    const years = statuteTextYears(catalog, edition);
+    return (row) => amendmentsForSection(index, row, years);
+  },
+  noticePills: headingNoticePills,
+  hiddenStatuses: () => deviceState.preferences().hiddenStatuses
+});
+
+// Page tree navigation for the subject index and the infraction schedule.
+const indexTree = createGroupTree({
+  id: "index",
+  label: "Index letters and headings",
+  heading: "Subject index",
+  filterLabel: "Filter letters and headings",
+  placeholder: "Heading",
+  nouns: { group: ["letter", "letters"], item: ["heading", "headings"] },
+  loadItems: async (group) => indexTreeItems(group.key, await secondaryRepository.loadIndexLetter(group.key)),
+  // The full index is large, so a filter searches the headings under the letter it starts
+  // with, as the index search does.
+  searchGroups: (query, groups) => groups.filter((group) => group.key === topicLetter(query)),
+  scopeNote: (query) => query.trim().length >= 2 ? `Headings are searched under ${topicLetter(query).toUpperCase()}.` : ""
+});
+
+function indexTreeItems(letter, topics) {
+  return topics.map((topic) => ({ key: topic.id, label: topic.label, href: indexRouteHref(letter, { topic: topic.id }), text: topic.label.toLocaleLowerCase() }));
+}
+
+const infractionTree = createGroupTree({
+  id: "infractions",
+  label: "Infraction categories and entries",
+  heading: "Infractions",
+  filterLabel: "Filter categories and entries",
+  placeholder: "Citation or description",
+  nouns: { group: ["category", "categories"], item: ["entry", "entries"] },
+  loadItems: async (group) => (await secondaryRepository.loadAllInfractions()).filter((entry) => entry.category === group.key).map(infractionTreeItem)
+});
+
+function infractionTreeItem(entry) {
+  return {
+    key: entry.id,
+    label: `Sec. ${entry.citation}`,
+    description: entry.description,
+    href: infractionsRouteHref(entry.category, { entry: entry.id }),
+    text: `${entry.citation} ${entry.description}`.toLocaleLowerCase()
+  };
+}
 const secondaryRepository = new SecondarySourceRepository();
 const actsRepository = new ActsRepository();
 const deviceState = new DeviceState();
@@ -111,7 +167,7 @@ let pwaState = pwaManager.state;
 const { closeOmni, scheduleOmnisearch, moveOmniSelection, selectedOmniItem } = createOmnisearchController({ loadCatalog, quickSearch, secondaryRepository, actsRepository });
 const SEARCH_BATCH_SIZE = 50;
 const LARGE_INDEX_TOPIC_THRESHOLD = 200;
-const { siteHeader, updatePwaControls } = createShell({ deviceState, navigationHistory, getPwaState: () => pwaState });
+const { siteHeader, navigationSettingsButton, navigationSettingsPanel, updatePwaControls } = createShell({ deviceState, navigationHistory, getPwaState: () => pwaState });
 const renderAbout = createAboutPage({ app, secondaryRepository, actsRepository, loadLatestSupplement, setDocumentTitle, siteHeader, breadcrumbs, legalFooter, isCurrent: (sequence) => sequence === renderSequence });
 applyPreferences(deviceState.preferences());
 pwaManager.subscribe((state) => {
@@ -175,10 +231,10 @@ function applicationShell({
     `--context-total-width:${fit.total}px`
   ].join(";");
   const hidden = (index) => index < fit.first ? " hidden" : "";
-  return `${siteHeader()}<div class="application-shell mobile-${escapeHtml(mobilePresentationMode)}" data-context-columns="${columnCount}" data-context-widths="${paneWidths.join(",")}" id="context-navigation" data-navigation-collapsed="${layout.collapsed}" style="${style}">
+  return `${siteHeader()}${columnCount ? navigationSettingsPanel() : ""}<div class="application-shell mobile-${escapeHtml(mobilePresentationMode)}" data-context-columns="${columnCount}" data-context-widths="${paneWidths.join(",")}" id="context-navigation" data-navigation-collapsed="${layout.collapsed}" style="${style}">
     ${columnCount ? `<button type="button" class="context-collapse-toggle" data-toggle-navigation aria-controls="context-navigation" aria-expanded="${!layout.collapsed}" aria-label="${layout.collapsed ? "Show navigation panes" : "Hide navigation panes"}" title="${layout.collapsed ? "Show navigation panes" : "Hide navigation panes"}"><span aria-hidden="true">${layout.collapsed ? "›" : "‹"}</span></button>` : ""}
     ${contextualNavigation.map((column, index) => `<aside class="context-column ${escapeHtml(column.className ?? "")}" id="context-pane-${index + 1}" data-context-key="${escapeHtml(column.className || column.label)}" aria-label="${escapeHtml(column.label)}"${hidden(index)}>
-      ${column.heading ? `<div class="context-column-heading">${column.heading}</div>` : ""}${column.content}
+      ${column.heading ? `<div class="context-column-heading">${navigationSettingsButton()}${column.heading}</div>` : ""}${column.content}
     </aside><div class="context-resizer" role="separator" tabindex="0" aria-orientation="vertical" aria-label="Resize ${escapeHtml(column.label)} pane" aria-controls="context-pane-${index + 1}" aria-valuemin="144" aria-valuemax="420" aria-valuenow="${fit.widths[index]}" data-resize-pane="${index}"${hidden(index)}></div>`).join("")}
     ${mainContent}
   </div><footer>${footer}</footer>`;
@@ -318,19 +374,33 @@ function pendingActPill(amendments = []) {
   return `<span class="section-status-pill act-pending-pill navigation-notice" title="${description}"><span class="navigation-notice-label" aria-hidden="true">Recent Act</span><span class="visually-hidden">${description}</span></span>`;
 }
 
+const STATUS_LABELS = { repealed: "Repealed", transferred: "Transferred", obsolete: "Obsolete", reserved: "Reserved" };
+
+// The status tags (Repealed, Transferred, Obsolete, Reserved) and the supplement tag. Recent Act
+// tags load separately.
+function sectionNoticePills(statuses, change) {
+  const statusPill = statuses.filter((status) => STATUS_LABELS[status]).map((status) => `<span class="section-status-pill ${status}-pill navigation-notice" title="${STATUS_LABELS[status]}"><span class="navigation-notice-label">${STATUS_LABELS[status]}</span></span>`).join("");
+  const supplementText = change ? escapeHtml(supplementLabel(change, { short: true })) : "";
+  const supplementPill = change ? `<span class="supplement-pill supplement-${escapeHtml(change.presentation)} navigation-notice" title="${supplementText}"><span class="navigation-notice-label">${supplementText}</span></span>` : "";
+  return `${statusPill}${supplementPill}`;
+}
+
+// The same tags for a row of a heading index, which records each status by name and the
+// supplement tag as "supplement-<presentation>".
+function headingNoticePills(tags = [], amendments = []) {
+  const supplement = tags.find((tag) => tag.startsWith("supplement-"));
+  return `${sectionNoticePills(tags.filter((tag) => STATUS_LABELS[tag]), supplement ? { presentation: supplement.slice("supplement-".length) } : null)}${pendingActPill(amendments)}`;
+}
+
 function statuteSectionItems(title, chapter, sections, selected, changeBySection = new Map(), pendingBySection = new Map()) {
   return sections.map((section) => {
-    const change = changeBySection.get(section.id);
-    const statusLabel = { repealed: "Repealed", transferred: "Transferred" }[section.status];
-    const status = statusLabel ? `<span class="section-status-pill ${section.status}-pill navigation-notice" title="${statusLabel}"><span class="navigation-notice-label">${statusLabel}</span></span>` : "";
-    const supplementText = change ? escapeHtml(supplementLabel(change, { short: true })) : "";
-    const supplement = change ? `<span class="supplement-pill supplement-${escapeHtml(change.presentation)} navigation-notice" title="${supplementText}"><span class="navigation-notice-label">${supplementText}</span></span>` : "";
+    const notices = sectionNoticePills(sectionStatuses(section), changeBySection.get(section.id));
     const label = navigationSectionLabel(section);
     const description = navigationSectionDescription(section);
-    const shortDescription = description.split(/(?<=\.)\s+/, 1)[0];
+    const shortDescription = shortSectionDescription(description);
     const showDescription = shortDescription && description !== section.citation && label !== section.heading;
     const shortLabel = label === section.heading ? label.split(/(?<=\.)\s+/, 1)[0] : label;
-    return `<li data-filter-heading="${escapeHtml(section.heading)}"><a class="section-navigation-link" href="${escapeHtml(provisionRoute(title, chapter, section))}"${selected?.id === section.id ? ` aria-current="page"` : ""}><strong>${escapeHtml(shortLabel)}</strong><span class="section-navigation-notices">${status}${supplement}<span data-act-notice-for="${escapeHtml(section.id)}">${pendingActPill(pendingBySection.get(section.id))}</span></span>${showDescription ? `<span class="section-navigation-description">${escapeHtml(shortDescription)}</span>` : ""}</a></li>`;
+    return `<li data-filter-heading="${escapeHtml(section.heading)}"><a class="section-navigation-link" href="${escapeHtml(provisionRoute(title, chapter, section))}"${selected?.id === section.id ? ` aria-current="page"` : ""}><strong>${escapeHtml(shortLabel)}</strong><span class="section-navigation-notices">${notices}<span data-act-notice-for="${escapeHtml(section.id)}">${pendingActPill(pendingBySection.get(section.id))}</span></span>${showDescription ? `<span class="section-navigation-description">${escapeHtml(shortDescription)}</span>` : ""}</a></li>`;
   });
 }
 
@@ -1103,13 +1173,13 @@ async function renderChapter(catalog, title, chapterMeta, route, sequence) {
   if (sequence !== renderSequence) return;
   const preferences = deviceState.preferences();
   const chapterNavigation = navigationSections(chapter.sections, {
-    hideRepealed: preferences.hideRepealedSections,
+    hiddenStatuses: preferences.hiddenStatuses,
     selected
   });
-  const hiddenRepealed = chapter.sections.length - chapterNavigation.length;
+  const hiddenSections = chapter.sections.length - chapterNavigation.length;
   setDocumentTitle(selected ? sectionLabel(selected) : chapterLabel(chapter), titleLabel(title));
   const sectionItems = statuteSectionItems(title, chapter, chapterNavigation, selected, changeBySection, pendingBySection);
-  const mobileChapterList = `<section class="mobile-only mobile-section-browser" aria-labelledby="mobile-sections-heading"><div class="section-heading"><div><p class="eyebrow">${chapterNavigation.length} sections${hiddenRepealed ? ` · ${hiddenRepealed} repealed hidden` : ""}</p><h2 id="mobile-sections-heading">Sections</h2></div></div>${browseFilter("section-filter", "Find a section", "browse-sections-list")}<div id="browse-sections-list">${railList(sectionItems)}</div></section>`;
+  const mobileChapterList = `<section class="mobile-only mobile-section-browser" aria-labelledby="mobile-sections-heading"><div class="section-heading"><div><p class="eyebrow">${chapterNavigation.length} sections${hiddenSections ? ` · ${hiddenSections} hidden` : ""}</p><h2 id="mobile-sections-heading">Sections</h2></div></div>${browseFilter("section-filter", "Find a section", "browse-sections-list")}<div id="browse-sections-list">${railList(sectionItems)}</div></section>`;
   const mainContent = `<main class="reader-content application-main" id="main-content">
       ${breadcrumbs([
         { label: "Titles", href: titlesRouteHref() },
@@ -1120,7 +1190,7 @@ async function renderChapter(catalog, title, chapterMeta, route, sequence) {
       ${supplementError ? `<p class="supplement-warning" role="alert">The published supplement could not be loaded. This page is showing the base revision only; reload before relying on it.</p>` : ""}
       <p class="source-note">Text: ${escapeHtml(String(catalog.source?.revisionYear ?? "Published"))} revision${latestEdition && !supplementError ? ` with the ${latestEdition.editionYear} Supplement` : ""}. Captured ${escapeHtml(formatSnapshotDate(catalog.source?.retrievedAt ?? catalog.generatedAt) ?? "date unavailable")}.</p>
       <div class="chapter-research-tools"><a href="${escapeHtml(searchRouteHref("", { title: title.id, chapter: chapter.number }))}">Search this chapter</a>${selected ? `<span class="mobile-reader-tools"><button type="button" data-open-chapter-sheet aria-haspopup="dialog">Browse chapter</button></span>` : ""}${selected ? sectionNavigation(title, chapter, chapterNavigation, selected).replace('aria-label="Adjacent sections"', 'aria-label="Section shortcuts"') : ""}</div>
-      ${selected ? `${renderProvision(title, chapter, selected, maps, secondaryContext, changeBySection.get(selected.id), pendingBySection.get(selected.id))}${sectionNavigation(title, chapter, chapterNavigation, selected)}${chapterSheet(title, chapter, chapterNavigation, selected, changeBySection, pendingBySection)}` : `<div class="chapter-overview"><p class="eyebrow">${chapterNavigation.length} sections${hiddenRepealed ? ` · ${hiddenRepealed} repealed hidden` : ""}</p><h1>${escapeHtml(chapterLabel(chapter))} — ${escapeHtml(chapter.name)}</h1>${chapterSupplementSummary(title, chapter, overlay, changeBySection)}<div data-amendments-status><p class="visually-hidden" role="status">Amendment information loading…</p></div><p class="desktop-only">Choose a section from the sections column.</p><a href="${escapeHtml(chapter.sourceUrl)}">Official chapter source</a></div>${mobileChapterList}`}
+      ${selected ? `${renderProvision(title, chapter, selected, maps, secondaryContext, changeBySection.get(selected.id), pendingBySection.get(selected.id))}${sectionNavigation(title, chapter, chapterNavigation, selected)}${chapterSheet(title, chapter, chapterNavigation, selected, changeBySection, pendingBySection)}` : `<div class="chapter-overview"><p class="eyebrow">${chapterNavigation.length} sections${hiddenSections ? ` · ${hiddenSections} hidden` : ""}</p><h1>${escapeHtml(chapterLabel(chapter))} — ${escapeHtml(chapter.name)}</h1>${chapterSupplementSummary(title, chapter, overlay, changeBySection)}<div data-amendments-status><p class="visually-hidden" role="status">Amendment information loading…</p></div><p class="desktop-only">Choose a section from the sections column.</p><a href="${escapeHtml(chapter.sourceUrl)}">Official chapter source</a></div>${mobileChapterList}`}
     </main>`;
   mountApplicationShell({
     ...statuteNavigation(catalog, route, () => [
@@ -1443,10 +1513,16 @@ async function renderInfractions(route, sequence) {
     heading: `<p class="eyebrow">${escapeHtml(selectedGroup[0])}</p><strong>Entries</strong>`,
     content: railList(entryItems, { empty: "No entries match this search." })
   });
+  const infractionsAsTree = deviceState.preferences().navigationTree;
   mountApplicationShell({
-    contextualNavigation,
+    contextualNavigation: infractionsAsTree ? [infractionTree.column({
+      groups: groups.map(([category, values]) => ({ key: category, label: category, description: `${values.length.toLocaleString()} entries`, href: infractionsRouteHref(category) })),
+      groupKey: selectedGroup?.[0] ?? null,
+      itemHref: selectedEntry ? infractionsRouteHref(selectedEntry.category, { entry: selectedEntry.id }) : null,
+      items: groups.map(([category, values]) => [category, values.map(infractionTreeItem)])
+    })] : contextualNavigation,
     mainContent,
-    columnCount: contextualColumnCount("infractions", route),
+    columnCount: infractionsAsTree ? 1 : contextualColumnCount("infractions", route),
     mobilePresentationMode: selectedEntry ? "detail" : "drilldown",
     footer: legalFooter()
   });
@@ -1762,10 +1838,16 @@ async function renderStatutesIndex(route, sequence) {
     content: railList(headingItems)
   });
   setDocumentTitle(selected?.label ?? (letter ? `Statutes index ${letter.toUpperCase()}` : "Statutes index"));
+  const indexAsTree = deviceState.preferences().navigationTree;
   mountApplicationShell({
-    contextualNavigation,
+    contextualNavigation: indexAsTree ? [indexTree.column({
+      groups: available.map((key) => ({ key, label: key.toUpperCase(), description: `${(letterCounts.get(key) ?? 0).toLocaleString()} headings`, href: indexRouteHref(key) })),
+      groupKey: letter ?? null,
+      itemHref: selected ? indexRouteHref(letter, { topic: selected.id }) : null,
+      items: letter ? [[letter, indexTreeItems(letter, topics)]] : []
+    })] : contextualNavigation,
     mainContent,
-    columnCount: contextualColumnCount("index", route),
+    columnCount: indexAsTree ? 1 : contextualColumnCount("index", route),
     mobilePresentationMode: selected ? "detail" : "drilldown"
   });
 
@@ -1999,13 +2081,17 @@ document.addEventListener("keydown", (event) => {
 // A setting that changes the page re-renders it with the Settings panel still open on that control.
 async function rerenderKeepingSettings(control, selector) {
   const currentHash = location.hash;
-  const scrollTop = control.closest("[data-settings-panel]").scrollTop;
+  const fromSidePanel = Boolean(control.closest("[data-navigation-settings]"));
+  const scrollTop = control.closest("[data-settings-panel], [data-navigation-settings]").scrollTop;
   await renderCurrentRoute();
   if (location.hash !== currentHash) return;
-  const panel = document.querySelector("[data-settings-panel]");
+  const panel = document.querySelector(fromSidePanel ? "[data-navigation-settings]" : "[data-settings-panel]");
   if (!panel) return;
-  panel.hidden = false;
-  document.querySelector("[data-open-settings]")?.setAttribute("aria-expanded", "true");
+  if (fromSidePanel) openNavigationSettings({ focus: false });
+  else {
+    panel.hidden = false;
+    document.querySelector("[data-open-settings]")?.setAttribute("aria-expanded", "true");
+  }
   panel.querySelector(selector)?.focus({ preventScroll: true });
   panel.scrollTop = scrollTop;
 }
@@ -2122,6 +2208,11 @@ document.addEventListener("keydown", (event) => {
     closeSettingsPanel();
     return;
   }
+  if (event.key === "Escape" && navigationSettingsOpen() && !document.querySelector("dialog[open]")) {
+    event.preventDefault();
+    closeNavigationSettings();
+    return;
+  }
   const inField = /^(input|select|textarea)$/i.test(document.activeElement?.tagName ?? "");
   if (event.key === "/" && !inField && !event.metaKey && !event.ctrlKey && !event.altKey) {
     event.preventDefault();
@@ -2145,8 +2236,47 @@ function closeSettingsPanel({ restoreFocus = true } = {}) {
   if (restoreFocus) button?.focus();
 }
 
+function navigationSettingsOpen() {
+  const panel = document.querySelector("[data-navigation-settings]");
+  return Boolean(panel && !panel.hidden);
+}
+
+// Only the first visible pane shows the button; CSS hides the others.
+function visibleNavigationSettingsButton() {
+  return [...document.querySelectorAll("[data-open-navigation-settings]")].find((button) => button.offsetParent);
+}
+
+// The panes are too narrow to hold the panel and clip what overflows them, so it sits
+// outside them and is placed under the button.
+function openNavigationSettings({ focus = true } = {}) {
+  const panel = document.querySelector("[data-navigation-settings]");
+  const button = visibleNavigationSettingsButton();
+  if (!panel || !button) return;
+  panel.hidden = false;
+  const { bottom, left } = button.getBoundingClientRect();
+  const gutter = 16;
+  const top = bottom + 6;
+  panel.style.top = `${top}px`;
+  panel.style.left = `${Math.max(gutter, Math.min(left, innerWidth - panel.offsetWidth - gutter))}px`;
+  panel.style.maxHeight = `${innerHeight - top - gutter}px`;
+  button.setAttribute("aria-expanded", "true");
+  if (focus) panel.querySelector("button")?.focus();
+}
+
+function closeNavigationSettings({ restoreFocus = true } = {}) {
+  if (!navigationSettingsOpen()) return;
+  document.querySelector("[data-navigation-settings]").hidden = true;
+  for (const button of document.querySelectorAll("[data-open-navigation-settings]")) button.setAttribute("aria-expanded", "false");
+  if (restoreFocus) visibleNavigationSettingsButton()?.focus();
+}
+
+window.addEventListener("resize", () => closeNavigationSettings({ restoreFocus: false }));
+
 document.addEventListener("pointerdown", (event) => {
   if (!event.target.closest("[data-global-search]")) closeOmni();
+  if (navigationSettingsOpen() && !event.target.closest("[data-navigation-settings], [data-open-navigation-settings]")) {
+    closeNavigationSettings({ restoreFocus: false });
+  }
   // Dialogs opened from Settings sit outside the panel but belong to it.
   if (settingsPanelOpen() && !event.target.closest("[data-settings-panel], [data-open-settings], dialog")) {
     closeSettingsPanel({ restoreFocus: false });
@@ -2259,6 +2389,12 @@ document.addEventListener("click", async (event) => {
       openSettings.setAttribute("aria-expanded", "true");
       panel.querySelector("button")?.focus();
     } else closeSettingsPanel();
+    return;
+  }
+  const openPaneSettings = event.target.closest("[data-open-navigation-settings]");
+  if (openPaneSettings || event.target.closest("[data-close-navigation-settings]")) {
+    if (openPaneSettings && !navigationSettingsOpen()) openNavigationSettings();
+    else closeNavigationSettings();
     return;
   }
   const openFeedback = event.target.closest("[data-open-feedback]");
@@ -2418,6 +2554,13 @@ document.addEventListener("change", async (event) => {
     chapterSelect.disabled = !title;
     return;
   }
+  // These rows exist in both Settings and the side panel's popover, so each copy stays current.
+  const navigationSetting = ["compact-lists", "subtle-notices", "navigation-tree"].find((name) => event.target.hasAttribute(`data-${name}`));
+  const copies = navigationSetting ? `input[data-${navigationSetting}]`
+    : event.target.matches("[data-hide-status]") ? `input[data-hide-status="${CSS.escape(event.target.dataset.hideStatus)}"]` : null;
+  if (copies) {
+    for (const input of document.querySelectorAll(copies)) input.checked = event.target.checked;
+  }
   if (event.target.matches("[data-compact-lists]")) {
     applyPreferences(deviceState.updatePreferences({ compactLists: event.target.checked }));
     return;
@@ -2426,14 +2569,18 @@ document.addEventListener("change", async (event) => {
     applyPreferences(deviceState.updatePreferences({ subtleNotices: event.target.checked }));
     return;
   }
-  if (event.target.matches("[data-hide-repealed]")) {
-    applyPreferences(deviceState.updatePreferences({ hideRepealedSections: event.target.checked }));
-    if (["chapter", "section"].includes(parseRoute(location).kind)) await rerenderKeepingSettings(event.target, "[data-hide-repealed]");
+  if (event.target.matches("[data-hide-status]")) {
+    const status = event.target.dataset.hideStatus;
+    const hidden = deviceState.preferences().hiddenStatuses.filter((value) => value !== status);
+    applyPreferences(deviceState.updatePreferences({ hiddenStatuses: event.target.checked ? [...hidden, status] : hidden }));
+    // The tree hides sections on every statute page; the panes only list a chapter's sections.
+    const pages = deviceState.preferences().navigationTree ? ["home", "title", "chapter", "section"] : ["chapter", "section"];
+    if (pages.includes(parseRoute(location).kind)) await rerenderKeepingSettings(event.target, `[data-hide-status="${CSS.escape(status)}"]`);
     return;
   }
   if (event.target.matches("[data-navigation-tree]")) {
     applyPreferences(deviceState.updatePreferences({ navigationTree: event.target.checked }));
-    if (["home", "title", "chapter", "section"].includes(parseRoute(location).kind)) await rerenderKeepingSettings(event.target, "[data-navigation-tree]");
+    if (["home", "title", "chapter", "section", "index", "infractions"].includes(parseRoute(location).kind)) await rerenderKeepingSettings(event.target, "[data-navigation-tree]");
     return;
   }
 });
@@ -2534,6 +2681,9 @@ function updateHeaderPinning() {
   }
 }
 new ResizeObserver(updateHeaderPinning).observe(document.body);
+compactLayout.addEventListener("change", () => {
+  document.querySelector(".app-nav > a:first-child")?.setAttribute("href", statutesNavHref());
+});
 
 window.addEventListener("hashchange", renderCurrentRoute);
 // A page that failed only because the connection dropped loads itself again on reconnect.

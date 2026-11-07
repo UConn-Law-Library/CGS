@@ -59,7 +59,7 @@ test("normalizes and applies reader preferences", () => {
     fontProfile: "atkinson",
     lineSpacing: 2.8,
     compactLists: true,
-    hideRepealedSections: true,
+    hiddenStatuses: ["reserved", "repealed", "unknown"],
     subtleNotices: true
   });
   assert.deepEqual(preferences, {
@@ -68,7 +68,7 @@ test("normalizes and applies reader preferences", () => {
     fontProfile: "atkinson",
     lineSpacing: 2.2,
     compactLists: true,
-    hideRepealedSections: true,
+    hiddenStatuses: ["repealed", "reserved"],
     subtleNotices: true,
     navigationTree: false
   });
@@ -78,7 +78,6 @@ test("normalizes and applies reader preferences", () => {
   assert.equal(root.dataset.theme, "oled");
   assert.equal(root.dataset.fontProfile, "atkinson");
   assert.equal(root.dataset.compactLists, "true");
-  assert.equal(root.dataset.hideRepealedSections, "true");
   assert.equal(root.dataset.subtleNotices, "true");
   assert.equal(style.values.get("--text-scale"), "1.25");
   assert.equal(style.values.get("--line-spacing"), "2.2");
@@ -161,4 +160,11 @@ test("storage failures remain non-fatal for preferences, bookmarks, recents, and
   assert.equal(state.recordSearch({ query: "public", href: "#/search?q=public" }).length, 1);
   assert.deepEqual(state.searchHistory(), []);
   assert.doesNotThrow(() => state.clearSearchHistory());
+});
+
+test("the earlier hide-repealed switch carries over as hiding repealed sections", () => {
+  const storage = memoryStorage();
+  storage.setItem("cgs.preferences.v1", JSON.stringify({ hideRepealedSections: true }));
+  assert.deepEqual(new DeviceState({ storage }).preferences().hiddenStatuses, ["repealed"]);
+  assert.deepEqual(new DeviceState({ storage: memoryStorage() }).preferences().hiddenStatuses, []);
 });

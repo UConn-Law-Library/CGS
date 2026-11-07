@@ -55,7 +55,7 @@ test("contents links move to a part without leaving the guide, and parts can be 
 test("the guide is reachable from Home, Settings, About, and Acts", async ({ page }) => {
   await openApp(page);
   await expect(page.locator('main a[href="#/guide"]')).toBeVisible();
-  await page.getByRole("button", { name: "Settings" }).click();
+  await page.getByRole("button", { name: "Settings", exact: true }).click();
   await expect(page.getByRole("dialog", { name: "Settings" }).getByRole("link", { name: /Understanding the Statutes/ })).toBeVisible();
   await openApp(page, "#/about");
   await expect(page.locator('main a[href="#/guide"]')).toBeVisible();

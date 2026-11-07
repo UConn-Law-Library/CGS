@@ -70,7 +70,7 @@ test("index letters render collapsed topics, dedicated large topics, and repeale
   assert.match(appSource, /target\?\.scrollIntoView\(\{ block: "center" \}\)/);
   assert.match(stylesSource, /\.index-topic \{[^}]*scroll-margin-top: 8rem;/);
   assert.match(stylesSource, /\.index-topic-jumps \{[^}]*overflow-x: auto/);
-  assert.match(appSource, /data-hide-repealed/);
+  assert.match(appSource, /data-hide-status/);
   assert.match(appSource, /repealed: "Repealed", transferred: "Transferred"/);
 });
 

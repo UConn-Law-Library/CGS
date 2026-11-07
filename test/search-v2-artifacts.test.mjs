@@ -76,3 +76,31 @@ test("maps every citation to its chapter and section route key", async (context)
   });
   assert.equal(manifest.citationShards[0].sha256, createHash("sha256").update(bytes).digest("hex"));
 });
+
+test("heading rows carry the status tags the chapter lists show", async (context) => {
+  const root = await mkdtemp(path.join(os.tmpdir(), "cgs-headings-"));
+  context.after(() => rm(root, { recursive: true, force: true }));
+  const dataDirectory = path.join(root, "data");
+  const outputDir = path.join(root, "output");
+  await mkdir(path.join(dataDirectory, "chapters"), { recursive: true });
+  await writeFile(path.join(dataDirectory, "chapters", "001.json"), JSON.stringify({
+    number: "001",
+    sections: [
+      { id: "section-1-1", citation: "1-1", heading: "Sec. 1-1. Words and phrases.", status: "active", content: {} },
+      { id: "section-1-2", citation: "1-2", heading: "Sec. 1-2. Repealed.", status: "repealed", content: {} },
+      { id: "section-1-3", citation: "1-3", heading: "Sec. 1-3. Transferred.", status: "transferred", content: {} }
+    ]
+  }));
+  const catalog = {
+    schemaVersion: "1.0.0",
+    titles: [{ id: "title-01", number: "01", name: "General", chapters: [{ id: "chapter-001", number: "001", path: "chapters/001.json" }] }]
+  };
+
+  await generateSearchV2Artifacts({ catalog, dataDirectory, supplementsDir: path.join(root, "supplements"), outputDir, generatedAt: "2026-07-18T00:00:00.000Z" });
+  const { headings } = JSON.parse(await readFile(path.join(outputDir, "headings", "title-01.json")));
+  assert.deepEqual(headings, [
+    ["1-1", "001", "Sec. 1-1. Words and phrases.", ["1-1"]],
+    ["1-2", "001", "Sec. 1-2. Repealed.", ["1-2"], ["repealed"]],
+    ["1-3", "001", "Sec. 1-3. Transferred.", ["1-3"], ["transferred"]]
+  ]);
+});

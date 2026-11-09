@@ -22,9 +22,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Any town, city, borough, fire district or incorporated school district may, by ordinance, establish a public library and may expend such sums of money as may be necessary to purchase land for a suitable site and to provide and maintain such suitable rooms or buildings as may be necessary for such library or for any library which is the property of any corporation without capital stock or for any public library established in such municipality, provided the use of such library shall be free to its inhabitants under such regulations as its trustees prescribe. Any such municipality may receive, hold and manage any devise, bequest or gift for the establishment, increase or maintenance of any such library within its limits and may retire with a pension or other reward any employee of any such library.",
-          "See Sec. 7-403 re deposit of funds in custodian account.",
-          "See Sec. 11-32 re power of city councils to establish and maintain public libraries."
+          "Any town, city, borough, fire district or incorporated school district may, by ordinance, establish a public library and may expend such sums of money as may be necessary to purchase land for a suitable site and to provide and maintain such suitable rooms or buildings as may be necessary for such library or for any library which is the property of any corporation without capital stock or for any public library established in such municipality, provided the use of such library shall be free to its inhabitants under such regulations as its trustees prescribe. Any such municipality may receive, hold and manage any devise, bequest or gift for the establishment, increase or maintenance of any such library within its limits and may retire with a pension or other reward any employee of any such library."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 1657; 1957, P.A. 13, S. 67; P.A. 07-227, S. 21.)"
@@ -35,10 +33,18 @@
         "annotations": [
           {
             "first": true,
+            "text": "See Sec. 7-403 re deposit of funds in custodian account."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 11-32 re power of city councils to establish and maintain public libraries."
+          },
+          {
+            "first": true,
             "text": "Devise to city, with discretionary power as to its application, sustained, although at the time of testator's death there was no public library. 60 C. 32."
           }
         ],
-        "plainText": "Any town, city, borough, fire district or incorporated school district may, by ordinance, establish a public library and may expend such sums of money as may be necessary to purchase land for a suitable site and to provide and maintain such suitable rooms or buildings as may be necessary for such library or for any library which is the property of any corporation without capital stock or for any public library established in such municipality, provided the use of such library shall be free to its inhabitants under such regulations as its trustees prescribe. Any such municipality may receive, hold and manage any devise, bequest or gift for the establishment, increase or maintenance of any such library within its limits and may retire with a pension or other reward any employee of any such library.\n\nSee Sec. 7-403 re deposit of funds in custodian account.\n\nSee Sec. 11-32 re power of city councils to establish and maintain public libraries."
+        "plainText": "Any town, city, borough, fire district or incorporated school district may, by ordinance, establish a public library and may expend such sums of money as may be necessary to purchase land for a suitable site and to provide and maintain such suitable rooms or buildings as may be necessary for such library or for any library which is the property of any corporation without capital stock or for any public library established in such municipality, provided the use of such library shall be free to its inhabitants under such regulations as its trustees prescribe. Any such municipality may receive, hold and manage any devise, bequest or gift for the establishment, increase or maintenance of any such library within its limits and may retire with a pension or other reward any employee of any such library."
       }
     },
     {
@@ -125,8 +131,7 @@
       "status": "active",
       "content": {
         "body": [
-          "The State Library Board shall maintain a library service center in the Middlesex County area and in the Windham-Tolland County area, to serve the public libraries and public schools in each of said areas.",
-          "See Sec. 11-23b re library service centers for public libraries and public schools."
+          "The State Library Board shall maintain a library service center in the Middlesex County area and in the Windham-Tolland County area, to serve the public libraries and public schools in each of said areas."
         ],
         "sourceNotes": [
           "(1959, P.A. 581, S. 1; February, 1965, P.A. 490, S. 6; P.A. 75-316, S. 10; P.A. 07-227, S. 9.)"
@@ -134,8 +139,13 @@
         "history": [
           "History: 1965 act substituted state library committee for state board of education and added new service center for Middlesex county area; P.A. 75-316 substituted state library board for state library committee; P.A. 07-227 deleted language allowing boards of directors and boards of education that desire supplementary services to designate representative to serve on advisory board of governors, effective July 1, 2007."
         ],
-        "annotations": [],
-        "plainText": "The State Library Board shall maintain a library service center in the Middlesex County area and in the Windham-Tolland County area, to serve the public libraries and public schools in each of said areas.\n\nSee Sec. 11-23b re library service centers for public libraries and public schools."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 11-23b re library service centers for public libraries and public schools."
+          }
+        ],
+        "plainText": "The State Library Board shall maintain a library service center in the Middlesex County area and in the Windham-Tolland County area, to serve the public libraries and public schools in each of said areas."
       }
     },
     {
@@ -150,8 +160,7 @@
       "status": "active",
       "content": {
         "body": [
-          "The State Library Board may establish and maintain library service centers to provide supplementary books and related library materials and services to public libraries and to public schools.",
-          "See Sec. 11-1a re programs of state-wide library service."
+          "The State Library Board may establish and maintain library service centers to provide supplementary books and related library materials and services to public libraries and to public schools."
         ],
         "sourceNotes": [
           "(February, 1965, P.A. 490, S. 5; P.A. 75-316, S. 11.)"
@@ -159,8 +168,13 @@
         "history": [
           "History: Sec. 10-28 transferred to Sec. 11-23b in 1969; P.A. 75-316 substituted state library board for state library committee."
         ],
-        "annotations": [],
-        "plainText": "The State Library Board may establish and maintain library service centers to provide supplementary books and related library materials and services to public libraries and to public schools.\n\nSee Sec. 11-1a re programs of state-wide library service."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 11-1a re programs of state-wide library service."
+          }
+        ],
+        "plainText": "The State Library Board may establish and maintain library service centers to provide supplementary books and related library materials and services to public libraries and to public schools."
       }
     },
     {
@@ -593,8 +607,7 @@
       "status": "active",
       "content": {
         "body": [
-          "The legislative body of any municipality may establish or operate a public library and reading room, together with such kindred apartments and facilities as the legislative body approves; and may levy a tax annually on all taxable property of the municipality for the establishment or operation of a public library. Such tax shall be levied and collected as other taxes, and shall be known as the “library fund”. Such library and reading room shall be free to the use of the inhabitants of the city, subject to such reasonable rules and regulations as the board of trustees may adopt in order to render the use of the library and reading room of the greatest benefit. Such board may exclude from the use of such library and reading room any person who wilfully violates such rules, and may extend its privileges to persons residing in this state outside the city upon such terms and conditions as it may prescribe.",
-          "See Sec. 11-20 re power of towns, cities, boroughs, fire districts and incorporated school districts to establish public libraries."
+          "The legislative body of any municipality may establish or operate a public library and reading room, together with such kindred apartments and facilities as the legislative body approves; and may levy a tax annually on all taxable property of the municipality for the establishment or operation of a public library. Such tax shall be levied and collected as other taxes, and shall be known as the “library fund”. Such library and reading room shall be free to the use of the inhabitants of the city, subject to such reasonable rules and regulations as the board of trustees may adopt in order to render the use of the library and reading room of the greatest benefit. Such board may exclude from the use of such library and reading room any person who wilfully violates such rules, and may extend its privileges to persons residing in this state outside the city upon such terms and conditions as it may prescribe."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 1670; P.A. 73-261, S. 1, 2; P.A. 82-305; P.A. 07-227, S. 22; P.A. 10-108, S. 33.)"
@@ -602,8 +615,13 @@
         "history": [
           "History: P.A. 73-261 increased tax limit from one and one-half to two mills on the dollar; P.A. 82-305 deleted provision which had limited tax levied for public library needs to a maximum of two mills on the dollar; P.A. 07-227 replaced board of directors with board of trustees, effective July 1, 2007; P.A. 10-108 replaced references to “city council” and “council” with “legislative body”, replaced references to “city” with “municipality”, replaced “and maintain” with “or operate” and added provision re tax for establishment or operation of a public library, effective June 1, 2010."
         ],
-        "annotations": [],
-        "plainText": "The legislative body of any municipality may establish or operate a public library and reading room, together with such kindred apartments and facilities as the legislative body approves; and may levy a tax annually on all taxable property of the municipality for the establishment or operation of a public library. Such tax shall be levied and collected as other taxes, and shall be known as the “library fund”. Such library and reading room shall be free to the use of the inhabitants of the city, subject to such reasonable rules and regulations as the board of trustees may adopt in order to render the use of the library and reading room of the greatest benefit. Such board may exclude from the use of such library and reading room any person who wilfully violates such rules, and may extend its privileges to persons residing in this state outside the city upon such terms and conditions as it may prescribe.\n\nSee Sec. 11-20 re power of towns, cities, boroughs, fire districts and incorporated school districts to establish public libraries."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 11-20 re power of towns, cities, boroughs, fire districts and incorporated school districts to establish public libraries."
+          }
+        ],
+        "plainText": "The legislative body of any municipality may establish or operate a public library and reading room, together with such kindred apartments and facilities as the legislative body approves; and may levy a tax annually on all taxable property of the municipality for the establishment or operation of a public library. Such tax shall be levied and collected as other taxes, and shall be known as the “library fund”. Such library and reading room shall be free to the use of the inhabitants of the city, subject to such reasonable rules and regulations as the board of trustees may adopt in order to render the use of the library and reading room of the greatest benefit. Such board may exclude from the use of such library and reading room any person who wilfully violates such rules, and may extend its privileges to persons residing in this state outside the city upon such terms and conditions as it may prescribe."
       }
     },
     {

@@ -75,8 +75,7 @@
       "content": {
         "body": [
           "(a) The words “child”, “children”, “issue”, “descendant”, “descendants”, “heir”, “heirs”, “unlawful heirs”, “grandchild” and “grandchildren”, when used in any will or trust instrument, shall, unless the document clearly indicates a contrary intention, include children born as a result of A.I.D.",
-          "(b) The provisions of this section shall apply to wills and trust instruments whether or not executed before, on or after October 1, 1975, unless the instrument indicates an intent to the contrary.",
-          "See Sec. 45a-262 re application of words of inheritance to child conceived through A.I.D. or child of decedent conceived and born after death of decedent."
+          "(b) The provisions of this section shall apply to wills and trust instruments whether or not executed before, on or after October 1, 1975, unless the instrument indicates an intent to the contrary."
         ],
         "sourceNotes": [
           "(P.A. 75-233, S. 10; P.A. 80-476, S. 181.)"
@@ -84,8 +83,13 @@
         "history": [
           "History: P.A. 80-476 divided section into Subsecs. and corrected spelling of “descendant(s)”; Sec. 45-69m transferred to Sec. 45a-778 in 1991."
         ],
-        "annotations": [],
-        "plainText": "(a) The words “child”, “children”, “issue”, “descendant”, “descendants”, “heir”, “heirs”, “unlawful heirs”, “grandchild” and “grandchildren”, when used in any will or trust instrument, shall, unless the document clearly indicates a contrary intention, include children born as a result of A.I.D.\n\n(b) The provisions of this section shall apply to wills and trust instruments whether or not executed before, on or after October 1, 1975, unless the instrument indicates an intent to the contrary.\n\nSee Sec. 45a-262 re application of words of inheritance to child conceived through A.I.D. or child of decedent conceived and born after death of decedent."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 45a-262 re application of words of inheritance to child conceived through A.I.D. or child of decedent conceived and born after death of decedent."
+          }
+        ],
+        "plainText": "(a) The words “child”, “children”, “issue”, “descendant”, “descendants”, “heir”, “heirs”, “unlawful heirs”, “grandchild” and “grandchildren”, when used in any will or trust instrument, shall, unless the document clearly indicates a contrary intention, include children born as a result of A.I.D.\n\n(b) The provisions of this section shall apply to wills and trust instruments whether or not executed before, on or after October 1, 1975, unless the instrument indicates an intent to the contrary."
       }
     },
     {

@@ -310,8 +310,7 @@
       "status": "active",
       "content": {
         "body": [
-          "When, in any criminal prosecution, it is necessary to obtain the testimony of any witnesses residing without this state, the Chief State's Attorney may allow them a reasonable sum for their time and expenses in going to, attending upon and returning from the court and may allow a reasonable sum for the expense of procuring their attendance or procuring any document from without this state necessary to be used as evidence on the trial of such prosecution, to be from the appropriation for the Division of Criminal Justice.",
-          "See Sec. 51-275 for applicable definitions."
+          "When, in any criminal prosecution, it is necessary to obtain the testimony of any witnesses residing without this state, the Chief State's Attorney may allow them a reasonable sum for their time and expenses in going to, attending upon and returning from the court and may allow a reasonable sum for the expense of procuring their attendance or procuring any document from without this state necessary to be used as evidence on the trial of such prosecution, to be from the appropriation for the Division of Criminal Justice."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 8851; 1963, P.A. 642, S. 81; 1967, P.A. 844; P.A. 73-122, S. 17, 27.)"
@@ -319,8 +318,13 @@
         "history": [
           "History: 1963 act deleted obsolete reference to criminal prosecution before common pleas court; 1967 act removed limitation of section to prosecutions in superior court; P.A. 73-122 made chief state's attorney rather than the court responsible for determining witnesses' expenses and specified that payments are to be made from criminal justice division appropriations, replacing provision whereby they were “taxed and paid as in other criminal cases”."
         ],
-        "annotations": [],
-        "plainText": "When, in any criminal prosecution, it is necessary to obtain the testimony of any witnesses residing without this state, the Chief State's Attorney may allow them a reasonable sum for their time and expenses in going to, attending upon and returning from the court and may allow a reasonable sum for the expense of procuring their attendance or procuring any document from without this state necessary to be used as evidence on the trial of such prosecution, to be from the appropriation for the Division of Criminal Justice.\n\nSee Sec. 51-275 for applicable definitions."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 51-275 for applicable definitions."
+          }
+        ],
+        "plainText": "When, in any criminal prosecution, it is necessary to obtain the testimony of any witnesses residing without this state, the Chief State's Attorney may allow them a reasonable sum for their time and expenses in going to, attending upon and returning from the court and may allow a reasonable sum for the expense of procuring their attendance or procuring any document from without this state necessary to be used as evidence on the trial of such prosecution, to be from the appropriation for the Division of Criminal Justice."
       }
     },
     {

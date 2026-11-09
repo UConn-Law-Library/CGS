@@ -221,8 +221,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Each public weighmaster license shall expire annually. Renewal applications shall be in such form as the commissioner shall prescribe.",
-          "See Sec. 21a-10(b) re staggered schedule for license renewals."
+          "Each public weighmaster license shall expire annually. Renewal applications shall be in such form as the commissioner shall prescribe."
         ],
         "sourceNotes": [
           "(P.A. 77-409, S. 8; P.A. 94-36, S. 34, 42; P.A. 24-142, S. 36.)"
@@ -230,8 +229,13 @@
         "history": [
           "History: P.A. 94-36 deleted reference to the “thirtieth day of June” license expiration date, effective January 1, 1995; P.A. 24-142 substituted “public weighmaster” for “licensed public weigher”, and made a conforming change, effective June 6, 2024."
         ],
-        "annotations": [],
-        "plainText": "Each public weighmaster license shall expire annually. Renewal applications shall be in such form as the commissioner shall prescribe.\n\nSee Sec. 21a-10(b) re staggered schedule for license renewals."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 21a-10(b) re staggered schedule for license renewals."
+          }
+        ],
+        "plainText": "Each public weighmaster license shall expire annually. Renewal applications shall be in such form as the commissioner shall prescribe."
       }
     },
     {

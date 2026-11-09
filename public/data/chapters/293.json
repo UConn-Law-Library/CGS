@@ -131,8 +131,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Except as provided in section 16-352 , a person, public agency or public utility responsible for excavating, discharging explosives or demolishing shall notify the central clearinghouse of such proposed excavation, discharge or demolition in the manner prescribed by regulations adopted pursuant to section 16-357 . Such notice shall include the name, address and telephone number of the person, public agency or public utility performing the excavation, discharge of explosives or demolition and the date, location and type of excavation, demolition or discharge of explosives. The central clearinghouse shall immediately transmit such information to the public utilities whose facilities may be affected. In the event the proposed excavation, demolition or discharge of explosives has not been completed within the allotted time frame prescribed by regulation of such notification, or the excavation, demolition or discharge of explosives will be expanded outside of the location originally specified in such notification, the person, public agency or public utility responsible for such excavation, demolition or discharge of explosives shall again notify the central clearinghouse in the manner prescribed by regulations adopted pursuant to section 16-357 .",
-          "See Sec. 16-356 re penalty for failure to give required notice."
+          "Except as provided in section 16-352 , a person, public agency or public utility responsible for excavating, discharging explosives or demolishing shall notify the central clearinghouse of such proposed excavation, discharge or demolition in the manner prescribed by regulations adopted pursuant to section 16-357 . Such notice shall include the name, address and telephone number of the person, public agency or public utility performing the excavation, discharge of explosives or demolition and the date, location and type of excavation, demolition or discharge of explosives. The central clearinghouse shall immediately transmit such information to the public utilities whose facilities may be affected. In the event the proposed excavation, demolition or discharge of explosives has not been completed within the allotted time frame prescribed by regulation of such notification, or the excavation, demolition or discharge of explosives will be expanded outside of the location originally specified in such notification, the person, public agency or public utility responsible for such excavation, demolition or discharge of explosives shall again notify the central clearinghouse in the manner prescribed by regulations adopted pursuant to section 16-357 ."
         ],
         "sourceNotes": [
           "(P.A. 77-350, S. 5; 77-614, S. 162, 587, 610; P.A. 78-303, S. 85, 136; P.A. 80-482, S. 166, 348; P.A. 87-71, S. 3, 13; P.A. 14-94, S. 42.)"
@@ -140,8 +139,13 @@
         "history": [
           "History: P.A. 77-614 and P.A. 78-303 replaced public utilities control authority with division of public utility control within the department of business regulation, effective January 1, 1979; P.A. 80-482 made division an independent department and deleted reference to abolished department of business regulation; P.A. 87-71 made technical changes, eliminated the option of providing notice of excavation or demolition to the department of public utility control, and required additional notice if the excavation or demolition has not commenced within 30 days of the original notice or will expand outside the location originally specified; P.A. 14-94 deleted provisions re excavating or discharging explosives at or near the location of public utility facilities and re demolishing a structure containing a public utility facility, replaced provisions re notice with references to regulations adopted pursuant to Sec. 16-357, replaced provision re commencement within 30 days with provision re completion within time frame prescribed by regulation, and made conforming changes, effective October 1, 2015."
         ],
-        "annotations": [],
-        "plainText": "Except as provided in section 16-352 , a person, public agency or public utility responsible for excavating, discharging explosives or demolishing shall notify the central clearinghouse of such proposed excavation, discharge or demolition in the manner prescribed by regulations adopted pursuant to section 16-357 . Such notice shall include the name, address and telephone number of the person, public agency or public utility performing the excavation, discharge of explosives or demolition and the date, location and type of excavation, demolition or discharge of explosives. The central clearinghouse shall immediately transmit such information to the public utilities whose facilities may be affected. In the event the proposed excavation, demolition or discharge of explosives has not been completed within the allotted time frame prescribed by regulation of such notification, or the excavation, demolition or discharge of explosives will be expanded outside of the location originally specified in such notification, the person, public agency or public utility responsible for such excavation, demolition or discharge of explosives shall again notify the central clearinghouse in the manner prescribed by regulations adopted pursuant to section 16-357 .\n\nSee Sec. 16-356 re penalty for failure to give required notice."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 16-356 re penalty for failure to give required notice."
+          }
+        ],
+        "plainText": "Except as provided in section 16-352 , a person, public agency or public utility responsible for excavating, discharging explosives or demolishing shall notify the central clearinghouse of such proposed excavation, discharge or demolition in the manner prescribed by regulations adopted pursuant to section 16-357 . Such notice shall include the name, address and telephone number of the person, public agency or public utility performing the excavation, discharge of explosives or demolition and the date, location and type of excavation, demolition or discharge of explosives. The central clearinghouse shall immediately transmit such information to the public utilities whose facilities may be affected. In the event the proposed excavation, demolition or discharge of explosives has not been completed within the allotted time frame prescribed by regulation of such notification, or the excavation, demolition or discharge of explosives will be expanded outside of the location originally specified in such notification, the person, public agency or public utility responsible for such excavation, demolition or discharge of explosives shall again notify the central clearinghouse in the manner prescribed by regulations adopted pursuant to section 16-357 ."
       }
     },
     {
@@ -205,8 +209,7 @@
       "content": {
         "body": [
           "(a) In case of emergency involving danger to life, health or property or which requires immediate correction to continue the operation of a major industrial plant, or to assure the continuity of public utility service, excavation or demolition without explosives may be made without notice required by section 16-349 provided notice thereof is given as soon as reasonably possible.",
-          "(b) In case of an emergency involving an immediate and substantial danger of death or serious personal injury, explosives may be discharged if notice thereof is given at any time before discharge.",
-          "See Sec. 16-356 re penalty for failure to give required notice."
+          "(b) In case of an emergency involving an immediate and substantial danger of death or serious personal injury, explosives may be discharged if notice thereof is given at any time before discharge."
         ],
         "sourceNotes": [
           "(P.A. 77-350, S. 8; P.A. 14-94, S. 44.)"
@@ -214,8 +217,13 @@
         "history": [
           "History: P.A. 14-94 amended Subsec. (a) to delete provision re two-day notice and provision re notice provided by telephone, effective October 1, 2015."
         ],
-        "annotations": [],
-        "plainText": "(a) In case of emergency involving danger to life, health or property or which requires immediate correction to continue the operation of a major industrial plant, or to assure the continuity of public utility service, excavation or demolition without explosives may be made without notice required by section 16-349 provided notice thereof is given as soon as reasonably possible.\n\n(b) In case of an emergency involving an immediate and substantial danger of death or serious personal injury, explosives may be discharged if notice thereof is given at any time before discharge.\n\nSee Sec. 16-356 re penalty for failure to give required notice."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 16-356 re penalty for failure to give required notice."
+          }
+        ],
+        "plainText": "(a) In case of emergency involving danger to life, health or property or which requires immediate correction to continue the operation of a major industrial plant, or to assure the continuity of public utility service, excavation or demolition without explosives may be made without notice required by section 16-349 provided notice thereof is given as soon as reasonably possible.\n\n(b) In case of an emergency involving an immediate and substantial danger of death or serious personal injury, explosives may be discharged if notice thereof is given at any time before discharge."
       }
     },
     {

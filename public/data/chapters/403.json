@@ -22,9 +22,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Each person who exposes for sale by auction any goods or articles, except provisions, charcoal, wood, the products of a farm and secondhand household furniture, in any town, city or borough of which he is not a resident, without a license therefor from a majority of the selectmen of such town or from the authorities of such city or borough authorized by the charter or ordinances of such city or borough to issue such license, shall be fined not more than two hundred fifty dollars. This section shall not apply to any auction conducted by or contracted for the state in accordance with any court order under the provisions of section 54-36b or 54-36c .",
-          "See Sec. 21-30 re licensure of veterans without payment of fee.",
-          "See Sec. 54-36d re inapplicability of this section to proceedings under chapters 214, 220 and 490."
+          "Each person who exposes for sale by auction any goods or articles, except provisions, charcoal, wood, the products of a farm and secondhand household furniture, in any town, city or borough of which he is not a resident, without a license therefor from a majority of the selectmen of such town or from the authorities of such city or borough authorized by the charter or ordinances of such city or borough to issue such license, shall be fined not more than two hundred fifty dollars. This section shall not apply to any auction conducted by or contracted for the state in accordance with any court order under the provisions of section 54-36b or 54-36c ."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 4639; P.A. 75-530, S. 20, 35; P.A. 12-80, S. 14.)"
@@ -32,8 +30,17 @@
         "history": [
           "History: P.A. 75-530 exempted auctions conducted by or contracted for the state in accordance with court order; P.A. 12-80 replaced penalty of a fine of not more than $50 or imprisonment of not more than 60 days or both with a fine of not more than $250 and made technical changes."
         ],
-        "annotations": [],
-        "plainText": "Each person who exposes for sale by auction any goods or articles, except provisions, charcoal, wood, the products of a farm and secondhand household furniture, in any town, city or borough of which he is not a resident, without a license therefor from a majority of the selectmen of such town or from the authorities of such city or borough authorized by the charter or ordinances of such city or borough to issue such license, shall be fined not more than two hundred fifty dollars. This section shall not apply to any auction conducted by or contracted for the state in accordance with any court order under the provisions of section 54-36b or 54-36c .\n\nSee Sec. 21-30 re licensure of veterans without payment of fee.\n\nSee Sec. 54-36d re inapplicability of this section to proceedings under chapters 214, 220 and 490."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 21-30 re licensure of veterans without payment of fee."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 54-36d re inapplicability of this section to proceedings under chapters 214, 220 and 490."
+          }
+        ],
+        "plainText": "Each person who exposes for sale by auction any goods or articles, except provisions, charcoal, wood, the products of a farm and secondhand household furniture, in any town, city or borough of which he is not a resident, without a license therefor from a majority of the selectmen of such town or from the authorities of such city or borough authorized by the charter or ordinances of such city or borough to issue such license, shall be fined not more than two hundred fifty dollars. This section shall not apply to any auction conducted by or contracted for the state in accordance with any court order under the provisions of section 54-36b or 54-36c ."
       }
     },
     {

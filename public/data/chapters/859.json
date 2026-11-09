@@ -51,8 +51,7 @@
       "status": "active",
       "content": {
         "body": [
-          "All goods not perishable, left with any person or upon any public wharf or highway, and all goods, other than personal baggage of passengers, which are left at any railroad station or in any railroad car or carriage, and whose owner is unknown or neglects to take them away for six months from the time when they were left, shall be advertised one month in a newspaper published in the county where such goods were left. If the owner thereof does not take them away within such month, they may be sold and the proceeds disposed of in the manner provided in section 50-1 .",
-          "See Sec. 7-285 re sale of unclaimed goods by police departments."
+          "All goods not perishable, left with any person or upon any public wharf or highway, and all goods, other than personal baggage of passengers, which are left at any railroad station or in any railroad car or carriage, and whose owner is unknown or neglects to take them away for six months from the time when they were left, shall be advertised one month in a newspaper published in the county where such goods were left. If the owner thereof does not take them away within such month, they may be sold and the proceeds disposed of in the manner provided in section 50-1 ."
         ],
         "sourceNotes": [
           "(1949, Rev., S. 7287; 1961, P.A. 540, S. 29.)"
@@ -60,8 +59,13 @@
         "history": [
           "History: 1961 act deleted provision specifying that proceeds unclaimed by owner within one year escheat to state."
         ],
-        "annotations": [],
-        "plainText": "All goods not perishable, left with any person or upon any public wharf or highway, and all goods, other than personal baggage of passengers, which are left at any railroad station or in any railroad car or carriage, and whose owner is unknown or neglects to take them away for six months from the time when they were left, shall be advertised one month in a newspaper published in the county where such goods were left. If the owner thereof does not take them away within such month, they may be sold and the proceeds disposed of in the manner provided in section 50-1 .\n\nSee Sec. 7-285 re sale of unclaimed goods by police departments."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 7-285 re sale of unclaimed goods by police departments."
+          }
+        ],
+        "plainText": "All goods not perishable, left with any person or upon any public wharf or highway, and all goods, other than personal baggage of passengers, which are left at any railroad station or in any railroad car or carriage, and whose owner is unknown or neglects to take them away for six months from the time when they were left, shall be advertised one month in a newspaper published in the county where such goods were left. If the owner thereof does not take them away within such month, they may be sold and the proceeds disposed of in the manner provided in section 50-1 ."
       }
     },
     {

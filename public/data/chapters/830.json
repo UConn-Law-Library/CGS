@@ -508,8 +508,7 @@
       "status": "active",
       "content": {
         "body": [
-          "In any borough, city or town which requires a certificate of occupancy prior to human habitation of any building located therein, if any building is occupied in whole or in part without such occupancy permit, the owner or lessor of the premises shall be liable for a civil penalty of not more than twenty dollars per day, per apartment or dwelling unit, for not more than two hundred days for such period of unlawful occupation.",
-          "See Sec. 47a-57 re certificate of occupancy requirement with respect to apartments or dwelling units containing three or more housing units."
+          "In any borough, city or town which requires a certificate of occupancy prior to human habitation of any building located therein, if any building is occupied in whole or in part without such occupancy permit, the owner or lessor of the premises shall be liable for a civil penalty of not more than twenty dollars per day, per apartment or dwelling unit, for not more than two hundred days for such period of unlawful occupation."
         ],
         "sourceNotes": [
           "(1959, P.A. 415, S. 1; P.A. 79-571, S. 8; P.A. 97-231, S. 4; P.A. 98-107, S. 4, 6.)"
@@ -518,6 +517,10 @@
           "History: Sec. 47-24a transferred to Sec. 47a-5 in 1977; P.A. 79-571 rephrased provisions but made no substantive changes; P.A. 97-231 revised the sanction for an owner or lessor who allows occupancy of premises without a certificate of occupancy by replacing the prohibition on the recovery of rent for such period of unlawful occupation with a civil penalty of not more than $20 per day for such period; P.A. 98-107 specified that the daily civil penalty is “per apartment or dwelling unit, for not more than two hundred days”, effective July 1, 1998."
         ],
         "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 47a-57 re certificate of occupancy requirement with respect to apartments or dwelling units containing three or more housing units."
+          },
           {
             "first": true,
             "text": "Annotation to former section 47-24a:"
@@ -543,7 +546,7 @@
             "text": "Cited. 37 CS 688; 38 CS 683."
           }
         ],
-        "plainText": "In any borough, city or town which requires a certificate of occupancy prior to human habitation of any building located therein, if any building is occupied in whole or in part without such occupancy permit, the owner or lessor of the premises shall be liable for a civil penalty of not more than twenty dollars per day, per apartment or dwelling unit, for not more than two hundred days for such period of unlawful occupation.\n\nSee Sec. 47a-57 re certificate of occupancy requirement with respect to apartments or dwelling units containing three or more housing units."
+        "plainText": "In any borough, city or town which requires a certificate of occupancy prior to human habitation of any building located therein, if any building is occupied in whole or in part without such occupancy permit, the owner or lessor of the premises shall be liable for a civil penalty of not more than twenty dollars per day, per apartment or dwelling unit, for not more than two hundred days for such period of unlawful occupation."
       }
     },
     {
@@ -1096,8 +1099,7 @@
           "(a) If there is a material noncompliance by the landlord with the rental agreement or a noncompliance with section 47a-7 which materially affects health and safety, the tenant may deliver a written notice to the landlord specifying the acts and omissions constituting the breach. If the breach is not remedied within fifteen days after receipt of the notice, the rental agreement shall terminate on such date. If substantially the same act or omission which constituted a prior noncompliance of which notice was given, recurs within six months of the first act of noncompliance, the tenant may terminate the rental agreement upon at least fourteen days written notice specifying (1) the date the breach complained of occurred and (2) the date the tenant intends to terminate the rental agreement by vacating the premises, which date shall be within thirty days of such breach.",
           "(b) The tenant may not terminate the rental agreement under subsection (a) of this section for a condition caused by the wilful or negligent act or omission of such tenant, a member of his family, or other person on the premises with his consent.",
           "(c) This section shall apply only to leases in which the term of the tenancy is more than one month.",
-          "(d) Nothing in this section shall in any way restrict the tenant's use of other remedies available to him.",
-          "See Secs. 47a-14a to 47a-14g, inclusive, re actions for private receivership of a tenement house."
+          "(d) Nothing in this section shall in any way restrict the tenant's use of other remedies available to him."
         ],
         "sourceNotes": [
           "(P.A. 76-95, S. 15, 27; 76-435, S. 75, 82; P.A. 79-571, S. 26; P.A. 97-231, S. 3.)"
@@ -1108,6 +1110,10 @@
         "annotations": [
           {
             "first": true,
+            "text": "See Secs. 47a-14a to 47a-14g, inclusive, re actions for private receivership of a tenement house."
+          },
+          {
+            "first": true,
             "text": "Cited. 32 CA 133."
           },
           {
@@ -1115,7 +1121,7 @@
             "text": "Cited. 35 CS 151; 38 CS 683."
           }
         ],
-        "plainText": "(a) If there is a material noncompliance by the landlord with the rental agreement or a noncompliance with section 47a-7 which materially affects health and safety, the tenant may deliver a written notice to the landlord specifying the acts and omissions constituting the breach. If the breach is not remedied within fifteen days after receipt of the notice, the rental agreement shall terminate on such date. If substantially the same act or omission which constituted a prior noncompliance of which notice was given, recurs within six months of the first act of noncompliance, the tenant may terminate the rental agreement upon at least fourteen days written notice specifying (1) the date the breach complained of occurred and (2) the date the tenant intends to terminate the rental agreement by vacating the premises, which date shall be within thirty days of such breach.\n\n(b) The tenant may not terminate the rental agreement under subsection (a) of this section for a condition caused by the wilful or negligent act or omission of such tenant, a member of his family, or other person on the premises with his consent.\n\n(c) This section shall apply only to leases in which the term of the tenancy is more than one month.\n\n(d) Nothing in this section shall in any way restrict the tenant's use of other remedies available to him.\n\nSee Secs. 47a-14a to 47a-14g, inclusive, re actions for private receivership of a tenement house."
+        "plainText": "(a) If there is a material noncompliance by the landlord with the rental agreement or a noncompliance with section 47a-7 which materially affects health and safety, the tenant may deliver a written notice to the landlord specifying the acts and omissions constituting the breach. If the breach is not remedied within fifteen days after receipt of the notice, the rental agreement shall terminate on such date. If substantially the same act or omission which constituted a prior noncompliance of which notice was given, recurs within six months of the first act of noncompliance, the tenant may terminate the rental agreement upon at least fourteen days written notice specifying (1) the date the breach complained of occurred and (2) the date the tenant intends to terminate the rental agreement by vacating the premises, which date shall be within thirty days of such breach.\n\n(b) The tenant may not terminate the rental agreement under subsection (a) of this section for a condition caused by the wilful or negligent act or omission of such tenant, a member of his family, or other person on the premises with his consent.\n\n(c) This section shall apply only to leases in which the term of the tenancy is more than one month.\n\n(d) Nothing in this section shall in any way restrict the tenant's use of other remedies available to him."
       }
     },
     {
@@ -1133,8 +1139,7 @@
           "(a) If the landlord is required to supply heat, running water, hot water, electricity, gas or other essential service, and if the landlord fails to supply such essential service and the failure is not caused by conditions beyond the landlord's control, the tenant may give notice to the landlord specifying the breach and may elect to (1) procure reasonable amounts of heat, hot water, running water, electric, gas or other essential service during the period of the landlord's noncompliance and deduct the actual and reasonable cost of such service from the rent; or (2) procure reasonable substitute housing during the period of the landlord's noncompliance if the landlord fails to supply such service within forty-eight hours of such breach, except if the breach is the failure to provide the same service and such breach recurs within six months, the tenant may secure substitute housing immediately; or (3) if the failure to supply such service is wilful, the tenant may terminate the rental agreement and recover an amount not more than two months' periodic rent or double the actual damages sustained by him, whichever is greater. If the rental agreement is terminated, the landlord shall return all security and prepaid rent and interest required pursuant to section 47a-22 , recoverable under section 47a-21 .",
           "(b) If the tenant elects to procure substitute housing as provided in subdivision (2) of subsection (a) of this section, rent otherwise owed to the landlord shall abate for the period of the landlord's noncompliance. In addition, the tenant may recover the actual costs of such substitute housing, but in no event shall the tenant recover more than an amount equal to the amount of rent abated under this subsection. In any cause of action or defense to any action arising under subsection (a) of this section, the tenant may recover reasonable attorney's fees.",
           "(c) Rights of the tenant under this section do not arise (1) until the tenant has given reasonable written or oral notice to the landlord or (2) if the condition was caused by the wilful or negligent act or omission of the tenant, a member of his family or other person on the premises with his consent.",
-          "(d) For the purposes of this section, “tenant” includes each resident of a mobile manufactured home park, as defined in section 21-64 , including a resident who owns his own home, and “landlord” includes a “licensee” and an “owner” of a mobile manufactured home park, as defined in section 21-64 .",
-          "See Secs. 16-262c to 16-262h, inclusive, re termination of utility service for nonpayment."
+          "(d) For the purposes of this section, “tenant” includes each resident of a mobile manufactured home park, as defined in section 21-64 , including a resident who owns his own home, and “landlord” includes a “licensee” and an “owner” of a mobile manufactured home park, as defined in section 21-64 ."
         ],
         "sourceNotes": [
           "(P.A. 76-95, S. 13, 27; 76-435, S. 75, 82; P.A. 79-571, S. 27; P.A. 91-383, S. 15; P.A. 17-171, S. 1.)"
@@ -1143,6 +1148,10 @@
           "History: P.A. 76-435 changed effective date section of P.A. 76-95; P.A. 79-571 substituted “the” for “such” in Subsec. (a) where appearing; P.A. 91-383 added Subsec. (d) defining “tenant” and “landlord”; P.A. 17-171 amended Subsec. (a)(2) by changing “two business days” to “forty-eight hours”."
         ],
         "annotations": [
+          {
+            "first": true,
+            "text": "See Secs. 16-262c to 16-262h, inclusive, re termination of utility service for nonpayment."
+          },
           {
             "first": true,
             "text": "Cited. 217 C. 57."
@@ -1156,7 +1165,7 @@
             "text": "Cited. 37 CS 873; 38 CS 683. Court concluded that recovery of personal injury damages under section is neither consistent with the overall statutory scheme nor supported by legislative history. 44 CS 544."
           }
         ],
-        "plainText": "(a) If the landlord is required to supply heat, running water, hot water, electricity, gas or other essential service, and if the landlord fails to supply such essential service and the failure is not caused by conditions beyond the landlord's control, the tenant may give notice to the landlord specifying the breach and may elect to (1) procure reasonable amounts of heat, hot water, running water, electric, gas or other essential service during the period of the landlord's noncompliance and deduct the actual and reasonable cost of such service from the rent; or (2) procure reasonable substitute housing during the period of the landlord's noncompliance if the landlord fails to supply such service within forty-eight hours of such breach, except if the breach is the failure to provide the same service and such breach recurs within six months, the tenant may secure substitute housing immediately; or (3) if the failure to supply such service is wilful, the tenant may terminate the rental agreement and recover an amount not more than two months' periodic rent or double the actual damages sustained by him, whichever is greater. If the rental agreement is terminated, the landlord shall return all security and prepaid rent and interest required pursuant to section 47a-22 , recoverable under section 47a-21 .\n\n(b) If the tenant elects to procure substitute housing as provided in subdivision (2) of subsection (a) of this section, rent otherwise owed to the landlord shall abate for the period of the landlord's noncompliance. In addition, the tenant may recover the actual costs of such substitute housing, but in no event shall the tenant recover more than an amount equal to the amount of rent abated under this subsection. In any cause of action or defense to any action arising under subsection (a) of this section, the tenant may recover reasonable attorney's fees.\n\n(c) Rights of the tenant under this section do not arise (1) until the tenant has given reasonable written or oral notice to the landlord or (2) if the condition was caused by the wilful or negligent act or omission of the tenant, a member of his family or other person on the premises with his consent.\n\n(d) For the purposes of this section, “tenant” includes each resident of a mobile manufactured home park, as defined in section 21-64 , including a resident who owns his own home, and “landlord” includes a “licensee” and an “owner” of a mobile manufactured home park, as defined in section 21-64 .\n\nSee Secs. 16-262c to 16-262h, inclusive, re termination of utility service for nonpayment."
+        "plainText": "(a) If the landlord is required to supply heat, running water, hot water, electricity, gas or other essential service, and if the landlord fails to supply such essential service and the failure is not caused by conditions beyond the landlord's control, the tenant may give notice to the landlord specifying the breach and may elect to (1) procure reasonable amounts of heat, hot water, running water, electric, gas or other essential service during the period of the landlord's noncompliance and deduct the actual and reasonable cost of such service from the rent; or (2) procure reasonable substitute housing during the period of the landlord's noncompliance if the landlord fails to supply such service within forty-eight hours of such breach, except if the breach is the failure to provide the same service and such breach recurs within six months, the tenant may secure substitute housing immediately; or (3) if the failure to supply such service is wilful, the tenant may terminate the rental agreement and recover an amount not more than two months' periodic rent or double the actual damages sustained by him, whichever is greater. If the rental agreement is terminated, the landlord shall return all security and prepaid rent and interest required pursuant to section 47a-22 , recoverable under section 47a-21 .\n\n(b) If the tenant elects to procure substitute housing as provided in subdivision (2) of subsection (a) of this section, rent otherwise owed to the landlord shall abate for the period of the landlord's noncompliance. In addition, the tenant may recover the actual costs of such substitute housing, but in no event shall the tenant recover more than an amount equal to the amount of rent abated under this subsection. In any cause of action or defense to any action arising under subsection (a) of this section, the tenant may recover reasonable attorney's fees.\n\n(c) Rights of the tenant under this section do not arise (1) until the tenant has given reasonable written or oral notice to the landlord or (2) if the condition was caused by the wilful or negligent act or omission of the tenant, a member of his family or other person on the premises with his consent.\n\n(d) For the purposes of this section, “tenant” includes each resident of a mobile manufactured home park, as defined in section 21-64 , including a resident who owns his own home, and “landlord” includes a “licensee” and an “owner” of a mobile manufactured home park, as defined in section 21-64 ."
       }
     },
     {
@@ -1840,9 +1849,7 @@
       "status": "active",
       "content": {
         "body": [
-          "A landlord shall not maintain an action or proceeding against a tenant to recover possession of a dwelling unit, demand an increase in rent from the tenant, or decrease the services to which the tenant has been entitled within six months after: (1) The tenant has in good faith attempted to remedy by any lawful means, including contacting officials of the state or of any town, city or borough or public agency or filing a complaint with a fair rent commission, any condition constituting a violation of any provisions of chapter 368o, or of chapter 412, or of any other state statute or regulation, or of the housing and health ordinances of the municipality wherein the premises which are the subject of the complaint lie; (2) any municipal agency or official has filed a notice, complaint or order regarding such a violation; (3) the tenant has in good faith requested the landlord to make repairs; (4) the tenant has in good faith instituted an action under subsections (a) to (i), inclusive, of section 47a-14h ; or (5) the tenant has organized or become a member of a tenants' union.",
-          "See Sec. 7-148f re penalty for violation of order of rent reduction or rent suspension.",
-          "See Sec. 47a-33 re defense that action is retaliatory."
+          "A landlord shall not maintain an action or proceeding against a tenant to recover possession of a dwelling unit, demand an increase in rent from the tenant, or decrease the services to which the tenant has been entitled within six months after: (1) The tenant has in good faith attempted to remedy by any lawful means, including contacting officials of the state or of any town, city or borough or public agency or filing a complaint with a fair rent commission, any condition constituting a violation of any provisions of chapter 368o, or of chapter 412, or of any other state statute or regulation, or of the housing and health ordinances of the municipality wherein the premises which are the subject of the complaint lie; (2) any municipal agency or official has filed a notice, complaint or order regarding such a violation; (3) the tenant has in good faith requested the landlord to make repairs; (4) the tenant has in good faith instituted an action under subsections (a) to (i), inclusive, of section 47a-14h ; or (5) the tenant has organized or become a member of a tenants' union."
         ],
         "sourceNotes": [
           "(1971, P.A. 852, S. 1–4; 1972, P.A. 160, S. 5; 186, S. 13; P.A. 76-95, S. 19, 27; 76-435, S. 75, 82; P.A. 79-571, S. 17; P.A. 83-510, S. 6, 9.)"
@@ -1851,6 +1858,14 @@
           "History: 1972 acts included filing complaint with fair rent commission as remedy in Subsec. (a)(1) and added reference to violations of Ch. 412 and other statutes and regulations; P.A. 76-95 added Subsec. (a)(4) forbidding landlord's action to recover dwelling unit, increase rent or decrease services within six months after tenant organizes or becomes a member of a tenant's union; P.A. 76-435 revised effective date section of P.A. 76-95; Sec. 19-375a transferred to Sec. 47a-20 in 1977; P.A. 79-571 rephrased provisions and deleted former Subsecs. (b) to (d), reincorporated in statutes as Sec. 47a-20a by the same act; P.A. 83-510 inserted new Subsec. (a)(4) to include an action brought in good faith by a tenant under Sec. 47a-14h(a) to (i)."
         ],
         "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 7-148f re penalty for violation of order of rent reduction or rent suspension."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 47a-33 re defense that action is retaliatory."
+          },
           {
             "first": true,
             "text": "Annotation to former section 19-375a:"
@@ -1876,7 +1891,7 @@
             "text": "Cited. 35 CS 233. Retaliatory eviction defense is not a right given to tenants, rather a limitation upon remedies of landlord intended to protect tenant who had complained of housing code violation; tenant's request to landlord to unclog bathtub drain does not constitute a repair sufficient to raise the presumption of retaliatory defense; under Subdiv. (3), “repairs” means repairs of substantial code violations; repairs required to conform a dwelling unit to basic structural, mechanical and housing code regulations are the types contemplated to raise presumption of retaliatory defense; establishment of prima facie case by tenant gives rise to presumption of retaliatory action by landlord; prima facie case results when tenant has produced sufficient evidence to bring himself within one or more of the specified acts; presumption of retaliatory action is rebuttable; to rebut, landlord is required to establish legitimate interest in the eviction; landlord has burden of producing substantial countervailing evidence and of proving facts which fairly put in issue the presumed fact; Subdiv. (1) contains language nearly identical to that of Sec. 47a-33; Subdiv. (1) and three others in section are intended to trigger defense of retaliatory action. Id., 261. Cited. 36 CS 47; 38 CS 370; Id., 683; 40 CS 470."
           }
         ],
-        "plainText": "A landlord shall not maintain an action or proceeding against a tenant to recover possession of a dwelling unit, demand an increase in rent from the tenant, or decrease the services to which the tenant has been entitled within six months after: (1) The tenant has in good faith attempted to remedy by any lawful means, including contacting officials of the state or of any town, city or borough or public agency or filing a complaint with a fair rent commission, any condition constituting a violation of any provisions of chapter 368o, or of chapter 412, or of any other state statute or regulation, or of the housing and health ordinances of the municipality wherein the premises which are the subject of the complaint lie; (2) any municipal agency or official has filed a notice, complaint or order regarding such a violation; (3) the tenant has in good faith requested the landlord to make repairs; (4) the tenant has in good faith instituted an action under subsections (a) to (i), inclusive, of section 47a-14h ; or (5) the tenant has organized or become a member of a tenants' union.\n\nSee Sec. 7-148f re penalty for violation of order of rent reduction or rent suspension.\n\nSee Sec. 47a-33 re defense that action is retaliatory."
+        "plainText": "A landlord shall not maintain an action or proceeding against a tenant to recover possession of a dwelling unit, demand an increase in rent from the tenant, or decrease the services to which the tenant has been entitled within six months after: (1) The tenant has in good faith attempted to remedy by any lawful means, including contacting officials of the state or of any town, city or borough or public agency or filing a complaint with a fair rent commission, any condition constituting a violation of any provisions of chapter 368o, or of chapter 412, or of any other state statute or regulation, or of the housing and health ordinances of the municipality wherein the premises which are the subject of the complaint lie; (2) any municipal agency or official has filed a notice, complaint or order regarding such a violation; (3) the tenant has in good faith requested the landlord to make repairs; (4) the tenant has in good faith instituted an action under subsections (a) to (i), inclusive, of section 47a-14h ; or (5) the tenant has organized or become a member of a tenants' union."
       }
     },
     {
@@ -1893,14 +1908,17 @@
         "body": [
           "(a) Notwithstanding the provisions of section 47a-20 , the landlord may maintain an action to recover possession of the dwelling unit if: (1) The tenant is using the dwelling unit for an illegal purpose or for a purpose which is in violation of the rental agreement or for nonpayment of rent; (2) the landlord seeks in good faith to recover possession of the dwelling unit for immediate use as his own abode; (3) the condition complained of was caused by the wilful actions of the tenant or another person in his household or a person on the premises with his consent; or (4) the landlord seeks to recover possession on the basis of a notice to terminate a periodic tenancy, which notice was given to the tenant before the tenant's complaint.",
           "(b) Notwithstanding the provisions of section 47a-20 , a landlord may increase the rent of a tenant if: (1) The condition complained of was caused by the lack of due care by the tenant or another person of his household or a person on the premises with his consent or (2) the landlord has become liable for a substantial increase in property taxes, or a substantial increase in other maintenance or operating costs not associated with his complying with the complaint, not less than four months before the demand for an increase in rent, and the increase in rent does not exceed the prorated portion of the net increase in taxes or costs.",
-          "(c) Nothing in this section or section 47a-20 shall be construed to in any way limit the defense provided in section 47a-33 .",
-          "See Sec. 47a-33 re defense that action is retaliatory."
+          "(c) Nothing in this section or section 47a-20 shall be construed to in any way limit the defense provided in section 47a-33 ."
         ],
         "sourceNotes": [
           "(P.A. 79-571, S. 18.)"
         ],
         "history": [],
         "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 47a-33 re defense that action is retaliatory."
+          },
           {
             "first": true,
             "text": "Cited. 217 C. 313."
@@ -1914,7 +1932,7 @@
             "text": "Cited. 38 CS 683; 40 CS 470."
           }
         ],
-        "plainText": "(a) Notwithstanding the provisions of section 47a-20 , the landlord may maintain an action to recover possession of the dwelling unit if: (1) The tenant is using the dwelling unit for an illegal purpose or for a purpose which is in violation of the rental agreement or for nonpayment of rent; (2) the landlord seeks in good faith to recover possession of the dwelling unit for immediate use as his own abode; (3) the condition complained of was caused by the wilful actions of the tenant or another person in his household or a person on the premises with his consent; or (4) the landlord seeks to recover possession on the basis of a notice to terminate a periodic tenancy, which notice was given to the tenant before the tenant's complaint.\n\n(b) Notwithstanding the provisions of section 47a-20 , a landlord may increase the rent of a tenant if: (1) The condition complained of was caused by the lack of due care by the tenant or another person of his household or a person on the premises with his consent or (2) the landlord has become liable for a substantial increase in property taxes, or a substantial increase in other maintenance or operating costs not associated with his complying with the complaint, not less than four months before the demand for an increase in rent, and the increase in rent does not exceed the prorated portion of the net increase in taxes or costs.\n\n(c) Nothing in this section or section 47a-20 shall be construed to in any way limit the defense provided in section 47a-33 .\n\nSee Sec. 47a-33 re defense that action is retaliatory."
+        "plainText": "(a) Notwithstanding the provisions of section 47a-20 , the landlord may maintain an action to recover possession of the dwelling unit if: (1) The tenant is using the dwelling unit for an illegal purpose or for a purpose which is in violation of the rental agreement or for nonpayment of rent; (2) the landlord seeks in good faith to recover possession of the dwelling unit for immediate use as his own abode; (3) the condition complained of was caused by the wilful actions of the tenant or another person in his household or a person on the premises with his consent; or (4) the landlord seeks to recover possession on the basis of a notice to terminate a periodic tenancy, which notice was given to the tenant before the tenant's complaint.\n\n(b) Notwithstanding the provisions of section 47a-20 , a landlord may increase the rent of a tenant if: (1) The condition complained of was caused by the lack of due care by the tenant or another person of his household or a person on the premises with his consent or (2) the landlord has become liable for a substantial increase in property taxes, or a substantial increase in other maintenance or operating costs not associated with his complying with the complaint, not less than four months before the demand for an increase in rent, and the increase in rent does not exceed the prorated portion of the net increase in taxes or costs.\n\n(c) Nothing in this section or section 47a-20 shall be construed to in any way limit the defense provided in section 47a-33 ."
       }
     },
     {

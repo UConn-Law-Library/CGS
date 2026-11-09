@@ -108,9 +108,7 @@
       "content": {
         "body": [
           "(a) Upon the granting of a certificate of public convenience and necessity, the holder of such certificate may apply for the registration of any motor bus of which such holder is the owner or lessee and which is to be used as specified in such certificate. The Commissioner of Motor Vehicles shall have jurisdiction over the registration of any motor bus, its exterior lighting equipment and the licensing of its operator.",
-          "(b) The holder of a certificate of public convenience and necessity, issued in accordance with the provisions of section 13b103 for the operation of a passenger vehicle which has seats for more than ten passengers in addition to the driver, may apply for the registration of such vehicle as a motor bus, provided such holder is the owner or lessee of such vehicle and such vehicle is to be used as specified in such certificate. The Commissioner of Motor Vehicles shall have jurisdiction over the registration of any such vehicle and its exterior lighting equipment and over the licensing of its operator. Any such vehicle so registered may operate exclusively in livery service in accordance with the provisions of chapter 244b.",
-          "See Sec. 14-26 re registration of public service motor vehicles.",
-          "See Sec. 14-44 re licensing of public service motor vehicle and service bus operators."
+          "(b) The holder of a certificate of public convenience and necessity, issued in accordance with the provisions of section 13b103 for the operation of a passenger vehicle which has seats for more than ten passengers in addition to the driver, may apply for the registration of such vehicle as a motor bus, provided such holder is the owner or lessee of such vehicle and such vehicle is to be used as specified in such certificate. The Commissioner of Motor Vehicles shall have jurisdiction over the registration of any such vehicle and its exterior lighting equipment and over the licensing of its operator. Any such vehicle so registered may operate exclusively in livery service in accordance with the provisions of chapter 244b."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 5707; P.A. 85-437, S. 2; P.A. 99-181, S. 2, 40; P.A. 03-115, S. 60.)"
@@ -118,8 +116,17 @@
         "history": [
           "History: In 1981 Sec. 16-310 transferred to Sec. 13b-83; P.A. 85-437 added Subsec. (b) which allows certain owners of motor vehicles used in livery service to register such vehicles as motor buses and to operate such vehicles as motor vehicles in livery service; P.A. 99-181 amended Subsec. (b) by increasing the minimum number of passenger seats required for registration as a motor bus from “more than nine” to “more than ten”, effective June 23, 1999; P.A. 03-115 amended Subsec. (a) to make technical changes."
         ],
-        "annotations": [],
-        "plainText": "(a) Upon the granting of a certificate of public convenience and necessity, the holder of such certificate may apply for the registration of any motor bus of which such holder is the owner or lessee and which is to be used as specified in such certificate. The Commissioner of Motor Vehicles shall have jurisdiction over the registration of any motor bus, its exterior lighting equipment and the licensing of its operator.\n\n(b) The holder of a certificate of public convenience and necessity, issued in accordance with the provisions of section 13b103 for the operation of a passenger vehicle which has seats for more than ten passengers in addition to the driver, may apply for the registration of such vehicle as a motor bus, provided such holder is the owner or lessee of such vehicle and such vehicle is to be used as specified in such certificate. The Commissioner of Motor Vehicles shall have jurisdiction over the registration of any such vehicle and its exterior lighting equipment and over the licensing of its operator. Any such vehicle so registered may operate exclusively in livery service in accordance with the provisions of chapter 244b.\n\nSee Sec. 14-26 re registration of public service motor vehicles.\n\nSee Sec. 14-44 re licensing of public service motor vehicle and service bus operators."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 14-26 re registration of public service motor vehicles."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 14-44 re licensing of public service motor vehicle and service bus operators."
+          }
+        ],
+        "plainText": "(a) Upon the granting of a certificate of public convenience and necessity, the holder of such certificate may apply for the registration of any motor bus of which such holder is the owner or lessee and which is to be used as specified in such certificate. The Commissioner of Motor Vehicles shall have jurisdiction over the registration of any motor bus, its exterior lighting equipment and the licensing of its operator.\n\n(b) The holder of a certificate of public convenience and necessity, issued in accordance with the provisions of section 13b103 for the operation of a passenger vehicle which has seats for more than ten passengers in addition to the driver, may apply for the registration of such vehicle as a motor bus, provided such holder is the owner or lessee of such vehicle and such vehicle is to be used as specified in such certificate. The Commissioner of Motor Vehicles shall have jurisdiction over the registration of any such vehicle and its exterior lighting equipment and over the licensing of its operator. Any such vehicle so registered may operate exclusively in livery service in accordance with the provisions of chapter 244b."
       }
     },
     {

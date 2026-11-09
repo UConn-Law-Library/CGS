@@ -1,11 +1,11 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-07-14T00:27:33Z",
+  "generatedAt": "2026-11-09T20:41:45Z",
   "source": {
     "name": "Connecticut General Statutes legacy JSON",
     "url": "https://www.cga.ct.gov/current/pub/titles.htm",
     "revisionYear": 2025,
-    "retrievedAt": "2026-07-14T00:27:33Z"
+    "retrievedAt": "2026-11-09T20:41:45Z"
   },
   "titles": [
     {

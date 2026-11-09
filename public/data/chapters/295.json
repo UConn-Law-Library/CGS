@@ -726,8 +726,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Any town, city or borough which has been included in any planning region as designated or defined by the Secretary of the Office of Policy and Management, or his predecessor, under the provisions of subsection (4) of section 16a-4a , may petition, upon a vote of its legislative body, the secretary for a redefinition or redesignation as part of a different planning region. The secretary shall determine the time and place for a hearing upon such petition and shall give notice thereof. In determining the appropriateness of such redesignation, the secretary shall consider, among other factors, whether or not the services that such petitioner needs can be better or more logically provided by a planning region other than the one to which it has been previously assigned.",
-          "See chapter 127 re regional council of governments."
+          "Any town, city or borough which has been included in any planning region as designated or defined by the Secretary of the Office of Policy and Management, or his predecessor, under the provisions of subsection (4) of section 16a-4a , may petition, upon a vote of its legislative body, the secretary for a redefinition or redesignation as part of a different planning region. The secretary shall determine the time and place for a hearing upon such petition and shall give notice thereof. In determining the appropriateness of such redesignation, the secretary shall consider, among other factors, whether or not the services that such petitioner needs can be better or more logically provided by a planning region other than the one to which it has been previously assigned."
         ],
         "sourceNotes": [
           "(P.A. 77-325; 77-614, S. 19, 610; P.A. 83-164.)"
@@ -735,8 +734,13 @@
         "history": [
           "History: P.A. 77-614 replaced commissioner of planning and energy policy with secretary of the office of policy and management; P.A. 83-164 removed provision allowing petitioner to appeal to the state planning council."
         ],
-        "annotations": [],
-        "plainText": "Any town, city or borough which has been included in any planning region as designated or defined by the Secretary of the Office of Policy and Management, or his predecessor, under the provisions of subsection (4) of section 16a-4a , may petition, upon a vote of its legislative body, the secretary for a redefinition or redesignation as part of a different planning region. The secretary shall determine the time and place for a hearing upon such petition and shall give notice thereof. In determining the appropriateness of such redesignation, the secretary shall consider, among other factors, whether or not the services that such petitioner needs can be better or more logically provided by a planning region other than the one to which it has been previously assigned.\n\nSee chapter 127 re regional council of governments."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See chapter 127 re regional council of governments."
+          }
+        ],
+        "plainText": "Any town, city or borough which has been included in any planning region as designated or defined by the Secretary of the Office of Policy and Management, or his predecessor, under the provisions of subsection (4) of section 16a-4a , may petition, upon a vote of its legislative body, the secretary for a redefinition or redesignation as part of a different planning region. The secretary shall determine the time and place for a hearing upon such petition and shall give notice thereof. In determining the appropriateness of such redesignation, the secretary shall consider, among other factors, whether or not the services that such petitioner needs can be better or more logically provided by a planning region other than the one to which it has been previously assigned."
       }
     },
     {

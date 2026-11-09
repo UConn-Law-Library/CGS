@@ -402,8 +402,7 @@
       "status": "active",
       "content": {
         "body": [
-          "No person, firm, corporation or partnership shall sell, offer for sale, advertise, or represent as a new tire, a tire which has been altered or reprocessed by the addition of a white or colored stripe to the outer sidewall of such tire, unless such tire bears a permanent label, which shall be not less than three-eighths inch in height and conspicuously displayed on the side of the tire altered or reprocessed, with the words “WHITEWALL ADDED” if the added stripe is white or “COLORWALL ADDED” if the stripe is colored. The labeling requirement of this section shall not be construed as authority or permission to impair or affect the structural integrity or safety of such tire. Failure to comply with the provisions of this section shall be deemed a deceptive trade practice as defined in section 42-110b .",
-          "See Sec. 14-106d re sale or offer for sale of air bag replacement device that does not meet federal safety requirements."
+          "No person, firm, corporation or partnership shall sell, offer for sale, advertise, or represent as a new tire, a tire which has been altered or reprocessed by the addition of a white or colored stripe to the outer sidewall of such tire, unless such tire bears a permanent label, which shall be not less than three-eighths inch in height and conspicuously displayed on the side of the tire altered or reprocessed, with the words “WHITEWALL ADDED” if the added stripe is white or “COLORWALL ADDED” if the stripe is colored. The labeling requirement of this section shall not be construed as authority or permission to impair or affect the structural integrity or safety of such tire. Failure to comply with the provisions of this section shall be deemed a deceptive trade practice as defined in section 42-110b ."
         ],
         "sourceNotes": [
           "(1969, P.A. 172, S. 1, 2; P.A. 84-468, S. 6, 10.)"
@@ -414,10 +413,14 @@
         "annotations": [
           {
             "first": true,
+            "text": "See Sec. 14-106d re sale or offer for sale of air bag replacement device that does not meet federal safety requirements."
+          },
+          {
+            "first": true,
             "text": "Cited. 158 C. 543; 231 C. 707."
           }
         ],
-        "plainText": "No person, firm, corporation or partnership shall sell, offer for sale, advertise, or represent as a new tire, a tire which has been altered or reprocessed by the addition of a white or colored stripe to the outer sidewall of such tire, unless such tire bears a permanent label, which shall be not less than three-eighths inch in height and conspicuously displayed on the side of the tire altered or reprocessed, with the words “WHITEWALL ADDED” if the added stripe is white or “COLORWALL ADDED” if the stripe is colored. The labeling requirement of this section shall not be construed as authority or permission to impair or affect the structural integrity or safety of such tire. Failure to comply with the provisions of this section shall be deemed a deceptive trade practice as defined in section 42-110b .\n\nSee Sec. 14-106d re sale or offer for sale of air bag replacement device that does not meet federal safety requirements."
+        "plainText": "No person, firm, corporation or partnership shall sell, offer for sale, advertise, or represent as a new tire, a tire which has been altered or reprocessed by the addition of a white or colored stripe to the outer sidewall of such tire, unless such tire bears a permanent label, which shall be not less than three-eighths inch in height and conspicuously displayed on the side of the tire altered or reprocessed, with the words “WHITEWALL ADDED” if the added stripe is white or “COLORWALL ADDED” if the stripe is colored. The labeling requirement of this section shall not be construed as authority or permission to impair or affect the structural integrity or safety of such tire. Failure to comply with the provisions of this section shall be deemed a deceptive trade practice as defined in section 42-110b ."
       }
     },
     {

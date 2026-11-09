@@ -146,10 +146,7 @@
       "content": {
         "body": [
           "(a) The commissioner shall be responsible for purchasing, leasing and contracting for all telecommunication facilities, equipment and services for the state-wide telecommunication infrastructure for the support of state agencies; implementing, or assisting state agencies in implementing, such facilities; processing bills for telecommunication services used by state agencies including telecommunication services provided at the request of state agencies to (1) private nonprofit or not-for-profit agencies whose telecommunication services are funded primarily by the state, and (2) political subdivisions of the state; and managing the operation of such infrastructure.",
-          "(b) The commissioner shall be responsible for planning for such telecommunication infrastructure and assisting state agencies in (1) planning for the acquisition of telecommunication systems and (2) implementing such systems.",
-          "See Sec. 14-42a re provision of Department of Motor Vehicles information to organ and tissue procurement organizations.",
-          "See Sec. 18-81x re transfer of revenue derived from contract for inmate pay telephone service.",
-          "See Sec. 27-62 re telephone and telegraph services for military units."
+          "(b) The commissioner shall be responsible for planning for such telecommunication infrastructure and assisting state agencies in (1) planning for the acquisition of telecommunication systems and (2) implementing such systems."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 192; 1963, P.A. 66, S. 1; 1969, P.A. 749, S. 8; P.A. 77-614, S. 592, 610; P.A. 78-303, S. 1, 136; P.A. 89-257, S. 8, 14; P.A. 93-42, S. 3, 4; P.A. 95-273; June 18 Sp. Sess. P.A. 97-9, S. 10, 50; P.A. 11-51, S. 76.)"
@@ -157,8 +154,21 @@
         "history": [
           "History: 1963 act required comptroller to provide telephone and telegraph service for state agencies; 1969 act removed from comptroller the responsibility for supplying office furniture etc. for the general assembly; P.A. 77-614 and P.A. 78-303 removed responsibility for supplying and accounting for office furniture etc. for state offices, effective January 1, 1979; P.A. 89-257 designated former provisions as Subsec. (a), limiting comptroller's responsibilities to “On and before September 30, 1989” and substituting “telecommunication” for “telephone and telegraph”, and added Subsec. (b) re telecommunication responsibilities of commissioner of administrative services and executive director of office of information and technology and added Subsec. (c) re continuity of telecommunication services for state agencies; Sec. 3-116 transferred to Sec. 16a-118 in 1991; P.A. 93-42 replaced “the acquisition of” with “purchasing, leasing and contracting for all” and added “equipment and services” in Subsec. (b)(1), effective May 5, 1993; P.A. 95-273 amended Subsec. (b) by adding provision re telecommunication services provided at the request of state agencies; June 18 Sp. Sess. P.A. 97-9 repealed former Subsec. (a) re Comptroller's telecommunications duties, divided Subsec. (a) into Subsecs. (a) and (b), amended Subsec. (a) by transferring duties from Commissioner of Administrative Services and executive director of Office of Information and Technology to Chief Information Officer, and repealed former Subsec. (c) re continuity of telecommunication services in 1989-90, effective July 1, 1997; Sec. 16a-118 transferred to Sec. 4d-5 in 1999; pursuant to P.A. 11-51, “Chief Information Officer” was changed editorially by the Revisors to “commissioner”, effective July 1, 2011."
         ],
-        "annotations": [],
-        "plainText": "(a) The commissioner shall be responsible for purchasing, leasing and contracting for all telecommunication facilities, equipment and services for the state-wide telecommunication infrastructure for the support of state agencies; implementing, or assisting state agencies in implementing, such facilities; processing bills for telecommunication services used by state agencies including telecommunication services provided at the request of state agencies to (1) private nonprofit or not-for-profit agencies whose telecommunication services are funded primarily by the state, and (2) political subdivisions of the state; and managing the operation of such infrastructure.\n\n(b) The commissioner shall be responsible for planning for such telecommunication infrastructure and assisting state agencies in (1) planning for the acquisition of telecommunication systems and (2) implementing such systems.\n\nSee Sec. 14-42a re provision of Department of Motor Vehicles information to organ and tissue procurement organizations.\n\nSee Sec. 18-81x re transfer of revenue derived from contract for inmate pay telephone service.\n\nSee Sec. 27-62 re telephone and telegraph services for military units."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 14-42a re provision of Department of Motor Vehicles information to organ and tissue procurement organizations."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 18-81x re transfer of revenue derived from contract for inmate pay telephone service."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 27-62 re telephone and telegraph services for military units."
+          }
+        ],
+        "plainText": "(a) The commissioner shall be responsible for purchasing, leasing and contracting for all telecommunication facilities, equipment and services for the state-wide telecommunication infrastructure for the support of state agencies; implementing, or assisting state agencies in implementing, such facilities; processing bills for telecommunication services used by state agencies including telecommunication services provided at the request of state agencies to (1) private nonprofit or not-for-profit agencies whose telecommunication services are funded primarily by the state, and (2) political subdivisions of the state; and managing the operation of such infrastructure.\n\n(b) The commissioner shall be responsible for planning for such telecommunication infrastructure and assisting state agencies in (1) planning for the acquisition of telecommunication systems and (2) implementing such systems."
       }
     },
     {

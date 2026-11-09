@@ -144,9 +144,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Each such library shall be for the use of the courts and citizens of the state, subject to such conditions as may be prescribed by the Office of the Chief Court Administrator.",
-          "See Sec. 11-19e re furnishing of legislative materials to law libraries.",
-          "See Sec. 51-215 re furnishing of Supreme Court case records and briefs to law libraries."
+          "Each such library shall be for the use of the courts and citizens of the state, subject to such conditions as may be prescribed by the Office of the Chief Court Administrator."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 1646; 1959, P.A. 152, S. 25; P.A. 73-471, S. 1, 5; P.A. 75-316, S. 7; P.A. 76-368, S. 4, 9; 76-436, S. 474, 681; P.A. 77-452, S. 2, 72; P.A. 90-234, S. 4, 8.)"
@@ -154,8 +152,17 @@
         "history": [
           "History: 1959 act placed ownership of libraries in state rather than in counties; P.A. 73-471 made technical changes and required approval of regulations by chief justice of supreme court, chief court administrator and chief judges of superior and common pleas courts and required them to advise state library committee of their actions; P.A. 75-316 substituted state library board for state library committee; P.A. 76-368 deleted provisions concerning management of libraries by law library associations composed of attorneys in county and required establishment of regulations by state library board with advice of law library advisory committee rather than by associations with approval of various officers of court; P.A. 76-436 required approval of regulations by chief administrative judge rather than chief court administrator and by two superior court judges appointed by chief justice rather than chief judges of superior and common pleas courts, effective July 1, 1978, but provisions were not enacted because provisions of P.A. 76-368 took precedence as clarified in P.A. 77-452; Sec. 11-10 transferred to Sec. 11-19b in 1977; P.A. 90-234 deleted reference to the regulations of the state library board re use of the state system of law libraries and substituted provision that use of the law library system shall be subject to conditions prescribed by the chief court administrator."
         ],
-        "annotations": [],
-        "plainText": "Each such library shall be for the use of the courts and citizens of the state, subject to such conditions as may be prescribed by the Office of the Chief Court Administrator.\n\nSee Sec. 11-19e re furnishing of legislative materials to law libraries.\n\nSee Sec. 51-215 re furnishing of Supreme Court case records and briefs to law libraries."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 11-19e re furnishing of legislative materials to law libraries."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 51-215 re furnishing of Supreme Court case records and briefs to law libraries."
+          }
+        ],
+        "plainText": "Each such library shall be for the use of the courts and citizens of the state, subject to such conditions as may be prescribed by the Office of the Chief Court Administrator."
       }
     },
     {

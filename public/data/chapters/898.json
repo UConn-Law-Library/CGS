@@ -43,9 +43,7 @@
       "status": "active",
       "content": {
         "body": [
-          "There shall be one form of civil action. The first pleading on the part of the plaintiff shall be known as the complaint and shall contain a statement of the facts constituting the cause of action and, on a separate page of the complaint, a demand for the relief, which shall be a statement of the remedy or remedies sought. When money damages are sought in the demand for relief, the demand for relief shall set forth: (1) That the amount, legal interest or property in demand is fifteen thousand dollars or more, exclusive of interest and costs; or (2) that the amount, legal interest or property in demand is two thousand five hundred dollars or more but is less than fifteen thousand dollars, exclusive of interest and costs; or (3) that the amount, legal interest or property in demand is less than two thousand five hundred dollars, exclusive of interest and costs. In addition, in a contract action in which only money damages are sought and in which the amount, legal interest or property in demand is less than fifteen thousand dollars, exclusive of interest and costs, the demand for relief shall also set forth whether or not the remedy sought is based upon an express or implied promise to pay a definite sum.",
-          "See Sec. 52-122 re inability of this section to affect flowage petitions on certain proceedings.",
-          "See Sec. 52-519 re form of writ, affidavit and bond in replevin actions."
+          "There shall be one form of civil action. The first pleading on the part of the plaintiff shall be known as the complaint and shall contain a statement of the facts constituting the cause of action and, on a separate page of the complaint, a demand for the relief, which shall be a statement of the remedy or remedies sought. When money damages are sought in the demand for relief, the demand for relief shall set forth: (1) That the amount, legal interest or property in demand is fifteen thousand dollars or more, exclusive of interest and costs; or (2) that the amount, legal interest or property in demand is two thousand five hundred dollars or more but is less than fifteen thousand dollars, exclusive of interest and costs; or (3) that the amount, legal interest or property in demand is less than two thousand five hundred dollars, exclusive of interest and costs. In addition, in a contract action in which only money damages are sought and in which the amount, legal interest or property in demand is less than fifteen thousand dollars, exclusive of interest and costs, the demand for relief shall also set forth whether or not the remedy sought is based upon an express or implied promise to pay a definite sum."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 7813; P.A. 77-497, S. 2, 7; 77-604, S. 61, 84; P.A. 78-379, S. 19, 27; P.A. 81-416, S. 4, 5; P.A. 82-160, S. 47; P.A. 83-144.)"
@@ -54,6 +52,14 @@
           "History: P.A. 77-497 clarified provisions, specifying that complaint shall not allege amount of money damages sought but that it shall be a statement of remedy sought, an allegation of court's jurisdiction and, on and after July 1, 1978, a statement that amount, legal interest or property demanded is or is not less than $7,500; P.A. 77-604 changed effective date of P.A. 77-497 but not with respect to this section; P.A. 78-379 deleted provision allowing defendant to “plead to jurisdiction or in abatement, or both” and form for that plea; P.A. 81-416 provided that on or after July 1, 1981, a complaint must state whether the amount in demand is less than or not less than $15,000, replacing the former amount of $7,500; P.A. 82-160 added provisions concerning the statement required if the amount, legal interest or property in demand is less than $5,000 or less than $2,500; P.A. 83-144 replaced provisions re allegations of the amount in demand and the threshold amounts with the provision that when money damages are sought the demand for relief shall set forth that the amount, legal interest or property in demand, exclusive of interest and costs, is (1) $15,000 or more, (2) $2,500 or more, but less than $15,000 or (3) less than $2,500, and added provision that in a contract action in which money damages of less than $15,000 are sought the demand for relief shall set forth whether or not the remedy sought is based upon an express or implied promise to pay a definite sum."
         ],
         "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 52-122 re inability of this section to affect flowage petitions on certain proceedings."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 52-519 re form of writ, affidavit and bond in replevin actions."
+          },
           {
             "first": true,
             "text": "Practice act. Does not change law as to statute of limitations. 52 C. 145. Formal and technical objections should be made known as soon as possible. 53 C. 52; 57 C. 161; 75 C. 279. Does not apply to quo warranto; 55 C. 121; nor to criminal prosecution. 72 C. 606. Application to replevin. 77 C. 463. Rules concerning departure still in force. 60 C. 83; 85 C. 271. Purpose is to do away with artificial forms and distinctions; 56 C. 24; 63 C. 560; 73 C. 5; 83 C. 670; as between law and equity; 63 C. 559; 81 C. 402; but it goes only to matters of form; 68 C. 372; 90 C. 581; pleadings conform to equity practice. 72 C. 195. It did not profess to introduce a complete new system, but to make the old system more convenient; 71 C. 198; to distinguish between what is a defect of substance and one of form; 72 C. 449; to simplify and unify all pleadings; 71 C. 717; to bring into the record a plain statement of facts. 74 C. 702. It encourages but does not require the settlement of all controversies in one action. 79 C. 693; 80 C. 218; 81 C. 246. It enables the court to determine ultimate rights and grant all proper relief. 81 C. 552. It does not seek to bring parties to a single issue. 67 C. 377. Power of court over issues. 80 C. 223; 85 C. 434; 86 C. 561. Controversy in Probate Court not an action. 90 C. 50. Rules apply to book debt. 78 C. 645. Act has not changed substantive law; same facts give right to same redress as before and no other. 90 C. 576. Rules of pleading not applicable to hearing before judge under special statute. 95 C. 89."
@@ -83,7 +89,7 @@
             "text": "Concurrent remedies do not conflict so as to be pleadable in abatement, even though recovery in one case may operate as bar to another. 2 Conn. Cir. Ct. 96. Demurrer allowed where unable to determine what causes of action were directed to defendant as individual and in her representative capacity. Id., 116. Cited. 3 Conn. Cir. Ct. 317. Where jurisdictional defect claimed is lack of service, the proper pleading is a plea in abatement and not to the jurisdiction. Id., 321."
           }
         ],
-        "plainText": "There shall be one form of civil action. The first pleading on the part of the plaintiff shall be known as the complaint and shall contain a statement of the facts constituting the cause of action and, on a separate page of the complaint, a demand for the relief, which shall be a statement of the remedy or remedies sought. When money damages are sought in the demand for relief, the demand for relief shall set forth: (1) That the amount, legal interest or property in demand is fifteen thousand dollars or more, exclusive of interest and costs; or (2) that the amount, legal interest or property in demand is two thousand five hundred dollars or more but is less than fifteen thousand dollars, exclusive of interest and costs; or (3) that the amount, legal interest or property in demand is less than two thousand five hundred dollars, exclusive of interest and costs. In addition, in a contract action in which only money damages are sought and in which the amount, legal interest or property in demand is less than fifteen thousand dollars, exclusive of interest and costs, the demand for relief shall also set forth whether or not the remedy sought is based upon an express or implied promise to pay a definite sum.\n\nSee Sec. 52-122 re inability of this section to affect flowage petitions on certain proceedings.\n\nSee Sec. 52-519 re form of writ, affidavit and bond in replevin actions."
+        "plainText": "There shall be one form of civil action. The first pleading on the part of the plaintiff shall be known as the complaint and shall contain a statement of the facts constituting the cause of action and, on a separate page of the complaint, a demand for the relief, which shall be a statement of the remedy or remedies sought. When money damages are sought in the demand for relief, the demand for relief shall set forth: (1) That the amount, legal interest or property in demand is fifteen thousand dollars or more, exclusive of interest and costs; or (2) that the amount, legal interest or property in demand is two thousand five hundred dollars or more but is less than fifteen thousand dollars, exclusive of interest and costs; or (3) that the amount, legal interest or property in demand is less than two thousand five hundred dollars, exclusive of interest and costs. In addition, in a contract action in which only money damages are sought and in which the amount, legal interest or property in demand is less than fifteen thousand dollars, exclusive of interest and costs, the demand for relief shall also set forth whether or not the remedy sought is based upon an express or implied promise to pay a definite sum."
       }
     },
     {
@@ -516,9 +522,7 @@
       "status": "active",
       "content": {
         "body": [
-          "All persons may be joined in one action as plaintiffs in whom any right of relief in respect to or arising out of the same transaction or series of transactions is alleged to exist either jointly or severally when, if such persons brought separate actions, any common question of law or fact would arise; provided, if, upon the motion of any party, it would appear that the joinder might embarrass or delay the trial of the action, the court may order separate trials, or make such other order as may be expedient, and judgment may be given for such one or more of the plaintiffs as may be found to be entitled to relief, for the relief to which he or they may be entitled. If two or more persons are joined as plaintiffs in an action, there shall be only one entry fee, one jury fee, if claimed for jury trial, and such other costs as may by rule be prescribed.",
-          "See Sec. 52-36a re claiming consolidated case to jury.",
-          "See Sec. 52-484 re interpleader."
+          "All persons may be joined in one action as plaintiffs in whom any right of relief in respect to or arising out of the same transaction or series of transactions is alleged to exist either jointly or severally when, if such persons brought separate actions, any common question of law or fact would arise; provided, if, upon the motion of any party, it would appear that the joinder might embarrass or delay the trial of the action, the court may order separate trials, or make such other order as may be expedient, and judgment may be given for such one or more of the plaintiffs as may be found to be entitled to relief, for the relief to which he or they may be entitled. If two or more persons are joined as plaintiffs in an action, there shall be only one entry fee, one jury fee, if claimed for jury trial, and such other costs as may by rule be prescribed."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 7824; P.A. 82-160, S. 39.)"
@@ -529,6 +533,14 @@
         "annotations": [
           {
             "first": true,
+            "text": "See Sec. 52-36a re claiming consolidated case to jury."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 52-484 re interpleader."
+          },
+          {
+            "first": true,
             "text": "Cited. 129 C. 608. Independent of statutory authority, courts of general jurisdiction have inherent power to consolidate different causes, or order them tried together. 130 C. 277. Five plaintiffs furnished materials or services in construction of defendant's house; held proper to join in one action provided any one court had jurisdiction of all causes of action. 139 C. 141. Cited. 143 C. 114; 145 C. 191; 146 C. 570; 191 C. 1."
           },
           {
@@ -536,7 +548,7 @@
             "text": "Cited. 10 CS 391; Id., 528; 12 CS 78; Id., 280. The monetary jurisdictional requirement for an action in the superior or common pleas court is not affected by the permissible joinder of plaintiffs. Id., 78; 14 CS 41; 15 CS 32. Cited. 16 CS 208. A common question of law or fact is not presented where there are two plaintiffs involved in two different accidents in which more than one question must be litigated. 23 CS 93. If much time, effort and expense would be spared in actions between same parties on substantially same grounds, court will grant motion to consolidate. 24 CS 467. Cited. 36 CS 56."
           }
         ],
-        "plainText": "All persons may be joined in one action as plaintiffs in whom any right of relief in respect to or arising out of the same transaction or series of transactions is alleged to exist either jointly or severally when, if such persons brought separate actions, any common question of law or fact would arise; provided, if, upon the motion of any party, it would appear that the joinder might embarrass or delay the trial of the action, the court may order separate trials, or make such other order as may be expedient, and judgment may be given for such one or more of the plaintiffs as may be found to be entitled to relief, for the relief to which he or they may be entitled. If two or more persons are joined as plaintiffs in an action, there shall be only one entry fee, one jury fee, if claimed for jury trial, and such other costs as may by rule be prescribed.\n\nSee Sec. 52-36a re claiming consolidated case to jury.\n\nSee Sec. 52-484 re interpleader."
+        "plainText": "All persons may be joined in one action as plaintiffs in whom any right of relief in respect to or arising out of the same transaction or series of transactions is alleged to exist either jointly or severally when, if such persons brought separate actions, any common question of law or fact would arise; provided, if, upon the motion of any party, it would appear that the joinder might embarrass or delay the trial of the action, the court may order separate trials, or make such other order as may be expedient, and judgment may be given for such one or more of the plaintiffs as may be found to be entitled to relief, for the relief to which he or they may be entitled. If two or more persons are joined as plaintiffs in an action, there shall be only one entry fee, one jury fee, if claimed for jury trial, and such other costs as may by rule be prescribed."
       }
     },
     {
@@ -615,8 +627,7 @@
       "status": "active",
       "content": {
         "body": [
-          "The court may determine the controversy as between the parties before it, if it can do so without prejudice to the rights of others; but, if a complete determination cannot be had without the presence of other parties, the court may direct that such other parties be brought in. If a person not a party has an interest or title which the judgment will affect, the court, on his application, shall direct him to be made a party.",
-          "See Sec. 52-484 re interpleader."
+          "The court may determine the controversy as between the parties before it, if it can do so without prejudice to the rights of others; but, if a complete determination cannot be had without the presence of other parties, the court may direct that such other parties be brought in. If a person not a party has an interest or title which the judgment will affect, the court, on his application, shall direct him to be made a party."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 7829; P.A. 82-160, S. 43.)"
@@ -625,6 +636,10 @@
           "History: P.A. 82-160 rephrased the section."
         ],
         "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 52-484 re interpleader."
+          },
           {
             "first": true,
             "text": "Cited. 24 C. 384; 33 C. 467. Stranger cannot be cited in to secure adjudication of claim not involved in action. 50 C. 583; 65 C. 76; 67 C. 277; 76 C. 542; 79 C. 694; 81 C. 474; 85 C. 429. Holder of mortgage bonds of street railway company not entitled to be made a codefendant in action against it. 56 C. 398. Complaint against one as administrator may be amended to charge him in his individual capacity. 57 C. 304. Taxing communities may be admitted as coplaintiffs with tax collector. 60 C. 118. This and related sections have radically changed the old practice. 63 C. 476. Cited. 65 C. 115. Application to cite in receiver properly refused, if permission to sue him has not been obtained. 66 C. 277. Court may admit persons vitally interested, although not necessary parties. 68 C. 157. Discretion of court where motion has been long delayed. 69 C. 440. Cited. 72 C. 92. Process, not complaint, makes parties. Id., 261. If claim assigned during suit, assignee may be substituted as plaintiff; prima facie showing of interest sufficient. 73 C. 377. Street railway company, primarily liable for defect in highway, may come in as defendant in action for injury due to it. 74 C. 163. Court may permit executor to enter in action brought by testator after time fixed by statute. 77 C. 347. Waiver by executor who voluntarily enters to defend. Id., 382. Right of taxpayer to defend action against city. 81 C. 235. Validity of mechanic's lien cannot be determined in action to which landowner is not a party. 90 C. 7. Third party beneficiary may sue on contract made for his benefit; other necessary parties may be cited in. 99 C. 216. Where taxpayer's complaint in appeal from former board of relief is based on failure to list taxable property of other persons, they must be made parties defendant. 109 C. 361. In appeal from zoning board, proper to permit intervention of property owners claiming their property would be damaged in value by erection of gas tank. 113 C. 695. Liquor Control Commission, while it would have been a proper party to action by town against permittee, was not a necessary party. 133 C. 157. Cited. 153 C. 545; 172 C. 572; 182 C. 1; 184 C. 483; 185 C. 445; 186 C. 311; 191 C. 1; 206 C. 374; 212 C. 628; 215 C. 224; 224 C. 263; 239 C. 1; 241 C. 734. Trial court did not err in denying motion to intervene as a matter of right because the movant did not identify an interest of direct and immediate character that would cause it to gain or lose anything as a result of the judgment in the case, and did not err in denying permissive intervention because the movant failed to demonstrate that Attorney General's defense of constitutionality of the marriage laws would be inadequate. 279 C. 447."
@@ -642,7 +657,7 @@
             "text": "New parties may be cited in upon order of court at any time in the course of an action, provided they receive due notice and a reasonable time to prepare their particular claims or defenses; where additional parties were cited in as parties defendant, the moving papers served on them did not constitute a new civil action, process in which would be subject to provisions of Sec. 52-48a. 3 Conn. Cir. Ct. 321."
           }
         ],
-        "plainText": "The court may determine the controversy as between the parties before it, if it can do so without prejudice to the rights of others; but, if a complete determination cannot be had without the presence of other parties, the court may direct that such other parties be brought in. If a person not a party has an interest or title which the judgment will affect, the court, on his application, shall direct him to be made a party.\n\nSee Sec. 52-484 re interpleader."
+        "plainText": "The court may determine the controversy as between the parties before it, if it can do so without prejudice to the rights of others; but, if a complete determination cannot be had without the presence of other parties, the court may direct that such other parties be brought in. If a person not a party has an interest or title which the judgment will affect, the court, on his application, shall direct him to be made a party."
       }
     },
     {
@@ -929,9 +944,7 @@
       "content": {
         "body": [
           "(a) In any action upon a bond taken in a court of probate, not brought by a representative of the estate in connection with which the bond was given or by some person in his own behalf and that of all other persons interested in the estate, the plaintiff shall state in his complaint or reply, (1) the persons for whose special benefit the action is prosecuted, (2) how such persons are interested in the action, and (3) how the act or neglect of the defendant has injured their rights or affected their interests.",
-          "(b) The judgment rendered in any such action shall not, in any future proceedings, by scire facias or otherwise, bar or conclude the rights of other persons interested in the bond.",
-          "See Sec. 45a-144 re action on probate bond by aggrieved person.",
-          "See Sec. 52-74 re action on foreign probate bond."
+          "(b) The judgment rendered in any such action shall not, in any future proceedings, by scire facias or otherwise, bar or conclude the rights of other persons interested in the bond."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 7839; P.A. 82-160, S. 48.)"
@@ -942,10 +955,18 @@
         "annotations": [
           {
             "first": true,
+            "text": "See Sec. 45a-144 re action on probate bond by aggrieved person."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 52-74 re action on foreign probate bond."
+          },
+          {
+            "first": true,
             "text": "Amount of recovery is limited to possible right of person for whose special benefit action is brought. 120 C. 346."
           }
         ],
-        "plainText": "(a) In any action upon a bond taken in a court of probate, not brought by a representative of the estate in connection with which the bond was given or by some person in his own behalf and that of all other persons interested in the estate, the plaintiff shall state in his complaint or reply, (1) the persons for whose special benefit the action is prosecuted, (2) how such persons are interested in the action, and (3) how the act or neglect of the defendant has injured their rights or affected their interests.\n\n(b) The judgment rendered in any such action shall not, in any future proceedings, by scire facias or otherwise, bar or conclude the rights of other persons interested in the bond.\n\nSee Sec. 45a-144 re action on probate bond by aggrieved person.\n\nSee Sec. 52-74 re action on foreign probate bond."
+        "plainText": "(a) In any action upon a bond taken in a court of probate, not brought by a representative of the estate in connection with which the bond was given or by some person in his own behalf and that of all other persons interested in the estate, the plaintiff shall state in his complaint or reply, (1) the persons for whose special benefit the action is prosecuted, (2) how such persons are interested in the action, and (3) how the act or neglect of the defendant has injured their rights or affected their interests.\n\n(b) The judgment rendered in any such action shall not, in any future proceedings, by scire facias or otherwise, bar or conclude the rights of other persons interested in the bond."
       }
     },
     {
@@ -997,15 +1018,21 @@
       "status": "active",
       "content": {
         "body": [
-          "Parties failing to plead according to the rules and orders of the court may be nonsuited or defaulted, as the case may be.",
-          "See Sec. 51-59 re hours of operation of court clerks' offices.",
-          "See Sec. 52-197 re rules governing orders to disclose facts, papers, books, documents, etc."
+          "Parties failing to plead according to the rules and orders of the court may be nonsuited or defaulted, as the case may be."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 7841.)"
         ],
         "history": [],
         "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 51-59 re hours of operation of court clerks' offices."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 52-197 re rules governing orders to disclose facts, papers, books, documents, etc."
+          },
           {
             "first": true,
             "text": "Party cannot refuse obedience to order of court because he deems it erroneous, or because it is erroneous; until revoked or reversed, it is the law of the case. 63 C. 566. Statute does not require nonsuit to be granted where to do so would run counter to sound principles of procedure. 130 C. 654. Cited. 180 C. 223; 188 C. 145."
@@ -1015,7 +1042,7 @@
             "text": "Judgment on the pleadings not proper in absence of responsive pleading by plaintiff to special defense. 24 CS 494."
           }
         ],
-        "plainText": "Parties failing to plead according to the rules and orders of the court may be nonsuited or defaulted, as the case may be.\n\nSee Sec. 51-59 re hours of operation of court clerks' offices.\n\nSee Sec. 52-197 re rules governing orders to disclose facts, papers, books, documents, etc."
+        "plainText": "Parties failing to plead according to the rules and orders of the court may be nonsuited or defaulted, as the case may be."
       }
     },
     {
@@ -1323,14 +1350,17 @@
       "status": "active",
       "content": {
         "body": [
-          "Parties may amend any defect, mistake or informality in the pleadings or other parts of the record or proceedings. When either party supposes that in any part of the pleadings he has missed the ground of his plea, and that he can plead a different plea that will save him in his cause, he may change his plea, answer, replication or rejoinder, as the case may be, and plead anew, and the other party shall have reasonable time to answer the same; and, in any case when a party amends or alters any part of the pleadings or pleads anew, if it occasions any delay in the trial or inconvenience to the other party, he shall be liable to pay costs at the discretion of the court. Any court may restrain the amendment or alteration of pleadings, so far as may be necessary to compel the parties to join issue in a reasonable time for trial.",
-          "See Sec. 52-72 re amendment of process."
+          "Parties may amend any defect, mistake or informality in the pleadings or other parts of the record or proceedings. When either party supposes that in any part of the pleadings he has missed the ground of his plea, and that he can plead a different plea that will save him in his cause, he may change his plea, answer, replication or rejoinder, as the case may be, and plead anew, and the other party shall have reasonable time to answer the same; and, in any case when a party amends or alters any part of the pleadings or pleads anew, if it occasions any delay in the trial or inconvenience to the other party, he shall be liable to pay costs at the discretion of the court. Any court may restrain the amendment or alteration of pleadings, so far as may be necessary to compel the parties to join issue in a reasonable time for trial."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 7852.)"
         ],
         "history": [],
         "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 52-72 re amendment of process."
+          },
           {
             "first": true,
             "text": "Amending records after term. 4 C. 77; 15 C. 37; 21 C. 530; 25 C. 342. A void process is not amendable. 5 D. 126. Errors in describing parties. 2 R. 57; 3 C. 159; 13 C. 53; 19 C. 62; 24 C. 13. Date of issuance of process. 41 C. 483. Writ returnable to term already past not amendable. Id., 539, but see 70 C. 348. Amending officer's return. 65 C. 193. Officer's return may not be amended after judgment so as to confer jurisdiction. 85 C. 327. Return day in writ may not be changed after issuance; 74 C. 38; but Supreme Court allowed an appeal to be amended by substituting one year for another. Id., 438. Judgment may be amended during term as to error in substance; at any time as to clerical error. 73 C. 497; 76 C. 113; 81 C. 283; Id., 562. Amending memorandum which directs judgment. 74 C. 18. Remittitur and amendment of judgment where damages are excessive. 75 C. 263. Discretion of court to allow amendment when action has been in court 2 years, and complaint repeatedly amended. 81 C. 452. Motion to dismiss amendment improperly allowed, proper. 86 C. 313. Right to amend to be restrained within reasonable limits; filing cross complaint after reservation. 66 C. 284; 68 C. 369. Amendment to appeal is to be made in Appellate Court; 72 C. 86; on return day. 74 C. 438. Amending plea in abatement. 68 C. 474; 73 C. 428; 74 C. 125. Court may correct its records. 76 C. 113; 81 C. 127; 91 C. 383. Amending memorandum of judgment. 74 C. 23. Gives right to amend to accord with proof on trial, subject to right of defendant to amend answer; but court may refuse to allow demurrer where it would not promote speedy issue. 96 C. 395. When amendment offered during trial to remedy mispleading, circumstances of particular case must govern. 115 C. 683. Court may in its discretion allow the filing of amendments to pleadings before, during and after trial. 135 C. 170. Harm done defendant by denial of motion far outweighed inconvenience to plaintiff or delay resulting from granting of it and was abuse of court's discretion. 139 C. 68. Amendment offered during trial which would radically change basis of plaintiff's cause of action properly refused. Id., 152. Court may in its discretion restrain the amendment of pleadings to prevent unreasonable delay of the trial. 140 C. 689. The courts have followed a liberal policy relative to permitting amendments to pleadings after the expiration of the time during which amendments may be filed as a matter of right. 144 C. 126. Failure to amend complaint at pretrial or within a reasonable time thereafter may constitute sound reason to deny motion. Id., 582. Denial of amendment to conform allegations to proof. Id., 594. Defendant not permitted to amend its answer during trial by adding third defense as this would have injected new issue requiring evidence different in character from that already presented. 155 C. 145. Cited. 177 C. 191; 187 C. 180; 192 C. 558; 215 C. 286; 221 C. 14; Id., 356."
@@ -1344,7 +1374,7 @@
             "text": "Power of court to restrain the amendment or alteration of pleading is to be sparingly exercised. 17 CS 47. Cited. 27 CS 63. Legislature has prescribed liberal policy toward the allowance of amendments to pleadings. 36 CS 126."
           }
         ],
-        "plainText": "Parties may amend any defect, mistake or informality in the pleadings or other parts of the record or proceedings. When either party supposes that in any part of the pleadings he has missed the ground of his plea, and that he can plead a different plea that will save him in his cause, he may change his plea, answer, replication or rejoinder, as the case may be, and plead anew, and the other party shall have reasonable time to answer the same; and, in any case when a party amends or alters any part of the pleadings or pleads anew, if it occasions any delay in the trial or inconvenience to the other party, he shall be liable to pay costs at the discretion of the court. Any court may restrain the amendment or alteration of pleadings, so far as may be necessary to compel the parties to join issue in a reasonable time for trial.\n\nSee Sec. 52-72 re amendment of process."
+        "plainText": "Parties may amend any defect, mistake or informality in the pleadings or other parts of the record or proceedings. When either party supposes that in any part of the pleadings he has missed the ground of his plea, and that he can plead a different plea that will save him in his cause, he may change his plea, answer, replication or rejoinder, as the case may be, and plead anew, and the other party shall have reasonable time to answer the same; and, in any case when a party amends or alters any part of the pleadings or pleads anew, if it occasions any delay in the trial or inconvenience to the other party, he shall be liable to pay costs at the discretion of the court. Any court may restrain the amendment or alteration of pleadings, so far as may be necessary to compel the parties to join issue in a reasonable time for trial."
       }
     },
     {
@@ -1443,8 +1473,7 @@
       "status": "active",
       "content": {
         "body": [
-          "The complaint in an action brought for breach of contract may be amended so as to set forth instead a cause of action founded on a tort, arising from the same transaction or subject of action; and any complaint founded on a tort may be amended so as to set forth instead a cause of action for a breach of contract arising out of the same transaction or subject of action.",
-          "See Sec. 52-244 re circumstances under which plaintiff may not recover costs."
+          "The complaint in an action brought for breach of contract may be amended so as to set forth instead a cause of action founded on a tort, arising from the same transaction or subject of action; and any complaint founded on a tort may be amended so as to set forth instead a cause of action for a breach of contract arising out of the same transaction or subject of action."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 7857.)"
@@ -1453,10 +1482,14 @@
         "annotations": [
           {
             "first": true,
+            "text": "See Sec. 52-244 re circumstances under which plaintiff may not recover costs."
+          },
+          {
+            "first": true,
             "text": "“A cause of action arising from the same transaction” is identical in substance with the term “ground of action”. 56 C. 594. Cited. 60 C. 500. Refers not to a new count, but such an amended statement as makes it a statement of a new cause sounding differently. 63 C. 372. Cited. 66 C. 500. Court may in its discretion allow the filing of amendments to pleadings before, during and after trial. 135 C. 170."
           }
         ],
-        "plainText": "The complaint in an action brought for breach of contract may be amended so as to set forth instead a cause of action founded on a tort, arising from the same transaction or subject of action; and any complaint founded on a tort may be amended so as to set forth instead a cause of action for a breach of contract arising out of the same transaction or subject of action.\n\nSee Sec. 52-244 re circumstances under which plaintiff may not recover costs."
+        "plainText": "The complaint in an action brought for breach of contract may be amended so as to set forth instead a cause of action founded on a tort, arising from the same transaction or subject of action; and any complaint founded on a tort may be amended so as to set forth instead a cause of action for a breach of contract arising out of the same transaction or subject of action."
       }
     },
     {
@@ -1529,8 +1562,7 @@
         "body": [
           "(a) In any action brought for the recovery of a debt, if there are mutual debts between the plaintiff or plaintiffs, or any of them, and the defendant or defendants, or any of them, one debt may be set off against the other.",
           "(b) No debt claimed by assignment may be set off unless the plaintiff had notice, at the commencement of the action, that the debt was due the defendant.",
-          "(c) If it appears upon the trial that the plaintiff is indebted to the defendant, the court shall give judgment for the defendant to recover the balance due of the plaintiff with his costs, except that no judgment may be given against the plaintiff to recover the balance of a debt due only a part of the defendants.",
-          "See Sec. 37-2 re limitation on amount of interest, discount or damages for detention of money which may be recovered by a borrower."
+          "(c) If it appears upon the trial that the plaintiff is indebted to the defendant, the court shall give judgment for the defendant to recover the balance due of the plaintiff with his costs, except that no judgment may be given against the plaintiff to recover the balance of a debt due only a part of the defendants."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 7860; March, 1958, P.A. 27, S. 62; 1959, P.A. 28, S. 110; P.A. 82-160, S. 56.)"
@@ -1539,6 +1571,10 @@
           "History: 1959 act deleted reference to judgment by justice of the peace; P.A. 82-160 rephrased the section and inserted Subsec. indicators."
         ],
         "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 37-2 re limitation on amount of interest, discount or damages for detention of money which may be recovered by a borrower."
+          },
           {
             "first": true,
             "text": "“Mutual debts” defined. 7 C. 223; 8 C. 328; 81 C. 244; 88 C. 198; 108 C. 499; 114 C. 564. The debt set off must have been due and payable when the suit was brought. 32 C. 141, but see 108 C. 499. Suit by executor. 34 C. 66; 1 R. 428. Claims for unliquidated damages. 9 C. 433; 31 C. 343. Suit by receivers of bank, set-off of bills of bank disallowed. 22 C. 644. Interest on balance. 32 C. 564. Judgment debt; demand in plea for judgment for defendant. 28 C. 120. In a suit upon a partnership claim, defendant cannot set off a claim against one of the partners individually. 43 C. 80. Insolvency of savings bank; debtor cannot set off the amount of his deposit. Id., 155. Obligor in bond to a town in a criminal cause cannot set off a claim against the town. 45 C. 353. Debt against insolvent estate, barred by failure to present, may still be used as an offset. 46 C. 277. A defendant pleading set-off is virtually a plaintiff as respects that claim. 49 C. 91. Courts of equity sometimes allow a set-off where a court of law would not. Id., 569. Statutory right of set-off is reinforced and extended by practice act. 50 C. 301; 108 C. 499. Delinquent tax collector cannot set off his claim for salary. 51 C. 172. Lessee of administrator cannot set off debt of intestate against rent. 53 C. 500. Fundamental principles and tests of set-off. 55 C. 127; 108 C. 499. In an action of covenant against encumbrances, unpaid purchase notes of plaintiff may be used as a set-off. 55 C. 431. Set-off not recognized in an action for tort. 66 C. 508; 82 C. 361; 39 C. 366. In action by trustee in insolvency. 65 C. 76. Right of set-off in general; in action by receiver of bank. 88 C. 186; Id., 198. Personal debt of trustee cannot be set off in action by him as trustee. 86 C. 548. Is matter of defense. 82 C. 175. Unliquidated damages in contract may be set off in action on foreign judgment; equitable rights. 81 C. 244. In action against guarantor, he cannot set off debt owed him by plaintiff. 68 C. 525. Set-off of mutual debt not matured permitted where one of mutual debtors has been adjudicated insolvent; statute is not exclusive in its scope. 108 C. 499. Allegations of answer cannot operate as claim for set-off unless accompanied by claim for affirmative relief. 109 C. 5. Set-off between parties distinguished from an accord and satisfaction. Id., 245. Trust company may not set off its own deposits with private banker against certificate of deposit issued to private banker and deposited with State Treasurer in lieu of private banker's bond. 114 C. 560. Where no equitable considerations are involved, defendant under statute can set off debts only when they are presently due him. 117 C. 280; 128 C. 10. Set-off not allowed bank on note against maker's deposit which, before note matured, was assigned to one who paid valid consideration, neither maker nor bank being insolvent. Id., 276. Maker of note which had not matured when trust company suspended held entitled to set off deposit when receiver sued on note. 118 C. 42. Assignee of chose in action takes subject to equities and defenses arising before receipt of notice of assignment; no set-off against assignee where defendant at time of notice of assignment had no right to recover from assignor. 128 C. 4. Set-off distinguished from counterclaim; condition precedent to legal set-off is that it shall be in answer to suit on a debt. 130 C. 210. Cited. 191 C. 104; 207 C. 483."
@@ -1552,7 +1588,7 @@
             "text": "Cited. 3 Conn. Cir. Ct. 427. Unliquidated assigned claim cannot be set off in action in assumpsit. 4 Conn. Cir. Ct. 581."
           }
         ],
-        "plainText": "(a) In any action brought for the recovery of a debt, if there are mutual debts between the plaintiff or plaintiffs, or any of them, and the defendant or defendants, or any of them, one debt may be set off against the other.\n\n(b) No debt claimed by assignment may be set off unless the plaintiff had notice, at the commencement of the action, that the debt was due the defendant.\n\n(c) If it appears upon the trial that the plaintiff is indebted to the defendant, the court shall give judgment for the defendant to recover the balance due of the plaintiff with his costs, except that no judgment may be given against the plaintiff to recover the balance of a debt due only a part of the defendants.\n\nSee Sec. 37-2 re limitation on amount of interest, discount or damages for detention of money which may be recovered by a borrower."
+        "plainText": "(a) In any action brought for the recovery of a debt, if there are mutual debts between the plaintiff or plaintiffs, or any of them, and the defendant or defendants, or any of them, one debt may be set off against the other.\n\n(b) No debt claimed by assignment may be set off unless the plaintiff had notice, at the commencement of the action, that the debt was due the defendant.\n\n(c) If it appears upon the trial that the plaintiff is indebted to the defendant, the court shall give judgment for the defendant to recover the balance due of the plaintiff with his costs, except that no judgment may be given against the plaintiff to recover the balance of a debt due only a part of the defendants."
       }
     },
     {

@@ -345,8 +345,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Any person or persons severally or jointly aggrieved by any decision of the historic district commission or of any officer thereof may, within fifteen days from the date when such decision was rendered, take an appeal to the superior court for the judicial district in which such municipality is located, which appeal shall be made returnable to such court in the same manner as that prescribed for other civil actions brought to such court. Notice of such appeal shall be given by leaving a true and attested copy thereof in the hands of or at the usual place of abode of the chairman or clerk of the commission within twelve days before the return day to which such appeal has been taken. Procedure upon such appeal shall be the same as that defined in section 8-8 .",
-          "See Sec. 51-197b re administrative appeals."
+          "Any person or persons severally or jointly aggrieved by any decision of the historic district commission or of any officer thereof may, within fifteen days from the date when such decision was rendered, take an appeal to the superior court for the judicial district in which such municipality is located, which appeal shall be made returnable to such court in the same manner as that prescribed for other civil actions brought to such court. Notice of such appeal shall be given by leaving a true and attested copy thereof in the hands of or at the usual place of abode of the chairman or clerk of the commission within twelve days before the return day to which such appeal has been taken. Procedure upon such appeal shall be the same as that defined in section 8-8 ."
         ],
         "sourceNotes": [
           "(1961, P.A. 430, S. 11; P.A. 76-436, S. 282, 681; P.A. 78-280, S. 1, 127; P.A. 80-314, S. 9.)"
@@ -357,6 +356,10 @@
         "annotations": [
           {
             "first": true,
+            "text": "See Sec. 51-197b re administrative appeals."
+          },
+          {
+            "first": true,
             "text": "Cited. 153 C. 160; 171 C. 199; 189 C. 727. In appeals from administrative zoning decisions, decisions will be invalidated, even if they were reasonably supported by the record, if they were not supported by substantial evidence in the record; in an appeal from decision of a commission, the record is reviewed to determine whether there is factual support for commission's decision; should substantial evidence exist in record to support any basis or stated reason for commission's decision, the court must sustain that decision. 284 C. 838. Although judicial review of land use decisions is deferential, it is not a rubber stamp as a court cannot take view in every case that discretion exercised by local zoning authority must not be disturbed, for if it did the right of appeal would be empty. Id. Although defendant's decision in this case was guided by proper statutory factors under Sec. 7-147f, the application of those factors was not supported by substantial evidence and, therefore, was an abuse of its discretion; because neighborly animosity and outcry are not, without more, factors for defendant's consideration under Sec. 7-147f(a), testimony does not support defendant's conclusion in this case. Id. This section and Sec. 8-8, when read together, do not provide for statutory aggrievement in historic district commission appeals. 325 C. 765."
           },
           {
@@ -364,7 +367,7 @@
             "text": "If an appeal has been taken and the trial court remands a case to commission, the scope of the remand order determines the finality of the trial court's judgment for appeal purposes. 108 CA 682."
           }
         ],
-        "plainText": "Any person or persons severally or jointly aggrieved by any decision of the historic district commission or of any officer thereof may, within fifteen days from the date when such decision was rendered, take an appeal to the superior court for the judicial district in which such municipality is located, which appeal shall be made returnable to such court in the same manner as that prescribed for other civil actions brought to such court. Notice of such appeal shall be given by leaving a true and attested copy thereof in the hands of or at the usual place of abode of the chairman or clerk of the commission within twelve days before the return day to which such appeal has been taken. Procedure upon such appeal shall be the same as that defined in section 8-8 .\n\nSee Sec. 51-197b re administrative appeals."
+        "plainText": "Any person or persons severally or jointly aggrieved by any decision of the historic district commission or of any officer thereof may, within fifteen days from the date when such decision was rendered, take an appeal to the superior court for the judicial district in which such municipality is located, which appeal shall be made returnable to such court in the same manner as that prescribed for other civil actions brought to such court. Notice of such appeal shall be given by leaving a true and attested copy thereof in the hands of or at the usual place of abode of the chairman or clerk of the commission within twelve days before the return day to which such appeal has been taken. Procedure upon such appeal shall be the same as that defined in section 8-8 ."
       }
     },
     {

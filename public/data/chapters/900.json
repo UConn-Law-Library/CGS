@@ -371,8 +371,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Any objections made to the acceptance of the report of a committee or auditor, or award of an arbitrator, shall be heard and determined promptly and without delay after return of the report or award, unless a continuance is granted for cause. Appeals from probate and from the actions of commissioners appointed by courts of probate, actions brought by or against executors or administrators of estates, actions brought by or against conservators of the estates of incapable persons, actions brought by or against guardians of the estates of minors, actions brought by receivers of insolvent corporations by order of the court by which such receivers were appointed, actions brought by or against any person sixty-five years of age or older or who reaches the age of sixty-five during the pendency of the action, actions in which a party has been ordered to post security with the Department of Motor Vehicles or has posted security with the Department of Motor Vehicles, pursuant to the requirements of section 14-117 , appeals from any action of the Commissioner of Energy and Environmental Protection in accordance with section 25-17 , appeals under the provisions of section 14-57 , partitions and foreclosure cases, including cases in which a bond has been substituted for a mechanic's lien, shall have precedence over all other civil actions in respect to the order of trial, except as provided in section 52-191 .",
-          "See Sec. 49-39 re privileged status of action to foreclose a mechanics' lien with respect to order of trial."
+          "Any objections made to the acceptance of the report of a committee or auditor, or award of an arbitrator, shall be heard and determined promptly and without delay after return of the report or award, unless a continuance is granted for cause. Appeals from probate and from the actions of commissioners appointed by courts of probate, actions brought by or against executors or administrators of estates, actions brought by or against conservators of the estates of incapable persons, actions brought by or against guardians of the estates of minors, actions brought by receivers of insolvent corporations by order of the court by which such receivers were appointed, actions brought by or against any person sixty-five years of age or older or who reaches the age of sixty-five during the pendency of the action, actions in which a party has been ordered to post security with the Department of Motor Vehicles or has posted security with the Department of Motor Vehicles, pursuant to the requirements of section 14-117 , appeals from any action of the Commissioner of Energy and Environmental Protection in accordance with section 25-17 , appeals under the provisions of section 14-57 , partitions and foreclosure cases, including cases in which a bond has been substituted for a mechanic's lien, shall have precedence over all other civil actions in respect to the order of trial, except as provided in section 52-191 ."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 7946; 1957, P.A. 78, S. 1; March, 1958, P.A. 14, S. 2; 1959, P.A. 102; 1961, P.A. 329; 509, S. 1; 1963, P.A. 162; 1967, P.A. 819; 1971, P.A. 872, S. 156; P.A. 82-160, S. 93; P.A. 92-118, S. 8; P.A. 11-80, S. 1.)"
@@ -381,6 +380,10 @@
           "History: 1959 act added partitions and foreclosures; 1961 acts added appeals under section 14-57; 1963 act added cases where bond has been substituted for mechanic's lien; 1967 act added actions where party has been ordered to or has posted security with motor vehicle department; 1971 act replaced water resources commission with commissioner of environmental protection; P.A. 82-160 rephrased the section; P.A. 92-118 added provision re precedence in order of trial for actions brought by or against executors or administrators of estates, conservators of estates of incapable persons and guardians of the estates of minors; (Revisor's note: In 1997 references to “Motor Vehicle Department” were changed editorially by the Revisors to “Department of Motor Vehicles” for consistency with customary statutory usage); pursuant to P.A. 11-80, “Commissioner of Environmental Protection” was changed editorially by the Revisors to “Commissioner of Energy and Environmental Protection”, effective July 1, 2011."
         ],
         "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 49-39 re privileged status of action to foreclose a mechanics' lien with respect to order of trial."
+          },
           {
             "first": true,
             "text": "Cited. 63 C. 307; 179 C. 415; 229 C. 634; 230 C. 828."
@@ -394,7 +397,7 @@
             "text": "Privilege given to “persons” over 65 years of age does not extend to corporate entities in existence over 65 years; legislative intent construed. 22 CS 156."
           }
         ],
-        "plainText": "Any objections made to the acceptance of the report of a committee or auditor, or award of an arbitrator, shall be heard and determined promptly and without delay after return of the report or award, unless a continuance is granted for cause. Appeals from probate and from the actions of commissioners appointed by courts of probate, actions brought by or against executors or administrators of estates, actions brought by or against conservators of the estates of incapable persons, actions brought by or against guardians of the estates of minors, actions brought by receivers of insolvent corporations by order of the court by which such receivers were appointed, actions brought by or against any person sixty-five years of age or older or who reaches the age of sixty-five during the pendency of the action, actions in which a party has been ordered to post security with the Department of Motor Vehicles or has posted security with the Department of Motor Vehicles, pursuant to the requirements of section 14-117 , appeals from any action of the Commissioner of Energy and Environmental Protection in accordance with section 25-17 , appeals under the provisions of section 14-57 , partitions and foreclosure cases, including cases in which a bond has been substituted for a mechanic's lien, shall have precedence over all other civil actions in respect to the order of trial, except as provided in section 52-191 .\n\nSee Sec. 49-39 re privileged status of action to foreclose a mechanics' lien with respect to order of trial."
+        "plainText": "Any objections made to the acceptance of the report of a committee or auditor, or award of an arbitrator, shall be heard and determined promptly and without delay after return of the report or award, unless a continuance is granted for cause. Appeals from probate and from the actions of commissioners appointed by courts of probate, actions brought by or against executors or administrators of estates, actions brought by or against conservators of the estates of incapable persons, actions brought by or against guardians of the estates of minors, actions brought by receivers of insolvent corporations by order of the court by which such receivers were appointed, actions brought by or against any person sixty-five years of age or older or who reaches the age of sixty-five during the pendency of the action, actions in which a party has been ordered to post security with the Department of Motor Vehicles or has posted security with the Department of Motor Vehicles, pursuant to the requirements of section 14-117 , appeals from any action of the Commissioner of Energy and Environmental Protection in accordance with section 25-17 , appeals under the provisions of section 14-57 , partitions and foreclosure cases, including cases in which a bond has been substituted for a mechanic's lien, shall have precedence over all other civil actions in respect to the order of trial, except as provided in section 52-191 ."
       }
     },
     {
@@ -886,9 +889,7 @@
       "content": {
         "body": [
           "(a) In any hearing or trial, a party interrogated shall not be obliged to answer a question or produce a document the answering or producing of which would tend to incriminate him, or to disclose his title to any property if the title is not material to the hearing or trial.",
-          "(b) The right to refuse to answer a question, produce a document or disclose a title may be claimed by the party interrogated or by counsel in his behalf.",
-          "See Sec. 51-35 re witnesses' imprisonment for refusal to testify and protection against self-incrimination.",
-          "See Sec. 54-84 re option of accused to testify or remain silent during trial."
+          "(b) The right to refuse to answer a question, produce a document or disclose a title may be claimed by the party interrogated or by counsel in his behalf."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 7951; P.A. 82-160, S. 62.)"
@@ -897,6 +898,14 @@
           "History: P.A. 82-160 rephrased the section and inserted Subsec. indicators."
         ],
         "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 51-35 re witnesses' imprisonment for refusal to testify and protection against self-incrimination."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 54-84 re option of accused to testify or remain silent during trial."
+          },
           {
             "first": true,
             "text": "Answers to interrogatories did not expose defendant to self-degradation and self-incrimination. 137 C. 404. Privilege against self-incrimination does not apply to corporations. 212 C. 661. Cited. 229 C. 716."
@@ -910,7 +919,7 @@
             "text": "The term “any hearing or trial” includes the taking of a deposition. 31 CS 66. Cited. 32 CS 306."
           }
         ],
-        "plainText": "(a) In any hearing or trial, a party interrogated shall not be obliged to answer a question or produce a document the answering or producing of which would tend to incriminate him, or to disclose his title to any property if the title is not material to the hearing or trial.\n\n(b) The right to refuse to answer a question, produce a document or disclose a title may be claimed by the party interrogated or by counsel in his behalf.\n\nSee Sec. 51-35 re witnesses' imprisonment for refusal to testify and protection against self-incrimination.\n\nSee Sec. 54-84 re option of accused to testify or remain silent during trial."
+        "plainText": "(a) In any hearing or trial, a party interrogated shall not be obliged to answer a question or produce a document the answering or producing of which would tend to incriminate him, or to disclose his title to any property if the title is not material to the hearing or trial.\n\n(b) The right to refuse to answer a question, produce a document or disclose a title may be claimed by the party interrogated or by counsel in his behalf."
       }
     },
     {
@@ -1140,8 +1149,7 @@
       "status": "active",
       "content": {
         "body": [
-          "No person who has received a valuable consideration for a contract, express or implied, made on a Sunday prior to June 9, 1976, may defend any action upon the contract on the ground that it was made on a Sunday, until he has restored the consideration.",
-          "See Sec. 53-300a re validity of Sunday real estate contracts."
+          "No person who has received a valuable consideration for a contract, express or implied, made on a Sunday prior to June 9, 1976, may defend any action upon the contract on the ground that it was made on a Sunday, until he has restored the consideration."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 7980; P.A. 76-415, S. 6; 76-435, S. 81, 82; P.A. 82-160, S. 99.)"
@@ -1152,6 +1160,10 @@
         "annotations": [
           {
             "first": true,
+            "text": "See Sec. 53-300a re validity of Sunday real estate contracts."
+          },
+          {
+            "first": true,
             "text": "Cited. 66 C. 275. Defendant must pay the reasonable value or agreed price, where a return of the identical consideration is practically impossible. 73 C. 624. Court should instruct jury as to whether certain date is Sunday. 81 C. 490. That contract was made on Sunday should be pleaded. 85 C. 635. In action by assignee to enforce bond for deed, defendant who received nothing as result of assignment may defend on ground it was made on Sunday. 133 C. 649. Cited. 155 C. 55; 177 C. 304."
           },
           {
@@ -1159,7 +1171,7 @@
             "text": "Cited. 14 CS 407. Sunday contract not demurrable if there is nothing to indicate that deposit allegedly accepted by defendant has been returned. 20 CS 443."
           }
         ],
-        "plainText": "No person who has received a valuable consideration for a contract, express or implied, made on a Sunday prior to June 9, 1976, may defend any action upon the contract on the ground that it was made on a Sunday, until he has restored the consideration.\n\nSee Sec. 53-300a re validity of Sunday real estate contracts."
+        "plainText": "No person who has received a valuable consideration for a contract, express or implied, made on a Sunday prior to June 9, 1976, may defend any action upon the contract on the ground that it was made on a Sunday, until he has restored the consideration."
       }
     },
     {
@@ -1465,8 +1477,7 @@
       "status": "active",
       "content": {
         "body": [
-          "The court shall decide all issues of law and all questions of law arising in the trial of any issue of fact; and, in committing the action to the jury, shall direct them to find accordingly. The court shall submit all questions of fact to the jury, with such observations on the evidence, for their information, as it thinks proper, without any direction as to how they shall find the facts. After the action has been committed to the jury, no pleas, arguments or evidence may be received before the verdict is returned into court and recorded.",
-          "See Sec. 52-224 re special verdicts to determine questions of law by court."
+          "The court shall decide all issues of law and all questions of law arising in the trial of any issue of fact; and, in committing the action to the jury, shall direct them to find accordingly. The court shall submit all questions of fact to the jury, with such observations on the evidence, for their information, as it thinks proper, without any direction as to how they shall find the facts. After the action has been committed to the jury, no pleas, arguments or evidence may be received before the verdict is returned into court and recorded."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 7969; P.A. 82-160, S. 105.)"
@@ -1475,6 +1486,10 @@
           "History: P.A. 82-160 replaced “cause” with “action” and rephrased the section."
         ],
         "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 52-224 re special verdicts to determine questions of law by court."
+          },
           {
             "first": true,
             "text": "Jury cannot pass on sufficiency of declaration. 32 C. 167. Construction of writings is for the court, unless it depends on proof of extrinsic circumstances, usages, etc. 12 C. 554; 38 C. 167. Court must decide on matters of fact bearing only on admissibility of evidence. 11 C. 463. And on challenge to jurors. 18 C. 171; 38 C. 137. Court may express opinion on weight of evidence. 21 C. 167; 37 C. 400. But court should not withdraw from jury any questions of fact, because it thinks the proof insufficient. 34 C. 538. It should instruct the jury, specifically, what law is applicable to the particular facts of the case; 32 C. 82; and may direct what verdict should be given, if the facts claimed and admitted would justify such verdict only. 5 C. 416; 8 C. 347; 65 C. 291. Verdict set aside, because document not in evidence was given to the jury by mistake; 18 C. 549; 109 C. 726; and because a juror gave evidence to his fellows out of court. 1 R. 523. Parties need not be formally called before taking the verdict. 41 C. 26. A claim devoid of evidence ought not to be submitted to the jury. 44 C. 88. Verdict not complete until read to jury and assented to by them. 46 C. 233. Court to determine all matters of law, even such as involve the decision of facts. Id., 383. Parties are entitled to a verdict on each of several separate counts. 53 C. 240. What comments of the court are to be commended. 59 C. 400, 401. Statute is identical in some of its features with Sec. 54-89. 64 C. 338; 103 C. 478. Court should direct a verdict where that depends upon a question of law. 65 C. 291. Court may express its opinion on the weight of evidence, leaving the decision of questions of fact to the jury. 69 C. 92. Is in accord with the constitutional right of trial by jury. Id., 145. Weight of testimony and the good or bad faith of parties are matters for the jury. 70 C. 509. Judge is not required to review all the evidence; how far he shall comment upon it is within his judicial discretion. Id., 719. Of jury trial in general. 75 C. 234. Functions of jury; 74 C. 71; in libel action. 67 C. 512; 69 C. 132; 75 C. 232. Must take law from judge; 69 C. 128; 73 C. 18; 75 C. 218; 78 C. 28; 80 C. 531; 85 C. 438; to leave it to them to decide is error. 86 C. 641. Weight and credibility of evidence is for jury; 73 C. 623; 81 C. 22; Id., 623; 82 C. 600; 86 C. 98; Id., 289; 87 C. 363; Id., 585; 90 C. 701; 94 C. 350; 97 C. 187; where evidence conflicts and fairminded men might differ; 94 C. 257; Id., 613; though witness is undisputed; 84 C. 267; 88 C. 619; or defendant offers no evidence; 92 C. 427; or one witness stands against many; 87 C. 363; so, inferences to be drawn from evidence; 86 C. 82; Id., 289; Id., 677; so meaning of words; 66 C. 525; so contract partly oral, partly written; 83 C. 16; weight of each part of evidence and its bearing upon the rest. 97 C. 187. Procuring cause of sale; 94 C. 475; agency and authority; 96 C. 21; 97 C. 149; whether written instrument meant to include whole agreement of parties. 97 C. 381. Jury must consider evidence as a whole. 75 C. 326. Judge as part of jury system. 74 C. 68; 75 C. 678; 76 C. 495; 81 C. 347; Id., 624. He may direct verdict in proper case; 77 C. 137; 79 C. 406; Id., 569; 80 C. 300; 81 C. 347; Id., 578; 86 C. 439; 89 C. 117; 91 C. 432; where only one conclusion is reasonably possible; 81 C. 343; 82 C. 394; 86 C. 131; 88 C. 16; 90 C. 30; Id., 139; 91 C. 433; 92 C. 560; 95 C. 441; 109 C. 159; where facts are undisputed and effect is question of law; 96 C. 319; where injury is clearly due to plaintiff's own negligence; 95 C. 48; constitutional limitation on powers; 91 C. 460; in libel action; 91 C. 442; and where a verdict is directed, the judgment will not readily be reversed. 78 C. 99; 82 C. 396. Refusal to direct verdict not ground of error. 93 C. 454. Court may comment on evidence; 73 C. 33; Id., 118; Id., 377; 79 C. 116; Id., 380; 87 C. 691; 88 C. 93; 90 C. 275; 92 C. 236; Id., 579; 93 C. 691; or its absence; 91 C. 316; in a criminal case; 64 C. 330; 67 C. 581; 72 C. 40; 78 C. 28; 81 C. 98; 83 C. 160; Id., 601; 87 C. 5; Id., 285; 98 C. 467; 109 C. 91. This is ordinarily a matter of discretion; 79 C. 663; 80 C. 88; Id., 538; 82 C. 518; 83 C. 597; 85 C. 459; 88 C. 93; 91 C. 388; but it may be its duty to do so; 71 C. 1; Id., 392; 72 C. 43; 75 C. 55; 79 C. 117; 82 C. 518; it may, but need not, call attention to particular evidence; 73 C. 462; 76 C. 135; 77 C. 295; 81 C. 556; 83 C. 261; 85 C. 180; 86 C. 15; Id., 252; 87 C. 363; as testimony of an accomplice; 72 C. 321; 76 C. 342; 84 C. 152; evidence as to character; 83 C. 598; circumstantial evidence; 77 C. 267; refusal of witness to answer question; 91 C. 316; credibility of witness; 95 C. 529; it may point out an undisputed fact; 86 C. 335; or one admitted; 89 C. 237; or one jury could not help but find; 81 C. 347; or one that is irrelevant; 78 C. 18; but it must leave decision to jury. 69 C. 91; 86 C. 335. It may express its own opinion. 92 C. 237. That comment affects credibility of party's claim nil sig. 93 C. 598. Section applies to comments made by the judge in ruling on evidence. 90 C. 95. Effect of series of writings as determining contract rights is for court to decide. 94 C. 445. Judge may ask questions of witness. 98 C. 468. Section does not apply to criminal cases. 103 C. 477, 479. Motion to reopen to offer evidence after case was committed to jury could not be granted; statute is definite and contains no exceptions. 135 C. 599. Cited. 137 C. 123. Whether there is any evidence is a question for the judge; whether sufficient evidence is for the jury. 143 C. 547. Comment to jury by court must be fair and reasonable. 144 C. 706. Verdict of jury must contain an intelligible finding so that its meaning can be clearly ascertained. 147 C. 72. Finding in a jury case is a statement of facts which, on the evidence, jury might have found proven and which parties claim were proven. Id., 90. Handling of expert testimony by jury discussed. Id., 171, 215. Purpose of rule that exceptions to a charge should be taken immediately after the charge is delivered. Id., 191. Construction of language of a will, even in a jury case, is for the court. Id., 248. In the absence of any request from defendant to withhold from jury exhibits concerned only with counts as to which a verdict in his favor had been directed, court itself not required to withhold such exhibits. Id., 589. It is error to submit to jury wholly inapplicable statutes. Id., 638. An inadvertent omission or inaccurate statement in a charge will not constitute reversible error unless it is reasonably probable that jury was misled by it. Id., 644. For case to go to jury, evidence fairly considered must be able to support a reasonable belief that it is more probable than otherwise that the fact in issue is true. Id., 699. Directed verdicts are not favored. Id., 704. When a court may direct a verdict. 148 C. 167; Id., 449. Finding in a jury trial is merely a narrative of facts claimed to have been proved by each side, made for the purpose of fairly presenting any claimed errors in charge or rulings of the court. Id., 208. What constitutes a request to charge which properly sets forth the “legal principle involved.” Id., 266. A fact not contradicted does not necessarily become an undisputed fact which is required to be added to the finding. Id., 349. Purpose of a charge is to call attention of jury, unfamiliar with legal distinctions, to whatever is necessary and proper to guide them to a right decision in a particular case; doctrine of estoppel was in issue but in charge jury was not given a definition of this term, held reversible error. Id., 391. Although trial court is given much latitude in discussing the evidence in a charge, an incorrect statement of a material and important fact which is apt to mislead the jury constitutes error. Id., 459. Plaintiff filed no requests to charge; it does not appear that any exception was made to the charge as given; had he any doubt about the jury's understanding, a proper request to charge would have alerted the court to the need for instruction and would have assured an adequate record for review. 149 C. 743. Charge to jury on Uniform Narcotic Drug Act; jury should have been instructed to indicate in their verdict whether the possession was for self-administration or possession for sale; jury could have found defendant not guilty of possession for sale because of entrapment, but guilty of possession for self-administration. 150 C. 1. Since there was no evidence that any of the vehicles involved in the collision had inadequate or defective brakes, the charge should not have submitted the issue to the jury; since other omitted matter was essential to a proper and complete consideration and decision of the case, the failure to charge on it, after a request to do so, constituted error. Id., 158. Where more than one conclusion is reasonably possible, judge cannot direct a verdict. Id., 623. Judge's failure to repeat all of his charge on claims of negligence may have misled jury into overlooking plaintiff's claim of supervening negligence of defendant as proximate cause of his injuries; this omission in supplemental charge was error and judgment for defendant was reversed. 157 C. 194. Failure of court to charge jury by relating law to pleadings and evidence in case was reversible error. 158 C. 75. Cited. 196 C. 53."
@@ -1488,7 +1503,7 @@
             "text": "When verdict will be set aside for error in the charge. 21 CS 1. The ad damnum clause of a complaint has no probative value and should not be submitted to the jury. Id., 150."
           }
         ],
-        "plainText": "The court shall decide all issues of law and all questions of law arising in the trial of any issue of fact; and, in committing the action to the jury, shall direct them to find accordingly. The court shall submit all questions of fact to the jury, with such observations on the evidence, for their information, as it thinks proper, without any direction as to how they shall find the facts. After the action has been committed to the jury, no pleas, arguments or evidence may be received before the verdict is returned into court and recorded.\n\nSee Sec. 52-224 re special verdicts to determine questions of law by court."
+        "plainText": "The court shall decide all issues of law and all questions of law arising in the trial of any issue of fact; and, in committing the action to the jury, shall direct them to find accordingly. The court shall submit all questions of fact to the jury, with such observations on the evidence, for their information, as it thinks proper, without any direction as to how they shall find the facts. After the action has been committed to the jury, no pleas, arguments or evidence may be received before the verdict is returned into court and recorded."
       }
     },
     {
@@ -1503,8 +1518,7 @@
       "status": "active",
       "content": {
         "body": [
-          "An agreement with any tortfeasor not to bring legal action or a release of a tortfeasor in any cause of action shall not be read to a jury or in any other way introduced in evidence by either party at any time during the trial of the cause of action against any other joint tortfeasors, nor shall any other agreement not to sue or release of claim among any plaintiffs or defendants in the action be read or in any other way introduced to a jury. If the court at the conclusion of the trial concludes that the verdict is excessive as a matter of law, it shall order a remittitur and, upon failure of the party so ordered to remit the amount ordered by the court, it shall set aside the verdict and order a new trial. If the court concludes that the verdict is inadequate as a matter of law, it shall order an additur, and upon failure of the party so ordered to add the amount ordered by the court, it shall set aside the verdict and order a new trial. This section shall not prohibit the introduction of such agreement or release in a trial to the court.",
-          "See Sec. 52-572e re release of joint tortfeasor."
+          "An agreement with any tortfeasor not to bring legal action or a release of a tortfeasor in any cause of action shall not be read to a jury or in any other way introduced in evidence by either party at any time during the trial of the cause of action against any other joint tortfeasors, nor shall any other agreement not to sue or release of claim among any plaintiffs or defendants in the action be read or in any other way introduced to a jury. If the court at the conclusion of the trial concludes that the verdict is excessive as a matter of law, it shall order a remittitur and, upon failure of the party so ordered to remit the amount ordered by the court, it shall set aside the verdict and order a new trial. If the court concludes that the verdict is inadequate as a matter of law, it shall order an additur, and upon failure of the party so ordered to add the amount ordered by the court, it shall set aside the verdict and order a new trial. This section shall not prohibit the introduction of such agreement or release in a trial to the court."
         ],
         "sourceNotes": [
           "(P.A. 76-197; P.A. 77-604, S. 33, 84; P.A. 82-160, S. 106; 82-406, S. 3.)"
@@ -1513,6 +1527,10 @@
           "History: P.A. 77-604 referred to agreements “with any tortfeasor” not to bring legal action rather than to agreements not to bring legal action “by any tortfeasor”; P.A. 82-160 rephrased the section; P.A. 82-406 deleted provision re authority of court to deduct any amount of money received as settlement from verdict and added provision re authority of court to order remittitur or additur."
         ],
         "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 52-572e re release of joint tortfeasor."
+          },
           {
             "first": true,
             "text": "Cited. 176 C. 245; Id., 383; 179 C. 269. Found unconstitutional as violating the right to trial by jury by permitting trial court to interfere with fact-finding function of jury. 186 C. 337. Cited. 187 C. 1. Statute as amended by public act 82-406, S. 3 held constitutional. 196 C. 53. Statute codifies proper procedure with regard to out-of-court settlements of joint tortfeasors. 196 C. 341. Cited. 203 C. 607; 206 C. 16; 208 C. 82; 211 C. 67; 212 C. 509; 219 C. 314; 223 C. 786; 229 C. 716; 230 C. 795; 231 C. 500; 234 C. 660; 239 C. 144. Section provides a directive to trial court that if defendant rejects the additur, trial court must set aside verdict and order a new trial, because initial verdict was necessarily inadequate as a matter of law; there is no irreconcilable conflict between Secs. 52-228b and 52-216a mandating that one be accepted and the other abandoned. 246 C. 170. Trial court should examine the evidence to decide whether jury reasonably could have found that plaintiff had failed in his proof of the issue; that decision should be made, not on the assumption that jury made a mistake, but, rather, on the supposition that jury did exactly what it intended to do. 252 C. 174. Statute inapplicable to an action brought pursuant to defective highway statute in which municipality is the sole tortfeasor because express language of statute applies solely to actions in which there are, or could be, joint tortfeasors. 258 C. 574. Under section, a trial court may, in exercise of its discretion, reduce a jury award to account for pretrial settlement payments; however, before doing so, the court first must determine that the settlement payments, when added to the jury award, render that award excessive as a matter of law, a threshold that is met only when the total amount received so far exceeds what is fair and reasonable as to be unconscionable. 284 C. 645. Because section merely codified the pre-existing common law standards, there is no reason to conclude that the legislature intended to modify the established abuse of discretion standard of review. 331 C. 777."
@@ -1526,7 +1544,7 @@
             "text": "Statute does not preclude an allegation of payments from a joint tortfeasor as a special defense. 40 CS 263."
           }
         ],
-        "plainText": "An agreement with any tortfeasor not to bring legal action or a release of a tortfeasor in any cause of action shall not be read to a jury or in any other way introduced in evidence by either party at any time during the trial of the cause of action against any other joint tortfeasors, nor shall any other agreement not to sue or release of claim among any plaintiffs or defendants in the action be read or in any other way introduced to a jury. If the court at the conclusion of the trial concludes that the verdict is excessive as a matter of law, it shall order a remittitur and, upon failure of the party so ordered to remit the amount ordered by the court, it shall set aside the verdict and order a new trial. If the court concludes that the verdict is inadequate as a matter of law, it shall order an additur, and upon failure of the party so ordered to add the amount ordered by the court, it shall set aside the verdict and order a new trial. This section shall not prohibit the introduction of such agreement or release in a trial to the court.\n\nSee Sec. 52-572e re release of joint tortfeasor."
+        "plainText": "An agreement with any tortfeasor not to bring legal action or a release of a tortfeasor in any cause of action shall not be read to a jury or in any other way introduced in evidence by either party at any time during the trial of the cause of action against any other joint tortfeasors, nor shall any other agreement not to sue or release of claim among any plaintiffs or defendants in the action be read or in any other way introduced to a jury. If the court at the conclusion of the trial concludes that the verdict is excessive as a matter of law, it shall order a remittitur and, upon failure of the party so ordered to remit the amount ordered by the court, it shall set aside the verdict and order a new trial. If the court concludes that the verdict is inadequate as a matter of law, it shall order an additur, and upon failure of the party so ordered to add the amount ordered by the court, it shall set aside the verdict and order a new trial. This section shall not prohibit the introduction of such agreement or release in a trial to the court."
       }
     },
     {
@@ -2224,15 +2242,19 @@
           "(5) An itemized listing of all applicable transfer expenses, other than attorney's fees and related disbursements payable in connection with the transferee's application for approval of the transfer, and the transferee's best estimate of the amount of any such fees and disbursements;",
           "(6) The net advance amount;",
           "(7) The amount of any penalties or liquidated damages payable by the payee in the event of any breach of the transfer agreement by the payee; and",
-          "(8) A statement that the payee has the right to cancel the transfer agreement, without penalty or further obligation, not later than the third business day after the date the agreement is signed by the payee.",
-          "See Sec. 52-225 l re transfer agreements to which applicable."
+          "(8) A statement that the payee has the right to cancel the transfer agreement, without penalty or further obligation, not later than the third business day after the date the agreement is signed by the payee."
         ],
         "sourceNotes": [
           "(P.A. 03-110, S. 2.)"
         ],
         "history": [],
-        "annotations": [],
-        "plainText": "Not less than three days prior to the date on which the payee signs a transfer agreement, the transferee shall provide to the payee a separate disclosure statement, in boldface type at least fourteen points in size, setting forth:\n\n(1) The amounts and due dates of the structured settlement payments to be transferred;\n\n(2) The aggregate amount of such payments;\n\n(3) The discounted present value of the payments to be transferred, which shall be identified as the “calculation of current value of the transferred structured settlement payments under federal standards for valuing annuities,” and the amount of the applicable federal rate used in calculating such discounted present value;\n\n(4) The gross advance amount;\n\n(5) An itemized listing of all applicable transfer expenses, other than attorney's fees and related disbursements payable in connection with the transferee's application for approval of the transfer, and the transferee's best estimate of the amount of any such fees and disbursements;\n\n(6) The net advance amount;\n\n(7) The amount of any penalties or liquidated damages payable by the payee in the event of any breach of the transfer agreement by the payee; and\n\n(8) A statement that the payee has the right to cancel the transfer agreement, without penalty or further obligation, not later than the third business day after the date the agreement is signed by the payee.\n\nSee Sec. 52-225 l re transfer agreements to which applicable."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 52-225 l re transfer agreements to which applicable."
+          }
+        ],
+        "plainText": "Not less than three days prior to the date on which the payee signs a transfer agreement, the transferee shall provide to the payee a separate disclosure statement, in boldface type at least fourteen points in size, setting forth:\n\n(1) The amounts and due dates of the structured settlement payments to be transferred;\n\n(2) The aggregate amount of such payments;\n\n(3) The discounted present value of the payments to be transferred, which shall be identified as the “calculation of current value of the transferred structured settlement payments under federal standards for valuing annuities,” and the amount of the applicable federal rate used in calculating such discounted present value;\n\n(4) The gross advance amount;\n\n(5) An itemized listing of all applicable transfer expenses, other than attorney's fees and related disbursements payable in connection with the transferee's application for approval of the transfer, and the transferee's best estimate of the amount of any such fees and disbursements;\n\n(6) The net advance amount;\n\n(7) The amount of any penalties or liquidated damages payable by the payee in the event of any breach of the transfer agreement by the payee; and\n\n(8) A statement that the payee has the right to cancel the transfer agreement, without penalty or further obligation, not later than the third business day after the date the agreement is signed by the payee."
       }
     },
     {
@@ -2250,15 +2272,19 @@
           "No direct or indirect transfer of structured settlement payment rights shall be effective and no structured settlement obligor or annuity issuer shall be required to make any payment directly or indirectly to any transferee of structured settlement payment rights unless the transfer has been approved in advance in a final court order or order of a responsible administrative authority based on express findings by such court or responsible administrative authority that:",
           "(1) The transfer is in the best interest of the payee, taking into account the welfare and support of the payee's dependents;",
           "(2) The payee has been advised in writing by the transferee to seek independent professional advice regarding the transfer and has either received such advice or knowingly waived such advice in writing; and",
-          "(3) The transfer does not contravene any applicable statute or the order of any court or other government authority.",
-          "See Sec. 52-225 l re transfer agreements to which applicable."
+          "(3) The transfer does not contravene any applicable statute or the order of any court or other government authority."
         ],
         "sourceNotes": [
           "(P.A. 03-110, S. 3.)"
         ],
         "history": [],
-        "annotations": [],
-        "plainText": "No direct or indirect transfer of structured settlement payment rights shall be effective and no structured settlement obligor or annuity issuer shall be required to make any payment directly or indirectly to any transferee of structured settlement payment rights unless the transfer has been approved in advance in a final court order or order of a responsible administrative authority based on express findings by such court or responsible administrative authority that:\n\n(1) The transfer is in the best interest of the payee, taking into account the welfare and support of the payee's dependents;\n\n(2) The payee has been advised in writing by the transferee to seek independent professional advice regarding the transfer and has either received such advice or knowingly waived such advice in writing; and\n\n(3) The transfer does not contravene any applicable statute or the order of any court or other government authority.\n\nSee Sec. 52-225 l re transfer agreements to which applicable."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 52-225 l re transfer agreements to which applicable."
+          }
+        ],
+        "plainText": "No direct or indirect transfer of structured settlement payment rights shall be effective and no structured settlement obligor or annuity issuer shall be required to make any payment directly or indirectly to any transferee of structured settlement payment rights unless the transfer has been approved in advance in a final court order or order of a responsible administrative authority based on express findings by such court or responsible administrative authority that:\n\n(1) The transfer is in the best interest of the payee, taking into account the welfare and support of the payee's dependents;\n\n(2) The payee has been advised in writing by the transferee to seek independent professional advice regarding the transfer and has either received such advice or knowingly waived such advice in writing; and\n\n(3) The transfer does not contravene any applicable statute or the order of any court or other government authority."
       }
     },
     {
@@ -2437,14 +2463,17 @@
       "status": "active",
       "content": {
         "body": [
-          "In any civil action in which a cause of action is sustained in favor of or against only a part of the parties thereto, judgment may be rendered in favor of or against such parties only; but any defendant against whom no recovery is obtained shall be entitled to costs.",
-          "See Sec. 52-257 re fees of parties in civil actions."
+          "In any civil action in which a cause of action is sustained in favor of or against only a part of the parties thereto, judgment may be rendered in favor of or against such parties only; but any defendant against whom no recovery is obtained shall be entitled to costs."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 7976.)"
         ],
         "history": [],
         "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 52-257 re fees of parties in civil actions."
+          },
           {
             "first": true,
             "text": "Section includes suits against partners. 25 C. 394. The ground of failure is immaterial. 28 C. 362. Withdrawal of action against one defendant. 31 C. 217. Cited. 43 C. 82; 44 C. 311. Only one bill of costs can be allowed to several defendants. 45 C. 102. Cited. 47 C. 210. Applies to defendants described as partners. 61 C. 48. Applies to joint tortfeasors. 67 C. 255; 73 C. 428; 79 C. 417; 83 C. 27. Statute is permissive. 68 C. 496. Cited. Id., 511. If two defendants join in same defense, they stand or fall together. 75 C. 356. Applied. 99 C. 644. Right to give judgment for or against some only of parties does not affect rules as to removal of causes to U.S. courts. 114 U.S. 59. Cited. 166 C. 325."
@@ -2454,7 +2483,7 @@
             "text": "Cited. 4 CS 167; 8 CS 30. Limits the taxation in Sec. 52-257 to one bill of costs though there may be more than one prevailing party. Id., 324. Cited. 18 CS 106. Judgment allowable against one party in joint promise action. 30 CS 593."
           }
         ],
-        "plainText": "In any civil action in which a cause of action is sustained in favor of or against only a part of the parties thereto, judgment may be rendered in favor of or against such parties only; but any defendant against whom no recovery is obtained shall be entitled to costs.\n\nSee Sec. 52-257 re fees of parties in civil actions."
+        "plainText": "In any civil action in which a cause of action is sustained in favor of or against only a part of the parties thereto, judgment may be rendered in favor of or against such parties only; but any defendant against whom no recovery is obtained shall be entitled to costs."
       }
     },
     {
@@ -2738,9 +2767,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Whenever any statutory appeal from the doings of any administrative or quasi-judicial board or person is taken to a judge of the Superior Court, such judge shall certify his doings thereon to the clerk of his court and such clerk shall thereupon enter such appeal upon the docket of such court in the same manner as in other civil actions.",
-          "See Sec. 4-183 re appeals to Superior Court from administrative proceedings.",
-          "See Sec. 51-197b re administrative appeals."
+          "Whenever any statutory appeal from the doings of any administrative or quasi-judicial board or person is taken to a judge of the Superior Court, such judge shall certify his doings thereon to the clerk of his court and such clerk shall thereupon enter such appeal upon the docket of such court in the same manner as in other civil actions."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 7965; P.A. 76-436, S. 471, 681.)"
@@ -2748,8 +2775,17 @@
         "history": [
           "History: P.A. 76-436 removed appeals taken to court of common pleas from purview of section, reflecting transfer of all trial jurisdiction to superior court, effective July 1, 1978."
         ],
-        "annotations": [],
-        "plainText": "Whenever any statutory appeal from the doings of any administrative or quasi-judicial board or person is taken to a judge of the Superior Court, such judge shall certify his doings thereon to the clerk of his court and such clerk shall thereupon enter such appeal upon the docket of such court in the same manner as in other civil actions.\n\nSee Sec. 4-183 re appeals to Superior Court from administrative proceedings.\n\nSee Sec. 51-197b re administrative appeals."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 4-183 re appeals to Superior Court from administrative proceedings."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 51-197b re administrative appeals."
+          }
+        ],
+        "plainText": "Whenever any statutory appeal from the doings of any administrative or quasi-judicial board or person is taken to a judge of the Superior Court, such judge shall certify his doings thereon to the clerk of his court and such clerk shall thereupon enter such appeal upon the docket of such court in the same manner as in other civil actions."
       }
     },
     {

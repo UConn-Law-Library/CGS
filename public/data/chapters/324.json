@@ -67,9 +67,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Any male child transferred to the regular criminal docket of the Superior Court under section 46b-127 , or any male person between the ages of sixteen and twenty-one years who is convicted of an offense for which he may be punished by imprisonment for a shorter period than life may be committed to the John R. Manson Youth Institution, Cheshire, if he appears to the trial court to be amenable to reformatory methods. The judge imposing a sentence to the John R. Manson Youth Institution, Cheshire, shall impose a sentence to a definite term of imprisonment therein for a specified period of time; provided in no event shall any sentence under this section be for a term longer than the maximum term of imprisonment for the offense committed or for a term of more than five years. The judge, at the time of imposing any sentence to imprisonment in said institution, may order its suspension after any specified number of months and may place the defendant on probation for the unexpired portion of the sentence. Uniform forms of mittimus for commitments to the John R. Manson Youth Institution, Cheshire, shall be used, which forms shall be prepared by the Judicial Department and furnished by said institution.",
-          "See Sec. 17b-732 re uniform forms for commitment of minors.",
-          "See Sec. 18-65a re confinement of young and teenage women."
+          "Any male child transferred to the regular criminal docket of the Superior Court under section 46b-127 , or any male person between the ages of sixteen and twenty-one years who is convicted of an offense for which he may be punished by imprisonment for a shorter period than life may be committed to the John R. Manson Youth Institution, Cheshire, if he appears to the trial court to be amenable to reformatory methods. The judge imposing a sentence to the John R. Manson Youth Institution, Cheshire, shall impose a sentence to a definite term of imprisonment therein for a specified period of time; provided in no event shall any sentence under this section be for a term longer than the maximum term of imprisonment for the offense committed or for a term of more than five years. The judge, at the time of imposing any sentence to imprisonment in said institution, may order its suspension after any specified number of months and may place the defendant on probation for the unexpired portion of the sentence. Uniform forms of mittimus for commitments to the John R. Manson Youth Institution, Cheshire, shall be used, which forms shall be prepared by the Judicial Department and furnished by said institution."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 2772; 1959, P.A. 28, S. 58; 37; 615, S. 8; February, 1965, P.A. 503; 1971, P.A. 65; 1972, P.A. 127, S. 34; P.A. 73-71, S. 1, 2; P.A. 75-633, S. 3; P.A. 76-194, S. 2; 76-436, S. 171, 681; P.A. 77-344, S. 1; 77-452, S. 11, 72; P.A. 79-631, S. 105, 111; P.A 80-442, S. 4, 28; P.A. 86-186, S. 13; P.A. 95-225, S. 42.)"
@@ -80,6 +78,14 @@
         "annotations": [
           {
             "first": true,
+            "text": "See Sec. 17b-732 re uniform forms for commitment of minors."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 18-65a re confinement of young and teenage women."
+          },
+          {
+            "first": true,
             "text": "Application to city courts having special charter provisions as to jurisdiction. 95 C. 601. Finding of Superior Court of age of defendant cannot be attacked in a habeas corpus action. 100 C. 503. If Superior Court could take jurisdiction to sentence accused under 16 to reformatory, it could only do so after proceedings were had in juvenile court. 115 C. 589. Cited. 116 C. 142; 153 C. 80; 158 C. 439; 195 C. 303."
           },
           {
@@ -87,7 +93,7 @@
             "text": "Trial court held not obliged to follow recommendation of family relations officer in report concerning sentences to be imposed. 23 CS 214. Defendant resentenced from indefinite term to maximum term penalty for his offense. 28 CS 132. Equal protection clause not violated by statutory classification of juvenile offenders for correctional purposes. Id., 137. Limited to Superior Court. 30 CS 71."
           }
         ],
-        "plainText": "Any male child transferred to the regular criminal docket of the Superior Court under section 46b-127 , or any male person between the ages of sixteen and twenty-one years who is convicted of an offense for which he may be punished by imprisonment for a shorter period than life may be committed to the John R. Manson Youth Institution, Cheshire, if he appears to the trial court to be amenable to reformatory methods. The judge imposing a sentence to the John R. Manson Youth Institution, Cheshire, shall impose a sentence to a definite term of imprisonment therein for a specified period of time; provided in no event shall any sentence under this section be for a term longer than the maximum term of imprisonment for the offense committed or for a term of more than five years. The judge, at the time of imposing any sentence to imprisonment in said institution, may order its suspension after any specified number of months and may place the defendant on probation for the unexpired portion of the sentence. Uniform forms of mittimus for commitments to the John R. Manson Youth Institution, Cheshire, shall be used, which forms shall be prepared by the Judicial Department and furnished by said institution.\n\nSee Sec. 17b-732 re uniform forms for commitment of minors.\n\nSee Sec. 18-65a re confinement of young and teenage women."
+        "plainText": "Any male child transferred to the regular criminal docket of the Superior Court under section 46b-127 , or any male person between the ages of sixteen and twenty-one years who is convicted of an offense for which he may be punished by imprisonment for a shorter period than life may be committed to the John R. Manson Youth Institution, Cheshire, if he appears to the trial court to be amenable to reformatory methods. The judge imposing a sentence to the John R. Manson Youth Institution, Cheshire, shall impose a sentence to a definite term of imprisonment therein for a specified period of time; provided in no event shall any sentence under this section be for a term longer than the maximum term of imprisonment for the offense committed or for a term of more than five years. The judge, at the time of imposing any sentence to imprisonment in said institution, may order its suspension after any specified number of months and may place the defendant on probation for the unexpired portion of the sentence. Uniform forms of mittimus for commitments to the John R. Manson Youth Institution, Cheshire, shall be used, which forms shall be prepared by the Judicial Department and furnished by said institution."
       }
     },
     {

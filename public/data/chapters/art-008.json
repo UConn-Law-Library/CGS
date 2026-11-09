@@ -123,8 +123,7 @@
           "(d) A writing that is a security certificate is governed by this article and not by article 3, even though it also meets the requirements of that article. However, a negotiable instrument governed by article 3 is a financial asset if it is held in a securities account.",
           "(e) An option or similar obligation issued by a clearing corporation to its participants is not a security, but is a financial asset.",
           "(f) A commodity contract, as defined in section 42a-9-102 (a)(15), is not a security or a financial asset.",
-          "(g) A document of title is not a financial asset unless subdivision (10)(iii) of subsection (a) of section 42a-8-102 applies.",
-          "See Sec. 42a-8-209 for successor provisions to Sec. 42a-8-103, revised to 1997, re issuer's lien."
+          "(g) A document of title is not a financial asset unless subdivision (10)(iii) of subsection (a) of section 42a-8-102 applies."
         ],
         "sourceNotes": [
           "(1959, P.A. 133, S. 8-103; P.A. 79-435, S. 2; P.A. 97-182, S. 3; P.A. 01-132, S. 146; P.A. 04-64, S. 59.)"
@@ -132,8 +131,13 @@
         "history": [
           "History: P.A. 79-435 amended section to distinguish between certificated and uncertificated securities, applying former provision to certificated securities and adding provision re uncertificated securities; P.A. 97-182 entirely replaced former provisions re issuer's lien with provisions re rules for determining whether certain obligations and interests are securities or financial assets; P.A. 01-132 amended Subsec. (f) to replace Sec. 42a-9-115 with Sec. 42a-9-102(a)(15) as the statutory reference for the definition of a “commodity contract”; P.A. 04-64 added Subsec. (g) re document of title to conform to revisions made to article 7 by the same act."
         ],
-        "annotations": [],
-        "plainText": "(a) A share or similar equity interest issued by a corporation, business trust, joint stock company or similar entity is a security.\n\n(b) An “investment company security” is a security. “Investment company security” means a share or similar equity interest issued by an entity that is registered as an investment company under the federal investment company laws, in interest in a unit investment trust that is so registered, or face-amount certificate issued by a face-amount certificate company that is so registered. Investment company security does not include an insurance policy or endowment policy or annuity contract issued by an insurance company.\n\n(c) An interest in a partnership or limited liability company is not a security unless it is dealt in or traded on securities exchanges or in securities markets, its terms expressly provide that it is a security governed by this article or it is an investment company security. However, an interest in a partnership or limited liability company is a financial asset if it is held in a securities account.\n\n(d) A writing that is a security certificate is governed by this article and not by article 3, even though it also meets the requirements of that article. However, a negotiable instrument governed by article 3 is a financial asset if it is held in a securities account.\n\n(e) An option or similar obligation issued by a clearing corporation to its participants is not a security, but is a financial asset.\n\n(f) A commodity contract, as defined in section 42a-9-102 (a)(15), is not a security or a financial asset.\n\n(g) A document of title is not a financial asset unless subdivision (10)(iii) of subsection (a) of section 42a-8-102 applies.\n\nSee Sec. 42a-8-209 for successor provisions to Sec. 42a-8-103, revised to 1997, re issuer's lien."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 42a-8-209 for successor provisions to Sec. 42a-8-103, revised to 1997, re issuer's lien."
+          }
+        ],
+        "plainText": "(a) A share or similar equity interest issued by a corporation, business trust, joint stock company or similar entity is a security.\n\n(b) An “investment company security” is a security. “Investment company security” means a share or similar equity interest issued by an entity that is registered as an investment company under the federal investment company laws, in interest in a unit investment trust that is so registered, or face-amount certificate issued by a face-amount certificate company that is so registered. Investment company security does not include an insurance policy or endowment policy or annuity contract issued by an insurance company.\n\n(c) An interest in a partnership or limited liability company is not a security unless it is dealt in or traded on securities exchanges or in securities markets, its terms expressly provide that it is a security governed by this article or it is an investment company security. However, an interest in a partnership or limited liability company is a financial asset if it is held in a securities account.\n\n(d) A writing that is a security certificate is governed by this article and not by article 3, even though it also meets the requirements of that article. However, a negotiable instrument governed by article 3 is a financial asset if it is held in a securities account.\n\n(e) An option or similar obligation issued by a clearing corporation to its participants is not a security, but is a financial asset.\n\n(f) A commodity contract, as defined in section 42a-9-102 (a)(15), is not a security or a financial asset.\n\n(g) A document of title is not a financial asset unless subdivision (10)(iii) of subsection (a) of section 42a-8-102 applies."
       }
     },
     {
@@ -153,8 +157,7 @@
           "(2) The person acquires a security entitlement to the security pursuant to section 42a-8-501 .",
           "(b) A person acquires a financial asset, other than a security, or an interest therein, under this article, if the person acquires a security entitlement to the financial asset.",
           "(c) A person who acquires a security entitlement to a security or other financial asset has the rights specified in part 5, but is a purchaser of any security, security entitlement, or other financial asset held by the securities intermediary only to the extent provided in section 42a-8-503 .",
-          "(d) Unless the context shows that a different meaning is intended, a person who is required by other law, regulation, rule or agreement to transfer, deliver, present, surrender, exchange or otherwise put in the possession of another person a security or financial asset satisfies that requirement by causing the other person to acquire an interest in the security or financial asset pursuant to subsection (a) or (b) of this section.",
-          "See Sec. 42a-8-210 for successor provisions to Sec. 42a-8-104, revised to 1997, re overissue."
+          "(d) Unless the context shows that a different meaning is intended, a person who is required by other law, regulation, rule or agreement to transfer, deliver, present, surrender, exchange or otherwise put in the possession of another person a security or financial asset satisfies that requirement by causing the other person to acquire an interest in the security or financial asset pursuant to subsection (a) or (b) of this section."
         ],
         "sourceNotes": [
           "(1959, P.A. 133, S. 8-104; P.A. 79-435, S. 3; P.A. 97-182, S. 4.)"
@@ -162,8 +165,13 @@
         "history": [
           "History: P.A. 79-435 amended section to distinguish between actions required for certificated and uncertificated securities, applying previous requirements to certificated securities; P.A. 97-182 entirely replaced former provisions re effect of overissue and defining “overissue” with provisions re acquisition of security or financial asset or an interest therein."
         ],
-        "annotations": [],
-        "plainText": "(a) A person acquires a security or an interest therein, under this article, if:\n\n(1) The person is a purchaser to whom a security is delivered pursuant to section 42a-8-301 ; or\n\n(2) The person acquires a security entitlement to the security pursuant to section 42a-8-501 .\n\n(b) A person acquires a financial asset, other than a security, or an interest therein, under this article, if the person acquires a security entitlement to the financial asset.\n\n(c) A person who acquires a security entitlement to a security or other financial asset has the rights specified in part 5, but is a purchaser of any security, security entitlement, or other financial asset held by the securities intermediary only to the extent provided in section 42a-8-503 .\n\n(d) Unless the context shows that a different meaning is intended, a person who is required by other law, regulation, rule or agreement to transfer, deliver, present, surrender, exchange or otherwise put in the possession of another person a security or financial asset satisfies that requirement by causing the other person to acquire an interest in the security or financial asset pursuant to subsection (a) or (b) of this section.\n\nSee Sec. 42a-8-210 for successor provisions to Sec. 42a-8-104, revised to 1997, re overissue."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 42a-8-210 for successor provisions to Sec. 42a-8-104, revised to 1997, re overissue."
+          }
+        ],
+        "plainText": "(a) A person acquires a security or an interest therein, under this article, if:\n\n(1) The person is a purchaser to whom a security is delivered pursuant to section 42a-8-301 ; or\n\n(2) The person acquires a security entitlement to the security pursuant to section 42a-8-501 .\n\n(b) A person acquires a financial asset, other than a security, or an interest therein, under this article, if the person acquires a security entitlement to the financial asset.\n\n(c) A person who acquires a security entitlement to a security or other financial asset has the rights specified in part 5, but is a purchaser of any security, security entitlement, or other financial asset held by the securities intermediary only to the extent provided in section 42a-8-503 .\n\n(d) Unless the context shows that a different meaning is intended, a person who is required by other law, regulation, rule or agreement to transfer, deliver, present, surrender, exchange or otherwise put in the possession of another person a security or financial asset satisfies that requirement by causing the other person to acquire an interest in the security or financial asset pursuant to subsection (a) or (b) of this section."
       }
     },
     {
@@ -189,8 +197,7 @@
           "(d) A purchaser of a certificated security has notice of an adverse claim if the security certificate:",
           "(1) Whether in bearer or registered form, has been endorsed “for collection” or “for surrender” or for some other purpose not involving transfer; or",
           "(2) Is in bearer form and has on it an unambiguous statement that it is the property of a person other than the transferor, but the mere writing of a name on the certificate is not such a statement.",
-          "(e) Filing of a financing statement under article 9 is not notice of an adverse claim to a financial asset.",
-          "See Sec. 42a-8-114 for successor provisions to Sec. 42a-8-105(3), revised to 1997, re rules in an action on a security."
+          "(e) Filing of a financing statement under article 9 is not notice of an adverse claim to a financial asset."
         ],
         "sourceNotes": [
           "(1959, P.A. 133, S. 8-105; P.A. 79-435, S. 4; P.A. 97-182, S. 5.)"
@@ -198,8 +205,13 @@
         "history": [
           "History: P.A. 79-435 specified “certificated” securities in Subsec. (1), inserted new Subsec. (2) re uncertificated securities and renumbered and amended former Subsec. (2) accordingly, adding provision re presumption of truth of facts in initial transaction statement; P.A. 97-182 entirely replaced former provisions re status of certificated securities and of statements and instructions with respect to uncertificated securities and procedures and presumptions in an action on a security with provisions re notice of an adverse claim, a restatement in part of Sec. 42a-8-304(1) and (3) and Sec. 42a-8-305, revised to 1997."
         ],
-        "annotations": [],
-        "plainText": "(a) A person has notice of an adverse claim if:\n\n(1) The person knows of the adverse claim;\n\n(2) The person is aware of facts sufficient to indicate that there is a significant probability that the adverse claim exists and deliberately avoids information that would establish the existence of the adverse claim; or\n\n(3) The person has a duty, imposed by statute or regulation, to investigate whether an adverse claim exists, and the investigation so required would establish the existence of the adverse claim.\n\n(b) Having knowledge that a financial asset or interest therein is or has been transferred by a representative imposes no duty of inquiry into the rightfulness of a transaction and is not notice of an adverse claim. However, a person who knows that a representative has transferred a financial asset or interest therein in a transaction that is, or whose proceeds are being used, for the individual benefit of the representative or otherwise in breach of duty has notice of an adverse claim.\n\n(c) An act or event that creates a right to immediate performance of the principal obligation represented by a security certificate or sets a date on or after which the certificate is to be presented or surrendered for redemption or exchange does not itself constitute notice of an adverse claim except in the case of a transfer more than:\n\n(1) One year after a date set for presentment or surrender for redemption or exchange; or\n\n(2) Six months after a date set for payment of money against presentation or surrender of the certificate, if money was available for payment on that date.\n\n(d) A purchaser of a certificated security has notice of an adverse claim if the security certificate:\n\n(1) Whether in bearer or registered form, has been endorsed “for collection” or “for surrender” or for some other purpose not involving transfer; or\n\n(2) Is in bearer form and has on it an unambiguous statement that it is the property of a person other than the transferor, but the mere writing of a name on the certificate is not such a statement.\n\n(e) Filing of a financing statement under article 9 is not notice of an adverse claim to a financial asset.\n\nSee Sec. 42a-8-114 for successor provisions to Sec. 42a-8-105(3), revised to 1997, re rules in an action on a security."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 42a-8-114 for successor provisions to Sec. 42a-8-105(3), revised to 1997, re rules in an action on a security."
+          }
+        ],
+        "plainText": "(a) A person has notice of an adverse claim if:\n\n(1) The person knows of the adverse claim;\n\n(2) The person is aware of facts sufficient to indicate that there is a significant probability that the adverse claim exists and deliberately avoids information that would establish the existence of the adverse claim; or\n\n(3) The person has a duty, imposed by statute or regulation, to investigate whether an adverse claim exists, and the investigation so required would establish the existence of the adverse claim.\n\n(b) Having knowledge that a financial asset or interest therein is or has been transferred by a representative imposes no duty of inquiry into the rightfulness of a transaction and is not notice of an adverse claim. However, a person who knows that a representative has transferred a financial asset or interest therein in a transaction that is, or whose proceeds are being used, for the individual benefit of the representative or otherwise in breach of duty has notice of an adverse claim.\n\n(c) An act or event that creates a right to immediate performance of the principal obligation represented by a security certificate or sets a date on or after which the certificate is to be presented or surrendered for redemption or exchange does not itself constitute notice of an adverse claim except in the case of a transfer more than:\n\n(1) One year after a date set for presentment or surrender for redemption or exchange; or\n\n(2) Six months after a date set for payment of money against presentation or surrender of the certificate, if money was available for payment on that date.\n\n(d) A purchaser of a certificated security has notice of an adverse claim if the security certificate:\n\n(1) Whether in bearer or registered form, has been endorsed “for collection” or “for surrender” or for some other purpose not involving transfer; or\n\n(2) Is in bearer form and has on it an unambiguous statement that it is the property of a person other than the transferor, but the mere writing of a name on the certificate is not such a statement.\n\n(e) Filing of a financing statement under article 9 is not notice of an adverse claim to a financial asset."
       }
     },
     {
@@ -227,8 +239,7 @@
           "(3) Another person has control of the security entitlement on behalf of the purchaser or, having previously acquired control of the security entitlement, acknowledges that it has control on behalf of the purchaser.",
           "(e) If an interest in a security entitlement is granted by the entitlement holder to the entitlement holder's own securities intermediary, the securities intermediary has control.",
           "(f) A purchaser who has satisfied the requirements of subsection (c) or (d) of this section has control, even if the registered owner in the case of subsection (c) of this section or the entitlement holder in the case of subsection (d) of this section retains the right to make substitutions for the uncertificated security or security entitlement, to originate instructions or entitlement orders to the issuer or securities intermediary, or otherwise to deal with the uncertificated security or security entitlement.",
-          "(g) An issuer or a securities intermediary may not enter into an agreement of the kind described in subsection (c)(2) or (d)(2) of this section without the consent of the registered owner or entitlement holder, but an issuer or a securities intermediary is not required to enter into such an agreement even though the registered owner or entitlement holder so directs. An issuer or securities intermediary that has entered into such an agreement is not required to confirm the existence of the agreement to another party unless requested to do so by the registered owner or entitlement holder.",
-          "See Sec. 42a-8-110 for successor provisions to Sec. 42a-8-106, revised to 1997, re applicable law."
+          "(g) An issuer or a securities intermediary may not enter into an agreement of the kind described in subsection (c)(2) or (d)(2) of this section without the consent of the registered owner or entitlement holder, but an issuer or a securities intermediary is not required to enter into such an agreement even though the registered owner or entitlement holder so directs. An issuer or securities intermediary that has entered into such an agreement is not required to confirm the existence of the agreement to another party unless requested to do so by the registered owner or entitlement holder."
         ],
         "sourceNotes": [
           "(1959, P.A. 133, S. 8-106; P.A. 79-435, S. 5; P.A. 97-182, S. 6; P.A. 01-132, S. 147.)"
@@ -236,8 +247,13 @@
         "history": [
           "History: P.A. 79-435 rephrased provisions and clarified applicability of law with respect to certificated and uncertificated securities; P.A. 97-182 entirely replaced former provisions re applicable law with provisions re control; P.A. 01-132 added Subsec. (d)(3) re when another person has control of the security entitlement on behalf of the purchaser and amended Subsec. (f) to replace references to Subsec. (c)(2) with Subsec. (c) and references to Subsec. (d)(2) with Subsec. (d) where appearing."
         ],
-        "annotations": [],
-        "plainText": "(a) A purchaser has “control” of a certificated security in bearer form if the certificated security is delivered to the purchaser.\n\n(b) A purchaser has “control” of a certificated security in registered form if the certificated security is delivered to the purchaser, and:\n\n(1) The certificate is endorsed to the purchaser or in blank by an effective endorsement; or\n\n(2) The certificate is registered in the name of the purchaser, upon original issue or registration of transfer by the issuer.\n\n(c) A purchaser has “control” of an uncertificated security if:\n\n(1) The uncertificated security is delivered to the purchaser; or\n\n(2) The issuer has agreed that it will comply with instructions originated by the purchaser without further consent by the registered owner.\n\n(d) A purchaser has “control” of a security entitlement if:\n\n(1) The purchaser becomes the entitlement holder;\n\n(2) The securities intermediary has agreed that it will comply with entitlement orders originated by the purchaser without further consent by the entitlement holder; or\n\n(3) Another person has control of the security entitlement on behalf of the purchaser or, having previously acquired control of the security entitlement, acknowledges that it has control on behalf of the purchaser.\n\n(e) If an interest in a security entitlement is granted by the entitlement holder to the entitlement holder's own securities intermediary, the securities intermediary has control.\n\n(f) A purchaser who has satisfied the requirements of subsection (c) or (d) of this section has control, even if the registered owner in the case of subsection (c) of this section or the entitlement holder in the case of subsection (d) of this section retains the right to make substitutions for the uncertificated security or security entitlement, to originate instructions or entitlement orders to the issuer or securities intermediary, or otherwise to deal with the uncertificated security or security entitlement.\n\n(g) An issuer or a securities intermediary may not enter into an agreement of the kind described in subsection (c)(2) or (d)(2) of this section without the consent of the registered owner or entitlement holder, but an issuer or a securities intermediary is not required to enter into such an agreement even though the registered owner or entitlement holder so directs. An issuer or securities intermediary that has entered into such an agreement is not required to confirm the existence of the agreement to another party unless requested to do so by the registered owner or entitlement holder.\n\nSee Sec. 42a-8-110 for successor provisions to Sec. 42a-8-106, revised to 1997, re applicable law."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 42a-8-110 for successor provisions to Sec. 42a-8-106, revised to 1997, re applicable law."
+          }
+        ],
+        "plainText": "(a) A purchaser has “control” of a certificated security in bearer form if the certificated security is delivered to the purchaser.\n\n(b) A purchaser has “control” of a certificated security in registered form if the certificated security is delivered to the purchaser, and:\n\n(1) The certificate is endorsed to the purchaser or in blank by an effective endorsement; or\n\n(2) The certificate is registered in the name of the purchaser, upon original issue or registration of transfer by the issuer.\n\n(c) A purchaser has “control” of an uncertificated security if:\n\n(1) The uncertificated security is delivered to the purchaser; or\n\n(2) The issuer has agreed that it will comply with instructions originated by the purchaser without further consent by the registered owner.\n\n(d) A purchaser has “control” of a security entitlement if:\n\n(1) The purchaser becomes the entitlement holder;\n\n(2) The securities intermediary has agreed that it will comply with entitlement orders originated by the purchaser without further consent by the entitlement holder; or\n\n(3) Another person has control of the security entitlement on behalf of the purchaser or, having previously acquired control of the security entitlement, acknowledges that it has control on behalf of the purchaser.\n\n(e) If an interest in a security entitlement is granted by the entitlement holder to the entitlement holder's own securities intermediary, the securities intermediary has control.\n\n(f) A purchaser who has satisfied the requirements of subsection (c) or (d) of this section has control, even if the registered owner in the case of subsection (c) of this section or the entitlement holder in the case of subsection (d) of this section retains the right to make substitutions for the uncertificated security or security entitlement, to originate instructions or entitlement orders to the issuer or securities intermediary, or otherwise to deal with the uncertificated security or security entitlement.\n\n(g) An issuer or a securities intermediary may not enter into an agreement of the kind described in subsection (c)(2) or (d)(2) of this section without the consent of the registered owner or entitlement holder, but an issuer or a securities intermediary is not required to enter into such an agreement even though the registered owner or entitlement holder so directs. An issuer or securities intermediary that has entered into such an agreement is not required to confirm the existence of the agreement to another party unless requested to do so by the registered owner or entitlement holder."
       }
     },
     {
@@ -837,8 +853,7 @@
           "(3) A securities intermediary acting on behalf of the purchaser acquires possession of the security certificate, only if the certificate is in registered form and is (i) registered in the name of the purchaser, (ii) payable to the order of the purchaser, or (iii) specially endorsed to the purchaser by an effective endorsement and has not been endorsed to the securities intermediary or in blank.",
           "(b) Delivery of an uncertificated security to a purchaser occurs when:",
           "(1) The issuer registers the purchaser as the registered owner, upon original issue or registration of transfer; or",
-          "(2) Another person, other than a securities intermediary, either becomes the registered owner of the uncertificated security on behalf of the purchaser or, having previously become the registered owner, acknowledges that it holds for the purchaser.",
-          "See Sec. 42a-8-302(a) and (b) for successor provisions to Sec. 42a-8-301, revised to 1997, re rights in a security acquired by a purchaser."
+          "(2) Another person, other than a securities intermediary, either becomes the registered owner of the uncertificated security on behalf of the purchaser or, having previously become the registered owner, acknowledges that it holds for the purchaser."
         ],
         "sourceNotes": [
           "(1959, P.A. 133, S. 8-301; P.A. 79-435, S. 16; P.A 97-182, S. 27; P.A. 01-132, S. 149.)"
@@ -849,10 +864,14 @@
         "annotations": [
           {
             "first": true,
+            "text": "See Sec. 42a-8-302(a) and (b) for successor provisions to Sec. 42a-8-301, revised to 1997, re rights in a security acquired by a purchaser."
+          },
+          {
+            "first": true,
             "text": "Former section cited. 16 CS 269."
           }
         ],
-        "plainText": "(a) Delivery of a certificated security to a purchaser occurs when:\n\n(1) The purchaser acquires possession of the security certificate;\n\n(2) Another person, other than a securities intermediary, either acquires possession of the security certificate on behalf of the purchaser or, having previously acquired possession of the certificate, acknowledges that it holds for the purchaser; or\n\n(3) A securities intermediary acting on behalf of the purchaser acquires possession of the security certificate, only if the certificate is in registered form and is (i) registered in the name of the purchaser, (ii) payable to the order of the purchaser, or (iii) specially endorsed to the purchaser by an effective endorsement and has not been endorsed to the securities intermediary or in blank.\n\n(b) Delivery of an uncertificated security to a purchaser occurs when:\n\n(1) The issuer registers the purchaser as the registered owner, upon original issue or registration of transfer; or\n\n(2) Another person, other than a securities intermediary, either becomes the registered owner of the uncertificated security on behalf of the purchaser or, having previously become the registered owner, acknowledges that it holds for the purchaser.\n\nSee Sec. 42a-8-302(a) and (b) for successor provisions to Sec. 42a-8-301, revised to 1997, re rights in a security acquired by a purchaser."
+        "plainText": "(a) Delivery of a certificated security to a purchaser occurs when:\n\n(1) The purchaser acquires possession of the security certificate;\n\n(2) Another person, other than a securities intermediary, either acquires possession of the security certificate on behalf of the purchaser or, having previously acquired possession of the certificate, acknowledges that it holds for the purchaser; or\n\n(3) A securities intermediary acting on behalf of the purchaser acquires possession of the security certificate, only if the certificate is in registered form and is (i) registered in the name of the purchaser, (ii) payable to the order of the purchaser, or (iii) specially endorsed to the purchaser by an effective endorsement and has not been endorsed to the securities intermediary or in blank.\n\n(b) Delivery of an uncertificated security to a purchaser occurs when:\n\n(1) The issuer registers the purchaser as the registered owner, upon original issue or registration of transfer; or\n\n(2) Another person, other than a securities intermediary, either becomes the registered owner of the uncertificated security on behalf of the purchaser or, having previously become the registered owner, acknowledges that it holds for the purchaser."
       }
     },
     {
@@ -869,9 +888,7 @@
         "body": [
           "(a) Except as otherwise provided in subsections (b) and (c) of this section, a purchaser of a certificated or uncertificated security acquires all rights in the security that the transferor had or had power to transfer.",
           "(b) A purchaser of a limited interest acquires rights only to the extent of the interest purchased.",
-          "(c) A purchaser of a certificated security who as a previous holder had notice of an adverse claim does not improve its position by taking from a protected purchaser.",
-          "See Sec. 42a-8-303(a) and (b) for successor provisions to Sec. 42a-8-302(1) and (3), respectively, revised to 1997, re definition of “bona fide purchaser” and the interest in a security acquired by a bona fide purchaser.",
-          "See Sec. 42a-8-102(a)(1) for successor provisions to Sec. 42a-8-302(2), revised to 1997, re definition of “adverse claim”."
+          "(c) A purchaser of a certificated security who as a previous holder had notice of an adverse claim does not improve its position by taking from a protected purchaser."
         ],
         "sourceNotes": [
           "(1959, P.A. 133, S. 8-302; P.A. 79-435, S. 17; P.A. 90-230, S. 56, 101; P.A. 97-182, S. 28; P.A. 01-132, S. 150.)"
@@ -879,8 +896,17 @@
         "history": [
           "History: P.A. 79-435 applied previous provisions to certificated securities, adding provisions re uncertificated securities, and added Subsecs. (2) to (4) containing provisions formerly found in Sec. 42a-8-301; P.A. 90-230 corrected an internal reference; P.A. 97-182 replaced former Subsecs. (1) to (3), inclusive, defining “bona fide purchaser” and “adverse claim” and specifying the interest in a security acquired by a bona fide purchaser with Subsecs. (a) and (b) re rights in a security acquired by a purchaser, a restatement of Sec. 42a-8-301, revised to 1997, and redesignated former Subsec. (4) as Subsec. (c) and amended said Subsec. by deleting provision re a transferee who has been a party to any fraud or illegality affecting the security; P.A. 01-132 amended Subsec. (a) to delete provisions that the purchaser's acquisition of the transferor's rights occurs “upon delivery” of the security to the purchaser."
         ],
-        "annotations": [],
-        "plainText": "(a) Except as otherwise provided in subsections (b) and (c) of this section, a purchaser of a certificated or uncertificated security acquires all rights in the security that the transferor had or had power to transfer.\n\n(b) A purchaser of a limited interest acquires rights only to the extent of the interest purchased.\n\n(c) A purchaser of a certificated security who as a previous holder had notice of an adverse claim does not improve its position by taking from a protected purchaser.\n\nSee Sec. 42a-8-303(a) and (b) for successor provisions to Sec. 42a-8-302(1) and (3), respectively, revised to 1997, re definition of “bona fide purchaser” and the interest in a security acquired by a bona fide purchaser.\n\nSee Sec. 42a-8-102(a)(1) for successor provisions to Sec. 42a-8-302(2), revised to 1997, re definition of “adverse claim”."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 42a-8-303(a) and (b) for successor provisions to Sec. 42a-8-302(1) and (3), respectively, revised to 1997, re definition of “bona fide purchaser” and the interest in a security acquired by a bona fide purchaser."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 42a-8-102(a)(1) for successor provisions to Sec. 42a-8-302(2), revised to 1997, re definition of “adverse claim”."
+          }
+        ],
+        "plainText": "(a) Except as otherwise provided in subsections (b) and (c) of this section, a purchaser of a certificated or uncertificated security acquires all rights in the security that the transferor had or had power to transfer.\n\n(b) A purchaser of a limited interest acquires rights only to the extent of the interest purchased.\n\n(c) A purchaser of a certificated security who as a previous holder had notice of an adverse claim does not improve its position by taking from a protected purchaser."
       }
     },
     {
@@ -899,8 +925,7 @@
           "(1) Gives value;",
           "(2) Does not have notice of any adverse claim to the security; and",
           "(3) Obtains control of the certificated or uncertificated security.",
-          "(b) In addition to acquiring the rights of a purchaser, a protected purchaser also acquires its interest in the security free of any adverse claim.",
-          "See Sec. 42a-8-102(a)(3) for successor provisions to Sec. 42a-8-303, revised to 1997, re definition of “broker”."
+          "(b) In addition to acquiring the rights of a purchaser, a protected purchaser also acquires its interest in the security free of any adverse claim."
         ],
         "sourceNotes": [
           "(1959, P.A. 133, S. 8-303; P.A. 79-435, S. 18; P.A. 97-182, S. 29.)"
@@ -908,8 +933,13 @@
         "history": [
           "History: P.A. 79-435 made technical corrections; P.A. 97-182 entirely replaced former provisions defining “broker” with provisions defining “protected purchaser” and specifying that the interest in a security acquired by a protected purchaser is free of any adverse claim, a restatement of Sec. 42a-8-302(1) and (3), revised to 1997."
         ],
-        "annotations": [],
-        "plainText": "(a) “Protected purchaser” means a purchaser of a certificated or uncertificated security, or of an interest therein, who:\n\n(1) Gives value;\n\n(2) Does not have notice of any adverse claim to the security; and\n\n(3) Obtains control of the certificated or uncertificated security.\n\n(b) In addition to acquiring the rights of a purchaser, a protected purchaser also acquires its interest in the security free of any adverse claim.\n\nSee Sec. 42a-8-102(a)(3) for successor provisions to Sec. 42a-8-303, revised to 1997, re definition of “broker”."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 42a-8-102(a)(3) for successor provisions to Sec. 42a-8-303, revised to 1997, re definition of “broker”."
+          }
+        ],
+        "plainText": "(a) “Protected purchaser” means a purchaser of a certificated or uncertificated security, or of an interest therein, who:\n\n(1) Gives value;\n\n(2) Does not have notice of any adverse claim to the security; and\n\n(3) Obtains control of the certificated or uncertificated security.\n\n(b) In addition to acquiring the rights of a purchaser, a protected purchaser also acquires its interest in the security free of any adverse claim."
       }
     },
     {
@@ -929,9 +959,7 @@
           "(c) An endorsement, whether special or in blank, does not constitute a transfer until delivery of the certificate on which it appears or, if the endorsement is on a separate document, until delivery of both the document and the certificate.",
           "(d) If a security certificate in registered form has been delivered to a purchaser without a necessary endorsement, the purchaser may become a protected purchaser only when the endorsement is supplied. However, against a transferor, a transfer is complete upon delivery and the purchaser has a specifically enforceable right to have any necessary endorsement supplied.",
           "(e) An endorsement of a security certificate in bearer form may give notice of an adverse claim to the certificate, but it does not otherwise affect a right to registration that the holder possesses.",
-          "(f) Unless otherwise agreed, a person making an endorsement assumes only the obligations provided in section 42a-8-108 , and not an obligation that the security will be honored by the issuer.",
-          "See Sec. 42a-8-105(b) for successor provisions to Sec. 42a-8-304(3), revised to 1997, re duty of inquiry into rightfulness of a transaction.",
-          "See Sec. 42a-8-105(d) for successor provisions to Sec. 42a-8-304(1), revised to 1997, re when a purchaser of a certificated security has notice of an adverse claim."
+          "(f) Unless otherwise agreed, a person making an endorsement assumes only the obligations provided in section 42a-8-108 , and not an obligation that the security will be honored by the issuer."
         ],
         "sourceNotes": [
           "(1959, P.A. 133, S. 8-304; P.A. 79-435, S. 19; P.A. 97-182, S. 30; P.A. 98-93, S. 5, 15.)"
@@ -939,8 +967,17 @@
         "history": [
           "History: P.A. 79-435 applied existing Subsec. (1) to certificated securities, inserted new Subsec. (2) and renumbered former Subsec. (2) as Subsec. (3) specifying purchasers of “certificated or uncertificated” securities and “constructive” notice of adverse claims; P.A. 97-182 entirely replaced former provisions re when a purchaser is charged with notice of adverse claims with provisions re endorsement, a restatement of Secs. 42a-8-307, 42a-8-308(2), (3) and (9), 42a-8-309 and 42a-8-310, revised to 1997; P.A. 98-93 amended Subsec. (f) to make a technical change, effective July 1, 1998."
         ],
-        "annotations": [],
-        "plainText": "(a) An endorsement may be in blank or special. An endorsement in blank includes an endorsement to bearer. A special endorsement specifies to whom a security is to be transferred or who has power to transfer it. A holder may convert a blank endorsement to a special endorsement.\n\n(b) An endorsement purporting to be only of part of a security certificate representing units intended by the issuer to be separately transferable is effective to the extent of the endorsement.\n\n(c) An endorsement, whether special or in blank, does not constitute a transfer until delivery of the certificate on which it appears or, if the endorsement is on a separate document, until delivery of both the document and the certificate.\n\n(d) If a security certificate in registered form has been delivered to a purchaser without a necessary endorsement, the purchaser may become a protected purchaser only when the endorsement is supplied. However, against a transferor, a transfer is complete upon delivery and the purchaser has a specifically enforceable right to have any necessary endorsement supplied.\n\n(e) An endorsement of a security certificate in bearer form may give notice of an adverse claim to the certificate, but it does not otherwise affect a right to registration that the holder possesses.\n\n(f) Unless otherwise agreed, a person making an endorsement assumes only the obligations provided in section 42a-8-108 , and not an obligation that the security will be honored by the issuer.\n\nSee Sec. 42a-8-105(b) for successor provisions to Sec. 42a-8-304(3), revised to 1997, re duty of inquiry into rightfulness of a transaction.\n\nSee Sec. 42a-8-105(d) for successor provisions to Sec. 42a-8-304(1), revised to 1997, re when a purchaser of a certificated security has notice of an adverse claim."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 42a-8-105(b) for successor provisions to Sec. 42a-8-304(3), revised to 1997, re duty of inquiry into rightfulness of a transaction."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 42a-8-105(d) for successor provisions to Sec. 42a-8-304(1), revised to 1997, re when a purchaser of a certificated security has notice of an adverse claim."
+          }
+        ],
+        "plainText": "(a) An endorsement may be in blank or special. An endorsement in blank includes an endorsement to bearer. A special endorsement specifies to whom a security is to be transferred or who has power to transfer it. A holder may convert a blank endorsement to a special endorsement.\n\n(b) An endorsement purporting to be only of part of a security certificate representing units intended by the issuer to be separately transferable is effective to the extent of the endorsement.\n\n(c) An endorsement, whether special or in blank, does not constitute a transfer until delivery of the certificate on which it appears or, if the endorsement is on a separate document, until delivery of both the document and the certificate.\n\n(d) If a security certificate in registered form has been delivered to a purchaser without a necessary endorsement, the purchaser may become a protected purchaser only when the endorsement is supplied. However, against a transferor, a transfer is complete upon delivery and the purchaser has a specifically enforceable right to have any necessary endorsement supplied.\n\n(e) An endorsement of a security certificate in bearer form may give notice of an adverse claim to the certificate, but it does not otherwise affect a right to registration that the holder possesses.\n\n(f) Unless otherwise agreed, a person making an endorsement assumes only the obligations provided in section 42a-8-108 , and not an obligation that the security will be honored by the issuer."
       }
     },
     {
@@ -956,8 +993,7 @@
       "content": {
         "body": [
           "(a) If an instruction has been originated by an appropriate person but is incomplete in any other respect, any person may complete it as authorized and the issuer may rely on it as completed, even though it has been completed incorrectly.",
-          "(b) Unless otherwise agreed, a person initiating an instruction assumes only the obligations imposed by section 42a-8-108 , and not an obligation that the security will be honored by the issuer.",
-          "See Sec. 42a-8-105(c) for successor provisions to Sec. 42a-8-305, revised to 1997, re “staleness” as notice of adverse claims."
+          "(b) Unless otherwise agreed, a person initiating an instruction assumes only the obligations imposed by section 42a-8-108 , and not an obligation that the security will be honored by the issuer."
         ],
         "sourceNotes": [
           "(1959, P.A. 133, S. 8-305; P.A. 79-435, S. 20; P.A. 97-182, S. 31; P.A. 98-93, S. 6, 15.)"
@@ -965,8 +1001,13 @@
         "history": [
           "History: P.A. 79-435 specified applicability of provisions to “certificated” securities and substituted “transfer” for “purchase”; P.A. 97-182 entirely replaced former provisions re “staleness” as notice of adverse claims with provisions re an instruction, a restatement in part of Sec. 42a-8-308(5) and (9), revised to 1997; P.A. 98-93 amended Subsec. (b) to make a technical change, effective July 1, 1998."
         ],
-        "annotations": [],
-        "plainText": "(a) If an instruction has been originated by an appropriate person but is incomplete in any other respect, any person may complete it as authorized and the issuer may rely on it as completed, even though it has been completed incorrectly.\n\n(b) Unless otherwise agreed, a person initiating an instruction assumes only the obligations imposed by section 42a-8-108 , and not an obligation that the security will be honored by the issuer.\n\nSee Sec. 42a-8-105(c) for successor provisions to Sec. 42a-8-305, revised to 1997, re “staleness” as notice of adverse claims."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 42a-8-105(c) for successor provisions to Sec. 42a-8-305, revised to 1997, re “staleness” as notice of adverse claims."
+          }
+        ],
+        "plainText": "(a) If an instruction has been originated by an appropriate person but is incomplete in any other respect, any person may complete it as authorized and the issuer may rely on it as completed, even though it has been completed incorrectly.\n\n(b) Unless otherwise agreed, a person initiating an instruction assumes only the obligations imposed by section 42a-8-108 , and not an obligation that the security will be honored by the issuer."
       }
     },
     {
@@ -996,8 +1037,7 @@
           "(e) A person who guarantees an endorsement of a security certificate makes the warranties of a signature guarantor under subsection (a) of this section and also warrants the rightfulness of the transfer in all respects.",
           "(f) A person who guarantees an instruction requesting the transfer of an uncertificated security makes the warranties of a special signature guarantor under subsection (c) of this section and also warrants the rightfulness of the transfer in all respects.",
           "(g) An issuer may not require a special guaranty of signature, a guaranty of endorsement, or a guaranty of instruction as a condition to registration of transfer.",
-          "(h) The warranties under this section are made to a person taking or dealing with the security in reliance on the guaranty, and the guarantor is liable to the person for loss resulting from their breach. An endorser or originator of an instruction whose signature, endorsement or instruction has been guaranteed is liable to a guarantor for any loss suffered by the guarantor as a result of breach of the warranties of the guarantor.",
-          "See Sec. 42a-8-108 for successor provisions to Sec. 42a-8-306, revised to 1997, re warranties in direct holding."
+          "(h) The warranties under this section are made to a person taking or dealing with the security in reliance on the guaranty, and the guarantor is liable to the person for loss resulting from their breach. An endorser or originator of an instruction whose signature, endorsement or instruction has been guaranteed is liable to a guarantor for any loss suffered by the guarantor as a result of breach of the warranties of the guarantor."
         ],
         "sourceNotes": [
           "(1959, P.A. 133, S. 8-306; 1963, P.A. 526, S. 17; P.A. 79-435, S. 21; P.A. 97-182, S. 32.)"
@@ -1005,8 +1045,13 @@
         "history": [
           "History: 1963 act deleted provision in Subsec. (3) which had specified that broker is not an intermediary within meaning of Subsec.; P.A. 79-435 applied previous provisions to certificated securities, adding provision re receipt of initial transaction statement in Subsec. (1), inserted new Subsecs. (5) to (9) and renumbered former Subsec. (5) as Subsec. (10); P.A. 97-182 entirely replaced former provisions re warranties on presentment and transfer of certificated securities and warranties of originators of instructions with provisions re the effect of guaranteeing signature, endorsement or instruction, a restatement of Sec. 42a-8-312, revised to 1997."
         ],
-        "annotations": [],
-        "plainText": "(a) A person who guarantees a signature of an endorser of a security certificate warrants that at the time of signing:\n\n(1) The signature was genuine;\n\n(2) The signer was an appropriate person to endorse, or if the signature is by an agent, the agent had actual authority to act on behalf of the appropriate person; and\n\n(3) The signer had legal capacity to sign.\n\n(b) A person who guarantees a signature of the originator of an instruction warrants that at the time of signing:\n\n(1) The signature was genuine;\n\n(2) The signer was an appropriate person to originate the instruction, or if the signature is by an agent, the agent had actual authority to act on behalf of the appropriate person, if the person specified in the instruction as the registered owner was, in fact, the registered owner, as to which fact the signature guarantor does not make a warranty; and\n\n(3) The signer had legal capacity to sign.\n\n(c) A person who specially guarantees the signature of an originator of an instruction makes the warranties of a signature guarantor under subsection (b) of this section and also warrants that at the time the instruction is presented to the issuer:\n\n(1) The person specified in the instruction as the registered owner of the uncertificated security will be the registered owner; and\n\n(2) The transfer of the uncertificated security requested in the instruction will be registered by the issuer free from all liens, security interests, restrictions and claims other than those specified in the instruction.\n\n(d) A guarantor under subsections (a) and (b) of this section or a special guarantor under subsection (c) of this section does not otherwise warrant the rightfulness of the transfer.\n\n(e) A person who guarantees an endorsement of a security certificate makes the warranties of a signature guarantor under subsection (a) of this section and also warrants the rightfulness of the transfer in all respects.\n\n(f) A person who guarantees an instruction requesting the transfer of an uncertificated security makes the warranties of a special signature guarantor under subsection (c) of this section and also warrants the rightfulness of the transfer in all respects.\n\n(g) An issuer may not require a special guaranty of signature, a guaranty of endorsement, or a guaranty of instruction as a condition to registration of transfer.\n\n(h) The warranties under this section are made to a person taking or dealing with the security in reliance on the guaranty, and the guarantor is liable to the person for loss resulting from their breach. An endorser or originator of an instruction whose signature, endorsement or instruction has been guaranteed is liable to a guarantor for any loss suffered by the guarantor as a result of breach of the warranties of the guarantor.\n\nSee Sec. 42a-8-108 for successor provisions to Sec. 42a-8-306, revised to 1997, re warranties in direct holding."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 42a-8-108 for successor provisions to Sec. 42a-8-306, revised to 1997, re warranties in direct holding."
+          }
+        ],
+        "plainText": "(a) A person who guarantees a signature of an endorser of a security certificate warrants that at the time of signing:\n\n(1) The signature was genuine;\n\n(2) The signer was an appropriate person to endorse, or if the signature is by an agent, the agent had actual authority to act on behalf of the appropriate person; and\n\n(3) The signer had legal capacity to sign.\n\n(b) A person who guarantees a signature of the originator of an instruction warrants that at the time of signing:\n\n(1) The signature was genuine;\n\n(2) The signer was an appropriate person to originate the instruction, or if the signature is by an agent, the agent had actual authority to act on behalf of the appropriate person, if the person specified in the instruction as the registered owner was, in fact, the registered owner, as to which fact the signature guarantor does not make a warranty; and\n\n(3) The signer had legal capacity to sign.\n\n(c) A person who specially guarantees the signature of an originator of an instruction makes the warranties of a signature guarantor under subsection (b) of this section and also warrants that at the time the instruction is presented to the issuer:\n\n(1) The person specified in the instruction as the registered owner of the uncertificated security will be the registered owner; and\n\n(2) The transfer of the uncertificated security requested in the instruction will be registered by the issuer free from all liens, security interests, restrictions and claims other than those specified in the instruction.\n\n(d) A guarantor under subsections (a) and (b) of this section or a special guarantor under subsection (c) of this section does not otherwise warrant the rightfulness of the transfer.\n\n(e) A person who guarantees an endorsement of a security certificate makes the warranties of a signature guarantor under subsection (a) of this section and also warrants the rightfulness of the transfer in all respects.\n\n(f) A person who guarantees an instruction requesting the transfer of an uncertificated security makes the warranties of a special signature guarantor under subsection (c) of this section and also warrants the rightfulness of the transfer in all respects.\n\n(g) An issuer may not require a special guaranty of signature, a guaranty of endorsement, or a guaranty of instruction as a condition to registration of transfer.\n\n(h) The warranties under this section are made to a person taking or dealing with the security in reliance on the guaranty, and the guarantor is liable to the person for loss resulting from their breach. An endorser or originator of an instruction whose signature, endorsement or instruction has been guaranteed is liable to a guarantor for any loss suffered by the guarantor as a result of breach of the warranties of the guarantor."
       }
     },
     {
@@ -1021,8 +1066,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Unless otherwise agreed, the transferor of a security on due demand shall supply the purchaser with proof of authority to transfer or with any other requisite necessary to obtain registration of the transfer of the security, but if the transfer is not for value, a transferor need not comply unless the purchaser pays the necessary expenses. If the transferor fails within a reasonable time to comply with the demand, the purchaser may reject or rescind the transfer.",
-          "See Sec. 42a-8-304(d) for successor provisions to Sec. 42a-8-307, revised to 1997, re effect of delivery without endorsement and the right of the purchaser to compel endorsement."
+          "Unless otherwise agreed, the transferor of a security on due demand shall supply the purchaser with proof of authority to transfer or with any other requisite necessary to obtain registration of the transfer of the security, but if the transfer is not for value, a transferor need not comply unless the purchaser pays the necessary expenses. If the transferor fails within a reasonable time to comply with the demand, the purchaser may reject or rescind the transfer."
         ],
         "sourceNotes": [
           "(1959, P.A. 133, S. 8-307; P.A. 79-435, S. 22; P.A. 97-182, S. 33.)"
@@ -1030,8 +1074,13 @@
         "history": [
           "History: P.A. 79-435 specified applicability to “certificated” securities; P.A. 97-182 entirely replaced former provisions re effect of delivery without endorsement and the right of the purchaser to compel endorsement with provisions re the right of the purchaser to demand that the transferor supply requisites necessary to obtain registration of the transfer, a restatement of Sec. 42a-8-316, revised to 1997."
         ],
-        "annotations": [],
-        "plainText": "Unless otherwise agreed, the transferor of a security on due demand shall supply the purchaser with proof of authority to transfer or with any other requisite necessary to obtain registration of the transfer of the security, but if the transfer is not for value, a transferor need not comply unless the purchaser pays the necessary expenses. If the transferor fails within a reasonable time to comply with the demand, the purchaser may reject or rescind the transfer.\n\nSee Sec. 42a-8-304(d) for successor provisions to Sec. 42a-8-307, revised to 1997, re effect of delivery without endorsement and the right of the purchaser to compel endorsement."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 42a-8-304(d) for successor provisions to Sec. 42a-8-307, revised to 1997, re effect of delivery without endorsement and the right of the purchaser to compel endorsement."
+          }
+        ],
+        "plainText": "Unless otherwise agreed, the transferor of a security on due demand shall supply the purchaser with proof of authority to transfer or with any other requisite necessary to obtain registration of the transfer of the security, but if the transfer is not for value, a transferor need not comply unless the purchaser pays the necessary expenses. If the transferor fails within a reasonable time to comply with the demand, the purchaser may reject or rescind the transfer."
       }
     },
     {
@@ -1220,8 +1269,7 @@
           "(1) So requests before the issuer has notice that the certificate has been acquired by a protected purchaser;",
           "(2) Files with the issuer a sufficient indemnity bond; and",
           "(3) Satisfies other reasonable requirements imposed by the issuer.",
-          "(b) If, after the issue of a new security certificate, a protected purchaser of the original certificate presents it for registration of transfer, the issuer shall register the transfer unless an overissue would result. In that case, the issuer's liability is governed by section 42a-8-210 . In addition to any rights on the indemnity bond, an issuer may recover the new certificate from a person to whom it was issued or any person taking under that person, except a protected purchaser.",
-          "See Sec. 42a-8-406 for successor provisions to Sec. 42a-8-405(1), revised to 1997, re obligation to notify issuer of lost, destroyed or wrongfully taken security certificates."
+          "(b) If, after the issue of a new security certificate, a protected purchaser of the original certificate presents it for registration of transfer, the issuer shall register the transfer unless an overissue would result. In that case, the issuer's liability is governed by section 42a-8-210 . In addition to any rights on the indemnity bond, an issuer may recover the new certificate from a person to whom it was issued or any person taking under that person, except a protected purchaser."
         ],
         "sourceNotes": [
           "(1959, P.A. 133, S. 8-405; P.A. 79-435, S. 41; P.A. 97-182, S. 38.)"
@@ -1229,8 +1277,13 @@
         "history": [
           "History: P.A. 79-435 applied previous provisions to “certificated” securities and added provisions specifically applicable to “uncertificated” securities; P.A. 97-182 deleted former Subsec. (1) re consequences of an owner failing to notify the issuer of lost, destroyed or stolen securities, redesignated former Subsecs. (2) and (3) as Subsecs. (a) and (b), respectively, and revised and rephrased said Subsecs."
         ],
-        "annotations": [],
-        "plainText": "(a) If an owner of a certificated security, whether in registered or bearer form, claims that the certificate has been lost, destroyed or wrongfully taken, the issuer shall issue a new certificate if the owner:\n\n(1) So requests before the issuer has notice that the certificate has been acquired by a protected purchaser;\n\n(2) Files with the issuer a sufficient indemnity bond; and\n\n(3) Satisfies other reasonable requirements imposed by the issuer.\n\n(b) If, after the issue of a new security certificate, a protected purchaser of the original certificate presents it for registration of transfer, the issuer shall register the transfer unless an overissue would result. In that case, the issuer's liability is governed by section 42a-8-210 . In addition to any rights on the indemnity bond, an issuer may recover the new certificate from a person to whom it was issued or any person taking under that person, except a protected purchaser.\n\nSee Sec. 42a-8-406 for successor provisions to Sec. 42a-8-405(1), revised to 1997, re obligation to notify issuer of lost, destroyed or wrongfully taken security certificates."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 42a-8-406 for successor provisions to Sec. 42a-8-405(1), revised to 1997, re obligation to notify issuer of lost, destroyed or wrongfully taken security certificates."
+          }
+        ],
+        "plainText": "(a) If an owner of a certificated security, whether in registered or bearer form, claims that the certificate has been lost, destroyed or wrongfully taken, the issuer shall issue a new certificate if the owner:\n\n(1) So requests before the issuer has notice that the certificate has been acquired by a protected purchaser;\n\n(2) Files with the issuer a sufficient indemnity bond; and\n\n(3) Satisfies other reasonable requirements imposed by the issuer.\n\n(b) If, after the issue of a new security certificate, a protected purchaser of the original certificate presents it for registration of transfer, the issuer shall register the transfer unless an overissue would result. In that case, the issuer's liability is governed by section 42a-8-210 . In addition to any rights on the indemnity bond, an issuer may recover the new certificate from a person to whom it was issued or any person taking under that person, except a protected purchaser."
       }
     },
     {
@@ -1245,8 +1298,7 @@
       "status": "active",
       "content": {
         "body": [
-          "If a security certificate has been lost, apparently destroyed, or wrongfully taken, and the owner fails to notify the issuer of that fact within a reasonable time after the owner has notice of it and the issuer registers a transfer of the security before receiving notification, the owner may not assert against the issuer a claim for registering the transfer under section 42a-8-404 , or a claim to a new security certificate under section 42a-8-405 .",
-          "See Sec. 42a-8-407 for successor provisions to Sec. 42a-8-406, revised to 1997, re duty of authenticating trustee, transfer agent and registrar."
+          "If a security certificate has been lost, apparently destroyed, or wrongfully taken, and the owner fails to notify the issuer of that fact within a reasonable time after the owner has notice of it and the issuer registers a transfer of the security before receiving notification, the owner may not assert against the issuer a claim for registering the transfer under section 42a-8-404 , or a claim to a new security certificate under section 42a-8-405 ."
         ],
         "sourceNotes": [
           "(1959, P.A. 133, S. 8-406; P.A. 79-435, S. 42; P.A. 97-182, S. 39.)"
@@ -1254,8 +1306,13 @@
         "history": [
           "History: P.A. 79-435 distinguished between certificated and uncertificated securities; P.A. 97-182 replaced former provisions re duty of authenticating trustee, transfer agent or registrar with provisions re consequences of an owner failing to notify the issuer of a lost, destroyed or wrongfully taken security certificate, a restatement of Sec. 42a-8-405(1), revised to 1997."
         ],
-        "annotations": [],
-        "plainText": "If a security certificate has been lost, apparently destroyed, or wrongfully taken, and the owner fails to notify the issuer of that fact within a reasonable time after the owner has notice of it and the issuer registers a transfer of the security before receiving notification, the owner may not assert against the issuer a claim for registering the transfer under section 42a-8-404 , or a claim to a new security certificate under section 42a-8-405 .\n\nSee Sec. 42a-8-407 for successor provisions to Sec. 42a-8-406, revised to 1997, re duty of authenticating trustee, transfer agent and registrar."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 42a-8-407 for successor provisions to Sec. 42a-8-406, revised to 1997, re duty of authenticating trustee, transfer agent and registrar."
+          }
+        ],
+        "plainText": "If a security certificate has been lost, apparently destroyed, or wrongfully taken, and the owner fails to notify the issuer of that fact within a reasonable time after the owner has notice of it and the issuer registers a transfer of the security before receiving notification, the owner may not assert against the issuer a claim for registering the transfer under section 42a-8-404 , or a claim to a new security certificate under section 42a-8-405 ."
       }
     },
     {

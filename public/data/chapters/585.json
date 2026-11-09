@@ -383,10 +383,7 @@
       "status": "active",
       "content": {
         "body": [
-          "No business facility shall be eligible to receive the benefits provided for a facility located in an enterprise zone if: (1) Such facility has relocated from an area that meets the eligibility criteria stated in section 32-70 for designation as an enterprise zone; or (2) such facility was originally located in a distressed municipality, as defined in section 32-9p , and relocated into a designated enterprise zone; provided in cases where the Commissioner of Economic and Community Development finds, in accordance with regulations that the commissioner shall adopt in accordance with the provisions of chapter 54, that the relocation of the business facility will represent a net expansion of business operations or employment, or both, the business facility shall be eligible. For the purposes of this section, relocation is defined as the transferring of personnel or employment positions from one or more existing locations to another location.",
-          "See Sec. 12-217e(a) re corporation business tax credit for certain manufacturing facilities in enterprise zones.",
-          "See Sec. 12-412(43) re sales tax exemptions for businesses in enterprise zones purchasing replacement parts for machinery.",
-          "See Sec. 32-9 l (a) re determination of job incentive grant amounts."
+          "No business facility shall be eligible to receive the benefits provided for a facility located in an enterprise zone if: (1) Such facility has relocated from an area that meets the eligibility criteria stated in section 32-70 for designation as an enterprise zone; or (2) such facility was originally located in a distressed municipality, as defined in section 32-9p , and relocated into a designated enterprise zone; provided in cases where the Commissioner of Economic and Community Development finds, in accordance with regulations that the commissioner shall adopt in accordance with the provisions of chapter 54, that the relocation of the business facility will represent a net expansion of business operations or employment, or both, the business facility shall be eligible. For the purposes of this section, relocation is defined as the transferring of personnel or employment positions from one or more existing locations to another location."
         ],
         "sourceNotes": [
           "(P.A. 82-435, S. 6, 8; P.A. 92-236, S. 29, 48; P.A. 95-250, S. 1; P.A. 96-211, S. 1, 5, 6.)"
@@ -394,8 +391,21 @@
         "history": [
           "History: P.A. 92-236 made a relocating business facility eligible to receive enterprise zone benefits if commissioner finds, in accordance with regulations, that the relocation represents expansion of either operations or employment or both, instead of both only; P.A. 95-250 and P.A. 96-211 replaced Commissioner and Department of Economic Development with Commissioner and Department of Economic and Community Development."
         ],
-        "annotations": [],
-        "plainText": "No business facility shall be eligible to receive the benefits provided for a facility located in an enterprise zone if: (1) Such facility has relocated from an area that meets the eligibility criteria stated in section 32-70 for designation as an enterprise zone; or (2) such facility was originally located in a distressed municipality, as defined in section 32-9p , and relocated into a designated enterprise zone; provided in cases where the Commissioner of Economic and Community Development finds, in accordance with regulations that the commissioner shall adopt in accordance with the provisions of chapter 54, that the relocation of the business facility will represent a net expansion of business operations or employment, or both, the business facility shall be eligible. For the purposes of this section, relocation is defined as the transferring of personnel or employment positions from one or more existing locations to another location.\n\nSee Sec. 12-217e(a) re corporation business tax credit for certain manufacturing facilities in enterprise zones.\n\nSee Sec. 12-412(43) re sales tax exemptions for businesses in enterprise zones purchasing replacement parts for machinery.\n\nSee Sec. 32-9 l (a) re determination of job incentive grant amounts."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 12-217e(a) re corporation business tax credit for certain manufacturing facilities in enterprise zones."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 12-412(43) re sales tax exemptions for businesses in enterprise zones purchasing replacement parts for machinery."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 32-9 l (a) re determination of job incentive grant amounts."
+          }
+        ],
+        "plainText": "No business facility shall be eligible to receive the benefits provided for a facility located in an enterprise zone if: (1) Such facility has relocated from an area that meets the eligibility criteria stated in section 32-70 for designation as an enterprise zone; or (2) such facility was originally located in a distressed municipality, as defined in section 32-9p , and relocated into a designated enterprise zone; provided in cases where the Commissioner of Economic and Community Development finds, in accordance with regulations that the commissioner shall adopt in accordance with the provisions of chapter 54, that the relocation of the business facility will represent a net expansion of business operations or employment, or both, the business facility shall be eligible. For the purposes of this section, relocation is defined as the transferring of personnel or employment positions from one or more existing locations to another location."
       }
     },
     {

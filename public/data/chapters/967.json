@@ -22,14 +22,17 @@
       "status": "active",
       "content": {
         "body": [
-          "The repeal of any statute defining or prescribing the punishment for any crime shall not affect any pending prosecution or any existing liability to prosecution and punishment therefor, unless expressly provided in the repealing statute that such repeal shall have that effect.",
-          "See Sec. 1-1 re words and phrases in general use throughout statutes."
+          "The repeal of any statute defining or prescribing the punishment for any crime shall not affect any pending prosecution or any existing liability to prosecution and punishment therefor, unless expressly provided in the repealing statute that such repeal shall have that effect."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 8872.)"
         ],
         "history": [],
         "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 1-1 re words and phrases in general use throughout statutes."
+          },
           {
             "first": true,
             "text": "Cited. 121 C. 200; 142 C. 29; 152 C. 81; 171 C. 524, 528. Repeal of any statute defining a crime shall not affect pending prosecutions thereunder unless expressly provided in repealing statute. 172 C. 242. Cited. 198 C. 158. Court declines to overrule State v. Kalil , 314 C. 529, and adopt the amelioration doctrine as it relates to section. 337 C. 739."
@@ -43,7 +46,7 @@
             "text": "Cited. 29 CS 132; Id., 333."
           }
         ],
-        "plainText": "The repeal of any statute defining or prescribing the punishment for any crime shall not affect any pending prosecution or any existing liability to prosecution and punishment therefor, unless expressly provided in the repealing statute that such repeal shall have that effect.\n\nSee Sec. 1-1 re words and phrases in general use throughout statutes."
+        "plainText": "The repeal of any statute defining or prescribing the punishment for any crime shall not affect any pending prosecution or any existing liability to prosecution and punishment therefor, unless expressly provided in the repealing statute that such repeal shall have that effect."
       }
     },
     {

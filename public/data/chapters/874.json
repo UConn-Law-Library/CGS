@@ -29,9 +29,7 @@
           "(4) “Transcript” means the official written record of a proceeding, or any part thereof, including, but not limited to, testimony and arguments of counsel, produced in the Superior, Appellate or Supreme Court, by an official court reporter, a court recording monitor or any other entity designated by the Chief Court Administrator; and",
           "(5) “Transcript page” means a page consisting of twenty-seven double-spaced lines on paper eight and one-half by eleven inches in size, if printed, with sixty spaces available per line, on paper or stored in an electronic medium that is retrievable in a perceivable form.",
           "(b) The Chief Court Administrator shall appoint official court reporters for the court as the administrator determines the business of the court requires.",
-          "(c) The Chief Court Administrator shall adopt policies and procedures necessary to implement the provisions of this chapter, including, but not limited to, the establishment and administration of a system of fees for production of expedited transcripts.",
-          "See Sec. 51-63 re salary and fees of court reporters.",
-          "See Sec. 51-166 re annual meeting of judges."
+          "(c) The Chief Court Administrator shall adopt policies and procedures necessary to implement the provisions of this chapter, including, but not limited to, the establishment and administration of a system of fees for production of expedited transcripts."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 7727; 1957, P.A. 199, S. 2; 445, S. 8; 1969, P.A. 16, S. 1; P.A. 76-436, S. 73, 681; P.A. 77-576, S. 20, 65; P.A. 78-280, S. 78, 127; P.A. 82-248, S. 58; P.A. 84-529, S. 2; P.A. 15-85, S. 9; P.A. 19-64, S. 4; P.A. 21-104, S. 41; P.A. 22-26, S. 15; P.A. 24-108, S. 12.)"
@@ -40,6 +38,14 @@
           "History: 1969 act deleted requirement that court reporter for Waterbury be a resident of that city; P.A. 76-436 authorized appointment of assistant court reporters, changed reporters' term of appointment from two years to one year and added provisions re salary and examination requirements, effective July 1, 1978; P.A. 77-576 substituted judicial district for county and deleted specific reference to Waterbury, effective July 1, 1978; P.A. 78-280 specified that committee of judges has power to remove reporters from office and deleted reference to reporters' receipt of compensation as was received in common pleas court pursuant to compensation plan under Sec. 51-12; P.A. 82-248 reworded section, divided section into Subsecs., deleted provisions re salaries and appointment of court reporter for Stamford and added “provided for under section 51-63” after “examination”; P.A. 84-529 deleted requirement of annual appointment of court reporters by judges of the superior court at their annual meeting in June and deleted Subsec. (b) re one-year term of office of court reporters, relettering former Subsec. (c) accordingly; P.A. 15-85 amended Subsec. (a) by deleting provision re appointment of stenographers as official court reporter and assistant court reporters; P.A. 19-64 added new Subsec. (a) defining “state's attorney”, “public defender”, “public official”, “transcript” and “transcript page”, redesignated existing Subsec. (a) as new Subsec. (b), deleted former Subsec. (b) re appointment and placement in higher salary classification of court reporters who had not passed examinations provided for in Sec. 51-63 and added Subsec. (c) re Chief Court Administrator to adopt policies and procedures to implement provisions of chapter, effective July 1, 2019; P.A. 21-104 amended Subsec. (a)(4) by adding “or any other entity”, effective July 1, 2021; P.A. 22-26 amended Subsec. (a) by redefining “transcript page”, May 10, 2022; P.A. 24-108 amended Subsec. (b) by substituting Chief Court Administrator for judges of the Superior Court and an authorized committee thereof re appointment of official court reporters, effective June 4, 2024."
         ],
         "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 51-63 re salary and fees of court reporters."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 51-166 re annual meeting of judges."
+          },
           {
             "first": true,
             "text": "Former statute cited. 128 C. 290."
@@ -53,7 +59,7 @@
             "text": "Cited. 36 CS 9; 43 CS 246."
           }
         ],
-        "plainText": "(a) As used in this chapter:\n\n(1) “State's attorney” means a state's attorney, assistant state's attorney, deputy assistant state's attorney and special deputy assistant state's attorney;\n\n(2) “Public defender” means a public defender, assistant public defender, deputy assistant public defender and Division of Public Defender Services assigned counsel;\n\n(3) “Public official” means any official of (A) the state, (B) any state agency, board or commission, or (C) a municipality of the state acting in an official capacity;\n\n(4) “Transcript” means the official written record of a proceeding, or any part thereof, including, but not limited to, testimony and arguments of counsel, produced in the Superior, Appellate or Supreme Court, by an official court reporter, a court recording monitor or any other entity designated by the Chief Court Administrator; and\n\n(5) “Transcript page” means a page consisting of twenty-seven double-spaced lines on paper eight and one-half by eleven inches in size, if printed, with sixty spaces available per line, on paper or stored in an electronic medium that is retrievable in a perceivable form.\n\n(b) The Chief Court Administrator shall appoint official court reporters for the court as the administrator determines the business of the court requires.\n\n(c) The Chief Court Administrator shall adopt policies and procedures necessary to implement the provisions of this chapter, including, but not limited to, the establishment and administration of a system of fees for production of expedited transcripts.\n\nSee Sec. 51-63 re salary and fees of court reporters.\n\nSee Sec. 51-166 re annual meeting of judges."
+        "plainText": "(a) As used in this chapter:\n\n(1) “State's attorney” means a state's attorney, assistant state's attorney, deputy assistant state's attorney and special deputy assistant state's attorney;\n\n(2) “Public defender” means a public defender, assistant public defender, deputy assistant public defender and Division of Public Defender Services assigned counsel;\n\n(3) “Public official” means any official of (A) the state, (B) any state agency, board or commission, or (C) a municipality of the state acting in an official capacity;\n\n(4) “Transcript” means the official written record of a proceeding, or any part thereof, including, but not limited to, testimony and arguments of counsel, produced in the Superior, Appellate or Supreme Court, by an official court reporter, a court recording monitor or any other entity designated by the Chief Court Administrator; and\n\n(5) “Transcript page” means a page consisting of twenty-seven double-spaced lines on paper eight and one-half by eleven inches in size, if printed, with sixty spaces available per line, on paper or stored in an electronic medium that is retrievable in a perceivable form.\n\n(b) The Chief Court Administrator shall appoint official court reporters for the court as the administrator determines the business of the court requires.\n\n(c) The Chief Court Administrator shall adopt policies and procedures necessary to implement the provisions of this chapter, including, but not limited to, the establishment and administration of a system of fees for production of expedited transcripts."
       }
     },
     {
@@ -293,8 +299,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Each stenographer called in and acting under the provisions of section 51-72 shall be sworn and shall have the powers and be subject to the duties prescribed by law for the official court reporter of the Superior Court. Evidence taken by any such stenographer shall have the same effect and be evidence to the same extent as evidence taken by the official court reporter of the Superior Court. Appeals from any decision rendered in any case after a record is made under this section and section 51-72 , shall be on such record and shall not be a trial de novo.",
-          "See Sec. 52-161 re consideration of transcripts of stenographer's record as part of official record."
+          "Each stenographer called in and acting under the provisions of section 51-72 shall be sworn and shall have the powers and be subject to the duties prescribed by law for the official court reporter of the Superior Court. Evidence taken by any such stenographer shall have the same effect and be evidence to the same extent as evidence taken by the official court reporter of the Superior Court. Appeals from any decision rendered in any case after a record is made under this section and section 51-72 , shall be on such record and shall not be a trial de novo."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 7734; 1959, P.A. 28, S. 95; P.A. 81-349, S. 4, 5.)"
@@ -305,6 +310,10 @@
         "annotations": [
           {
             "first": true,
+            "text": "See Sec. 52-161 re consideration of transcripts of stenographer's record as part of official record."
+          },
+          {
+            "first": true,
             "text": "Cited. 194 C. 635; 237 C. 12."
           },
           {
@@ -312,7 +321,7 @@
             "text": "Cited. 27 CA 333."
           }
         ],
-        "plainText": "Each stenographer called in and acting under the provisions of section 51-72 shall be sworn and shall have the powers and be subject to the duties prescribed by law for the official court reporter of the Superior Court. Evidence taken by any such stenographer shall have the same effect and be evidence to the same extent as evidence taken by the official court reporter of the Superior Court. Appeals from any decision rendered in any case after a record is made under this section and section 51-72 , shall be on such record and shall not be a trial de novo.\n\nSee Sec. 52-161 re consideration of transcripts of stenographer's record as part of official record."
+        "plainText": "Each stenographer called in and acting under the provisions of section 51-72 shall be sworn and shall have the powers and be subject to the duties prescribed by law for the official court reporter of the Superior Court. Evidence taken by any such stenographer shall have the same effect and be evidence to the same extent as evidence taken by the official court reporter of the Superior Court. Appeals from any decision rendered in any case after a record is made under this section and section 51-72 , shall be on such record and shall not be a trial de novo."
       }
     },
     {
@@ -327,8 +336,7 @@
       "status": "active",
       "content": {
         "body": [
-          "The record of proceedings in any court required to be made by an official court reporter or court recording monitor shall be made by digital recording equipment approved by the Chief Justice of the Supreme Court.",
-          "See chapter 400 l re licensing of shorthand reporters."
+          "The record of proceedings in any court required to be made by an official court reporter or court recording monitor shall be made by digital recording equipment approved by the Chief Justice of the Supreme Court."
         ],
         "sourceNotes": [
           "(1953, S. 3136d; P.A. 82-248, S. 64; P.A. 19-64, S. 8.)"
@@ -339,6 +347,10 @@
         "annotations": [
           {
             "first": true,
+            "text": "See chapter 400 l re licensing of shorthand reporters."
+          },
+          {
+            "first": true,
             "text": "Cited. 165 C. 152."
           },
           {
@@ -346,7 +358,7 @@
             "text": "Cited. 43 CS 246."
           }
         ],
-        "plainText": "The record of proceedings in any court required to be made by an official court reporter or court recording monitor shall be made by digital recording equipment approved by the Chief Justice of the Supreme Court.\n\nSee chapter 400 l re licensing of shorthand reporters."
+        "plainText": "The record of proceedings in any court required to be made by an official court reporter or court recording monitor shall be made by digital recording equipment approved by the Chief Justice of the Supreme Court."
       }
     },
     {

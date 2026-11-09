@@ -255,8 +255,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Whenever property is held in the joint names of two or more persons and the survivor or survivors of them, the right of the survivor or survivors to the immediate ownership or possession and enjoyment of such property shall be a taxable transfer and the tax shall be computed as though a fractional part of the property, determined by dividing the fair market value of the entire property by the number of persons in whose joint names it was held, belonged absolutely to the deceased person and had been bequeathed or devised by him to the survivor or survivors by will; provided, in addition to any exemption granted under the provisions of this chapter, the provisions of this section shall not render subject to a succession tax joint checking or savings accounts in banks or savings banks, savings and loan associations or credit unions, or United States war or savings bonds, payable to either or to the survivor, if the aggregate thereof is less than five thousand dollars, but a fractional share of any excess over five thousand dollars shall be taxable. The provisions of this section shall not be construed to prevent the taxability, in whole or in part, under the provisions of subsection (c) or (d) of section 12-341 or 12-341b of any property held in the joint names of two or more persons and the survivor of them, including any joint checking or savings account in any bank, savings bank, savings and loan association or credit union, or United States war or savings bonds. The limitations imposed by section 12-340 shall apply to any tax imposed under the provisions of this section.",
-          "See Sec. 12-363 re certification by probate court freeing jointly held property from succession tax."
+          "Whenever property is held in the joint names of two or more persons and the survivor or survivors of them, the right of the survivor or survivors to the immediate ownership or possession and enjoyment of such property shall be a taxable transfer and the tax shall be computed as though a fractional part of the property, determined by dividing the fair market value of the entire property by the number of persons in whose joint names it was held, belonged absolutely to the deceased person and had been bequeathed or devised by him to the survivor or survivors by will; provided, in addition to any exemption granted under the provisions of this chapter, the provisions of this section shall not render subject to a succession tax joint checking or savings accounts in banks or savings banks, savings and loan associations or credit unions, or United States war or savings bonds, payable to either or to the survivor, if the aggregate thereof is less than five thousand dollars, but a fractional share of any excess over five thousand dollars shall be taxable. The provisions of this section shall not be construed to prevent the taxability, in whole or in part, under the provisions of subsection (c) or (d) of section 12-341 or 12-341b of any property held in the joint names of two or more persons and the survivor of them, including any joint checking or savings account in any bank, savings bank, savings and loan association or credit union, or United States war or savings bonds. The limitations imposed by section 12-340 shall apply to any tax imposed under the provisions of this section."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 2022; 1949, 1955, S. 1138d; P.A. 78-121, S. 5, 113.)"
@@ -267,6 +266,10 @@
         "annotations": [
           {
             "first": true,
+            "text": "See Sec. 12-363 re certification by probate court freeing jointly held property from succession tax."
+          },
+          {
+            "first": true,
             "text": "Cited. 111 C. 176; 115 C. 147. Statute upheld; the $5,000 should be subtracted before the division by the number of joint owners. 128 C. 557, 560. If donees came into possession and enjoyment at creation of accounts, section applies; if they were to succeed to possession and enjoyment at donor's death, accounts taxable under Sec. 12-341. 131 C. 347. U.S. defense savings bonds held taxable even though survivor had no knowledge of treasury regulations. 136 C. 33. Cited. 149 C. 334. Whether joint bank accounts are fractionally taxable under section or taxable in their entirety under Sec. 12-341b(d) shall be determined by the transferor's intent, as evidenced by the total factual situation. 175 C. 8. Cited. 240 C. 343."
           },
           {
@@ -274,7 +277,7 @@
             "text": "Cited. 16 CS 241; 32 CS 227."
           }
         ],
-        "plainText": "Whenever property is held in the joint names of two or more persons and the survivor or survivors of them, the right of the survivor or survivors to the immediate ownership or possession and enjoyment of such property shall be a taxable transfer and the tax shall be computed as though a fractional part of the property, determined by dividing the fair market value of the entire property by the number of persons in whose joint names it was held, belonged absolutely to the deceased person and had been bequeathed or devised by him to the survivor or survivors by will; provided, in addition to any exemption granted under the provisions of this chapter, the provisions of this section shall not render subject to a succession tax joint checking or savings accounts in banks or savings banks, savings and loan associations or credit unions, or United States war or savings bonds, payable to either or to the survivor, if the aggregate thereof is less than five thousand dollars, but a fractional share of any excess over five thousand dollars shall be taxable. The provisions of this section shall not be construed to prevent the taxability, in whole or in part, under the provisions of subsection (c) or (d) of section 12-341 or 12-341b of any property held in the joint names of two or more persons and the survivor of them, including any joint checking or savings account in any bank, savings bank, savings and loan association or credit union, or United States war or savings bonds. The limitations imposed by section 12-340 shall apply to any tax imposed under the provisions of this section.\n\nSee Sec. 12-363 re certification by probate court freeing jointly held property from succession tax."
+        "plainText": "Whenever property is held in the joint names of two or more persons and the survivor or survivors of them, the right of the survivor or survivors to the immediate ownership or possession and enjoyment of such property shall be a taxable transfer and the tax shall be computed as though a fractional part of the property, determined by dividing the fair market value of the entire property by the number of persons in whose joint names it was held, belonged absolutely to the deceased person and had been bequeathed or devised by him to the survivor or survivors by will; provided, in addition to any exemption granted under the provisions of this chapter, the provisions of this section shall not render subject to a succession tax joint checking or savings accounts in banks or savings banks, savings and loan associations or credit unions, or United States war or savings bonds, payable to either or to the survivor, if the aggregate thereof is less than five thousand dollars, but a fractional share of any excess over five thousand dollars shall be taxable. The provisions of this section shall not be construed to prevent the taxability, in whole or in part, under the provisions of subsection (c) or (d) of section 12-341 or 12-341b of any property held in the joint names of two or more persons and the survivor of them, including any joint checking or savings account in any bank, savings bank, savings and loan association or credit union, or United States war or savings bonds. The limitations imposed by section 12-340 shall apply to any tax imposed under the provisions of this section."
       }
     },
     {
@@ -978,15 +981,19 @@
       "status": "active",
       "content": {
         "body": [
-          "The commissioner shall have full supervision of the enforcement of this chapter and may call upon the other administrative departments of the state government for such information and assistance as he may deem necessary to the performance of his duties. He may compel the attendance of witnesses and the production of evidence by subpoena, administer oaths and take testimony in relation to any matter under this chapter. Witnesses shall receive the same fees as are paid to witnesses subpoenaed to attend in courts of record.",
-          "See Sec. 52-260 re witness fees."
+          "The commissioner shall have full supervision of the enforcement of this chapter and may call upon the other administrative departments of the state government for such information and assistance as he may deem necessary to the performance of his duties. He may compel the attendance of witnesses and the production of evidence by subpoena, administer oaths and take testimony in relation to any matter under this chapter. Witnesses shall receive the same fees as are paid to witnesses subpoenaed to attend in courts of record."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 2037.)"
         ],
         "history": [],
-        "annotations": [],
-        "plainText": "The commissioner shall have full supervision of the enforcement of this chapter and may call upon the other administrative departments of the state government for such information and assistance as he may deem necessary to the performance of his duties. He may compel the attendance of witnesses and the production of evidence by subpoena, administer oaths and take testimony in relation to any matter under this chapter. Witnesses shall receive the same fees as are paid to witnesses subpoenaed to attend in courts of record.\n\nSee Sec. 52-260 re witness fees."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 52-260 re witness fees."
+          }
+        ],
+        "plainText": "The commissioner shall have full supervision of the enforcement of this chapter and may call upon the other administrative departments of the state government for such information and assistance as he may deem necessary to the performance of his duties. He may compel the attendance of witnesses and the production of evidence by subpoena, administer oaths and take testimony in relation to any matter under this chapter. Witnesses shall receive the same fees as are paid to witnesses subpoenaed to attend in courts of record."
       }
     },
     {

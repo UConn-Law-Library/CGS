@@ -78,8 +78,7 @@
       "status": "active",
       "content": {
         "body": [
-          "No person may marry such person's parent, grandparent, child, grandchild, sibling, parent's sibling, sibling's child, stepparent or stepchild. Any marriage within these degrees is void.",
-          "See Sec. 53a-191 re incest."
+          "No person may marry such person's parent, grandparent, child, grandchild, sibling, parent's sibling, sibling's child, stepparent or stepchild. Any marriage within these degrees is void."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 7301; P.A. 78-230, S. 3, 54; P.A. 09-13, S. 6.)"
@@ -88,6 +87,10 @@
           "History: P.A. 78-230 changed wording slightly and substituted “may” for “shall”; Sec. 46-1 transferred to Sec. 46b-21 in 1979; P.A. 09-13 made provision prohibiting a man or woman marrying person of the opposite sex related within certain degrees of consanguinity or affinity applicable regardless of sex of such other person, effective April 23, 2009."
         ],
         "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 53a-191 re incest."
+          },
           {
             "first": true,
             "text": "Annotations to former section 46-1:"
@@ -105,7 +108,7 @@
             "text": "Former section cited. 182 C. 344. Relationship as half-uncle and half-niece is void. 213 C. 637."
           }
         ],
-        "plainText": "No person may marry such person's parent, grandparent, child, grandchild, sibling, parent's sibling, sibling's child, stepparent or stepchild. Any marriage within these degrees is void.\n\nSee Sec. 53a-191 re incest."
+        "plainText": "No person may marry such person's parent, grandparent, child, grandchild, sibling, parent's sibling, sibling's child, stepparent or stepchild. Any marriage within these degrees is void."
       }
     },
     {
@@ -704,8 +707,7 @@
       "status": "active",
       "content": {
         "body": [
-          "A spouse shall not acquire by marriage any right to or interest in any property held by the other spouse before or acquired after such marriage, except as to the share of the survivor in the property as provided by sections 45a-436 and 45a-437 . Each spouse shall have power to make contracts with the other spouse or with third persons, to convey to the other spouse or to third persons his or her real and personal estate and to receive conveyances of real and personal estate from the other spouse or from third persons as if unmarried. Each spouse may bring suit in his or her own name upon contracts or for torts and he or she may be sued for a breach of contract or for a tort; and his or her property, except such property as is exempt by law, may be taken on attachment and execution, but shall not be taken for the debts of the other spouse, except as provided in section 46b-37 . Neither spouse shall be liable for the debts of the other spouse contracted before marriage, nor upon the other spouse's contracts made after marriage, except as provided in said section.",
-          "See Sec. 52-572d re abrogation of interspousal immunity in motor vehicle negligence actions accruing out of state."
+          "A spouse shall not acquire by marriage any right to or interest in any property held by the other spouse before or acquired after such marriage, except as to the share of the survivor in the property as provided by sections 45a-436 and 45a-437 . Each spouse shall have power to make contracts with the other spouse or with third persons, to convey to the other spouse or to third persons his or her real and personal estate and to receive conveyances of real and personal estate from the other spouse or from third persons as if unmarried. Each spouse may bring suit in his or her own name upon contracts or for torts and he or she may be sued for a breach of contract or for a tort; and his or her property, except such property as is exempt by law, may be taken on attachment and execution, but shall not be taken for the debts of the other spouse, except as provided in section 46b-37 . Neither spouse shall be liable for the debts of the other spouse contracted before marriage, nor upon the other spouse's contracts made after marriage, except as provided in said section."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 7307; P.A. 13-213, S. 1.)"
@@ -714,6 +716,10 @@
           "History: Sec. 46-9 transferred to Sec. 46b-36 in 1979 and reference to Sec. 46-10 changed to Sec. 46b-37 to reflect that section's transfer; (Revisor's note: In 1991 a reference to Sec. 45-273a changed editorially by the Revisors to Sec. 45a-436 to reflect recodification of title 45 as title 45a and in 1993 the reference to Sec. 45a-437 was added editorially since the provisions of that section had originally been included as former Sec. 45-273a(b) until separated by public act 90-146 which enabled the recodification of title 45 and the renumbering of Sec. 45-273a as Secs. 45a-436 and 45a-437, but due to an oversight reference to the latter section was omitted); P.A. 13-213 replaced references to “husband” and “wife” with references to “spouse”, deleted “The separate earnings of the wife shall be her sole property.” and made technical changes."
         ],
         "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 52-572d re abrogation of interspousal immunity in motor vehicle negligence actions accruing out of state."
+          },
           {
             "first": true,
             "text": "Annotations to former section 46-9:"
@@ -739,7 +745,7 @@
             "text": "Cited. 17 CA 431."
           }
         ],
-        "plainText": "A spouse shall not acquire by marriage any right to or interest in any property held by the other spouse before or acquired after such marriage, except as to the share of the survivor in the property as provided by sections 45a-436 and 45a-437 . Each spouse shall have power to make contracts with the other spouse or with third persons, to convey to the other spouse or to third persons his or her real and personal estate and to receive conveyances of real and personal estate from the other spouse or from third persons as if unmarried. Each spouse may bring suit in his or her own name upon contracts or for torts and he or she may be sued for a breach of contract or for a tort; and his or her property, except such property as is exempt by law, may be taken on attachment and execution, but shall not be taken for the debts of the other spouse, except as provided in section 46b-37 . Neither spouse shall be liable for the debts of the other spouse contracted before marriage, nor upon the other spouse's contracts made after marriage, except as provided in said section.\n\nSee Sec. 52-572d re abrogation of interspousal immunity in motor vehicle negligence actions accruing out of state."
+        "plainText": "A spouse shall not acquire by marriage any right to or interest in any property held by the other spouse before or acquired after such marriage, except as to the share of the survivor in the property as provided by sections 45a-436 and 45a-437 . Each spouse shall have power to make contracts with the other spouse or with third persons, to convey to the other spouse or to third persons his or her real and personal estate and to receive conveyances of real and personal estate from the other spouse or from third persons as if unmarried. Each spouse may bring suit in his or her own name upon contracts or for torts and he or she may be sued for a breach of contract or for a tort; and his or her property, except such property as is exempt by law, may be taken on attachment and execution, but shall not be taken for the debts of the other spouse, except as provided in section 46b-37 . Neither spouse shall be liable for the debts of the other spouse contracted before marriage, nor upon the other spouse's contracts made after marriage, except as provided in said section."
       }
     },
     {
@@ -1122,8 +1128,7 @@
           "(2) “Family or household member” means any of the following persons, regardless of the age of such person: (A) Spouses or former spouses; (B) parents or their children; (C) persons related by blood or marriage; (D) persons other than those persons described in subparagraph (C) of this subdivision presently residing together or who have resided together; (E) persons who have a child in common regardless of whether they are or have been married or have lived together at any time; and (F) persons in, or who have recently been in, a dating relationship.",
           "(3) “Family violence crime” means a crime as defined in section 53a-24 , other than a delinquent act, as defined in section 46b-120 , which, in addition to its other elements, contains as an element thereof an act of family violence to a family or household member. “Family violence crime” includes any violation of section 53a-222 , 53a-222a , 53a-223 , 53a-223a or 53a-223b when the condition of release or court order is issued for an act of family violence or a family violence crime. “Family violence crime” does not include acts by parents or guardians disciplining minor children unless such acts constitute abuse.",
           "(4) “Institutions and services” means peace officers, service providers, mandated reporters of abuse, agencies and departments that provide services to victims and families and services designed to assist victims and families.",
-          "(5) “Dominant aggressor” means the person who poses the most serious ongoing threat in a situation involving the suspected commission of a family violence crime.",
-          "See chapter 968a re address confidentiality program."
+          "(5) “Dominant aggressor” means the person who poses the most serious ongoing threat in a situation involving the suspected commission of a family violence crime."
         ],
         "sourceNotes": [
           "(P.A. 86-337, S. 1; P.A. 87-567, S. 1, 7; P.A. 88-364, S. 59, 123; P.A. 99-186, S. 2; P.A. 11-152, S. 2; 11-157, S. 21; P.A. 12-114, S. 2; P.A. 18-5, S. 1; P.A. 21-78, S. 4.)"
@@ -1132,6 +1137,10 @@
           "History: P.A. 87-567 amended definitions of “family violence” by adding provision re verbal abuse or argument, “family or household member” by adding “and their children”, changing “sixteen” to “eighteen” and adding persons 16 or older other than persons in Subpara. (C) and “family violence crime” by deleting former provisions and adding “in addition to its other elements, contains as an element thereof an act of family violence to a family member and shall not include acts by parents or guardians disciplining minor children unless such acts constitute abuse”; P.A. 88-364 amended Subdiv. (2)(D) to remove a redundant reference to persons who have resided together in the recent past; P.A. 99-186 added Subdiv. (2)(F) re persons in, or having recently been in, a dating relationship; P.A. 11-152 amended Subdiv. (2)(F) to redefine “family or household member” by adding “regardless of the age of such persons”; P.A. 11-157 amended Subdiv. (3) to redefine “family violence crime” by excluding a delinquent act as defined in Sec. 46b-120; P.A. 12-114 redefined “family violence” in Subdiv. (1) to include stalking or pattern of threatening, redefined “family or household member” in Subdiv. (2) to apply to enumerated persons regardless of age, redefined “family violence crime” in Subdiv. (3) to include crimes that contain element of family violence to a household member, and made technical and conforming changes; P.A. 18-5 amended Subdiv. (1) by replacing “shall not constitute” with “does not constitute”, added Subdiv. (5) defining “dominant aggressor”, and made a technical change, effective January 1, 2019; P.A. 21-78 amended Subdiv. (3) to redefine “family violence crime”, effective July 1, 2021."
         ],
         "annotations": [
+          {
+            "first": true,
+            "text": "See chapter 968a re address confidentiality program."
+          },
           {
             "first": true,
             "text": "Cited. 219 C. 752."
@@ -1145,7 +1154,7 @@
             "text": "Creation of a class of victims and defendants does not affect the prosecution of any crime, does not afford victim greater rights with regard to defendant's prosecution, and is a legitimate classification, being neither arbitrary nor irrational, and thus does not violate equal protection rights. 46 CS 598."
           }
         ],
-        "plainText": "For the purposes of sections 46b-38a to 46b-38f , inclusive:\n\n(1) “Family violence” means an incident resulting in physical harm, bodily injury or assault, or an act of threatened violence that constitutes fear of imminent physical harm, bodily injury or assault, including, but not limited to, stalking or a pattern of threatening, between family or household members. Verbal abuse or argument does not constitute family violence unless there is present danger and the likelihood that physical violence will occur.\n\n(2) “Family or household member” means any of the following persons, regardless of the age of such person: (A) Spouses or former spouses; (B) parents or their children; (C) persons related by blood or marriage; (D) persons other than those persons described in subparagraph (C) of this subdivision presently residing together or who have resided together; (E) persons who have a child in common regardless of whether they are or have been married or have lived together at any time; and (F) persons in, or who have recently been in, a dating relationship.\n\n(3) “Family violence crime” means a crime as defined in section 53a-24 , other than a delinquent act, as defined in section 46b-120 , which, in addition to its other elements, contains as an element thereof an act of family violence to a family or household member. “Family violence crime” includes any violation of section 53a-222 , 53a-222a , 53a-223 , 53a-223a or 53a-223b when the condition of release or court order is issued for an act of family violence or a family violence crime. “Family violence crime” does not include acts by parents or guardians disciplining minor children unless such acts constitute abuse.\n\n(4) “Institutions and services” means peace officers, service providers, mandated reporters of abuse, agencies and departments that provide services to victims and families and services designed to assist victims and families.\n\n(5) “Dominant aggressor” means the person who poses the most serious ongoing threat in a situation involving the suspected commission of a family violence crime.\n\nSee chapter 968a re address confidentiality program."
+        "plainText": "For the purposes of sections 46b-38a to 46b-38f , inclusive:\n\n(1) “Family violence” means an incident resulting in physical harm, bodily injury or assault, or an act of threatened violence that constitutes fear of imminent physical harm, bodily injury or assault, including, but not limited to, stalking or a pattern of threatening, between family or household members. Verbal abuse or argument does not constitute family violence unless there is present danger and the likelihood that physical violence will occur.\n\n(2) “Family or household member” means any of the following persons, regardless of the age of such person: (A) Spouses or former spouses; (B) parents or their children; (C) persons related by blood or marriage; (D) persons other than those persons described in subparagraph (C) of this subdivision presently residing together or who have resided together; (E) persons who have a child in common regardless of whether they are or have been married or have lived together at any time; and (F) persons in, or who have recently been in, a dating relationship.\n\n(3) “Family violence crime” means a crime as defined in section 53a-24 , other than a delinquent act, as defined in section 46b-120 , which, in addition to its other elements, contains as an element thereof an act of family violence to a family or household member. “Family violence crime” includes any violation of section 53a-222 , 53a-222a , 53a-223 , 53a-223a or 53a-223b when the condition of release or court order is issued for an act of family violence or a family violence crime. “Family violence crime” does not include acts by parents or guardians disciplining minor children unless such acts constitute abuse.\n\n(4) “Institutions and services” means peace officers, service providers, mandated reporters of abuse, agencies and departments that provide services to victims and families and services designed to assist victims and families.\n\n(5) “Dominant aggressor” means the person who poses the most serious ongoing threat in a situation involving the suspected commission of a family violence crime."
       }
     },
     {
@@ -1360,15 +1369,19 @@
       "status": "active",
       "content": {
         "body": [
-          "The Chief Court Administrator shall, within available appropriations, establish programs for children impacted by domestic violence.",
-          "See Sec. 54-216 re restitution services for victims of domestic violence and their families and children who witness domestic violence."
+          "The Chief Court Administrator shall, within available appropriations, establish programs for children impacted by domestic violence."
         ],
         "sourceNotes": [
           "(P.A. 93-280, S. 1.)"
         ],
         "history": [],
-        "annotations": [],
-        "plainText": "The Chief Court Administrator shall, within available appropriations, establish programs for children impacted by domestic violence.\n\nSee Sec. 54-216 re restitution services for victims of domestic violence and their families and children who witness domestic violence."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 54-216 re restitution services for victims of domestic violence and their families and children who witness domestic violence."
+          }
+        ],
+        "plainText": "The Chief Court Administrator shall, within available appropriations, establish programs for children impacted by domestic violence."
       }
     },
     {

@@ -596,9 +596,7 @@
           "(b) Each license shall expire annually and may be renewed upon application and upon payment of the fee prescribed by section 21a-36 .",
           "(c) Each operator shall notify the commissioner promptly of any change in the location of and of the establishment of a commissary or service or transport facility.",
           "(d) Every owner and operator shall maintain at his principal place of business in this state a current list of all vending machines which he owns and has in operation, which list shall be made available, upon request, to the commissioner and any authorized inspector.",
-          "(e) Every owner shall notify the commissioner promptly upon converting any vending machine to dispense any food or beverage other than that for which such machine originally was designed or constructed.",
-          "See Sec. 21a-10(b) re staggered schedule for license renewals.",
-          "See Sec. 21a-47 re penalty for violation of provisions of this section."
+          "(e) Every owner shall notify the commissioner promptly upon converting any vending machine to dispense any food or beverage other than that for which such machine originally was designed or constructed."
         ],
         "sourceNotes": [
           "(1961, P.A. 579, S. 4; 1969, P.A. 70, S. 2; 596, S. 3; P.A. 94-36, S. 25, 42.)"
@@ -606,8 +604,17 @@
         "history": [
           "History: 1969 acts removed references to vending machine licenses, removed requirement that licenses be “serially” numbered, clarified nontransferability of licenses by adding phrase “from person to person” and added provisions re display of operator's name and address and service telephone number on machines in Subsec. (a), deleted reference to Sec. 19-193b in Subsec. (b) and replaced “owns or operates” with “owns and has in operation” in Subsec. (d); Sec. 19-193d transferred to Sec. 21a-37 in 1983; P.A. 94-36 amended Subsec. (b) to eliminate the reference to the “last day of June” license expiration date, effective January 1, 1995."
         ],
-        "annotations": [],
-        "plainText": "(a) Vending machine operators' licenses shall be of such size and style as the commissioner prescribes and shall be numbered. Each operator's license shall be displayed conspicuously at the operator's principal place of business in this state. No license shall be transferable from person to person. Each vending machine shall also bear in a conspicuous manner the name and address of the operator thereof and a telephone number which may be called for service at any hour of the day, provided, if two or more vending machines are displayed in a common area, such disclosure may be on a sign or placard conspicuously displayed in such area.\n\n(b) Each license shall expire annually and may be renewed upon application and upon payment of the fee prescribed by section 21a-36 .\n\n(c) Each operator shall notify the commissioner promptly of any change in the location of and of the establishment of a commissary or service or transport facility.\n\n(d) Every owner and operator shall maintain at his principal place of business in this state a current list of all vending machines which he owns and has in operation, which list shall be made available, upon request, to the commissioner and any authorized inspector.\n\n(e) Every owner shall notify the commissioner promptly upon converting any vending machine to dispense any food or beverage other than that for which such machine originally was designed or constructed.\n\nSee Sec. 21a-10(b) re staggered schedule for license renewals.\n\nSee Sec. 21a-47 re penalty for violation of provisions of this section."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 21a-10(b) re staggered schedule for license renewals."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 21a-47 re penalty for violation of provisions of this section."
+          }
+        ],
+        "plainText": "(a) Vending machine operators' licenses shall be of such size and style as the commissioner prescribes and shall be numbered. Each operator's license shall be displayed conspicuously at the operator's principal place of business in this state. No license shall be transferable from person to person. Each vending machine shall also bear in a conspicuous manner the name and address of the operator thereof and a telephone number which may be called for service at any hour of the day, provided, if two or more vending machines are displayed in a common area, such disclosure may be on a sign or placard conspicuously displayed in such area.\n\n(b) Each license shall expire annually and may be renewed upon application and upon payment of the fee prescribed by section 21a-36 .\n\n(c) Each operator shall notify the commissioner promptly of any change in the location of and of the establishment of a commissary or service or transport facility.\n\n(d) Every owner and operator shall maintain at his principal place of business in this state a current list of all vending machines which he owns and has in operation, which list shall be made available, upon request, to the commissioner and any authorized inspector.\n\n(e) Every owner shall notify the commissioner promptly upon converting any vending machine to dispense any food or beverage other than that for which such machine originally was designed or constructed."
       }
     },
     {
@@ -955,8 +962,7 @@
       "content": {
         "body": [
           "(a) Each manufacturer of frozen desserts and frozen dessert mix for sale shall file with the Commissioner of Consumer Protection an application for a license, upon a form prescribed by the commissioner. The application shall show the location of each plant at which frozen desserts and frozen dessert mix are to be manufactured and the name of the brand or brands, if any, under which the same are to be sold. The license period shall be for twelve months.",
-          "(b) On and after July 15, 2021, the commissioner shall include the link to the Internet web site published by the Commissioner of Motor Vehicles pursuant to section 14-283h on (1) the application for a license for a retail manufacturer to vend from a frozen dessert truck, as defined in section 14-283c , and (2) the Internet web site of the Department of Consumer Protection.",
-          "See Sec. 21a-10(b) re staggered schedule for license renewals."
+          "(b) On and after July 15, 2021, the commissioner shall include the link to the Internet web site published by the Commissioner of Motor Vehicles pursuant to section 14-283h on (1) the application for a license for a retail manufacturer to vend from a frozen dessert truck, as defined in section 14-283c , and (2) the Internet web site of the Department of Consumer Protection."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 3913; 1959, P.A. 375, S. 1; 412, S. 38, 42; P.A. 94-36, S. 1, 42; June 30 Sp. Sess. P.A. 03-6, S. 146(c); P.A. 04-189, S. 1; P.A. 21-20, S. 7; P.A. 22-44, S. 32.)"
@@ -967,6 +973,10 @@
         "annotations": [
           {
             "first": true,
+            "text": "See Sec. 21a-10(b) re staggered schedule for license renewals."
+          },
+          {
+            "first": true,
             "text": "Annotation to former section 19-197:"
           },
           {
@@ -974,7 +984,7 @@
             "text": "Cited. 178 C. 493."
           }
         ],
-        "plainText": "(a) Each manufacturer of frozen desserts and frozen dessert mix for sale shall file with the Commissioner of Consumer Protection an application for a license, upon a form prescribed by the commissioner. The application shall show the location of each plant at which frozen desserts and frozen dessert mix are to be manufactured and the name of the brand or brands, if any, under which the same are to be sold. The license period shall be for twelve months.\n\n(b) On and after July 15, 2021, the commissioner shall include the link to the Internet web site published by the Commissioner of Motor Vehicles pursuant to section 14-283h on (1) the application for a license for a retail manufacturer to vend from a frozen dessert truck, as defined in section 14-283c , and (2) the Internet web site of the Department of Consumer Protection.\n\nSee Sec. 21a-10(b) re staggered schedule for license renewals."
+        "plainText": "(a) Each manufacturer of frozen desserts and frozen dessert mix for sale shall file with the Commissioner of Consumer Protection an application for a license, upon a form prescribed by the commissioner. The application shall show the location of each plant at which frozen desserts and frozen dessert mix are to be manufactured and the name of the brand or brands, if any, under which the same are to be sold. The license period shall be for twelve months.\n\n(b) On and after July 15, 2021, the commissioner shall include the link to the Internet web site published by the Commissioner of Motor Vehicles pursuant to section 14-283h on (1) the application for a license for a retail manufacturer to vend from a frozen dessert truck, as defined in section 14-283c , and (2) the Internet web site of the Department of Consumer Protection."
       }
     },
     {
@@ -2729,8 +2739,7 @@
           "(3) Issue an appropriate order to any person found to be in violation of this section to provide for the immediate discontinuance of the violation; and",
           "(4) Issue an appropriate order to any person found to be in violation of this section, requiring the person to make restitution for any damage caused by the violation.",
           "(f) The commissioner may adopt regulations, in accordance with chapter 54, to implement the provisions of this section.",
-          "(g) Any person who violates any provision of this section shall be fined not more than ten thousand dollars or imprisoned not more than one year, or both, for each violation.",
-          "See Sec. 20-14n re penalty for prescribing practitioner."
+          "(g) Any person who violates any provision of this section shall be fined not more than ten thousand dollars or imprisoned not more than one year, or both, for each violation."
         ],
         "sourceNotes": [
           "(P.A. 14-224, S. 7; P.A. 15-49, S. 1.)"
@@ -2738,8 +2747,13 @@
         "history": [
           "History: P.A. 14-224 effective July 1, 2014; P.A. 15-49 amended Subsec. (b) to add provisions re importing, reimporting or dispensing."
         ],
-        "annotations": [],
-        "plainText": "(a) For the purposes of this section:\n\n(1) “Counterfeit drug or device” means a drug, as defined in section 21a-92 , or a “device”, as defined in section 21a-92 , or the container or labeling of which, that without authorization, bears the trademark, trade name or other identifying mark, imprint, number or device, or any likeness thereof, of a manufacturer, distributor or dispenser other than the person or persons who in fact manufactured, distributed or dispensed such drug or device and that thereby falsely purports or is represented to be the drug or device of, or to have been distributed by, such other manufacturer, distributor or dispenser; and\n\n(2) “Department” means the Department of Consumer Protection.\n\n(b) No person shall knowingly import or reimport into the state, purchase for resale, sell, offer for sale, dispense, as defined in section 20-571 , or deliver in any manner a counterfeit drug or device.\n\n(c) The department shall conduct any necessary investigation regarding possible violations of this section. In connection with any such investigation, the commissioner, or the commissioner's authorized agent, may administer oaths, issue subpoenas, compel testimony and order the production of books, records and documents. If any person refuses to appear, to testify or to produce any book, record or document when so ordered, a judge of the Superior Court may make such order as may be appropriate to aid in the enforcement of this section.\n\n(d) The commissioner may conduct hearings regarding violations of this section. Such hearings shall be conducted in accordance with chapter 54. In connection with any such hearing, the commissioner may administer oaths, issue subpoenas, compel testimony and order the production of books, records and documents. If any person refuses to appear, testify or produce any book, record or document when so ordered, a judge of the Superior Court may make such order as may be appropriate to aid in the enforcement of this section.\n\n(e) For any violation of this section, the commissioner may:\n\n(1) Suspend, revoke, refuse to renew, or place on probationary status a license or registration issued by the department;\n\n(2) Assess a civil penalty of not more than one thousand dollars per violation;\n\n(3) Issue an appropriate order to any person found to be in violation of this section to provide for the immediate discontinuance of the violation; and\n\n(4) Issue an appropriate order to any person found to be in violation of this section, requiring the person to make restitution for any damage caused by the violation.\n\n(f) The commissioner may adopt regulations, in accordance with chapter 54, to implement the provisions of this section.\n\n(g) Any person who violates any provision of this section shall be fined not more than ten thousand dollars or imprisoned not more than one year, or both, for each violation.\n\nSee Sec. 20-14n re penalty for prescribing practitioner."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 20-14n re penalty for prescribing practitioner."
+          }
+        ],
+        "plainText": "(a) For the purposes of this section:\n\n(1) “Counterfeit drug or device” means a drug, as defined in section 21a-92 , or a “device”, as defined in section 21a-92 , or the container or labeling of which, that without authorization, bears the trademark, trade name or other identifying mark, imprint, number or device, or any likeness thereof, of a manufacturer, distributor or dispenser other than the person or persons who in fact manufactured, distributed or dispensed such drug or device and that thereby falsely purports or is represented to be the drug or device of, or to have been distributed by, such other manufacturer, distributor or dispenser; and\n\n(2) “Department” means the Department of Consumer Protection.\n\n(b) No person shall knowingly import or reimport into the state, purchase for resale, sell, offer for sale, dispense, as defined in section 20-571 , or deliver in any manner a counterfeit drug or device.\n\n(c) The department shall conduct any necessary investigation regarding possible violations of this section. In connection with any such investigation, the commissioner, or the commissioner's authorized agent, may administer oaths, issue subpoenas, compel testimony and order the production of books, records and documents. If any person refuses to appear, to testify or to produce any book, record or document when so ordered, a judge of the Superior Court may make such order as may be appropriate to aid in the enforcement of this section.\n\n(d) The commissioner may conduct hearings regarding violations of this section. Such hearings shall be conducted in accordance with chapter 54. In connection with any such hearing, the commissioner may administer oaths, issue subpoenas, compel testimony and order the production of books, records and documents. If any person refuses to appear, testify or produce any book, record or document when so ordered, a judge of the Superior Court may make such order as may be appropriate to aid in the enforcement of this section.\n\n(e) For any violation of this section, the commissioner may:\n\n(1) Suspend, revoke, refuse to renew, or place on probationary status a license or registration issued by the department;\n\n(2) Assess a civil penalty of not more than one thousand dollars per violation;\n\n(3) Issue an appropriate order to any person found to be in violation of this section to provide for the immediate discontinuance of the violation; and\n\n(4) Issue an appropriate order to any person found to be in violation of this section, requiring the person to make restitution for any damage caused by the violation.\n\n(f) The commissioner may adopt regulations, in accordance with chapter 54, to implement the provisions of this section.\n\n(g) Any person who violates any provision of this section shall be fined not more than ten thousand dollars or imprisoned not more than one year, or both, for each violation."
       }
     },
     {

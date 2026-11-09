@@ -49,8 +49,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Sections 1-266 to 1-286 , inclusive, shall be known and may be cited as the “Connecticut Uniform Electronic Transactions Act”.",
-          "See Secs. 7-35aa to 7-35gg, inclusive, re Uniform Real Property Electronic Recording Act."
+          "Sections 1-266 to 1-286 , inclusive, shall be known and may be cited as the “Connecticut Uniform Electronic Transactions Act”."
         ],
         "sourceNotes": [
           "(P.A. 02-68, S. 1.)"
@@ -58,8 +57,13 @@
         "history": [
           "History: (Revisor's note: Quotation marks were inserted editorially by the Revisors for consistency and proper form)."
         ],
-        "annotations": [],
-        "plainText": "Sections 1-266 to 1-286 , inclusive, shall be known and may be cited as the “Connecticut Uniform Electronic Transactions Act”.\n\nSee Secs. 7-35aa to 7-35gg, inclusive, re Uniform Real Property Electronic Recording Act."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Secs. 7-35aa to 7-35gg, inclusive, re Uniform Real Property Electronic Recording Act."
+          }
+        ],
+        "plainText": "Sections 1-266 to 1-286 , inclusive, shall be known and may be cited as the “Connecticut Uniform Electronic Transactions Act”."
       }
     },
     {

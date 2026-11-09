@@ -1,10 +1,10 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-07T19:01:39.809792Z",
+  "generatedAt": "2026-11-09T20:55:28.065985Z",
   "base": {
     "schemaVersion": "1.0.0",
-    "generatedAt": "2026-07-14T00:27:33Z",
-    "manifestSha256": "9fb4cdc169f66b09b61add8d64f08ba29b9a5d1d2b87fb9779aaa15d6abca14c"
+    "generatedAt": "2026-11-09T20:41:45Z",
+    "manifestSha256": "a7d52c3e0cfc2d8298ba350d64585438353cfc9b7e58cef0d403994daf17781a"
   },
   "counts": {
     "infractions": 1793,
@@ -21,7 +21,7 @@
     {
       "path": "infractions/manifest.json",
       "bytes": 5462,
-      "sha256": "812dc0277c9c6c08f10388672f9a7a42b097c58381ccdeeb64bc8895f2e21c1d"
+      "sha256": "584f9910e94f58603c099861f5029319da7a4738c5dc447f5793cce185bae433"
     },
     {
       "path": "infractions/title-01.json",
@@ -276,7 +276,7 @@
     {
       "path": "links/manifest.json",
       "bytes": 7249,
-      "sha256": "2d0d73d7ba8d0b55fec9ed569cdd9b5393e2894569f275581787a7acd5eb1b41"
+      "sha256": "25b36a86a065bae91be9a50bbb8d90b93094e66c45eb8bd222499918dc8d9c16"
     },
     {
       "path": "links/title-01.json",
@@ -751,7 +751,7 @@
     {
       "path": "statutes-index/manifest.json",
       "bytes": 5444,
-      "sha256": "44498eb50ded0a6e86f8bc13041577c3327012b1666f204a16802bfb3879352e"
+      "sha256": "65e1b3a56bfe8e1c185aa764a885b8bd760a162794261b80361ac44232a55d5b"
     },
     {
       "path": "statutes-index/n.json",

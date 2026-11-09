@@ -299,15 +299,19 @@
       "content": {
         "body": [
           "(a) For the purposes of this section, a manufacturer's serial number means that number or other mark which identifies any product, other than a motor vehicle, and distinguishes it from other products of like model and kind produced by the same manufacturer and may be punched, impressed or affixed by plate. No person shall remove, deface, alter or obliterate any manufacturer's serial number on any manufactured product with intent to prevent the tracing or identification of such product or shall knowingly sell, offer for sale, or purchase any such product whose manufacturer's serial number has been removed, defaced, altered or obliterated with intent to prevent the tracing or identification of such product.",
-          "(b) Any person who violates any provision of this section shall be guilty of a class C misdemeanor.",
-          "See Sec. 29-36 re alteration of identifying mark, number or name of firearm."
+          "(b) Any person who violates any provision of this section shall be guilty of a class C misdemeanor."
         ],
         "sourceNotes": [
           "(P.A. 74-42, S. 1, 2.)"
         ],
         "history": [],
-        "annotations": [],
-        "plainText": "(a) For the purposes of this section, a manufacturer's serial number means that number or other mark which identifies any product, other than a motor vehicle, and distinguishes it from other products of like model and kind produced by the same manufacturer and may be punched, impressed or affixed by plate. No person shall remove, deface, alter or obliterate any manufacturer's serial number on any manufactured product with intent to prevent the tracing or identification of such product or shall knowingly sell, offer for sale, or purchase any such product whose manufacturer's serial number has been removed, defaced, altered or obliterated with intent to prevent the tracing or identification of such product.\n\n(b) Any person who violates any provision of this section shall be guilty of a class C misdemeanor.\n\nSee Sec. 29-36 re alteration of identifying mark, number or name of firearm."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 29-36 re alteration of identifying mark, number or name of firearm."
+          }
+        ],
+        "plainText": "(a) For the purposes of this section, a manufacturer's serial number means that number or other mark which identifies any product, other than a motor vehicle, and distinguishes it from other products of like model and kind produced by the same manufacturer and may be punched, impressed or affixed by plate. No person shall remove, deface, alter or obliterate any manufacturer's serial number on any manufactured product with intent to prevent the tracing or identification of such product or shall knowingly sell, offer for sale, or purchase any such product whose manufacturer's serial number has been removed, defaced, altered or obliterated with intent to prevent the tracing or identification of such product.\n\n(b) Any person who violates any provision of this section shall be guilty of a class C misdemeanor."
       }
     },
     {

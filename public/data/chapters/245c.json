@@ -338,8 +338,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Each household goods carrier subject to the provisions of this chapter shall issue a bill of lading upon the receipt of household goods for transportation for hire. The rights and obligations of such household goods carrier and the holder of such bill of lading shall be determined in accordance with the provisions of article 7 of the Uniform Commercial Code, title 42a, respecting bills of lading.",
-          "See Sec. 42a-7-301 et seq. re bills of lading under Uniform Commercial Code."
+          "Each household goods carrier subject to the provisions of this chapter shall issue a bill of lading upon the receipt of household goods for transportation for hire. The rights and obligations of such household goods carrier and the holder of such bill of lading shall be determined in accordance with the provisions of article 7 of the Uniform Commercial Code, title 42a, respecting bills of lading."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 5684; 1961, P.A. 116, S. 17; P.A. 95-126, S. 12, 25.)"
@@ -350,6 +349,10 @@
         "annotations": [
           {
             "first": true,
+            "text": "See Sec. 42a-7-301 et seq. re bills of lading under Uniform Commercial Code."
+          },
+          {
+            "first": true,
             "text": "Annotation to former section 16-290:"
           },
           {
@@ -357,7 +360,7 @@
             "text": "A common carrier is excused from liability only by an act of God, the public enemy, faulty packaging or inherent vice; to escape liability, it is incumbent upon defendant carrier to prove the shipment delivered in a damaged condition fell within a class as to which the carrier is not an insurer and that no fault of his contributed to the damage. 5 Conn. Cir. Ct. 91."
           }
         ],
-        "plainText": "Each household goods carrier subject to the provisions of this chapter shall issue a bill of lading upon the receipt of household goods for transportation for hire. The rights and obligations of such household goods carrier and the holder of such bill of lading shall be determined in accordance with the provisions of article 7 of the Uniform Commercial Code, title 42a, respecting bills of lading.\n\nSee Sec. 42a-7-301 et seq. re bills of lading under Uniform Commercial Code."
+        "plainText": "Each household goods carrier subject to the provisions of this chapter shall issue a bill of lading upon the receipt of household goods for transportation for hire. The rights and obligations of such household goods carrier and the holder of such bill of lading shall be determined in accordance with the provisions of article 7 of the Uniform Commercial Code, title 42a, respecting bills of lading."
       }
     },
     {

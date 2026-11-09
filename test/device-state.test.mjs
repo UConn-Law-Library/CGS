@@ -70,7 +70,8 @@ test("normalizes and applies reader preferences", () => {
     compactLists: true,
     hiddenStatuses: ["repealed", "reserved"],
     subtleNotices: true,
-    navigationTree: false
+    navigationTree: false,
+    readingWidth: "standard"
   });
   const style = { values: new Map(), setProperty(key, value) { this.values.set(key, value); } };
   const root = { dataset: {}, style };
@@ -79,6 +80,7 @@ test("normalizes and applies reader preferences", () => {
   assert.equal(root.dataset.fontProfile, "atkinson");
   assert.equal(root.dataset.compactLists, "true");
   assert.equal(root.dataset.subtleNotices, "true");
+  assert.equal(root.dataset.readingWidth, "standard");
   assert.equal(style.values.get("--text-scale"), "1.25");
   assert.equal(style.values.get("--line-spacing"), "2.2");
   assert.equal(style.values.get("--line-spacing-factor"), String(2.2 / 1.55));
@@ -167,4 +169,10 @@ test("the earlier hide-repealed switch carries over as hiding repealed sections"
   storage.setItem("cgs.preferences.v1", JSON.stringify({ hideRepealedSections: true }));
   assert.deepEqual(new DeviceState({ storage }).preferences().hiddenStatuses, ["repealed"]);
   assert.deepEqual(new DeviceState({ storage: memoryStorage() }).preferences().hiddenStatuses, []);
+});
+
+test("reading width keeps known values only", () => {
+  const state = new DeviceState({ storage: memoryStorage() });
+  assert.equal(state.updatePreferences({ readingWidth: "wide" }).readingWidth, "wide");
+  assert.equal(state.updatePreferences({ readingWidth: "huge" }).readingWidth, "standard");
 });

@@ -1,6 +1,6 @@
 import { escapeHtml } from "./reader.js";
 import { parseRoute, guideRouteHref, titlesRouteHref } from "./routes.js";
-import { HIDEABLE_STATUSES } from "./device-state.js";
+import { HIDEABLE_STATUSES, READING_WIDTHS } from "./device-state.js";
 
 const HIDEABLE_STATUS_LABELS = { repealed: "Repealed", transferred: "Transferred", obsolete: "Obsolete", reserved: "Reserved" };
 
@@ -202,6 +202,9 @@ function settingsPanel() {
     <div class="setting-group typography-setting"><div class="setting-row-label"><label for="line-spacing">Line spacing</label><output for="line-spacing" data-line-spacing-value>${preferences.lineSpacing.toFixed(2)}×</output></div>
       <input id="line-spacing" type="range" min="1.2" max="2.2" step="0.05" value="${preferences.lineSpacing}" data-line-spacing>
     </div>
+    <div class="setting-group reading-width-setting"><span>Reading width</span><div class="segmented" role="group" aria-label="Reading width">
+      ${Object.entries(READING_WIDTHS).map(([width, label]) => `<button type="button" data-reading-width-value="${width}" aria-pressed="${preferences.readingWidth === width}">${label}</button>`).join("")}
+    </div></div>
     <div class="navigation-setting-rows">${navigationSettingRows()}</div>
     <button type="button" class="settings-action update-action" data-apply-update${pwaState.updateAvailable ? "" : " hidden"}>Update available <small>Reload to use the latest published app</small></button>
     <a class="settings-action" href="#/about"><strong class="settings-about-title">About this app</strong> <small>Sources, coverage, and project information</small></a>

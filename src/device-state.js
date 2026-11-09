@@ -16,7 +16,8 @@ export const DEFAULT_PREFERENCES = Object.freeze({
   compactLists: true,
   hiddenStatuses: Object.freeze([]),
   subtleNotices: false,
-  navigationTree: false
+  navigationTree: false,
+  readingWidth: "standard"
 });
 
 const themes = new Set(["auto", "light", "dark", "oled"]);
@@ -28,6 +29,7 @@ function normalizeHiddenStatuses(value, legacyHideRepealed = false) {
   return HIDEABLE_STATUSES.filter((status) => wanted.includes(status));
 }
 const fontProfiles = new Set(["default", "atkinson", "lexend", "inclusive"]);
+export const READING_WIDTHS = Object.freeze({ standard: "Standard", wide: "Wide", widest: "Widest" });
 
 function normalizeLineSpacing(value) {
   if (value === null || value === undefined || value === "") return DEFAULT_PREFERENCES.lineSpacing;
@@ -251,7 +253,8 @@ export class DeviceState {
         : DEFAULT_PREFERENCES.compactLists,
       hiddenStatuses: normalizeHiddenStatuses(value.hiddenStatuses, value.hideRepealedSections === true),
       subtleNotices: value.subtleNotices === true,
-      navigationTree: value.navigationTree === true
+      navigationTree: value.navigationTree === true,
+      readingWidth: Object.hasOwn(READING_WIDTHS, value.readingWidth) ? value.readingWidth : DEFAULT_PREFERENCES.readingWidth
     };
   }
 
@@ -266,6 +269,7 @@ export class DeviceState {
     delete value.hideRepealedSections;
     value.subtleNotices = value.subtleNotices === true;
     value.navigationTree = value.navigationTree === true;
+    if (!Object.hasOwn(READING_WIDTHS, value.readingWidth)) value.readingWidth = DEFAULT_PREFERENCES.readingWidth;
     this.#write(PREFERENCES_KEY, value);
     return value;
   }
@@ -276,6 +280,7 @@ export function applyPreferences(preferences, root = document.documentElement) {
   root.dataset.fontProfile = preferences.fontProfile;
   root.dataset.compactLists = String(preferences.compactLists);
   root.dataset.subtleNotices = String(preferences.subtleNotices);
+  root.dataset.readingWidth = preferences.readingWidth;
   root.style.setProperty("--text-scale", String(preferences.textScale));
   root.style.setProperty("--line-spacing", String(preferences.lineSpacing));
   root.style.setProperty("--line-spacing-factor", String(preferences.lineSpacing / DEFAULT_PREFERENCES.lineSpacing));

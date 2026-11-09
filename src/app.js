@@ -404,6 +404,16 @@ function statuteSectionItems(title, chapter, sections, selected, changeBySection
   });
 }
 
+const disclosureChevron = `<svg class="tree-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>`;
+
+// A collapsed list of a chapter's sections, drawn as a row with a chevron so it reads as
+// something to open.
+function chapterChangeList(label, items) {
+  return `<details class="chapter-change-list"><summary><span>${label}</span>${disclosureChevron}</summary>${railList(items)}</details>`;
+}
+
+// The supplement and Recent Act notices share one shape: a heading, one sentence, and the
+// sections as collapsed lists. Their colors carry the meaning (blue supplement, amber caution).
 function chapterSupplementSummary(title, chapter, overlay, changeBySection) {
   if (!changeBySection.size) return "";
   const updated = [];
@@ -412,11 +422,13 @@ function chapterSupplementSummary(title, chapter, overlay, changeBySection) {
     const change = changeBySection.get(section.id);
     if (change) (change.presentation === "new" ? added : updated).push(section);
   }
+  const count = updated.length + added.length;
   const groups = [["Updated sections", updated], ["New sections", added]];
-  return `<div class="supplement-summary"><strong>${overlay.editionYear} Supplement applied.</strong>
+  return `<section class="chapter-notice supplement-summary"><h2>Changed by the ${overlay.editionYear} Supplement</h2>
+    <p>The text of ${count} section${count === 1 ? "" : "s"} in this chapter comes from the ${overlay.editionYear} Supplement.</p>
     ${groups.filter(([, sections]) => sections.length).map(([label, sections]) =>
-      `<details class="chapter-change-list"><summary>${label} (${sections.length})</summary>${railList(statuteSectionItems(title, chapter, sections, null, changeBySection))}</details>`
-    ).join("")}</div>`;
+      chapterChangeList(`${label} (${sections.length})`, statuteSectionItems(title, chapter, sections, null, changeBySection))
+    ).join("")}</section>`;
 }
 
 function pendingChapterSummary(title, chapter, changeBySection, pendingBySection) {
@@ -425,9 +437,9 @@ function pendingChapterSummary(title, chapter, changeBySection, pendingBySection
   const count = pendingBySection.size;
   const oneAct = new Set(all.map((amendment) => amendment.citation)).size === 1;
   const sections = chapter.sections.filter((section) => pendingBySection.has(section.id));
-  return `<div class="pending-amendments-summary"><details class="chapter-change-list"><summary>${oneAct ? "A recent Public Act changes" : "Recent Public Acts change"} ${count} section${count === 1 ? "" : "s"} in this chapter.</summary>
-    ${railList(statuteSectionItems(title, chapter, sections, null, changeBySection, pendingBySection))}</details>
-    <p>The statute text does not include those changes yet.</p></div>`;
+  return `<section class="chapter-notice pending-amendments-summary"><h2>Changed by recent Public Acts</h2>
+    <p>${oneAct ? "A recent Public Act changes" : "Recent Public Acts change"} ${count} section${count === 1 ? "" : "s"} in this chapter. The statute text does not include those changes yet.</p>
+    ${chapterChangeList(`Affected sections (${count})`, statuteSectionItems(title, chapter, sections, null, changeBySection, pendingBySection))}</section>`;
 }
 
 function statuteSectionColumn(title, chapter, sections, selected, changeBySection, pendingBySection) {
@@ -2419,6 +2431,12 @@ document.addEventListener("click", async (event) => {
     const preferences = deviceState.updatePreferences({ theme: themeButton.dataset.themeValue });
     applyPreferences(preferences);
     document.querySelectorAll("[data-theme-value]").forEach((button) => button.setAttribute("aria-pressed", String(button === themeButton)));
+    return;
+  }
+  const widthButton = event.target.closest("[data-reading-width-value]");
+  if (widthButton) {
+    applyPreferences(deviceState.updatePreferences({ readingWidth: widthButton.dataset.readingWidthValue }));
+    document.querySelectorAll("[data-reading-width-value]").forEach((button) => button.setAttribute("aria-pressed", String(button === widthButton)));
     return;
   }
   const applyUpdate = event.target.closest("[data-apply-update]");

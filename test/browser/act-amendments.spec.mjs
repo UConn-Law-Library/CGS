@@ -31,7 +31,7 @@ test("sections no listed act changes show no notice, and the chapter overview co
   await expect(page.getByRole("heading", { level: 1, name: /Sec\. 1-2\./ })).toBeVisible();
   await expect(page.locator(".pending-amendments")).toHaveCount(0);
   await openApp(page, "#/t/22a/c/446d");
-  await expect(page.locator(".pending-amendments-summary")).toContainText(/(A recent Public Act changes|Recent Public Acts change) \d+ sections? in this chapter\./);
+  await expect(page.locator(".pending-amendments-summary")).toContainText(/(A recent Public Act changes|Recent Public Acts change) \d+ sections? in this chapter\. The statute text does not include those changes yet\./);
 });
 
 test.describe("dark color scheme", () => {

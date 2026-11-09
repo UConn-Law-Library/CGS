@@ -736,3 +736,33 @@ test("Hide sections removes only entries whose every status is hidden, and persi
   await expect(reopened.panel.locator('input[data-hide-status="transferred"]')).toBeChecked();
   await expect(reopened.panel.locator('input[data-hide-status="obsolete"]')).not.toBeChecked();
 });
+
+test("Reading width widens the desktop reading column and persists", async ({ page }, testInfo) => {
+  test.skip(isMobileProject(testInfo), "Desktop setting; phones use the full width.");
+  await page.setViewportSize({ width: 1800, height: 1000 });
+  await openApp(page, "#/t/06/c/078/s/6-32d");
+  const column = page.locator(".reader-content");
+  const standard = (await column.boundingBox()).width;
+  await page.getByRole("button", { name: "Settings", exact: true }).click();
+  const group = page.getByRole("group", { name: "Reading width" });
+  await group.getByRole("button", { name: "Widest", exact: true }).click();
+  await expect(group.getByRole("button", { name: "Widest", exact: true })).toHaveAttribute("aria-pressed", "true");
+  expect((await column.boundingBox()).width).toBeGreaterThan(standard + 300);
+  await page.reload();
+  await expect(page.locator("html")).toHaveAttribute("data-reading-width", "widest");
+});
+
+test("chapter notices share one shape, with headings and openable section lists", async ({ page }) => {
+  await openApp(page, "#/t/06/c/078");
+  const supplement = page.locator(".supplement-summary");
+  const acts = page.locator(".pending-amendments-summary");
+  await expect(supplement.getByRole("heading", { level: 2 })).toHaveText("Changed by the 2026 Supplement");
+  await expect(acts.getByRole("heading", { level: 2 })).toHaveText("Changed by recent Public Acts");
+  const supplementBox = await supplement.boundingBox();
+  const actsBox = await acts.boundingBox();
+  expect(Math.abs(supplementBox.width - actsBox.width)).toBeLessThanOrEqual(1);
+  const summary = acts.locator("summary");
+  await expect(summary).toHaveText(/^Affected sections \(\d+\)$/);
+  await summary.click();
+  await expect(acts.locator(".context-list a").first()).toBeVisible();
+});

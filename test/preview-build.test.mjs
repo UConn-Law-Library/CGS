@@ -26,6 +26,14 @@ test("the preview build keeps its browser storage apart from production", async 
   assert.doesNotMatch(worker, /"cgs-data-/);
 });
 
+test("the preview build starts visitors on page tree navigation", async (t) => {
+  const directory = await fixture(t);
+  await applyPreviewNamespace(directory);
+  const deviceState = await readFile(path.join(directory, "device-state.js"), "utf8");
+  assert.match(deviceState, /^\s*navigationTree: true,$/m);
+  assert.match(await readFile("src/device-state.js", "utf8"), /^\s*navigationTree: false,$/m);
+});
+
 test("the preview build fails when a storage name it expects has changed", async (t) => {
   const directory = await fixture(t);
   const target = path.join(directory, "device-state.js");

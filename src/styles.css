@@ -1604,6 +1604,25 @@ h1,
   :root[data-reading-width="widest"] { --measure-reading: 72rem; }
   .reading-width-setting .segmented { grid-template-columns: repeat(3, 1fr); }
   @media (max-width: 60rem) { .reading-width-setting { display: none; } }
+  /* What's new tour: a floating card beside the outlined control (navy marks "you are here"). */
+  .whats-new-button { font: inherit; cursor: pointer; }
+  .tour-card { position: fixed; z-index: 70; width: min(22rem, calc(100vw - 2rem)); padding: 1rem; color: var(--ink); background: var(--surface-raised); border: 1px solid var(--line); border-radius: .8rem; box-shadow: var(--shadow); }
+  .tour-card[hidden] { display: none; }
+  .tour-card:focus { outline: none; }
+  .tour-card-header { display: flex; align-items: center; justify-content: space-between; gap: .5rem; }
+  .tour-progress { margin: 0; color: var(--muted); font-size: var(--text-caption); font-weight: 700; }
+  .tour-card .icon-button { min-width: 2.25rem; min-height: 2.25rem; padding: 0; color: var(--ink); background: transparent; border: 0; border-radius: var(--radius-control); font-size: 1.25rem; }
+  .tour-card h2 { margin: .25rem 0 .4rem; font-size: 1.15rem; }
+  .tour-card #tour-text { margin: 0; font-size: var(--text-small-reading); line-height: 1.5; }
+  .tour-actions { display: flex; justify-content: flex-end; gap: .5rem; margin-top: 1rem; }
+  .tour-actions button { min-height: 2.5rem; padding: .45rem .9rem; border-radius: var(--radius-control); font-size: var(--text-ui); font-weight: 700; }
+  .tour-actions [data-tour-back] { color: var(--ink); background: transparent; border: 1px solid var(--field-line); }
+  .tour-actions [data-tour-back]:disabled { opacity: .45; }
+  .tour-actions [data-tour-next] { color: var(--on-blue); background: var(--blue); border: 1px solid var(--blue); }
+  .tour-target { outline: 3px solid var(--blue) !important; outline-offset: 4px; border-radius: var(--radius-control); }
+  @media (max-width: 60rem) {
+    .tour-card { top: auto; right: .75rem; bottom: calc(5rem + env(safe-area-inset-bottom)); left: .75rem; width: auto; }
+  }
   .context-column:not([hidden]) ~ .context-column .navigation-settings-button { display: none; }
   .navigation-settings-panel { right: auto; width: min(22rem, calc(100vw - 2rem)); }
   .navigation-settings-panel .setting-row:last-child { padding-bottom: 0; border-bottom: 0; }

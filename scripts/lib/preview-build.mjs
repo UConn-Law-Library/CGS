@@ -12,12 +12,24 @@ const NAMESPACES = [
   { file: "service-worker.js", from: /"cgs-data-/g, to: '"cgs-preview-data-', expected: 3 }
 ];
 
+// Defaults the preview changes for visitors who have not chosen otherwise. Page tree navigation
+// starts on so testers see it first; production keeps the panes.
+const PREVIEW_DEFAULTS = [
+  { file: "device-state.js", from: /^(\s*navigationTree:) false,$/m, to: "$1 true,", label: "page tree default" }
+];
+
 export async function applyPreviewNamespace(directory) {
   for (const { file, from, to, expected } of NAMESPACES) {
     const target = path.join(directory, file);
     const source = await readFile(target, "utf8");
     const found = source.match(from)?.length ?? 0;
     if (found !== expected) throw new Error(`Expected ${expected} browser storage names in ${file}, found ${found}; update applyPreviewNamespace`);
+    await writeFile(target, source.replace(from, to), "utf8");
+  }
+  for (const { file, from, to, label } of PREVIEW_DEFAULTS) {
+    const target = path.join(directory, file);
+    const source = await readFile(target, "utf8");
+    if (!from.test(source)) throw new Error(`Could not find the ${label} in ${file}; update applyPreviewNamespace`);
     await writeFile(target, source.replace(from, to), "utf8");
   }
 }

@@ -12,6 +12,7 @@ export const shellInputs = Object.freeze([
   "shell.js",
   "statute-tree.js",
   "group-tree.js",
+  "whats-new.js",
   "bookmark-page.js",
   "bookmark-controls.js",
   "data-loader.js",

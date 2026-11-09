@@ -238,6 +238,11 @@ function historyLink(route) {
   return `<a class="navigation-history" href="#/history"${route.kind === "history" ? ' aria-current="page"' : ""}><span class="utility-label">History</span><span class="mobile-utility-icon" aria-hidden="true">${svgIcon('<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>')}</span></a>`;
 }
 
+// Opens the guided tour of recent changes (whats-new.js).
+function whatsNewButton() {
+  return `<button type="button" class="navigation-history whats-new-button" data-open-whats-new><span class="utility-label">What's new</span><span class="mobile-utility-icon" aria-hidden="true">${svgIcon('<path d="M12 3l1.8 4.9L19 9.7l-4.9 1.8L12 16.4l-1.8-4.9L5 9.7l4.9-1.8z"/><path d="M18.5 15l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7z"/>')}</span></button>`;
+}
+
 function globalSearch(route) {
   return `<form class="global-search" data-global-search role="search">
       ${backButton()}
@@ -250,13 +255,14 @@ function globalSearch(route) {
       </div>
       <button type="submit" class="global-search-button"><span class="utility-label">Search</span><span class="mobile-utility-icon" aria-hidden="true">${svgIcon('<circle cx="10" cy="10" r="6"/><path d="m15 15 5 5"/>')}</span></button>
       ${historyLink(route)}
+      ${whatsNewButton()}
     </form>`;
 }
 
 // The search page has its own query box. This row keeps the header the same height there,
 // so moving between pages does not shift the content.
 function headerUtilities(route) {
-  return `<div class="global-search header-utilities">${backButton()}${historyLink(route)}</div>`;
+  return `<div class="global-search header-utilities">${backButton()}${historyLink(route)}${whatsNewButton()}</div>`;
 }
 
 function siteHeader() {

@@ -766,3 +766,28 @@ test("chapter notices share one shape, with headings and openable section lists"
   await summary.click();
   await expect(acts.locator(".context-list a").first()).toBeVisible();
 });
+
+test("What's new walks through the changes and returns focus when closed", async ({ page }) => {
+  await openApp(page);
+  const button = page.locator("[data-open-whats-new]");
+  await button.click();
+  const card = page.getByRole("dialog", { name: "Navigation settings" });
+  await expect(card).toBeVisible();
+  await expect(page).toHaveURL(/#\/t\/16a\/c\/295$/);
+  await expect(page.locator(".tour-target")).toHaveCount(1);
+  const titles = ["Filter sections by status", "Reading width", "Chapter change summaries", "Compare a section's versions"];
+  for (const title of titles) {
+    await page.locator("[data-tour-next]").click();
+    await expect(page.locator("#tour-title")).toHaveText(title);
+  }
+  await expect(page).toHaveURL(/#\/t\/16a\/c\/295\/s\/16a-3g$/);
+  await expect(page.locator(".revision-view-switch")).toHaveClass(/tour-target/);
+  await expect(page.locator("[data-tour-progress]")).toHaveText("What's new · 5 of 5");
+  await expect(page.locator("[data-tour-next]")).toHaveText("Done");
+  await page.locator("[data-tour-back]").click();
+  await expect(page.locator("#tour-title")).toHaveText("Chapter change summaries");
+  await page.keyboard.press("Escape");
+  await expect(page.locator("[data-tour]")).toHaveCount(0);
+  await expect(page.locator(".tour-target")).toHaveCount(0);
+  await expect(page.locator("[data-open-whats-new]")).toBeFocused();
+});

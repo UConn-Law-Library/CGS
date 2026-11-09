@@ -3,6 +3,9 @@ import { createAboutPage, formatSnapshotDate } from "./about-page.js";
 import { createShell, icons, bookmarkButtonLabel, iconActionLabel, statutesNavHref } from "./shell.js";
 import { createStatuteTree } from "./statute-tree.js";
 import { createGroupTree } from "./group-tree.js";
+import { createWhatsNewTour } from "./whats-new.js";
+
+const whatsNewTour = createWhatsNewTour();
 import { QuickSearchRepository } from "./quick-search.js";
 import { renderBookmarkPage } from "./bookmark-page.js";
 import { bindBookmarkControls } from "./bookmark-controls.js";
@@ -2431,6 +2434,11 @@ document.addEventListener("click", async (event) => {
     const preferences = deviceState.updatePreferences({ theme: themeButton.dataset.themeValue });
     applyPreferences(preferences);
     document.querySelectorAll("[data-theme-value]").forEach((button) => button.setAttribute("aria-pressed", String(button === themeButton)));
+    return;
+  }
+  const whatsNew = event.target.closest("[data-open-whats-new]");
+  if (whatsNew) {
+    whatsNewTour.start(whatsNew);
     return;
   }
   const widthButton = event.target.closest("[data-reading-width-value]");

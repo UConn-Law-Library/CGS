@@ -123,8 +123,10 @@ const indexTree = createGroupTree({
   placeholder: "Heading",
   nouns: { group: ["letter", "letters"], item: ["heading", "headings"] },
   loadItems: async (group) => indexTreeItems(group.key, await secondaryRepository.loadIndexLetter(group.key)),
-  // The full index is large, so a filter searches the headings under the letter it starts
-  // with, as the index search does.
+  // A filter searches every letter's headings from one compact list. If that list can't load,
+  // it falls back to the headings under the letter the query starts with, as the index search does.
+  loadSearchItems: async () => new Map(Object.entries(await secondaryRepository.loadIndexHeadings())
+    .map(([letter, headings]) => [letter, indexTreeItems(letter, headings.map(([id, label]) => ({ id, label })))])),
   searchGroups: (query, groups) => groups.filter((group) => group.key === topicLetter(query)),
   scopeNote: (query) => query.trim().length >= 2 ? `Headings are searched under ${topicLetter(query).toUpperCase()}.` : ""
 });
@@ -458,7 +460,7 @@ function chapterSheet(title, chapter, sections, selected, changeBySection, pendi
   return `<dialog class="chapter-sheet" data-chapter-sheet aria-labelledby="chapter-sheet-title">
     <div class="chapter-sheet-panel"><header><div><p class="eyebrow">${escapeHtml(titleLabel(title))}</p><h2 id="chapter-sheet-title">${escapeHtml(chapterLabel(chapter))} sections</h2></div><button type="button" data-close-chapter-sheet autofocus>Close</button></header>
       ${browseFilter("sheet-section-filter", "Filter chapter sections", "sheet-sections")}
-      <div id="sheet-sections">${railList(statuteSectionItems(title, chapter, sections, selected, changeBySection, pendingBySection), { className: "chapter-sheet-list" })}</div>
+      <div id="sheet-sections">${railList(statuteSectionItems(title, chapter, sections, selected, changeBySection, pendingBySection), { className: "chapter-sheet-list stagger-rows" })}</div>
     </div>
   </dialog>`;
 }
@@ -2533,11 +2535,14 @@ document.addEventListener("click", async (event) => {
     const status = copyCitation.closest(".provision")?.querySelector(".action-status");
     try {
       await navigator.clipboard.writeText(copyCitation.dataset.copyCitation);
-      copyCitation.textContent = "Copied";
+      // Icon actions swap to a check mark; the text-only button swaps its words.
+      const iconOnly = copyCitation.classList.contains("icon-action");
+      copyCitation.innerHTML = iconOnly ? iconActionLabel(icons.copied, "Copied") : "Copied";
       if (status) status.textContent = `${copyCitation.dataset.copyCitation} copied.`;
-      window.setTimeout(() => {
-        if (copyCitation.isConnected) copyCitation.textContent = "Copy citation";
-      }, 1200);
+      window.clearTimeout(Number(copyCitation.dataset.copyTimer));
+      copyCitation.dataset.copyTimer = String(window.setTimeout(() => {
+        if (copyCitation.isConnected) copyCitation.innerHTML = iconOnly ? iconActionLabel(icons.copy, "Copy citation") : "Copy citation";
+      }, 1600));
     } catch {
       if (status) status.textContent = "The citation could not be copied automatically.";
     }

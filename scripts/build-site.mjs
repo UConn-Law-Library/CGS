@@ -9,6 +9,7 @@ import { generateSupplementIndex } from "./lib/supplement-index.mjs";
 import { generateSearchV2Artifacts } from "./lib/search-v2-artifacts.mjs";
 import { buildRepositoryMap } from "./lib/build-repository-map.mjs";
 import { generateActAmendments } from "./lib/act-amendments-artifact.mjs";
+import { generateIndexHeadings } from "./lib/index-headings.mjs";
 import { generateDataRelease } from "./lib/data-release.mjs";
 import { applyPreviewNamespace } from "./lib/preview-build.mjs";
 
@@ -44,6 +45,10 @@ const actAmendments = await generateActAmendments({
   actsDir: path.join(dataDirectory, "acts"),
   outputDir: path.join(output, "data", "acts")
 });
+const indexHeadings = await generateIndexHeadings({
+  indexDir: path.join(dataDirectory, "secondary", "statutes-index"),
+  outputFile: path.join(output, "data", "index-headings.json")
+});
 const dataRelease = await generateDataRelease(path.join(output, "data"));
 const loaderPath = path.join(output, "data-loader.js");
 await writeFile(loaderPath, (await readFile(loaderPath, "utf8")).replaceAll("__CGS_DATA_RELEASE_ID__", dataRelease.id));
@@ -54,7 +59,7 @@ const buildId = await stampServiceWorker(output, undefined, {
   corpusSchemaVersion: catalog.schemaVersion
 });
 const repositoryMap = await buildRepositoryMap({ root, output });
-console.log(`Built static site ${appVersion} at ${output} with ${discovery.pages} indexed URLs, ${supplementIndex.editions.length} supplement editions, ${searchV2.counts.documents} extended search documents, ${actAmendments.counts.citations} sections amended by listed acts, ${repositoryMap.diagrams} repository map diagrams, and PWA build ${buildId}`);
+console.log(`Built static site ${appVersion} at ${output} with ${discovery.pages} indexed URLs, ${supplementIndex.editions.length} supplement editions, ${searchV2.counts.documents} extended search documents, ${actAmendments.counts.citations} sections amended by listed acts, ${indexHeadings.count} index headings, ${repositoryMap.diagrams} repository map diagrams, and PWA build ${buildId}`);
 
 // Without hints the browser finds each module only after parsing the one that imports it, and
 // the catalog only after every module has run. Preloading them from index.html lets the whole

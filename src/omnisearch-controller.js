@@ -28,7 +28,11 @@ function renderOmniPanel(query, groups, { completed = 0, total = 0, pending = fa
   if (!input || !panel || input.value.trim() !== query) return;
   const previousHref = omniItems()[omniSelection]?.getAttribute("href") ?? null;
   const rows = buildOmniRows(groups);
-  const body = rows.length ? rows.map((row, index) => `<a class="omni-item" id="omni-option-${index}" role="option" aria-selected="false" data-omni-option href="${escapeHtml(row.href)}">
+  // Suggestions redraw as results arrive, so only rows not already showing fade in, 30ms apart.
+  const shown = panel.hidden ? new Set() : new Set(omniItems().map((item) => item.getAttribute("href")));
+  let fresh = 0;
+  const entrance = (href) => shown.has(href) ? "" : ` is-new" style="--row: ${fresh++}`;
+  const body = rows.length ? rows.map((row, index) => `<a class="omni-item${entrance(row.href)}" id="omni-option-${index}" role="option" aria-selected="false" data-omni-option href="${escapeHtml(row.href)}">
       <span class="omni-kind">${escapeHtml(row.kind)}</span>
       <strong class="omni-main">${escapeHtml(row.label)}</strong>
       <small class="omni-sub">${escapeHtml(row.subtitle)}</small>

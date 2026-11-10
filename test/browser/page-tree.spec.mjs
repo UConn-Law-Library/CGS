@@ -252,8 +252,12 @@ test("the setting turns the index and infractions panes into trees too", async (
   await indexRail.getByRole("button", { name: "Expand B", exact: true }).click();
   await expect(indexRail.getByRole("link", { name: /^BAIL/ }).first()).toBeVisible();
   await page.getByLabel("Filter letters and headings").fill("motor vehicle");
-  await expect(page.locator('[data-group-tree-status="index"]')).toHaveText(/headings?\. Headings are searched under M\.$/);
+  await expect(page.locator('[data-group-tree-status="index"]')).toHaveText(/^\d+ headings?\.$/);
   await expect(indexRail.getByRole("link", { name: "MOTOR VEHICLE INSURANCE", exact: true })).toBeVisible();
+  // The filter searches every letter, not only the one the query starts with.
+  await page.getByLabel("Filter letters and headings").fill("librar");
+  await expect(indexRail.getByRole("link", { name: "STATE LIBRARIAN", exact: true })).toBeVisible();
+  await expect(indexRail.getByRole("link", { name: "LAW LIBRARIES", exact: true })).toBeVisible();
 
   await page.goto("/#/infractions/BOATING");
   const infractionRail = page.locator("#rail-infractions-tree");

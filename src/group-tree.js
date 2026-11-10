@@ -1,10 +1,12 @@
 import { escapeHtml } from "./reader.js";
-import { syncCollapseAll } from "./statute-tree.js";
+import { staggerChildren, syncCollapseAll } from "./statute-tree.js";
 
 // A two-level page tree (groups > items) for the subject index and the infraction schedule,
 // shown in place of their panes when page tree navigation is on. It uses the statute tree's
 // markup and styles. Items load per group on demand; `searchGroups` limits which groups a
 // filter searches, so a filter never downloads more than the page could already load.
+// `loadSearchItems`, when given, loads one compact list of every group's items for the
+// filter instead, so a filter searches all groups; if it fails, `searchGroups` applies.
 const RESULT_LIMIT = 200;
 const MINIMUM_ITEM_QUERY = 2;
 const chevron = `<svg class="tree-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>`;
@@ -30,7 +32,8 @@ export function createGroupTree({
   nouns,
   loadItems,
   searchGroups = (query, groups) => groups,
-  scopeNote = () => ""
+  scopeNote = () => "",
+  loadSearchItems = null
 }) {
   const railId = `rail-${id}-tree`;
   let groups = [];
@@ -42,6 +45,10 @@ export function createGroupTree({
   const items = new Map();
   const loads = new Map();
   const failed = new Set();
+  let searchItems = null;
+  let searchLoad = null;
+  let searchFailed = false;
+  let lastOpened = null;
 
   const filtering = () => Boolean(query.trim());
   const isOpen = (key, byDefault = false) => (filtering() ? filterExpanded : expanded).get(key) ?? byDefault;
@@ -61,6 +68,21 @@ export function createGroupTree({
     loads.set(group.key, load);
     return load;
   }
+
+  function ensureSearchItems() {
+    if (searchItems || searchLoad) return;
+    searchLoad = loadSearchItems().then((loaded) => {
+      searchItems = loaded;
+    }).catch((error) => {
+      searchFailed = true;
+      console.warn(`Could not load the ${nouns.item[1]} to filter`, error);
+    }).finally(() => {
+      searchLoad = null;
+      refresh();
+    });
+  }
+
+  const searchesAll = () => Boolean(loadSearchItems) && !searchFailed;
 
   function itemRow(item) {
     return `<li><a class="section-navigation-link" href="${escapeHtml(item.href)}"${item.href === current.itemHref ? ' aria-current="page"' : ""}><strong>${escapeHtml(item.label)}</strong>${item.description ? `<span class="section-navigation-description">${escapeHtml(item.description)}</span>` : ""}</a></li>`;
@@ -90,19 +112,26 @@ export function createGroupTree({
 
   function filteredTree() {
     const words = queryWords(query);
-    const searched = query.trim().length >= MINIMUM_ITEM_QUERY ? new Set(searchGroups(query, groups).map((group) => group.key)) : new Set();
+    const long = query.trim().length >= MINIMUM_ITEM_QUERY;
+    const all = searchesAll();
+    const searched = long ? new Set((all ? groups : searchGroups(query, groups)).map((group) => group.key)) : new Set();
     const counts = { groups: 0, items: 0, shown: 0, loading: false };
+    if (all && long && !searchItems) {
+      counts.loading = true;
+      ensureSearchItems();
+    }
     const nodes = [];
     for (const group of groups) {
       const groupHit = matchesWords(`${group.label} ${group.description ?? ""}`.toLocaleLowerCase(), words);
       if (groupHit) counts.groups += 1;
       let shown = [];
       if (searched.has(group.key)) {
-        if (!items.has(group.key) && !failed.has(group.key)) {
+        if (!all && !items.has(group.key) && !failed.has(group.key)) {
           counts.loading = true;
           ensureItems(group);
         }
-        const hits = (items.get(group.key) ?? []).filter((item) => matchesWords(item.text, words));
+        const source = all ? searchItems?.get(group.key) ?? [] : items.get(group.key) ?? [];
+        const hits = source.filter((item) => matchesWords(item.text, words));
         counts.items += hits.length;
         shown = hits.slice(0, Math.max(0, RESULT_LIMIT - counts.shown));
         counts.shown += shown.length;
@@ -115,7 +144,7 @@ export function createGroupTree({
 
   function statusText(counts) {
     if (counts.loading) return `Loading ${nouns.item[1]}…`;
-    const note = scopeNote(query);
+    const note = searchesAll() ? "" : scopeNote(query);
     const total = counts.groups + counts.items;
     if (!total) return `No matching ${nouns.group[1]} or ${nouns.item[1]}.${note ? ` ${note}` : ""}`;
     const summary = `${[[counts.groups, nouns.group], [counts.items, nouns.item]].filter(([count]) => count).map(([count, noun]) => plural(count, noun)).join(", ")}.`;
@@ -139,6 +168,7 @@ export function createGroupTree({
     rail.innerHTML = html;
     rail.scrollTop = scrollTop;
     syncCollapseAll(id, rail);
+    if (lastOpened && performance.now() - lastOpened.at < 1000) staggerChildren(rail.querySelector(`[data-group-key="${CSS.escape(lastOpened.key)}"]`));
     const statusElement = document.querySelector(`[data-group-tree-status="${CSS.escape(id)}"]`);
     if (statusElement && statusElement.textContent !== status) statusElement.textContent = status;
     if (focusKey !== null) rail.querySelector(`[data-group-key="${CSS.escape(focusKey)}"]`)?.focus({ preventScroll: true });
@@ -148,7 +178,9 @@ export function createGroupTree({
     const toggle = event.target.closest(`[data-group-tree-toggle="${CSS.escape(id)}"]`);
     if (!toggle) return;
     const key = toggle.dataset.groupKey;
-    (filtering() ? filterExpanded : expanded).set(key, toggle.getAttribute("aria-expanded") !== "true");
+    const opening = toggle.getAttribute("aria-expanded") !== "true";
+    (filtering() ? filterExpanded : expanded).set(key, opening);
+    lastOpened = opening ? { key, at: performance.now() } : null;
     refresh({ focusKey: key });
   });
 

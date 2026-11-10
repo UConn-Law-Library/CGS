@@ -294,12 +294,14 @@ footer { padding: 2rem 0; color: var(--muted); border-top: 1px solid var(--line)
 .supplement-warning { padding: 1rem; color: var(--warning-ink); background: var(--warning-surface); border: 1px solid var(--warning-line); }
 /* A listed Public Act changes this section after the published text: amber, for caution. */
 .pending-amendments, .pending-amendments-summary { max-width: var(--measure-reading); color: var(--warning-ink); background: var(--warning-surface); border: 1px solid var(--warning-line); border-radius: .5rem; }
-.pending-amendments { margin: 1rem 0 0; padding: .9rem 1rem; }
+.pending-amendments { margin: 1rem 0 0; padding: .9rem 1rem; background: transparent; }
 .pending-amendments h2 { margin: 0 0 .35rem; font-size: 1.05rem; }
 .pending-amendments p { margin: 0; font-size: var(--text-small-reading); }
 .pending-amendments ul { display: grid; gap: .45rem; margin: .7rem 0; padding: 0; list-style: none; }
 .pending-amendments li { display: grid; gap: .1rem; }
-.pending-amendments li a { width: fit-content; color: inherit; font-weight: 700; }
+.pending-amendments li a { display: inline-flex; align-items: center; gap: .35rem; width: fit-content; min-height: 2.25rem; padding: .2rem .6rem; color: inherit; font-weight: 700; text-decoration-thickness: 2px; text-underline-offset: .2em; background: transparent; border: 1px solid var(--warning-line); border-radius: var(--radius-control); }
+/* An outlined chip marks each act as a link to its text, not a label. */
+.pending-amendments li a:hover { background: color-mix(in srgb, currentColor 12%, transparent); border-color: currentColor; }
 .pending-amendments li span { font-size: var(--text-ui); }
 .pending-amendments .pending-amendments-note { font-size: var(--text-meta); }
 .pending-amendments a { color: inherit; }
@@ -1396,7 +1398,7 @@ h1,
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; transition-delay: 0s !important; animation-duration: .01ms !important; animation-delay: 0s !important; }
 }
 
 @media (max-width: 60rem) {
@@ -1534,6 +1536,9 @@ h1,
   --research-gap: 2rem;
   --control-height: 2.75rem;
   --bookmark-accent: light-dark(#704488, #d8aff0);
+  /* The Transferred tag's green, shared by the What's new button and tour. */
+  --transferred-accent: light-dark(#09645e, #74d6cb);
+  --on-transferred: light-dark(#fff, #062521);
 }
 .brand-library { display: block; margin-bottom: .3rem; font-size: var(--text-caption); font-weight: 400; letter-spacing: .025em; }
 .mobile-utility-icon { display: none; }
@@ -1604,9 +1609,13 @@ h1,
   :root[data-reading-width="widest"] { --measure-reading: 72rem; }
   .reading-width-setting .segmented { grid-template-columns: repeat(3, 1fr); }
   @media (max-width: 60rem) { .reading-width-setting { display: none; } }
-  /* What's new tour: a floating card beside the outlined control (navy marks "you are here"). */
+  /* What's new tour: the button, card, and outlined control share the Transferred tag's green. */
   .whats-new-button { font: inherit; cursor: pointer; }
-  .tour-card { position: fixed; z-index: 70; width: min(22rem, calc(100vw - 2rem)); padding: 1rem; color: var(--ink); background: var(--surface-raised); border: 1px solid var(--line); border-radius: .8rem; box-shadow: var(--shadow); }
+  /* Tinted like the home page's Understanding the Statutes card, not filled. */
+  .global-search .whats-new-button { color: var(--ink); background: color-mix(in srgb, var(--transferred-accent) 12%, var(--surface-raised)); border-color: color-mix(in srgb, var(--transferred-accent) 65%, var(--line)); font-weight: 700; }
+  .global-search .whats-new-button:hover { background: color-mix(in srgb, var(--transferred-accent) 20%, var(--surface-raised)); border-color: var(--transferred-accent); }
+  .whats-new-button:focus-visible { outline: 3px solid var(--transferred-accent); outline-offset: 2px; }
+  .tour-card { position: fixed; z-index: 70; width: min(22rem, calc(100vw - 2rem)); padding: 1rem; color: var(--ink); background: color-mix(in srgb, var(--transferred-accent) 12%, var(--surface-raised)); border: 1px solid var(--transferred-accent); border-radius: .8rem; box-shadow: var(--shadow); }
   .tour-card[hidden] { display: none; }
   .tour-card:focus { outline: none; }
   .tour-card-header { display: flex; align-items: center; justify-content: space-between; gap: .5rem; }
@@ -1618,8 +1627,8 @@ h1,
   .tour-actions button { min-height: 2.5rem; padding: .45rem .9rem; border-radius: var(--radius-control); font-size: var(--text-ui); font-weight: 700; }
   .tour-actions [data-tour-back] { color: var(--ink); background: transparent; border: 1px solid var(--field-line); }
   .tour-actions [data-tour-back]:disabled { opacity: .45; }
-  .tour-actions [data-tour-next] { color: var(--on-blue); background: var(--blue); border: 1px solid var(--blue); }
-  .tour-target { outline: 3px solid var(--blue) !important; outline-offset: 4px; border-radius: var(--radius-control); }
+  .tour-actions [data-tour-next] { color: var(--on-transferred); background: var(--transferred-accent); border: 1px solid var(--transferred-accent); }
+  .tour-target { outline: 3px solid var(--transferred-accent) !important; outline-offset: 4px; border-radius: var(--radius-control); }
   @media (max-width: 60rem) {
     .tour-card { top: auto; right: .75rem; bottom: calc(5rem + env(safe-area-inset-bottom)); left: .75rem; width: auto; }
   }
@@ -1646,7 +1655,7 @@ h1,
   .context-list strong { font-weight: 600; }
   .context-list span { font-size: var(--text-meta); line-height: 1.45; }
   .context-list .transferred-pill {
-    color: light-dark(#09645e, #74d6cb);
+    color: var(--transferred-accent);
     background: color-mix(in srgb, currentColor 12%, var(--surface-raised));
     border-color: currentColor;
   }
@@ -1879,3 +1888,63 @@ h1,
 @media print {
   .browse-filter, .chapter-research-tools, .research-start { display: none; }
 }
+
+/* Menu motion: menus, panels, and dialogs ease out over 250ms when they open and 200ms when
+   they close. `display` and `overlay` transition discretely, so a closing menu stays drawn
+   until it has faded. Browsers without @starting-style open and close at once. */
+:is(.settings-panel, .omni-panel, .tour-card) {
+  transition: opacity 250ms ease-out, translate 250ms ease-out, display 250ms ease-out allow-discrete;
+}
+:is(.settings-panel, .omni-panel, .tour-card)[hidden] {
+  display: none;
+  opacity: 0;
+  translate: 0 -.4rem;
+  pointer-events: none;
+  transition-duration: 200ms;
+}
+@starting-style {
+  :is(.settings-panel, .omni-panel, .tour-card):not([hidden]) { opacity: 0; translate: 0 -.4rem; }
+}
+:is(.chapter-sheet, .clear-data-dialog, .feedback-dialog) {
+  --menu-offset: .5rem;
+  opacity: 0;
+  translate: 0 var(--menu-offset);
+  pointer-events: none;
+  transition: opacity 200ms ease-out, translate 200ms ease-out, display 200ms ease-out allow-discrete, overlay 200ms ease-out allow-discrete;
+}
+.chapter-sheet { --menu-offset: 2rem; }
+:is(.chapter-sheet, .clear-data-dialog, .feedback-dialog)[open] { opacity: 1; translate: none; pointer-events: auto; transition-duration: 250ms; }
+@starting-style {
+  :is(.chapter-sheet, .clear-data-dialog, .feedback-dialog)[open] { opacity: 0; translate: 0 var(--menu-offset); }
+}
+:is(.chapter-sheet, .clear-data-dialog, .feedback-dialog)::backdrop {
+  opacity: 0;
+  transition: opacity 200ms ease-out, display 200ms ease-out allow-discrete, overlay 200ms ease-out allow-discrete;
+}
+:is(.chapter-sheet, .clear-data-dialog, .feedback-dialog)[open]::backdrop { opacity: 1; transition-duration: 250ms; }
+@starting-style {
+  :is(.chapter-sheet, .clear-data-dialog, .feedback-dialog)[open]::backdrop { opacity: 0; }
+}
+/* Phones dock Settings and the tour card at the bottom, so they rise into place instead. */
+@media (max-width: 60rem) {
+  :is(.settings-panel, .tour-card)[hidden] { translate: 0 .4rem; }
+  @starting-style {
+    :is(.settings-panel, .tour-card):not([hidden]) { translate: 0 .4rem; }
+  }
+}
+
+/* Rows of a list that just opened fade in 30ms apart. The stagger stops at the tenth row so
+   a long chapter doesn't keep the reader waiting. */
+.stagger-rows > * { animation: row-in 250ms ease-out backwards; animation-delay: 300ms; }
+.stagger-rows > :nth-child(1) { animation-delay: 0ms; }
+.stagger-rows > :nth-child(2) { animation-delay: 30ms; }
+.stagger-rows > :nth-child(3) { animation-delay: 60ms; }
+.stagger-rows > :nth-child(4) { animation-delay: 90ms; }
+.stagger-rows > :nth-child(5) { animation-delay: 120ms; }
+.stagger-rows > :nth-child(6) { animation-delay: 150ms; }
+.stagger-rows > :nth-child(7) { animation-delay: 180ms; }
+.stagger-rows > :nth-child(8) { animation-delay: 210ms; }
+.stagger-rows > :nth-child(9) { animation-delay: 240ms; }
+.stagger-rows > :nth-child(10) { animation-delay: 270ms; }
+.omni-item.is-new { animation: row-in 250ms ease-out backwards; animation-delay: calc(min(var(--row, 0), 10) * 30ms); }
+@keyframes row-in { from { opacity: 0; translate: 0 -.25rem; } }

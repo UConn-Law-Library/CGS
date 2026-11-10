@@ -5,6 +5,9 @@ import { routeHref } from "./routes.js";
 // Settings beside the three-pane layout. Sections come from the small per-title heading indexes,
 // so browsing or filtering the whole code does not download any chapter text.
 const RAIL_ID = "rail-statute-tree";
+// A row's children stagger in when it opens. Sections that finish loading soon after still
+// count as opening; later redraws don't replay it.
+const STAGGER_WINDOW = 1000;
 const SECTION_RESULT_LIMIT = 200;
 const MINIMUM_SECTION_QUERY = 2;
 const LOAD_CONCURRENCY = 6;
@@ -35,6 +38,10 @@ function collapseAllButton(treeId, html) {
   return `<button type="button" class="tree-collapse-all" data-tree-collapse-all="${treeId}"${html.includes('aria-expanded="true"') ? "" : " hidden"}>Collapse all</button>`;
 }
 
+export function staggerChildren(toggle) {
+  toggle?.closest(".tree-node")?.querySelector(":scope > .tree-children")?.classList.add("stagger-rows");
+}
+
 export function syncCollapseAll(treeId, rail) {
   const button = document.querySelector(`[data-tree-collapse-all="${treeId}"]`);
   if (button) button.hidden = !rail.querySelector('[aria-expanded="true"]');
@@ -56,6 +63,7 @@ export function createStatuteTree({ titleLabel, chapterLabel, titleRoute, chapte
   let searching = false;
   let filterTimer = null;
   let progressTimer = null;
+  let lastOpened = null;
   // Each mode keeps its own open and closed rows: filtering opens rows that have matches, and
   // clearing the filter returns to what the person had open.
   const expanded = new Map();
@@ -259,6 +267,7 @@ export function createStatuteTree({ titleLabel, chapterLabel, titleRoute, chapte
     rail.innerHTML = html;
     rail.scrollTop = scrollTop;
     syncCollapseAll("statutes", rail);
+    if (lastOpened && performance.now() - lastOpened.at < STAGGER_WINDOW) staggerChildren(rail.querySelector(`[data-tree-toggle="${CSS.escape(lastOpened.key)}"]`));
     const statusElement = document.querySelector("[data-tree-filter-status]");
     if (statusElement && statusElement.textContent !== status) statusElement.textContent = status;
     if (focusToggle) rail.querySelector(`[data-tree-toggle="${CSS.escape(focusToggle)}"]`)?.focus({ preventScroll: true });
@@ -300,7 +309,9 @@ export function createStatuteTree({ titleLabel, chapterLabel, titleRoute, chapte
     const toggle = event.target.closest("[data-tree-toggle]");
     if (!toggle) return;
     const key = toggle.dataset.treeToggle;
-    (filtering() ? filterExpanded : expanded).set(key, toggle.getAttribute("aria-expanded") !== "true");
+    const opening = toggle.getAttribute("aria-expanded") !== "true";
+    (filtering() ? filterExpanded : expanded).set(key, opening);
+    lastOpened = opening ? { key, at: performance.now() } : null;
     refresh({ focusToggle: key });
   });
 

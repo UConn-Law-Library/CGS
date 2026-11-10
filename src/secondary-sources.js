@@ -63,6 +63,21 @@ export class SecondarySourceRepository {
     return shards.flatMap((shard) => shard.headings);
   }
 
+  // Every index heading's id and label, keyed by letter, built from the index shards.
+  async loadIndexHeadings() {
+    if (!this.#cache.has("index-headings")) {
+      this.#cache.set("index-headings", (async () => {
+        const response = await this.#fetch(dataUrl(new URL("../index-headings.json", this.#baseUrl)), { signal: AbortSignal.timeout(15000) });
+        if (!response.ok) throw new Error(`Could not load index headings (${response.status})`);
+        return (await response.json()).letters;
+      })().catch((error) => {
+        this.#cache.delete("index-headings");
+        throw error;
+      }));
+    }
+    return this.#cache.get("index-headings");
+  }
+
   async loadLinkedIndexEntries(links = []) {
     const byShard = new Map();
     for (const link of links) {

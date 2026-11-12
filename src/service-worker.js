@@ -76,12 +76,17 @@ const SHELL_FILES = [
   "./data/catalog.json",
   "./data/release.json"
 ];
+// Data files are verified against the release, so only the code and assets are served
+// straight from the precache.
+const SHELL_URLS = new Set(SHELL_FILES.filter((file) => !file.startsWith("./data/")).map((file) => new URL(file, self.registration.scope).href));
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(SHELL_CACHE)
       .then(async (cache) => {
-        await cache.addAll(SHELL_FILES);
+        // Bypass the HTTP cache: Pages allows copies up to ten minutes old, and a stale file
+        // here would be served for this whole shell generation.
+        await cache.addAll(SHELL_FILES.map((file) => new Request(scopedUrl(file), { cache: "reload" })));
         const release = await dataRelease();
         const catalog = await cache.match(scopedUrl("./data/catalog.json"));
         await CgsOfflineIntegrity.verifyArtifactBytes(await catalog.arrayBuffer(), release.artifacts.find((item) => item.path === "catalog.json"), crypto);
@@ -117,6 +122,18 @@ async function networkFirst(request, cacheName, fallback = null) {
     if (cached) return cached;
     throw error;
   }
+}
+
+// Precached shell files come from this worker's own generation, so a page and the modules it
+// imports always belong to one build. A new build installs a new worker and cache.
+async function shellFirst(request, cacheKey = request, fallback = null) {
+  const cached = await (await caches.open(SHELL_CACHE)).match(cacheKey);
+  return cached ?? networkFirst(request, SHELL_CACHE, fallback);
+}
+
+function isAppEntry(url) {
+  const path = url.pathname.slice(new URL(self.registration.scope).pathname.length);
+  return path === "" || path === "index.html";
 }
 
 function transientFailure(response) {
@@ -161,6 +178,18 @@ async function verifiedResponse(request, artifact, timeout = 15000) {
   }, timeout);
 }
 
+// A cached copy of an artifact, only if its bytes match this release's hash for that path.
+async function verifiedCopy(cache, request, artifact) {
+  const cached = await cache?.match(request, { ignoreSearch: true });
+  if (!cached) return null;
+  try {
+    await CgsOfflineIntegrity.verifyArtifactBytes(await cached.clone().arrayBuffer(), artifact, crypto);
+    return cached;
+  } catch {
+    return null;
+  }
+}
+
 async function activeOfflineCacheName() {
   const control = await caches.open(CONTROL_CACHE);
   const active = await control.match(scopedUrl(ACTIVE_CACHE_URL));
@@ -201,14 +230,12 @@ async function dataNetworkFirst(request) {
     await runtime.put(request, response.clone());
     return response;
   } catch (error) {
+    // A download from an earlier release still serves every file whose bytes this release
+    // publishes unchanged; a weekly refresh changes only a few of them.
     const activeName = await activeOfflineCacheName();
     if (activeName) {
-      const active = await caches.open(activeName);
-      const metadata = await active.match(scopedUrl(METADATA_URL));
-      if (metadata && (await metadata.json()).dataReleaseId === DATA_RELEASE_ID) {
-        const downloaded = await active.match(request, { ignoreSearch: true });
-        if (downloaded) return downloaded;
-      }
+      const downloaded = await verifiedCopy(await caches.open(activeName), request, artifact);
+      if (downloaded) return downloaded;
     }
     const visited = await runtime.match(request, { ignoreSearch: true });
     if (visited) return visited;
@@ -224,9 +251,13 @@ self.addEventListener("fetch", (event) => {
   const url = new URL(request.url);
   if (url.origin !== self.location.origin) return;
   if (request.mode === "navigate") {
-    event.respondWith(networkFirst(request, SHELL_CACHE, scopedUrl("./index.html")));
+    event.respondWith(isAppEntry(url)
+      ? shellFirst(request, scopedUrl("./index.html"), scopedUrl("./index.html"))
+      : networkFirst(request, SHELL_CACHE, scopedUrl("./index.html")));
   } else if (url.pathname.includes("/data/")) {
     event.respondWith(dataNetworkFirst(request));
+  } else if (SHELL_URLS.has(url.href)) {
+    event.respondWith(shellFirst(request));
   } else {
     event.respondWith(networkFirst(request, SHELL_CACHE));
   }
@@ -271,11 +302,16 @@ async function supplementOfflineData(index, cache) {
   return { cachedManifests: index.editions.length, editions, artifacts: editions.flatMap((edition) => edition.artifacts) };
 }
 
-async function fetchVerifiedIntoCache(task, cache) {
+async function fetchVerifiedIntoCache(task, cache, previous = null) {
   const request = new Request(scopedUrl(task.path), { cache: "reload" });
+  const reused = await verifiedCopy(previous, request, task);
+  if (reused) {
+    await cache.put(request, reused);
+    return { bytes: task.bytes, reused: true };
+  }
   const response = await verifiedResponse(request, task, 60000);
   await cache.put(request, response);
-  return task.bytes;
+  return { bytes: task.bytes, reused: false };
 }
 
 function currentRelease() {
@@ -293,7 +329,11 @@ function compatibilityFor(metadata) {
     return { compatible: false, reason: "The offline data format predates this application release." };
   }
   if (metadata.dataReleaseId !== DATA_RELEASE_ID) {
-    return { compatible: false, reason: "The downloaded statutes, supplements, acts, or indexes differ from this application’s data release." };
+    return {
+      compatible: false,
+      code: "release",
+      reason: "The statutes, supplements, acts, or indexes were updated after this copy was saved. Pages that did not change still open offline."
+    };
   }
   if (metadata.corpus?.schemaVersion !== CORPUS_SCHEMA_VERSION) {
     return { compatible: false, reason: "The offline corpus schema differs from this application release." };
@@ -305,7 +345,11 @@ function compatibilityFor(metadata) {
 }
 
 async function cacheOfflineData({ port }) {
-  await cleanupOfflineCaches(await activeOfflineCacheName());
+  const previousName = await activeOfflineCacheName();
+  await cleanupOfflineCaches(previousName);
+  // Files whose bytes still match are copied from the previous download, after the same
+  // hash check a download gets; damaged or changed files are downloaded again.
+  const previous = previousName ? await caches.open(previousName) : null;
   const stagingName = `${OFFLINE_CACHE_PREFIX}${crypto.randomUUID()}`;
   const cache = await caches.open(stagingName);
   try {
@@ -329,13 +373,16 @@ async function cacheOfflineData({ port }) {
     let completed = 6 + supplementData.cachedManifests;
     let cursor = 0;
     let verifiedBytes = 0;
+    let reusedFiles = 0;
     const pending = artifacts;
     const total = pending.length + completed;
     port.postMessage({ type: "progress", completed, total });
     async function worker() {
       while (cursor < pending.length) {
         const artifact = pending[cursor++];
-        verifiedBytes += await fetchVerifiedIntoCache(artifact, cache);
+        const result = await fetchVerifiedIntoCache(artifact, cache, previous);
+        verifiedBytes += result.bytes;
+        if (result.reused) reusedFiles += 1;
         completed += 1;
         if (completed === total || completed % 10 === 0) {
           port.postMessage({ type: "progress", completed, total });
@@ -353,6 +400,7 @@ async function cacheOfflineData({ port }) {
       downloadedAt: new Date().toISOString(),
       verifiedFiles: artifacts.length,
       verifiedBytes,
+      reusedFiles,
       corpus: {
         generatedAt: baseManifest.generatedAt,
         schemaVersion: baseManifest.schemaVersion,

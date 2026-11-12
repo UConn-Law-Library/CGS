@@ -9,5 +9,9 @@
   "maxProvisionCountDeltaPercent": 5,
   "maxAddedProvisionsPercent": 5,
   "maxRemovedProvisionsPercent": 2,
-  "maxChangedProvisionsPercent": 35
+  "maxChangedProvisionsPercent": 15,
+  "maxStatusTransitionsPercent": 2,
+  "maxShrunkBodies": 25,
+  "maxEmptyActiveIncrease": 0,
+  "maxIdentifierWarningIncrease": 5
 }

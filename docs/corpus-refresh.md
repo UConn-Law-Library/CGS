@@ -10,7 +10,9 @@ An administrator must configure the repository to:
 - allow the workflow `contents: write`, `pull-requests: write`, and `actions: write` permissions;
 - require pull requests for `main` and require the `verify` check before merge.
 
-The workflow-created branch receives an explicit `CI` workflow dispatch because GitHub does not recursively trigger ordinary workflow events created with the repository `GITHUB_TOKEN`.
+Only the short `publish` job holds those write permissions. The `refresh` job, which installs packages and parses downloaded pages, runs with `contents: read` and keeps no Git credentials. It commits the candidate locally and passes it to `publish` as a Git bundle. `publish` runs only [`scripts/publish-refresh.sh`](../scripts/publish-refresh.sh).
+
+Each source has one rolling branch and draft pull request: `automation/corpus-refresh`, `automation/acts-refresh`, and `automation/secondary-refresh`. A new run force-pushes that branch and updates the open draft's title and description rather than opening another draft. If `main` moved while the refresh ran, nothing is published, because the checks ran against an older `main`; run the workflow again. The branch receives an explicit `CI` workflow dispatch because GitHub does not recursively trigger ordinary workflow events created with the repository `GITHUB_TOKEN`.
 
 ## Run a refresh
 
@@ -44,9 +46,11 @@ python -m crawler.cgs_crawler.cli --ca-bundle .crawl/ca-bundle.pem --output .cra
 
 ## Safety policy
 
-[`config/corpus-refresh-policy.json`](../config/corpus-refresh-policy.json) is the reviewed, versioned policy. It limits title membership changes, structural churn, provision count drift, additions, removals, and content changes. A legitimate publication outside those bounds requires a separate policy pull request before rerunning the refresh; workflow inputs cannot bypass the gate.
+[`config/corpus-refresh-policy.json`](../config/corpus-refresh-policy.json) is the reviewed, versioned policy. It limits title membership changes, structural churn, provision count drift, additions, removals, content changes, and status transitions. A normal week changes about 7% of provisions, mostly annotations, so content changes are limited to 15%. A legitimate publication outside those bounds requires a separate policy pull request before rerunning the refresh; workflow inputs cannot bypass the gate.
 
-The crawler's own plausible-count checks and the canonical validator run before the policy gate. After the candidate replaces the working copy, the complete `npm run check` sequence runs again before any branch is pushed.
+The policy also fails on signs of parser damage rather than legal change: any new in-force section with no text, more than a few new identifier warnings, or more than 25 bodies that shrink by more than half without a status change. The diff lists each shrunk body.
+
+The crawler's own plausible-count checks and the canonical validator run before the policy gate. The crawler also fails outright if an in-force section has no text, which happens when a section's anchor cannot be found. After the candidate replaces the working copy, the complete `npm run check` sequence runs again before any branch is pushed.
 
 ## Review
 

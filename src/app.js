@@ -64,7 +64,7 @@ import { PwaManager } from "./pwa.js";
 import { NativeDialogController } from "./dialog.js";
 import { aggregateShardCounts, contextualColumnCount } from "./context-navigation.js";
 import { NavigationHistory } from "./navigation-history.js";
-import { getJson, retryableLoader } from "./data-loader.js";
+import { DATA_RELEASE_CHANGED_EVENT, getJson, isDataReleaseChanged, retryableLoader } from "./data-loader.js";
 import {
   actSearchLinks,
   findActMatches,
@@ -117,32 +117,44 @@ pwaManager.subscribe((state) => {
   updatePwaControls();
 });
 pwaManager.init();
+// Any data request this tab makes after a newer release takes over is refused, so offer the
+// reload in Settings too, for failures that only leave a partial page.
+globalThis.addEventListener(DATA_RELEASE_CHANGED_EVENT, () => pwaManager.markDataReleaseChanged());
 
 // fetch() rejects with a TypeError when the request never reaches a server; HTTP errors
 // arrive as our own Error with the status in its message.
 function loadFailureKind(error) {
+  if (isDataReleaseChanged(error)) return "release";
   if (!navigator.onLine) return "offline";
   return error instanceof TypeError ? "network" : "server";
 }
 
 function loadFailurePage(error) {
   const kind = loadFailureKind(error);
-  const heading = kind === "offline" ? "This page isn’t saved for offline use" : "The statutes could not be loaded";
+  const heading = {
+    offline: "This page isn’t saved for offline use",
+    release: "The statutes were updated"
+  }[kind] ?? "The statutes could not be loaded";
   const message = {
     offline: "You’re offline, and this part of the statutes hasn’t been downloaded to this device. The page will load again when you reconnect. To read without a connection later, choose Download for offline use in Settings.",
     network: "The statute data could not be reached. Check your connection and try again.",
-    server: "The statute data could not be loaded from the server. Try again in a moment."
+    server: "The statute data could not be loaded from the server. Try again in a moment.",
+    release: "A newer edition of the statute data was published while this page was open. Reload to read it. You’ll return to this page."
   }[kind];
+  const action = kind === "release"
+    ? `<button type="button" data-reload-page>Reload</button>`
+    : `<button type="button" data-retry-route>Try again</button>`;
   return `<main class="error load-failure" id="main-content" data-load-failure>
     <h1>${heading}</h1>
     <p>${message}</p>
-    <p><button type="button" data-retry-route>Try again</button></p>
+    <p>${action}</p>
     <p class="load-failure-detail">Technical detail: ${escapeHtml(error.message)}</p>
   </main>`;
 }
 
 function searchFailureMessage(error) {
   return {
+    release: "A newer edition of the statute data was published while this page was open. Reload the page to search it.",
     offline: "You’re offline, and the search data hasn’t been downloaded to this device. Reconnect and search again.",
     network: "The search data could not be reached. Check your connection and search again.",
     server: `Search could not finish because its data did not load (${error.message}). Try again in a moment.`
@@ -2121,6 +2133,10 @@ document.addEventListener("click", async (event) => {
   }
   if (event.target.closest("[data-retry-route]")) {
     renderCurrentRoute();
+    return;
+  }
+  if (event.target.closest("[data-reload-page]")) {
+    location.reload();
     return;
   }
   if (event.target.closest("[data-close-feedback]")) {

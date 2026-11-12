@@ -11,10 +11,10 @@ on:
         default: true
         type: boolean
 
+# The refresh job installs packages and parses downloaded PDFs, so it holds no write access.
+# Only the short publish job can push, and it runs no downloaded code.
 permissions:
-  actions: write
-  contents: write
-  pull-requests: write
+  contents: read
 
 concurrency:
   group: secondary-sources-refresh
@@ -24,6 +24,8 @@ jobs:
   refresh:
     runs-on: ubuntu-24.04
     timeout-minutes: 180
+    outputs:
+      publish: ${{ steps.package.outputs.publish }}
     defaults:
       run:
         shell: bash
@@ -36,6 +38,8 @@ jobs:
       CREATE_PULL_REQUEST: ${{ github.event_name == 'schedule' || inputs.create_pull_request }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
       - name: Require main for publication
         run: |
           if [ "$GITHUB_REF" != "refs/heads/main" ] && [ "$CREATE_PULL_REQUEST" = "true" ]; then
@@ -50,6 +54,7 @@ jobs:
         with:
           python-version: "3.12"
           cache: pip
+          cache-dependency-path: crawler/requirements-lock.txt
       - run: python -m pip install -r crawler/requirements-lock.txt
       - run: python -m crawler.cgs_crawler.tls --output .crawl/ca-bundle.pem
       - run: npm ci
@@ -126,30 +131,33 @@ jobs:
             echo "Review the official revisions, legal-data changes, citation resolution, and source links before merging."
           } > "$REPORT_DIR/pull-request.md"
 
-      - name: Create draft refresh pull request
+      - name: Package the candidate commit
+        id: package
         if: steps.review.outputs.has_changes == 'true' && env.CREATE_PULL_REQUEST == 'true'
-        env:
-          GH_TOKEN: ${{ github.token }}
         run: |
-          branch="automation/secondary-refresh-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          title="Refresh secondary sources $(date -u +%Y-%m-%d)"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git switch -c "$branch"
           git add -- public/data/secondary
           if git diff --cached --quiet; then
             echo "The review reported meaningful changes, but no secondary artifacts changed." >&2
             exit 1
           fi
-          git commit -m "Refresh secondary sources $(date -u +%Y-%m-%d)"
-          git push origin "$branch"
-          pr_url="$(gh pr create \
-            --base main \
-            --head "$branch" \
-            --draft \
-            --title "Refresh secondary sources $(date -u +%Y-%m-%d)" \
-            --body-file "$REPORT_DIR/pull-request.md")"
-          gh workflow run ci.yml --ref "$branch"
-          echo "Created draft refresh PR: $pr_url" >> "$GITHUB_STEP_SUMMARY"
+          git commit --quiet -m "$title"
+          mkdir -p .crawl/publish
+          git bundle create .crawl/publish/candidate.bundle "$GITHUB_SHA..HEAD"
+          cp "$REPORT_DIR/pull-request.md" .crawl/publish/pull-request.md
+          echo "$title" > .crawl/publish/title.txt
+          echo "publish=true" >> "$GITHUB_OUTPUT"
+
+      - name: Upload the candidate commit
+        if: steps.package.outputs.publish == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: secondary-refresh-candidate-${{ github.run_id }}-${{ github.run_attempt }}
+          path: .crawl/publish/
+          include-hidden-files: true
+          retention-days: 7
 
       - name: Upload refresh reports
         if: always()
@@ -170,3 +178,23 @@ jobs:
           if-no-files-found: ignore
           include-hidden-files: true
           retention-days: 14
+
+  publish:
+    needs: refresh
+    if: needs.refresh.outputs.publish == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      actions: write
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: secondary-refresh-candidate-${{ github.run_id }}-${{ github.run_attempt }}
+          path: .crawl/publish
+      - name: Update the draft refresh pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: bash scripts/publish-refresh.sh automation/secondary-refresh .crawl/publish

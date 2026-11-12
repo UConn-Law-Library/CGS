@@ -18,12 +18,28 @@ concurrency:
 jobs:
   version:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     outputs:
       version: ${{ steps.version.outputs.version }}
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      # Production deploys only the newest main commit. Without this, a manual run from another
+      # branch, or a re-run of an older run, would replace the site with older code.
+      - name: Require the newest main commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ "$GITHUB_REF" != "refs/heads/main" ]]; then
+            echo "Production deploys only from main, not $GITHUB_REF." >&2
+            exit 1
+          fi
+          main_sha="$(git rev-parse origin/main)"
+          if [[ "$main_sha" != "$GITHUB_SHA" ]]; then
+            echo "This run is for ${GITHUB_SHA::7}, but main is now at ${main_sha::7}. Deploy from the newest run instead." >&2
+            exit 1
+          fi
       - name: Determine application version
         id: version
         shell: bash
@@ -49,6 +65,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     needs: version
+    timeout-minutes: 30
     env:
       CGS_APP_VERSION: ${{ needs.version.outputs.version }}
     steps:
@@ -63,6 +80,7 @@ jobs:
         with:
           python-version: "3.12"
           cache: pip
+          cache-dependency-path: crawler/requirements-lock.txt
       - run: python -m pip install -r crawler/requirements-lock.txt
       - run: npm ci
       - run: npm run check
@@ -74,6 +92,7 @@ jobs:
   browser:
     runs-on: windows-latest
     needs: version
+    timeout-minutes: 60
     env:
       CGS_APP_VERSION: ${{ needs.version.outputs.version }}
     steps:
@@ -85,6 +104,10 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci
+      - uses: actions/cache@v4
+        with:
+          path: ~\AppData\Local\ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
       - run: npx playwright install chromium firefox webkit
       - run: npm run test:browser
       - name: Upload browser-test report
@@ -98,12 +121,13 @@ jobs:
           if-no-files-found: ignore
           retention-days: 14
 
+  # Tagged only after the site is live, so a failed deploy leaves no release that never shipped.
   publish-release:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     needs:
       - version
-      - build
-      - browser
+      - deploy
     permissions:
       contents: write
     steps:
@@ -143,10 +167,10 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     needs:
       - build
       - browser
-      - publish-release
     steps:
       - name: Deploy to GitHub Pages
         id: deployment

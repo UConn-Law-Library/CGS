@@ -9,7 +9,7 @@ test("weekly corpus refreshes retain the reviewed publication safeguards", () =>
   assert.match(workflow, /CREATE_PULL_REQUEST: \$\{\{ github\.event_name == 'schedule' \|\| inputs\.create_pull_request \}\}/);
   assert.equal((workflow.match(/env\.CREATE_PULL_REQUEST == 'true'/g) ?? []).length, 2);
   assert.match(workflow, /concurrency:\s*\n\s*group: corpus-refresh\s*\n\s*cancel-in-progress: false/);
-  assert.match(workflow, /gh pr create[\s\S]*?--base main[\s\S]*?--draft/);
+  assert.match(workflow, /run: bash scripts\/publish-refresh\.sh automation\/corpus-refresh \.crawl\/publish/);
   assert.match(workflow, /Rebind secondary sources to the candidate corpus[\s\S]*?--base "\$CANONICAL_DIR"[\s\S]*?--output "\$CANONICAL_DIR\/secondary"/);
   assert.match(workflow, /Rebind published supplements to the candidate corpus/);
   assert.match(workflow, /plan-supplement-rebind\.mjs[\s\S]*?--supplements public\/data\/supplements[\s\S]*?--base "\$CANONICAL_DIR"[\s\S]*?--summary "\$REPORT_DIR\/supplement-retirement\.md"/);

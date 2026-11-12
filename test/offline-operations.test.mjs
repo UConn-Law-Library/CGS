@@ -7,6 +7,8 @@ import vm from "node:vm";
 async function offlineWorker({ timeout = 15000 } = {}) {
   const stores = new Map();
   const handlers = new Map();
+  const precacheModes = [];
+  const fetched = [];
   const scope = "https://example.test/CGS/";
   const key = (request) => typeof request === "string" ? request : request.url;
   const caches = {
@@ -20,7 +22,11 @@ async function offlineWorker({ timeout = 15000 } = {}) {
           match: async (request) => entries.get(key(request))?.clone(),
           keys: async () => [...entries.keys()].map((url) => new Request(url)),
           delete: async (request) => entries.delete(key(request)),
-          addAll: async (urls) => urls.forEach((url) => entries.set(new URL(url, scope).href, new Response(JSON.stringify(manifests.get(url.replace("./", "")) ?? "shell"))))
+          addAll: async (requests) => requests.forEach((request) => {
+            const href = typeof request === "string" ? new URL(request, scope).href : request.url;
+            if (typeof request !== "string") precacheModes.push(request.cache);
+            entries.set(href, new Response(JSON.stringify(manifests.get(href.slice(scope.length)) ?? "shell")));
+          })
         });
       }
       // Deleted caches remain usable through existing handles, like CacheStorage.
@@ -58,6 +64,7 @@ async function offlineWorker({ timeout = 15000 } = {}) {
     importScripts() {},
     fetch: async (request) => {
       const path = request.url.slice(scope.length);
+      fetched.push(path);
       if (path === "data/fixture.json") return artifactFetch();
       assert.ok(manifests.has(path), `Unexpected download: ${path}`);
       if (path === "data/manifest.json") manifestRequests++;
@@ -70,10 +77,16 @@ async function offlineWorker({ timeout = 15000 } = {}) {
   const shell = await caches.open(`cgs-pages-shell-${encodeURIComponent('/CGS/')}-__CGS_BUILD_ID__`);
   await shell.put(`${scope}data/release.json`, Response.json(release));
   return {
-    caches, scope,
+    caches, scope, precacheModes, fetched,
     async fetchArtifact(query = "") {
       let response;
       handlers.get("fetch")({ request: new Request(`${scope}data/fixture.json${query}`), respondWith: (task) => { response = task; } });
+      return response;
+    },
+    handler: async (type) => handlers.get(type),
+    async fetchPath(path, init) {
+      let response;
+      handlers.get("fetch")({ request: new Request(`${scope}${path}`, init), respondWith: (task) => { response = task; } });
       return response;
     },
     async lifecycle(type) {
@@ -92,6 +105,11 @@ async function offlineWorker({ timeout = 15000 } = {}) {
         waitUntil: (task) => { completion = task; }
       });
       return completion.then(() => messages.at(-1));
+    },
+    async replaceActiveArtifact(content) {
+      const control = await caches.open("cgs-data-control-v1");
+      const cache = stores.get(await (await control.match(`${scope}__active-offline-cache__`)).text());
+      await cache.put(`${scope}data/fixture.json`, new Response(content));
     },
     async activeArtifact() {
       const control = await caches.open("cgs-data-control-v1");
@@ -137,6 +155,9 @@ for (const nextOperation of ["REPAIR_OFFLINE_DATA", "CLEAR_OFFLINE_DATA"]) {
 test("a failed refresh preserves the complete copy and does not block queued repairs", async () => {
   const worker = await offlineWorker();
   assert.equal((await worker.request("DOWNLOAD_OFFLINE_DATA")).result.complete, true);
+  // Unchanged files are copied rather than downloaded, so damage the saved copy to make the
+  // refresh fetch it.
+  await worker.replaceActiveArtifact('{"revision":"saved"}');
   const started = Promise.withResolvers();
   const release = Promise.withResolvers();
   worker.artifactFetch = async () => {
@@ -148,7 +169,7 @@ test("a failed refresh preserves the complete copy and does not block queued rep
   await started.promise;
   const repair = worker.request("REPAIR_OFFLINE_DATA");
   assert.equal((await worker.request("OFFLINE_STATUS")).result.complete, true);
-  assert.deepEqual(await worker.activeArtifact(), { revision: "verified" });
+  assert.deepEqual(await worker.activeArtifact(), { revision: "saved" });
   worker.artifactFetch = async () => worker.goodResponse();
   release.resolve();
   assert.equal((await refresh).type, "error");
@@ -229,4 +250,60 @@ test("an old complete dataset cannot supply bytes to a new release", async () =>
 test("a tab from a previous release must reload after worker activation", async () => {
   const worker = await offlineWorker();
   assert.equal((await worker.fetchArtifact("?release=previous-generation")).status, 409);
+});
+
+async function oldDownload(worker, content) {
+  const active = await worker.caches.open("cgs-data-offline-old");
+  await active.put(`${worker.scope}__offline-metadata__`, Response.json({ complete: true, offlineFormatVersion: 3, dataReleaseId: "old-release" }));
+  await active.put(`${worker.scope}data/fixture.json`, new Response(content));
+  const control = await worker.caches.open("cgs-data-control-v1");
+  await control.put(`${worker.scope}__active-offline-cache__`, new Response("cgs-data-offline-old"));
+}
+
+test("an old complete dataset still serves files the new release publishes unchanged", async () => {
+  const worker = await offlineWorker();
+  await oldDownload(worker, JSON.stringify({ revision: "verified" }));
+  worker.artifactFetch = async () => { throw new TypeError("offline"); };
+  const status = (await worker.request("OFFLINE_STATUS")).result;
+  assert.equal(status.compatibility.compatible, false);
+  assert.equal(status.compatibility.code, "release");
+  assert.deepEqual(await (await worker.fetchArtifact()).json(), { revision: "verified" });
+});
+
+test("repair copies unchanged files from the previous download instead of fetching them", async () => {
+  const worker = await offlineWorker();
+  await oldDownload(worker, JSON.stringify({ revision: "verified" }));
+  worker.artifactFetch = async () => { throw new Error("the unchanged file must not be downloaded"); };
+  const result = (await worker.request("REPAIR_OFFLINE_DATA")).result;
+  assert.equal(result.complete, true);
+  assert.equal(result.reusedFiles, 1);
+  assert.equal(result.dataReleaseId, "__CGS_DATA_RELEASE_ID__");
+  assert.notEqual(result.compatibility.code, "release");
+  assert.ok(!worker.fetched.includes("data/fixture.json"));
+  assert.deepEqual(await worker.activeArtifact(), { revision: "verified" });
+});
+
+test("repair downloads a file whose saved copy is damaged or changed", async () => {
+  const worker = await offlineWorker();
+  await oldDownload(worker, "damaged");
+  const result = (await worker.request("REPAIR_OFFLINE_DATA")).result;
+  assert.equal(result.reusedFiles, 0);
+  assert.ok(worker.fetched.includes("data/fixture.json"));
+  assert.deepEqual(await worker.activeArtifact(), { revision: "verified" });
+});
+
+test("the shell is precached past the HTTP cache and served from its own generation", async () => {
+  const worker = await offlineWorker();
+  await worker.lifecycle("install");
+  assert.ok(worker.precacheModes.length > 0);
+  assert.ok(worker.precacheModes.every((mode) => mode === "reload"));
+  const shell = (await worker.caches.keys()).find((name) => name.startsWith("cgs-pages-shell-"));
+  await (await worker.caches.open(shell)).put(`${worker.scope}app.js`, new Response("precached module"));
+  assert.equal(await (await worker.fetchPath("app.js")).text(), "precached module");
+  await (await worker.caches.open(shell)).put(`${worker.scope}index.html`, new Response("precached page"));
+  const navigation = { method: "GET", mode: "navigate", url: `${worker.scope}?chapter=001` };
+  let response;
+  (await worker.handler("fetch"))({ request: navigation, respondWith: (task) => { response = task; } });
+  assert.equal(await (await response).text(), "precached page");
+  assert.ok(!worker.fetched.includes("app.js"));
 });

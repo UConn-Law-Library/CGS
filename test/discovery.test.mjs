@@ -90,3 +90,26 @@ test("generates script-free discovery pages, sitemap, and robots metadata", asyn
     "User-agent: *\nAllow: /\nSitemap: https://example.test/CGS/sitemap.xml\n"
   );
 });
+
+test("a preview build is marked noindex and names production as canonical", async (t) => {
+  const root = await mkdtemp(path.join(os.tmpdir(), "cgs-discovery-"));
+  t.after(() => rm(root, { recursive: true, force: true }));
+  const dataDirectory = path.join(root, "data");
+  const output = path.join(root, "dist");
+  await mkdir(path.join(dataDirectory, "chapters"), { recursive: true });
+  await writeFile(path.join(dataDirectory, "chapters", "001.json"), JSON.stringify(chapter), "utf8");
+  await generateDiscovery({
+    catalog: { counts: { titles: 1, chapters: 1, sections: 1 }, titles: [structuredClone(title)] },
+    dataDirectory,
+    output,
+    siteUrl: "https://example.test/CGS-Preview/",
+    indexable: false,
+    canonicalSiteUrl: "https://example.test/CGS/"
+  });
+  const chapterPage = await readFile(path.join(output, "discover", "titles", "01", "chapters", "001", "index.html"), "utf8");
+  assert.match(chapterPage, /<meta name="robots" content="noindex">/);
+  assert.match(chapterPage, /<link rel="canonical" href="https:\/\/example\.test\/CGS\/discover\/titles\/01\/chapters\/001\/">/);
+  assert.doesNotMatch(chapterPage, /CGS-Preview/);
+  await assert.rejects(readFile(path.join(output, "sitemap.xml"), "utf8"), { code: "ENOENT" });
+  assert.equal(await readFile(path.join(output, "robots.txt"), "utf8"), "User-agent: *\nDisallow: /\n");
+});

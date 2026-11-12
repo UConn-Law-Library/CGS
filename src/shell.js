@@ -41,6 +41,7 @@ function installStatus(state) {
 function offlineStatus(state) {
   if (state.error) return state.error;
   if (state.busy && state.totalFiles) return `Downloading ${state.cachedFiles.toLocaleString()} of ${state.totalFiles.toLocaleString()} files…`;
+  if (state.complete && state.compatibility?.code === "release") return `${state.cachedFiles.toLocaleString()} files saved offline; update available`;
   if (state.complete && state.compatibility?.compatible === false) return `${state.cachedFiles.toLocaleString()} files available offline; repair required`;
   if (state.complete) return `${state.cachedFiles.toLocaleString()} files available offline`;
   if (state.ready) return "Download the complete published dataset";
@@ -85,6 +86,7 @@ function offlineRevisionMarkup(state) {
 
 function offlineCompatibilityWarning(state) {
   if (state.compatibility?.compatible !== false) return "";
+  if (state.compatibility.code === "release") return `${state.compatibility.reason} Repair offline data to save the changes; unchanged files are copied, not downloaded again.`;
   return `${state.compatibility.reason ?? "The downloaded corpus is incompatible with this application release."} Repair offline data before relying on offline access.`;
 }
 
@@ -173,7 +175,7 @@ function settingsPanel() {
     <button type="button" class="settings-action" data-install-app${pwaState.installed || !pwaState.installable ? " disabled" : ""}>Install app <small>${escapeHtml(installStatus(pwaState))}</small></button>
     <button type="button" class="settings-action" data-download-offline${!pwaState.ready || pwaState.busy ? " disabled" : ""}><span data-offline-action-label>${pwaState.complete ? "Refresh offline data" : "Download for offline use"}</span><small>Statutes, supplements, search, index, infractions, and acts</small></button>
     <progress class="offline-progress" data-pwa-progress value="${pwaState.cachedFiles}" max="${Math.max(1, pwaState.totalFiles)}"${!pwaState.busy || !pwaState.totalFiles ? " hidden" : ""}>Offline download progress</progress>
-    <button type="button" class="settings-action" data-repair-offline${!pwaState.ready || pwaState.busy || !pwaState.complete ? " disabled" : ""}>Repair offline data <small>Download every file again and check for errors</small></button>
+    <button type="button" class="settings-action" data-repair-offline${!pwaState.ready || pwaState.busy || !pwaState.complete ? " disabled" : ""}>Repair offline data <small>Check every file and download any that changed or are damaged</small></button>
     <button type="button" class="settings-action" data-clear-offline${!pwaState.cachedFiles || pwaState.busy ? " disabled" : ""}>Remove offline data <small>Keep the installed app</small></button>
     <p class="offline-compatibility-warning" data-offline-compatibility role="alert"${offlineCompatibilityWarning(pwaState) ? "" : " hidden"}>${escapeHtml(offlineCompatibilityWarning(pwaState))}</p>
     <p class="settings-note" data-pwa-status role="status" aria-live="polite">${escapeHtml(offlineStatus(pwaState))}</p>

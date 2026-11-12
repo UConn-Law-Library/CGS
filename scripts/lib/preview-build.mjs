@@ -1,7 +1,26 @@
-import { readFile, writeFile } from "node:fs/promises";
+import { readdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 export const PREVIEW_SITE_URL = "https://uconn-law-library.github.io/CGS-Preview/";
+export const PRODUCTION_SITE_URL = "https://uconn-law-library.github.io/CGS/";
+const NOINDEX_META = '<meta name="robots" content="noindex">';
+
+// The preview's statutes can lag production, so no page of it should appear in search results.
+// Run it before the shell is fingerprinted and again after generated pages are written.
+export async function applyPreviewNoindex(directory) {
+  let marked = 0;
+  for (const entry of await readdir(directory, { recursive: true, withFileTypes: true })) {
+    if (!entry.isFile() || !entry.name.endsWith(".html")) continue;
+    const target = path.join(entry.parentPath, entry.name);
+    const source = await readFile(target, "utf8");
+    if (source.includes(NOINDEX_META)) continue;
+    const charset = source.match(/<meta charset="utf-8"\s*\/?>/i);
+    if (!charset) throw new Error(`${path.relative(directory, target)} has no charset meta to place the preview noindex tag after`);
+    await writeFile(target, source.replace(charset[0], `${charset[0]}${NOINDEX_META}`), "utf8");
+    marked += 1;
+  }
+  return marked;
+}
 
 // The preview and production sites share the uconn-law-library.github.io origin, and so share
 // browser storage. Renaming these keeps preview testing from touching anyone's real bookmarks,

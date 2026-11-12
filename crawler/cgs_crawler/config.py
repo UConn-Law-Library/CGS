@@ -14,8 +14,10 @@ USER_AGENT = (
 @dataclass(frozen=True)
 class FetchPolicy:
     timeout: float = 30.0
-    attempts: int = 4
-    backoff: float = 1.0
+    # Six attempts with doubling waits capped at a minute ride out about two minutes of outage.
+    attempts: int = 6
+    backoff: float = 2.0
+    max_backoff: float = 60.0
     delay: float = 0.3
     jitter: float = 0.2
     verify_ssl: object = True

@@ -295,3 +295,63 @@ test("heading scale remains compact across app page types", async () => {
   assert.match(styles, /--font-reading: Georgia/);
   assert.doesNotMatch(styles, /clamp\([^)]*,\s*(?:4|4\.5|5)rem\)/);
 });
+
+function stalePwa({ onLine = true, saveData = false, compatibility = { compatible: false, code: "release", reason: "updated" } } = {}) {
+  class TestMessageChannel {
+    constructor() {
+      this.port1 = {};
+      this.port2 = { reply: (data) => this.port1.onmessage({ data }) };
+    }
+  }
+  const messages = [];
+  let persistCalls = 0;
+  const target = {
+    postMessage({ type }, [port]) {
+      messages.push(type);
+      const result = type === "OFFLINE_STATUS"
+        ? { cachedFiles: 5, totalFiles: 5, complete: true, compatibility }
+        : { cachedFiles: 5, totalFiles: 5, complete: true, reusedFiles: 4, compatibility: { compatible: true, reason: null } };
+      port.reply({ type: "complete", result });
+    }
+  };
+  const registration = { active: target };
+  const manager = new PwaManager({
+    navigatorObject: {
+      onLine,
+      connection: { saveData },
+      storage: { async persisted() { return false; }, async persist() { persistCalls += 1; return true; } },
+      serviceWorker: { controller: target, addEventListener() {}, async register() { return registration; }, ready: Promise.resolve(registration) }
+    },
+    windowObject: { addEventListener() {}, matchMedia() { return { matches: false }; } },
+    MessageChannelClass: TestMessageChannel
+  });
+  return { manager, messages, persistCalls: () => persistCalls };
+}
+
+test("a download saved before a data release updates in the background without a storage prompt", async () => {
+  const { manager, messages, persistCalls } = stalePwa();
+  await manager.init();
+  await new Promise((resolve) => setImmediate(resolve));
+  assert.deepEqual(messages, ["OFFLINE_STATUS", "REPAIR_OFFLINE_DATA"]);
+  assert.equal(persistCalls(), 0);
+  assert.equal(manager.state.compatibility.compatible, true);
+});
+
+for (const [label, options] of [
+  ["offline", { onLine: false }],
+  ["with Save-Data", { saveData: true }],
+  ["for an incompatible format", { compatibility: { compatible: false, reason: "format" } }]
+]) {
+  test(`a stale download is not updated automatically ${label}`, async () => {
+    const { manager, messages } = stalePwa(options);
+    await manager.init();
+    await new Promise((resolve) => setImmediate(resolve));
+    assert.deepEqual(messages, ["OFFLINE_STATUS"]);
+  });
+}
+
+test("a refused data request offers the reload in Settings", () => {
+  const manager = new PwaManager({ navigatorObject: {}, windowObject: {}, MessageChannelClass: null });
+  manager.markDataReleaseChanged();
+  assert.equal(manager.state.updateAvailable, true);
+});

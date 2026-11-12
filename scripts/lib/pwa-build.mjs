@@ -44,7 +44,15 @@ export const shellInputs = Object.freeze([
   "service-worker.js",
   "styles.css",
   "supplement-overlay.js",
-  "supplements.js"
+  "supplements.js",
+  // Precached by the worker, so a changed font must start a new shell generation too.
+  "fonts/AtkinsonHyperlegible-Regular.ttf",
+  "fonts/AtkinsonHyperlegible-Bold.ttf",
+  "fonts/AtkinsonHyperlegible-Italic.ttf",
+  "fonts/AtkinsonHyperlegible-BoldItalic.ttf",
+  "fonts/Lexend-wght.ttf",
+  "fonts/InclusiveSans-wght.woff2",
+  "fonts/InclusiveSans-Italic-wght.woff2"
 ]);
 
 export async function stampServiceWorker(directory, inputs = shellInputs, release = {}) {

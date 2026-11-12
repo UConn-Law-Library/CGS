@@ -39,6 +39,8 @@ function publicPath(file) {
   return file === "index.html" ? "" : file.replace(/index\.html$/, "");
 }
 
+export const NOINDEX_META = '<meta name="robots" content="noindex">';
+
 function page({ file, title, description, siteUrl, breadcrumbs = [], body }) {
   const home = relativeFile(file, "index.html");
   const browse = relativeDirectory(file, discoveryRoot);
@@ -166,13 +168,17 @@ async function write(output, file, content) {
   await writeFile(target, content, "utf8");
 }
 
-export async function generateDiscovery({ catalog, dataDirectory, output, siteUrl }) {
+// A preview build passes indexable: false and the production URL as canonicalSiteUrl, so search
+// engines neither index the prototype nor treat it as the original of production pages.
+export async function generateDiscovery({ catalog, dataDirectory, output, siteUrl, indexable = true, canonicalSiteUrl = siteUrl }) {
   const consolidated = await consolidatedCorpus(catalog, dataDirectory);
   const baseCatalog = catalog;
   catalog = consolidated.catalog;
   const normalizedSiteUrl = new URL(siteUrl.endsWith("/") ? siteUrl : `${siteUrl}/`);
+  const canonicalUrl = new URL(canonicalSiteUrl.endsWith("/") ? canonicalSiteUrl : `${canonicalSiteUrl}/`);
+  const render = (html) => indexable ? html : html.replace('<link rel="canonical"', `${NOINDEX_META}\n  <link rel="canonical"`);
   const pages = ["index.html", discoveryRoot, guideFile];
-  await write(output, guideFile, renderGuidePage(await publishedCoverage(baseCatalog, dataDirectory), normalizedSiteUrl));
+  await write(output, guideFile, render(renderGuidePage(await publishedCoverage(baseCatalog, dataDirectory), canonicalUrl)));
 
   for (const title of catalog.titles) {
     const titleFile = titleDiscoveryPath(title);
@@ -182,19 +188,24 @@ export async function generateDiscovery({ catalog, dataDirectory, output, siteUr
       chapterMeta.sectionCount = chapter.sections.length;
       const chapterFile = chapterDiscoveryPath(title, chapterMeta);
       pages.push(chapterFile);
-      await write(output, chapterFile, renderChapterPage(title, chapter, normalizedSiteUrl));
+      await write(output, chapterFile, render(renderChapterPage(title, chapter, canonicalUrl)));
     }));
-    await write(output, titleFile, renderTitlePage(title, normalizedSiteUrl));
+    await write(output, titleFile, render(renderTitlePage(title, canonicalUrl)));
   }
 
   catalog.counts.chapters = catalog.titles.reduce((total, title) => total + title.chapters.length, 0);
   catalog.counts.sections = catalog.titles.reduce((total, title) => total + title.chapters.reduce((count, chapter) => count + chapter.sectionCount, 0), 0);
-  await write(output, discoveryRoot, renderDiscoveryIndex(catalog, normalizedSiteUrl));
+  await write(output, discoveryRoot, render(renderDiscoveryIndex(catalog, canonicalUrl)));
 
   pages.sort();
   const urls = pages.map((file) => new URL(publicPath(file), normalizedSiteUrl).href);
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((url) => `  <url><loc>${escapeHtml(url)}</loc></url>`).join("\n")}\n</urlset>\n`;
-  await write(output, "sitemap.xml", sitemap);
-  await write(output, "robots.txt", `User-agent: *\nAllow: /\nSitemap: ${new URL("sitemap.xml", normalizedSiteUrl).href}\n`);
+  if (indexable) {
+    await write(output, "sitemap.xml", sitemap);
+    await write(output, "robots.txt", `User-agent: *\nAllow: /\nSitemap: ${new URL("sitemap.xml", normalizedSiteUrl).href}\n`);
+  } else {
+    // Crawlers read robots.txt only at the host root, so the noindex tags do the real work.
+    await write(output, "robots.txt", "User-agent: *\nDisallow: /\n");
+  }
   return { pages: pages.length, titles: catalog.titles.length, chapters: pages.length - catalog.titles.length - 3 };
 }

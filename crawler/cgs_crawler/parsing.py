@@ -21,22 +21,29 @@ FORMER_CHAPTER_RE = re.compile(r"\bformerly published as chapter\s+(\d+[a-z]*)\b
 REVISED_TO_RE = re.compile(r"^revised to january 1,\s*(\d{4})$", re.IGNORECASE)
 MAX_GROUP_EXPANSION = 5000
 
+# A heading such as "Secs. 33-822 to 33-829. Reserved." states a status only when the status is
+# the whole catchline. "Sec. 33-656. Reserved name." and "Sec. 5-183. Transferred county
+# employees." are in-force sections whose catchlines merely begin with a status word.
+def _heading_status(word: str) -> str:
+    return rf"Secs?\..{{0,300}}?\.\s*{word}(?:\s+for\s+future\s+use)?\s*\.?\s*$"
+
+
 SECTION_STATUS_PATTERNS = (
     ("repealed", re.compile(
-        r"^\s*(?:repealed\b|Secs?\..{0,300}?\.\s*repealed\b|"
+        rf"^\s*(?:repealed\b|{_heading_status('repealed')}|"
         r"(?:Secs?\.?|Sections?)\s+.{0,300}?\b(?:is|are)\s+repealed\b|"
         r"All\s+sections\b.{0,300}?\brepealed\b)", re.IGNORECASE | re.DOTALL)),
     ("reserved", re.compile(
         r"^\s*(?:reserved\b|(?:Secs?\.?|Sections?)\s+.{0,300}?"
         r"\b(?:is|are)\s+reserved\b|All\s+sections\b.{0,300}?\breserved\b|"
-        r"Secs?\..{0,300}?\.\s*Reserved\b)", re.IGNORECASE | re.DOTALL)),
+        rf"{_heading_status('reserved')})", re.IGNORECASE | re.DOTALL)),
     ("transferred", re.compile(
         r"^\s*(?:transferred\b|(?:Secs?\.?|Sections?)\s+(?:are\s+)?transferred\b|"
-        r"Secs?\..{0,300}?\.\s*transferred\b|(?:Secs?\.?|Sections?)\s+.{0,300}?"
+        rf"{_heading_status('transferred')}|(?:Secs?\.?|Sections?)\s+.{{0,300}}?"
         r"\b(?:is|are)\s+transferred\b|All\s+sections\b.{0,300}?\btransferred\b)",
         re.IGNORECASE | re.DOTALL)),
     ("obsolete", re.compile(
-        r"^\s*(?:obsolete\b|Secs?\..{0,300}?\.\s*obsolete\b|"
+        rf"^\s*(?:obsolete\b|{_heading_status('obsolete')}|"
         r"(?:Secs?\.?|Sections?)\s+.{0,300}?\b(?:is|are)\s+obsolete\b|"
         r"All\s+sections\b.{0,300}?\bobsolete\b)", re.IGNORECASE | re.DOTALL)),
 )
@@ -320,6 +327,10 @@ def extract_section_links(
                 continue
             seen_groups.add(url)
         section: Dict[str, object] = {"section_key": section_key, "label": label, "url": url}
+        if section_key and not heading_key:
+            # Not a table-of-contents entry: a link in some provision's text, such as
+            # "Sections 1-42 to 1-54 are repealed" or "see section 22-61<i>l</i>".
+            section["cross_reference"] = True
         if not section_key:
             grouped_keys = expand_grouped_section_keys(fragment, label)
             if grouped_keys:
@@ -507,6 +518,31 @@ def extract_repealed_note_map(html: str) -> Dict[str, str]:
     return output
 
 
+def _prune_cross_reference_entries(sections: List[Dict[str, object]]) -> None:
+    """Drop entries that exist only because provision text links to a section number.
+
+    Such an entry duplicates a grouped range that already covers its key, or has no text of
+    its own (a link to a section on another page, or to a key whose suffix is outside the
+    link, as in "22-61<i>l</i>"). An entry with text and no covering group is kept: it is the
+    only way to reach a key the group's heading could not be expanded to.
+    """
+    grouped: Set[str] = {
+        str(key).lower()
+        for section in sections
+        if section.get("section_keys")
+        for key in section.get("section_keys") or []
+    }
+    kept: List[Dict[str, object]] = []
+    for section in sections:
+        if section.pop("cross_reference", False):
+            key = str(section.get("section_key") or "").lower()
+            content = section.get("content") or {}
+            if key in grouped or not str(content.get("text") or "").strip():
+                continue
+        kept.append(section)
+    sections[:] = kept
+
+
 def attach_section_content(html: str, sections: List[Dict[str, object]]) -> None:
     text_map = extract_section_text_map(html, sections)
     repealed_map = extract_repealed_note_map(html)
@@ -531,3 +567,4 @@ def attach_section_content(html: str, sections: List[Dict[str, object]]) -> None
                     content["status"] = "repealed"
         apply_section_status(content, str(section.get("label") or ""))
         section["content"] = content
+    _prune_cross_reference_entries(sections)

@@ -1,4 +1,4 @@
-import { dataUrl } from "./data-loader.js";
+import { checkDataResponse, dataUrl } from "./data-loader.js";
 export class SecondarySourceRepository {
   #baseUrl;
   #fetch;
@@ -14,7 +14,7 @@ export class SecondarySourceRepository {
     if (!this.#cache.has(relativePath)) {
       this.#cache.set(relativePath, (async () => {
         const response = await this.#fetch(dataUrl(new URL(relativePath, this.#baseUrl)), { signal: AbortSignal.timeout(15000) });
-        if (!response.ok) throw new Error(`Could not load secondary source ${relativePath} (${response.status})`);
+        checkDataResponse(response, `secondary source ${relativePath}`);
         return response.json();
       })().catch((error) => {
         this.#cache.delete(relativePath);

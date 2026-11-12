@@ -216,6 +216,26 @@ def attach_texts(sessions: List[dict], texts: Dict[str, dict], *, retrieved_at: 
     return attached
 
 
+def _require_acts_directory(output_dir: Path) -> None:
+    """Refuse to write where removing stale files could delete other data.
+
+    The writer removes every JSON file it did not produce, so the directory must be empty or
+    hold an acts manifest. Pointed at public/data, it would otherwise delete the statutes.
+    """
+    resolved = output_dir.resolve()
+    if resolved == Path(resolved.anchor) or resolved == Path.cwd().resolve():
+        raise ValueError(f"Refusing unsafe acts output directory: {resolved}")
+    if not output_dir.exists() or not any(output_dir.iterdir()):
+        return
+    manifest = output_dir / "manifest.json"
+    try:
+        source = json.loads(manifest.read_text(encoding="utf-8")).get("source") or {}
+    except (OSError, ValueError, AttributeError):
+        source = {}
+    if source.get("name") != "Public and Special Acts":
+        raise ValueError(f"Refusing to write acts into {resolved}: it is not empty and holds no acts manifest")
+
+
 def write_published(
     sessions: List[dict],
     output_dir: Path,
@@ -227,6 +247,7 @@ def write_published(
     Acts carry text references from attach_texts; ``texts`` supplies the documents.
     """
     texts = texts or {}
+    _require_acts_directory(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
     entries = []
     artifacts = []

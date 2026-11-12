@@ -58,12 +58,18 @@ function chapterSnapshot(chapter, title) {
   };
 }
 
+function bodyLength(section) {
+  return (section.content?.body ?? []).join("\n").length;
+}
+
 async function loadCorpus(dataDir, titleIds) {
   const root = path.resolve(dataDir);
   const catalog = await readJson(path.join(root, "catalog.json"));
   const titles = new Map();
   const chapters = new Map();
   const provisions = new Map();
+  // Signs of a parser problem rather than a change in the law.
+  const quality = { emptyActive: 0, identifierWarnings: 0 };
   for (const title of catalog.titles) {
     if (titleIds?.size && !titleIds.has(title.id)) continue;
     if (titles.has(title.id)) throw new Error(`Duplicate title ID ${title.id} in ${root}`);
@@ -78,10 +84,12 @@ async function loadCorpus(dataDir, titleIds) {
           throw new Error(`Duplicate stable provision key ${value.key} in ${root}`);
         }
         provisions.set(value.key, value);
+        if (section.status === "active" && section.kind !== "group" && bodyLength(section) === 0) quality.emptyActive += 1;
+        if (section.identifierWarning) quality.identifierWarnings += 1;
       }
     }
   }
-  return { catalog, titles, chapters, provisions };
+  return { catalog, titles, chapters, provisions, quality };
 }
 
 function publicSnapshot(value) {
@@ -138,6 +146,7 @@ export async function diffCorpora({ beforeDir, afterDir, titleIds }) {
   const removed = [];
   const changed = [];
   const statusTransitions = [];
+  const shrunkBodies = [];
 
   for (const [key, current] of after.provisions) {
     const previous = before.provisions.get(key);
@@ -154,6 +163,13 @@ export async function diffCorpora({ beforeDir, afterDir, titleIds }) {
         after: publicSnapshot(current)
       };
       changed.push(entry);
+      // A repeal replaces the text with a short note, so only shrinkage without a status
+      // change is suspicious: it suggests text was lost or moved out of the body.
+      const beforeLength = bodyLength(previous.section);
+      const afterLength = bodyLength(current.section);
+      if (!fields.includes("status") && beforeLength > 0 && afterLength < beforeLength / 2) {
+        shrunkBodies.push({ key, citation: current.citation, heading: current.heading, beforeLength, afterLength });
+      }
       if (fields.includes("status")) {
         statusTransitions.push({
           key,
@@ -173,15 +189,18 @@ export async function diffCorpora({ beforeDir, afterDir, titleIds }) {
   sortByKey(removed);
   sortByKey(changed);
   sortByKey(statusTransitions);
+  sortByKey(shrunkBodies);
   return {
     schemaVersion: "1.0.0",
     before: {
       generatedAt: before.catalog.generatedAt,
-      counts: { ...before.catalog.counts, provisionsRead: before.provisions.size }
+      counts: { ...before.catalog.counts, provisionsRead: before.provisions.size },
+      quality: before.quality
     },
     after: {
       generatedAt: after.catalog.generatedAt,
-      counts: { ...after.catalog.counts, provisionsRead: after.provisions.size }
+      counts: { ...after.catalog.counts, provisionsRead: after.provisions.size },
+      quality: after.quality
     },
     summary: {
       titlesAdded: titleChanges.added.length,
@@ -193,7 +212,8 @@ export async function diffCorpora({ beforeDir, afterDir, titleIds }) {
       added: added.length,
       removed: removed.length,
       changed: changed.length,
-      statusTransitions: statusTransitions.length
+      statusTransitions: statusTransitions.length,
+      shrunkBodies: shrunkBodies.length
     },
     structure: {
       titles: titleChanges,
@@ -202,7 +222,8 @@ export async function diffCorpora({ beforeDir, afterDir, titleIds }) {
     added,
     removed,
     changed,
-    statusTransitions
+    statusTransitions,
+    shrunkBodies
   };
 }
 
@@ -230,6 +251,7 @@ export function renderDiffMarkdown(report) {
     `| Removed | ${report.summary.removed} |`,
     `| Changed | ${report.summary.changed} |`,
     `| Status transitions | ${report.summary.statusTransitions} |`,
+    `| Bodies shrunk by more than half | ${report.summary.shrunkBodies} |`,
     ""
   ];
   const sections = [
@@ -240,6 +262,7 @@ export function renderDiffMarkdown(report) {
     ["Chapters removed", report.structure.chapters.removed, (item) => `- Chapter ${item.number} — ${item.name} (${item.titleId})`],
     ["Chapters changed", report.structure.chapters.changed, (item) => `- Chapter ${item.after.number} — ${item.changes.join(", ")}: ${item.after.name}`],
     ["Status transitions", report.statusTransitions, (item) => `- ${displayCitation(item)} — ${item.from} → ${item.to}: ${item.heading}`],
+    ["Bodies shrunk by more than half", report.shrunkBodies, (item) => `- ${displayCitation(item)} — ${item.beforeLength.toLocaleString("en-US")} → ${item.afterLength.toLocaleString("en-US")} characters: ${item.heading}`],
     ["Added", report.added, (item) => `- ${displayCitation(item)} — ${item.heading} (${item.chapterId})`],
     ["Removed", report.removed, (item) => `- ${displayCitation(item)} — ${item.heading} (${item.chapterId})`],
     ["Changed", report.changed, (item) => `- ${displayCitation(item.after)} — ${item.changes.join(", ")}: ${item.after.heading}`]

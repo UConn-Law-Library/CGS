@@ -161,7 +161,54 @@ class ParsingTests(unittest.TestCase):
         self.assertNotIn("status", sections[1]["content"])
         self.assertTrue(all("cross_reference" not in section for section in sections))
 
+    def test_an_italic_l_suffix_is_part_of_the_section_number(self):
+        # CGA sets a trailing "l" in italics so it is not read as "1".
+        url = "https://www.cga.ct.gov/current/pub/chap_961.htm"
+        html = (
+            '<p class="toc_catchln"><a href="#sec_54-102l">Sec. 54-102<i>l</i>. Expungement of DNA data bank records.</a></p>'
+            '<p class="toc_catchln"><a href="#secs_54-102ll_to_54-102oo">Secs. 54-102<i>ll</i> to 54-102oo.</a> <b>Reserved</b></p>'
+            '<p class="toc_catchln"><a href="#secs_1-56l_to_1-56n">Secs. 1-56<i>l</i> to 1-56n. Repealed.</a></p>'
+            '<p><span class="catchln" id="sec_54-102l">Sec. 54-102<i>l</i>. Expungement of DNA data bank records.</span> '
+            "(a) A DNA profile that has been included in the data bank shall be expunged.</p>"
+            '<p><span class="catchln" id="secs_54-102ll_to_54-102oo">Secs. 54-102<i>ll</i> to 54-102oo.</span> Reserved for future use.</p>'
+            '<p><span class="catchln" id="secs_1-56l_to_1-56n">Secs. 1-56<i>l</i> to 1-56n. Repealed.</span></p>'
+        )
+        sections = extract_section_links(html, url, "54")
+        attach_section_content(html, sections)
+        section = sections[0]
+        self.assertEqual(section["section_key"], "54-102l")
+        self.assertEqual(section["label"], "Sec. 54-102 l . Expungement of DNA data bank records.")
+        self.assertNotIn("identifier_warning", section)
+        self.assertNotIn("status", section["content"])
+        self.assertIn("DNA profile", section["content"]["text"])
+        self.assertEqual(sections[1]["section_keys"], ["54-102ll", "54-102mm", "54-102nn", "54-102oo"])
+        self.assertEqual(sections[1]["content"]["status"], "reserved")
+        self.assertEqual(sections[2]["section_keys"], ["1-56l", "1-56m", "1-56n"])
+
+    def test_a_range_with_mixed_suffixes_covers_the_plain_numbers_between(self):
+        self.assertEqual(
+            expand_grouped_section_keys("secs_19-207_to_19-210l"),
+            ["19-207", "19-208", "19-209", "19-210", "19-210l"],
+        )
+        self.assertEqual(expand_grouped_section_keys("secs_12-21a_to_12-23"), ["12-21a", "12-22", "12-23"])
+
     def test_a_linked_key_outside_any_group_with_text_is_kept(self):
+        # CGA's heading misnumbers the second section ("51-51o" for 31-51o), so only the link in
+        # the repeal note reaches 31-51o.
+        url = "https://www.cga.ct.gov/current/pub/chap_557.htm"
+        html = (
+            '<p class="toc_catchln"><a href="#secs_31-51n_51-51o">Secs. 31-51n and 51-51o. Definitions.</a></p>'
+            '<p><span class="catchln" id="secs_31-51n_51-51o">Secs. 31-51n and 51-51o. Definitions.</span> '
+            'Sections <a href="chap_557.htm#sec_31-51n">31-51n</a> and <a href="chap_557.htm#sec_31-51o">31-51o</a> '
+            "are repealed.</p>"
+        )
+        sections = extract_section_links(html, url, "31")
+        attach_section_content(html, sections)
+        keys = [section.get("section_key") or tuple(section["section_keys"]) for section in sections]
+        self.assertEqual(keys, [("31-51n", "51-51o"), "31-51o"])
+        self.assertEqual(sections[1]["content"]["status"], "repealed")
+
+    def test_a_linked_key_inside_a_mixed_suffix_range_is_dropped(self):
         url = "https://www.cga.ct.gov/current/pub/chap_201.htm"
         html = (
             '<p class="toc_catchln"><a href="#secs_12-21_to_12-24a">Secs. 12-21 to 12-24a. Grants.</a></p>'
@@ -171,9 +218,8 @@ class ParsingTests(unittest.TestCase):
         )
         sections = extract_section_links(html, url, "12")
         attach_section_content(html, sections)
-        keys = [section.get("section_key") or tuple(section["section_keys"]) for section in sections]
-        self.assertIn("12-22", keys)
-        self.assertEqual(next(s for s in sections if s.get("section_key") == "12-22")["content"]["status"], "repealed")
+        self.assertEqual(len(sections), 1)
+        self.assertEqual(sections[0]["section_keys"], ["12-21", "12-22", "12-23", "12-24", "12-24a"])
 
 
 if __name__ == "__main__":

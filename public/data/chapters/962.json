@@ -310,8 +310,7 @@
       "status": "active",
       "content": {
         "body": [
-          "When, in any criminal prosecution, it is necessary to obtain the testimony of any witnesses residing without this state, the Chief State's Attorney may allow them a reasonable sum for their time and expenses in going to, attending upon and returning from the court and may allow a reasonable sum for the expense of procuring their attendance or procuring any document from without this state necessary to be used as evidence on the trial of such prosecution, to be from the appropriation for the Division of Criminal Justice.",
-          "See Sec. 51-275 for applicable definitions."
+          "When, in any criminal prosecution, it is necessary to obtain the testimony of any witnesses residing without this state, the Chief State's Attorney may allow them a reasonable sum for their time and expenses in going to, attending upon and returning from the court and may allow a reasonable sum for the expense of procuring their attendance or procuring any document from without this state necessary to be used as evidence on the trial of such prosecution, to be from the appropriation for the Division of Criminal Justice."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 8851; 1963, P.A. 642, S. 81; 1967, P.A. 844; P.A. 73-122, S. 17, 27.)"
@@ -319,8 +318,13 @@
         "history": [
           "History: 1963 act deleted obsolete reference to criminal prosecution before common pleas court; 1967 act removed limitation of section to prosecutions in superior court; P.A. 73-122 made chief state's attorney rather than the court responsible for determining witnesses' expenses and specified that payments are to be made from criminal justice division appropriations, replacing provision whereby they were “taxed and paid as in other criminal cases”."
         ],
-        "annotations": [],
-        "plainText": "When, in any criminal prosecution, it is necessary to obtain the testimony of any witnesses residing without this state, the Chief State's Attorney may allow them a reasonable sum for their time and expenses in going to, attending upon and returning from the court and may allow a reasonable sum for the expense of procuring their attendance or procuring any document from without this state necessary to be used as evidence on the trial of such prosecution, to be from the appropriation for the Division of Criminal Justice.\n\nSee Sec. 51-275 for applicable definitions."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 51-275 for applicable definitions."
+          }
+        ],
+        "plainText": "When, in any criminal prosecution, it is necessary to obtain the testimony of any witnesses residing without this state, the Chief State's Attorney may allow them a reasonable sum for their time and expenses in going to, attending upon and returning from the court and may allow a reasonable sum for the expense of procuring their attendance or procuring any document from without this state necessary to be used as evidence on the trial of such prosecution, to be from the appropriation for the Division of Criminal Justice."
       }
     },
     {
@@ -444,46 +448,6 @@
         ],
         "annotations": [],
         "plainText": "No public agency, as defined in section 1-200 , or employee, appointee, officer or official or any other person acting on behalf of a public agency may provide any information or expend or use time, money, facilities, property, equipment, personnel or other resources in furtherance of any interstate investigation or proceeding seeking to impose civil or criminal liability upon a person or entity for (1) the provision, seeking or receipt of or inquiring about reproductive health care services or gender-affirming health care services, as defined in section 52-571n , that are legal in this state, or (2) assisting any person or entity providing, seeking, receiving or responding to an inquiry about reproductive health care services or gender-affirming health care services, as defined in section 52-571n , that are legal in this state. This section shall not apply to any investigation or proceeding where the conduct subject to potential liability under the investigation or proceeding would be subject to liability under the laws of this state if committed in this state."
-      }
-    },
-    {
-      "id": "section-54-145",
-      "kind": "section",
-      "citation": "54-145",
-      "citations": [
-        "54-145"
-      ],
-      "heading": "54-145",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_962.htm#sec_54-145",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 54-145 and 54-146. Refunds to clerk of municipal court or to town treasurer. Report to clerk or town treasurer. Sections 54-145 and 54-146 are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 54-145 and 54-146. Refunds to clerk of municipal court or to town treasurer. Report to clerk or town treasurer. Sections 54-145 and 54-146 are repealed."
-      }
-    },
-    {
-      "id": "section-54-146",
-      "kind": "section",
-      "citation": "54-146",
-      "citations": [
-        "54-146"
-      ],
-      "heading": "54-146",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_962.htm#sec_54-146",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 54-145 and 54-146. Refunds to clerk of municipal court or to town treasurer. Report to clerk or town treasurer. Sections 54-145 and 54-146 are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 54-145 and 54-146. Refunds to clerk of municipal court or to town treasurer. Report to clerk or town treasurer. Sections 54-145 and 54-146 are repealed."
       }
     }
   ]

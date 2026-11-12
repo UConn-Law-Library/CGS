@@ -31,11 +31,14 @@
       }
     },
     {
-      "id": "group-19a-461-to-19a-464h",
+      "id": "group-19a-461-to-19a-462-to-19a-463-to-19a-464-to-19a-464h",
       "kind": "group",
       "citation": null,
       "citations": [
         "19a-461",
+        "19a-462",
+        "19a-463",
+        "19a-464",
         "19a-464h"
       ],
       "heading": "Secs. 19a-461 to 19a-464h.",
@@ -254,46 +257,6 @@
         "history": [],
         "annotations": [],
         "plainText": "Transferred to Chapter 319b, Sec. 17a-247 ."
-      }
-    },
-    {
-      "id": "section-19a-476",
-      "kind": "section",
-      "citation": "19a-476",
-      "citations": [
-        "19a-476"
-      ],
-      "heading": "19a-476",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_368u.htm#sec_19a-476",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 19a-476 to 19a-482. Definitions. Funding and provision of technical assistance and oversight for vocational services for severely disabled individuals. Funding for community work services program. Duties of commissioner re community work services program. Community Work Services Council; membership. Community Work Services Council; duties. Regulations. Sections 19a-476 to 19a-482 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 19a-476 to 19a-482. Definitions. Funding and provision of technical assistance and oversight for vocational services for severely disabled individuals. Funding for community work services program. Duties of commissioner re community work services program. Community Work Services Council; membership. Community Work Services Council; duties. Regulations. Sections 19a-476 to 19a-482 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-19a-482",
-      "kind": "section",
-      "citation": "19a-482",
-      "citations": [
-        "19a-482"
-      ],
-      "heading": "19a-482",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_368u.htm#sec_19a-482",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 19a-476 to 19a-482. Definitions. Funding and provision of technical assistance and oversight for vocational services for severely disabled individuals. Funding for community work services program. Duties of commissioner re community work services program. Community Work Services Council; membership. Community Work Services Council; duties. Regulations. Sections 19a-476 to 19a-482 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 19a-476 to 19a-482. Definitions. Funding and provision of technical assistance and oversight for vocational services for severely disabled individuals. Funding for community work services program. Duties of commissioner re community work services program. Community Work Services Council; membership. Community Work Services Council; duties. Regulations. Sections 19a-476 to 19a-482 , inclusive, are repealed."
       }
     }
   ]

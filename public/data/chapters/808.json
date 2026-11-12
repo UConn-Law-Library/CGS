@@ -123,11 +123,44 @@
       }
     },
     {
-      "id": "group-46-32-to-46-65e",
+      "id": "group-46-32-to-46-33-to-46-34-to-46-35-to-46-36-to-46-37-to-46-38-to-46-39-to-46-40-to-46-41-to-46-42-to-46-43-to-46-44-to-46-45-to-46-46-to-46-47-to-46-48-to-46-49-to-46-50-to-46-51-to-46-52-to-46-53-to-46-54-to-46-55-to-46-56-to-46-57-to-46-58-to-46-59-to-46-60-to-46-61-to-46-62-to-46-63-to-46-64-to-46-65-to-46-65e",
       "kind": "group",
       "citation": null,
       "citations": [
         "46-32",
+        "46-33",
+        "46-34",
+        "46-35",
+        "46-36",
+        "46-37",
+        "46-38",
+        "46-39",
+        "46-40",
+        "46-41",
+        "46-42",
+        "46-43",
+        "46-44",
+        "46-45",
+        "46-46",
+        "46-47",
+        "46-48",
+        "46-49",
+        "46-50",
+        "46-51",
+        "46-52",
+        "46-53",
+        "46-54",
+        "46-55",
+        "46-56",
+        "46-57",
+        "46-58",
+        "46-59",
+        "46-60",
+        "46-61",
+        "46-62",
+        "46-63",
+        "46-64",
+        "46-65",
         "46-65e"
       ],
       "heading": "Secs. 46-32 to 46-65e. Dissolution of marriage. Legal separation.",
@@ -142,150 +175,6 @@
         "history": [],
         "annotations": [],
         "plainText": "Sections 46-32 to 46-65e , inclusive, have been transferred or repealed.\n\nNote: These sections were formerly published as chapter 811."
-      }
-    },
-    {
-      "id": "section-46-1",
-      "kind": "section",
-      "citation": "46-1",
-      "citations": [
-        "46-1"
-      ],
-      "heading": "46-1",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_808-811.htm#sec_46-1",
-      "status": "active",
-      "content": {
-        "body": [],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": ""
-      }
-    },
-    {
-      "id": "section-46-8",
-      "kind": "section",
-      "citation": "46-8",
-      "citations": [
-        "46-8"
-      ],
-      "heading": "46-8",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_808-811.htm#sec_46-8",
-      "status": "active",
-      "content": {
-        "body": [],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": ""
-      }
-    },
-    {
-      "id": "section-46-9",
-      "kind": "section",
-      "citation": "46-9",
-      "citations": [
-        "46-9"
-      ],
-      "heading": "46-9",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_808-811.htm#sec_46-9",
-      "status": "active",
-      "content": {
-        "body": [],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": ""
-      }
-    },
-    {
-      "id": "section-46-12",
-      "kind": "section",
-      "citation": "46-12",
-      "citations": [
-        "46-12"
-      ],
-      "heading": "46-12",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_808-811.htm#sec_46-12",
-      "status": "active",
-      "content": {
-        "body": [],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": ""
-      }
-    },
-    {
-      "id": "section-46-13",
-      "kind": "section",
-      "citation": "46-13",
-      "citations": [
-        "46-13"
-      ],
-      "heading": "46-13",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_808-811.htm#sec_46-13",
-      "status": "active",
-      "content": {
-        "body": [],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": ""
-      }
-    },
-    {
-      "id": "section-46-31",
-      "kind": "section",
-      "citation": "46-31",
-      "citations": [
-        "46-31"
-      ],
-      "heading": "46-31",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_808-811.htm#sec_46-31",
-      "status": "active",
-      "content": {
-        "body": [],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": ""
-      }
-    },
-    {
-      "id": "section-46-32",
-      "kind": "section",
-      "citation": "46-32",
-      "citations": [
-        "46-32"
-      ],
-      "heading": "46-32",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_808-811.htm#sec_46-32",
-      "status": "active",
-      "content": {
-        "body": [],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": ""
-      }
-    },
-    {
-      "id": "section-46-65e",
-      "kind": "section",
-      "citation": "46-65e",
-      "citations": [
-        "46-65e"
-      ],
-      "heading": "46-65e",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_808-811.htm#sec_46-65e",
-      "status": "active",
-      "content": {
-        "body": [],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": ""
       }
     }
   ]

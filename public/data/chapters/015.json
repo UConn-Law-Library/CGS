@@ -49,8 +49,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Sections 1-266 to 1-286 , inclusive, shall be known and may be cited as the “Connecticut Uniform Electronic Transactions Act”.",
-          "See Secs. 7-35aa to 7-35gg, inclusive, re Uniform Real Property Electronic Recording Act."
+          "Sections 1-266 to 1-286 , inclusive, shall be known and may be cited as the “Connecticut Uniform Electronic Transactions Act”."
         ],
         "sourceNotes": [
           "(P.A. 02-68, S. 1.)"
@@ -58,8 +57,13 @@
         "history": [
           "History: (Revisor's note: Quotation marks were inserted editorially by the Revisors for consistency and proper form)."
         ],
-        "annotations": [],
-        "plainText": "Sections 1-266 to 1-286 , inclusive, shall be known and may be cited as the “Connecticut Uniform Electronic Transactions Act”.\n\nSee Secs. 7-35aa to 7-35gg, inclusive, re Uniform Real Property Electronic Recording Act."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Secs. 7-35aa to 7-35gg, inclusive, re Uniform Real Property Electronic Recording Act."
+          }
+        ],
+        "plainText": "Sections 1-266 to 1-286 , inclusive, shall be known and may be cited as the “Connecticut Uniform Electronic Transactions Act”."
       }
     },
     {
@@ -644,46 +648,6 @@
         "history": [],
         "annotations": [],
         "plainText": "Reserved for future use."
-      }
-    },
-    {
-      "id": "section-1-260",
-      "kind": "section",
-      "citation": "1-260",
-      "citations": [
-        "1-260"
-      ],
-      "heading": "1-260",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_015.htm#sec_1-260",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 1-260 to 1-265. Definitions. Exemptions. Electronic records. Electronic signatures. Regulations. Reports. Sections 1-260 to 1-265 , inclusive, are repealed, effective October 1, 2002."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 1-260 to 1-265. Definitions. Exemptions. Electronic records. Electronic signatures. Regulations. Reports. Sections 1-260 to 1-265 , inclusive, are repealed, effective October 1, 2002."
-      }
-    },
-    {
-      "id": "section-1-265",
-      "kind": "section",
-      "citation": "1-265",
-      "citations": [
-        "1-265"
-      ],
-      "heading": "1-265",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_015.htm#sec_1-265",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 1-260 to 1-265. Definitions. Exemptions. Electronic records. Electronic signatures. Regulations. Reports. Sections 1-260 to 1-265 , inclusive, are repealed, effective October 1, 2002."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 1-260 to 1-265. Definitions. Exemptions. Electronic records. Electronic signatures. Regulations. Reports. Sections 1-260 to 1-265 , inclusive, are repealed, effective October 1, 2002."
       }
     }
   ]

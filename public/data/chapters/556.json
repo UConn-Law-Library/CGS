@@ -57,8 +57,7 @@
           "(d) The commissioner shall assist state agencies, boards and commissions that issue occupational certificates or licenses in (1) determining when to recognize and accept military training and experience in lieu of all or part of the training and experience required for a specific professional or occupational license, and (2) reviewing and revising policies and procedures to ensure that relevant military education, skills and training are given appropriate recognition in the certification and licensing process.",
           "(e) The commissioner may enter into contractual agreements, as may be necessary, for all programs, activities, services and grants within the jurisdiction of the Labor Department, including, but not limited to, employment and training programs in the state and the application for and use, administration or repayments of any federal funds made available or allotted under any federal law.",
           "(f) (1) The powers and duties enumerated in this section shall be in addition to any other powers and duties conferred to the Labor Commissioner in any other provision of the general statutes.",
-          "(2) Nothing in this section shall limit any other powers or duties conferred to the Labor Commissioner in any other provisions of the general statutes.",
-          "See Secs. 22-13 to 22-17, inclusive, re duties relative to the employment of minors in agriculture."
+          "(2) Nothing in this section shall limit any other powers or duties conferred to the Labor Commissioner in any other provisions of the general statutes."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 3776; September, 1957, P.A. 11, S. 13; P.A. 73-164, S. 1, 5; P.A. 76-209, S. 1; P.A. 77-614, S. 479, 610; P.A. 78-303, S. 122, 136; P.A. 89-292, S. 3, 6; P.A. 92-210, S. 1; P.A. 14-131, S. 12; June Sp. Sess. P.A. 21-2, S. 212; P.A. 22-67, S. 1; P.A. 23-117, S. 2; P.A. 24-147, S. 1.)"
@@ -66,8 +65,13 @@
         "history": [
           "History: P.A. 73-164 deleted provisions concerning bureau of labor statistics, substituted reference to “the general powers conferred upon the office of the labor commissioner under the general statutes or in accordance with federal law” for detailed listing of specific powers and made other language changes; P.A. 76-209 restored provisions re bureau of labor statistics and re specific powers of commissioner, specified that persons need not leave “the vicinity of their residences or places of business” to give depositions and made minor language changes; P.A. 77-614 deleted provisions re bureau of labor statistics and re appointment of deputy commissioner, effective January 1, 1979; P.A. 78-303 required commission to collect and collate population and employment data, to make projections re employment and to analyze data concerning present job requirements and potential needs of new industry; P.A. 89-292 added Subsecs. (b) and (c) concerning the commissioner's responsibilities for employment and training programs; P.A. 92-210 added Subsec. (d) authorizing the commissioner to request the attorney general to bring an action in superior court; P.A. 14-131 added Subsec. (e) re duty of commissioner to assist state agencies, boards and commissions in recognizing military training and experience for professional or occupational licensure, effective July 1, 2014; June Sp. Sess. P.A. 21-2 amended Subsec. (a) by adding Subdiv. designators (1) and (2), deleting provision re analysis of data and inclusion of statistical details in commissioner's annual report and making a technical change, amended Subsec. (b) by replacing provisions re administration of coordination of employment and training programs, implementation of Connecticut Employment and Training Commission plan and development and maintenance of comprehensive inventory of programs with provision allowing adoption of regulations for all programs within jurisdiction of Labor Department, deleted former Subsec. (c) re provision of staff and other resources to commission, and redesignated existing Subsecs. (d) and (e) as Subsecs. (c) and (d), effective July 1, 2021; P.A. 22-67 amended Subsec. (b) to remove the requirements that Labor Commissioner collect and collate population and employment data and data concerning present job requirements and potential needs of new industry, effective May 23, 2022; P.A. 23-117 amended Subsec. (a) by deleting “its relation to capital,” replacing “men and women” with “individuals”, deleting “and moral” and making technical changes, effective June 27, 2023; P.A. 24-147 added Subsec. (e) authorizing commissioner to enter into contractual agreements, and added Subsec. (f) clarifying that commissioner's duties not limited to provisions of this section, effective June 6, 2024."
         ],
-        "annotations": [],
-        "plainText": "(a) The Labor Commissioner shall collect information upon the subject of labor, the hours of labor, the earnings of laboring individuals and the means of promoting their material, social and intellectual prosperity, and may summon and examine under oath such witnesses, and may direct the production of, and examine or cause to be produced and examined, such books, records, vouchers, memoranda, documents, letters, contracts or other papers in relation thereto as he deems necessary, and shall have the same powers in relation thereto as are vested in magistrates in taking depositions, but for this purpose persons shall not be required to leave the vicinity of their residences or places of business.\n\n(b) The commissioner may adopt regulations, in accordance with the provisions of chapter 54, for all programs within the jurisdiction of the Labor Department, including, but not limited to, employment and training programs in the state.\n\n(c) The commissioner may request the Attorney General to bring an action in Superior Court for injunctive relief requiring compliance with any statute, regulation, order or permit administered, adopted or issued by the commissioner.\n\n(d) The commissioner shall assist state agencies, boards and commissions that issue occupational certificates or licenses in (1) determining when to recognize and accept military training and experience in lieu of all or part of the training and experience required for a specific professional or occupational license, and (2) reviewing and revising policies and procedures to ensure that relevant military education, skills and training are given appropriate recognition in the certification and licensing process.\n\n(e) The commissioner may enter into contractual agreements, as may be necessary, for all programs, activities, services and grants within the jurisdiction of the Labor Department, including, but not limited to, employment and training programs in the state and the application for and use, administration or repayments of any federal funds made available or allotted under any federal law.\n\n(f) (1) The powers and duties enumerated in this section shall be in addition to any other powers and duties conferred to the Labor Commissioner in any other provision of the general statutes.\n\n(2) Nothing in this section shall limit any other powers or duties conferred to the Labor Commissioner in any other provisions of the general statutes.\n\nSee Secs. 22-13 to 22-17, inclusive, re duties relative to the employment of minors in agriculture."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Secs. 22-13 to 22-17, inclusive, re duties relative to the employment of minors in agriculture."
+          }
+        ],
+        "plainText": "(a) The Labor Commissioner shall collect information upon the subject of labor, the hours of labor, the earnings of laboring individuals and the means of promoting their material, social and intellectual prosperity, and may summon and examine under oath such witnesses, and may direct the production of, and examine or cause to be produced and examined, such books, records, vouchers, memoranda, documents, letters, contracts or other papers in relation thereto as he deems necessary, and shall have the same powers in relation thereto as are vested in magistrates in taking depositions, but for this purpose persons shall not be required to leave the vicinity of their residences or places of business.\n\n(b) The commissioner may adopt regulations, in accordance with the provisions of chapter 54, for all programs within the jurisdiction of the Labor Department, including, but not limited to, employment and training programs in the state.\n\n(c) The commissioner may request the Attorney General to bring an action in Superior Court for injunctive relief requiring compliance with any statute, regulation, order or permit administered, adopted or issued by the commissioner.\n\n(d) The commissioner shall assist state agencies, boards and commissions that issue occupational certificates or licenses in (1) determining when to recognize and accept military training and experience in lieu of all or part of the training and experience required for a specific professional or occupational license, and (2) reviewing and revising policies and procedures to ensure that relevant military education, skills and training are given appropriate recognition in the certification and licensing process.\n\n(e) The commissioner may enter into contractual agreements, as may be necessary, for all programs, activities, services and grants within the jurisdiction of the Labor Department, including, but not limited to, employment and training programs in the state and the application for and use, administration or repayments of any federal funds made available or allotted under any federal law.\n\n(f) (1) The powers and duties enumerated in this section shall be in addition to any other powers and duties conferred to the Labor Commissioner in any other provision of the general statutes.\n\n(2) Nothing in this section shall limit any other powers or duties conferred to the Labor Commissioner in any other provisions of the general statutes."
       }
     },
     {
@@ -1240,8 +1244,7 @@
           "(3) “Career ladder” means a description of the progression from an entry level position to higher levels of pay, skill, responsibility or authority.",
           "(b) Not later than January 1, 2020, the Connecticut Clean Economy Council, in consultation with the Office of Higher Education, Department of Education, Labor Department, Department of Energy and Environmental Protection, regional workforce development boards and employers, shall, within available appropriations, identify a career ladder for jobs in the green technology industry, including, but not limited to, a listing of (1) careers at each level of the green technology industry and the requisite level of education and the salary offered for such career, (2) all course, certificate and degree programs in green jobs offered by technical education and career schools within the Technical Education and Career System and institutions of higher education in the state, and (3) jobs available in the green technology industry in the state. The Connecticut Clean Economy Council shall update the green jobs career ladder established pursuant to this section on an as needed basis.",
           "(c) Not later than January 1, 2024, the Connecticut Clean Economy Council shall develop a plan for green jobs workforce training to accomplish the greenhouse gas emissions goals set forth in subsection (a) of section 22a-200a . Such plan shall include, but need not be limited to, (1) development of work-based learning programs for green jobs with workforce shortages; (2) development of certificate and degree programs related to the green technology industry at technical education and career schools and institutions of higher education in the state; (3) identification of available funding, whether from a public or private source, to fund the development of such work-based learning and certificate and degree programs and provide grants to apprentices and students; and (4) a strategy to market and recruit individuals, especially from underrepresented populations, to existing and newly developed green jobs work-based learning programs and certificate and degree programs related to the green technology industry at job centers, technical education and career schools and institutions of higher education. Not later than January 1, 2025, and annually thereafter, said council shall update such plan as necessary.",
-          "(d) Not later than February 1, 2024, and annually thereafter, the Connecticut Clean Economy Council shall submit, in accordance with the provisions of section 11-4a , to the joint standing committee of the General Assembly having cognizance of matters relating to higher education and employment advancement the plan developed or updated pursuant to subsection (c) of this section.",
-          "See Sec. 10a-55g re publication of the career ladder by the Office of Higher Education and the Labor Department."
+          "(d) Not later than February 1, 2024, and annually thereafter, the Connecticut Clean Economy Council shall submit, in accordance with the provisions of section 11-4a , to the joint standing committee of the General Assembly having cognizance of matters relating to higher education and employment advancement the plan developed or updated pursuant to subsection (c) of this section."
         ],
         "sourceNotes": [
           "(P.A. 19-35, S. 19; June Sp. Sess. P.A. 21-2, S. 237; P.A. 23-61, S. 1.)"
@@ -1249,8 +1252,13 @@
         "history": [
           "History: P.A. 19-35 effective July 1, 2019; June Sp. Sess. P.A. 21-2 replaced “Office of Workforce Competitiveness” with “Office of Workforce Strategy” and “establish” with “identify”, effective July 1, 2021; P.A. 23-61 replaced “Office of Workforce Strategy” with “Connecticut Clean Economy Council”, added Subsec. (c) re development of plan for green jobs workforce training program and added Subsec. (d) re annual reporting on plan, effective July 1, 2023."
         ],
-        "annotations": [],
-        "plainText": "(a) As used in this section and section 10a-55g :\n\n(1) “Green jobs” has the same meaning as provided in section 10a-55d ;\n\n(2) “Green technology” has the same meaning as provided in section 10a-55d ; and\n\n(3) “Career ladder” means a description of the progression from an entry level position to higher levels of pay, skill, responsibility or authority.\n\n(b) Not later than January 1, 2020, the Connecticut Clean Economy Council, in consultation with the Office of Higher Education, Department of Education, Labor Department, Department of Energy and Environmental Protection, regional workforce development boards and employers, shall, within available appropriations, identify a career ladder for jobs in the green technology industry, including, but not limited to, a listing of (1) careers at each level of the green technology industry and the requisite level of education and the salary offered for such career, (2) all course, certificate and degree programs in green jobs offered by technical education and career schools within the Technical Education and Career System and institutions of higher education in the state, and (3) jobs available in the green technology industry in the state. The Connecticut Clean Economy Council shall update the green jobs career ladder established pursuant to this section on an as needed basis.\n\n(c) Not later than January 1, 2024, the Connecticut Clean Economy Council shall develop a plan for green jobs workforce training to accomplish the greenhouse gas emissions goals set forth in subsection (a) of section 22a-200a . Such plan shall include, but need not be limited to, (1) development of work-based learning programs for green jobs with workforce shortages; (2) development of certificate and degree programs related to the green technology industry at technical education and career schools and institutions of higher education in the state; (3) identification of available funding, whether from a public or private source, to fund the development of such work-based learning and certificate and degree programs and provide grants to apprentices and students; and (4) a strategy to market and recruit individuals, especially from underrepresented populations, to existing and newly developed green jobs work-based learning programs and certificate and degree programs related to the green technology industry at job centers, technical education and career schools and institutions of higher education. Not later than January 1, 2025, and annually thereafter, said council shall update such plan as necessary.\n\n(d) Not later than February 1, 2024, and annually thereafter, the Connecticut Clean Economy Council shall submit, in accordance with the provisions of section 11-4a , to the joint standing committee of the General Assembly having cognizance of matters relating to higher education and employment advancement the plan developed or updated pursuant to subsection (c) of this section.\n\nSee Sec. 10a-55g re publication of the career ladder by the Office of Higher Education and the Labor Department."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 10a-55g re publication of the career ladder by the Office of Higher Education and the Labor Department."
+          }
+        ],
+        "plainText": "(a) As used in this section and section 10a-55g :\n\n(1) “Green jobs” has the same meaning as provided in section 10a-55d ;\n\n(2) “Green technology” has the same meaning as provided in section 10a-55d ; and\n\n(3) “Career ladder” means a description of the progression from an entry level position to higher levels of pay, skill, responsibility or authority.\n\n(b) Not later than January 1, 2020, the Connecticut Clean Economy Council, in consultation with the Office of Higher Education, Department of Education, Labor Department, Department of Energy and Environmental Protection, regional workforce development boards and employers, shall, within available appropriations, identify a career ladder for jobs in the green technology industry, including, but not limited to, a listing of (1) careers at each level of the green technology industry and the requisite level of education and the salary offered for such career, (2) all course, certificate and degree programs in green jobs offered by technical education and career schools within the Technical Education and Career System and institutions of higher education in the state, and (3) jobs available in the green technology industry in the state. The Connecticut Clean Economy Council shall update the green jobs career ladder established pursuant to this section on an as needed basis.\n\n(c) Not later than January 1, 2024, the Connecticut Clean Economy Council shall develop a plan for green jobs workforce training to accomplish the greenhouse gas emissions goals set forth in subsection (a) of section 22a-200a . Such plan shall include, but need not be limited to, (1) development of work-based learning programs for green jobs with workforce shortages; (2) development of certificate and degree programs related to the green technology industry at technical education and career schools and institutions of higher education in the state; (3) identification of available funding, whether from a public or private source, to fund the development of such work-based learning and certificate and degree programs and provide grants to apprentices and students; and (4) a strategy to market and recruit individuals, especially from underrepresented populations, to existing and newly developed green jobs work-based learning programs and certificate and degree programs related to the green technology industry at job centers, technical education and career schools and institutions of higher education. Not later than January 1, 2025, and annually thereafter, said council shall update such plan as necessary.\n\n(d) Not later than February 1, 2024, and annually thereafter, the Connecticut Clean Economy Council shall submit, in accordance with the provisions of section 11-4a , to the joint standing committee of the General Assembly having cognizance of matters relating to higher education and employment advancement the plan developed or updated pursuant to subsection (c) of this section."
       }
     },
     {
@@ -1493,8 +1501,7 @@
       "content": {
         "body": [
           "(a) The state of Connecticut accepts the benefits of an act of the Congress of the United States entitled “An Act to Provide for the Establishment of a National Employment System and for Cooperation with the States in the Promotion of Such System and for Other Purposes”, approved June 6, 1933, and will observe and comply with the requirements of said act. The Labor Department is designated as the state agency for the purpose of said act and is vested with all powers necessary to cooperate with the United States Employment Service under this section.",
-          "(b) Each agency in the executive, legislative and judicial branches of state government shall notify the Connecticut Employment Service of any job openings or examinations for positions in the agency.",
-          "See Sec. 31-237 re Employment Security Division's duties re requirements of federal act."
+          "(b) Each agency in the executive, legislative and judicial branches of state government shall notify the Connecticut Employment Service of any job openings or examinations for positions in the agency."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 3780; P.A. 85-505, S. 5, 21.)"
@@ -1502,8 +1509,13 @@
         "history": [
           "History: P.A. 85-505 made the existing section Subsec. (a) and added Subsec. (b) requiring notification of state job openings and examinations to be given to Connecticut employment service."
         ],
-        "annotations": [],
-        "plainText": "(a) The state of Connecticut accepts the benefits of an act of the Congress of the United States entitled “An Act to Provide for the Establishment of a National Employment System and for Cooperation with the States in the Promotion of Such System and for Other Purposes”, approved June 6, 1933, and will observe and comply with the requirements of said act. The Labor Department is designated as the state agency for the purpose of said act and is vested with all powers necessary to cooperate with the United States Employment Service under this section.\n\n(b) Each agency in the executive, legislative and judicial branches of state government shall notify the Connecticut Employment Service of any job openings or examinations for positions in the agency.\n\nSee Sec. 31-237 re Employment Security Division's duties re requirements of federal act."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 31-237 re Employment Security Division's duties re requirements of federal act."
+          }
+        ],
+        "plainText": "(a) The state of Connecticut accepts the benefits of an act of the Congress of the United States entitled “An Act to Provide for the Establishment of a National Employment System and for Cooperation with the States in the Promotion of Such System and for Other Purposes”, approved June 6, 1933, and will observe and comply with the requirements of said act. The Labor Department is designated as the state agency for the purpose of said act and is vested with all powers necessary to cooperate with the United States Employment Service under this section.\n\n(b) Each agency in the executive, legislative and judicial branches of state government shall notify the Connecticut Employment Service of any job openings or examinations for positions in the agency."
       }
     },
     {
@@ -1679,126 +1691,6 @@
         "history": [],
         "annotations": [],
         "plainText": "Reserved for future use."
-      }
-    },
-    {
-      "id": "section-31-2a",
-      "kind": "section",
-      "citation": "31-2a",
-      "citations": [
-        "31-2a"
-      ],
-      "heading": "31-2a",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_556.htm#sec_31-2a",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 31-2a and 31-2b. Statistical services. Bureau of Labor Statistics. Sections 31-2a and 31-2b are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 31-2a and 31-2b. Statistical services. Bureau of Labor Statistics. Sections 31-2a and 31-2b are repealed."
-      }
-    },
-    {
-      "id": "section-31-2b",
-      "kind": "section",
-      "citation": "31-2b",
-      "citations": [
-        "31-2b"
-      ],
-      "heading": "31-2b",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_556.htm#sec_31-2b",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 31-2a and 31-2b. Statistical services. Bureau of Labor Statistics. Sections 31-2a and 31-2b are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 31-2a and 31-2b. Statistical services. Bureau of Labor Statistics. Sections 31-2a and 31-2b are repealed."
-      }
-    },
-    {
-      "id": "section-31-3p",
-      "kind": "section",
-      "citation": "31-3p",
-      "citations": [
-        "31-3p"
-      ],
-      "heading": "31-3p",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_556.htm#sec_31-3p",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 31-3p and 31-3q. Grant proposal or plan inconsistent with annual regional plan of regional work force development board; procedures. State employment and training programs. Sections 31-3p and 31-3q are repealed, effective July 1, 2021."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 31-3p and 31-3q. Grant proposal or plan inconsistent with annual regional plan of regional work force development board; procedures. State employment and training programs. Sections 31-3p and 31-3q are repealed, effective July 1, 2021."
-      }
-    },
-    {
-      "id": "section-31-3q",
-      "kind": "section",
-      "citation": "31-3q",
-      "citations": [
-        "31-3q"
-      ],
-      "heading": "31-3q",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_556.htm#sec_31-3q",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 31-3p and 31-3q. Grant proposal or plan inconsistent with annual regional plan of regional work force development board; procedures. State employment and training programs. Sections 31-3p and 31-3q are repealed, effective July 1, 2021."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 31-3p and 31-3q. Grant proposal or plan inconsistent with annual regional plan of regional work force development board; procedures. State employment and training programs. Sections 31-3p and 31-3q are repealed, effective July 1, 2021."
-      }
-    },
-    {
-      "id": "section-31-3y",
-      "kind": "section",
-      "citation": "31-3y",
-      "citations": [
-        "31-3y"
-      ],
-      "heading": "31-3y",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_556.htm#sec_31-3y",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 31-3y and 31-3z. Self-employment assistance: Definitions. Regulations. Sections 31-3y and 31-3z are repealed, effective May 23, 2022."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 31-3y and 31-3z. Self-employment assistance: Definitions. Regulations. Sections 31-3y and 31-3z are repealed, effective May 23, 2022."
-      }
-    },
-    {
-      "id": "section-31-3z",
-      "kind": "section",
-      "citation": "31-3z",
-      "citations": [
-        "31-3z"
-      ],
-      "heading": "31-3z",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_556.htm#sec_31-3z",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 31-3y and 31-3z. Self-employment assistance: Definitions. Regulations. Sections 31-3y and 31-3z are repealed, effective May 23, 2022."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 31-3y and 31-3z. Self-employment assistance: Definitions. Regulations. Sections 31-3y and 31-3z are repealed, effective May 23, 2022."
       }
     }
   ]

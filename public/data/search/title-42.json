@@ -98,38 +98,6 @@
       "href": "?chapter=731&section=group-42-1-to-42-2-to-42-3-to-42-4-to-42-5-to-42-6-to-42-7-to-42-8-to-42-9-to-42-10-to-42-11-to-42-12-to-42-13-to-42-14-to-42-15-to-42-16-to-42-17-to-42-18-to-42-19-to-42-20-to-42-21-to-42-22-to-42-23-to-42-24-to-42-25-to-42-26-to-42-27-to-42-28-to-42-29-to-42-30-to-42-31-to-42-32-to-42-33-to-42-34-to-42-35-to-42-36-to-42-37-to-42-38-to-42-39-to-42-40-to-42-41-to-42-42-to-42-43-to-42-44-to-42-45-to-42-46-to-42-47-to-42-48-to-42-49-to-42-50-to-42-51-to-42-52-to-42-53-to-42-54-to-42-55-to-42-56-to-42-57-to-42-58-to-42-59-to-42-60-to-42-61-to-42-62-to-42-63-to-42-64-to-42-65-to-42-66-to-42-67-to-42-68-to-42-69-to-42-70-to-42-71-to-42-72-to-42-73-to-42-74-to-42-75-to-42-76"
     },
     {
-      "id": "section-42-1",
-      "citation": "42-1",
-      "citations": [
-        "42-1"
-      ],
-      "heading": "42-1",
-      "chapter": {
-        "id": "chapter-731",
-        "number": "731",
-        "name": "The Sales Act"
-      },
-      "status": "repealed",
-      "text": "Secs. 42-1 to 42-76. The Sales Act. Sections 42-1 to 42-76 , inclusive, are repealed.",
-      "href": "?chapter=731&section=section-42-1"
-    },
-    {
-      "id": "section-42-76",
-      "citation": "42-76",
-      "citations": [
-        "42-76"
-      ],
-      "heading": "42-76",
-      "chapter": {
-        "id": "chapter-731",
-        "number": "731",
-        "name": "The Sales Act"
-      },
-      "status": "repealed",
-      "text": "Secs. 42-1 to 42-76. The Sales Act. Sections 42-1 to 42-76 , inclusive, are repealed.",
-      "href": "?chapter=731&section=section-42-76"
-    },
-    {
       "id": "group-42-77-to-42-78-to-42-79-to-42-80-to-42-81-to-42-82",
       "citation": null,
       "citations": [
@@ -149,38 +117,6 @@
       "status": "repealed",
       "text": "Sections 42-77 to 42-82 , inclusive, are repealed.",
       "href": "?chapter=732&section=group-42-77-to-42-78-to-42-79-to-42-80-to-42-81-to-42-82"
-    },
-    {
-      "id": "section-42-77",
-      "citation": "42-77",
-      "citations": [
-        "42-77"
-      ],
-      "heading": "42-77",
-      "chapter": {
-        "id": "chapter-732",
-        "number": "732",
-        "name": "Sales of Personal Property on Condition"
-      },
-      "status": "repealed",
-      "text": "Secs. 42-77 to 42-82. Sales of personal property on condition. Sections 42-77 to 42-82 , inclusive, are repealed.",
-      "href": "?chapter=732&section=section-42-77"
-    },
-    {
-      "id": "section-42-82",
-      "citation": "42-82",
-      "citations": [
-        "42-82"
-      ],
-      "heading": "42-82",
-      "chapter": {
-        "id": "chapter-732",
-        "number": "732",
-        "name": "Sales of Personal Property on Condition"
-      },
-      "status": "repealed",
-      "text": "Secs. 42-77 to 42-82. Sales of personal property on condition. Sections 42-77 to 42-82 , inclusive, are repealed.",
-      "href": "?chapter=732&section=section-42-82"
     },
     {
       "id": "group-42-83-to-42-84",
@@ -217,10 +153,25 @@
       "href": "?chapter=733&section=group-42-84a-to-42-84b"
     },
     {
-      "id": "group-42-85-to-42-100a",
+      "id": "group-42-85-to-42-86-to-42-87-to-42-88-to-42-89-to-42-90-to-42-91-to-42-92-to-42-93-to-42-94-to-42-95-to-42-96-to-42-97-to-42-98-to-42-99-to-42-100-to-42-100a",
       "citation": null,
       "citations": [
         "42-85",
+        "42-86",
+        "42-87",
+        "42-88",
+        "42-89",
+        "42-90",
+        "42-91",
+        "42-92",
+        "42-93",
+        "42-94",
+        "42-95",
+        "42-96",
+        "42-97",
+        "42-98",
+        "42-99",
+        "42-100",
         "42-100a"
       ],
       "heading": "Secs. 42-85 to 42-100a.",
@@ -231,7 +182,7 @@
       },
       "status": "transferred",
       "text": "Transferred to Chapter 669, Part XI, Secs. 36a-772 to 36a-788 , inclusive.",
-      "href": "?chapter=733&section=group-42-85-to-42-100a"
+      "href": "?chapter=733&section=group-42-85-to-42-86-to-42-87-to-42-88-to-42-89-to-42-90-to-42-91-to-42-92-to-42-93-to-42-94-to-42-95-to-42-96-to-42-97-to-42-98-to-42-99-to-42-100-to-42-100a"
     },
     {
       "id": "section-42-100b",
@@ -246,7 +197,7 @@
         "name": "Retail Credit Transaction Statement Errors"
       },
       "status": "active",
-      "text": "As used in section 42-100c , “retail credit transaction” includes any agreement or transaction for the retail sale of goods or services which are used or bought primarily for personal, family or household purposes, but does not include transactions covered by chapter 4 of the Consumer Credit Protection Act, 15 USC 1666 et seq., as from time to time amended.\n\nSee Sec. 36a-676 for definitions under the Connecticut Truth-in-Lending Act applicable to this section.",
+      "text": "As used in section 42-100c , “retail credit transaction” includes any agreement or transaction for the retail sale of goods or services which are used or bought primarily for personal, family or household purposes, but does not include transactions covered by chapter 4 of the Consumer Credit Protection Act, 15 USC 1666 et seq., as from time to time amended.",
       "href": "?chapter=733a&section=section-42-100b"
     },
     {
@@ -262,7 +213,7 @@
         "name": "Retail Credit Transaction Statement Errors"
       },
       "status": "active",
-      "text": "(a) If a debtor, upon receipt of a statement of his account under a retail credit transaction, believes that there is an error in such statement as to the whole or any part of the amount shown as owing to the creditor, he may, in writing, not later than sixty days from the date of mailing of such statement, so notify the creditor, stating the basis or reasons for his belief that the statement is in error. The creditor shall within thirty days after receipt of such notification send a written acknowledgment to the debtor, and no later than two complete billing cycles of the creditor but in no event more than ninety days after receipt of the notification, investigate the debtor's complaint and make the necessary corrections in such account and submit a corrected statement or send a written explanation to the debtor setting forth the reasons why the creditor believes the account is correct as shown in the statement. Prior to completing such investigation, the creditor shall take no action to collect the amount in dispute or to in any way affect the debtor's credit rating.\n\n(b) Any creditor who fails to comply with the provisions of subsection (a) of this section shall: (1) Forfeit any right to collect from the debtor the amount in dispute and any interest, service, finance, carrying or other charge on such amount, and (2) if such amount is in fact in error, be liable to the debtor for the actual damages sustained by him as a result of such failure of the creditor to comply, or twice the amount referred to in subdivision (1), whichever is greater, and in the case of any successful action to enforce such liability, the costs of the action together with attorney's fees.\n\nSee Sec. 36a-676 for definitions under the Connecticut Truth-in-Lending Act applicable to this section.",
+      "text": "(a) If a debtor, upon receipt of a statement of his account under a retail credit transaction, believes that there is an error in such statement as to the whole or any part of the amount shown as owing to the creditor, he may, in writing, not later than sixty days from the date of mailing of such statement, so notify the creditor, stating the basis or reasons for his belief that the statement is in error. The creditor shall within thirty days after receipt of such notification send a written acknowledgment to the debtor, and no later than two complete billing cycles of the creditor but in no event more than ninety days after receipt of the notification, investigate the debtor's complaint and make the necessary corrections in such account and submit a corrected statement or send a written explanation to the debtor setting forth the reasons why the creditor believes the account is correct as shown in the statement. Prior to completing such investigation, the creditor shall take no action to collect the amount in dispute or to in any way affect the debtor's credit rating.\n\n(b) Any creditor who fails to comply with the provisions of subsection (a) of this section shall: (1) Forfeit any right to collect from the debtor the amount in dispute and any interest, service, finance, carrying or other charge on such amount, and (2) if such amount is in fact in error, be liable to the debtor for the actual damages sustained by him as a result of such failure of the creditor to comply, or twice the amount referred to in subdivision (1), whichever is greater, and in the case of any successful action to enforce such liability, the costs of the action together with attorney's fees.",
       "href": "?chapter=733a&section=section-42-100c"
     },
     {
@@ -282,38 +233,6 @@
       "status": "repealed",
       "text": "Sections 42-101 to 42-103 , inclusive, are repealed.",
       "href": "?chapter=734&section=group-42-101-to-42-102-to-42-103"
-    },
-    {
-      "id": "section-42-101",
-      "citation": "42-101",
-      "citations": [
-        "42-101"
-      ],
-      "heading": "42-101",
-      "chapter": {
-        "id": "chapter-734",
-        "number": "734",
-        "name": "Bulk Sales"
-      },
-      "status": "repealed",
-      "text": "Secs. 42-101 to 42-103. Bulk sales. Sections 42-101 to 42-103 , inclusive, are repealed.",
-      "href": "?chapter=734&section=section-42-101"
-    },
-    {
-      "id": "section-42-103",
-      "citation": "42-103",
-      "citations": [
-        "42-103"
-      ],
-      "heading": "42-103",
-      "chapter": {
-        "id": "chapter-734",
-        "number": "734",
-        "name": "Bulk Sales"
-      },
-      "status": "repealed",
-      "text": "Secs. 42-101 to 42-103. Bulk sales. Sections 42-101 to 42-103 , inclusive, are repealed.",
-      "href": "?chapter=734&section=section-42-103"
     },
     {
       "id": "section-42-103a",
@@ -1017,38 +936,6 @@
       "href": "?chapter=734b&section=section-42-103ddd"
     },
     {
-      "id": "section-42-103w",
-      "citation": "42-103w",
-      "citations": [
-        "42-103w"
-      ],
-      "heading": "42-103w",
-      "chapter": {
-        "id": "chapter-734b",
-        "number": "734b",
-        "name": "Time Shares"
-      },
-      "status": "repealed",
-      "text": "Secs. 42-103w to 42-103bb. Application of chapter. Definitions. Contract; information required; right to cancel. Advertising and promotional devices. Unfair trade practices. Disclosure of information concerning prizes in advertisements and promotional materials. Sections 42-103w to 42-103bb , inclusive, are repealed, effective January 1, 2010.",
-      "href": "?chapter=734b&section=section-42-103w"
-    },
-    {
-      "id": "section-42-103bb",
-      "citation": "42-103bb",
-      "citations": [
-        "42-103bb"
-      ],
-      "heading": "42-103bb",
-      "chapter": {
-        "id": "chapter-734b",
-        "number": "734b",
-        "name": "Time Shares"
-      },
-      "status": "repealed",
-      "text": "Secs. 42-103w to 42-103bb. Application of chapter. Definitions. Contract; information required; right to cancel. Advertising and promotional devices. Unfair trade practices. Disclosure of information concerning prizes in advertisements and promotional materials. Sections 42-103w to 42-103bb , inclusive, are repealed, effective January 1, 2010.",
-      "href": "?chapter=734b&section=section-42-103bb"
-    },
-    {
       "id": "group-42-104-to-42-105-to-42-106-to-42-107-to-42-108-to-42-109-to-42-110",
       "citation": null,
       "citations": [
@@ -1069,38 +956,6 @@
       "status": "repealed",
       "text": "Sections 42-104 to 42-110 , inclusive, are repealed.",
       "href": "?chapter=735&section=group-42-104-to-42-105-to-42-106-to-42-107-to-42-108-to-42-109-to-42-110"
-    },
-    {
-      "id": "section-42-104",
-      "citation": "42-104",
-      "citations": [
-        "42-104"
-      ],
-      "heading": "42-104",
-      "chapter": {
-        "id": "chapter-735",
-        "number": "735",
-        "name": "Fair Trade Act"
-      },
-      "status": "repealed",
-      "text": "Secs. 42-104 to 42-110. Fair Trade Act. Sections 42-104 to 42-110 , inclusive, are repealed.",
-      "href": "?chapter=735&section=section-42-104"
-    },
-    {
-      "id": "section-42-110",
-      "citation": "42-110",
-      "citations": [
-        "42-110"
-      ],
-      "heading": "42-110",
-      "chapter": {
-        "id": "chapter-735",
-        "number": "735",
-        "name": "Fair Trade Act"
-      },
-      "status": "repealed",
-      "text": "Secs. 42-104 to 42-110. Fair Trade Act. Sections 42-104 to 42-110 , inclusive, are repealed.",
-      "href": "?chapter=735&section=section-42-110"
     },
     {
       "id": "section-42-110a",
@@ -1546,10 +1401,14 @@
       "href": "?chapter=735c&section=section-42-110ll"
     },
     {
-      "id": "group-42-111-to-42-115d",
+      "id": "group-42-111-to-42-112-to-42-113-to-42-114-to-42-115-to-42-115d",
       "citation": null,
       "citations": [
         "42-111",
+        "42-112",
+        "42-113",
+        "42-114",
+        "42-115",
         "42-115d"
       ],
       "heading": "Secs. 42-111 to 42-115d. Unfair or deceptive trade practices, generally.",
@@ -1560,7 +1419,7 @@
       },
       "status": "repealed",
       "text": "Sections 42-111 to 42-115d , inclusive, are repealed.",
-      "href": "?chapter=736&section=group-42-111-to-42-115d"
+      "href": "?chapter=736&section=group-42-111-to-42-112-to-42-113-to-42-114-to-42-115-to-42-115d"
     },
     {
       "id": "section-42-115e",
@@ -1783,7 +1642,7 @@
         "name": "Unfair Sales Practices"
       },
       "status": "active",
-      "text": "No person, firm, corporation or partnership shall sell, offer for sale, advertise, or represent as a new tire, a tire which has been altered or reprocessed by the addition of a white or colored stripe to the outer sidewall of such tire, unless such tire bears a permanent label, which shall be not less than three-eighths inch in height and conspicuously displayed on the side of the tire altered or reprocessed, with the words “WHITEWALL ADDED” if the added stripe is white or “COLORWALL ADDED” if the stripe is colored. The labeling requirement of this section shall not be construed as authority or permission to impair or affect the structural integrity or safety of such tire. Failure to comply with the provisions of this section shall be deemed a deceptive trade practice as defined in section 42-110b .\n\nSee Sec. 14-106d re sale or offer for sale of air bag replacement device that does not meet federal safety requirements.",
+      "text": "No person, firm, corporation or partnership shall sell, offer for sale, advertise, or represent as a new tire, a tire which has been altered or reprocessed by the addition of a white or colored stripe to the outer sidewall of such tire, unless such tire bears a permanent label, which shall be not less than three-eighths inch in height and conspicuously displayed on the side of the tire altered or reprocessed, with the words “WHITEWALL ADDED” if the added stripe is white or “COLORWALL ADDED” if the stripe is colored. The labeling requirement of this section shall not be construed as authority or permission to impair or affect the structural integrity or safety of such tire. Failure to comply with the provisions of this section shall be deemed a deceptive trade practice as defined in section 42-110b .",
       "href": "?chapter=736&section=section-42-115r"
     },
     {
@@ -1833,38 +1692,6 @@
       "status": "active",
       "text": "(a) Any person who violates any provision of this chapter shall be guilty of a class C misdemeanor.\n\n(b) A violation of any of the provisions of this chapter shall be deemed an unfair or deceptive practice under section 42-110b .\n\n(c) The Commissioner of Consumer Protection, after a hearing conducted in accordance with the provisions of chapter 54, may impose a civil penalty of not more than one hundred dollars for the first offense and of not more than five hundred dollars for any subsequent offense on any person who violates any provision of sections 42-115g to 42-115p , inclusive, or any regulation adopted pursuant to said sections. Each violation with respect to each such unit, package or device shall be considered a separate offense.",
       "href": "?chapter=736&section=section-42-115u"
-    },
-    {
-      "id": "section-42-111",
-      "citation": "42-111",
-      "citations": [
-        "42-111"
-      ],
-      "heading": "42-111",
-      "chapter": {
-        "id": "chapter-736",
-        "number": "736",
-        "name": "Unfair Sales Practices"
-      },
-      "status": "repealed",
-      "text": "Secs. 42-111 to 42-115d. Unfair or deceptive trade practices, generally. Sections 42-111 to 42-115d , inclusive, are repealed.",
-      "href": "?chapter=736&section=section-42-111"
-    },
-    {
-      "id": "section-42-115d",
-      "citation": "42-115d",
-      "citations": [
-        "42-115d"
-      ],
-      "heading": "42-115d",
-      "chapter": {
-        "id": "chapter-736",
-        "number": "736",
-        "name": "Unfair Sales Practices"
-      },
-      "status": "repealed",
-      "text": "Secs. 42-111 to 42-115d. Unfair or deceptive trade practices, generally. Sections 42-111 to 42-115d , inclusive, are repealed.",
-      "href": "?chapter=736&section=section-42-115d"
     },
     {
       "id": "section-42-116",
@@ -2097,38 +1924,6 @@
       "status": "repealed",
       "text": "Sections 42-117 to 42-125 , inclusive, are repealed.",
       "href": "?chapter=738&section=group-42-117-to-42-118-to-42-119-to-42-120-to-42-121-to-42-122-to-42-123-to-42-124-to-42-125"
-    },
-    {
-      "id": "section-42-117",
-      "citation": "42-117",
-      "citations": [
-        "42-117"
-      ],
-      "heading": "42-117",
-      "chapter": {
-        "id": "chapter-738",
-        "number": "738",
-        "name": "Assignment of Choses in Action"
-      },
-      "status": "repealed",
-      "text": "Secs. 42-117 to 42-125. Assignment of choses in action. Sections 42-117 to 42-125 , inclusive, are repealed.",
-      "href": "?chapter=738&section=section-42-117"
-    },
-    {
-      "id": "section-42-125",
-      "citation": "42-125",
-      "citations": [
-        "42-125"
-      ],
-      "heading": "42-125",
-      "chapter": {
-        "id": "chapter-738",
-        "number": "738",
-        "name": "Assignment of Choses in Action"
-      },
-      "status": "repealed",
-      "text": "Secs. 42-117 to 42-125. Assignment of choses in action. Sections 42-117 to 42-125 , inclusive, are repealed.",
-      "href": "?chapter=738&section=section-42-125"
     },
     {
       "id": "section-42-125a",
@@ -2410,7 +2205,7 @@
         "name": "Consumer Layaway Plans"
       },
       "status": "active",
-      "text": "It shall be an unfair trade practice within the meaning of chapter 735a for any seller of consumer goods as defined in section 42-125aa on a layaway plan:\n\n(a) To fail to provide the buyer at the time of entering into the layaway agreement with a written statement of the terms and conditions of the agreement, including the following information: (1) The amount of the deposit received; (2) the length of time the goods will be held on layaway, which may be expressed as a period of time or as a date when final payment for the goods is due; (3) a reasonable description of each of the goods, including but not limited to, where applicable, the type of item, name of manufacturer, color and size, style or model number; (4) the total purchase price of the goods, including a separate listing of the price of each item which could have been individually purchased and of any tax, installation, handling, processing, delivery or freight charges; (5) if all moneys paid on deposit will not be refunded upon cancellation of the layaway agreement, a statement of the portion of the deposit that will be forfeited upon cancellation, provided that any forfeiture of a deposit or portion thereof shall be subject to the provisions of section 42-125cc , title 42a and any other applicable law, and provided further that if any seller fails to comply with this subdivision all moneys paid on deposit shall be refunded upon cancellation; and (6) any other terms and conditions of the layaway agreement;\n\n(b) To misrepresent in any way the seller's policy with reference to a layaway plan to any buyer of consumer goods under such a plan;\n\n(c) To represent to a buyer under a layaway plan that the specific consumer goods chosen by the buyer or an exact duplicate of such consumer goods are actually being physically retained for the buyer when such is not a fact;\n\n(d) To deliver to the buyer after payments pursuant to the layaway plan are completed goods which are not identical or exact substitutes to those specified, unless approval in writing at the time of substitution has been received from the buyer and the provisions of section 42-125cc have been met;\n\n(e) To increase the price of consumer goods purchased under a layaway plan either by increasing the payments or substituting consumer goods which are of a lower quality or price;\n\n(f) To fail to deliver to the buyer, on any date payment is made, a receipt showing the amount and date of that payment and the amount of the balance due;\n\n(g) To fail to deliver to the buyer, upon his request, any consumer goods which have been fully paid for and which were available for separate purchase, because other consumer goods also purchased are not yet fully paid for. Consumer goods of which delivery has been requested shall be deemed to be fully paid for if the total amount of payments equals or exceeds the price of such goods.\n\nSee Sec. 52-400f re priority of claims for deposits for consumer goods and services.",
+      "text": "It shall be an unfair trade practice within the meaning of chapter 735a for any seller of consumer goods as defined in section 42-125aa on a layaway plan:\n\n(a) To fail to provide the buyer at the time of entering into the layaway agreement with a written statement of the terms and conditions of the agreement, including the following information: (1) The amount of the deposit received; (2) the length of time the goods will be held on layaway, which may be expressed as a period of time or as a date when final payment for the goods is due; (3) a reasonable description of each of the goods, including but not limited to, where applicable, the type of item, name of manufacturer, color and size, style or model number; (4) the total purchase price of the goods, including a separate listing of the price of each item which could have been individually purchased and of any tax, installation, handling, processing, delivery or freight charges; (5) if all moneys paid on deposit will not be refunded upon cancellation of the layaway agreement, a statement of the portion of the deposit that will be forfeited upon cancellation, provided that any forfeiture of a deposit or portion thereof shall be subject to the provisions of section 42-125cc , title 42a and any other applicable law, and provided further that if any seller fails to comply with this subdivision all moneys paid on deposit shall be refunded upon cancellation; and (6) any other terms and conditions of the layaway agreement;\n\n(b) To misrepresent in any way the seller's policy with reference to a layaway plan to any buyer of consumer goods under such a plan;\n\n(c) To represent to a buyer under a layaway plan that the specific consumer goods chosen by the buyer or an exact duplicate of such consumer goods are actually being physically retained for the buyer when such is not a fact;\n\n(d) To deliver to the buyer after payments pursuant to the layaway plan are completed goods which are not identical or exact substitutes to those specified, unless approval in writing at the time of substitution has been received from the buyer and the provisions of section 42-125cc have been met;\n\n(e) To increase the price of consumer goods purchased under a layaway plan either by increasing the payments or substituting consumer goods which are of a lower quality or price;\n\n(f) To fail to deliver to the buyer, on any date payment is made, a receipt showing the amount and date of that payment and the amount of the balance due;\n\n(g) To fail to deliver to the buyer, upon his request, any consumer goods which have been fully paid for and which were available for separate purchase, because other consumer goods also purchased are not yet fully paid for. Consumer goods of which delivery has been requested shall be deemed to be fully paid for if the total amount of payments equals or exceeds the price of such goods.",
       "href": "?chapter=738b&section=section-42-125bb"
     },
     {
@@ -2689,7 +2484,7 @@
         "name": "Trading Stamps, Mail Orders, Franchises, Credit Programs and Subscriptions"
       },
       "status": "active",
-      "text": "As used in sections 42-133e to 42-133g , inclusive:\n\n(a) “Person” means a natural person, corporation, limited liability company, partnership or other entity and, in case of an entity, includes any other entity which has a majority interest in such entity or effectively controls such other entity as well as the individual officers, directors and other persons in active control of the activities of such entity;\n\n(b) “Franchise” means an oral or written agreement or arrangement in which (1) a franchisee is granted the right to engage in the business of offering, selling or distributing goods or services under a marketing plan or system prescribed in substantial part by a franchisor, provided nothing contained herein shall be deemed to create a franchisor-franchisee relationship between the grantor and grantee of a lease, license or concession to sell goods or services upon or appurtenant to the premises of the grantor, which premises are occupied by the grantor primarily for its own independent merchandising activities; and (2) the operation of the franchisee's business pursuant to such plan or system is substantially associated with the franchisor's trademark, service mark, trade name, logotype, advertising or other commercial symbol designating the franchisor or its affiliate, and includes any agreement between a manufacturer, refiner or producer and a distributor, wholesaler or jobber, between a manufacturer, refiner or producer and a retailer, or between a distributor, wholesaler or jobber and a retailer;\n\n(c) “Franchisor” means a person who grants a franchise to another person, including a manufacturer, refiner or producer or a distributor, wholesaler or jobber who grants to a distributor, wholesaler or jobber or retailer, as the case may be, the authority to use a trademark, tradename, service mark or other identifying symbol or name under a franchise;\n\n(d) “Franchisee” means a person to whom a franchise is granted, including a distributor, wholesaler or jobber or retailer who is granted the authority under a franchise to use a trademark, tradename, service mark or other identifying symbol or name.\n\nSee Sec. 42-133h re applicability of sections.",
+      "text": "As used in sections 42-133e to 42-133g , inclusive:\n\n(a) “Person” means a natural person, corporation, limited liability company, partnership or other entity and, in case of an entity, includes any other entity which has a majority interest in such entity or effectively controls such other entity as well as the individual officers, directors and other persons in active control of the activities of such entity;\n\n(b) “Franchise” means an oral or written agreement or arrangement in which (1) a franchisee is granted the right to engage in the business of offering, selling or distributing goods or services under a marketing plan or system prescribed in substantial part by a franchisor, provided nothing contained herein shall be deemed to create a franchisor-franchisee relationship between the grantor and grantee of a lease, license or concession to sell goods or services upon or appurtenant to the premises of the grantor, which premises are occupied by the grantor primarily for its own independent merchandising activities; and (2) the operation of the franchisee's business pursuant to such plan or system is substantially associated with the franchisor's trademark, service mark, trade name, logotype, advertising or other commercial symbol designating the franchisor or its affiliate, and includes any agreement between a manufacturer, refiner or producer and a distributor, wholesaler or jobber, between a manufacturer, refiner or producer and a retailer, or between a distributor, wholesaler or jobber and a retailer;\n\n(c) “Franchisor” means a person who grants a franchise to another person, including a manufacturer, refiner or producer or a distributor, wholesaler or jobber who grants to a distributor, wholesaler or jobber or retailer, as the case may be, the authority to use a trademark, tradename, service mark or other identifying symbol or name under a franchise;\n\n(d) “Franchisee” means a person to whom a franchise is granted, including a distributor, wholesaler or jobber or retailer who is granted the authority under a franchise to use a trademark, tradename, service mark or other identifying symbol or name.",
       "href": "?chapter=739&section=section-42-133e"
     },
     {
@@ -2705,7 +2500,7 @@
         "name": "Trading Stamps, Mail Orders, Franchises, Credit Programs and Subscriptions"
       },
       "status": "active",
-      "text": "(a) No franchisor shall, directly, or through any officer, agent or employee, terminate, cancel or fail to renew a franchise, except for good cause which shall include, but not be limited to the franchisee's refusal or failure to comply substantially with any material and reasonable obligation of the franchise agreement or for the reasons stated in subsection (e) of this section. The franchisor shall give the franchisee written notice of such termination, cancellation or intent not to renew, at least sixty days in advance to such termination, cancellation or failure to renew with the cause stated thereon; provided, in the event the franchisor elects not to renew a franchise pursuant to subsection (e) of this section, the franchisor shall give the franchisee written notice of such intent not to renew at least six months prior to the expiration of the current franchise agreement. The provisions of this section shall not apply (1) where the alleged grounds are voluntary abandonment by the franchisee of the franchise relationship, in which event, such notice may be given thirty days in advance of such termination, cancellation or failure to renew, or (2) where the alleged grounds are the conviction of the franchisee in a court of competent jurisdiction of an offense punishable by a term of imprisonment in excess of one year and directly related to the business conducted pursuant to the franchise, in which event, such notice may be given at any time following such conviction and shall be effective upon delivery and written receipt of such notice.\n\n(b) If the franchise which is the subject of a notice of termination, cancellation or failure to renew provided for in subsection (a) of this section is operated on premises leased by the franchisor to the franchisee under a lease which terminates upon termination of the franchise, and if the franchisor seeks to terminate the lease, the notice shall be served upon the franchisee by a state marshal or indifferent person and shall expressly state that said lease shall terminate upon termination of the franchise, and shall further state that the franchisee may have certain rights under sections 42-133f and 42-133g , which sections shall be reproduced and attached to the notice.\n\n(c) Upon termination of any franchise the franchisee shall be allowed fair and reasonable compensation by the franchisor for the franchisee's inventory, supplies, equipment and furnishings purchased by the franchisee from the franchisor or its approved sources under the terms of the franchise or any ancillary or collateral agreement; provided no compensation shall be allowed for personalized items which have no value to the franchisor.\n\n(d) Notwithstanding the provisions of section 52-550 , no franchise entered into or renewed on or after October 1, 1973, whether oral or written, shall be for a term of less than three years and for successive terms of not less than three years thereafter unless cancelled, terminated or not renewed pursuant to subsections (a) and (d) of this section.\n\n(e) A franchisor may elect not to renew a franchise which involves the lease by the franchisor to the franchisee of real property and improvement, in the event the franchisor (1) sells or leases such real property and improvements to other than a subsidiary or affiliate of the franchisor for any use; or (2) sells or leases such real property to a subsidiary or affiliate of the franchisor, except such subsidiary or affiliate shall not use such real property for the operation of the same business of the franchisee; or (3) converts such real property and improvements to a use not covered by the franchise agreement; or (4) has leased such real property from a person not the franchisee and such lease from such person is terminated or not renewed.\n\n(f) Any waiver of the rights of a franchisee under sections 42-133f or 42-133g which is contained in any franchise agreement entered into or amended on or after June 12, 1975, shall be void.\n\nSee Sec. 42-133h re applicability of section.",
+      "text": "(a) No franchisor shall, directly, or through any officer, agent or employee, terminate, cancel or fail to renew a franchise, except for good cause which shall include, but not be limited to the franchisee's refusal or failure to comply substantially with any material and reasonable obligation of the franchise agreement or for the reasons stated in subsection (e) of this section. The franchisor shall give the franchisee written notice of such termination, cancellation or intent not to renew, at least sixty days in advance to such termination, cancellation or failure to renew with the cause stated thereon; provided, in the event the franchisor elects not to renew a franchise pursuant to subsection (e) of this section, the franchisor shall give the franchisee written notice of such intent not to renew at least six months prior to the expiration of the current franchise agreement. The provisions of this section shall not apply (1) where the alleged grounds are voluntary abandonment by the franchisee of the franchise relationship, in which event, such notice may be given thirty days in advance of such termination, cancellation or failure to renew, or (2) where the alleged grounds are the conviction of the franchisee in a court of competent jurisdiction of an offense punishable by a term of imprisonment in excess of one year and directly related to the business conducted pursuant to the franchise, in which event, such notice may be given at any time following such conviction and shall be effective upon delivery and written receipt of such notice.\n\n(b) If the franchise which is the subject of a notice of termination, cancellation or failure to renew provided for in subsection (a) of this section is operated on premises leased by the franchisor to the franchisee under a lease which terminates upon termination of the franchise, and if the franchisor seeks to terminate the lease, the notice shall be served upon the franchisee by a state marshal or indifferent person and shall expressly state that said lease shall terminate upon termination of the franchise, and shall further state that the franchisee may have certain rights under sections 42-133f and 42-133g , which sections shall be reproduced and attached to the notice.\n\n(c) Upon termination of any franchise the franchisee shall be allowed fair and reasonable compensation by the franchisor for the franchisee's inventory, supplies, equipment and furnishings purchased by the franchisee from the franchisor or its approved sources under the terms of the franchise or any ancillary or collateral agreement; provided no compensation shall be allowed for personalized items which have no value to the franchisor.\n\n(d) Notwithstanding the provisions of section 52-550 , no franchise entered into or renewed on or after October 1, 1973, whether oral or written, shall be for a term of less than three years and for successive terms of not less than three years thereafter unless cancelled, terminated or not renewed pursuant to subsections (a) and (d) of this section.\n\n(e) A franchisor may elect not to renew a franchise which involves the lease by the franchisor to the franchisee of real property and improvement, in the event the franchisor (1) sells or leases such real property and improvements to other than a subsidiary or affiliate of the franchisor for any use; or (2) sells or leases such real property to a subsidiary or affiliate of the franchisor, except such subsidiary or affiliate shall not use such real property for the operation of the same business of the franchisee; or (3) converts such real property and improvements to a use not covered by the franchise agreement; or (4) has leased such real property from a person not the franchisee and such lease from such person is terminated or not renewed.\n\n(f) Any waiver of the rights of a franchisee under sections 42-133f or 42-133g which is contained in any franchise agreement entered into or amended on or after June 12, 1975, shall be void.",
       "href": "?chapter=739&section=section-42-133f"
     },
     {
@@ -2721,7 +2516,7 @@
         "name": "Trading Stamps, Mail Orders, Franchises, Credit Programs and Subscriptions"
       },
       "status": "active",
-      "text": "(a) Any franchisee may bring an action for violation of sections 42-133e to 42-133g , inclusive, in the Superior Court to recover damages sustained by reason of such violation, which action shall be privileged in respect to its assignment for trial and, where appropriate, may apply for injunctive relief as provided in chapter 916. Such franchisee, if successful, shall be entitled to costs, including, but not limited to, reasonable attorneys' fees.\n\n(b) A franchisee who leases real property under a franchise agreement, which lease expires upon termination of the franchise, and who receives notice from the franchisor in accordance with the provisions of subsections (a) and (b) of section 42-133f that such franchise is terminated, shall have no right or privilege to occupy the premises which are the subject of such lease, as of the date specified in such notice for the termination of such franchise, unless such franchisee is granted a temporary injunction in accordance with the provisions of chapter 916.\n\n(c) A franchisor who applies to a court to obtain possession of premises leased by the franchisor to the franchisee upon termination of the franchise, which premises the franchisee has no right or privilege to occupy under subsection (b) of this section, shall file with the court from which it seeks the order of possession: (1) An affidavit under oath from the clerk of such court, which affidavit shall state that the court records indicate that no temporary injunction has been granted to the franchisee, (2) the return of service of the notice required pursuant to subsection (b) of this section, (3) a copy of the notice served pursuant to subsection (b) of this section, and (4) an affidavit under oath, which affidavit shall state that the notice required by subsections (a) and (b) of section 42-133f , has been served, that the notice period required by said section has expired, and that no injunction to restrain termination has been issued.\n\nSee Sec. 42-133h re applicability of section.",
+      "text": "(a) Any franchisee may bring an action for violation of sections 42-133e to 42-133g , inclusive, in the Superior Court to recover damages sustained by reason of such violation, which action shall be privileged in respect to its assignment for trial and, where appropriate, may apply for injunctive relief as provided in chapter 916. Such franchisee, if successful, shall be entitled to costs, including, but not limited to, reasonable attorneys' fees.\n\n(b) A franchisee who leases real property under a franchise agreement, which lease expires upon termination of the franchise, and who receives notice from the franchisor in accordance with the provisions of subsections (a) and (b) of section 42-133f that such franchise is terminated, shall have no right or privilege to occupy the premises which are the subject of such lease, as of the date specified in such notice for the termination of such franchise, unless such franchisee is granted a temporary injunction in accordance with the provisions of chapter 916.\n\n(c) A franchisor who applies to a court to obtain possession of premises leased by the franchisor to the franchisee upon termination of the franchise, which premises the franchisee has no right or privilege to occupy under subsection (b) of this section, shall file with the court from which it seeks the order of possession: (1) An affidavit under oath from the clerk of such court, which affidavit shall state that the court records indicate that no temporary injunction has been granted to the franchisee, (2) the return of service of the notice required pursuant to subsection (b) of this section, (3) a copy of the notice served pursuant to subsection (b) of this section, and (4) an affidavit under oath, which affidavit shall state that the notice required by subsections (a) and (b) of section 42-133f , has been served, that the notice period required by said section has expired, and that no injunction to restrain termination has been issued.",
       "href": "?chapter=739&section=section-42-133g"
     },
     {
@@ -3190,38 +2985,6 @@
       "status": "active",
       "text": "(a) When a franchisor intends to sell, transfer or assign to another person the franchisor's interest in a single marketing premises that is not part of two or more marketing premises marketed as a package to sell, transfer or assign more than a single marketing premises, that the franchisee has occupied under a lease, sublease or other grant of authority to occupy such premises, such franchisor shall first: (1) Make a bona fide offer to sell, transfer or assign to the franchisee such franchisor's interests in such single marketing premises; or (2) if applicable, offer the franchisee a right of first refusal of a bona fide offer made by another acceptable to the franchisor, to purchase such franchisor's interest in such single marketing premises. The franchisee shall have forty-five days in which to accept or reject such offer made under subdivision (1) or (2) of this subsection.\n\n(b) When a franchisor sells, transfers or assigns the franchisor's interest in two or more marketing premises marketed as a package to a successor owner, any change in the terms and conditions of the franchise agreement in effect at the time of the sale, transfer or assignment shall be by mutual agreement of the franchisee and the successor owner. Such successor owner shall, at the expiration of the franchise agreement in effect at the time of the sale, transfer or assignment, renew the franchise agreement of each franchisee for the same number of years as the agreement in effect at the time of the sale, transfer or assignment, provided such renewal shall not exceed five years. Any changes to the franchise agreement shall be submitted in good faith by the successor owner and negotiated in good faith by the successor owner and the franchisee. The successor owner shall not require the franchisee to do the following: (1) Take part in promotional campaigns of the successor owner's products; (2) meet sales quotas; (3) sell any product at a price suggested by the successor owner or supplier; (4) keep the premises open and operating during hours which are documented by the franchisee to be unprofitable to the franchisee or during the hours after ten o'clock p.m. and prior to six o'clock a.m.; or (5) disclose to the successor owner or supplier financial records of the operation of the franchise which are not related or necessary to the franchisee's obligations under the franchise agreement. Nothing in this subsection shall affect the successor owner's ability to terminate, cancel or fail to renew a franchise agreement for good cause shown.\n\n(c) If such successor owner intends to sell, transfer or assign to another person such successor owner's interest in the marketing premises that the franchisee has occupied under a lease, sublease or other grant of authority to occupy such premises, the new owner shall first (1) make a bona fide offer to sell, transfer or assign to the franchisee such successor owner's interest in the marketing premises; or (2) if applicable, offer the franchisee a right of first refusal of a bona fide offer made by another acceptable to the successor, to purchase such successor owner's interest in such marketing premises. The franchisee shall have forty-five days in which to accept or reject such offer made under subdivision (1) or (2) of this subsection.\n\n(d) For the purposes of this section, “marketing premises” means premises which, under a franchise agreement, are to be employed by a franchisee in connection with the sale, consignment or distribution of motor fuel.\n\n(e) The provisions of this section shall apply to any franchise agreement in effect on or after July 1, 2000.",
       "href": "?chapter=739&section=section-42-133mm"
-    },
-    {
-      "id": "section-42-132",
-      "citation": "42-132",
-      "citations": [
-        "42-132"
-      ],
-      "heading": "42-132",
-      "chapter": {
-        "id": "chapter-739",
-        "number": "739",
-        "name": "Trading Stamps, Mail Orders, Franchises, Credit Programs and Subscriptions"
-      },
-      "status": "repealed",
-      "text": "Secs. 42-132 and 42-133. Application in case of pretended purchase or assignment. Penalty. Sections 42-132 and 42-133 are repealed.",
-      "href": "?chapter=739&section=section-42-132"
-    },
-    {
-      "id": "section-42-133",
-      "citation": "42-133",
-      "citations": [
-        "42-133"
-      ],
-      "heading": "42-133",
-      "chapter": {
-        "id": "chapter-739",
-        "number": "739",
-        "name": "Trading Stamps, Mail Orders, Franchises, Credit Programs and Subscriptions"
-      },
-      "status": "repealed",
-      "text": "Secs. 42-132 and 42-133. Application in case of pretended purchase or assignment. Penalty. Sections 42-132 and 42-133 are repealed.",
-      "href": "?chapter=739&section=section-42-133"
     },
     {
       "id": "section-42-134",
@@ -3827,70 +3590,6 @@
       "href": "?chapter=742a&section=section-42-158h"
     },
     {
-      "id": "section-42-158b",
-      "citation": "42-158b",
-      "citations": [
-        "42-158b"
-      ],
-      "heading": "42-158b",
-      "chapter": {
-        "id": "chapter-742a",
-        "number": "742a",
-        "name": "Noncommercial Motor Vehicle Lease Agreements"
-      },
-      "status": "repealed",
-      "text": "Secs. 42-158b and 42-158c. Required calculation of lease rate. Required disclosures in lease agreements. Sections 42-158b and 42-158c are repealed, effective July 1, 2002.",
-      "href": "?chapter=742a&section=section-42-158b"
-    },
-    {
-      "id": "section-42-158c",
-      "citation": "42-158c",
-      "citations": [
-        "42-158c"
-      ],
-      "heading": "42-158c",
-      "chapter": {
-        "id": "chapter-742a",
-        "number": "742a",
-        "name": "Noncommercial Motor Vehicle Lease Agreements"
-      },
-      "status": "repealed",
-      "text": "Secs. 42-158b and 42-158c. Required calculation of lease rate. Required disclosures in lease agreements. Sections 42-158b and 42-158c are repealed, effective July 1, 2002.",
-      "href": "?chapter=742a&section=section-42-158c"
-    },
-    {
-      "id": "section-42-158d",
-      "citation": "42-158d",
-      "citations": [
-        "42-158d"
-      ],
-      "heading": "42-158d",
-      "chapter": {
-        "id": "chapter-742a",
-        "number": "742a",
-        "name": "Noncommercial Motor Vehicle Lease Agreements"
-      },
-      "status": "repealed",
-      "text": "Secs. 42-158d to 42-158g. Unfair trade practice. Conflict with state or federal law to be avoided. Terms excluding or modifying implied warranties or remedies for breach unenforceable. Required disclosures. Sections 42-158d to 42-158g , inclusive, are repealed, effective July 1, 2003.",
-      "href": "?chapter=742a&section=section-42-158d"
-    },
-    {
-      "id": "section-42-158g",
-      "citation": "42-158g",
-      "citations": [
-        "42-158g"
-      ],
-      "heading": "42-158g",
-      "chapter": {
-        "id": "chapter-742a",
-        "number": "742a",
-        "name": "Noncommercial Motor Vehicle Lease Agreements"
-      },
-      "status": "repealed",
-      "text": "Secs. 42-158d to 42-158g. Unfair trade practice. Conflict with state or federal law to be avoided. Terms excluding or modifying implied warranties or remedies for breach unenforceable. Required disclosures. Sections 42-158d to 42-158g , inclusive, are repealed, effective July 1, 2003.",
-      "href": "?chapter=742a&section=section-42-158g"
-    },
-    {
       "id": "section-42-158i",
       "citation": "42-158i",
       "citations": [
@@ -3903,7 +3602,7 @@
         "name": "Construction Contracts"
       },
       "status": "active",
-      "text": "As used in sections 42-158i to 42-158n , inclusive, unless the context otherwise requires:\n\n(1) “Owner” means any individual, corporation, nonprofit corporation, partnership, limited partnership, limited liability company or other business entity that is the owner of record or lessee of real property upon which construction, renovation or rehabilitation is to be or is being performed pursuant to a construction contract regarding such real property.\n\n(2) “Construction contract” or “contract” means any contract for the construction, renovation or rehabilitation in this state on or after October 1, 1999, including any improvements to real property that are associated with such construction, renovation or rehabilitation, or any subcontract for construction, renovation or rehabilitation between an owner and a contractor, or between a contractor and a subcontractor or subcontractors, or between a subcontractor and any other subcontractor. “Construction contract” or “contract” does not include (A) any public works or other building contract entered into with this state, the United States, any other state, and any municipality or other political subdivision of this state or any other state, (B) a contract or project funded or insured by the United States Department of Housing and Urban Development, (C) a contract between an owner and a contractor for an amount of twenty-five thousand dollars or less or a subcontract which results from such a contract, or (D) a contract for a building intended for residential occupancy containing four or less units.\n\n(3) “Retainage” means a sum withheld from progress payments to the contractor or subcontractor, otherwise payable to a contractor or subcontractor by an owner conditioned on substantial or final completion of all work in accordance with the terms of a written or verbal construction contract, but does not include any sum withheld due to the contractor's or subcontractor's failure to comply with construction plans and specifications.\n\nSee Sec. 42-158p re retainage escrow accounts.",
+      "text": "As used in sections 42-158i to 42-158n , inclusive, unless the context otherwise requires:\n\n(1) “Owner” means any individual, corporation, nonprofit corporation, partnership, limited partnership, limited liability company or other business entity that is the owner of record or lessee of real property upon which construction, renovation or rehabilitation is to be or is being performed pursuant to a construction contract regarding such real property.\n\n(2) “Construction contract” or “contract” means any contract for the construction, renovation or rehabilitation in this state on or after October 1, 1999, including any improvements to real property that are associated with such construction, renovation or rehabilitation, or any subcontract for construction, renovation or rehabilitation between an owner and a contractor, or between a contractor and a subcontractor or subcontractors, or between a subcontractor and any other subcontractor. “Construction contract” or “contract” does not include (A) any public works or other building contract entered into with this state, the United States, any other state, and any municipality or other political subdivision of this state or any other state, (B) a contract or project funded or insured by the United States Department of Housing and Urban Development, (C) a contract between an owner and a contractor for an amount of twenty-five thousand dollars or less or a subcontract which results from such a contract, or (D) a contract for a building intended for residential occupancy containing four or less units.\n\n(3) “Retainage” means a sum withheld from progress payments to the contractor or subcontractor, otherwise payable to a contractor or subcontractor by an owner conditioned on substantial or final completion of all work in accordance with the terms of a written or verbal construction contract, but does not include any sum withheld due to the contractor's or subcontractor's failure to comply with construction plans and specifications.",
       "href": "?chapter=742b&section=section-42-158i"
     },
     {
@@ -4175,47 +3874,9 @@
       "href": "?chapter=742e&section=section-42-158kk"
     },
     {
-      "id": "group-42-158-to-42-158a-to-42-158b-to-42-158c-to-42-158d-to-42-158e-to-42-158f-to-42-158g-to-42-158h-to-42-158i-to-42-158j-to-42-158k-to-42-158l-to-42-158m-to-42-158n-to-42-158o-to-42-158p-to-42-158q-to-42-158r-to-42-158s-to-42-158t-to-42-158u-to-42-158v-to-42-158w-to-42-158x-to-42-158y-to-42-158z-to-42-158aa-to-42-158bb-to-42-158cc-to-42-158dd-to-42-158ee-to-42-158ff-to-42-158gg-to-42-158hh-to-42-158ii-to-42-158jj-to-42-158kk-to-42-158ll-to-42-158mm-to-42-158nn-to-42-158oo",
+      "id": "group-42-158ll-to-42-158mm-to-42-158nn-to-42-158oo",
       "citation": null,
       "citations": [
-        "42-158",
-        "42-158a",
-        "42-158b",
-        "42-158c",
-        "42-158d",
-        "42-158e",
-        "42-158f",
-        "42-158g",
-        "42-158h",
-        "42-158i",
-        "42-158j",
-        "42-158k",
-        "42-158l",
-        "42-158m",
-        "42-158n",
-        "42-158o",
-        "42-158p",
-        "42-158q",
-        "42-158r",
-        "42-158s",
-        "42-158t",
-        "42-158u",
-        "42-158v",
-        "42-158w",
-        "42-158x",
-        "42-158y",
-        "42-158z",
-        "42-158aa",
-        "42-158bb",
-        "42-158cc",
-        "42-158dd",
-        "42-158ee",
-        "42-158ff",
-        "42-158gg",
-        "42-158hh",
-        "42-158ii",
-        "42-158jj",
-        "42-158kk",
         "42-158ll",
         "42-158mm",
         "42-158nn",
@@ -4229,7 +3890,7 @@
       },
       "status": "reserved",
       "text": "Reserved for future use.",
-      "href": "?chapter=742e&section=group-42-158-to-42-158a-to-42-158b-to-42-158c-to-42-158d-to-42-158e-to-42-158f-to-42-158g-to-42-158h-to-42-158i-to-42-158j-to-42-158k-to-42-158l-to-42-158m-to-42-158n-to-42-158o-to-42-158p-to-42-158q-to-42-158r-to-42-158s-to-42-158t-to-42-158u-to-42-158v-to-42-158w-to-42-158x-to-42-158y-to-42-158z-to-42-158aa-to-42-158bb-to-42-158cc-to-42-158dd-to-42-158ee-to-42-158ff-to-42-158gg-to-42-158hh-to-42-158ii-to-42-158jj-to-42-158kk-to-42-158ll-to-42-158mm-to-42-158nn-to-42-158oo"
+      "href": "?chapter=742e&section=group-42-158ll-to-42-158mm-to-42-158nn-to-42-158oo"
     },
     {
       "id": "section-42-159",
@@ -5359,7 +5020,7 @@
         "name": "Consumer Rent-to-Own Agreements"
       },
       "status": "active",
-      "text": "A lessor shall not charge a lessee for:\n\n(1) Any insurance whether in connection with the transaction or otherwise, except that a charge may be made for property insurance for the rented property if the charge is clearly disclosed as optional and does not exceed five per cent of the rental renewal payment;\n\n(2) In-home collection of a payment unless the lessee has expressly agreed to the fee and the amount of the fee is disclosed. This fee may not exceed five dollars, may not be assessed until after the expiration of the grace periods described in subdivision (3) of this section, may not be assessed more than three times in any six-month period, and may be charged in lieu of, but not in addition to, any allowable late charge;\n\n(3) Late payment of an installment unless the lessee has expressly agreed to the fee and the amount of the fee is disclosed. No such fee shall be assessed on any rental payment that is made within five days after the due date on rent-to-own agreements with monthly renewal dates and within three days after the due date on rent-to-own agreements with renewal dates more frequent than monthly. Thereafter a lessor may assess a late charge not to exceed five per cent of the late renewal payment or five dollars, whichever is less, except that a minimum late charge of one dollar may be assessed. Only one late fee may be assessed upon any delinquent renewal payment, regardless of the period during which it remains in default, and payments, when received, shall first be applied to the most recent payment due. With respect to renewal payments accepted by mail or by store deposit box, no lessor shall assess a late fee for payments which are postmarked or received before the expiration of the applicable grace periods;\n\n(4) Early termination of a rent-to-own agreement or for the return of an item at any point;\n\n(5) Picking up the rented property;\n\n(6) A separate payment in excess of the weekly or monthly rental renewal payment in order to acquire ownership of the rented property;\n\n(7) An application fee or processing fee in excess of ten dollars.\n\nSee Sec. 1-2a re construction of references to “United States mail”, “postmark” or “registered or certified mail”.",
+      "text": "A lessor shall not charge a lessee for:\n\n(1) Any insurance whether in connection with the transaction or otherwise, except that a charge may be made for property insurance for the rented property if the charge is clearly disclosed as optional and does not exceed five per cent of the rental renewal payment;\n\n(2) In-home collection of a payment unless the lessee has expressly agreed to the fee and the amount of the fee is disclosed. This fee may not exceed five dollars, may not be assessed until after the expiration of the grace periods described in subdivision (3) of this section, may not be assessed more than three times in any six-month period, and may be charged in lieu of, but not in addition to, any allowable late charge;\n\n(3) Late payment of an installment unless the lessee has expressly agreed to the fee and the amount of the fee is disclosed. No such fee shall be assessed on any rental payment that is made within five days after the due date on rent-to-own agreements with monthly renewal dates and within three days after the due date on rent-to-own agreements with renewal dates more frequent than monthly. Thereafter a lessor may assess a late charge not to exceed five per cent of the late renewal payment or five dollars, whichever is less, except that a minimum late charge of one dollar may be assessed. Only one late fee may be assessed upon any delinquent renewal payment, regardless of the period during which it remains in default, and payments, when received, shall first be applied to the most recent payment due. With respect to renewal payments accepted by mail or by store deposit box, no lessor shall assess a late fee for payments which are postmarked or received before the expiration of the applicable grace periods;\n\n(4) Early termination of a rent-to-own agreement or for the return of an item at any point;\n\n(5) Picking up the rented property;\n\n(6) A separate payment in excess of the weekly or monthly rental renewal payment in order to acquire ownership of the rented property;\n\n(7) An application fee or processing fee in excess of ten dollars.",
       "href": "?chapter=743i&section=section-42-243"
     },
     {

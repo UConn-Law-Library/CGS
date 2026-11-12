@@ -140,9 +140,7 @@
           "By: (Signature of Agent) L.S.",
           "Name of Signatory",
           "His/Her Agent",
-          "(d) Nothing in subsection (c) of this section precludes the use of any other legal form of execution of deed or other conveyance of real property.",
-          "See chapter 821a re forms of deeds and mortgages.",
-          "See Sec. 7-34a re recording fees."
+          "(d) Nothing in subsection (c) of this section precludes the use of any other legal form of execution of deed or other conveyance of real property."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 7085; P.A. 75-309, S. 3; P.A. 79-602, S. 1; P.A. 87-265; P.A. 96-77, S. 16; P.A. 05-288, S. 160; P.A. 06-196, S. 176; P.A. 11-206, S. 1; P.A. 13-87, S. 1; P.A. 15-240, S. 50; P.A. 16-40, S. 9; P.A. 21-39, S. 9.)"
@@ -151,6 +149,14 @@
           "History: P.A. 75-309 made grantor's seal optional rather than mandatory, specified that duly authorized person may subscribe to conveyance where grantor is a corporation or partnership and deleted detailed listing of persons before whom acknowledgment may be made; P.A. 79-602 restated provisions and added Subdiv. indicators; P.A. 87-265 added Subsec. (b) re form for execution of deed or other conveyance of real property pursuant to a power of attorney and Subsec. (c) re use of other legal forms of deed execution or property conveyance; P.A. 96-77 amended Subsec. (a)(2) to add “limited liability company”; P.A. 05-288 made a technical change in Subsec. (c), effective July 13, 2005; P.A. 06-196 made a technical change in Subsec. (b), effective June 7, 2006; P.A. 11-206 amended Subsec. (a)(3) to designate existing provisions re free act and deed as Subpara. (A) and add Subpara. (B) to permit acknowledgment in any manner permitted under Ch. 6 or 8; P.A. 13-87 added new Subsec. (b) re conveyance of land to include current mailing address of the grantee, redesignated existing Subsecs. (b) and (c) as Subsecs. (c) and (d) and made a technical change in redesignated Subsec. (d); P.A. 15-240 amended Subsec. (a) by substituting “agent” for “attorney” and amended Subsec. (c) by substituting “Agent” for “Attorney-in-Fact”, effective July 1, 2016; P.A. 16-40 changed effective date of P.A. 15-240, S. 50, from July 1, 2016, to October 1, 2016, effective May 27, 2016; P.A. 21-39 amended Subsec. (a)(2) by designating existing provision re natural person as Subpara. (A) and amending same to designate existing provision as clause (i) and add clause (ii) re executed, acknowledged and witnessed as provided in Secs. 1-350d and 1-350r(a), designating existing provision re corporation, limited liability corporation or partnership as Subpara. (B) and making a technical and conforming change."
         ],
         "annotations": [
+          {
+            "first": true,
+            "text": "See chapter 821a re forms of deeds and mortgages."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 7-34a re recording fees."
+          },
           {
             "first": true,
             "text": "When an unacknowledged deed is admissible in evidence. 3 D. 500; 3 C. 398. What defect in certificate of acknowledgment is fatal. 2 C. 527; 3 C. 406; 11 C. 129. Whether a deed attested by only one witness was valid under the colony laws of 1672. 3 C. 35. The acknowledgment cannot be proved by parol. Id., 406; 11 C. 129. When chancery will supply defects in attestation. 4 C. 344; 5 C. 468; 8 C. 549. Cancellation of a deed, duly executed and delivered, does not revest the title. 4 C. 550; 5 C. 86, 262. Record of deed, defectively attested, not constructive notice. 5 C. 468; 87 C. 369. General agent of manufacturing company cannot execute deed of company's real estate. 7 C. 214. Material alteration makes a new attestation necessary. 8 C. 289. Corporation may by vote, without power of attorney, empower agent to convey its real estate; such agent must affix corporate seal to deed. Id., 191; 27 C. 538. Signature must be made by party's own hand. 13 C. 192. Vote of corporation authorizing execution of deed need not be under corporate seal nor recorded with deed. 14 C. 594. Witnesses must be disinterested. 26 C. 195. When “personally appeared ... signer and sealer”, etc., a sufficient acknowledgment. 30 C. 344. Unsigned recorded mortgage absolutely void. 44 C. 321. In equity, an absolute deed can by parol be proved to be a mortgage. 72 C. 720; 74 C. 252; 79 C. 340; 85 C. 46; 89 C. 178; 93 C. 66. Acknowledgment taken by agent of grantee. 77 C. 276. Deed conveys title but does not purport to express agreement of parties; counterclaim for deficiency in acreage. 97 C. 350. Delivery and acceptance necessary; leaving with maker's own attorney is inoperative where no instructions given; requisites for valid gift inter vivos. Id., 483. Applies, by reference, to chattel mortgages. 105 C. 772. Effect of validating acts. 109 C. 312. The attestation clause of a deed which is in the possession of the grantee is prima facie proof of delivery. 146 C. 307. In proceeding to set aside a conveyance, the burden of proof on issue of undue influence rests on the one alleging it, except when it appears that a stranger, holding toward the grantor a relationship of trust and confidence, is the principal beneficiary to the exclusion of others who are the natural objects of grantor's bounty. 147 C. 474. Agreement to divide money representing income from property or proceeds from its sale was a contract and not a conveyance of land and it was not necessary it be executed in accordance with section. 156 C. 12. Cited. 207 C. 555; 218 C. 512; 232 C. 645."
@@ -176,7 +182,7 @@
             "text": "Cited. 38 CA 639. Lack of adherence to the formalities in Subsec. rendered the subject deed of conveyance voidable, but not void; in the case of the subject deed, where plaintiff gave permission to or granted authority to his father to sign his name on the deed, plaintiff waived directive of Subsec. 67 CA 447. A grantor or a grantee of a deed cannot act as one of the two attesting witnesses required for the conveyance of property because allowing the parties to act as witnesses would negate the purpose of the witness requirement. 134 CA 265."
           }
         ],
-        "plainText": "(a) All conveyances of land shall be: (1) In writing; (2) if the grantor is (A) a natural person, subscribed, with or without a seal, by the grantor with his own hand or with his mark with his name annexed to it or by his agent authorized for that purpose by a power (i) executed, acknowledged and witnessed in the manner provided for conveyances, or (ii) executed, acknowledged and witnessed in the same manner provided for in section 1-350d , and subsection (a) of section 1-350r ; or (B) a corporation, limited liability company or partnership, subscribed by a duly authorized person; (3) acknowledged by the grantor, his agent or such duly authorized person (A) to be his free act and deed, or (B) in any manner permitted under chapter 6 or chapter 8; and (4) attested to by two witnesses with their own hands.\n\n(b) A document conveying land shall also include the current mailing address of the grantee.\n\n(c) In addition to the requirements of subsection (a) of this section, the execution of a deed or other conveyance of real property pursuant to a power of attorney shall be deemed sufficient if done in substantially the following form:\n\nName of Owner of Record\n\nBy: (Signature of Agent) L.S.\n\nName of Signatory\n\nHis/Her Agent\n\n(d) Nothing in subsection (c) of this section precludes the use of any other legal form of execution of deed or other conveyance of real property.\n\nSee chapter 821a re forms of deeds and mortgages.\n\nSee Sec. 7-34a re recording fees."
+        "plainText": "(a) All conveyances of land shall be: (1) In writing; (2) if the grantor is (A) a natural person, subscribed, with or without a seal, by the grantor with his own hand or with his mark with his name annexed to it or by his agent authorized for that purpose by a power (i) executed, acknowledged and witnessed in the manner provided for conveyances, or (ii) executed, acknowledged and witnessed in the same manner provided for in section 1-350d , and subsection (a) of section 1-350r ; or (B) a corporation, limited liability company or partnership, subscribed by a duly authorized person; (3) acknowledged by the grantor, his agent or such duly authorized person (A) to be his free act and deed, or (B) in any manner permitted under chapter 6 or chapter 8; and (4) attested to by two witnesses with their own hands.\n\n(b) A document conveying land shall also include the current mailing address of the grantee.\n\n(c) In addition to the requirements of subsection (a) of this section, the execution of a deed or other conveyance of real property pursuant to a power of attorney shall be deemed sufficient if done in substantially the following form:\n\nName of Owner of Record\n\nBy: (Signature of Agent) L.S.\n\nName of Signatory\n\nHis/Her Agent\n\n(d) Nothing in subsection (c) of this section precludes the use of any other legal form of execution of deed or other conveyance of real property."
       }
     },
     {
@@ -191,8 +197,7 @@
       "status": "active",
       "content": {
         "body": [
-          "If the acknowledgment in a conveyance of real estate is made in this state, it may be made before a judge of a court of record of this state or of the United States, a clerk of the Superior Court, a justice of the peace, a commissioner of the Superior Court, a notary public, either with or without his official seal, a town clerk or an assistant town clerk; and, if in any other state or territory of the United States, before a commissioner residing in such other state or territory appointed by the Governor of Connecticut, or an officer authorized to take the acknowledgment of deeds in such state or territory; and, if in a foreign country, before any ambassador, minister, charge d'affaires, consul, vice-consul, deputy-consul, consul-general, vice-consul-general, deputy-consul-general, consular-agent, vice-consular-agent, commercial agent or vice-commercial agent of the United States, representing or acting as agent of the United States in such foreign country, or before any notary public or justice of the peace, or before any other public officer, in such foreign country, before whom oaths or acknowledgments may be given; but no officer shall have power to take such acknowledgment, except within the territorial limits in which he may perform the duties of his office. The authentication of the signature and qualification of the acknowledging officer on any instrument executed out of this state may conform either to the provisions of chapter 6 or to section 47-7 .",
-          "See chapter 821a re forms of deeds and mortgages."
+          "If the acknowledgment in a conveyance of real estate is made in this state, it may be made before a judge of a court of record of this state or of the United States, a clerk of the Superior Court, a justice of the peace, a commissioner of the Superior Court, a notary public, either with or without his official seal, a town clerk or an assistant town clerk; and, if in any other state or territory of the United States, before a commissioner residing in such other state or territory appointed by the Governor of Connecticut, or an officer authorized to take the acknowledgment of deeds in such state or territory; and, if in a foreign country, before any ambassador, minister, charge d'affaires, consul, vice-consul, deputy-consul, consul-general, vice-consul-general, deputy-consul-general, consular-agent, vice-consular-agent, commercial agent or vice-commercial agent of the United States, representing or acting as agent of the United States in such foreign country, or before any notary public or justice of the peace, or before any other public officer, in such foreign country, before whom oaths or acknowledgments may be given; but no officer shall have power to take such acknowledgment, except within the territorial limits in which he may perform the duties of his office. The authentication of the signature and qualification of the acknowledging officer on any instrument executed out of this state may conform either to the provisions of chapter 6 or to section 47-7 ."
         ],
         "sourceNotes": [
           "(P.A. 75-309, S. 4; P.A. 76-436, S. 646, 681; P.A. 79-602, S. 2.)"
@@ -200,8 +205,13 @@
         "history": [
           "History: P.A. 76-436 removed clerk of common pleas court as person before whom acknowledgment may be made in this state, that court having been abolished in the act, effective July 1, 1978; P.A. 79-602 made minor changes in wording but made no substantive change."
         ],
-        "annotations": [],
-        "plainText": "If the acknowledgment in a conveyance of real estate is made in this state, it may be made before a judge of a court of record of this state or of the United States, a clerk of the Superior Court, a justice of the peace, a commissioner of the Superior Court, a notary public, either with or without his official seal, a town clerk or an assistant town clerk; and, if in any other state or territory of the United States, before a commissioner residing in such other state or territory appointed by the Governor of Connecticut, or an officer authorized to take the acknowledgment of deeds in such state or territory; and, if in a foreign country, before any ambassador, minister, charge d'affaires, consul, vice-consul, deputy-consul, consul-general, vice-consul-general, deputy-consul-general, consular-agent, vice-consular-agent, commercial agent or vice-commercial agent of the United States, representing or acting as agent of the United States in such foreign country, or before any notary public or justice of the peace, or before any other public officer, in such foreign country, before whom oaths or acknowledgments may be given; but no officer shall have power to take such acknowledgment, except within the territorial limits in which he may perform the duties of his office. The authentication of the signature and qualification of the acknowledging officer on any instrument executed out of this state may conform either to the provisions of chapter 6 or to section 47-7 .\n\nSee chapter 821a re forms of deeds and mortgages."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See chapter 821a re forms of deeds and mortgages."
+          }
+        ],
+        "plainText": "If the acknowledgment in a conveyance of real estate is made in this state, it may be made before a judge of a court of record of this state or of the United States, a clerk of the Superior Court, a justice of the peace, a commissioner of the Superior Court, a notary public, either with or without his official seal, a town clerk or an assistant town clerk; and, if in any other state or territory of the United States, before a commissioner residing in such other state or territory appointed by the Governor of Connecticut, or an officer authorized to take the acknowledgment of deeds in such state or territory; and, if in a foreign country, before any ambassador, minister, charge d'affaires, consul, vice-consul, deputy-consul, consul-general, vice-consul-general, deputy-consul-general, consular-agent, vice-consular-agent, commercial agent or vice-commercial agent of the United States, representing or acting as agent of the United States in such foreign country, or before any notary public or justice of the peace, or before any other public officer, in such foreign country, before whom oaths or acknowledgments may be given; but no officer shall have power to take such acknowledgment, except within the territorial limits in which he may perform the duties of his office. The authentication of the signature and qualification of the acknowledging officer on any instrument executed out of this state may conform either to the provisions of chapter 6 or to section 47-7 ."
       }
     },
     {
@@ -433,8 +443,7 @@
       "content": {
         "body": [
           "(a) No conveyance shall be effectual to hold any land against any other person but the grantor and his heirs, unless recorded on the records of the town in which the land lies. When a conveyance is executed by a power of attorney, the power of attorney shall be recorded with the deed, unless it has already been recorded in the records of the town in which the land lies and reference to the power of attorney is made in the deed.",
-          "(b) Any conveyance that is otherwise effective and properly recorded before, on or after October 1, 2002, in accordance with subsection (a) of this section shall not be invalid or unenforceable because the original documentation evidencing such conveyance is converted into digital or electronic form or is lost or destroyed at any time after such recordation.",
-          "See Secs. 7-35aa to 7-35gg, inclusive, re Uniform Real Property Electronic Recording Act."
+          "(b) Any conveyance that is otherwise effective and properly recorded before, on or after October 1, 2002, in accordance with subsection (a) of this section shall not be invalid or unenforceable because the original documentation evidencing such conveyance is converted into digital or electronic form or is lost or destroyed at any time after such recordation."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 7091; P.A. 79-602, S. 35; P.A. 02-66, S. 1.)"
@@ -443,6 +452,10 @@
           "History: P.A. 79-602 restated provisions but made no substantive change; P.A. 02-66 designated existing provisions as Subsec. (a) and added Subsec. (b) re properly recorded conveyance not invalid or unenforceable if original documentation evidencing conveyance is converted into digital or electronic form or is lost or destroyed."
         ],
         "annotations": [
+          {
+            "first": true,
+            "text": "See Secs. 7-35aa to 7-35gg, inclusive, re Uniform Real Property Electronic Recording Act."
+          },
           {
             "first": true,
             "text": "When and how delay to record at length affects title of grantee. K. 72; 1 R. 61, 81, 500; 2 R. 287, 298. When parol evidence admissible to show actual time of recording. 1 R. 81. Rule that deed first recorded obtains priority; how qualified. 2 R. 239, 383; 2 C. 467; 4 C. 575; 8 C. 342; 15 C. 307; 71 C. 100. Action lies against clerk for delivering up deed before recording. 2 R. 85. Bona fide later purchaser without notice of former conveyance by unrecorded deed holds against such former purchaser. Id., 420. Whether a deed releasing an equity of redemption is valid without being recorded. 2 D. 280. Unrecorded deed not good against disseizor. 2 C. 92. What writing is not required to be recorded. Id., 467. What notice of encumbrance the condition of a mortgage deed must give; 4 C. 158; 5 C. 442; 6 C. 37, 116; 7 C. 387; 8 C. 215; 9 C. 286; 12 C. 195; 13 C. 165, 376; 14 C. 77; 15 C. 562; 16 C. 260; 18 C. 257; 19 C. 29; 20 C. 240, 427, 603; 31 C. 74, 488; 46 C. 313; 73 C. 318; 74 C. 198; Id., 405; 76 C. 388; 84 C. 329; 85 C. 46; 91 C. 496; U.S. Supreme Court follows rule of state court. 91 U.S. 452. Return to grantor and cancellation of unrecorded deed does not divest grantee's title. 4 C. 550; 5 C. 262. Covenant of seizin may be broken, although grantee by first recording has secured title. Id. Recording of deed, defective in a statute requisite does not give notice. Id., 468; 8 C. 549; 14 C. 135; 87 C. 369. When unrecorded deed admissible in evidence. 7 C. 291. Action lies for fraudulent withdrawal of deed from clerk's office. 8 C. 342. Mortgage deed recorded after death of mortgagor, good. 11 C. 174. Estate by curtesy cannot be divested by disclaimer duly signed, attested, acknowledged and recorded. 13 C. 83. What record of power of attorney sufficient. 14 C. 32. Burden of proof rests on prior grantee who claims against subsequent deed first recorded. 17 C. 594. When conveyances may be proved by copies of records. 18 C. 311. Deed not recorded until after death of grantor good against a purchaser from his heir at law. 24 C. 211. Deed defective in formal requisite is treated in a court of equity as an executory contract for sale of land. 27 C. 104. What is a reasonable time in which to record deed. 40 C. 85. A mortgage not recorded until after attachment of the mortgaged property, where the delay is unreasonable and unexplained, is not good against the attaching creditor. Id., 214. Placing a deed on record with intent to pass title to grantee makes a legal delivery. 49 C. 570. Party lending on mortgage in good faith is not charged with notice of equities which do not appear of record. 50 C. 46. Question of priority between deed with covenants given before grantor acquired title and deed given, after title acquired, to purchaser in good faith, for value, without notice. Id., 113. Casual knowledge of prior unrecorded mortgage does not charge notice thereof against party taking second mortgage on same land 9 years later. Id., 517. Absolute recorded deed, with separate unrecorded defeasance, making it a mortgage, is invalid against grantor's attaching creditor. 51 C. 446. Provision in railroad company's charter may render unnecessary recording conveyance of its property in land records. 52 C. 274. Grantee not affected by mistake in recording his deed; various points about priority of mortgages. 56 C. 55. Failure to discover record, no defense. 68 C. 305. Notice of building restriction by record. Id., 367. Title of trustee in insolvency takes precedence of prior mortgages unrecorded for two years. 71 C. 358. Priorities between purchaser of land and execution creditor; 70 C. 356; between attaching creditor and purchaser failing to record deed. 71 C. 364; 91 C. 423. What is reasonable time for record, question of fact; 71 C. 95; 91 C. 423; when properly recorded, deed dates back to time of delivery. 76 C. 44; 91 C. 423. Policy of our law is to show title by record; 74 C. 405; 84 C. 329; 85 C. 47; 87 C. 99; 108 C. 24; mortgage; 82 C. 306. Withholding record of mortgage to uphold mortgagor's credit is fraudulent. 74 C. 367. Extent of notice by record. Id., 405; 76 C. 50; 80 C. 329; 102 C. 687. Priority where A, having no title, deeds land to B, then gets title and deeds to C. 76 C. 44. Deed endorsed as recorded after mortgage back, held to precede mortgage. Id., 47. Effect of knowledge of right not appearing of record. 83 C. 581; 87 C. 90; Id., 209. Effect of failure to record separate defeasance. 85 C. 46; 89 C. 444. Creditor's rights where deed or mortgage is not recorded. 85 C. 46; Id., 696. Priority where one purchases after mechanic's lien attaches but before record. 87 C. 316. Unrecorded deed; how far good. 89 C. 35, 45. Recording mortgage of street railway. Id., 63. Only creditor who extends credit on strength of record title can prevail over undisclosed equitable rights of third parties. 91 C. 576. Mortgagee without notice and giving value may foreclose regardless of such equities. Id., 580. That land records would have shown true title is no defense in action for fraudulent misrepresentation as to title. 94 C. 226. Distinction between constructive knowledge from land records as regards character and extent of actual title, and such knowledge in creating personal rights related to title. Id., 225. Recording of a map is inoperative unless clearly referred to in properly recorded deed. 108 C. 541. Cited. 109 C. 438; 113 C. 481. Assignment of a mortgage falls within statute. 121 C. 268. Prior assignee of mortgage who failed to record estopped by conduct; one invoking estoppel must exercise good faith and reasonable diligence. 126 C. 101. Mechanic's lien given priority over purchase money mortgage not recorded until after materials were furnished. 130 C. 367. Cited. 132 C. 554. Lack of actual notice of restrictions cannot aid defendant since they were on record. 138 C. 188. If a deed of real property is given to secure a debt, it must describe the indebtedness with reasonable accuracy to be valid against other encumbrances. 146 C. 523. Cited. 182 C. 1; 207 C. 555; 219 C. 810; 221 C. 77."
@@ -456,7 +469,7 @@
             "text": "Unless a mortgage is recorded within a reasonable time before the execution of a subsequent mortgage, the latter has priority. 6 CS 97. Reasonable time depends upon the facts in each particular case. 11 CS 407. Cited. 15 CS 466. Quitclaim deed executed in 1936 and recorded in 1948 not good against a judgment lien recorded more than 5 months previously. 16 CS 428."
           }
         ],
-        "plainText": "(a) No conveyance shall be effectual to hold any land against any other person but the grantor and his heirs, unless recorded on the records of the town in which the land lies. When a conveyance is executed by a power of attorney, the power of attorney shall be recorded with the deed, unless it has already been recorded in the records of the town in which the land lies and reference to the power of attorney is made in the deed.\n\n(b) Any conveyance that is otherwise effective and properly recorded before, on or after October 1, 2002, in accordance with subsection (a) of this section shall not be invalid or unenforceable because the original documentation evidencing such conveyance is converted into digital or electronic form or is lost or destroyed at any time after such recordation.\n\nSee Secs. 7-35aa to 7-35gg, inclusive, re Uniform Real Property Electronic Recording Act."
+        "plainText": "(a) No conveyance shall be effectual to hold any land against any other person but the grantor and his heirs, unless recorded on the records of the town in which the land lies. When a conveyance is executed by a power of attorney, the power of attorney shall be recorded with the deed, unless it has already been recorded in the records of the town in which the land lies and reference to the power of attorney is made in the deed.\n\n(b) Any conveyance that is otherwise effective and properly recorded before, on or after October 1, 2002, in accordance with subsection (a) of this section shall not be invalid or unenforceable because the original documentation evidencing such conveyance is converted into digital or electronic form or is lost or destroyed at any time after such recordation."
       }
     },
     {
@@ -2525,8 +2538,7 @@
         "body": [
           "(a) Any person who knowingly injures, destroys, disturbs or removes any marker properly placed on any tract of land or street or highway line by a surveyor, or by any person at the direction of a surveyor, for the purpose of designating any point, course or line in the boundary of such tract of land, street or highway, shall be fined not less than five hundred dollars or more than one thousand dollars.",
           "(b) Notwithstanding the provisions of subsection (a) of this section, a surveyor licensed under chapter 391, or a person acting at the direction of any such licensed surveyor, may remove an existing marker in order to place an upgraded marker in the same location.",
-          "(c) Any person who knowingly injures, destroys, disturbs or removes any monument that has been established by the National Geodetic Survey or Connecticut Geodetic Survey for use in the determination of spatial location relative to the Connecticut coordinate systems specified in section 13a-255 or precise elevation datum shall be fined not less than two thousand dollars or more than five thousand dollars.",
-          "See Sec. 52-560a re encroachment on open space land."
+          "(c) Any person who knowingly injures, destroys, disturbs or removes any monument that has been established by the National Geodetic Survey or Connecticut Geodetic Survey for use in the determination of spatial location relative to the Connecticut coordinate systems specified in section 13a-255 or precise elevation datum shall be fined not less than two thousand dollars or more than five thousand dollars."
         ],
         "sourceNotes": [
           "(1971, P.A. 804; P.A. 88-99; P.A. 03-115, S. 82; P.A. 04-257, S. 75.)"
@@ -2537,10 +2549,14 @@
         "annotations": [
           {
             "first": true,
+            "text": "See Sec. 52-560a re encroachment on open space land."
+          },
+          {
+            "first": true,
             "text": "Cited. 15 CA 458; 46 CA 46."
           }
         ],
-        "plainText": "(a) Any person who knowingly injures, destroys, disturbs or removes any marker properly placed on any tract of land or street or highway line by a surveyor, or by any person at the direction of a surveyor, for the purpose of designating any point, course or line in the boundary of such tract of land, street or highway, shall be fined not less than five hundred dollars or more than one thousand dollars.\n\n(b) Notwithstanding the provisions of subsection (a) of this section, a surveyor licensed under chapter 391, or a person acting at the direction of any such licensed surveyor, may remove an existing marker in order to place an upgraded marker in the same location.\n\n(c) Any person who knowingly injures, destroys, disturbs or removes any monument that has been established by the National Geodetic Survey or Connecticut Geodetic Survey for use in the determination of spatial location relative to the Connecticut coordinate systems specified in section 13a-255 or precise elevation datum shall be fined not less than two thousand dollars or more than five thousand dollars.\n\nSee Sec. 52-560a re encroachment on open space land."
+        "plainText": "(a) Any person who knowingly injures, destroys, disturbs or removes any marker properly placed on any tract of land or street or highway line by a surveyor, or by any person at the direction of a surveyor, for the purpose of designating any point, course or line in the boundary of such tract of land, street or highway, shall be fined not less than five hundred dollars or more than one thousand dollars.\n\n(b) Notwithstanding the provisions of subsection (a) of this section, a surveyor licensed under chapter 391, or a person acting at the direction of any such licensed surveyor, may remove an existing marker in order to place an upgraded marker in the same location.\n\n(c) Any person who knowingly injures, destroys, disturbs or removes any monument that has been established by the National Geodetic Survey or Connecticut Geodetic Survey for use in the determination of spatial location relative to the Connecticut coordinate systems specified in section 13a-255 or precise elevation datum shall be fined not less than two thousand dollars or more than five thousand dollars."
       }
     },
     {
@@ -2589,66 +2605,6 @@
         ],
         "annotations": [],
         "plainText": "If the United States of America, or any official or agent in its behalf, claims any lien or encumbrance on, or interest in, land situated in this state, whether or not as a lien referred to in section 49-32a , or if any judgment, order or decree of any United States court or official or bankruptcy referee affects any title to or rights concerning land situated in this state, the instrument evidencing or describing that claim or a certified copy of that judgment, order or decree, or a lis pendens giving notice thereof as authorized by section 52-325 may be recorded in the land records of the town in which the land is situated and may be indexed and released in the same manner as other claims, judgments, orders or decrees. Until so recorded, that claim, judgment, order or lis pendens shall not be effective against the land or constitute constructive notice thereof."
-      }
-    },
-    {
-      "id": "section-47-23b",
-      "kind": "section",
-      "citation": "47-23b",
-      "citations": [
-        "47-23b"
-      ],
-      "heading": "47-23b",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_821.htm#sec_47-23b",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 47-23b to 47-23f, 47-24. Security deposit refunds. Tenant not liable for rent while premises are untenantable. Sections 47-23b to 47-23f , inclusive, and 47-24 are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 47-23b to 47-23f, 47-24. Security deposit refunds. Tenant not liable for rent while premises are untenantable. Sections 47-23b to 47-23f , inclusive, and 47-24 are repealed."
-      }
-    },
-    {
-      "id": "section-47-23f",
-      "kind": "section",
-      "citation": "47-23f",
-      "citations": [
-        "47-23f"
-      ],
-      "heading": "47-23f",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_821.htm#sec_47-23f",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 47-23b to 47-23f, 47-24. Security deposit refunds. Tenant not liable for rent while premises are untenantable. Sections 47-23b to 47-23f , inclusive, and 47-24 are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 47-23b to 47-23f, 47-24. Security deposit refunds. Tenant not liable for rent while premises are untenantable. Sections 47-23b to 47-23f , inclusive, and 47-24 are repealed."
-      }
-    },
-    {
-      "id": "section-47-24",
-      "kind": "section",
-      "citation": "47-24",
-      "citations": [
-        "47-24"
-      ],
-      "heading": "47-24",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_821.htm#sec_47-24",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 47-23b to 47-23f, 47-24. Security deposit refunds. Tenant not liable for rent while premises are untenantable. Sections 47-23b to 47-23f , inclusive, and 47-24 are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 47-23b to 47-23f, 47-24. Security deposit refunds. Tenant not liable for rent while premises are untenantable. Sections 47-23b to 47-23f , inclusive, and 47-24 are repealed."
       }
     }
   ]

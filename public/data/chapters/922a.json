@@ -23,9 +23,7 @@
       "content": {
         "body": [
           "(a) In any small claims action, the parties may, by agreement, submit such matter to a commissioner of the Superior Court chosen on a rotating basis by the clerk of the court to which such small claim is returned, from a list of such commissioners approved by the Chief Court Administrator, in accordance with section 52-549d , and submitted to the parties by the clerk in the small claims area in which such matter is filed. If the parties fail to agree on the first commissioner so chosen, the clerk shall choose another upon whom the parties may agree on such rotating basis.",
-          "(b) If the parties consent to a hearing before a commissioner of the Superior Court, they shall sign a statement, to be filed with the clerk of the superior court in which such action is filed, containing the following: (1) Consent to hearing before such commissioner, which shall contain the name of the commissioner; (2) a brief recital of the nature of the controversy to be determined; and (3) an agreement of the parties to abide by the decision of such commissioner.",
-          "See Sec. 51-15 re procedure and jurisdictional limit for small claims matters.",
-          "See Sec. 52-259 re court fees for entry and transfer of small claims cases."
+          "(b) If the parties consent to a hearing before a commissioner of the Superior Court, they shall sign a statement, to be filed with the clerk of the superior court in which such action is filed, containing the following: (1) Consent to hearing before such commissioner, which shall contain the name of the commissioner; (2) a brief recital of the nature of the controversy to be determined; and (3) an agreement of the parties to abide by the decision of such commissioner."
         ],
         "sourceNotes": [
           "(P.A. 76-298, S. 2, 6; P.A. 77-452, S. 30, 68, 72; P.A. 00-191, S. 6.)"
@@ -33,8 +31,17 @@
         "history": [
           "History: P.A. 77-452 made chief court administrator rather than chief judge of court of common pleas responsible for approving list of superior court commissioners in Subsec. (a) and required that statement be filed by clerk of superior court rather than clerk of common pleas court in Subsec. (b), reflecting reorganization of judicial system, effective July 1, 1978; P.A. 00-191 amended Subsec. (a) by changing “geographical area” to “small claims area”."
         ],
-        "annotations": [],
-        "plainText": "(a) In any small claims action, the parties may, by agreement, submit such matter to a commissioner of the Superior Court chosen on a rotating basis by the clerk of the court to which such small claim is returned, from a list of such commissioners approved by the Chief Court Administrator, in accordance with section 52-549d , and submitted to the parties by the clerk in the small claims area in which such matter is filed. If the parties fail to agree on the first commissioner so chosen, the clerk shall choose another upon whom the parties may agree on such rotating basis.\n\n(b) If the parties consent to a hearing before a commissioner of the Superior Court, they shall sign a statement, to be filed with the clerk of the superior court in which such action is filed, containing the following: (1) Consent to hearing before such commissioner, which shall contain the name of the commissioner; (2) a brief recital of the nature of the controversy to be determined; and (3) an agreement of the parties to abide by the decision of such commissioner.\n\nSee Sec. 51-15 re procedure and jurisdictional limit for small claims matters.\n\nSee Sec. 52-259 re court fees for entry and transfer of small claims cases."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 51-15 re procedure and jurisdictional limit for small claims matters."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 52-259 re court fees for entry and transfer of small claims cases."
+          }
+        ],
+        "plainText": "(a) In any small claims action, the parties may, by agreement, submit such matter to a commissioner of the Superior Court chosen on a rotating basis by the clerk of the court to which such small claim is returned, from a list of such commissioners approved by the Chief Court Administrator, in accordance with section 52-549d , and submitted to the parties by the clerk in the small claims area in which such matter is filed. If the parties fail to agree on the first commissioner so chosen, the clerk shall choose another upon whom the parties may agree on such rotating basis.\n\n(b) If the parties consent to a hearing before a commissioner of the Superior Court, they shall sign a statement, to be filed with the clerk of the superior court in which such action is filed, containing the following: (1) Consent to hearing before such commissioner, which shall contain the name of the commissioner; (2) a brief recital of the nature of the controversy to be determined; and (3) an agreement of the parties to abide by the decision of such commissioner."
       }
     },
     {

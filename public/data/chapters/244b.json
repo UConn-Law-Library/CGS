@@ -196,8 +196,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Upon the issuance of a permit as provided in section 13b-103 or 13b-105 , the holder of such permit may apply to the Commissioner of Motor Vehicles for the registration of any motor vehicle of which such holder is the owner or lessee, to be used as specified in such permit, any provision of section 14-12 to the contrary notwithstanding. The Commissioner of Motor Vehicles shall have jurisdiction over such registration, the exterior lighting equipment of such motor vehicle and the licensing of its operator. An operator of a motor vehicle which has a capacity of less than ten adults shall conspicuously display the assigned livery registration while the motor vehicle is operating in livery service. Said commissioner may suspend such registration and the license of such operator for the violation of any provision of this chapter or any order or regulation prescribed or established under such provision, for such term as the commissioner deems advisable.",
-          "See Sec. 14-26 re registration of public service motor vehicles."
+          "Upon the issuance of a permit as provided in section 13b-103 or 13b-105 , the holder of such permit may apply to the Commissioner of Motor Vehicles for the registration of any motor vehicle of which such holder is the owner or lessee, to be used as specified in such permit, any provision of section 14-12 to the contrary notwithstanding. The Commissioner of Motor Vehicles shall have jurisdiction over such registration, the exterior lighting equipment of such motor vehicle and the licensing of its operator. An operator of a motor vehicle which has a capacity of less than ten adults shall conspicuously display the assigned livery registration while the motor vehicle is operating in livery service. Said commissioner may suspend such registration and the license of such operator for the violation of any provision of this chapter or any order or regulation prescribed or established under such provision, for such term as the commissioner deems advisable."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 5726; P.A. 87-523, S. 2; P.A. 03-115, S. 65.)"
@@ -205,8 +204,13 @@
         "history": [
           "History: In 1981 Sec. 16-327 transferred to Sec. 13b-106; P.A. 87-523 required an operator of a motor vehicle which has a capacity of less than ten adults to conspicuously display the assigned livery registration while the motor vehicle is operating in livery service; P.A. 03-115 made technical changes."
         ],
-        "annotations": [],
-        "plainText": "Upon the issuance of a permit as provided in section 13b-103 or 13b-105 , the holder of such permit may apply to the Commissioner of Motor Vehicles for the registration of any motor vehicle of which such holder is the owner or lessee, to be used as specified in such permit, any provision of section 14-12 to the contrary notwithstanding. The Commissioner of Motor Vehicles shall have jurisdiction over such registration, the exterior lighting equipment of such motor vehicle and the licensing of its operator. An operator of a motor vehicle which has a capacity of less than ten adults shall conspicuously display the assigned livery registration while the motor vehicle is operating in livery service. Said commissioner may suspend such registration and the license of such operator for the violation of any provision of this chapter or any order or regulation prescribed or established under such provision, for such term as the commissioner deems advisable.\n\nSee Sec. 14-26 re registration of public service motor vehicles."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 14-26 re registration of public service motor vehicles."
+          }
+        ],
+        "plainText": "Upon the issuance of a permit as provided in section 13b-103 or 13b-105 , the holder of such permit may apply to the Commissioner of Motor Vehicles for the registration of any motor vehicle of which such holder is the owner or lessee, to be used as specified in such permit, any provision of section 14-12 to the contrary notwithstanding. The Commissioner of Motor Vehicles shall have jurisdiction over such registration, the exterior lighting equipment of such motor vehicle and the licensing of its operator. An operator of a motor vehicle which has a capacity of less than ten adults shall conspicuously display the assigned livery registration while the motor vehicle is operating in livery service. Said commissioner may suspend such registration and the license of such operator for the violation of any provision of this chapter or any order or regulation prescribed or established under such provision, for such term as the commissioner deems advisable."
       }
     },
     {

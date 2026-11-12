@@ -345,8 +345,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Any person or persons severally or jointly aggrieved by any decision of the historic district commission or of any officer thereof may, within fifteen days from the date when such decision was rendered, take an appeal to the superior court for the judicial district in which such municipality is located, which appeal shall be made returnable to such court in the same manner as that prescribed for other civil actions brought to such court. Notice of such appeal shall be given by leaving a true and attested copy thereof in the hands of or at the usual place of abode of the chairman or clerk of the commission within twelve days before the return day to which such appeal has been taken. Procedure upon such appeal shall be the same as that defined in section 8-8 .",
-          "See Sec. 51-197b re administrative appeals."
+          "Any person or persons severally or jointly aggrieved by any decision of the historic district commission or of any officer thereof may, within fifteen days from the date when such decision was rendered, take an appeal to the superior court for the judicial district in which such municipality is located, which appeal shall be made returnable to such court in the same manner as that prescribed for other civil actions brought to such court. Notice of such appeal shall be given by leaving a true and attested copy thereof in the hands of or at the usual place of abode of the chairman or clerk of the commission within twelve days before the return day to which such appeal has been taken. Procedure upon such appeal shall be the same as that defined in section 8-8 ."
         ],
         "sourceNotes": [
           "(1961, P.A. 430, S. 11; P.A. 76-436, S. 282, 681; P.A. 78-280, S. 1, 127; P.A. 80-314, S. 9.)"
@@ -357,6 +356,10 @@
         "annotations": [
           {
             "first": true,
+            "text": "See Sec. 51-197b re administrative appeals."
+          },
+          {
+            "first": true,
             "text": "Cited. 153 C. 160; 171 C. 199; 189 C. 727. In appeals from administrative zoning decisions, decisions will be invalidated, even if they were reasonably supported by the record, if they were not supported by substantial evidence in the record; in an appeal from decision of a commission, the record is reviewed to determine whether there is factual support for commission's decision; should substantial evidence exist in record to support any basis or stated reason for commission's decision, the court must sustain that decision. 284 C. 838. Although judicial review of land use decisions is deferential, it is not a rubber stamp as a court cannot take view in every case that discretion exercised by local zoning authority must not be disturbed, for if it did the right of appeal would be empty. Id. Although defendant's decision in this case was guided by proper statutory factors under Sec. 7-147f, the application of those factors was not supported by substantial evidence and, therefore, was an abuse of its discretion; because neighborly animosity and outcry are not, without more, factors for defendant's consideration under Sec. 7-147f(a), testimony does not support defendant's conclusion in this case. Id. This section and Sec. 8-8, when read together, do not provide for statutory aggrievement in historic district commission appeals. 325 C. 765."
           },
           {
@@ -364,7 +367,7 @@
             "text": "If an appeal has been taken and the trial court remands a case to commission, the scope of the remand order determines the finality of the trial court's judgment for appeal purposes. 108 CA 682."
           }
         ],
-        "plainText": "Any person or persons severally or jointly aggrieved by any decision of the historic district commission or of any officer thereof may, within fifteen days from the date when such decision was rendered, take an appeal to the superior court for the judicial district in which such municipality is located, which appeal shall be made returnable to such court in the same manner as that prescribed for other civil actions brought to such court. Notice of such appeal shall be given by leaving a true and attested copy thereof in the hands of or at the usual place of abode of the chairman or clerk of the commission within twelve days before the return day to which such appeal has been taken. Procedure upon such appeal shall be the same as that defined in section 8-8 .\n\nSee Sec. 51-197b re administrative appeals."
+        "plainText": "Any person or persons severally or jointly aggrieved by any decision of the historic district commission or of any officer thereof may, within fifteen days from the date when such decision was rendered, take an appeal to the superior court for the judicial district in which such municipality is located, which appeal shall be made returnable to such court in the same manner as that prescribed for other civil actions brought to such court. Notice of such appeal shall be given by leaving a true and attested copy thereof in the hands of or at the usual place of abode of the chairman or clerk of the commission within twelve days before the return day to which such appeal has been taken. Procedure upon such appeal shall be the same as that defined in section 8-8 ."
       }
     },
     {
@@ -726,46 +729,6 @@
         ],
         "annotations": [],
         "plainText": "(a) Nothing in this part shall be construed to prevent the ordinary maintenance or repair of any exterior architectural feature within the boundaries of an historic property which does not involve a change in the appearance or design thereof; nor to prevent the erection or alteration of any such feature which the building inspector or a similar agent certifies is required by the public safety because of a condition which is unsafe or dangerous due to deterioration; nor to prevent the erection or alteration of any such feature under a permit issued by a building inspector or similar agent prior to designation of such historic property.\n\n(b) If a building within the boundaries of an historic property is to be demolished, no demolition shall occur for ninety days from issuance of a demolition permit if during such time the historic properties commission or the Department of Economic and Community Development is attempting to find a purchaser who will retain or remove such building or who will present some other reasonable alternative to demolition. During such ninety-day period the municipality may abate all real property taxes. At the conclusion of such ninety-day period, the demolition permit shall become effective and the demolition may occur. Nothing in this section shall be construed to mandate that the owner of such property is under any obligation to sell such property or building."
-      }
-    },
-    {
-      "id": "section-7-147l",
-      "kind": "section",
-      "citation": "7-147l",
-      "citations": [
-        "7-147l"
-      ],
-      "heading": "7-147 l",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_097a.htm#sec_7-147l",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 7-147 l and 7-147m. Method of balloting; eligibility to vote; balloting on prior districts. Sections 7-147 l and 7-147m are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 7-147 l and 7-147m. Method of balloting; eligibility to vote; balloting on prior districts. Sections 7-147 l and 7-147m are repealed."
-      }
-    },
-    {
-      "id": "section-7-147m",
-      "kind": "section",
-      "citation": "7-147m",
-      "citations": [
-        "7-147m"
-      ],
-      "heading": "7-147m",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_097a.htm#sec_7-147m",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 7-147 l and 7-147m. Method of balloting; eligibility to vote; balloting on prior districts. Sections 7-147 l and 7-147m are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 7-147 l and 7-147m. Method of balloting; eligibility to vote; balloting on prior districts. Sections 7-147 l and 7-147m are repealed."
       }
     }
   ]

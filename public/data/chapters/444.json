@@ -851,11 +851,12 @@
       }
     },
     {
-      "id": "group-22a-112-to-22a-113c",
+      "id": "group-22a-112-to-22a-113-to-22a-113c",
       "kind": "group",
       "citation": null,
       "citations": [
         "22a-112",
+        "22a-113",
         "22a-113c"
       ],
       "heading": "Secs. 22a-112 to 22a-113c. Financial assistance; grants to municipalities; contracts or grant agreements concerning coastal management. Estuarine embayment program established. Grants; eligibility. Regulations. State bond issue authorized for estuarine embayment projects.",
@@ -897,46 +898,6 @@
         "history": [],
         "annotations": [],
         "plainText": "Reserved for future use."
-      }
-    },
-    {
-      "id": "section-22a-112",
-      "kind": "section",
-      "citation": "22a-112",
-      "citations": [
-        "22a-112"
-      ],
-      "heading": "22a-112",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_444.htm#sec_22a-112",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 22a-112 to 22a-113c. Financial assistance; grants to municipalities; contracts or grant agreements concerning coastal management. Estuarine embayment program established. Grants; eligibility. Regulations. State bond issue authorized for estuarine embayment projects. Sections 22a-112 to 22a-113e , inclusive, are repealed, effective June 21, 2010."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 22a-112 to 22a-113c. Financial assistance; grants to municipalities; contracts or grant agreements concerning coastal management. Estuarine embayment program established. Grants; eligibility. Regulations. State bond issue authorized for estuarine embayment projects. Sections 22a-112 to 22a-113e , inclusive, are repealed, effective June 21, 2010."
-      }
-    },
-    {
-      "id": "section-22a-113e",
-      "kind": "section",
-      "citation": "22a-113e",
-      "citations": [
-        "22a-113e"
-      ],
-      "heading": "22a-113e",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_444.htm#sec_22a-113e",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 22a-112 to 22a-113c. Financial assistance; grants to municipalities; contracts or grant agreements concerning coastal management. Estuarine embayment program established. Grants; eligibility. Regulations. State bond issue authorized for estuarine embayment projects. Sections 22a-112 to 22a-113e , inclusive, are repealed, effective June 21, 2010."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 22a-112 to 22a-113c. Financial assistance; grants to municipalities; contracts or grant agreements concerning coastal management. Estuarine embayment program established. Grants; eligibility. Regulations. State bond issue authorized for estuarine embayment projects. Sections 22a-112 to 22a-113e , inclusive, are repealed, effective June 21, 2010."
       }
     }
   ]

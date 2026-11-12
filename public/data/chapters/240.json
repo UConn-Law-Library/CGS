@@ -22,8 +22,7 @@
       "status": "active",
       "content": {
         "body": [
-          "The Comptroller, upon receipt of a certificate from the Commissioner of Transportation certifying the completion of any improvement, shall draw his order on the Treasurer in payment for the improvement as certified. The Treasurer shall pay such order from funds provided for that purpose. All appropriations made for the improvement of highways or bridges and all funds available under any statutory provision for such purpose without specific appropriation shall be held for such purpose until used by the commissioner.",
-          "See Sec. 13b-61 re moneys used for highway improvements."
+          "The Comptroller, upon receipt of a certificate from the Commissioner of Transportation certifying the completion of any improvement, shall draw his order on the Treasurer in payment for the improvement as certified. The Treasurer shall pay such order from funds provided for that purpose. All appropriations made for the improvement of highways or bridges and all funds available under any statutory provision for such purpose without specific appropriation shall be held for such purpose until used by the commissioner."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 2202; 1958 Rev., S. 13-88; 1963, P.A. 226, S. 163; 1969, P.A. 768, S. 111.)"
@@ -31,8 +30,13 @@
         "history": [
           "History: 1963 act replaced previous provisions: See title history; 1969 act replaced highway commissioner with commissioner of transportation."
         ],
-        "annotations": [],
-        "plainText": "The Comptroller, upon receipt of a certificate from the Commissioner of Transportation certifying the completion of any improvement, shall draw his order on the Treasurer in payment for the improvement as certified. The Treasurer shall pay such order from funds provided for that purpose. All appropriations made for the improvement of highways or bridges and all funds available under any statutory provision for such purpose without specific appropriation shall be held for such purpose until used by the commissioner.\n\nSee Sec. 13b-61 re moneys used for highway improvements."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 13b-61 re moneys used for highway improvements."
+          }
+        ],
+        "plainText": "The Comptroller, upon receipt of a certificate from the Commissioner of Transportation certifying the completion of any improvement, shall draw his order on the Treasurer in payment for the improvement as certified. The Treasurer shall pay such order from funds provided for that purpose. All appropriations made for the improvement of highways or bridges and all funds available under any statutory provision for such purpose without specific appropriation shall be held for such purpose until used by the commissioner."
       }
     },
     {
@@ -117,8 +121,7 @@
       "status": "active",
       "content": {
         "body": [
-          "In accordance with procedures promulgated by the Secretary of the Office of Policy and Management for the purpose of supplementing the financing of the aggregate cost of construction of any highway or bridge, including planning, design and preliminary engineering, or the purchase of land in connection therewith financed in part by federal grants under the provisions of federal law the State Comptroller is authorized to record as receivables that portion of the federal grant apportionment to the state required to finance the federal share of the proposed project upon authorization of the proposed project by the Federal Highway Administration; and such amount, after deduction therefrom of such part of said federal share as may have been provided for under any appropriation available pursuant to part III of this chapter, is deemed to be appropriated for said purposes. No grant from the federal government that is recorded as a receivable pursuant to this section shall require allotment, unless there is a notice by the Secretary of the Office of Policy and Management that the state agency receiving such funding has failed to consistently provide the notifications required in subsection (e) of section 4-66a .",
-          "See Sec. 3-39a re funds recorded as receivables."
+          "In accordance with procedures promulgated by the Secretary of the Office of Policy and Management for the purpose of supplementing the financing of the aggregate cost of construction of any highway or bridge, including planning, design and preliminary engineering, or the purchase of land in connection therewith financed in part by federal grants under the provisions of federal law the State Comptroller is authorized to record as receivables that portion of the federal grant apportionment to the state required to finance the federal share of the proposed project upon authorization of the proposed project by the Federal Highway Administration; and such amount, after deduction therefrom of such part of said federal share as may have been provided for under any appropriation available pursuant to part III of this chapter, is deemed to be appropriated for said purposes. No grant from the federal government that is recorded as a receivable pursuant to this section shall require allotment, unless there is a notice by the Secretary of the Office of Policy and Management that the state agency receiving such funding has failed to consistently provide the notifications required in subsection (e) of section 4-66a ."
         ],
         "sourceNotes": [
           "(1957, P.A. 473, S. 1; March, 1958, P.A. 6, S. 1; 1958 Rev., S. 13-81; 1959, P.A. 132, S. 12; 1963, P.A. 226, S. 166; P.A. 73-675, S. 24, 44; P.A. 74-342, S. 20, 43; P.A. 75-568, S. 19, 45; P.A. 77-614, S. 19, 610; P.A. 97-131, S 4, 5.)"
@@ -126,8 +129,13 @@
         "history": [
           "History: 1959 act added authorization of project in cases of preliminary engineering to list of grants which may be recorded as receivables and added deduction provision in last clause; 1963 act replaced previous provisions: See title history; P.A. 73-675 replaced highway fund with transportation fund and federal bureau of public roads with federal highway administration; P.A. 74-342 substituted “part III of this chapter” for reference to Sec. 13a-182; P.A. 75-568 deleted reference to transportation fund; P.A. 77-614 replaced commissioner of finance and control with secretary of the office of policy and management; P.A. 97-131 added “planning, design and preliminary engineering”, added provision that no grant from federal government recorded as a receivable pursuant to section shall require allotment unless there is notice from the Secretary of the Office of Policy and Management that the receiving agency has failed consistently to provide notification under Sec. 4-66a(e), and made technical changes, effective June 13, 1997."
         ],
-        "annotations": [],
-        "plainText": "In accordance with procedures promulgated by the Secretary of the Office of Policy and Management for the purpose of supplementing the financing of the aggregate cost of construction of any highway or bridge, including planning, design and preliminary engineering, or the purchase of land in connection therewith financed in part by federal grants under the provisions of federal law the State Comptroller is authorized to record as receivables that portion of the federal grant apportionment to the state required to finance the federal share of the proposed project upon authorization of the proposed project by the Federal Highway Administration; and such amount, after deduction therefrom of such part of said federal share as may have been provided for under any appropriation available pursuant to part III of this chapter, is deemed to be appropriated for said purposes. No grant from the federal government that is recorded as a receivable pursuant to this section shall require allotment, unless there is a notice by the Secretary of the Office of Policy and Management that the state agency receiving such funding has failed to consistently provide the notifications required in subsection (e) of section 4-66a .\n\nSee Sec. 3-39a re funds recorded as receivables."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 3-39a re funds recorded as receivables."
+          }
+        ],
+        "plainText": "In accordance with procedures promulgated by the Secretary of the Office of Policy and Management for the purpose of supplementing the financing of the aggregate cost of construction of any highway or bridge, including planning, design and preliminary engineering, or the purchase of land in connection therewith financed in part by federal grants under the provisions of federal law the State Comptroller is authorized to record as receivables that portion of the federal grant apportionment to the state required to finance the federal share of the proposed project upon authorization of the proposed project by the Federal Highway Administration; and such amount, after deduction therefrom of such part of said federal share as may have been provided for under any appropriation available pursuant to part III of this chapter, is deemed to be appropriated for said purposes. No grant from the federal government that is recorded as a receivable pursuant to this section shall require allotment, unless there is a notice by the Secretary of the Office of Policy and Management that the state agency receiving such funding has failed to consistently provide the notifications required in subsection (e) of section 4-66a ."
       }
     },
     {
@@ -195,8 +203,7 @@
         "body": [
           "(a) For each fiscal year there shall be allocated twelve million five hundred thousand dollars out of the funds appropriated to the Department of Transportation, or from any other source, not otherwise prohibited by law, to be used by the towns for the construction, reconstruction, improvement or maintenance of highways, sections of highways, bridges or structures incidental to highways and bridges or the improvement thereof, including the plowing of snow, the sanding of icy pavements, the trimming and removal of trees, the installation, replacement and maintenance of traffic signs, signals and markings, for traffic control and vehicular safety programs, traffic and parking planning and administration, and other purposes and programs related to highways, traffic and parking, and for the purposes of providing and operating essential public transportation services and related facilities.",
           "(b) Notwithstanding the provisions of subsection (a) of this section, the Secretary of the Office of Policy and Management, in the secretary's discretion, may approve the use of funds by a town for purposes other than those enumerated in said subsection.",
-          "(c) Not later than September 1, 2022, and annually thereafter, each town or district that received funds pursuant to subsection (a) of this section in the preceding fiscal year shall submit a report to the Commissioner of Transportation, in the form and manner prescribed by the commissioner, detailing the amount of such funds expended in such fiscal year for each of the usages enumerated in said subsection or approved pursuant to subsection (b) of this section.",
-          "See Sec. 13a-175j re emergency aid to repair damage resulting from natural disaster."
+          "(c) Not later than September 1, 2022, and annually thereafter, each town or district that received funds pursuant to subsection (a) of this section in the preceding fiscal year shall submit a report to the Commissioner of Transportation, in the form and manner prescribed by the commissioner, detailing the amount of such funds expended in such fiscal year for each of the usages enumerated in said subsection or approved pursuant to subsection (b) of this section."
         ],
         "sourceNotes": [
           "(1967, P.A. 701, S. 1; 1969, P.A. 768, S. 114; P.A. 73-5, S. 1, 4; P.A. 77-567, S. 1, 4; P.A. 78-160, S. 1, 3; P.A. 81-463, S. 1, 10; June 30 Sp. Sess. P.A. 03-3, S. 41; P.A. 13-247, S. 96; P.A. 22-118, S. 461.)"
@@ -204,8 +211,13 @@
         "history": [
           "History: 1969 act replaced highway commissioner with commissioner of transportation; P.A. 73-5 included in purposes of allocation the provision and operation of essential public transportation services and facilities; P.A. 77-567 increased allocation from $12,000,000 to $13,600,000 and provided that allocation come from transportation department appropriations rather than from funds received from commissioner of motor vehicles; P.A. 78-160 increased allocation to $14,600,000; P.A. 81-463 repealed requirement that the commissioner supervise the use of funds by towns unless a town requests the commissioner not to furnish supervision; June 30 Sp. Sess. P.A. 03-3 amended section to change amount allocated to towns for specified purposes from $14,600,000 to $12,500,000, effective August 20, 2003; P.A. 13-247 designated existing provisions as Subsec. (a) and added Subsec. (b) re use of funds for other purposes with approval of Secretary of the Office of Policy and Management, effective July 1, 2013; P.A. 22-118 added Subsec. (c) re reporting requirement by towns and districts that received funds and made technical changes, effective July 1, 2022."
         ],
-        "annotations": [],
-        "plainText": "(a) For each fiscal year there shall be allocated twelve million five hundred thousand dollars out of the funds appropriated to the Department of Transportation, or from any other source, not otherwise prohibited by law, to be used by the towns for the construction, reconstruction, improvement or maintenance of highways, sections of highways, bridges or structures incidental to highways and bridges or the improvement thereof, including the plowing of snow, the sanding of icy pavements, the trimming and removal of trees, the installation, replacement and maintenance of traffic signs, signals and markings, for traffic control and vehicular safety programs, traffic and parking planning and administration, and other purposes and programs related to highways, traffic and parking, and for the purposes of providing and operating essential public transportation services and related facilities.\n\n(b) Notwithstanding the provisions of subsection (a) of this section, the Secretary of the Office of Policy and Management, in the secretary's discretion, may approve the use of funds by a town for purposes other than those enumerated in said subsection.\n\n(c) Not later than September 1, 2022, and annually thereafter, each town or district that received funds pursuant to subsection (a) of this section in the preceding fiscal year shall submit a report to the Commissioner of Transportation, in the form and manner prescribed by the commissioner, detailing the amount of such funds expended in such fiscal year for each of the usages enumerated in said subsection or approved pursuant to subsection (b) of this section.\n\nSee Sec. 13a-175j re emergency aid to repair damage resulting from natural disaster."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 13a-175j re emergency aid to repair damage resulting from natural disaster."
+          }
+        ],
+        "plainText": "(a) For each fiscal year there shall be allocated twelve million five hundred thousand dollars out of the funds appropriated to the Department of Transportation, or from any other source, not otherwise prohibited by law, to be used by the towns for the construction, reconstruction, improvement or maintenance of highways, sections of highways, bridges or structures incidental to highways and bridges or the improvement thereof, including the plowing of snow, the sanding of icy pavements, the trimming and removal of trees, the installation, replacement and maintenance of traffic signs, signals and markings, for traffic control and vehicular safety programs, traffic and parking planning and administration, and other purposes and programs related to highways, traffic and parking, and for the purposes of providing and operating essential public transportation services and related facilities.\n\n(b) Notwithstanding the provisions of subsection (a) of this section, the Secretary of the Office of Policy and Management, in the secretary's discretion, may approve the use of funds by a town for purposes other than those enumerated in said subsection.\n\n(c) Not later than September 1, 2022, and annually thereafter, each town or district that received funds pursuant to subsection (a) of this section in the preceding fiscal year shall submit a report to the Commissioner of Transportation, in the form and manner prescribed by the commissioner, detailing the amount of such funds expended in such fiscal year for each of the usages enumerated in said subsection or approved pursuant to subsection (b) of this section."
       }
     },
     {
@@ -220,8 +232,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Said sum shall be distributed to the towns as follows, provided the amount of each such distribution shall be reduced proportionately in the event that the total of all such distributions exceeds the amount appropriated for the purposes of section 13a-175a : One thousand five hundred dollars per mile shall be paid for each mile of improved roads for the first thirty-two miles thereof and the remaining allocation shall be distributed pro rata to the towns on the basis of the ratio of the population of the town to the population of the state. The figures promulgated by the Department of Vital Statistics of the Connecticut Department of Public Health for the immediately preceding year shall be used to determine a town's population. Any town which would be allocated less under the provisions of this section than such town was allocated for the fiscal year 1966-1967 under section 13a-169 prior to July 1, 1967, shall be paid, from funds appropriated to the Commissioner of Transportation, in addition to the allocation provided herein, an amount equal to the difference between said allocation and the amount allocated to such town for said fiscal year. The commissioner and the selectmen of each town shall ascertain the number of miles of such improved highways in such town. Cities and boroughs not consolidated with their towns, and having responsibility for construction or maintenance of public roads, shall receive a pro rata share of the sum allotted to the town, such share to be computed in the ratio of the population within the city or borough to the total population in the town. If the commissioner and selectmen of any town are unable to agree on the number of miles of improved highways in such town, the commissioner shall determine the number of miles of such improved highways in such town. Any town aggrieved by the action of the commissioner may appeal therefrom in accordance with the provisions of section 4-183 .",
-          "See Sec. 13a-175j re emergency aid to repair damage resulting from natural disaster."
+          "Said sum shall be distributed to the towns as follows, provided the amount of each such distribution shall be reduced proportionately in the event that the total of all such distributions exceeds the amount appropriated for the purposes of section 13a-175a : One thousand five hundred dollars per mile shall be paid for each mile of improved roads for the first thirty-two miles thereof and the remaining allocation shall be distributed pro rata to the towns on the basis of the ratio of the population of the town to the population of the state. The figures promulgated by the Department of Vital Statistics of the Connecticut Department of Public Health for the immediately preceding year shall be used to determine a town's population. Any town which would be allocated less under the provisions of this section than such town was allocated for the fiscal year 1966-1967 under section 13a-169 prior to July 1, 1967, shall be paid, from funds appropriated to the Commissioner of Transportation, in addition to the allocation provided herein, an amount equal to the difference between said allocation and the amount allocated to such town for said fiscal year. The commissioner and the selectmen of each town shall ascertain the number of miles of such improved highways in such town. Cities and boroughs not consolidated with their towns, and having responsibility for construction or maintenance of public roads, shall receive a pro rata share of the sum allotted to the town, such share to be computed in the ratio of the population within the city or borough to the total population in the town. If the commissioner and selectmen of any town are unable to agree on the number of miles of improved highways in such town, the commissioner shall determine the number of miles of such improved highways in such town. Any town aggrieved by the action of the commissioner may appeal therefrom in accordance with the provisions of section 4-183 ."
         ],
         "sourceNotes": [
           "(1967, P.A. 701, S. 2; 1969, P.A. 768, S. 115; 1971, P.A. 179, S. 4; 870, S. 110; P.A. 73-530; P.A. 76-436, S. 339, 681; P.A. 77-567, S. 2, 4; 77-603, S. 28, 125; 77-614, S. 323, 610; P.A. 78-160, S. 2, 3; P.A. 93-80, S. 46, 67; 93-381, S. 9, 39; P.A. 95-257, S. 12, 21, 58.)"
@@ -229,8 +240,13 @@
         "history": [
           "History: 1969 act replaced highway commissioner with commissioner of transportation; 1971 acts provided that appeal be made on “return day not less than twelve or more than thirty days after service thereof” rather than on “next return day or the next but one to which such appeal may be returnable” and substituted court of common pleas for superior court, effective September 1, 1971, except that courts with cases pending retain jurisdiction unless pending matters deemed transferable; P.A. 73-530 changed basis for determining population from most recent federal census to figures deduced by department of vital statistics in health department for year immediately preceding; P.A. 76-436 substituted superior court for court of common pleas, effective July 1, 1978; P.A. 77-567 provided that per mile payment apply to first 30, rather than first 23 miles; P.A. 77-603 made appeals in accordance with Sec. 4-183, replacing previous provisions; P.A. 77-614 replaced department of health with department of health services, effective January 1, 1979; P.A. 78-160 increased per mile payment from $1,400 to $1,500 applicable to first 32, rather than first 30, miles; P.A. 93-80 required amount of each distribution to be reduced proportionately in the event that the total of all distributions exceeds the amount appropriated for the purposes of Sec. 13a-175a, effective July 1, 1993; P.A. 93-381 replaced department of health services with department of public health and addiction services, effective July 1, 1993; P.A. 95-257 replaced Commissioner and Department of Public Health and Addiction Services with Commissioner and Department of Public Health, effective July 1, 1995."
         ],
-        "annotations": [],
-        "plainText": "Said sum shall be distributed to the towns as follows, provided the amount of each such distribution shall be reduced proportionately in the event that the total of all such distributions exceeds the amount appropriated for the purposes of section 13a-175a : One thousand five hundred dollars per mile shall be paid for each mile of improved roads for the first thirty-two miles thereof and the remaining allocation shall be distributed pro rata to the towns on the basis of the ratio of the population of the town to the population of the state. The figures promulgated by the Department of Vital Statistics of the Connecticut Department of Public Health for the immediately preceding year shall be used to determine a town's population. Any town which would be allocated less under the provisions of this section than such town was allocated for the fiscal year 1966-1967 under section 13a-169 prior to July 1, 1967, shall be paid, from funds appropriated to the Commissioner of Transportation, in addition to the allocation provided herein, an amount equal to the difference between said allocation and the amount allocated to such town for said fiscal year. The commissioner and the selectmen of each town shall ascertain the number of miles of such improved highways in such town. Cities and boroughs not consolidated with their towns, and having responsibility for construction or maintenance of public roads, shall receive a pro rata share of the sum allotted to the town, such share to be computed in the ratio of the population within the city or borough to the total population in the town. If the commissioner and selectmen of any town are unable to agree on the number of miles of improved highways in such town, the commissioner shall determine the number of miles of such improved highways in such town. Any town aggrieved by the action of the commissioner may appeal therefrom in accordance with the provisions of section 4-183 .\n\nSee Sec. 13a-175j re emergency aid to repair damage resulting from natural disaster."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 13a-175j re emergency aid to repair damage resulting from natural disaster."
+          }
+        ],
+        "plainText": "Said sum shall be distributed to the towns as follows, provided the amount of each such distribution shall be reduced proportionately in the event that the total of all such distributions exceeds the amount appropriated for the purposes of section 13a-175a : One thousand five hundred dollars per mile shall be paid for each mile of improved roads for the first thirty-two miles thereof and the remaining allocation shall be distributed pro rata to the towns on the basis of the ratio of the population of the town to the population of the state. The figures promulgated by the Department of Vital Statistics of the Connecticut Department of Public Health for the immediately preceding year shall be used to determine a town's population. Any town which would be allocated less under the provisions of this section than such town was allocated for the fiscal year 1966-1967 under section 13a-169 prior to July 1, 1967, shall be paid, from funds appropriated to the Commissioner of Transportation, in addition to the allocation provided herein, an amount equal to the difference between said allocation and the amount allocated to such town for said fiscal year. The commissioner and the selectmen of each town shall ascertain the number of miles of such improved highways in such town. Cities and boroughs not consolidated with their towns, and having responsibility for construction or maintenance of public roads, shall receive a pro rata share of the sum allotted to the town, such share to be computed in the ratio of the population within the city or borough to the total population in the town. If the commissioner and selectmen of any town are unable to agree on the number of miles of improved highways in such town, the commissioner shall determine the number of miles of such improved highways in such town. Any town aggrieved by the action of the commissioner may appeal therefrom in accordance with the provisions of section 4-183 ."
       }
     },
     {
@@ -245,8 +261,7 @@
       "status": "active",
       "content": {
         "body": [
-          "There shall be allocated from the resources of the General Fund, for distribution to the several towns, such sums as required to insure that none of said towns shall be allocated for any fiscal year less than the amount allocated to such towns for the fiscal year 1966-67 pursuant to section 13a-169 prior to July 1, 1967.",
-          "See Sec. 13a-175j re emergency aid to repair damage resulting from natural disaster."
+          "There shall be allocated from the resources of the General Fund, for distribution to the several towns, such sums as required to insure that none of said towns shall be allocated for any fiscal year less than the amount allocated to such towns for the fiscal year 1966-67 pursuant to section 13a-169 prior to July 1, 1967."
         ],
         "sourceNotes": [
           "(1967, P.A. 701, S. 3; P.A. 73-675, S. 25, 44; P.A. 74-342, S. 21, 43; P.A. 75-567, S. 43, 80.)"
@@ -254,8 +269,13 @@
         "history": [
           "History: P.A. 73-675 replaced highway fund with transportation fund; P.A. 74-342 clarified provisions; P.A. 75-567 replaced transportation fund with general fund."
         ],
-        "annotations": [],
-        "plainText": "There shall be allocated from the resources of the General Fund, for distribution to the several towns, such sums as required to insure that none of said towns shall be allocated for any fiscal year less than the amount allocated to such towns for the fiscal year 1966-67 pursuant to section 13a-169 prior to July 1, 1967.\n\nSee Sec. 13a-175j re emergency aid to repair damage resulting from natural disaster."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 13a-175j re emergency aid to repair damage resulting from natural disaster."
+          }
+        ],
+        "plainText": "There shall be allocated from the resources of the General Fund, for distribution to the several towns, such sums as required to insure that none of said towns shall be allocated for any fiscal year less than the amount allocated to such towns for the fiscal year 1966-67 pursuant to section 13a-169 prior to July 1, 1967."
       }
     },
     {
@@ -270,8 +290,7 @@
       "status": "active",
       "content": {
         "body": [
-          "There shall be allocated from funds appropriated to the Commissioner of Transportation for town-aid grants for roads the sum of one million dollars annually, to be distributed pro rata to the towns in the state on the basis of the total mileage of unimproved highways in each town, for the improvement or maintenance of dirt and unimproved roads, including bridges on such roads, and if approved by the commissioner and the selectmen in such town, any portion of said sum distributed to such town in excess of the amount used for the purposes as provided in this section may be used for the purposes of the allocation provided under section 13a-175a . The commissioner and the selectmen of each town shall ascertain the number of miles of such unimproved highway in such town. If the commissioner and the selectmen of any town are unable to agree on the number of miles of unimproved highway in such town, the commissioner shall determine the number of miles of unimproved highway in such town. Any town aggrieved by such determination by the commissioner may appeal therefrom in accordance with the provisions of section 4-183 .",
-          "See Sec. 13a-175j re emergency aid to repair damage resulting from natural disaster."
+          "There shall be allocated from funds appropriated to the Commissioner of Transportation for town-aid grants for roads the sum of one million dollars annually, to be distributed pro rata to the towns in the state on the basis of the total mileage of unimproved highways in each town, for the improvement or maintenance of dirt and unimproved roads, including bridges on such roads, and if approved by the commissioner and the selectmen in such town, any portion of said sum distributed to such town in excess of the amount used for the purposes as provided in this section may be used for the purposes of the allocation provided under section 13a-175a . The commissioner and the selectmen of each town shall ascertain the number of miles of such unimproved highway in such town. If the commissioner and the selectmen of any town are unable to agree on the number of miles of unimproved highway in such town, the commissioner shall determine the number of miles of unimproved highway in such town. Any town aggrieved by such determination by the commissioner may appeal therefrom in accordance with the provisions of section 4-183 ."
         ],
         "sourceNotes": [
           "(1967, P.A. 701, S. 4; 1969, P.A. 768, S. 116; 1971, P.A. 179, S. 5; 870, S. 111; P.A. 73-675, S. 26, 44; P.A. 75-324, S. 1, 2; 75-568, S. 20, 45; P.A. 76-436, S. 340, 681; P.A. 77-603, S. 29, 125; P.A. 81-463, S. 2, 10.)"
@@ -282,10 +301,14 @@
         "annotations": [
           {
             "first": true,
+            "text": "See Sec. 13a-175j re emergency aid to repair damage resulting from natural disaster."
+          },
+          {
+            "first": true,
             "text": "Cited. 14 CA 77."
           }
         ],
-        "plainText": "There shall be allocated from funds appropriated to the Commissioner of Transportation for town-aid grants for roads the sum of one million dollars annually, to be distributed pro rata to the towns in the state on the basis of the total mileage of unimproved highways in each town, for the improvement or maintenance of dirt and unimproved roads, including bridges on such roads, and if approved by the commissioner and the selectmen in such town, any portion of said sum distributed to such town in excess of the amount used for the purposes as provided in this section may be used for the purposes of the allocation provided under section 13a-175a . The commissioner and the selectmen of each town shall ascertain the number of miles of such unimproved highway in such town. If the commissioner and the selectmen of any town are unable to agree on the number of miles of unimproved highway in such town, the commissioner shall determine the number of miles of unimproved highway in such town. Any town aggrieved by such determination by the commissioner may appeal therefrom in accordance with the provisions of section 4-183 .\n\nSee Sec. 13a-175j re emergency aid to repair damage resulting from natural disaster."
+        "plainText": "There shall be allocated from funds appropriated to the Commissioner of Transportation for town-aid grants for roads the sum of one million dollars annually, to be distributed pro rata to the towns in the state on the basis of the total mileage of unimproved highways in each town, for the improvement or maintenance of dirt and unimproved roads, including bridges on such roads, and if approved by the commissioner and the selectmen in such town, any portion of said sum distributed to such town in excess of the amount used for the purposes as provided in this section may be used for the purposes of the allocation provided under section 13a-175a . The commissioner and the selectmen of each town shall ascertain the number of miles of such unimproved highway in such town. If the commissioner and the selectmen of any town are unable to agree on the number of miles of unimproved highway in such town, the commissioner shall determine the number of miles of unimproved highway in such town. Any town aggrieved by such determination by the commissioner may appeal therefrom in accordance with the provisions of section 4-183 ."
       }
     },
     {
@@ -325,8 +348,7 @@
       "status": "active",
       "content": {
         "body": [
-          "The Commissioner of Transportation upon reasonable request of the selectmen or other authority having charge of highways of any town shall allow such town to join with the department in the purchase of materials used for the laying out, construction, repair, reconstruction or maintenance of any highway or bridge. The commissioner shall conduct such tests as are necessary to insure the quality of such materials.",
-          "See Sec. 13b-31 re Transportation Commissioner's authority to furnish supervision, inspectors and engineers to assist towns in highway and bridge projects."
+          "The Commissioner of Transportation upon reasonable request of the selectmen or other authority having charge of highways of any town shall allow such town to join with the department in the purchase of materials used for the laying out, construction, repair, reconstruction or maintenance of any highway or bridge. The commissioner shall conduct such tests as are necessary to insure the quality of such materials."
         ],
         "sourceNotes": [
           "(1967, P.A. 701, S. 9; 1969, P.A. 768, S. 118; P.A. 81-463, S. 4, 10.)"
@@ -334,8 +356,13 @@
         "history": [
           "History: 1969 act replaced highway commissioner with commissioner of transportation; P.A. 81-463 repealed requirement that the commissioner, upon request of a town, furnish supervision, inspectors and engineers for purposes connected with the laying out, construction and maintenance of highways and bridges and added provisions requiring the commissioner to perform quality testing of materials used for such purposes and allowing towns to join with the department in the purchase of such materials."
         ],
-        "annotations": [],
-        "plainText": "The Commissioner of Transportation upon reasonable request of the selectmen or other authority having charge of highways of any town shall allow such town to join with the department in the purchase of materials used for the laying out, construction, repair, reconstruction or maintenance of any highway or bridge. The commissioner shall conduct such tests as are necessary to insure the quality of such materials.\n\nSee Sec. 13b-31 re Transportation Commissioner's authority to furnish supervision, inspectors and engineers to assist towns in highway and bridge projects."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 13b-31 re Transportation Commissioner's authority to furnish supervision, inspectors and engineers to assist towns in highway and bridge projects."
+          }
+        ],
+        "plainText": "The Commissioner of Transportation upon reasonable request of the selectmen or other authority having charge of highways of any town shall allow such town to join with the department in the purchase of materials used for the laying out, construction, repair, reconstruction or maintenance of any highway or bridge. The commissioner shall conduct such tests as are necessary to insure the quality of such materials."
       }
     },
     {
@@ -419,8 +446,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Any balance of appropriations in excess of that required to be distributed to the towns, under the formulas set forth in sections 13a-175a to 13a-175d , inclusive, as of June 30, 1977, and annually thereafter, may be made available by the Governor, upon application of the selectman or other authority having charge of highways in any town, to be used to defray, in whole or part, the cost of repairs, improvements, alteration or replacement of roads, bridges and dams in such town which, in the opinion of the Governor, with the advice of the Commissioner of Transportation, in the case of roads or bridges, and the Commissioner of Energy and Environmental Protection, in the case of dams, constitute a threat to public safety as a result of damage resulting from a natural disaster. On or after June 30, 2018, any such balance shall lapse to the resources of the Special Transportation Fund and shall not be transferred to the General Fund.",
-          "See chapter 446j re dams and reservoirs."
+          "Any balance of appropriations in excess of that required to be distributed to the towns, under the formulas set forth in sections 13a-175a to 13a-175d , inclusive, as of June 30, 1977, and annually thereafter, may be made available by the Governor, upon application of the selectman or other authority having charge of highways in any town, to be used to defray, in whole or part, the cost of repairs, improvements, alteration or replacement of roads, bridges and dams in such town which, in the opinion of the Governor, with the advice of the Commissioner of Transportation, in the case of roads or bridges, and the Commissioner of Energy and Environmental Protection, in the case of dams, constitute a threat to public safety as a result of damage resulting from a natural disaster. On or after June 30, 2018, any such balance shall lapse to the resources of the Special Transportation Fund and shall not be transferred to the General Fund."
         ],
         "sourceNotes": [
           "(P.A. 78-182, S. 1, 2; P.A. 11-80, S. 1; P.A. 18-167, S. 1.)"
@@ -428,8 +454,13 @@
         "history": [
           "History: Pursuant to P.A. 11-80, “Commissioner of Environmental Protection” was changed editorially by the Revisors to “Commissioner of Energy and Environmental Protection”, effective July 1, 2011; P.A. 18-167 added provision re any balance on or after June 30, 2018 to lapse to Special Transportation Fund, effective June 14, 2018."
         ],
-        "annotations": [],
-        "plainText": "Any balance of appropriations in excess of that required to be distributed to the towns, under the formulas set forth in sections 13a-175a to 13a-175d , inclusive, as of June 30, 1977, and annually thereafter, may be made available by the Governor, upon application of the selectman or other authority having charge of highways in any town, to be used to defray, in whole or part, the cost of repairs, improvements, alteration or replacement of roads, bridges and dams in such town which, in the opinion of the Governor, with the advice of the Commissioner of Transportation, in the case of roads or bridges, and the Commissioner of Energy and Environmental Protection, in the case of dams, constitute a threat to public safety as a result of damage resulting from a natural disaster. On or after June 30, 2018, any such balance shall lapse to the resources of the Special Transportation Fund and shall not be transferred to the General Fund.\n\nSee chapter 446j re dams and reservoirs."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See chapter 446j re dams and reservoirs."
+          }
+        ],
+        "plainText": "Any balance of appropriations in excess of that required to be distributed to the towns, under the formulas set forth in sections 13a-175a to 13a-175d , inclusive, as of June 30, 1977, and annually thereafter, may be made available by the Governor, upon application of the selectman or other authority having charge of highways in any town, to be used to defray, in whole or part, the cost of repairs, improvements, alteration or replacement of roads, bridges and dams in such town which, in the opinion of the Governor, with the advice of the Commissioner of Transportation, in the case of roads or bridges, and the Commissioner of Energy and Environmental Protection, in the case of dams, constitute a threat to public safety as a result of damage resulting from a natural disaster. On or after June 30, 2018, any such balance shall lapse to the resources of the Special Transportation Fund and shall not be transferred to the General Fund."
       }
     },
     {
@@ -458,22 +489,10 @@
       }
     },
     {
-      "id": "group-13a-175-to-13a-175a-to-13a-175b-to-13a-175c-to-13a-175d-to-13a-175e-to-13a-175f-to-13a-175g-to-13a-175h-to-13a-175i-to-13a-175j-to-13a-175k-to-13a-175l-to-13a-175m-to-13a-175n-to-13a-175o",
+      "id": "group-13a-175l-to-13a-175m-to-13a-175n-to-13a-175o",
       "kind": "group",
       "citation": null,
       "citations": [
-        "13a-175",
-        "13a-175a",
-        "13a-175b",
-        "13a-175c",
-        "13a-175d",
-        "13a-175e",
-        "13a-175f",
-        "13a-175g",
-        "13a-175h",
-        "13a-175i",
-        "13a-175j",
-        "13a-175k",
         "13a-175l",
         "13a-175m",
         "13a-175n",
@@ -812,8 +831,7 @@
       "content": {
         "body": [
           "(a) The State Bond Commission shall have power, in accordance with the provisions of sections 13a-176 to 13a-183 , inclusive, to authorize, in one or more series and in principal amounts not in the aggregate exceeding the respective amounts hereinbelow stated, the issuance of bonds of the state for any of the following purposes: (1) Not more than three hundred ninety-three million one hundred eighty-five thousand dollars for financing all or any part of the cost of planning, designing, laying out, constructing, reconstructing or improving any highways or other facilities, hereinafter sometimes referred to as “highway projects” or, individually, as a “highway project”, on the National System of Interstate and Defense Highways as designated on or after May 8, 1959, pursuant to federal law, including but not limited to costs and expenses of right-of-way or other property acquisitions therefor, expenses of the Department of Transportation in connection therewith for engineering, architectural and legal work or services, and all administrative and other expenses properly attributable thereto, whether or not the United States or agencies thereof are to contribute to such cost by participating in payment or reimbursement thereof or otherwise and for any of the projects or purposes of sections 1 to 6, inclusive, of public act 95-286*; (2) not more than forty-eight million dollars for financing all or any part of the cost of planning, designing, laying out, constructing, reconstructing or improving any highways or other facilities, hereinafter sometimes referred to as “highway projects” or, individually, as a “highway project”, on the federal-aid primary system or federal-aid secondary system as designated on or after May 8, 1959, pursuant to federal law, including but not limited to costs and expenses of right-of-way or other property acquisitions therefor, expenses of the Department of Transportation in connection therewith for engineering, architectural and legal work or services, and all administrative and other expenses properly attributable thereto, whether or not the United States or agencies thereof are to contribute to such cost by participating in payment or reimbursement thereof or otherwise and for any of the projects or purposes of sections 1 to 6, inclusive, of public act 95-286*, and (3) not more than thirty-eight million dollars for financing, refinancing or paying expenditures made before or after May 8, 1959, in connection with bridges or other properties operated by the Greater Hartford Bridge Authority pursuant to part IV of chapter 235 of the 1958 revision of the general statutes, which expenditures may include any payments made before or after said date by said authority and payments on account of acquisition or payment of, or other provision regarding, any indebtedness of said authority including any bonds or notes issued by it before or after May 8, 1959, and payments on account of any sums becoming due from the state pursuant to any contract, agreement or other arrangement with said authority or holders of any of said bonds or notes or representatives thereof.",
-          "(b) It is the intention of the legislature that, insofar as practicable and consistent with federal law and regulations, the proceeds of the additional amount of one hundred thirty-three million one hundred eighty-five thousand dollars which may now be authorized pursuant to this section for said National System of Interstate and Defense Highways be spent, to the extent necessary for such purpose, to finance costs referred to above with respect to highway projects located on the following portions of said interstate system: (1) Repealed by P.A. 78-107, S. 2; (2) Connecticut Interstate Route 84, from west of Simmons Road in East Hartford to north of Middle Turnpike in Manchester to Connecticut Routes 83 and 30 in Vernon; (3) Connecticut Interstate Route 84, from Route 6A in Newtown to north of River Road in Southbury; (4) and (5) Repealed by P.A. 78-107, S. 2; (6) Connecticut Interstate Route 84 and interchanges, Danbury; and (7) Connecticut Interstate Route 84 between Manchester and Connecticut Route 52 in Plainfield.",
-          "See Sec. 13a-191 re deposit of earnings on investment of proceeds from securities in General Fund."
+          "(b) It is the intention of the legislature that, insofar as practicable and consistent with federal law and regulations, the proceeds of the additional amount of one hundred thirty-three million one hundred eighty-five thousand dollars which may now be authorized pursuant to this section for said National System of Interstate and Defense Highways be spent, to the extent necessary for such purpose, to finance costs referred to above with respect to highway projects located on the following portions of said interstate system: (1) Repealed by P.A. 78-107, S. 2; (2) Connecticut Interstate Route 84, from west of Simmons Road in East Hartford to north of Middle Turnpike in Manchester to Connecticut Routes 83 and 30 in Vernon; (3) Connecticut Interstate Route 84, from Route 6A in Newtown to north of River Road in Southbury; (4) and (5) Repealed by P.A. 78-107, S. 2; (6) Connecticut Interstate Route 84 and interchanges, Danbury; and (7) Connecticut Interstate Route 84 between Manchester and Connecticut Route 52 in Plainfield."
         ],
         "sourceNotes": [
           "(1959, P.A. 132, S. 1; 1963, P.A. 226, S. 176; February, 1965, P.A. 325, S. 1; 1969, P.A. 768, S. 120; P.A. 77-357, S. 1, 2; P.A. 78-107, S. 2; 78-331, S. 9, 58; P.A. 81-370, S. 5, 13; P.A. 82-369, S. 3, 28; June Sp. Sess. P.A. 83-33, S. 7, 17; P.A. 95-286, S. 18, 26.)",
@@ -822,8 +840,13 @@
         "history": [
           "History: 1963 act replaced previous provisions: See title history; 1965 act raised bond amount in Subsec. (a)(1) from $260,000,000 and added Subsec. (b); 1969 act replaced highway department with department of transportation; P.A. 77-357 increased bond authorization in Subsec. (b) from $5,000,000 to $10,185,000 and included expenditures for I-84 and interchanges at Danbury; P.A. 78-107 repealed Subdivs. (1), (4) and (5) in Subsec. (b); P.A. 78-331 increased bond authorization in Subsec. (a)(1) from $365,000,000 to $370,185,000; P.A. 81-370 increased the aggregate of bonds the bond commission may authorize for purposes of projects under Secs. 13a-176 to 13a-183, inclusive, to $374,185,000; P.A. 82-369 amended Subsec. (a)(1) to increase the aggregate amount authorized to $378,185,000 and amended Subsec. (b) to change reference to additional amount from $114,185,000 to $118,185,000; June Sp. Sess. P.A. 83-33 amended Subsec. (a) to increase the aggregate amount authorized under Subdiv. (1) to $393,185,000 and amended Subsec. (b) to change reference to additional amount to $133,185,000 and to add Subdiv. (7); P.A. 95-286 amended Subsec. (a) to add projects or purposes under Secs. 1 to 6 of P.A. 95-286, effective July 1, 1995."
         ],
-        "annotations": [],
-        "plainText": "(a) The State Bond Commission shall have power, in accordance with the provisions of sections 13a-176 to 13a-183 , inclusive, to authorize, in one or more series and in principal amounts not in the aggregate exceeding the respective amounts hereinbelow stated, the issuance of bonds of the state for any of the following purposes: (1) Not more than three hundred ninety-three million one hundred eighty-five thousand dollars for financing all or any part of the cost of planning, designing, laying out, constructing, reconstructing or improving any highways or other facilities, hereinafter sometimes referred to as “highway projects” or, individually, as a “highway project”, on the National System of Interstate and Defense Highways as designated on or after May 8, 1959, pursuant to federal law, including but not limited to costs and expenses of right-of-way or other property acquisitions therefor, expenses of the Department of Transportation in connection therewith for engineering, architectural and legal work or services, and all administrative and other expenses properly attributable thereto, whether or not the United States or agencies thereof are to contribute to such cost by participating in payment or reimbursement thereof or otherwise and for any of the projects or purposes of sections 1 to 6, inclusive, of public act 95-286*; (2) not more than forty-eight million dollars for financing all or any part of the cost of planning, designing, laying out, constructing, reconstructing or improving any highways or other facilities, hereinafter sometimes referred to as “highway projects” or, individually, as a “highway project”, on the federal-aid primary system or federal-aid secondary system as designated on or after May 8, 1959, pursuant to federal law, including but not limited to costs and expenses of right-of-way or other property acquisitions therefor, expenses of the Department of Transportation in connection therewith for engineering, architectural and legal work or services, and all administrative and other expenses properly attributable thereto, whether or not the United States or agencies thereof are to contribute to such cost by participating in payment or reimbursement thereof or otherwise and for any of the projects or purposes of sections 1 to 6, inclusive, of public act 95-286*, and (3) not more than thirty-eight million dollars for financing, refinancing or paying expenditures made before or after May 8, 1959, in connection with bridges or other properties operated by the Greater Hartford Bridge Authority pursuant to part IV of chapter 235 of the 1958 revision of the general statutes, which expenditures may include any payments made before or after said date by said authority and payments on account of acquisition or payment of, or other provision regarding, any indebtedness of said authority including any bonds or notes issued by it before or after May 8, 1959, and payments on account of any sums becoming due from the state pursuant to any contract, agreement or other arrangement with said authority or holders of any of said bonds or notes or representatives thereof.\n\n(b) It is the intention of the legislature that, insofar as practicable and consistent with federal law and regulations, the proceeds of the additional amount of one hundred thirty-three million one hundred eighty-five thousand dollars which may now be authorized pursuant to this section for said National System of Interstate and Defense Highways be spent, to the extent necessary for such purpose, to finance costs referred to above with respect to highway projects located on the following portions of said interstate system: (1) Repealed by P.A. 78-107, S. 2; (2) Connecticut Interstate Route 84, from west of Simmons Road in East Hartford to north of Middle Turnpike in Manchester to Connecticut Routes 83 and 30 in Vernon; (3) Connecticut Interstate Route 84, from Route 6A in Newtown to north of River Road in Southbury; (4) and (5) Repealed by P.A. 78-107, S. 2; (6) Connecticut Interstate Route 84 and interchanges, Danbury; and (7) Connecticut Interstate Route 84 between Manchester and Connecticut Route 52 in Plainfield.\n\nSee Sec. 13a-191 re deposit of earnings on investment of proceeds from securities in General Fund."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 13a-191 re deposit of earnings on investment of proceeds from securities in General Fund."
+          }
+        ],
+        "plainText": "(a) The State Bond Commission shall have power, in accordance with the provisions of sections 13a-176 to 13a-183 , inclusive, to authorize, in one or more series and in principal amounts not in the aggregate exceeding the respective amounts hereinbelow stated, the issuance of bonds of the state for any of the following purposes: (1) Not more than three hundred ninety-three million one hundred eighty-five thousand dollars for financing all or any part of the cost of planning, designing, laying out, constructing, reconstructing or improving any highways or other facilities, hereinafter sometimes referred to as “highway projects” or, individually, as a “highway project”, on the National System of Interstate and Defense Highways as designated on or after May 8, 1959, pursuant to federal law, including but not limited to costs and expenses of right-of-way or other property acquisitions therefor, expenses of the Department of Transportation in connection therewith for engineering, architectural and legal work or services, and all administrative and other expenses properly attributable thereto, whether or not the United States or agencies thereof are to contribute to such cost by participating in payment or reimbursement thereof or otherwise and for any of the projects or purposes of sections 1 to 6, inclusive, of public act 95-286*; (2) not more than forty-eight million dollars for financing all or any part of the cost of planning, designing, laying out, constructing, reconstructing or improving any highways or other facilities, hereinafter sometimes referred to as “highway projects” or, individually, as a “highway project”, on the federal-aid primary system or federal-aid secondary system as designated on or after May 8, 1959, pursuant to federal law, including but not limited to costs and expenses of right-of-way or other property acquisitions therefor, expenses of the Department of Transportation in connection therewith for engineering, architectural and legal work or services, and all administrative and other expenses properly attributable thereto, whether or not the United States or agencies thereof are to contribute to such cost by participating in payment or reimbursement thereof or otherwise and for any of the projects or purposes of sections 1 to 6, inclusive, of public act 95-286*, and (3) not more than thirty-eight million dollars for financing, refinancing or paying expenditures made before or after May 8, 1959, in connection with bridges or other properties operated by the Greater Hartford Bridge Authority pursuant to part IV of chapter 235 of the 1958 revision of the general statutes, which expenditures may include any payments made before or after said date by said authority and payments on account of acquisition or payment of, or other provision regarding, any indebtedness of said authority including any bonds or notes issued by it before or after May 8, 1959, and payments on account of any sums becoming due from the state pursuant to any contract, agreement or other arrangement with said authority or holders of any of said bonds or notes or representatives thereof.\n\n(b) It is the intention of the legislature that, insofar as practicable and consistent with federal law and regulations, the proceeds of the additional amount of one hundred thirty-three million one hundred eighty-five thousand dollars which may now be authorized pursuant to this section for said National System of Interstate and Defense Highways be spent, to the extent necessary for such purpose, to finance costs referred to above with respect to highway projects located on the following portions of said interstate system: (1) Repealed by P.A. 78-107, S. 2; (2) Connecticut Interstate Route 84, from west of Simmons Road in East Hartford to north of Middle Turnpike in Manchester to Connecticut Routes 83 and 30 in Vernon; (3) Connecticut Interstate Route 84, from Route 6A in Newtown to north of River Road in Southbury; (4) and (5) Repealed by P.A. 78-107, S. 2; (6) Connecticut Interstate Route 84 and interchanges, Danbury; and (7) Connecticut Interstate Route 84 between Manchester and Connecticut Route 52 in Plainfield."
       }
     },
     {
@@ -2088,384 +2111,6 @@
         ],
         "annotations": [],
         "plainText": "Subject to the limitations referred to in section 13a-32 , nothing in sections 13a-239 to 13a-246 , inclusive, shall prevent expenditure for the project authorized by said section 13a-32 by the Commissioner of Transportation in accordance with law of more moneys than are mentioned in subsection (a) of section 13a-239 ."
-      }
-    },
-    {
-      "id": "section-13a-168",
-      "kind": "section",
-      "citation": "13a-168",
-      "citations": [
-        "13a-168"
-      ],
-      "heading": "13a-168",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_240.htm#sec_13a-168",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 13a-168 to 13a-175. Town aid. Sections 13a-168 to 13a-175 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 13a-168 to 13a-175. Town aid. Sections 13a-168 to 13a-175 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-13a-175",
-      "kind": "section",
-      "citation": "13a-175",
-      "citations": [
-        "13a-175"
-      ],
-      "heading": "13a-175",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_240.htm#sec_13a-175",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 13a-168 to 13a-175. Town aid. Sections 13a-168 to 13a-175 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 13a-168 to 13a-175. Town aid. Sections 13a-168 to 13a-175 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-13a-169",
-      "kind": "section",
-      "citation": "13a-169",
-      "citations": [
-        "13a-169"
-      ],
-      "heading": "13a-169",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_240.htm#sec_13a-169",
-      "status": "active",
-      "content": {
-        "body": [],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": ""
-      }
-    },
-    {
-      "id": "section-13a-175aa",
-      "kind": "section",
-      "citation": "13a-175aa",
-      "citations": [
-        "13a-175aa"
-      ],
-      "heading": "13a-175aa",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_240.htm#sec_13a-175aa",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 13a-175aa to 13a-175dd. Declaration of policy. Trust fund and separate account established. Trust fund committee established. Investment of funds. Sections 13a-175aa to 13a-175dd , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 13a-175aa to 13a-175dd. Declaration of policy. Trust fund and separate account established. Trust fund committee established. Investment of funds. Sections 13a-175aa to 13a-175dd , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-13a-175dd",
-      "kind": "section",
-      "citation": "13a-175dd",
-      "citations": [
-        "13a-175dd"
-      ],
-      "heading": "13a-175dd",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_240.htm#sec_13a-175dd",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 13a-175aa to 13a-175dd. Declaration of policy. Trust fund and separate account established. Trust fund committee established. Investment of funds. Sections 13a-175aa to 13a-175dd , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 13a-175aa to 13a-175dd. Declaration of policy. Trust fund and separate account established. Trust fund committee established. Investment of funds. Sections 13a-175aa to 13a-175dd , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-13a-193",
-      "kind": "section",
-      "citation": "13a-193",
-      "citations": [
-        "13a-193"
-      ],
-      "heading": "13a-193",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_240.htm#sec_13a-193",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 13a-193 to 13a-196. Highway Debt Service Fund. State Bond Commission may vary use of bond proceeds. Treasurer may determine method of revenue bond sale; negotiable instruments. Pledges to bondholders; binding nature of pledges. Sections 13a-193 to 13a-196 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 13a-193 to 13a-196. Highway Debt Service Fund. State Bond Commission may vary use of bond proceeds. Treasurer may determine method of revenue bond sale; negotiable instruments. Pledges to bondholders; binding nature of pledges. Sections 13a-193 to 13a-196 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-13a-196",
-      "kind": "section",
-      "citation": "13a-196",
-      "citations": [
-        "13a-196"
-      ],
-      "heading": "13a-196",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_240.htm#sec_13a-196",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 13a-193 to 13a-196. Highway Debt Service Fund. State Bond Commission may vary use of bond proceeds. Treasurer may determine method of revenue bond sale; negotiable instruments. Pledges to bondholders; binding nature of pledges. Sections 13a-193 to 13a-196 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 13a-193 to 13a-196. Highway Debt Service Fund. State Bond Commission may vary use of bond proceeds. Treasurer may determine method of revenue bond sale; negotiable instruments. Pledges to bondholders; binding nature of pledges. Sections 13a-193 to 13a-196 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-13a-199",
-      "kind": "section",
-      "citation": "13a-199",
-      "citations": [
-        "13a-199"
-      ],
-      "heading": "13a-199",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_240.htm#sec_13a-199",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 13a-199 to 13a-210. Definitions. Bonds. Preliminary requirements for issuance of bonds. Highway Commissioner may issue contracts. Issuance of bonds. Bond declaration. Treasurer to make bond declarations; general powers. Additional expressway bonds. General obligation bonds. Sale of bonds. Bonds not general obligations. Bonds legal investments. Sections 13a-199 to 13a-210 , inclusive, are repealed, effective October 1, 1997."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 13a-199 to 13a-210. Definitions. Bonds. Preliminary requirements for issuance of bonds. Highway Commissioner may issue contracts. Issuance of bonds. Bond declaration. Treasurer to make bond declarations; general powers. Additional expressway bonds. General obligation bonds. Sale of bonds. Bonds not general obligations. Bonds legal investments. Sections 13a-199 to 13a-210 , inclusive, are repealed, effective October 1, 1997."
-      }
-    },
-    {
-      "id": "section-13a-210",
-      "kind": "section",
-      "citation": "13a-210",
-      "citations": [
-        "13a-210"
-      ],
-      "heading": "13a-210",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_240.htm#sec_13a-210",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 13a-199 to 13a-210. Definitions. Bonds. Preliminary requirements for issuance of bonds. Highway Commissioner may issue contracts. Issuance of bonds. Bond declaration. Treasurer to make bond declarations; general powers. Additional expressway bonds. General obligation bonds. Sale of bonds. Bonds not general obligations. Bonds legal investments. Sections 13a-199 to 13a-210 , inclusive, are repealed, effective October 1, 1997."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 13a-199 to 13a-210. Definitions. Bonds. Preliminary requirements for issuance of bonds. Highway Commissioner may issue contracts. Issuance of bonds. Bond declaration. Treasurer to make bond declarations; general powers. Additional expressway bonds. General obligation bonds. Sale of bonds. Bonds not general obligations. Bonds legal investments. Sections 13a-199 to 13a-210 , inclusive, are repealed, effective October 1, 1997."
-      }
-    },
-    {
-      "id": "section-13a-211",
-      "kind": "section",
-      "citation": "13a-211",
-      "citations": [
-        "13a-211"
-      ],
-      "heading": "13a-211",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_240.htm#sec_13a-211",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 13a-211 to 13a-214. Anticipation notes. Use of receipts from tolls and charges. Additional Expressway Construction Fund. Expressway Reserve Fund. Sections 13a-211 to 13a-214 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 13a-211 to 13a-214. Anticipation notes. Use of receipts from tolls and charges. Additional Expressway Construction Fund. Expressway Reserve Fund. Sections 13a-211 to 13a-214 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-13a-214",
-      "kind": "section",
-      "citation": "13a-214",
-      "citations": [
-        "13a-214"
-      ],
-      "heading": "13a-214",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_240.htm#sec_13a-214",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 13a-211 to 13a-214. Anticipation notes. Use of receipts from tolls and charges. Additional Expressway Construction Fund. Expressway Reserve Fund. Sections 13a-211 to 13a-214 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 13a-211 to 13a-214. Anticipation notes. Use of receipts from tolls and charges. Additional Expressway Construction Fund. Expressway Reserve Fund. Sections 13a-211 to 13a-214 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-13a-215",
-      "kind": "section",
-      "citation": "13a-215",
-      "citations": [
-        "13a-215"
-      ],
-      "heading": "13a-215",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_240.htm#sec_13a-215",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 13a-215 to 13a-220. Investment of funds. Pledges binding. Tax exemption. Agreement with bond holders. Committee to receive no compensation; majority action required. Prior covenants and contracts not affected. Sections 13a-215 to 13a-220 , inclusive, are repealed, effective October 1, 1997."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 13a-215 to 13a-220. Investment of funds. Pledges binding. Tax exemption. Agreement with bond holders. Committee to receive no compensation; majority action required. Prior covenants and contracts not affected. Sections 13a-215 to 13a-220 , inclusive, are repealed, effective October 1, 1997."
-      }
-    },
-    {
-      "id": "section-13a-220",
-      "kind": "section",
-      "citation": "13a-220",
-      "citations": [
-        "13a-220"
-      ],
-      "heading": "13a-220",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_240.htm#sec_13a-220",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 13a-215 to 13a-220. Investment of funds. Pledges binding. Tax exemption. Agreement with bond holders. Committee to receive no compensation; majority action required. Prior covenants and contracts not affected. Sections 13a-215 to 13a-220 , inclusive, are repealed, effective October 1, 1997."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 13a-215 to 13a-220. Investment of funds. Pledges binding. Tax exemption. Agreement with bond holders. Committee to receive no compensation; majority action required. Prior covenants and contracts not affected. Sections 13a-215 to 13a-220 , inclusive, are repealed, effective October 1, 1997."
-      }
-    },
-    {
-      "id": "section-13a-221",
-      "kind": "section",
-      "citation": "13a-221",
-      "citations": [
-        "13a-221"
-      ],
-      "heading": "13a-221",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_240.htm#sec_13a-221",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 13a-221 to 13a-228. Gold Star Memorial Bridge. Sections 13a-221 to 13a-228 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 13a-221 to 13a-228. Gold Star Memorial Bridge. Sections 13a-221 to 13a-228 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-13a-228",
-      "kind": "section",
-      "citation": "13a-228",
-      "citations": [
-        "13a-228"
-      ],
-      "heading": "13a-228",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_240.htm#sec_13a-228",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 13a-221 to 13a-228. Gold Star Memorial Bridge. Sections 13a-221 to 13a-228 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 13a-221 to 13a-228. Gold Star Memorial Bridge. Sections 13a-221 to 13a-228 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-13a-229",
-      "kind": "section",
-      "citation": "13a-229",
-      "citations": [
-        "13a-229"
-      ],
-      "heading": "13a-229",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_240.htm#sec_13a-229",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 13a-229 to 13a-234. Hartford and East Hartford Bridge. Sections 13a-229 to 13a-234 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 13a-229 to 13a-234. Hartford and East Hartford Bridge. Sections 13a-229 to 13a-234 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-13a-234",
-      "kind": "section",
-      "citation": "13a-234",
-      "citations": [
-        "13a-234"
-      ],
-      "heading": "13a-234",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_240.htm#sec_13a-234",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 13a-229 to 13a-234. Hartford and East Hartford Bridge. Sections 13a-229 to 13a-234 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 13a-229 to 13a-234. Hartford and East Hartford Bridge. Sections 13a-229 to 13a-234 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-13a-235",
-      "kind": "section",
-      "citation": "13a-235",
-      "citations": [
-        "13a-235"
-      ],
-      "heading": "13a-235",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_240.htm#sec_13a-235",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 13a-235 to 13a-238. Use of tolls. Bonds to be legal investments. Payment of bonds. Not to be affected by other acts. Sections 13a-235 to 13a-238 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 13a-235 to 13a-238. Use of tolls. Bonds to be legal investments. Payment of bonds. Not to be affected by other acts. Sections 13a-235 to 13a-238 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-13a-238",
-      "kind": "section",
-      "citation": "13a-238",
-      "citations": [
-        "13a-238"
-      ],
-      "heading": "13a-238",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_240.htm#sec_13a-238",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 13a-235 to 13a-238. Use of tolls. Bonds to be legal investments. Payment of bonds. Not to be affected by other acts. Sections 13a-235 to 13a-238 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 13a-235 to 13a-238. Use of tolls. Bonds to be legal investments. Payment of bonds. Not to be affected by other acts. Sections 13a-235 to 13a-238 , inclusive, are repealed."
       }
     }
   ]

@@ -221,8 +221,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Each public weighmaster license shall expire annually. Renewal applications shall be in such form as the commissioner shall prescribe.",
-          "See Sec. 21a-10(b) re staggered schedule for license renewals."
+          "Each public weighmaster license shall expire annually. Renewal applications shall be in such form as the commissioner shall prescribe."
         ],
         "sourceNotes": [
           "(P.A. 77-409, S. 8; P.A. 94-36, S. 34, 42; P.A. 24-142, S. 36.)"
@@ -230,8 +229,13 @@
         "history": [
           "History: P.A. 94-36 deleted reference to the “thirtieth day of June” license expiration date, effective January 1, 1995; P.A. 24-142 substituted “public weighmaster” for “licensed public weigher”, and made a conforming change, effective June 6, 2024."
         ],
-        "annotations": [],
-        "plainText": "Each public weighmaster license shall expire annually. Renewal applications shall be in such form as the commissioner shall prescribe.\n\nSee Sec. 21a-10(b) re staggered schedule for license renewals."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 21a-10(b) re staggered schedule for license renewals."
+          }
+        ],
+        "plainText": "Each public weighmaster license shall expire annually. Renewal applications shall be in such form as the commissioner shall prescribe."
       }
     },
     {
@@ -451,46 +455,6 @@
         ],
         "annotations": [],
         "plainText": "(a) Any person who requests a public weighmaster to weigh any property, produce, commodity or article falsely or incorrectly, or who requests a false or incorrect weight certificate, or any person who issues a weight certificate simulating the weight certificate prescribed in this chapter and who is not a public weighmaster, shall, for the first offense, be fined not less than twenty-five dollars or more than one hundred dollars and, for any subsequent offense, be guilty of a class C misdemeanor.\n\n(b) Any public weighmaster who falsifies a weight certificate, or who delegates such public weighmaster's authority to any person not licensed as a public weighmaster, or who preseals a weight certificate with such public weighmaster's official seal before performing the act of weighing, shall be guilty of a class C misdemeanor.\n\n(c) Any person who violates any provision of this chapter or any rule or regulation promulgated or adopted pursuant thereto for which no specific penalty has been provided shall be fined not less than twenty-five dollars or more than one thousand dollars.\n\n(d) The Commissioner of Consumer Protection, after conducting a hearing in accordance with the provisions of chapter 54, may impose a civil penalty of not more than one thousand dollars per violation on any person who violates any provision of this chapter or any regulation adopted pursuant to this chapter. Each violation with respect to each such unit, certificate, device or scale shall be considered a separate offense."
-      }
-    },
-    {
-      "id": "section-43-10",
-      "kind": "section",
-      "citation": "43-10",
-      "citations": [
-        "43-10"
-      ],
-      "heading": "43-10",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_751.htm#sec_43-10",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 43-10 to 43-16. State licenses; town weighers. Sections 43-10 to 43-16 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 43-10 to 43-16. State licenses; town weighers. Sections 43-10 to 43-16 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-43-16",
-      "kind": "section",
-      "citation": "43-16",
-      "citations": [
-        "43-16"
-      ],
-      "heading": "43-16",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_751.htm#sec_43-16",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 43-10 to 43-16. State licenses; town weighers. Sections 43-10 to 43-16 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 43-10 to 43-16. State licenses; town weighers. Sections 43-10 to 43-16 , inclusive, are repealed."
       }
     }
   ]

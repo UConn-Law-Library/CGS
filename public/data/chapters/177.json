@@ -104,24 +104,6 @@
         "annotations": [],
         "plainText": "Transferred to Secs. 10-320b to 10-320i , inclusive."
       }
-    },
-    {
-      "id": "section-10-320b",
-      "kind": "section",
-      "citation": "10-320b",
-      "citations": [
-        "10-320b"
-      ],
-      "heading": "10-320b",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_177.htm#sec_10-320b",
-      "status": "active",
-      "content": {
-        "body": [],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": ""
-      }
     }
   ]
 }

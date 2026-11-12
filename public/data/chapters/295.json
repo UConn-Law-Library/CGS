@@ -726,8 +726,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Any town, city or borough which has been included in any planning region as designated or defined by the Secretary of the Office of Policy and Management, or his predecessor, under the provisions of subsection (4) of section 16a-4a , may petition, upon a vote of its legislative body, the secretary for a redefinition or redesignation as part of a different planning region. The secretary shall determine the time and place for a hearing upon such petition and shall give notice thereof. In determining the appropriateness of such redesignation, the secretary shall consider, among other factors, whether or not the services that such petitioner needs can be better or more logically provided by a planning region other than the one to which it has been previously assigned.",
-          "See chapter 127 re regional council of governments."
+          "Any town, city or borough which has been included in any planning region as designated or defined by the Secretary of the Office of Policy and Management, or his predecessor, under the provisions of subsection (4) of section 16a-4a , may petition, upon a vote of its legislative body, the secretary for a redefinition or redesignation as part of a different planning region. The secretary shall determine the time and place for a hearing upon such petition and shall give notice thereof. In determining the appropriateness of such redesignation, the secretary shall consider, among other factors, whether or not the services that such petitioner needs can be better or more logically provided by a planning region other than the one to which it has been previously assigned."
         ],
         "sourceNotes": [
           "(P.A. 77-325; 77-614, S. 19, 610; P.A. 83-164.)"
@@ -735,8 +734,13 @@
         "history": [
           "History: P.A. 77-614 replaced commissioner of planning and energy policy with secretary of the office of policy and management; P.A. 83-164 removed provision allowing petitioner to appeal to the state planning council."
         ],
-        "annotations": [],
-        "plainText": "Any town, city or borough which has been included in any planning region as designated or defined by the Secretary of the Office of Policy and Management, or his predecessor, under the provisions of subsection (4) of section 16a-4a , may petition, upon a vote of its legislative body, the secretary for a redefinition or redesignation as part of a different planning region. The secretary shall determine the time and place for a hearing upon such petition and shall give notice thereof. In determining the appropriateness of such redesignation, the secretary shall consider, among other factors, whether or not the services that such petitioner needs can be better or more logically provided by a planning region other than the one to which it has been previously assigned.\n\nSee chapter 127 re regional council of governments."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See chapter 127 re regional council of governments."
+          }
+        ],
+        "plainText": "Any town, city or borough which has been included in any planning region as designated or defined by the Secretary of the Office of Policy and Management, or his predecessor, under the provisions of subsection (4) of section 16a-4a , may petition, upon a vote of its legislative body, the secretary for a redefinition or redesignation as part of a different planning region. The secretary shall determine the time and place for a hearing upon such petition and shall give notice thereof. In determining the appropriateness of such redesignation, the secretary shall consider, among other factors, whether or not the services that such petitioner needs can be better or more logically provided by a planning region other than the one to which it has been previously assigned."
       }
     },
     {
@@ -1433,46 +1437,6 @@
         ],
         "annotations": [],
         "plainText": "(a) This chapter may be enforced by the Secretary of the Office of Policy and Management in the superior court for any judicial district in which any person who violates any provisions of this chapter resides or maintains a place of business by an ex parte temporary injunction issued by said court or a judge thereof; provided, if such injunction is issued, such person may file a motion to dissolve such injunction and a hearing upon such motion shall be held by the superior court not later than three days after service of such motion upon the Governor pursuant to an order of said court or a judge thereof. If a permanent injunction is granted, such person may be assessed damages of not more than ten thousand dollars plus court costs.\n\n(b) The provisions of this section are not exclusive, and the remedies provided for in this section shall be in addition to any other remedy provided for in any other section of the general statutes or available under common law."
-      }
-    },
-    {
-      "id": "section-16a-14c",
-      "kind": "section",
-      "citation": "16a-14c",
-      "citations": [
-        "16a-14c"
-      ],
-      "heading": "16a-14c",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_295.htm#sec_16a-14c",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 16a-14c and 16a-14d. Comprehensive energy plan. Technical advisory group; recommendations regarding electric energy efficiency; regulations. Sections 16a-14c and 16a-14d are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 16a-14c and 16a-14d. Comprehensive energy plan. Technical advisory group; recommendations regarding electric energy efficiency; regulations. Sections 16a-14c and 16a-14d are repealed."
-      }
-    },
-    {
-      "id": "section-16a-14d",
-      "kind": "section",
-      "citation": "16a-14d",
-      "citations": [
-        "16a-14d"
-      ],
-      "heading": "16a-14d",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_295.htm#sec_16a-14d",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 16a-14c and 16a-14d. Comprehensive energy plan. Technical advisory group; recommendations regarding electric energy efficiency; regulations. Sections 16a-14c and 16a-14d are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 16a-14c and 16a-14d. Comprehensive energy plan. Technical advisory group; recommendations regarding electric energy efficiency; regulations. Sections 16a-14c and 16a-14d are repealed."
       }
     }
   ]

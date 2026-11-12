@@ -51,8 +51,7 @@
       "status": "active",
       "content": {
         "body": [
-          "All goods not perishable, left with any person or upon any public wharf or highway, and all goods, other than personal baggage of passengers, which are left at any railroad station or in any railroad car or carriage, and whose owner is unknown or neglects to take them away for six months from the time when they were left, shall be advertised one month in a newspaper published in the county where such goods were left. If the owner thereof does not take them away within such month, they may be sold and the proceeds disposed of in the manner provided in section 50-1 .",
-          "See Sec. 7-285 re sale of unclaimed goods by police departments."
+          "All goods not perishable, left with any person or upon any public wharf or highway, and all goods, other than personal baggage of passengers, which are left at any railroad station or in any railroad car or carriage, and whose owner is unknown or neglects to take them away for six months from the time when they were left, shall be advertised one month in a newspaper published in the county where such goods were left. If the owner thereof does not take them away within such month, they may be sold and the proceeds disposed of in the manner provided in section 50-1 ."
         ],
         "sourceNotes": [
           "(1949, Rev., S. 7287; 1961, P.A. 540, S. 29.)"
@@ -60,8 +59,13 @@
         "history": [
           "History: 1961 act deleted provision specifying that proceeds unclaimed by owner within one year escheat to state."
         ],
-        "annotations": [],
-        "plainText": "All goods not perishable, left with any person or upon any public wharf or highway, and all goods, other than personal baggage of passengers, which are left at any railroad station or in any railroad car or carriage, and whose owner is unknown or neglects to take them away for six months from the time when they were left, shall be advertised one month in a newspaper published in the county where such goods were left. If the owner thereof does not take them away within such month, they may be sold and the proceeds disposed of in the manner provided in section 50-1 .\n\nSee Sec. 7-285 re sale of unclaimed goods by police departments."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 7-285 re sale of unclaimed goods by police departments."
+          }
+        ],
+        "plainText": "All goods not perishable, left with any person or upon any public wharf or highway, and all goods, other than personal baggage of passengers, which are left at any railroad station or in any railroad car or carriage, and whose owner is unknown or neglects to take them away for six months from the time when they were left, shall be advertised one month in a newspaper published in the county where such goods were left. If the owner thereof does not take them away within such month, they may be sold and the proceeds disposed of in the manner provided in section 50-1 ."
       }
     },
     {
@@ -314,46 +318,6 @@
         "history": [],
         "annotations": [],
         "plainText": "The police commissioners of such municipality shall sell at public auction any articles which it acquires as provided herein after the expiration of the time for the owner or finder to demand the same and after the time and place of such sale and a description of the articles to be sold have been advertised once a week for two successive weeks in a newspaper having a circulation in such municipality. The net proceeds from such sales and the unclaimed net proceeds from the sales of perishable or obnoxious property or articles of a dangerous or harmful nature shall be paid to the treasurer of such municipality, who shall deposit them in the police benefit fund, if any, of such municipality."
-      }
-    },
-    {
-      "id": "section-50-6",
-      "kind": "section",
-      "citation": "50-6",
-      "citations": [
-        "50-6"
-      ],
-      "heading": "50-6",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_859.htm#sec_50-6",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 50-6 and 50-7. Disposition of stray beasts; lost goods. Restoration to owner if claimed; procedure if unclaimed. Sections 50-6 and 50-7 are repealed, effective October 1, 2000."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 50-6 and 50-7. Disposition of stray beasts; lost goods. Restoration to owner if claimed; procedure if unclaimed. Sections 50-6 and 50-7 are repealed, effective October 1, 2000."
-      }
-    },
-    {
-      "id": "section-50-7",
-      "kind": "section",
-      "citation": "50-7",
-      "citations": [
-        "50-7"
-      ],
-      "heading": "50-7",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_859.htm#sec_50-7",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 50-6 and 50-7. Disposition of stray beasts; lost goods. Restoration to owner if claimed; procedure if unclaimed. Sections 50-6 and 50-7 are repealed, effective October 1, 2000."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 50-6 and 50-7. Disposition of stray beasts; lost goods. Restoration to owner if claimed; procedure if unclaimed. Sections 50-6 and 50-7 are repealed, effective October 1, 2000."
       }
     }
   ]

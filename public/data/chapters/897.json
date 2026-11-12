@@ -132,10 +132,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Any number of persons associated together as a voluntary association, not having corporate powers, but known by a distinguishing name, may sue and be sued and plead and be impleaded by such name. A civil action may be brought against such an association by any individual member thereof and such association may bring civil actions against individual members. Civil actions may be brought, both in contract and tort, against such an association and its members, but no such civil action, except on contract, may be brought against the members without joining the association as a party to the action if the association is located or has property subject to attachment in this state.",
-          "See Sec. 52-57(e) re service of process upon presiding officer, secretary or treasurer of voluntary association.",
-          "See Sec. 52-292 re attachment in actions against voluntary associations and their members.",
-          "See Sec. 52-365 re demand on execution against voluntary association."
+          "Any number of persons associated together as a voluntary association, not having corporate powers, but known by a distinguishing name, may sue and be sued and plead and be impleaded by such name. A civil action may be brought against such an association by any individual member thereof and such association may bring civil actions against individual members. Civil actions may be brought, both in contract and tort, against such an association and its members, but no such civil action, except on contract, may be brought against the members without joining the association as a party to the action if the association is located or has property subject to attachment in this state."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 7797; P.A. 82-160, S. 28.)"
@@ -146,6 +143,18 @@
         "annotations": [
           {
             "first": true,
+            "text": "See Sec. 52-57(e) re service of process upon presiding officer, secretary or treasurer of voluntary association."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 52-292 re attachment in actions against voluntary associations and their members."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 52-365 re demand on execution against voluntary association."
+          },
+          {
+            "first": true,
             "text": "Voluntary association cannot, as such, hold real estate. 44 C. 260. When individual members liable for goods purchased. 55 C. 111. Prior to amendment of 1893, a member could not sue the association. 61 C. 227. Association may give note to compromise suit pending against it. 70 C. 636. Includes action for damages for wrongful expulsion of member. 76 C. 649. Quo warranto against “pretended town”. 77 C. 265. Reasons for denying to member of a voluntary unincorporated association a cause of action in negligence against the association do not apply in the case of intentional torts; statute, however, is procedural and creates no substantive right; if the acts of which plaintiff complains occurred in the course of a labor dispute, it is necessary to determine the effect of Sec. 31-114 in determining whether plaintiff has a substantive right of action which he can enforce against the union. 150 C. 266. Cited. 186 C. 725."
           },
           {
@@ -153,7 +162,7 @@
             "text": "A labor union may sue in its own name. 15 CS 321. Cited. 42 CS 336."
           }
         ],
-        "plainText": "Any number of persons associated together as a voluntary association, not having corporate powers, but known by a distinguishing name, may sue and be sued and plead and be impleaded by such name. A civil action may be brought against such an association by any individual member thereof and such association may bring civil actions against individual members. Civil actions may be brought, both in contract and tort, against such an association and its members, but no such civil action, except on contract, may be brought against the members without joining the association as a party to the action if the association is located or has property subject to attachment in this state.\n\nSee Sec. 52-57(e) re service of process upon presiding officer, secretary or treasurer of voluntary association.\n\nSee Sec. 52-292 re attachment in actions against voluntary associations and their members.\n\nSee Sec. 52-365 re demand on execution against voluntary association."
+        "plainText": "Any number of persons associated together as a voluntary association, not having corporate powers, but known by a distinguishing name, may sue and be sued and plead and be impleaded by such name. A civil action may be brought against such an association by any individual member thereof and such association may bring civil actions against individual members. Civil actions may be brought, both in contract and tort, against such an association and its members, but no such civil action, except on contract, may be brought against the members without joining the association as a party to the action if the association is located or has property subject to attachment in this state."
       }
     },
     {
@@ -382,8 +391,7 @@
       "status": "active",
       "content": {
         "body": [
-          "When any process has been served on any defendant and returned to court, if he does not appear on or before the second day after the return day, judgment by default may be rendered against him.",
-          "See Sec. 51-55 re judgments of default or nonsuit."
+          "When any process has been served on any defendant and returned to court, if he does not appear on or before the second day after the return day, judgment by default may be rendered against him."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 7805; 1967, P.A. 742, S. 2.)"
@@ -394,6 +402,10 @@
         "annotations": [
           {
             "first": true,
+            "text": "See Sec. 51-55 re judgments of default or nonsuit."
+          },
+          {
+            "first": true,
             "text": "The judgment should be entered at the first or second term. 17 C. 537. It admits a cause of action, but nothing more. 26 C. 436; 33 C. 250; Id., 346. It may be opened on terms. 38 C. 497. A default admits only the cause of action stated in the complaint. 45 C. 58. There may be an actual appearance to defend, without an entry on the docket. 51 C. 391. Nature of judgment by default. 67 C. 133; 69 C. 440; 75 C. 76; 97 C. 123. Opening defaults; discretion of court. 69 C. 355. Contents of judgment file. 73 C. 680. Default admits complaint as it stands, not as it may be amended. 86 C. 308. Effect of default for nonappearance. 97 C. 125. Cited. 139 C. 535. Court, in its discretion, may allow the filing of a late appearance. 148 C. 435."
           },
           {
@@ -401,7 +413,7 @@
             "text": "Cited. 24 CS 83."
           }
         ],
-        "plainText": "When any process has been served on any defendant and returned to court, if he does not appear on or before the second day after the return day, judgment by default may be rendered against him.\n\nSee Sec. 51-55 re judgments of default or nonsuit."
+        "plainText": "When any process has been served on any defendant and returned to court, if he does not appear on or before the second day after the return day, judgment by default may be rendered against him."
       }
     },
     {

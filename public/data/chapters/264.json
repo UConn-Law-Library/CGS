@@ -11,11 +11,14 @@
   "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_264.htm",
   "sections": [
     {
-      "id": "group-15-27-to-15-30a",
+      "id": "group-15-27-to-15-28-to-15-29-to-15-30-to-15-30a",
       "kind": "group",
       "citation": null,
       "citations": [
         "15-27",
+        "15-28",
+        "15-29",
+        "15-30",
         "15-30a"
       ],
       "heading": "Secs. 15-27 to 15-30a. Commissioners. Office. Powers and duties. Sale of land by commissioner. Disposition of proceeds. Docking facilities in Stonington.",
@@ -51,46 +54,6 @@
         "history": [],
         "annotations": [],
         "plainText": "Transferred to Chapter 263, Sec. 15-11a ."
-      }
-    },
-    {
-      "id": "section-15-27",
-      "kind": "section",
-      "citation": "15-27",
-      "citations": [
-        "15-27"
-      ],
-      "heading": "15-27",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_264.htm#sec_15-27",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 15-27 to 15-30a. Commissioners. Office. Powers and duties. Sale of land by commissioner. Disposition of proceeds. Docking facilities in Stonington. Sections 15-27 to 15-30a , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 15-27 to 15-30a. Commissioners. Office. Powers and duties. Sale of land by commissioner. Disposition of proceeds. Docking facilities in Stonington. Sections 15-27 to 15-30a , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-15-30a",
-      "kind": "section",
-      "citation": "15-30a",
-      "citations": [
-        "15-30a"
-      ],
-      "heading": "15-30a",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_264.htm#sec_15-30a",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 15-27 to 15-30a. Commissioners. Office. Powers and duties. Sale of land by commissioner. Disposition of proceeds. Docking facilities in Stonington. Sections 15-27 to 15-30a , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 15-27 to 15-30a. Commissioners. Office. Powers and duties. Sale of land by commissioner. Disposition of proceeds. Docking facilities in Stonington. Sections 15-27 to 15-30a , inclusive, are repealed."
       }
     }
   ]

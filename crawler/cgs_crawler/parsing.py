@@ -15,7 +15,10 @@ SECTION_HEADING_RE = re.compile(rf"^\s*Sec\.\s*({SECTION_KEY_PATTERN})\s*\.", re
 SECTION_BARE_LABEL_RE = re.compile(rf"^\s*({SECTION_KEY_PATTERN})\s*\.?\s*$", re.IGNORECASE)
 SECTION_KEY_TOKEN_RE = re.compile(SECTION_KEY_PATTERN, re.IGNORECASE)
 SECTION_KEY_PART_RE = re.compile(r"^(.*-)(\d+)([a-z]*)$", re.IGNORECASE)
-SECTION_FRAGMENT_LINK_RE = re.compile(r"#sec[_-]?([0-9]+[a-z]*-[0-9]+[a-z]*(?:-[0-9]+[a-z]*)?)", re.IGNORECASE)
+# CGA italicizes a trailing "l" so it is not read as "1": "54-102<i>l</i>" becomes "54-102 l" in
+# link text. Rejoined before section keys are read; the stored heading keeps the published text.
+ITALIC_SUFFIX_RE = re.compile(r"(\d+[a-z]*-\d+[a-z]*) (l+)\b")
+SECTION_FRAGMENT_LINK_RE =re.compile(r"#sec[_-]?([0-9]+[a-z]*-[0-9]+[a-z]*(?:-[0-9]+[a-z]*)?)", re.IGNORECASE)
 REPEALED_RE = re.compile(r"\bare repealed\b", re.IGNORECASE)
 FORMER_CHAPTER_RE = re.compile(r"\bformerly published as chapter\s+(\d+[a-z]*)\b", re.IGNORECASE)
 REVISED_TO_RE = re.compile(r"^revised to january 1,\s*(\d{4})$", re.IGNORECASE)
@@ -234,6 +237,11 @@ def _expand_section_range(low: str, high: str) -> List[str]:
             return [f"{prefix}{low_number}{_suffix_from_ordinal(number)}" for number in range(low_order, high_order + 1)]
     if low_suffix == high_suffix and 0 <= high_number - low_number <= MAX_GROUP_EXPANSION:
         return [f"{prefix}{number}{low_suffix}" for number in range(low_number, high_number + 1)]
+    if 0 < high_number - low_number <= MAX_GROUP_EXPANSION:
+        # Mixed suffixes, as in "19-170 to 19-210l": both ends and every plain number between.
+        # Lettered sections inside the range cannot be known from the heading alone.
+        middle = [f"{prefix}{number}" for number in range(low_number + 1, high_number + 1)]
+        return list(dict.fromkeys([low, *middle, *([high] if high_suffix else [])]))
     return [low, high]
 
 
@@ -302,9 +310,10 @@ def extract_section_links(
         if not fragment.lower().startswith("sec"):
             continue
         label = text_clean(link.get_text(" ", strip=True))
-        heading_key = _section_key_from_heading(label)
+        key_label = ITALIC_SUFFIX_RE.sub(r"\1\2", label)
+        heading_key = _section_key_from_heading(key_label)
         fragment_key = _section_key_from_fragment(fragment)
-        bare_key = _section_key_from_bare_label(label)
+        bare_key = _section_key_from_bare_label(key_label)
         section_key = heading_key or fragment_key or bare_key
         warnings: List[str] = []
         if heading_key and fragment_key and heading_key != fragment_key:
@@ -323,7 +332,7 @@ def extract_section_links(
                 continue
             seen_keys.add(section_key)
         else:
-            if not _looks_grouped(fragment, label) or url in seen_groups:
+            if not _looks_grouped(fragment, key_label) or url in seen_groups:
                 continue
             seen_groups.add(url)
         section: Dict[str, object] = {"section_key": section_key, "label": label, "url": url}
@@ -332,7 +341,7 @@ def extract_section_links(
             # "Sections 1-42 to 1-54 are repealed" or "see section 22-61<i>l</i>".
             section["cross_reference"] = True
         if not section_key:
-            grouped_keys = expand_grouped_section_keys(fragment, label)
+            grouped_keys = expand_grouped_section_keys(fragment, key_label)
             if grouped_keys:
                 section["grouped"] = True
                 section["section_keys"] = grouped_keys

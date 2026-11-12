@@ -8,7 +8,17 @@ export async function openApp(page, route = "#/") {
   await expect(page.locator("main.error")).toHaveCount(0);
 }
 
+// Panels and dialogs fade in. Scanned mid-transition, their text is partly transparent and
+// fails color contrast, so let every finite animation finish first. Infinite ones, such as a
+// loading spinner, are skipped.
+export async function settleAnimations(page) {
+  await page.evaluate(() => Promise.all(document.getAnimations()
+    .filter((animation) => Number.isFinite(animation.effect?.getComputedTiming().endTime))
+    .map((animation) => animation.finished.catch(() => {}))));
+}
+
 export async function expectNoHighImpactAccessibilityViolations(page) {
+  await settleAnimations(page);
   const results = await new AxeBuilder({ page })
     .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22aa"])
     .analyze();

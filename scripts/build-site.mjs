@@ -11,7 +11,7 @@ import { buildRepositoryMap } from "./lib/build-repository-map.mjs";
 import { generateActAmendments } from "./lib/act-amendments-artifact.mjs";
 import { generateIndexHeadings } from "./lib/index-headings.mjs";
 import { generateDataRelease } from "./lib/data-release.mjs";
-import { applyPreviewNamespace } from "./lib/preview-build.mjs";
+import { PRODUCTION_SITE_URL, applyPreviewNamespace, applyPreviewNoindex } from "./lib/preview-build.mjs";
 
 const root = process.cwd();
 const output = path.join(root, "dist");
@@ -19,16 +19,20 @@ await rm(output, { recursive: true, force: true });
 await mkdir(output, { recursive: true });
 await cp(path.join(root, "src"), output, { recursive: true });
 await cp(path.join(root, "public"), output, { recursive: true });
-if (process.env.CGS_PREVIEW_BUILD === "true") await applyPreviewNamespace(output);
+const preview = process.env.CGS_PREVIEW_BUILD === "true";
+if (preview) {
+  await applyPreviewNamespace(output);
+  await applyPreviewNoindex(output);
+}
 const packageMetadata = JSON.parse(await readFile(path.join(root, "package.json"), "utf8"));
 const updates = await readRecentUpdates(root);
 const appVersion = await stampReleaseVersion(output, process.env.CGS_APP_VERSION ?? packageMetadata.version, updates);
 const dataDirectory = path.join(root, "public", "data");
 const catalog = JSON.parse(await readFile(path.join(dataDirectory, "catalog.json"), "utf8"));
-const siteUrl = process.env.CGS_SITE_URL ?? "https://uconn-law-library.github.io/CGS/";
+const siteUrl = process.env.CGS_SITE_URL ?? PRODUCTION_SITE_URL;
 const notFoundPath = path.join(output, "404.html");
 await writeFile(notFoundPath, (await readFile(notFoundPath, "utf8")).replace("%APP_BASE_PATH%", new URL(siteUrl).pathname));
-const discovery = await generateDiscovery({ catalog, dataDirectory, output, siteUrl });
+const discovery = await generateDiscovery({ catalog, dataDirectory, output, siteUrl, indexable: !preview, canonicalSiteUrl: preview ? PRODUCTION_SITE_URL : siteUrl });
 const supplementIndex = await generateSupplementIndex({
   supplementsDir: path.join(dataDirectory, "supplements"),
   outputDir: path.join(output, "data", "supplements"),
@@ -59,6 +63,7 @@ const buildId = await stampServiceWorker(output, undefined, {
   corpusSchemaVersion: catalog.schemaVersion
 });
 const repositoryMap = await buildRepositoryMap({ root, output });
+if (preview) await applyPreviewNoindex(output);
 console.log(`Built static site ${appVersion} at ${output} with ${discovery.pages} indexed URLs, ${supplementIndex.editions.length} supplement editions, ${searchV2.counts.documents} extended search documents, ${actAmendments.counts.citations} sections amended by listed acts, ${indexHeadings.count} index headings, ${repositoryMap.diagrams} repository map diagrams, and PWA build ${buildId}`);
 
 // Without hints the browser finds each module only after parsing the one that imports it, and

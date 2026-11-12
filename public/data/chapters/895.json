@@ -48,11 +48,15 @@
       }
     },
     {
-      "id": "group-52-2-to-52-6a",
+      "id": "group-52-2-to-52-3-to-52-4-to-52-5-to-52-6-to-52-6a",
       "kind": "group",
       "citation": null,
       "citations": [
         "52-2",
+        "52-3",
+        "52-4",
+        "52-5",
+        "52-6",
         "52-6a"
       ],
       "heading": "Secs. 52-2 to 52-6a. Jurisdiction of justice of the peace and circuit, municipal and common pleas courts and divisions, generally. Appeals to appellate session of Superior Court; to Supreme Court.",
@@ -212,11 +216,7 @@
           "(a) The superior court in each judicial district shall have jurisdiction of complaints praying for a change of name, brought by any person residing in the judicial district, and may change the name of the complainant, who shall thereafter be known by the name prescribed by said court in its decree, except that no superior court may issue an order or otherwise allow for the change of name of a person who is required to register with the Commissioner of Emergency Services and Public Protection as a sexual offender or as an offender convicted of committing a crime with a deadly weapon unless such person complies with the requirements of subdivision (1) of subsection (b) of this section.",
           "(b) (1) Any person who is required to register with the Commissioner of Emergency Services and Public Protection as a sexual offender or as an offender convicted of committing a crime with a deadly weapon who files an application with the Superior Court for a change of name shall (A) prior to filing such application, notify the Commissioner of Emergency Services and Public Protection, on such form as the commissioner may prescribe, that the person intends to file an application for a change of name, indicating the change of name sought, and (B) include with such application a sworn statement that such change of name is not being sought for the purpose of avoiding the legal consequences of a criminal conviction, including, but not limited to, a criminal conviction that requires such person to register as a sexual offender or as an offender convicted of committing a crime with a deadly weapon.",
           "(2) The Commissioner of Emergency Services and Public Protection shall have standing to challenge such person's application for a change of name in the superior court where such change of name is sought. The commissioner shall challenge the change of name through the Attorney General. The superior court may deny such person's application for a change of name if the court finds, by a preponderance of the evidence, that the person is applying for such change of name for the purpose of avoiding the legal consequences of a criminal conviction.",
-          "(c) Whenever the court, pursuant to this section, orders a change of name of a person, the clerk of the court shall notify the Commissioner of Emergency Services and Public Protection of the issuance of such order if the clerk finds that such person is listed in the registry established and maintained pursuant to section 54-257 or in the registry established and maintained pursuant to section 54-280 .",
-          "See Sec. 45a-99 re concurrent jurisdiction of Probate Court in matters concerning change of name.",
-          "See Secs. 45a-736, 45a-737 re change of name of adopted persons.",
-          "See Sec. 46b-1(6) re jurisdiction of Superior Court concerning complaints for change of name.",
-          "See Sec. 46b-63 re jurisdiction of Superior Court to restore birth name or former name of spouse following decree dissolving marriage."
+          "(c) Whenever the court, pursuant to this section, orders a change of name of a person, the clerk of the court shall notify the Commissioner of Emergency Services and Public Protection of the issuance of such order if the clerk finds that such person is listed in the registry established and maintained pursuant to section 54-257 or in the registry established and maintained pursuant to section 54-280 ."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 7756; P.A. 76-436, S. 176, 681; P.A. 78-33, S. 2; 78-280, S. 1, 127; P.A. 03-202, S. 17; P.A. 08-54, S. 2; P.A. 11-51, S. 134; P.A. 13-3, S. 22.)"
@@ -225,6 +225,22 @@
           "History: P.A. 76-436 added reference to judicial districts, effective July 1, 1978; P.A. 78-33 and P.A. 78-280 replaced “county” with “judicial district” or deleted reference to counties as necessary to reflect transfer of jurisdiction from counties to judicial districts; P.A. 03-202 designated existing provisions as Subsec. (a) and added Subsec. (b) re notice to Commissioner of Public Safety; P.A. 08-54 amended Subsec. (a) to add exception re person required to register with Commissioner of Public Safety as a sexual offender, inserted new Subsec. (b) re requirements for sexual offender who files application and standing of commissioner to challenge change of name, and redesignated existing Subsec. (b) as Subsec. (c), effective May 12, 2008; pursuant to P.A. 11-51, “Commissioner of Public Safety” was changed editorially by the Revisors to “Commissioner of Emergency Services and Public Protection”, effective July 1, 2011; P.A. 13-3 amended Subsecs. (a) and (b) to add provisions re person required to register with commissioner as an offender convicted of committing a crime with a deadly weapon and amended Subsec. (c) to add reference to registry established pursuant to Sec. 54-280, effective January 1, 2014."
         ],
         "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 45a-99 re concurrent jurisdiction of Probate Court in matters concerning change of name."
+          },
+          {
+            "first": false,
+            "text": "See Secs. 45a-736, 45a-737 re change of name of adopted persons."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 46b-1(6) re jurisdiction of Superior Court concerning complaints for change of name."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 46b-63 re jurisdiction of Superior Court to restore birth name or former name of spouse following decree dissolving marriage."
+          },
           {
             "first": true,
             "text": "If the applicant for a change of name resides in the county where the proceeding is brought, the fact that the applicant's technical domicile may be in another state does not deprive the court of jurisdiction. 142 C. 309."
@@ -238,7 +254,7 @@
             "text": "Cited. 32 CS 1. When the question presented is whether name of a minor child should be changed, the court, in line with its universal duty to protect the interests of minors, must take into consideration whether the change of name will promote child's best welfare. 48 CS 647."
           }
         ],
-        "plainText": "(a) The superior court in each judicial district shall have jurisdiction of complaints praying for a change of name, brought by any person residing in the judicial district, and may change the name of the complainant, who shall thereafter be known by the name prescribed by said court in its decree, except that no superior court may issue an order or otherwise allow for the change of name of a person who is required to register with the Commissioner of Emergency Services and Public Protection as a sexual offender or as an offender convicted of committing a crime with a deadly weapon unless such person complies with the requirements of subdivision (1) of subsection (b) of this section.\n\n(b) (1) Any person who is required to register with the Commissioner of Emergency Services and Public Protection as a sexual offender or as an offender convicted of committing a crime with a deadly weapon who files an application with the Superior Court for a change of name shall (A) prior to filing such application, notify the Commissioner of Emergency Services and Public Protection, on such form as the commissioner may prescribe, that the person intends to file an application for a change of name, indicating the change of name sought, and (B) include with such application a sworn statement that such change of name is not being sought for the purpose of avoiding the legal consequences of a criminal conviction, including, but not limited to, a criminal conviction that requires such person to register as a sexual offender or as an offender convicted of committing a crime with a deadly weapon.\n\n(2) The Commissioner of Emergency Services and Public Protection shall have standing to challenge such person's application for a change of name in the superior court where such change of name is sought. The commissioner shall challenge the change of name through the Attorney General. The superior court may deny such person's application for a change of name if the court finds, by a preponderance of the evidence, that the person is applying for such change of name for the purpose of avoiding the legal consequences of a criminal conviction.\n\n(c) Whenever the court, pursuant to this section, orders a change of name of a person, the clerk of the court shall notify the Commissioner of Emergency Services and Public Protection of the issuance of such order if the clerk finds that such person is listed in the registry established and maintained pursuant to section 54-257 or in the registry established and maintained pursuant to section 54-280 .\n\nSee Sec. 45a-99 re concurrent jurisdiction of Probate Court in matters concerning change of name.\n\nSee Secs. 45a-736, 45a-737 re change of name of adopted persons.\n\nSee Sec. 46b-1(6) re jurisdiction of Superior Court concerning complaints for change of name.\n\nSee Sec. 46b-63 re jurisdiction of Superior Court to restore birth name or former name of spouse following decree dissolving marriage."
+        "plainText": "(a) The superior court in each judicial district shall have jurisdiction of complaints praying for a change of name, brought by any person residing in the judicial district, and may change the name of the complainant, who shall thereafter be known by the name prescribed by said court in its decree, except that no superior court may issue an order or otherwise allow for the change of name of a person who is required to register with the Commissioner of Emergency Services and Public Protection as a sexual offender or as an offender convicted of committing a crime with a deadly weapon unless such person complies with the requirements of subdivision (1) of subsection (b) of this section.\n\n(b) (1) Any person who is required to register with the Commissioner of Emergency Services and Public Protection as a sexual offender or as an offender convicted of committing a crime with a deadly weapon who files an application with the Superior Court for a change of name shall (A) prior to filing such application, notify the Commissioner of Emergency Services and Public Protection, on such form as the commissioner may prescribe, that the person intends to file an application for a change of name, indicating the change of name sought, and (B) include with such application a sworn statement that such change of name is not being sought for the purpose of avoiding the legal consequences of a criminal conviction, including, but not limited to, a criminal conviction that requires such person to register as a sexual offender or as an offender convicted of committing a crime with a deadly weapon.\n\n(2) The Commissioner of Emergency Services and Public Protection shall have standing to challenge such person's application for a change of name in the superior court where such change of name is sought. The commissioner shall challenge the change of name through the Attorney General. The superior court may deny such person's application for a change of name if the court finds, by a preponderance of the evidence, that the person is applying for such change of name for the purpose of avoiding the legal consequences of a criminal conviction.\n\n(c) Whenever the court, pursuant to this section, orders a change of name of a person, the clerk of the court shall notify the Commissioner of Emergency Services and Public Protection of the issuance of such order if the clerk finds that such person is listed in the registry established and maintained pursuant to section 54-257 or in the registry established and maintained pursuant to section 54-280 ."
       }
     },
     {
@@ -778,422 +794,6 @@
         "history": [],
         "annotations": [],
         "plainText": "Sections 52-42a and 52-43 to 52-45 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-52-2",
-      "kind": "section",
-      "citation": "52-2",
-      "citations": [
-        "52-2"
-      ],
-      "heading": "52-2",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_895.htm#sec_52-2",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 52-2 to 52-6a. Jurisdiction of justice of the peace and circuit, municipal and common pleas courts and divisions, generally. Appeals to appellate session of Superior Court; to Supreme Court. Sections 52-2 to 52-6a , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 52-2 to 52-6a. Jurisdiction of justice of the peace and circuit, municipal and common pleas courts and divisions, generally. Appeals to appellate session of Superior Court; to Supreme Court. Sections 52-2 to 52-6a , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-52-6a",
-      "kind": "section",
-      "citation": "52-6a",
-      "citations": [
-        "52-6a"
-      ],
-      "heading": "52-6a",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_895.htm#sec_52-6a",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 52-2 to 52-6a. Jurisdiction of justice of the peace and circuit, municipal and common pleas courts and divisions, generally. Appeals to appellate session of Superior Court; to Supreme Court. Sections 52-2 to 52-6a , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 52-2 to 52-6a. Jurisdiction of justice of the peace and circuit, municipal and common pleas courts and divisions, generally. Appeals to appellate session of Superior Court; to Supreme Court. Sections 52-2 to 52-6a , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-52-8",
-      "kind": "section",
-      "citation": "52-8",
-      "citations": [
-        "52-8"
-      ],
-      "heading": "52-8",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_895.htm#sec_52-8",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 52-8 and 52-9. Jurisdiction of the court of common pleas for the judicial district of Waterbury. Civil actions in the Court of Common Pleas; where they may be brought or taken; exceptions. Sections 52-8 and 52-9 are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 52-8 and 52-9. Jurisdiction of the court of common pleas for the judicial district of Waterbury. Civil actions in the Court of Common Pleas; where they may be brought or taken; exceptions. Sections 52-8 and 52-9 are repealed."
-      }
-    },
-    {
-      "id": "section-52-9",
-      "kind": "section",
-      "citation": "52-9",
-      "citations": [
-        "52-9"
-      ],
-      "heading": "52-9",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_895.htm#sec_52-9",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 52-8 and 52-9. Jurisdiction of the court of common pleas for the judicial district of Waterbury. Civil actions in the Court of Common Pleas; where they may be brought or taken; exceptions. Sections 52-8 and 52-9 are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 52-8 and 52-9. Jurisdiction of the court of common pleas for the judicial district of Waterbury. Civil actions in the Court of Common Pleas; where they may be brought or taken; exceptions. Sections 52-8 and 52-9 are repealed."
-      }
-    },
-    {
-      "id": "section-52-25g",
-      "kind": "section",
-      "citation": "52-25g",
-      "citations": [
-        "52-25g"
-      ],
-      "heading": "52-25g",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_895.htm#sec_52-25g",
-      "status": "active",
-      "content": {
-        "body": [],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": ""
-      }
-    },
-    {
-      "id": "section-52-25h",
-      "kind": "section",
-      "citation": "52-25h",
-      "citations": [
-        "52-25h"
-      ],
-      "heading": "52-25h",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_895.htm#sec_52-25h",
-      "status": "active",
-      "content": {
-        "body": [],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": ""
-      }
-    },
-    {
-      "id": "section-52-15",
-      "kind": "section",
-      "citation": "52-15",
-      "citations": [
-        "52-15"
-      ],
-      "heading": "52-15",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_895.htm#sec_52-15",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 52-15 and 52-16. Naturalization of aliens. Disposal of fees. Sections 52-15 and 52-16 are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 52-15 and 52-16. Naturalization of aliens. Disposal of fees. Sections 52-15 and 52-16 are repealed."
-      }
-    },
-    {
-      "id": "section-52-16",
-      "kind": "section",
-      "citation": "52-16",
-      "citations": [
-        "52-16"
-      ],
-      "heading": "52-16",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_895.htm#sec_52-16",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 52-15 and 52-16. Naturalization of aliens. Disposal of fees. Sections 52-15 and 52-16 are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 52-15 and 52-16. Naturalization of aliens. Disposal of fees. Sections 52-15 and 52-16 are repealed."
-      }
-    },
-    {
-      "id": "section-52-18",
-      "kind": "section",
-      "citation": "52-18",
-      "citations": [
-        "52-18"
-      ],
-      "heading": "52-18",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_895.htm#sec_52-18",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 52-18 to 52-21. Actions for partition or sale of property. Jurisdiction of foreclosure or redemption suits. Return of action brought by foreign corporation. Action by nonresident executor, trustee or administrator. Sections 52-18 to 52-21 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 52-18 to 52-21. Actions for partition or sale of property. Jurisdiction of foreclosure or redemption suits. Return of action brought by foreign corporation. Action by nonresident executor, trustee or administrator. Sections 52-18 to 52-21 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-52-21",
-      "kind": "section",
-      "citation": "52-21",
-      "citations": [
-        "52-21"
-      ],
-      "heading": "52-21",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_895.htm#sec_52-21",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 52-18 to 52-21. Actions for partition or sale of property. Jurisdiction of foreclosure or redemption suits. Return of action brought by foreign corporation. Action by nonresident executor, trustee or administrator. Sections 52-18 to 52-21 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 52-18 to 52-21. Actions for partition or sale of property. Jurisdiction of foreclosure or redemption suits. Return of action brought by foreign corporation. Action by nonresident executor, trustee or administrator. Sections 52-18 to 52-21 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-52-25",
-      "kind": "section",
-      "citation": "52-25",
-      "citations": [
-        "52-25"
-      ],
-      "heading": "52-25",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_895.htm#sec_52-25",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 52-25 to 52-28. Venue matters. Concurrent jurisdiction of Common Pleas and Superior Courts. Sections 52-25 to 52-28 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 52-25 to 52-28. Venue matters. Concurrent jurisdiction of Common Pleas and Superior Courts. Sections 52-25 to 52-28 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-52-28",
-      "kind": "section",
-      "citation": "52-28",
-      "citations": [
-        "52-28"
-      ],
-      "heading": "52-28",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_895.htm#sec_52-28",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 52-25 to 52-28. Venue matters. Concurrent jurisdiction of Common Pleas and Superior Courts. Sections 52-25 to 52-28 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 52-25 to 52-28. Venue matters. Concurrent jurisdiction of Common Pleas and Superior Courts. Sections 52-25 to 52-28 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-52-33",
-      "kind": "section",
-      "citation": "52-33",
-      "citations": [
-        "52-33"
-      ],
-      "heading": "52-33",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_895.htm#sec_52-33",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 52-33 to 52-36. Transfer of causes between Superior and Common Pleas Court. Transfers after pretrial sessions and conferences. Fees in transferred actions. Consolidation of actions. Jury in consolidated cases. Sections 52-33 to 52-36 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 52-33 to 52-36. Transfer of causes between Superior and Common Pleas Court. Transfers after pretrial sessions and conferences. Fees in transferred actions. Consolidation of actions. Jury in consolidated cases. Sections 52-33 to 52-36 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-52-36",
-      "kind": "section",
-      "citation": "52-36",
-      "citations": [
-        "52-36"
-      ],
-      "heading": "52-36",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_895.htm#sec_52-36",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 52-33 to 52-36. Transfer of causes between Superior and Common Pleas Court. Transfers after pretrial sessions and conferences. Fees in transferred actions. Consolidation of actions. Jury in consolidated cases. Sections 52-33 to 52-36 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 52-33 to 52-36. Transfer of causes between Superior and Common Pleas Court. Transfers after pretrial sessions and conferences. Fees in transferred actions. Consolidation of actions. Jury in consolidated cases. Sections 52-33 to 52-36 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-52-37",
-      "kind": "section",
-      "citation": "52-37",
-      "citations": [
-        "52-37"
-      ],
-      "heading": "52-37",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_895.htm#sec_52-37",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 52-37 and 52-37a. Transmission of files and papers; procedure. Consolidation of actions in Circuit Court and Common Pleas or Superior Court. Sections 52-37 and 52-37a are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 52-37 and 52-37a. Transmission of files and papers; procedure. Consolidation of actions in Circuit Court and Common Pleas or Superior Court. Sections 52-37 and 52-37a are repealed."
-      }
-    },
-    {
-      "id": "section-52-37a",
-      "kind": "section",
-      "citation": "52-37a",
-      "citations": [
-        "52-37a"
-      ],
-      "heading": "52-37a",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_895.htm#sec_52-37a",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 52-37 and 52-37a. Transmission of files and papers; procedure. Consolidation of actions in Circuit Court and Common Pleas or Superior Court. Sections 52-37 and 52-37a are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 52-37 and 52-37a. Transmission of files and papers; procedure. Consolidation of actions in Circuit Court and Common Pleas or Superior Court. Sections 52-37 and 52-37a are repealed."
-      }
-    },
-    {
-      "id": "section-52-39",
-      "kind": "section",
-      "citation": "52-39",
-      "citations": [
-        "52-39"
-      ],
-      "heading": "52-39",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_895.htm#sec_52-39",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 52-39 to 52-41. Distinct claims; separate counts; jurisdiction. Several claims; jurisdiction of Common Pleas Court. Limited jurisdiction; judgment above limit. Sections 52-39 to 52-41 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 52-39 to 52-41. Distinct claims; separate counts; jurisdiction. Several claims; jurisdiction of Common Pleas Court. Limited jurisdiction; judgment above limit. Sections 52-39 to 52-41 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-52-41",
-      "kind": "section",
-      "citation": "52-41",
-      "citations": [
-        "52-41"
-      ],
-      "heading": "52-41",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_895.htm#sec_52-41",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 52-39 to 52-41. Distinct claims; separate counts; jurisdiction. Several claims; jurisdiction of Common Pleas Court. Limited jurisdiction; judgment above limit. Sections 52-39 to 52-41 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 52-39 to 52-41. Distinct claims; separate counts; jurisdiction. Several claims; jurisdiction of Common Pleas Court. Limited jurisdiction; judgment above limit. Sections 52-39 to 52-41 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-52-42a",
-      "kind": "section",
-      "citation": "52-42a",
-      "citations": [
-        "52-42a"
-      ],
-      "heading": "52-42a",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_895.htm#sec_52-42a",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 52-42a and 52-43 to 52-45. Venue in actions involving security deposits. Venue where all parties nonresident. When justice action may be brought in adjoining town. Appeals from justice. Sections 52-42a and 52-43 to 52-45 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 52-42a and 52-43 to 52-45. Venue in actions involving security deposits. Venue where all parties nonresident. When justice action may be brought in adjoining town. Appeals from justice. Sections 52-42a and 52-43 to 52-45 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-52-43",
-      "kind": "section",
-      "citation": "52-43",
-      "citations": [
-        "52-43"
-      ],
-      "heading": "52-43",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_895.htm#sec_52-43",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 52-42a and 52-43 to 52-45. Venue in actions involving security deposits. Venue where all parties nonresident. When justice action may be brought in adjoining town. Appeals from justice. Sections 52-42a and 52-43 to 52-45 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 52-42a and 52-43 to 52-45. Venue in actions involving security deposits. Venue where all parties nonresident. When justice action may be brought in adjoining town. Appeals from justice. Sections 52-42a and 52-43 to 52-45 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-52-45",
-      "kind": "section",
-      "citation": "52-45",
-      "citations": [
-        "52-45"
-      ],
-      "heading": "52-45",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_895.htm#sec_52-45",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 52-42a and 52-43 to 52-45. Venue in actions involving security deposits. Venue where all parties nonresident. When justice action may be brought in adjoining town. Appeals from justice. Sections 52-42a and 52-43 to 52-45 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 52-42a and 52-43 to 52-45. Venue in actions involving security deposits. Venue where all parties nonresident. When justice action may be brought in adjoining town. Appeals from justice. Sections 52-42a and 52-43 to 52-45 , inclusive, are repealed."
       }
     }
   ]

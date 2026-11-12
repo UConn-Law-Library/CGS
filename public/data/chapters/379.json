@@ -45,11 +45,7 @@
       "content": {
         "body": [
           "(a) The State Dental Commission shall consist of nine members appointed by the Governor, subject to the provisions of section 4-9a , six of whom shall be practitioners in dentistry residing in this state who are in good standing in their profession and three of whom shall be public members. No member of said commission shall be an elected or appointed officer of a professional association of members of his profession or have been such an officer for the year immediately preceding his appointment. The Commissioner of Public Health, with advice and assistance from the Dental Commission, may issue regulations to implement the provisions of this chapter, and to insure proper dental care and the protection of public health, considering the convenience and welfare of the patient, methods recommended by the canon of ethics of the Connecticut State Dental Association and the American Dental Association and accepted health standards as promulgated by local health ordinances and state statutes and regulations.",
-          "(b) The Governor shall appoint a chairperson from among such members. Said commission shall meet at least once during each calendar quarter and at such other times as the chairman deems necessary. Special meetings shall be held on the request of a majority of the commission after notice in accordance with the provisions of section 1-225 . A majority of the members of the commission shall constitute a quorum. Members shall not be compensated for their services. Any member who fails to attend three consecutive meetings or who fails to attend fifty per cent of all meetings held during any calendar year shall be deemed to have resigned from office. Minutes of all meetings shall be recorded by the commission. No member shall participate in the affairs of the commission during the pendency of any disciplinary proceedings by the commission against such member. No member shall serve for more than two full consecutive terms commencing after July 1, 1980. Said commission shall (1) hear and decide matters concerning suspension or revocation of licensure, (2) adjudicate complaints filed against practitioners and (3) impose sanctions where appropriate.",
-          "See Sec. 1-24 re persons empowered to administer oaths.",
-          "See Sec. 4-9a for definition of “public member”.",
-          "See Sec. 4-10 re appointment of boards and commission members from lists provided to Governor.",
-          "See Secs. 19a-8 to 19a-12, inclusive, re powers and duties of boards and commissions within Department of Public Health."
+          "(b) The Governor shall appoint a chairperson from among such members. Said commission shall meet at least once during each calendar quarter and at such other times as the chairman deems necessary. Special meetings shall be held on the request of a majority of the commission after notice in accordance with the provisions of section 1-225 . A majority of the members of the commission shall constitute a quorum. Members shall not be compensated for their services. Any member who fails to attend three consecutive meetings or who fails to attend fifty per cent of all meetings held during any calendar year shall be deemed to have resigned from office. Minutes of all meetings shall be recorded by the commission. No member shall participate in the affairs of the commission during the pendency of any disciplinary proceedings by the commission against such member. No member shall serve for more than two full consecutive terms commencing after July 1, 1980. Said commission shall (1) hear and decide matters concerning suspension or revocation of licensure, (2) adjudicate complaints filed against practitioners and (3) impose sanctions where appropriate."
         ],
         "sourceNotes": [
           "(P.A. 78-303, S. 87, 136; P.A. 80-484, S. 38, 174, 176; P.A. 81-471, S. 27, 71; P.A. 85-398; June Sp. Sess. P.A. 91-12, S. 21, 55; P.A. 93-381, S. 9, 39; P.A. 94-149, S. 16; P.A. 95-257, S. 12, 21, 58; P.A. 98-143, S. 9, 24.)"
@@ -57,8 +53,25 @@
         "history": [
           "History: P.A. 80-484 made appointments subject to Sec. 4-9a, deleted requirement that dentist and dental hygienist members have practiced in state for 10 and 5 years, respectively, deleted provision requiring July meeting and allowing commission to regulate announcements, signs, directory listings, etc. and added prohibition against members holding office in professional association within 1 year of their appointment in Subsec. (a) and replaced provisions of Subsec. (b) re appointments from lists of nominees submitted by professional associations and re filling vacancies with provisions re meetings, expense reimbursement, members' attendance and duties; P.A. 81-471 changed “elected official” in Subsec. (a) to “elected or appointed officer” as of July 1, 1981; P.A. 85-398 amended Subsec. (a) to increase the number of dental hygienists on the dental commission from one to two and public members from three to four; June Sp. Sess. P.A. 91-12 in Subsec. (b) eliminated expense reimbursement for board members; P.A. 93-381 replaced commissioner of health services with commissioner of public health and addiction services, effective July 1, 1993; P.A. 94-149 amended Subsec. (a) to reduce number of commission members from eleven to nine, to increase the number of dentists from five to six and to decrease the number of public members from four to three; P.A. 95-257 replaced Commissioner and Department of Public Health and Addiction Services with Commissioner and Department of Public Health, effective July 1, 1995; P.A. 98-143 added quorum provision in Subsec. (b), effective July 1, 1998."
         ],
-        "annotations": [],
-        "plainText": "(a) The State Dental Commission shall consist of nine members appointed by the Governor, subject to the provisions of section 4-9a , six of whom shall be practitioners in dentistry residing in this state who are in good standing in their profession and three of whom shall be public members. No member of said commission shall be an elected or appointed officer of a professional association of members of his profession or have been such an officer for the year immediately preceding his appointment. The Commissioner of Public Health, with advice and assistance from the Dental Commission, may issue regulations to implement the provisions of this chapter, and to insure proper dental care and the protection of public health, considering the convenience and welfare of the patient, methods recommended by the canon of ethics of the Connecticut State Dental Association and the American Dental Association and accepted health standards as promulgated by local health ordinances and state statutes and regulations.\n\n(b) The Governor shall appoint a chairperson from among such members. Said commission shall meet at least once during each calendar quarter and at such other times as the chairman deems necessary. Special meetings shall be held on the request of a majority of the commission after notice in accordance with the provisions of section 1-225 . A majority of the members of the commission shall constitute a quorum. Members shall not be compensated for their services. Any member who fails to attend three consecutive meetings or who fails to attend fifty per cent of all meetings held during any calendar year shall be deemed to have resigned from office. Minutes of all meetings shall be recorded by the commission. No member shall participate in the affairs of the commission during the pendency of any disciplinary proceedings by the commission against such member. No member shall serve for more than two full consecutive terms commencing after July 1, 1980. Said commission shall (1) hear and decide matters concerning suspension or revocation of licensure, (2) adjudicate complaints filed against practitioners and (3) impose sanctions where appropriate.\n\nSee Sec. 1-24 re persons empowered to administer oaths.\n\nSee Sec. 4-9a for definition of “public member”.\n\nSee Sec. 4-10 re appointment of boards and commission members from lists provided to Governor.\n\nSee Secs. 19a-8 to 19a-12, inclusive, re powers and duties of boards and commissions within Department of Public Health."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 1-24 re persons empowered to administer oaths."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 4-9a for definition of “public member”."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 4-10 re appointment of boards and commission members from lists provided to Governor."
+          },
+          {
+            "first": false,
+            "text": "See Secs. 19a-8 to 19a-12, inclusive, re powers and duties of boards and commissions within Department of Public Health."
+          }
+        ],
+        "plainText": "(a) The State Dental Commission shall consist of nine members appointed by the Governor, subject to the provisions of section 4-9a , six of whom shall be practitioners in dentistry residing in this state who are in good standing in their profession and three of whom shall be public members. No member of said commission shall be an elected or appointed officer of a professional association of members of his profession or have been such an officer for the year immediately preceding his appointment. The Commissioner of Public Health, with advice and assistance from the Dental Commission, may issue regulations to implement the provisions of this chapter, and to insure proper dental care and the protection of public health, considering the convenience and welfare of the patient, methods recommended by the canon of ethics of the Connecticut State Dental Association and the American Dental Association and accepted health standards as promulgated by local health ordinances and state statutes and regulations.\n\n(b) The Governor shall appoint a chairperson from among such members. Said commission shall meet at least once during each calendar quarter and at such other times as the chairman deems necessary. Special meetings shall be held on the request of a majority of the commission after notice in accordance with the provisions of section 1-225 . A majority of the members of the commission shall constitute a quorum. Members shall not be compensated for their services. Any member who fails to attend three consecutive meetings or who fails to attend fifty per cent of all meetings held during any calendar year shall be deemed to have resigned from office. Minutes of all meetings shall be recorded by the commission. No member shall participate in the affairs of the commission during the pendency of any disciplinary proceedings by the commission against such member. No member shall serve for more than two full consecutive terms commencing after July 1, 1980. Said commission shall (1) hear and decide matters concerning suspension or revocation of licensure, (2) adjudicate complaints filed against practitioners and (3) impose sanctions where appropriate."
       }
     },
     {
@@ -196,8 +209,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Upon the payment of a fee of five hundred sixty-five dollars by an applicant, the Department of Public Health, under the supervision of the dental commissioners shall examine applicants. All examinations shall be given at least once per year and at other times prescribed by the department. The department shall grant licenses to such applicants as are qualified.",
-          "See Sec. 4-32 re state revenue accounting system."
+          "Upon the payment of a fee of five hundred sixty-five dollars by an applicant, the Department of Public Health, under the supervision of the dental commissioners shall examine applicants. All examinations shall be given at least once per year and at other times prescribed by the department. The department shall grant licenses to such applicants as are qualified."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 4454; 1957, P.A. 181; 1959, P.A. 616, S. 33; 1963, P.A. 257; June, 1971, P.A. 8, S. 53; P.A. 77-614, S. 398, 610; P.A. 80-484, S. 150, 176; P.A. 81-471, S. 28, 71; P.A. 89-251, S. 87, 203; P.A. 93-381, S. 9, 39; P.A. 95-257, S. 12, 21, 58; June Sp. Sess. P.A. 09-3, S. 200.)"
@@ -205,8 +217,13 @@
         "history": [
           "History: 1959 act increased fee from $35 to $50, deleted provisions for reexamination, updated statute, eliminating provisions for duties of recorder re fees and required payments of moneys collected by dental commissioners to general fund; 1963 act added requirement for $100 fee for nonresidents and provided that meetings be held in June and November; 1971 act removed fee differential for residents and nonresidents, raising fee for all applicants to $150; P.A. 77-614 made department of health services, rather than dental commissioners, responsible for examinations, retaining commissioners in supervisory role and retaining their power to grant licenses, effective January 1, 1979; P.A. 80-484 transferred licensing power to health services department and deleted provision re payment of moneys collected to general fund; P.A. 81-471 deleted requirement that examinations be held in June and November and substituted requirement that exams be held at least once per year and at other times prescribed by the department; P.A. 89-251 increased fee from $150 to $450; P.A. 93-381 replaced department of health services with department of public health and addiction services, effective July 1, 1993; P.A. 95-257 replaced Commissioner and Department of Public Health and Addiction Services with Commissioner and Department of Public Health, effective July 1, 1995; June Sp. Sess. P.A. 09-3 increased fee from $450 to $565."
         ],
-        "annotations": [],
-        "plainText": "Upon the payment of a fee of five hundred sixty-five dollars by an applicant, the Department of Public Health, under the supervision of the dental commissioners shall examine applicants. All examinations shall be given at least once per year and at other times prescribed by the department. The department shall grant licenses to such applicants as are qualified.\n\nSee Sec. 4-32 re state revenue accounting system."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 4-32 re state revenue accounting system."
+          }
+        ],
+        "plainText": "Upon the payment of a fee of five hundred sixty-five dollars by an applicant, the Department of Public Health, under the supervision of the dental commissioners shall examine applicants. All examinations shall be given at least once per year and at other times prescribed by the department. The department shall grant licenses to such applicants as are qualified."
       }
     },
     {
@@ -670,8 +687,7 @@
           "(2) Any regularly enrolled student in a dental school approved as provided in this chapter or a medical school approved as provided in chapter 370 receiving practical training in dentistry under the supervision of a licensed dentist or physician in a dental or medical school in this state or in any hospital, infirmary, clinic or dispensary affiliated with such school;",
           "(3) A person who holds the degree of doctor of dental medicine or doctor of dental surgery or its equivalent and who has been issued a permit in accordance with section 20-126b and who is receiving practical training under the supervision of a licensed dentist or physician in an advanced dental education program conducted by a dental or medical school in this state or by a hospital operated by the federal government or licensed pursuant to subsection (a) of section 19a-491 ;",
           "(4) Any regularly enrolled student in or graduate of an accredited school of dental hygiene who is receiving practical training in dental hygiene in an approved school of dental hygiene in the state or in any hospital, infirmary, clinic or dispensary affiliated with such school, under the supervision of a dentist licensed pursuant to this chapter or a dental hygienist licensed pursuant to chapter 379a; or",
-          "(5) Controlled investigations or innovative training programs related to the delivery of dental health services within accredited dental schools or schools of dental hygiene, provided such programs are (A) under the supervision of a dentist licensed pursuant to this chapter or physician licensed pursuant to chapter 370, and (B) conducted within a program accredited by the Commission on Dental Accreditation or such other national professional accrediting body as may be recognized by the United States Department of Education.",
-          "See Secs. 20-14c to 20-14g, inclusive, re dispensing and labeling of drugs by licensed practitioners."
+          "(5) Controlled investigations or innovative training programs related to the delivery of dental health services within accredited dental schools or schools of dental hygiene, provided such programs are (A) under the supervision of a dentist licensed pursuant to this chapter or physician licensed pursuant to chapter 370, and (B) conducted within a program accredited by the Commission on Dental Accreditation or such other national professional accrediting body as may be recognized by the United States Department of Education."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 4458; 1949, 1953, S. 2233d; 1963, P.A. 450, S. 1; 1967, P.A. 238; 1969, P.A. 102; 1971, P.A. 244; P.A. 73-183; P.A. 92-35, S. 8; P.A. 94-149, S. 22; P.A. 05-213, S. 3.)"
@@ -682,6 +698,10 @@
         "annotations": [
           {
             "first": true,
+            "text": "See Secs. 20-14c to 20-14g, inclusive, re dispensing and labeling of drugs by licensed practitioners."
+          },
+          {
+            "first": true,
             "text": "Dental assistant guilty of violation when he sprayed and drilled tooth. 109 C. 73. Such part as deals with making and repairing prosthetic dentures is not unreasonable or arbitrary exercise of police power; such part as deals with advertising is unconstitutional. 141 C. 288. Cited. 148 C. 94; 149 C. 262. Statute must be strictly construed since it is in derogation of a common law right and is penal in nature; selling and supplying of “Spare Denture Kit” does not constitute the practice of dentistry in violation of section (prior to 1971 amendment). 159 C. 362."
           },
           {
@@ -689,7 +709,7 @@
             "text": "Cited. 21 CS 332."
           }
         ],
-        "plainText": "(a) No person shall engage in the practice of dentistry unless he or she is licensed pursuant to the provisions of this chapter. The practice of dentistry or dental medicine is defined as the diagnosis, evaluation, prevention or treatment by surgical or other means, of an injury, deformity, disease or condition of the oral cavity or its contents, or the jaws or the associated structures of the jaws. The practice of dentistry does not include: (1) The treatment of dermatologic diseases or disorders of the skin or face; (2) the performance of microvascular free tissue transfer; (3) the treatment of diseases or disorders of the eye; (4) ocular procedures; (5) the performance of cosmetic surgery or other cosmetic procedures other than those related to the oral cavity, its contents, or the jaws; or (6) nasal or sinus surgery, other than that related to the oral cavity, its contents or the jaws.\n\n(b) No person other than a person licensed to practice dentistry under this chapter shall:\n\n(1) Describe himself or herself by the word “Dentist” or letters “D.D.S.” or “D.M.D.”, or in other words, letters or title in connection with his or her name which in any way represents such person as engaged in the practice of dentistry;\n\n(2) Own or carry on a dental practice or business;\n\n(3) Replace lost teeth by artificial ones, or attempt to diagnose or correct malpositioned teeth;\n\n(4) Directly or indirectly, by any means or method, furnish, supply, construct, reproduce or repair any prosthetic denture, bridge, appliance or any other structure to be worn in a person's mouth, except upon the written direction of a licensed dentist, or place such appliance or structure in a person's mouth or attempt to adjust such appliance or structure in a person's mouth, or deliver such appliance or structure to any person other than the dentist upon whose direction the work was performed;\n\n(5) Sell or distribute materials, except to a licensed dentist, dental laboratory or dental supply house, with instructions for an individual to construct, repair, reproduce or duplicate any prosthetic denture, bridge, appliance or any other structure to be worn in a person's mouth;\n\n(6) Advertise to the public, by any method, to furnish, supply, construct, reproduce or repair any prosthetic denture, bridge, appliance or other structure to be worn in a person's mouth;\n\n(7) Give estimates of the cost of dental treatment; or\n\n(8) Advertise or permit it to be advertised by sign, card, circular, handbill or newspaper, or otherwise indicate that such person, by contract with others or by himself or herself, will perform any of the functions specified in subdivisions (1) to (7), inclusive, of this subsection.\n\n(c) Notwithstanding the provisions of subsection (a) of this section, a person who is licensed to practice dentistry under this chapter, who has successfully completed a postdoctoral training program that is accredited by the Commission on Dental Accreditation or its successor organization, in the specialty area of dentistry in which such person practices may: (1) Diagnose, evaluate, prevent or treat by surgical or other means, injuries, deformities, diseases or conditions of the hard and soft tissues of the oral and maxillofacial area, or its adjacent or associated structures; and (2) perform any of the following procedures, provided the dentist has been granted hospital privileges to perform such procedures: (A) Surgical treatment of sleep apnea involving the jaws; (B) salivary gland surgery; (C) the harvesting of donor tissue; (D) frontal and orbital surgery and nasoethmoidal procedures to the extent that such surgery or procedures are associated with trauma.\n\n(d) Any person who, in practicing dentistry or dental medicine, as defined in this section, employs or permits any other person except a licensed dentist to so practice dentistry or dental medicine shall be subject to the penalties provided in section 20-126 .\n\n(e) The provisions of this section do not apply to:\n\n(1) Any practicing physician or surgeon who is licensed in accordance with chapter 370;\n\n(2) Any regularly enrolled student in a dental school approved as provided in this chapter or a medical school approved as provided in chapter 370 receiving practical training in dentistry under the supervision of a licensed dentist or physician in a dental or medical school in this state or in any hospital, infirmary, clinic or dispensary affiliated with such school;\n\n(3) A person who holds the degree of doctor of dental medicine or doctor of dental surgery or its equivalent and who has been issued a permit in accordance with section 20-126b and who is receiving practical training under the supervision of a licensed dentist or physician in an advanced dental education program conducted by a dental or medical school in this state or by a hospital operated by the federal government or licensed pursuant to subsection (a) of section 19a-491 ;\n\n(4) Any regularly enrolled student in or graduate of an accredited school of dental hygiene who is receiving practical training in dental hygiene in an approved school of dental hygiene in the state or in any hospital, infirmary, clinic or dispensary affiliated with such school, under the supervision of a dentist licensed pursuant to this chapter or a dental hygienist licensed pursuant to chapter 379a; or\n\n(5) Controlled investigations or innovative training programs related to the delivery of dental health services within accredited dental schools or schools of dental hygiene, provided such programs are (A) under the supervision of a dentist licensed pursuant to this chapter or physician licensed pursuant to chapter 370, and (B) conducted within a program accredited by the Commission on Dental Accreditation or such other national professional accrediting body as may be recognized by the United States Department of Education.\n\nSee Secs. 20-14c to 20-14g, inclusive, re dispensing and labeling of drugs by licensed practitioners."
+        "plainText": "(a) No person shall engage in the practice of dentistry unless he or she is licensed pursuant to the provisions of this chapter. The practice of dentistry or dental medicine is defined as the diagnosis, evaluation, prevention or treatment by surgical or other means, of an injury, deformity, disease or condition of the oral cavity or its contents, or the jaws or the associated structures of the jaws. The practice of dentistry does not include: (1) The treatment of dermatologic diseases or disorders of the skin or face; (2) the performance of microvascular free tissue transfer; (3) the treatment of diseases or disorders of the eye; (4) ocular procedures; (5) the performance of cosmetic surgery or other cosmetic procedures other than those related to the oral cavity, its contents, or the jaws; or (6) nasal or sinus surgery, other than that related to the oral cavity, its contents or the jaws.\n\n(b) No person other than a person licensed to practice dentistry under this chapter shall:\n\n(1) Describe himself or herself by the word “Dentist” or letters “D.D.S.” or “D.M.D.”, or in other words, letters or title in connection with his or her name which in any way represents such person as engaged in the practice of dentistry;\n\n(2) Own or carry on a dental practice or business;\n\n(3) Replace lost teeth by artificial ones, or attempt to diagnose or correct malpositioned teeth;\n\n(4) Directly or indirectly, by any means or method, furnish, supply, construct, reproduce or repair any prosthetic denture, bridge, appliance or any other structure to be worn in a person's mouth, except upon the written direction of a licensed dentist, or place such appliance or structure in a person's mouth or attempt to adjust such appliance or structure in a person's mouth, or deliver such appliance or structure to any person other than the dentist upon whose direction the work was performed;\n\n(5) Sell or distribute materials, except to a licensed dentist, dental laboratory or dental supply house, with instructions for an individual to construct, repair, reproduce or duplicate any prosthetic denture, bridge, appliance or any other structure to be worn in a person's mouth;\n\n(6) Advertise to the public, by any method, to furnish, supply, construct, reproduce or repair any prosthetic denture, bridge, appliance or other structure to be worn in a person's mouth;\n\n(7) Give estimates of the cost of dental treatment; or\n\n(8) Advertise or permit it to be advertised by sign, card, circular, handbill or newspaper, or otherwise indicate that such person, by contract with others or by himself or herself, will perform any of the functions specified in subdivisions (1) to (7), inclusive, of this subsection.\n\n(c) Notwithstanding the provisions of subsection (a) of this section, a person who is licensed to practice dentistry under this chapter, who has successfully completed a postdoctoral training program that is accredited by the Commission on Dental Accreditation or its successor organization, in the specialty area of dentistry in which such person practices may: (1) Diagnose, evaluate, prevent or treat by surgical or other means, injuries, deformities, diseases or conditions of the hard and soft tissues of the oral and maxillofacial area, or its adjacent or associated structures; and (2) perform any of the following procedures, provided the dentist has been granted hospital privileges to perform such procedures: (A) Surgical treatment of sleep apnea involving the jaws; (B) salivary gland surgery; (C) the harvesting of donor tissue; (D) frontal and orbital surgery and nasoethmoidal procedures to the extent that such surgery or procedures are associated with trauma.\n\n(d) Any person who, in practicing dentistry or dental medicine, as defined in this section, employs or permits any other person except a licensed dentist to so practice dentistry or dental medicine shall be subject to the penalties provided in section 20-126 .\n\n(e) The provisions of this section do not apply to:\n\n(1) Any practicing physician or surgeon who is licensed in accordance with chapter 370;\n\n(2) Any regularly enrolled student in a dental school approved as provided in this chapter or a medical school approved as provided in chapter 370 receiving practical training in dentistry under the supervision of a licensed dentist or physician in a dental or medical school in this state or in any hospital, infirmary, clinic or dispensary affiliated with such school;\n\n(3) A person who holds the degree of doctor of dental medicine or doctor of dental surgery or its equivalent and who has been issued a permit in accordance with section 20-126b and who is receiving practical training under the supervision of a licensed dentist or physician in an advanced dental education program conducted by a dental or medical school in this state or by a hospital operated by the federal government or licensed pursuant to subsection (a) of section 19a-491 ;\n\n(4) Any regularly enrolled student in or graduate of an accredited school of dental hygiene who is receiving practical training in dental hygiene in an approved school of dental hygiene in the state or in any hospital, infirmary, clinic or dispensary affiliated with such school, under the supervision of a dentist licensed pursuant to this chapter or a dental hygienist licensed pursuant to chapter 379a; or\n\n(5) Controlled investigations or innovative training programs related to the delivery of dental health services within accredited dental schools or schools of dental hygiene, provided such programs are (A) under the supervision of a dentist licensed pursuant to this chapter or physician licensed pursuant to chapter 370, and (B) conducted within a program accredited by the Commission on Dental Accreditation or such other national professional accrediting body as may be recognized by the United States Department of Education."
       }
     },
     {
@@ -1037,146 +1057,6 @@
         "history": [],
         "annotations": [],
         "plainText": "Reserved for future use."
-      }
-    },
-    {
-      "id": "section-20-104",
-      "kind": "section",
-      "citation": "20-104",
-      "citations": [
-        "20-104"
-      ],
-      "heading": "20-104",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_379.htm#sec_20-104",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 20-104 and 20-105. Qualifications and duties; regulations. Compensation; counsel. Sections 20-104 and 20-105 are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 20-104 and 20-105. Qualifications and duties; regulations. Compensation; counsel. Sections 20-104 and 20-105 are repealed."
-      }
-    },
-    {
-      "id": "section-20-105",
-      "kind": "section",
-      "citation": "20-105",
-      "citations": [
-        "20-105"
-      ],
-      "heading": "20-105",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_379.htm#sec_20-105",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 20-104 and 20-105. Qualifications and duties; regulations. Compensation; counsel. Sections 20-104 and 20-105 are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 20-104 and 20-105. Qualifications and duties; regulations. Compensation; counsel. Sections 20-104 and 20-105 are repealed."
-      }
-    },
-    {
-      "id": "section-20-111",
-      "kind": "section",
-      "citation": "20-111",
-      "citations": [
-        "20-111"
-      ],
-      "heading": "20-111",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_379.htm#sec_20-111",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 20-111 to 20-111c and 20-112. Dental hygienists; definitions; scope of practice; continuing education. Application for license; requirements; fee. Examination of applicants. Licensure without examination; fee. Unlicensed registered assistants. Sections 20-111 to 20-111c , inclusive, and 20-112 are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 20-111 to 20-111c and 20-112. Dental hygienists; definitions; scope of practice; continuing education. Application for license; requirements; fee. Examination of applicants. Licensure without examination; fee. Unlicensed registered assistants. Sections 20-111 to 20-111c , inclusive, and 20-112 are repealed."
-      }
-    },
-    {
-      "id": "section-20-111c",
-      "kind": "section",
-      "citation": "20-111c",
-      "citations": [
-        "20-111c"
-      ],
-      "heading": "20-111c",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_379.htm#sec_20-111c",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 20-111 to 20-111c and 20-112. Dental hygienists; definitions; scope of practice; continuing education. Application for license; requirements; fee. Examination of applicants. Licensure without examination; fee. Unlicensed registered assistants. Sections 20-111 to 20-111c , inclusive, and 20-112 are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 20-111 to 20-111c and 20-112. Dental hygienists; definitions; scope of practice; continuing education. Application for license; requirements; fee. Examination of applicants. Licensure without examination; fee. Unlicensed registered assistants. Sections 20-111 to 20-111c , inclusive, and 20-112 are repealed."
-      }
-    },
-    {
-      "id": "section-20-112",
-      "kind": "section",
-      "citation": "20-112",
-      "citations": [
-        "20-112"
-      ],
-      "heading": "20-112",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_379.htm#sec_20-112",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 20-111 to 20-111c and 20-112. Dental hygienists; definitions; scope of practice; continuing education. Application for license; requirements; fee. Examination of applicants. Licensure without examination; fee. Unlicensed registered assistants. Sections 20-111 to 20-111c , inclusive, and 20-112 are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 20-111 to 20-111c and 20-112. Dental hygienists; definitions; scope of practice; continuing education. Application for license; requirements; fee. Examination of applicants. Licensure without examination; fee. Unlicensed registered assistants. Sections 20-111 to 20-111c , inclusive, and 20-112 are repealed."
-      }
-    },
-    {
-      "id": "section-20-115",
-      "kind": "section",
-      "citation": "20-115",
-      "citations": [
-        "20-115"
-      ],
-      "heading": "20-115",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_379.htm#sec_20-115",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 20-115 to 20-117. Complaints against dentists or dental hygienists. Grievance committee. Restoration of licenses. Sections 20-115 to 20-117 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 20-115 to 20-117. Complaints against dentists or dental hygienists. Grievance committee. Restoration of licenses. Sections 20-115 to 20-117 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-20-117",
-      "kind": "section",
-      "citation": "20-117",
-      "citations": [
-        "20-117"
-      ],
-      "heading": "20-117",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_379.htm#sec_20-117",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 20-115 to 20-117. Complaints against dentists or dental hygienists. Grievance committee. Restoration of licenses. Sections 20-115 to 20-117 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 20-115 to 20-117. Complaints against dentists or dental hygienists. Grievance committee. Restoration of licenses. Sections 20-115 to 20-117 , inclusive, are repealed."
       }
     }
   ]

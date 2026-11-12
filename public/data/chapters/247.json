@@ -867,8 +867,7 @@
       "content": {
         "body": [
           "(a) The commissioner shall prescribe and provide suitable forms of applications, certificates of title, notices of security interests and all other notices and forms necessary to carry out the provisions of this chapter.",
-          "(b) The commissioner may: (1) Make necessary investigations to procure information required to carry out the provisions of this chapter; (2) adopt and enforce reasonable rules to carry out the provisions of this chapter; (3) assign a new identification number to a vehicle if it has none, or its identification number is destroyed or obliterated, or its motor is changed, and shall either issue a new certificate of title showing the new identification number or make an appropriate endorsement on the original certificate; (4) require each manufacturer or assembler of a vehicle sold in this state to provide such vehicle with a vehicle identification number and, upon the request of the commissioner, to inform him concerning the location or locations of every vehicle identification number on such vehicle. The commissioner may refuse to register a vehicle made by a manufacturer or assembler who fails to comply with this section.",
-          "See Sec. 14-149 re procedure when stolen vehicle or vehicle or part with mutilated or missing identification, engine or factory number is recovered."
+          "(b) The commissioner may: (1) Make necessary investigations to procure information required to carry out the provisions of this chapter; (2) adopt and enforce reasonable rules to carry out the provisions of this chapter; (3) assign a new identification number to a vehicle if it has none, or its identification number is destroyed or obliterated, or its motor is changed, and shall either issue a new certificate of title showing the new identification number or make an appropriate endorsement on the original certificate; (4) require each manufacturer or assembler of a vehicle sold in this state to provide such vehicle with a vehicle identification number and, upon the request of the commissioner, to inform him concerning the location or locations of every vehicle identification number on such vehicle. The commissioner may refuse to register a vehicle made by a manufacturer or assembler who fails to comply with this section."
         ],
         "sourceNotes": [
           "(1957, P.A. 607, S. 29; 1967, P.A. 102.)"
@@ -876,8 +875,13 @@
         "history": [
           "History: 1967 act added Subsec. (a)(4) re vehicle identification numbers."
         ],
-        "annotations": [],
-        "plainText": "(a) The commissioner shall prescribe and provide suitable forms of applications, certificates of title, notices of security interests and all other notices and forms necessary to carry out the provisions of this chapter.\n\n(b) The commissioner may: (1) Make necessary investigations to procure information required to carry out the provisions of this chapter; (2) adopt and enforce reasonable rules to carry out the provisions of this chapter; (3) assign a new identification number to a vehicle if it has none, or its identification number is destroyed or obliterated, or its motor is changed, and shall either issue a new certificate of title showing the new identification number or make an appropriate endorsement on the original certificate; (4) require each manufacturer or assembler of a vehicle sold in this state to provide such vehicle with a vehicle identification number and, upon the request of the commissioner, to inform him concerning the location or locations of every vehicle identification number on such vehicle. The commissioner may refuse to register a vehicle made by a manufacturer or assembler who fails to comply with this section.\n\nSee Sec. 14-149 re procedure when stolen vehicle or vehicle or part with mutilated or missing identification, engine or factory number is recovered."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 14-149 re procedure when stolen vehicle or vehicle or part with mutilated or missing identification, engine or factory number is recovered."
+          }
+        ],
+        "plainText": "(a) The commissioner shall prescribe and provide suitable forms of applications, certificates of title, notices of security interests and all other notices and forms necessary to carry out the provisions of this chapter.\n\n(b) The commissioner may: (1) Make necessary investigations to procure information required to carry out the provisions of this chapter; (2) adopt and enforce reasonable rules to carry out the provisions of this chapter; (3) assign a new identification number to a vehicle if it has none, or its identification number is destroyed or obliterated, or its motor is changed, and shall either issue a new certificate of title showing the new identification number or make an appropriate endorsement on the original certificate; (4) require each manufacturer or assembler of a vehicle sold in this state to provide such vehicle with a vehicle identification number and, upon the request of the commissioner, to inform him concerning the location or locations of every vehicle identification number on such vehicle. The commissioner may refuse to register a vehicle made by a manufacturer or assembler who fails to comply with this section."
       }
     },
     {
@@ -979,8 +983,7 @@
           "(b) An owner or a lienholder may report the theft of a vehicle, or its conversion if a crime, to the commissioner, but the commissioner may disregard the report of a conversion unless a warrant has been issued for the arrest of a person charged with the conversion. A person who has so reported the theft or conversion of a vehicle shall, forthwith after learning of its recovery, report the recovery to the commissioner.",
           "(c) An operator of a place of business for garaging, repairing, parking or storing vehicles for the public, in which there is stored an abandoned or unclaimed vehicle for a period of thirty days, shall, within five days after the expiration of that period, report the vehicle as unclaimed or abandoned to the commissioner. A vehicle left by its owner whose name and address are known to the operator or his employee is not considered unclaimed. A person who fails to report a vehicle as unclaimed or abandoned in accordance with this subsection forfeits all claims and liens for its garaging, parking, towing or storing. The commissioner may, after notice and hearing, impose a civil penalty of not more than twenty-five dollars for each day the failure to report continues.",
           "(d) The commissioner shall maintain and appropriately index weekly and cumulative public records of stolen, converted, recovered, abandoned and unclaimed vehicles reported to him pursuant to this section. The commissioner may make and distribute copies of the weekly records so maintained to police officers upon request without fee and to others for the fee, if any, the commissioner prescribes.",
-          "(e) The commissioner may suspend the registration of a vehicle the theft or conversion of which is reported to the commissioner pursuant to this section. Until the commissioner learns of its recovery or that the report of its theft or conversion was erroneous, the commissioner shall not issue a certificate of title for the vehicle.",
-          "See Sec. 14-150 re abandoned or unregistered motor vehicles and re vehicles which pose a menace to traffic."
+          "(e) The commissioner may suspend the registration of a vehicle the theft or conversion of which is reported to the commissioner pursuant to this section. Until the commissioner learns of its recovery or that the report of its theft or conversion was erroneous, the commissioner shall not issue a certificate of title for the vehicle."
         ],
         "sourceNotes": [
           "(1957, P.A. 607, S. 33; P.A. 75-394; P.A. 81-206, S. 3; P.A. 00-99, S. 50, 154; P.A. 02-70, S. 54; P.A. 06-196, S. 283.)"
@@ -988,8 +991,13 @@
         "history": [
           "History: P.A. 75-394 included abandoned vehicles in provisions of Subsecs. (c) and (d); P.A. 81-206 converted the criminal fines provided for in Subsec. (c) to civil penalties imposed by the commissioner; P.A. 00-99 deleted reference to sheriff in Subsec. (a), effective December 1, 2000; P.A. 02-70 amended Subsec. (a) to make technical changes, effective July 1, 2002; P.A. 06-196 made technical changes in Subsec. (e), effective June 7, 2006."
         ],
-        "annotations": [],
-        "plainText": "(a) A police officer or constable who learns of the theft of a vehicle not since recovered, or of the recovery of a vehicle the theft or conversion of which such officer or constable knows or has reason to believe has been reported to the commissioner, shall forthwith report the theft or recovery to the commissioner.\n\n(b) An owner or a lienholder may report the theft of a vehicle, or its conversion if a crime, to the commissioner, but the commissioner may disregard the report of a conversion unless a warrant has been issued for the arrest of a person charged with the conversion. A person who has so reported the theft or conversion of a vehicle shall, forthwith after learning of its recovery, report the recovery to the commissioner.\n\n(c) An operator of a place of business for garaging, repairing, parking or storing vehicles for the public, in which there is stored an abandoned or unclaimed vehicle for a period of thirty days, shall, within five days after the expiration of that period, report the vehicle as unclaimed or abandoned to the commissioner. A vehicle left by its owner whose name and address are known to the operator or his employee is not considered unclaimed. A person who fails to report a vehicle as unclaimed or abandoned in accordance with this subsection forfeits all claims and liens for its garaging, parking, towing or storing. The commissioner may, after notice and hearing, impose a civil penalty of not more than twenty-five dollars for each day the failure to report continues.\n\n(d) The commissioner shall maintain and appropriately index weekly and cumulative public records of stolen, converted, recovered, abandoned and unclaimed vehicles reported to him pursuant to this section. The commissioner may make and distribute copies of the weekly records so maintained to police officers upon request without fee and to others for the fee, if any, the commissioner prescribes.\n\n(e) The commissioner may suspend the registration of a vehicle the theft or conversion of which is reported to the commissioner pursuant to this section. Until the commissioner learns of its recovery or that the report of its theft or conversion was erroneous, the commissioner shall not issue a certificate of title for the vehicle.\n\nSee Sec. 14-150 re abandoned or unregistered motor vehicles and re vehicles which pose a menace to traffic."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 14-150 re abandoned or unregistered motor vehicles and re vehicles which pose a menace to traffic."
+          }
+        ],
+        "plainText": "(a) A police officer or constable who learns of the theft of a vehicle not since recovered, or of the recovery of a vehicle the theft or conversion of which such officer or constable knows or has reason to believe has been reported to the commissioner, shall forthwith report the theft or recovery to the commissioner.\n\n(b) An owner or a lienholder may report the theft of a vehicle, or its conversion if a crime, to the commissioner, but the commissioner may disregard the report of a conversion unless a warrant has been issued for the arrest of a person charged with the conversion. A person who has so reported the theft or conversion of a vehicle shall, forthwith after learning of its recovery, report the recovery to the commissioner.\n\n(c) An operator of a place of business for garaging, repairing, parking or storing vehicles for the public, in which there is stored an abandoned or unclaimed vehicle for a period of thirty days, shall, within five days after the expiration of that period, report the vehicle as unclaimed or abandoned to the commissioner. A vehicle left by its owner whose name and address are known to the operator or his employee is not considered unclaimed. A person who fails to report a vehicle as unclaimed or abandoned in accordance with this subsection forfeits all claims and liens for its garaging, parking, towing or storing. The commissioner may, after notice and hearing, impose a civil penalty of not more than twenty-five dollars for each day the failure to report continues.\n\n(d) The commissioner shall maintain and appropriately index weekly and cumulative public records of stolen, converted, recovered, abandoned and unclaimed vehicles reported to him pursuant to this section. The commissioner may make and distribute copies of the weekly records so maintained to police officers upon request without fee and to others for the fee, if any, the commissioner prescribes.\n\n(e) The commissioner may suspend the registration of a vehicle the theft or conversion of which is reported to the commissioner pursuant to this section. Until the commissioner learns of its recovery or that the report of its theft or conversion was erroneous, the commissioner shall not issue a certificate of title for the vehicle."
       }
     },
     {
@@ -1145,46 +1153,6 @@
           }
         ],
         "plainText": "This chapter may be cited as the “Uniform Motor Vehicle Certificate of Title and Antitheft Act”."
-      }
-    },
-    {
-      "id": "section-14-201",
-      "kind": "section",
-      "citation": "14-201",
-      "citations": [
-        "14-201"
-      ],
-      "heading": "14-201",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_247.htm#sec_14-201",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 14-201 to 14-209. Definition. Exemption of previously registered vehicle. Issuance of distinctive certificate. Perfection of security interest. Perfection under other statute. Filing of notices of security interest. Assignment of security interest. Release of interest. Lienholder to furnish information concerning security agreement. Sections 14-201 to 14-209 , inclusive, are repealed, effective July 1, 2002."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 14-201 to 14-209. Definition. Exemption of previously registered vehicle. Issuance of distinctive certificate. Perfection of security interest. Perfection under other statute. Filing of notices of security interest. Assignment of security interest. Release of interest. Lienholder to furnish information concerning security agreement. Sections 14-201 to 14-209 , inclusive, are repealed, effective July 1, 2002."
-      }
-    },
-    {
-      "id": "section-14-209",
-      "kind": "section",
-      "citation": "14-209",
-      "citations": [
-        "14-209"
-      ],
-      "heading": "14-209",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_247.htm#sec_14-209",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 14-201 to 14-209. Definition. Exemption of previously registered vehicle. Issuance of distinctive certificate. Perfection of security interest. Perfection under other statute. Filing of notices of security interest. Assignment of security interest. Release of interest. Lienholder to furnish information concerning security agreement. Sections 14-201 to 14-209 , inclusive, are repealed, effective July 1, 2002."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 14-201 to 14-209. Definition. Exemption of previously registered vehicle. Issuance of distinctive certificate. Perfection of security interest. Perfection under other statute. Filing of notices of security interest. Assignment of security interest. Release of interest. Lienholder to furnish information concerning security agreement. Sections 14-201 to 14-209 , inclusive, are repealed, effective July 1, 2002."
       }
     }
   ]

@@ -79,8 +79,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Any pedestrian who uses any street or highway negligently or recklessly or fails to obey the signal of any traffic officer, pedestrian control, sign, signal, marking or device or recklessly disregards his own safety or the safety of any person by the manner of his use of any street or highway shall be deemed to have committed an infraction and be fined not less than thirty-five dollars nor more than fifty dollars.",
-          "See Sec. 14-300 re crosswalks, regulation of pedestrian traffic, etc."
+          "Any pedestrian who uses any street or highway negligently or recklessly or fails to obey the signal of any traffic officer, pedestrian control, sign, signal, marking or device or recklessly disregards his own safety or the safety of any person by the manner of his use of any street or highway shall be deemed to have committed an infraction and be fined not less than thirty-five dollars nor more than fifty dollars."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 8513; February, 1965, P.A. 448, S. 42; P.A. 82-223, S. 29; P.A. 83-577, S. 33.)"
@@ -89,6 +88,10 @@
           "History: 1965 act deleted the word “wilfully” before “fails to obey the signal,” added the words “pedestrian control, sign, signal, marking or device” and substituted reference to the penalty in Sec. 14-296 for a specific penalty of not less than $2 nor more than $25; P.A. 82-223 specified that violation of the section constituted an infraction and replaced the penalty provision with minimum and maximum fine amounts; P.A. 83-577 increased the minimum fine from $25 to $35."
         ],
         "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 14-300 re crosswalks, regulation of pedestrian traffic, etc."
+          },
           {
             "first": true,
             "text": "Pedestrian standing in street awaiting approach of trolley car and not looking for 1 minute in direction from which an automobile was approaching held not necessarily negligent under statute; question of fact for jury. 99 C. 2; Id., 11. Not necessary to charge as to full terms and effect of statute when so much of statute as was applicable was explained in charge on contributory negligence. 103 C. 552. As regards negligence, statute establishes no other standards than those of the common law. 116 C. 53; 127 C. 159; 128 C. 584. Cited. 144 C. 449; 239 C. 235."
@@ -106,7 +109,7 @@
             "text": "Cited. 6 Conn. Cir. Ct. 584."
           }
         ],
-        "plainText": "Any pedestrian who uses any street or highway negligently or recklessly or fails to obey the signal of any traffic officer, pedestrian control, sign, signal, marking or device or recklessly disregards his own safety or the safety of any person by the manner of his use of any street or highway shall be deemed to have committed an infraction and be fined not less than thirty-five dollars nor more than fifty dollars.\n\nSee Sec. 14-300 re crosswalks, regulation of pedestrian traffic, etc."
+        "plainText": "Any pedestrian who uses any street or highway negligently or recklessly or fails to obey the signal of any traffic officer, pedestrian control, sign, signal, marking or device or recklessly disregards his own safety or the safety of any person by the manner of his use of any street or highway shall be deemed to have committed an infraction and be fined not less than thirty-five dollars nor more than fifty dollars."
       }
     },
     {
@@ -293,8 +296,7 @@
       "status": "active",
       "content": {
         "body": [
-          "No person owning, managing or conducting any place where any moving picture or theatrical production is exhibited shall sell any admission ticket or charge or receive any admission fee or collect or receive any valuable thing from any person after the seating capacity of such place has been exhausted, unless, at the time of such sale, charge, receipt or collection, the person making such sale, charge or collection or receiving such admission fee or valuable thing distinctly announces to the person making such purchase, or from whom such charge or collection is made or fee or valuable thing received, that standing room only is available. The state police shall, in order to ensure safety and health, limit the number of persons that may occupy standing room in each place where any moving picture or theatrical production is exhibited, and shall require the person owning, managing or conducting such place to display conspicuously, at each entrance thereto, a placard upon which shall be plainly printed such standing room capacity. Any person who violates any provision of this section or any order of the Commissioner of Emergency Services and Public Protection made pursuant thereto limiting the number of persons that may occupy standing room in a theater where any moving picture or theatrical production is exhibited, or who fails to display conspicuously, at the entrance thereto, a placard on which shall be plainly printed such standing room capacity, shall be fined not more than two hundred fifty dollars.",
-          "See chapter 531 re moving pictures."
+          "No person owning, managing or conducting any place where any moving picture or theatrical production is exhibited shall sell any admission ticket or charge or receive any admission fee or collect or receive any valuable thing from any person after the seating capacity of such place has been exhausted, unless, at the time of such sale, charge, receipt or collection, the person making such sale, charge or collection or receiving such admission fee or valuable thing distinctly announces to the person making such purchase, or from whom such charge or collection is made or fee or valuable thing received, that standing room only is available. The state police shall, in order to ensure safety and health, limit the number of persons that may occupy standing room in each place where any moving picture or theatrical production is exhibited, and shall require the person owning, managing or conducting such place to display conspicuously, at each entrance thereto, a placard upon which shall be plainly printed such standing room capacity. Any person who violates any provision of this section or any order of the Commissioner of Emergency Services and Public Protection made pursuant thereto limiting the number of persons that may occupy standing room in a theater where any moving picture or theatrical production is exhibited, or who fails to display conspicuously, at the entrance thereto, a placard on which shall be plainly printed such standing room capacity, shall be fined not more than two hundred fifty dollars."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 8528; P.A. 77-614, S. 486, 587, 610; P.A. 78-303, S. 85, 136; P.A. 11-51, S. 134; P.A. 12-80, S. 48.)"
@@ -305,10 +307,14 @@
         "annotations": [
           {
             "first": true,
+            "text": "See chapter 531 re moving pictures."
+          },
+          {
+            "first": true,
             "text": "Superior Court held to have no original jurisdiction of violation in city of New Haven. 97 C. 600."
           }
         ],
-        "plainText": "No person owning, managing or conducting any place where any moving picture or theatrical production is exhibited shall sell any admission ticket or charge or receive any admission fee or collect or receive any valuable thing from any person after the seating capacity of such place has been exhausted, unless, at the time of such sale, charge, receipt or collection, the person making such sale, charge or collection or receiving such admission fee or valuable thing distinctly announces to the person making such purchase, or from whom such charge or collection is made or fee or valuable thing received, that standing room only is available. The state police shall, in order to ensure safety and health, limit the number of persons that may occupy standing room in each place where any moving picture or theatrical production is exhibited, and shall require the person owning, managing or conducting such place to display conspicuously, at each entrance thereto, a placard upon which shall be plainly printed such standing room capacity. Any person who violates any provision of this section or any order of the Commissioner of Emergency Services and Public Protection made pursuant thereto limiting the number of persons that may occupy standing room in a theater where any moving picture or theatrical production is exhibited, or who fails to display conspicuously, at the entrance thereto, a placard on which shall be plainly printed such standing room capacity, shall be fined not more than two hundred fifty dollars.\n\nSee chapter 531 re moving pictures."
+        "plainText": "No person owning, managing or conducting any place where any moving picture or theatrical production is exhibited shall sell any admission ticket or charge or receive any admission fee or collect or receive any valuable thing from any person after the seating capacity of such place has been exhausted, unless, at the time of such sale, charge, receipt or collection, the person making such sale, charge or collection or receiving such admission fee or valuable thing distinctly announces to the person making such purchase, or from whom such charge or collection is made or fee or valuable thing received, that standing room only is available. The state police shall, in order to ensure safety and health, limit the number of persons that may occupy standing room in each place where any moving picture or theatrical production is exhibited, and shall require the person owning, managing or conducting such place to display conspicuously, at each entrance thereto, a placard upon which shall be plainly printed such standing room capacity. Any person who violates any provision of this section or any order of the Commissioner of Emergency Services and Public Protection made pursuant thereto limiting the number of persons that may occupy standing room in a theater where any moving picture or theatrical production is exhibited, or who fails to display conspicuously, at the entrance thereto, a placard on which shall be plainly printed such standing room capacity, shall be fined not more than two hundred fifty dollars."
       }
     },
     {
@@ -323,8 +329,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Any person who is principal or second in any prize fight in this state shall be guilty of a class D felony. A contest in which blows are struck which are intended or calculated to stun, disable or knock out either of the contestants, or in which either contestant is counted out or otherwise declared defeated because of failure to resume the contest within a certain time, shall be deemed a prize fight within the meaning of this section. The provisions of this section shall not apply to (1) professional boxing or mixed martial arts matches held or conducted under the laws of this state, or (2) amateur boxing or mixed martial arts matches held under the provisions of section 29-143j , or under the supervision of any school, college or university having an academic course of study or of the recognized athletic association connected with such school, college or university.",
-          "See chapter 532a re boxing and mixed martial arts."
+          "Any person who is principal or second in any prize fight in this state shall be guilty of a class D felony. A contest in which blows are struck which are intended or calculated to stun, disable or knock out either of the contestants, or in which either contestant is counted out or otherwise declared defeated because of failure to resume the contest within a certain time, shall be deemed a prize fight within the meaning of this section. The provisions of this section shall not apply to (1) professional boxing or mixed martial arts matches held or conducted under the laws of this state, or (2) amateur boxing or mixed martial arts matches held under the provisions of section 29-143j , or under the supervision of any school, college or university having an academic course of study or of the recognized athletic association connected with such school, college or university."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 8516; February, 1965, P.A. 617, S. 11; 1967, P.A. 787, S. 3; 1972, P.A. 55, S. 12; P.A. 85-293, S. 9; P.A. 96-259, S. 13; P.A. 13-258, S. 113; 13-259, S. 16.)"
@@ -332,8 +337,13 @@
         "history": [
           "History: 1965 act deleted exception allowing professional boxing exhibitions under permit and made specific provision for amateur boxing exhibitions; 1967 act added exception for exhibitions under section 19-327; 1972 act exempted boxing exhibitions from provisions of section and deleted proviso which had stated that boxing exhibitions would be exempt “at such time as they are regulated by an agency of the United States government”; P.A. 85-293 deleted reference to consumer protection commissioner's power to grant permits for wrestling bouts; P.A. 96-259 made technical grammatical change in reference to wrestling bouts or amateur boxing exhibitions where section does not apply; P.A. 13-258 changed penalty from fine of not more than $1,000 or imprisonment of not more than 5 years to a class D felony; P.A. 13-259 inserted Subdiv. (1) and (2) designators, replaced “boxing exhibitions” with “professional boxing or mixed martial arts matches”, deleted reference to wrestling bouts and replaced “amateur boxing exhibitions” with “amateur boxing or mixed martial arts matches”."
         ],
-        "annotations": [],
-        "plainText": "Any person who is principal or second in any prize fight in this state shall be guilty of a class D felony. A contest in which blows are struck which are intended or calculated to stun, disable or knock out either of the contestants, or in which either contestant is counted out or otherwise declared defeated because of failure to resume the contest within a certain time, shall be deemed a prize fight within the meaning of this section. The provisions of this section shall not apply to (1) professional boxing or mixed martial arts matches held or conducted under the laws of this state, or (2) amateur boxing or mixed martial arts matches held under the provisions of section 29-143j , or under the supervision of any school, college or university having an academic course of study or of the recognized athletic association connected with such school, college or university.\n\nSee chapter 532a re boxing and mixed martial arts."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See chapter 532a re boxing and mixed martial arts."
+          }
+        ],
+        "plainText": "Any person who is principal or second in any prize fight in this state shall be guilty of a class D felony. A contest in which blows are struck which are intended or calculated to stun, disable or knock out either of the contestants, or in which either contestant is counted out or otherwise declared defeated because of failure to resume the contest within a certain time, shall be deemed a prize fight within the meaning of this section. The provisions of this section shall not apply to (1) professional boxing or mixed martial arts matches held or conducted under the laws of this state, or (2) amateur boxing or mixed martial arts matches held under the provisions of section 29-143j , or under the supervision of any school, college or university having an academic course of study or of the recognized athletic association connected with such school, college or university."
       }
     },
     {
@@ -348,8 +358,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Any person who is present at any prize fight, to aid, abet or assist therein, or give countenance thereto, or who aids or encourages such fight in this state, without being present thereat, shall be imprisoned not more than two years or fined not more than three thousand five hundred dollars, or both. The provisions of this section shall not apply to (1) professional boxing or mixed martial arts matches held or conducted under the laws of this state, or (2) amateur boxing or mixed martial arts matches held under the provisions of section 29-143j or under the supervision of any school, college or university having an academic course of study or of the recognized athletic association connected with such school, college or university.",
-          "See chapter 532a re boxing and mixed martial arts."
+          "Any person who is present at any prize fight, to aid, abet or assist therein, or give countenance thereto, or who aids or encourages such fight in this state, without being present thereat, shall be imprisoned not more than two years or fined not more than three thousand five hundred dollars, or both. The provisions of this section shall not apply to (1) professional boxing or mixed martial arts matches held or conducted under the laws of this state, or (2) amateur boxing or mixed martial arts matches held under the provisions of section 29-143j or under the supervision of any school, college or university having an academic course of study or of the recognized athletic association connected with such school, college or university."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 8517; February, 1965, P.A. 617, S. 12; 1967, P.A. 787, S. 4; 1972, P.A. 55, S. 13; P.A. 85-293, S. 10; P.A. 13-258, S. 19; 13-259, S. 17.)"
@@ -357,8 +366,13 @@
         "history": [
           "History: 1965 act deleted exception allowing professional boxing exhibitions under permit and made specific provision for amateur boxing exhibitions; 1967 act added exception for exhibitions under Sec. 19-327; 1972 act specified that provisions do not apply to boxing exhibitions; P.A. 85-293 deleted reference to power of commissioner of consumer protection to grant permits for wrestling bouts; P.A. 13-258 changed fine from $500 to $3,500 and made a technical change; P.A. 13-259 inserted Subdiv. (1) and (2) designators, replaced “boxing exhibitions” with “professional boxing or mixed martial arts matches”, deleted reference to wrestling bouts, replaced “amateur boxing exhibitions” with “amateur boxing or mixed martial arts matches” and made technical changes."
         ],
-        "annotations": [],
-        "plainText": "Any person who is present at any prize fight, to aid, abet or assist therein, or give countenance thereto, or who aids or encourages such fight in this state, without being present thereat, shall be imprisoned not more than two years or fined not more than three thousand five hundred dollars, or both. The provisions of this section shall not apply to (1) professional boxing or mixed martial arts matches held or conducted under the laws of this state, or (2) amateur boxing or mixed martial arts matches held under the provisions of section 29-143j or under the supervision of any school, college or university having an academic course of study or of the recognized athletic association connected with such school, college or university.\n\nSee chapter 532a re boxing and mixed martial arts."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See chapter 532a re boxing and mixed martial arts."
+          }
+        ],
+        "plainText": "Any person who is present at any prize fight, to aid, abet or assist therein, or give countenance thereto, or who aids or encourages such fight in this state, without being present thereat, shall be imprisoned not more than two years or fined not more than three thousand five hundred dollars, or both. The provisions of this section shall not apply to (1) professional boxing or mixed martial arts matches held or conducted under the laws of this state, or (2) amateur boxing or mixed martial arts matches held under the provisions of section 29-143j or under the supervision of any school, college or university having an academic course of study or of the recognized athletic association connected with such school, college or university."
       }
     },
     {
@@ -380,9 +394,7 @@
           "(e) The presence of a machine gun in any room, boat or vehicle shall be presumptive evidence of the possession or use of the machine gun by each person occupying such room, boat or vehicle.",
           "(f) Each manufacturer shall keep a register of all machine guns manufactured or handled by the manufacturer. Such register shall show the model and serial number, and the date of manufacture, sale, loan, gift, delivery or receipt, of each machine gun, the name, address and occupation of the person to whom the machine gun was sold, loaned, given or delivered, or from whom it was received and the purpose for which it was acquired by the person to whom the machine gun was sold, loaned, given or delivered. Upon demand, any manufacturer shall permit any marshal or police officer to inspect such manufacturer's entire stock of machine guns, and parts and supplies therefor, and shall produce the register, herein required, for inspection. Any person who violates any provision of this subsection shall be fined not more than two thousand dollars.",
           "(g) Each machine gun in this state adapted to use projectiles of any caliber shall be registered in the office of the Commissioner of Emergency Services and Public Protection within twenty-four hours after its acquisition and, thereafter, annually, on July first. Blanks for registration shall be prepared by said commissioner and furnished upon application. To comply with this subsection, the application as filed shall show the model and serial number of the gun, the name, address and occupation of the person in possession, and from whom and the purpose for which the gun was acquired. The registration data shall not be subject to inspection by the public. Any person who fails to register any gun as required hereby shall be presumed to possess the same for an offensive or aggressive purpose. The provisions of this subsection shall not apply to any machine gun which has been registered under the provisions of subsection (f) and which is still in the actual possession of the manufacturer.",
-          "(h) No provision of this section shall apply to: (1) The manufacture of machine guns for sale or transfer to the United States government, to any state, territory or possession of the United States or to any political subdivision thereof or to the District of Columbia; (2) the possession of a machine gun rendered inoperable by welding of all critical functioning parts and possessed as a curiosity, ornament or keepsake; or (3) a machine gun acquired, transferred or possessed in accordance with the National Firearms Act, as amended, provided such machine gun shall be subject to the provisions of subsection (g) of this section.",
-          "See Secs. 29-27 to 29-38, inclusive, re permits for pistols and revolvers.",
-          "See Sec. 54-33a et seq. re searches."
+          "(h) No provision of this section shall apply to: (1) The manufacture of machine guns for sale or transfer to the United States government, to any state, territory or possession of the United States or to any political subdivision thereof or to the District of Columbia; (2) the possession of a machine gun rendered inoperable by welding of all critical functioning parts and possessed as a curiosity, ornament or keepsake; or (3) a machine gun acquired, transferred or possessed in accordance with the National Firearms Act, as amended, provided such machine gun shall be subject to the provisions of subsection (g) of this section."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 8509; 1963, P.A. 652, S. 10; P.A. 76-336, S. 19; P.A. 77-614, S. 486, 610; P.A. 84-200; P.A. 00-99, S. 118, 154; P.A. 01-195, S. 69, 181; P.A. 09-62, S. 1; P.A. 11-51, S. 134.)"
@@ -393,6 +405,14 @@
         "annotations": [
           {
             "first": true,
+            "text": "See Secs. 29-27 to 29-38, inclusive, re permits for pistols and revolvers."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 54-33a et seq. re searches."
+          },
+          {
+            "first": true,
             "text": "Cited. 224 C. 163; 237 C. 348."
           },
           {
@@ -400,7 +420,7 @@
             "text": "Cited. 9 CA 330; 17 CA 556; 25 CA 433; 26 CA 698; 44 CA 40."
           }
         ],
-        "plainText": "(a) As used in this section: (1) “Machine gun” shall apply to and include a weapon of any description, loaded or unloaded, which shoots, is designed to shoot or can be readily restored to shoot automatically more than one projectile, without manual reloading, by a single function of the trigger, and shall also include any part or combination of parts designed for use in converting a weapon into a machine gun and any combination of parts from which a machine gun can be assembled if such parts are in the possession of or under the control of a person. (2) “Crime of violence” shall apply to and include any of the following-named crimes or an attempt to commit any of the same: Murder, manslaughter, kidnapping, sexual assault and sexual assault with a firearm, assault in the first or second degree, robbery, burglary, larceny and riot in the first degree. (3) “Projectile” means any size bullet that when affixed to any cartridge case may be propelled through the bore of a machine gun.\n\n(b) Any person who possesses or uses a machine gun in the perpetration or attempted perpetration of a crime of violence shall be imprisoned not less than ten years nor more than twenty years.\n\n(c) Any person who (1) possesses or uses a machine gun for an offensive or aggressive purpose, or (2) notwithstanding the provisions of subdivision (3) of subsection (h) of this section, transfers, sells or gives a machine gun to a person under sixteen years of age, including the temporary transfer of a machine gun to such person for use in target shooting or on a firing or shooting range or for any other purpose, shall be fined not more than one thousand dollars or imprisoned not less than five years nor more than ten years or be both fined and imprisoned.\n\n(d) The possession or use of a machine gun shall be presumed to be for an offensive or aggressive purpose: (1) When the machine gun is on premises not owned or rented, for bona fide permanent residence or business occupancy, by the person in whose possession the machine gun was found; or (2) when in the possession of, or used by, an unnaturalized foreign-born person, or a person who has been convicted of a crime of violence in any state or federal court of record of the United States of America, its territories or insular possessions; or (3) when the machine gun is of the kind described in subsection (g) hereof and has not been registered as therein required; or (4) when empty or loaded projectiles of any caliber which have been or are susceptible of use in the machine gun are found in the immediate vicinity thereof.\n\n(e) The presence of a machine gun in any room, boat or vehicle shall be presumptive evidence of the possession or use of the machine gun by each person occupying such room, boat or vehicle.\n\n(f) Each manufacturer shall keep a register of all machine guns manufactured or handled by the manufacturer. Such register shall show the model and serial number, and the date of manufacture, sale, loan, gift, delivery or receipt, of each machine gun, the name, address and occupation of the person to whom the machine gun was sold, loaned, given or delivered, or from whom it was received and the purpose for which it was acquired by the person to whom the machine gun was sold, loaned, given or delivered. Upon demand, any manufacturer shall permit any marshal or police officer to inspect such manufacturer's entire stock of machine guns, and parts and supplies therefor, and shall produce the register, herein required, for inspection. Any person who violates any provision of this subsection shall be fined not more than two thousand dollars.\n\n(g) Each machine gun in this state adapted to use projectiles of any caliber shall be registered in the office of the Commissioner of Emergency Services and Public Protection within twenty-four hours after its acquisition and, thereafter, annually, on July first. Blanks for registration shall be prepared by said commissioner and furnished upon application. To comply with this subsection, the application as filed shall show the model and serial number of the gun, the name, address and occupation of the person in possession, and from whom and the purpose for which the gun was acquired. The registration data shall not be subject to inspection by the public. Any person who fails to register any gun as required hereby shall be presumed to possess the same for an offensive or aggressive purpose. The provisions of this subsection shall not apply to any machine gun which has been registered under the provisions of subsection (f) and which is still in the actual possession of the manufacturer.\n\n(h) No provision of this section shall apply to: (1) The manufacture of machine guns for sale or transfer to the United States government, to any state, territory or possession of the United States or to any political subdivision thereof or to the District of Columbia; (2) the possession of a machine gun rendered inoperable by welding of all critical functioning parts and possessed as a curiosity, ornament or keepsake; or (3) a machine gun acquired, transferred or possessed in accordance with the National Firearms Act, as amended, provided such machine gun shall be subject to the provisions of subsection (g) of this section.\n\nSee Secs. 29-27 to 29-38, inclusive, re permits for pistols and revolvers.\n\nSee Sec. 54-33a et seq. re searches."
+        "plainText": "(a) As used in this section: (1) “Machine gun” shall apply to and include a weapon of any description, loaded or unloaded, which shoots, is designed to shoot or can be readily restored to shoot automatically more than one projectile, without manual reloading, by a single function of the trigger, and shall also include any part or combination of parts designed for use in converting a weapon into a machine gun and any combination of parts from which a machine gun can be assembled if such parts are in the possession of or under the control of a person. (2) “Crime of violence” shall apply to and include any of the following-named crimes or an attempt to commit any of the same: Murder, manslaughter, kidnapping, sexual assault and sexual assault with a firearm, assault in the first or second degree, robbery, burglary, larceny and riot in the first degree. (3) “Projectile” means any size bullet that when affixed to any cartridge case may be propelled through the bore of a machine gun.\n\n(b) Any person who possesses or uses a machine gun in the perpetration or attempted perpetration of a crime of violence shall be imprisoned not less than ten years nor more than twenty years.\n\n(c) Any person who (1) possesses or uses a machine gun for an offensive or aggressive purpose, or (2) notwithstanding the provisions of subdivision (3) of subsection (h) of this section, transfers, sells or gives a machine gun to a person under sixteen years of age, including the temporary transfer of a machine gun to such person for use in target shooting or on a firing or shooting range or for any other purpose, shall be fined not more than one thousand dollars or imprisoned not less than five years nor more than ten years or be both fined and imprisoned.\n\n(d) The possession or use of a machine gun shall be presumed to be for an offensive or aggressive purpose: (1) When the machine gun is on premises not owned or rented, for bona fide permanent residence or business occupancy, by the person in whose possession the machine gun was found; or (2) when in the possession of, or used by, an unnaturalized foreign-born person, or a person who has been convicted of a crime of violence in any state or federal court of record of the United States of America, its territories or insular possessions; or (3) when the machine gun is of the kind described in subsection (g) hereof and has not been registered as therein required; or (4) when empty or loaded projectiles of any caliber which have been or are susceptible of use in the machine gun are found in the immediate vicinity thereof.\n\n(e) The presence of a machine gun in any room, boat or vehicle shall be presumptive evidence of the possession or use of the machine gun by each person occupying such room, boat or vehicle.\n\n(f) Each manufacturer shall keep a register of all machine guns manufactured or handled by the manufacturer. Such register shall show the model and serial number, and the date of manufacture, sale, loan, gift, delivery or receipt, of each machine gun, the name, address and occupation of the person to whom the machine gun was sold, loaned, given or delivered, or from whom it was received and the purpose for which it was acquired by the person to whom the machine gun was sold, loaned, given or delivered. Upon demand, any manufacturer shall permit any marshal or police officer to inspect such manufacturer's entire stock of machine guns, and parts and supplies therefor, and shall produce the register, herein required, for inspection. Any person who violates any provision of this subsection shall be fined not more than two thousand dollars.\n\n(g) Each machine gun in this state adapted to use projectiles of any caliber shall be registered in the office of the Commissioner of Emergency Services and Public Protection within twenty-four hours after its acquisition and, thereafter, annually, on July first. Blanks for registration shall be prepared by said commissioner and furnished upon application. To comply with this subsection, the application as filed shall show the model and serial number of the gun, the name, address and occupation of the person in possession, and from whom and the purpose for which the gun was acquired. The registration data shall not be subject to inspection by the public. Any person who fails to register any gun as required hereby shall be presumed to possess the same for an offensive or aggressive purpose. The provisions of this subsection shall not apply to any machine gun which has been registered under the provisions of subsection (f) and which is still in the actual possession of the manufacturer.\n\n(h) No provision of this section shall apply to: (1) The manufacture of machine guns for sale or transfer to the United States government, to any state, territory or possession of the United States or to any political subdivision thereof or to the District of Columbia; (2) the possession of a machine gun rendered inoperable by welding of all critical functioning parts and possessed as a curiosity, ornament or keepsake; or (3) a machine gun acquired, transferred or possessed in accordance with the National Firearms Act, as amended, provided such machine gun shall be subject to the provisions of subsection (g) of this section."
       }
     },
     {
@@ -1097,12 +1117,7 @@
         "body": [
           "(a) A person is guilty of firearms trafficking if such person, knowingly and intentionally, directly or indirectly, causes one or more firearms that such person owns, is in possession of or is in control of to come into the possession of or control of another person who such person knows or has reason to believe is prohibited from owning or possessing any firearm under state or federal law.",
           "(b) (1) Any person who violates any provision of this section shall be guilty of a class C felony if such person, on or after October 1, 2007, but prior to October 1, 2013, sells, delivers or otherwise transfers five or fewer firearms, and a class B felony if such person, on or after October 1, 2007, but prior to October 1, 2013, sells, delivers or otherwise transfers more than five firearms. (2) Any person who violates any provision of this section on or after October 1, 2013, shall be guilty of a class B felony for which three years of the sentence imposed may not be suspended or reduced by the court, and ten thousand dollars of the fine imposed may not be remitted or reduced by the court unless the court states on the record its reasons for remitting or reducing such fine.",
-          "(c) For the purposes of this section, “firearm” means “firearm” as defined in section 53a-3 , but does not include a rifle or shotgun or an antique firearm as defined in section 29-37a .",
-          "See Sec. 29-33 re requirements for sale or transfer of pistols or revolvers.",
-          "See Sec. 29-37a re requirements for sale or transfer of long guns.",
-          "See Sec. 29-37j re prohibition on purchasing firearm with intent to transfer same to person prohibited from purchasing or receiving.",
-          "See Sec. 53a-217 re criminal possession of a firearm.",
-          "See Sec. 53a-217c re criminal possession of a pistol or revolver."
+          "(c) For the purposes of this section, “firearm” means “firearm” as defined in section 53a-3 , but does not include a rifle or shotgun or an antique firearm as defined in section 29-37a ."
         ],
         "sourceNotes": [
           "(P.A. 07-163, S. 3; June 12 Sp. Sess. P.A. 12-2, S. 89; P.A. 13-3, S. 13, 42.)"
@@ -1110,8 +1125,29 @@
         "history": [
           "History: June 12 Sp. Sess. P.A. 12-2 made a technical change in Subsec. (a); P.A. 13-3 amended Subsec. (c) to make a technical change, effective April 4, 2013, and amended Subsec. (b) to insert Subdiv. (1) designator re violation committed on or after October 1, 2007, but prior to October 1, 2013, and add Subdiv. (2) re violation committed on or after October 1, 2013, to be a class B felony for which 3 years of the sentence may not be suspended or reduced by the court and $10,000 of the fine imposed may not be remitted or reduced by the court unless the court states on the record its reasons for remitting or reducing the fine, effective October 1, 2013."
         ],
-        "annotations": [],
-        "plainText": "(a) A person is guilty of firearms trafficking if such person, knowingly and intentionally, directly or indirectly, causes one or more firearms that such person owns, is in possession of or is in control of to come into the possession of or control of another person who such person knows or has reason to believe is prohibited from owning or possessing any firearm under state or federal law.\n\n(b) (1) Any person who violates any provision of this section shall be guilty of a class C felony if such person, on or after October 1, 2007, but prior to October 1, 2013, sells, delivers or otherwise transfers five or fewer firearms, and a class B felony if such person, on or after October 1, 2007, but prior to October 1, 2013, sells, delivers or otherwise transfers more than five firearms. (2) Any person who violates any provision of this section on or after October 1, 2013, shall be guilty of a class B felony for which three years of the sentence imposed may not be suspended or reduced by the court, and ten thousand dollars of the fine imposed may not be remitted or reduced by the court unless the court states on the record its reasons for remitting or reducing such fine.\n\n(c) For the purposes of this section, “firearm” means “firearm” as defined in section 53a-3 , but does not include a rifle or shotgun or an antique firearm as defined in section 29-37a .\n\nSee Sec. 29-33 re requirements for sale or transfer of pistols or revolvers.\n\nSee Sec. 29-37a re requirements for sale or transfer of long guns.\n\nSee Sec. 29-37j re prohibition on purchasing firearm with intent to transfer same to person prohibited from purchasing or receiving.\n\nSee Sec. 53a-217 re criminal possession of a firearm.\n\nSee Sec. 53a-217c re criminal possession of a pistol or revolver."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 29-33 re requirements for sale or transfer of pistols or revolvers."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 29-37a re requirements for sale or transfer of long guns."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 29-37j re prohibition on purchasing firearm with intent to transfer same to person prohibited from purchasing or receiving."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 53a-217 re criminal possession of a firearm."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 53a-217c re criminal possession of a pistol or revolver."
+          }
+        ],
+        "plainText": "(a) A person is guilty of firearms trafficking if such person, knowingly and intentionally, directly or indirectly, causes one or more firearms that such person owns, is in possession of or is in control of to come into the possession of or control of another person who such person knows or has reason to believe is prohibited from owning or possessing any firearm under state or federal law.\n\n(b) (1) Any person who violates any provision of this section shall be guilty of a class C felony if such person, on or after October 1, 2007, but prior to October 1, 2013, sells, delivers or otherwise transfers five or fewer firearms, and a class B felony if such person, on or after October 1, 2007, but prior to October 1, 2013, sells, delivers or otherwise transfers more than five firearms. (2) Any person who violates any provision of this section on or after October 1, 2013, shall be guilty of a class B felony for which three years of the sentence imposed may not be suspended or reduced by the court, and ten thousand dollars of the fine imposed may not be remitted or reduced by the court unless the court states on the record its reasons for remitting or reducing such fine.\n\n(c) For the purposes of this section, “firearm” means “firearm” as defined in section 53a-3 , but does not include a rifle or shotgun or an antique firearm as defined in section 29-37a ."
       }
     },
     {
@@ -1190,9 +1226,7 @@
           "(a) No person shall carry or possess in any vehicle or snowmobile any firearm, other than a pistol or revolver, while such firearm contains in the barrel, chamber or magazine any loaded shell or cartridge capable of being discharged or, if such firearm is a muzzleloader, when such muzzleloader has a percussion cap in place or when the powder pan of a flintlock contains powder. As used in this subsection, “muzzleloader” means a rifle or shotgun that is incapable of firing a self-contained cartridge and must be loaded at the muzzle end.",
           "(b) The enforcement officers of the Department of Energy and Environmental Protection are empowered to enforce this section.",
           "(c) The provisions of this section shall not apply to members of the military departments of the government or state while on duty or while traveling to or from assignments, or to enforcement officers, security guards or other persons employed to protect public or private property while in the performance of such duties.",
-          "(d) Any person who violates any provision of this section shall be guilty of a class D misdemeanor.",
-          "See Sec. 14-379 for definition of “snowmobile”.",
-          "See Sec. 26-6a re constables for fish and game protection."
+          "(d) Any person who violates any provision of this section shall be guilty of a class D misdemeanor."
         ],
         "sourceNotes": [
           "(1953, S. 3289d; 1969, P.A. 752, S. 11; P.A. 76-374; P.A. 10-36, S. 12; P.A. 11-80, S. 1; P.A. 12-80, S. 104; P.A. 23-53, S. 34.)"
@@ -1203,6 +1237,14 @@
         "annotations": [
           {
             "first": true,
+            "text": "See Sec. 14-379 for definition of “snowmobile”."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 26-6a re constables for fish and game protection."
+          },
+          {
+            "first": true,
             "text": "Cited. 163 C. 184; 195 C. 668; 197 C. 602."
           },
           {
@@ -1210,7 +1252,7 @@
             "text": "Cited. 35 CS 659."
           }
         ],
-        "plainText": "(a) No person shall carry or possess in any vehicle or snowmobile any firearm, other than a pistol or revolver, while such firearm contains in the barrel, chamber or magazine any loaded shell or cartridge capable of being discharged or, if such firearm is a muzzleloader, when such muzzleloader has a percussion cap in place or when the powder pan of a flintlock contains powder. As used in this subsection, “muzzleloader” means a rifle or shotgun that is incapable of firing a self-contained cartridge and must be loaded at the muzzle end.\n\n(b) The enforcement officers of the Department of Energy and Environmental Protection are empowered to enforce this section.\n\n(c) The provisions of this section shall not apply to members of the military departments of the government or state while on duty or while traveling to or from assignments, or to enforcement officers, security guards or other persons employed to protect public or private property while in the performance of such duties.\n\n(d) Any person who violates any provision of this section shall be guilty of a class D misdemeanor.\n\nSee Sec. 14-379 for definition of “snowmobile”.\n\nSee Sec. 26-6a re constables for fish and game protection."
+        "plainText": "(a) No person shall carry or possess in any vehicle or snowmobile any firearm, other than a pistol or revolver, while such firearm contains in the barrel, chamber or magazine any loaded shell or cartridge capable of being discharged or, if such firearm is a muzzleloader, when such muzzleloader has a percussion cap in place or when the powder pan of a flintlock contains powder. As used in this subsection, “muzzleloader” means a rifle or shotgun that is incapable of firing a self-contained cartridge and must be loaded at the muzzle end.\n\n(b) The enforcement officers of the Department of Energy and Environmental Protection are empowered to enforce this section.\n\n(c) The provisions of this section shall not apply to members of the military departments of the government or state while on duty or while traveling to or from assignments, or to enforcement officers, security guards or other persons employed to protect public or private property while in the performance of such duties.\n\n(d) Any person who violates any provision of this section shall be guilty of a class D misdemeanor."
       }
     },
     {
@@ -1226,9 +1268,7 @@
       "content": {
         "body": [
           "(a) Any person who carries upon his or her person any BB. gun, blackjack, metal or brass knuckles, or any dirk knife, or any switch knife, or any knife having an automatic spring release device by which a blade is released from the handle, having a blade of over one and one-half inches in length, or stiletto, or any knife the edged portion of the blade of which is four inches or more in length, any police baton or nightstick, or any martial arts weapon or electronic defense weapon, as defined in section 53a-3 , or any other dangerous or deadly weapon or instrument, shall be guilty of a class E felony. Whenever any person is found guilty of a violation of this section, any weapon or other instrument within the provisions of this section, found upon the body of such person, shall be forfeited to the municipality wherein such person was apprehended, notwithstanding any failure of the judgment of conviction to expressly impose such forfeiture.",
-          "(b) The provisions of this section shall not apply to (1) any officer charged with the preservation of the public peace while engaged in the pursuit of such officer's official duties; (2) the carrying of a baton or nightstick by a security guard while engaged in the pursuit of such guard's official duties; (3) the carrying of a knife, the edged portion of the blade of which is four inches or more in length, by (A) any member of the armed forces of the United States, as defined in section 27-103 , or any reserve component thereof, or of the armed forces of the state, as defined in section 27-2 , when on duty or going to or from duty, (B) any member of any military organization when on parade or when going to or from any place of assembly, (C) any person while transporting such knife as merchandise or for display at an authorized gun or knife show, (D) any person who is found with any such knife concealed upon one's person while lawfully removing such person's household goods or effects from one place to another, or from one residence to another, (E) any person while actually and peaceably engaged in carrying any such knife from such person's place of abode or business to a place or person where or by whom such knife is to be repaired, or while actually and peaceably returning to such person's place of abode or business with such knife after the same has been repaired, (F) any person holding a valid hunting, fishing or trapping license issued pursuant to chapter 490 or any saltwater fisherman carrying such knife for lawful hunting, fishing or trapping activities, or (G) any person while participating in an authorized historic reenactment; (4) the carrying by any person enrolled in or currently attending, or an instructor at, a martial arts school of a martial arts weapon while in a class or at an authorized event or competition or while transporting such weapon to or from such class, event or competition; (5) the carrying of a BB. gun by any person taking part in a supervised event or competition of the Boy Scouts of America or the Girl Scouts of America or in any other authorized event or competition while taking part in such event or competition or while transporting such weapon to or from such event or competition; (6) the carrying of an electronic defense weapon, as defined in section 53a-3 , by any person who is twenty-one years of age or older and possesses a permit or certificate issued under the provisions of section 29-28 , 29-36f , 29-37p or 29-38n ; and (7) the carrying of a BB. gun by any person upon such person's own property or the property of another person provided such other person has authorized the carrying of such weapon on such property, and the transporting of such weapon to or from such property.",
-          "See Sec. 29-32b re Board of Firearms Permit Examiners.",
-          "See Sec. 29-38 re weapons in vehicles."
+          "(b) The provisions of this section shall not apply to (1) any officer charged with the preservation of the public peace while engaged in the pursuit of such officer's official duties; (2) the carrying of a baton or nightstick by a security guard while engaged in the pursuit of such guard's official duties; (3) the carrying of a knife, the edged portion of the blade of which is four inches or more in length, by (A) any member of the armed forces of the United States, as defined in section 27-103 , or any reserve component thereof, or of the armed forces of the state, as defined in section 27-2 , when on duty or going to or from duty, (B) any member of any military organization when on parade or when going to or from any place of assembly, (C) any person while transporting such knife as merchandise or for display at an authorized gun or knife show, (D) any person who is found with any such knife concealed upon one's person while lawfully removing such person's household goods or effects from one place to another, or from one residence to another, (E) any person while actually and peaceably engaged in carrying any such knife from such person's place of abode or business to a place or person where or by whom such knife is to be repaired, or while actually and peaceably returning to such person's place of abode or business with such knife after the same has been repaired, (F) any person holding a valid hunting, fishing or trapping license issued pursuant to chapter 490 or any saltwater fisherman carrying such knife for lawful hunting, fishing or trapping activities, or (G) any person while participating in an authorized historic reenactment; (4) the carrying by any person enrolled in or currently attending, or an instructor at, a martial arts school of a martial arts weapon while in a class or at an authorized event or competition or while transporting such weapon to or from such class, event or competition; (5) the carrying of a BB. gun by any person taking part in a supervised event or competition of the Boy Scouts of America or the Girl Scouts of America or in any other authorized event or competition while taking part in such event or competition or while transporting such weapon to or from such event or competition; (6) the carrying of an electronic defense weapon, as defined in section 53a-3 , by any person who is twenty-one years of age or older and possesses a permit or certificate issued under the provisions of section 29-28 , 29-36f , 29-37p or 29-38n ; and (7) the carrying of a BB. gun by any person upon such person's own property or the property of another person provided such other person has authorized the carrying of such weapon on such property, and the transporting of such weapon to or from such property."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 8540; 1953, S. 3287d; P.A. 86-287, S. 1; P.A. 87-220, S. 1; P.A. 98-129, S. 9; June Sp. Sess. P.A. 98-1, S. 120, 121; P.A. 99-212, S. 12; P.A. 03-19, S. 123; P.A. 10-32, S. 148; P.A. 13-258, S. 30; P.A. 14-122, S. 57; P.A. 21-31, S. 2.)"
@@ -1237,6 +1277,14 @@
           "History: P.A. 86-287 amended Subsecs. (a) and (b) by adding “or any martial arts weapon and electronic defense weapon as defined in section 53a-3” and amended Subsec. (a) by adding provision permitting person to carry any martial arts weapon anywhere within state if such person has been granted a permit to do so; P.A. 87-220 made technical changes; P.A. 98-129 replaced requirement that a permit be obtained for the carrying of certain dangerous or deadly weapons or instruments with prohibition on the carrying of such weapons or instruments, deleted slung shot, air rifles and sand bags from the list of prohibited weapons or instruments, added exception for the carrying of knives with blades of four inches or more by certain individuals and deleted requirement that the seller of any such weapon or instrument give written notice of any such sale to the chief of police of the city, warden of the borough or first selectman of the town where such weapon or instrument was sold or delivered; June Sp. Sess. P.A. 98-1 repealed all changes enacted by P.A. 98-129, effective June 24, 1998; P.A. 99-212 substantially revised section including replacing requirement that a permit be obtained for the carrying of certain dangerous or deadly weapons or instruments with prohibition on the carrying of such weapons or instruments, deleting slung shot, air rifle and sand bag from list of prohibited weapons and instruments, adding police baton or nightstick to list of prohibited weapons and instruments, making the exception for an officer charged with preservation of the public peace applicable while the officer is “engaged in the pursuit of such officer's official duties”, adding exception for the carrying of a baton or nightstick by a security guard while engaged in the guard's official duties, adding exception for the carrying of a knife having a blade of four inches or more by certain individuals under certain circumstances, adding exception for the carrying of a martial arts weapon by a student or instructor at a martial arts school under certain circumstances, adding exception for the carrying of a BB. gun by a person taking part in certain supervised or authorized events or competitions under certain circumstances, adding exception for the carrying of a BB. gun on private property with the authorization of the owner and the transporting of such weapon to or from such property and deleting the requirement that the seller of any such weapon or instrument give written notice of such sale to the chief of police of the city, warden of the borough or first selectman of the town where such weapon or instrument was sold or delivered; P.A. 03-19 made a technical change in Subsec. (a), effective May 12, 2003; P.A. 10-32 made technical changes, effective May 10, 2010; P.A. 13-258 amended Subsec. (a) to change penalty from fine of not more than $500 or imprisonment of not more than 3 years to a class E felony; P.A. 14-122 made a technical change in Subsec. (b)(3)(F); P.A. 21-31 amended Subsec. (b) by adding new Subdiv. (6) re electronic defense weapons and redesignating existing Subdiv. (6) as Subdiv. (7), effective July 1, 2021."
         ],
         "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 29-32b re Board of Firearms Permit Examiners."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 29-38 re weapons in vehicles."
+          },
           {
             "first": true,
             "text": "Cited. 138 C. 485; 153 C. 584. Burden on prosecution to prove defendant did not possess a written permit. 179 C. 516. Cited. 195 C. 668; 208 C. 689; 209 C. 322; 210 C. 110; Id., 199; 211 C. 672; 217 C. 73; 226 C. 497; 229 C. 691; 236 C. 189; 240 C. 317. Offense of carrying a dangerous weapon is not constitutionally overbroad in violation of the first and fourteenth amendments to the U.S. Constitution; the circumstances surrounding an alleged threat are critical in determining if the threat is a true threat; the trial court should have instructed jury to consider the particular factual context in which the allegedly threatening conduct occurred, including the victim's reaction to defendant's actions before and after the allegedly threatening conduct; defendant's threatened use of a table leg to inflict serious bodily injury against victim, in the event that victim continued to bother him, constitutes a violation of this section and Sec. 53a-3 if the threat is found to be a true threat not protected by the first amendment to the U.S. Constitution. 287 C. 237."
@@ -1262,7 +1310,7 @@
             "text": "Exceptions in Subdiv. (3)(D) and (E) plainly and unambiguously apply only to the carrying of long knives, and said Subdiv. implicitly provides an exception for carrying a long knife in one's residence or abode; in this case, defendant carried a switchblade knife which was prohibited irrespective of location, and section recognizes no presumed lawful reason for carrying a switchblade knife. 300 C. 368."
           }
         ],
-        "plainText": "(a) Any person who carries upon his or her person any BB. gun, blackjack, metal or brass knuckles, or any dirk knife, or any switch knife, or any knife having an automatic spring release device by which a blade is released from the handle, having a blade of over one and one-half inches in length, or stiletto, or any knife the edged portion of the blade of which is four inches or more in length, any police baton or nightstick, or any martial arts weapon or electronic defense weapon, as defined in section 53a-3 , or any other dangerous or deadly weapon or instrument, shall be guilty of a class E felony. Whenever any person is found guilty of a violation of this section, any weapon or other instrument within the provisions of this section, found upon the body of such person, shall be forfeited to the municipality wherein such person was apprehended, notwithstanding any failure of the judgment of conviction to expressly impose such forfeiture.\n\n(b) The provisions of this section shall not apply to (1) any officer charged with the preservation of the public peace while engaged in the pursuit of such officer's official duties; (2) the carrying of a baton or nightstick by a security guard while engaged in the pursuit of such guard's official duties; (3) the carrying of a knife, the edged portion of the blade of which is four inches or more in length, by (A) any member of the armed forces of the United States, as defined in section 27-103 , or any reserve component thereof, or of the armed forces of the state, as defined in section 27-2 , when on duty or going to or from duty, (B) any member of any military organization when on parade or when going to or from any place of assembly, (C) any person while transporting such knife as merchandise or for display at an authorized gun or knife show, (D) any person who is found with any such knife concealed upon one's person while lawfully removing such person's household goods or effects from one place to another, or from one residence to another, (E) any person while actually and peaceably engaged in carrying any such knife from such person's place of abode or business to a place or person where or by whom such knife is to be repaired, or while actually and peaceably returning to such person's place of abode or business with such knife after the same has been repaired, (F) any person holding a valid hunting, fishing or trapping license issued pursuant to chapter 490 or any saltwater fisherman carrying such knife for lawful hunting, fishing or trapping activities, or (G) any person while participating in an authorized historic reenactment; (4) the carrying by any person enrolled in or currently attending, or an instructor at, a martial arts school of a martial arts weapon while in a class or at an authorized event or competition or while transporting such weapon to or from such class, event or competition; (5) the carrying of a BB. gun by any person taking part in a supervised event or competition of the Boy Scouts of America or the Girl Scouts of America or in any other authorized event or competition while taking part in such event or competition or while transporting such weapon to or from such event or competition; (6) the carrying of an electronic defense weapon, as defined in section 53a-3 , by any person who is twenty-one years of age or older and possesses a permit or certificate issued under the provisions of section 29-28 , 29-36f , 29-37p or 29-38n ; and (7) the carrying of a BB. gun by any person upon such person's own property or the property of another person provided such other person has authorized the carrying of such weapon on such property, and the transporting of such weapon to or from such property.\n\nSee Sec. 29-32b re Board of Firearms Permit Examiners.\n\nSee Sec. 29-38 re weapons in vehicles."
+        "plainText": "(a) Any person who carries upon his or her person any BB. gun, blackjack, metal or brass knuckles, or any dirk knife, or any switch knife, or any knife having an automatic spring release device by which a blade is released from the handle, having a blade of over one and one-half inches in length, or stiletto, or any knife the edged portion of the blade of which is four inches or more in length, any police baton or nightstick, or any martial arts weapon or electronic defense weapon, as defined in section 53a-3 , or any other dangerous or deadly weapon or instrument, shall be guilty of a class E felony. Whenever any person is found guilty of a violation of this section, any weapon or other instrument within the provisions of this section, found upon the body of such person, shall be forfeited to the municipality wherein such person was apprehended, notwithstanding any failure of the judgment of conviction to expressly impose such forfeiture.\n\n(b) The provisions of this section shall not apply to (1) any officer charged with the preservation of the public peace while engaged in the pursuit of such officer's official duties; (2) the carrying of a baton or nightstick by a security guard while engaged in the pursuit of such guard's official duties; (3) the carrying of a knife, the edged portion of the blade of which is four inches or more in length, by (A) any member of the armed forces of the United States, as defined in section 27-103 , or any reserve component thereof, or of the armed forces of the state, as defined in section 27-2 , when on duty or going to or from duty, (B) any member of any military organization when on parade or when going to or from any place of assembly, (C) any person while transporting such knife as merchandise or for display at an authorized gun or knife show, (D) any person who is found with any such knife concealed upon one's person while lawfully removing such person's household goods or effects from one place to another, or from one residence to another, (E) any person while actually and peaceably engaged in carrying any such knife from such person's place of abode or business to a place or person where or by whom such knife is to be repaired, or while actually and peaceably returning to such person's place of abode or business with such knife after the same has been repaired, (F) any person holding a valid hunting, fishing or trapping license issued pursuant to chapter 490 or any saltwater fisherman carrying such knife for lawful hunting, fishing or trapping activities, or (G) any person while participating in an authorized historic reenactment; (4) the carrying by any person enrolled in or currently attending, or an instructor at, a martial arts school of a martial arts weapon while in a class or at an authorized event or competition or while transporting such weapon to or from such class, event or competition; (5) the carrying of a BB. gun by any person taking part in a supervised event or competition of the Boy Scouts of America or the Girl Scouts of America or in any other authorized event or competition while taking part in such event or competition or while transporting such weapon to or from such event or competition; (6) the carrying of an electronic defense weapon, as defined in section 53a-3 , by any person who is twenty-one years of age or older and possesses a permit or certificate issued under the provisions of section 29-28 , 29-36f , 29-37p or 29-38n ; and (7) the carrying of a BB. gun by any person upon such person's own property or the property of another person provided such other person has authorized the carrying of such weapon on such property, and the transporting of such weapon to or from such property."
       }
     },
     {
@@ -1305,15 +1353,19 @@
           "(3) “Firearm” means a firearm as defined in section 53a-3 .",
           "(b) No person shall (1) teach or demonstrate to any person the use, application or making of any firearm, explosive or incendiary device, or technique capable of causing injury or death to a person, knowing or intending that such firearm, explosive, incendiary device or technique will be unlawfully employed for use in, or in furtherance of, a civil disorder; or (2) assemble with one or more persons for the purpose of training with, practicing with or being instructed in the use of any firearm, explosive or incendiary device, or technique capable of causing injury or death to a person, intending to employ unlawfully such firearm, explosive, incendiary device or technique for use in, or in furtherance of, a civil disorder.",
           "(c) Any person who violates any provision of this section shall be guilty of a class C felony.",
-          "(d) Nothing in this section shall make unlawful any act of any peace officer, as defined in section 53a-3 , performed in the lawful discharge of his official duties.",
-          "See chapter 505 re private military forces."
+          "(d) Nothing in this section shall make unlawful any act of any peace officer, as defined in section 53a-3 , performed in the lawful discharge of his official duties."
         ],
         "sourceNotes": [
           "(P.A. 81-243.)"
         ],
         "history": [],
-        "annotations": [],
-        "plainText": "(a) As used in this section:\n\n(1) “Civil disorder” means a public disturbance involving acts of violence by a group of three or more persons which causes an immediate danger of or results in damage to the property of or injury to any other person.\n\n(2) “Explosive or incendiary device” means (A) dynamite and all other forms of high explosives, (B) any explosive bomb, grenade, missile or similar device, and (C) any incendiary bomb or grenade, fire bomb or similar device, including any device which (i) consists of or includes a breakable container which contains a flammable liquid or compound and a wick composed of any material which, when ignited, is capable of igniting such flammable liquid or compound, and (ii) can be carried or thrown by an individual.\n\n(3) “Firearm” means a firearm as defined in section 53a-3 .\n\n(b) No person shall (1) teach or demonstrate to any person the use, application or making of any firearm, explosive or incendiary device, or technique capable of causing injury or death to a person, knowing or intending that such firearm, explosive, incendiary device or technique will be unlawfully employed for use in, or in furtherance of, a civil disorder; or (2) assemble with one or more persons for the purpose of training with, practicing with or being instructed in the use of any firearm, explosive or incendiary device, or technique capable of causing injury or death to a person, intending to employ unlawfully such firearm, explosive, incendiary device or technique for use in, or in furtherance of, a civil disorder.\n\n(c) Any person who violates any provision of this section shall be guilty of a class C felony.\n\n(d) Nothing in this section shall make unlawful any act of any peace officer, as defined in section 53a-3 , performed in the lawful discharge of his official duties.\n\nSee chapter 505 re private military forces."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See chapter 505 re private military forces."
+          }
+        ],
+        "plainText": "(a) As used in this section:\n\n(1) “Civil disorder” means a public disturbance involving acts of violence by a group of three or more persons which causes an immediate danger of or results in damage to the property of or injury to any other person.\n\n(2) “Explosive or incendiary device” means (A) dynamite and all other forms of high explosives, (B) any explosive bomb, grenade, missile or similar device, and (C) any incendiary bomb or grenade, fire bomb or similar device, including any device which (i) consists of or includes a breakable container which contains a flammable liquid or compound and a wick composed of any material which, when ignited, is capable of igniting such flammable liquid or compound, and (ii) can be carried or thrown by an individual.\n\n(3) “Firearm” means a firearm as defined in section 53a-3 .\n\n(b) No person shall (1) teach or demonstrate to any person the use, application or making of any firearm, explosive or incendiary device, or technique capable of causing injury or death to a person, knowing or intending that such firearm, explosive, incendiary device or technique will be unlawfully employed for use in, or in furtherance of, a civil disorder; or (2) assemble with one or more persons for the purpose of training with, practicing with or being instructed in the use of any firearm, explosive or incendiary device, or technique capable of causing injury or death to a person, intending to employ unlawfully such firearm, explosive, incendiary device or technique for use in, or in furtherance of, a civil disorder.\n\n(c) Any person who violates any provision of this section shall be guilty of a class C felony.\n\n(d) Nothing in this section shall make unlawful any act of any peace officer, as defined in section 53a-3 , performed in the lawful discharge of his official duties."
       }
     },
     {
@@ -1621,8 +1673,7 @@
       "status": "active",
       "content": {
         "body": [
-          "No person shall wilfully refuse to relinquish a party line when informed that such line is needed for an emergency call to a fire department or police department or for medical aid or ambulance service, or secure the use of a party line by falsely stating that such line is needed for an emergency call. As used in this section, “party line” means a subscriber line telephone circuit, consisting of two or more main telephone stations connected therewith, each station with a distinctive ring or telephone number, and “emergency” means a situation in which property or human life is in jeopardy and the prompt summoning of aid is essential. Violation of this section shall be an infraction as provided for in sections 51-164m and 51-164n .",
-          "See Sec. 53a-183b re interfering with emergency call as class A misdemeanor."
+          "No person shall wilfully refuse to relinquish a party line when informed that such line is needed for an emergency call to a fire department or police department or for medical aid or ambulance service, or secure the use of a party line by falsely stating that such line is needed for an emergency call. As used in this section, “party line” means a subscriber line telephone circuit, consisting of two or more main telephone stations connected therewith, each station with a distinctive ring or telephone number, and “emergency” means a situation in which property or human life is in jeopardy and the prompt summoning of aid is essential. Violation of this section shall be an infraction as provided for in sections 51-164m and 51-164n ."
         ],
         "sourceNotes": [
           "(1957, P.A. 375, S. 1; 1961, P.A. 517, S. 126; P.A. 75-577, S. 10, 126.)"
@@ -1630,8 +1681,13 @@
         "history": [
           "History: 1961 act made grammatical correction in definition of emergency; P.A. 75-577 restated provisions and replaced maximum fine of $50 with statement that violation is an infraction as provided in Secs. 51-164m and 51-164n."
         ],
-        "annotations": [],
-        "plainText": "No person shall wilfully refuse to relinquish a party line when informed that such line is needed for an emergency call to a fire department or police department or for medical aid or ambulance service, or secure the use of a party line by falsely stating that such line is needed for an emergency call. As used in this section, “party line” means a subscriber line telephone circuit, consisting of two or more main telephone stations connected therewith, each station with a distinctive ring or telephone number, and “emergency” means a situation in which property or human life is in jeopardy and the prompt summoning of aid is essential. Violation of this section shall be an infraction as provided for in sections 51-164m and 51-164n .\n\nSee Sec. 53a-183b re interfering with emergency call as class A misdemeanor."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 53a-183b re interfering with emergency call as class A misdemeanor."
+          }
+        ],
+        "plainText": "No person shall wilfully refuse to relinquish a party line when informed that such line is needed for an emergency call to a fire department or police department or for medical aid or ambulance service, or secure the use of a party line by falsely stating that such line is needed for an emergency call. As used in this section, “party line” means a subscriber line telephone circuit, consisting of two or more main telephone stations connected therewith, each station with a distinctive ring or telephone number, and “emergency” means a situation in which property or human life is in jeopardy and the prompt summoning of aid is essential. Violation of this section shall be an infraction as provided for in sections 51-164m and 51-164n ."
       }
     },
     {
@@ -1710,11 +1766,12 @@
       }
     },
     {
-      "id": "group-53-212b-to-53-214",
+      "id": "group-53-212b-to-53-213-to-53-214",
       "kind": "group",
       "citation": null,
       "citations": [
         "53-212b",
+        "53-213",
         "53-214"
       ],
       "heading": "Secs. 53-212b to 53-214. Use of machinery in proximity to high voltage conductors. Spitting in public places. Pollution of drinking utensils.",
@@ -1778,246 +1835,6 @@
         ],
         "annotations": [],
         "plainText": "Any person who manufactures, sells or offers for sale any recapped motor vehicle tire, having knowledge that the casing of such tire does not meet the requirements promulgated by the Commissioner of Motor Vehicles in accordance with section 14-137 , or who knowingly recaps or causes to be recapped any tire having a defective casing with intent to sell the same or offer it for sale, shall be fined not more than one hundred dollars or imprisoned not more than six months or both."
-      }
-    },
-    {
-      "id": "section-53-169",
-      "kind": "section",
-      "citation": "53-169",
-      "citations": [
-        "53-169"
-      ],
-      "heading": "53-169",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_943.htm#sec_53-169",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 53-169 to 53-180. Dispersion of riotous assembly. Disturbance of meetings and elections. Refusal to assist public officer. Breach of the peace; intimidation; libel. Indecent or harassing telephone calls. Disorderly conduct. False information concerning bombs. Loitering. Soliciting from occupants of vehicles. Sections 53-169 to 53-180 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 53-169 to 53-180. Dispersion of riotous assembly. Disturbance of meetings and elections. Refusal to assist public officer. Breach of the peace; intimidation; libel. Indecent or harassing telephone calls. Disorderly conduct. False information concerning bombs. Loitering. Soliciting from occupants of vehicles. Sections 53-169 to 53-180 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-53-180",
-      "kind": "section",
-      "citation": "53-180",
-      "citations": [
-        "53-180"
-      ],
-      "heading": "53-180",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_943.htm#sec_53-180",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 53-169 to 53-180. Dispersion of riotous assembly. Disturbance of meetings and elections. Refusal to assist public officer. Breach of the peace; intimidation; libel. Indecent or harassing telephone calls. Disorderly conduct. False information concerning bombs. Loitering. Soliciting from occupants of vehicles. Sections 53-169 to 53-180 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 53-169 to 53-180. Dispersion of riotous assembly. Disturbance of meetings and elections. Refusal to assist public officer. Breach of the peace; intimidation; libel. Indecent or harassing telephone calls. Disorderly conduct. False information concerning bombs. Loitering. Soliciting from occupants of vehicles. Sections 53-169 to 53-180 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-53-183",
-      "kind": "section",
-      "citation": "53-183",
-      "citations": [
-        "53-183"
-      ],
-      "heading": "53-183",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_943.htm#sec_53-183",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 53-183 to 53-189. Animals on highway, generally. Transportation of wild animals. Signal lights and exhausts or mufflers on motor boats. Reckless operation of motor boats. Sections 53-183 to 53-189 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 53-183 to 53-189. Animals on highway, generally. Transportation of wild animals. Signal lights and exhausts or mufflers on motor boats. Reckless operation of motor boats. Sections 53-183 to 53-189 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-53-189",
-      "kind": "section",
-      "citation": "53-189",
-      "citations": [
-        "53-189"
-      ],
-      "heading": "53-189",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_943.htm#sec_53-189",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 53-183 to 53-189. Animals on highway, generally. Transportation of wild animals. Signal lights and exhausts or mufflers on motor boats. Reckless operation of motor boats. Sections 53-183 to 53-189 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 53-183 to 53-189. Animals on highway, generally. Transportation of wild animals. Signal lights and exhausts or mufflers on motor boats. Reckless operation of motor boats. Sections 53-183 to 53-189 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-53-192",
-      "kind": "section",
-      "citation": "53-192",
-      "citations": [
-        "53-192"
-      ],
-      "heading": "53-192",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_943.htm#sec_53-192",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 53-192 and 53-193. Speed of boats in Wethersfield Cove. Lights on boats on Highland Lake. Sections 53-192 and 53-193 are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 53-192 and 53-193. Speed of boats in Wethersfield Cove. Lights on boats on Highland Lake. Sections 53-192 and 53-193 are repealed."
-      }
-    },
-    {
-      "id": "section-53-193",
-      "kind": "section",
-      "citation": "53-193",
-      "citations": [
-        "53-193"
-      ],
-      "heading": "53-193",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_943.htm#sec_53-193",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 53-192 and 53-193. Speed of boats in Wethersfield Cove. Lights on boats on Highland Lake. Sections 53-192 and 53-193 are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 53-192 and 53-193. Speed of boats in Wethersfield Cove. Lights on boats on Highland Lake. Sections 53-192 and 53-193 are repealed."
-      }
-    },
-    {
-      "id": "section-53-195",
-      "kind": "section",
-      "citation": "53-195",
-      "citations": [
-        "53-195"
-      ],
-      "heading": "53-195",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_943.htm#sec_53-195",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 53-195 to 53-197. Abandonment or obstruction of engines or cars. Hindering street railway company in use of its tracks. Neglect to close gates and bars at railroad crossings; protection at ferry docks. Sections 53-195 to 53-197 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 53-195 to 53-197. Abandonment or obstruction of engines or cars. Hindering street railway company in use of its tracks. Neglect to close gates and bars at railroad crossings; protection at ferry docks. Sections 53-195 to 53-197 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-53-197",
-      "kind": "section",
-      "citation": "53-197",
-      "citations": [
-        "53-197"
-      ],
-      "heading": "53-197",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_943.htm#sec_53-197",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 53-195 to 53-197. Abandonment or obstruction of engines or cars. Hindering street railway company in use of its tracks. Neglect to close gates and bars at railroad crossings; protection at ferry docks. Sections 53-195 to 53-197 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 53-195 to 53-197. Abandonment or obstruction of engines or cars. Hindering street railway company in use of its tracks. Neglect to close gates and bars at railroad crossings; protection at ferry docks. Sections 53-195 to 53-197 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-53-207",
-      "kind": "section",
-      "citation": "53-207",
-      "citations": [
-        "53-207"
-      ],
-      "heading": "53-207",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_943.htm#sec_53-207",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 53-207 to 53-209. Carrying of knife or razor with intent to assault. Removal of danger signal. Abuse of public utility employees. Sections 53-207 to 53-209 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 53-207 to 53-209. Carrying of knife or razor with intent to assault. Removal of danger signal. Abuse of public utility employees. Sections 53-207 to 53-209 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-53-209",
-      "kind": "section",
-      "citation": "53-209",
-      "citations": [
-        "53-209"
-      ],
-      "heading": "53-209",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_943.htm#sec_53-209",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 53-207 to 53-209. Carrying of knife or razor with intent to assault. Removal of danger signal. Abuse of public utility employees. Sections 53-207 to 53-209 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 53-207 to 53-209. Carrying of knife or razor with intent to assault. Removal of danger signal. Abuse of public utility employees. Sections 53-207 to 53-209 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-53-212b",
-      "kind": "section",
-      "citation": "53-212b",
-      "citations": [
-        "53-212b"
-      ],
-      "heading": "53-212b",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_943.htm#sec_53-212b",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 53-212b to 53-214. Use of machinery in proximity to high voltage conductors. Spitting in public places. Pollution of drinking utensils. Sections 53-212b to 53-214 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 53-212b to 53-214. Use of machinery in proximity to high voltage conductors. Spitting in public places. Pollution of drinking utensils. Sections 53-212b to 53-214 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-53-214",
-      "kind": "section",
-      "citation": "53-214",
-      "citations": [
-        "53-214"
-      ],
-      "heading": "53-214",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_943.htm#sec_53-214",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 53-212b to 53-214. Use of machinery in proximity to high voltage conductors. Spitting in public places. Pollution of drinking utensils. Sections 53-212b to 53-214 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 53-212b to 53-214. Use of machinery in proximity to high voltage conductors. Spitting in public places. Pollution of drinking utensils. Sections 53-212b to 53-214 , inclusive, are repealed."
       }
     }
   ]

@@ -22,8 +22,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Any person who erects, establishes, maintains, uses, owns or leases any building or place used for the purpose of lewdness, assignation or prostitution shall be guilty of maintaining a nuisance, and the building, the place and the ground upon which such lewdness, assignation or prostitution is conducted, permitted or carried on, including the furniture, fixtures, musical instruments and movable property used in conducting or maintaining any such place, are also declared to be nuisances.",
-          "See Sec. 53a-82 et seq. re penalties for offenses involving prostitution."
+          "Any person who erects, establishes, maintains, uses, owns or leases any building or place used for the purpose of lewdness, assignation or prostitution shall be guilty of maintaining a nuisance, and the building, the place and the ground upon which such lewdness, assignation or prostitution is conducted, permitted or carried on, including the furniture, fixtures, musical instruments and movable property used in conducting or maintaining any such place, are also declared to be nuisances."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 4206.)"
@@ -31,8 +30,13 @@
         "history": [
           "History: Sec. 19-316 transferred to Sec. 19a-345 in 1983."
         ],
-        "annotations": [],
-        "plainText": "Any person who erects, establishes, maintains, uses, owns or leases any building or place used for the purpose of lewdness, assignation or prostitution shall be guilty of maintaining a nuisance, and the building, the place and the ground upon which such lewdness, assignation or prostitution is conducted, permitted or carried on, including the furniture, fixtures, musical instruments and movable property used in conducting or maintaining any such place, are also declared to be nuisances.\n\nSee Sec. 53a-82 et seq. re penalties for offenses involving prostitution."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 53a-82 et seq. re penalties for offenses involving prostitution."
+          }
+        ],
+        "plainText": "Any person who erects, establishes, maintains, uses, owns or leases any building or place used for the purpose of lewdness, assignation or prostitution shall be guilty of maintaining a nuisance, and the building, the place and the ground upon which such lewdness, assignation or prostitution is conducted, permitted or carried on, including the furniture, fixtures, musical instruments and movable property used in conducting or maintaining any such place, are also declared to be nuisances."
       }
     },
     {
@@ -95,8 +99,7 @@
       "status": "active",
       "content": {
         "body": [
-          "If the existence of the nuisance is admitted or established in an action under this chapter or in a criminal proceeding, an order of abatement shall be entered as a part of the judgment, which order shall direct the removal from the building or place of all fixtures, furniture, musical instruments and personal property used in conducting such nuisance, and shall direct the sale of so much thereof as belongs to any defendant notified or appearing, in the manner provided for the sale of chattels upon execution, and shall order the closing of the building or place and the discontinuance of its use for any purpose, for a period of one year, unless sooner released. Any owner of any unsold personal property so seized shall appear and claim the same within ten days after such order of abatement has been made, and prove innocence, to the satisfaction of the court, of any knowledge of such use. Each defendant in any such action shall be presumed to have had knowledge of the general reputation of such place. If innocence is established, any unsold personal property belonging to any person found innocent shall be delivered to him, otherwise it shall be sold as hereinbefore provided. If any person breaks and enters or uses any building or place so directed to be closed, he shall be punished for contempt as provided in section 19a-347 . For removing and selling any such personal property, the officer shall receive the same fees as for levying upon and selling like property on execution, and for closing any such premises and keeping the same closed a reasonable sum shall be allowed by the court.",
-          "See Sec. 52-261 re fees and expenses of officers and persons serving process."
+          "If the existence of the nuisance is admitted or established in an action under this chapter or in a criminal proceeding, an order of abatement shall be entered as a part of the judgment, which order shall direct the removal from the building or place of all fixtures, furniture, musical instruments and personal property used in conducting such nuisance, and shall direct the sale of so much thereof as belongs to any defendant notified or appearing, in the manner provided for the sale of chattels upon execution, and shall order the closing of the building or place and the discontinuance of its use for any purpose, for a period of one year, unless sooner released. Any owner of any unsold personal property so seized shall appear and claim the same within ten days after such order of abatement has been made, and prove innocence, to the satisfaction of the court, of any knowledge of such use. Each defendant in any such action shall be presumed to have had knowledge of the general reputation of such place. If innocence is established, any unsold personal property belonging to any person found innocent shall be delivered to him, otherwise it shall be sold as hereinbefore provided. If any person breaks and enters or uses any building or place so directed to be closed, he shall be punished for contempt as provided in section 19a-347 . For removing and selling any such personal property, the officer shall receive the same fees as for levying upon and selling like property on execution, and for closing any such premises and keeping the same closed a reasonable sum shall be allowed by the court."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 4209.)"
@@ -104,8 +107,13 @@
         "history": [
           "History: Sec. 19-319 transferred to Sec. 19a-348 in 1983."
         ],
-        "annotations": [],
-        "plainText": "If the existence of the nuisance is admitted or established in an action under this chapter or in a criminal proceeding, an order of abatement shall be entered as a part of the judgment, which order shall direct the removal from the building or place of all fixtures, furniture, musical instruments and personal property used in conducting such nuisance, and shall direct the sale of so much thereof as belongs to any defendant notified or appearing, in the manner provided for the sale of chattels upon execution, and shall order the closing of the building or place and the discontinuance of its use for any purpose, for a period of one year, unless sooner released. Any owner of any unsold personal property so seized shall appear and claim the same within ten days after such order of abatement has been made, and prove innocence, to the satisfaction of the court, of any knowledge of such use. Each defendant in any such action shall be presumed to have had knowledge of the general reputation of such place. If innocence is established, any unsold personal property belonging to any person found innocent shall be delivered to him, otherwise it shall be sold as hereinbefore provided. If any person breaks and enters or uses any building or place so directed to be closed, he shall be punished for contempt as provided in section 19a-347 . For removing and selling any such personal property, the officer shall receive the same fees as for levying upon and selling like property on execution, and for closing any such premises and keeping the same closed a reasonable sum shall be allowed by the court.\n\nSee Sec. 52-261 re fees and expenses of officers and persons serving process."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 52-261 re fees and expenses of officers and persons serving process."
+          }
+        ],
+        "plainText": "If the existence of the nuisance is admitted or established in an action under this chapter or in a criminal proceeding, an order of abatement shall be entered as a part of the judgment, which order shall direct the removal from the building or place of all fixtures, furniture, musical instruments and personal property used in conducting such nuisance, and shall direct the sale of so much thereof as belongs to any defendant notified or appearing, in the manner provided for the sale of chattels upon execution, and shall order the closing of the building or place and the discontinuance of its use for any purpose, for a period of one year, unless sooner released. Any owner of any unsold personal property so seized shall appear and claim the same within ten days after such order of abatement has been made, and prove innocence, to the satisfaction of the court, of any knowledge of such use. Each defendant in any such action shall be presumed to have had knowledge of the general reputation of such place. If innocence is established, any unsold personal property belonging to any person found innocent shall be delivered to him, otherwise it shall be sold as hereinbefore provided. If any person breaks and enters or uses any building or place so directed to be closed, he shall be punished for contempt as provided in section 19a-347 . For removing and selling any such personal property, the officer shall receive the same fees as for levying upon and selling like property on execution, and for closing any such premises and keeping the same closed a reasonable sum shall be allowed by the court."
       }
     },
     {

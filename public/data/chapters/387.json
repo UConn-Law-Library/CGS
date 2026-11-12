@@ -232,8 +232,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Any person who held a license to practice hairdressing and cosmetology in this state in October, 1940, or who has obtained a license since that time, and who has not renewed his license to practice hairdressing and cosmetology because of service in the armed forces, shall notify the Department of Public Health in writing of his intention to resume practice, shall set forth by affidavit such information as the department requires and shall be issued the same type of license he last held in this state and may resume practice. In such cases the renewal fee of five dollars shall be waived for the first license issued following discharge from the armed forces.",
-          "See Sec. 19a-88b re renewal of license of persons serving in U.S. armed forces."
+          "Any person who held a license to practice hairdressing and cosmetology in this state in October, 1940, or who has obtained a license since that time, and who has not renewed his license to practice hairdressing and cosmetology because of service in the armed forces, shall notify the Department of Public Health in writing of his intention to resume practice, shall set forth by affidavit such information as the department requires and shall be issued the same type of license he last held in this state and may resume practice. In such cases the renewal fee of five dollars shall be waived for the first license issued following discharge from the armed forces."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 4593; 1951, S. 2290d; P.A. 77-614, S. 323, 610; P.A. 86-403, S. 44, 132; P.A. 93-381, S. 9, 39; P.A. 95-257, S. 12, 21, 58.)"
@@ -241,8 +240,13 @@
         "history": [
           "History: P.A. 77-614 replaced department of health with department of health services, effective January 1, 1979; P.A. 86-403 made technical change; P.A. 93-381 replaced department of health services with department of public health and addiction services, effective July 1, 1993; P.A. 95-257 replaced Commissioner and Department of Public Health and Addiction Services with Commissioner and Department of Public Health, effective July 1, 1995."
         ],
-        "annotations": [],
-        "plainText": "Any person who held a license to practice hairdressing and cosmetology in this state in October, 1940, or who has obtained a license since that time, and who has not renewed his license to practice hairdressing and cosmetology because of service in the armed forces, shall notify the Department of Public Health in writing of his intention to resume practice, shall set forth by affidavit such information as the department requires and shall be issued the same type of license he last held in this state and may resume practice. In such cases the renewal fee of five dollars shall be waived for the first license issued following discharge from the armed forces.\n\nSee Sec. 19a-88b re renewal of license of persons serving in U.S. armed forces."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 19a-88b re renewal of license of persons serving in U.S. armed forces."
+          }
+        ],
+        "plainText": "Any person who held a license to practice hairdressing and cosmetology in this state in October, 1940, or who has obtained a license since that time, and who has not renewed his license to practice hairdressing and cosmetology because of service in the armed forces, shall notify the Department of Public Health in writing of his intention to resume practice, shall set forth by affidavit such information as the department requires and shall be issued the same type of license he last held in this state and may resume practice. In such cases the renewal fee of five dollars shall be waived for the first license issued following discharge from the armed forces."
       }
     },
     {
@@ -825,46 +829,6 @@
         "history": [],
         "annotations": [],
         "plainText": "Reserved for future use."
-      }
-    },
-    {
-      "id": "section-20-266a",
-      "kind": "section",
-      "citation": "20-266a",
-      "citations": [
-        "20-266a"
-      ],
-      "heading": "20-266a",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_387.htm#sec_20-266a",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 20-266a to 20-266f. Nail technicians, generally. Sections 20-266a to 20-266f , inclusive, are repealed, effective July 1, 2001."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 20-266a to 20-266f. Nail technicians, generally. Sections 20-266a to 20-266f , inclusive, are repealed, effective July 1, 2001."
-      }
-    },
-    {
-      "id": "section-20-266f",
-      "kind": "section",
-      "citation": "20-266f",
-      "citations": [
-        "20-266f"
-      ],
-      "heading": "20-266f",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_387.htm#sec_20-266f",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 20-266a to 20-266f. Nail technicians, generally. Sections 20-266a to 20-266f , inclusive, are repealed, effective July 1, 2001."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 20-266a to 20-266f. Nail technicians, generally. Sections 20-266a to 20-266f , inclusive, are repealed, effective July 1, 2001."
       }
     }
   ]

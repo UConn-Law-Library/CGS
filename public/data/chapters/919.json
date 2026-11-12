@@ -22,8 +22,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Courts having jurisdiction of actions for equitable relief may, upon the complaint of any person interested, order partition of any real property held in joint tenancy, tenancy in common, coparcenary or by tenants in tail. The court may appoint a committee to partition any such property. Any decrees partitioning entailed estates shall bind the parties and all persons who thereafter claim title to the property as heirs of their bodies.",
-          "See Sec. 45a-326 re partition or sale of undivided interest in decedent's estate."
+          "Courts having jurisdiction of actions for equitable relief may, upon the complaint of any person interested, order partition of any real property held in joint tenancy, tenancy in common, coparcenary or by tenants in tail. The court may appoint a committee to partition any such property. Any decrees partitioning entailed estates shall bind the parties and all persons who thereafter claim title to the property as heirs of their bodies."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 8231; P.A. 82-160, S. 185.)"
@@ -32,6 +31,10 @@
           "History: P.A. 82-160 rephrased the section."
         ],
         "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 45a-326 re partition or sale of undivided interest in decedent's estate."
+          },
           {
             "first": true,
             "text": "Partition or sale of lands held in common is a matter of right. 14 C. 360; 43 C. 560; 49 C. 517; 60 C. 379. Application for partition of lands of deceased person, when premature. 43 C. 560. Petitioner must be in possession. 24 C. 233; 78 C. 421. To lose right to partition, a cotenant must have been ousted of possession. 133 C. 428. When rule of division follows legal interest of parties. 40 C. 280. Jurisdiction to be determined by value of property sought to be aparted or sold. 50 C. 258. Fundamental rule in partition of land stated. 56 C. 545. Object of statute stated. 60 C. 379. Nature of rights of adjoining proprietors in a tree on the dividing line. 65 C. 379; 108 C. 98. Court may order sale under Sec. 52-500 if it believes a sale is better for parties than a partition, even though some of joint owners demand a partition. 98 C. 395. Effect of partition upon passway appurtenant to original tract. 100 C. 633. Partition will not be granted where to do so would involve violation or defeat of a trust. 110 C. 526. Division may be based on equitable interests; 134 C. 179; but no unconscionable enrichment of husband where wife built house on land owned in common. Id., 180. The two modes of relief within the power of the court are partition by division of real estate and partition by sale. 143 C. 218. Cited. 175 C. 463; 181 C. 533; 195 C. 368; 208 C. 318; 224 C. 219. In a partition action, one joint tenant or tenant in common cannot dispossess another except by partition in kind or partition by sale pursuant to section and Sec. 52-500, and trial court did not have authority to order defendant to execute a quitclaim deed to plaintiff in exchange for the payment of money; partition by physical division and trial court proceedings in partition action discussed. 255 C. 47."
@@ -49,7 +52,7 @@
             "text": "Cited. 4 Conn. Cir. Ct. 654."
           }
         ],
-        "plainText": "Courts having jurisdiction of actions for equitable relief may, upon the complaint of any person interested, order partition of any real property held in joint tenancy, tenancy in common, coparcenary or by tenants in tail. The court may appoint a committee to partition any such property. Any decrees partitioning entailed estates shall bind the parties and all persons who thereafter claim title to the property as heirs of their bodies.\n\nSee Sec. 45a-326 re partition or sale of undivided interest in decedent's estate."
+        "plainText": "Courts having jurisdiction of actions for equitable relief may, upon the complaint of any person interested, order partition of any real property held in joint tenancy, tenancy in common, coparcenary or by tenants in tail. The court may appoint a committee to partition any such property. Any decrees partitioning entailed estates shall bind the parties and all persons who thereafter claim title to the property as heirs of their bodies."
       }
     },
     {

@@ -59,8 +59,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Any female person between the ages of sixteen and twenty-one years who is convicted in the Superior Court for an offense for which she may be punished by imprisonment for a shorter period than life or any female child transferred to the regular docket of said court under section 46b-127 , may, if it appears to the trial court that such person is amenable to reformatory methods, be sentenced to a definite term of imprisonment in the York Correctional Institution or to the Commissioner of Correction for placement in any institution available to said commissioner; provided in no event shall any sentence under this section be for a term longer than the maximum term of imprisonment for the offense committed, nor shall such term be for more than five years. The judge at the time of imposing any sentence to imprisonment in said institution or to the custody of said commissioner for placement in any institution available to him, may order suspension of such sentence after any specified number of months and may place such person on probation for the unexpired portion of the sentence.",
-          "See Sec. 18-73 re confinement of male children and youths."
+          "Any female person between the ages of sixteen and twenty-one years who is convicted in the Superior Court for an offense for which she may be punished by imprisonment for a shorter period than life or any female child transferred to the regular docket of said court under section 46b-127 , may, if it appears to the trial court that such person is amenable to reformatory methods, be sentenced to a definite term of imprisonment in the York Correctional Institution or to the Commissioner of Correction for placement in any institution available to said commissioner; provided in no event shall any sentence under this section be for a term longer than the maximum term of imprisonment for the offense committed, nor shall such term be for more than five years. The judge at the time of imposing any sentence to imprisonment in said institution or to the custody of said commissioner for placement in any institution available to him, may order suspension of such sentence after any specified number of months and may place such person on probation for the unexpired portion of the sentence."
         ],
         "sourceNotes": [
           "(P.A. 75-633, S. 2; P.A. 76-194, S. 1; 76-436, S. 191, 681; P.A. 77-452, S. 10, 72; P.A. 79-631, S. 104, 111; P.A. 80-442, S. 3, 28; P.A. 95-225, S. 41; P.A. 15-14, S. 30.)"
@@ -71,10 +70,14 @@
         "annotations": [
           {
             "first": true,
+            "text": "See Sec. 18-73 re confinement of male children and youths."
+          },
+          {
+            "first": true,
             "text": "Cited. 195 C. 303."
           }
         ],
-        "plainText": "Any female person between the ages of sixteen and twenty-one years who is convicted in the Superior Court for an offense for which she may be punished by imprisonment for a shorter period than life or any female child transferred to the regular docket of said court under section 46b-127 , may, if it appears to the trial court that such person is amenable to reformatory methods, be sentenced to a definite term of imprisonment in the York Correctional Institution or to the Commissioner of Correction for placement in any institution available to said commissioner; provided in no event shall any sentence under this section be for a term longer than the maximum term of imprisonment for the offense committed, nor shall such term be for more than five years. The judge at the time of imposing any sentence to imprisonment in said institution or to the custody of said commissioner for placement in any institution available to him, may order suspension of such sentence after any specified number of months and may place such person on probation for the unexpired portion of the sentence.\n\nSee Sec. 18-73 re confinement of male children and youths."
+        "plainText": "Any female person between the ages of sixteen and twenty-one years who is convicted in the Superior Court for an offense for which she may be punished by imprisonment for a shorter period than life or any female child transferred to the regular docket of said court under section 46b-127 , may, if it appears to the trial court that such person is amenable to reformatory methods, be sentenced to a definite term of imprisonment in the York Correctional Institution or to the Commissioner of Correction for placement in any institution available to said commissioner; provided in no event shall any sentence under this section be for a term longer than the maximum term of imprisonment for the offense committed, nor shall such term be for more than five years. The judge at the time of imposing any sentence to imprisonment in said institution or to the custody of said commissioner for placement in any institution available to him, may order suspension of such sentence after any specified number of months and may place such person on probation for the unexpired portion of the sentence."
       }
     },
     {

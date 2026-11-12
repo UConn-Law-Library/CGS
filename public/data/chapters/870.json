@@ -46,8 +46,7 @@
         "body": [
           "(a) The Judicial Department of the state shall consist of the Supreme Court, the Appellate Court, the Superior Court, the Office of the Chief Court Administrator and their employees and divisions, the courts of probate, and, as provided in chapter 887, the Public Defender Services Commission. For the purposes of the general statutes, “Judicial Branch” means the Judicial Department.",
           "(b) The territorial jurisdiction of the Supreme Court, the Appellate Court, and the Superior Court shall be coextensive with the boundaries of the state.",
-          "(c) The territorial jurisdiction of each court of probate shall be the probate district established for such court by statute. Each town in this state shall be a probate district or a part of a probate district.",
-          "See Sec. 51-164s re Superior Court's status as sole trial court and transfer of Common Pleas and Juvenile Courts' jurisdictions to Superior Court."
+          "(c) The territorial jurisdiction of each court of probate shall be the probate district established for such court by statute. Each town in this state shall be a probate district or a part of a probate district."
         ],
         "sourceNotes": [
           "(P.A. 76-436, S. 5, 681; P.A. 82-248, S. 1; June Sp. Sess. P.A. 83-29, S. 1, 82; P.A. 90-230, S. 65, 101; P.A. 03-202, S. 10.)"
@@ -58,10 +57,14 @@
         "annotations": [
           {
             "first": true,
+            "text": "See Sec. 51-164s re Superior Court's status as sole trial court and transfer of Common Pleas and Juvenile Courts' jurisdictions to Superior Court."
+          },
+          {
+            "first": true,
             "text": "Cited. 205 C. 542; 224 C. 372; 230 C. 183."
           }
         ],
-        "plainText": "(a) The Judicial Department of the state shall consist of the Supreme Court, the Appellate Court, the Superior Court, the Office of the Chief Court Administrator and their employees and divisions, the courts of probate, and, as provided in chapter 887, the Public Defender Services Commission. For the purposes of the general statutes, “Judicial Branch” means the Judicial Department.\n\n(b) The territorial jurisdiction of the Supreme Court, the Appellate Court, and the Superior Court shall be coextensive with the boundaries of the state.\n\n(c) The territorial jurisdiction of each court of probate shall be the probate district established for such court by statute. Each town in this state shall be a probate district or a part of a probate district.\n\nSee Sec. 51-164s re Superior Court's status as sole trial court and transfer of Common Pleas and Juvenile Courts' jurisdictions to Superior Court."
+        "plainText": "(a) The Judicial Department of the state shall consist of the Supreme Court, the Appellate Court, the Superior Court, the Office of the Chief Court Administrator and their employees and divisions, the courts of probate, and, as provided in chapter 887, the Public Defender Services Commission. For the purposes of the general statutes, “Judicial Branch” means the Judicial Department.\n\n(b) The territorial jurisdiction of the Supreme Court, the Appellate Court, and the Superior Court shall be coextensive with the boundaries of the state.\n\n(c) The territorial jurisdiction of each court of probate shall be the probate district established for such court by statute. Each town in this state shall be a probate district or a part of a probate district."
       }
     },
     {
@@ -78,8 +81,7 @@
         "body": [
           "(a) The Chief Justice of the Supreme Court shall be the head of the Judicial Department and shall be responsible for its administration.",
           "(b) The Chief Justice shall appoint a Chief Court Administrator who shall serve at the pleasure of the Chief Justice.",
-          "(c) The Chief Justice may take any action necessary in the event of a major disaster, emergency, civil preparedness emergency or disaster emergency, as those terms are defined in section 28-1 , or a public health emergency, as defined in section 19a-131 , to ensure the continued efficient operation of the Supreme, Appellate and Superior Courts, the prompt disposition of cases and the proper administration of judicial business. Such necessary action may include: (1) Establishing alternative locations to conduct judicial business in the event that one or more court locations cannot be used, (2) suspending any judicial business that is deemed not essential by the Chief Justice, and (3) taking any other appropriate action necessary to ensure that essential judicial business is effectively handled by the courts.",
-          "See Sec. 51-5a re duties of Chief Court Administrator."
+          "(c) The Chief Justice may take any action necessary in the event of a major disaster, emergency, civil preparedness emergency or disaster emergency, as those terms are defined in section 28-1 , or a public health emergency, as defined in section 19a-131 , to ensure the continued efficient operation of the Supreme, Appellate and Superior Courts, the prompt disposition of cases and the proper administration of judicial business. Such necessary action may include: (1) Establishing alternative locations to conduct judicial business in the event that one or more court locations cannot be used, (2) suspending any judicial business that is deemed not essential by the Chief Justice, and (3) taking any other appropriate action necessary to ensure that essential judicial business is effectively handled by the courts."
         ],
         "sourceNotes": [
           "(P.A. 76-436, S. 10, 681; P.A. 82-248, S. 2; P.A. 10-43, S. 8.)"
@@ -90,10 +92,14 @@
         "annotations": [
           {
             "first": true,
+            "text": "See Sec. 51-5a re duties of Chief Court Administrator."
+          },
+          {
+            "first": true,
             "text": "Cited. 17 CA 71."
           }
         ],
-        "plainText": "(a) The Chief Justice of the Supreme Court shall be the head of the Judicial Department and shall be responsible for its administration.\n\n(b) The Chief Justice shall appoint a Chief Court Administrator who shall serve at the pleasure of the Chief Justice.\n\n(c) The Chief Justice may take any action necessary in the event of a major disaster, emergency, civil preparedness emergency or disaster emergency, as those terms are defined in section 28-1 , or a public health emergency, as defined in section 19a-131 , to ensure the continued efficient operation of the Supreme, Appellate and Superior Courts, the prompt disposition of cases and the proper administration of judicial business. Such necessary action may include: (1) Establishing alternative locations to conduct judicial business in the event that one or more court locations cannot be used, (2) suspending any judicial business that is deemed not essential by the Chief Justice, and (3) taking any other appropriate action necessary to ensure that essential judicial business is effectively handled by the courts.\n\nSee Sec. 51-5a re duties of Chief Court Administrator."
+        "plainText": "(a) The Chief Justice of the Supreme Court shall be the head of the Judicial Department and shall be responsible for its administration.\n\n(b) The Chief Justice shall appoint a Chief Court Administrator who shall serve at the pleasure of the Chief Justice.\n\n(c) The Chief Justice may take any action necessary in the event of a major disaster, emergency, civil preparedness emergency or disaster emergency, as those terms are defined in section 28-1 , or a public health emergency, as defined in section 19a-131 , to ensure the continued efficient operation of the Supreme, Appellate and Superior Courts, the prompt disposition of cases and the proper administration of judicial business. Such necessary action may include: (1) Establishing alternative locations to conduct judicial business in the event that one or more court locations cannot be used, (2) suspending any judicial business that is deemed not essential by the Chief Justice, and (3) taking any other appropriate action necessary to ensure that essential judicial business is effectively handled by the courts."
       }
     },
     {
@@ -605,8 +611,7 @@
       "content": {
         "body": [
           "(a) The Chief Court Administrator, subject to the provisions of section 51-12 , shall appoint and fix the compensation of a Jury Administrator and such other assistants as are necessary to enable the Jury Administrator to perform the duties of his office.",
-          "(b) The Chief Court Administrator may select from among inspectors appointed by the Chief State's Attorney an individual who shall serve as the director of security and safety of the Judicial Department while retaining his status as an inspector in the Division of Criminal Justice. Such inspector shall serve at the pleasure of the Chief Court Administrator in the capacity of director of security and safety of the Judicial Department, and shall be paid from funds appropriated to the Judicial Department.",
-          "See Sec. 51-219a re duties of Jury Administrator."
+          "(b) The Chief Court Administrator may select from among inspectors appointed by the Chief State's Attorney an individual who shall serve as the director of security and safety of the Judicial Department while retaining his status as an inspector in the Division of Criminal Justice. Such inspector shall serve at the pleasure of the Chief Court Administrator in the capacity of director of security and safety of the Judicial Department, and shall be paid from funds appropriated to the Judicial Department."
         ],
         "sourceNotes": [
           "(1957, P.A. 651, S. 10; P.A. 73-589, S. 1, 4; P.A. 78-280, S. 124, 127; 78-331, S. 53, 58; P.A. 82-248, S. 120; P.A. 85-414, S. 4, 5; P.A. 86-403, S. 83, 132.)"
@@ -614,8 +619,13 @@
         "history": [
           "History: P.A. 73-589 authorized appointment of jury administrator; P.A. 78-280 transferred appointment power from executive secretary to chief court administrator and deleted reference to executive secretary in provision prohibiting practice of law; P.A. 78-331 made technical grammatical change to correct inadvertent error in P.A. 78-280; P.A. 82-248 rephrased the section but made no substantive changes; P.A. 85-414 deleted prohibition of practice of law by jury administrator and assistants and added Subsec. (b) re selection of director of security and safety of judicial department from among inspectors in the division of criminal justice, effective December 2, 1985, upon certification of one chief court administrator that the courthouse at New London is operational; P.A. 86-403 changed effective date of P.A. 85-414 with regard to this section to June 11, 1986."
         ],
-        "annotations": [],
-        "plainText": "(a) The Chief Court Administrator, subject to the provisions of section 51-12 , shall appoint and fix the compensation of a Jury Administrator and such other assistants as are necessary to enable the Jury Administrator to perform the duties of his office.\n\n(b) The Chief Court Administrator may select from among inspectors appointed by the Chief State's Attorney an individual who shall serve as the director of security and safety of the Judicial Department while retaining his status as an inspector in the Division of Criminal Justice. Such inspector shall serve at the pleasure of the Chief Court Administrator in the capacity of director of security and safety of the Judicial Department, and shall be paid from funds appropriated to the Judicial Department.\n\nSee Sec. 51-219a re duties of Jury Administrator."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 51-219a re duties of Jury Administrator."
+          }
+        ],
+        "plainText": "(a) The Chief Court Administrator, subject to the provisions of section 51-12 , shall appoint and fix the compensation of a Jury Administrator and such other assistants as are necessary to enable the Jury Administrator to perform the duties of his office.\n\n(b) The Chief Court Administrator may select from among inspectors appointed by the Chief State's Attorney an individual who shall serve as the director of security and safety of the Judicial Department while retaining his status as an inspector in the Division of Criminal Justice. Such inspector shall serve at the pleasure of the Chief Court Administrator in the capacity of director of security and safety of the Judicial Department, and shall be paid from funds appropriated to the Judicial Department."
       }
     },
     {
@@ -966,9 +976,7 @@
           "(a) In accordance with the provisions of section 51-14 , the judges of the Superior Court shall make such orders and rules as they deem necessary or advisable concerning the commencement of process and procedure in flowage petitions, parentage proceedings, replevin, summary process, habeas corpus, mandamus, prohibition, ne exeat, quo warranto, forcible entry and detainer, peaceable entry and forcible detainer, for paying rewards, and for the hearing and determination of small claims, including suitable forms of procedure in such cases, exclusive of fees.",
           "(b) The judges of the Superior Court shall adopt orders and rules for the hearing and determination of small claims that shall include: (1) Provisions for the institution of small claims actions by attorneys-at-law on suitable forms to be served by a proper officer or indifferent person upon the defendant in the same manner as complaints are served in civil actions; (2) notice by mail; (3) provisions for the early hearing of actions and rules for hearings in accordance with sections 51-193t and 52-549a , and the elimination of any and all fees or costs, except a fee for small claims procedure as prescribed in section 52-259 ; (4) modification of any or all existing rules of pleading, practice and evidence; and (5) a stay of the entry of judgment or of the issuance of execution and an alternative procedure according to the usual rules of practice. Such orders and rules shall permit the institution of a small claims action against a nonresident defendant who owns real or personal property in this state and against an out-of-state corporation.",
           "(c) Upon the taking effect of such orders and rules, all provisions of statute, both public and private, and the provisions of any orders or rules adopted by the judges of the Superior Court prior to July 1, 1957, inconsistent with or superseded by them, shall be deemed to be repealed, to the extent necessary to render the orders and rules effective.",
-          "(d) The procedure for the hearing and determination of small claims as the same may be prescribed, from time to time, by the judges of the Superior Court shall be used in all small claims sessions of the court. The small claims procedure shall only be applicable to (1) all actions claiming money damages not in excess of five thousand dollars, except such procedure shall not be applicable to actions of libel and slander, and (2) actions claiming loss or damages not in excess of fifteen thousand dollars sustained by reason of (A) performance of, or offer to perform, home improvement, as defined in section 20-419 , by a contractor holding a certificate under chapter 400, or (B) a contract for new home construction with a new home construction contractor holding a certificate under chapter 399a. If an action is brought in the small claims session by a tenant pursuant to subsection (g) of section 47a-21 to reclaim any part of a security deposit which may be due, the judicial authority hearing the action may award to the tenant the damages authorized by subsection (d) of said section and, if authorized by the rental agreement or any provision of the general statutes, costs, notwithstanding that the amount of such damages and costs, in the aggregate, exceeds the jurisdictional monetary limit established by subdivision (1) of this subsection. If a motion is filed to transfer a small claims matter to the regular docket in the court, the moving party shall pay the fee prescribed by section 52-259 . The Attorney General or an assistant attorney general, or the head of any state agency or his or her authorized representative, while acting in his or her official capacity shall not be required to pay any small claims court fee. There shall be no charge for copies of service on defendants in small claims matters.",
-          "See chapter 922a re hearing of small claims matters.",
-          "See Sec. 52-259 re court fees for entry and transfer of small claims cases."
+          "(d) The procedure for the hearing and determination of small claims as the same may be prescribed, from time to time, by the judges of the Superior Court shall be used in all small claims sessions of the court. The small claims procedure shall only be applicable to (1) all actions claiming money damages not in excess of five thousand dollars, except such procedure shall not be applicable to actions of libel and slander, and (2) actions claiming loss or damages not in excess of fifteen thousand dollars sustained by reason of (A) performance of, or offer to perform, home improvement, as defined in section 20-419 , by a contractor holding a certificate under chapter 400, or (B) a contract for new home construction with a new home construction contractor holding a certificate under chapter 399a. If an action is brought in the small claims session by a tenant pursuant to subsection (g) of section 47a-21 to reclaim any part of a security deposit which may be due, the judicial authority hearing the action may award to the tenant the damages authorized by subsection (d) of said section and, if authorized by the rental agreement or any provision of the general statutes, costs, notwithstanding that the amount of such damages and costs, in the aggregate, exceeds the jurisdictional monetary limit established by subdivision (1) of this subsection. If a motion is filed to transfer a small claims matter to the regular docket in the court, the moving party shall pay the fee prescribed by section 52-259 . The Attorney General or an assistant attorney general, or the head of any state agency or his or her authorized representative, while acting in his or her official capacity shall not be required to pay any small claims court fee. There shall be no charge for copies of service on defendants in small claims matters."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 7656; 1955, S. 3117d; 1957, P.A. 651, S. 33; 1959, P.A. 28, S. 74; 1963, P.A. 242; 1969, P.A. 777, S. 1; 1971, P.A. 870, S. 4; 1972, P.A. 281, S. 25; P.A. 74-183, S. 16, 291; P.A. 75-548; P.A. 76-298, S. 1, 6; 76-368, S. 7, 9; 76-436, S. 49, 681; P.A. 77-614, S. 133, 610; P.A. 81-129, S. 1; 81-472, S. 109, 159; P.A. 82-248, S. 9; 82-472, S. 133, 183; P.A. 83-295, S. 4; 83-577, S. 2; P.A. 85-256; 85-464, S. 5; P.A. 86-199; P.A. 89-53; May Sp. Sess. P.A. 92-6, S. 71, 117; P.A. 93-297, S. 4, 29; P.A. 95-36; P.A. 00-94; P.A. 01-195, S. 50, 181; P.A. 02-132, S. 73; P.A. 05-42, S. 1; P.A. 13-194, S. 7; P.A. 21-15, S. 142; 21-197, S. 13.)"
@@ -977,6 +985,14 @@
           "History: 1959 act amended second sentence by deleting trial by jury provision and amended fourth sentence by substituting small claims sessions of circuit court for municipal courts and justice courts having small claims divisions; 1963 act amended second sentence by requiring provisions authorizing institution of actions on forms served at least 10 days prior to session, return to be made at least 6 days prior to session; 1969 act imposed $3 fee for small claims procedure and exempted Attorney General or assistant attorneys general from paying fee when acting in his or their official capacity; 1971 act changed limit on money damage claims included in small claims procedure from $250 to $750, effective September 1, 1971; 1972 act raised fee for small claims procedure to $5 and added provisions re fee for transferring small claims matter to regular docket and re absence of charge for copies of service on defendants in small claims matters, effective September 1, 1972; P.A. 74-183 replaced circuit court with court of common pleas and specified that fee for small claims procedure may not be eliminated, effective December 31, 1974; P.A. 75-548 specified that director of central collections division of department of finance and control and his authorized representative are exempt from payment of fee; P.A. 76-298 included rules for hearings in accordance with Sec. 52-549a; P.A. 76-368 raised fee for small claims procedure to $6; P.A. 76-436 transferred powers formerly held by supreme court to superior court and jurisdiction of small claims matters from court of common pleas to superior court, effective July 1, 1978; P.A. 77-614 replaced director of central collections division of department of finance and control with commissioner of administrative services in provision re exemptions from payment of small claims fee; P.A. 81-129 increased the fee for small claims procedure from $8 to $10 and increased the jurisdictional limit for small claims matters from $750 to $1,000; P.A. 81-472 made the technical correction of increasing the fee for small claims procedure from $6 to $8 to conform to the increase in such fee made in Sec. 52-259 by P.A. 80-387; P.A. 82-248 changed fee for small claims procedure from $8 to $10, and changed reference to “civil cause” to “civil action”; P.A. 82-472 reiterated fee increase enacted by P.A. 82-248; P.A. 83-295 replaced the provision that the fee for transferring a small claims matter to the regular docket is the “same fee as is paid for entering a civil action” with “the fee prescribed by section 52-259”; P.A. 83-577 inserted Subsec. indicators, amended Subsec. (b) to replace the fee for small claims procedure of $10 with the fee “as prescribed in section 52-259” and reiterated amendment to Subsec. (d) made by P.A. 83-295; P.A. 85-256 amended Subsec. (b) to require the orders and rules to permit a small claims action against a nonresident defendant who owns real or personal property in this state and against an out-of-state corporation and amended Subsec. (d) to increase the jurisdictional limit for small claims matters from $1,000 to $1,500; P.A. 85-464 amended Subsec. (b) by adding reference to hearings in accordance with Sec. 51-193t; P.A. 86-199 amended Subsec. (d) by replacing the “commissioner of administrative services” with the “head of any state agency” in provision re exemption from payment of court fee; P.A. 89-53 amended Subsec. (d) to increase the jurisdictional limit for small claims matters from $1,500 to $2,000; May Sp. Sess. P.A. 92-6 amended Subsec. (d) to require payment of the fee prescribed in Sec. 52-259 if a motion is filed, instead of granted, to transfer a small claims matter to the regular docket; P.A. 93-297 amended Subsec. (a) to authorize the making of orders and rules for cases filed on and after January 1, 1994, which are expedited process cases and added Subsec. (e) to specify mandatory provisions of such orders and rules and require all expedited process cases to be heard by a judge of the superior court, effective January 1, 1994; P.A. 95-36 amended Subsec. (d) to increase jurisdictional limit for small claims matters from $2,000 to $2,500; P.A. 00-94 amended Subsec. (d) to increase jurisdictional monetary limit for small claims matters to $3,500 and to add exception to such limit for action brought by tenant to reclaim any part of security deposit who may be awarded damages and costs in excess of such limit; P.A. 01-195 made technical changes in Subsec. (d) for purposes of gender neutrality, effective July 11, 2001; P.A. 02-132 amended Subsec. (b) by deleting provisions re time periods for service and return, commencement of actions without writ or pleading and commencement of actions without payment of fees with respect to small claims actions and by making technical changes; P.A. 05-42 amended Subsec. (d) to increase jurisdictional monetary limit for small claims matters from $3,500 to $5,000; P.A. 13-194 amended Subsec. (a) and deleted former Subsec. (e) to eliminate provisions re expedited process cases pursuant to Sec. 52-195b(b)(2); P.A. 21-15 amended Subsec. (a) by replacing “paternity” with “parentage”, effective January 1, 2022; P.A. 21-197 amended Subsec. (d) by designating existing provision as Subdiv. (1) and adding new Subdiv. (2) re actions claiming loss or damage not in excess of $15,000 re performance of home improvement or new home construction contracts and making technical changes, effective July 1, 2022."
         ],
         "annotations": [
+          {
+            "first": true,
+            "text": "See chapter 922a re hearing of small claims matters."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 52-259 re court fees for entry and transfer of small claims cases."
+          },
           {
             "first": true,
             "text": "Cited. 115 C. 101; 194 C. 43."
@@ -994,7 +1010,7 @@
             "text": "History of small claims procedures discussed. 3 Conn. Cir. Ct. 5, 6; Id., 698, 700."
           }
         ],
-        "plainText": "(a) In accordance with the provisions of section 51-14 , the judges of the Superior Court shall make such orders and rules as they deem necessary or advisable concerning the commencement of process and procedure in flowage petitions, parentage proceedings, replevin, summary process, habeas corpus, mandamus, prohibition, ne exeat, quo warranto, forcible entry and detainer, peaceable entry and forcible detainer, for paying rewards, and for the hearing and determination of small claims, including suitable forms of procedure in such cases, exclusive of fees.\n\n(b) The judges of the Superior Court shall adopt orders and rules for the hearing and determination of small claims that shall include: (1) Provisions for the institution of small claims actions by attorneys-at-law on suitable forms to be served by a proper officer or indifferent person upon the defendant in the same manner as complaints are served in civil actions; (2) notice by mail; (3) provisions for the early hearing of actions and rules for hearings in accordance with sections 51-193t and 52-549a , and the elimination of any and all fees or costs, except a fee for small claims procedure as prescribed in section 52-259 ; (4) modification of any or all existing rules of pleading, practice and evidence; and (5) a stay of the entry of judgment or of the issuance of execution and an alternative procedure according to the usual rules of practice. Such orders and rules shall permit the institution of a small claims action against a nonresident defendant who owns real or personal property in this state and against an out-of-state corporation.\n\n(c) Upon the taking effect of such orders and rules, all provisions of statute, both public and private, and the provisions of any orders or rules adopted by the judges of the Superior Court prior to July 1, 1957, inconsistent with or superseded by them, shall be deemed to be repealed, to the extent necessary to render the orders and rules effective.\n\n(d) The procedure for the hearing and determination of small claims as the same may be prescribed, from time to time, by the judges of the Superior Court shall be used in all small claims sessions of the court. The small claims procedure shall only be applicable to (1) all actions claiming money damages not in excess of five thousand dollars, except such procedure shall not be applicable to actions of libel and slander, and (2) actions claiming loss or damages not in excess of fifteen thousand dollars sustained by reason of (A) performance of, or offer to perform, home improvement, as defined in section 20-419 , by a contractor holding a certificate under chapter 400, or (B) a contract for new home construction with a new home construction contractor holding a certificate under chapter 399a. If an action is brought in the small claims session by a tenant pursuant to subsection (g) of section 47a-21 to reclaim any part of a security deposit which may be due, the judicial authority hearing the action may award to the tenant the damages authorized by subsection (d) of said section and, if authorized by the rental agreement or any provision of the general statutes, costs, notwithstanding that the amount of such damages and costs, in the aggregate, exceeds the jurisdictional monetary limit established by subdivision (1) of this subsection. If a motion is filed to transfer a small claims matter to the regular docket in the court, the moving party shall pay the fee prescribed by section 52-259 . The Attorney General or an assistant attorney general, or the head of any state agency or his or her authorized representative, while acting in his or her official capacity shall not be required to pay any small claims court fee. There shall be no charge for copies of service on defendants in small claims matters.\n\nSee chapter 922a re hearing of small claims matters.\n\nSee Sec. 52-259 re court fees for entry and transfer of small claims cases."
+        "plainText": "(a) In accordance with the provisions of section 51-14 , the judges of the Superior Court shall make such orders and rules as they deem necessary or advisable concerning the commencement of process and procedure in flowage petitions, parentage proceedings, replevin, summary process, habeas corpus, mandamus, prohibition, ne exeat, quo warranto, forcible entry and detainer, peaceable entry and forcible detainer, for paying rewards, and for the hearing and determination of small claims, including suitable forms of procedure in such cases, exclusive of fees.\n\n(b) The judges of the Superior Court shall adopt orders and rules for the hearing and determination of small claims that shall include: (1) Provisions for the institution of small claims actions by attorneys-at-law on suitable forms to be served by a proper officer or indifferent person upon the defendant in the same manner as complaints are served in civil actions; (2) notice by mail; (3) provisions for the early hearing of actions and rules for hearings in accordance with sections 51-193t and 52-549a , and the elimination of any and all fees or costs, except a fee for small claims procedure as prescribed in section 52-259 ; (4) modification of any or all existing rules of pleading, practice and evidence; and (5) a stay of the entry of judgment or of the issuance of execution and an alternative procedure according to the usual rules of practice. Such orders and rules shall permit the institution of a small claims action against a nonresident defendant who owns real or personal property in this state and against an out-of-state corporation.\n\n(c) Upon the taking effect of such orders and rules, all provisions of statute, both public and private, and the provisions of any orders or rules adopted by the judges of the Superior Court prior to July 1, 1957, inconsistent with or superseded by them, shall be deemed to be repealed, to the extent necessary to render the orders and rules effective.\n\n(d) The procedure for the hearing and determination of small claims as the same may be prescribed, from time to time, by the judges of the Superior Court shall be used in all small claims sessions of the court. The small claims procedure shall only be applicable to (1) all actions claiming money damages not in excess of five thousand dollars, except such procedure shall not be applicable to actions of libel and slander, and (2) actions claiming loss or damages not in excess of fifteen thousand dollars sustained by reason of (A) performance of, or offer to perform, home improvement, as defined in section 20-419 , by a contractor holding a certificate under chapter 400, or (B) a contract for new home construction with a new home construction contractor holding a certificate under chapter 399a. If an action is brought in the small claims session by a tenant pursuant to subsection (g) of section 47a-21 to reclaim any part of a security deposit which may be due, the judicial authority hearing the action may award to the tenant the damages authorized by subsection (d) of said section and, if authorized by the rental agreement or any provision of the general statutes, costs, notwithstanding that the amount of such damages and costs, in the aggregate, exceeds the jurisdictional monetary limit established by subdivision (1) of this subsection. If a motion is filed to transfer a small claims matter to the regular docket in the court, the moving party shall pay the fee prescribed by section 52-259 . The Attorney General or an assistant attorney general, or the head of any state agency or his or her authorized representative, while acting in his or her official capacity shall not be required to pay any small claims court fee. There shall be no charge for copies of service on defendants in small claims matters."
       }
     },
     {
@@ -1149,11 +1165,15 @@
       }
     },
     {
-      "id": "group-51-21a-to-51-26",
+      "id": "group-51-21a-to-51-22-to-51-23-to-51-24-to-51-25-to-51-26",
       "kind": "group",
       "citation": null,
       "citations": [
         "51-21a",
+        "51-22",
+        "51-23",
+        "51-24",
+        "51-25",
         "51-26"
       ],
       "heading": "Secs. 51-21a to 51-26. Connecticut Circuit Court Reports. Publication of state agency regulations and court rules. Publication of rules of the courts: Other documents. Unused volumes of reports. Unclaimed money in possession of officer or employee of Judicial Department; application for payment; escheat. Judicial Council. Reports of prosecuting officers to Judicial Council.",
@@ -1169,126 +1189,6 @@
         "history": [],
         "annotations": [],
         "plainText": "Sections 51-21a to 51-26 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-51-4",
-      "kind": "section",
-      "citation": "51-4",
-      "citations": [
-        "51-4"
-      ],
-      "heading": "51-4",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_870.htm#sec_51-4",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 51-4 and 51-5. Chief Court Administrator to appoint Chief Judges of Superior, Common Pleas and Juvenile Courts; vacancy. Powers and duties of Chief Judges and Probate Court Administrator. Sections 51-4 and 51-5 are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 51-4 and 51-5. Chief Court Administrator to appoint Chief Judges of Superior, Common Pleas and Juvenile Courts; vacancy. Powers and duties of Chief Judges and Probate Court Administrator. Sections 51-4 and 51-5 are repealed."
-      }
-    },
-    {
-      "id": "section-51-5",
-      "kind": "section",
-      "citation": "51-5",
-      "citations": [
-        "51-5"
-      ],
-      "heading": "51-5",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_870.htm#sec_51-5",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 51-4 and 51-5. Chief Court Administrator to appoint Chief Judges of Superior, Common Pleas and Juvenile Courts; vacancy. Powers and duties of Chief Judges and Probate Court Administrator. Sections 51-4 and 51-5 are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 51-4 and 51-5. Chief Court Administrator to appoint Chief Judges of Superior, Common Pleas and Juvenile Courts; vacancy. Powers and duties of Chief Judges and Probate Court Administrator. Sections 51-4 and 51-5 are repealed."
-      }
-    },
-    {
-      "id": "section-51-11a",
-      "kind": "section",
-      "citation": "51-11a",
-      "citations": [
-        "51-11a"
-      ],
-      "heading": "51-11a",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_870.htm#sec_51-11a",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 51-11a and 51-11b. Registrar of wills. Disposition of wills in possession of registrar. Sections 51-11a and 51-11b are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 51-11a and 51-11b. Registrar of wills. Disposition of wills in possession of registrar. Sections 51-11a and 51-11b are repealed."
-      }
-    },
-    {
-      "id": "section-51-11b",
-      "kind": "section",
-      "citation": "51-11b",
-      "citations": [
-        "51-11b"
-      ],
-      "heading": "51-11b",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_870.htm#sec_51-11b",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 51-11a and 51-11b. Registrar of wills. Disposition of wills in possession of registrar. Sections 51-11a and 51-11b are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 51-11a and 51-11b. Registrar of wills. Disposition of wills in possession of registrar. Sections 51-11a and 51-11b are repealed."
-      }
-    },
-    {
-      "id": "section-51-21a",
-      "kind": "section",
-      "citation": "51-21a",
-      "citations": [
-        "51-21a"
-      ],
-      "heading": "51-21a",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_870.htm#sec_51-21a",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 51-21a to 51-26. Connecticut Circuit Court Reports. Publication of state agency regulations and court rules. Publication of rules of the courts: Other documents. Unused volumes of reports. Unclaimed money in possession of officer or employee of Judicial Department; application for payment; escheat. Judicial Council. Reports of prosecuting officers to Judicial Council. Sections 51-21a to 51-26 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 51-21a to 51-26. Connecticut Circuit Court Reports. Publication of state agency regulations and court rules. Publication of rules of the courts: Other documents. Unused volumes of reports. Unclaimed money in possession of officer or employee of Judicial Department; application for payment; escheat. Judicial Council. Reports of prosecuting officers to Judicial Council. Sections 51-21a to 51-26 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-51-26",
-      "kind": "section",
-      "citation": "51-26",
-      "citations": [
-        "51-26"
-      ],
-      "heading": "51-26",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_870.htm#sec_51-26",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 51-21a to 51-26. Connecticut Circuit Court Reports. Publication of state agency regulations and court rules. Publication of rules of the courts: Other documents. Unused volumes of reports. Unclaimed money in possession of officer or employee of Judicial Department; application for payment; escheat. Judicial Council. Reports of prosecuting officers to Judicial Council. Sections 51-21a to 51-26 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 51-21a to 51-26. Connecticut Circuit Court Reports. Publication of state agency regulations and court rules. Publication of rules of the courts: Other documents. Unused volumes of reports. Unclaimed money in possession of officer or employee of Judicial Department; application for payment; escheat. Judicial Council. Reports of prosecuting officers to Judicial Council. Sections 51-21a to 51-26 , inclusive, are repealed."
       }
     }
   ]

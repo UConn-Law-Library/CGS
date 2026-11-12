@@ -24,8 +24,7 @@
         "body": [
           "(a) For purposes of this section, “quarterly period” means a period of three calendar months commencing on the first day of January, April, July or October and ending on the last day of March, June, September or December, respectively.",
           "(b) Each person operating a community antenna television system under chapter 289 or a certified competitive video service pursuant to sections 16-331e to 16-331o , inclusive, and each person operating a business that provides one-way transmission to subscribers of video programming by satellite, shall pay a quarterly tax upon the gross earnings from (1) the lines, facilities, apparatus and auxiliary equipment in this state used for operating a community antenna television system, or (2) the transmission to subscribers in this state of video programming by satellite or by a certified competitive video service provider, as the case may be. No deduction shall be allowed from such gross earnings for operations related to commissions, rebates or other payments, except such refunds as arise from errors or overcharges. On or before the last day of the month next succeeding each quarterly period, each such person shall render to the commissioner a return on forms prescribed or furnished by the commissioner, signed by the person performing the duties of treasurer or an authorized agent or officer of the system or service operated by such person, which return shall include information regarding the name and location within this state of such system or service and the total amount of gross earnings derived from such operations and such other facts as the commissioner may require for the purpose of making any computation required by this chapter.",
-          "(c) For purposes of this chapter, a holder of a certificate of cable franchise authority under section 16-331p , and a community antenna television company issued a certificate of video franchise authority under section 16-331e for any service area in which it was not certified to provide community antenna television service pursuant to section 16-331 on or before October 1, 2007, shall be treated as a person operating a community antenna television system under chapter 289.",
-          "See Sec. 12-268d re returns of transportation and utility companies."
+          "(c) For purposes of this chapter, a holder of a certificate of cable franchise authority under section 16-331p , and a community antenna television company issued a certificate of video franchise authority under section 16-331e for any service area in which it was not certified to provide community antenna television service pursuant to section 16-331 on or before October 1, 2007, shall be treated as a person operating a community antenna television system under chapter 289."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 1942; 1961, P.A. 604, S. 10; 1963, P.A. 512; February, 1965, P.A. 169, S. 1; P.A. 77-614, S. 139, 610; P.A. 85-304, S. 1, 4; P.A. 86-410, S. 20, 28; P.A. 89-251, S. 4, 203; P.A. 91-82, S. 1, 5; P.A. 03-2, S. 54; June 30 Sp. Sess. P.A. 03-1, S. 92; P.A. 06-159, S. 12; P.A. 07-253, S. 26; June Sp. Sess. P.A. 07-5, S. 7.)"
@@ -36,6 +35,10 @@
         "annotations": [
           {
             "first": true,
+            "text": "See Sec. 12-268d re returns of transportation and utility companies."
+          },
+          {
+            "first": true,
             "text": "Phrase “the transmission to subscribers in this state of video programming by satellite” in Subsec. (b)(2) is ambiguous with respect to whether it was intended to include sale or lease of satellite dishes and related equipment required to view video programming, fees for equipment installation and maintenance, or provision of DVR service, and must be resolved in favor of taxpayer, but imposition of payment-related fees is not stand-alone business operation separate and distinct from transmission of video programming and are subject to tax. 330 C. 280."
           },
           {
@@ -43,7 +46,7 @@
             "text": "Cited. 134 C. 299."
           }
         ],
-        "plainText": "(a) For purposes of this section, “quarterly period” means a period of three calendar months commencing on the first day of January, April, July or October and ending on the last day of March, June, September or December, respectively.\n\n(b) Each person operating a community antenna television system under chapter 289 or a certified competitive video service pursuant to sections 16-331e to 16-331o , inclusive, and each person operating a business that provides one-way transmission to subscribers of video programming by satellite, shall pay a quarterly tax upon the gross earnings from (1) the lines, facilities, apparatus and auxiliary equipment in this state used for operating a community antenna television system, or (2) the transmission to subscribers in this state of video programming by satellite or by a certified competitive video service provider, as the case may be. No deduction shall be allowed from such gross earnings for operations related to commissions, rebates or other payments, except such refunds as arise from errors or overcharges. On or before the last day of the month next succeeding each quarterly period, each such person shall render to the commissioner a return on forms prescribed or furnished by the commissioner, signed by the person performing the duties of treasurer or an authorized agent or officer of the system or service operated by such person, which return shall include information regarding the name and location within this state of such system or service and the total amount of gross earnings derived from such operations and such other facts as the commissioner may require for the purpose of making any computation required by this chapter.\n\n(c) For purposes of this chapter, a holder of a certificate of cable franchise authority under section 16-331p , and a community antenna television company issued a certificate of video franchise authority under section 16-331e for any service area in which it was not certified to provide community antenna television service pursuant to section 16-331 on or before October 1, 2007, shall be treated as a person operating a community antenna television system under chapter 289.\n\nSee Sec. 12-268d re returns of transportation and utility companies."
+        "plainText": "(a) For purposes of this section, “quarterly period” means a period of three calendar months commencing on the first day of January, April, July or October and ending on the last day of March, June, September or December, respectively.\n\n(b) Each person operating a community antenna television system under chapter 289 or a certified competitive video service pursuant to sections 16-331e to 16-331o , inclusive, and each person operating a business that provides one-way transmission to subscribers of video programming by satellite, shall pay a quarterly tax upon the gross earnings from (1) the lines, facilities, apparatus and auxiliary equipment in this state used for operating a community antenna television system, or (2) the transmission to subscribers in this state of video programming by satellite or by a certified competitive video service provider, as the case may be. No deduction shall be allowed from such gross earnings for operations related to commissions, rebates or other payments, except such refunds as arise from errors or overcharges. On or before the last day of the month next succeeding each quarterly period, each such person shall render to the commissioner a return on forms prescribed or furnished by the commissioner, signed by the person performing the duties of treasurer or an authorized agent or officer of the system or service operated by such person, which return shall include information regarding the name and location within this state of such system or service and the total amount of gross earnings derived from such operations and such other facts as the commissioner may require for the purpose of making any computation required by this chapter.\n\n(c) For purposes of this chapter, a holder of a certificate of cable franchise authority under section 16-331p , and a community antenna television company issued a certificate of video franchise authority under section 16-331e for any service area in which it was not certified to provide community antenna television service pursuant to section 16-331 on or before October 1, 2007, shall be treated as a person operating a community antenna television system under chapter 289."
       }
     },
     {
@@ -194,8 +197,7 @@
         "body": [
           "(a) Each person included in section 12-256 shall be taxed upon the amount of the gross earnings in each quarterly period from the lines, facilities, apparatus and auxiliary equipment operated by it in this state, or from the transmission of video programming by satellite or by a certified competitive video service provider to subscribers in this state, as the case may be, at the rates provided in this section.",
           "(b) Gross earnings for any quarterly period, for the purposes of assessment and taxation, shall be as follows: In the case of a person carrying on the business wholly within the limits of this state, the entire amount of the gross earnings subject to the tax imposed under section 12-256 ; in the case of a person also carrying on the business outside of this state, a portion of the entire amount of the gross earnings subject to the tax imposed under section 12-256 apportioned to this state as follows: (1) In the case of a person operating a community antenna television system, such portion of the total gross earnings from the lines, facilities, apparatus and auxiliary equipment operated by it as is represented by the total number of miles of lines operated by such person within this state on the first day and on the last day of such quarterly period to the total number of miles of lines operated by such person both within and without the state on said dates; (2) in the case of a person operating a business that provides one-way transmission to subscribers of video programming by satellite, such portion of the total gross earnings from the transmission to subscribers in this state as is represented by the total number of subscribers served by such person within this state on the first day and on the last day of such quarterly period to the total number of subscribers served by such person both within and without the state on said dates; and (3) in the case of a person providing certified competitive video service, such portion of the total gross earnings from the transmission to subscribers in this state as is represented by the total number of subscribers served by such person within this state on the first and the last days of such quarterly period to the average of the total number of subscribers served by such person both within and without the state on said dates.",
-          "(c) The rates of tax on the gross earnings as determined in this section shall be as follows: (1) Persons operating a community antenna television system or a certified competitive video service, five per cent of such gross earnings, reduced by any assessments made pursuant to section 16-49 which are attributable to the year in which such tax is assessed; and (2) persons operating a business that provides one-way transmission to subscribers of video programming by satellite, five per cent of such gross earnings.",
-          "See Sec. 12-268a re decrease or increase in apportionments."
+          "(c) The rates of tax on the gross earnings as determined in this section shall be as follows: (1) Persons operating a community antenna television system or a certified competitive video service, five per cent of such gross earnings, reduced by any assessments made pursuant to section 16-49 which are attributable to the year in which such tax is assessed; and (2) persons operating a business that provides one-way transmission to subscribers of video programming by satellite, five per cent of such gross earnings."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 1943; 1961, P.A. 604, S. 12; February, 1965, P.A. 169, S. 2; June, 1971, P.A. 8, S. 22; P.A. 81-255, S. 1, 37; P.A. 85-304, S. 2, 4; P.A. 86-410, S. 21, 28; P.A. 89-251, S. 5, 203; P.A. 91-82, S. 2, 5; June 30 Sp. Sess. P.A. 03-1, S. 93; P.A. 06-159, S. 13; P.A. 07-253, S. 27.)"
@@ -206,10 +208,14 @@
         "annotations": [
           {
             "first": true,
+            "text": "See Sec. 12-268a re decrease or increase in apportionments."
+          },
+          {
+            "first": true,
             "text": "Cited. 134 C. 299."
           }
         ],
-        "plainText": "(a) Each person included in section 12-256 shall be taxed upon the amount of the gross earnings in each quarterly period from the lines, facilities, apparatus and auxiliary equipment operated by it in this state, or from the transmission of video programming by satellite or by a certified competitive video service provider to subscribers in this state, as the case may be, at the rates provided in this section.\n\n(b) Gross earnings for any quarterly period, for the purposes of assessment and taxation, shall be as follows: In the case of a person carrying on the business wholly within the limits of this state, the entire amount of the gross earnings subject to the tax imposed under section 12-256 ; in the case of a person also carrying on the business outside of this state, a portion of the entire amount of the gross earnings subject to the tax imposed under section 12-256 apportioned to this state as follows: (1) In the case of a person operating a community antenna television system, such portion of the total gross earnings from the lines, facilities, apparatus and auxiliary equipment operated by it as is represented by the total number of miles of lines operated by such person within this state on the first day and on the last day of such quarterly period to the total number of miles of lines operated by such person both within and without the state on said dates; (2) in the case of a person operating a business that provides one-way transmission to subscribers of video programming by satellite, such portion of the total gross earnings from the transmission to subscribers in this state as is represented by the total number of subscribers served by such person within this state on the first day and on the last day of such quarterly period to the total number of subscribers served by such person both within and without the state on said dates; and (3) in the case of a person providing certified competitive video service, such portion of the total gross earnings from the transmission to subscribers in this state as is represented by the total number of subscribers served by such person within this state on the first and the last days of such quarterly period to the average of the total number of subscribers served by such person both within and without the state on said dates.\n\n(c) The rates of tax on the gross earnings as determined in this section shall be as follows: (1) Persons operating a community antenna television system or a certified competitive video service, five per cent of such gross earnings, reduced by any assessments made pursuant to section 16-49 which are attributable to the year in which such tax is assessed; and (2) persons operating a business that provides one-way transmission to subscribers of video programming by satellite, five per cent of such gross earnings.\n\nSee Sec. 12-268a re decrease or increase in apportionments."
+        "plainText": "(a) Each person included in section 12-256 shall be taxed upon the amount of the gross earnings in each quarterly period from the lines, facilities, apparatus and auxiliary equipment operated by it in this state, or from the transmission of video programming by satellite or by a certified competitive video service provider to subscribers in this state, as the case may be, at the rates provided in this section.\n\n(b) Gross earnings for any quarterly period, for the purposes of assessment and taxation, shall be as follows: In the case of a person carrying on the business wholly within the limits of this state, the entire amount of the gross earnings subject to the tax imposed under section 12-256 ; in the case of a person also carrying on the business outside of this state, a portion of the entire amount of the gross earnings subject to the tax imposed under section 12-256 apportioned to this state as follows: (1) In the case of a person operating a community antenna television system, such portion of the total gross earnings from the lines, facilities, apparatus and auxiliary equipment operated by it as is represented by the total number of miles of lines operated by such person within this state on the first day and on the last day of such quarterly period to the total number of miles of lines operated by such person both within and without the state on said dates; (2) in the case of a person operating a business that provides one-way transmission to subscribers of video programming by satellite, such portion of the total gross earnings from the transmission to subscribers in this state as is represented by the total number of subscribers served by such person within this state on the first day and on the last day of such quarterly period to the total number of subscribers served by such person both within and without the state on said dates; and (3) in the case of a person providing certified competitive video service, such portion of the total gross earnings from the transmission to subscribers in this state as is represented by the total number of subscribers served by such person within this state on the first and the last days of such quarterly period to the average of the total number of subscribers served by such person both within and without the state on said dates.\n\n(c) The rates of tax on the gross earnings as determined in this section shall be as follows: (1) Persons operating a community antenna television system or a certified competitive video service, five per cent of such gross earnings, reduced by any assessments made pursuant to section 16-49 which are attributable to the year in which such tax is assessed; and (2) persons operating a business that provides one-way transmission to subscribers of video programming by satellite, five per cent of such gross earnings."
       }
     },
     {
@@ -303,166 +309,6 @@
         "history": [],
         "annotations": [],
         "plainText": "Sections 12-259 to 12-263 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-12-256a",
-      "kind": "section",
-      "citation": "12-256a",
-      "citations": [
-        "12-256a"
-      ],
-      "heading": "12-256a",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_211.htm#sec_12-256a",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 12-256a and 12-256b. Definitions. Company rendering telecommunications service subject to taxes under sections 12-255b and 12-256 ; liable for personal property tax related to service under section 12-255b ; property tax collected by state and distributed to towns as payment in lieu of taxes. Sections 12-256a and 12-256b are repealed effective May 9, 1991, and applicable to taxable years of taxpayers commencing on or after January 1, 1991."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 12-256a and 12-256b. Definitions. Company rendering telecommunications service subject to taxes under sections 12-255b and 12-256 ; liable for personal property tax related to service under section 12-255b ; property tax collected by state and distributed to towns as payment in lieu of taxes. Sections 12-256a and 12-256b are repealed effective May 9, 1991, and applicable to taxable years of taxpayers commencing on or after January 1, 1991."
-      }
-    },
-    {
-      "id": "section-12-256b",
-      "kind": "section",
-      "citation": "12-256b",
-      "citations": [
-        "12-256b"
-      ],
-      "heading": "12-256b",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_211.htm#sec_12-256b",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 12-256a and 12-256b. Definitions. Company rendering telecommunications service subject to taxes under sections 12-255b and 12-256 ; liable for personal property tax related to service under section 12-255b ; property tax collected by state and distributed to towns as payment in lieu of taxes. Sections 12-256a and 12-256b are repealed effective May 9, 1991, and applicable to taxable years of taxpayers commencing on or after January 1, 1991."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 12-256a and 12-256b. Definitions. Company rendering telecommunications service subject to taxes under sections 12-255b and 12-256 ; liable for personal property tax related to service under section 12-255b ; property tax collected by state and distributed to towns as payment in lieu of taxes. Sections 12-256a and 12-256b are repealed effective May 9, 1991, and applicable to taxable years of taxpayers commencing on or after January 1, 1991."
-      }
-    },
-    {
-      "id": "section-12-256d",
-      "kind": "section",
-      "citation": "12-256d",
-      "citations": [
-        "12-256d"
-      ],
-      "heading": "12-256d",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_211.htm#sec_12-256d",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 12-256d and 12-256e. Company subject to tax under sections 12-256 and 12-255b for same tax year may pay both taxes annually. One-third of total tax on telecommunications service under sections 12-256 and 12-258 to be distributed to municipalities as property tax relief. Sections 12-256d and 12-256e are repealed effective May 9, 1991, and applicable to taxable years of taxpayers commencing on or after January 1, 1991."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 12-256d and 12-256e. Company subject to tax under sections 12-256 and 12-255b for same tax year may pay both taxes annually. One-third of total tax on telecommunications service under sections 12-256 and 12-258 to be distributed to municipalities as property tax relief. Sections 12-256d and 12-256e are repealed effective May 9, 1991, and applicable to taxable years of taxpayers commencing on or after January 1, 1991."
-      }
-    },
-    {
-      "id": "section-12-256e",
-      "kind": "section",
-      "citation": "12-256e",
-      "citations": [
-        "12-256e"
-      ],
-      "heading": "12-256e",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_211.htm#sec_12-256e",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 12-256d and 12-256e. Company subject to tax under sections 12-256 and 12-255b for same tax year may pay both taxes annually. One-third of total tax on telecommunications service under sections 12-256 and 12-258 to be distributed to municipalities as property tax relief. Sections 12-256d and 12-256e are repealed effective May 9, 1991, and applicable to taxable years of taxpayers commencing on or after January 1, 1991."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 12-256d and 12-256e. Company subject to tax under sections 12-256 and 12-255b for same tax year may pay both taxes annually. One-third of total tax on telecommunications service under sections 12-256 and 12-258 to be distributed to municipalities as property tax relief. Sections 12-256d and 12-256e are repealed effective May 9, 1991, and applicable to taxable years of taxpayers commencing on or after January 1, 1991."
-      }
-    },
-    {
-      "id": "section-12-258b",
-      "kind": "section",
-      "citation": "12-258b",
-      "citations": [
-        "12-258b"
-      ],
-      "heading": "12-258b",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_211.htm#sec_12-258b",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 12-258b and 12-258c. Tax credit for expenditures for: Air pollution abatement facilities; industrial waste treatment facilities. Sections 12-258b and 12-258c are repealed, effective July 8, 1997, and applicable to income years commencing on or after January 1, 1998."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 12-258b and 12-258c. Tax credit for expenditures for: Air pollution abatement facilities; industrial waste treatment facilities. Sections 12-258b and 12-258c are repealed, effective July 8, 1997, and applicable to income years commencing on or after January 1, 1998."
-      }
-    },
-    {
-      "id": "section-12-258c",
-      "kind": "section",
-      "citation": "12-258c",
-      "citations": [
-        "12-258c"
-      ],
-      "heading": "12-258c",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_211.htm#sec_12-258c",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 12-258b and 12-258c. Tax credit for expenditures for: Air pollution abatement facilities; industrial waste treatment facilities. Sections 12-258b and 12-258c are repealed, effective July 8, 1997, and applicable to income years commencing on or after January 1, 1998."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 12-258b and 12-258c. Tax credit for expenditures for: Air pollution abatement facilities; industrial waste treatment facilities. Sections 12-258b and 12-258c are repealed, effective July 8, 1997, and applicable to income years commencing on or after January 1, 1998."
-      }
-    },
-    {
-      "id": "section-12-259",
-      "kind": "section",
-      "citation": "12-259",
-      "citations": [
-        "12-259"
-      ],
-      "heading": "12-259",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_211.htm#sec_12-259",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 12-259 to 12-263. Tax computed on gross earnings. Commissioner to determine gross earnings and deductions. Assessment and due date of tax. Tax to be in lieu of all other taxation; exemption of stocks and bonds. Sections 12-259 to 12-263 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 12-259 to 12-263. Tax computed on gross earnings. Commissioner to determine gross earnings and deductions. Assessment and due date of tax. Tax to be in lieu of all other taxation; exemption of stocks and bonds. Sections 12-259 to 12-263 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-12-263",
-      "kind": "section",
-      "citation": "12-263",
-      "citations": [
-        "12-263"
-      ],
-      "heading": "12-263",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_211.htm#sec_12-263",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 12-259 to 12-263. Tax computed on gross earnings. Commissioner to determine gross earnings and deductions. Assessment and due date of tax. Tax to be in lieu of all other taxation; exemption of stocks and bonds. Sections 12-259 to 12-263 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 12-259 to 12-263. Tax computed on gross earnings. Commissioner to determine gross earnings and deductions. Assessment and due date of tax. Tax to be in lieu of all other taxation; exemption of stocks and bonds. Sections 12-259 to 12-263 , inclusive, are repealed."
       }
     }
   ]

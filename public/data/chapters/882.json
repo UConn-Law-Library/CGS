@@ -441,8 +441,7 @@
       "content": {
         "body": [
           "(a) There shall be a term of the Superior Court for criminal business on the first Tuesday of each month in each judicial district.",
-          "(b) The court shall sit during any term in a judicial district for the trial of any person confined to a community correctional center on the first day of the term for want of bail who applies to the court for such trial.",
-          "See Sec. 51-183a re procedure when a judge is unable to hold court."
+          "(b) The court shall sit during any term in a judicial district for the trial of any person confined to a community correctional center on the first day of the term for want of bail who applies to the court for such trial."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 7622; 1951, 1955, S. 3111d; November, 1955, S. N227; 1967, P.A. 656, S. 30; 1969, P.A. 297; 1972, P.A. 165, S. 15; June, 1972, P.A. 1, S. 20; P.A. 78-280, S. 4, 127; P.A. 82-248, S. 87.)"
@@ -450,8 +449,13 @@
         "history": [
           "History: 1967 act changed sessions from three to four times each year; 1969 act substituted “community correctional center” for “jail”; 1972 acts added reference to judicial districts and deleted specific reference to sessions in Waterbury in New Haven county, effective September 5, 1972; P.A. 78-280 deleted references to counties; P.A. 82-248 reworded section, divided section into Subsecs. and deleted provision re sitting of court for criminal sessions as fixed by judges."
         ],
-        "annotations": [],
-        "plainText": "(a) There shall be a term of the Superior Court for criminal business on the first Tuesday of each month in each judicial district.\n\n(b) The court shall sit during any term in a judicial district for the trial of any person confined to a community correctional center on the first day of the term for want of bail who applies to the court for such trial.\n\nSee Sec. 51-183a re procedure when a judge is unable to hold court."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 51-183a re procedure when a judge is unable to hold court."
+          }
+        ],
+        "plainText": "(a) There shall be a term of the Superior Court for criminal business on the first Tuesday of each month in each judicial district.\n\n(b) The court shall sit during any term in a judicial district for the trial of any person confined to a community correctional center on the first day of the term for want of bail who applies to the court for such trial."
       }
     },
     {
@@ -490,9 +494,7 @@
       "status": "active",
       "content": {
         "body": [
-          "The Superior Court shall sit continuously throughout the year, at such times and places and for such periods as are set by the Chief Court Administrator or, with the approval of the Chief Court Administrator, his or her designee, in the following cities or towns, except as otherwise provided by law: (1) In the judicial district of Ansonia-Milford, at Ansonia or Derby and at Milford; (2) in the judicial district of Danbury, at Danbury; (3) in the judicial district of Bridgeport, at Bridgeport; (4) in the judicial district of Hartford, at Hartford and, whenever suitable accommodations are provided without expense to the state, at Manchester; (5) in the judicial district of Litchfield, at Torrington; (6) in the judicial district of Middlesex, at Middletown; (7) in the judicial district of New Britain, at New Britain; (8) in the judicial district of New Haven, at New Haven and Meriden; (9) in the judicial district of New London, at Norwich and New London; (10) in the judicial district of Stamford-Norwalk, at Stamford; (11) in the judicial district of Tolland, at Rockville; (12) in the judicial district of Waterbury, at Waterbury; and (13) in the judicial district of Windham, at Putnam.",
-          "See Sec. 51-180 re criminal terms and sessions.",
-          "See Sec. 51-183a re procedure when a judge is unable to hold court."
+          "The Superior Court shall sit continuously throughout the year, at such times and places and for such periods as are set by the Chief Court Administrator or, with the approval of the Chief Court Administrator, his or her designee, in the following cities or towns, except as otherwise provided by law: (1) In the judicial district of Ansonia-Milford, at Ansonia or Derby and at Milford; (2) in the judicial district of Danbury, at Danbury; (3) in the judicial district of Bridgeport, at Bridgeport; (4) in the judicial district of Hartford, at Hartford and, whenever suitable accommodations are provided without expense to the state, at Manchester; (5) in the judicial district of Litchfield, at Torrington; (6) in the judicial district of Middlesex, at Middletown; (7) in the judicial district of New Britain, at New Britain; (8) in the judicial district of New Haven, at New Haven and Meriden; (9) in the judicial district of New London, at Norwich and New London; (10) in the judicial district of Stamford-Norwalk, at Stamford; (11) in the judicial district of Tolland, at Rockville; (12) in the judicial district of Waterbury, at Waterbury; and (13) in the judicial district of Windham, at Putnam."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 7623; 1951, 1953, 1955, S. 3113d; 1957, P.A. 44 5, S. 2; 452, S. 1; 603, S. 1; 1959, P.A. 152, S. 70; 1963, P.A. 465; February, 1965, P.A. 331, S. 21; 1967, P.A. 386, S. 1; 1972, P.A. 165, S. 16; June, 1972, P.A. 1, S. 20; P.A. 73-290; 73-603, S. 4; P.A. 75-530, S. 30, 35; P.A. 76-436, S. 10a, 86, 681; P.A. 77-411, S. 3, 6; 77-576, S. 27, 65; 77-604, S. 59, 84; P.A. 78-280, S. 82, 127; 78-379, S. 6, 27; P.A. 80-201, S. 4, 9; P.A. 82-248, S. 88; P.A. 88-230, S. 6, 12; P.A. 90-98, S. 1, 2; P.A. 93-142, S. 7, 8; P.A. 95-220, S. 4–6; P.A. 98-81, S. 15, 20; P.A. 17-99, S. 7; P.A. 19-64, S. 19; P.A. 23-46, S. 31.)"
@@ -503,6 +505,14 @@
         "annotations": [
           {
             "first": true,
+            "text": "See Sec. 51-180 re criminal terms and sessions."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 51-183a re procedure when a judge is unable to hold court."
+          },
+          {
+            "first": true,
             "text": "Cited. 139 C. 260; 143 C. 688; 174 C. 567; 199 C. 417."
           },
           {
@@ -510,7 +520,7 @@
             "text": "Superior Court is continuously in session with four sessions held on first Tuesdays of September, January and April and on first Tuesday following July 4; a session is only part of a “term”. 28 CS 118."
           }
         ],
-        "plainText": "The Superior Court shall sit continuously throughout the year, at such times and places and for such periods as are set by the Chief Court Administrator or, with the approval of the Chief Court Administrator, his or her designee, in the following cities or towns, except as otherwise provided by law: (1) In the judicial district of Ansonia-Milford, at Ansonia or Derby and at Milford; (2) in the judicial district of Danbury, at Danbury; (3) in the judicial district of Bridgeport, at Bridgeport; (4) in the judicial district of Hartford, at Hartford and, whenever suitable accommodations are provided without expense to the state, at Manchester; (5) in the judicial district of Litchfield, at Torrington; (6) in the judicial district of Middlesex, at Middletown; (7) in the judicial district of New Britain, at New Britain; (8) in the judicial district of New Haven, at New Haven and Meriden; (9) in the judicial district of New London, at Norwich and New London; (10) in the judicial district of Stamford-Norwalk, at Stamford; (11) in the judicial district of Tolland, at Rockville; (12) in the judicial district of Waterbury, at Waterbury; and (13) in the judicial district of Windham, at Putnam.\n\nSee Sec. 51-180 re criminal terms and sessions.\n\nSee Sec. 51-183a re procedure when a judge is unable to hold court."
+        "plainText": "The Superior Court shall sit continuously throughout the year, at such times and places and for such periods as are set by the Chief Court Administrator or, with the approval of the Chief Court Administrator, his or her designee, in the following cities or towns, except as otherwise provided by law: (1) In the judicial district of Ansonia-Milford, at Ansonia or Derby and at Milford; (2) in the judicial district of Danbury, at Danbury; (3) in the judicial district of Bridgeport, at Bridgeport; (4) in the judicial district of Hartford, at Hartford and, whenever suitable accommodations are provided without expense to the state, at Manchester; (5) in the judicial district of Litchfield, at Torrington; (6) in the judicial district of Middlesex, at Middletown; (7) in the judicial district of New Britain, at New Britain; (8) in the judicial district of New Haven, at New Haven and Meriden; (9) in the judicial district of New London, at Norwich and New London; (10) in the judicial district of Stamford-Norwalk, at Stamford; (11) in the judicial district of Tolland, at Rockville; (12) in the judicial district of Waterbury, at Waterbury; and (13) in the judicial district of Windham, at Putnam."
       }
     },
     {
@@ -2040,9 +2050,7 @@
           "(b) Except as provided in section 4-183 , the Superior Court, after a hearing, may reverse or affirm, wholly or partly, or may modify or revise the decision appealed from.",
           "(c) So much of any special act as is inconsistent with this section is repealed.",
           "(d) Except as provided in sections 8-8 , 8-9 and 22a-43 , there shall be a right to further review to the Appellate Court under such rules as the judges of the Appellate Court shall adopt.",
-          "(e) The procedure on such appeal to the Appellate Court shall be in accordance with the procedure provided by rule or law for the appeal of judgments rendered by the Superior Court unless modified by rule of the judges of the Appellate Court. There shall be no right to further review except to the Supreme Court pursuant to the provisions of section 51-197f .",
-          "See Sec. 4-183 re appeals to Superior Court from administrative proceedings.",
-          "See Sec. 52-233 re requirements upon statutory appeal from administrative action taken to a judge."
+          "(e) The procedure on such appeal to the Appellate Court shall be in accordance with the procedure provided by rule or law for the appeal of judgments rendered by the Superior Court unless modified by rule of the judges of the Appellate Court. There shall be no right to further review except to the Supreme Court pursuant to the provisions of section 51-197f ."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 7742; P.A. 76-436, S. 4, 681; P.A. 77-347, S. 7, 11; 77-604, S. 60, 84; P.A. 80-352, S. 1, 2; 80-422, S. 48; P.A. 81-416, S. 3, 5; P.A. 82-248, S. 98; June Sp. Sess. P.A. 83-29, S. 4, 82; P.A. 88-317, S. 27, 107; P.A. 89-356, S. 7; P.A. 95-151, S. 3.)"
@@ -2051,6 +2059,14 @@
           "History: P.A. 76-436 transferred court of common pleas' jurisdiction of appeals under section provisions to superior court and added provisions re appeal to supreme court, effective July 1, 1978; P.A. 77-347 added exception re provisions of Sec. 53-36(b) and provision re appeals from judgment of common pleas court entered prior to July 1, 1978, effective July 1, 1978, and effective through June 30, 1979; P.A. 77-604 substituted “section 53-36b” for reference to Sec. 53-36(b), effective July 1, 1978; Sec. 52-7 transferred to Sec. 51-197b in the 1977 Court Reorganization Supplement; P.A. 80-352 added exception re appeals concerning administrative decisions of revenue services commissioner; P.A. 80-422 substituted reference to Sec. 53-36d for reference to Sec. 53-36b; P.A. 81-416 replaced provisions barring further review of superior court decisions of administrative appeals except by certification for review by the supreme court with provisions allowing review by the appellate session but no further review except by the supreme court pursuant to Sec. 51-197f; P.A. 82-248 reworded section, divided section into Subsecs. and deleted provision re appeals from judgments entered by court of common pleas prior to July 1, 1978; June Sp. Sess. P.A. 83-29 made changes necessitated by establishment of the appellate court; P.A. 88-317 divided Subsec. (a) into three subsections, inserted “Except as provided in section 4-183,” in Subsec. (b) and relettered former Subsec. (b) as Subsec. (d) and former Subsec. (c) as Subsec. (e), effective July 1, 1989, and applicable to all agency proceedings commencing on or after that date; P.A. 89-356 amended Subsec. (d) by deleting reference to Secs. 8-28 and 8-30; P.A. 95-151 amended Subsec. (d) to include an exception for appeals taken from judicial decisions re inland wetlands matters."
         ],
         "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 4-183 re appeals to Superior Court from administrative proceedings."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 52-233 re requirements upon statutory appeal from administrative action taken to a judge."
+          },
           {
             "first": true,
             "text": "Annotations to former section 52-7:"
@@ -2092,7 +2108,7 @@
             "text": "Failure of legislature to include reference to Sec. 8-30g did not thereby manifest an intention to permit direct appeal to Appellate Court of affordable housing land use appeals. 245 C. 257."
           }
         ],
-        "plainText": "(a) Except as provided in section 31-301b , all appeals that may be taken from administrative decisions of officers, boards, commissions or agencies of the state or any political subdivision thereof shall be taken to the Superior Court.\n\n(b) Except as provided in section 4-183 , the Superior Court, after a hearing, may reverse or affirm, wholly or partly, or may modify or revise the decision appealed from.\n\n(c) So much of any special act as is inconsistent with this section is repealed.\n\n(d) Except as provided in sections 8-8 , 8-9 and 22a-43 , there shall be a right to further review to the Appellate Court under such rules as the judges of the Appellate Court shall adopt.\n\n(e) The procedure on such appeal to the Appellate Court shall be in accordance with the procedure provided by rule or law for the appeal of judgments rendered by the Superior Court unless modified by rule of the judges of the Appellate Court. There shall be no right to further review except to the Supreme Court pursuant to the provisions of section 51-197f .\n\nSee Sec. 4-183 re appeals to Superior Court from administrative proceedings.\n\nSee Sec. 52-233 re requirements upon statutory appeal from administrative action taken to a judge."
+        "plainText": "(a) Except as provided in section 31-301b , all appeals that may be taken from administrative decisions of officers, boards, commissions or agencies of the state or any political subdivision thereof shall be taken to the Superior Court.\n\n(b) Except as provided in section 4-183 , the Superior Court, after a hearing, may reverse or affirm, wholly or partly, or may modify or revise the decision appealed from.\n\n(c) So much of any special act as is inconsistent with this section is repealed.\n\n(d) Except as provided in sections 8-8 , 8-9 and 22a-43 , there shall be a right to further review to the Appellate Court under such rules as the judges of the Appellate Court shall adopt.\n\n(e) The procedure on such appeal to the Appellate Court shall be in accordance with the procedure provided by rule or law for the appeal of judgments rendered by the Superior Court unless modified by rule of the judges of the Appellate Court. There shall be no right to further review except to the Supreme Court pursuant to the provisions of section 51-197f ."
       }
     },
     {
@@ -2208,286 +2224,6 @@
           }
         ],
         "plainText": "Upon final determination of any appeal by the Appellate Court, there shall be no right to further review except the Supreme Court shall have the power to certify cases for its review upon petition by an aggrieved party or by the appellate panel which heard the matter. A vote of three judges of the Supreme Court shall be required to certify a case for review by the Supreme Court, except that if fewer than six judges of said court are available to consider a petition, a vote of two judges of said court shall be required to certify a case, under such other rules as the justices of said court shall establish. The procedure on appeal from the Appellate Court to the Supreme Court shall, except as otherwise provided, be in accordance with the procedure provided by rule or law for the appeal of judgments rendered by the Superior Court, unless modified by rule of the justices of the Supreme Court."
-      }
-    },
-    {
-      "id": "section-51-169",
-      "kind": "section",
-      "citation": "51-169",
-      "citations": [
-        "51-169"
-      ],
-      "heading": "51-169",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_882.htm#sec_51-169",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 51-169 to 51-171. Salaries of clerks and assistant clerks; traveling expenses; full-time, part-time requirements. Clerks of Superior Court to be county and judicial district clerks; custody of records of former county courts. Certification re authority of notaries public who recorded commissions prior to July 1, 1982. Custody of files and judgments in Stamford. Sections 51-169 to 51-171 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 51-169 to 51-171. Salaries of clerks and assistant clerks; traveling expenses; full-time, part-time requirements. Clerks of Superior Court to be county and judicial district clerks; custody of records of former county courts. Certification re authority of notaries public who recorded commissions prior to July 1, 1982. Custody of files and judgments in Stamford. Sections 51-169 to 51-171 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-51-171",
-      "kind": "section",
-      "citation": "51-171",
-      "citations": [
-        "51-171"
-      ],
-      "heading": "51-171",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_882.htm#sec_51-171",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 51-169 to 51-171. Salaries of clerks and assistant clerks; traveling expenses; full-time, part-time requirements. Clerks of Superior Court to be county and judicial district clerks; custody of records of former county courts. Certification re authority of notaries public who recorded commissions prior to July 1, 1982. Custody of files and judgments in Stamford. Sections 51-169 to 51-171 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 51-169 to 51-171. Salaries of clerks and assistant clerks; traveling expenses; full-time, part-time requirements. Clerks of Superior Court to be county and judicial district clerks; custody of records of former county courts. Certification re authority of notaries public who recorded commissions prior to July 1, 1982. Custody of files and judgments in Stamford. Sections 51-169 to 51-171 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-51-172",
-      "kind": "section",
-      "citation": "51-172",
-      "citations": [
-        "51-172"
-      ],
-      "heading": "51-172",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_882.htm#sec_51-172",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 51-172 to 51-174. Records and files at Waterbury. Civil actions on appeals brought in Ansonia filed in Waterbury. Records and seal of court at Winchester. Sections 51-172 to 51-174 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 51-172 to 51-174. Records and files at Waterbury. Civil actions on appeals brought in Ansonia filed in Waterbury. Records and seal of court at Winchester. Sections 51-172 to 51-174 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-51-174",
-      "kind": "section",
-      "citation": "51-174",
-      "citations": [
-        "51-174"
-      ],
-      "heading": "51-174",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_882.htm#sec_51-174",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 51-172 to 51-174. Records and files at Waterbury. Civil actions on appeals brought in Ansonia filed in Waterbury. Records and seal of court at Winchester. Sections 51-172 to 51-174 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 51-172 to 51-174. Records and files at Waterbury. Civil actions on appeals brought in Ansonia filed in Waterbury. Records and seal of court at Winchester. Sections 51-172 to 51-174 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-51-176",
-      "kind": "section",
-      "citation": "51-176",
-      "citations": [
-        "51-176"
-      ],
-      "heading": "51-176",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_882.htm#sec_51-176",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 51-176 to 51-179. Special state's attorney. Circuit Court prosecutors not to be state's attorneys. Expenses of state's attorneys. Civil term. Sections 51-176 to 51-179 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 51-176 to 51-179. Special state's attorney. Circuit Court prosecutors not to be state's attorneys. Expenses of state's attorneys. Civil term. Sections 51-176 to 51-179 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-51-179",
-      "kind": "section",
-      "citation": "51-179",
-      "citations": [
-        "51-179"
-      ],
-      "heading": "51-179",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_882.htm#sec_51-179",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 51-176 to 51-179. Special state's attorney. Circuit Court prosecutors not to be state's attorneys. Expenses of state's attorneys. Civil term. Sections 51-176 to 51-179 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 51-176 to 51-179. Special state's attorney. Circuit Court prosecutors not to be state's attorneys. Expenses of state's attorneys. Civil term. Sections 51-176 to 51-179 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-51-182a",
-      "kind": "section",
-      "citation": "51-182a",
-      "citations": [
-        "51-182a"
-      ],
-      "heading": "51-182a",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_882.htm#sec_51-182a",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 51-182a and 51-182b. Family relations term. Family relations sessions. Sections 51-182a and 51-182b are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 51-182a and 51-182b. Family relations term. Family relations sessions. Sections 51-182a and 51-182b are repealed."
-      }
-    },
-    {
-      "id": "section-51-182b",
-      "kind": "section",
-      "citation": "51-182b",
-      "citations": [
-        "51-182b"
-      ],
-      "heading": "51-182b",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_882.htm#sec_51-182b",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 51-182a and 51-182b. Family relations term. Family relations sessions. Sections 51-182a and 51-182b are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 51-182a and 51-182b. Family relations term. Family relations sessions. Sections 51-182a and 51-182b are repealed."
-      }
-    },
-    {
-      "id": "section-51-182n",
-      "kind": "section",
-      "citation": "51-182n",
-      "citations": [
-        "51-182n"
-      ],
-      "heading": "51-182n",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_882.htm#sec_51-182n",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 51-182n and 51-182o. Hearing of appeals from Juvenile Court. Sessions for appeals from Common Pleas Court. Sections 51-182n and 51-182o are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 51-182n and 51-182o. Hearing of appeals from Juvenile Court. Sessions for appeals from Common Pleas Court. Sections 51-182n and 51-182o are repealed."
-      }
-    },
-    {
-      "id": "section-51-182o",
-      "kind": "section",
-      "citation": "51-182o",
-      "citations": [
-        "51-182o"
-      ],
-      "heading": "51-182o",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_882.htm#sec_51-182o",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 51-182n and 51-182o. Hearing of appeals from Juvenile Court. Sessions for appeals from Common Pleas Court. Sections 51-182n and 51-182o are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 51-182n and 51-182o. Hearing of appeals from Juvenile Court. Sessions for appeals from Common Pleas Court. Sections 51-182n and 51-182o are repealed."
-      }
-    },
-    {
-      "id": "section-51-191",
-      "kind": "section",
-      "citation": "51-191",
-      "citations": [
-        "51-191"
-      ],
-      "heading": "51-191",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_882.htm#sec_51-191",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 51-191 to 51-193. Cause affecting land; documents lodged in Superior Court. Clerk designated by judge to take papers. Records may be rewritten. Sections 51-191 to 51-193 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 51-191 to 51-193. Cause affecting land; documents lodged in Superior Court. Clerk designated by judge to take papers. Records may be rewritten. Sections 51-191 to 51-193 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-51-193",
-      "kind": "section",
-      "citation": "51-193",
-      "citations": [
-        "51-193"
-      ],
-      "heading": "51-193",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_882.htm#sec_51-193",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 51-191 to 51-193. Cause affecting land; documents lodged in Superior Court. Clerk designated by judge to take papers. Records may be rewritten. Sections 51-191 to 51-193 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 51-191 to 51-193. Cause affecting land; documents lodged in Superior Court. Clerk designated by judge to take papers. Records may be rewritten. Sections 51-191 to 51-193 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-51-193m",
-      "kind": "section",
-      "citation": "51-193m",
-      "citations": [
-        "51-193m"
-      ],
-      "heading": "51-193m",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_882.htm#sec_51-193m",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 51-193m to 51-193q. Prosecutions to be submitted to magistrate. Persons alleged to have committed motor vehicle infractions; payment of fine; plea of not guilty. Request for jury trial; hearing in Superior Court. Notification of magistrate by clerk of court; where hearing may be held. Hearing before magistrate; report; final judgment. Sections 51-193m to 51-193q , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 51-193m to 51-193q. Prosecutions to be submitted to magistrate. Persons alleged to have committed motor vehicle infractions; payment of fine; plea of not guilty. Request for jury trial; hearing in Superior Court. Notification of magistrate by clerk of court; where hearing may be held. Hearing before magistrate; report; final judgment. Sections 51-193m to 51-193q , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-51-193q",
-      "kind": "section",
-      "citation": "51-193q",
-      "citations": [
-        "51-193q"
-      ],
-      "heading": "51-193q",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_882.htm#sec_51-193q",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 51-193m to 51-193q. Prosecutions to be submitted to magistrate. Persons alleged to have committed motor vehicle infractions; payment of fine; plea of not guilty. Request for jury trial; hearing in Superior Court. Notification of magistrate by clerk of court; where hearing may be held. Hearing before magistrate; report; final judgment. Sections 51-193m to 51-193q , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 51-193m to 51-193q. Prosecutions to be submitted to magistrate. Persons alleged to have committed motor vehicle infractions; payment of fine; plea of not guilty. Request for jury trial; hearing in Superior Court. Notification of magistrate by clerk of court; where hearing may be held. Hearing before magistrate; report; final judgment. Sections 51-193m to 51-193q , inclusive, are repealed."
       }
     }
   ]

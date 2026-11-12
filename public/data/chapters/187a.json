@@ -509,64 +509,6 @@
         "annotations": [],
         "plainText": "Reserved for future use."
       }
-    },
-    {
-      "id": "section-10a-217",
-      "kind": "section",
-      "citation": "10a-217",
-      "citations": [
-        "10a-217"
-      ],
-      "heading": "10a-217",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_187a.htm#sec_10a-217",
-      "status": "active",
-      "content": {
-        "body": [],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": ""
-      }
-    },
-    {
-      "id": "section-10a-213",
-      "kind": "section",
-      "citation": "10a-213",
-      "citations": [
-        "10a-213"
-      ],
-      "heading": "10a-213",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_187a.htm#sec_10a-213",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 10a-213 to 10a-215. (Formerly Secs. 10-368b to 10-368d). Unrestricted and restricted funds. Bond issue. General obligation bonds. Sections 10a-213 to 10a-215 , inclusive, are repealed, effective July 1, 2005."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 10a-213 to 10a-215. (Formerly Secs. 10-368b to 10-368d). Unrestricted and restricted funds. Bond issue. General obligation bonds. Sections 10a-213 to 10a-215 , inclusive, are repealed, effective July 1, 2005."
-      }
-    },
-    {
-      "id": "section-10a-215",
-      "kind": "section",
-      "citation": "10a-215",
-      "citations": [
-        "10a-215"
-      ],
-      "heading": "10a-215",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_187a.htm#sec_10a-215",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 10a-213 to 10a-215. (Formerly Secs. 10-368b to 10-368d). Unrestricted and restricted funds. Bond issue. General obligation bonds. Sections 10a-213 to 10a-215 , inclusive, are repealed, effective July 1, 2005."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 10a-213 to 10a-215. (Formerly Secs. 10-368b to 10-368d). Unrestricted and restricted funds. Bond issue. General obligation bonds. Sections 10a-213 to 10a-215 , inclusive, are repealed, effective July 1, 2005."
-      }
     }
   ]
 }

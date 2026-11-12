@@ -330,11 +330,12 @@
       }
     },
     {
-      "id": "group-16a-34-to-16a-35a",
+      "id": "group-16a-34-to-16a-35-to-16a-35a",
       "kind": "group",
       "citation": null,
       "citations": [
         "16a-34",
+        "16a-35",
         "16a-35a"
       ],
       "heading": "Secs. 16a-34 to 16a-35a. Commission on Connecticut's Future. Duties, studies, reports.",
@@ -370,66 +371,6 @@
         "history": [],
         "annotations": [],
         "plainText": "Transferred to Chapter 578, Sec. 32-1f ."
-      }
-    },
-    {
-      "id": "section-16a-34",
-      "kind": "section",
-      "citation": "16a-34",
-      "citations": [
-        "16a-34"
-      ],
-      "heading": "16a-34",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_297.htm#sec_16a-34",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 16a-34 to 16a-35a. Commission on Connecticut's Future. Duties, studies, reports. Sections 16a-34 , 16a-35 and 16a-35a are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 16a-34 to 16a-35a. Commission on Connecticut's Future. Duties, studies, reports. Sections 16a-34 , 16a-35 and 16a-35a are repealed."
-      }
-    },
-    {
-      "id": "section-16a-35",
-      "kind": "section",
-      "citation": "16a-35",
-      "citations": [
-        "16a-35"
-      ],
-      "heading": "16a-35",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_297.htm#sec_16a-35",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 16a-34 to 16a-35a. Commission on Connecticut's Future. Duties, studies, reports. Sections 16a-34 , 16a-35 and 16a-35a are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 16a-34 to 16a-35a. Commission on Connecticut's Future. Duties, studies, reports. Sections 16a-34 , 16a-35 and 16a-35a are repealed."
-      }
-    },
-    {
-      "id": "section-16a-35a",
-      "kind": "section",
-      "citation": "16a-35a",
-      "citations": [
-        "16a-35a"
-      ],
-      "heading": "16a-35a",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_297.htm#sec_16a-35a",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 16a-34 to 16a-35a. Commission on Connecticut's Future. Duties, studies, reports. Sections 16a-34 , 16a-35 and 16a-35a are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 16a-34 to 16a-35a. Commission on Connecticut's Future. Duties, studies, reports. Sections 16a-34 , 16a-35 and 16a-35a are repealed."
       }
     }
   ]

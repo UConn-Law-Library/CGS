@@ -22,9 +22,7 @@
       "status": "active",
       "content": {
         "body": [
-          "All taxes levied by any school district shall be levied on the real estate situated therein, and the ratable personal property of those persons who belonged to such district at the time of laying such tax, and upon any manufacturing or mechanical business subject to taxation which is located or carried on in such district, not including therein the value of any real estate situated out of the district, and also upon any mercantile business carried on in such district by any person or persons who do not reside in the town in which such school district is situated; and neither the business so taxed nor any real estate in such district shall be taxed in any other district.",
-          "See Sec. 10-240 re town control of schools.",
-          "See Sec. 10-245 re formation of school districts."
+          "All taxes levied by any school district shall be levied on the real estate situated therein, and the ratable personal property of those persons who belonged to such district at the time of laying such tax, and upon any manufacturing or mechanical business subject to taxation which is located or carried on in such district, not including therein the value of any real estate situated out of the district, and also upon any mercantile business carried on in such district by any person or persons who do not reside in the town in which such school district is situated; and neither the business so taxed nor any real estate in such district shall be taxed in any other district."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 1878.)"
@@ -33,10 +31,18 @@
         "annotations": [
           {
             "first": true,
+            "text": "See Sec. 10-240 re town control of schools."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 10-245 re formation of school districts."
+          },
+          {
+            "first": true,
             "text": "Real estate in any district taxable there, whatever owner's residence. 4 D. 376; 11 C. 479. Votes imposing school taxes inartificially drawn held valid. 15 C. 331. Rate bill not invalid because it did not show on what list laid. Id., 447. Personal property of deceased person's estate in settlement taxable in district of his domicile at death. 38 C. 443. District may tax to pay old debt. 76 C. 695. See 92 C. 675."
           }
         ],
-        "plainText": "All taxes levied by any school district shall be levied on the real estate situated therein, and the ratable personal property of those persons who belonged to such district at the time of laying such tax, and upon any manufacturing or mechanical business subject to taxation which is located or carried on in such district, not including therein the value of any real estate situated out of the district, and also upon any mercantile business carried on in such district by any person or persons who do not reside in the town in which such school district is situated; and neither the business so taxed nor any real estate in such district shall be taxed in any other district.\n\nSee Sec. 10-240 re town control of schools.\n\nSee Sec. 10-245 re formation of school districts."
+        "plainText": "All taxes levied by any school district shall be levied on the real estate situated therein, and the ratable personal property of those persons who belonged to such district at the time of laying such tax, and upon any manufacturing or mechanical business subject to taxation which is located or carried on in such district, not including therein the value of any real estate situated out of the district, and also upon any mercantile business carried on in such district by any person or persons who do not reside in the town in which such school district is situated; and neither the business so taxed nor any real estate in such district shall be taxed in any other district."
       }
     },
     {

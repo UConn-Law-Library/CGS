@@ -95,8 +95,7 @@
       "status": "active",
       "content": {
         "body": [
-          "The use of cannabis shall be prohibited on any state lands or waters managed by the Department of Energy and Environmental Protection. Any person who violates such prohibition shall be fined not more than two hundred fifty dollars. The provisions of this section may only be enforced by agents of the Department of Energy and Environmental Protection.",
-          "See Sec. 21a-420 re definition of cannabis."
+          "The use of cannabis shall be prohibited on any state lands or waters managed by the Department of Energy and Environmental Protection. Any person who violates such prohibition shall be fined not more than two hundred fifty dollars. The provisions of this section may only be enforced by agents of the Department of Energy and Environmental Protection."
         ],
         "sourceNotes": [
           "(June Sp. Sess. P.A. 21-1, S. 91.)"
@@ -104,8 +103,13 @@
         "history": [
           "History: June Sp. Sess. P.A. 21-1 effective July 1, 2022."
         ],
-        "annotations": [],
-        "plainText": "The use of cannabis shall be prohibited on any state lands or waters managed by the Department of Energy and Environmental Protection. Any person who violates such prohibition shall be fined not more than two hundred fifty dollars. The provisions of this section may only be enforced by agents of the Department of Energy and Environmental Protection.\n\nSee Sec. 21a-420 re definition of cannabis."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 21a-420 re definition of cannabis."
+          }
+        ],
+        "plainText": "The use of cannabis shall be prohibited on any state lands or waters managed by the Department of Energy and Environmental Protection. Any person who violates such prohibition shall be fined not more than two hundred fifty dollars. The provisions of this section may only be enforced by agents of the Department of Energy and Environmental Protection."
       }
     },
     {
@@ -548,8 +552,7 @@
       "status": "active",
       "content": {
         "body": [
-          "The commissioner is authorized to take land or any interest therein by right of eminent domain in the manner provided for in section 48-12 for the public purposes for which it is authorized to acquire land under the provisions of section 23-8 .",
-          "See Sec. 48-10 re determination of damages in cases brought by state to condemn land by state referee."
+          "The commissioner is authorized to take land or any interest therein by right of eminent domain in the manner provided for in section 48-12 for the public purposes for which it is authorized to acquire land under the provisions of section 23-8 ."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 3437; 1967, P.A. 864, S. 1; 1971, P.A. 872, S. 170.)"
@@ -560,10 +563,14 @@
         "annotations": [
           {
             "first": true,
+            "text": "See Sec. 48-10 re determination of damages in cases brought by state to condemn land by state referee."
+          },
+          {
+            "first": true,
             "text": "Former provision for determination of damages by three appraisers held impliedly repealed by Sec. 48-10. 116 C. 119."
           }
         ],
-        "plainText": "The commissioner is authorized to take land or any interest therein by right of eminent domain in the manner provided for in section 48-12 for the public purposes for which it is authorized to acquire land under the provisions of section 23-8 .\n\nSee Sec. 48-10 re determination of damages in cases brought by state to condemn land by state referee."
+        "plainText": "The commissioner is authorized to take land or any interest therein by right of eminent domain in the manner provided for in section 48-12 for the public purposes for which it is authorized to acquire land under the provisions of section 23-8 ."
       }
     },
     {
@@ -1326,9 +1333,7 @@
       "status": "active",
       "content": {
         "body": [
-          "There shall be within the Department of Energy and Environmental Protection a State Forester who shall be responsible to the commissioner for the performance of his duties and shall be accountable to the commissioner in all his official activities. The State Forester shall be a technically trained forester with not less than ten years' experience in professional forestry. He shall be responsible for forest management and protection of department lands and for assuming a leadership role in the conservation, management and protection of state forest resources.",
-          "See Sec. 12-96 et seq. re taxation of forested land.",
-          "See Secs. 23-65f to 23-65j, inclusive, re State Forester's duties re registration of loggers and foresters."
+          "There shall be within the Department of Energy and Environmental Protection a State Forester who shall be responsible to the commissioner for the performance of his duties and shall be accountable to the commissioner in all his official activities. The State Forester shall be a technically trained forester with not less than ten years' experience in professional forestry. He shall be responsible for forest management and protection of department lands and for assuming a leadership role in the conservation, management and protection of state forest resources."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 3445; 1951, June, 1955, S. 1863d; 1971, P.A. 872, S. 182; P.A. 81-354, S. 2, 4; P.A. 11-80, S. 1.)"
@@ -1336,8 +1341,17 @@
         "history": [
           "History: 1971 act replaced references to state park and forest commission and its director with references to environmental protection commissioner, deleting obsolete references to director's office and his authority to make expenditures of state or federal funds if approved by commission; P.A. 81-354 made state forester's position classified and described his responsibilities; pursuant to P.A. 11-80, “Department of Environmental Protection” was changed editorially by the Revisors to “Department of Energy and Environmental Protection”, effective July 1, 2011."
         ],
-        "annotations": [],
-        "plainText": "There shall be within the Department of Energy and Environmental Protection a State Forester who shall be responsible to the commissioner for the performance of his duties and shall be accountable to the commissioner in all his official activities. The State Forester shall be a technically trained forester with not less than ten years' experience in professional forestry. He shall be responsible for forest management and protection of department lands and for assuming a leadership role in the conservation, management and protection of state forest resources.\n\nSee Sec. 12-96 et seq. re taxation of forested land.\n\nSee Secs. 23-65f to 23-65j, inclusive, re State Forester's duties re registration of loggers and foresters."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 12-96 et seq. re taxation of forested land."
+          },
+          {
+            "first": false,
+            "text": "See Secs. 23-65f to 23-65j, inclusive, re State Forester's duties re registration of loggers and foresters."
+          }
+        ],
+        "plainText": "There shall be within the Department of Energy and Environmental Protection a State Forester who shall be responsible to the commissioner for the performance of his duties and shall be accountable to the commissioner in all his official activities. The State Forester shall be a technically trained forester with not less than ten years' experience in professional forestry. He shall be responsible for forest management and protection of department lands and for assuming a leadership role in the conservation, management and protection of state forest resources."
       }
     },
     {
@@ -1357,9 +1371,7 @@
           "(c) (1) The commissioner may harvest forest products from woodlands owned by the state and take such other measures as the commissioner deems necessary for the efficient management and protection of such woodlands and may sell wood, timber and other products from any state woodlands whenever the commissioner deems such sales desirable and may develop recreational facilities in the woodlands managed by the Department of Energy and Environmental Protection. The commissioner shall charge no less than ten dollars per cord for any such wood or timber sold as fuel.",
           "(2) There is established an account to be known as the “timber harvesting revolving account” which shall be a separate, nonlapsing account within the General Fund. Proceeds from the harvest of timber from state forests and state wildlife management areas shall be deposited in such account. The commissioner shall use moneys in such account for the purpose of developing forest management plans to guide the harvest of timber from state forests and state wildlife management areas and for all reasonable direct expenses relating to the administration and operation of such plans in such state forests and wildlife management areas. The commissioner may accept, on behalf of the Department of Energy and Environmental Protection, any gifts, donations, loans or bequests for the purposes of depositing such funds into the timber harvesting revolving account. Any such loan from a nonprofit organization qualified under Section 501(c)(3) of the Internal Revenue Code of 1986, or any subsequent corresponding internal revenue code of the United States, as amended from time to time, shall be repaid from such account not later than two years after entering such loan agreement or at a time and upon terms agreed upon by the commissioner and such nonprofit organization. The account shall not exceed one hundred thousand dollars. Any remaining proceeds shall be deposited in the General Fund.",
           "(d) The commissioner may rent state forest property and buildings thereon under his or her jurisdiction for a period not exceeding twenty-five years, provided any lease for such property and building for a term of more than ten years shall be subject to the review and approval of the State Properties Review Board. The proceeds of such sales, rentals and any receipts resulting from management of the state forests, or from reimbursements from other state departments or state institutions, shall be deposited in the General Fund in accordance with the provisions of section 4-32 . Expenditures incurred by the commissioner for the protection, management and development of the forests, the preparation and marketing of forest products and the acquisition of land for the extension and completion of the state forests as provided in section 23-21 may be paid with moneys appropriated from the General Fund.",
-          "(e) The provisions of this section shall not apply to land owned or managed by the state on which forest resource management measures may be restricted by deed, statute, or incompatible use. As used in this section, “woodland” means land owned or managed by a state agency and stocked with forest tree species not less than six hundred stems per acre and at least one year old.",
-          "See Sec. 12-107d re classification of land as forest land.",
-          "See Secs. 23-65f to 23-65j, inclusive, re commissioner's duties re registration of loggers and foresters."
+          "(e) The provisions of this section shall not apply to land owned or managed by the state on which forest resource management measures may be restricted by deed, statute, or incompatible use. As used in this section, “woodland” means land owned or managed by a state agency and stocked with forest tree species not less than six hundred stems per acre and at least one year old."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 3446; 1949, 1951, June, 1955, S. 1864d; 1971, P.A. 872, S. 183; P.A. 74-83, S. 1; P.A. 81-354, S. 1, 4; P.A. 82-142; P.A. 84-82; P.A. 04-115, S. 1; P.A. 08-172, S. 1; June Sp. Sess. P.A. 09-3, S. 469; P.A. 11-80, S. 1; 11-192, S. 1.)"
@@ -1367,8 +1379,17 @@
         "history": [
           "History: 1971 act transferred power to administer statutes concerning forests from state forester to commissioner of environmental protection, deleted references to supervisory duties of state park and forest commission and its director with regard to actions for which state forester was formerly responsible under section and replaced reference to the commission with reference to environmental protection commissioner; P.A. 74-83 substituted “personnel” for “men”; P.A. 81-354 required commissioner to charge no less than $10 per cord; P.A. 82-142 amended the section to expand land available for forest resource management and sale of wood from state forests to state woodlands, defined “woodlands” and authorized the commissioner of environmental protection to prepare forest management and protection plans without a prior request where previously his actions were dependent upon request of state agencies and institutions or municipalities if applicable; P.A. 84-82 extended the maximum duration of leases from 2 to 25 years and added a provision requiring review by the state properties review board for leases of 10 years or more; P.A. 04-115 authorized commissioner to have publicly-owned woodlands or products from such woodlands certified or licensed by specified entities, provided private funding is used for the cost of all applications, authorized commissioner to accept gifts, donations and bequests on behalf of department re applying for and obtaining certification and licensure, provided that proceeds from management of state forests in excess of $875,000 derived from sale of wood, timber and other products from publicly-owned woodlands shall be deposited in the Conservation Fund and made technical changes; P.A. 08-172 required commissioner to apply to have publicly owned woodlands or products from such woodlands certified or licensed not later than January 10, 2010, added “(10) any other programs deemed necessary, as determined by the commissioner” to list of authorized programs, changed proceeds deposit amount to amount in excess of $600,000, specified that moneys are only to be used to support forestry programs and changed certain mandatory expenditure payments to discretionary payments for moneys appropriated from the General Fund, effective June 6, 2008; June Sp. Sess. P.A. 09-3 deleted provision re deposit of annual proceeds in excess of $600,000 derived from sale of certain products in the Conservation Fund and re use of same to support forestry programs; pursuant to P.A. 11-80, “Commissioner of Environmental Protection” and “Department of Environmental Protection” were changed editorially by the Revisors to “Commissioner of Energy and Environmental Protection” and “Department of Energy and Environmental Protection”, respectively, effective July 1, 2011; P.A. 11-192 designated existing provisions as Subsecs. (a), (b), (c)(1), (d) and (e), added Subsec. (c)(2) re timber harvesting revolving account and made technical changes, effective July 13, 2011."
         ],
-        "annotations": [],
-        "plainText": "(a) The Commissioner of Energy and Environmental Protection shall administer the statutes relating to forestry and the protection of forests. The commissioner may: (1) Employ such field and office assistants as may be necessary for the execution of his or her duties, (2) from time to time, publish the forestry laws of the state and other literature of general interest and practical value pertaining to forestry, (3) enter into cooperation with departments of the federal government for the promotion of forest resource management and protection within the state, and (4) with the assistance of the State Forester, develop and administer plans for the protection and management of publicly owned woodlands. Such plans shall include, but not be limited to, proposals for the establishment of forest plantations and the marketing of forest products.\n\n(b) Not later than January 10, 2010, the commissioner shall apply to have publicly owned woodlands or products from such woodlands certified or licensed under one or more of the following, provided the commissioner uses private funding from gifts, donations or bequests, as authorized in this section, for the cost of all such applications: (1) The Sustainable Forestry Initiative Program, (2) the American Tree Farm System, (3) the Canadian Standards Association's Sustainable Management System Standards, (4) the Finnish Standard, (5) the Forest Stewardship Council, (6) the Pan-European Forest Certification Program, (7) the Swedish Standards, (8) the United Kingdom Woodland Assurance Scheme, (9) the Smart Wood Program, as administered by the Rainforest Alliance, or (10) any other programs deemed necessary, as determined by the commissioner. The commissioner shall implement any sustainable forestry practice necessary for such certification or licensure. The commissioner may accept, on behalf of the Department of Energy and Environmental Protection, any gifts, donations or bequests for the purposes of applying for and obtaining such certification or licensure.\n\n(c) (1) The commissioner may harvest forest products from woodlands owned by the state and take such other measures as the commissioner deems necessary for the efficient management and protection of such woodlands and may sell wood, timber and other products from any state woodlands whenever the commissioner deems such sales desirable and may develop recreational facilities in the woodlands managed by the Department of Energy and Environmental Protection. The commissioner shall charge no less than ten dollars per cord for any such wood or timber sold as fuel.\n\n(2) There is established an account to be known as the “timber harvesting revolving account” which shall be a separate, nonlapsing account within the General Fund. Proceeds from the harvest of timber from state forests and state wildlife management areas shall be deposited in such account. The commissioner shall use moneys in such account for the purpose of developing forest management plans to guide the harvest of timber from state forests and state wildlife management areas and for all reasonable direct expenses relating to the administration and operation of such plans in such state forests and wildlife management areas. The commissioner may accept, on behalf of the Department of Energy and Environmental Protection, any gifts, donations, loans or bequests for the purposes of depositing such funds into the timber harvesting revolving account. Any such loan from a nonprofit organization qualified under Section 501(c)(3) of the Internal Revenue Code of 1986, or any subsequent corresponding internal revenue code of the United States, as amended from time to time, shall be repaid from such account not later than two years after entering such loan agreement or at a time and upon terms agreed upon by the commissioner and such nonprofit organization. The account shall not exceed one hundred thousand dollars. Any remaining proceeds shall be deposited in the General Fund.\n\n(d) The commissioner may rent state forest property and buildings thereon under his or her jurisdiction for a period not exceeding twenty-five years, provided any lease for such property and building for a term of more than ten years shall be subject to the review and approval of the State Properties Review Board. The proceeds of such sales, rentals and any receipts resulting from management of the state forests, or from reimbursements from other state departments or state institutions, shall be deposited in the General Fund in accordance with the provisions of section 4-32 . Expenditures incurred by the commissioner for the protection, management and development of the forests, the preparation and marketing of forest products and the acquisition of land for the extension and completion of the state forests as provided in section 23-21 may be paid with moneys appropriated from the General Fund.\n\n(e) The provisions of this section shall not apply to land owned or managed by the state on which forest resource management measures may be restricted by deed, statute, or incompatible use. As used in this section, “woodland” means land owned or managed by a state agency and stocked with forest tree species not less than six hundred stems per acre and at least one year old.\n\nSee Sec. 12-107d re classification of land as forest land.\n\nSee Secs. 23-65f to 23-65j, inclusive, re commissioner's duties re registration of loggers and foresters."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 12-107d re classification of land as forest land."
+          },
+          {
+            "first": false,
+            "text": "See Secs. 23-65f to 23-65j, inclusive, re commissioner's duties re registration of loggers and foresters."
+          }
+        ],
+        "plainText": "(a) The Commissioner of Energy and Environmental Protection shall administer the statutes relating to forestry and the protection of forests. The commissioner may: (1) Employ such field and office assistants as may be necessary for the execution of his or her duties, (2) from time to time, publish the forestry laws of the state and other literature of general interest and practical value pertaining to forestry, (3) enter into cooperation with departments of the federal government for the promotion of forest resource management and protection within the state, and (4) with the assistance of the State Forester, develop and administer plans for the protection and management of publicly owned woodlands. Such plans shall include, but not be limited to, proposals for the establishment of forest plantations and the marketing of forest products.\n\n(b) Not later than January 10, 2010, the commissioner shall apply to have publicly owned woodlands or products from such woodlands certified or licensed under one or more of the following, provided the commissioner uses private funding from gifts, donations or bequests, as authorized in this section, for the cost of all such applications: (1) The Sustainable Forestry Initiative Program, (2) the American Tree Farm System, (3) the Canadian Standards Association's Sustainable Management System Standards, (4) the Finnish Standard, (5) the Forest Stewardship Council, (6) the Pan-European Forest Certification Program, (7) the Swedish Standards, (8) the United Kingdom Woodland Assurance Scheme, (9) the Smart Wood Program, as administered by the Rainforest Alliance, or (10) any other programs deemed necessary, as determined by the commissioner. The commissioner shall implement any sustainable forestry practice necessary for such certification or licensure. The commissioner may accept, on behalf of the Department of Energy and Environmental Protection, any gifts, donations or bequests for the purposes of applying for and obtaining such certification or licensure.\n\n(c) (1) The commissioner may harvest forest products from woodlands owned by the state and take such other measures as the commissioner deems necessary for the efficient management and protection of such woodlands and may sell wood, timber and other products from any state woodlands whenever the commissioner deems such sales desirable and may develop recreational facilities in the woodlands managed by the Department of Energy and Environmental Protection. The commissioner shall charge no less than ten dollars per cord for any such wood or timber sold as fuel.\n\n(2) There is established an account to be known as the “timber harvesting revolving account” which shall be a separate, nonlapsing account within the General Fund. Proceeds from the harvest of timber from state forests and state wildlife management areas shall be deposited in such account. The commissioner shall use moneys in such account for the purpose of developing forest management plans to guide the harvest of timber from state forests and state wildlife management areas and for all reasonable direct expenses relating to the administration and operation of such plans in such state forests and wildlife management areas. The commissioner may accept, on behalf of the Department of Energy and Environmental Protection, any gifts, donations, loans or bequests for the purposes of depositing such funds into the timber harvesting revolving account. Any such loan from a nonprofit organization qualified under Section 501(c)(3) of the Internal Revenue Code of 1986, or any subsequent corresponding internal revenue code of the United States, as amended from time to time, shall be repaid from such account not later than two years after entering such loan agreement or at a time and upon terms agreed upon by the commissioner and such nonprofit organization. The account shall not exceed one hundred thousand dollars. Any remaining proceeds shall be deposited in the General Fund.\n\n(d) The commissioner may rent state forest property and buildings thereon under his or her jurisdiction for a period not exceeding twenty-five years, provided any lease for such property and building for a term of more than ten years shall be subject to the review and approval of the State Properties Review Board. The proceeds of such sales, rentals and any receipts resulting from management of the state forests, or from reimbursements from other state departments or state institutions, shall be deposited in the General Fund in accordance with the provisions of section 4-32 . Expenditures incurred by the commissioner for the protection, management and development of the forests, the preparation and marketing of forest products and the acquisition of land for the extension and completion of the state forests as provided in section 23-21 may be paid with moneys appropriated from the General Fund.\n\n(e) The provisions of this section shall not apply to land owned or managed by the state on which forest resource management measures may be restricted by deed, statute, or incompatible use. As used in this section, “woodland” means land owned or managed by a state agency and stocked with forest tree species not less than six hundred stems per acre and at least one year old."
       }
     },
     {
@@ -1677,8 +1698,7 @@
       "status": "active",
       "content": {
         "body": [
-          "The Commissioner of Energy and Environmental Protection shall adopt regulations in accordance with the provisions of chapter 54 (1) establishing standards and procedures for certification of operators of all-terrain vehicles and the use of all-terrain vehicles on state land, (2) setting a fee sufficient to cover the cost of implementing the certification program required pursuant to section 23-26b , and (3) establishing safety requirements for the operation of all-terrain vehicles on state land which shall include provisions for noise levels. Any regulations concerning safety shall be adopted in consultation with the Commissioner of Consumer Protection.",
-          "See chapter 255 re all-terrain vehicles."
+          "The Commissioner of Energy and Environmental Protection shall adopt regulations in accordance with the provisions of chapter 54 (1) establishing standards and procedures for certification of operators of all-terrain vehicles and the use of all-terrain vehicles on state land, (2) setting a fee sufficient to cover the cost of implementing the certification program required pursuant to section 23-26b , and (3) establishing safety requirements for the operation of all-terrain vehicles on state land which shall include provisions for noise levels. Any regulations concerning safety shall be adopted in consultation with the Commissioner of Consumer Protection."
         ],
         "sourceNotes": [
           "(P.A. 86-249, S. 6, 9; June 30 Sp. Sess. P.A. 03-6, S. 146(c); P.A. 04-189, S. 1; P.A. 11-80, S. 1.)"
@@ -1686,8 +1706,13 @@
         "history": [
           "History: June 30 Sp. Sess. P.A. 03-6 replaced Commissioner of Consumer Protection with Commissioner of Agriculture and Consumer Protection, effective July 1, 2004; P.A. 04-189 repealed Sec. 146 of June 30 Sp. Sess. P.A. 03-6, thereby reversing the merger of the Departments of Agriculture and Consumer Protection, effective June 1, 2004; pursuant to P.A. 11-80, “Commissioner of Environmental Protection” was changed editorially by the Revisors to “Commissioner of Energy and Environmental Protection”, effective July 1, 2011."
         ],
-        "annotations": [],
-        "plainText": "The Commissioner of Energy and Environmental Protection shall adopt regulations in accordance with the provisions of chapter 54 (1) establishing standards and procedures for certification of operators of all-terrain vehicles and the use of all-terrain vehicles on state land, (2) setting a fee sufficient to cover the cost of implementing the certification program required pursuant to section 23-26b , and (3) establishing safety requirements for the operation of all-terrain vehicles on state land which shall include provisions for noise levels. Any regulations concerning safety shall be adopted in consultation with the Commissioner of Consumer Protection.\n\nSee chapter 255 re all-terrain vehicles."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See chapter 255 re all-terrain vehicles."
+          }
+        ],
+        "plainText": "The Commissioner of Energy and Environmental Protection shall adopt regulations in accordance with the provisions of chapter 54 (1) establishing standards and procedures for certification of operators of all-terrain vehicles and the use of all-terrain vehicles on state land, (2) setting a fee sufficient to cover the cost of implementing the certification program required pursuant to section 23-26b , and (3) establishing safety requirements for the operation of all-terrain vehicles on state land which shall include provisions for noise levels. Any regulations concerning safety shall be adopted in consultation with the Commissioner of Consumer Protection."
       }
     },
     {
@@ -1703,8 +1728,7 @@
       "content": {
         "body": [
           "(a) Any person who violates section 23-26b or 23-26e or any regulations adopted pursuant to section 23-26f shall have committed an infraction. For a second and each subsequent violation of any of said laws or regulations, the Commissioner of Energy and Environmental Protection may suspend any certificate issued pursuant to section 23-26b and the right to obtain any such permit for not more than two years.",
-          "(b) Any person who (1) knowingly permits a person less than eighteen years of age who has not obtained a certificate pursuant to section 23-26b to operate an all-terrain vehicle on state land, (2) permits a person less than twelve years of age to operate an all-terrain vehicle on state land, or (3) allows a person between twelve and sixteen years of age to operate an all-terrain vehicle on state land without being supervised by a person more than eighteen years of age, shall have committed an infraction.",
-          "See Secs. 14-387 and 14-388 re violations of rules of operation of all-terrain vehicles and resulting penalties."
+          "(b) Any person who (1) knowingly permits a person less than eighteen years of age who has not obtained a certificate pursuant to section 23-26b to operate an all-terrain vehicle on state land, (2) permits a person less than twelve years of age to operate an all-terrain vehicle on state land, or (3) allows a person between twelve and sixteen years of age to operate an all-terrain vehicle on state land without being supervised by a person more than eighteen years of age, shall have committed an infraction."
         ],
         "sourceNotes": [
           "(P.A. 86-249, S. 7; P.A. 11-80, S. 1.)"
@@ -1712,8 +1736,13 @@
         "history": [
           "History: Pursuant to P.A. 11-80, “Commissioner of Environmental Protection” was changed editorially by the Revisors to “Commissioner of Energy and Environmental Protection” in Subsec. (a), effective July 1, 2011."
         ],
-        "annotations": [],
-        "plainText": "(a) Any person who violates section 23-26b or 23-26e or any regulations adopted pursuant to section 23-26f shall have committed an infraction. For a second and each subsequent violation of any of said laws or regulations, the Commissioner of Energy and Environmental Protection may suspend any certificate issued pursuant to section 23-26b and the right to obtain any such permit for not more than two years.\n\n(b) Any person who (1) knowingly permits a person less than eighteen years of age who has not obtained a certificate pursuant to section 23-26b to operate an all-terrain vehicle on state land, (2) permits a person less than twelve years of age to operate an all-terrain vehicle on state land, or (3) allows a person between twelve and sixteen years of age to operate an all-terrain vehicle on state land without being supervised by a person more than eighteen years of age, shall have committed an infraction.\n\nSee Secs. 14-387 and 14-388 re violations of rules of operation of all-terrain vehicles and resulting penalties."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Secs. 14-387 and 14-388 re violations of rules of operation of all-terrain vehicles and resulting penalties."
+          }
+        ],
+        "plainText": "(a) Any person who violates section 23-26b or 23-26e or any regulations adopted pursuant to section 23-26f shall have committed an infraction. For a second and each subsequent violation of any of said laws or regulations, the Commissioner of Energy and Environmental Protection may suspend any certificate issued pursuant to section 23-26b and the right to obtain any such permit for not more than two years.\n\n(b) Any person who (1) knowingly permits a person less than eighteen years of age who has not obtained a certificate pursuant to section 23-26b to operate an all-terrain vehicle on state land, (2) permits a person less than twelve years of age to operate an all-terrain vehicle on state land, or (3) allows a person between twelve and sixteen years of age to operate an all-terrain vehicle on state land without being supervised by a person more than eighteen years of age, shall have committed an infraction."
       }
     },
     {
@@ -1770,86 +1799,6 @@
         "history": [],
         "annotations": [],
         "plainText": "Sections 23-27a to 23-27k , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-23-1",
-      "kind": "section",
-      "citation": "23-1",
-      "citations": [
-        "23-1"
-      ],
-      "heading": "23-1",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_447.htm#sec_23-1",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 23-1 to 23-3. Appointment and term of commission. Powers and duties; reports; director. Supervision of tree wardens. Sections 23-1 to 23-3 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 23-1 to 23-3. Appointment and term of commission. Powers and duties; reports; director. Supervision of tree wardens. Sections 23-1 to 23-3 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-23-3",
-      "kind": "section",
-      "citation": "23-3",
-      "citations": [
-        "23-3"
-      ],
-      "heading": "23-3",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_447.htm#sec_23-3",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 23-1 to 23-3. Appointment and term of commission. Powers and duties; reports; director. Supervision of tree wardens. Sections 23-1 to 23-3 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 23-1 to 23-3. Appointment and term of commission. Powers and duties; reports; director. Supervision of tree wardens. Sections 23-1 to 23-3 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-23-27a",
-      "kind": "section",
-      "citation": "23-27a",
-      "citations": [
-        "23-27a"
-      ],
-      "heading": "23-27a",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_447.htm#sec_23-27a",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 23-27a to 23-27k. Registration of private land for recreational purposes. Sections 23-27a to 23-27k , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 23-27a to 23-27k. Registration of private land for recreational purposes. Sections 23-27a to 23-27k , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-23-27k",
-      "kind": "section",
-      "citation": "23-27k",
-      "citations": [
-        "23-27k"
-      ],
-      "heading": "23-27k",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_447.htm#sec_23-27k",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 23-27a to 23-27k. Registration of private land for recreational purposes. Sections 23-27a to 23-27k , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 23-27a to 23-27k. Registration of private land for recreational purposes. Sections 23-27a to 23-27k , inclusive, are repealed."
       }
     }
   ]

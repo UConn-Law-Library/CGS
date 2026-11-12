@@ -283,15 +283,19 @@
       "status": "active",
       "content": {
         "body": [
-          "As used in this chapter, “owner or lessor” includes any receiver appointed under sections 47a-56 to 47a-56i , inclusive.",
-          "See Sec. 47a-56d re authority of receiver to bring summary process action."
+          "As used in this chapter, “owner or lessor” includes any receiver appointed under sections 47a-56 to 47a-56i , inclusive."
         ],
         "sourceNotes": [
           "(P.A. 95-247, S. 11.)"
         ],
         "history": [],
-        "annotations": [],
-        "plainText": "As used in this chapter, “owner or lessor” includes any receiver appointed under sections 47a-56 to 47a-56i , inclusive.\n\nSee Sec. 47a-56d re authority of receiver to bring summary process action."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 47a-56d re authority of receiver to bring summary process action."
+          }
+        ],
+        "plainText": "As used in this chapter, “owner or lessor” includes any receiver appointed under sections 47a-56 to 47a-56i , inclusive."
       }
     },
     {
@@ -597,8 +601,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Appeal shall be allowed from any judgment rendered in any summary process action in the manner provided in sections 47a-35 to 47a-35b , inclusive, and sections 51-197c to 51-197f , inclusive.",
-          "See Sec. 47a-35 re time period to appeal."
+          "Appeal shall be allowed from any judgment rendered in any summary process action in the manner provided in sections 47a-35 to 47a-35b , inclusive, and sections 51-197c to 51-197f , inclusive."
         ],
         "sourceNotes": [
           "(P.A. 79-571, S. 59.)"
@@ -607,10 +610,14 @@
         "annotations": [
           {
             "first": true,
+            "text": "See Sec. 47a-35 re time period to appeal."
+          },
+          {
+            "first": true,
             "text": "Cited. 38 CS 70."
           }
         ],
-        "plainText": "Appeal shall be allowed from any judgment rendered in any summary process action in the manner provided in sections 47a-35 to 47a-35b , inclusive, and sections 51-197c to 51-197f , inclusive.\n\nSee Sec. 47a-35 re time period to appeal."
+        "plainText": "Appeal shall be allowed from any judgment rendered in any summary process action in the manner provided in sections 47a-35 to 47a-35b , inclusive, and sections 51-197c to 51-197f , inclusive."
       }
     },
     {
@@ -859,8 +866,7 @@
       "status": "active",
       "content": {
         "body": [
-          "When the lessee or tenant of any house, room, tenement or dwelling unit is convicted of keeping a house of ill-fame therein, resorted to for the purpose of prostitution or lewdness, or of a violation therein of any law against gaming, the lease, contract or rental agreement for letting such house, room, tenement or dwelling unit shall thereupon be void; and the lessor may recover possession of the premises in the manner prescribed in this chapter, but notice to quit possession shall not be required.",
-          "See Sec. 53a-89 re penalty for permitting prostitution on premises."
+          "When the lessee or tenant of any house, room, tenement or dwelling unit is convicted of keeping a house of ill-fame therein, resorted to for the purpose of prostitution or lewdness, or of a violation therein of any law against gaming, the lease, contract or rental agreement for letting such house, room, tenement or dwelling unit shall thereupon be void; and the lessor may recover possession of the premises in the manner prescribed in this chapter, but notice to quit possession shall not be required."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 8281; P.A. 79-571, S. 50.)"
@@ -869,6 +875,10 @@
           "History: Sec. 52-539 transferred to Sec. 47a-31 in 1977; P.A. 79-571 added references to dwelling units and rental agreements and rephrased provisions."
         ],
         "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 53a-89 re penalty for permitting prostitution on premises."
+          },
           {
             "first": true,
             "text": "Annotations to former Sec. 52-539:"
@@ -886,7 +896,7 @@
             "text": "Cited. 38 CS 70."
           }
         ],
-        "plainText": "When the lessee or tenant of any house, room, tenement or dwelling unit is convicted of keeping a house of ill-fame therein, resorted to for the purpose of prostitution or lewdness, or of a violation therein of any law against gaming, the lease, contract or rental agreement for letting such house, room, tenement or dwelling unit shall thereupon be void; and the lessor may recover possession of the premises in the manner prescribed in this chapter, but notice to quit possession shall not be required.\n\nSee Sec. 53a-89 re penalty for permitting prostitution on premises."
+        "plainText": "When the lessee or tenant of any house, room, tenement or dwelling unit is convicted of keeping a house of ill-fame therein, resorted to for the purpose of prostitution or lewdness, or of a violation therein of any law against gaming, the lease, contract or rental agreement for letting such house, room, tenement or dwelling unit shall thereupon be void; and the lessor may recover possession of the premises in the manner prescribed in this chapter, but notice to quit possession shall not be required."
       }
     },
     {
@@ -946,9 +956,7 @@
       "status": "active",
       "content": {
         "body": [
-          "In any action for summary process under this chapter or section 21-80 it shall be an affirmative defense that the plaintiff brought such action solely because the defendant attempted to remedy, by lawful means, including contacting officials of the state or of any town, city, borough or public agency or filing a complaint with a fair rent commission, any condition constituting a violation of any of the provisions of chapter 368o, or of chapter 412, or of any other state statute or regulation or of the housing or health ordinances of the municipality wherein the premises which are the subject of the complaint lie. The obligation on the part of the defendant to pay rent or the reasonable value of the use and occupancy of the premises which are the subject of any such action shall not be abrogated or diminished by any provision of this section.",
-          "See Sec. 47a-20 prohibiting retaliatory action by landlord.",
-          "See Sec. 47a-21 re actions deemed not to be retaliatory."
+          "In any action for summary process under this chapter or section 21-80 it shall be an affirmative defense that the plaintiff brought such action solely because the defendant attempted to remedy, by lawful means, including contacting officials of the state or of any town, city, borough or public agency or filing a complaint with a fair rent commission, any condition constituting a violation of any of the provisions of chapter 368o, or of chapter 412, or of any other state statute or regulation or of the housing or health ordinances of the municipality wherein the premises which are the subject of the complaint lie. The obligation on the part of the defendant to pay rent or the reasonable value of the use and occupancy of the premises which are the subject of any such action shall not be abrogated or diminished by any provision of this section."
         ],
         "sourceNotes": [
           "(1969, P.A. 315; 1972, P.A. 160, S. 4; 186, S. 14; P.A. 74-333, S. 6, 12; P.A. 78-303, S. 118, 136; P.A. 79-560, S. 20, 39.)"
@@ -957,6 +965,14 @@
           "History: 1972 acts specified as affirmative defense that plaintiff brought action because defendant sought remedy by filing complaint with fair rent commission and added reference to statutes and regulations other than provisions of Ch. 352 and later added reference to Ch. 412; P.A. 74-333 added reference to Sec. 21-80; Sec. 52-540a transferred to Sec. 47a-33 in 1977; P.A. 78-303 deleted reference to Sec. 21-80; P.A. 79-560 restored reference to Sec. 21-80."
         ],
         "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 47a-20 prohibiting retaliatory action by landlord."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 47a-21 re actions deemed not to be retaliatory."
+          },
           {
             "first": true,
             "text": "Annotations to former section 52-540a:"
@@ -986,7 +1002,7 @@
             "text": "Cited. 35 CS 233. Section establishes retaliatory action as affirmative defense; no presumptions permitted under section and tenant, by affirmative proof, must establish landlord's primary motive in seeking eviction was in retaliation for tenant's exercise of his statutory right to report housing code violations; burden of persuasion for affirmative defense rests upon tenant who asserts it. Id., 261. Cited. 36 CS 47; 38 CS 70; Id., 370."
           }
         ],
-        "plainText": "In any action for summary process under this chapter or section 21-80 it shall be an affirmative defense that the plaintiff brought such action solely because the defendant attempted to remedy, by lawful means, including contacting officials of the state or of any town, city, borough or public agency or filing a complaint with a fair rent commission, any condition constituting a violation of any of the provisions of chapter 368o, or of chapter 412, or of any other state statute or regulation or of the housing or health ordinances of the municipality wherein the premises which are the subject of the complaint lie. The obligation on the part of the defendant to pay rent or the reasonable value of the use and occupancy of the premises which are the subject of any such action shall not be abrogated or diminished by any provision of this section.\n\nSee Sec. 47a-20 prohibiting retaliatory action by landlord.\n\nSee Sec. 47a-21 re actions deemed not to be retaliatory."
+        "plainText": "In any action for summary process under this chapter or section 21-80 it shall be an affirmative defense that the plaintiff brought such action solely because the defendant attempted to remedy, by lawful means, including contacting officials of the state or of any town, city, borough or public agency or filing a complaint with a fair rent commission, any condition constituting a violation of any of the provisions of chapter 368o, or of chapter 412, or of any other state statute or regulation or of the housing or health ordinances of the municipality wherein the premises which are the subject of the complaint lie. The obligation on the part of the defendant to pay rent or the reasonable value of the use and occupancy of the premises which are the subject of any such action shall not be abrogated or diminished by any provision of this section."
       }
     },
     {

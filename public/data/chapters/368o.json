@@ -130,8 +130,7 @@
       "status": "active",
       "content": {
         "body": [
-          "In each tenement house, all rooms, except water-closet compartments, bathrooms and kitchenettes, shall be of the following minimum sizes: In each apartment there shall be at least one room containing not less than one hundred and twenty square feet of floor area, and each other room shall contain at least seventy square feet of floor area. Each room shall be in at least seventy-five per cent of its area not less than seven feet eight inches high from the finished floor to the finished ceiling, except attic rooms, which shall be at least seven feet four inches high in one-half of its area. A kitchenette with less than seventy square feet of floor area need not be considered a separate room but shall comply with section 19-359 .",
-          "See Sec. 29-267 re inapplicability of this section to construction or alteration of building pursuant to State Building Code."
+          "In each tenement house, all rooms, except water-closet compartments, bathrooms and kitchenettes, shall be of the following minimum sizes: In each apartment there shall be at least one room containing not less than one hundred and twenty square feet of floor area, and each other room shall contain at least seventy square feet of floor area. Each room shall be in at least seventy-five per cent of its area not less than seven feet eight inches high from the finished floor to the finished ceiling, except attic rooms, which shall be at least seven feet four inches high in one-half of its area. A kitchenette with less than seventy square feet of floor area need not be considered a separate room but shall comply with section 19-359 ."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 4069; 1967, P.A. 180, S. 2.)"
@@ -142,10 +141,14 @@
         "annotations": [
           {
             "first": true,
+            "text": "See Sec. 29-267 re inapplicability of this section to construction or alteration of building pursuant to State Building Code."
+          },
+          {
+            "first": true,
             "text": "Cited. 13 CA 1."
           }
         ],
-        "plainText": "In each tenement house, all rooms, except water-closet compartments, bathrooms and kitchenettes, shall be of the following minimum sizes: In each apartment there shall be at least one room containing not less than one hundred and twenty square feet of floor area, and each other room shall contain at least seventy square feet of floor area. Each room shall be in at least seventy-five per cent of its area not less than seven feet eight inches high from the finished floor to the finished ceiling, except attic rooms, which shall be at least seven feet four inches high in one-half of its area. A kitchenette with less than seventy square feet of floor area need not be considered a separate room but shall comply with section 19-359 .\n\nSee Sec. 29-267 re inapplicability of this section to construction or alteration of building pursuant to State Building Code."
+        "plainText": "In each tenement house, all rooms, except water-closet compartments, bathrooms and kitchenettes, shall be of the following minimum sizes: In each apartment there shall be at least one room containing not less than one hundred and twenty square feet of floor area, and each other room shall contain at least seventy square feet of floor area. Each room shall be in at least seventy-five per cent of its area not less than seven feet eight inches high from the finished floor to the finished ceiling, except attic rooms, which shall be at least seven feet four inches high in one-half of its area. A kitchenette with less than seventy square feet of floor area need not be considered a separate room but shall comply with section 19-359 ."
       }
     },
     {

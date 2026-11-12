@@ -122,8 +122,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Upon receipt of an application, as set forth in section 21-50 , and the required application and annual permit fees, the Commissioner of Transportation shall cause to be issued a permit for the erection or continued maintenance of the outdoor advertising structure, device or display named in such application, which permit shall state the size of such structure, device or display and the location upon which it is to be erected or maintained and shall be in force until the first day of August next following the date thereof. Any advertisement displayed upon any such structure or device shall be exempted from the payment of any other permit fee during the period covered by such permit.",
-          "See Sec. 13a-123 re requirement that signs, etc. licensed under chapter conform to regulations and standards."
+          "Upon receipt of an application, as set forth in section 21-50 , and the required application and annual permit fees, the Commissioner of Transportation shall cause to be issued a permit for the erection or continued maintenance of the outdoor advertising structure, device or display named in such application, which permit shall state the size of such structure, device or display and the location upon which it is to be erected or maintained and shall be in force until the first day of August next following the date thereof. Any advertisement displayed upon any such structure or device shall be exempted from the payment of any other permit fee during the period covered by such permit."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 4692; 1972, P.A. 272, S. 4; P.A. 86-209, S. 3, 4.)"
@@ -131,8 +130,13 @@
         "history": [
           "History: 1972 act substituted commissioner of transportation for commissioner of state police; P.A. 86-209 added reference to application fee."
         ],
-        "annotations": [],
-        "plainText": "Upon receipt of an application, as set forth in section 21-50 , and the required application and annual permit fees, the Commissioner of Transportation shall cause to be issued a permit for the erection or continued maintenance of the outdoor advertising structure, device or display named in such application, which permit shall state the size of such structure, device or display and the location upon which it is to be erected or maintained and shall be in force until the first day of August next following the date thereof. Any advertisement displayed upon any such structure or device shall be exempted from the payment of any other permit fee during the period covered by such permit.\n\nSee Sec. 13a-123 re requirement that signs, etc. licensed under chapter conform to regulations and standards."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 13a-123 re requirement that signs, etc. licensed under chapter conform to regulations and standards."
+          }
+        ],
+        "plainText": "Upon receipt of an application, as set forth in section 21-50 , and the required application and annual permit fees, the Commissioner of Transportation shall cause to be issued a permit for the erection or continued maintenance of the outdoor advertising structure, device or display named in such application, which permit shall state the size of such structure, device or display and the location upon which it is to be erected or maintained and shall be in force until the first day of August next following the date thereof. Any advertisement displayed upon any such structure or device shall be exempted from the payment of any other permit fee during the period covered by such permit."
       }
     },
     {
@@ -313,8 +317,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Notwithstanding any statutory provision to the contrary, the Commissioner of Transportation may, with the consent of the selectmen of a town, the mayor of a city or the warden of a borough, permit the erection of advertising signs designed to benefit local residents or industries, within the limits of highways, other than limited access highways, but not in any location where such signs will obstruct the view along any highway.",
-          "See Sec. 13a-123 re requirement that signs conform to regulations and standards adopted under that section."
+          "Notwithstanding any statutory provision to the contrary, the Commissioner of Transportation may, with the consent of the selectmen of a town, the mayor of a city or the warden of a borough, permit the erection of advertising signs designed to benefit local residents or industries, within the limits of highways, other than limited access highways, but not in any location where such signs will obstruct the view along any highway."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 4700; 1951, S. 2338d; 1959, P.A. 526, S. 8; 1969, P.A. 768, S. 249.)"
@@ -322,8 +325,13 @@
         "history": [
           "History: 1959 act excepted limited access highways; 1969 act substituted commissioner of transportation for highway commissioner."
         ],
-        "annotations": [],
-        "plainText": "Notwithstanding any statutory provision to the contrary, the Commissioner of Transportation may, with the consent of the selectmen of a town, the mayor of a city or the warden of a borough, permit the erection of advertising signs designed to benefit local residents or industries, within the limits of highways, other than limited access highways, but not in any location where such signs will obstruct the view along any highway.\n\nSee Sec. 13a-123 re requirement that signs conform to regulations and standards adopted under that section."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 13a-123 re requirement that signs conform to regulations and standards adopted under that section."
+          }
+        ],
+        "plainText": "Notwithstanding any statutory provision to the contrary, the Commissioner of Transportation may, with the consent of the selectmen of a town, the mayor of a city or the warden of a borough, permit the erection of advertising signs designed to benefit local residents or industries, within the limits of highways, other than limited access highways, but not in any location where such signs will obstruct the view along any highway."
       }
     },
     {

@@ -22,15 +22,21 @@
       "status": "active",
       "content": {
         "body": [
-          "Unless otherwise specifically provided by law, each person appointed or nominated for appointment by the Governor, with or without the advice and consent of the General Assembly or either house thereof, and each person appointed or elected by the General Assembly or either house thereof, shall be sworn and shall hold office for the term prescribed by law and until his successor is appointed and has qualified. Such persons shall receive no compensation for services unless the same is prescribed by law, but shall receive their actual and necessary expenses incurred in the performance of their official duties.",
-          "See Sec. 4-16 re payment of expenses by state.",
-          "See Sec. 4-40 re determination of salaries not prescribed by law."
+          "Unless otherwise specifically provided by law, each person appointed or nominated for appointment by the Governor, with or without the advice and consent of the General Assembly or either house thereof, and each person appointed or elected by the General Assembly or either house thereof, shall be sworn and shall hold office for the term prescribed by law and until his successor is appointed and has qualified. Such persons shall receive no compensation for services unless the same is prescribed by law, but shall receive their actual and necessary expenses incurred in the performance of their official duties."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 260.)"
         ],
         "history": [],
         "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 4-16 re payment of expenses by state."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 4-40 re determination of salaries not prescribed by law."
+          },
           {
             "first": true,
             "text": "Section is effective amendment of statutes not specifically providing for extension of term in case of failure of appointment of successor, and incumbent will hold over de jure. 133 C. 40. See 133 C. 50. Can be interpreted only as effective to fix a term of office ab initio. 135 C. 639. Is a remedial statute which should receive as liberal a construction as can reasonably be given to effectuate its beneficial purpose. 136 C. 312. The term of office of a municipal court judge is “otherwise specifically provided by law” by the twentieth amendment; doubtful that statute was intended to apply to judicial offices. 138 C. 153. Cited. 200 C. 91."
@@ -40,7 +46,7 @@
             "text": "Declaratory judgment not appropriate to try title to office. 13 CS 430. Where General Assembly did not appoint a county commissioner, the incumbent held over and an interim appointment was invalid. 14 CS 225."
           }
         ],
-        "plainText": "Unless otherwise specifically provided by law, each person appointed or nominated for appointment by the Governor, with or without the advice and consent of the General Assembly or either house thereof, and each person appointed or elected by the General Assembly or either house thereof, shall be sworn and shall hold office for the term prescribed by law and until his successor is appointed and has qualified. Such persons shall receive no compensation for services unless the same is prescribed by law, but shall receive their actual and necessary expenses incurred in the performance of their official duties.\n\nSee Sec. 4-16 re payment of expenses by state.\n\nSee Sec. 4-40 re determination of salaries not prescribed by law."
+        "plainText": "Unless otherwise specifically provided by law, each person appointed or nominated for appointment by the Governor, with or without the advice and consent of the General Assembly or either house thereof, and each person appointed or elected by the General Assembly or either house thereof, shall be sworn and shall hold office for the term prescribed by law and until his successor is appointed and has qualified. Such persons shall receive no compensation for services unless the same is prescribed by law, but shall receive their actual and necessary expenses incurred in the performance of their official duties."
       }
     },
     {
@@ -84,9 +90,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Except as otherwise provided by law, all nominations to be made by the Governor for appointment to office by the General Assembly or either branch thereof, and all appointments to office to be made by the Governor which require the advice and consent of the General Assembly or either branch thereof, shall be made on or before May first of the year in which the General Assembly is in session, except that, in any case where a vacancy results from death occurring on or after said May first but prior to the adjournment of such session, the Governor may make a nomination or appointment to fill such vacancy as soon as possible thereafter and prior to such adjournment and if such vacancy is in the office of a judge, the nomination shall, notwithstanding the provisions of section 2-40 , be referred to the committee on the judiciary immediately on receipt thereof from the Governor.",
-          "See Sec. 2-39 re time limit for senate action on nominations.",
-          "See Sec. 4-7 re procedure for confirmation or rejection of nominations."
+          "Except as otherwise provided by law, all nominations to be made by the Governor for appointment to office by the General Assembly or either branch thereof, and all appointments to office to be made by the Governor which require the advice and consent of the General Assembly or either branch thereof, shall be made on or before May first of the year in which the General Assembly is in session, except that, in any case where a vacancy results from death occurring on or after said May first but prior to the adjournment of such session, the Governor may make a nomination or appointment to fill such vacancy as soon as possible thereafter and prior to such adjournment and if such vacancy is in the office of a judge, the nomination shall, notwithstanding the provisions of section 2-40 , be referred to the committee on the judiciary immediately on receipt thereof from the Governor."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 96; 1967, P.A. 164, S. 1.)"
@@ -94,8 +98,17 @@
         "history": [
           "History: 1967 act clarified procedure for filling vacancies in appointed offices to allow appointments after May first and before general assembly adjourns."
         ],
-        "annotations": [],
-        "plainText": "Except as otherwise provided by law, all nominations to be made by the Governor for appointment to office by the General Assembly or either branch thereof, and all appointments to office to be made by the Governor which require the advice and consent of the General Assembly or either branch thereof, shall be made on or before May first of the year in which the General Assembly is in session, except that, in any case where a vacancy results from death occurring on or after said May first but prior to the adjournment of such session, the Governor may make a nomination or appointment to fill such vacancy as soon as possible thereafter and prior to such adjournment and if such vacancy is in the office of a judge, the nomination shall, notwithstanding the provisions of section 2-40 , be referred to the committee on the judiciary immediately on receipt thereof from the Governor.\n\nSee Sec. 2-39 re time limit for senate action on nominations.\n\nSee Sec. 4-7 re procedure for confirmation or rejection of nominations."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 2-39 re time limit for senate action on nominations."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 4-7 re procedure for confirmation or rejection of nominations."
+          }
+        ],
+        "plainText": "Except as otherwise provided by law, all nominations to be made by the Governor for appointment to office by the General Assembly or either branch thereof, and all appointments to office to be made by the Governor which require the advice and consent of the General Assembly or either branch thereof, shall be made on or before May first of the year in which the General Assembly is in session, except that, in any case where a vacancy results from death occurring on or after said May first but prior to the adjournment of such session, the Governor may make a nomination or appointment to fill such vacancy as soon as possible thereafter and prior to such adjournment and if such vacancy is in the office of a judge, the nomination shall, notwithstanding the provisions of section 2-40 , be referred to the committee on the judiciary immediately on receipt thereof from the Governor."
       }
     },
     {
@@ -157,15 +170,19 @@
       "status": "active",
       "content": {
         "body": [
-          "The term of office of each officer appointed by the Governor or by the Governor by and with the advice and consent of the General Assembly or either branch thereof, unless otherwise provided by law, shall commence on the first day of July following his appointment, except that the term of office of the Governor's staff, executive secretary and clerk shall commence from the date of their respective appointments.",
-          "See Sec. 4-6 re appointment and terms of department heads."
+          "The term of office of each officer appointed by the Governor or by the Governor by and with the advice and consent of the General Assembly or either branch thereof, unless otherwise provided by law, shall commence on the first day of July following his appointment, except that the term of office of the Governor's staff, executive secretary and clerk shall commence from the date of their respective appointments."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 98.)"
         ],
         "history": [],
-        "annotations": [],
-        "plainText": "The term of office of each officer appointed by the Governor or by the Governor by and with the advice and consent of the General Assembly or either branch thereof, unless otherwise provided by law, shall commence on the first day of July following his appointment, except that the term of office of the Governor's staff, executive secretary and clerk shall commence from the date of their respective appointments.\n\nSee Sec. 4-6 re appointment and terms of department heads."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 4-6 re appointment and terms of department heads."
+          }
+        ],
+        "plainText": "The term of office of each officer appointed by the Governor or by the Governor by and with the advice and consent of the General Assembly or either branch thereof, unless otherwise provided by law, shall commence on the first day of July following his appointment, except that the term of office of the Governor's staff, executive secretary and clerk shall commence from the date of their respective appointments."
       }
     },
     {
@@ -180,8 +197,7 @@
       "status": "active",
       "content": {
         "body": [
-          "As used in sections 4-6 , 4-7 and 4-8 , the term “department head” means the Secretary of the Office of Policy and Management, Commissioner of Administrative Services, Commissioner of Revenue Services, Banking Commissioner, Commissioner of Children and Families, Commissioner of Consumer Protection, Commissioner of Correction, Commissioner of Economic and Community Development, State Board of Education, Commissioner of Emergency Services and Public Protection, Commissioner of Energy and Environmental Protection, Commissioner of Agriculture, Commissioner of Public Health, Insurance Commissioner, Labor Commissioner, Commissioner of Mental Health and Addiction Services, Commissioner of Social Services, Commissioner of Developmental Services, Commissioner of Motor Vehicles, Commissioner of Transportation, Commissioner of Veterans Affairs, Commissioner of Housing, Commissioner of Aging and Disability Services, Commissioner of Early Childhood, Commissioner of Health Strategy, executive director of the Office of Military Affairs, executive director of the Technical Education and Career System, Chief Workforce Officer and Commissioner of Higher Education. As used in sections 4-6 and 4-7 , “department head” also means the Commissioner of Education.",
-          "See Sec. 4-20 re bond requirement."
+          "As used in sections 4-6 , 4-7 and 4-8 , the term “department head” means the Secretary of the Office of Policy and Management, Commissioner of Administrative Services, Commissioner of Revenue Services, Banking Commissioner, Commissioner of Children and Families, Commissioner of Consumer Protection, Commissioner of Correction, Commissioner of Economic and Community Development, State Board of Education, Commissioner of Emergency Services and Public Protection, Commissioner of Energy and Environmental Protection, Commissioner of Agriculture, Commissioner of Public Health, Insurance Commissioner, Labor Commissioner, Commissioner of Mental Health and Addiction Services, Commissioner of Social Services, Commissioner of Developmental Services, Commissioner of Motor Vehicles, Commissioner of Transportation, Commissioner of Veterans Affairs, Commissioner of Housing, Commissioner of Aging and Disability Services, Commissioner of Early Childhood, Commissioner of Health Strategy, executive director of the Office of Military Affairs, executive director of the Technical Education and Career System, Chief Workforce Officer and Commissioner of Higher Education. As used in sections 4-6 and 4-7 , “department head” also means the Commissioner of Education."
         ],
         "sourceNotes": [
           "(March, 1950, 1953, S. 27d; 1959, P.A. 412, S. 3; 637, S. 1; 1967, P.A. 152, S. 4; 522, S. 4; 657, S. 80; 1969, P.A. 664, S. 17; 768, S. 57; 814, S. 7; 1971, P.A. 872, S. 3; P.A. 73-599, S. 7; 73-677, S. 2; P.A. 75-519, S. 2, 12; 75-537, S. 17, 55; 75-638, S. 8, 23; P.A. 77-614, S. 4, 610; P.A. 79-598, S. 2, 27; P.A. 80-482, S. 3, 345, 348; P.A. 84-342, S. 2, 13; P.A. 86-175, S. 2, 4; P.A. 87-9, S. 2, 3; 87-496, S. 1, 110; P.A. 93-91, S. 1, 2; 93-262, S. 26, 87; 93-381, S. 9, 39; P.A. 95-250, S. 13, 42; 95-257, S. 11, 12, 21, 40, 58; 95-309, S. 11, 12; P.A. 96-211, S. 1, 5, 6; June 18 Sp. Sess. P.A. 97-9, S. 14, 50; P.A. 03-84, S. 4; 03-217, S. 2; June 30 Sp. Sess. P.A. 03-6, S. 146(c), (e), 147, 241; P.A. 04-189, S. 1; 04-205, S. 5; 04-219, S. 1; May Sp. Sess. P.A. 04-2, S. 30; P.A. 06-187, S. 11; P.A. 07-73, S. 2(b); 07-114, S. 2; 07-205, S. 2; Sept. Sp. Sess. P.A. 09-3, S. 23; Sept. Sp. Sess. P.A. 09-7, S. 156; P.A. 11-44, S. 31; 11-48, S. 131; 11-51, S. 46, 141; 11-80, S. 1, 3; June 12 Sp. Sess. P.A. 12-1, S. 29, 121; P.A. 13-4, S. 2; 13-125, S. 27; 13-247, S. 198; P.A. 14-39, S. 5; 14-182, S. 4; P.A. 16-167, S. 12; P.A. 17-237, S. 6; June Sp. Sess. P.A. 17-2, S. 278, 279; P.A. 18-91, S. 2, 3; 18-182, S. 20; P.A. 19-31, S. 4, 5; 19-117, S. 155, 156, 283; 19-157, S. 2, 3; June Sp. Sess. P.A. 21-2, S. 253, 254; P.A. 22-118, S. 227, 250; 22-123, S. 1; P.A. 23-22, S. 12; P.A. 24-81, S. 177.)"
@@ -192,10 +208,14 @@
         "annotations": [
           {
             "first": true,
+            "text": "See Sec. 4-20 re bond requirement."
+          },
+          {
+            "first": true,
             "text": "Cited. 184 C. 1."
           }
         ],
-        "plainText": "As used in sections 4-6 , 4-7 and 4-8 , the term “department head” means the Secretary of the Office of Policy and Management, Commissioner of Administrative Services, Commissioner of Revenue Services, Banking Commissioner, Commissioner of Children and Families, Commissioner of Consumer Protection, Commissioner of Correction, Commissioner of Economic and Community Development, State Board of Education, Commissioner of Emergency Services and Public Protection, Commissioner of Energy and Environmental Protection, Commissioner of Agriculture, Commissioner of Public Health, Insurance Commissioner, Labor Commissioner, Commissioner of Mental Health and Addiction Services, Commissioner of Social Services, Commissioner of Developmental Services, Commissioner of Motor Vehicles, Commissioner of Transportation, Commissioner of Veterans Affairs, Commissioner of Housing, Commissioner of Aging and Disability Services, Commissioner of Early Childhood, Commissioner of Health Strategy, executive director of the Office of Military Affairs, executive director of the Technical Education and Career System, Chief Workforce Officer and Commissioner of Higher Education. As used in sections 4-6 and 4-7 , “department head” also means the Commissioner of Education.\n\nSee Sec. 4-20 re bond requirement."
+        "plainText": "As used in sections 4-6 , 4-7 and 4-8 , the term “department head” means the Secretary of the Office of Policy and Management, Commissioner of Administrative Services, Commissioner of Revenue Services, Banking Commissioner, Commissioner of Children and Families, Commissioner of Consumer Protection, Commissioner of Correction, Commissioner of Economic and Community Development, State Board of Education, Commissioner of Emergency Services and Public Protection, Commissioner of Energy and Environmental Protection, Commissioner of Agriculture, Commissioner of Public Health, Insurance Commissioner, Labor Commissioner, Commissioner of Mental Health and Addiction Services, Commissioner of Social Services, Commissioner of Developmental Services, Commissioner of Motor Vehicles, Commissioner of Transportation, Commissioner of Veterans Affairs, Commissioner of Housing, Commissioner of Aging and Disability Services, Commissioner of Early Childhood, Commissioner of Health Strategy, executive director of the Office of Military Affairs, executive director of the Technical Education and Career System, Chief Workforce Officer and Commissioner of Higher Education. As used in sections 4-6 and 4-7 , “department head” also means the Commissioner of Education."
       }
     },
     {
@@ -475,15 +495,19 @@
       "status": "active",
       "content": {
         "body": [
-          "In the appointment of any member or members of any board or commission, which member or members are required by statute to be appointed by the Governor, any list from which any nominee may be selected, required to be presented to the Governor, shall continue to be submitted to him; but, in making any such appointment, the Governor may select the nominee from such list or otherwise as he deems for the best interests of the state.",
-          "See Sec. 9-167a re minority representation."
+          "In the appointment of any member or members of any board or commission, which member or members are required by statute to be appointed by the Governor, any list from which any nominee may be selected, required to be presented to the Governor, shall continue to be submitted to him; but, in making any such appointment, the Governor may select the nominee from such list or otherwise as he deems for the best interests of the state."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 93.)"
         ],
         "history": [],
-        "annotations": [],
-        "plainText": "In the appointment of any member or members of any board or commission, which member or members are required by statute to be appointed by the Governor, any list from which any nominee may be selected, required to be presented to the Governor, shall continue to be submitted to him; but, in making any such appointment, the Governor may select the nominee from such list or otherwise as he deems for the best interests of the state.\n\nSee Sec. 9-167a re minority representation."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 9-167a re minority representation."
+          }
+        ],
+        "plainText": "In the appointment of any member or members of any board or commission, which member or members are required by statute to be appointed by the Governor, any list from which any nominee may be selected, required to be presented to the Governor, shall continue to be submitted to him; but, in making any such appointment, the Governor may select the nominee from such list or otherwise as he deems for the best interests of the state."
       }
     },
     {
@@ -619,15 +643,19 @@
       "status": "active",
       "content": {
         "body": [
-          "Upon request by any elected state officer, by either auditor of public accounts or by the Governor's executive secretary, the Comptroller shall pay to such officer, auditor or secretary, for transportation for each day's attendance at his office in the Capitol, an allowance per mile on the same basis as provided for members of the General Assembly under the provisions of section 2-15 , which shall be charged by the Comptroller against the amount allotted for the expenses of such officer when an allowance for expenses is made.",
-          "See Sec. 3-9 re provision of automobile for Governor's use."
+          "Upon request by any elected state officer, by either auditor of public accounts or by the Governor's executive secretary, the Comptroller shall pay to such officer, auditor or secretary, for transportation for each day's attendance at his office in the Capitol, an allowance per mile on the same basis as provided for members of the General Assembly under the provisions of section 2-15 , which shall be charged by the Comptroller against the amount allotted for the expenses of such officer when an allowance for expenses is made."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 198; 1949, S. 68d; 1957, P.A. 3, S. 1.)"
         ],
         "history": [],
-        "annotations": [],
-        "plainText": "Upon request by any elected state officer, by either auditor of public accounts or by the Governor's executive secretary, the Comptroller shall pay to such officer, auditor or secretary, for transportation for each day's attendance at his office in the Capitol, an allowance per mile on the same basis as provided for members of the General Assembly under the provisions of section 2-15 , which shall be charged by the Comptroller against the amount allotted for the expenses of such officer when an allowance for expenses is made.\n\nSee Sec. 3-9 re provision of automobile for Governor's use."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 3-9 re provision of automobile for Governor's use."
+          }
+        ],
+        "plainText": "Upon request by any elected state officer, by either auditor of public accounts or by the Governor's executive secretary, the Comptroller shall pay to such officer, auditor or secretary, for transportation for each day's attendance at his office in the Capitol, an allowance per mile on the same basis as provided for members of the General Assembly under the provisions of section 2-15 , which shall be charged by the Comptroller against the amount allotted for the expenses of such officer when an allowance for expenses is made."
       }
     },
     {
@@ -761,8 +789,7 @@
       "status": "active",
       "content": {
         "body": [
-          "When the General Assembly is not in session and when no other provision has been made for filling any vacancy in an office, appointment to which is made by the General Assembly or either branch thereof, whether or not on nomination by the Governor, or appointment to which is made by the Governor with the advice and consent of the General Assembly or either branch thereof, the Governor may fill the same until the sixth Wednesday of the next regular session of the General Assembly, and until a successor is elected or appointed and has qualified. The Governor may fill any vacancy in any office to which he has power of appointment, provided the Governor may not appoint a person who was nominated for an appointment subject to the advice and consent of the General Assembly or either branch thereof and whose nomination was rejected by the General Assembly or either branch thereof during the last preceding regular session of the General Assembly to the same or similar vacancy unless the General Assembly is in regular session.",
-          "See Sec. 4-7(c) re vacancies in offices of department head."
+          "When the General Assembly is not in session and when no other provision has been made for filling any vacancy in an office, appointment to which is made by the General Assembly or either branch thereof, whether or not on nomination by the Governor, or appointment to which is made by the Governor with the advice and consent of the General Assembly or either branch thereof, the Governor may fill the same until the sixth Wednesday of the next regular session of the General Assembly, and until a successor is elected or appointed and has qualified. The Governor may fill any vacancy in any office to which he has power of appointment, provided the Governor may not appoint a person who was nominated for an appointment subject to the advice and consent of the General Assembly or either branch thereof and whose nomination was rejected by the General Assembly or either branch thereof during the last preceding regular session of the General Assembly to the same or similar vacancy unless the General Assembly is in regular session."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 92; 1967, P.A. 165, S. 1; P.A. 77-604, S. 2, 84; P.A. 93-154, S. 4, 5.)"
@@ -773,6 +800,10 @@
         "annotations": [
           {
             "first": true,
+            "text": "See Sec. 4-7(c) re vacancies in offices of department head."
+          },
+          {
+            "first": true,
             "text": "Applies to judges and county commissioners; when vacancy deemed to exist. 87 C. 547; Id., 596; 133 C. 54. Cited. 120 C. 435; 132 C. 521. Terms of judges appointed for two-year term could not be extended and Governor had power to fill vacancies. 135 C. 638. Cited. 136 C. 318. Ineffective to extend term of office of municipal court judge beyond two years provided by twentieth amendment. 138 C. 153. Words “originally filled by the General Assembly” construed. 144 C. 612."
           },
           {
@@ -780,7 +811,7 @@
             "text": "Governor's authority to fill a vacancy in the civil service. 8 CS 172."
           }
         ],
-        "plainText": "When the General Assembly is not in session and when no other provision has been made for filling any vacancy in an office, appointment to which is made by the General Assembly or either branch thereof, whether or not on nomination by the Governor, or appointment to which is made by the Governor with the advice and consent of the General Assembly or either branch thereof, the Governor may fill the same until the sixth Wednesday of the next regular session of the General Assembly, and until a successor is elected or appointed and has qualified. The Governor may fill any vacancy in any office to which he has power of appointment, provided the Governor may not appoint a person who was nominated for an appointment subject to the advice and consent of the General Assembly or either branch thereof and whose nomination was rejected by the General Assembly or either branch thereof during the last preceding regular session of the General Assembly to the same or similar vacancy unless the General Assembly is in regular session.\n\nSee Sec. 4-7(c) re vacancies in offices of department head."
+        "plainText": "When the General Assembly is not in session and when no other provision has been made for filling any vacancy in an office, appointment to which is made by the General Assembly or either branch thereof, whether or not on nomination by the Governor, or appointment to which is made by the Governor with the advice and consent of the General Assembly or either branch thereof, the Governor may fill the same until the sixth Wednesday of the next regular session of the General Assembly, and until a successor is elected or appointed and has qualified. The Governor may fill any vacancy in any office to which he has power of appointment, provided the Governor may not appoint a person who was nominated for an appointment subject to the advice and consent of the General Assembly or either branch thereof and whose nomination was rejected by the General Assembly or either branch thereof during the last preceding regular session of the General Assembly to the same or similar vacancy unless the General Assembly is in regular session."
       }
     },
     {
@@ -797,8 +828,7 @@
         "body": [
           "(a) The State Insurance and Risk Management Board shall, not later than October 1, 1974, and quadrennially thereafter, set the penalties of the bonds of the following officers, having due regard for the duties and responsibilities of said officers, for fouryear terms concurrent with their respective terms of office: The Secretary of the State and those department heads listed in section 45. Said officers shall, before entering upon the performance of the duties of their office, give their official bonds in the penalty fixed by the board. The premium for said bonds shall be paid by the state.",
           "(b) All state officers, state employees and other persons, other than those listed in subsection (a) of this section, who in the opinion of the board should be bonded, shall be bonded, the amount, condition and form to be determined by the board. Bonds taken pursuant to this subsection shall be purchased by the board, at the request of the Comptroller at state expense from a company or companies authorized to issue such bonds and having an office and licensed to do business in this state. The Comptroller may, at any time, request that any such bond be cancelled or terminated and any rebate of premium thereon shall be returned to the Comptroller for deposit in the General Fund.",
-          "(c) All bonds required by this section shall be approved as to form by the Attorney General and shall be filed in the office of the Secretary of the State, except that bonds of the Secretary of the State and his deputy and subordinates shall be kept by the Treasurer. A record shall be made in the office of the Secretary of the State, giving the name of the officer, employee, agency or person for whom each bond is issued, the name of the company issuing the same and the number, date and time of expiration thereof, and of any certificate renewing such bond.",
-          "See Sec. 4-54 re bond requirement for persons acting as treasurers of activity funds."
+          "(c) All bonds required by this section shall be approved as to form by the Attorney General and shall be filed in the office of the Secretary of the State, except that bonds of the Secretary of the State and his deputy and subordinates shall be kept by the Treasurer. A record shall be made in the office of the Secretary of the State, giving the name of the officer, employee, agency or person for whom each bond is issued, the name of the company issuing the same and the number, date and time of expiration thereof, and of any certificate renewing such bond."
         ],
         "sourceNotes": [
           "(June, 1955, S. 102d; 1972, P.A. 241, S. 1; P.A. 77-563, S. 1, 5; P.A. 99-51, S. 3, 9; 99-145, S. 16, 23; P.A. 05-288, S. 10.)"
@@ -806,8 +836,13 @@
         "history": [
           "History: 1972 act deleted former Subsec. (a), relettered remaining Subsecs. accordingly, replaced committee on bonding of state officers and employees with state insurance purchasing board and changed deadline from October 1, 1966, to October 1, 1974; P.A. 77-563 made board rather than comptroller responsible for purchasing bonds and made provision for placing refunds of cancelled bonds in general fund; P.A. 99-51, effective May 27, 1999, and P.A. 99-145, effective June 8, 1999, both amended Subsec. (a) to substitute “State Insurance and Risk Management Board” for “State Insurance Purchasing Board”; P.A. 05-288 made a technical change in Subsec. (b), effective July 13, 2005."
         ],
-        "annotations": [],
-        "plainText": "(a) The State Insurance and Risk Management Board shall, not later than October 1, 1974, and quadrennially thereafter, set the penalties of the bonds of the following officers, having due regard for the duties and responsibilities of said officers, for fouryear terms concurrent with their respective terms of office: The Secretary of the State and those department heads listed in section 45. Said officers shall, before entering upon the performance of the duties of their office, give their official bonds in the penalty fixed by the board. The premium for said bonds shall be paid by the state.\n\n(b) All state officers, state employees and other persons, other than those listed in subsection (a) of this section, who in the opinion of the board should be bonded, shall be bonded, the amount, condition and form to be determined by the board. Bonds taken pursuant to this subsection shall be purchased by the board, at the request of the Comptroller at state expense from a company or companies authorized to issue such bonds and having an office and licensed to do business in this state. The Comptroller may, at any time, request that any such bond be cancelled or terminated and any rebate of premium thereon shall be returned to the Comptroller for deposit in the General Fund.\n\n(c) All bonds required by this section shall be approved as to form by the Attorney General and shall be filed in the office of the Secretary of the State, except that bonds of the Secretary of the State and his deputy and subordinates shall be kept by the Treasurer. A record shall be made in the office of the Secretary of the State, giving the name of the officer, employee, agency or person for whom each bond is issued, the name of the company issuing the same and the number, date and time of expiration thereof, and of any certificate renewing such bond.\n\nSee Sec. 4-54 re bond requirement for persons acting as treasurers of activity funds."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 4-54 re bond requirement for persons acting as treasurers of activity funds."
+          }
+        ],
+        "plainText": "(a) The State Insurance and Risk Management Board shall, not later than October 1, 1974, and quadrennially thereafter, set the penalties of the bonds of the following officers, having due regard for the duties and responsibilities of said officers, for fouryear terms concurrent with their respective terms of office: The Secretary of the State and those department heads listed in section 45. Said officers shall, before entering upon the performance of the duties of their office, give their official bonds in the penalty fixed by the board. The premium for said bonds shall be paid by the state.\n\n(b) All state officers, state employees and other persons, other than those listed in subsection (a) of this section, who in the opinion of the board should be bonded, shall be bonded, the amount, condition and form to be determined by the board. Bonds taken pursuant to this subsection shall be purchased by the board, at the request of the Comptroller at state expense from a company or companies authorized to issue such bonds and having an office and licensed to do business in this state. The Comptroller may, at any time, request that any such bond be cancelled or terminated and any rebate of premium thereon shall be returned to the Comptroller for deposit in the General Fund.\n\n(c) All bonds required by this section shall be approved as to form by the Attorney General and shall be filed in the office of the Secretary of the State, except that bonds of the Secretary of the State and his deputy and subordinates shall be kept by the Treasurer. A record shall be made in the office of the Secretary of the State, giving the name of the officer, employee, agency or person for whom each bond is issued, the name of the company issuing the same and the number, date and time of expiration thereof, and of any certificate renewing such bond."
       }
     },
     {

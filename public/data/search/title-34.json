@@ -30,38 +30,6 @@
       "href": "?chapter=609&section=group-34-1-to-34-2-to-34-3-to-34-4-to-34-5-to-34-6-to-34-7-to-34-8"
     },
     {
-      "id": "section-34-1",
-      "citation": "34-1",
-      "citations": [
-        "34-1"
-      ],
-      "heading": "34-1",
-      "chapter": {
-        "id": "chapter-609",
-        "number": "609",
-        "name": "Limited Partnerships"
-      },
-      "status": "repealed",
-      "text": "Secs. 34-1 to 34-8. Limited partnerships. Sections 34-1 to 34-8 , inclusive, are repealed.",
-      "href": "?chapter=609&section=section-34-1"
-    },
-    {
-      "id": "section-34-8",
-      "citation": "34-8",
-      "citations": [
-        "34-8"
-      ],
-      "heading": "34-8",
-      "chapter": {
-        "id": "chapter-609",
-        "number": "609",
-        "name": "Limited Partnerships"
-      },
-      "status": "repealed",
-      "text": "Secs. 34-1 to 34-8. Limited partnerships. Sections 34-1 to 34-8 , inclusive, are repealed.",
-      "href": "?chapter=609&section=section-34-8"
-    },
-    {
       "id": "section-34-9",
       "citation": "34-9",
       "citations": [
@@ -74,7 +42,7 @@
         "name": "Uniform Limited Partnership Act"
       },
       "status": "active",
-      "text": "As used in this chapter, unless the context otherwise requires:\n\n(1) “Address” means location as described by the full street number, if any, street, city or town, state or country and not a mailing address such as a post office box.\n\n(2) “Certificate of limited partnership” means the certificate referred to in section 34-10 and the certificate as amended or restated.\n\n(3) “Consolidation” means a business combination pursuant to section 34-33b .\n\n(4) “Contribution” means any cash, property, services rendered, or a promissory note or other binding obligation to contribute cash or property or to perform services, which a partner contributes to a limited partnership in his capacity as a partner.\n\n(5) “Deliver” or “delivery” means any method of delivery used in conventional commercial practice including delivery by hand, mail, commercial delivery and electronic transmission.\n\n(6) “Document” includes anything delivered to the office of the Secretary of the State for filing under sections 34-9 to 34-38u , inclusive.\n\n(7) “Electronic transmission” or “electronically transmitted” means any process of communication not directly involving the physical transfer of paper that is suitable for the retention, retrieval and reproduction of information by the recipient.\n\n(8) “Event of withdrawal of a general partner” means an event that causes a person to cease to be a general partner as provided in section 34-28 .\n\n(9) “Foreign limited partnership” means a partnership formed under the laws of any state other than this state and having as partners one or more general partners and one or more limited partners.\n\n(10) “General partner” means a person who has been admitted to a limited partnership as a general partner in accordance with the partnership agreement and named in the certificate of limited partnership as a general partner.\n\n(11) “Interests” means the proprietary interests in an other entity.\n\n(12) “Limited partner” means a person who has been admitted to a limited partnership as a limited partner in accordance with the partnership agreement.\n\n(13) “Limited partnership” and “domestic limited partnership” means a partnership formed by two or more persons under the provisions of this chapter and having one or more general partners and one or more limited partners.\n\n(14) “Merger” means a business combination pursuant to section 34-33a .\n\n(15) “Organizational documents” means the basic document or documents that create, or determine the internal governance of, an other entity.\n\n(16) “Other entity” means any association or legal entity, other than a domestic or foreign limited partnership, organized to conduct business, including, but not limited to, a corporation, general partnership, limited liability partnership, limited liability company, joint venture, joint stock company, business trust, statutory trust and real estate investment trust.\n\n(17) “Partner” means a limited or general partner.\n\n(18) “Partnership agreement” means any valid agreement, written or oral, of the partners as to the affairs of a limited partnership and the conduct of its business.\n\n(19) “Partnership interest” means a partner's share of the profits and losses of a limited partnership and the right to receive distributions of partnership assets.\n\n(20) “Party to a consolidation” means any domestic or foreign limited partnership or other entity that will consolidate under a plan of consolidation.\n\n(21) “Party to a merger” means any domestic or foreign limited partnership or other entity that will merge under a plan of merger.\n\n(22) “Person” means a natural person, partnership, limited partnership, foreign limited partnership, trust, estate, association, limited liability company or corporation.\n\n(23) “Plan of merger” means a plan entered into pursuant to section 34-33a .\n\n(24) “Plan of consolidation” means a plan entered into pursuant to section 34-33b .\n\n(25) “Sign” or “signature” includes any manual, facsimile, conformed or electronic signature.\n\n(26) “State” means a state, territory, or possession of the United States, the District of Columbia or the Commonwealth of Puerto Rico.\n\n(27) “Survivor” means, in a merger or consolidation, the limited partnership or other entity into which one or more other limited partnerships or other entities are merged or consolidated.\n\nSee Sec. 34-38b re inapplicability of provisions as amended by P.A. 86-379 to partnerships in existence before October 1, 1986.",
+      "text": "As used in this chapter, unless the context otherwise requires:\n\n(1) “Address” means location as described by the full street number, if any, street, city or town, state or country and not a mailing address such as a post office box.\n\n(2) “Certificate of limited partnership” means the certificate referred to in section 34-10 and the certificate as amended or restated.\n\n(3) “Consolidation” means a business combination pursuant to section 34-33b .\n\n(4) “Contribution” means any cash, property, services rendered, or a promissory note or other binding obligation to contribute cash or property or to perform services, which a partner contributes to a limited partnership in his capacity as a partner.\n\n(5) “Deliver” or “delivery” means any method of delivery used in conventional commercial practice including delivery by hand, mail, commercial delivery and electronic transmission.\n\n(6) “Document” includes anything delivered to the office of the Secretary of the State for filing under sections 34-9 to 34-38u , inclusive.\n\n(7) “Electronic transmission” or “electronically transmitted” means any process of communication not directly involving the physical transfer of paper that is suitable for the retention, retrieval and reproduction of information by the recipient.\n\n(8) “Event of withdrawal of a general partner” means an event that causes a person to cease to be a general partner as provided in section 34-28 .\n\n(9) “Foreign limited partnership” means a partnership formed under the laws of any state other than this state and having as partners one or more general partners and one or more limited partners.\n\n(10) “General partner” means a person who has been admitted to a limited partnership as a general partner in accordance with the partnership agreement and named in the certificate of limited partnership as a general partner.\n\n(11) “Interests” means the proprietary interests in an other entity.\n\n(12) “Limited partner” means a person who has been admitted to a limited partnership as a limited partner in accordance with the partnership agreement.\n\n(13) “Limited partnership” and “domestic limited partnership” means a partnership formed by two or more persons under the provisions of this chapter and having one or more general partners and one or more limited partners.\n\n(14) “Merger” means a business combination pursuant to section 34-33a .\n\n(15) “Organizational documents” means the basic document or documents that create, or determine the internal governance of, an other entity.\n\n(16) “Other entity” means any association or legal entity, other than a domestic or foreign limited partnership, organized to conduct business, including, but not limited to, a corporation, general partnership, limited liability partnership, limited liability company, joint venture, joint stock company, business trust, statutory trust and real estate investment trust.\n\n(17) “Partner” means a limited or general partner.\n\n(18) “Partnership agreement” means any valid agreement, written or oral, of the partners as to the affairs of a limited partnership and the conduct of its business.\n\n(19) “Partnership interest” means a partner's share of the profits and losses of a limited partnership and the right to receive distributions of partnership assets.\n\n(20) “Party to a consolidation” means any domestic or foreign limited partnership or other entity that will consolidate under a plan of consolidation.\n\n(21) “Party to a merger” means any domestic or foreign limited partnership or other entity that will merge under a plan of merger.\n\n(22) “Person” means a natural person, partnership, limited partnership, foreign limited partnership, trust, estate, association, limited liability company or corporation.\n\n(23) “Plan of merger” means a plan entered into pursuant to section 34-33a .\n\n(24) “Plan of consolidation” means a plan entered into pursuant to section 34-33b .\n\n(25) “Sign” or “signature” includes any manual, facsimile, conformed or electronic signature.\n\n(26) “State” means a state, territory, or possession of the United States, the District of Columbia or the Commonwealth of Puerto Rico.\n\n(27) “Survivor” means, in a merger or consolidation, the limited partnership or other entity into which one or more other limited partnerships or other entities are merged or consolidated.",
       "href": "?chapter=610&section=section-34-9"
     },
     {
@@ -90,7 +58,7 @@
         "name": "Uniform Limited Partnership Act"
       },
       "status": "active",
-      "text": "(a) In order to form a limited partnership a certificate of limited partnership must be executed as provided in section 34-10a and the certificate shall set forth:\n\n(1) The name of the limited partnership and the address of the office required to be maintained by section 34-13b ;\n\n(2) The name and address of the agent for service of process required to be maintained by section 34-13b ;\n\n(3) The name and business address of each general partner;\n\n(4) The valid electronic mail address of the limited partnership;\n\n(5) The limited partnership's North American Industry Classification System Code; and\n\n(6) Any other matters the partners determine to include in the certificate.\n\n(b) A limited partnership is formed at the time of the filing of the certificate of limited partnership in the office of the Secretary of the State or at any later time specified in the certificate of limited partnership if, in either case, there has been substantial compliance with the requirements of this section.\n\nSee Sec. 34-38b re inapplicability of provisions as amended by P.A. 86-379 to partnerships existing before October 1, 1986.",
+      "text": "(a) In order to form a limited partnership a certificate of limited partnership must be executed as provided in section 34-10a and the certificate shall set forth:\n\n(1) The name of the limited partnership and the address of the office required to be maintained by section 34-13b ;\n\n(2) The name and address of the agent for service of process required to be maintained by section 34-13b ;\n\n(3) The name and business address of each general partner;\n\n(4) The valid electronic mail address of the limited partnership;\n\n(5) The limited partnership's North American Industry Classification System Code; and\n\n(6) Any other matters the partners determine to include in the certificate.\n\n(b) A limited partnership is formed at the time of the filing of the certificate of limited partnership in the office of the Secretary of the State or at any later time specified in the certificate of limited partnership if, in either case, there has been substantial compliance with the requirements of this section.",
       "href": "?chapter=610&section=section-34-10"
     },
     {
@@ -106,7 +74,7 @@
         "name": "Uniform Limited Partnership Act"
       },
       "status": "active",
-      "text": "(a) Each certificate required by this chapter to be filed in the office of the Secretary of the State shall be executed in the following manner:\n\n(1) An original certificate of limited partnership must be signed by all general partners named therein;\n\n(2) A certificate of amendment must be signed by at least one general partner and by each other partner designated in the certificate as a new general partner;\n\n(3) A certificate of cancellation must be signed by all general partners; and\n\n(4) A certificate of merger or consolidation affecting a domestic limited partnership must be signed by at least one general partner of the domestic limited partnership.\n\n(b) Any person may sign a certificate by an attorney-in-fact.\n\n(c) The execution of a certificate by a general partner constitutes an affirmation under the penalties of false statement that the facts stated therein are true.\n\nSee Sec. 34-38b re inapplicability of provisions as amended by P.A. 86-379 to partnerships existing before October 1, 1986.",
+      "text": "(a) Each certificate required by this chapter to be filed in the office of the Secretary of the State shall be executed in the following manner:\n\n(1) An original certificate of limited partnership must be signed by all general partners named therein;\n\n(2) A certificate of amendment must be signed by at least one general partner and by each other partner designated in the certificate as a new general partner;\n\n(3) A certificate of cancellation must be signed by all general partners; and\n\n(4) A certificate of merger or consolidation affecting a domestic limited partnership must be signed by at least one general partner of the domestic limited partnership.\n\n(b) Any person may sign a certificate by an attorney-in-fact.\n\n(c) The execution of a certificate by a general partner constitutes an affirmation under the penalties of false statement that the facts stated therein are true.",
       "href": "?chapter=610&section=section-34-10a"
     },
     {
@@ -138,7 +106,7 @@
         "name": "Uniform Limited Partnership Act"
       },
       "status": "active",
-      "text": "The fact that a certificate of limited partnership is on file in the office of the Secretary of the State is notice that the partnership is a limited partnership and all persons designated therein as general partners are general partners and the persons designated therein as limited partners, if so designated, are limited partners, but it is not notice of any other fact.\n\nSee Sec. 34-38b re inapplicability of provisions as amended by P.A. 86-379 to partnerships existing before October 1, 1986.",
+      "text": "The fact that a certificate of limited partnership is on file in the office of the Secretary of the State is notice that the partnership is a limited partnership and all persons designated therein as general partners are general partners and the persons designated therein as limited partners, if so designated, are limited partners, but it is not notice of any other fact.",
       "href": "?chapter=610&section=section-34-10c"
     },
     {
@@ -202,7 +170,7 @@
         "name": "Uniform Limited Partnership Act"
       },
       "status": "active",
-      "text": "The name of each limited partnership as set forth in its certificate of limited partnership:\n\n(1) Shall contain without abbreviation the words “limited partnership”;\n\n(2) May not contain the name of a limited partner unless it is also the name of a general partner or the business of the limited partnership had been carried on under that name before the admission of that limited partner; and\n\n(3) Shall be such as to distinguish it upon the records in the office of the Secretary of the State from the name of (A) any corporation, limited partnership or limited liability company organized under the laws of this state or licensed or registered as a foreign corporation, foreign limited partnership or foreign limited liability company in this state, or (B) any other entity whose name is carried upon the records of the Secretary of the State as organized or authorized to transact business or conduct affairs in this state.\n\nSee Sec. 34-38b re inapplicability of provisions as amended by P.A. 86-379 to partnerships existing before October 1, 1986.",
+      "text": "The name of each limited partnership as set forth in its certificate of limited partnership:\n\n(1) Shall contain without abbreviation the words “limited partnership”;\n\n(2) May not contain the name of a limited partner unless it is also the name of a general partner or the business of the limited partnership had been carried on under that name before the admission of that limited partner; and\n\n(3) Shall be such as to distinguish it upon the records in the office of the Secretary of the State from the name of (A) any corporation, limited partnership or limited liability company organized under the laws of this state or licensed or registered as a foreign corporation, foreign limited partnership or foreign limited liability company in this state, or (B) any other entity whose name is carried upon the records of the Secretary of the State as organized or authorized to transact business or conduct affairs in this state.",
       "href": "?chapter=610&section=section-34-13"
     },
     {
@@ -234,7 +202,7 @@
         "name": "Uniform Limited Partnership Act"
       },
       "status": "active",
-      "text": "(a) Each limited partnership shall continuously maintain in this state an office, which may but need not be a place of its business in this state, at which shall be kept the records required by section 34-13c to be maintained.\n\n(b) Each limited partnership shall have and maintain a statutory agent for service in this state as provided in this section. A statutory agent for service shall be: (1) A natural person who is a resident of this state; (2) a domestic corporation; (3) a corporation not organized under the laws of this state and which has procured a certificate of authority to transact business or conduct its affairs in this state; (4) a domestic limited liability company; (5) a limited liability company not organized under the laws of this state and which has procured a certificate of registration to transact business or conduct its affairs in this state; (6) a domestic registered limited liability partnership; (7) a registered limited liability partnership not organized under the laws of this state and which has procured a certificate of authority to transact business or conduct its affairs in this state; (8) a domestic statutory trust; or (9) a statutory trust not organized under the laws of this state and which has procured a certificate of registration to transact business or conduct its affairs in this state.\n\n(c) A limited partnership's statutory agent for service shall be appointed by filing with the Secretary of the State a written appointment. The initial written appointment of the statutory agent for service of process shall be included in the original certificate of limited partnership. All subsequent written appointments shall be in such form as the secretary shall prescribe. All written appointments shall set forth: (1) The name of the statutory agent for service; (2) a statement of acceptance by the statutory agent therein appointed; and (3) if the statutory agent is a natural person, the business and residence address thereof; if the statutory agent is a corporation organized under the laws of this state, the address of the principal office thereof; if the statutory agent is a corporation not organized under the laws of this state, the address of the principal office thereof in this state, if any. In each case the address shall include the street and number or other particular designation. Subsequent appointments shall, in addition, set forth the name of the limited partnership.\n\n(d) The initial written appointment shall be signed by the statutory agent therein appointed. Subsequent written appointments shall be signed by a general partner of the appointing limited partnership and by the statutory agent therein appointed.\n\n(e) If a statutory agent for service dies, dissolves, removes from the state or resigns, the limited partnership shall forthwith appoint another statutory agent for service. If the statutory agent for service changes his or its business or residence address within the state from that appearing upon the record in the office of the Secretary of the State, the agent for service of process or the limited partnership shall forthwith file with the Secretary of the State notice of the new address. A statutory agent for service may resign by filing with the Secretary of the State a signed statement in duplicate to that effect. The Secretary of the State shall forthwith file one copy and mail the other copy of such statement to the limited partnership, at the office designated in the certificate of limited partnership. Upon the expiration of thirty days after such filing, the resignation shall be effective and the authority of such statutory agent for service shall terminate. A limited partnership may revoke the appointment of a statutory agent for service by making a new appointment as provided in this section and any new appointment so made shall revoke all appointments theretofore made.\n\n(f) Notwithstanding the provisions of subsection (d) of section 52-57 , any process, notice or demand in connection with any action or proceeding required or permitted by law to be served upon a limited partnership which is subject to the provisions of this section, may be served upon the limited partnership's statutory agent for service by any proper officer or other person lawfully empowered to make service.\n\n(g) If it appears from the records of the Secretary of the State that such a limited partnership has failed to appoint or maintain a statutory agent for service, or if it appears by affidavit attached to the process, notice or demand of the officer or other proper person directed to serve any process, notice or demand upon a limited partnership's statutory agent for service appearing on the records of the Secretary of the State that such agent cannot, with reasonable diligence, be found, service of process, notice or demand on such limited partnership may, when timely made, be made by such officer or other proper person by: (1) Leaving a true and attested copy thereof, together with the required fee at the office of the Secretary of the State or depositing the same in the United States mails, by registered or certified mail, postage prepaid, addressed to such office, and (2) depositing in the United States mails, by registered or certified mail, postage prepaid, a true and attested copy thereof, together with a statement by such officer that service is being made pursuant to this section, addressed to such limited partnership at the office designated in the certificate of limited partnership.\n\n(h) The Secretary of the State shall file the copy of each process, notice or demand received by him as provided in subsection (g) of this section and keep a record of the day and hour of such receipt. Service made as provided in this section shall be effective as of such day and hour.\n\n(i) Nothing herein contained shall limit or affect the right to serve any process, notice or demand required or permitted by law to be served upon a limited partnership in any other manner permitted by law.\n\nSee Sec. 34-38b re inapplicability of provisions as amended by P.A. 86-379 to partnerships existing before October, 1986.",
+      "text": "(a) Each limited partnership shall continuously maintain in this state an office, which may but need not be a place of its business in this state, at which shall be kept the records required by section 34-13c to be maintained.\n\n(b) Each limited partnership shall have and maintain a statutory agent for service in this state as provided in this section. A statutory agent for service shall be: (1) A natural person who is a resident of this state; (2) a domestic corporation; (3) a corporation not organized under the laws of this state and which has procured a certificate of authority to transact business or conduct its affairs in this state; (4) a domestic limited liability company; (5) a limited liability company not organized under the laws of this state and which has procured a certificate of registration to transact business or conduct its affairs in this state; (6) a domestic registered limited liability partnership; (7) a registered limited liability partnership not organized under the laws of this state and which has procured a certificate of authority to transact business or conduct its affairs in this state; (8) a domestic statutory trust; or (9) a statutory trust not organized under the laws of this state and which has procured a certificate of registration to transact business or conduct its affairs in this state.\n\n(c) A limited partnership's statutory agent for service shall be appointed by filing with the Secretary of the State a written appointment. The initial written appointment of the statutory agent for service of process shall be included in the original certificate of limited partnership. All subsequent written appointments shall be in such form as the secretary shall prescribe. All written appointments shall set forth: (1) The name of the statutory agent for service; (2) a statement of acceptance by the statutory agent therein appointed; and (3) if the statutory agent is a natural person, the business and residence address thereof; if the statutory agent is a corporation organized under the laws of this state, the address of the principal office thereof; if the statutory agent is a corporation not organized under the laws of this state, the address of the principal office thereof in this state, if any. In each case the address shall include the street and number or other particular designation. Subsequent appointments shall, in addition, set forth the name of the limited partnership.\n\n(d) The initial written appointment shall be signed by the statutory agent therein appointed. Subsequent written appointments shall be signed by a general partner of the appointing limited partnership and by the statutory agent therein appointed.\n\n(e) If a statutory agent for service dies, dissolves, removes from the state or resigns, the limited partnership shall forthwith appoint another statutory agent for service. If the statutory agent for service changes his or its business or residence address within the state from that appearing upon the record in the office of the Secretary of the State, the agent for service of process or the limited partnership shall forthwith file with the Secretary of the State notice of the new address. A statutory agent for service may resign by filing with the Secretary of the State a signed statement in duplicate to that effect. The Secretary of the State shall forthwith file one copy and mail the other copy of such statement to the limited partnership, at the office designated in the certificate of limited partnership. Upon the expiration of thirty days after such filing, the resignation shall be effective and the authority of such statutory agent for service shall terminate. A limited partnership may revoke the appointment of a statutory agent for service by making a new appointment as provided in this section and any new appointment so made shall revoke all appointments theretofore made.\n\n(f) Notwithstanding the provisions of subsection (d) of section 52-57 , any process, notice or demand in connection with any action or proceeding required or permitted by law to be served upon a limited partnership which is subject to the provisions of this section, may be served upon the limited partnership's statutory agent for service by any proper officer or other person lawfully empowered to make service.\n\n(g) If it appears from the records of the Secretary of the State that such a limited partnership has failed to appoint or maintain a statutory agent for service, or if it appears by affidavit attached to the process, notice or demand of the officer or other proper person directed to serve any process, notice or demand upon a limited partnership's statutory agent for service appearing on the records of the Secretary of the State that such agent cannot, with reasonable diligence, be found, service of process, notice or demand on such limited partnership may, when timely made, be made by such officer or other proper person by: (1) Leaving a true and attested copy thereof, together with the required fee at the office of the Secretary of the State or depositing the same in the United States mails, by registered or certified mail, postage prepaid, addressed to such office, and (2) depositing in the United States mails, by registered or certified mail, postage prepaid, a true and attested copy thereof, together with a statement by such officer that service is being made pursuant to this section, addressed to such limited partnership at the office designated in the certificate of limited partnership.\n\n(h) The Secretary of the State shall file the copy of each process, notice or demand received by him as provided in subsection (g) of this section and keep a record of the day and hour of such receipt. Service made as provided in this section shall be effective as of such day and hour.\n\n(i) Nothing herein contained shall limit or affect the right to serve any process, notice or demand required or permitted by law to be served upon a limited partnership in any other manner permitted by law.",
       "href": "?chapter=610&section=section-34-13b"
     },
     {
@@ -250,7 +218,7 @@
         "name": "Uniform Limited Partnership Act"
       },
       "status": "active",
-      "text": "Each limited partnership shall keep at the office referred to in section 34-13b the following: (1) A current list of the full name and last known business address of each partner set forth in alphabetical order, (2) a copy of the certificate of limited partnership and all certificates of amendment thereto, together with executed copies of any powers of attorney pursuant to which any certificate has been executed, (3) copies of the limited partnership's federal, state and local income tax returns and reports, if any, for the three most recent years, (4) copies of any then effective written partnership agreements and of any financial statements of the limited partnership for the three most recent years, and (5) unless contained in a written partnership agreement, a writing setting out: (A) The amount of cash and a description and statement of the agreed value of the other property or services contributed by each partner and which each partner has agreed to contribute; (B) the times at which or events on the happening of which any additional contributions agreed to be made by each partner are to be made; (C) any right of a partner to receive, or of a general partner to make, distributions to a partner which include a return of all or any part of the partner's contribution; and (D) any events upon the happening of which the limited partnership is to be dissolved and its affairs wound up. Those records are subject to inspection and copying at the reasonable request, and at the expense, of any partner during ordinary business hours.\n\nSee Sec. 34-38b re inapplicability of provisions as amended by P.A. 86-379 to partnerships existing before October 1, 1986.",
+      "text": "Each limited partnership shall keep at the office referred to in section 34-13b the following: (1) A current list of the full name and last known business address of each partner set forth in alphabetical order, (2) a copy of the certificate of limited partnership and all certificates of amendment thereto, together with executed copies of any powers of attorney pursuant to which any certificate has been executed, (3) copies of the limited partnership's federal, state and local income tax returns and reports, if any, for the three most recent years, (4) copies of any then effective written partnership agreements and of any financial statements of the limited partnership for the three most recent years, and (5) unless contained in a written partnership agreement, a writing setting out: (A) The amount of cash and a description and statement of the agreed value of the other property or services contributed by each partner and which each partner has agreed to contribute; (B) the times at which or events on the happening of which any additional contributions agreed to be made by each partner are to be made; (C) any right of a partner to receive, or of a general partner to make, distributions to a partner which include a return of all or any part of the partner's contribution; and (D) any events upon the happening of which the limited partnership is to be dissolved and its affairs wound up. Those records are subject to inspection and copying at the reasonable request, and at the expense, of any partner during ordinary business hours.",
       "href": "?chapter=610&section=section-34-13c"
     },
     {
@@ -330,7 +298,7 @@
         "name": "Uniform Limited Partnership Act"
       },
       "status": "active",
-      "text": "(a) Except as provided in subsection (d) of this section, a limited partner is not liable for the obligations of a limited partnership unless he is also a general partner or, in addition to the exercise of his rights and powers as a limited partner, he participates in the control of the business; provided, if the limited partner does participate in the control of the business, he is liable only to persons who transact business with the limited partnership reasonably believing, based upon the limited partner's conduct, that the limited partner is a general partner.\n\n(b) A limited partner does not participate in the control of the business within the meaning of subsection (a) of this section by virtue of his possessing or exercising one or more of the following powers:\n\n(1) Being a contractor for or an agent or employee of the limited partnership or of a general partner or being an officer, director or shareholder of a general partner that is a corporation;\n\n(2) Consulting with and advising a general partner with respect to the business of the limited partnership;\n\n(3) Acting as surety for the limited partnership or guaranteeing or assuming one or more specific obligations of the limited partnership;\n\n(4) Taking any action required or permitted by law to bring or pursue a derivative action in the right of the limited partnership;\n\n(5) Requesting or attending a meeting of partners; or\n\n(6) Proposing, approving or disapproving, by voting or otherwise, one or more of the following matters:\n\n(i) The dissolution and winding up of the limited partnership;\n\n(ii) The sale, exchange, lease, mortgage, pledge or other transfer of all or substantially all of the assets of the limited partnership;\n\n(iii) The incurrence of indebtedness by the limited partnership other than in the ordinary course of its business;\n\n(iv) A change in the nature of the business;\n\n(v) The removal of a general partner or limited partner;\n\n(vi) The admission of a general partner or limited partner;\n\n(vii) A transaction involving an actual or potential conflict of interest between a general partner and the limited partnership or the limited partners;\n\n(viii) An amendment to the partnership agreement or certificate of limited partnership;\n\n(ix) A merger or consolidation of a limited partnership; or\n\n(x) Matters related to the business of the limited partnership not otherwise enumerated in this subsection, which the partnership agreement states, in writing, may be subject to the approval or disapproval of limited partners;\n\n(7) Winding up the limited partnership pursuant to section 34-28c ; or\n\n(8) Exercising any right or power permitted to limited partners under this chapter and not specifically enumerated in this subsection.\n\n(c) The enumeration in subsection (b) of this section does not mean that the possession or exercise of any other powers by a limited partner constitutes participation by him in the control of the business of the limited partnership.\n\n(d) A limited partner who knowingly permits his name to be used in the name of the limited partnership, except under circumstances permitted by subdivision (2) of section 34-13 , is liable to creditors who extend credit to the limited partnership without actual knowledge that the limited partner is not a general partner.\n\nSee Sec. 34-38b re inapplicability of provisions as amended by P.A. 86-379 to partnerships existing before October 1, 1986.",
+      "text": "(a) Except as provided in subsection (d) of this section, a limited partner is not liable for the obligations of a limited partnership unless he is also a general partner or, in addition to the exercise of his rights and powers as a limited partner, he participates in the control of the business; provided, if the limited partner does participate in the control of the business, he is liable only to persons who transact business with the limited partnership reasonably believing, based upon the limited partner's conduct, that the limited partner is a general partner.\n\n(b) A limited partner does not participate in the control of the business within the meaning of subsection (a) of this section by virtue of his possessing or exercising one or more of the following powers:\n\n(1) Being a contractor for or an agent or employee of the limited partnership or of a general partner or being an officer, director or shareholder of a general partner that is a corporation;\n\n(2) Consulting with and advising a general partner with respect to the business of the limited partnership;\n\n(3) Acting as surety for the limited partnership or guaranteeing or assuming one or more specific obligations of the limited partnership;\n\n(4) Taking any action required or permitted by law to bring or pursue a derivative action in the right of the limited partnership;\n\n(5) Requesting or attending a meeting of partners; or\n\n(6) Proposing, approving or disapproving, by voting or otherwise, one or more of the following matters:\n\n(i) The dissolution and winding up of the limited partnership;\n\n(ii) The sale, exchange, lease, mortgage, pledge or other transfer of all or substantially all of the assets of the limited partnership;\n\n(iii) The incurrence of indebtedness by the limited partnership other than in the ordinary course of its business;\n\n(iv) A change in the nature of the business;\n\n(v) The removal of a general partner or limited partner;\n\n(vi) The admission of a general partner or limited partner;\n\n(vii) A transaction involving an actual or potential conflict of interest between a general partner and the limited partnership or the limited partners;\n\n(viii) An amendment to the partnership agreement or certificate of limited partnership;\n\n(ix) A merger or consolidation of a limited partnership; or\n\n(x) Matters related to the business of the limited partnership not otherwise enumerated in this subsection, which the partnership agreement states, in writing, may be subject to the approval or disapproval of limited partners;\n\n(7) Winding up the limited partnership pursuant to section 34-28c ; or\n\n(8) Exercising any right or power permitted to limited partners under this chapter and not specifically enumerated in this subsection.\n\n(c) The enumeration in subsection (b) of this section does not mean that the possession or exercise of any other powers by a limited partner constitutes participation by him in the control of the business of the limited partnership.\n\n(d) A limited partner who knowingly permits his name to be used in the name of the limited partnership, except under circumstances permitted by subdivision (2) of section 34-13 , is liable to creditors who extend credit to the limited partnership without actual knowledge that the limited partner is not a general partner.",
       "href": "?chapter=610&section=section-34-15"
     },
     {
@@ -378,7 +346,7 @@
         "name": "Uniform Limited Partnership Act"
       },
       "status": "active",
-      "text": "After the formation of a limited partnership, a person becomes a limited partner on the later of:\n\n(1) The date the limited partnership is formed;\n\n(2) In the case of a person acquiring a partnership interest directly from the limited partnership, upon the compliance with the partnership agreement or, if the partnership agreement does not so provide, upon the written consent of all partners; or\n\n(3) In the case of an assignee of a partnership interest of a partner who has the power, as provided in section 34-27a , to grant the assignee the right to become a limited partner, upon the exercise of that power and compliance with any conditions limiting the grant or exercise of the power.\n\nSee Sec. 34-38b re inapplicability of provisions as amended by P.A. 86-379 to partnerships existing before October 1, 1986.",
+      "text": "After the formation of a limited partnership, a person becomes a limited partner on the later of:\n\n(1) The date the limited partnership is formed;\n\n(2) In the case of a person acquiring a partnership interest directly from the limited partnership, upon the compliance with the partnership agreement or, if the partnership agreement does not so provide, upon the written consent of all partners; or\n\n(3) In the case of an assignee of a partnership interest of a partner who has the power, as provided in section 34-27a , to grant the assignee the right to become a limited partner, upon the exercise of that power and compliance with any conditions limiting the grant or exercise of the power.",
       "href": "?chapter=610&section=section-34-16"
     },
     {
@@ -410,7 +378,7 @@
         "name": "Uniform Limited Partnership Act"
       },
       "status": "active",
-      "text": "After the filing of a limited partnership's original certificate of limited partnership, additional general partners may be admitted only with the specific written consent of each partner; provided, if the partnership agreement names a person to be admitted as a general partner upon the occurrence of a specified event or at a specified time, the consent required is deemed to have been given.\n\nSee Sec. 34-38b re inapplicability of provisions as amended by P.A. 86-379 to partnerships existing before October 1, 1986.",
+      "text": "After the filing of a limited partnership's original certificate of limited partnership, additional general partners may be admitted only with the specific written consent of each partner; provided, if the partnership agreement names a person to be admitted as a general partner upon the occurrence of a specified event or at a specified time, the consent required is deemed to have been given.",
       "href": "?chapter=610&section=section-34-17a"
     },
     {
@@ -442,7 +410,7 @@
         "name": "Uniform Limited Partnership Act"
       },
       "status": "active",
-      "text": "(a) Except as provided in subsection (b) of this section, a person who makes a contribution to a business enterprise and erroneously but in good faith believes that such person has become a limited partner in the enterprise is not a general partner in the enterprise and is not bound by its obligations by reason of making the contributions, receiving distributions from the enterprise or exercising any rights of a limited partner, if, on ascertaining the mistake, the person:\n\n(1) Causes an appropriate certificate of limited partnership or a certificate of amendment to be executed and filed; or\n\n(2) Withdraws from future equity participation in the enterprise by executing and filing in the office of the Secretary of the State a certificate declaring withdrawal under this section.\n\n(b) A person who makes a contribution of the kind described in subsection (a) of this section is liable as a general partner to any third party who transacts business with the enterprise (1) before the person withdraws and an appropriate certificate is filed to show withdrawal, or (2) before an appropriate certificate is filed to show that the person is not a general partner, but in either case only if the third party actually believed in good faith that the person was a general partner at the time of the transaction.\n\nSee Sec. 34-38b re inapplicability of provisions as amended by P.A. 86-379 to partnerships existing before October 1, 1986.",
+      "text": "(a) Except as provided in subsection (b) of this section, a person who makes a contribution to a business enterprise and erroneously but in good faith believes that such person has become a limited partner in the enterprise is not a general partner in the enterprise and is not bound by its obligations by reason of making the contributions, receiving distributions from the enterprise or exercising any rights of a limited partner, if, on ascertaining the mistake, the person:\n\n(1) Causes an appropriate certificate of limited partnership or a certificate of amendment to be executed and filed; or\n\n(2) Withdraws from future equity participation in the enterprise by executing and filing in the office of the Secretary of the State a certificate declaring withdrawal under this section.\n\n(b) A person who makes a contribution of the kind described in subsection (a) of this section is liable as a general partner to any third party who transacts business with the enterprise (1) before the person withdraws and an appropriate certificate is filed to show withdrawal, or (2) before an appropriate certificate is filed to show that the person is not a general partner, but in either case only if the third party actually believed in good faith that the person was a general partner at the time of the transaction.",
       "href": "?chapter=610&section=section-34-19"
     },
     {
@@ -474,7 +442,7 @@
         "name": "Uniform Limited Partnership Act"
       },
       "status": "active",
-      "text": "The profits and losses of a limited partnership shall be allocated among the partners, and among classes of partners, in the manner provided in the partnership agreement. If the partnership agreement does not so provide, profits and losses shall be allocated on the basis of the value, as stated in the partnership agreement, of the contributions made by each partner to the extent they have been received by the partnership and have not been returned.\n\nSee Sec. 34-38b re inapplicability of provisions as amended by P.A. 86-379 to partnerships existing before October 1, 1986.",
+      "text": "The profits and losses of a limited partnership shall be allocated among the partners, and among classes of partners, in the manner provided in the partnership agreement. If the partnership agreement does not so provide, profits and losses shall be allocated on the basis of the value, as stated in the partnership agreement, of the contributions made by each partner to the extent they have been received by the partnership and have not been returned.",
       "href": "?chapter=610&section=section-34-20a"
     },
     {
@@ -490,7 +458,7 @@
         "name": "Uniform Limited Partnership Act"
       },
       "status": "active",
-      "text": "Distributions of cash or other assets of a limited partnership shall be allocated among the partners, and among classes of partners, in the manner provided in the partnership agreement. If the partnership agreement does not so provide, distributions shall be made on the basis of the value, as stated in the partnership agreement, of the contributions made by each partner to the extent they have been received by the partnership and have not been returned.\n\nSee Sec. 34-38b re inapplicability of provisions as amended by P.A. 86-379 to partnerships existing before October 1, 1986.",
+      "text": "Distributions of cash or other assets of a limited partnership shall be allocated among the partners, and among classes of partners, in the manner provided in the partnership agreement. If the partnership agreement does not so provide, distributions shall be made on the basis of the value, as stated in the partnership agreement, of the contributions made by each partner to the extent they have been received by the partnership and have not been returned.",
       "href": "?chapter=610&section=section-34-20b"
     },
     {
@@ -506,7 +474,7 @@
         "name": "Uniform Limited Partnership Act"
       },
       "status": "active",
-      "text": "Except as provided in the partnership agreement, a partner, regardless of the nature of his contribution, has no right to demand and receive any distribution from a limited partnership in any form other than cash. Except as provided in the partnership agreement, a partner may not be compelled to accept a distribution of any asset in kind from a limited partnership to the extent that the percentage of the asset distributed to him exceeds a percentage of that asset which is equal to the percentage in which he shares in distributions from the limited partnership.\n\nSee Sec. 34-38b re inapplicability of provisions as amended in P.A. 86-379 to partnerships existing before October 1, 1986.",
+      "text": "Except as provided in the partnership agreement, a partner, regardless of the nature of his contribution, has no right to demand and receive any distribution from a limited partnership in any form other than cash. Except as provided in the partnership agreement, a partner may not be compelled to accept a distribution of any asset in kind from a limited partnership to the extent that the percentage of the asset distributed to him exceeds a percentage of that asset which is equal to the percentage in which he shares in distributions from the limited partnership.",
       "href": "?chapter=610&section=section-34-20c"
     },
     {
@@ -522,7 +490,7 @@
         "name": "Uniform Limited Partnership Act"
       },
       "status": "active",
-      "text": "Except as provided in this chapter, a partner is entitled to receive distributions from a limited partnership before his withdrawal from the limited partnership and before the dissolution and winding up thereof to the extent and at the times or upon the happening of the events specified in the partnership agreement.\n\nSee Sec. 34-38b re inapplicability of provisions as amended by P.A. 86-379 to partnerships existing before October 1, 1986.",
+      "text": "Except as provided in this chapter, a partner is entitled to receive distributions from a limited partnership before his withdrawal from the limited partnership and before the dissolution and winding up thereof to the extent and at the times or upon the happening of the events specified in the partnership agreement.",
       "href": "?chapter=610&section=section-34-20d"
     },
     {
@@ -603,7 +571,7 @@
         "name": "Uniform Limited Partnership Act"
       },
       "status": "active",
-      "text": "(a) No promise by a limited partner to contribute to the limited partnership is enforceable unless set out in a writing signed by the limited partner.\n\n(b) Except as provided in the partnership agreement, a partner is obligated to the limited partnership to perform any promise to contribute cash or property or to perform services, even if he is unable to perform because of death, disability or any other reason. If a partner does not make the required contribution of property or services, he is obligated at the option of the limited partnership to contribute cash equal to that portion of the value, as stated in the partnership records required to be kept pursuant to section 34-13c , of the stated contribution that has not been made.\n\n(c) Unless otherwise provided in the partnership agreement, the obligation of a partner to make a contribution or return money or other property paid or distributed in violation of this chapter may be compromised only by the consent of all partners. Notwithstanding the compromise, a creditor of a limited partnership, who extends credit or otherwise acts in reliance on that obligation after the partner signs a writing which reflects the obligation, and before a cancellation or amendment thereof to reflect the compromise, may enforce the original obligation.\n\nSee Sec. 34-38b re inapplicability of provisions as amended by P.A. 86-379 to partnerships existing before October 1, 1986.",
+      "text": "(a) No promise by a limited partner to contribute to the limited partnership is enforceable unless set out in a writing signed by the limited partner.\n\n(b) Except as provided in the partnership agreement, a partner is obligated to the limited partnership to perform any promise to contribute cash or property or to perform services, even if he is unable to perform because of death, disability or any other reason. If a partner does not make the required contribution of property or services, he is obligated at the option of the limited partnership to contribute cash equal to that portion of the value, as stated in the partnership records required to be kept pursuant to section 34-13c , of the stated contribution that has not been made.\n\n(c) Unless otherwise provided in the partnership agreement, the obligation of a partner to make a contribution or return money or other property paid or distributed in violation of this chapter may be compromised only by the consent of all partners. Notwithstanding the compromise, a creditor of a limited partnership, who extends credit or otherwise acts in reliance on that obligation after the partner signs a writing which reflects the obligation, and before a cancellation or amendment thereof to reflect the compromise, may enforce the original obligation.",
       "href": "?chapter=610&section=section-34-25"
     },
     {
@@ -619,7 +587,7 @@
         "name": "Uniform Limited Partnership Act"
       },
       "status": "active",
-      "text": "(a) If a partner has received the return of any part of his contribution without violation of the partnership agreement or this chapter, he is liable to the limited partnership for a period of one year thereafter for the amount of the returned contribution, without interest, but only to the extent necessary to discharge the limited partnership's liabilities to creditors who extended credit to the limited partnership during the period the contribution was held by the partnership.\n\n(b) If a partner has received the return of any part of his contribution in violation of the partnership agreement or this chapter, he is liable to the limited partnership for a period of six years thereafter for the amount of the contribution, without interest, wrongfully returned.\n\n(c) A partner receives a return of his contribution to the extent that a distribution to him reduces or further reduces his share of the fair value of the net assets of the limited partnership below the value of his contribution, as set forth in the partnership records required to be kept pursuant to section 34-13c , which has not been distributed to him.\n\nSee Sec. 34-38b re inapplicability of provisions as amended by P.A. 86-379 to partnerships existing before October 1, 1986.",
+      "text": "(a) If a partner has received the return of any part of his contribution without violation of the partnership agreement or this chapter, he is liable to the limited partnership for a period of one year thereafter for the amount of the returned contribution, without interest, but only to the extent necessary to discharge the limited partnership's liabilities to creditors who extended credit to the limited partnership during the period the contribution was held by the partnership.\n\n(b) If a partner has received the return of any part of his contribution in violation of the partnership agreement or this chapter, he is liable to the limited partnership for a period of six years thereafter for the amount of the contribution, without interest, wrongfully returned.\n\n(c) A partner receives a return of his contribution to the extent that a distribution to him reduces or further reduces his share of the fair value of the net assets of the limited partnership below the value of his contribution, as set forth in the partnership records required to be kept pursuant to section 34-13c , which has not been distributed to him.",
       "href": "?chapter=610&section=section-34-25a"
     },
     {
@@ -667,7 +635,7 @@
         "name": "Uniform Limited Partnership Act"
       },
       "status": "active",
-      "text": "(a) An assignee of a partnership interest, including an assignee of a general partner, may become a limited partner if and to the extent that (1) the assignor gives the assignee that right in accordance with authority described in the partnership agreement, or (2) all other partners consent.\n\n(b) An assignee who has become a limited partner has, to the extent assigned, the rights and powers, and is subject to the restrictions and liabilities, of a limited partner under the partnership agreement and this chapter. An assignee who becomes a limited partner also is liable for the obligations of his assignor to make contributions as provided in the partnership agreement and in section 34-25 , and to return distributions as provided in section 34-25a . However, the assignee is not obligated for liabilities unknown to the assignee at the time he became a limited partner and which could not be ascertained from the partnership agreement.\n\n(c) If an assignee of a partnership interest becomes a limited partner, the assignor is not released from his liability to the limited partnership under sections 34-14 and 34-25 .\n\nSee Sec. 34-38b re inapplicability of provisions as amended by P.A. 86-379 to partnerships existing before October 1, 1986.",
+      "text": "(a) An assignee of a partnership interest, including an assignee of a general partner, may become a limited partner if and to the extent that (1) the assignor gives the assignee that right in accordance with authority described in the partnership agreement, or (2) all other partners consent.\n\n(b) An assignee who has become a limited partner has, to the extent assigned, the rights and powers, and is subject to the restrictions and liabilities, of a limited partner under the partnership agreement and this chapter. An assignee who becomes a limited partner also is liable for the obligations of his assignor to make contributions as provided in the partnership agreement and in section 34-25 , and to return distributions as provided in section 34-25a . However, the assignee is not obligated for liabilities unknown to the assignee at the time he became a limited partner and which could not be ascertained from the partnership agreement.\n\n(c) If an assignee of a partnership interest becomes a limited partner, the assignor is not released from his liability to the limited partnership under sections 34-14 and 34-25 .",
       "href": "?chapter=610&section=section-34-27a"
     },
     {
@@ -699,7 +667,7 @@
         "name": "Uniform Limited Partnership Act"
       },
       "status": "active",
-      "text": "A limited partner may withdraw from a limited partnership in accordance with the partnership agreement. If the partnership agreement does not specify the time or the events upon the happening of which a limited partner may withdraw or a definite time for the dissolution and winding up of the limited partnership, a limited partner may withdraw upon not less than six months' prior written notice to each general partner at his address on the books of the limited partnership at its office in this state.\n\nSee Sec. 34-38b re inapplicability of provisions as amended by P.A. 86-379 to partnerships existing before October 1, 1986.",
+      "text": "A limited partner may withdraw from a limited partnership in accordance with the partnership agreement. If the partnership agreement does not specify the time or the events upon the happening of which a limited partner may withdraw or a definite time for the dissolution and winding up of the limited partnership, a limited partner may withdraw upon not less than six months' prior written notice to each general partner at his address on the books of the limited partnership at its office in this state.",
       "href": "?chapter=610&section=section-34-27c"
     },
     {
@@ -731,7 +699,7 @@
         "name": "Uniform Limited Partnership Act"
       },
       "status": "active",
-      "text": "Except as approved by a specific written consent of all partners at the time, a person ceases to be a general partner of a limited partnership upon the happening of any of the following events:\n\n(1) The general partner withdraws from the limited partnership as provided in section 34-27b ;\n\n(2) The general partner ceases to be a member of the limited partnership as provided in section 34-27 ;\n\n(3) The general partner is removed as a general partner in accordance with the partnership agreement;\n\n(4) Unless otherwise provided in the partnership agreement, the general partner: (i) Makes assignment for the benefit of creditors; (ii) files a voluntary petition in bankruptcy; (iii) is adjudicated a bankrupt or insolvent; (iv) files a petition or answer seeking for himself any reorganization, arrangement, composition, readjustment, liquidation, dissolution or similar relief under any statute, law, or regulation; (v) files an answer or other pleading admitting or failing to contest material allegations of a petition filed against him in any proceeding of this nature; or (vi) seeks, consents to, or acquiesces in the appointment of a trustee receiver, or liquidator of the general partner or of all or any substantial part of his properties;\n\n(5) Unless otherwise provided in the partnership agreement, one hundred twenty days after the commencement of any proceeding against the general partner seeking reorganization, arrangement, composition, readjustment, liquidation, dissolution or similar relief under any statute, law, or regulation, the proceeding has not been dismissed, or if within ninety days after the appointment without his consent or acquiescence of a trustee, receiver, or liquidator of the general partner or of all or any substantial part of his properties, the appointment is not vacated or stayed within ninety days after expiration of any such stay, the appointment is not vacated;\n\n(6) In the case of a general partner who is a natural person, (i) his death; or (ii) the entry by a court of competent jurisdiction adjudicating him incompetent to manage his person or his estate;\n\n(7) In the case of a general partner who is acting as a general partner by virtue of being a trustee of a trust, the termination of the trust, but not merely the substitution of a new trustee;\n\n(8) In the case of a general partner that is a separate partnership, the dissolution and commencement of winding up the separate partnership;\n\n(9) In the case of a general partner that is a corporation, the filing of a certificate of dissolution, or its equivalent, for the corporation or the revocation of its charter; or\n\n(10) In the case of an estate, the distribution by the fiduciary of the estate's entire interest in the partnership.\n\nSee Sec. 34-38b re inapplicability of provisions as amended by P.A. 86-379 to partnerships existing before October 1, 1986.",
+      "text": "Except as approved by a specific written consent of all partners at the time, a person ceases to be a general partner of a limited partnership upon the happening of any of the following events:\n\n(1) The general partner withdraws from the limited partnership as provided in section 34-27b ;\n\n(2) The general partner ceases to be a member of the limited partnership as provided in section 34-27 ;\n\n(3) The general partner is removed as a general partner in accordance with the partnership agreement;\n\n(4) Unless otherwise provided in the partnership agreement, the general partner: (i) Makes assignment for the benefit of creditors; (ii) files a voluntary petition in bankruptcy; (iii) is adjudicated a bankrupt or insolvent; (iv) files a petition or answer seeking for himself any reorganization, arrangement, composition, readjustment, liquidation, dissolution or similar relief under any statute, law, or regulation; (v) files an answer or other pleading admitting or failing to contest material allegations of a petition filed against him in any proceeding of this nature; or (vi) seeks, consents to, or acquiesces in the appointment of a trustee receiver, or liquidator of the general partner or of all or any substantial part of his properties;\n\n(5) Unless otherwise provided in the partnership agreement, one hundred twenty days after the commencement of any proceeding against the general partner seeking reorganization, arrangement, composition, readjustment, liquidation, dissolution or similar relief under any statute, law, or regulation, the proceeding has not been dismissed, or if within ninety days after the appointment without his consent or acquiescence of a trustee, receiver, or liquidator of the general partner or of all or any substantial part of his properties, the appointment is not vacated or stayed within ninety days after expiration of any such stay, the appointment is not vacated;\n\n(6) In the case of a general partner who is a natural person, (i) his death; or (ii) the entry by a court of competent jurisdiction adjudicating him incompetent to manage his person or his estate;\n\n(7) In the case of a general partner who is acting as a general partner by virtue of being a trustee of a trust, the termination of the trust, but not merely the substitution of a new trustee;\n\n(8) In the case of a general partner that is a separate partnership, the dissolution and commencement of winding up the separate partnership;\n\n(9) In the case of a general partner that is a corporation, the filing of a certificate of dissolution, or its equivalent, for the corporation or the revocation of its charter; or\n\n(10) In the case of an estate, the distribution by the fiduciary of the estate's entire interest in the partnership.",
       "href": "?chapter=610&section=section-34-28"
     },
     {
@@ -747,7 +715,7 @@
         "name": "Uniform Limited Partnership Act"
       },
       "status": "active",
-      "text": "A limited partnership is dissolved and its affairs shall be wound up upon the happening of the first to occur of the following: (1) At the time specified in the partnership agreement; (2) upon the happening of events specified in the partnership agreement; (3) written consent of all partners; (4) an event of withdrawal of a general partner unless at the time there is at least one other general partner and the partnership agreement permits the business of the limited partnership to be carried on by the remaining general partner and that partner does so, but the limited partnership is not dissolved and is not required to be wound up by reason of any event of withdrawal, if, within ninety days after the withdrawal, all partners agree in writing to continue the business of the limited partnership and to the appointment of one or more additional general partners if necessary or desired; or (5) entry of a decree of judicial dissolution under section 34-28b .\n\nSee Sec. 34-38b re inapplicability of provisions as amended by P.A. 86-379 to partnerships existing before October 1, 1986.",
+      "text": "A limited partnership is dissolved and its affairs shall be wound up upon the happening of the first to occur of the following: (1) At the time specified in the partnership agreement; (2) upon the happening of events specified in the partnership agreement; (3) written consent of all partners; (4) an event of withdrawal of a general partner unless at the time there is at least one other general partner and the partnership agreement permits the business of the limited partnership to be carried on by the remaining general partner and that partner does so, but the limited partnership is not dissolved and is not required to be wound up by reason of any event of withdrawal, if, within ninety days after the withdrawal, all partners agree in writing to continue the business of the limited partnership and to the appointment of one or more additional general partners if necessary or desired; or (5) entry of a decree of judicial dissolution under section 34-28b .",
       "href": "?chapter=610&section=section-34-28a"
     },
     {
@@ -843,7 +811,7 @@
         "name": "Uniform Limited Partnership Act"
       },
       "status": "active",
-      "text": "(a) A certificate of limited partnership shall be amended by filing a certificate of amendment thereto in the office of the Secretary of the State. The certificate shall set forth:\n\n(1) The name of the limited partnership;\n\n(2) The date of filing the original certificate of limited partnership; and\n\n(3) The amendment to the certificate.\n\n(b) Within thirty days after the happening of any of the following events, an amendment to a certificate of limited partnership reflecting the occurrence of the event or events shall be filed:\n\n(1) The admission of a new general partner;\n\n(2) The withdrawal of a general partner; or\n\n(3) The continuation of the business under section 34-28a after an event of withdrawal of a general partner.\n\n(c) A general partner who becomes aware that any statement in a certificate of limited partnership was false when made or that any arrangements or other facts described have changed, making the certificate inaccurate in any respect, shall promptly amend the certificate.\n\n(d) A certificate of limited partnership may be amended at any time for any other proper purpose the general partners determine.\n\n(e) No person has any liability because an amendment to a certificate of limited partnership has not been filed to reflect the occurrence of any event referred to in subsection (b) of this section if the amendment is filed within the thirty-day period specified in subsection (b).\n\n(f) A restated certificate of limited partnership may be executed and filed in the same manner as the certificate of amendment.\n\nSee Sec. 34-38b re inapplicability of provisions as amended by P.A. 86-379 to partnerships existing before October 1, 1986.",
+      "text": "(a) A certificate of limited partnership shall be amended by filing a certificate of amendment thereto in the office of the Secretary of the State. The certificate shall set forth:\n\n(1) The name of the limited partnership;\n\n(2) The date of filing the original certificate of limited partnership; and\n\n(3) The amendment to the certificate.\n\n(b) Within thirty days after the happening of any of the following events, an amendment to a certificate of limited partnership reflecting the occurrence of the event or events shall be filed:\n\n(1) The admission of a new general partner;\n\n(2) The withdrawal of a general partner; or\n\n(3) The continuation of the business under section 34-28a after an event of withdrawal of a general partner.\n\n(c) A general partner who becomes aware that any statement in a certificate of limited partnership was false when made or that any arrangements or other facts described have changed, making the certificate inaccurate in any respect, shall promptly amend the certificate.\n\n(d) A certificate of limited partnership may be amended at any time for any other proper purpose the general partners determine.\n\n(e) No person has any liability because an amendment to a certificate of limited partnership has not been filed to reflect the occurrence of any event referred to in subsection (b) of this section if the amendment is filed within the thirty-day period specified in subsection (b).\n\n(f) A restated certificate of limited partnership may be executed and filed in the same manner as the certificate of amendment.",
       "href": "?chapter=610&section=section-34-32"
     },
     {
@@ -1147,7 +1115,7 @@
         "name": "Uniform Limited Partnership Act"
       },
       "status": "active",
-      "text": "(a) A limited partnership formed under any statute of this state prior to October 1, 1979, may become a limited partnership formed under this chapter by complying with the provisions of section 34-10 .\n\n(b) A limited partnership formed under any statute of this state prior to October 1, 1961, until or unless it becomes a limited partnership under this chapter, shall continue to be governed by the provisions of chapter 609, except that such partnerships shall not be renewed unless so provided in the original agreement.\n\n(c) A limited partnership formed under any statute of this state on or after October 1, 1961, and prior to October 1, 1979, shall continue to be governed by the provisions of chapter 610 of the general statutes, revision of 1958, revised to 1979, except that (1) such partnerships shall not be renewed unless so provided in the original agreement, (2) the execution of amendments to or cancellations of the certificates of such limited partnerships shall be governed by section 34-10a , (3) the place of filing of amendments to or cancellations of the certificates of such limited partnerships shall be the office of the Secretary of the State, and (4) the fees charged for filings made by such limited partnerships with the office of the Secretary of the State shall be the same as the fees charged to limited partnerships formed on or after October 1, 1979.\n\nSee Sec. 34-38b re inapplicability of provisions as amended by P.A. 86-379 to partnerships existing before October 1, 1986.",
+      "text": "(a) A limited partnership formed under any statute of this state prior to October 1, 1979, may become a limited partnership formed under this chapter by complying with the provisions of section 34-10 .\n\n(b) A limited partnership formed under any statute of this state prior to October 1, 1961, until or unless it becomes a limited partnership under this chapter, shall continue to be governed by the provisions of chapter 609, except that such partnerships shall not be renewed unless so provided in the original agreement.\n\n(c) A limited partnership formed under any statute of this state on or after October 1, 1961, and prior to October 1, 1979, shall continue to be governed by the provisions of chapter 610 of the general statutes, revision of 1958, revised to 1979, except that (1) such partnerships shall not be renewed unless so provided in the original agreement, (2) the execution of amendments to or cancellations of the certificates of such limited partnerships shall be governed by section 34-10a , (3) the place of filing of amendments to or cancellations of the certificates of such limited partnerships shall be the office of the Secretary of the State, and (4) the fees charged for filings made by such limited partnerships with the office of the Secretary of the State shall be the same as the fees charged to limited partnerships formed on or after October 1, 1979.",
       "href": "?chapter=610&section=section-34-38"
     },
     {
@@ -1229,7 +1197,7 @@
         "name": "Uniform Limited Partnership Act"
       },
       "status": "active",
-      "text": "Before transacting business in this state, a foreign limited partnership shall register with the Secretary of the State. In order to register, a foreign limited partnership shall submit to the Secretary of the State an application for registration as a foreign limited partnership, signed by a general partner and setting forth: (1) The name of the foreign limited partnership and, if different, the name under which it proposes to register and transact business in the state; (2) the state and date of its formation; (3) the general character of the business it proposes to transact in this state; (4) the name and address of the agent in this state for service of process on the foreign limited partnership required to be maintained by section 34-38p and an acceptance of such appointment signed by the agent appointed if other than the Secretary of the State; (5) the address of the office required to be maintained in the state of its organization by the laws of that state, or, if not so required, of the principal office of the foreign limited partnership; (6) the name and business address of each general partner; (7) the address of the office at which is kept a list of the names and addresses of the limited partners and their capital contributions, together with an undertaking by the foreign limited partnership to keep those records until the foreign limited partnership registration in this state is cancelled or withdrawn; (8) the date the foreign limited partnership commenced transacting business in this state; (9) the valid electronic mail address of the foreign limited partnership; and (10) the foreign limited partnership's North American Industry Classification System Code.\n\nSee Sec. 34-38b re inapplicability of provisions as amended by P.A. 86-379 to partnerships existing before October 1, 1986.",
+      "text": "Before transacting business in this state, a foreign limited partnership shall register with the Secretary of the State. In order to register, a foreign limited partnership shall submit to the Secretary of the State an application for registration as a foreign limited partnership, signed by a general partner and setting forth: (1) The name of the foreign limited partnership and, if different, the name under which it proposes to register and transact business in the state; (2) the state and date of its formation; (3) the general character of the business it proposes to transact in this state; (4) the name and address of the agent in this state for service of process on the foreign limited partnership required to be maintained by section 34-38p and an acceptance of such appointment signed by the agent appointed if other than the Secretary of the State; (5) the address of the office required to be maintained in the state of its organization by the laws of that state, or, if not so required, of the principal office of the foreign limited partnership; (6) the name and business address of each general partner; (7) the address of the office at which is kept a list of the names and addresses of the limited partners and their capital contributions, together with an undertaking by the foreign limited partnership to keep those records until the foreign limited partnership registration in this state is cancelled or withdrawn; (8) the date the foreign limited partnership commenced transacting business in this state; (9) the valid electronic mail address of the foreign limited partnership; and (10) the foreign limited partnership's North American Industry Classification System Code.",
       "href": "?chapter=610&section=section-34-38g"
     },
     {
@@ -1309,7 +1277,7 @@
         "name": "Uniform Limited Partnership Act"
       },
       "status": "active",
-      "text": "(a) A foreign limited partnership transacting business in this state may not maintain any action, suit or proceeding in any court of this state until it has registered in this state.\n\n(b) The failure of a foreign limited partnership to register in this state does not impair the validity of any contract or act of the foreign limited partnership or prevent the foreign limited partnership from defending any action, suit or proceeding in any court of this state.\n\n(c) A limited partner of a foreign limited partnership is not liable as a general partner of the foreign limited partnership solely by reason of having transacted business in this state without registration.\n\n(d) A foreign limited partnership, by transacting business in this state without registration, appoints the Secretary of the State as its agent for service of process with respect to causes of action arising out of the transaction of business in this state.\n\n(e) A foreign limited partnership which transacts business in this state without registering with the Secretary of the State as required by this chapter shall be liable to this state, for each year or part thereof during which it transacted business in this state without being registered with said secretary, in an amount equal to: (1) All fees and taxes which would have been imposed by law upon such limited partnership had it duly applied for and received such registration to transact business in this state, and (2) all interest and penalties imposed by law for failure to pay such fees and taxes. A foreign limited partnership is further liable to this state, for each month or part thereof during which it transacted business in this state without registering with the Secretary of the State, in an amount equal to three hundred dollars, except that a foreign limited partnership which has registered with said secretary not later than ninety days after it has commenced transacting business in this state shall not be liable for such monthly penalty. Such fees and penalties may be levied by the Secretary of the State.\n\nSee Sec. 34-38r re limited amnesty program.",
+      "text": "(a) A foreign limited partnership transacting business in this state may not maintain any action, suit or proceeding in any court of this state until it has registered in this state.\n\n(b) The failure of a foreign limited partnership to register in this state does not impair the validity of any contract or act of the foreign limited partnership or prevent the foreign limited partnership from defending any action, suit or proceeding in any court of this state.\n\n(c) A limited partner of a foreign limited partnership is not liable as a general partner of the foreign limited partnership solely by reason of having transacted business in this state without registration.\n\n(d) A foreign limited partnership, by transacting business in this state without registration, appoints the Secretary of the State as its agent for service of process with respect to causes of action arising out of the transaction of business in this state.\n\n(e) A foreign limited partnership which transacts business in this state without registering with the Secretary of the State as required by this chapter shall be liable to this state, for each year or part thereof during which it transacted business in this state without being registered with said secretary, in an amount equal to: (1) All fees and taxes which would have been imposed by law upon such limited partnership had it duly applied for and received such registration to transact business in this state, and (2) all interest and penalties imposed by law for failure to pay such fees and taxes. A foreign limited partnership is further liable to this state, for each month or part thereof during which it transacted business in this state without registering with the Secretary of the State, in an amount equal to three hundred dollars, except that a foreign limited partnership which has registered with said secretary not later than ninety days after it has commenced transacting business in this state shall not be liable for such monthly penalty. Such fees and penalties may be levied by the Secretary of the State.",
       "href": "?chapter=610&section=section-34-38l"
     },
     {
@@ -1341,7 +1309,7 @@
         "name": "Uniform Limited Partnership Act"
       },
       "status": "active",
-      "text": "(a) The Secretary of the State shall receive, for filing any document or certificate required to be filed under sections 34-10 , 34-13a , 34-13e , 34-32 , 34-32a , 34-32c , 34-38g and 34-38s , the following fees: (1) For reservation or cancellation of reservation of name, sixty dollars; (2) for a certificate of limited partnership and appointment of statutory agent, one hundred twenty dollars; (3) for a certificate of amendment, one hundred twenty dollars; (4) for a certificate of merger or consolidation, sixty dollars; (5) for a certificate of registration, one hundred twenty dollars; (6) for a change of agent or change of address of agent, twenty dollars; (7) for a certificate of reinstatement, one hundred twenty dollars; and (8) for an annual report, (A) prior to July 1, 2020, twenty dollars, and (B) on or after July 1, 2020, eighty dollars.\n\n(b) Miscellaneous charges: (1) At the time of any service of process on the Secretary of the State as statutory agent of a limited partnership, the plaintiff in the process so served shall pay fifty dollars; (2) for preparing and furnishing a copy of any document or instrument or paper filed or recorded relating to a limited partnership: For each copy of each such document thereof regardless of the number of pages, forty dollars; for affixing his certification and official seal thereto, fifteen dollars; (3) for preparing and furnishing a certificate that may reflect any and all changes of limited partnership names and the dates of filing thereof, fifty dollars; and (4) for other services for which fees are not provided by the general statutes, the Secretary of the State may charge such fees which shall, in his judgment, cover the cost of the services provided.\n\nSee Sec. 34-38b re inapplicability of provisions as amended by P.A. 86-379 to partnerships existing before October 1, 1986.",
+      "text": "(a) The Secretary of the State shall receive, for filing any document or certificate required to be filed under sections 34-10 , 34-13a , 34-13e , 34-32 , 34-32a , 34-32c , 34-38g and 34-38s , the following fees: (1) For reservation or cancellation of reservation of name, sixty dollars; (2) for a certificate of limited partnership and appointment of statutory agent, one hundred twenty dollars; (3) for a certificate of amendment, one hundred twenty dollars; (4) for a certificate of merger or consolidation, sixty dollars; (5) for a certificate of registration, one hundred twenty dollars; (6) for a change of agent or change of address of agent, twenty dollars; (7) for a certificate of reinstatement, one hundred twenty dollars; and (8) for an annual report, (A) prior to July 1, 2020, twenty dollars, and (B) on or after July 1, 2020, eighty dollars.\n\n(b) Miscellaneous charges: (1) At the time of any service of process on the Secretary of the State as statutory agent of a limited partnership, the plaintiff in the process so served shall pay fifty dollars; (2) for preparing and furnishing a copy of any document or instrument or paper filed or recorded relating to a limited partnership: For each copy of each such document thereof regardless of the number of pages, forty dollars; for affixing his certification and official seal thereto, fifteen dollars; (3) for preparing and furnishing a certificate that may reflect any and all changes of limited partnership names and the dates of filing thereof, fifty dollars; and (4) for other services for which fees are not provided by the general statutes, the Secretary of the State may charge such fees which shall, in his judgment, cover the cost of the services provided.",
       "href": "?chapter=610&section=section-34-38n"
     },
     {
@@ -1455,38 +1423,6 @@
       "status": "active",
       "text": "(a) The certificate of registration of a foreign limited partnership to transact business in this state may be revoked by the Secretary of the State upon the conditions provided in this section when: (1) The foreign limited partnership has failed to file its annual report with the Secretary of the State; (2) any wilful misrepresentation has been made of any material matter in any application, report, affidavit or other document, submitted by such foreign limited partnership pursuant to this chapter; (3) the foreign limited partnership is exceeding the authority conferred upon it by this chapter; or (4) the foreign limited partnership is without an agent upon whom process may be served in this state for sixty days or more.\n\n(b) On the happening of the events set out in subdivision (1), (2), (3) or (4) of subsection (a) of this section, the Secretary of the State shall give not less than twenty days' written notice to the foreign limited partnership that he intends to revoke the certificate of registration of such foreign limited partnership for one of said causes, specifying the same. Such notice shall be given by electronic mail addressed and sent to the foreign limited partnership at its electronic mail address as last shown on the records of the Secretary of the State. If, before expiration of the time set forth in such notice, the foreign limited partnership establishes to the satisfaction of the Secretary of the State that the stated cause for the revocation of its certificate of registration did not exist at the time the notice was mailed or, if it did exist at said time, has been cured, the Secretary of the State shall take no further action. Otherwise, on the expiration of the time stated in the notice, the Secretary shall revoke the certificate of registration of such foreign limited partnership to transact business in this state.\n\n(c) Upon revoking the certificate of registration of any foreign limited partnership, the Secretary of the State shall file a certificate of revocation in his office and shall: (1) Send a copy thereof to such foreign limited partnership at its electronic mail address as last shown on the Secretary's records; and (2) cause notice of the filing of such certificate of revocation to be posted on the office of the Secretary of the State's Internet web site for a period of sixty days following the date on which the Secretary of the State files the certificate of revocation. The filing of such certificate of revocation shall cause the authority of a foreign limited partnership to transact business in this state to cease. Notwithstanding the filing of the certificate of revocation, the appointment by a foreign limited partnership of an attorney upon whom process may be served shall continue in force as long as any liability remains outstanding against the foreign limited partnership in this state.",
       "href": "?chapter=610&section=section-34-38u"
-    },
-    {
-      "id": "section-34-22",
-      "citation": "34-22",
-      "citations": [
-        "34-22"
-      ],
-      "heading": "34-22",
-      "chapter": {
-        "id": "chapter-610",
-        "number": "610",
-        "name": "Uniform Limited Partnership Act"
-      },
-      "status": "repealed",
-      "text": "Secs. 34-22 and 34-23. Priority among limited partners. Payment of compensation to limited partners. Sections 34-22 and 34-23 are repealed.",
-      "href": "?chapter=610&section=section-34-22"
-    },
-    {
-      "id": "section-34-23",
-      "citation": "34-23",
-      "citations": [
-        "34-23"
-      ],
-      "heading": "34-23",
-      "chapter": {
-        "id": "chapter-610",
-        "number": "610",
-        "name": "Uniform Limited Partnership Act"
-      },
-      "status": "repealed",
-      "text": "Secs. 34-22 and 34-23. Priority among limited partners. Payment of compensation to limited partners. Sections 34-22 and 34-23 are repealed.",
-      "href": "?chapter=610&section=section-34-23"
     },
     {
       "id": "group-34-39-to-34-40-to-34-41-to-34-42-to-34-43-to-34-44-to-34-45-to-34-46-to-34-47-to-34-48-to-34-49-to-34-50-to-34-51-to-34-52-to-34-53-to-34-54-to-34-55-to-34-56-to-34-57-to-34-58-to-34-59-to-34-60-to-34-61-to-34-62-to-34-63-to-34-64-to-34-65-to-34-66-to-34-67-to-34-68-to-34-69-to-34-70-to-34-71-to-34-72-to-34-73-to-34-74-to-34-75-to-34-76-to-34-77-to-34-78-to-34-79-to-34-80-to-34-81",
@@ -1663,38 +1599,6 @@
       "href": "?chapter=611&section=group-34-81s-to-34-81t-to-34-81u-to-34-81v-to-34-81w-to-34-81x-to-34-81y-to-34-81z"
     },
     {
-      "id": "section-34-39",
-      "citation": "34-39",
-      "citations": [
-        "34-39"
-      ],
-      "heading": "34-39",
-      "chapter": {
-        "id": "chapter-611",
-        "number": "611",
-        "name": "Uniform Partnership Act"
-      },
-      "status": "repealed",
-      "text": "Secs. 34-39 to 34-81. Uniform Partnership Act. Sections 34-39 to 34-81 , inclusive, are repealed, effective July 1, 1997.",
-      "href": "?chapter=611&section=section-34-39"
-    },
-    {
-      "id": "section-34-81",
-      "citation": "34-81",
-      "citations": [
-        "34-81"
-      ],
-      "heading": "34-81",
-      "chapter": {
-        "id": "chapter-611",
-        "number": "611",
-        "name": "Uniform Partnership Act"
-      },
-      "status": "repealed",
-      "text": "Secs. 34-39 to 34-81. Uniform Partnership Act. Sections 34-39 to 34-81 , inclusive, are repealed, effective July 1, 1997.",
-      "href": "?chapter=611&section=section-34-81"
-    },
-    {
       "id": "section-34-82",
       "citation": "34-82",
       "citations": [
@@ -1707,7 +1611,7 @@
         "name": "Professional Associations"
       },
       "status": "active",
-      "text": "(a) Notwithstanding the provisions of sections 34-300 to 34-434 , inclusive, any three or more persons, licensed or authorized to practice a profession by the state of Connecticut, may associate to practice such profession for profit, if the articles of association of the members provide that the association thereby formed and hereby authorized shall have at least three of the following four attributes: (1) Continuity of life so that the death, insanity, bankruptcy, retirement, resignation or expulsion of any member shall not cause a dissolution of the association; (2) centralized management so that any one or more but less than all of the members has continuing exclusive authority to make management decisions necessary to the conduct of the professional business for which the association was formed, and so that no member of the association, acting without the authority of the managing member or members, shall have the power to bind the association by his act; (3) limited liability so that the individual members of the association shall not be individually or severally liable for its debts; provided, however, the members shall in no way limit their individual or several liability in the articles of association, or otherwise, for any acts of reckless or wanton misconduct, negligence, malpractice, professional misconduct or tort; and (4) free transferability of interests so that each of its members or those members owning substantially all of the interests in the association have the power, without the consent of other members, to substitute for themselves in the same association a person duly licensed or authorized to practice the profession for which the association was formed who is not a member of the association, or, a modified form of free transferability of interests so that each member of the association can transfer his interest to a person so licensed or authorized who is not a member of the association only after having offered such interest to the association or to the other members of the association at its fair market value as established in the articles of association, or otherwise.\n\n(b) The articles of association of any association, formed and authorized pursuant to subsection (a) of this section, shall expressly state that the association is formed under said subsection (a) and shall be signed and sworn to by all of the members. The articles of association, duly executed, shall be filed for record with the Secretary of the State, together with a filing fee of twenty-five dollars. The Secretary of the State shall index and keep the documents in files used exclusively for such purpose.\n\n(c) Any association formed and authorized under subsection (a) of this section shall be subject to the laws of the state of Connecticut regulating the practice of the profession of the individual members of the association.\n\n(d) The articles of association shall be cancelled when the association is dissolved by all of its members or as otherwise provided in the articles of association. The articles of association shall be amended when (1) there is a change in the name or principal place of business of the association, or (2) the members desire to make a change in any other statement in the articles of association and have adopted such change in the manner provided in the articles of association.\n\n(e) No amendment to the articles of association nor any dissolution of the association shall be effective until the amendment or an agreement of dissolution has been duly executed and filed for record with the Secretary of the State, together with a filing fee of ten dollars.\n\nSee Sec. 46a-59 re prohibition against discrimination based on race, national origin, creed, sex, gender identity or expression or color in associations of licensed persons.",
+      "text": "(a) Notwithstanding the provisions of sections 34-300 to 34-434 , inclusive, any three or more persons, licensed or authorized to practice a profession by the state of Connecticut, may associate to practice such profession for profit, if the articles of association of the members provide that the association thereby formed and hereby authorized shall have at least three of the following four attributes: (1) Continuity of life so that the death, insanity, bankruptcy, retirement, resignation or expulsion of any member shall not cause a dissolution of the association; (2) centralized management so that any one or more but less than all of the members has continuing exclusive authority to make management decisions necessary to the conduct of the professional business for which the association was formed, and so that no member of the association, acting without the authority of the managing member or members, shall have the power to bind the association by his act; (3) limited liability so that the individual members of the association shall not be individually or severally liable for its debts; provided, however, the members shall in no way limit their individual or several liability in the articles of association, or otherwise, for any acts of reckless or wanton misconduct, negligence, malpractice, professional misconduct or tort; and (4) free transferability of interests so that each of its members or those members owning substantially all of the interests in the association have the power, without the consent of other members, to substitute for themselves in the same association a person duly licensed or authorized to practice the profession for which the association was formed who is not a member of the association, or, a modified form of free transferability of interests so that each member of the association can transfer his interest to a person so licensed or authorized who is not a member of the association only after having offered such interest to the association or to the other members of the association at its fair market value as established in the articles of association, or otherwise.\n\n(b) The articles of association of any association, formed and authorized pursuant to subsection (a) of this section, shall expressly state that the association is formed under said subsection (a) and shall be signed and sworn to by all of the members. The articles of association, duly executed, shall be filed for record with the Secretary of the State, together with a filing fee of twenty-five dollars. The Secretary of the State shall index and keep the documents in files used exclusively for such purpose.\n\n(c) Any association formed and authorized under subsection (a) of this section shall be subject to the laws of the state of Connecticut regulating the practice of the profession of the individual members of the association.\n\n(d) The articles of association shall be cancelled when the association is dissolved by all of its members or as otherwise provided in the articles of association. The articles of association shall be amended when (1) there is a change in the name or principal place of business of the association, or (2) the members desire to make a change in any other statement in the articles of association and have adopted such change in the manner provided in the articles of association.\n\n(e) No amendment to the articles of association nor any dissolution of the association shall be effective until the amendment or an agreement of dissolution has been duly executed and filed for record with the Secretary of the State, together with a filing fee of ten dollars.",
       "href": "?chapter=612&section=section-34-82"
     },
     {
@@ -2319,534 +2223,6 @@
       "status": "repealed",
       "text": "Sections 34-241 and 34-242 are repealed, effective July 1, 2017.",
       "href": "?chapter=613&section=group-34-241-to-34-242"
-    },
-    {
-      "id": "section-34-100",
-      "citation": "34-100",
-      "citations": [
-        "34-100"
-      ],
-      "heading": "34-100",
-      "chapter": {
-        "id": "chapter-613",
-        "number": "613",
-        "name": "Limited Liability Companies"
-      },
-      "status": "repealed",
-      "text": "Secs. 34-100 to 34-105. Short title: Connecticut Limited Liability Company Act. Definitions. Name. Reservation of name. Statutory agent for service. Service of process on statutory agent, member or manager. Sections 34-100 to 34-105 , inclusive, are repealed, effective July 1, 2017.",
-      "href": "?chapter=613&section=section-34-100"
-    },
-    {
-      "id": "section-34-105",
-      "citation": "34-105",
-      "citations": [
-        "34-105"
-      ],
-      "heading": "34-105",
-      "chapter": {
-        "id": "chapter-613",
-        "number": "613",
-        "name": "Limited Liability Companies"
-      },
-      "status": "repealed",
-      "text": "Secs. 34-100 to 34-105. Short title: Connecticut Limited Liability Company Act. Definitions. Name. Reservation of name. Statutory agent for service. Service of process on statutory agent, member or manager. Sections 34-100 to 34-105 , inclusive, are repealed, effective July 1, 2017.",
-      "href": "?chapter=613&section=section-34-105"
-    },
-    {
-      "id": "section-34-106",
-      "citation": "34-106",
-      "citations": [
-        "34-106"
-      ],
-      "heading": "34-106",
-      "chapter": {
-        "id": "chapter-613",
-        "number": "613",
-        "name": "Limited Liability Companies"
-      },
-      "status": "repealed",
-      "text": "Secs. 34-106 to 34-113. Annual report; interim notice of change of manager or member. Failure to file report; incorrect report. Interrogatories by Secretary of the State. Execution of documents. Filing of documents. Forms for documents to be filed; mailings. Fees payable to Secretary of the State; sales tax not imposed. Taxation. Sections 34-106 to 34-113 , inclusive, are repealed, effective July 1, 2017.",
-      "href": "?chapter=613&section=section-34-106"
-    },
-    {
-      "id": "section-34-113",
-      "citation": "34-113",
-      "citations": [
-        "34-113"
-      ],
-      "heading": "34-113",
-      "chapter": {
-        "id": "chapter-613",
-        "number": "613",
-        "name": "Limited Liability Companies"
-      },
-      "status": "repealed",
-      "text": "Secs. 34-106 to 34-113. Annual report; interim notice of change of manager or member. Failure to file report; incorrect report. Interrogatories by Secretary of the State. Execution of documents. Filing of documents. Forms for documents to be filed; mailings. Fees payable to Secretary of the State; sales tax not imposed. Taxation. Sections 34-106 to 34-113 , inclusive, are repealed, effective July 1, 2017.",
-      "href": "?chapter=613&section=section-34-113"
-    },
-    {
-      "id": "section-34-119",
-      "citation": "34-119",
-      "citations": [
-        "34-119"
-      ],
-      "heading": "34-119",
-      "chapter": {
-        "id": "chapter-613",
-        "number": "613",
-        "name": "Limited Liability Companies"
-      },
-      "status": "repealed",
-      "text": "Secs. 34-119 to 34-124. Restrictions on purposes and powers of limited liability companies. Formation. Articles of organization. Amendment and restatement of articles of organization. Effect of delivery of articles of organization for filing and endorsement. Powers of limited liability company. Sections 34-119 to 34-124 , inclusive, are repealed, effective July 1, 2017.",
-      "href": "?chapter=613&section=section-34-119"
-    },
-    {
-      "id": "section-34-124",
-      "citation": "34-124",
-      "citations": [
-        "34-124"
-      ],
-      "heading": "34-124",
-      "chapter": {
-        "id": "chapter-613",
-        "number": "613",
-        "name": "Limited Liability Companies"
-      },
-      "status": "repealed",
-      "text": "Secs. 34-119 to 34-124. Restrictions on purposes and powers of limited liability companies. Formation. Articles of organization. Amendment and restatement of articles of organization. Effect of delivery of articles of organization for filing and endorsement. Powers of limited liability company. Sections 34-119 to 34-124 , inclusive, are repealed, effective July 1, 2017.",
-      "href": "?chapter=613&section=section-34-124"
-    },
-    {
-      "id": "section-34-130",
-      "citation": "34-130",
-      "citations": [
-        "34-130"
-      ],
-      "heading": "34-130",
-      "chapter": {
-        "id": "chapter-613",
-        "number": "613",
-        "name": "Limited Liability Companies"
-      },
-      "status": "repealed",
-      "text": "Secs. 34-130 to 34-134. Agency power of members and managers. Admissions and representations by members and managers. Limited liability company charged with notice to or knowledge of any member or manager. Liability of members and managers to third parties. Members and managers as parties to actions. Sections 34-130 to 30-134 , inclusive, are repealed, effective July 1, 2017.",
-      "href": "?chapter=613&section=section-34-130"
-    },
-    {
-      "id": "section-34-140",
-      "citation": "34-140",
-      "citations": [
-        "34-140"
-      ],
-      "heading": "34-140",
-      "chapter": {
-        "id": "chapter-613",
-        "number": "613",
-        "name": "Limited Liability Companies"
-      },
-      "status": "repealed",
-      "text": "Secs. 34-140 to 34-144. Management. Discharge of duties by members and managers. Voting. Liability and indemnification of members and managers. Records and information. Sections 34-140 to 34-144 , inclusive, are repealed, effective July 1, 2017.",
-      "href": "?chapter=613&section=section-34-140"
-    },
-    {
-      "id": "section-34-144",
-      "citation": "34-144",
-      "citations": [
-        "34-144"
-      ],
-      "heading": "34-144",
-      "chapter": {
-        "id": "chapter-613",
-        "number": "613",
-        "name": "Limited Liability Companies"
-      },
-      "status": "repealed",
-      "text": "Secs. 34-140 to 34-144. Management. Discharge of duties by members and managers. Voting. Liability and indemnification of members and managers. Records and information. Sections 34-140 to 34-144 , inclusive, are repealed, effective July 1, 2017.",
-      "href": "?chapter=613&section=section-34-144"
-    },
-    {
-      "id": "section-34-150",
-      "citation": "34-150",
-      "citations": [
-        "34-150"
-      ],
-      "heading": "34-150",
-      "chapter": {
-        "id": "chapter-613",
-        "number": "613",
-        "name": "Limited Liability Companies"
-      },
-      "status": "repealed",
-      "text": "Secs. 34-150 to 34-152. Contributions to capital. Liability for contribution. Sharing of profits and losses. Sections 34-150 to 34-152 , inclusive, are repealed, effective July 1, 2017.",
-      "href": "?chapter=613&section=section-34-150"
-    },
-    {
-      "id": "section-34-152",
-      "citation": "34-152",
-      "citations": [
-        "34-152"
-      ],
-      "heading": "34-152",
-      "chapter": {
-        "id": "chapter-613",
-        "number": "613",
-        "name": "Limited Liability Companies"
-      },
-      "status": "repealed",
-      "text": "Secs. 34-150 to 34-152. Contributions to capital. Liability for contribution. Sharing of profits and losses. Sections 34-150 to 34-152 , inclusive, are repealed, effective July 1, 2017.",
-      "href": "?chapter=613&section=section-34-152"
-    },
-    {
-      "id": "section-34-158",
-      "citation": "34-158",
-      "citations": [
-        "34-158"
-      ],
-      "heading": "34-158",
-      "chapter": {
-        "id": "chapter-613",
-        "number": "613",
-        "name": "Limited Liability Companies"
-      },
-      "status": "repealed",
-      "text": "Secs. 34-158 to 34-161. Sharing of interim distributions. Distributions upon an event of dissociation. Distribution in kind. Right to distribution. Sections 34-158 to 34-161 , inclusive, are repealed, effective, July 1, 2017.",
-      "href": "?chapter=613&section=section-34-158"
-    },
-    {
-      "id": "section-34-161",
-      "citation": "34-161",
-      "citations": [
-        "34-161"
-      ],
-      "heading": "34-161",
-      "chapter": {
-        "id": "chapter-613",
-        "number": "613",
-        "name": "Limited Liability Companies"
-      },
-      "status": "repealed",
-      "text": "Secs. 34-158 to 34-161. Sharing of interim distributions. Distributions upon an event of dissociation. Distribution in kind. Right to distribution. Sections 34-158 to 34-161 , inclusive, are repealed, effective, July 1, 2017.",
-      "href": "?chapter=613&section=section-34-161"
-    },
-    {
-      "id": "section-34-167",
-      "citation": "34-167",
-      "citations": [
-        "34-167"
-      ],
-      "heading": "34-167",
-      "chapter": {
-        "id": "chapter-613",
-        "number": "613",
-        "name": "Limited Liability Companies"
-      },
-      "status": "repealed",
-      "text": "Secs. 34-167 to 34-173. Ownership of limited liability company property. Transfer of property. Nature of membership interest. Assignment of membership interest. Rights of judgment creditor. Right of assignee to become a member. Powers of legal representative or successor of deceased, incompetent, dissolved or terminated member; right of legal representative or successor to become member. Sections 34-167 to 34-173 , inclusive, are repealed, effective July 1, 2017.",
-      "href": "?chapter=613&section=section-34-167"
-    },
-    {
-      "id": "section-34-173",
-      "citation": "34-173",
-      "citations": [
-        "34-173"
-      ],
-      "heading": "34-173",
-      "chapter": {
-        "id": "chapter-613",
-        "number": "613",
-        "name": "Limited Liability Companies"
-      },
-      "status": "repealed",
-      "text": "Secs. 34-167 to 34-173. Ownership of limited liability company property. Transfer of property. Nature of membership interest. Assignment of membership interest. Rights of judgment creditor. Right of assignee to become a member. Powers of legal representative or successor of deceased, incompetent, dissolved or terminated member; right of legal representative or successor to become member. Sections 34-167 to 34-173 , inclusive, are repealed, effective July 1, 2017.",
-      "href": "?chapter=613&section=section-34-173"
-    },
-    {
-      "id": "section-34-179",
-      "citation": "34-179",
-      "citations": [
-        "34-179"
-      ],
-      "heading": "34-179",
-      "chapter": {
-        "id": "chapter-613",
-        "number": "613",
-        "name": "Limited Liability Companies"
-      },
-      "status": "repealed",
-      "text": "Secs. 34-179 and 34-180. Admission of members. Events of dissociation. Sections 34-179 and 34-180 are repealed, effective July 1, 2017.",
-      "href": "?chapter=613&section=section-34-179"
-    },
-    {
-      "id": "section-34-180",
-      "citation": "34-180",
-      "citations": [
-        "34-180"
-      ],
-      "heading": "34-180",
-      "chapter": {
-        "id": "chapter-613",
-        "number": "613",
-        "name": "Limited Liability Companies"
-      },
-      "status": "repealed",
-      "text": "Secs. 34-179 and 34-180. Admission of members. Events of dissociation. Sections 34-179 and 34-180 are repealed, effective July 1, 2017.",
-      "href": "?chapter=613&section=section-34-180"
-    },
-    {
-      "id": "section-34-186",
-      "citation": "34-186",
-      "citations": [
-        "34-186"
-      ],
-      "heading": "34-186",
-      "chapter": {
-        "id": "chapter-613",
-        "number": "613",
-        "name": "Limited Liability Companies"
-      },
-      "status": "repealed",
-      "text": "Secs. 34-186 and 34-187. Suits by and against limited liability company. Authority to sue on behalf of limited liability company. Sections 34-186 and 34-187 are repealed, effective July 1, 2017.",
-      "href": "?chapter=613&section=section-34-186"
-    },
-    {
-      "id": "section-34-187",
-      "citation": "34-187",
-      "citations": [
-        "34-187"
-      ],
-      "heading": "34-187",
-      "chapter": {
-        "id": "chapter-613",
-        "number": "613",
-        "name": "Limited Liability Companies"
-      },
-      "status": "repealed",
-      "text": "Secs. 34-186 and 34-187. Suits by and against limited liability company. Authority to sue on behalf of limited liability company. Sections 34-186 and 34-187 are repealed, effective July 1, 2017.",
-      "href": "?chapter=613&section=section-34-187"
-    },
-    {
-      "id": "section-34-193",
-      "citation": "34-193",
-      "citations": [
-        "34-193"
-      ],
-      "heading": "34-193",
-      "chapter": {
-        "id": "chapter-613",
-        "number": "613",
-        "name": "Limited Liability Companies"
-      },
-      "status": "repealed",
-      "text": "Secs. 34-193 to 34-198. Merger or consolidation. Approval of merger or consolidation. Plan of merger or consolidation. Articles of merger or consolidation. Effect of merger or consolidation. Survivor to be governed by laws of jurisdiction other than this state. Sections 34-193 to 34-198 , inclusive, are repealed, effective July 1, 2017.",
-      "href": "?chapter=613&section=section-34-193"
-    },
-    {
-      "id": "section-34-198",
-      "citation": "34-198",
-      "citations": [
-        "34-198"
-      ],
-      "heading": "34-198",
-      "chapter": {
-        "id": "chapter-613",
-        "number": "613",
-        "name": "Limited Liability Companies"
-      },
-      "status": "repealed",
-      "text": "Secs. 34-193 to 34-198. Merger or consolidation. Approval of merger or consolidation. Plan of merger or consolidation. Articles of merger or consolidation. Effect of merger or consolidation. Survivor to be governed by laws of jurisdiction other than this state. Sections 34-193 to 34-198 , inclusive, are repealed, effective July 1, 2017.",
-      "href": "?chapter=613&section=section-34-198"
-    },
-    {
-      "id": "section-34-199",
-      "citation": "34-199",
-      "citations": [
-        "34-199"
-      ],
-      "heading": "34-199",
-      "chapter": {
-        "id": "chapter-613",
-        "number": "613",
-        "name": "Limited Liability Companies"
-      },
-      "status": "repealed",
-      "text": "Secs. 34-199 and 34-200. Conversion of domestic general or limited partnership to limited liability company. Effect of conversion. Sections 34-199 and 34-200 are repealed, effective January 1, 2014.",
-      "href": "?chapter=613&section=section-34-199"
-    },
-    {
-      "id": "section-34-200",
-      "citation": "34-200",
-      "citations": [
-        "34-200"
-      ],
-      "heading": "34-200",
-      "chapter": {
-        "id": "chapter-613",
-        "number": "613",
-        "name": "Limited Liability Companies"
-      },
-      "status": "repealed",
-      "text": "Secs. 34-199 and 34-200. Conversion of domestic general or limited partnership to limited liability company. Effect of conversion. Sections 34-199 and 34-200 are repealed, effective January 1, 2014.",
-      "href": "?chapter=613&section=section-34-200"
-    },
-    {
-      "id": "section-34-206",
-      "citation": "34-206",
-      "citations": [
-        "34-206"
-      ],
-      "heading": "34-206",
-      "chapter": {
-        "id": "chapter-613",
-        "number": "613",
-        "name": "Limited Liability Companies"
-      },
-      "status": "repealed",
-      "text": "Secs. 34-206 to 34-211. Dissolution. Judicial dissolution. Winding up. Agency powers of managers or members after dissolution. Distribution of assets. Articles of dissolution. Sections 34-206 to 34-211 , inclusive, are repealed, effective July 1, 2017.",
-      "href": "?chapter=613&section=section-34-206"
-    },
-    {
-      "id": "section-34-211",
-      "citation": "34-211",
-      "citations": [
-        "34-211"
-      ],
-      "heading": "34-211",
-      "chapter": {
-        "id": "chapter-613",
-        "number": "613",
-        "name": "Limited Liability Companies"
-      },
-      "status": "repealed",
-      "text": "Secs. 34-206 to 34-211. Dissolution. Judicial dissolution. Winding up. Agency powers of managers or members after dissolution. Distribution of assets. Articles of dissolution. Sections 34-206 to 34-211 , inclusive, are repealed, effective July 1, 2017.",
-      "href": "?chapter=613&section=section-34-211"
-    },
-    {
-      "id": "section-34-212",
-      "citation": "34-212",
-      "citations": [
-        "34-212"
-      ],
-      "heading": "34-212",
-      "chapter": {
-        "id": "chapter-613",
-        "number": "613",
-        "name": "Limited Liability Companies"
-      },
-      "status": "repealed",
-      "text": "Secs. 34-212 to 34-216. Known claims against dissolved limited liability company. Unknown claims against dissolved limited liability company. Recovery for claims not barred. Dissolution by forfeiture. Reinstatement after dissolution. Sections 34-212 to 34-216 , inclusive, are repealed, effective July 1, 2017.",
-      "href": "?chapter=613&section=section-34-212"
-    },
-    {
-      "id": "section-34-216",
-      "citation": "34-216",
-      "citations": [
-        "34-216"
-      ],
-      "heading": "34-216",
-      "chapter": {
-        "id": "chapter-613",
-        "number": "613",
-        "name": "Limited Liability Companies"
-      },
-      "status": "repealed",
-      "text": "Secs. 34-212 to 34-216. Known claims against dissolved limited liability company. Unknown claims against dissolved limited liability company. Recovery for claims not barred. Dissolution by forfeiture. Reinstatement after dissolution. Sections 34-212 to 34-216 , inclusive, are repealed, effective July 1, 2017.",
-      "href": "?chapter=613&section=section-34-216"
-    },
-    {
-      "id": "section-34-222",
-      "citation": "34-222",
-      "citations": [
-        "34-222"
-      ],
-      "heading": "34-222",
-      "chapter": {
-        "id": "chapter-613",
-        "number": "613",
-        "name": "Limited Liability Companies"
-      },
-      "status": "repealed",
-      "text": "Secs. 34-222 to 34-229. Governing law. Registration with Secretary of the State. Appointment of agent for service of process. Service of process on statutory agent. Issuance of registration. Name. Amendment of application for registration. Annual report; interim notice of change of manager or member. Sections 34-222 to 34-229 , inclusive, are repealed, effective July 1, 2017.",
-      "href": "?chapter=613&section=section-34-222"
-    },
-    {
-      "id": "section-34-229",
-      "citation": "34-229",
-      "citations": [
-        "34-229"
-      ],
-      "heading": "34-229",
-      "chapter": {
-        "id": "chapter-613",
-        "number": "613",
-        "name": "Limited Liability Companies"
-      },
-      "status": "repealed",
-      "text": "Secs. 34-222 to 34-229. Governing law. Registration with Secretary of the State. Appointment of agent for service of process. Service of process on statutory agent. Issuance of registration. Name. Amendment of application for registration. Annual report; interim notice of change of manager or member. Sections 34-222 to 34-229 , inclusive, are repealed, effective July 1, 2017.",
-      "href": "?chapter=613&section=section-34-229"
-    },
-    {
-      "id": "section-34-230",
-      "citation": "34-230",
-      "citations": [
-        "34-230"
-      ],
-      "heading": "34-230",
-      "chapter": {
-        "id": "chapter-613",
-        "number": "613",
-        "name": "Limited Liability Companies"
-      },
-      "status": "repealed",
-      "text": "Secs. 34-230 to 34-236. Failure to file report; incorrect report. Cancellation of registration. Revocation of certificate of registration. Transaction of business without registration. Limited amnesty for foreign limited liability companies transacting business without registration. Activities not constituting transacting business in this state. Action by Attorney General. Sections 34-230 to 34-236 , inclusive, are repealed, effective July 1, 2017.",
-      "href": "?chapter=613&section=section-34-230"
-    },
-    {
-      "id": "section-34-236",
-      "citation": "34-236",
-      "citations": [
-        "34-236"
-      ],
-      "heading": "34-236",
-      "chapter": {
-        "id": "chapter-613",
-        "number": "613",
-        "name": "Limited Liability Companies"
-      },
-      "status": "repealed",
-      "text": "Secs. 34-230 to 34-236. Failure to file report; incorrect report. Cancellation of registration. Revocation of certificate of registration. Transaction of business without registration. Limited amnesty for foreign limited liability companies transacting business without registration. Activities not constituting transacting business in this state. Action by Attorney General. Sections 34-230 to 34-236 , inclusive, are repealed, effective July 1, 2017.",
-      "href": "?chapter=613&section=section-34-236"
-    },
-    {
-      "id": "section-34-241",
-      "citation": "34-241",
-      "citations": [
-        "34-241"
-      ],
-      "heading": "34-241",
-      "chapter": {
-        "id": "chapter-613",
-        "number": "613",
-        "name": "Limited Liability Companies"
-      },
-      "status": "repealed",
-      "text": "Secs. 34-241 and 34-242. Knowledge and notice. Rules of construction. Sections 34-241 and 34-242 are repealed, effective July 1, 2017.",
-      "href": "?chapter=613&section=section-34-241"
-    },
-    {
-      "id": "section-34-242",
-      "citation": "34-242",
-      "citations": [
-        "34-242"
-      ],
-      "heading": "34-242",
-      "chapter": {
-        "id": "chapter-613",
-        "number": "613",
-        "name": "Limited Liability Companies"
-      },
-      "status": "repealed",
-      "text": "Secs. 34-241 and 34-242. Knowledge and notice. Rules of construction. Sections 34-241 and 34-242 are repealed, effective July 1, 2017.",
-      "href": "?chapter=613&section=section-34-242"
     },
     {
       "id": "section-34-243",
@@ -3521,7 +2897,7 @@
         "name": "Uniform Limited Liability Company Act"
       },
       "status": "active",
-      "text": "(a) A debt, obligation or other liability of a limited liability company is solely the debt, obligation or other liability of the company. A member or manager is not personally liable, directly or indirectly, by way of contribution or otherwise, for a debt, obligation or other liability of the company solely by reason of being or acting as a member or manager. This subsection applies regardless of the dissolution of the company.\n\n(b) The failure of a limited liability company to observe formalities relating to the exercise of its powers or management of its activities and affairs is not a ground for imposing liability on a member or manager of the company for a debt, obligation or other liability of the company.\n\n(c) Nothing contained in sections 34-243 to 34-283d , inclusive, shall be interpreted to abolish, repeal, modify, restrict or limit the law in effect on July 1, 2017, in this state applicable to the professional relationship and liabilities between the person furnishing the professional services and the person receiving such professional service and to the standards for professional conduct, provided (1) any member, manager, agent or employee of a limited liability company rendering professional services formed under sections 34-243 to 34-283d , inclusive, shall be personally liable and accountable only for negligent or wrongful acts or misconduct committed by such person, or by any person under such person's direct supervision and control, while rendering professional services on behalf of the limited liability company to the person for whom such professional services were being rendered; and (2) the personal liability of members of a limited liability company rendering professional services formed under sections 34-243 to 34-283d , inclusive, in their capacity as members of such limited liability company, shall be not greater in any aspect than that of a shareholder who is an employee of a corporation formed under chapter 601. A limited liability company rendering professional services shall be liable for up to the full value of its property for any negligent or wrongful acts or misconduct committed by any of its members, managers, agents or employees while they are engaged on behalf of the limited liability company in the rendering of professional services.\n\nSee Sec. 33-673b re limitation on liability of an interest holder of a domestic entity.",
+      "text": "(a) A debt, obligation or other liability of a limited liability company is solely the debt, obligation or other liability of the company. A member or manager is not personally liable, directly or indirectly, by way of contribution or otherwise, for a debt, obligation or other liability of the company solely by reason of being or acting as a member or manager. This subsection applies regardless of the dissolution of the company.\n\n(b) The failure of a limited liability company to observe formalities relating to the exercise of its powers or management of its activities and affairs is not a ground for imposing liability on a member or manager of the company for a debt, obligation or other liability of the company.\n\n(c) Nothing contained in sections 34-243 to 34-283d , inclusive, shall be interpreted to abolish, repeal, modify, restrict or limit the law in effect on July 1, 2017, in this state applicable to the professional relationship and liabilities between the person furnishing the professional services and the person receiving such professional service and to the standards for professional conduct, provided (1) any member, manager, agent or employee of a limited liability company rendering professional services formed under sections 34-243 to 34-283d , inclusive, shall be personally liable and accountable only for negligent or wrongful acts or misconduct committed by such person, or by any person under such person's direct supervision and control, while rendering professional services on behalf of the limited liability company to the person for whom such professional services were being rendered; and (2) the personal liability of members of a limited liability company rendering professional services formed under sections 34-243 to 34-283d , inclusive, in their capacity as members of such limited liability company, shall be not greater in any aspect than that of a shareholder who is an employee of a corporation formed under chapter 601. A limited liability company rendering professional services shall be liable for up to the full value of its property for any negligent or wrongful acts or misconduct committed by any of its members, managers, agents or employees while they are engaged on behalf of the limited liability company in the rendering of professional services.",
       "href": "?chapter=613a&section=section-34-251a"
     },
     {
@@ -6288,38 +5664,6 @@
       "status": "reserved",
       "text": "Reserved for future use.",
       "href": "?chapter=614&section=group-34-435-to-34-436-to-34-437-to-34-438-to-34-439-to-34-440-to-34-441-to-34-442-to-34-443-to-34-444-to-34-445-to-34-446-to-34-447-to-34-448-to-34-449-to-34-450-to-34-451-to-34-452-to-34-453-to-34-454-to-34-455-to-34-456-to-34-457-to-34-458-to-34-459-to-34-460-to-34-461-to-34-462-to-34-463-to-34-464-to-34-465-to-34-466-to-34-467-to-34-468-to-34-469-to-34-470-to-34-471-to-34-472-to-34-473-to-34-474-to-34-475-to-34-476-to-34-477-to-34-478-to-34-479-to-34-480-to-34-481-to-34-482-to-34-483-to-34-484-to-34-485-to-34-486-to-34-487-to-34-488-to-34-489-to-34-490-to-34-491-to-34-492-to-34-493-to-34-494-to-34-495-to-34-496-to-34-497-to-34-498-to-34-499"
-    },
-    {
-      "id": "section-34-385",
-      "citation": "34-385",
-      "citations": [
-        "34-385"
-      ],
-      "heading": "34-385",
-      "chapter": {
-        "id": "chapter-614",
-        "number": "614",
-        "name": "Uniform Partnership Act. Limited Liability Partnerships"
-      },
-      "status": "repealed",
-      "text": "Secs. 34-385 to 34-387. Conversion of partnership to limited partnership. Conversion of limited partnership to partnership. Effect of conversion. Sections 34-385 to 34-387 , inclusive, are repealed, effective January 1, 2014.",
-      "href": "?chapter=614&section=section-34-385"
-    },
-    {
-      "id": "section-34-387",
-      "citation": "34-387",
-      "citations": [
-        "34-387"
-      ],
-      "heading": "34-387",
-      "chapter": {
-        "id": "chapter-614",
-        "number": "614",
-        "name": "Uniform Partnership Act. Limited Liability Partnerships"
-      },
-      "status": "repealed",
-      "text": "Secs. 34-385 to 34-387. Conversion of partnership to limited partnership. Conversion of limited partnership to partnership. Effect of conversion. Sections 34-385 to 34-387 , inclusive, are repealed, effective January 1, 2014.",
-      "href": "?chapter=614&section=section-34-387"
     },
     {
       "id": "section-34-500",

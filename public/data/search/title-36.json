@@ -7,10 +7,18 @@
   },
   "documents": [
     {
-      "id": "group-36-1-to-36-9gg",
+      "id": "group-36-1-to-36-2-to-36-3-to-36-4-to-36-5-to-36-6-to-36-7-to-36-8-to-36-9-to-36-9gg",
       "citation": null,
       "citations": [
         "36-1",
+        "36-2",
+        "36-3",
+        "36-4",
+        "36-5",
+        "36-6",
+        "36-7",
+        "36-8",
+        "36-9",
         "36-9gg"
       ],
       "heading": "Secs. 36-1 to 36-9gg. Definitions and general provisions.",
@@ -21,13 +29,25 @@
       },
       "status": "active",
       "text": "Sections 36-1 to 36-9gg , inclusive, have been transferred or repealed.\n\nNote: These sections were formerly published as chapter 634.",
-      "href": "?chapter=634&section=group-36-1-to-36-9gg"
+      "href": "?chapter=634&section=group-36-1-to-36-2-to-36-3-to-36-4-to-36-5-to-36-6-to-36-7-to-36-8-to-36-9-to-36-9gg"
     },
     {
-      "id": "group-36-10-to-36-22b",
+      "id": "group-36-10-to-36-11-to-36-12-to-36-13-to-36-14-to-36-15-to-36-16-to-36-17-to-36-18-to-36-19-to-36-20-to-36-21-to-36-22-to-36-22b",
       "citation": null,
       "citations": [
         "36-10",
+        "36-11",
+        "36-12",
+        "36-13",
+        "36-14",
+        "36-15",
+        "36-16",
+        "36-17",
+        "36-18",
+        "36-19",
+        "36-20",
+        "36-21",
+        "36-22",
         "36-22b"
       ],
       "heading": "Secs. 36-10 to 36-22b. Commissioner of Banking.",
@@ -38,7 +58,7 @@
       },
       "status": "active",
       "text": "Sections 36-10 to 36-22b , inclusive, have been transferred or repealed.\n\nNote: These sections were formerly published as chapter 635.",
-      "href": "?chapter=634&section=group-36-10-to-36-22b"
+      "href": "?chapter=634&section=group-36-10-to-36-11-to-36-12-to-36-13-to-36-14-to-36-15-to-36-16-to-36-17-to-36-18-to-36-19-to-36-20-to-36-21-to-36-22-to-36-22b"
     },
     {
       "id": "group-36-23-to-36-24-to-36-25-to-36-26",
@@ -101,10 +121,11 @@
       "href": "?chapter=634&section=group-36-27a-to-36-27b-to-36-27c-to-36-27d-to-36-27e-to-36-27f-to-36-27g-to-36-27h-to-36-27i-to-36-27j"
     },
     {
-      "id": "group-36-28-to-36-29e",
+      "id": "group-36-28-to-36-29-to-36-29e",
       "citation": null,
       "citations": [
         "36-28",
+        "36-29",
         "36-29e"
       ],
       "heading": "Secs. 36-28 to 36-29e. Bank holidays.",
@@ -115,7 +136,7 @@
       },
       "status": "active",
       "text": "Sections 36-28 to 36-29e , inclusive, have been transferred or repealed.\n\nNote: These sections were formerly published as chapter 638.",
-      "href": "?chapter=634&section=group-36-28-to-36-29e"
+      "href": "?chapter=634&section=group-36-28-to-36-29-to-36-29e"
     },
     {
       "id": "group-36-29f-to-36-29g-to-36-29h-to-36-29i-to-36-29j-to-36-29k-to-36-29l",
@@ -291,10 +312,35 @@
       "href": "?chapter=634&section=group-36-94-to-36-95-to-36-96-to-36-97-to-36-98-to-36-99-to-36-100-to-36-101-to-36-102-to-36-103-to-36-104-to-36-105-to-36-106-to-36-107-to-36-108-to-36-109-to-36-110-to-36-111-to-36-112-to-36-113-to-36-114-to-36-115-to-36-116"
     },
     {
-      "id": "group-36-117-to-36-142k",
+      "id": "group-36-117-to-36-118-to-36-119-to-36-120-to-36-121-to-36-122-to-36-123-to-36-124-to-36-125-to-36-126-to-36-127-to-36-128-to-36-129-to-36-130-to-36-131-to-36-132-to-36-133-to-36-134-to-36-135-to-36-136-to-36-137-to-36-138-to-36-139-to-36-140-to-36-141-to-36-142-to-36-142k",
       "citation": null,
       "citations": [
         "36-117",
+        "36-118",
+        "36-119",
+        "36-120",
+        "36-121",
+        "36-122",
+        "36-123",
+        "36-124",
+        "36-125",
+        "36-126",
+        "36-127",
+        "36-128",
+        "36-129",
+        "36-130",
+        "36-131",
+        "36-132",
+        "36-133",
+        "36-134",
+        "36-135",
+        "36-136",
+        "36-137",
+        "36-138",
+        "36-139",
+        "36-140",
+        "36-141",
+        "36-142",
         "36-142k"
       ],
       "heading": "Secs. 36-117 to 36-142k. Savings banks.",
@@ -305,24 +351,12 @@
       },
       "status": "active",
       "text": "Sections 36-117 to 36-142k , inclusive, have been transferred or repealed.\n\nNote: These sections were formerly published as chapter 642.",
-      "href": "?chapter=634&section=group-36-117-to-36-142k"
+      "href": "?chapter=634&section=group-36-117-to-36-118-to-36-119-to-36-120-to-36-121-to-36-122-to-36-123-to-36-124-to-36-125-to-36-126-to-36-127-to-36-128-to-36-129-to-36-130-to-36-131-to-36-132-to-36-133-to-36-134-to-36-135-to-36-136-to-36-137-to-36-138-to-36-139-to-36-140-to-36-141-to-36-142-to-36-142k"
     },
     {
-      "id": "group-36-142-to-36-142a-to-36-142b-to-36-142c-to-36-142d-to-36-142e-to-36-142f-to-36-142g-to-36-142h-to-36-142i-to-36-142j-to-36-142k-to-36-142l-to-36-142m-to-36-142n-to-36-142o-to-36-142p-to-36-142q-to-36-142r-to-36-142s-to-36-142t-to-36-142u-to-36-142v-to-36-142w-to-36-142x-to-36-142y-to-36-142z",
+      "id": "group-36-142l-to-36-142m-to-36-142n-to-36-142o-to-36-142p-to-36-142q-to-36-142r-to-36-142s-to-36-142t-to-36-142u-to-36-142v-to-36-142w-to-36-142x-to-36-142y-to-36-142z",
       "citation": null,
       "citations": [
-        "36-142",
-        "36-142a",
-        "36-142b",
-        "36-142c",
-        "36-142d",
-        "36-142e",
-        "36-142f",
-        "36-142g",
-        "36-142h",
-        "36-142i",
-        "36-142j",
-        "36-142k",
         "36-142l",
         "36-142m",
         "36-142n",
@@ -347,7 +381,7 @@
       },
       "status": "active",
       "text": "Sections 36-142 l to 36-142z , inclusive, have been transferred or repealed.\n\nNote: These sections were formerly published as chapter 642a.",
-      "href": "?chapter=634&section=group-36-142-to-36-142a-to-36-142b-to-36-142c-to-36-142d-to-36-142e-to-36-142f-to-36-142g-to-36-142h-to-36-142i-to-36-142j-to-36-142k-to-36-142l-to-36-142m-to-36-142n-to-36-142o-to-36-142p-to-36-142q-to-36-142r-to-36-142s-to-36-142t-to-36-142u-to-36-142v-to-36-142w-to-36-142x-to-36-142y-to-36-142z"
+      "href": "?chapter=634&section=group-36-142l-to-36-142m-to-36-142n-to-36-142o-to-36-142p-to-36-142q-to-36-142r-to-36-142s-to-36-142t-to-36-142u-to-36-142v-to-36-142w-to-36-142x-to-36-142y-to-36-142z"
     },
     {
       "id": "group-36-142aa-to-36-142bb-to-36-142cc-to-36-142dd-to-36-142ee-to-36-142ff-to-36-142gg-to-36-142hh",
@@ -401,10 +435,25 @@
       "href": "?chapter=634&section=group-36-143-to-36-144-to-36-145-to-36-146-to-36-147-to-36-148-to-36-149-to-36-150-to-36-151-to-36-152-to-36-153-to-36-154-to-36-155"
     },
     {
-      "id": "group-36-156-to-36-171a",
+      "id": "group-36-156-to-36-157-to-36-158-to-36-159-to-36-160-to-36-161-to-36-162-to-36-163-to-36-164-to-36-165-to-36-166-to-36-167-to-36-168-to-36-169-to-36-170-to-36-171-to-36-171a",
       "citation": null,
       "citations": [
         "36-156",
+        "36-157",
+        "36-158",
+        "36-159",
+        "36-160",
+        "36-161",
+        "36-162",
+        "36-163",
+        "36-164",
+        "36-165",
+        "36-166",
+        "36-167",
+        "36-168",
+        "36-169",
+        "36-170",
+        "36-171",
         "36-171a"
       ],
       "heading": "Secs. 36-156 to 36-171a. Private bankers.",
@@ -415,7 +464,7 @@
       },
       "status": "repealed",
       "text": "Sections 36-156 to 36-171a , inclusive, are repealed.\n\nNote: These sections were formerly published as chapter 644.",
-      "href": "?chapter=634&section=group-36-156-to-36-171a"
+      "href": "?chapter=634&section=group-36-156-to-36-157-to-36-158-to-36-159-to-36-160-to-36-161-to-36-162-to-36-163-to-36-164-to-36-165-to-36-166-to-36-167-to-36-168-to-36-169-to-36-170-to-36-171-to-36-171a"
     },
     {
       "id": "group-36-172-to-36-173-to-36-174-to-36-175-to-36-176-to-36-177-to-36-178-to-36-179-to-36-180-to-36-181-to-36-182-to-36-183-to-36-184-to-36-185-to-36-186-to-36-187-to-36-188-to-36-189-to-36-190-to-36-191-to-36-192-to-36-193",
@@ -781,10 +830,15 @@
       "href": "?chapter=634&section=group-36-264-to-36-265-to-36-266-to-36-267-to-36-268-to-36-269-to-36-270-to-36-271-to-36-272-to-36-273-to-36-274-to-36-275-to-36-276-to-36-277-to-36-278-to-36-279-to-36-280-to-36-281-to-36-282-to-36-283-to-36-284-to-36-285-to-36-286-to-36-287-to-36-288-to-36-289-to-36-290-to-36-291-to-36-292-to-36-293-to-36-294-to-36-295-to-36-296-to-36-297-to-36-298-to-36-299-to-36-300-to-36-301-to-36-302-to-36-303-to-36-304-to-36-305-to-36-306-to-36-307-to-36-308-to-36-309-to-36-310-to-36-311-to-36-312-to-36-313"
     },
     {
-      "id": "group-36-314-to-36-319a",
+      "id": "group-36-314-to-36-315-to-36-316-to-36-317-to-36-318-to-36-319-to-36-319a",
       "citation": null,
       "citations": [
         "36-314",
+        "36-315",
+        "36-316",
+        "36-317",
+        "36-318",
+        "36-319",
         "36-319a"
       ],
       "heading": "Secs. 36-314 to 36-319a. Corporations exercising fiduciary powers.",
@@ -795,7 +849,7 @@
       },
       "status": "active",
       "text": "Sections 36-314 to 36-319a , inclusive, have been transferred.\n\nNote: These sections were formerly published as chapter 652.",
-      "href": "?chapter=634&section=group-36-314-to-36-319a"
+      "href": "?chapter=634&section=group-36-314-to-36-315-to-36-316-to-36-317-to-36-318-to-36-319-to-36-319a"
     },
     {
       "id": "group-36-320-to-36-321-to-36-322-to-36-323-to-36-324-to-36-325-to-36-326-to-36-327-to-36-328-to-36-329-to-36-330-to-36-331-to-36-332-to-36-333-to-36-334-to-36-335-to-36-336-to-36-337-to-36-338-to-36-339-to-36-340-to-36-341-to-36-342-to-36-343-to-36-344-to-36-345-to-36-346-to-36-347",
@@ -1083,14 +1137,15 @@
       "href": "?chapter=634&section=group-36-418-to-36-419-to-36-420-to-36-421-to-36-422-to-36-423-to-36-424-to-36-425-to-36-426-to-36-427-to-36-428-to-36-429-to-36-430"
     },
     {
-      "id": "group-36-431-to-36-432-to-36-433-to-36-434-to-36-435",
+      "id": "group-36-431-to-36-432-to-36-433-to-36-434-to-36-435-to-36-435l",
       "citation": null,
       "citations": [
         "36-431",
         "36-432",
         "36-433",
         "36-434",
-        "36-435"
+        "36-435",
+        "36-435l"
       ],
       "heading": "Secs. 36-431 to 36-435 l . Consumer credit reports.",
       "chapter": {
@@ -1100,7 +1155,7 @@
       },
       "status": "active",
       "text": "Sections 36-431 to 36-435 l , inclusive, have been transferred or repealed.\n\nNote: These sections were formerly published as chapter 659.",
-      "href": "?chapter=634&section=group-36-431-to-36-432-to-36-433-to-36-434-to-36-435"
+      "href": "?chapter=634&section=group-36-431-to-36-432-to-36-433-to-36-434-to-36-435-to-36-435l"
     },
     {
       "id": "group-36-436-to-36-437-to-36-438-to-36-439",
@@ -1472,1606 +1527,6 @@
       "status": "active",
       "text": "Sections 36-577 to 36-583 , inclusive, have been transferred or repealed.\n\nNote: These sections were formerly published as chapter 662e.\n\nNote: Former chapter 663 (Sec. 37-1 et seq.), entitled “INTEREST”, has been renumbered as chapter 673 to allow for the creation of titles 36a, The Banking Law of Connecticut, and 36b, Connecticut Securities Law and Business Opportunity Act. These titles constitute successor provisions to former title 36 and certain sections from title 42.",
       "href": "?chapter=634&section=group-36-577-to-36-578-to-36-579-to-36-580-to-36-581-to-36-582-to-36-583"
-    },
-    {
-      "id": "section-36-1",
-      "citation": "36-1",
-      "citations": [
-        "36-1"
-      ],
-      "heading": "36-1",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-1"
-    },
-    {
-      "id": "section-36-9gg",
-      "citation": "36-9gg",
-      "citations": [
-        "36-9gg"
-      ],
-      "heading": "36-9gg",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-9gg"
-    },
-    {
-      "id": "section-36-10",
-      "citation": "36-10",
-      "citations": [
-        "36-10"
-      ],
-      "heading": "36-10",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-10"
-    },
-    {
-      "id": "section-36-22b",
-      "citation": "36-22b",
-      "citations": [
-        "36-22b"
-      ],
-      "heading": "36-22b",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-22b"
-    },
-    {
-      "id": "section-36-23",
-      "citation": "36-23",
-      "citations": [
-        "36-23"
-      ],
-      "heading": "36-23",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-23"
-    },
-    {
-      "id": "section-36-26",
-      "citation": "36-26",
-      "citations": [
-        "36-26"
-      ],
-      "heading": "36-26",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-26"
-    },
-    {
-      "id": "section-36-27a",
-      "citation": "36-27a",
-      "citations": [
-        "36-27a"
-      ],
-      "heading": "36-27a",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-27a"
-    },
-    {
-      "id": "section-36-27j",
-      "citation": "36-27j",
-      "citations": [
-        "36-27j"
-      ],
-      "heading": "36-27j",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-27j"
-    },
-    {
-      "id": "section-36-28",
-      "citation": "36-28",
-      "citations": [
-        "36-28"
-      ],
-      "heading": "36-28",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-28"
-    },
-    {
-      "id": "section-36-29e",
-      "citation": "36-29e",
-      "citations": [
-        "36-29e"
-      ],
-      "heading": "36-29e",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-29e"
-    },
-    {
-      "id": "section-36-29f",
-      "citation": "36-29f",
-      "citations": [
-        "36-29f"
-      ],
-      "heading": "36-29f",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-29f"
-    },
-    {
-      "id": "section-36-29l",
-      "citation": "36-29l",
-      "citations": [
-        "36-29l"
-      ],
-      "heading": "36-29 l",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-29l"
-    },
-    {
-      "id": "section-36-30",
-      "citation": "36-30",
-      "citations": [
-        "36-30"
-      ],
-      "heading": "36-30",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-30"
-    },
-    {
-      "id": "section-36-52",
-      "citation": "36-52",
-      "citations": [
-        "36-52"
-      ],
-      "heading": "36-52",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-52"
-    },
-    {
-      "id": "section-36-52a",
-      "citation": "36-52a",
-      "citations": [
-        "36-52a"
-      ],
-      "heading": "36-52a",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-52a"
-    },
-    {
-      "id": "section-36-52d",
-      "citation": "36-52d",
-      "citations": [
-        "36-52d"
-      ],
-      "heading": "36-52d",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-52d"
-    },
-    {
-      "id": "section-36-53",
-      "citation": "36-53",
-      "citations": [
-        "36-53"
-      ],
-      "heading": "36-53",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-53"
-    },
-    {
-      "id": "section-36-93",
-      "citation": "36-93",
-      "citations": [
-        "36-93"
-      ],
-      "heading": "36-93",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-93"
-    },
-    {
-      "id": "section-36-94",
-      "citation": "36-94",
-      "citations": [
-        "36-94"
-      ],
-      "heading": "36-94",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-94"
-    },
-    {
-      "id": "section-36-116",
-      "citation": "36-116",
-      "citations": [
-        "36-116"
-      ],
-      "heading": "36-116",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-116"
-    },
-    {
-      "id": "section-36-117",
-      "citation": "36-117",
-      "citations": [
-        "36-117"
-      ],
-      "heading": "36-117",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-117"
-    },
-    {
-      "id": "section-36-142k",
-      "citation": "36-142k",
-      "citations": [
-        "36-142k"
-      ],
-      "heading": "36-142k",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-142k"
-    },
-    {
-      "id": "section-36-142l",
-      "citation": "36-142l",
-      "citations": [
-        "36-142l"
-      ],
-      "heading": "36-142 l",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-142l"
-    },
-    {
-      "id": "section-36-142z",
-      "citation": "36-142z",
-      "citations": [
-        "36-142z"
-      ],
-      "heading": "36-142z",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-142z"
-    },
-    {
-      "id": "section-36-142aa",
-      "citation": "36-142aa",
-      "citations": [
-        "36-142aa"
-      ],
-      "heading": "36-142aa",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-142aa"
-    },
-    {
-      "id": "section-36-142hh",
-      "citation": "36-142hh",
-      "citations": [
-        "36-142hh"
-      ],
-      "heading": "36-142hh",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-142hh"
-    },
-    {
-      "id": "section-36-143",
-      "citation": "36-143",
-      "citations": [
-        "36-143"
-      ],
-      "heading": "36-143",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "repealed",
-      "text": "Secs. 36-143 to 36-155. Industrial banks. Sections 36-143 to 36-155 , inclusive, are repealed.",
-      "href": "?chapter=634&section=section-36-143"
-    },
-    {
-      "id": "section-36-155",
-      "citation": "36-155",
-      "citations": [
-        "36-155"
-      ],
-      "heading": "36-155",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "repealed",
-      "text": "Secs. 36-143 to 36-155. Industrial banks. Sections 36-143 to 36-155 , inclusive, are repealed.",
-      "href": "?chapter=634&section=section-36-155"
-    },
-    {
-      "id": "section-36-156",
-      "citation": "36-156",
-      "citations": [
-        "36-156"
-      ],
-      "heading": "36-156",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "repealed",
-      "text": "Secs. 36-156 to 36-171a. Private bankers. Sections 36-156 to 36-171a , inclusive, are repealed.",
-      "href": "?chapter=634&section=section-36-156"
-    },
-    {
-      "id": "section-36-171a",
-      "citation": "36-171a",
-      "citations": [
-        "36-171a"
-      ],
-      "heading": "36-171a",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "repealed",
-      "text": "Secs. 36-156 to 36-171a. Private bankers. Sections 36-156 to 36-171a , inclusive, are repealed.",
-      "href": "?chapter=634&section=section-36-171a"
-    },
-    {
-      "id": "section-36-172",
-      "citation": "36-172",
-      "citations": [
-        "36-172"
-      ],
-      "heading": "36-172",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-172"
-    },
-    {
-      "id": "section-36-193",
-      "citation": "36-193",
-      "citations": [
-        "36-193"
-      ],
-      "heading": "36-193",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-193"
-    },
-    {
-      "id": "section-36-193a",
-      "citation": "36-193a",
-      "citations": [
-        "36-193a"
-      ],
-      "heading": "36-193a",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-193a"
-    },
-    {
-      "id": "section-36-193h",
-      "citation": "36-193h",
-      "citations": [
-        "36-193h"
-      ],
-      "heading": "36-193h",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-193h"
-    },
-    {
-      "id": "section-36-193i",
-      "citation": "36-193i",
-      "citations": [
-        "36-193i"
-      ],
-      "heading": "36-193i",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "repealed",
-      "text": "Secs. 36-193i to 36-193s. Capital stock savings and loan associations. Sections 36-193i to 36-193s , inclusive, are repealed.",
-      "href": "?chapter=634&section=section-36-193i"
-    },
-    {
-      "id": "section-36-193s",
-      "citation": "36-193s",
-      "citations": [
-        "36-193s"
-      ],
-      "heading": "36-193s",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "repealed",
-      "text": "Secs. 36-193i to 36-193s. Capital stock savings and loan associations. Sections 36-193i to 36-193s , inclusive, are repealed.",
-      "href": "?chapter=634&section=section-36-193s"
-    },
-    {
-      "id": "section-36-193t",
-      "citation": "36-193t",
-      "citations": [
-        "36-193t"
-      ],
-      "heading": "36-193t",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-193t"
-    },
-    {
-      "id": "section-36-193w",
-      "citation": "36-193w",
-      "citations": [
-        "36-193w"
-      ],
-      "heading": "36-193w",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-193w"
-    },
-    {
-      "id": "section-36-194",
-      "citation": "36-194",
-      "citations": [
-        "36-194"
-      ],
-      "heading": "36-194",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-194"
-    },
-    {
-      "id": "section-36-224",
-      "citation": "36-224",
-      "citations": [
-        "36-224"
-      ],
-      "heading": "36-224",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-224"
-    },
-    {
-      "id": "section-36-224a",
-      "citation": "36-224a",
-      "citations": [
-        "36-224a"
-      ],
-      "heading": "36-224a",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-224a"
-    },
-    {
-      "id": "section-36-224o",
-      "citation": "36-224o",
-      "citations": [
-        "36-224o"
-      ],
-      "heading": "36-224o",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-224o"
-    },
-    {
-      "id": "section-36-225",
-      "citation": "36-225",
-      "citations": [
-        "36-225"
-      ],
-      "heading": "36-225",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-225"
-    },
-    {
-      "id": "section-36-243",
-      "citation": "36-243",
-      "citations": [
-        "36-243"
-      ],
-      "heading": "36-243",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-243"
-    },
-    {
-      "id": "section-36-243a",
-      "citation": "36-243a",
-      "citations": [
-        "36-243a"
-      ],
-      "heading": "36-243a",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-243a"
-    },
-    {
-      "id": "section-36-243c",
-      "citation": "36-243c",
-      "citations": [
-        "36-243c"
-      ],
-      "heading": "36-243c",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-243c"
-    },
-    {
-      "id": "section-36-244",
-      "citation": "36-244",
-      "citations": [
-        "36-244"
-      ],
-      "heading": "36-244",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "repealed",
-      "text": "Secs. 36-244 to 36-248. Money Forwarders Act. Sections 36-244 to 36-248 , inclusive, are repealed.",
-      "href": "?chapter=634&section=section-36-244"
-    },
-    {
-      "id": "section-36-248",
-      "citation": "36-248",
-      "citations": [
-        "36-248"
-      ],
-      "heading": "36-248",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "repealed",
-      "text": "Secs. 36-244 to 36-248. Money Forwarders Act. Sections 36-244 to 36-248 , inclusive, are repealed.",
-      "href": "?chapter=634&section=section-36-248"
-    },
-    {
-      "id": "section-36-249",
-      "citation": "36-249",
-      "citations": [
-        "36-249"
-      ],
-      "heading": "36-249",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-249"
-    },
-    {
-      "id": "section-36-253",
-      "citation": "36-253",
-      "citations": [
-        "36-253"
-      ],
-      "heading": "36-253",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-253"
-    },
-    {
-      "id": "section-36-254",
-      "citation": "36-254",
-      "citations": [
-        "36-254"
-      ],
-      "heading": "36-254",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-254"
-    },
-    {
-      "id": "section-36-263",
-      "citation": "36-263",
-      "citations": [
-        "36-263"
-      ],
-      "heading": "36-263",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-263"
-    },
-    {
-      "id": "section-36-264",
-      "citation": "36-264",
-      "citations": [
-        "36-264"
-      ],
-      "heading": "36-264",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "repealed",
-      "text": "Secs. 36-264 to 36-313. Supervision of sale of securities. Sections 36-264 to 36-313 , inclusive, are repealed.",
-      "href": "?chapter=634&section=section-36-264"
-    },
-    {
-      "id": "section-36-313",
-      "citation": "36-313",
-      "citations": [
-        "36-313"
-      ],
-      "heading": "36-313",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "repealed",
-      "text": "Secs. 36-264 to 36-313. Supervision of sale of securities. Sections 36-264 to 36-313 , inclusive, are repealed.",
-      "href": "?chapter=634&section=section-36-313"
-    },
-    {
-      "id": "section-36-314",
-      "citation": "36-314",
-      "citations": [
-        "36-314"
-      ],
-      "heading": "36-314",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-314"
-    },
-    {
-      "id": "section-36-319a",
-      "citation": "36-319a",
-      "citations": [
-        "36-319a"
-      ],
-      "heading": "36-319a",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-319a"
-    },
-    {
-      "id": "section-36-320",
-      "citation": "36-320",
-      "citations": [
-        "36-320"
-      ],
-      "heading": "36-320",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "repealed",
-      "text": "Secs. 36-320 to 36-347. The Connecticut Securities Act. Sections 36-320 to 36-347 , inclusive, are repealed.",
-      "href": "?chapter=634&section=section-36-320"
-    },
-    {
-      "id": "section-36-347",
-      "citation": "36-347",
-      "citations": [
-        "36-347"
-      ],
-      "heading": "36-347",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "repealed",
-      "text": "Secs. 36-320 to 36-347. The Connecticut Securities Act. Sections 36-320 to 36-347 , inclusive, are repealed.",
-      "href": "?chapter=634&section=section-36-347"
-    },
-    {
-      "id": "section-36-347a",
-      "citation": "36-347a",
-      "citations": [
-        "36-347a"
-      ],
-      "heading": "36-347a",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-347a"
-    },
-    {
-      "id": "section-36-347m",
-      "citation": "36-347m",
-      "citations": [
-        "36-347m"
-      ],
-      "heading": "36-347m",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-347m"
-    },
-    {
-      "id": "section-36-348",
-      "citation": "36-348",
-      "citations": [
-        "36-348"
-      ],
-      "heading": "36-348",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "repealed",
-      "text": "Secs. 36-348 to 36-363. Finance charge disclosures. Sections 36-348 to 36-363 , inclusive, are repealed.",
-      "href": "?chapter=634&section=section-36-348"
-    },
-    {
-      "id": "section-36-363",
-      "citation": "36-363",
-      "citations": [
-        "36-363"
-      ],
-      "heading": "36-363",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "repealed",
-      "text": "Secs. 36-348 to 36-363. Finance charge disclosures. Sections 36-348 to 36-363 , inclusive, are repealed.",
-      "href": "?chapter=634&section=section-36-363"
-    },
-    {
-      "id": "section-36-364",
-      "citation": "36-364",
-      "citations": [
-        "36-364"
-      ],
-      "heading": "36-364",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-364"
-    },
-    {
-      "id": "section-36-381",
-      "citation": "36-381",
-      "citations": [
-        "36-381"
-      ],
-      "heading": "36-381",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-381"
-    },
-    {
-      "id": "section-36-382",
-      "citation": "36-382",
-      "citations": [
-        "36-382"
-      ],
-      "heading": "36-382",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-382"
-    },
-    {
-      "id": "section-36-392",
-      "citation": "36-392",
-      "citations": [
-        "36-392"
-      ],
-      "heading": "36-392",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-392"
-    },
-    {
-      "id": "section-36-393",
-      "citation": "36-393",
-      "citations": [
-        "36-393"
-      ],
-      "heading": "36-393",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-393"
-    },
-    {
-      "id": "section-36-417",
-      "citation": "36-417",
-      "citations": [
-        "36-417"
-      ],
-      "heading": "36-417",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-417"
-    },
-    {
-      "id": "section-36-417a",
-      "citation": "36-417a",
-      "citations": [
-        "36-417a"
-      ],
-      "heading": "36-417a",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "repealed",
-      "text": "Secs. 36-417a to 36-417y. Fair Credit Billing Act. Sections 36-417a to 36-417y , inclusive, are repealed.",
-      "href": "?chapter=634&section=section-36-417a"
-    },
-    {
-      "id": "section-36-417y",
-      "citation": "36-417y",
-      "citations": [
-        "36-417y"
-      ],
-      "heading": "36-417y",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "repealed",
-      "text": "Secs. 36-417a to 36-417y. Fair Credit Billing Act. Sections 36-417a to 36-417y , inclusive, are repealed.",
-      "href": "?chapter=634&section=section-36-417y"
-    },
-    {
-      "id": "section-36-418",
-      "citation": "36-418",
-      "citations": [
-        "36-418"
-      ],
-      "heading": "36-418",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-418"
-    },
-    {
-      "id": "section-36-430",
-      "citation": "36-430",
-      "citations": [
-        "36-430"
-      ],
-      "heading": "36-430",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-430"
-    },
-    {
-      "id": "section-36-431",
-      "citation": "36-431",
-      "citations": [
-        "36-431"
-      ],
-      "heading": "36-431",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-431"
-    },
-    {
-      "id": "section-36-435l",
-      "citation": "36-435l",
-      "citations": [
-        "36-435l"
-      ],
-      "heading": "36-435 l",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-435l"
-    },
-    {
-      "id": "section-36-436",
-      "citation": "36-436",
-      "citations": [
-        "36-436"
-      ],
-      "heading": "36-436",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-436"
-    },
-    {
-      "id": "section-36-439",
-      "citation": "36-439",
-      "citations": [
-        "36-439"
-      ],
-      "heading": "36-439",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-439"
-    },
-    {
-      "id": "section-36-440",
-      "citation": "36-440",
-      "citations": [
-        "36-440"
-      ],
-      "heading": "36-440",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-440"
-    },
-    {
-      "id": "section-36-441",
-      "citation": "36-441",
-      "citations": [
-        "36-441"
-      ],
-      "heading": "36-441",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-441"
-    },
-    {
-      "id": "section-36-442",
-      "citation": "36-442",
-      "citations": [
-        "36-442"
-      ],
-      "heading": "36-442",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-442"
-    },
-    {
-      "id": "section-36-442l",
-      "citation": "36-442l",
-      "citations": [
-        "36-442l"
-      ],
-      "heading": "36-442 l",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-442l"
-    },
-    {
-      "id": "section-36-442m",
-      "citation": "36-442m",
-      "citations": [
-        "36-442m"
-      ],
-      "heading": "36-442m",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-442m"
-    },
-    {
-      "id": "section-36-442z",
-      "citation": "36-442z",
-      "citations": [
-        "36-442z"
-      ],
-      "heading": "36-442z",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-442z"
-    },
-    {
-      "id": "section-36-442aa",
-      "citation": "36-442aa",
-      "citations": [
-        "36-442aa"
-      ],
-      "heading": "36-442aa",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-442aa"
-    },
-    {
-      "id": "section-36-442bb",
-      "citation": "36-442bb",
-      "citations": [
-        "36-442bb"
-      ],
-      "heading": "36-442bb",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-442bb"
-    },
-    {
-      "id": "section-36-443",
-      "citation": "36-443",
-      "citations": [
-        "36-443"
-      ],
-      "heading": "36-443",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-443"
-    },
-    {
-      "id": "section-36-455",
-      "citation": "36-455",
-      "citations": [
-        "36-455"
-      ],
-      "heading": "36-455",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-455"
-    },
-    {
-      "id": "section-36-456",
-      "citation": "36-456",
-      "citations": [
-        "36-456"
-      ],
-      "heading": "36-456",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-456"
-    },
-    {
-      "id": "section-36-469",
-      "citation": "36-469",
-      "citations": [
-        "36-469"
-      ],
-      "heading": "36-469",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-469"
-    },
-    {
-      "id": "section-36-470",
-      "citation": "36-470",
-      "citations": [
-        "36-470"
-      ],
-      "heading": "36-470",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-470"
-    },
-    {
-      "id": "section-36-502",
-      "citation": "36-502",
-      "citations": [
-        "36-502"
-      ],
-      "heading": "36-502",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-502"
-    },
-    {
-      "id": "section-36-503",
-      "citation": "36-503",
-      "citations": [
-        "36-503"
-      ],
-      "heading": "36-503",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-503"
-    },
-    {
-      "id": "section-36-529",
-      "citation": "36-529",
-      "citations": [
-        "36-529"
-      ],
-      "heading": "36-529",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-529"
-    },
-    {
-      "id": "section-36-530",
-      "citation": "36-530",
-      "citations": [
-        "36-530"
-      ],
-      "heading": "36-530",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-530"
-    },
-    {
-      "id": "section-36-551",
-      "citation": "36-551",
-      "citations": [
-        "36-551"
-      ],
-      "heading": "36-551",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-551"
-    },
-    {
-      "id": "section-36-552",
-      "citation": "36-552",
-      "citations": [
-        "36-552"
-      ],
-      "heading": "36-552",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-552"
-    },
-    {
-      "id": "section-36-563",
-      "citation": "36-563",
-      "citations": [
-        "36-563"
-      ],
-      "heading": "36-563",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-563"
-    },
-    {
-      "id": "section-36-564",
-      "citation": "36-564",
-      "citations": [
-        "36-564"
-      ],
-      "heading": "36-564",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-564"
-    },
-    {
-      "id": "section-36-576",
-      "citation": "36-576",
-      "citations": [
-        "36-576"
-      ],
-      "heading": "36-576",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-576"
-    },
-    {
-      "id": "section-36-577",
-      "citation": "36-577",
-      "citations": [
-        "36-577"
-      ],
-      "heading": "36-577",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-577"
-    },
-    {
-      "id": "section-36-583",
-      "citation": "36-583",
-      "citations": [
-        "36-583"
-      ],
-      "heading": "36-583",
-      "chapter": {
-        "id": "chapter-634",
-        "number": "634",
-        "name": "Chapters 634–662e The Banking Law of Connecticut"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=634&section=section-36-583"
     }
   ]
 }

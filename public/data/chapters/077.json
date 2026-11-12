@@ -100,46 +100,6 @@
         "annotations": [],
         "plainText": "Section 6-28b is repealed, effective October 1, 2002."
       }
-    },
-    {
-      "id": "section-6-3",
-      "kind": "section",
-      "citation": "6-3",
-      "citations": [
-        "6-3"
-      ],
-      "heading": "6-3",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_077.htm#sec_6-3",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 6-3 to 6-28. Sections 6-3 to 6-28 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 6-3 to 6-28. Sections 6-3 to 6-28 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-6-28",
-      "kind": "section",
-      "citation": "6-28",
-      "citations": [
-        "6-28"
-      ],
-      "heading": "6-28",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_077.htm#sec_6-28",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 6-3 to 6-28. Sections 6-3 to 6-28 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 6-3 to 6-28. Sections 6-3 to 6-28 , inclusive, are repealed."
-      }
     }
   ]
 }

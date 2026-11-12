@@ -99,8 +99,7 @@
           "(a) There shall be within the Department of Public Health a Connecticut Board of Examiners for Optometrists. Said board shall consist of seven members appointed by the Governor, subject to the provisions of section 4-9a , as follows: Four practicing licensed optometrists in good professional standing who reside in this state and three public members. The optometrists appointed for terms beginning on and after January 1, 1997, shall be optometrists authorized under this chapter to practice at the highest level of their profession, except that any optometrist serving on the board on October 1, 1996, shall be eligible for reappointment on or after January 1, 1997, whether or not such optometrist is authorized to practice at the highest level of his profession. The Governor shall appoint a chairman from among such members. No member appointed on or after January 1, 1991, shall serve on the board for more than twelve years.",
           "(b) Said board shall meet at least once during each calendar quarter and at such other times as the chairman deems necessary. Special meetings shall be held on the request of a majority of the board after notice in accordance with the provisions of section 1-225 . A majority of the members of the board shall constitute a quorum. Members shall not be compensated for their services. Any member who fails to attend three consecutive meetings or who fails to attend fifty per cent of all meetings held during any calendar year shall be deemed to have resigned from office. Minutes of all meetings shall be recorded by the board. No member shall participate in the affairs of the board during the pendency of any disciplinary proceedings by the board against such member. No professional member shall be an elected or appointed officer of a professional society of optometrists or have been such an officer during the year immediately preceding his appointment.",
           "(c) The Commissioner of Public Health, with advice and assistance from the board, may make and enforce such regulations, in accordance with chapter 54, as the commissioner deems necessary to maintain proper professional and ethical standards, including, but not limited to, continuing education requirements, for optometrists. The board may revoke or suspend licenses for cause.",
-          "(d) The Board of Examiners for Optometrists shall (1) hear and decide matters concerning suspension or revocation of licensure, (2) adjudicate complaints filed against practitioners licensed under this chapter, and (3) impose sanctions where appropriate.",
-          "See Sec. 4-9a for definition of “public member”."
+          "(d) The Board of Examiners for Optometrists shall (1) hear and decide matters concerning suspension or revocation of licensure, (2) adjudicate complaints filed against practitioners licensed under this chapter, and (3) impose sanctions where appropriate."
         ],
         "sourceNotes": [
           "(P.A. 80-484, S. 44, 46, 176; P.A. 81-471, S. 32, 71; P.A. 90-75; P.A. 93-296, S. 8, 10; 93-381, S. 9, 39; P.A. 95-257, S. 12, 21, 58; P.A. 96-123, S. 2; P.A. 98-143, S. 10, 24; P.A. 07-92, S. 5; P.A. 08-184, S. 15; P.A. 10-117, S. 66; P.A. 13-208, S. 12.)"
@@ -108,8 +107,13 @@
         "history": [
           "History: P.A. 81-471 changed “elected official” to “elected or appointed officer” as of July 1, 1981, and increased membership from three to seven members, adding two additional optometrist members and two additional public members; P.A. 90-75 required that newly appointed optometrist members whose terms begin on or after January 1, 1991, be authorized to use pharmaceutical agents and limited the length of time a person is able to serve on the board; P.A. 93-296 deleted board members' reimbursement for expenses, effective June 29, 1993; P.A. 93-381 replaced department and commissioner of health services with department and commissioner of public health and addiction services, effective July 1, 1993; P.A. 95-257 replaced Commissioner and Department of Public Health and Addiction Services with Commissioner and Department of Public Health, effective July 1, 1995; P.A. 96-123 substituted optometrists authorized to practice at “highest level” for optometrists authorized to use certain pharmaceutical agents; P.A. 98-143 added quorum provision in Subsec. (b), effective July 1, 1998; P.A. 07-92 amended Subsec. (c) to require adoption of regulations requiring optometrists to complete a minimum of 20 hours of continuing education during each registration period, effective June 5, 2007; P.A. 08-184 amended Subsec. (a) by substituting “twelve” for “eight” years re maximum term of service on the board for a member appointed on or after January 1, 1991; P.A. 10-117 amended Subsec. (c) by requiring that board approve all continuing education courses; P.A. 13-208 amended Subsec. (c) by adding reference to Ch. 54 re regulations and by substituting provision allowing commissioner to adopt and enforce regulations concerning continuing education requirements for provision requiring commissioner to adopt regulations concerning continuing education."
         ],
-        "annotations": [],
-        "plainText": "(a) There shall be within the Department of Public Health a Connecticut Board of Examiners for Optometrists. Said board shall consist of seven members appointed by the Governor, subject to the provisions of section 4-9a , as follows: Four practicing licensed optometrists in good professional standing who reside in this state and three public members. The optometrists appointed for terms beginning on and after January 1, 1997, shall be optometrists authorized under this chapter to practice at the highest level of their profession, except that any optometrist serving on the board on October 1, 1996, shall be eligible for reappointment on or after January 1, 1997, whether or not such optometrist is authorized to practice at the highest level of his profession. The Governor shall appoint a chairman from among such members. No member appointed on or after January 1, 1991, shall serve on the board for more than twelve years.\n\n(b) Said board shall meet at least once during each calendar quarter and at such other times as the chairman deems necessary. Special meetings shall be held on the request of a majority of the board after notice in accordance with the provisions of section 1-225 . A majority of the members of the board shall constitute a quorum. Members shall not be compensated for their services. Any member who fails to attend three consecutive meetings or who fails to attend fifty per cent of all meetings held during any calendar year shall be deemed to have resigned from office. Minutes of all meetings shall be recorded by the board. No member shall participate in the affairs of the board during the pendency of any disciplinary proceedings by the board against such member. No professional member shall be an elected or appointed officer of a professional society of optometrists or have been such an officer during the year immediately preceding his appointment.\n\n(c) The Commissioner of Public Health, with advice and assistance from the board, may make and enforce such regulations, in accordance with chapter 54, as the commissioner deems necessary to maintain proper professional and ethical standards, including, but not limited to, continuing education requirements, for optometrists. The board may revoke or suspend licenses for cause.\n\n(d) The Board of Examiners for Optometrists shall (1) hear and decide matters concerning suspension or revocation of licensure, (2) adjudicate complaints filed against practitioners licensed under this chapter, and (3) impose sanctions where appropriate.\n\nSee Sec. 4-9a for definition of “public member”."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 4-9a for definition of “public member”."
+          }
+        ],
+        "plainText": "(a) There shall be within the Department of Public Health a Connecticut Board of Examiners for Optometrists. Said board shall consist of seven members appointed by the Governor, subject to the provisions of section 4-9a , as follows: Four practicing licensed optometrists in good professional standing who reside in this state and three public members. The optometrists appointed for terms beginning on and after January 1, 1997, shall be optometrists authorized under this chapter to practice at the highest level of their profession, except that any optometrist serving on the board on October 1, 1996, shall be eligible for reappointment on or after January 1, 1997, whether or not such optometrist is authorized to practice at the highest level of his profession. The Governor shall appoint a chairman from among such members. No member appointed on or after January 1, 1991, shall serve on the board for more than twelve years.\n\n(b) Said board shall meet at least once during each calendar quarter and at such other times as the chairman deems necessary. Special meetings shall be held on the request of a majority of the board after notice in accordance with the provisions of section 1-225 . A majority of the members of the board shall constitute a quorum. Members shall not be compensated for their services. Any member who fails to attend three consecutive meetings or who fails to attend fifty per cent of all meetings held during any calendar year shall be deemed to have resigned from office. Minutes of all meetings shall be recorded by the board. No member shall participate in the affairs of the board during the pendency of any disciplinary proceedings by the board against such member. No professional member shall be an elected or appointed officer of a professional society of optometrists or have been such an officer during the year immediately preceding his appointment.\n\n(c) The Commissioner of Public Health, with advice and assistance from the board, may make and enforce such regulations, in accordance with chapter 54, as the commissioner deems necessary to maintain proper professional and ethical standards, including, but not limited to, continuing education requirements, for optometrists. The board may revoke or suspend licenses for cause.\n\n(d) The Board of Examiners for Optometrists shall (1) hear and decide matters concerning suspension or revocation of licensure, (2) adjudicate complaints filed against practitioners licensed under this chapter, and (3) impose sanctions where appropriate."
       }
     },
     {
@@ -124,8 +128,7 @@
       "status": "active",
       "content": {
         "body": [
-          "The Commissioner of Public Health, with advice and assistance from the board, shall make regulations for the government of the board in the transaction of its business. The board shall, annually, on or before the first day of October, make a report to the Department of Public Health of its official acts, with such suggestions as it deems advisable with reference to the matters committed to its charge.",
-          "See Sec. 4-40a re compensation and expenses of licensing boards and commissions."
+          "The Commissioner of Public Health, with advice and assistance from the board, shall make regulations for the government of the board in the transaction of its business. The board shall, annually, on or before the first day of October, make a report to the Department of Public Health of its official acts, with such suggestions as it deems advisable with reference to the matters committed to its charge."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 4490; June, 1955, S. 2238d; 1959, P.A. 616, S. 45; P.A. 77-614, S. 409, 610; P.A. 80-484, S. 45, 176; P.A. 93-381, S. 9, 39; P.A. 95-257, S. 12, 21, 58.)"
@@ -133,8 +136,13 @@
         "history": [
           "History: 1959 act deleted provisions re board's receipts, fees and expenditures and compensation of members of the board and its secretary; P.A. 77-614 replaced department of health with department of health services, replaced references to president and secretary of board with “board” and transferred regulatory power re board government and transaction of business from board to commissioner of health services, retaining board in advisory role, effective January 1, 1979; P.A. 80-484 deleted provisions re quorum, meetings and records of proceedings; P.A. 93-381 replaced commissioner of health services with commissioner of public health and addiction services, effective July 1, 1993; P.A. 95-257 replaced Commissioner and Department of Public Health and Addiction Services with Commissioner and Department of Public Health, effective July 1, 1995."
         ],
-        "annotations": [],
-        "plainText": "The Commissioner of Public Health, with advice and assistance from the board, shall make regulations for the government of the board in the transaction of its business. The board shall, annually, on or before the first day of October, make a report to the Department of Public Health of its official acts, with such suggestions as it deems advisable with reference to the matters committed to its charge.\n\nSee Sec. 4-40a re compensation and expenses of licensing boards and commissions."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 4-40a re compensation and expenses of licensing boards and commissions."
+          }
+        ],
+        "plainText": "The Commissioner of Public Health, with advice and assistance from the board, shall make regulations for the government of the board in the transaction of its business. The board shall, annually, on or before the first day of October, make a report to the Department of Public Health of its official acts, with such suggestions as it deems advisable with reference to the matters committed to its charge."
       }
     },
     {
@@ -149,8 +157,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Each person, before beginning the practice of optometry in this state, except as hereinafter provided, shall present to the Department of Public Health satisfactory evidence that such person has been graduated from a school of optometry approved by the board of examiners with the consent of the Commissioner of Public Health. The board shall consult, where possible, with nationally recognized accrediting agencies when approving schools of optometry. All applicants shall be required to successfully complete an examination prescribed by the Department of Public Health with the consent of the board of examiners, in theoretic, practical and physiological optics, theoretic and practical optometry, ocular pharmacology, treatment and management of ocular disease, and the anatomy and physiology of the eye; and said department shall determine the qualifications of the applicant and, if they are found satisfactory, shall give a license to that effect. Passing scores shall be established by the department with the consent of the board. The department may, upon receipt of five hundred sixty-five dollars, issue a license to any person who is a currently practicing competent practitioner who holds (1) a license issued to such person after examination by a board of registration in optometry in any other state or territory of the United States in which the requirements for registration are deemed by the department to be equivalent to, or higher than, those prescribed in this chapter, or (2) a Council on Endorsed Licensure Mobility for Optometrists certificate issued by the Association of Regulatory Boards of Optometry, or its successor organization. No license shall be issued under this section to any applicant against whom professional disciplinary action is pending or who is the subject of an unresolved complaint.",
-          "See Sec. 10-5 re high school equivalency diplomas."
+          "Each person, before beginning the practice of optometry in this state, except as hereinafter provided, shall present to the Department of Public Health satisfactory evidence that such person has been graduated from a school of optometry approved by the board of examiners with the consent of the Commissioner of Public Health. The board shall consult, where possible, with nationally recognized accrediting agencies when approving schools of optometry. All applicants shall be required to successfully complete an examination prescribed by the Department of Public Health with the consent of the board of examiners, in theoretic, practical and physiological optics, theoretic and practical optometry, ocular pharmacology, treatment and management of ocular disease, and the anatomy and physiology of the eye; and said department shall determine the qualifications of the applicant and, if they are found satisfactory, shall give a license to that effect. Passing scores shall be established by the department with the consent of the board. The department may, upon receipt of five hundred sixty-five dollars, issue a license to any person who is a currently practicing competent practitioner who holds (1) a license issued to such person after examination by a board of registration in optometry in any other state or territory of the United States in which the requirements for registration are deemed by the department to be equivalent to, or higher than, those prescribed in this chapter, or (2) a Council on Endorsed Licensure Mobility for Optometrists certificate issued by the Association of Regulatory Boards of Optometry, or its successor organization. No license shall be issued under this section to any applicant against whom professional disciplinary action is pending or who is the subject of an unresolved complaint."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 4491; 1959, P.A. 616, S. 46; June, 1971, P.A. 8, S. 57; 1972, P.A. 127, S. 39; P.A. 73-147; P.A. 74-59; P.A. 77-614, S. 302, 410, 610; P.A. 80-484, S. 47, 176; P.A. 86-13, S. 3, 4; P.A. 89-251, S. 90, 203; P.A. 93-381, S. 9, 39; P.A. 95-257, S. 12, 21, 58; P.A. 07-252, S. 30; June Sp. Sess. P.A. 09-3, S. 205.)"
@@ -161,6 +168,10 @@
         "annotations": [
           {
             "first": true,
+            "text": "See Sec. 10-5 re high school equivalency diplomas."
+          },
+          {
+            "first": true,
             "text": "Cited. 130 C. 347."
           },
           {
@@ -168,7 +179,7 @@
             "text": "Partnership cannot be licensed to practice optometry. 21 CS 332."
           }
         ],
-        "plainText": "Each person, before beginning the practice of optometry in this state, except as hereinafter provided, shall present to the Department of Public Health satisfactory evidence that such person has been graduated from a school of optometry approved by the board of examiners with the consent of the Commissioner of Public Health. The board shall consult, where possible, with nationally recognized accrediting agencies when approving schools of optometry. All applicants shall be required to successfully complete an examination prescribed by the Department of Public Health with the consent of the board of examiners, in theoretic, practical and physiological optics, theoretic and practical optometry, ocular pharmacology, treatment and management of ocular disease, and the anatomy and physiology of the eye; and said department shall determine the qualifications of the applicant and, if they are found satisfactory, shall give a license to that effect. Passing scores shall be established by the department with the consent of the board. The department may, upon receipt of five hundred sixty-five dollars, issue a license to any person who is a currently practicing competent practitioner who holds (1) a license issued to such person after examination by a board of registration in optometry in any other state or territory of the United States in which the requirements for registration are deemed by the department to be equivalent to, or higher than, those prescribed in this chapter, or (2) a Council on Endorsed Licensure Mobility for Optometrists certificate issued by the Association of Regulatory Boards of Optometry, or its successor organization. No license shall be issued under this section to any applicant against whom professional disciplinary action is pending or who is the subject of an unresolved complaint.\n\nSee Sec. 10-5 re high school equivalency diplomas."
+        "plainText": "Each person, before beginning the practice of optometry in this state, except as hereinafter provided, shall present to the Department of Public Health satisfactory evidence that such person has been graduated from a school of optometry approved by the board of examiners with the consent of the Commissioner of Public Health. The board shall consult, where possible, with nationally recognized accrediting agencies when approving schools of optometry. All applicants shall be required to successfully complete an examination prescribed by the Department of Public Health with the consent of the board of examiners, in theoretic, practical and physiological optics, theoretic and practical optometry, ocular pharmacology, treatment and management of ocular disease, and the anatomy and physiology of the eye; and said department shall determine the qualifications of the applicant and, if they are found satisfactory, shall give a license to that effect. Passing scores shall be established by the department with the consent of the board. The department may, upon receipt of five hundred sixty-five dollars, issue a license to any person who is a currently practicing competent practitioner who holds (1) a license issued to such person after examination by a board of registration in optometry in any other state or territory of the United States in which the requirements for registration are deemed by the department to be equivalent to, or higher than, those prescribed in this chapter, or (2) a Council on Endorsed Licensure Mobility for Optometrists certificate issued by the Association of Regulatory Boards of Optometry, or its successor organization. No license shall be issued under this section to any applicant against whom professional disciplinary action is pending or who is the subject of an unresolved complaint."
       }
     },
     {
@@ -368,16 +379,23 @@
       "status": "active",
       "content": {
         "body": [
-          "The examination and inspection of school children under the provisions of chapter 169, as far as such examination and inspection concern the vision, may be performed by any optometrist licensed under the provisions of this chapter, provided such optometrist shall be appointed for such purpose in the same manner as medical advisors are appointed under the provisions of said chapter.",
-          "See Sec. 10-205 re appointment of school medical advisors.",
-          "See Sec. 10-214 re vision, audiometric and postural screenings of public school students."
+          "The examination and inspection of school children under the provisions of chapter 169, as far as such examination and inspection concern the vision, may be performed by any optometrist licensed under the provisions of this chapter, provided such optometrist shall be appointed for such purpose in the same manner as medical advisors are appointed under the provisions of said chapter."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 4497.)"
         ],
         "history": [],
-        "annotations": [],
-        "plainText": "The examination and inspection of school children under the provisions of chapter 169, as far as such examination and inspection concern the vision, may be performed by any optometrist licensed under the provisions of this chapter, provided such optometrist shall be appointed for such purpose in the same manner as medical advisors are appointed under the provisions of said chapter.\n\nSee Sec. 10-205 re appointment of school medical advisors.\n\nSee Sec. 10-214 re vision, audiometric and postural screenings of public school students."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 10-205 re appointment of school medical advisors."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 10-214 re vision, audiometric and postural screenings of public school students."
+          }
+        ],
+        "plainText": "The examination and inspection of school children under the provisions of chapter 169, as far as such examination and inspection concern the vision, may be performed by any optometrist licensed under the provisions of this chapter, provided such optometrist shall be appointed for such purpose in the same manner as medical advisors are appointed under the provisions of said chapter."
       }
     },
     {
@@ -527,86 +545,6 @@
         "history": [],
         "annotations": [],
         "plainText": "The provisions of section 20-138b shall apply to every individual or group hospital or medical expense insurance policy and every individual or group hospital or medical service plan contract delivered or issued for delivery or renewed in this state after October 1, 1975, which provides coverage or benefits for services or treatments which are within the definition of optometry as set forth in section 20-127 . If any such policy or contract provides coverage or benefits for any such services or treatments when rendered by a person licensed under chapter 370, such policy or contract shall provide identical coverage or benefits for such services or treatments when rendered by a person licensed under this chapter, provided this section shall not alter or enlarge in any way the services or treatments which persons licensed under this chapter are authorized to perform."
-      }
-    },
-    {
-      "id": "section-20-131",
-      "kind": "section",
-      "citation": "20-131",
-      "citations": [
-        "20-131"
-      ],
-      "heading": "20-131",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_380.htm#sec_20-131",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 20-131 and 20-132. License; fee for; display of. Regulations concerning license; duplicate licenses. Sections 20-131 and 20-132 are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 20-131 and 20-132. License; fee for; display of. Regulations concerning license; duplicate licenses. Sections 20-131 and 20-132 are repealed."
-      }
-    },
-    {
-      "id": "section-20-132",
-      "kind": "section",
-      "citation": "20-132",
-      "citations": [
-        "20-132"
-      ],
-      "heading": "20-132",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_380.htm#sec_20-132",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 20-131 and 20-132. License; fee for; display of. Regulations concerning license; duplicate licenses. Sections 20-131 and 20-132 are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 20-131 and 20-132. License; fee for; display of. Regulations concerning license; duplicate licenses. Sections 20-131 and 20-132 are repealed."
-      }
-    },
-    {
-      "id": "section-20-134",
-      "kind": "section",
-      "citation": "20-134",
-      "citations": [
-        "20-134"
-      ],
-      "heading": "20-134",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_380.htm#sec_20-134",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 20-134 and 20-135. Hearing on suspension or revocation of license. Appeal. Sections 20-134 and 20-135 are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 20-134 and 20-135. Hearing on suspension or revocation of license. Appeal. Sections 20-134 and 20-135 are repealed."
-      }
-    },
-    {
-      "id": "section-20-135",
-      "kind": "section",
-      "citation": "20-135",
-      "citations": [
-        "20-135"
-      ],
-      "heading": "20-135",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_380.htm#sec_20-135",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 20-134 and 20-135. Hearing on suspension or revocation of license. Appeal. Sections 20-134 and 20-135 are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 20-134 and 20-135. Hearing on suspension or revocation of license. Appeal. Sections 20-134 and 20-135 are repealed."
       }
     }
   ]

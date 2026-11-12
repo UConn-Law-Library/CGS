@@ -11,11 +11,17 @@
   "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_424.htm",
   "sections": [
     {
-      "id": "group-22-55-to-22-61a",
+      "id": "group-22-55-to-22-56-to-22-57-to-22-58-to-22-59-to-22-60-to-22-61-to-22-61a",
       "kind": "group",
       "citation": null,
       "citations": [
         "22-55",
+        "22-56",
+        "22-57",
+        "22-58",
+        "22-59",
+        "22-60",
+        "22-61",
         "22-61a"
       ],
       "heading": "Secs. 22-55 to 22-61a. Definitions. Label requirements. Restrictions on sale and exposure and transportation for sale; registration; fee; regulations. Exemptions. Enforcement of provisions; duties and powers of commissioner. Seizure, condemnation. Penalty. Injunctions issued without bond.",
@@ -675,64 +681,6 @@
         ],
         "annotations": [],
         "plainText": "(a) As used in this section:\n\n(1) “Cultivator” has the same meaning as provided in section 21a-420 ;\n\n(2) “Hemp” has the same meaning as provided in section 22-61 l ;\n\n(3) “Hemp products” has the same meaning as provided in section 22-61 l ;\n\n(4) “Micro-cultivator” has the same meaning as provided in section 21a-420 ;\n\n(5) “Producer” has the same meaning as provided in section 21a-420 ; and\n\n(6) “Product manufacturer” has the same meaning as provided in section 21a-420 .\n\n(b) Any producer, cultivator, micro-cultivator and product manufacturer may manufacture, market, cultivate or store hemp and hemp products in accordance with the provisions of this chapter and any regulations adopted pursuant to said chapter. A producer, cultivator, micro-cultivator and product manufacturer that obtains hemp and hemp products shall only obtain such hemp and hemp products from a person authorized under the laws of this state or another state, territory or possession of the United States or another sovereign entity to possess and sell such hemp and hemp products.\n\n(c) Hemp or hemp products purchased by a producer, cultivator, micro-cultivator, product manufacturer or food and beverage manufacturer from a third party shall be tracked as a separate batch throughout the manufacturing process in order to document the disposition of such hemp or hemp products. Once hemp or hemp products are received by a producer, cultivator, micro-cultivator, product manufacturer or food and beverage manufacturer, such hemp or hemp products shall be deemed cannabis and shall comply with the requirements for cannabis contained in the applicable provisions of the general statutes and any regulations adopted pursuant to such provisions. A producer, cultivator, micro-cultivator, product manufacturer and food and beverage manufacturer shall retain a copy of the certificate of analysis for purchased hemp or hemp products and invoice and transport documents that evidence the quantity purchased and date received."
-      }
-    },
-    {
-      "id": "section-22-55",
-      "kind": "section",
-      "citation": "22-55",
-      "citations": [
-        "22-55"
-      ],
-      "heading": "22-55",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_424.htm#sec_22-55",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 22-55 to 22-61a. Definitions. Label requirements. Restrictions on sale and exposure and transportation for sale; registration; fee; regulations. Exemptions. Enforcement of provisions; duties and powers of commissioner. Seizure, condemnation. Penalty. Injunctions issued without bond. Sections 22-55 to 22-61a , inclusive, are repealed, effective October 1, 2014."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 22-55 to 22-61a. Definitions. Label requirements. Restrictions on sale and exposure and transportation for sale; registration; fee; regulations. Exemptions. Enforcement of provisions; duties and powers of commissioner. Seizure, condemnation. Penalty. Injunctions issued without bond. Sections 22-55 to 22-61a , inclusive, are repealed, effective October 1, 2014."
-      }
-    },
-    {
-      "id": "section-22-61a",
-      "kind": "section",
-      "citation": "22-61a",
-      "citations": [
-        "22-61a"
-      ],
-      "heading": "22-61a",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_424.htm#sec_22-61a",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 22-55 to 22-61a. Definitions. Label requirements. Restrictions on sale and exposure and transportation for sale; registration; fee; regulations. Exemptions. Enforcement of provisions; duties and powers of commissioner. Seizure, condemnation. Penalty. Injunctions issued without bond. Sections 22-55 to 22-61a , inclusive, are repealed, effective October 1, 2014."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 22-55 to 22-61a. Definitions. Label requirements. Restrictions on sale and exposure and transportation for sale; registration; fee; regulations. Exemptions. Enforcement of provisions; duties and powers of commissioner. Seizure, condemnation. Penalty. Injunctions issued without bond. Sections 22-55 to 22-61a , inclusive, are repealed, effective October 1, 2014."
-      }
-    },
-    {
-      "id": "section-22-61",
-      "kind": "section",
-      "citation": "22-61",
-      "citations": [
-        "22-61"
-      ],
-      "heading": "22-61",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_424.htm#sec_22-61",
-      "status": "active",
-      "content": {
-        "body": [],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": ""
       }
     }
   ]

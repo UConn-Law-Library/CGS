@@ -118,8 +118,7 @@
       "content": {
         "body": [
           "(a) An injunction may be granted immediately, if the circumstances of the case demand it, or the court or judge may cause immediate notice of the application to be given to the adverse party, that he may show cause why the injunction should not be granted.",
-          "(b) No temporary injunction may be granted without notice to the adverse party unless it clearly appears from the specific facts shown by affidavit or by verified complaint that irreparable loss or damage will result to the plaintiff before the matter can be heard on notice. It shall be sufficient, on such application for a temporary injunction, to present to the court or judge the original complaint containing the demand for an injunction, duly verified, without further complaint, application or motion in writing.",
-          "See Sec. 52-481 re temporary injunction to abate nuisance created by a manufacturer."
+          "(b) No temporary injunction may be granted without notice to the adverse party unless it clearly appears from the specific facts shown by affidavit or by verified complaint that irreparable loss or damage will result to the plaintiff before the matter can be heard on notice. It shall be sufficient, on such application for a temporary injunction, to present to the court or judge the original complaint containing the demand for an injunction, duly verified, without further complaint, application or motion in writing."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 8209; P.A. 82-160, S. 174.)"
@@ -128,6 +127,10 @@
           "History: P.A. 82-160 rephrased the section and inserted Subsec. indicators."
         ],
         "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 52-481 re temporary injunction to abate nuisance created by a manufacturer."
+          },
           {
             "first": true,
             "text": "Ex parte injunction without bond disapproved. 77 C. 402. Discretion of court in granting ex parte injunction; review. 80 C. 430. Cited. 153 C. 661. In divorce or separation action, husband cannot be punished for civil contempt unless final judgment itself awards damages for such civil contempt. 157 C. 470. Tenants of a building where sewage disposal system was causing water pollution were not adverse parties requiring notice. 180 C. 568. Cited. 181 C. 492; 186 C. 725."
@@ -145,7 +148,7 @@
             "text": "Stipulation entered into between parties that breach of their agreement by defendant would result in issuance of injunction forthwith is sufficient grounds for ex parte issuance of injunction sought; no jury trial was required where defendant was charged with civil contempt. 5 Conn. Cir. Ct. 724. Cited. 6 Conn. Cir. Ct. 105."
           }
         ],
-        "plainText": "(a) An injunction may be granted immediately, if the circumstances of the case demand it, or the court or judge may cause immediate notice of the application to be given to the adverse party, that he may show cause why the injunction should not be granted.\n\n(b) No temporary injunction may be granted without notice to the adverse party unless it clearly appears from the specific facts shown by affidavit or by verified complaint that irreparable loss or damage will result to the plaintiff before the matter can be heard on notice. It shall be sufficient, on such application for a temporary injunction, to present to the court or judge the original complaint containing the demand for an injunction, duly verified, without further complaint, application or motion in writing.\n\nSee Sec. 52-481 re temporary injunction to abate nuisance created by a manufacturer."
+        "plainText": "(a) An injunction may be granted immediately, if the circumstances of the case demand it, or the court or judge may cause immediate notice of the application to be given to the adverse party, that he may show cause why the injunction should not be granted.\n\n(b) No temporary injunction may be granted without notice to the adverse party unless it clearly appears from the specific facts shown by affidavit or by verified complaint that irreparable loss or damage will result to the plaintiff before the matter can be heard on notice. It shall be sufficient, on such application for a temporary injunction, to present to the court or judge the original complaint containing the demand for an injunction, duly verified, without further complaint, application or motion in writing."
       }
     },
     {
@@ -385,14 +388,17 @@
       "status": "active",
       "content": {
         "body": [
-          "An injunction may be granted against the malicious erection, by or with the consent of an owner, lessee or person entitled to the possession of land, of any structure upon it, intended to annoy and injure any owner or lessee of adjacent land in respect to his use or disposition of the same.",
-          "See Sec. 52-570 re action for malicious erection of structure."
+          "An injunction may be granted against the malicious erection, by or with the consent of an owner, lessee or person entitled to the possession of land, of any structure upon it, intended to annoy and injure any owner or lessee of adjacent land in respect to his use or disposition of the same."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 8216.)"
         ],
         "history": [],
         "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 52-570 re action for malicious erection of structure."
+          },
           {
             "first": true,
             "text": "When no defense that structure screens respondents' premises. 46 C. 109. Injunction may be granted against the continuance of structure erected in violation of statute. Id., 108. The malicious purpose must be the predominant one and give character to the act. 48 C. 395. The malicious acts intended by statute must, as a rule, go beyond the petty hostilities of business competition. Id., 395. History, purpose and scope of remedy. 75 C. 425; 102 C. 357. Finding that erection malicious not ordinarily reviewable. 82 C. 290. That fence is being constructed by independent contractor is no defense to proceedings for contempt for violation of temporary injunction by continuing erection. 102 C. 358. On finding, plaintiff held not entitled to relief under section for building of wall and change of grade. 132 C. 319. Equitable defense of “clean hands” available but not applicable to facts; it was abuse of trial courts' discretion to enjoin building of any other structures on that portion of land from which court ordered removal of fence. 174 C. 29."
@@ -410,7 +416,7 @@
             "text": "Provides for injunctive relief for structures constructed with intention to annoy and injure plaintiff's use of premises. 6 Conn. Cir. Ct. 427, 428."
           }
         ],
-        "plainText": "An injunction may be granted against the malicious erection, by or with the consent of an owner, lessee or person entitled to the possession of land, of any structure upon it, intended to annoy and injure any owner or lessee of adjacent land in respect to his use or disposition of the same.\n\nSee Sec. 52-570 re action for malicious erection of structure."
+        "plainText": "An injunction may be granted against the malicious erection, by or with the consent of an owner, lessee or person entitled to the possession of land, of any structure upon it, intended to annoy and injure any owner or lessee of adjacent land in respect to his use or disposition of the same."
       }
     },
     {
@@ -429,8 +435,7 @@
           "(b) Each complaint shall be heard at the first session of the court or promptly thereafter unless continued for cause. A continuance may be granted upon such conditions and with such provision for temporary relief as the court orders.",
           "(c) If, after hearing, the court is of the opinion that the plaintiffs are entitled to relief, it may make such order for the discontinuance or abatement of the nuisance, or for regulating the manner of conducting the business, as it finds to be necessary. If it appears that any such order is ineffectual to abate the nuisance or if it appears that the order is disobeyed or evaded, the court, upon such notice as it directs, may make such further order and provision for the enforcement of the original order or decree as may be deemed necessary.",
           "(d) The Superior Court, or any judge thereof when the court is not in session, may, upon complaint, issue a temporary injunction against the continuance of any such nuisance until a final hearing may be had. If it is impracticable to stay the continuance of a nuisance by a temporary injunction or if the injunction is disobeyed or evaded, the court or judge may make and enforce such temporary order for the discontinuance of the nuisance until a final hearing, as may be deemed necessary.",
-          "(e) At least twenty-four hours' notice in writing of the time and place of making such a motion for temporary injunction shall be given to the defendants or some of them, if they are known and can be found in this state, and, if not, shall be left with the person in charge of the premises, if such person can be found.",
-          "See Sec. 52-253 re costs in suits against manufacturers for nuisance."
+          "(e) At least twenty-four hours' notice in writing of the time and place of making such a motion for temporary injunction shall be given to the defendants or some of them, if they are known and can be found in this state, and, if not, shall be left with the person in charge of the premises, if such person can be found."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 8217; 1967, P.A. 656, S. 51; P.A. 78-280, S. 2, 127; P.A. 82-160, S. 178.)"
@@ -441,6 +446,10 @@
         "annotations": [
           {
             "first": true,
+            "text": "See Sec. 52-253 re costs in suits against manufacturers for nuisance."
+          },
+          {
+            "first": true,
             "text": "What constitutes a nuisance of this character. 21 C. 218; 33 C. 121; 39 C. 426, 493; 100 C. 667. Petition must aver that petitioner is aggrieved. 39 C. 427. Effect upon complainant's family material question. 71 C. 647. No injunction against production of castor oil where court found no substantial violation of plaintiff's rights and use of defendant's plant was not unreasonable. 130 C. 485. History discussed; section does not give an exclusive remedy to the Superior Court in an action of nuisance; a statute creating a new remedy for an existing right does not preclude the use of existing common law remedies. 153 C. 661."
           },
           {
@@ -448,7 +457,7 @@
             "text": "Statute is codification of existing law; it indirectly recognizes the doctrine of balancing conveniences. 11 CS 93. Persons of ordinary health and sensitiveness are to be considered in the determination of the existence of a nuisance. 22 CS 381."
           }
         ],
-        "plainText": "(a) If any manufacturer carries on his business, or exposes the material used therein, or refuse produced thereby, so as to constitute a nuisance to the public or to individuals, any persons aggrieved thereby may unite in a complaint to the superior court for the judicial district where the nuisance exists, for the discontinuance or abatement of the nuisance, making the manufacturer, if known to them, the defendant. If the manufacturer is not known, they may make the person in charge of the premises the defendant. Service on the person in charge shall be sufficient notice to any defendant living out of this state.\n\n(b) Each complaint shall be heard at the first session of the court or promptly thereafter unless continued for cause. A continuance may be granted upon such conditions and with such provision for temporary relief as the court orders.\n\n(c) If, after hearing, the court is of the opinion that the plaintiffs are entitled to relief, it may make such order for the discontinuance or abatement of the nuisance, or for regulating the manner of conducting the business, as it finds to be necessary. If it appears that any such order is ineffectual to abate the nuisance or if it appears that the order is disobeyed or evaded, the court, upon such notice as it directs, may make such further order and provision for the enforcement of the original order or decree as may be deemed necessary.\n\n(d) The Superior Court, or any judge thereof when the court is not in session, may, upon complaint, issue a temporary injunction against the continuance of any such nuisance until a final hearing may be had. If it is impracticable to stay the continuance of a nuisance by a temporary injunction or if the injunction is disobeyed or evaded, the court or judge may make and enforce such temporary order for the discontinuance of the nuisance until a final hearing, as may be deemed necessary.\n\n(e) At least twenty-four hours' notice in writing of the time and place of making such a motion for temporary injunction shall be given to the defendants or some of them, if they are known and can be found in this state, and, if not, shall be left with the person in charge of the premises, if such person can be found.\n\nSee Sec. 52-253 re costs in suits against manufacturers for nuisance."
+        "plainText": "(a) If any manufacturer carries on his business, or exposes the material used therein, or refuse produced thereby, so as to constitute a nuisance to the public or to individuals, any persons aggrieved thereby may unite in a complaint to the superior court for the judicial district where the nuisance exists, for the discontinuance or abatement of the nuisance, making the manufacturer, if known to them, the defendant. If the manufacturer is not known, they may make the person in charge of the premises the defendant. Service on the person in charge shall be sufficient notice to any defendant living out of this state.\n\n(b) Each complaint shall be heard at the first session of the court or promptly thereafter unless continued for cause. A continuance may be granted upon such conditions and with such provision for temporary relief as the court orders.\n\n(c) If, after hearing, the court is of the opinion that the plaintiffs are entitled to relief, it may make such order for the discontinuance or abatement of the nuisance, or for regulating the manner of conducting the business, as it finds to be necessary. If it appears that any such order is ineffectual to abate the nuisance or if it appears that the order is disobeyed or evaded, the court, upon such notice as it directs, may make such further order and provision for the enforcement of the original order or decree as may be deemed necessary.\n\n(d) The Superior Court, or any judge thereof when the court is not in session, may, upon complaint, issue a temporary injunction against the continuance of any such nuisance until a final hearing may be had. If it is impracticable to stay the continuance of a nuisance by a temporary injunction or if the injunction is disobeyed or evaded, the court or judge may make and enforce such temporary order for the discontinuance of the nuisance until a final hearing, as may be deemed necessary.\n\n(e) At least twenty-four hours' notice in writing of the time and place of making such a motion for temporary injunction shall be given to the defendants or some of them, if they are known and can be found in this state, and, if not, shall be left with the person in charge of the premises, if such person can be found."
       }
     },
     {

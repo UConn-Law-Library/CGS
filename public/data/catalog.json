@@ -1,11 +1,11 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-07-14T00:27:33Z",
+  "generatedAt": "2026-11-12T22:30:49Z",
   "source": {
     "name": "Connecticut General Statutes legacy JSON",
     "url": "https://www.cga.ct.gov/current/pub/titles.htm",
     "revisionYear": 2025,
-    "retrievedAt": "2026-07-14T00:27:33Z"
+    "retrievedAt": "2026-11-12T22:30:49Z"
   },
   "titles": [
     {
@@ -69,7 +69,7 @@
           "name": "Statutory Short Form Power of Attorney",
           "path": "chapters/007.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_007.htm",
-          "sectionCount": 7
+          "sectionCount": 3
         },
         {
           "id": "chapter-007a",
@@ -85,7 +85,7 @@
           "name": "Springing Power of Attorney",
           "path": "chapters/007b.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_007b.htm",
-          "sectionCount": 4
+          "sectionCount": 2
         },
         {
           "id": "chapter-007c",
@@ -117,7 +117,7 @@
           "name": "Code of Ethics",
           "path": "chapters/009.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_009.htm",
-          "sectionCount": 6
+          "sectionCount": 4
         },
         {
           "id": "chapter-010",
@@ -125,7 +125,7 @@
           "name": "Codes of Ethics",
           "path": "chapters/010.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_010.htm",
-          "sectionCount": 62
+          "sectionCount": 60
         },
         {
           "id": "chapter-011",
@@ -157,7 +157,7 @@
           "name": "Connecticut Institute for Municipal Studies",
           "path": "chapters/013.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_013.htm",
-          "sectionCount": 5
+          "sectionCount": 3
         },
         {
           "id": "chapter-013a",
@@ -181,7 +181,7 @@
           "name": "Connecticut Uniform Electronic Transactions Act",
           "path": "chapters/015.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_015.htm",
-          "sectionCount": 25
+          "sectionCount": 23
         },
         {
           "id": "chapter-015a",
@@ -230,7 +230,7 @@
           "name": "General Assembly",
           "path": "chapters/016.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_016.htm",
-          "sectionCount": 118
+          "sectionCount": 106
         },
         {
           "id": "chapter-017",
@@ -246,7 +246,7 @@
           "name": "Legislative Council",
           "path": "chapters/018.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_018.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-018a",
@@ -262,7 +262,7 @@
           "name": "Committees on Intergovernmental Cooperation",
           "path": "chapters/019.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_019.htm",
-          "sectionCount": 4
+          "sectionCount": 2
         },
         {
           "id": "chapter-019a",
@@ -302,7 +302,7 @@
           "name": "Connecticut Law Revision Commission",
           "path": "chapters/022.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_022.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-023",
@@ -326,7 +326,7 @@
           "name": "Office of the Inspector General",
           "path": "chapters/023b.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_023b.htm",
-          "sectionCount": 5
+          "sectionCount": 3
         },
         {
           "id": "chapter-023c",
@@ -366,7 +366,7 @@
           "name": "Connecticut Competitiveness Council. Commission on Economic Competitiveness",
           "path": "chapters/023g.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_023g.htm",
-          "sectionCount": 4
+          "sectionCount": 2
         },
         {
           "id": "chapter-023h",
@@ -423,7 +423,7 @@
           "name": "Connecticut Sunset Law",
           "path": "chapters/028.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_028.htm",
-          "sectionCount": 20
+          "sectionCount": 10
         },
         {
           "id": "chapter-028a",
@@ -456,7 +456,7 @@
           "name": "Treasurer",
           "path": "chapters/032.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_032.htm",
-          "sectionCount": 230
+          "sectionCount": 221
         },
         {
           "id": "chapter-033",
@@ -464,7 +464,7 @@
           "name": "Secretary",
           "path": "chapters/033.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_033.htm",
-          "sectionCount": 86
+          "sectionCount": 80
         },
         {
           "id": "chapter-034",
@@ -472,7 +472,7 @@
           "name": "Comptroller",
           "path": "chapters/034.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_034.htm",
-          "sectionCount": 86
+          "sectionCount": 83
         },
         {
           "id": "chapter-035",
@@ -505,7 +505,7 @@
           "name": "Department of Administrative Services",
           "path": "chapters/046a.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_046a.htm",
-          "sectionCount": 11
+          "sectionCount": 9
         },
         {
           "id": "chapter-047",
@@ -513,7 +513,7 @@
           "name": "State Property and Funds",
           "path": "chapters/047.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_047.htm",
-          "sectionCount": 77
+          "sectionCount": 73
         },
         {
           "id": "chapter-048",
@@ -521,7 +521,7 @@
           "name": "Organization of State Agencies",
           "path": "chapters/048.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_048.htm",
-          "sectionCount": 87
+          "sectionCount": 75
         },
         {
           "id": "chapter-049",
@@ -537,7 +537,7 @@
           "name": "Office of Policy and Management: General Provisions; Budget and Appropriations; State Planning",
           "path": "chapters/050.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_050.htm",
-          "sectionCount": 228
+          "sectionCount": 212
         },
         {
           "id": "chapter-051",
@@ -545,7 +545,7 @@
           "name": "Department of Administrative Services: Public Works",
           "path": "chapters/051.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_051.htm",
-          "sectionCount": 22
+          "sectionCount": 20
         },
         {
           "id": "chapter-051a",
@@ -561,7 +561,7 @@
           "name": "State Building Program Commission",
           "path": "chapters/052.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_052.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-053",
@@ -569,7 +569,7 @@
           "name": "Claims Against the State",
           "path": "chapters/053.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_053.htm",
-          "sectionCount": 35
+          "sectionCount": 33
         },
         {
           "id": "chapter-054",
@@ -577,7 +577,7 @@
           "name": "Uniform Administrative Procedure Act",
           "path": "chapters/054.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_054.htm",
-          "sectionCount": 45
+          "sectionCount": 43
         },
         {
           "id": "chapter-054a",
@@ -593,7 +593,7 @@
           "name": "Personal Data",
           "path": "chapters/055.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_055.htm",
-          "sectionCount": 10
+          "sectionCount": 8
         },
         {
           "id": "chapter-055a",
@@ -601,7 +601,7 @@
           "name": "Consultants and Personal Service Agreements",
           "path": "chapters/055a.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_055a.htm",
-          "sectionCount": 18
+          "sectionCount": 14
         },
         {
           "id": "chapter-055b",
@@ -674,7 +674,7 @@
           "name": "Purchases and Printing",
           "path": "chapters/058.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_058.htm",
-          "sectionCount": 59
+          "sectionCount": 57
         },
         {
           "id": "chapter-058a",
@@ -699,7 +699,7 @@
           "name": "State Real Property",
           "path": "chapters/059.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_059.htm",
-          "sectionCount": 57
+          "sectionCount": 55
         },
         {
           "id": "chapter-060",
@@ -707,7 +707,7 @@
           "name": "Construction and Alterations of State Buildings",
           "path": "chapters/060.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_060.htm",
-          "sectionCount": 52
+          "sectionCount": 49
         },
         {
           "id": "chapter-060a",
@@ -749,7 +749,7 @@
           "name": "State Information and Telecommunication Systems Management and Contracts",
           "path": "chapters/061.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_061.htm",
-          "sectionCount": 43
+          "sectionCount": 39
         },
         {
           "id": "chapter-061a",
@@ -757,7 +757,7 @@
           "name": "Educational Technology",
           "path": "chapters/061a.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_061a.htm",
-          "sectionCount": 10
+          "sectionCount": 8
         },
         {
           "id": "chapter-061b",
@@ -815,7 +815,7 @@
           "name": "State Employment",
           "path": "chapters/063.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_063.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-064",
@@ -823,7 +823,7 @@
           "name": "Retirement",
           "path": "chapters/064.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_064.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-064a",
@@ -863,7 +863,7 @@
           "name": "State Personnel Act",
           "path": "chapters/067.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_067.htm",
-          "sectionCount": 146
+          "sectionCount": 135
         },
         {
           "id": "chapter-068",
@@ -896,7 +896,7 @@
           "name": "County Officers, Appropriations and Taxes",
           "path": "chapters/077.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_077.htm",
-          "sectionCount": 5
+          "sectionCount": 3
         },
         {
           "id": "chapter-078",
@@ -904,7 +904,7 @@
           "name": "Judicial and State Marshals",
           "path": "chapters/078.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_078.htm",
-          "sectionCount": 52
+          "sectionCount": 42
         },
         {
           "id": "chapter-079",
@@ -912,7 +912,7 @@
           "name": "Coroners",
           "path": "chapters/079.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_079.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         }
       ]
     },
@@ -961,7 +961,7 @@
           "name": "Registrars of Vital Statistics",
           "path": "chapters/093.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_093.htm",
-          "sectionCount": 56
+          "sectionCount": 54
         },
         {
           "id": "chapter-094",
@@ -977,7 +977,7 @@
           "name": "Constables",
           "path": "chapters/095.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_095.htm",
-          "sectionCount": 11
+          "sectionCount": 9
         },
         {
           "id": "chapter-096",
@@ -1001,7 +1001,7 @@
           "name": "Municipalities: General Provisions",
           "path": "chapters/097.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_097.htm",
-          "sectionCount": 148
+          "sectionCount": 132
         },
         {
           "id": "chapter-097a",
@@ -1009,7 +1009,7 @@
           "name": "Historic Districts and Historic Properties",
           "path": "chapters/097a.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_097a.htm",
-          "sectionCount": 25
+          "sectionCount": 23
         },
         {
           "id": "chapter-098",
@@ -1017,7 +1017,7 @@
           "name": "Municipal Powers",
           "path": "chapters/098.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_098.htm",
-          "sectionCount": 123
+          "sectionCount": 109
         },
         {
           "id": "chapter-099",
@@ -1097,7 +1097,7 @@
           "name": "Police and Fire Protection",
           "path": "chapters/104.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_104.htm",
-          "sectionCount": 159
+          "sectionCount": 157
         },
         {
           "id": "chapter-105",
@@ -1105,7 +1105,7 @@
           "name": "Fire, Sewer and Other Districts",
           "path": "chapters/105.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_105.htm",
-          "sectionCount": 56
+          "sectionCount": 54
         },
         {
           "id": "chapter-105a",
@@ -1137,7 +1137,7 @@
           "name": "Town Deposit Fund",
           "path": "chapters/107.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_107.htm",
-          "sectionCount": 4
+          "sectionCount": 2
         },
         {
           "id": "chapter-108",
@@ -1193,7 +1193,7 @@
           "name": "Municipal Employees",
           "path": "chapters/113.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_113.htm",
-          "sectionCount": 130
+          "sectionCount": 126
         },
         {
           "id": "chapter-113a",
@@ -1209,7 +1209,7 @@
           "name": "Municipal Liability Trust Fund",
           "path": "chapters/113b.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_113b.htm",
-          "sectionCount": 5
+          "sectionCount": 3
         },
         {
           "id": "chapter-114",
@@ -1241,7 +1241,7 @@
           "name": "Local Property Tax Relief Trust Fund",
           "path": "chapters/116a.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_116a.htm",
-          "sectionCount": 5
+          "sectionCount": 3
         },
         {
           "id": "chapter-116b",
@@ -1314,7 +1314,7 @@
           "name": "Planned Unit Development",
           "path": "chapters/124a.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_124a.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-124b",
@@ -1330,7 +1330,7 @@
           "name": "Zoning Districts for Commercial Structures and Advertising Signs",
           "path": "chapters/125.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_125.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-125a",
@@ -1362,7 +1362,7 @@
           "name": "Regional Councils of Governments",
           "path": "chapters/127.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_127.htm",
-          "sectionCount": 22
+          "sectionCount": 20
         },
         {
           "id": "chapter-127a",
@@ -1386,7 +1386,7 @@
           "name": "Department of Housing: General Provisions",
           "path": "chapters/127c.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_127c.htm",
-          "sectionCount": 47
+          "sectionCount": 45
         },
         {
           "id": "chapter-128",
@@ -1394,7 +1394,7 @@
           "name": "Department of Housing: Municipal Housing Projects",
           "path": "chapters/128.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_128.htm",
-          "sectionCount": 151
+          "sectionCount": 149
         },
         {
           "id": "chapter-129",
@@ -1410,7 +1410,7 @@
           "name": "Redevelopment and Urban Renewal. State and Federal Aid. Community Development. Urban Homesteading. Abandoned and Blighted Property",
           "path": "chapters/130.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_130.htm",
-          "sectionCount": 99
+          "sectionCount": 93
         },
         {
           "id": "chapter-131",
@@ -1418,7 +1418,7 @@
           "name": "Department of Economic and Community Development: Industrial and Research Development Projects",
           "path": "chapters/131.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_131.htm",
-          "sectionCount": 4
+          "sectionCount": 1
         },
         {
           "id": "chapter-132",
@@ -1434,7 +1434,7 @@
           "name": "Housing, Redevelopment and Urban Renewal and Human Resource Development Programs",
           "path": "chapters/133.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_133.htm",
-          "sectionCount": 83
+          "sectionCount": 74
         },
         {
           "id": "chapter-133a",
@@ -1450,7 +1450,7 @@
           "name": "Connecticut Housing Finance Authority Act",
           "path": "chapters/134.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_134.htm",
-          "sectionCount": 80
+          "sectionCount": 78
         },
         {
           "id": "chapter-135",
@@ -1522,7 +1522,7 @@
           "name": "Security Deposit Assistance",
           "path": "chapters/138.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_138.htm",
-          "sectionCount": 5
+          "sectionCount": 3
         },
         {
           "id": "chapter-138a",
@@ -1538,7 +1538,7 @@
           "name": "Housing Programs for Homeless Persons",
           "path": "chapters/138b.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_138b.htm",
-          "sectionCount": 17
+          "sectionCount": 15
         },
         {
           "id": "chapter-138c",
@@ -1554,7 +1554,7 @@
           "name": "Rental Housing Assistance Trust Fund",
           "path": "chapters/138d.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_138d.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-138e",
@@ -1602,7 +1602,7 @@
           "name": "Residential Subsurface Sewage Disposal System Repair Program",
           "path": "chapters/138j.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_138j.htm",
-          "sectionCount": 8
+          "sectionCount": 6
         },
         {
           "id": "chapter-138k",
@@ -1610,7 +1610,7 @@
           "name": "Consolidated Housing Construction, Acquisition and Related Rehabilitation Program",
           "path": "chapters/138k.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_138k.htm",
-          "sectionCount": 4
+          "sectionCount": 2
         },
         {
           "id": "chapter-138l",
@@ -1667,7 +1667,7 @@
           "name": "Electors: Qualifications and Admission",
           "path": "chapters/143.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_143.htm",
-          "sectionCount": 121
+          "sectionCount": 108
         },
         {
           "id": "chapter-144",
@@ -1675,7 +1675,7 @@
           "name": "Nominations and Political Parties",
           "path": "chapters/144.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_144.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-144a",
@@ -1683,7 +1683,7 @@
           "name": "Absentee Voting at Primaries",
           "path": "chapters/144a.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_144a.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-145",
@@ -1691,7 +1691,7 @@
           "name": "Absentee Voting",
           "path": "chapters/145.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_145.htm",
-          "sectionCount": 87
+          "sectionCount": 77
         },
         {
           "id": "chapter-145a",
@@ -1707,7 +1707,7 @@
           "name": "Elections",
           "path": "chapters/146.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_146.htm",
-          "sectionCount": 145
+          "sectionCount": 141
         },
         {
           "id": "chapter-147",
@@ -1715,7 +1715,7 @@
           "name": "Voting Methods",
           "path": "chapters/147.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_147.htm",
-          "sectionCount": 59
+          "sectionCount": 51
         },
         {
           "id": "chapter-148",
@@ -1739,7 +1739,7 @@
           "name": "Elections: Campaign Financing",
           "path": "chapters/150.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_150.htm",
-          "sectionCount": 12
+          "sectionCount": 6
         },
         {
           "id": "chapter-150a",
@@ -1779,7 +1779,7 @@
           "name": "Nominations and Political Parties",
           "path": "chapters/153.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_153.htm",
-          "sectionCount": 135
+          "sectionCount": 127
         },
         {
           "id": "chapter-154",
@@ -1787,7 +1787,7 @@
           "name": "Presidential Preference Primary",
           "path": "chapters/154.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_154.htm",
-          "sectionCount": 24
+          "sectionCount": 20
         },
         {
           "id": "chapter-155",
@@ -1811,7 +1811,7 @@
           "name": "Citizens' Election Program",
           "path": "chapters/157.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_157.htm",
-          "sectionCount": 25
+          "sectionCount": 23
         },
         {
           "id": "chapter-158",
@@ -1836,7 +1836,7 @@
           "name": "State Board of Education. Department of Education",
           "path": "chapters/163.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_163.htm",
-          "sectionCount": 74
+          "sectionCount": 72
         },
         {
           "id": "chapter-163a",
@@ -1844,7 +1844,7 @@
           "name": "Proficiency Examinations",
           "path": "chapters/163a.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_163a.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-163b",
@@ -1860,7 +1860,7 @@
           "name": "Education Evaluation and Remedial Assistance",
           "path": "chapters/163c.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_163c.htm",
-          "sectionCount": 25
+          "sectionCount": 23
         },
         {
           "id": "chapter-164",
@@ -1868,7 +1868,7 @@
           "name": "Educational Opportunities",
           "path": "chapters/164.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_164.htm",
-          "sectionCount": 443
+          "sectionCount": 394
         },
         {
           "id": "chapter-165",
@@ -1876,7 +1876,7 @@
           "name": "(The University of Connecticut) Advisory Council for Professional Standards",
           "path": "chapters/165.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_165.htm",
-          "sectionCount": 15
+          "sectionCount": 13
         },
         {
           "id": "chapter-166",
@@ -1884,7 +1884,7 @@
           "name": "Teachers and Superintendents",
           "path": "chapters/166.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_166.htm",
-          "sectionCount": 155
+          "sectionCount": 135
         },
         {
           "id": "chapter-167",
@@ -1892,7 +1892,7 @@
           "name": "Teachers' Retirement System",
           "path": "chapters/167.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_167.htm",
-          "sectionCount": 7
+          "sectionCount": 3
         },
         {
           "id": "chapter-167a",
@@ -1908,7 +1908,7 @@
           "name": "School Attendance and Employment of Children",
           "path": "chapters/168.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_168.htm",
-          "sectionCount": 31
+          "sectionCount": 27
         },
         {
           "id": "chapter-169",
@@ -1924,7 +1924,7 @@
           "name": "Boards of Education",
           "path": "chapters/170.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_170.htm",
-          "sectionCount": 187
+          "sectionCount": 183
         },
         {
           "id": "chapter-171",
@@ -1940,7 +1940,7 @@
           "name": "Support of Public Schools. Transportation",
           "path": "chapters/172.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_172.htm",
-          "sectionCount": 148
+          "sectionCount": 127
         },
         {
           "id": "chapter-172a",
@@ -1948,7 +1948,7 @@
           "name": "Reimbursement Grants for Parental Equivalent Instruction Costs",
           "path": "chapters/172a.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_172a.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-173",
@@ -1956,7 +1956,7 @@
           "name": "Public School Building Projects",
           "path": "chapters/173.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_173.htm",
-          "sectionCount": 72
+          "sectionCount": 66
         },
         {
           "id": "chapter-174",
@@ -1964,7 +1964,7 @@
           "name": "Education of Persons Who Are Blind or Visually Impaired",
           "path": "chapters/174.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_174.htm",
-          "sectionCount": 23
+          "sectionCount": 17
         },
         {
           "id": "chapter-175",
@@ -1972,7 +1972,7 @@
           "name": "Education of the Deaf",
           "path": "chapters/175.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_175.htm",
-          "sectionCount": 4
+          "sectionCount": 2
         },
         {
           "id": "chapter-176",
@@ -1988,7 +1988,7 @@
           "name": "Connecticut Historical Commission",
           "path": "chapters/177.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_177.htm",
-          "sectionCount": 5
+          "sectionCount": 4
         },
         {
           "id": "chapter-177a",
@@ -1996,7 +1996,7 @@
           "name": "American Revolution Bicentennial Commission",
           "path": "chapters/177a.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_177a.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-177b",
@@ -2012,7 +2012,7 @@
           "name": "United States Constitution Bicentennial Commission",
           "path": "chapters/177c.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_177c.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-178",
@@ -2020,7 +2020,7 @@
           "name": "State System of Higher Education",
           "path": "chapters/178.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_178.htm",
-          "sectionCount": 52
+          "sectionCount": 42
         },
         {
           "id": "chapter-179",
@@ -2044,7 +2044,7 @@
           "name": "Connecticut Student Loan Foundation",
           "path": "chapters/180.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_180.htm",
-          "sectionCount": 5
+          "sectionCount": 3
         },
         {
           "id": "chapter-181",
@@ -2052,7 +2052,7 @@
           "name": "State Commission on the Arts",
           "path": "chapters/181.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_181.htm",
-          "sectionCount": 16
+          "sectionCount": 11
         },
         {
           "id": "chapter-181a",
@@ -2076,7 +2076,7 @@
           "name": "State Museum of Connecticut History",
           "path": "chapters/183.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_183.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-184",
@@ -2125,7 +2125,7 @@
           "name": "Administration of State System",
           "path": "chapters/185.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_185.htm",
-          "sectionCount": 220
+          "sectionCount": 194
         },
         {
           "id": "chapter-185a",
@@ -2141,7 +2141,7 @@
           "name": "Constituent Units",
           "path": "chapters/185b.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_185b.htm",
-          "sectionCount": 254
+          "sectionCount": 233
         },
         {
           "id": "chapter-186",
@@ -2149,7 +2149,7 @@
           "name": "State Financial Assistance",
           "path": "chapters/186.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_186.htm",
-          "sectionCount": 36
+          "sectionCount": 30
         },
         {
           "id": "chapter-187",
@@ -2157,7 +2157,7 @@
           "name": "Connecticut Health and Educational Facilities Authority",
           "path": "chapters/187.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_187.htm",
-          "sectionCount": 42
+          "sectionCount": 38
         },
         {
           "id": "chapter-187a",
@@ -2165,7 +2165,7 @@
           "name": "Connecticut Student Loan Foundation",
           "path": "chapters/187a.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_187a.htm",
-          "sectionCount": 22
+          "sectionCount": 19
         },
         {
           "id": "chapter-187b",
@@ -2214,7 +2214,7 @@
           "name": "Law Libraries",
           "path": "chapters/189.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_189.htm",
-          "sectionCount": 11
+          "sectionCount": 9
         },
         {
           "id": "chapter-190",
@@ -2255,7 +2255,7 @@
           "name": "State and Local Revenue Services. Department of Revenue Services",
           "path": "chapters/201.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_201.htm",
-          "sectionCount": 89
+          "sectionCount": 76
         },
         {
           "id": "chapter-202",
@@ -2263,7 +2263,7 @@
           "name": "Collection of State Taxes",
           "path": "chapters/202.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_202.htm",
-          "sectionCount": 47
+          "sectionCount": 41
         },
         {
           "id": "chapter-203",
@@ -2271,7 +2271,7 @@
           "name": "Property Tax Assessment",
           "path": "chapters/203.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_203.htm",
-          "sectionCount": 218
+          "sectionCount": 204
         },
         {
           "id": "chapter-203a",
@@ -2279,7 +2279,7 @@
           "name": "The Connecticut Appeals Board for Property Valuation",
           "path": "chapters/203a.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_203a.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-204",
@@ -2287,7 +2287,7 @@
           "name": "Local Levy and Collection of Taxes",
           "path": "chapters/204.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_204.htm",
-          "sectionCount": 97
+          "sectionCount": 89
         },
         {
           "id": "chapter-204a",
@@ -2295,7 +2295,7 @@
           "name": "Property Tax Relief for Elderly Homeowners and Renters and Persons with Permanent Total Disability",
           "path": "chapters/204a.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_204a.htm",
-          "sectionCount": 18
+          "sectionCount": 16
         },
         {
           "id": "chapter-205",
@@ -2319,7 +2319,7 @@
           "name": "Insurance Companies and Health Care Centers Taxes",
           "path": "chapters/207.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_207.htm",
-          "sectionCount": 32
+          "sectionCount": 28
         },
         {
           "id": "chapter-208",
@@ -2327,7 +2327,7 @@
           "name": "Corporation Business Tax",
           "path": "chapters/208.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_208.htm",
-          "sectionCount": 118
+          "sectionCount": 106
         },
         {
           "id": "chapter-208a",
@@ -2351,7 +2351,7 @@
           "name": "Air Carriers Tax",
           "path": "chapters/209.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_209.htm",
-          "sectionCount": 9
+          "sectionCount": 7
         },
         {
           "id": "chapter-210",
@@ -2359,7 +2359,7 @@
           "name": "Railroad Companies Tax",
           "path": "chapters/210.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_210.htm",
-          "sectionCount": 11
+          "sectionCount": 7
         },
         {
           "id": "chapter-210a",
@@ -2367,7 +2367,7 @@
           "name": "Telecommunications Service Company Tax",
           "path": "chapters/210a.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_210a.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-211",
@@ -2375,7 +2375,7 @@
           "name": "Community Antenna Television Systems and One-Way Satellite Transmission Businesses Tax",
           "path": "chapters/211.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_211.htm",
-          "sectionCount": 20
+          "sectionCount": 12
         },
         {
           "id": "chapter-211a",
@@ -2407,7 +2407,7 @@
           "name": "Utility Companies Tax",
           "path": "chapters/212.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_212.htm",
-          "sectionCount": 10
+          "sectionCount": 6
         },
         {
           "id": "chapter-212a",
@@ -2431,7 +2431,7 @@
           "name": "Unincorporated Business Tax",
           "path": "chapters/213.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_213.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-213a",
@@ -2447,7 +2447,7 @@
           "name": "Cigarette Taxes",
           "path": "chapters/214.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_214.htm",
-          "sectionCount": 68
+          "sectionCount": 64
         },
         {
           "id": "chapter-214a",
@@ -2479,7 +2479,7 @@
           "name": "Amusement Places Tax",
           "path": "chapters/215.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_215.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-216",
@@ -2487,7 +2487,7 @@
           "name": "Succession and Transfer Taxes",
           "path": "chapters/216.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_216.htm",
-          "sectionCount": 70
+          "sectionCount": 68
         },
         {
           "id": "chapter-216a",
@@ -2495,7 +2495,7 @@
           "name": "Generation-Skipping Transfer Tax",
           "path": "chapters/216a.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_216a.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-217",
@@ -2519,7 +2519,7 @@
           "name": "Estate Income Tax",
           "path": "chapters/218a.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_218a.htm",
-          "sectionCount": 11
+          "sectionCount": 9
         },
         {
           "id": "chapter-219",
@@ -2543,7 +2543,7 @@
           "name": "Motor Vehicle Fuels Tax",
           "path": "chapters/221.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_221.htm",
-          "sectionCount": 39
+          "sectionCount": 33
         },
         {
           "id": "chapter-221a",
@@ -2575,7 +2575,7 @@
           "name": "Real Estate Conveyance Tax",
           "path": "chapters/223.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_223.htm",
-          "sectionCount": 24
+          "sectionCount": 22
         },
         {
           "id": "chapter-224",
@@ -2599,7 +2599,7 @@
           "name": "Gaming Policy, Regulation and Revenue",
           "path": "chapters/226.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_226.htm",
-          "sectionCount": 62
+          "sectionCount": 56
         },
         {
           "id": "chapter-226a",
@@ -2639,7 +2639,7 @@
           "name": "Unincorporated Business Tax",
           "path": "chapters/228.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_228.htm",
-          "sectionCount": 4
+          "sectionCount": 2
         },
         {
           "id": "chapter-228a",
@@ -2671,7 +2671,7 @@
           "name": "Marijuana and Controlled Substances Tax",
           "path": "chapters/228d.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_228d.htm",
-          "sectionCount": 5
+          "sectionCount": 3
         },
         {
           "id": "chapter-228e",
@@ -2719,7 +2719,7 @@
           "name": "Income Tax",
           "path": "chapters/229.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_229.htm",
-          "sectionCount": 74
+          "sectionCount": 70
         },
         {
           "id": "chapter-229a",
@@ -2752,7 +2752,7 @@
           "name": "Chapters 231–235 Highways and Bridges",
           "path": "chapters/231.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_231-235.htm",
-          "sectionCount": 15
+          "sectionCount": 5
         }
       ]
     },
@@ -2769,7 +2769,7 @@
           "name": "Definitions and Administration",
           "path": "chapters/236.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_236.htm",
-          "sectionCount": 16
+          "sectionCount": 14
         },
         {
           "id": "chapter-237",
@@ -2785,7 +2785,7 @@
           "name": "Highway Construction and Maintenance",
           "path": "chapters/238.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_238.htm",
-          "sectionCount": 206
+          "sectionCount": 198
         },
         {
           "id": "chapter-239",
@@ -2793,7 +2793,7 @@
           "name": "Tolls",
           "path": "chapters/239.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_239.htm",
-          "sectionCount": 8
+          "sectionCount": 4
         },
         {
           "id": "chapter-240",
@@ -2801,7 +2801,7 @@
           "name": "Highway Financing",
           "path": "chapters/240.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_240.htm",
-          "sectionCount": 98
+          "sectionCount": 79
         },
         {
           "id": "chapter-241",
@@ -2826,7 +2826,7 @@
           "name": "Department of Transportation",
           "path": "chapters/242.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_242.htm",
-          "sectionCount": 173
+          "sectionCount": 159
         },
         {
           "id": "chapter-242a",
@@ -2834,7 +2834,7 @@
           "name": "State Transportation Strategy and Transportation Investment Areas",
           "path": "chapters/242a.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_242a.htm",
-          "sectionCount": 18
+          "sectionCount": 14
         },
         {
           "id": "chapter-243",
@@ -2842,7 +2842,7 @@
           "name": "Infrastructure Program",
           "path": "chapters/243.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_243.htm",
-          "sectionCount": 57
+          "sectionCount": 50
         },
         {
           "id": "chapter-244",
@@ -2890,7 +2890,7 @@
           "name": "Railroads and Railways",
           "path": "chapters/245.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_245.htm",
-          "sectionCount": 47
+          "sectionCount": 41
         },
         {
           "id": "chapter-245a",
@@ -2898,7 +2898,7 @@
           "name": "Railroad Construction and Location",
           "path": "chapters/245a.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_245a.htm",
-          "sectionCount": 72
+          "sectionCount": 70
         },
         {
           "id": "chapter-245b",
@@ -2906,7 +2906,7 @@
           "name": "Railroad Operations",
           "path": "chapters/245b.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_245b.htm",
-          "sectionCount": 53
+          "sectionCount": 45
         },
         {
           "id": "chapter-245c",
@@ -2914,7 +2914,7 @@
           "name": "Motor Carriers of Property for Hire",
           "path": "chapters/245c.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_245c.htm",
-          "sectionCount": 36
+          "sectionCount": 33
         }
       ]
     },
@@ -2931,7 +2931,7 @@
           "name": "Motor Vehicles",
           "path": "chapters/246.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_246.htm",
-          "sectionCount": 442
+          "sectionCount": 423
         },
         {
           "id": "chapter-246a",
@@ -2939,7 +2939,7 @@
           "name": "Motor Vehicle Emissions",
           "path": "chapters/246a.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_246a.htm",
-          "sectionCount": 16
+          "sectionCount": 14
         },
         {
           "id": "chapter-246b",
@@ -2955,7 +2955,7 @@
           "name": "Uniform Motor Vehicle Certificate of Title and Antitheft Act",
           "path": "chapters/247.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_247.htm",
-          "sectionCount": 44
+          "sectionCount": 42
         },
         {
           "id": "chapter-247a",
@@ -2971,7 +2971,7 @@
           "name": "Vehicle Highway Use",
           "path": "chapters/248.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_248.htm",
-          "sectionCount": 211
+          "sectionCount": 207
         },
         {
           "id": "chapter-249",
@@ -2979,7 +2979,7 @@
           "name": "Traffic Control and Highway Safety",
           "path": "chapters/249.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_249.htm",
-          "sectionCount": 56
+          "sectionCount": 54
         },
         {
           "id": "chapter-250",
@@ -2987,7 +2987,7 @@
           "name": "Gasoline and Motor Oil Sales",
           "path": "chapters/250.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_250.htm",
-          "sectionCount": 30
+          "sectionCount": 26
         },
         {
           "id": "chapter-250a",
@@ -3003,7 +3003,7 @@
           "name": "Special Fuel Use Tax",
           "path": "chapters/251.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_251.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-252",
@@ -3011,7 +3011,7 @@
           "name": "Highway Use Tax",
           "path": "chapters/252.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_252.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-253",
@@ -3027,7 +3027,7 @@
           "name": "Vehicle Equipment Safety Compact",
           "path": "chapters/254.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_254.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-255",
@@ -3035,7 +3035,7 @@
           "name": "Snowmobiles, All-Terrain Vehicles, Dirt Bikes and Mini-Motorcycles",
           "path": "chapters/255.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_255.htm",
-          "sectionCount": 18
+          "sectionCount": 16
         },
         {
           "id": "chapter-256",
@@ -3043,7 +3043,7 @@
           "name": "Petroleum Products Control Commission",
           "path": "chapters/256.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_256.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         }
       ]
     },
@@ -3060,7 +3060,7 @@
           "name": "Harbors and Rivers",
           "path": "chapters/263.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_263.htm",
-          "sectionCount": 38
+          "sectionCount": 32
         },
         {
           "id": "chapter-264",
@@ -3068,7 +3068,7 @@
           "name": "Commissioners of Steamship Terminals",
           "path": "chapters/264.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_264.htm",
-          "sectionCount": 4
+          "sectionCount": 2
         },
         {
           "id": "chapter-264a",
@@ -3092,7 +3092,7 @@
           "name": "Aeronautics",
           "path": "chapters/266.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_266.htm",
-          "sectionCount": 72
+          "sectionCount": 56
         },
         {
           "id": "chapter-266a",
@@ -3100,7 +3100,7 @@
           "name": "Bradley International Airport Improvements and Financing",
           "path": "chapters/266a.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_266a.htm",
-          "sectionCount": 12
+          "sectionCount": 10
         },
         {
           "id": "chapter-266b",
@@ -3116,7 +3116,7 @@
           "name": "Bradley International Airport: General Provisions",
           "path": "chapters/266c.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_266c.htm",
-          "sectionCount": 8
+          "sectionCount": 6
         },
         {
           "id": "chapter-267",
@@ -3124,7 +3124,7 @@
           "name": "Uniform Aircraft Financial Responsibility Act",
           "path": "chapters/267.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_267.htm",
-          "sectionCount": 21
+          "sectionCount": 19
         },
         {
           "id": "chapter-267a",
@@ -3148,7 +3148,7 @@
           "name": "Boating",
           "path": "chapters/268.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_268.htm",
-          "sectionCount": 94
+          "sectionCount": 88
         },
         {
           "id": "chapter-269",
@@ -3173,7 +3173,7 @@
           "name": "Department of Energy and Environmental Protection. Public Utilities Regulatory Authority. Office of Consumer Counsel. Miscellaneous Provisions",
           "path": "chapters/277.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_277.htm",
-          "sectionCount": 161
+          "sectionCount": 151
         },
         {
           "id": "chapter-277a",
@@ -3221,7 +3221,7 @@
           "name": "Street Railway Operations",
           "path": "chapters/281.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_281.htm",
-          "sectionCount": 14
+          "sectionCount": 6
         },
         {
           "id": "chapter-282",
@@ -3237,7 +3237,7 @@
           "name": "Telephone, Gas, Power and Water Companies",
           "path": "chapters/283.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_283.htm",
-          "sectionCount": 221
+          "sectionCount": 211
         },
         {
           "id": "chapter-284",
@@ -3293,7 +3293,7 @@
           "name": "Connecticut Transportation Authority",
           "path": "chapters/290.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_290.htm",
-          "sectionCount": 4
+          "sectionCount": 2
         },
         {
           "id": "chapter-291",
@@ -3301,7 +3301,7 @@
           "name": "Tri-State Regional Planning Compact",
           "path": "chapters/291.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_291.htm",
-          "sectionCount": 4
+          "sectionCount": 2
         },
         {
           "id": "chapter-292",
@@ -3317,7 +3317,7 @@
           "name": "Excavation, Demolition or Discharge of Explosives",
           "path": "chapters/293.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_293.htm",
-          "sectionCount": 16
+          "sectionCount": 14
         }
       ]
     },
@@ -3334,7 +3334,7 @@
           "name": "Energy Planning",
           "path": "chapters/295.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_295.htm",
-          "sectionCount": 57
+          "sectionCount": 55
         },
         {
           "id": "chapter-296",
@@ -3358,7 +3358,7 @@
           "name": "Connecticut's Development and Future",
           "path": "chapters/297.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_297.htm",
-          "sectionCount": 17
+          "sectionCount": 14
         },
         {
           "id": "chapter-297a",
@@ -3374,7 +3374,7 @@
           "name": "Energy Utilization and Conservation",
           "path": "chapters/298.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_298.htm",
-          "sectionCount": 100
+          "sectionCount": 88
         },
         {
           "id": "chapter-298a",
@@ -3390,7 +3390,7 @@
           "name": "Information and Technology",
           "path": "chapters/298b.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_298b.htm",
-          "sectionCount": 10
+          "sectionCount": 8
         }
       ]
     },
@@ -3407,7 +3407,7 @@
           "name": "Chapters 299–318c Public Assistance and Welfare Services",
           "path": "chapters/299.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_299-318c.htm",
-          "sectionCount": 90
+          "sectionCount": 30
         }
       ]
     },
@@ -3424,7 +3424,7 @@
           "name": "Department of Children and Families",
           "path": "chapters/319.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_319.htm",
-          "sectionCount": 154
+          "sectionCount": 145
         },
         {
           "id": "chapter-319a",
@@ -3432,7 +3432,7 @@
           "name": "Child Welfare",
           "path": "chapters/319a.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_319a.htm",
-          "sectionCount": 138
+          "sectionCount": 132
         },
         {
           "id": "chapter-319b",
@@ -3440,7 +3440,7 @@
           "name": "Department of Developmental Services",
           "path": "chapters/319b.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_319b.htm",
-          "sectionCount": 99
+          "sectionCount": 95
         },
         {
           "id": "chapter-319c",
@@ -3448,7 +3448,7 @@
           "name": "Council on Developmental Services. General Provisions",
           "path": "chapters/319c.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_319c.htm",
-          "sectionCount": 16
+          "sectionCount": 14
         },
         {
           "id": "chapter-319d",
@@ -3456,7 +3456,7 @@
           "name": "Department of Aging and Disability Services",
           "path": "chapters/319d.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_319d.htm",
-          "sectionCount": 26
+          "sectionCount": 18
         },
         {
           "id": "chapter-319e",
@@ -3496,7 +3496,7 @@
           "name": "Persons with Psychiatric Disabilities",
           "path": "chapters/319i.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_319i.htm",
-          "sectionCount": 200
+          "sectionCount": 192
         },
         {
           "id": "chapter-319j",
@@ -3504,7 +3504,7 @@
           "name": "Addiction Services",
           "path": "chapters/319j.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_319j.htm",
-          "sectionCount": 84
+          "sectionCount": 82
         },
         {
           "id": "chapter-319k",
@@ -3537,7 +3537,7 @@
           "name": "Department of Social Services",
           "path": "chapters/319o.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_319o.htm",
-          "sectionCount": 78
+          "sectionCount": 76
         },
         {
           "id": "chapter-319q",
@@ -3545,7 +3545,7 @@
           "name": "Administrative Hearings",
           "path": "chapters/319q.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_319q.htm",
-          "sectionCount": 7
+          "sectionCount": 5
         },
         {
           "id": "chapter-319s",
@@ -3553,7 +3553,7 @@
           "name": "Financial Assistance",
           "path": "chapters/319s.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_319s.htm",
-          "sectionCount": 114
+          "sectionCount": 105
         },
         {
           "id": "chapter-319t",
@@ -3569,7 +3569,7 @@
           "name": "Medical Assistance",
           "path": "chapters/319v.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_319v.htm",
-          "sectionCount": 219
+          "sectionCount": 215
         },
         {
           "id": "chapter-319x",
@@ -3585,7 +3585,7 @@
           "name": "Long-Term Care",
           "path": "chapters/319y.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_319y.htm",
-          "sectionCount": 63
+          "sectionCount": 59
         },
         {
           "id": "chapter-319aa",
@@ -3617,7 +3617,7 @@
           "name": "Prescription Drug Assistance",
           "path": "chapters/319ff.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_319ff.htm",
-          "sectionCount": 16
+          "sectionCount": 14
         },
         {
           "id": "chapter-319hh",
@@ -3633,7 +3633,7 @@
           "name": "Medicare Assignment",
           "path": "chapters/319jj.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_319jj.htm",
-          "sectionCount": 4
+          "sectionCount": 2
         },
         {
           "id": "chapter-319mm",
@@ -3641,7 +3641,7 @@
           "name": "Assistance to the Disabled",
           "path": "chapters/319mm.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_319mm.htm",
-          "sectionCount": 38
+          "sectionCount": 36
         },
         {
           "id": "chapter-319oo",
@@ -3649,7 +3649,7 @@
           "name": "Employment and Training",
           "path": "chapters/319oo.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_319oo.htm",
-          "sectionCount": 25
+          "sectionCount": 19
         },
         {
           "id": "chapter-319pp",
@@ -3665,7 +3665,7 @@
           "name": "Child Care and Protection",
           "path": "chapters/319rr.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_319rr.htm",
-          "sectionCount": 41
+          "sectionCount": 37
         },
         {
           "id": "chapter-319tt",
@@ -3714,7 +3714,7 @@
           "name": "Correctional Institutions",
           "path": "chapters/320.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_320.htm",
-          "sectionCount": 24
+          "sectionCount": 18
         },
         {
           "id": "chapter-321",
@@ -3722,7 +3722,7 @@
           "name": "Board of Pardons",
           "path": "chapters/321.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_321.htm",
-          "sectionCount": 10
+          "sectionCount": 8
         },
         {
           "id": "chapter-322",
@@ -3730,7 +3730,7 @@
           "name": "Community Correctional Centers",
           "path": "chapters/322.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_322.htm",
-          "sectionCount": 23
+          "sectionCount": 15
         },
         {
           "id": "chapter-323",
@@ -3746,7 +3746,7 @@
           "name": "John R. Manson Youth Institution, Cheshire",
           "path": "chapters/324.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_324.htm",
-          "sectionCount": 12
+          "sectionCount": 6
         },
         {
           "id": "chapter-325",
@@ -3754,7 +3754,7 @@
           "name": "Department of Correction",
           "path": "chapters/325.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_325.htm",
-          "sectionCount": 129
+          "sectionCount": 125
         },
         {
           "id": "chapter-326",
@@ -3787,7 +3787,7 @@
           "name": "Chapters 333–367 Public Health and Safety",
           "path": "chapters/333.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_333-367.htm",
-          "sectionCount": 137
+          "sectionCount": 47
         }
       ]
     },
@@ -3804,7 +3804,7 @@
           "name": "Department of Public Health",
           "path": "chapters/368a.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_368a.htm",
-          "sectionCount": 409
+          "sectionCount": 391
         },
         {
           "id": "chapter-368b",
@@ -3812,7 +3812,7 @@
           "name": "Public Health Nursing",
           "path": "chapters/368b.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_368b.htm",
-          "sectionCount": 4
+          "sectionCount": 2
         },
         {
           "id": "chapter-368c",
@@ -3820,7 +3820,7 @@
           "name": "Commission on Hospitals and Health Care",
           "path": "chapters/368c.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_368c.htm",
-          "sectionCount": 46
+          "sectionCount": 32
         },
         {
           "id": "chapter-368d",
@@ -3828,7 +3828,7 @@
           "name": "Emergency Medical Services",
           "path": "chapters/368d.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_368d.htm",
-          "sectionCount": 58
+          "sectionCount": 54
         },
         {
           "id": "chapter-368e",
@@ -3836,7 +3836,7 @@
           "name": "Municipal Health Authorities",
           "path": "chapters/368e.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_368e.htm",
-          "sectionCount": 43
+          "sectionCount": 41
         },
         {
           "id": "chapter-368f",
@@ -3852,7 +3852,7 @@
           "name": "Lung Disease, Tuberculosis, Chronic Illness and Breast and Cervical Cancer",
           "path": "chapters/368g.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_368g.htm",
-          "sectionCount": 19
+          "sectionCount": 17
         },
         {
           "id": "chapter-368h",
@@ -3868,7 +3868,7 @@
           "name": "Anatomical Donations",
           "path": "chapters/368i.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_368i.htm",
-          "sectionCount": 41
+          "sectionCount": 37
         },
         {
           "id": "chapter-368j",
@@ -3924,7 +3924,7 @@
           "name": "Treatment of Drug-Dependent Persons",
           "path": "chapters/368p.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_368p.htm",
-          "sectionCount": 4
+          "sectionCount": 2
         },
         {
           "id": "chapter-368q",
@@ -3964,7 +3964,7 @@
           "name": "Department of Mental Retardation",
           "path": "chapters/368u.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_368u.htm",
-          "sectionCount": 13
+          "sectionCount": 11
         },
         {
           "id": "chapter-368v",
@@ -3972,7 +3972,7 @@
           "name": "Health Care Institutions",
           "path": "chapters/368v.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_368v.htm",
-          "sectionCount": 237
+          "sectionCount": 233
         },
         {
           "id": "chapter-368w",
@@ -4004,7 +4004,7 @@
           "name": "Health Systems Planning Unit",
           "path": "chapters/368z.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_368z.htm",
-          "sectionCount": 99
+          "sectionCount": 83
         },
         {
           "id": "chapter-368aa",
@@ -4028,7 +4028,7 @@
           "name": "Health Care Cabinet",
           "path": "chapters/368cc.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_368cc.htm",
-          "sectionCount": 8
+          "sectionCount": 4
         },
         {
           "id": "chapter-368dd",
@@ -4036,7 +4036,7 @@
           "name": "Office of Health Strategy",
           "path": "chapters/368dd.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_368dd.htm",
-          "sectionCount": 14
+          "sectionCount": 12
         },
         {
           "id": "chapter-368ee",
@@ -4069,7 +4069,7 @@
           "name": "Healing Arts",
           "path": "chapters/369.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_369.htm",
-          "sectionCount": 13
+          "sectionCount": 11
         },
         {
           "id": "chapter-370",
@@ -4077,7 +4077,7 @@
           "name": "Medicine and Surgery",
           "path": "chapters/370.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_370.htm",
-          "sectionCount": 59
+          "sectionCount": 57
         },
         {
           "id": "chapter-371",
@@ -4085,7 +4085,7 @@
           "name": "Osteopathy",
           "path": "chapters/371.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_371.htm",
-          "sectionCount": 5
+          "sectionCount": 3
         },
         {
           "id": "chapter-372",
@@ -4093,7 +4093,7 @@
           "name": "Chiropractic",
           "path": "chapters/372.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_372.htm",
-          "sectionCount": 13
+          "sectionCount": 11
         },
         {
           "id": "chapter-373",
@@ -4109,7 +4109,7 @@
           "name": "Medical Examining Boards",
           "path": "chapters/374.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_374.htm",
-          "sectionCount": 7
+          "sectionCount": 3
         },
         {
           "id": "chapter-375",
@@ -4117,7 +4117,7 @@
           "name": "Podiatry",
           "path": "chapters/375.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_375.htm",
-          "sectionCount": 21
+          "sectionCount": 17
         },
         {
           "id": "chapter-375a",
@@ -4149,7 +4149,7 @@
           "name": "Alcohol and Drug Counselors",
           "path": "chapters/376b.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_376b.htm",
-          "sectionCount": 6
+          "sectionCount": 4
         },
         {
           "id": "chapter-376c",
@@ -4165,7 +4165,7 @@
           "name": "Midwifery",
           "path": "chapters/377.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_377.htm",
-          "sectionCount": 12
+          "sectionCount": 10
         },
         {
           "id": "chapter-377a",
@@ -4197,7 +4197,7 @@
           "name": "Dentistry",
           "path": "chapters/379.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_379.htm",
-          "sectionCount": 45
+          "sectionCount": 38
         },
         {
           "id": "chapter-379a",
@@ -4213,7 +4213,7 @@
           "name": "Optometry",
           "path": "chapters/380.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_380.htm",
-          "sectionCount": 23
+          "sectionCount": 19
         },
         {
           "id": "chapter-381",
@@ -4245,7 +4245,7 @@
           "name": "Pharmacy",
           "path": "chapters/382.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_382.htm",
-          "sectionCount": 34
+          "sectionCount": 30
         },
         {
           "id": "chapter-382a",
@@ -4405,7 +4405,7 @@
           "name": "Barbers",
           "path": "chapters/386.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_386.htm",
-          "sectionCount": 18
+          "sectionCount": 16
         },
         {
           "id": "chapter-387",
@@ -4413,7 +4413,7 @@
           "name": "Hairdressers and Cosmeticians, Estheticians, Eyelash Technicians and Nail Technicians",
           "path": "chapters/387.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_387.htm",
-          "sectionCount": 32
+          "sectionCount": 30
         },
         {
           "id": "chapter-387a",
@@ -4445,7 +4445,7 @@
           "name": "Public Accountants",
           "path": "chapters/389.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_389.htm",
-          "sectionCount": 28
+          "sectionCount": 24
         },
         {
           "id": "chapter-390",
@@ -4453,7 +4453,7 @@
           "name": "Architects",
           "path": "chapters/390.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_390.htm",
-          "sectionCount": 18
+          "sectionCount": 16
         },
         {
           "id": "chapter-391",
@@ -4469,7 +4469,7 @@
           "name": "Real Estate Licensees",
           "path": "chapters/392.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_392.htm",
-          "sectionCount": 105
+          "sectionCount": 104
         },
         {
           "id": "chapter-393",
@@ -4485,7 +4485,7 @@
           "name": "Subsurface Sewage Disposal System Installers and Cleaners",
           "path": "chapters/393a.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_393a.htm",
-          "sectionCount": 15
+          "sectionCount": 13
         },
         {
           "id": "chapter-393b",
@@ -4541,7 +4541,7 @@
           "name": "Ambulance Services",
           "path": "chapters/397.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_397.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-397a",
@@ -4565,7 +4565,7 @@
           "name": "Speech and Language Pathologists",
           "path": "chapters/399.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_399.htm",
-          "sectionCount": 14
+          "sectionCount": 12
         },
         {
           "id": "chapter-399a",
@@ -4653,7 +4653,7 @@
           "name": "Uniform Athlete Agents Act",
           "path": "chapters/400i.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_400i.htm",
-          "sectionCount": 7
+          "sectionCount": 3
         },
         {
           "id": "chapter-400j",
@@ -4677,7 +4677,7 @@
           "name": "Shorthand Reporters",
           "path": "chapters/400l.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_400l.htm",
-          "sectionCount": 4
+          "sectionCount": 2
         },
         {
           "id": "chapter-400m",
@@ -4718,7 +4718,7 @@
           "name": "Auctioneers",
           "path": "chapters/403.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_403.htm",
-          "sectionCount": 7
+          "sectionCount": 5
         },
         {
           "id": "chapter-404",
@@ -4750,7 +4750,7 @@
           "name": "Itinerant Vendors",
           "path": "chapters/407.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_407.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-407a",
@@ -4871,7 +4871,7 @@
           "name": "General Provisions. Pure Food and Drugs",
           "path": "chapters/417.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_417.htm",
-          "sectionCount": 109
+          "sectionCount": 105
         },
         {
           "id": "chapter-418",
@@ -4919,7 +4919,7 @@
           "name": "Solicitation of Charitable Funds Act",
           "path": "chapters/419d.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_419d.htm",
-          "sectionCount": 17
+          "sectionCount": 15
         },
         {
           "id": "chapter-419e",
@@ -4951,7 +4951,7 @@
           "name": "Dependency-Producing Drugs",
           "path": "chapters/420b.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_420b.htm",
-          "sectionCount": 68
+          "sectionCount": 64
         },
         {
           "id": "chapter-420c",
@@ -5040,7 +5040,7 @@
           "name": "Department of Agriculture",
           "path": "chapters/422.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_422.htm",
-          "sectionCount": 77
+          "sectionCount": 75
         },
         {
           "id": "chapter-422a",
@@ -5048,7 +5048,7 @@
           "name": "Agricultural Lands",
           "path": "chapters/422a.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_422a.htm",
-          "sectionCount": 18
+          "sectionCount": 16
         },
         {
           "id": "chapter-423",
@@ -5064,7 +5064,7 @@
           "name": "Seeds",
           "path": "chapters/424.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_424.htm",
-          "sectionCount": 17
+          "sectionCount": 14
         },
         {
           "id": "chapter-425",
@@ -5072,7 +5072,7 @@
           "name": "Regional Markets",
           "path": "chapters/425.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_425.htm",
-          "sectionCount": 13
+          "sectionCount": 7
         },
         {
           "id": "chapter-426",
@@ -5080,7 +5080,7 @@
           "name": "Agricultural Experiment Stations",
           "path": "chapters/426.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_426.htm",
-          "sectionCount": 38
+          "sectionCount": 34
         },
         {
           "id": "chapter-427",
@@ -5088,7 +5088,7 @@
           "name": "Fertilizers",
           "path": "chapters/427.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_427.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-427a",
@@ -5112,7 +5112,7 @@
           "name": "Commercial Feeding Stuffs",
           "path": "chapters/428.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_428.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-428a",
@@ -5120,7 +5120,7 @@
           "name": "Commercial and Customer-Formula Feeds",
           "path": "chapters/428a.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_428a.htm",
-          "sectionCount": 15
+          "sectionCount": 13
         },
         {
           "id": "chapter-429",
@@ -5128,7 +5128,7 @@
           "name": "Agricultural Societies",
           "path": "chapters/429.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_429.htm",
-          "sectionCount": 12
+          "sectionCount": 8
         },
         {
           "id": "chapter-430",
@@ -5136,7 +5136,7 @@
           "name": "Milk and Milk Products",
           "path": "chapters/430.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_430.htm",
-          "sectionCount": 101
+          "sectionCount": 83
         },
         {
           "id": "chapter-430a",
@@ -5152,7 +5152,7 @@
           "name": "Milk Industry",
           "path": "chapters/431.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_431.htm",
-          "sectionCount": 61
+          "sectionCount": 53
         },
         {
           "id": "chapter-432",
@@ -5160,7 +5160,7 @@
           "name": "Slaughtering of Animals. Commission Sales Stables",
           "path": "chapters/432.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_432.htm",
-          "sectionCount": 10
+          "sectionCount": 6
         },
         {
           "id": "chapter-433",
@@ -5168,7 +5168,7 @@
           "name": "Diseases of Domestic Animals",
           "path": "chapters/433.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_433.htm",
-          "sectionCount": 67
+          "sectionCount": 61
         },
         {
           "id": "chapter-434",
@@ -5184,7 +5184,7 @@
           "name": "Dogs and Other Companion Animals. Kennels and Pet Shops",
           "path": "chapters/435.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_435.htm",
-          "sectionCount": 77
+          "sectionCount": 73
         },
         {
           "id": "chapter-436",
@@ -5192,7 +5192,7 @@
           "name": "Pounds",
           "path": "chapters/436.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_436.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-436a",
@@ -5200,7 +5200,7 @@
           "name": "Animal Population Control",
           "path": "chapters/436a.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_436a.htm",
-          "sectionCount": 11
+          "sectionCount": 10
         },
         {
           "id": "chapter-437",
@@ -5216,7 +5216,7 @@
           "name": "Meat and Poultry Products Inspection Act",
           "path": "chapters/438.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_438.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-438a",
@@ -5232,7 +5232,7 @@
           "name": "State Aquaculture Commission",
           "path": "chapters/438b.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_438b.htm",
-          "sectionCount": 5
+          "sectionCount": 3
         },
         {
           "id": "chapter-438c",
@@ -5265,7 +5265,7 @@
           "name": "Department of Energy and Environmental Protection. State Policy",
           "path": "chapters/439.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_439.htm",
-          "sectionCount": 126
+          "sectionCount": 122
         },
         {
           "id": "chapter-440",
@@ -5273,7 +5273,7 @@
           "name": "Wetlands and Watercourses",
           "path": "chapters/440.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_440.htm",
-          "sectionCount": 32
+          "sectionCount": 30
         },
         {
           "id": "chapter-441",
@@ -5297,7 +5297,7 @@
           "name": "Litter Control",
           "path": "chapters/443.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_443.htm",
-          "sectionCount": 7
+          "sectionCount": 5
         },
         {
           "id": "chapter-444",
@@ -5305,7 +5305,7 @@
           "name": "Coastal Management",
           "path": "chapters/444.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_444.htm",
-          "sectionCount": 31
+          "sectionCount": 29
         },
         {
           "id": "chapter-444a",
@@ -5329,7 +5329,7 @@
           "name": "Hazardous Waste Management Service",
           "path": "chapters/445a.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_445a.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-445b",
@@ -5353,7 +5353,7 @@
           "name": "Radiation and Radioactive Materials",
           "path": "chapters/446a.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_446a.htm",
-          "sectionCount": 27
+          "sectionCount": 25
         },
         {
           "id": "chapter-446b",
@@ -5361,7 +5361,7 @@
           "name": "Mid-Atlantic States Air Pollution Control Compact",
           "path": "chapters/446b.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_446b.htm",
-          "sectionCount": 4
+          "sectionCount": 2
         },
         {
           "id": "chapter-446c",
@@ -5369,7 +5369,7 @@
           "name": "Air Pollution Control",
           "path": "chapters/446c.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_446c.htm",
-          "sectionCount": 73
+          "sectionCount": 67
         },
         {
           "id": "chapter-446d",
@@ -5377,7 +5377,7 @@
           "name": "Solid Waste Management",
           "path": "chapters/446d.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_446d.htm",
-          "sectionCount": 190
+          "sectionCount": 186
         },
         {
           "id": "chapter-446e",
@@ -5385,7 +5385,7 @@
           "name": "Solid Waste Management Services Act",
           "path": "chapters/446e.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_446e.htm",
-          "sectionCount": 52
+          "sectionCount": 48
         },
         {
           "id": "chapter-446f",
@@ -5417,7 +5417,7 @@
           "name": "Water Resources. Invasive Plants",
           "path": "chapters/446i.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_446i.htm",
-          "sectionCount": 116
+          "sectionCount": 112
         },
         {
           "id": "chapter-446j",
@@ -5433,7 +5433,7 @@
           "name": "Water Pollution Control",
           "path": "chapters/446k.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_446k.htm",
-          "sectionCount": 167
+          "sectionCount": 162
         },
         {
           "id": "chapter-446l",
@@ -5482,7 +5482,7 @@
           "name": "State Parks and Forests",
           "path": "chapters/447.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_447.htm",
-          "sectionCount": 75
+          "sectionCount": 71
         },
         {
           "id": "chapter-447a",
@@ -5490,7 +5490,7 @@
           "name": "Park Improvement Employment Projects",
           "path": "chapters/447a.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_447a.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-448",
@@ -5522,7 +5522,7 @@
           "name": "Public Shade Trees and Tree Protection Examining Board",
           "path": "chapters/451.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_451.htm",
-          "sectionCount": 23
+          "sectionCount": 21
         },
         {
           "id": "chapter-451a",
@@ -5579,7 +5579,7 @@
           "name": "Weather Control Board",
           "path": "chapters/463.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_463.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         }
       ]
     },
@@ -5596,7 +5596,7 @@
           "name": "Water Resources",
           "path": "chapters/473.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_473.htm",
-          "sectionCount": 13
+          "sectionCount": 11
         },
         {
           "id": "chapter-474",
@@ -5604,7 +5604,7 @@
           "name": "Pollution",
           "path": "chapters/474.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_474.htm",
-          "sectionCount": 80
+          "sectionCount": 74
         },
         {
           "id": "chapter-474a",
@@ -5676,7 +5676,7 @@
           "name": "River Protection",
           "path": "chapters/477d.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_477d.htm",
-          "sectionCount": 7
+          "sectionCount": 5
         },
         {
           "id": "chapter-478",
@@ -5724,7 +5724,7 @@
           "name": "Interstate Water Compact",
           "path": "chapters/481.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_481.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-482",
@@ -5740,7 +5740,7 @@
           "name": "Long Island Sound",
           "path": "chapters/483.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_483.htm",
-          "sectionCount": 19
+          "sectionCount": 15
         },
         {
           "id": "chapter-483a",
@@ -5764,7 +5764,7 @@
           "name": "Bi-State Farmington River Commission",
           "path": "chapters/483c.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_483c.htm",
-          "sectionCount": 5
+          "sectionCount": 3
         },
         {
           "id": "chapter-483aa",
@@ -5805,7 +5805,7 @@
           "name": "Fisheries and Game",
           "path": "chapters/490.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_490.htm",
-          "sectionCount": 277
+          "sectionCount": 263
         },
         {
           "id": "chapter-491",
@@ -5813,7 +5813,7 @@
           "name": "State Shellfisheries",
           "path": "chapters/491.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_491.htm",
-          "sectionCount": 74
+          "sectionCount": 68
         },
         {
           "id": "chapter-492",
@@ -5821,7 +5821,7 @@
           "name": "Local Shellfisheries",
           "path": "chapters/492.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_492.htm",
-          "sectionCount": 61
+          "sectionCount": 51
         },
         {
           "id": "chapter-493",
@@ -5862,7 +5862,7 @@
           "name": "Militia",
           "path": "chapters/504.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_504.htm",
-          "sectionCount": 125
+          "sectionCount": 121
         },
         {
           "id": "chapter-505",
@@ -5886,7 +5886,7 @@
           "name": "Veterans",
           "path": "chapters/506.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_506.htm",
-          "sectionCount": 79
+          "sectionCount": 66
         },
         {
           "id": "chapter-507",
@@ -5992,7 +5992,7 @@
           "name": "Fire Marshals and Fire Hazards",
           "path": "chapters/530.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_530.htm",
-          "sectionCount": 17
+          "sectionCount": 15
         },
         {
           "id": "chapter-530a",
@@ -6008,7 +6008,7 @@
           "name": "Motion Pictures",
           "path": "chapters/531.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_531.htm",
-          "sectionCount": 23
+          "sectionCount": 17
         },
         {
           "id": "chapter-532",
@@ -6024,7 +6024,7 @@
           "name": "Boxing and Mixed Martial Arts",
           "path": "chapters/532a.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_532a.htm",
-          "sectionCount": 20
+          "sectionCount": 18
         },
         {
           "id": "chapter-533",
@@ -6072,7 +6072,7 @@
           "name": "Organized Crime Investigative Task Force. Regional Narcotics Squads and Coordinating Committee",
           "path": "chapters/536.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_536.htm",
-          "sectionCount": 20
+          "sectionCount": 18
         },
         {
           "id": "chapter-537",
@@ -6080,7 +6080,7 @@
           "name": "Connecticut Justice Commission",
           "path": "chapters/537.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_537.htm",
-          "sectionCount": 6
+          "sectionCount": 4
         },
         {
           "id": "chapter-538",
@@ -6120,7 +6120,7 @@
           "name": "Building, Fire and Demolition Codes. Fire Marshals and Fire Hazards. Safety of Public and Other Structures",
           "path": "chapters/541.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_541.htm",
-          "sectionCount": 205
+          "sectionCount": 193
         },
         {
           "id": "chapter-541a",
@@ -6145,7 +6145,7 @@
           "name": "Liquor Control Act",
           "path": "chapters/545.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_545.htm",
-          "sectionCount": 233
+          "sectionCount": 215
         }
       ]
     },
@@ -6162,7 +6162,7 @@
           "name": "Labor Department",
           "path": "chapters/556.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_556.htm",
-          "sectionCount": 72
+          "sectionCount": 66
         },
         {
           "id": "chapter-556a",
@@ -6170,7 +6170,7 @@
           "name": "Workforce Development",
           "path": "chapters/556a.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_556a.htm",
-          "sectionCount": 29
+          "sectionCount": 23
         },
         {
           "id": "chapter-557",
@@ -6178,7 +6178,7 @@
           "name": "Employment Regulation",
           "path": "chapters/557.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_557.htm",
-          "sectionCount": 201
+          "sectionCount": 181
         },
         {
           "id": "chapter-558",
@@ -6186,7 +6186,7 @@
           "name": "Wages",
           "path": "chapters/558.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_558.htm",
-          "sectionCount": 54
+          "sectionCount": 50
         },
         {
           "id": "chapter-559",
@@ -6194,7 +6194,7 @@
           "name": "Labor Organizations",
           "path": "chapters/559.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_559.htm",
-          "sectionCount": 8
+          "sectionCount": 6
         },
         {
           "id": "chapter-560",
@@ -6226,7 +6226,7 @@
           "name": "Fair Employment Practices",
           "path": "chapters/563.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_563.htm",
-          "sectionCount": 12
+          "sectionCount": 10
         },
         {
           "id": "chapter-563a",
@@ -6242,7 +6242,7 @@
           "name": "Private Employment and Information Agencies",
           "path": "chapters/564.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_564.htm",
-          "sectionCount": 11
+          "sectionCount": 9
         },
         {
           "id": "chapter-565",
@@ -6258,7 +6258,7 @@
           "name": "Workmen's Compensation Act",
           "path": "chapters/566.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_566.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-566a",
@@ -6274,7 +6274,7 @@
           "name": "Unemployment Compensation",
           "path": "chapters/567.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_567.htm",
-          "sectionCount": 115
+          "sectionCount": 111
         },
         {
           "id": "chapter-568",
@@ -6282,7 +6282,7 @@
           "name": "Workers' Compensation Act",
           "path": "chapters/568.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_568.htm",
-          "sectionCount": 163
+          "sectionCount": 157
         },
         {
           "id": "chapter-569",
@@ -6290,7 +6290,7 @@
           "name": "Full Employment Act",
           "path": "chapters/569.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_569.htm",
-          "sectionCount": 6
+          "sectionCount": 4
         },
         {
           "id": "chapter-569a",
@@ -6306,7 +6306,7 @@
           "name": "Committee of Concern for Connecticut Jobs",
           "path": "chapters/570.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_570.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-571",
@@ -6338,7 +6338,7 @@
           "name": "Connecticut Retirement Security Authority. Connecticut Retirement Security Exchange",
           "path": "chapters/574.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_574.htm",
-          "sectionCount": 18
+          "sectionCount": 16
         },
         {
           "id": "chapter-577",
@@ -6363,7 +6363,7 @@
           "name": "Department of Economic and Community Development",
           "path": "chapters/578.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_578.htm",
-          "sectionCount": 146
+          "sectionCount": 129
         },
         {
           "id": "chapter-579",
@@ -6371,7 +6371,7 @@
           "name": "Connecticut Innovations, Incorporated",
           "path": "chapters/579.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_579.htm",
-          "sectionCount": 76
+          "sectionCount": 70
         },
         {
           "id": "chapter-580",
@@ -6379,7 +6379,7 @@
           "name": "Connecticut Research Commission",
           "path": "chapters/580.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_580.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-580a",
@@ -6395,7 +6395,7 @@
           "name": "Innovation Capital Act of 1989. Connecticut Innovations, Incorporated",
           "path": "chapters/581.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_581.htm",
-          "sectionCount": 82
+          "sectionCount": 76
         },
         {
           "id": "chapter-582",
@@ -6403,7 +6403,7 @@
           "name": "Surety Bond Guarantee Program for Small Contractors",
           "path": "chapters/582.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_582.htm",
-          "sectionCount": 6
+          "sectionCount": 2
         },
         {
           "id": "chapter-583",
@@ -6435,7 +6435,7 @@
           "name": "Enterprise Zones, Entertainment Districts, Enterprise Corridor Zones and Airport Development Zones",
           "path": "chapters/585.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_585.htm",
-          "sectionCount": 26
+          "sectionCount": 24
         },
         {
           "id": "chapter-586",
@@ -6443,7 +6443,7 @@
           "name": "Loans to Small Contractors and Small Manufacturers",
           "path": "chapters/586.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_586.htm",
-          "sectionCount": 4
+          "sectionCount": 2
         },
         {
           "id": "chapter-587",
@@ -6451,7 +6451,7 @@
           "name": "Connecticut Film, Video and Media Office and Commission",
           "path": "chapters/587.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_587.htm",
-          "sectionCount": 9
+          "sectionCount": 7
         },
         {
           "id": "chapter-588",
@@ -6467,7 +6467,7 @@
           "name": "Infrastructure Development Economic Assistance",
           "path": "chapters/588a.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588a.htm",
-          "sectionCount": 4
+          "sectionCount": 2
         },
         {
           "id": "chapter-588b",
@@ -6475,7 +6475,7 @@
           "name": "Loan Incentives for Employment",
           "path": "chapters/588b.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588b.htm",
-          "sectionCount": 4
+          "sectionCount": 2
         },
         {
           "id": "chapter-588c",
@@ -6491,7 +6491,7 @@
           "name": "Employee Ownership Trust Fund",
           "path": "chapters/588d.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588d.htm",
-          "sectionCount": 4
+          "sectionCount": 2
         },
         {
           "id": "chapter-588e",
@@ -6499,7 +6499,7 @@
           "name": "Northeast Connecticut Capital Assistance Fund",
           "path": "chapters/588e.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588e.htm",
-          "sectionCount": 4
+          "sectionCount": 2
         },
         {
           "id": "chapter-588f",
@@ -6507,7 +6507,7 @@
           "name": "Exporters Revolving Loan Fund",
           "path": "chapters/588f.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588f.htm",
-          "sectionCount": 4
+          "sectionCount": 2
         },
         {
           "id": "chapter-588g",
@@ -6515,7 +6515,7 @@
           "name": "Job Training Coordination",
           "path": "chapters/588g.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588g.htm",
-          "sectionCount": 4
+          "sectionCount": 2
         },
         {
           "id": "chapter-588h",
@@ -6531,7 +6531,7 @@
           "name": "Connecticut-Israel Exchange Commission",
           "path": "chapters/588i.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588i.htm",
-          "sectionCount": 4
+          "sectionCount": 2
         },
         {
           "id": "chapter-588j",
@@ -6539,7 +6539,7 @@
           "name": "Connecticut Convention Center",
           "path": "chapters/588j.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588j.htm",
-          "sectionCount": 4
+          "sectionCount": 2
         },
         {
           "id": "chapter-588k",
@@ -6547,7 +6547,7 @@
           "name": "Lower Fairfield County Convention Center Authority",
           "path": "chapters/588k.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588k.htm",
-          "sectionCount": 4
+          "sectionCount": 2
         },
         {
           "id": "chapter-588l",
@@ -6563,7 +6563,7 @@
           "name": "Commission on Connecticut's Future",
           "path": "chapters/588m.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588m.htm",
-          "sectionCount": 4
+          "sectionCount": 2
         },
         {
           "id": "chapter-588n",
@@ -6579,7 +6579,7 @@
           "name": "Tourism",
           "path": "chapters/588o.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588o.htm",
-          "sectionCount": 5
+          "sectionCount": 3
         },
         {
           "id": "chapter-588p",
@@ -6587,7 +6587,7 @@
           "name": "Energy Conservation Loans and Investment in Alternative Fuels",
           "path": "chapters/588p.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588p.htm",
-          "sectionCount": 13
+          "sectionCount": 11
         },
         {
           "id": "chapter-588q",
@@ -6611,7 +6611,7 @@
           "name": "Stadium Project",
           "path": "chapters/588s.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588s.htm",
-          "sectionCount": 13
+          "sectionCount": 5
         },
         {
           "id": "chapter-588t",
@@ -6619,7 +6619,7 @@
           "name": "Connecticut Port Authority",
           "path": "chapters/588t.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588t.htm",
-          "sectionCount": 5
+          "sectionCount": 3
         },
         {
           "id": "chapter-588u",
@@ -6659,7 +6659,7 @@
           "name": "Patriots Stadium",
           "path": "chapters/588y.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588y.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-588z",
@@ -6691,7 +6691,7 @@
           "name": "Innovation Network for Economic Development",
           "path": "chapters/588cc.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_588cc.htm",
-          "sectionCount": 5
+          "sectionCount": 3
         },
         {
           "id": "chapter-588dd",
@@ -6748,7 +6748,7 @@
           "name": "Specially Chartered Corporations. General Provisions",
           "path": "chapters/589.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_589.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-590",
@@ -6756,7 +6756,7 @@
           "name": "Corporations with Capital Stock",
           "path": "chapters/590.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_590.htm",
-          "sectionCount": 9
+          "sectionCount": 3
         },
         {
           "id": "chapter-591",
@@ -6764,7 +6764,7 @@
           "name": "Corporations without Capital Stock",
           "path": "chapters/591.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_591.htm",
-          "sectionCount": 6
+          "sectionCount": 2
         },
         {
           "id": "chapter-592",
@@ -6796,7 +6796,7 @@
           "name": "Medical Group Clinic Corporations",
           "path": "chapters/594.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_594.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-594a",
@@ -6828,7 +6828,7 @@
           "name": "Cooperative Marketing Corporations",
           "path": "chapters/596.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_596.htm",
-          "sectionCount": 22
+          "sectionCount": 18
         },
         {
           "id": "chapter-597",
@@ -6844,7 +6844,7 @@
           "name": "Religious Corporations and Societies",
           "path": "chapters/598.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_598.htm",
-          "sectionCount": 35
+          "sectionCount": 33
         },
         {
           "id": "chapter-598a",
@@ -6860,7 +6860,7 @@
           "name": "Stock Corporations",
           "path": "chapters/599.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_599.htm",
-          "sectionCount": 67
+          "sectionCount": 27
         },
         {
           "id": "chapter-599a",
@@ -6876,7 +6876,7 @@
           "name": "Nonstock Corporations",
           "path": "chapters/600.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_600.htm",
-          "sectionCount": 45
+          "sectionCount": 17
         },
         {
           "id": "chapter-601",
@@ -6884,7 +6884,7 @@
           "name": "Business Corporations",
           "path": "chapters/601.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_601.htm",
-          "sectionCount": 280
+          "sectionCount": 278
         },
         {
           "id": "chapter-602",
@@ -6933,7 +6933,7 @@
           "name": "Limited Partnerships",
           "path": "chapters/609.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_609.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-610",
@@ -6941,7 +6941,7 @@
           "name": "Uniform Limited Partnership Act",
           "path": "chapters/610.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_610.htm",
-          "sectionCount": 89
+          "sectionCount": 87
         },
         {
           "id": "chapter-611",
@@ -6949,7 +6949,7 @@
           "name": "Uniform Partnership Act",
           "path": "chapters/611.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_611.htm",
-          "sectionCount": 9
+          "sectionCount": 7
         },
         {
           "id": "chapter-612",
@@ -6965,7 +6965,7 @@
           "name": "Limited Liability Companies",
           "path": "chapters/613.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_613.htm",
-          "sectionCount": 62
+          "sectionCount": 29
         },
         {
           "id": "chapter-613a",
@@ -6981,7 +6981,7 @@
           "name": "Uniform Partnership Act. Limited Liability Partnerships",
           "path": "chapters/614.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_614.htm",
-          "sectionCount": 91
+          "sectionCount": 89
         },
         {
           "id": "chapter-615",
@@ -7030,7 +7030,7 @@
           "name": "Trademarks",
           "path": "chapters/621.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_621.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-621a",
@@ -7046,7 +7046,7 @@
           "name": "Trade Union Labels. Insignia",
           "path": "chapters/622.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_622.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-622a",
@@ -7095,7 +7095,7 @@
           "name": "Chapters 634–662e The Banking Law of Connecticut",
           "path": "chapters/634.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_634-662e.htm",
-          "sectionCount": 152
+          "sectionCount": 52
         }
       ]
     },
@@ -7144,7 +7144,7 @@
           "name": "Powers, Loans and Investments",
           "path": "chapters/665.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_665.htm",
-          "sectionCount": 28
+          "sectionCount": 26
         },
         {
           "id": "chapter-665a",
@@ -7184,7 +7184,7 @@
           "name": "Credit Unions",
           "path": "chapters/667.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_667.htm",
-          "sectionCount": 81
+          "sectionCount": 71
         },
         {
           "id": "chapter-668",
@@ -7192,7 +7192,7 @@
           "name": "Nondepository Financial Institutions",
           "path": "chapters/668.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_668.htm",
-          "sectionCount": 127
+          "sectionCount": 123
         },
         {
           "id": "chapter-669",
@@ -7200,7 +7200,7 @@
           "name": "Regulated Activities",
           "path": "chapters/669.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_669.htm",
-          "sectionCount": 207
+          "sectionCount": 205
         }
       ]
     },
@@ -7275,7 +7275,7 @@
           "name": "Chapters 674–696 Insurance",
           "path": "chapters/674.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_674-696.htm",
-          "sectionCount": 88
+          "sectionCount": 29
         }
       ]
     },
@@ -7292,7 +7292,7 @@
           "name": "General Provisions",
           "path": "chapters/697.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_697.htm",
-          "sectionCount": 35
+          "sectionCount": 33
         },
         {
           "id": "chapter-698",
@@ -7300,7 +7300,7 @@
           "name": "Insurers",
           "path": "chapters/698.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_698.htm",
-          "sectionCount": 214
+          "sectionCount": 210
         },
         {
           "id": "chapter-698a",
@@ -7308,7 +7308,7 @@
           "name": "Health Care and Related Service Groups",
           "path": "chapters/698a.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_698a.htm",
-          "sectionCount": 50
+          "sectionCount": 48
         },
         {
           "id": "chapter-698b",
@@ -7356,7 +7356,7 @@
           "name": "Property and Casualty Insurance",
           "path": "chapters/700.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_700.htm",
-          "sectionCount": 107
+          "sectionCount": 101
         },
         {
           "id": "chapter-700a",
@@ -7372,7 +7372,7 @@
           "name": "Life Insurance, Annuities, Burial Contracts and Life Settlements",
           "path": "chapters/700b.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_700b.htm",
-          "sectionCount": 58
+          "sectionCount": 56
         },
         {
           "id": "chapter-700c",
@@ -7380,7 +7380,7 @@
           "name": "Health Insurance",
           "path": "chapters/700c.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_700c.htm",
-          "sectionCount": 373
+          "sectionCount": 367
         },
         {
           "id": "chapter-700d",
@@ -7452,7 +7452,7 @@
           "name": "(Insurance Administrators) Reinsurance Intermediary Act",
           "path": "chapters/701e.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_701e.htm",
-          "sectionCount": 15
+          "sectionCount": 13
         },
         {
           "id": "chapter-701f",
@@ -7468,7 +7468,7 @@
           "name": "Licensing",
           "path": "chapters/702.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_702.htm",
-          "sectionCount": 33
+          "sectionCount": 31
         },
         {
           "id": "chapter-703",
@@ -7508,7 +7508,7 @@
           "name": "Insurers Rehabilitation and Liquidation Act and Termination of Domestic Life Insurance Companies",
           "path": "chapters/704c.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_704c.htm",
-          "sectionCount": 78
+          "sectionCount": 76
         },
         {
           "id": "chapter-705",
@@ -7590,7 +7590,7 @@
           "name": "Uniform Warehouse Receipts Act",
           "path": "chapters/708.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_708.htm",
-          "sectionCount": 12
+          "sectionCount": 8
         },
         {
           "id": "chapter-709",
@@ -7598,7 +7598,7 @@
           "name": "Uniform Trust Receipts Act",
           "path": "chapters/709.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_709.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         }
       ]
     },
@@ -7615,7 +7615,7 @@
           "name": "Bills of Lading",
           "path": "chapters/720.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_720.htm",
-          "sectionCount": 10
+          "sectionCount": 8
         }
       ]
     },
@@ -7632,7 +7632,7 @@
           "name": "The Sales Act",
           "path": "chapters/731.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_731.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-732",
@@ -7640,7 +7640,7 @@
           "name": "Sales of Personal Property on Condition",
           "path": "chapters/732.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_732.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-733",
@@ -7664,7 +7664,7 @@
           "name": "Bulk Sales",
           "path": "chapters/734.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_734.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-734a",
@@ -7680,7 +7680,7 @@
           "name": "Time Shares",
           "path": "chapters/734b.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_734b.htm",
-          "sectionCount": 31
+          "sectionCount": 29
         },
         {
           "id": "chapter-735",
@@ -7688,7 +7688,7 @@
           "name": "Fair Trade Act",
           "path": "chapters/735.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_735.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-735a",
@@ -7720,7 +7720,7 @@
           "name": "Unfair Sales Practices",
           "path": "chapters/736.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_736.htm",
-          "sectionCount": 20
+          "sectionCount": 18
         },
         {
           "id": "chapter-737",
@@ -7768,7 +7768,7 @@
           "name": "Assignment of Choses in Action",
           "path": "chapters/738.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_738.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-738a",
@@ -7792,7 +7792,7 @@
           "name": "Trading Stamps, Mail Orders, Franchises, Credit Programs and Subscriptions",
           "path": "chapters/739.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_739.htm",
-          "sectionCount": 49
+          "sectionCount": 47
         },
         {
           "id": "chapter-740",
@@ -7840,7 +7840,7 @@
           "name": "Noncommercial Motor Vehicle Lease Agreements",
           "path": "chapters/742a.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_742a.htm",
-          "sectionCount": 8
+          "sectionCount": 4
         },
         {
           "id": "chapter-742b",
@@ -8153,7 +8153,7 @@
           "name": "General Provisions",
           "path": "chapters/art-001.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/art_001.htm",
-          "sectionCount": 27
+          "sectionCount": 25
         },
         {
           "id": "chapter-art-002",
@@ -8177,7 +8177,7 @@
           "name": "Negotiable Instruments",
           "path": "chapters/art-003.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/art_003.htm",
-          "sectionCount": 80
+          "sectionCount": 74
         },
         {
           "id": "chapter-art-004",
@@ -8209,7 +8209,7 @@
           "name": "Bulk Transfers",
           "path": "chapters/art-006.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/art_006.htm",
-          "sectionCount": 4
+          "sectionCount": 2
         },
         {
           "id": "chapter-art-007",
@@ -8225,7 +8225,7 @@
           "name": "Investment Securities",
           "path": "chapters/art-008.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/art_008.htm",
-          "sectionCount": 56
+          "sectionCount": 54
         },
         {
           "id": "chapter-art-009",
@@ -8233,7 +8233,7 @@
           "name": "Secured Transactions",
           "path": "chapters/art-009.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/art_009.htm",
-          "sectionCount": 150
+          "sectionCount": 148
         },
         {
           "id": "chapter-art-010",
@@ -8283,7 +8283,7 @@
           "name": "Public Weighmasters",
           "path": "chapters/751.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_751.htm",
-          "sectionCount": 20
+          "sectionCount": 18
         },
         {
           "id": "chapter-752",
@@ -8333,7 +8333,7 @@
           "name": "Chapters 774–800 Probate Courts and Procedure",
           "path": "chapters/774.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_774-800.htm",
-          "sectionCount": 116
+          "sectionCount": 40
         }
       ]
     },
@@ -8350,7 +8350,7 @@
           "name": "Probate Court: Administrative Provisions",
           "path": "chapters/801.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_801.htm",
-          "sectionCount": 93
+          "sectionCount": 89
         },
         {
           "id": "chapter-801a",
@@ -8366,7 +8366,7 @@
           "name": "Probate Court Procedures",
           "path": "chapters/801b.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_801b.htm",
-          "sectionCount": 85
+          "sectionCount": 83
         },
         {
           "id": "chapter-802",
@@ -8374,7 +8374,7 @@
           "name": "Fiduciaries",
           "path": "chapters/802.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_802.htm",
-          "sectionCount": 27
+          "sectionCount": 25
         },
         {
           "id": "chapter-802a",
@@ -8390,7 +8390,7 @@
           "name": "Decedents' Estates",
           "path": "chapters/802b.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_802b.htm",
-          "sectionCount": 171
+          "sectionCount": 169
         },
         {
           "id": "chapter-802c",
@@ -8398,7 +8398,7 @@
           "name": "Trusts",
           "path": "chapters/802c.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_802c.htm",
-          "sectionCount": 258
+          "sectionCount": 248
         },
         {
           "id": "chapter-802d",
@@ -8406,7 +8406,7 @@
           "name": "Connecticut Uniform Transfers to Minors Act",
           "path": "chapters/802d.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_802d.htm",
-          "sectionCount": 28
+          "sectionCount": 26
         },
         {
           "id": "chapter-802e",
@@ -8446,7 +8446,7 @@
           "name": "Termination of Parental Rights and Adoption",
           "path": "chapters/803.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_803.htm",
-          "sectionCount": 62
+          "sectionCount": 61
         },
         {
           "id": "chapter-803a",
@@ -8454,7 +8454,7 @@
           "name": "Children Conceived Through Artificial Insemination. Children of Decedent Conceived and Born After Death of Decedent",
           "path": "chapters/803a.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_803a.htm",
-          "sectionCount": 11
+          "sectionCount": 9
         }
       ]
     },
@@ -8471,7 +8471,7 @@
           "name": "Chapters 808–811 Husband and Wife",
           "path": "chapters/808.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_808-811.htm",
-          "sectionCount": 13
+          "sectionCount": 5
         }
       ]
     },
@@ -8496,7 +8496,7 @@
           "name": "Protection and Advocacy for Persons with Disabilities",
           "path": "chapters/813.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_813.htm",
-          "sectionCount": 21
+          "sectionCount": 17
         },
         {
           "id": "chapter-813a",
@@ -8536,7 +8536,7 @@
           "name": "Human Rights and Opportunities",
           "path": "chapters/814c.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_814c.htm",
-          "sectionCount": 118
+          "sectionCount": 115
         },
         {
           "id": "chapter-814d",
@@ -8544,7 +8544,7 @@
           "name": "Commission on Women, Children, Seniors, Equity and Opportunity Concerning Children",
           "path": "chapters/814d.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_814d.htm",
-          "sectionCount": 10
+          "sectionCount": 8
         },
         {
           "id": "chapter-814e",
@@ -8601,7 +8601,7 @@
           "name": "Marriage",
           "path": "chapters/815e.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_815e.htm",
-          "sectionCount": 54
+          "sectionCount": 52
         },
         {
           "id": "chapter-815f",
@@ -8609,7 +8609,7 @@
           "name": "Civil Union",
           "path": "chapters/815f.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_815f.htm",
-          "sectionCount": 9
+          "sectionCount": 7
         },
         {
           "id": "chapter-815j",
@@ -8625,7 +8625,7 @@
           "name": "Uniform Child Custody Jurisdiction Act",
           "path": "chapters/815o.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_815o.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-815p",
@@ -8649,7 +8649,7 @@
           "name": "Juvenile Matters",
           "path": "chapters/815t.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_815t.htm",
-          "sectionCount": 108
+          "sectionCount": 94
         },
         {
           "id": "chapter-815y",
@@ -8665,7 +8665,7 @@
           "name": "Support",
           "path": "chapters/816.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_816.htm",
-          "sectionCount": 43
+          "sectionCount": 35
         },
         {
           "id": "chapter-817",
@@ -8681,7 +8681,7 @@
           "name": "Connecticut Parentage Act and Parentage-Related Provisions",
           "path": "chapters/818.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_818.htm",
-          "sectionCount": 115
+          "sectionCount": 114
         }
       ]
     },
@@ -8698,7 +8698,7 @@
           "name": "Land Titles",
           "path": "chapters/821.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_821.htm",
-          "sectionCount": 87
+          "sectionCount": 84
         },
         {
           "id": "chapter-821a",
@@ -8706,7 +8706,7 @@
           "name": "Forms of Deeds and Mortgages",
           "path": "chapters/821a.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_821a.htm",
-          "sectionCount": 21
+          "sectionCount": 19
         },
         {
           "id": "chapter-821b",
@@ -8746,7 +8746,7 @@
           "name": "Indians",
           "path": "chapters/824.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_824.htm",
-          "sectionCount": 29
+          "sectionCount": 25
         },
         {
           "id": "chapter-825",
@@ -8754,7 +8754,7 @@
           "name": "Condominium Act",
           "path": "chapters/825.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_825.htm",
-          "sectionCount": 52
+          "sectionCount": 48
         },
         {
           "id": "chapter-826",
@@ -8860,7 +8860,7 @@
           "name": "Eminent Domain",
           "path": "chapters/835.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_835.htm",
-          "sectionCount": 38
+          "sectionCount": 36
         }
       ]
     },
@@ -8877,7 +8877,7 @@
           "name": "Mortgages",
           "path": "chapters/846.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_846.htm",
-          "sectionCount": 92
+          "sectionCount": 90
         },
         {
           "id": "chapter-847",
@@ -8885,7 +8885,7 @@
           "name": "Liens",
           "path": "chapters/847.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_847.htm",
-          "sectionCount": 99
+          "sectionCount": 95
         },
         {
           "id": "chapter-848",
@@ -8893,7 +8893,7 @@
           "name": "Chattel Mortgages",
           "path": "chapters/848.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_848.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         }
       ]
     },
@@ -8910,7 +8910,7 @@
           "name": "Lost and Unclaimed Property",
           "path": "chapters/859.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_859.htm",
-          "sectionCount": 15
+          "sectionCount": 13
         }
       ]
     },
@@ -8984,7 +8984,7 @@
           "name": "Judicial Department",
           "path": "chapters/870.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_870.htm",
-          "sectionCount": 50
+          "sectionCount": 44
         },
         {
           "id": "chapter-871",
@@ -8992,7 +8992,7 @@
           "name": "Courts",
           "path": "chapters/871.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_871.htm",
-          "sectionCount": 24
+          "sectionCount": 22
         },
         {
           "id": "chapter-872",
@@ -9000,7 +9000,7 @@
           "name": "Judges",
           "path": "chapters/872.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_872.htm",
-          "sectionCount": 46
+          "sectionCount": 44
         },
         {
           "id": "chapter-872a",
@@ -9016,7 +9016,7 @@
           "name": "Court Clerks",
           "path": "chapters/873.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_873.htm",
-          "sectionCount": 16
+          "sectionCount": 14
         },
         {
           "id": "chapter-874",
@@ -9024,7 +9024,7 @@
           "name": "Court Reporters",
           "path": "chapters/874.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_874.htm",
-          "sectionCount": 12
+          "sectionCount": 10
         },
         {
           "id": "chapter-875",
@@ -9032,7 +9032,7 @@
           "name": "Court Messengers",
           "path": "chapters/875.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_875.htm",
-          "sectionCount": 7
+          "sectionCount": 3
         },
         {
           "id": "chapter-876",
@@ -9040,7 +9040,7 @@
           "name": "Attorneys",
           "path": "chapters/876.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_876.htm",
-          "sectionCount": 40
+          "sectionCount": 38
         },
         {
           "id": "chapter-877",
@@ -9048,7 +9048,7 @@
           "name": "Justices of the Peace",
           "path": "chapters/877.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_877.htm",
-          "sectionCount": 13
+          "sectionCount": 9
         },
         {
           "id": "chapter-878",
@@ -9056,7 +9056,7 @@
           "name": "Trial Justices and Prosecuting Grand Jurors",
           "path": "chapters/878.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_878.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-879",
@@ -9064,7 +9064,7 @@
           "name": "Municipal Courts",
           "path": "chapters/879.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_879.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-880",
@@ -9080,7 +9080,7 @@
           "name": "Court of Common Pleas",
           "path": "chapters/881.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_881.htm",
-          "sectionCount": 37
+          "sectionCount": 21
         },
         {
           "id": "chapter-881a",
@@ -9088,7 +9088,7 @@
           "name": "Common Pleas Judicial District of Ansonia-Milford",
           "path": "chapters/881a.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_881a.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-881b",
@@ -9104,7 +9104,7 @@
           "name": "Superior Court",
           "path": "chapters/882.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_882.htm",
-          "sectionCount": 91
+          "sectionCount": 77
         },
         {
           "id": "chapter-883",
@@ -9136,7 +9136,7 @@
           "name": "Jurors",
           "path": "chapters/884.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_884.htm",
-          "sectionCount": 52
+          "sectionCount": 44
         },
         {
           "id": "chapter-885",
@@ -9144,7 +9144,7 @@
           "name": "Circuit Court",
           "path": "chapters/885.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_885.htm",
-          "sectionCount": 28
+          "sectionCount": 22
         },
         {
           "id": "chapter-886",
@@ -9152,7 +9152,7 @@
           "name": "Division of Criminal Justice",
           "path": "chapters/886.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_886.htm",
-          "sectionCount": 46
+          "sectionCount": 44
         },
         {
           "id": "chapter-887",
@@ -9201,7 +9201,7 @@
           "name": "Civil Jurisdiction",
           "path": "chapters/895.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_895.htm",
-          "sectionCount": 52
+          "sectionCount": 31
         },
         {
           "id": "chapter-896",
@@ -9209,7 +9209,7 @@
           "name": "Civil Process, Service and Time for Return",
           "path": "chapters/896.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_896.htm",
-          "sectionCount": 39
+          "sectionCount": 33
         },
         {
           "id": "chapter-897",
@@ -9225,7 +9225,7 @@
           "name": "Pleading",
           "path": "chapters/898.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_898.htm",
-          "sectionCount": 56
+          "sectionCount": 50
         },
         {
           "id": "chapter-899",
@@ -9233,7 +9233,7 @@
           "name": "Evidence",
           "path": "chapters/899.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_899.htm",
-          "sectionCount": 91
+          "sectionCount": 89
         },
         {
           "id": "chapter-900",
@@ -9241,7 +9241,7 @@
           "name": "Court Practice and Procedure",
           "path": "chapters/900.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_900.htm",
-          "sectionCount": 98
+          "sectionCount": 92
         },
         {
           "id": "chapter-901",
@@ -9249,7 +9249,7 @@
           "name": "Damages, Costs and Fees",
           "path": "chapters/901.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_901.htm",
-          "sectionCount": 43
+          "sectionCount": 41
         },
         {
           "id": "chapter-902",
@@ -9265,7 +9265,7 @@
           "name": "New Trials",
           "path": "chapters/903.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_903.htm",
-          "sectionCount": 11
+          "sectionCount": 5
         },
         {
           "id": "chapter-903a",
@@ -9281,7 +9281,7 @@
           "name": "Attachments",
           "path": "chapters/904.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_904.htm",
-          "sectionCount": 52
+          "sectionCount": 46
         },
         {
           "id": "chapter-905",
@@ -9297,7 +9297,7 @@
           "name": "Postjudgment Procedures",
           "path": "chapters/906.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_906.htm",
-          "sectionCount": 90
+          "sectionCount": 78
         },
         {
           "id": "chapter-907",
@@ -9481,7 +9481,7 @@
           "name": "Statute of Limitations",
           "path": "chapters/926.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_926.htm",
-          "sectionCount": 41
+          "sectionCount": 39
         },
         {
           "id": "chapter-927",
@@ -9538,7 +9538,7 @@
           "name": "Offenses Against the Sovereignty of the State",
           "path": "chapters/938.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_938.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-939",
@@ -9546,7 +9546,7 @@
           "name": "Offenses Against the Person",
           "path": "chapters/939.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_939.htm",
-          "sectionCount": 38
+          "sectionCount": 30
         },
         {
           "id": "chapter-940",
@@ -9554,7 +9554,7 @@
           "name": "Offenses Against Public Property",
           "path": "chapters/940.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_940.htm",
-          "sectionCount": 3
+          "sectionCount": 1
         },
         {
           "id": "chapter-941",
@@ -9562,7 +9562,7 @@
           "name": "Offenses Against Private Property",
           "path": "chapters/941.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_941.htm",
-          "sectionCount": 27
+          "sectionCount": 21
         },
         {
           "id": "chapter-942",
@@ -9570,7 +9570,7 @@
           "name": "Offenses Against Public Justice",
           "path": "chapters/942.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_942.htm",
-          "sectionCount": 12
+          "sectionCount": 6
         },
         {
           "id": "chapter-943",
@@ -9578,7 +9578,7 @@
           "name": "Offenses Against Public Peace and Safety",
           "path": "chapters/943.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_943.htm",
-          "sectionCount": 70
+          "sectionCount": 58
         },
         {
           "id": "chapter-944",
@@ -9586,7 +9586,7 @@
           "name": "(Offenses Against Chastity) Concealment of Delivery of Child",
           "path": "chapters/944.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_944.htm",
-          "sectionCount": 7
+          "sectionCount": 3
         },
         {
           "id": "chapter-945",
@@ -9594,7 +9594,7 @@
           "name": "(Offenses Against Humanity and Morality) Cruelty to Animals",
           "path": "chapters/945.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_945.htm",
-          "sectionCount": 13
+          "sectionCount": 11
         },
         {
           "id": "chapter-946",
@@ -9602,7 +9602,7 @@
           "name": "Offenses Against Public Policy",
           "path": "chapters/946.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_946.htm",
-          "sectionCount": 97
+          "sectionCount": 81
         },
         {
           "id": "chapter-947",
@@ -9610,7 +9610,7 @@
           "name": "Forgery and Counterfeiting",
           "path": "chapters/947.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_947.htm",
-          "sectionCount": 7
+          "sectionCount": 3
         },
         {
           "id": "chapter-948",
@@ -9618,7 +9618,7 @@
           "name": "Frauds and False Pretenses",
           "path": "chapters/948.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_948.htm",
-          "sectionCount": 19
+          "sectionCount": 13
         },
         {
           "id": "chapter-949",
@@ -9626,7 +9626,7 @@
           "name": "Crimes Involving Credit Cards, Scanning Devices or Reencoders",
           "path": "chapters/949.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_949.htm",
-          "sectionCount": 4
+          "sectionCount": 2
         },
         {
           "id": "chapter-949a",
@@ -9715,7 +9715,7 @@
           "name": "Penal Code: Offenses",
           "path": "chapters/952.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_952.htm",
-          "sectionCount": 429
+          "sectionCount": 417
         }
       ]
     },
@@ -9732,7 +9732,7 @@
           "name": "Court Jurisdiction and Power",
           "path": "chapters/959.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_959.htm",
-          "sectionCount": 98
+          "sectionCount": 78
         },
         {
           "id": "chapter-959a",
@@ -9748,7 +9748,7 @@
           "name": "Information, Procedure and Bail",
           "path": "chapters/960.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_960.htm",
-          "sectionCount": 90
+          "sectionCount": 86
         },
         {
           "id": "chapter-960a",
@@ -9764,7 +9764,7 @@
           "name": "Trial and Proceedings after Conviction",
           "path": "chapters/961.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_961.htm",
-          "sectionCount": 203
+          "sectionCount": 193
         },
         {
           "id": "chapter-961a",
@@ -9780,7 +9780,7 @@
           "name": "Costs, Fees and Expenses in Criminal Proceedings or Prosecutions",
           "path": "chapters/962.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_962.htm",
-          "sectionCount": 19
+          "sectionCount": 17
         },
         {
           "id": "chapter-963",
@@ -9820,7 +9820,7 @@
           "name": "General Provisions",
           "path": "chapters/967.json",
           "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_967.htm",
-          "sectionCount": 7
+          "sectionCount": 5
         },
         {
           "id": "chapter-968",
@@ -9885,6 +9885,6 @@
   "counts": {
     "titles": 81,
     "chapters": 1143,
-    "sections": 33017
+    "sections": 30574
   }
 }

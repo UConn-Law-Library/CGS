@@ -11,11 +11,26 @@
   "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_213.htm",
   "sections": [
     {
-      "id": "group-12-269-to-12-284a",
+      "id": "group-12-269-to-12-270-to-12-271-to-12-272-to-12-273-to-12-274-to-12-275-to-12-276-to-12-277-to-12-278-to-12-279-to-12-280-to-12-281-to-12-282-to-12-283-to-12-284-to-12-284a",
       "kind": "group",
       "citation": null,
       "citations": [
         "12-269",
+        "12-270",
+        "12-271",
+        "12-272",
+        "12-273",
+        "12-274",
+        "12-275",
+        "12-276",
+        "12-277",
+        "12-278",
+        "12-279",
+        "12-280",
+        "12-281",
+        "12-282",
+        "12-283",
+        "12-284",
         "12-284a"
       ],
       "heading": "Secs. 12-269 to 12-284a. Unincorporated business tax.",
@@ -31,46 +46,6 @@
         "history": [],
         "annotations": [],
         "plainText": "Sections 12-269 to 12-284a , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-12-269",
-      "kind": "section",
-      "citation": "12-269",
-      "citations": [
-        "12-269"
-      ],
-      "heading": "12-269",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_213.htm#sec_12-269",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 12-269 to 12-284a. Unincorporated business tax. Sections 12-269 to 12-284a , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 12-269 to 12-284a. Unincorporated business tax. Sections 12-269 to 12-284a , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-12-284a",
-      "kind": "section",
-      "citation": "12-284a",
-      "citations": [
-        "12-284a"
-      ],
-      "heading": "12-284a",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_213.htm#sec_12-284a",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 12-269 to 12-284a. Unincorporated business tax. Sections 12-269 to 12-284a , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 12-269 to 12-284a. Unincorporated business tax. Sections 12-269 to 12-284a , inclusive, are repealed."
       }
     }
   ]

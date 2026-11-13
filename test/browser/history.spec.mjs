@@ -55,7 +55,7 @@ test("History persists visited pages, reopens them, and clears without deleting 
   await expect(page.locator(".page-history-list li").first()).toContainText("Chapter 1");
   await page.evaluate(() => localStorage.setItem("cgs.bookmarks.v1", JSON.stringify([{ id: "saved", href: "#/t/01" }])));
   await page.getByRole("button", { name: "Clear history", exact: true }).click();
-  await expect(page.getByRole("status")).toContainText("No browsing history yet");
+  await expect(page.getByRole("status").filter({ hasText: "No browsing history yet" })).toBeVisible();
   await page.reload();
   await expect(page.locator(".page-history-list li")).toHaveCount(0);
   expect(await page.evaluate(() => JSON.parse(localStorage.getItem("cgs.bookmarks.v1")).length)).toBe(1);

@@ -6,6 +6,25 @@ export function escapeHtml(value) {
   })[character]);
 }
 
+// A link inside a grouped entry can be imported as a separate section whose heading is
+// just its citation. Use the first matching provision, as citation routes do.
+export function groupedSectionAliases(sections) {
+  const firstByCitation = new Map();
+  const aliases = new Map();
+  for (const section of sections) {
+    const citation = section.citation?.toLowerCase();
+    const first = firstByCitation.get(citation);
+    if (first?.kind === "group" && section.heading?.replace(/\s+/g, "").toLowerCase() === citation) {
+      aliases.set(section, first);
+    }
+    for (const value of section.citations ?? (citation ? [citation] : [])) {
+      const key = value.toLowerCase();
+      if (!firstByCitation.has(key)) firstByCitation.set(key, section);
+    }
+  }
+  return aliases;
+}
+
 // Leaves out sections whose every status is hidden. An entry that was "transferred or
 // repealed" stays unless both are hidden. The open section always stays.
 export function navigationSections(sections, { hiddenStatuses = [], selected = null } = {}) {

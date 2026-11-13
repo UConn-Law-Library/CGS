@@ -45,6 +45,31 @@ test("the tree opens to the current section, in view, and marks only that row cu
   await expectNoHighImpactAccessibilityViolations(page);
 });
 
+test("grouped sections appear once and still open from individual citations", async ({ page }, testInfo) => {
+  desktopOnly(testInfo);
+  await turnTreeOn(page, "#/t/01/c/007/s/1-42");
+  const chapterLinks = (chapter) => rail(page).locator(`.tree-chapter:has(> .tree-row > a[href="#/t/01/c/${chapter}"]) .section-navigation-link`);
+  await expect(chapterLinks("007")).toHaveCount(3);
+  await expect(chapterLinks("007").first()).toHaveAttribute("aria-current", "page");
+
+  await rail(page).getByRole("button", { name: "Expand Chapter 7b", exact: true }).click();
+  await expect(chapterLinks("007b")).toHaveCount(2);
+
+  const filter = page.getByLabel("Filter titles, chapters, and sections");
+  await filter.fill("1-42");
+  await expect(chapterLinks("007")).toHaveCount(1);
+  await filter.fill("1-53");
+  await expect(chapterLinks("007")).toHaveAttribute("href", "#/t/01/c/007/s/1-42");
+  await filter.fill("");
+  await expect(chapterLinks("007")).toHaveCount(3);
+
+  await page.goto("/#/t/01/c/007b/s/1-56k");
+  await expect(page.locator("main h1")).toContainText("Springing power of attorney");
+  await expect(chapterLinks("007b").first()).toHaveAttribute("aria-current", "page");
+  await page.goto("/#/t/01/c/007b/s/section-1-56k");
+  await expect(page.locator("main h1")).toContainText("Springing power of attorney");
+});
+
 test("chevrons open and close rows without navigating, and links navigate and open", async ({ page }, testInfo) => {
   desktopOnly(testInfo);
   await turnTreeOn(page);

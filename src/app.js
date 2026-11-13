@@ -54,6 +54,7 @@ import { amendmentsForSection } from "./act-amendments.js";
 import {
   escapeHtml,
   extractLegalReferences,
+  groupedSectionAliases,
   leadingSubsection,
   navigationSectionDescription,
   navigationSectionLabel,
@@ -1227,7 +1228,9 @@ async function renderChapter(catalog, title, chapterMeta, route, sequence, setti
   if (!chapter) return renderNotFound("That supplement chapter could not be loaded.");
   const changeBySection = new Map((overlay?.changes ?? []).map((change) => [change.sectionId, { ...change, editionYear: overlay.editionYear }]));
   const pendingBySection = new Map();
-  const selected = route.kind === "section" ? findSection(chapter, route.section) : null;
+  const aliases = groupedSectionAliases(chapter.sections);
+  const requestedSection = route.kind === "section" ? findSection(chapter, route.section) : null;
+  const selected = aliases.get(requestedSection) ?? requestedSection;
   if (route.kind === "section" && !selected) return renderNotFound("That section was not found.");
 
   if (route.legacyQuery) {
@@ -1240,11 +1243,12 @@ async function renderChapter(catalog, title, chapterMeta, route, sequence, setti
   const secondaryContext = null;
   if (sequence !== renderSequence) return;
   const preferences = deviceState.preferences();
-  const chapterNavigation = navigationSections(chapter.sections, {
+  const sections = chapter.sections.filter((section) => !aliases.has(section));
+  const chapterNavigation = navigationSections(sections, {
     hiddenStatuses: preferences.hiddenStatuses,
     selected
   });
-  const hiddenSections = chapter.sections.length - chapterNavigation.length;
+  const hiddenSections = sections.length - chapterNavigation.length;
   setDocumentTitle(selected ? sectionLabel(selected) : chapterLabel(chapter), titleLabel(title));
   const sectionItems = statuteSectionItems(title, chapter, chapterNavigation, selected, changeBySection, pendingBySection);
   const mobileChapterList = `<section class="mobile-only mobile-section-browser statute-drilldown" aria-labelledby="mobile-sections-heading"><div class="section-heading"><div><p class="eyebrow">${chapterNavigation.length} sections${hiddenSections ? ` · ${hiddenSections} hidden` : ""}</p><h2 id="mobile-sections-heading">Sections</h2></div></div>${browseFilter("section-filter", "Find a section", "browse-sections-list")}<div id="browse-sections-list">${railList(sectionItems)}</div></section>`;

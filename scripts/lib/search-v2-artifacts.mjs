@@ -2,7 +2,7 @@ import { createHash } from "node:crypto";
 import { mkdir, readFile, readdir, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { applyChapterOverlay } from "./supplement-overlay.mjs";
-import { sectionStatuses } from "../../src/reader.js";
+import { groupedSectionAliases, sectionStatuses } from "../../src/reader.js";
 
 function comparableNumber(value) {
   return String(value ?? "").trim().toLowerCase().replace(/^0+(?=\d)/, "");
@@ -85,7 +85,9 @@ export async function generateSearchV2Artifacts({ catalog, dataDirectory, supple
     // "obsolete", "reserved"), and "supplement-<presentation>".
     const addHeadings = (chapter, overlay = null) => {
       const supplementBySection = new Map((overlay?.changes ?? []).map((change) => [change.sectionId, change.presentation]));
+      const aliases = groupedSectionAliases(chapter.sections);
       for (const section of chapter.sections) {
+        if (aliases.has(section)) continue;
         const tags = sectionStatuses(section);
         if (supplementBySection.has(section.id)) tags.push(`supplement-${supplementBySection.get(section.id)}`);
         headings.push([

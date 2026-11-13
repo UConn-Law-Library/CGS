@@ -99,12 +99,12 @@ test("font and line spacing preferences persist and reject unsupported values", 
   assert.equal(state.preferences().lineSpacing, 1.55);
 });
 
-test("uses compact lists by default while preserving an explicit comfortable preference", () => {
+test("shows full labels by default and persists the compact lists preference", () => {
   const storage = memoryStorage();
   const state = new DeviceState({ storage });
-  assert.equal(state.preferences().compactLists, true);
-  state.updatePreferences({ compactLists: false });
   assert.equal(state.preferences().compactLists, false);
+  state.updatePreferences({ compactLists: true });
+  assert.equal(new DeviceState({ storage }).preferences().compactLists, true);
 });
 
 test("deduplicates, orders, limits, and clears recent items", () => {
@@ -154,7 +154,7 @@ test("deduplicates, orders, limits, and clears device-local search history", () 
 
 test("storage failures remain non-fatal for preferences, bookmarks, recents, and search history", () => {
   const state = new DeviceState({ storage: failingStorage() });
-  assert.equal(state.preferences().compactLists, true);
+  assert.equal(state.preferences().compactLists, false);
   assert.deepEqual(state.bookmarks(), []);
   assert.equal(state.recordRecent({ id: "x", type: "statute", title: "X", href: "#/x" }).length, 1);
   assert.deepEqual(state.recents(), []);

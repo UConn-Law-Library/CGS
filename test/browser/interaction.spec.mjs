@@ -153,9 +153,18 @@ test("Home exposes the core application destinations", async ({ page }) => {
   expect(overflow).toBeLessThanOrEqual(1);
 });
 
-test("Settings closes and restores focus to its trigger", async ({ page }) => {
+test("Settings opens from the header and restores focus to its trigger", async ({ page }, testInfo) => {
   await openApp(page);
-  const trigger = page.getByRole("button", { name: "Settings", exact: true });
+  const header = page.locator(".site-header");
+  const trigger = header.getByRole("button", { name: "Settings", exact: true });
+  if (isMobileProject(testInfo)) {
+    const back = await header.getByRole("button", { name: "Go back" }).boundingBox();
+    const settings = await trigger.boundingBox();
+    expect(settings.y).toBe(back.y);
+    expect(settings.width).toBe(back.width);
+    expect(settings.x + settings.width).toBeCloseTo((await header.boundingBox()).width - back.x, 0);
+    await expect(header.getByRole("navigation", { name: "Main sections" }).getByRole("link")).toHaveCount(5);
+  }
   await trigger.click();
   await page.getByRole("button", { name: "Close settings" }).click();
   await expect(page.getByRole("dialog", { name: "Settings" })).toBeHidden();
@@ -177,30 +186,40 @@ test("Text size slider follows Font and persists its value", async ({ page }) =>
   await expect(page.locator("[data-text-size-value]")).toHaveText("120%");
 });
 
-test("hiding repealed sections keeps its panel open and focused after the chapter redraws", async ({ page }) => {
+test("hiding repealed sections keeps the same panel open and focused after the chapter redraws", async ({ page }) => {
   await openApp(page, "#/t/03/c/033/s/3-99h");
   const { trigger, panel } = await openNavigationSettings(page);
-  const checkbox = panel.locator('input[data-hide-status="repealed"]');
-  await checkbox.check();
+  const toggle = panel.getByRole("switch", { name: "Repealed" });
+  const originalPanel = await panel.elementHandle();
+  const originalReader = await page.locator("main").elementHandle();
+  await toggle.check();
+  await expect.poll(() => originalReader.evaluate((reader) => reader.isConnected)).toBe(false);
+  expect(await originalPanel.evaluate((element) => element.isConnected)).toBe(true);
   await expect(panel).toBeVisible();
   await expect(trigger).toHaveAttribute("aria-expanded", "true");
-  await expect(checkbox).toBeChecked();
-  await expect(checkbox).toBeFocused();
-  await checkbox.uncheck();
+  await expect(toggle).toBeChecked();
+  await expect(toggle).toBeFocused();
+  await toggle.press("Space");
   await expect(panel).toBeVisible();
-  await expect(checkbox).not.toBeChecked();
+  await expect(toggle).not.toBeChecked();
 });
 
-test("Compact lists changes chapter navigation density", async ({ page }, testInfo) => {
+test("Compact lists hides section headings visually and keeps them searchable", async ({ page }, testInfo) => {
   await openApp(page, "#/t/02/c/017");
-  const row = page.locator(isMobileProject(testInfo) ? ".mobile-section-browser .context-list a" : ".context-column .context-list a").first();
-  const compactHeight = (await row.boundingBox()).height;
+  const row = page.locator(isMobileProject(testInfo) ? ".mobile-section-browser .section-navigation-link" : ".sections-column .section-navigation-link").first();
+  const description = row.locator(".section-navigation-description");
+  await expect(description).toHaveCSS("position", "static");
+  const heading = await description.textContent();
   const { panel } = await openNavigationSettings(page);
-  await panel.locator("input[data-compact-lists]").uncheck();
-  const comfortableHeight = (await row.boundingBox()).height;
-  expect(comfortableHeight).toBeGreaterThan(compactHeight + 5);
-  await panel.locator("input[data-compact-lists]").check();
-  expect((await row.boundingBox()).height).toBe(compactHeight);
+  const toggle = panel.getByRole("switch", { name: "Compact lists" });
+  await expect(toggle).not.toBeChecked();
+  await toggle.check();
+  await expect(description).toHaveCSS("position", "absolute");
+  await expect(row).toHaveAccessibleName(new RegExp(heading.replace(/[.*+?^$${}()|[\]\\]/g, "\\$&")));
+  await page.keyboard.press("Escape");
+  await page.getByRole("searchbox", { name: isMobileProject(testInfo) ? "Find a section" : "Filter sections" }).fill(heading);
+  await expect(row).toBeVisible();
+  await expect(row.locator("strong")).toBeVisible();
 });
 
 test("navigation settings open from the side panel, and stay in Settings without one", async ({ page }, testInfo) => {
@@ -555,7 +574,7 @@ test("a targeted statute paragraph exposes and copies its citation", async ({ pa
 
   await copyCitation.click();
   await expect(copyCitation).toHaveText("Copied");
-  await expect(page.locator(".action-status")).toHaveText("C.G.S. § 1-34(1) copied.");
+  await expect(page.locator("[data-action-toast]")).toHaveText("C.G.S. § 1-34(1) copied.");
   await expect.poll(() => page.evaluate(() => window.__copiedCitation)).toBe("C.G.S. § 1-34(1)");
 });
 

@@ -35,12 +35,14 @@ function compactCitation(citation) {
   return String(citation ?? "").replace(/^[^-]+-/, "");
 }
 
-export function navigationSectionLabel(section) {
+export function navigationSectionLabel(section, { compact = true } = {}) {
   const citations = section.citations?.filter(Boolean) ?? (section.citation ? [section.citation] : []);
   if (citations.length > 1) {
-    return `§§ ${citations[0]}–${compactCitation(citations.at(-1))}`;
+    const first = citations[0];
+    const last = citations.at(-1);
+    return compact ? `§§ ${first}–${compactCitation(last)}` : `Secs. ${first} to ${last}`;
   }
-  if (citations.length === 1) return `§ ${citations[0]}`;
+  if (citations.length === 1) return `${compact ? "§" : "Sec."} ${citations[0]}`;
   return section.heading;
 }
 

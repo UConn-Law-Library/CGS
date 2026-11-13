@@ -13,7 +13,7 @@ const STEPS = [
     targets: ["#statute-tree-status"],
     title: "Filter sections by status",
     text: "In the page tree, Status lists only the sections with one tag: Supplement amendments or additions, Recent Public Acts, Repealed, Transferred, Obsolete, or Reserved. It works with the text filter above it.",
-    fallback: "With Page tree navigation on, a Status filter lists only the sections with one tag: Supplement amendments or additions, Recent Public Acts, Repealed, Transferred, Obsolete, or Reserved. Turn it on from the navigation settings on a larger screen."
+    fallback: "Turn on Page tree navigation in Settings to filter the statute tree by status, including Supplement amendments or additions, Recent Public Acts, Repealed, Transferred, Obsolete, or Reserved."
   },
   {
     route: "#/t/16a/c/295",

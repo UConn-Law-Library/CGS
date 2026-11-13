@@ -13,7 +13,7 @@ export const DEFAULT_PREFERENCES = Object.freeze({
   textScale: 1,
   fontProfile: "default",
   lineSpacing: 1.55,
-  compactLists: true,
+  compactLists: false,
   hiddenStatuses: Object.freeze([]),
   subtleNotices: false,
   navigationTree: false,

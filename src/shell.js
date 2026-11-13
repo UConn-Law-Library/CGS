@@ -14,6 +14,7 @@ export function statutesNavHref() {
 
 const svgIcon = (paths) => `<svg class="glyph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false">${paths}</svg>`;
 export const icons = {
+  search: svgIcon('<circle cx="10" cy="10" r="6"/><path d="m15 15 5 5"/>'),
   settings: svgIcon(`<path d="M4 7h16M4 17h16"/><circle cx="9" cy="7" r="3" fill="var(--surface-raised)"/><circle cx="15" cy="17" r="3" fill="var(--surface-raised)"/>`),
   document: svgIcon(`<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/>`),
   scale: svgIcon(`<path d="M12 3v18M8 21h8M5 7h14"/><path d="M2 15l3-8 3 8M16 15l3-8 3 8"/><path d="M2 15a3 3 0 0 0 6 0M16 15a3 3 0 0 0 6 0"/>`),
@@ -26,7 +27,7 @@ export const icons = {
   mail: svgIcon(`<path d="m2 7 8.165 5.715c.661.463.992.695 1.351.784a2 2 0 0 0 .968 0c.36-.09.69-.32 1.351-.784L22 7M6.8 20h10.4c1.68 0 2.52 0 3.162-.327a3 3 0 0 0 1.311-1.311C22 17.72 22 16.88 22 15.2V8.8c0-1.68 0-2.52-.327-3.162a3 3 0 0 0-1.311-1.311C19.72 4 18.88 4 17.2 4H6.8c-1.68 0-2.52 0-3.162.327a3 3 0 0 0-1.311 1.311C2 6.28 2 7.12 2 8.8v6.4c0 1.68 0 2.52.327 3.162a3 3 0 0 0 1.311 1.311C4.28 20 5.12 20 6.8 20Z"/>`),
   bookmarkAdd: svgIcon(`<path d="M12 13V7m-3 3h6m4 11V7.8c0-1.68 0-2.52-.327-3.162a3 3 0 0 0-1.311-1.311C16.72 3 15.88 3 14.2 3H9.8c-1.68 0-2.52 0-3.162.327a3 3 0 0 0-1.311 1.311C5 5.28 5 6.12 5 7.8V21l7-4 7 4Z"/>`),
   copied: svgIcon(`<path d="M20 6 9 17l-5-5"/>`),
-  bookmarkCheck: svgIcon(`<path d="m9 10.5 2 2L15.5 8M19 21V7.8c0-1.68 0-2.52-.327-3.162a3 3 0 0 0-1.311-1.311C16.72 3 15.88 3 14.2 3H9.8c-1.68 0-2.52 0-3.162.327a3 3 0 0 0-1.311 1.311C5 5.28 5 6.12 5 7.8V21l7-4 7 4Z"/>`)
+  bookmarkCheck: svgIcon(`<path class="bookmark-shape" d="M19 21V7.8c0-1.68 0-2.52-.327-3.162a3 3 0 0 0-1.311-1.311C16.72 3 15.88 3 14.2 3H9.8c-1.68 0-2.52 0-3.162.327a3 3 0 0 0-1.311 1.311C5 5.28 5 6.12 5 7.8V21l7-4 7 4Z"/><path class="bookmark-check" d="m9 10.5 2 2L15.5 8"/>`)
 };
 
 export const bookmarkButtonLabel = (saved) => `<span aria-hidden="true">${saved ? icons.bookmarkCheck : icons.bookmarkAdd}</span><span class="action-label">${saved ? "Saved" : "Bookmark"}</span>`;
@@ -160,12 +161,16 @@ function updatePwaControls() {
   progress.value = pwaState.cachedFiles;
 }
 
-function navigationSettingRows() {
+function navigationSettingRows(idPrefix) {
   const preferences = deviceState.preferences();
-  return `<label class="setting-row"><span><strong>Compact lists</strong><small>Show more items on screen</small></span><input type="checkbox" data-compact-lists${preferences.compactLists ? " checked" : ""}></label>
-    <fieldset class="setting-row hidden-status-setting"><legend><strong>Hide sections</strong><small>Remove these from chapter navigation</small></legend><div class="hidden-status-options">${HIDEABLE_STATUSES.map((status) => `<label><input type="checkbox" data-hide-status="${status}"${preferences.hiddenStatuses.includes(status) ? " checked" : ""}>${HIDEABLE_STATUS_LABELS[status]}</label>`).join("")}</div></fieldset>
-    <label class="setting-row"><span><strong>Subtle notices</strong><small>Show status tags as colored dots in section lists</small></span><input type="checkbox" data-subtle-notices${preferences.subtleNotices ? " checked" : ""}></label>
-    <label class="setting-row"><span><strong>Page tree navigation</strong><small>On larger screens, browse the statutes, the index, and infractions in one panel</small></span><input type="checkbox" data-navigation-tree${preferences.navigationTree ? " checked" : ""}></label>`;
+  const switchRow = (setting, label, hint, checked) => {
+    const id = `${idPrefix}-${setting}`;
+    return `<label class="setting-row"><span><strong id="${id}-label">${label}</strong><small id="${id}-hint">${hint}</small></span><input class="setting-switch" type="checkbox" role="switch" data-${setting} aria-labelledby="${id}-label" aria-describedby="${id}-hint"${checked ? " checked" : ""}></label>`;
+  };
+  return `${switchRow("compact-lists", "Compact lists", "Show only title, chapter, and section numbers in statute lists", preferences.compactLists)}
+    <fieldset class="setting-row hidden-status-setting"><legend><strong>Hide sections</strong><small>Remove these from chapter navigation</small></legend><div class="hidden-status-options">${HIDEABLE_STATUSES.map((status) => `<label>${HIDEABLE_STATUS_LABELS[status]}<input class="setting-switch" type="checkbox" role="switch" data-hide-status="${status}"${preferences.hiddenStatuses.includes(status) ? " checked" : ""}></label>`).join("")}</div></fieldset>
+    ${switchRow("subtle-notices", "Subtle notices", "Show status tags as colored dots in section lists", preferences.subtleNotices)}
+    ${switchRow("navigation-tree", "Page tree navigation", "Browse statute titles, chapters, and sections in an expandable tree", preferences.navigationTree)}`;
 }
 
 // Where a side panel is showing, these settings open from its heading instead of Settings.
@@ -176,7 +181,7 @@ function navigationSettingsButton() {
 function navigationSettingsPanel() {
   return `<section class="settings-panel navigation-settings-panel" id="navigation-settings" role="dialog" aria-label="Navigation settings" data-navigation-settings hidden>
     <div class="settings-heading"><strong>Navigation settings</strong><button type="button" class="icon-button" data-close-navigation-settings aria-label="Close navigation settings">×</button></div>
-    ${navigationSettingRows()}
+    ${navigationSettingRows("pane-settings")}
   </section>`;
 }
 
@@ -186,7 +191,7 @@ function settingsPanel() {
   const bookmarkCount = deviceState.bookmarks().length;
   const recentCount = deviceState.recents().length;
   const searchHistoryCount = deviceState.searchHistory().length;
-  return `<section class="settings-panel" role="dialog" aria-label="Settings" data-settings-panel hidden>
+  return `<section class="settings-panel" id="app-settings" role="dialog" aria-label="Settings" data-settings-panel hidden>
     <div class="settings-heading"><strong>Settings</strong><button type="button" class="icon-button" data-close-settings aria-label="Close settings">×</button></div>
     <div class="setting-group"><span>Theme</span><div class="segmented" role="group" aria-label="Theme">
       ${Object.entries({ auto: "Auto", light: "Light", dark: "Dark", oled: "OLED" }).map(([theme, label]) => `<button type="button" data-theme-value="${theme}" aria-pressed="${preferences.theme === theme}">${label}</button>`).join("")}
@@ -206,7 +211,7 @@ function settingsPanel() {
     <div class="setting-group reading-width-setting"><span>Reading width</span><div class="segmented" role="group" aria-label="Reading width">
       ${Object.entries(READING_WIDTHS).map(([width, label]) => `<button type="button" data-reading-width-value="${width}" aria-pressed="${preferences.readingWidth === width}">${label}</button>`).join("")}
     </div></div>
-    <div class="navigation-setting-rows">${navigationSettingRows()}</div>
+    <div class="navigation-setting-rows">${navigationSettingRows("app-settings")}</div>
     <button type="button" class="settings-action update-action" data-apply-update${pwaState.updateAvailable ? "" : " hidden"}>Update available <small>Reload to use the latest published app</small></button>
     <a class="settings-action" href="#/about"><strong class="settings-about-title">About this app</strong> <small>Sources, coverage, and project information</small></a>
     <a class="settings-action" href="${guideRouteHref()}"><strong class="settings-about-title">Understanding the Statutes</strong> <small>How laws are enacted, codified, and published</small></a>
@@ -254,7 +259,7 @@ function globalSearch(route) {
         <kbd class="omni-shortcut" aria-hidden="true">/</kbd>
         <div class="omni-panel" id="omni-results" role="listbox" hidden data-omni-panel></div>
       </div>
-      <button type="submit" class="global-search-button"><span class="utility-label">Search</span><span class="mobile-utility-icon" aria-hidden="true">${svgIcon('<circle cx="10" cy="10" r="6"/><path d="m15 15 5 5"/>')}</span></button>
+      <button type="submit" class="global-search-button"><span class="utility-label">Search</span><span class="mobile-utility-icon" aria-hidden="true">${icons.search}</span></button>
       ${historyLink(route)}
       ${whatsNewButton()}
     </form>`;
@@ -275,14 +280,16 @@ function siteHeader() {
       <div class="header-identity">
         <a class="brand" href="#/"><span class="brand-mark" aria-hidden="true">§</span><span><small class="brand-library">UConn Law Library</small>Connecticut General Statutes</span></a>
       </div>
-      <nav class="app-nav" aria-label="Main sections">
-        ${navLink({ href: statutesNavHref(), id: "statutes", icon: "§", label: "Statutes" }, active)}
-        ${navLink({ href: "#/index", id: "index", icon: "A–Z", label: "Index" }, active)}
-        ${navLink({ href: "#/infractions", id: "infractions", icon: icons.scale, label: "Infractions" }, active)}
-        ${navLink({ href: "#/acts", id: "acts", icon: icons.document, label: "Acts" }, active)}
-        ${navLink({ href: "#/bookmarks", id: "bookmarks", icon: icons.bookmark, label: "Bookmarks", badge: bookmarkCount }, active)}
-        <button type="button" data-open-settings aria-expanded="false"${active === "settings" ? ` aria-current="page"` : ""}><span aria-hidden="true">${icons.settings}</span><span>Settings</span></button>
-      </nav>
+      <div class="header-actions">
+        <nav class="app-nav" aria-label="Main sections">
+          ${navLink({ href: statutesNavHref(), id: "statutes", icon: "§", label: "Statutes" }, active)}
+          ${navLink({ href: "#/index", id: "index", icon: "A–Z", label: "Index" }, active)}
+          ${navLink({ href: "#/infractions", id: "infractions", icon: icons.scale, label: "Infractions" }, active)}
+          ${navLink({ href: "#/acts", id: "acts", icon: icons.document, label: "Acts" }, active)}
+          ${navLink({ href: "#/bookmarks", id: "bookmarks", icon: icons.bookmark, label: "Bookmarks", badge: bookmarkCount }, active)}
+        </nav>
+        <button type="button" class="header-settings-button" data-open-settings aria-label="Settings" aria-controls="app-settings" aria-expanded="false"${active === "settings" ? ` aria-current="page"` : ""}><span aria-hidden="true">${icons.settings}</span><span class="settings-label">Settings</span></button>
+      </div>
     </div>
     ${route.kind === "search" ? headerUtilities(route) : globalSearch(route)}
     ${settingsPanel()}

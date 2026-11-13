@@ -65,7 +65,7 @@ test("chapter disclosures link to updated, new, and act-affected sections", asyn
 test("subtle notices persist and keep transferred and act labels accessible", async ({ page }, testInfo) => {
   await openApp(page, "#/t/04/c/050/s/4-68bb");
   await openNavigationSettings(page);
-  const toggle = page.getByRole("checkbox", { name: /Subtle notices/ });
+  const toggle = page.getByRole("switch", { name: "Subtle notices" });
   await expect(toggle).not.toBeChecked();
   await toggle.check();
   await page.reload();
@@ -87,7 +87,7 @@ test("reader citation, scoped search, history and chapter sheet remain usable", 
   await openApp(page, "#/t/01/c/004/s/1-24");
   await page.locator(".section-actions").getByRole("button", { name: "Copy citation", exact: true }).click();
   await expect.poll(() => page.evaluate(() => window.copiedCitation)).toBe("Conn. Gen. Stat. § 1-24");
-  await expect(page.locator(".action-status")).toContainText("copied");
+  await expect(page.locator("[data-action-toast]")).toContainText("copied");
   await page.getByRole("link", { name: "Search this chapter", exact: true }).click();
   await expect(page.locator("#search-title")).toHaveValue("title-01");
   await expect(page.locator("#search-chapter")).toHaveValue("004");

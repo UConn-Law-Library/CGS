@@ -271,7 +271,16 @@ function restoreContextScrollPositions(positions) {
   });
 }
 
-function mountApplicationShell(options) {
+function orderStatuteTree() {
+  const shell = app.querySelector(".application-shell.mobile-drilldown:has(> .statute-tree-column > #rail-statute-tree)");
+  if (!shell) return;
+  const main = shell.querySelector(":scope > main");
+  const tree = shell.querySelector(":scope > .statute-tree-column");
+  if (compactLayout.matches && main.nextElementSibling !== tree) tree.before(main);
+  if (!compactLayout.matches && main !== shell.lastElementChild) shell.append(main);
+}
+
+function mountApplicationShell(options, settingsPanel) {
   const positions = contextScrollPositions();
   // Measured while the outgoing page's layout is still current, so fitting the panes into the
   // new page costs no extra layout pass over it.
@@ -279,7 +288,19 @@ function mountApplicationShell(options) {
     width: document.documentElement.clientWidth,
     rem: parseFloat(getComputedStyle(document.documentElement).fontSize)
   };
-  app.innerHTML = applicationShell({ ...options, viewport });
+  const markup = applicationShell({ ...options, viewport });
+  const currentShell = app.querySelector(".application-shell");
+  if (settingsPanel?.isConnected && currentShell) {
+    // Keep the header and settings panels mounted so the open panel retains focus,
+    // its scroll position, and its current animation state.
+    const template = document.createElement("template");
+    template.innerHTML = markup;
+    currentShell.replaceWith(template.content.querySelector(".application-shell"));
+    if (navigationSettingsOpen()) positionNavigationSettings();
+  } else {
+    app.innerHTML = markup;
+  }
+  orderStatuteTree();
   restoreContextScrollPositions(positions);
 }
 
@@ -332,6 +353,15 @@ function scheduleContextFit() {
   contextFitFrame = requestAnimationFrame(() => fitContextColumns());
 }
 window.addEventListener("resize", scheduleContextFit);
+
+const actionToast = document.querySelector("[data-action-toast]");
+let actionToastTimer;
+
+function showActionToast(message) {
+  clearTimeout(actionToastTimer);
+  actionToast.replaceChildren(message);
+  actionToastTimer = setTimeout(() => actionToast.replaceChildren(), 3500);
+}
 
 function railList(items, { className = "", empty = "No items are available." } = {}) {
   if (!items.length) return `<p class="context-empty">${escapeHtml(empty)}</p>`;
@@ -666,8 +696,8 @@ function sectionNavigation(title, chapter, sections, selected) {
   const previous = index > 0 ? sections[index - 1] : null;
   const next = index < sections.length - 1 ? sections[index + 1] : null;
   return `<nav class="adjacent" aria-label="Adjacent sections">
-    ${previous ? `<a rel="prev" href="${escapeHtml(provisionRoute(title, chapter, previous))}"><span>Previous</span>${escapeHtml(sectionLabel(previous))}</a>` : "<span></span>"}
-    ${next ? `<a rel="next" href="${escapeHtml(provisionRoute(title, chapter, next))}"><span>Next</span>${escapeHtml(sectionLabel(next))}</a>` : ""}
+    ${previous ? `<a rel="prev" href="${escapeHtml(provisionRoute(title, chapter, previous))}"><span>Previous</span>${escapeHtml(navigationSectionLabel(previous, { compact: false }))}</a>` : "<span></span>"}
+    ${next ? `<a rel="next" href="${escapeHtml(provisionRoute(title, chapter, next))}"><span>Next</span>${escapeHtml(navigationSectionLabel(next, { compact: false }))}</a>` : ""}
   </nav>`;
 }
 
@@ -728,7 +758,6 @@ function renderProvision(title, chapter, section, maps, secondaryContext = null,
       <a class="icon-action" href="${escapeHtml(email)}">${iconActionLabel(icons.mail, "Email")}</a>
       <a class="primary-action" href="${escapeHtml(section.sourceUrl)}">Official source</a>
     </div>
-    <p class="action-status" role="status" aria-live="polite"></p>
     ${renderTextViews(section, change, `<div class="statute-text">${section.content.body.map((paragraph) => renderParagraph(paragraph, maps, title, chapter, section)).join("")}</div>
     ${renderInformationReferences(section, maps, secondaryContext, change)}`, maps)}
   </article>`;
@@ -776,7 +805,7 @@ function renderActivityList(items, emptyMessage) {
   </a></li>`).join("")}</ol>`;
 }
 
-async function renderHome(catalog) {
+async function renderHome(catalog, settingsPanel) {
   const recents = deviceState.recents().slice(0, 5);
   const bookmarks = deviceState.bookmarks().slice(0, 5);
   setDocumentTitle();
@@ -805,17 +834,25 @@ async function renderHome(catalog) {
     ...statuteNavigation(catalog, { kind: "home" }, () => [statuteTitleColumn(catalog)]),
     mainContent,
     mobilePresentationMode: "home"
-  });
+  }, settingsPanel);
 }
 
-function renderTitles(catalog) {
+function renderTitles(catalog, settingsPanel) {
   setDocumentTitle("Titles");
-  app.innerHTML = `${siteHeader()}<main class="browse-page titles-page" id="main-content">
+  const mainContent = `<main class="browse-page titles-page" id="main-content">
     <header class="browse-heading"><div><p class="eyebrow">${catalog.counts.chapters.toLocaleString()} chapters · ${catalog.counts.sections.toLocaleString()} sections</p><h1>Statute titles</h1></div></header>
-    ${browseFilter("title-filter", "Find a title", "browse-titles-list")}
-    <ol class="title-list" id="browse-titles-list">${catalog.titles.map((title) => `<li><a href="${escapeHtml(titleRoute(title))}"><strong>${escapeHtml(titleLabel(title))}</strong><span>${escapeHtml(title.name)}</span><small>${title.chapters.length} chapter${title.chapters.length === 1 ? "" : "s"}</small></a></li>`).join("")}</ol>
-  </main><footer>${legalFooter()}</footer>`;
-  window.scrollTo({ top: 0 });
+    <div class="statute-drilldown">
+      ${browseFilter("title-filter", "Find a title", "browse-titles-list")}
+      <ol class="title-list" id="browse-titles-list">${catalog.titles.map((title) => `<li><a href="${escapeHtml(titleRoute(title))}"><strong>${escapeHtml(titleLabel(title))}</strong><span>${escapeHtml(title.name)}</span><small>${title.chapters.length} chapter${title.chapters.length === 1 ? "" : "s"}</small></a></li>`).join("")}</ol>
+    </div>
+  </main>`;
+  const showTree = compactLayout.matches && deviceState.preferences().navigationTree;
+  mountApplicationShell({
+    contextualNavigation: showTree ? [statuteTree.column(catalog)] : [],
+    mainContent,
+    mobilePresentationMode: "drilldown"
+  }, settingsPanel);
+  if (!settingsPanel?.isConnected) window.scrollTo({ top: 0 });
 }
 
 function renderHistory() {
@@ -986,26 +1023,38 @@ async function runStatuteSearch(query, routeOptions = {}, { limit = SEARCH_BATCH
   }
 }
 
+function searchQueryRow({ id, label, query = "", placeholder, submit = "Search", required = false, autocompleteOff = false }) {
+  return `<label for="${id}">${escapeHtml(label)}</label>
+    <div class="search-query-row">
+      <div class="search-query-field"><span aria-hidden="true">${icons.search}</span>
+        <input id="${id}" name="query" type="search"${required ? ' minlength="2" required' : ""}${autocompleteOff ? ' autocomplete="off"' : ""} placeholder="${escapeHtml(placeholder)}" value="${escapeHtml(query)}"></div>
+      <button type="submit">${escapeHtml(submit)}</button>
+    </div>`;
+}
+
 async function renderSearchPage(catalog, route) {
   const query = route.query ?? "";
   const options = searchRouteOptions(route);
   const selectedTitle = catalog.titles.find((title) => title.id === options.title) ?? null;
+  const hasAdvancedOptions = options.title || options.chapter || options.field !== "statute" || options.status || options.supplement || options.sort !== "relevance";
   setDocumentTitle(query ? `Search: ${query}` : "Search");
   app.innerHTML = `${siteHeader()}<main class="search-page" id="main-content">
-    <header><p class="eyebrow">Statutes, acts, and infractions</p><h1>Search</h1><p>Find sections by citation, phrase, or keyword. Filters apply to statutes only; matching acts and infractions are listed under “Also found in.”</p></header>
-    <form class="search-refine search-v2-refine" data-search-refine>
-      <div class="search-primary-controls">
-        <div class="search-field search-query-field"><label for="search-page-query">Citation, phrase, or keyword</label>
-          <input id="search-page-query" name="query" type="search" minlength="2" required aria-describedby="search-help" value="${escapeHtml(query)}"></div>
-        <div class="search-field"><label for="search-title">Title</label>
-          <select id="search-title" name="title"><option value="">All titles</option>${catalog.titles.map((title) => `<option value="${escapeHtml(title.id)}"${selectAttribute(title.id, options.title)}>${escapeHtml(titleLabel(title))} — ${escapeHtml(title.name)}</option>`).join("")}</select></div>
-        <div class="search-field"><label for="search-chapter">Chapter</label>
-          <select id="search-chapter" name="chapter"${selectedTitle ? "" : " disabled"}><option value="">All chapters</option>${selectedTitle?.chapters.map((chapter) => `<option value="${escapeHtml(chapter.number)}"${selectAttribute(chapter.number, options.chapter)}>${escapeHtml(chapterLabel(chapter))} — ${escapeHtml(chapter.name)}</option>`).join("") ?? ""}</select></div>
-        <button type="submit">Search</button>
-      </div>
-      <details class="search-advanced"${options.field !== "statute" || options.status || options.supplement || options.sort !== "relevance" ? " open" : ""}>
-        <summary>Advanced search options</summary>
+    <header><h1>Search</h1><p>Search statutes, Public and Special Acts, and infractions. Advanced filters apply to statutes only.</p></header>
+    <form class="search-refine search-v2-refine" role="search" aria-label="Search statutes, acts, and infractions" data-search-refine>
+      ${searchQueryRow({
+        id: "search-page-query",
+        label: "Citation, phrase, or keyword",
+        query,
+        placeholder: "e.g., 1-210 or freedom of information",
+        required: true
+      })}
+      <details class="search-advanced"${hasAdvancedOptions ? " open" : ""}>
+        <summary><span aria-hidden="true">${icons.settings}</span>Advanced search options${disclosureChevron}</summary>
         <div class="search-filter-grid">
+          <div class="search-field"><label for="search-title">Title</label>
+            <select id="search-title" name="title"><option value="">All titles</option>${catalog.titles.map((title) => `<option value="${escapeHtml(title.id)}"${selectAttribute(title.id, options.title)}>${escapeHtml(titleLabel(title))} — ${escapeHtml(title.name)}</option>`).join("")}</select></div>
+          <div class="search-field"><label for="search-chapter">Chapter</label>
+            <select id="search-chapter" name="chapter"${selectedTitle ? "" : " disabled"}><option value="">${selectedTitle ? "All chapters" : "Choose a title first"}</option>${selectedTitle?.chapters.map((chapter) => `<option value="${escapeHtml(chapter.number)}"${selectAttribute(chapter.number, options.chapter)}>${escapeHtml(chapterLabel(chapter))} — ${escapeHtml(chapter.name)}</option>`).join("") ?? ""}</select></div>
           <div class="search-field"><label for="search-field">Search field</label><select id="search-field" name="field">${[["statute", "Statute text"], ["citation", "Citation"], ["heading", "Heading"], ["body", "Body"], ["history", "History"], ["annotations", "Annotations"], ["all", "All fields"]].map(([value, label]) => `<option value="${value}"${selectAttribute(value, options.field)}>${label}</option>`).join("")}</select></div>
           <div class="search-field"><label for="search-status-filter">Section status</label><select id="search-status-filter" name="status"><option value="">Any status</option>${["active", "mixed", "obsolete", "repealed", "reserved", "transferred"].map((value) => `<option value="${value}"${selectAttribute(value, options.status)}>${value[0].toUpperCase()}${value.slice(1)}</option>`).join("")}</select></div>
           <div class="search-field"><label for="search-supplement-filter">Supplement</label><select id="search-supplement-filter" name="supplement"><option value="">Base and supplement</option><option value="updated"${selectAttribute("updated", options.supplement)}>Updated by supplement</option><option value="base"${selectAttribute("base", options.supplement)}>Base revision only</option></select></div>
@@ -1048,13 +1097,13 @@ function alsoFoundMarkup(query) {
   if (!plainSearchWords(query)) {
     return `<p class="also-found-note">Public and Special Acts and infractions are not searched when a query uses OR, NOT, NEAR, or parentheses.</p>`;
   }
-  return `<section class="also-found" data-also-found aria-labelledby="also-found-heading" hidden>
-    <h2 id="also-found-heading">Also found in</h2>
+  return `<details class="also-found" data-also-found hidden>
+    <summary>Also found in${disclosureChevron}</summary>
     <div class="also-found-groups">
       <section class="also-found-group" data-also-found-group="acts" aria-labelledby="also-found-acts" hidden></section>
       <section class="also-found-group" data-also-found-group="infractions" aria-labelledby="also-found-infractions" hidden></section>
     </div>
-  </section>`;
+  </details>`;
 }
 
 function fillAlsoFoundGroup(section, name, heading, rows, links) {
@@ -1087,20 +1136,22 @@ function searchOtherSources(query) {
   }).catch((error) => console.warn("Could not search the infractions", error));
 }
 
-function renderTitle(catalog, title) {
+function renderTitle(catalog, title, settingsPanel) {
   setDocumentTitle(titleLabel(title));
   const mainContent = `<main class="browse-page application-main" id="main-content">
     ${breadcrumbs([{ label: "Titles", href: titlesRouteHref() }, { label: titleLabel(title) }])}
     <div class="browse-heading"><div><p class="eyebrow">${title.chapters.length} chapter${title.chapters.length === 1 ? "" : "s"}</p><h1>${escapeHtml(titleLabel(title))} — ${escapeHtml(title.name)}</h1></div><a href="${escapeHtml(title.sourceUrl)}">Official title source</a></div>
     <p class="desktop-only">Choose a chapter from the chapters column.</p>
-    <div class="mobile-only">${browseFilter("chapter-filter", "Find a chapter", "browse-chapters-list")}</div>
-    <ol class="chapter-list mobile-only" id="browse-chapters-list">${title.chapters.map((chapter) => `<li><a href="${escapeHtml(chapterRoute(title, chapter))}"><strong>${escapeHtml(chapterLabel(chapter))}</strong><span>${escapeHtml(chapter.name)}</span><small>${chapter.sectionCount} section${chapter.sectionCount === 1 ? "" : "s"}</small></a></li>`).join("")}</ol>
+    <div class="mobile-only statute-drilldown">
+      ${browseFilter("chapter-filter", "Find a chapter", "browse-chapters-list")}
+      <ol class="chapter-list" id="browse-chapters-list">${title.chapters.map((chapter) => `<li><a href="${escapeHtml(chapterRoute(title, chapter))}"><strong>${escapeHtml(chapterLabel(chapter))}</strong><span>${escapeHtml(chapter.name)}</span><small>${chapter.sectionCount} section${chapter.sectionCount === 1 ? "" : "s"}</small></a></li>`).join("")}</ol>
+    </div>
   </main>`;
   mountApplicationShell({
     ...statuteNavigation(catalog, { kind: "title" }, () => [statuteTitleColumn(catalog, title), statuteChapterColumn(title)], { title }),
     mainContent,
     mobilePresentationMode: "drilldown"
-  });
+  }, settingsPanel);
 }
 
 async function sectionSecondaryContext(title, section, requestedCitation) {
@@ -1138,7 +1189,7 @@ function loadChapter(path) {
   return pending ?? getJson(`./data/${path}`);
 }
 
-async function renderChapter(catalog, title, chapterMeta, route, sequence) {
+async function renderChapter(catalog, title, chapterMeta, route, sequence, settingsPanel) {
   if (route.kind === "section") {
     // The section's reference links and related sources need these; fetch them with the chapter.
     repository.loadCitations(title.id).catch(() => {});
@@ -1196,7 +1247,10 @@ async function renderChapter(catalog, title, chapterMeta, route, sequence) {
   const hiddenSections = chapter.sections.length - chapterNavigation.length;
   setDocumentTitle(selected ? sectionLabel(selected) : chapterLabel(chapter), titleLabel(title));
   const sectionItems = statuteSectionItems(title, chapter, chapterNavigation, selected, changeBySection, pendingBySection);
-  const mobileChapterList = `<section class="mobile-only mobile-section-browser" aria-labelledby="mobile-sections-heading"><div class="section-heading"><div><p class="eyebrow">${chapterNavigation.length} sections${hiddenSections ? ` · ${hiddenSections} hidden` : ""}</p><h2 id="mobile-sections-heading">Sections</h2></div></div>${browseFilter("section-filter", "Find a section", "browse-sections-list")}<div id="browse-sections-list">${railList(sectionItems)}</div></section>`;
+  const mobileChapterList = `<section class="mobile-only mobile-section-browser statute-drilldown" aria-labelledby="mobile-sections-heading"><div class="section-heading"><div><p class="eyebrow">${chapterNavigation.length} sections${hiddenSections ? ` · ${hiddenSections} hidden` : ""}</p><h2 id="mobile-sections-heading">Sections</h2></div></div>${browseFilter("section-filter", "Find a section", "browse-sections-list")}<div id="browse-sections-list">${railList(sectionItems)}</div></section>`;
+  const mobileBrowse = preferences.navigationTree
+    ? `<a href="${escapeHtml(chapterRoute(title, chapter))}">Browse statute tree</a>`
+    : '<button type="button" data-open-chapter-sheet aria-haspopup="dialog">Browse chapter</button>';
   const mainContent = `<main class="reader-content application-main" id="main-content">
       ${breadcrumbs([
         { label: "Titles", href: titlesRouteHref() },
@@ -1206,7 +1260,7 @@ async function renderChapter(catalog, title, chapterMeta, route, sequence) {
       ])}
       ${supplementError ? `<p class="supplement-warning" role="alert">The published supplement could not be loaded. This page is showing the base revision only; reload before relying on it.</p>` : ""}
       <p class="source-note">Text: ${escapeHtml(String(catalog.source?.revisionYear ?? "Published"))} revision${latestEdition && !supplementError ? ` with the ${latestEdition.editionYear} Supplement` : ""}. Captured ${escapeHtml(formatSnapshotDate(catalog.source?.retrievedAt ?? catalog.generatedAt) ?? "date unavailable")}.</p>
-      <div class="chapter-research-tools"><a href="${escapeHtml(searchRouteHref("", { title: title.id, chapter: chapter.number }))}">Search this chapter</a>${selected ? `<span class="mobile-reader-tools"><button type="button" data-open-chapter-sheet aria-haspopup="dialog">Browse chapter</button></span>` : ""}${selected ? sectionNavigation(title, chapter, chapterNavigation, selected).replace('aria-label="Adjacent sections"', 'aria-label="Section shortcuts"') : ""}</div>
+      <div class="chapter-research-tools"><a href="${escapeHtml(searchRouteHref("", { title: title.id, chapter: chapter.number }))}">Search this chapter</a>${selected ? `<span class="mobile-reader-tools">${mobileBrowse}</span>` : ""}${selected ? sectionNavigation(title, chapter, chapterNavigation, selected).replace('aria-label="Adjacent sections"', 'aria-label="Section shortcuts"') : ""}</div>
       ${selected ? `${renderProvision(title, chapter, selected, maps, secondaryContext, changeBySection.get(selected.id), pendingBySection.get(selected.id))}${sectionNavigation(title, chapter, chapterNavigation, selected)}${chapterSheet(title, chapter, chapterNavigation, selected, changeBySection, pendingBySection)}` : `<div class="chapter-overview"><p class="eyebrow">${chapterNavigation.length} sections${hiddenSections ? ` · ${hiddenSections} hidden` : ""}</p><h1>${escapeHtml(chapterLabel(chapter))} — ${escapeHtml(chapter.name)}</h1>${chapterSupplementSummary(title, chapter, overlay, changeBySection)}<div data-amendments-status><p class="visually-hidden" role="status">Amendment information loading…</p></div><p class="desktop-only">Choose a section from the sections column.</p><a href="${escapeHtml(chapter.sourceUrl)}">Official chapter source</a></div>${mobileChapterList}`}
     </main>`;
   mountApplicationShell({
@@ -1222,7 +1276,7 @@ async function renderChapter(catalog, title, chapterMeta, route, sequence) {
     }),
     mainContent,
     mobilePresentationMode: selected ? "reader" : "drilldown"
-  });
+  }, settingsPanel);
   bindChapterSheet();
   // Enrich the mounted reader without replacing its text, focus, or open disclosures.
   amendmentsPromise.then(({ index, error }) => {
@@ -1270,11 +1324,13 @@ async function renderChapter(catalog, title, chapterMeta, route, sequence) {
     if (target) {
       target.classList.add("subsection-target");
       target.tabIndex = -1;
-      // Start, not center: a long subsection would otherwise open with its first lines hidden.
-      target.scrollIntoView({ block: "start" });
-      target.focus({ preventScroll: true });
+      if (!settingsPanel?.isConnected) {
+        // Start, not center: a long subsection would otherwise open with its first lines hidden.
+        target.scrollIntoView({ block: "start" });
+        target.focus({ preventScroll: true });
+      }
     }
-  } else {
+  } else if (!settingsPanel?.isConnected) {
     window.scrollTo({ top: 0 });
   }
 }
@@ -1361,7 +1417,7 @@ function renderSelectedIndexTopic(topic, groups, targetEntry, query = "") {
   </section>`;
 }
 
-function attachLargeIndexTopic(topic, groups, targetEntry) {
+function attachLargeIndexTopic(topic, groups, targetEntry, { moveToEntry = true } = {}) {
   const groupById = new Map(groups.map((group) => [group[0].id, group]));
   const populate = (details) => {
     const list = details.querySelector("[data-index-group-entries]");
@@ -1411,9 +1467,11 @@ function attachLargeIndexTopic(topic, groups, targetEntry) {
       details?.classList.add("index-entry-target");
       target = details?.querySelector("summary") ?? details;
     } else target.classList.add("index-entry-target");
-    target?.scrollIntoView({ block: "center" });
-    target?.focus({ preventScroll: true });
-  } else window.scrollTo({ top: 0 });
+    if (moveToEntry) {
+      target?.scrollIntoView({ block: "center" });
+      target?.focus({ preventScroll: true });
+    }
+  } else if (moveToEntry) window.scrollTo({ top: 0 });
 }
 
 function bookmarkButton(bookmark, className = "") {
@@ -1476,7 +1534,7 @@ function renderInfractionDetail(entry, source) {
   </article>`;
 }
 
-async function renderInfractions(route, sequence) {
+async function renderInfractions(route, sequence, settingsPanel) {
   const [manifests, entries] = await Promise.all([
     secondaryRepository.init(),
     secondaryRepository.loadAllInfractions()
@@ -1499,11 +1557,9 @@ async function renderInfractions(route, sequence) {
   const categoryItems = groups.map(([category, values]) => `<li><a href="${escapeHtml(infractionsRouteHref(category))}"${selectedGroup?.[0] === category ? ` aria-current="page"` : ""}><strong>${escapeHtml(category)}</strong><span>${values.length.toLocaleString()} entries</span></a></li>`);
   const entryItems = shown.map((entry) => `<li><a href="${escapeHtml(infractionsRouteHref(entry.category, { entry: entry.id }))}"${selectedEntry?.id === entry.id ? ` aria-current="page"` : ""}><strong>Sec. ${escapeHtml(entry.citation)}</strong><span>${escapeHtml(entry.description)}</span></a></li>`);
   setDocumentTitle(selectedEntry ? `Sec. ${selectedEntry.citation}` : selectedGroup?.[0] ?? "Infractions");
-  const searchForm = (label, placeholder) => `<form class="infraction-search" data-infraction-search>
-        <label for="infraction-query">${label}</label>
-        <input id="infraction-query" name="query" type="search" value="${escapeHtml(route.query ?? "")}" placeholder="${placeholder}">
-        <button type="submit">Search</button>
-      </form>`;
+  const searchForm = (label, placeholder) => `<form class="search-refine infraction-search" data-infraction-search role="search" aria-label="Infractions">
+    ${searchQueryRow({ id: "infraction-query", label, query, placeholder })}
+  </form>`;
   const matchCount = (suffix = "") => `<p class="note">${filtered.length.toLocaleString()} matching entr${filtered.length === 1 ? "y" : "ies"}${filtered.length > shown.length ? `; showing the first ${shown.length}` : ""}.${suffix}</p>`;
   const mainBody = selectedEntry ? renderInfractionDetail(selectedEntry, manifests.infractions.source) : selectedGroup ? `<header class="section-heading"><div><p class="eyebrow">Judicial Branch schedule</p><h1>${escapeHtml(selectedGroup[0])}</h1></div><p>${selectedGroup[1].length.toLocaleString()} entries</p></header>
       ${searchForm("Search this category", "Citation or description")}
@@ -1542,7 +1598,7 @@ async function renderInfractions(route, sequence) {
     columnCount: infractionsAsTree ? 1 : contextualColumnCount("infractions", route),
     mobilePresentationMode: selectedEntry ? "detail" : "drilldown",
     footer: legalFooter()
-  });
+  }, settingsPanel);
   if (selectedEntry) {
     deviceState.recordRecent({
       id: `infraction:${selectedEntry.id}`,
@@ -1552,7 +1608,7 @@ async function renderInfractions(route, sequence) {
       href: infractionsRouteHref(selectedGroup[0], { entry: selectedEntry.id })
     });
   }
-  window.scrollTo({ top: 0 });
+  if (!settingsPanel?.isConnected) window.scrollTo({ top: 0 });
 }
 
 async function renderActs(route, sequence) {
@@ -1636,12 +1692,18 @@ async function renderActs(route, sequence) {
         : entry.counts.textActs ? `<p>Select an act to read its text here. Search matches words in each act's title and text.</p>` : ""}
     </aside>
     <nav class="acts-views" aria-label="Acts view">${viewLinks}</nav>
-    <form class="search-refine search-v2-refine acts-filter${sessionField ? " acts-filter-sessions" : ""}${effectiveView ? " acts-filter-effective" : ""}" data-acts-filter role="search" aria-label="Filter acts">
-      <div class="search-primary-controls">
-        <div class="search-field"><label for="acts-query">Search ${effectiveView ? "Public Acts" : "acts"}</label><input id="acts-query" name="query" type="search" value="${escapeHtml(options.query ?? "")}" placeholder="${entry.counts.textActs ? "Words, act, or bill number" : "Title, act, or bill number"}" autocomplete="off"></div>
+    <form class="search-refine" data-acts-filter role="search" aria-label="Filter acts">
+      ${searchQueryRow({
+        id: "acts-query",
+        label: effectiveView ? "Search Public Acts" : "Search acts",
+        query: options.query ?? "",
+        placeholder: entry.counts.textActs ? "Words, act, or bill number" : "Title, act, or bill number",
+        submit: "Apply",
+        autocompleteOff: true
+      })}
+      <div class="acts-filter-fields">
         ${sessionField}
         ${filterFields}
-        <button type="submit">Apply</button>
       </div>
     </form>
     ${results}
@@ -1797,7 +1859,7 @@ function renderBookmarks() {
   app.innerHTML = renderBookmarkPage(deviceState, siteHeader());
 }
 
-async function renderStatutesIndex(route, sequence) {
+async function renderStatutesIndex(route, sequence, settingsPanel) {
   const manifests = await secondaryRepository.init();
   if (sequence !== renderSequence) return;
   const letterCounts = aggregateShardCounts(manifests.index.shards);
@@ -1824,10 +1886,15 @@ async function renderStatutesIndex(route, sequence) {
       <p>Browse official subject headings and open linked statute sections. ${escapeHtml(source.revision)}.</p>
       <p class="source-note"><a href="${escapeHtml(source.url)}">View the official index volumes</a> · ${manifests.index.counts.headings.toLocaleString()} headings · ${manifests.index.counts.items.toLocaleString()} entries</p>
     </header>
-    <form class="index-search-form" id="index-search-form">
-      <label for="index-query">Search the subject index</label>
-      <input id="index-query" name="query" type="search" minlength="2" required value="${escapeHtml(route.query ?? "")}" placeholder="Try motor vehicles">
-      <button type="submit">Search index</button>
+    <form class="search-refine" id="index-search-form" role="search" aria-label="Subject index">
+      ${searchQueryRow({
+        id: "index-query",
+        label: "Search the subject index",
+        query: route.query ?? "",
+        placeholder: "Try motor vehicles",
+        submit: "Search index",
+        required: true
+      })}
     </form>`;
   const mainBody = selected ? `<header class="index-intro index-topic-intro">
       <p class="eyebrow">General Statutes index</p>
@@ -1866,7 +1933,7 @@ async function renderStatutesIndex(route, sequence) {
     mainContent,
     columnCount: indexAsTree ? 1 : contextualColumnCount("index", route),
     mobilePresentationMode: selected ? "detail" : "drilldown"
-  });
+  }, settingsPanel);
 
   document.querySelector("#index-search-form")?.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -1874,13 +1941,15 @@ async function renderStatutesIndex(route, sequence) {
     location.hash = indexRouteHref(topicLetter(query), { query });
   });
   if (selected?.items.length > LARGE_INDEX_TOPIC_THRESHOLD) {
-    attachLargeIndexTopic(selected, topicGroups, matchingEntry);
+    attachLargeIndexTopic(selected, topicGroups, matchingEntry, { moveToEntry: !settingsPanel?.isConnected });
   } else if (selected && matchingEntry) {
     const target = document.getElementById(matchingEntry.id);
     target?.classList.add("index-entry-target");
-    target?.scrollIntoView({ block: "center" });
-    target?.focus({ preventScroll: true });
-  } else window.scrollTo({ top: 0 });
+    if (!settingsPanel?.isConnected) {
+      target?.scrollIntoView({ block: "center" });
+      target?.focus({ preventScroll: true });
+    }
+  } else if (!settingsPanel?.isConnected) window.scrollTo({ top: 0 });
   if (selected) {
     deviceState.recordRecent({
       id: `index:${selected.id}`,
@@ -1932,7 +2001,7 @@ function restoreRouteFocus(priorFocus) {
   if (pane && href) {
     const match = [...document.querySelectorAll(".context-column[data-context-key] a[href]")]
       .find((link) => link.getAttribute("href") === href && link.closest(".context-column").dataset.contextKey === pane.dataset.contextKey);
-    if (match) {
+    if (match?.offsetParent) {
       match.focus({ preventScroll: true });
       announceRoute();
       return;
@@ -1944,7 +2013,7 @@ function restoreRouteFocus(priorFocus) {
   heading.focus({ preventScroll: true });
 }
 
-async function renderCurrentRoute() {
+async function renderCurrentRoute(settingsPanel) {
   const priorFocus = document.activeElement;
   const initialRender = !hasRendered;
   hasRendered = true;
@@ -1965,18 +2034,18 @@ async function renderCurrentRoute() {
     }
     const catalog = await loadCatalog();
     if (sequence !== renderSequence) return;
-    if (route.kind === "home") return await renderHome(catalog);
-    if (route.kind === "titles") return renderTitles(catalog);
+    if (route.kind === "home") return await renderHome(catalog, settingsPanel);
+    if (route.kind === "titles") return renderTitles(catalog, settingsPanel);
     if (route.kind === "not-found") return renderNotFound();
     if (route.kind === "search") return await renderSearchPage(catalog, route);
-    if (route.kind === "infractions") return await renderInfractions(route, sequence);
+    if (route.kind === "infractions") return await renderInfractions(route, sequence, settingsPanel);
     if (route.kind === "acts") return await renderActs(route, sequence);
     if (route.kind === "act") return await renderAct(catalog, route, sequence);
     if (route.kind === "bookmarks") return renderBookmarks();
     if (route.kind === "history") return renderHistory();
     if (route.kind === "about") return await renderAbout(catalog, route, sequence);
     if (route.kind === "guide") return await renderGuide(catalog, route, sequence);
-    if (route.kind === "index") return await renderStatutesIndex(route, sequence);
+    if (route.kind === "index") return await renderStatutesIndex(route, sequence, settingsPanel);
 
     let title = route.title ? findTitle(catalog, route.title) : null;
     const baseMatch = route.chapter ? findChapter(catalog, route.chapter, title) : null;
@@ -1986,10 +2055,10 @@ async function renderCurrentRoute() {
     let chapterMatch = route.chapter ? findChapter(catalog, route.chapter, title) : null;
     if (!title && chapterMatch) title = chapterMatch.title;
     if (!title) return renderNotFound("That title was not found.");
-    if (route.kind === "title") return renderTitle(catalog, title);
+    if (route.kind === "title") return renderTitle(catalog, title, settingsPanel);
     if (!chapterMatch) chapterMatch = findChapter(catalog, route.chapter, title);
     if (!chapterMatch) return renderNotFound("That chapter was not found.");
-    return await renderChapter(catalog, title, chapterMatch.chapter, route, sequence);
+    return await renderChapter(catalog, title, chapterMatch.chapter, route, sequence, settingsPanel);
   } catch (error) {
     if (sequence !== renderSequence) return;
     setDocumentTitle("Could not load");
@@ -2094,24 +2163,6 @@ document.addEventListener("keydown", (event) => {
   selectRevisionView(next);
   next.focus();
 });
-
-// A setting that changes the page re-renders it with the Settings panel still open on that control.
-async function rerenderKeepingSettings(control, selector) {
-  const currentHash = location.hash;
-  const fromSidePanel = Boolean(control.closest("[data-navigation-settings]"));
-  const scrollTop = control.closest("[data-settings-panel], [data-navigation-settings]").scrollTop;
-  await renderCurrentRoute();
-  if (location.hash !== currentHash) return;
-  const panel = document.querySelector(fromSidePanel ? "[data-navigation-settings]" : "[data-settings-panel]");
-  if (!panel) return;
-  if (fromSidePanel) openNavigationSettings({ focus: false });
-  else {
-    panel.hidden = false;
-    document.querySelector("[data-open-settings]")?.setAttribute("aria-expanded", "true");
-  }
-  panel.querySelector(selector)?.focus({ preventScroll: true });
-  panel.scrollTop = scrollTop;
-}
 
 document.addEventListener("input", (event) => {
   if (event.target.matches("[data-filter-list]")) {
@@ -2265,7 +2316,7 @@ function visibleNavigationSettingsButton() {
 
 // The panes are too narrow to hold the panel and clip what overflows them, so it sits
 // outside them and is placed under the button.
-function openNavigationSettings({ focus = true } = {}) {
+function positionNavigationSettings() {
   const panel = document.querySelector("[data-navigation-settings]");
   const button = visibleNavigationSettingsButton();
   if (!panel || !button) return;
@@ -2277,7 +2328,11 @@ function openNavigationSettings({ focus = true } = {}) {
   panel.style.left = `${Math.max(gutter, Math.min(left, innerWidth - panel.offsetWidth - gutter))}px`;
   panel.style.maxHeight = `${innerHeight - top - gutter}px`;
   button.setAttribute("aria-expanded", "true");
-  if (focus) panel.querySelector("button")?.focus();
+  return panel;
+}
+
+function openNavigationSettings() {
+  positionNavigationSettings()?.querySelector("button")?.focus();
 }
 
 function closeNavigationSettings({ restoreFocus = true } = {}) {
@@ -2532,42 +2587,40 @@ document.addEventListener("click", async (event) => {
   }
   const copyCitation = event.target.closest("[data-copy-citation]");
   if (copyCitation) {
-    const status = copyCitation.closest(".provision")?.querySelector(".action-status");
     try {
       await navigator.clipboard.writeText(copyCitation.dataset.copyCitation);
+      if (!copyCitation.isConnected) return;
       // Icon actions swap to a check mark; the text-only button swaps its words.
       const iconOnly = copyCitation.classList.contains("icon-action");
       copyCitation.innerHTML = iconOnly ? iconActionLabel(icons.copied, "Copied") : "Copied";
-      if (status) status.textContent = `${copyCitation.dataset.copyCitation} copied.`;
+      showActionToast(`${copyCitation.dataset.copyCitation} copied.`);
       window.clearTimeout(Number(copyCitation.dataset.copyTimer));
       copyCitation.dataset.copyTimer = String(window.setTimeout(() => {
         if (copyCitation.isConnected) copyCitation.innerHTML = iconOnly ? iconActionLabel(icons.copy, "Copy citation") : "Copy citation";
       }, 1600));
     } catch {
-      if (status) status.textContent = "The citation could not be copied automatically.";
+      if (copyCitation.isConnected) showActionToast("The citation could not be copied automatically.");
     }
     return;
   }
   const share = event.target.closest("[data-share-link]");
   if (share) {
-    const status = share.closest(".provision")?.querySelector(".action-status");
     try {
       await navigator.share({ title: share.dataset.shareTitle, url: new URL(share.dataset.shareLink, location.href).href });
-      if (status) status.textContent = "Share options opened.";
+      if (share.isConnected) showActionToast("Share options opened.");
     } catch (error) {
       // Closing the share sheet without choosing anything is not a failure.
-      if (error.name !== "AbortError" && status) status.textContent = "The share options could not be opened. Use Copy link instead.";
+      if (error.name !== "AbortError" && share.isConnected) showActionToast("The share options could not be opened. Use Copy link instead.");
     }
     return;
   }
   const copy = event.target.closest("[data-copy-link]");
   if (!copy) return;
-  const status = copy.closest(".provision")?.querySelector(".action-status");
   try {
     await navigator.clipboard.writeText(new URL(copy.dataset.copyLink, location.href).href);
-    if (status) status.textContent = "Link copied.";
+    if (copy.isConnected) showActionToast("Link copied.");
   } catch {
-    if (status) status.textContent = "The link could not be copied automatically.";
+    if (copy.isConnected) showActionToast("The link could not be copied automatically.");
   }
 });
 
@@ -2580,7 +2633,7 @@ document.addEventListener("change", async (event) => {
     const chapterSelect = document.querySelector("#search-chapter");
     const catalog = await loadCatalog();
     const title = catalog.titles.find((candidate) => candidate.id === event.target.value);
-    const options = [new Option("All chapters", ""), ...(title?.chapters ?? []).map((chapter) => new Option(`${chapterLabel(chapter)} — ${chapter.name}`, chapter.number))];
+    const options = [new Option(title ? "All chapters" : "Choose a title first", ""), ...(title?.chapters ?? []).map((chapter) => new Option(`${chapterLabel(chapter)} — ${chapter.name}`, chapter.number))];
     chapterSelect.replaceChildren(...options);
     chapterSelect.disabled = !title;
     return;
@@ -2605,13 +2658,13 @@ document.addEventListener("change", async (event) => {
     const hidden = deviceState.preferences().hiddenStatuses.filter((value) => value !== status);
     applyPreferences(deviceState.updatePreferences({ hiddenStatuses: event.target.checked ? [...hidden, status] : hidden }));
     // The tree hides sections on every statute page; the panes only list a chapter's sections.
-    const pages = deviceState.preferences().navigationTree ? ["home", "title", "chapter", "section"] : ["chapter", "section"];
-    if (pages.includes(parseRoute(location).kind)) await rerenderKeepingSettings(event.target, `[data-hide-status="${CSS.escape(status)}"]`);
+    const pages = deviceState.preferences().navigationTree ? ["home", "titles", "title", "chapter", "section"] : ["chapter", "section"];
+    if (pages.includes(parseRoute(location).kind)) await renderCurrentRoute(event.target.closest(".settings-panel"));
     return;
   }
   if (event.target.matches("[data-navigation-tree]")) {
     applyPreferences(deviceState.updatePreferences({ navigationTree: event.target.checked }));
-    if (["home", "title", "chapter", "section", "index", "infractions"].includes(parseRoute(location).kind)) await rerenderKeepingSettings(event.target, "[data-navigation-tree]");
+    if (["home", "titles", "title", "chapter", "section", "index", "infractions"].includes(parseRoute(location).kind)) await renderCurrentRoute(event.target.closest(".settings-panel"));
     return;
   }
 });
@@ -2714,13 +2767,15 @@ function updateHeaderPinning() {
 new ResizeObserver(updateHeaderPinning).observe(document.body);
 compactLayout.addEventListener("change", () => {
   document.querySelector(".app-nav > a:first-child")?.setAttribute("href", statutesNavHref());
+  if (parseRoute(location).kind === "titles" && deviceState.preferences().navigationTree) renderCurrentRoute();
+  else orderStatuteTree();
 });
 
-window.addEventListener("hashchange", renderCurrentRoute);
+window.addEventListener("hashchange", () => renderCurrentRoute());
 // A page that failed only because the connection dropped loads itself again on reconnect.
 window.addEventListener("online", () => {
   if (app.querySelector("[data-load-failure]")) renderCurrentRoute();
 });
 renderCurrentRoute();
 
-bindBookmarkControls({ state: deviceState, render: renderBookmarks, buttonLabel: bookmarkButtonLabel });
+bindBookmarkControls({ state: deviceState, render: renderBookmarks, buttonLabel: bookmarkButtonLabel, showActionToast });

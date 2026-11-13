@@ -3,20 +3,30 @@ import { expectNoHighImpactAccessibilityViolations, openApp, isMobileProject } f
 
 const routes = ["#/", "#/titles", "#/t/01", "#/t/01/c/001", "#/t/01/c/001/s/1-1", "#/infractions", "#/index", "#/acts", "#/bookmarks", "#/search"];
 
-test("security deposit lists Also found in above the results", async ({ page }) => {
+test("security deposit shows a collapsed Also found in above the statute results", async ({ page }) => {
   await openApp(page, "#/search?q=security%20deposit");
   await expect(page.locator("#search-status")).toContainText(/Showing \d+ of \d+ results?/, { timeout: 60_000 });
-  const alsoFound = page.getByRole("region", { name: "Also found in" });
-  await expect(alsoFound.getByRole("region", { name: "Public and Special Acts" })).toBeVisible();
-  await expect(alsoFound.getByRole("region", { name: "Infractions" })).toBeVisible();
+  const alsoFound = page.locator("[data-also-found]");
+  await expect(alsoFound).toBeVisible();
+  await expect(alsoFound).not.toHaveAttribute("open");
+  await expect(alsoFound.locator(".also-found-groups")).toBeHidden();
   const also = await alsoFound.boundingBox();
   const results = await page.locator("#results").boundingBox();
   expect(also.y + also.height).toBeLessThanOrEqual(results.y);
+  await alsoFound.locator("summary").press("Enter");
+  await expect(alsoFound.getByRole("region", { name: "Public and Special Acts" })).toBeVisible();
+  await expect(alsoFound.getByRole("region", { name: "Infractions" })).toBeVisible();
   await expectNoHighImpactAccessibilityViolations(page);
 });
 
 test("Search tips is a collapsed disclosure outside Advanced options with every tip", async ({ page }) => {
   await openApp(page, "#/search");
+  const advanced = page.locator(".search-advanced");
+  await expect(advanced).not.toHaveAttribute("open");
+  await advanced.locator("summary").click();
+  await expect(page.getByLabel("Chapter", { exact: true })).toBeDisabled();
+  await page.getByLabel("Title", { exact: true }).selectOption("title-01");
+  await expect(page.getByLabel("Chapter", { exact: true })).toBeEnabled();
   const tips = page.locator(".search-syntax");
   await expect(tips.locator("summary")).toHaveText("Search tips");
   await expect(page.locator(".search-advanced .search-syntax")).toHaveCount(0);
@@ -243,7 +253,8 @@ test("section actions are four named icons and a blue Official source button", a
     const box = await icon.boundingBox();
     expect(box.width).toBeGreaterThanOrEqual(36);
     expect(box.height).toBeGreaterThanOrEqual(44);
-    await expect(icon.locator("svg")).toHaveCount(1);
+    await expect(icon).toHaveCSS("border-top-width", "0px");
+    await expect(icon.locator("svg")).toHaveCSS("width", "24px");
   }
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   await expectNoHighImpactAccessibilityViolations(page);
@@ -264,11 +275,12 @@ test("tooltips appear on hover and keyboard focus and icon actions still work", 
   await page.mouse.move(0, 0);
   await citation.click();
   await expect.poll(() => page.evaluate(() => window.copied)).toBe("Conn. Gen. Stat. § 11-22");
-  await expect(page.locator(".action-status")).toContainText("copied");
+  await expect(page.locator("[data-action-toast]")).toContainText("copied");
   const link = actions.getByRole("button", { name: "Copy link", exact: true });
   await link.click();
   await expect.poll(() => page.evaluate(() => window.copied)).toContain("#/t/11/c/190/s/11-22");
-  await expect(page.locator(".action-status")).toHaveText("Link copied.");
+  await expect(page.locator("[data-action-toast]")).toHaveText("Link copied.");
+  await expect(page.locator("[data-action-toast]")).toBeEmpty({ timeout: 4500 });
   await page.mouse.move(0, 0);
   await citation.focus();
   await page.keyboard.press("Tab");
@@ -277,17 +289,19 @@ test("tooltips appear on hover and keyboard focus and icon actions still work", 
   await expect(actions.getByRole("link", { name: "Email" })).toHaveAttribute("href", /^mailto:/);
 });
 
-test("the bookmark icon swaps between add and check, and the saved section appears on Bookmarks", async ({ page }) => {
+test("the saved bookmark icon is filled and the saved section appears on Bookmarks", async ({ page }) => {
   await openApp(page, "#/t/11/c/190/s/11-22");
   const button = page.locator(".provision .bookmark-button");
-  const path = () => button.locator("svg path").getAttribute("d");
-  expect(await path()).toMatch(/^M12 13V7/);
+  await expect(button.locator("svg path")).toHaveCSS("fill", "none");
   await expect(button).toHaveAttribute("aria-pressed", "false");
   await button.click();
   await expect(button).toHaveAttribute("aria-pressed", "true");
   await expect(button).toHaveAccessibleName("Saved");
-  expect((await path()).startsWith("m9 10.5")).toBe(true);
-  await expect(page.locator(".action-status")).toContainText("Bookmark saved");
+  const bookmark = button.locator(".bookmark-shape");
+  const color = await bookmark.evaluate((path) => getComputedStyle(path).color);
+  await expect(bookmark).toHaveCSS("fill", color);
+  await expect(button).toHaveCSS("background-color", "rgba(0, 0, 0, 0)");
+  await expect(page.locator("[data-action-toast]")).toContainText("Bookmark saved");
   await page.evaluate(() => { location.hash = "#/bookmarks"; });
   await expect(page.getByRole("link", { name: "Sec. 11-22" }).first()).toBeVisible();
 });
@@ -330,7 +344,7 @@ test("Share shows only on touch devices that have a share sheet", async ({ page 
   const data = await page.evaluate(() => window.shared[0]);
   expect(data.title).toBe("Sec. 11-22. Expenses.");
   expect(data.url).toContain("#/t/11/c/190/s/11-22");
-  await expect(page.locator(".action-status")).toHaveText("Share options opened.");
+  await expect(page.locator("[data-action-toast]")).toHaveText("Share options opened.");
   await expectNoHighImpactAccessibilityViolations(page);
 });
 
@@ -348,7 +362,7 @@ test("closing the share sheet says nothing, and a real failure points to Copy li
   await openApp(page, "#/t/11/c/190/s/11-22");
   await page.getByRole("button", { name: "Share", exact: true }).click();
   await expect.poll(() => page.evaluate(() => window.shared.length)).toBe(1);
-  await expect(page.locator(".action-status")).toBeEmpty();
+  await expect(page.locator("[data-action-toast]")).toBeEmpty();
 });
 
 test("a share failure points to Copy link", async ({ page }, testInfo) => {
@@ -356,7 +370,7 @@ test("a share failure points to Copy link", async ({ page }, testInfo) => {
   await stubShare(page, "fail");
   await openApp(page, "#/t/11/c/190/s/11-22");
   await page.getByRole("button", { name: "Share", exact: true }).click();
-  await expect(page.locator(".action-status")).toContainText("Use Copy link instead");
+  await expect(page.locator("[data-action-toast]")).toContainText("Use Copy link instead");
 });
 
 for (const width of [320, 360, 375, 390, 430, 576]) {

@@ -20,13 +20,13 @@ test("dense shell exposes bookmark count and device-local activity", () => {
 });
 
 test("Search v2 uses structured filters, highlighted field-aware excerpts, and local history", () => {
-  assert.match(appSource, /class="search-field search-query-field"/);
+  assert.match(appSource, /class="search-query-field"/);
   assert.match(appSource, /renderSearchHighlight\(document\.heading, highlightTerms\)/);
   assert.match(appSource, /renderSearchExcerpt\(searchResultContext\(document, options\), highlightTerms\)/);
   assert.match(appSource, /NEAR\/5/);
   assert.match(appSource, /data-search-within/);
   assert.match(appSource, /deviceState\.recordSearch/);
-  assert.match(stylesSource, /\.search-primary-controls \{ display: grid;/);
+  assert.match(stylesSource, /\.search-query-row \{ display: grid;/);
   assert.match(stylesSource, /\.results mark \{[^}]*background: var\(--highlight-surface\)/);
 });
 
@@ -39,7 +39,7 @@ test("shared application shell provides contextual rails and mobile presentation
   assert.match(appSource, /statuteSectionColumn\(title, chapter, chapterNavigation, selected, changeBySection, pendingBySection\)/);
   assert.match(stylesSource, /\.context-list a\[aria-current="page"\]/);
   assert.match(appSource, /data-context-key="\$\{escapeHtml\(column\.className \|\| column\.label\)\}"/);
-  assert.match(appSource, /function mountApplicationShell\(options\)[\s\S]*contextScrollPositions\(\)[\s\S]*restoreContextScrollPositions\(positions\)/);
+  assert.match(appSource, /function mountApplicationShell\([^)]*\)[\s\S]*contextScrollPositions\(\)[\s\S]*restoreContextScrollPositions\(positions\)/);
   assert.match(appSource, /column\.scrollTop = previous/);
 });
 

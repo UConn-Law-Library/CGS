@@ -17,7 +17,7 @@ test("the panes stay the default, and the setting swaps them and persists", asyn
   await expect(page.locator(".context-column")).toHaveCount(3);
   await expect(page.locator(".statute-tree-column")).toHaveCount(0);
   await openNavigationSettings(page);
-  const setting = page.getByRole("checkbox", { name: /Page tree navigation/ });
+  const setting = page.getByRole("switch", { name: "Page tree navigation" });
   await expect(setting).not.toBeChecked();
   await setting.check();
   await expect(page.locator(".context-column")).toHaveCount(1);
@@ -173,12 +173,26 @@ test("the pane toggle stays clear in tree mode, open and collapsed", async ({ pa
   await expect(page.locator(".statute-tree-column")).toBeVisible();
 });
 
-test("phones keep their browsing with the setting on", async ({ page }, testInfo) => {
+test("phones switch between the page tree and the title, chapter, and section lists", async ({ page }, testInfo) => {
   test.skip(!isMobileProject(testInfo), "phone only");
-  await openApp(page, "#/t/01/c/001");
+  await openApp(page, "#/titles");
+  await expect(page.locator("#browse-titles-list")).toBeVisible();
   await openNavigationSettings(page);
   await page.locator("[data-navigation-tree]:visible").check();
-  await expect(page.locator(".statute-tree-column")).toBeHidden();
+  await expect(rail(page)).toBeVisible();
+  await expect(page.locator("#browse-titles-list")).toBeHidden();
+  await page.keyboard.press("Escape");
+  await rail(page).getByRole("button", { name: "Expand Title 1", exact: true }).click();
+  await rail(page).getByRole("button", { name: "Expand Chapter 2", exact: true }).click();
+  await rail(page).getByRole("link", { name: /§ 1-5 Independence Day/ }).click();
+  await expect(page.getByRole("heading", { level: 1, name: /Independence Day/ })).toBeVisible();
+  await expect(rail(page)).toBeHidden();
+  await page.getByRole("link", { name: "Browse statute tree" }).click();
+  await expect(rail(page)).toBeVisible();
+  await expect(page.locator("#browse-sections-list")).toBeHidden();
+  await openNavigationSettings(page);
+  await page.locator("[data-navigation-tree]:visible").uncheck();
+  await expect(rail(page)).toBeHidden();
   await expect(page.locator("#browse-sections-list")).toBeVisible();
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
 });
@@ -207,8 +221,21 @@ test("filter results keep their status tags, and the status filter narrows to a 
   await expect(formerly.locator(".supplement-pill")).toBeVisible();
   await expect(formerly.locator(".act-pending-pill")).toHaveCount(1);
 
-  const statusFilter = page.getByLabel("Status", { exact: true });
-  await statusFilter.selectOption("act");
+  const statusFilter = page.getByRole("button", { name: /^Status / });
+  await statusFilter.press("Enter");
+  const anyStatus = page.getByRole("button", { name: "Any status", exact: true });
+  await expect(anyStatus).toBeFocused();
+  await anyStatus.press("ArrowDown");
+  await expect(page.getByRole("button", { name: "Supplement amendments", exact: true })).toBeFocused();
+  await page.keyboard.press("Escape");
+  await expect(statusFilter).toBeFocused();
+  const chooseStatus = async (name) => {
+    await statusFilter.click();
+    await page.getByRole("group", { name: "Status", exact: true }).getByRole("button", { name, exact: true }).click();
+    await expect(statusFilter).toBeFocused();
+    await expect(statusFilter).toHaveAccessibleName(`Status ${name}`);
+  };
+  await chooseStatus("Recent Public Acts");
   await expect(status).toHaveText("2 sections.");
   await expect(rail(page).locator(".section-navigation-link")).toHaveCount(2);
   for (const link of await rail(page).locator(".section-navigation-link").all()) {
@@ -216,17 +243,17 @@ test("filter results keep their status tags, and the status filter narrows to a 
   }
 
   await filter.fill("");
-  await statusFilter.selectOption("transferred");
+  await chooseStatus("Transferred");
   await expect(status).toHaveText(/^[\d,]+ sections\. Showing the first 200 sections/);
   await expect(rail(page).locator(".transferred-pill")).toHaveCount(200);
-  await statusFilter.selectOption("supplement-new");
+  await chooseStatus("Supplement additions");
   await expect(status).toHaveText(/^[\d,]+ sections\. Showing the first 200 sections/);
   await expect(rail(page).locator(".supplement-new")).toHaveCount(200);
   await expect(rail(page).locator(".supplement-amended")).toHaveCount(0);
-  await statusFilter.selectOption("obsolete");
+  await chooseStatus("Obsolete");
   await expect(status).toHaveText(/^\d+ sections\.$/);
   await expect(rail(page).locator(".obsolete-pill")).toHaveCount(await rail(page).locator(".section-navigation-link").count());
-  await statusFilter.selectOption("all");
+  await chooseStatus("Any status");
   await expect(status).toBeHidden();
   await expect(rail(page).locator(".tree-title")).toHaveCount(81);
 });

@@ -15,15 +15,20 @@ const chevron = `<svg class="tree-chevron" viewBox="0 0 24 24" fill="none" strok
 
 // Each option keeps the sections that carry that tag in the section lists.
 const STATUS_FILTERS = {
-  all: "Any status",
-  "supplement-amended": "Supplement amendments",
-  "supplement-new": "Supplement additions",
-  act: "Recent Public Acts",
-  repealed: "Repealed",
-  transferred: "Transferred",
-  obsolete: "Obsolete",
-  reserved: "Reserved"
+  all: ["Any status", ""],
+  "supplement-amended": ["Supplement amendments", "supplement-pill supplement-amended"],
+  "supplement-new": ["Supplement additions", "supplement-pill supplement-new"],
+  act: ["Recent Public Acts", "section-status-pill act-pending-pill"],
+  repealed: ["Repealed", "section-status-pill repealed-pill"],
+  transferred: ["Transferred", "section-status-pill transferred-pill"],
+  obsolete: ["Obsolete", "section-status-pill obsolete-pill"],
+  reserved: ["Reserved", "section-status-pill reserved-pill"]
 };
+
+function statusBadge(status) {
+  const [label, classes] = STATUS_FILTERS[status];
+  return `<span class="${classes}">${label}</span>`;
+}
 
 function queryWords(query) {
   return query.replace(/§/g, " ").toLocaleLowerCase().split(/\s+/).filter(Boolean);
@@ -340,13 +345,54 @@ export function createStatuteTree({ titleLabel, chapterLabel, titleRoute, chapte
     }, 120);
   });
 
-  document.addEventListener("change", (event) => {
-    if (!event.target.matches("[data-tree-status]")) return;
-    statusFilter = Object.hasOwn(STATUS_FILTERS, event.target.value) ? event.target.value : "all";
+  document.addEventListener("click", (event) => {
+    const trigger = event.target.closest("#statute-tree-status");
+    if (trigger) {
+      const menu = document.getElementById("statute-tree-status-menu");
+      const { left, top, bottom } = trigger.getBoundingClientRect();
+      const below = innerHeight - bottom;
+      const above = top;
+      const openBelow = below >= 320 || below >= above;
+      menu.style.left = `clamp(1rem, ${left}px, 100vw - 17rem)`;
+      menu.style.top = openBelow ? `${bottom + 4}px` : "auto";
+      menu.style.bottom = openBelow ? "auto" : `${innerHeight - top + 4}px`;
+      menu.style.maxHeight = `${Math.max(0, (openBelow ? below : above) - 12)}px`;
+      return;
+    }
+    const option = event.target.closest("[data-tree-status-option]");
+    if (!option) return;
+    const menu = option.closest("[popover]");
+    menu.hidePopover();
+    document.getElementById("statute-tree-status").focus({ preventScroll: true });
+    const status = option.dataset.treeStatusOption;
+    if (status === statusFilter) return;
+    statusFilter = status;
+    document.getElementById("statute-tree-status-value").innerHTML = statusBadge(statusFilter);
+    for (const choice of menu.querySelectorAll("[data-tree-status-option]")) {
+      const selected = choice === option;
+      choice.setAttribute("aria-pressed", String(selected));
+      choice.toggleAttribute("autofocus", selected);
+    }
     filterExpanded.clear();
     if (searchesSections()) loadEveryTitle();
     refresh();
     if (!filtering()) revealCurrent();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    const option = event.target.closest?.("[data-tree-status-option]");
+    if (!option) return;
+    const choices = [...option.parentElement.querySelectorAll("button")];
+    const index = choices.indexOf(option);
+    const next = {
+      ArrowDown: choices[(index + 1) % choices.length],
+      ArrowUp: choices[(index - 1 + choices.length) % choices.length],
+      Home: choices[0],
+      End: choices.at(-1)
+    }[event.key];
+    if (!next) return;
+    event.preventDefault();
+    next.focus();
   });
 
   // `next` describes the page being opened: its title, chapter and section, and the section rows
@@ -371,8 +417,14 @@ export function createStatuteTree({ titleLabel, chapterLabel, titleRoute, chapte
       heading: `${collapseAllButton("statutes", html)}<strong>Statutes</strong><div class="browse-filter"><label for="statute-tree-filter">Filter titles, chapters, and sections</label>
         <input id="statute-tree-filter" type="search" value="${escapeHtml(query)}" placeholder="Number or heading" data-tree-filter aria-controls="${RAIL_ID}" autocomplete="off">
         <p class="browse-filter-status" role="status" aria-live="polite" data-tree-filter-status>${escapeHtml(status)}</p></div>
-        <div class="tree-status-filter"><label for="statute-tree-status">Status</label>
-        <select id="statute-tree-status" data-tree-status aria-controls="${RAIL_ID}">${Object.entries(STATUS_FILTERS).map(([value, label]) => `<option value="${value}"${value === statusFilter ? " selected" : ""}>${label}</option>`).join("")}</select></div>`,
+        <div class="tree-status-filter"><span id="statute-tree-status-label">Status</span>
+          <button type="button" id="statute-tree-status" popovertarget="statute-tree-status-menu" aria-labelledby="statute-tree-status-label statute-tree-status-value">
+            <span id="statute-tree-status-value">${statusBadge(statusFilter)}</span>${chevron}
+          </button>
+          <div id="statute-tree-status-menu" class="tree-status-menu" popover aria-labelledby="statute-tree-status-label" role="group">
+            ${Object.keys(STATUS_FILTERS).map((status) => `<button type="button" data-tree-status-option="${status}" aria-pressed="${status === statusFilter}"${status === statusFilter ? " autofocus" : ""}>${statusBadge(status)}</button>`).join("")}
+          </div>
+        </div>`,
       content: `<div id="${RAIL_ID}" class="statute-tree">${html}</div>`
     };
   }

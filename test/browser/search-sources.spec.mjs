@@ -1,7 +1,11 @@
 import { expect, test } from "@playwright/test";
 import { expectNoHighImpactAccessibilityViolations, openApp } from "./helpers.mjs";
 
-const alsoFound = (page) => page.getByRole("region", { name: "Also found in" });
+const alsoFound = (page) => page.locator("[data-also-found]");
+
+async function expandAlsoFound(page) {
+  await alsoFound(page).locator("summary").click();
+}
 
 test("the search page lists matching acts and infractions beside the statute results", async ({ page }) => {
   test.setTimeout(120_000);
@@ -11,6 +15,10 @@ test("the search page lists matching acts and infractions beside the statute res
   await expect(page).toHaveURL(/#\/search\?q=beverage%20containers$/);
 
   // The acts and infractions groups do not wait for the search of every statute title.
+  await expect(alsoFound(page)).toBeVisible();
+  await expect(alsoFound(page)).not.toHaveAttribute("open");
+  await expect(alsoFound(page).locator(".also-found-groups")).toBeHidden();
+  await expandAlsoFound(page);
   const acts = alsoFound(page).getByRole("region", { name: "Public and Special Acts" });
   await expect(acts.getByRole("link").first()).toContainText("P.A. 26-2");
   await expect(acts.getByRole("link").first()).toHaveAttribute("href", "#/acts/2026-regular/pa-2");
@@ -27,6 +35,7 @@ test("the search page lists matching acts and infractions beside the statute res
   await expect(page.locator(".acts-page [role=status]")).toContainText(`Showing ${actCount} of`);
 
   await page.goBack();
+  await expandAlsoFound(page);
   const seeAllInfractions = alsoFound(page).getByRole("link", { name: /^See all \d+ matching infractions?$/ });
   const infractionCount = (await seeAllInfractions.textContent()).match(/\d+/)[0];
   await seeAllInfractions.click();
@@ -39,6 +48,7 @@ test("the search page lists matching acts and infractions beside the statute res
 
 test("a search that names an act lists it under the acts group", async ({ page }) => {
   await openApp(page, "#/search?q=PA%2026-2&title=title-22a");
+  await expandAlsoFound(page);
   const acts = alsoFound(page).getByRole("region", { name: "Public and Special Acts" });
   await expect(acts.getByRole("listitem")).toHaveCount(1);
   await expect(acts.getByRole("link").first()).toContainText("P.A. 26-2");
@@ -51,6 +61,7 @@ test("a source that fails to load drops its group without breaking the search", 
   // One title keeps the statute search short; acts and infractions ignore the filter.
   await openApp(page, "#/search?q=beverage%20containers&title=title-22a");
   await expect(page.locator("#search-status")).toContainText(/Showing \d+ of \d+ results?/);
+  await expandAlsoFound(page);
   await expect(alsoFound(page).getByRole("region", { name: "Infractions" })).toBeVisible();
   await expect(page.locator('[data-also-found-group="acts"]')).toBeHidden();
 });

@@ -160,6 +160,7 @@ test("filters repealed sections from navigation while preserving a selected dire
 test("uses complete citations and clean descriptions in chapter navigation", () => {
   assert.equal(navigationSectionLabel({ citation: "36-53", citations: ["36-53"] }), "§ 36-53");
   assert.equal(navigationSectionLabel({ citation: null, citations: ["36-53", "36-54", "36-93"] }), "§§ 36-53–93");
+  assert.equal(navigationSectionLabel({ citations: ["1-42", "1-43", "1-54"] }, { compact: false }), "Secs. 1-42 to 1-54");
   assert.equal(
     navigationSectionDescription({ heading: "Sec. 9-135b. Preparation and printing of absentee ballots." }),
     "Preparation and printing of absentee ballots."

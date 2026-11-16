@@ -66,7 +66,8 @@ test("grouped sections appear once and still open from individual citations", as
   await page.goto("/#/t/01/c/007b/s/1-56k");
   await expect(page.locator("main h1")).toContainText("Springing power of attorney");
   await expect(chapterLinks("007b").first()).toHaveAttribute("aria-current", "page");
-  await page.goto("/#/t/01/c/007b/s/section-1-56k");
+  // The 2026-11-12 refresh publishes 1-56h to 1-56k as one grouped provision; its id opens it too.
+  await page.goto("/#/t/01/c/007b/s/group-1-56h-to-1-56i-to-1-56j-to-1-56k");
   await expect(page.locator("main h1")).toContainText("Springing power of attorney");
 });
 

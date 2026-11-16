@@ -33,46 +33,6 @@
         "annotations": [],
         "plainText": "Sections 42-101 to 42-103 , inclusive, are repealed."
       }
-    },
-    {
-      "id": "section-42-101",
-      "kind": "section",
-      "citation": "42-101",
-      "citations": [
-        "42-101"
-      ],
-      "heading": "42-101",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_734.htm#sec_42-101",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 42-101 to 42-103. Bulk sales. Sections 42-101 to 42-103 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 42-101 to 42-103. Bulk sales. Sections 42-101 to 42-103 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-42-103",
-      "kind": "section",
-      "citation": "42-103",
-      "citations": [
-        "42-103"
-      ],
-      "heading": "42-103",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_734.htm#sec_42-103",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 42-101 to 42-103. Bulk sales. Sections 42-101 to 42-103 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 42-101 to 42-103. Bulk sales. Sections 42-101 to 42-103 , inclusive, are repealed."
-      }
     }
   ]
 }

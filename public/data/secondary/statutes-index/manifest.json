@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-10-07T19:01:39.809792Z",
+  "generatedAt": "2026-11-12T22:44:45.288057Z",
   "source": {
     "name": "Index to the General Statutes of Connecticut",
     "publisher": "Connecticut General Assembly, Legislative Commissioners' Office",
@@ -32,7 +32,7 @@
     "headings": 5652,
     "items": 198142,
     "references": 171719,
-    "resolved": 169465
+    "resolved": 169467
   },
   "shards": [
     {

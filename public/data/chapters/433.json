@@ -279,8 +279,7 @@
         "body": [
           "(a) At the expense of the state, the commissioner may require and provide for the testing and the control of tuberculosis in livestock in this state. Any condemnation of livestock infected with tuberculosis shall comply with the provisions of section 22-288 . The procedures for testing for tuberculosis and the control and disposition of livestock classified as reactors shall conform to one of the following: (1) For goats, cattle, bison and captive cervids, the procedures, methods, testing and the disposition of reactors shall conform to the USDA Uniform Methods and Rules for Bovine Tuberculosis Eradication; (2) for species of livestock other than goats, cattle, bison or captive cervids, the procedures, methods, testing and the disposition of reactors shall be determined by the State Veterinarian; or (3) the most recent USDA approved and published procedures for testing for tuberculosis and the control and disposition of tuberculosis positive livestock.",
           "(b) The state shall not be liable for any damage incurred or alleged to have been incurred by any such test performed pursuant to this section.",
-          "(c) Official testing for tuberculosis shall be restricted to the State Veterinarian, veterinarians employed by the federal government and accredited veterinarians licensed to practice in this state. Surveillance tests may be performed by an employee of the department trained by and under the supervision of the State Veterinarian, provided no condemnation shall be made on the basis of such surveillance tests. The owner of any herd to be so tested shall provide assistance and proper restraint for confining the animals for such testing and during the application of such tests.",
-          "See Sec. 22-388 re periodic testing of livestock for infectious diseases."
+          "(c) Official testing for tuberculosis shall be restricted to the State Veterinarian, veterinarians employed by the federal government and accredited veterinarians licensed to practice in this state. Surveillance tests may be performed by an employee of the department trained by and under the supervision of the State Veterinarian, provided no condemnation shall be made on the basis of such surveillance tests. The owner of any herd to be so tested shall provide assistance and proper restraint for confining the animals for such testing and during the application of such tests."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 3346; 1959, P.A. 637, S. 2; 1961, P.A. 67; February, 1965, P.A. 32, S. 1; 1971, P.A. 4; 872, S. 446, 448; P.A. 77-267, S. 1; June Sp. Sess. P.A. 91-10, S. 7, 20; June 30 Sp. Sess. P.A. 03-6, S. 146(e), (f); P.A. 04-189, S. 1; P.A. 10-32, S. 82; P.A. 23-187, S. 4.)"
@@ -288,8 +287,13 @@
         "history": [
           "History: 1959 act replaced commissioner of agriculture with commissioner of agriculture, conservation and natural resources; 1961 act replaced commissioner of agriculture, conservation and natural resources with commissioner of agriculture and natural resources; 1965 act required that owner provide assistance and restraint for animals being tested and prohibited adding animals to herd until premises are clean, disinfected, inspected, etc.; 1971 acts allowed veterinarians employed by state department of agriculture and natural resources to administer tests and later replaced commissioner and department of agriculture and natural resources with commissioner and department of agriculture; P.A. 77-267 added Subsec. (b) re surveillance tests; June Sp. Sess. P.A. 91-10 amended Subsec. (a) to make commissioner's duty under this section a discretionary power; June 30 Sp. Sess. P.A. 03-6 replaced Commissioner and Department of Agriculture with Commissioner and Department of Agriculture and Consumer Protection, effective July 1, 2004; P.A. 04-189 repealed Sec. 146 of June 30 Sp. Sess. P.A. 03-6, thereby reversing the merger of the Departments of Agriculture and Consumer Protection, effective June 1, 2004; P.A. 10-32 deleted reference to Livestock Division and made technical changes in Subsec. (b), effective May 10, 2010; P.A. 23-187 deleted existing provisions and added new Subsec. (a) re testing of livestock for tuberculosis, added new Subsec. (b) re state liability and added Subsec. (c) re persons authorized to perform such testing, effective June 28, 2023."
         ],
-        "annotations": [],
-        "plainText": "(a) At the expense of the state, the commissioner may require and provide for the testing and the control of tuberculosis in livestock in this state. Any condemnation of livestock infected with tuberculosis shall comply with the provisions of section 22-288 . The procedures for testing for tuberculosis and the control and disposition of livestock classified as reactors shall conform to one of the following: (1) For goats, cattle, bison and captive cervids, the procedures, methods, testing and the disposition of reactors shall conform to the USDA Uniform Methods and Rules for Bovine Tuberculosis Eradication; (2) for species of livestock other than goats, cattle, bison or captive cervids, the procedures, methods, testing and the disposition of reactors shall be determined by the State Veterinarian; or (3) the most recent USDA approved and published procedures for testing for tuberculosis and the control and disposition of tuberculosis positive livestock.\n\n(b) The state shall not be liable for any damage incurred or alleged to have been incurred by any such test performed pursuant to this section.\n\n(c) Official testing for tuberculosis shall be restricted to the State Veterinarian, veterinarians employed by the federal government and accredited veterinarians licensed to practice in this state. Surveillance tests may be performed by an employee of the department trained by and under the supervision of the State Veterinarian, provided no condemnation shall be made on the basis of such surveillance tests. The owner of any herd to be so tested shall provide assistance and proper restraint for confining the animals for such testing and during the application of such tests.\n\nSee Sec. 22-388 re periodic testing of livestock for infectious diseases."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 22-388 re periodic testing of livestock for infectious diseases."
+          }
+        ],
+        "plainText": "(a) At the expense of the state, the commissioner may require and provide for the testing and the control of tuberculosis in livestock in this state. Any condemnation of livestock infected with tuberculosis shall comply with the provisions of section 22-288 . The procedures for testing for tuberculosis and the control and disposition of livestock classified as reactors shall conform to one of the following: (1) For goats, cattle, bison and captive cervids, the procedures, methods, testing and the disposition of reactors shall conform to the USDA Uniform Methods and Rules for Bovine Tuberculosis Eradication; (2) for species of livestock other than goats, cattle, bison or captive cervids, the procedures, methods, testing and the disposition of reactors shall be determined by the State Veterinarian; or (3) the most recent USDA approved and published procedures for testing for tuberculosis and the control and disposition of tuberculosis positive livestock.\n\n(b) The state shall not be liable for any damage incurred or alleged to have been incurred by any such test performed pursuant to this section.\n\n(c) Official testing for tuberculosis shall be restricted to the State Veterinarian, veterinarians employed by the federal government and accredited veterinarians licensed to practice in this state. Surveillance tests may be performed by an employee of the department trained by and under the supervision of the State Veterinarian, provided no condemnation shall be made on the basis of such surveillance tests. The owner of any herd to be so tested shall provide assistance and proper restraint for confining the animals for such testing and during the application of such tests."
       }
     },
     {
@@ -436,8 +440,7 @@
       "status": "active",
       "content": {
         "body": [
-          "The owner of any herd of livestock shall house, feed and care for such herd under such sanitary conditions as shall promote the health and welfare of such herd. No calf shall be fed milk or any other dairy product except such milk or other product that is produced by a herd that is negative for tuberculosis, or such milk or other dairy product that is pasteurized by being maintained at a heat of one hundred forty-two degrees Fahrenheit for a period of thirty minutes.",
-          "See Sec. 22-194 re definition of “pasteurized”."
+          "The owner of any herd of livestock shall house, feed and care for such herd under such sanitary conditions as shall promote the health and welfare of such herd. No calf shall be fed milk or any other dairy product except such milk or other product that is produced by a herd that is negative for tuberculosis, or such milk or other dairy product that is pasteurized by being maintained at a heat of one hundred forty-two degrees Fahrenheit for a period of thirty minutes."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 3352; P.A. 23-187, S. 7.)"
@@ -445,8 +448,13 @@
         "history": [
           "History: P.A. 23-187 added reference to livestock and promotion of health and welfare and made technical changes, effective June 28, 2023."
         ],
-        "annotations": [],
-        "plainText": "The owner of any herd of livestock shall house, feed and care for such herd under such sanitary conditions as shall promote the health and welfare of such herd. No calf shall be fed milk or any other dairy product except such milk or other product that is produced by a herd that is negative for tuberculosis, or such milk or other dairy product that is pasteurized by being maintained at a heat of one hundred forty-two degrees Fahrenheit for a period of thirty minutes.\n\nSee Sec. 22-194 re definition of “pasteurized”."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 22-194 re definition of “pasteurized”."
+          }
+        ],
+        "plainText": "The owner of any herd of livestock shall house, feed and care for such herd under such sanitary conditions as shall promote the health and welfare of such herd. No calf shall be fed milk or any other dairy product except such milk or other product that is produced by a herd that is negative for tuberculosis, or such milk or other dairy product that is pasteurized by being maintained at a heat of one hundred forty-two degrees Fahrenheit for a period of thirty minutes."
       }
     },
     {
@@ -534,8 +542,7 @@
           "(a) The commissioner may require and provide for the drawing and collecting of samples for testing and the control of brucellosis in livestock in this state. All blood and milk samples shall be submitted to a laboratory approved by the commissioner and the results of such tests shall be reported by the laboratories to the commissioner in a manner prescribed by the commissioner. Upon receipt of the laboratory reports on any such tests, the commissioner shall inform the owner or agent of any corporation and the applicable veterinarian of the results. Any condemnation of livestock infected with brucellosis shall comply with section 22-288 . The procedures for testing for brucellosis and the control and disposition of livestock infected with brucellosis shall conform to one of the following: (1) For cattle and bison, the procedures, methods, testing and disposition shall conform to the USDA uniform methods and rules for brucellosis eradication in cattle and bison; (2) for swine, the procedures, methods, testing and disposition of shall conform to the USDA uniform methods and rules for brucellosis eradication in swine; (3) for cervidae, the procedures, methods, testing and disposition of shall conform to the USDA uniform methods and rules for brucellosis eradication in cervidae; (4) for species other than cattle, bison, swine or cervidae, the procedures, methods, testing and disposition for brucellosis shall be determined by the State Veterinarian; or (5) the most recent USDA approved and published brucellosis procedures for testing and the control and disposition of brucellosis positive livestock.",
           "(b) The state shall not be liable for any damage incurred or alleged to have been incurred by any such test performed pursuant to this section.",
           "(c) No swine or goats used for breeding purposes shall be kept on the same premises as cattle unless such swine or goats are certified free from brucellosis.",
-          "(d) The drawing of samples for brucellosis tests shall be restricted to the State Veterinarian, veterinarians and trained employees of the department, veterinarians employed by the federal government and accredited veterinarians licensed to practice in this state.",
-          "See Sec. 22-288a re procedure for condemnation of herd and compensation of owner."
+          "(d) The drawing of samples for brucellosis tests shall be restricted to the State Veterinarian, veterinarians and trained employees of the department, veterinarians employed by the federal government and accredited veterinarians licensed to practice in this state."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 3328; 1955, S. 1785d; 1957, P.A. 36, S. 1; 1959, P.A. 477, S. 1; 637, S. 2; 1961, P.A. 67; 1967, P.A. 215; 1969, P.A. 104, S. 1; 1971, P.A. 5; 872, S. 446, 448; P.A. 77-267, S. 3; June Sp. Sess. P.A. 91-10, S. 8, 20; June 30 Sp. Sess. P.A. 03-6, S. 146(e), (f); P.A. 04-189, S. 1; P.A. 23-187, S. 10.)"
@@ -543,8 +550,13 @@
         "history": [
           "History: 1959 acts deleted provisions re herd owners' requests for brucellosis testing, allowing instead that commissioner may require such tests, increased age of heifers before testing from 24 to 30 months, required submission of milk samples to state department of health, specified that brand on afflicted animals be placed on left jaw and that left ear have metal reflector tag, required that premises where afflicted animals have been kept be cleaned, disinfected and approved within 30 days of their slaughter as qualification for indemnity and later replaced commissioner of agriculture with commissioner of agriculture, conservation and natural resources; 1961 act replaced commissioner of agriculture, conservation and natural resources with commissioner of agriculture and natural resources; 1967 act made testing mandatory rather than optional, rephrased exemption re steers and other specially designated classes of animals to specifically include male bovines, 6 months or older except steers and reduced age for which postponement of testing for heifers applies from 30 to 24 months; 1969 act reduced age applicable to heifers to 18 months and replaced reference to Storrs Agricultural Experiment Station laboratory and to department of health laboratory with reference to laboratory approved by commissioner; 1971 acts replaced commissioner of agriculture and natural resources with commissioner of agriculture and added reference in Subsec. (d) to veterinarians employed by state department of agriculture; P.A. 77-267 made testing provisions applicable to goats over 3 months old; June Sp. Sess. P.A. 91-10 amended Subsec. (a) to make commissioner's duty under this section a discretionary power; June 30 Sp. Sess. P.A. 03-6 replaced Commissioner and Department of Agriculture with Commissioner and Department of Agriculture and Consumer Protection, effective July 1, 2004; P.A. 04-189 repealed Sec. 146 of June 30 Sp. Sess. P.A. 03-6, thereby reversing the merger of the Departments of Agriculture and Consumer Protection, effective June 1, 2004; P.A. 23-187 deleted existing provisions and added new Subsec. (a) re testing procedures for brucellosis, new Subsec. (b) re state liability for such testing, new Subsec. (c) re prohibition concerning breeding swine and goats being kept on same premises as cattle unless certified to be free from brucellosis, and new Subsec. (d) re persons authorized to perform such testing, effective June 28, 2023."
         ],
-        "annotations": [],
-        "plainText": "(a) The commissioner may require and provide for the drawing and collecting of samples for testing and the control of brucellosis in livestock in this state. All blood and milk samples shall be submitted to a laboratory approved by the commissioner and the results of such tests shall be reported by the laboratories to the commissioner in a manner prescribed by the commissioner. Upon receipt of the laboratory reports on any such tests, the commissioner shall inform the owner or agent of any corporation and the applicable veterinarian of the results. Any condemnation of livestock infected with brucellosis shall comply with section 22-288 . The procedures for testing for brucellosis and the control and disposition of livestock infected with brucellosis shall conform to one of the following: (1) For cattle and bison, the procedures, methods, testing and disposition shall conform to the USDA uniform methods and rules for brucellosis eradication in cattle and bison; (2) for swine, the procedures, methods, testing and disposition of shall conform to the USDA uniform methods and rules for brucellosis eradication in swine; (3) for cervidae, the procedures, methods, testing and disposition of shall conform to the USDA uniform methods and rules for brucellosis eradication in cervidae; (4) for species other than cattle, bison, swine or cervidae, the procedures, methods, testing and disposition for brucellosis shall be determined by the State Veterinarian; or (5) the most recent USDA approved and published brucellosis procedures for testing and the control and disposition of brucellosis positive livestock.\n\n(b) The state shall not be liable for any damage incurred or alleged to have been incurred by any such test performed pursuant to this section.\n\n(c) No swine or goats used for breeding purposes shall be kept on the same premises as cattle unless such swine or goats are certified free from brucellosis.\n\n(d) The drawing of samples for brucellosis tests shall be restricted to the State Veterinarian, veterinarians and trained employees of the department, veterinarians employed by the federal government and accredited veterinarians licensed to practice in this state.\n\nSee Sec. 22-288a re procedure for condemnation of herd and compensation of owner."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 22-288a re procedure for condemnation of herd and compensation of owner."
+          }
+        ],
+        "plainText": "(a) The commissioner may require and provide for the drawing and collecting of samples for testing and the control of brucellosis in livestock in this state. All blood and milk samples shall be submitted to a laboratory approved by the commissioner and the results of such tests shall be reported by the laboratories to the commissioner in a manner prescribed by the commissioner. Upon receipt of the laboratory reports on any such tests, the commissioner shall inform the owner or agent of any corporation and the applicable veterinarian of the results. Any condemnation of livestock infected with brucellosis shall comply with section 22-288 . The procedures for testing for brucellosis and the control and disposition of livestock infected with brucellosis shall conform to one of the following: (1) For cattle and bison, the procedures, methods, testing and disposition shall conform to the USDA uniform methods and rules for brucellosis eradication in cattle and bison; (2) for swine, the procedures, methods, testing and disposition of shall conform to the USDA uniform methods and rules for brucellosis eradication in swine; (3) for cervidae, the procedures, methods, testing and disposition of shall conform to the USDA uniform methods and rules for brucellosis eradication in cervidae; (4) for species other than cattle, bison, swine or cervidae, the procedures, methods, testing and disposition for brucellosis shall be determined by the State Veterinarian; or (5) the most recent USDA approved and published brucellosis procedures for testing and the control and disposition of brucellosis positive livestock.\n\n(b) The state shall not be liable for any damage incurred or alleged to have been incurred by any such test performed pursuant to this section.\n\n(c) No swine or goats used for breeding purposes shall be kept on the same premises as cattle unless such swine or goats are certified free from brucellosis.\n\n(d) The drawing of samples for brucellosis tests shall be restricted to the State Veterinarian, veterinarians and trained employees of the department, veterinarians employed by the federal government and accredited veterinarians licensed to practice in this state."
       }
     },
     {
@@ -627,8 +639,7 @@
       "status": "active",
       "content": {
         "body": [
-          "No milk may be offered for sale in Connecticut unless produced from herds complying with sections 22-287 and 22-298 . For each new milk producer registered pursuant to section 22-172 or 22-173a , if such herd or any animals in such herd does not have a current tuberculosis and brucellosis negative test result, such herd shall be tested and found negative to a tuberculosis and brucellosis test prior to the issuance of the registration to produce milk. Such tuberculosis and brucellosis test may be conducted by employees of the department. Thereafter, each registered milk producing herd shall be surveillance tested for tuberculosis and brucellosis by the department at a frequency to be determined by the State Veterinarian.",
-          "See Sec. 22-192a re prohibition against sale of milk as if from tuberculin-tested or brucellosis-tested cows unless cows are so tested."
+          "No milk may be offered for sale in Connecticut unless produced from herds complying with sections 22-287 and 22-298 . For each new milk producer registered pursuant to section 22-172 or 22-173a , if such herd or any animals in such herd does not have a current tuberculosis and brucellosis negative test result, such herd shall be tested and found negative to a tuberculosis and brucellosis test prior to the issuance of the registration to produce milk. Such tuberculosis and brucellosis test may be conducted by employees of the department. Thereafter, each registered milk producing herd shall be surveillance tested for tuberculosis and brucellosis by the department at a frequency to be determined by the State Veterinarian."
         ],
         "sourceNotes": [
           "(1955, S. 1788d; 1957, P.A. 36, S. 3; 1959, P.A. 477, S. 4; 637, S. 2; 1961, P.A. 67; 1963, P.A. 391, S. 2; 1971, P.A. 872, S. 446, 448; June 30 Sp. Sess. P.A. 03-6, S. 146(e); P.A. 04-189, S. 1; P.A. 10-32, S. 83; P.A. 23-187, S. 11.)"
@@ -636,8 +647,13 @@
         "history": [
           "History: 1959 acts replaced commissioner of agriculture with commissioner of agriculture, conservation and natural resources and replaced references to “brucellosis-free animals” with “herds complying with this act” and reference to herd which has reacted negatively to test; 1961 act replaced commissioner of agriculture, conservation and natural resources with commissioner of agriculture and natural resources; 1963 act replaced reference to repealed Sec. 22-299 with reference to Sec. 22-299a; 1971 act replaced commissioner of agriculture and natural resources with commissioner of agriculture; June 30 Sp. Sess. P.A. 03-6 replaced Commissioner of Agriculture with Commissioner of Agriculture and Consumer Protection, effective July 1, 2004; P.A. 04-189 repealed Sec. 146 of June 30 Sp. Sess. P.A. 03-6, thereby reversing the merger of the Departments of Agriculture and Consumer Protection, effective June 1, 2004; P.A. 10-32 substituted “state Department of Agriculture” for “Livestock Division”, effective May 10, 2010; P.A. 23-187 deleted existing provisions re conditions for issuance of such permit and added reference to Sec. 22-287, added provisions re requirements for new milk producers and persons authorized to perform such testing and added provision re surveillance testing of registered herds for tuberculosis and brucellosis, effective June 28, 2023."
         ],
-        "annotations": [],
-        "plainText": "No milk may be offered for sale in Connecticut unless produced from herds complying with sections 22-287 and 22-298 . For each new milk producer registered pursuant to section 22-172 or 22-173a , if such herd or any animals in such herd does not have a current tuberculosis and brucellosis negative test result, such herd shall be tested and found negative to a tuberculosis and brucellosis test prior to the issuance of the registration to produce milk. Such tuberculosis and brucellosis test may be conducted by employees of the department. Thereafter, each registered milk producing herd shall be surveillance tested for tuberculosis and brucellosis by the department at a frequency to be determined by the State Veterinarian.\n\nSee Sec. 22-192a re prohibition against sale of milk as if from tuberculin-tested or brucellosis-tested cows unless cows are so tested."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 22-192a re prohibition against sale of milk as if from tuberculin-tested or brucellosis-tested cows unless cows are so tested."
+          }
+        ],
+        "plainText": "No milk may be offered for sale in Connecticut unless produced from herds complying with sections 22-287 and 22-298 . For each new milk producer registered pursuant to section 22-172 or 22-173a , if such herd or any animals in such herd does not have a current tuberculosis and brucellosis negative test result, such herd shall be tested and found negative to a tuberculosis and brucellosis test prior to the issuance of the registration to produce milk. Such tuberculosis and brucellosis test may be conducted by employees of the department. Thereafter, each registered milk producing herd shall be surveillance tested for tuberculosis and brucellosis by the department at a frequency to be determined by the State Veterinarian."
       }
     },
     {
@@ -771,8 +787,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Indemnities shall be paid for animals declared reactors as a result of serological tests approved by the Commissioner of Agriculture. Such indemnities shall be paid at the same rate as indemnities paid for cattle condemned for tuberculosis, and shall be determined by appraisers chosen by the commissioner.",
-          "See Sec. 22-288 re compensation for condemned cattle."
+          "Indemnities shall be paid for animals declared reactors as a result of serological tests approved by the Commissioner of Agriculture. Such indemnities shall be paid at the same rate as indemnities paid for cattle condemned for tuberculosis, and shall be determined by appraisers chosen by the commissioner."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 3328; 1949, June, 1949, S. 1351c; 1955, S. 1799d; 1957, P.A. 36, S. 7; 1959, P.A. 477, S. 9; 637, S. 2; 1961, P.A. 67; 1971, P.A. 872, S. 446, 448; June 30 Sp. Sess. P.A. 03-6, S. 146(e); P.A. 04-189, S. 1.)"
@@ -780,8 +795,13 @@
         "history": [
           "History: 1959 acts deleted clause limiting indemnities to reactors “in herds that are on the cooperative state and federal brucellosis control program and from which all previous reactors have been removed”, substituted “tests” for “test” and replaced commissioner of agriculture with commissioner of agriculture, conservation and natural resources; 1961 act replaced commissioner of agriculture, conservation and natural resources with commissioner of agriculture and natural resources; 1971 act replaced commissioner of agriculture and natural resources with commissioner of agriculture; June 30 Sp. Sess. P.A. 03-6 replaced Commissioner of Agriculture with Commissioner of Agriculture and Consumer Protection, effective July 1, 2004; P.A. 04-189 repealed Sec. 146 of June 30 Sp. Sess. P.A. 03-6, thereby reversing the merger of the Departments of Agriculture and Consumer Protection, effective June 1, 2004."
         ],
-        "annotations": [],
-        "plainText": "Indemnities shall be paid for animals declared reactors as a result of serological tests approved by the Commissioner of Agriculture. Such indemnities shall be paid at the same rate as indemnities paid for cattle condemned for tuberculosis, and shall be determined by appraisers chosen by the commissioner.\n\nSee Sec. 22-288 re compensation for condemned cattle."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 22-288 re compensation for condemned cattle."
+          }
+        ],
+        "plainText": "Indemnities shall be paid for animals declared reactors as a result of serological tests approved by the Commissioner of Agriculture. Such indemnities shall be paid at the same rate as indemnities paid for cattle condemned for tuberculosis, and shall be determined by appraisers chosen by the commissioner."
       }
     },
     {
@@ -1493,126 +1513,6 @@
         ],
         "annotations": [],
         "plainText": "(a) Any person, or any officer or agent of any corporation, who violates any provision of this chapter for which no other penalty is provided, who obstructs or attempts to obstruct the commissioner, an authorized agent of the commissioner or an employee of the department in the performance of a duty established in this chapter, or who violates any regulation established by said commissioner, shall be fined two hundred fifty dollars for a first such violation or obstruction and for any such second violation or obstruction shall be guilty of a class D misdemeanor.\n\n(b) Any person who misleads or attempts to mislead the commissioner by removing or altering the official identification of any livestock or by falsifying a certificate of veterinary inspection shall be fined two hundred fifty dollars for a first such violation and shall be guilty of a class D misdemeanor for any second or subsequent such violation."
-      }
-    },
-    {
-      "id": "section-22-281",
-      "kind": "section",
-      "citation": "22-281",
-      "citations": [
-        "22-281"
-      ],
-      "heading": "22-281",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_433.htm#sec_22-281",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 22-281 to 22-283. Glanders or farcy. Inspection of animals; quarantine. Disposal of infected animal. Sections 22-281 to 22-283 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 22-281 to 22-283. Glanders or farcy. Inspection of animals; quarantine. Disposal of infected animal. Sections 22-281 to 22-283 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-22-283",
-      "kind": "section",
-      "citation": "22-283",
-      "citations": [
-        "22-283"
-      ],
-      "heading": "22-283",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_433.htm#sec_22-283",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 22-281 to 22-283. Glanders or farcy. Inspection of animals; quarantine. Disposal of infected animal. Sections 22-281 to 22-283 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 22-281 to 22-283. Glanders or farcy. Inspection of animals; quarantine. Disposal of infected animal. Sections 22-281 to 22-283 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-22-291",
-      "kind": "section",
-      "citation": "22-291",
-      "citations": [
-        "22-291"
-      ],
-      "heading": "22-291",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_433.htm#sec_22-291",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 22-291 to 22-293. Tuberculosis-free accredited herd defined. Additions to an officially tested herd. Additions or sales to be reported. Sections 22-291 to 22-293 , inclusive, are repealed, effective June 28, 2023."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 22-291 to 22-293. Tuberculosis-free accredited herd defined. Additions to an officially tested herd. Additions or sales to be reported. Sections 22-291 to 22-293 , inclusive, are repealed, effective June 28, 2023."
-      }
-    },
-    {
-      "id": "section-22-293",
-      "kind": "section",
-      "citation": "22-293",
-      "citations": [
-        "22-293"
-      ],
-      "heading": "22-293",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_433.htm#sec_22-293",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 22-291 to 22-293. Tuberculosis-free accredited herd defined. Additions to an officially tested herd. Additions or sales to be reported. Sections 22-291 to 22-293 , inclusive, are repealed, effective June 28, 2023."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 22-291 to 22-293. Tuberculosis-free accredited herd defined. Additions to an officially tested herd. Additions or sales to be reported. Sections 22-291 to 22-293 , inclusive, are repealed, effective June 28, 2023."
-      }
-    },
-    {
-      "id": "section-22-310",
-      "kind": "section",
-      "citation": "22-310",
-      "citations": [
-        "22-310"
-      ],
-      "heading": "22-310",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_433.htm#sec_22-310",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 22-310 to 22-313. Importation of dairy and breeding cattle and goats. Report of arrival. Requirements concerning dairy cattle and goats. Cattle for slaughter. Sections 22-310 to 22-313 , inclusive, are repealed, effective June 28, 2023."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 22-310 to 22-313. Importation of dairy and breeding cattle and goats. Report of arrival. Requirements concerning dairy cattle and goats. Cattle for slaughter. Sections 22-310 to 22-313 , inclusive, are repealed, effective June 28, 2023."
-      }
-    },
-    {
-      "id": "section-22-313",
-      "kind": "section",
-      "citation": "22-313",
-      "citations": [
-        "22-313"
-      ],
-      "heading": "22-313",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_433.htm#sec_22-313",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 22-310 to 22-313. Importation of dairy and breeding cattle and goats. Report of arrival. Requirements concerning dairy cattle and goats. Cattle for slaughter. Sections 22-310 to 22-313 , inclusive, are repealed, effective June 28, 2023."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 22-310 to 22-313. Importation of dairy and breeding cattle and goats. Report of arrival. Requirements concerning dairy cattle and goats. Cattle for slaughter. Sections 22-310 to 22-313 , inclusive, are repealed, effective June 28, 2023."
       }
     }
   ]

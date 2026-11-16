@@ -22,15 +22,19 @@
       "status": "active",
       "content": {
         "body": [
-          "The mayor, aldermen and common council of any city, the warden and burgesses of any borough and the selectmen of any town may license and regulate any exhibitions therein; but selectmen shall not license any such exhibition within the limits of any city or borough.",
-          "See Sec. 29-129 et seq. re licensure of amusement parks."
+          "The mayor, aldermen and common council of any city, the warden and burgesses of any borough and the selectmen of any town may license and regulate any exhibitions therein; but selectmen shall not license any such exhibition within the limits of any city or borough."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 4644.)"
         ],
         "history": [],
-        "annotations": [],
-        "plainText": "The mayor, aldermen and common council of any city, the warden and burgesses of any borough and the selectmen of any town may license and regulate any exhibitions therein; but selectmen shall not license any such exhibition within the limits of any city or borough.\n\nSee Sec. 29-129 et seq. re licensure of amusement parks."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 29-129 et seq. re licensure of amusement parks."
+          }
+        ],
+        "plainText": "The mayor, aldermen and common council of any city, the warden and burgesses of any borough and the selectmen of any town may license and regulate any exhibitions therein; but selectmen shall not license any such exhibition within the limits of any city or borough."
       }
     },
     {

@@ -66,15 +66,19 @@
       "status": "active",
       "content": {
         "body": [
-          "Each such corporation shall be subject to the general corporation laws as to name and location, except that in lieu of the word “company” or “corporation” in its name any such corporation may use the word “association”.",
-          "See Sec. 33-1045 et seq. re corporate name provisions for nonstock corporations."
+          "Each such corporation shall be subject to the general corporation laws as to name and location, except that in lieu of the word “company” or “corporation” in its name any such corporation may use the word “association”."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 5305.)"
         ],
         "history": [],
-        "annotations": [],
-        "plainText": "Each such corporation shall be subject to the general corporation laws as to name and location, except that in lieu of the word “company” or “corporation” in its name any such corporation may use the word “association”.\n\nSee Sec. 33-1045 et seq. re corporate name provisions for nonstock corporations."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 33-1045 et seq. re corporate name provisions for nonstock corporations."
+          }
+        ],
+        "plainText": "Each such corporation shall be subject to the general corporation laws as to name and location, except that in lieu of the word “company” or “corporation” in its name any such corporation may use the word “association”."
       }
     },
     {
@@ -214,8 +218,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Agricultural cooperative associations and cooperative marketing corporations incorporated or organized under any statute of this state may merge or consolidate with any other similar corporation or association organized under the laws of this or any other state. Any such merger or consolidation may be effected in accordance with the general provisions of law providing for the merger or consolidation of other corporations so far as applicable, in a manner reasonably analogous to that set forth in such provisions. The effect and the rights, duties and liabilities arising from any such merger or consolidation shall be the same as that arising from a merger or consolidation of other corporations.",
-          "See Sec. 33-1155 et seq. re merger of nonstock corporations."
+          "Agricultural cooperative associations and cooperative marketing corporations incorporated or organized under any statute of this state may merge or consolidate with any other similar corporation or association organized under the laws of this or any other state. Any such merger or consolidation may be effected in accordance with the general provisions of law providing for the merger or consolidation of other corporations so far as applicable, in a manner reasonably analogous to that set forth in such provisions. The effect and the rights, duties and liabilities arising from any such merger or consolidation shall be the same as that arising from a merger or consolidation of other corporations."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 5315; 1967, P.A. 148, S. 2.)"
@@ -223,8 +226,13 @@
         "history": [
           "History: 1967 act authorized merger or consolidation with similar corporations organized under laws of any other state and deleted provision whereby members take action as is required of stockholders in effecting merger or consolidation and specified that value of stock of dissenting member considered equivalent to the amount he would have received on distribution of assets if association or corporation had been dissolved."
         ],
-        "annotations": [],
-        "plainText": "Agricultural cooperative associations and cooperative marketing corporations incorporated or organized under any statute of this state may merge or consolidate with any other similar corporation or association organized under the laws of this or any other state. Any such merger or consolidation may be effected in accordance with the general provisions of law providing for the merger or consolidation of other corporations so far as applicable, in a manner reasonably analogous to that set forth in such provisions. The effect and the rights, duties and liabilities arising from any such merger or consolidation shall be the same as that arising from a merger or consolidation of other corporations.\n\nSee Sec. 33-1155 et seq. re merger of nonstock corporations."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 33-1155 et seq. re merger of nonstock corporations."
+          }
+        ],
+        "plainText": "Agricultural cooperative associations and cooperative marketing corporations incorporated or organized under any statute of this state may merge or consolidate with any other similar corporation or association organized under the laws of this or any other state. Any such merger or consolidation may be effected in accordance with the general provisions of law providing for the merger or consolidation of other corporations so far as applicable, in a manner reasonably analogous to that set forth in such provisions. The effect and the rights, duties and liabilities arising from any such merger or consolidation shall be the same as that arising from a merger or consolidation of other corporations."
       }
     },
     {
@@ -375,15 +383,19 @@
       "status": "active",
       "content": {
         "body": [
-          "Any such corporation shall be subject to the provisions of the general corporation law with reference to receiverships, provided no application for a receivership of any corporation organized under this chapter shall be brought by less than one-twentieth in number of the members of such corporation. Any such corporation shall be subject to the same provisions as to voluntary dissolution as are other corporations without capital stock.",
-          "See chapter 602, part XI re dissolution and winding up of nonstock corporations."
+          "Any such corporation shall be subject to the provisions of the general corporation law with reference to receiverships, provided no application for a receivership of any corporation organized under this chapter shall be brought by less than one-twentieth in number of the members of such corporation. Any such corporation shall be subject to the same provisions as to voluntary dissolution as are other corporations without capital stock."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 5324.)"
         ],
         "history": [],
-        "annotations": [],
-        "plainText": "Any such corporation shall be subject to the provisions of the general corporation law with reference to receiverships, provided no application for a receivership of any corporation organized under this chapter shall be brought by less than one-twentieth in number of the members of such corporation. Any such corporation shall be subject to the same provisions as to voluntary dissolution as are other corporations without capital stock.\n\nSee chapter 602, part XI re dissolution and winding up of nonstock corporations."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See chapter 602, part XI re dissolution and winding up of nonstock corporations."
+          }
+        ],
+        "plainText": "Any such corporation shall be subject to the provisions of the general corporation law with reference to receiverships, provided no application for a receivership of any corporation organized under this chapter shall be brought by less than one-twentieth in number of the members of such corporation. Any such corporation shall be subject to the same provisions as to voluntary dissolution as are other corporations without capital stock."
       }
     },
     {
@@ -430,86 +442,6 @@
         ],
         "annotations": [],
         "plainText": "Any such corporation shall pay, during January of each year, to the Secretary of the State, a license fee of fifty dollars. If such fee is not paid on or before February first, a penalty of fifty dollars shall be added thereto, and such fee, together with such penalty, shall thereafter bear interest at the rate of nine per cent per annum. The Attorney General shall have power to collect such fee, penalty and interest thereon in the same manner as provided in section 12-28 ; provided the Attorney General may, upon such terms as he may prescribe, remit, either in whole or in part, the amount of such fees, penalty and interest thereon, when, in his opinion, it would be inequitable to enforce collection thereof."
-      }
-    },
-    {
-      "id": "section-33-200",
-      "kind": "section",
-      "citation": "33-200",
-      "citations": [
-        "33-200"
-      ],
-      "heading": "33-200",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_596.htm#sec_33-200",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 33-200 to 33-204. Sections 33-200 to 33-204 , inclusive, are repealed, provided the repeal of any of said sections shall not affect any right accrued or established, or any liability or penalty incurred, under the provisions of such section prior to January 1, 1961."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 33-200 to 33-204. Sections 33-200 to 33-204 , inclusive, are repealed, provided the repeal of any of said sections shall not affect any right accrued or established, or any liability or penalty incurred, under the provisions of such section prior to January 1, 1961."
-      }
-    },
-    {
-      "id": "section-33-204",
-      "kind": "section",
-      "citation": "33-204",
-      "citations": [
-        "33-204"
-      ],
-      "heading": "33-204",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_596.htm#sec_33-204",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 33-200 to 33-204. Sections 33-200 to 33-204 , inclusive, are repealed, provided the repeal of any of said sections shall not affect any right accrued or established, or any liability or penalty incurred, under the provisions of such section prior to January 1, 1961."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 33-200 to 33-204. Sections 33-200 to 33-204 , inclusive, are repealed, provided the repeal of any of said sections shall not affect any right accrued or established, or any liability or penalty incurred, under the provisions of such section prior to January 1, 1961."
-      }
-    },
-    {
-      "id": "section-33-208",
-      "kind": "section",
-      "citation": "33-208",
-      "citations": [
-        "33-208"
-      ],
-      "heading": "33-208",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_596.htm#sec_33-208",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 33-208 to 33-210. Sections 33-208 to 33-210 , inclusive, are repealed, provided the repeal of any of said sections shall not affect any right accrued or established, or any liability or penalty incurred, under the provisions of such section prior to January 1, 1961."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 33-208 to 33-210. Sections 33-208 to 33-210 , inclusive, are repealed, provided the repeal of any of said sections shall not affect any right accrued or established, or any liability or penalty incurred, under the provisions of such section prior to January 1, 1961."
-      }
-    },
-    {
-      "id": "section-33-210",
-      "kind": "section",
-      "citation": "33-210",
-      "citations": [
-        "33-210"
-      ],
-      "heading": "33-210",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_596.htm#sec_33-210",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 33-208 to 33-210. Sections 33-208 to 33-210 , inclusive, are repealed, provided the repeal of any of said sections shall not affect any right accrued or established, or any liability or penalty incurred, under the provisions of such section prior to January 1, 1961."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 33-208 to 33-210. Sections 33-208 to 33-210 , inclusive, are repealed, provided the repeal of any of said sections shall not affect any right accrued or established, or any liability or penalty incurred, under the provisions of such section prior to January 1, 1961."
       }
     }
   ]

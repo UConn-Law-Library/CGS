@@ -35,8 +35,7 @@
           "(10) “Minor party” has the same meaning as provided in section 9-372 .",
           "(11) “Municipal office” has the same meaning as provided in section 9-372 .",
           "(12) “Primary campaign” means the period beginning on the day following the close of (A) a convention held pursuant to section 9-382 for the purpose of endorsing a candidate for nomination to the office of Governor, Lieutenant Governor, Attorney General, State Comptroller, State Treasurer or Secretary of the State or the district office of state senator or state representative, or (B) a caucus, convention or town committee meeting held pursuant to section 9-390 for the purpose of endorsing a candidate for the municipal office of state senator or state representative, whichever is applicable, and ending on the day of a primary held for the purpose of nominating a candidate for such office.",
-          "(13) “Qualified candidate committee” means a candidate committee (A) established to aid or promote the success of any candidate for nomination or election to the office of Governor, Lieutenant Governor, Attorney General, State Comptroller, State Treasurer, Secretary of the State, state senator or state representative, and (B) approved by the commission to receive a grant from the Citizens' Election Fund under section 9-706 .",
-          "See Secs. 9-601 to 9-601c, inclusive, for other definitions applicable to chapter."
+          "(13) “Qualified candidate committee” means a candidate committee (A) established to aid or promote the success of any candidate for nomination or election to the office of Governor, Lieutenant Governor, Attorney General, State Comptroller, State Treasurer, Secretary of the State, state senator or state representative, and (B) approved by the commission to receive a grant from the Citizens' Election Fund under section 9-706 ."
         ],
         "sourceNotes": [
           "(Oct. 25 Sp. Sess. P.A. 05-5, S. 1; P.A. 06-196, S. 59; P.A. 13-180, S. 12; P.A. 23-205, S. 185.)"
@@ -44,8 +43,13 @@
         "history": [
           "History: Oct. 25 Sp. Sess. P.A. 05-5 effective January 1, 2006; P.A. 06-196 made a technical change in Subdivs. (4) and (5), effective June 7, 2006; pursuant to P.A. 13-180, “campaign treasurer” was changed editorially by the Revisors to “treasurer” in Subdiv. (7), effective June 18, 2013; P.A. 23-205 added new Subdiv. (2) re definition of convention campaign and redesignated existing Subdivs. (2) to (12) as Subdivs. (3) to (13)."
         ],
-        "annotations": [],
-        "plainText": "As used in sections 9-700 to 9-716 , inclusive:\n\n(1) “Commission” means the State Elections Enforcement Commission.\n\n(2) “Convention campaign” means, in the case of a major party candidate for Governor, the period beginning the day such candidate files the affidavit under section 9-703 certifying such candidate's intent to abide by the expenditure limits under the Citizens' Election Program and ending at the close of the state convention held pursuant to section 9-382 by such major party for the purpose of endorsing a candidate for nomination to the office of Governor.\n\n(3) “Depository account” means the single checking account at the depository institution designated as the depository for the candidate committee's moneys in accordance with the provisions of subsection (a) of section 9-604 .\n\n(4) “District office” has the same meaning as provided in section 9-372 .\n\n(5) “Eligible minor party candidate” means a candidate for election to an office who is nominated by a minor party pursuant to subpart B of part III of chapter 153.\n\n(6) “Eligible petitioning party candidate” means a candidate for election to an office pursuant to subpart C of part III of chapter 153 whose nominating petition has been approved by the Secretary of the State pursuant to section 9-453o .\n\n(7) “Fund” means the Citizens' Election Fund established in section 9-701 .\n\n(8) “General election campaign” means (A) in the case of a candidate nominated at a primary, the period beginning on the day following the primary and ending on the date the treasurer files the final statement for such campaign pursuant to section 9-608 , or (B) in the case of a candidate nominated without a primary, the period beginning on the day following the day on which the candidate is nominated and ending on the date the treasurer files the final statement for such campaign pursuant to section 9-608 .\n\n(9) “Major party” has the same meaning as provided in section 9-372 .\n\n(10) “Minor party” has the same meaning as provided in section 9-372 .\n\n(11) “Municipal office” has the same meaning as provided in section 9-372 .\n\n(12) “Primary campaign” means the period beginning on the day following the close of (A) a convention held pursuant to section 9-382 for the purpose of endorsing a candidate for nomination to the office of Governor, Lieutenant Governor, Attorney General, State Comptroller, State Treasurer or Secretary of the State or the district office of state senator or state representative, or (B) a caucus, convention or town committee meeting held pursuant to section 9-390 for the purpose of endorsing a candidate for the municipal office of state senator or state representative, whichever is applicable, and ending on the day of a primary held for the purpose of nominating a candidate for such office.\n\n(13) “Qualified candidate committee” means a candidate committee (A) established to aid or promote the success of any candidate for nomination or election to the office of Governor, Lieutenant Governor, Attorney General, State Comptroller, State Treasurer, Secretary of the State, state senator or state representative, and (B) approved by the commission to receive a grant from the Citizens' Election Fund under section 9-706 .\n\nSee Secs. 9-601 to 9-601c, inclusive, for other definitions applicable to chapter."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Secs. 9-601 to 9-601c, inclusive, for other definitions applicable to chapter."
+          }
+        ],
+        "plainText": "As used in sections 9-700 to 9-716 , inclusive:\n\n(1) “Commission” means the State Elections Enforcement Commission.\n\n(2) “Convention campaign” means, in the case of a major party candidate for Governor, the period beginning the day such candidate files the affidavit under section 9-703 certifying such candidate's intent to abide by the expenditure limits under the Citizens' Election Program and ending at the close of the state convention held pursuant to section 9-382 by such major party for the purpose of endorsing a candidate for nomination to the office of Governor.\n\n(3) “Depository account” means the single checking account at the depository institution designated as the depository for the candidate committee's moneys in accordance with the provisions of subsection (a) of section 9-604 .\n\n(4) “District office” has the same meaning as provided in section 9-372 .\n\n(5) “Eligible minor party candidate” means a candidate for election to an office who is nominated by a minor party pursuant to subpart B of part III of chapter 153.\n\n(6) “Eligible petitioning party candidate” means a candidate for election to an office pursuant to subpart C of part III of chapter 153 whose nominating petition has been approved by the Secretary of the State pursuant to section 9-453o .\n\n(7) “Fund” means the Citizens' Election Fund established in section 9-701 .\n\n(8) “General election campaign” means (A) in the case of a candidate nominated at a primary, the period beginning on the day following the primary and ending on the date the treasurer files the final statement for such campaign pursuant to section 9-608 , or (B) in the case of a candidate nominated without a primary, the period beginning on the day following the day on which the candidate is nominated and ending on the date the treasurer files the final statement for such campaign pursuant to section 9-608 .\n\n(9) “Major party” has the same meaning as provided in section 9-372 .\n\n(10) “Minor party” has the same meaning as provided in section 9-372 .\n\n(11) “Municipal office” has the same meaning as provided in section 9-372 .\n\n(12) “Primary campaign” means the period beginning on the day following the close of (A) a convention held pursuant to section 9-382 for the purpose of endorsing a candidate for nomination to the office of Governor, Lieutenant Governor, Attorney General, State Comptroller, State Treasurer or Secretary of the State or the district office of state senator or state representative, or (B) a caucus, convention or town committee meeting held pursuant to section 9-390 for the purpose of endorsing a candidate for the municipal office of state senator or state representative, whichever is applicable, and ending on the day of a primary held for the purpose of nominating a candidate for such office.\n\n(13) “Qualified candidate committee” means a candidate committee (A) established to aid or promote the success of any candidate for nomination or election to the office of Governor, Lieutenant Governor, Attorney General, State Comptroller, State Treasurer, Secretary of the State, state senator or state representative, and (B) approved by the commission to receive a grant from the Citizens' Election Fund under section 9-706 ."
       }
     },
     {
@@ -757,46 +761,6 @@
         "history": [],
         "annotations": [],
         "plainText": "Reserved for future use."
-      }
-    },
-    {
-      "id": "section-9-713",
-      "kind": "section",
-      "citation": "9-713",
-      "citations": [
-        "9-713"
-      ],
-      "heading": "9-713",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_157.htm#sec_9-713",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 9-713 and 9-714. Excess expenditures: Payment of additional moneys to opposing participating candidates. Independent expenditures: Payment of additional matching moneys to participating candidates. Sections 9-713 and 9-714 are repealed, effective August 13, 2010."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 9-713 and 9-714. Excess expenditures: Payment of additional moneys to opposing participating candidates. Independent expenditures: Payment of additional matching moneys to participating candidates. Sections 9-713 and 9-714 are repealed, effective August 13, 2010."
-      }
-    },
-    {
-      "id": "section-9-714",
-      "kind": "section",
-      "citation": "9-714",
-      "citations": [
-        "9-714"
-      ],
-      "heading": "9-714",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_157.htm#sec_9-714",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 9-713 and 9-714. Excess expenditures: Payment of additional moneys to opposing participating candidates. Independent expenditures: Payment of additional matching moneys to participating candidates. Sections 9-713 and 9-714 are repealed, effective August 13, 2010."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 9-713 and 9-714. Excess expenditures: Payment of additional moneys to opposing participating candidates. Independent expenditures: Payment of additional matching moneys to participating candidates. Sections 9-713 and 9-714 are repealed, effective August 13, 2010."
       }
     }
   ]

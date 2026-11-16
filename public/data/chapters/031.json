@@ -195,15 +195,19 @@
       "status": "active",
       "content": {
         "body": [
-          "The Governor is authorized to cause any suit or action at law to be brought in the name of the state, when in his judgment the interests of the state demand that such suit or action at law be brought.",
-          "See Sec. 3-125 re duties of Attorney General."
+          "The Governor is authorized to cause any suit or action at law to be brought in the name of the state, when in his judgment the interests of the state demand that such suit or action at law be brought."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 82.)"
         ],
         "history": [],
-        "annotations": [],
-        "plainText": "The Governor is authorized to cause any suit or action at law to be brought in the name of the state, when in his judgment the interests of the state demand that such suit or action at law be brought.\n\nSee Sec. 3-125 re duties of Attorney General."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 3-125 re duties of Attorney General."
+          }
+        ],
+        "plainText": "The Governor is authorized to cause any suit or action at law to be brought in the name of the state, when in his judgment the interests of the state demand that such suit or action at law be brought."
       }
     },
     {

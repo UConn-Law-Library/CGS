@@ -20,10 +20,39 @@ function validFormat(value, format) {
       return false;
     }
   }
-  return true;
+  throw new Error(`Unsupported JSON Schema format: ${format}`);
+}
+
+// This validator implements a subset of JSON Schema. A keyword outside it would be silently
+// ignored, so a schema that uses one is rejected instead.
+const ANNOTATIONS = new Set(["$schema", "$id", "$comment", "$defs", "title", "description", "examples", "default"]);
+const KEYWORDS = new Set([
+  "$ref", "const", "enum", "type", "minLength", "pattern", "format", "minimum",
+  "minItems", "uniqueItems", "items", "required", "properties", "additionalProperties"
+]);
+const FORMATS = new Set(["date-time", "uri"]);
+const checkedSchemas = new WeakSet();
+
+function assertSupported(rule, pointer = "#") {
+  if (typeof rule !== "object" || rule === null || Array.isArray(rule)) throw new Error(`${pointer}: a schema must be an object`);
+  for (const key of Object.keys(rule)) {
+    if (!KEYWORDS.has(key) && !ANNOTATIONS.has(key)) throw new Error(`${pointer}: unsupported JSON Schema keyword ${key}`);
+  }
+  if (rule.format !== undefined && !FORMATS.has(rule.format)) throw new Error(`${pointer}: unsupported JSON Schema format ${rule.format}`);
+  for (const [key, child] of Object.entries(rule.properties ?? {})) assertSupported(child, `${pointer}/properties/${key}`);
+  for (const [key, child] of Object.entries(rule.$defs ?? {})) assertSupported(child, `${pointer}/$defs/${key}`);
+  if (rule.items !== undefined) assertSupported(rule.items, `${pointer}/items`);
+  if (typeof rule.additionalProperties === "object") assertSupported(rule.additionalProperties, `${pointer}/additionalProperties`);
+  else if (rule.additionalProperties !== undefined && typeof rule.additionalProperties !== "boolean") {
+    throw new Error(`${pointer}/additionalProperties: must be a boolean or a schema`);
+  }
 }
 
 export function validateSchema(value, schema) {
+  if (!checkedSchemas.has(schema)) {
+    assertSupported(schema);
+    checkedSchemas.add(schema);
+  }
   const errors = [];
 
   function visit(instance, rule, pointer) {
@@ -69,6 +98,7 @@ export function validateSchema(value, schema) {
       for (const [key, child] of Object.entries(instance)) {
         if (rule.properties?.[key]) visit(child, rule.properties[key], `${pointer}/${key}`);
         else if (rule.additionalProperties === false) errors.push(`${pointer}: unexpected property ${key}`);
+        else if (typeof rule.additionalProperties === "object") visit(child, rule.additionalProperties, `${pointer}/${key}`);
       }
     }
   }

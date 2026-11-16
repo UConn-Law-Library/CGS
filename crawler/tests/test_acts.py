@@ -109,6 +109,18 @@ class PublishTests(unittest.TestCase):
             self.assertEqual(sorted(path.name for path in root.iterdir()), ["manifest.json"])
             self.assertEqual(json.loads((root / "manifest.json").read_text(encoding="utf-8"))["sessions"], [])
 
+    def test_refuses_a_directory_that_holds_other_data(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "chapters").mkdir()
+            chapter = root / "chapters" / "001.json"
+            chapter.write_text("{}", encoding="utf-8")
+            (root / "manifest.json").write_text('{"source": {"name": "Statutes"}}', encoding="utf-8")
+            parsed = parse_acts_page(fixture_page(), PAGE_URL)
+            with self.assertRaisesRegex(ValueError, "no acts manifest"):
+                write_published(merge_sessions(parsed, {}, retrieved_at="2026-10-05T00:00:00Z"), root)
+            self.assertTrue(chapter.exists())
+
 
 def text_for(value, words="Redemption centers"):
     return {

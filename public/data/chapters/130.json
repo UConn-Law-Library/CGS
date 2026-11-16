@@ -340,8 +340,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Whenever any redevelopment agency files a statement of compensation as provided for in section 8-129 , it shall deposit with the clerk of the Superior Court a sum of money equal to the amount set forth in the statement of compensation to the use of the persons entitled thereto. The redevelopment agency, at any time prior to the issuance by the clerk of the Superior Court of a certificate of taking, as provided for in section 8-129 , may withdraw any condemnation proceeding by filing with the clerk of the Superior Court a withdrawal, which shall state that all persons having a record interest therein have been given notice of the withdrawal in the same manner as provided in section 8-129 for giving notice of the filing of a statement of compensation. Upon the filing of such a withdrawal the clerk of the Superior Court shall return to the redevelopment agency any moneys deposited in court without charge of any fee. The redevelopment agency shall cause a copy of such withdrawal to be recorded in the office of the town clerk of each town in which the property which is the subject of the condemnation proceeding is located so as to remove the lis pendens as provided in section 8-129 . If the amount of compensation is finally determined through the filing of an amended statement of compensation which is thereafter accepted by the owners and all other persons having a record interest therein as provided for in section 8-131 , the redevelopment agency shall deposit with such amended statement an additional sum of money representing the excess over the amount appearing in the original statement of compensation. Interest shall not be allowed in any judgment on so much of the amount as has been deposited in court. Upon the application of any person claiming an interest therein the Superior Court, or any judge thereof, after determining the equity of the applicant in the deposit, shall order that the money so deposited or any part thereof be paid forthwith for or on account of the just compensation to be awarded in the proceeding. If the compensation finally awarded exceeds the total amount of money so deposited or received by any person or persons entitled thereto, the court shall enter judgment against the municipality for the amount of the deficiency.",
-          "See Sec. 37-3c re calculation of interest in condemnation cases."
+          "Whenever any redevelopment agency files a statement of compensation as provided for in section 8-129 , it shall deposit with the clerk of the Superior Court a sum of money equal to the amount set forth in the statement of compensation to the use of the persons entitled thereto. The redevelopment agency, at any time prior to the issuance by the clerk of the Superior Court of a certificate of taking, as provided for in section 8-129 , may withdraw any condemnation proceeding by filing with the clerk of the Superior Court a withdrawal, which shall state that all persons having a record interest therein have been given notice of the withdrawal in the same manner as provided in section 8-129 for giving notice of the filing of a statement of compensation. Upon the filing of such a withdrawal the clerk of the Superior Court shall return to the redevelopment agency any moneys deposited in court without charge of any fee. The redevelopment agency shall cause a copy of such withdrawal to be recorded in the office of the town clerk of each town in which the property which is the subject of the condemnation proceeding is located so as to remove the lis pendens as provided in section 8-129 . If the amount of compensation is finally determined through the filing of an amended statement of compensation which is thereafter accepted by the owners and all other persons having a record interest therein as provided for in section 8-131 , the redevelopment agency shall deposit with such amended statement an additional sum of money representing the excess over the amount appearing in the original statement of compensation. Interest shall not be allowed in any judgment on so much of the amount as has been deposited in court. Upon the application of any person claiming an interest therein the Superior Court, or any judge thereof, after determining the equity of the applicant in the deposit, shall order that the money so deposited or any part thereof be paid forthwith for or on account of the just compensation to be awarded in the proceeding. If the compensation finally awarded exceeds the total amount of money so deposited or received by any person or persons entitled thereto, the court shall enter judgment against the municipality for the amount of the deficiency."
         ],
         "sourceNotes": [
           "(1957, P.A. 270, S. 3; 1959, P.A. 397, S. 4; 1961, P.A. 231, S. 2; 1969, P.A. 226, S. 2.)"
@@ -350,6 +349,10 @@
           "History: 1959 act specified “superior” court “or any judge thereof”; 1961 act added withdrawal procedure; 1969 act deleted provision concerning bond to be posted by development agency."
         ],
         "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 37-3c re calculation of interest in condemnation cases."
+          },
           {
             "first": true,
             "text": "Cited. 153 C. 119; 155 C. 86; 158 C. 38; 160 C. 492; 168 C. 135; 179 C. 293."
@@ -363,7 +366,7 @@
             "text": "Cited. 35 CS 157."
           }
         ],
-        "plainText": "Whenever any redevelopment agency files a statement of compensation as provided for in section 8-129 , it shall deposit with the clerk of the Superior Court a sum of money equal to the amount set forth in the statement of compensation to the use of the persons entitled thereto. The redevelopment agency, at any time prior to the issuance by the clerk of the Superior Court of a certificate of taking, as provided for in section 8-129 , may withdraw any condemnation proceeding by filing with the clerk of the Superior Court a withdrawal, which shall state that all persons having a record interest therein have been given notice of the withdrawal in the same manner as provided in section 8-129 for giving notice of the filing of a statement of compensation. Upon the filing of such a withdrawal the clerk of the Superior Court shall return to the redevelopment agency any moneys deposited in court without charge of any fee. The redevelopment agency shall cause a copy of such withdrawal to be recorded in the office of the town clerk of each town in which the property which is the subject of the condemnation proceeding is located so as to remove the lis pendens as provided in section 8-129 . If the amount of compensation is finally determined through the filing of an amended statement of compensation which is thereafter accepted by the owners and all other persons having a record interest therein as provided for in section 8-131 , the redevelopment agency shall deposit with such amended statement an additional sum of money representing the excess over the amount appearing in the original statement of compensation. Interest shall not be allowed in any judgment on so much of the amount as has been deposited in court. Upon the application of any person claiming an interest therein the Superior Court, or any judge thereof, after determining the equity of the applicant in the deposit, shall order that the money so deposited or any part thereof be paid forthwith for or on account of the just compensation to be awarded in the proceeding. If the compensation finally awarded exceeds the total amount of money so deposited or received by any person or persons entitled thereto, the court shall enter judgment against the municipality for the amount of the deficiency.\n\nSee Sec. 37-3c re calculation of interest in condemnation cases."
+        "plainText": "Whenever any redevelopment agency files a statement of compensation as provided for in section 8-129 , it shall deposit with the clerk of the Superior Court a sum of money equal to the amount set forth in the statement of compensation to the use of the persons entitled thereto. The redevelopment agency, at any time prior to the issuance by the clerk of the Superior Court of a certificate of taking, as provided for in section 8-129 , may withdraw any condemnation proceeding by filing with the clerk of the Superior Court a withdrawal, which shall state that all persons having a record interest therein have been given notice of the withdrawal in the same manner as provided in section 8-129 for giving notice of the filing of a statement of compensation. Upon the filing of such a withdrawal the clerk of the Superior Court shall return to the redevelopment agency any moneys deposited in court without charge of any fee. The redevelopment agency shall cause a copy of such withdrawal to be recorded in the office of the town clerk of each town in which the property which is the subject of the condemnation proceeding is located so as to remove the lis pendens as provided in section 8-129 . If the amount of compensation is finally determined through the filing of an amended statement of compensation which is thereafter accepted by the owners and all other persons having a record interest therein as provided for in section 8-131 , the redevelopment agency shall deposit with such amended statement an additional sum of money representing the excess over the amount appearing in the original statement of compensation. Interest shall not be allowed in any judgment on so much of the amount as has been deposited in court. Upon the application of any person claiming an interest therein the Superior Court, or any judge thereof, after determining the equity of the applicant in the deposit, shall order that the money so deposited or any part thereof be paid forthwith for or on account of the just compensation to be awarded in the proceeding. If the compensation finally awarded exceeds the total amount of money so deposited or received by any person or persons entitled thereto, the court shall enter judgment against the municipality for the amount of the deficiency."
       }
     },
     {
@@ -774,15 +777,19 @@
       "content": {
         "body": [
           "By concurrent action the legislative bodies of two or more municipalities: (a) May create a regional or metropolitan planning agency and may authorize such agency or the planning agency of any of such municipalities to make a comprehensive or general plan of the area included within such municipalities as described in section 8-127 , and (b) may exercise the powers granted in this chapter to the legislative body of any municipality. In all matters under this chapter requiring the approval of the legislative body, such approval shall be by the legislative body of each municipality only as to the portions of the redevelopment plan situated in such municipality.",
-          "See Sec. 7-137 re regional economic development commissions.",
           "*Cited. 4 Conn. Cir. Ct. 241."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 987; 1957, P.A. 13, S. 56.)"
         ],
         "history": [],
-        "annotations": [],
-        "plainText": "By concurrent action the legislative bodies of two or more municipalities: (a) May create a regional or metropolitan planning agency and may authorize such agency or the planning agency of any of such municipalities to make a comprehensive or general plan of the area included within such municipalities as described in section 8-127 , and (b) may exercise the powers granted in this chapter to the legislative body of any municipality. In all matters under this chapter requiring the approval of the legislative body, such approval shall be by the legislative body of each municipality only as to the portions of the redevelopment plan situated in such municipality.\n\nSee Sec. 7-137 re regional economic development commissions.\n\n*Cited. 4 Conn. Cir. Ct. 241."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 7-137 re regional economic development commissions."
+          }
+        ],
+        "plainText": "By concurrent action the legislative bodies of two or more municipalities: (a) May create a regional or metropolitan planning agency and may authorize such agency or the planning agency of any of such municipalities to make a comprehensive or general plan of the area included within such municipalities as described in section 8-127 , and (b) may exercise the powers granted in this chapter to the legislative body of any municipality. In all matters under this chapter requiring the approval of the legislative body, such approval shall be by the legislative body of each municipality only as to the portions of the redevelopment plan situated in such municipality.\n\n*Cited. 4 Conn. Cir. Ct. 241."
       }
     },
     {
@@ -1053,8 +1060,7 @@
       "status": "active",
       "content": {
         "body": [
-          "To provide funds for state grants provided pursuant to section 8-154a , the Treasurer is directed, subject to the provisions of section 3-20 , to issue bonds of the state in an amount not exceeding eighty-seven million six hundred ninety-two thousand two hundred eighteen dollars. Such bonds shall be issued at such times and in such amounts as shall be determined by the State Bond Commission provided that total bond commission allocations of such amounts shall not exceed seventy-seven million nine hundred thousand dollars prior to July 1, 1977, and eighty-six million two hundred thousand dollars prior to July 1, 1978. All temporary notes and all renewals thereof issued by the state in anticipation of the issue of such bonds shall mature within three years from the date of the first of such notes to be issued. The full faith and credit of the state of Connecticut are pledged for the payment of the principal of and the interest on such bonds and notes. Net earnings on investments of proceeds, accrued interest and premiums on the issuance of such bonds shall be used first by the Treasurer for the payment of expenses incurred in connection with their issuance.",
-          "See Sec. 8-226 re use of bonds issued under authority of this section."
+          "To provide funds for state grants provided pursuant to section 8-154a , the Treasurer is directed, subject to the provisions of section 3-20 , to issue bonds of the state in an amount not exceeding eighty-seven million six hundred ninety-two thousand two hundred eighteen dollars. Such bonds shall be issued at such times and in such amounts as shall be determined by the State Bond Commission provided that total bond commission allocations of such amounts shall not exceed seventy-seven million nine hundred thousand dollars prior to July 1, 1977, and eighty-six million two hundred thousand dollars prior to July 1, 1978. All temporary notes and all renewals thereof issued by the state in anticipation of the issue of such bonds shall mature within three years from the date of the first of such notes to be issued. The full faith and credit of the state of Connecticut are pledged for the payment of the principal of and the interest on such bonds and notes. Net earnings on investments of proceeds, accrued interest and premiums on the issuance of such bonds shall be used first by the Treasurer for the payment of expenses incurred in connection with their issuance."
         ],
         "sourceNotes": [
           "(1961, P.A. 594, S. 2; 1963, P.A. 646, S. 2; February, 1965, P.A. 541, S. 2; June, 1971, P.A. 4, S. 3; P.A. 73-286, S. 3, 5; P.A. 74-105, S. 3, 4; P.A. 76-289, S. 2, 3; P.A. 77-313, S. 3; P.A. 85-558, S. 7, 17; P.A. 86-396, S. 8, 25; P.A. 87-405, S. 5, 26; P.A. 88-343, S. 6, 32; P.A. 89-331, S. 8, 30.)"
@@ -1062,8 +1068,13 @@
         "history": [
           "History: 1963 act increased bond issue from $25,000,000 to $37,500,000; 1965 act included grants-in-aid and increased bond issue to $54,000,000; 1971 act increased bond limit to $59,000,000; P.A. 73-286 increased bond limit to $62,000,000; P.A. 74-105 increased bond limit to $67,500,000; P.A. 76-289 increased bond limit to $87,900,000, added provisions limiting authorizations to $87,900,000 prior to July 1, 1977, and to $86,200,000 prior to July 1, 1978, and added provision re agreements for reimbursement to municipalities; P.A. 77-313 specified issuance of bonds to provide funds for state grants pursuant to Sec. 8-154a rather than to meet advances and to reimburse municipalities for differences between use value and sale price, deleted limitation on amount to be made available for grants-in-aid, deleted provision re agreements for reimbursements enacted by 1976 act and substituted “allocations” for “authorizations”; P.A. 85-558 reduced bond authorization to $87,695,000; P.A. 86-396 increased bond authorization from to $89,195,000; P.A. 87-405 reduced the bond authorization to $86,695,000; P.A. 88-343 increased the bond authorization from to $87,695,000; P.A. 89-331 decreased the bond authorization to $87,692,218."
         ],
-        "annotations": [],
-        "plainText": "To provide funds for state grants provided pursuant to section 8-154a , the Treasurer is directed, subject to the provisions of section 3-20 , to issue bonds of the state in an amount not exceeding eighty-seven million six hundred ninety-two thousand two hundred eighteen dollars. Such bonds shall be issued at such times and in such amounts as shall be determined by the State Bond Commission provided that total bond commission allocations of such amounts shall not exceed seventy-seven million nine hundred thousand dollars prior to July 1, 1977, and eighty-six million two hundred thousand dollars prior to July 1, 1978. All temporary notes and all renewals thereof issued by the state in anticipation of the issue of such bonds shall mature within three years from the date of the first of such notes to be issued. The full faith and credit of the state of Connecticut are pledged for the payment of the principal of and the interest on such bonds and notes. Net earnings on investments of proceeds, accrued interest and premiums on the issuance of such bonds shall be used first by the Treasurer for the payment of expenses incurred in connection with their issuance.\n\nSee Sec. 8-226 re use of bonds issued under authority of this section."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 8-226 re use of bonds issued under authority of this section."
+          }
+        ],
+        "plainText": "To provide funds for state grants provided pursuant to section 8-154a , the Treasurer is directed, subject to the provisions of section 3-20 , to issue bonds of the state in an amount not exceeding eighty-seven million six hundred ninety-two thousand two hundred eighteen dollars. Such bonds shall be issued at such times and in such amounts as shall be determined by the State Bond Commission provided that total bond commission allocations of such amounts shall not exceed seventy-seven million nine hundred thousand dollars prior to July 1, 1977, and eighty-six million two hundred thousand dollars prior to July 1, 1978. All temporary notes and all renewals thereof issued by the state in anticipation of the issue of such bonds shall mature within three years from the date of the first of such notes to be issued. The full faith and credit of the state of Connecticut are pledged for the payment of the principal of and the interest on such bonds and notes. Net earnings on investments of proceeds, accrued interest and premiums on the issuance of such bonds shall be used first by the Treasurer for the payment of expenses incurred in connection with their issuance."
       }
     },
     {
@@ -1149,8 +1160,7 @@
       "content": {
         "body": [
           "(a) All state financial assistance authorized by sections 8-154a to 8-154c , inclusive, shall, on July 1, 1967, become state grants-in-aid and no state financial assistance authorized by said sections and paid to municipalities for the purposes specified therein on account of any contract for state financial assistance in accordance therewith, shall be repaid to the state in whole or in part but shall become a state grant-in-aid in accordance with this section.",
-          "(b) Contracts for state financial assistance for urban renewal or redevelopment projects executed under any provisions of this chapter in effect prior to October 1, 1977, shall be deemed valid and shall be binding upon all parties thereto. Obligations issued by the state in order to provide funding for such contracts shall remain valid and binding in accordance with their terms.",
-          "See Sec. 8-226 re use of prior bond proceeds for purposes of this section."
+          "(b) Contracts for state financial assistance for urban renewal or redevelopment projects executed under any provisions of this chapter in effect prior to October 1, 1977, shall be deemed valid and shall be binding upon all parties thereto. Obligations issued by the state in order to provide funding for such contracts shall remain valid and binding in accordance with their terms."
         ],
         "sourceNotes": [
           "(1967, P.A. 522, S. 10; 1969, P.A. 305, S. 1; P.A. 77-313, S. 6.)"
@@ -1158,8 +1168,13 @@
         "history": [
           "History: 1969 act required approval of Department of Housing and Urban Development for loan and grant contracts or neighborhood development program rather than for surveys and plans as previously; P.A. 77-313 deleted Subsec. (a) re state-municipality contracts for redevelopment or urban renewal, relettered Subsec. (b) as Subsec. (a) deleting provision requiring substitution of “grant-in-aid” for “advance-in-aid” and added new Subsec. (b) validating contracts and obligations made prior to October 1, 1977."
         ],
-        "annotations": [],
-        "plainText": "(a) All state financial assistance authorized by sections 8-154a to 8-154c , inclusive, shall, on July 1, 1967, become state grants-in-aid and no state financial assistance authorized by said sections and paid to municipalities for the purposes specified therein on account of any contract for state financial assistance in accordance therewith, shall be repaid to the state in whole or in part but shall become a state grant-in-aid in accordance with this section.\n\n(b) Contracts for state financial assistance for urban renewal or redevelopment projects executed under any provisions of this chapter in effect prior to October 1, 1977, shall be deemed valid and shall be binding upon all parties thereto. Obligations issued by the state in order to provide funding for such contracts shall remain valid and binding in accordance with their terms.\n\nSee Sec. 8-226 re use of prior bond proceeds for purposes of this section."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 8-226 re use of prior bond proceeds for purposes of this section."
+          }
+        ],
+        "plainText": "(a) All state financial assistance authorized by sections 8-154a to 8-154c , inclusive, shall, on July 1, 1967, become state grants-in-aid and no state financial assistance authorized by said sections and paid to municipalities for the purposes specified therein on account of any contract for state financial assistance in accordance therewith, shall be repaid to the state in whole or in part but shall become a state grant-in-aid in accordance with this section.\n\n(b) Contracts for state financial assistance for urban renewal or redevelopment projects executed under any provisions of this chapter in effect prior to October 1, 1977, shall be deemed valid and shall be binding upon all parties thereto. Obligations issued by the state in order to provide funding for such contracts shall remain valid and binding in accordance with their terms."
       }
     },
     {
@@ -2725,126 +2740,6 @@
         "history": [],
         "annotations": [],
         "plainText": "The authority shall offer technical support to any member municipality or joint member entity in the development of project criteria and local regulations intended to substantially increase housing production if such technical support is requested by such municipality or entity."
-      }
-    },
-    {
-      "id": "section-8-146",
-      "kind": "section",
-      "citation": "8-146",
-      "citations": [
-        "8-146"
-      ],
-      "heading": "8-146",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_130.htm#sec_8-146",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 8-146 to 8-150. Finding and declaration of necessity. Contract for state assistance. Form of aid. Bond issue. Maximum amount of loan notes. Requirements of notes and bonds. Regulations. Sections 8-146 to 8-150 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 8-146 to 8-150. Finding and declaration of necessity. Contract for state assistance. Form of aid. Bond issue. Maximum amount of loan notes. Requirements of notes and bonds. Regulations. Sections 8-146 to 8-150 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-8-150",
-      "kind": "section",
-      "citation": "8-150",
-      "citations": [
-        "8-150"
-      ],
-      "heading": "8-150",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_130.htm#sec_8-150",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 8-146 to 8-150. Finding and declaration of necessity. Contract for state assistance. Form of aid. Bond issue. Maximum amount of loan notes. Requirements of notes and bonds. Regulations. Sections 8-146 to 8-150 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 8-146 to 8-150. Finding and declaration of necessity. Contract for state assistance. Form of aid. Bond issue. Maximum amount of loan notes. Requirements of notes and bonds. Regulations. Sections 8-146 to 8-150 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-8-152",
-      "kind": "section",
-      "citation": "8-152",
-      "citations": [
-        "8-152"
-      ],
-      "heading": "8-152",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_130.htm#sec_8-152",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 8-152 to 8-154. Grants-in-aid for redevelopment or urban renewal. Bond issue. Commissioner of Community Affairs to administer program. Sections 8-152 to 8-154 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 8-152 to 8-154. Grants-in-aid for redevelopment or urban renewal. Bond issue. Commissioner of Community Affairs to administer program. Sections 8-152 to 8-154 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-8-154",
-      "kind": "section",
-      "citation": "8-154",
-      "citations": [
-        "8-154"
-      ],
-      "heading": "8-154",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_130.htm#sec_8-154",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 8-152 to 8-154. Grants-in-aid for redevelopment or urban renewal. Bond issue. Commissioner of Community Affairs to administer program. Sections 8-152 to 8-154 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 8-152 to 8-154. Grants-in-aid for redevelopment or urban renewal. Bond issue. Commissioner of Community Affairs to administer program. Sections 8-152 to 8-154 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-8-155",
-      "kind": "section",
-      "citation": "8-155",
-      "citations": [
-        "8-155"
-      ],
-      "heading": "8-155",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_130.htm#sec_8-155",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 8-155 to 8-159. Commercial or industrial development. Sections 8-155 to 8-159 , inclusive, are repealed; provided, that in any case where any municipality, on or before July 6, 1967, had entered into a contract with the Connecticut Development Commission for financial assistance to a commercial or industrial redevelopment project under said sections 8-155 to 8-159 , inclusive, or had otherwise taken substantial action under said sections, then such municipality, the state and any other interested person shall continue to be subject to said sections and be eligible for state financial assistance thereunder but only insofar as said sections relate to those projects that have been planned or commenced thereunder and such municipality, the state or such other interested person may make application to the Commissioner of Economic and Community Development for, and the Commissioner of Economic and Community Development may make grants for the purposes of such commercial or industrial redevelopment project from the funds available for the purposes of chapter 133, but subject to the provisions of section 8-154f ."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 8-155 to 8-159. Commercial or industrial development. Sections 8-155 to 8-159 , inclusive, are repealed; provided, that in any case where any municipality, on or before July 6, 1967, had entered into a contract with the Connecticut Development Commission for financial assistance to a commercial or industrial redevelopment project under said sections 8-155 to 8-159 , inclusive, or had otherwise taken substantial action under said sections, then such municipality, the state and any other interested person shall continue to be subject to said sections and be eligible for state financial assistance thereunder but only insofar as said sections relate to those projects that have been planned or commenced thereunder and such municipality, the state or such other interested person may make application to the Commissioner of Economic and Community Development for, and the Commissioner of Economic and Community Development may make grants for the purposes of such commercial or industrial redevelopment project from the funds available for the purposes of chapter 133, but subject to the provisions of section 8-154f ."
-      }
-    },
-    {
-      "id": "section-8-159",
-      "kind": "section",
-      "citation": "8-159",
-      "citations": [
-        "8-159"
-      ],
-      "heading": "8-159",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_130.htm#sec_8-159",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 8-155 to 8-159. Commercial or industrial development. Sections 8-155 to 8-159 , inclusive, are repealed; provided, that in any case where any municipality, on or before July 6, 1967, had entered into a contract with the Connecticut Development Commission for financial assistance to a commercial or industrial redevelopment project under said sections 8-155 to 8-159 , inclusive, or had otherwise taken substantial action under said sections, then such municipality, the state and any other interested person shall continue to be subject to said sections and be eligible for state financial assistance thereunder but only insofar as said sections relate to those projects that have been planned or commenced thereunder and such municipality, the state or such other interested person may make application to the Commissioner of Economic and Community Development for, and the Commissioner of Economic and Community Development may make grants for the purposes of such commercial or industrial redevelopment project from the funds available for the purposes of chapter 133, but subject to the provisions of section 8-154f ."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 8-155 to 8-159. Commercial or industrial development. Sections 8-155 to 8-159 , inclusive, are repealed; provided, that in any case where any municipality, on or before July 6, 1967, had entered into a contract with the Connecticut Development Commission for financial assistance to a commercial or industrial redevelopment project under said sections 8-155 to 8-159 , inclusive, or had otherwise taken substantial action under said sections, then such municipality, the state and any other interested person shall continue to be subject to said sections and be eligible for state financial assistance thereunder but only insofar as said sections relate to those projects that have been planned or commenced thereunder and such municipality, the state or such other interested person may make application to the Commissioner of Economic and Community Development for, and the Commissioner of Economic and Community Development may make grants for the purposes of such commercial or industrial redevelopment project from the funds available for the purposes of chapter 133, but subject to the provisions of section 8-154f ."
       }
     }
   ]

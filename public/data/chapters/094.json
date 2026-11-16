@@ -120,16 +120,23 @@
       "status": "active",
       "content": {
         "body": [
-          "All orders drawn by the selectmen on the town treasurer in payment of the expenses of any town shall be signed by a majority of the selectmen of such town, and no order not so signed shall be paid by the town treasurer. Any town treasurer who pays any order in violation of the provisions of this section shall be fined not more than one hundred dollars.",
-          "See Sec. 7-12 re selectmen's duties.",
-          "See Sec. 7-13 re procedure for selectman's drawing order on treasurer."
+          "All orders drawn by the selectmen on the town treasurer in payment of the expenses of any town shall be signed by a majority of the selectmen of such town, and no order not so signed shall be paid by the town treasurer. Any town treasurer who pays any order in violation of the provisions of this section shall be fined not more than one hundred dollars."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 602.)"
         ],
         "history": [],
-        "annotations": [],
-        "plainText": "All orders drawn by the selectmen on the town treasurer in payment of the expenses of any town shall be signed by a majority of the selectmen of such town, and no order not so signed shall be paid by the town treasurer. Any town treasurer who pays any order in violation of the provisions of this section shall be fined not more than one hundred dollars.\n\nSee Sec. 7-12 re selectmen's duties.\n\nSee Sec. 7-13 re procedure for selectman's drawing order on treasurer."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 7-12 re selectmen's duties."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 7-13 re procedure for selectman's drawing order on treasurer."
+          }
+        ],
+        "plainText": "All orders drawn by the selectmen on the town treasurer in payment of the expenses of any town shall be signed by a majority of the selectmen of such town, and no order not so signed shall be paid by the town treasurer. Any town treasurer who pays any order in violation of the provisions of this section shall be fined not more than one hundred dollars."
       }
     },
     {
@@ -144,15 +151,19 @@
       "status": "active",
       "content": {
         "body": [
-          "The town treasurer shall keep a record of all town orders presented to him for payment, whether he pays the same or not, showing to whom the same were given and the amounts, dates and numbers thereof, and shall make sworn report to the town at its annual town meeting of all outstanding town orders, with the names of the persons to whom given and the amount, date and number thereof and the interest thereon.",
-          "See Sec. 7-13 re procedure for selectman's drawing order on treasurer."
+          "The town treasurer shall keep a record of all town orders presented to him for payment, whether he pays the same or not, showing to whom the same were given and the amounts, dates and numbers thereof, and shall make sworn report to the town at its annual town meeting of all outstanding town orders, with the names of the persons to whom given and the amount, date and number thereof and the interest thereon."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 603.)"
         ],
         "history": [],
-        "annotations": [],
-        "plainText": "The town treasurer shall keep a record of all town orders presented to him for payment, whether he pays the same or not, showing to whom the same were given and the amounts, dates and numbers thereof, and shall make sworn report to the town at its annual town meeting of all outstanding town orders, with the names of the persons to whom given and the amount, date and number thereof and the interest thereon.\n\nSee Sec. 7-13 re procedure for selectman's drawing order on treasurer."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 7-13 re procedure for selectman's drawing order on treasurer."
+          }
+        ],
+        "plainText": "The town treasurer shall keep a record of all town orders presented to him for payment, whether he pays the same or not, showing to whom the same were given and the amounts, dates and numbers thereof, and shall make sworn report to the town at its annual town meeting of all outstanding town orders, with the names of the persons to whom given and the amount, date and number thereof and the interest thereon."
       }
     },
     {

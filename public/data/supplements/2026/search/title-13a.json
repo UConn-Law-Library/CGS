@@ -13,7 +13,6 @@
     "section-13a-98m",
     "section-13a-124a",
     "section-13a-175a",
-    "group-13a-175-to-13a-175a-to-13a-175b-to-13a-175c-to-13a-175d-to-13a-175e-to-13a-175f-to-13a-175g-to-13a-175h-to-13a-175i-to-13a-175j-to-13a-175k-to-13a-175l-to-13a-175m-to-13a-175n-to-13a-175o",
     "section-13a-255",
     "section-13a-260",
     "section-13a-262"
@@ -118,36 +117,6 @@
         "editionYear": 2026,
         "presentation": "amended"
       }
-    },
-    {
-      "id": "group-13a-175-to-13a-175b-to-13a-175c-to-13a-175d-to-13a-175e-to-13a-175f-to-13a-175g-to-13a-175h-to-13a-175i-to-13a-175j-to-13a-175k-to-13a-175l-to-13a-175m-to-13a-175n-to-13a-175o",
-      "citation": null,
-      "citations": [
-        "13a-175",
-        "13a-175b",
-        "13a-175c",
-        "13a-175d",
-        "13a-175e",
-        "13a-175f",
-        "13a-175g",
-        "13a-175h",
-        "13a-175i",
-        "13a-175j",
-        "13a-175k",
-        "13a-175l",
-        "13a-175m",
-        "13a-175n",
-        "13a-175o"
-      ],
-      "heading": "Secs. 13a-175, 13a-175b, 13a-175c, 13a-175d, 13a-175e, 13a-175f, 13a-175g, 13a-175h, 13a-175i, 13a-175j, 13a-175k, 13a-175l, 13a-175m, 13a-175n and 13a-175o. Reserved for future use.",
-      "chapter": {
-        "id": "chapter-240",
-        "number": "240",
-        "name": "Highway Financing"
-      },
-      "status": "reserved",
-      "text": "Reserved for future use.",
-      "href": "?chapter=240&section=group-13a-175-to-13a-175b-to-13a-175c-to-13a-175d-to-13a-175e-to-13a-175f-to-13a-175g-to-13a-175h-to-13a-175i-to-13a-175j-to-13a-175k-to-13a-175l-to-13a-175m-to-13a-175n-to-13a-175o"
     },
     {
       "id": "section-13a-175a",

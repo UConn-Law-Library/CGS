@@ -1,4 +1,4 @@
-import { dataUrl } from "./data-loader.js";
+import { checkDataResponse, dataUrl } from "./data-loader.js";
 import { mergeSupplementSearchShard } from "./supplements.js";
 
 export function normalizeText(value) {
@@ -390,7 +390,7 @@ export class SearchRepository {
 
   async #json(relativePath, baseUrl = this.#baseUrl) {
     const response = await this.#fetch(dataUrl(new URL(relativePath, baseUrl)), { signal: AbortSignal.timeout(15000) });
-    if (!response.ok) throw new Error(`Could not load ${relativePath} (${response.status})`);
+    checkDataResponse(response, relativePath);
     return response.json();
   }
 

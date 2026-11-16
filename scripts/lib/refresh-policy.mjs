@@ -36,7 +36,7 @@ export function evaluateCorpusRefresh(report, policy) {
   const beforeProvisions = requiredNumber(report.before?.counts?.provisionsRead, "before provision count");
   const afterProvisions = requiredNumber(report.after?.counts?.provisionsRead, "after provision count");
   const summary = Object.fromEntries(
-    [...CHANGE_KEYS, "statusTransitions"].map((key) => [key, requiredNumber(report.summary?.[key], `summary.${key}`)])
+    [...CHANGE_KEYS, "statusTransitions", "shrunkBodies"].map((key) => [key, requiredNumber(report.summary?.[key], `summary.${key}`)])
   );
 
   const limits = {
@@ -49,8 +49,16 @@ export function evaluateCorpusRefresh(report, policy) {
     maxProvisionCountDeltaPercent: requiredNumber(policy.maxProvisionCountDeltaPercent, "policy.maxProvisionCountDeltaPercent"),
     maxAddedProvisionsPercent: requiredNumber(policy.maxAddedProvisionsPercent, "policy.maxAddedProvisionsPercent"),
     maxRemovedProvisionsPercent: requiredNumber(policy.maxRemovedProvisionsPercent, "policy.maxRemovedProvisionsPercent"),
-    maxChangedProvisionsPercent: requiredNumber(policy.maxChangedProvisionsPercent, "policy.maxChangedProvisionsPercent")
+    maxChangedProvisionsPercent: requiredNumber(policy.maxChangedProvisionsPercent, "policy.maxChangedProvisionsPercent"),
+    maxStatusTransitionsPercent: requiredNumber(policy.maxStatusTransitionsPercent, "policy.maxStatusTransitionsPercent"),
+    maxShrunkBodies: requiredNumber(policy.maxShrunkBodies, "policy.maxShrunkBodies"),
+    maxEmptyActiveIncrease: requiredNumber(policy.maxEmptyActiveIncrease, "policy.maxEmptyActiveIncrease"),
+    maxIdentifierWarningIncrease: requiredNumber(policy.maxIdentifierWarningIncrease, "policy.maxIdentifierWarningIncrease")
   };
+  const quality = Object.fromEntries(["emptyActive", "identifierWarnings"].map((key) => [key, {
+    before: requiredNumber(report.before?.quality?.[key], `before.quality.${key}`),
+    after: requiredNumber(report.after?.quality?.[key], `after.quality.${key}`)
+  }]));
 
   const checks = [
     check("Title count delta", Math.abs(afterTitles - beforeTitles), limits.maxTitleCountDelta, "count"),
@@ -62,7 +70,11 @@ export function evaluateCorpusRefresh(report, policy) {
     check("Provision count delta", percent(Math.abs(afterProvisions - beforeProvisions), beforeProvisions), limits.maxProvisionCountDeltaPercent, "percent"),
     check("Added provisions", percent(summary.added, beforeProvisions), limits.maxAddedProvisionsPercent, "percent"),
     check("Removed provisions", percent(summary.removed, beforeProvisions), limits.maxRemovedProvisionsPercent, "percent"),
-    check("Changed provisions", percent(summary.changed, beforeProvisions), limits.maxChangedProvisionsPercent, "percent")
+    check("Changed provisions", percent(summary.changed, beforeProvisions), limits.maxChangedProvisionsPercent, "percent"),
+    check("Status transitions", percent(summary.statusTransitions, beforeProvisions), limits.maxStatusTransitionsPercent, "percent"),
+    check("Bodies shrunk by more than half", summary.shrunkBodies, limits.maxShrunkBodies, "count"),
+    check("New in-force provisions with no text", quality.emptyActive.after - quality.emptyActive.before, limits.maxEmptyActiveIncrease, "count"),
+    check("New identifier warnings", quality.identifierWarnings.after - quality.identifierWarnings.before, limits.maxIdentifierWarningIncrease, "count")
   ];
 
   return {
@@ -98,6 +110,9 @@ export function renderRefreshSummary(report, evaluation) {
     `| Chapters added / removed / changed | ${report.summary.chaptersAdded} / ${report.summary.chaptersRemoved} / ${report.summary.chaptersChanged} |`,
     `| Provisions added / removed / changed | ${report.summary.added} / ${report.summary.removed} / ${report.summary.changed} |`,
     `| Status transitions | ${report.summary.statusTransitions} |`,
+    `| Bodies shrunk by more than half | ${report.summary.shrunkBodies} |`,
+    `| In-force provisions with no text | ${report.before.quality.emptyActive} → ${report.after.quality.emptyActive} |`,
+    `| Identifier warnings | ${report.before.quality.identifierWarnings} → ${report.after.quality.identifierWarnings} |`,
     "",
     "| Safety check | Actual | Limit | Result |",
     "| --- | ---: | ---: | :---: |",

@@ -436,8 +436,7 @@
       "status": "active",
       "content": {
         "body": [
-          "If any school district, formerly existing in a town in which the school districts have been or shall be abolished or consolidated, has received a permanent fund for the support of a school or schools in such district, the treasurer of the town shall have charge of it and keep a separate account thereof; and the income of such fund shall be held subject to the order of the board of education, which shall apply it for the benefit of the school or schools within or nearest to the limits of the district formerly existing, in such manner as to carry out, as nearly as possible, the intent of the grantor of such fund.",
-          "See Sec. 10-258 re administration of trust funds."
+          "If any school district, formerly existing in a town in which the school districts have been or shall be abolished or consolidated, has received a permanent fund for the support of a school or schools in such district, the treasurer of the town shall have charge of it and keep a separate account thereof; and the income of such fund shall be held subject to the order of the board of education, which shall apply it for the benefit of the school or schools within or nearest to the limits of the district formerly existing, in such manner as to carry out, as nearly as possible, the intent of the grantor of such fund."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 1543; P.A. 78-218, S. 177.)"
@@ -445,8 +444,13 @@
         "history": [
           "History: P.A. 78-218 deleted “town” in phrase “subject to the order of the town board of education”."
         ],
-        "annotations": [],
-        "plainText": "If any school district, formerly existing in a town in which the school districts have been or shall be abolished or consolidated, has received a permanent fund for the support of a school or schools in such district, the treasurer of the town shall have charge of it and keep a separate account thereof; and the income of such fund shall be held subject to the order of the board of education, which shall apply it for the benefit of the school or schools within or nearest to the limits of the district formerly existing, in such manner as to carry out, as nearly as possible, the intent of the grantor of such fund.\n\nSee Sec. 10-258 re administration of trust funds."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 10-258 re administration of trust funds."
+          }
+        ],
+        "plainText": "If any school district, formerly existing in a town in which the school districts have been or shall be abolished or consolidated, has received a permanent fund for the support of a school or schools in such district, the treasurer of the town shall have charge of it and keep a separate account thereof; and the income of such fund shall be held subject to the order of the board of education, which shall apply it for the benefit of the school or schools within or nearest to the limits of the district formerly existing, in such manner as to carry out, as nearly as possible, the intent of the grantor of such fund."
       }
     },
     {

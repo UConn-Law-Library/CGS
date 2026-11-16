@@ -17,8 +17,7 @@ test("secondary-source refreshes remain review-gated and database-free", () => {
   assert.match(workflow, /if \[ "\$GITHUB_REF" != "refs\/heads\/main" \] && \[ "\$CREATE_PULL_REQUEST" = "true" \]; then/);
   assert.doesNotMatch(workflow, /\s--no-ssl-verify/);
   assert.match(workflow, /git add -- public\/data\/secondary/);
-  assert.match(workflow, /gh pr create[\s\S]*?--base main[\s\S]*?--draft/);
-  assert.match(workflow, /gh workflow run ci\.yml --ref "\$branch"/);
+  assert.match(workflow, /run: bash scripts\/publish-refresh\.sh automation\/secondary-refresh \.crawl\/publish/);
   assert.equal((workflow.match(/env\.CREATE_PULL_REQUEST == 'true'/g) ?? []).length, 2);
   assert.equal((workflow.match(/if: always\(\)/g) ?? []).length, 3);
   assert.doesNotMatch(workflow, /git push\s+origin\s+main/);

@@ -76,6 +76,7 @@ def _validate(index: Dict[str, object], stage: Path, config: CrawlConfig) -> Dic
         raise RuntimeError(f"Crawled title set {set(title_keys)} does not match requested titles {requested}")
     chapter_count = 0
     section_count = 0
+    empty: List[str] = []
     for entry in entries:
         filename = str(entry.get("file") or "")
         if Path(filename).name != filename or not filename:
@@ -105,6 +106,13 @@ def _validate(index: Dict[str, object], stage: Path, config: CrawlConfig) -> Dic
                 required = {"body_paragraphs", "source", "history", "annotations", "text"}
                 if not isinstance(content, dict) or not required.issubset(content):
                     raise RuntimeError(f"{filename} chapter {chapter_key} provision {identity} has incomplete content")
+                # An in-force section with no text would publish as blank law. It means the
+                # section's anchor was not found, as when CGA changes its markup.
+                if not section.get("grouped") and not content.get("status") and not str(content.get("text") or "").strip():
+                    empty.append(f"{chapter_key}/{identity}")
+    if empty:
+        listed = ", ".join(empty[:20]) + (f", and {len(empty) - 20} more" if len(empty) > 20 else "")
+        raise RuntimeError(f"Crawl produced {len(empty)} in-force provision(s) with no text: {listed}")
     if config.edition == "current" and not requested:
         if not 60 <= len(entries) <= 110:
             raise RuntimeError(f"Implausible full-crawl title count: {len(entries)}")

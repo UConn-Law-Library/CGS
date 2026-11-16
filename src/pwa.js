@@ -89,10 +89,25 @@ export class PwaManager {
       await this.#navigator.serviceWorker.ready;
       this.#update({ ready: true, error: null });
       await this.refreshStatus();
+      this.#updateStaleDownload();
     } catch (error) {
       this.#update({ error: error.message });
     }
     return this.state;
+  }
+
+  // A copy saved before a data release is brought up to date in the background. Unchanged
+  // files are copied locally, so only changed files download. Skipped offline or with
+  // Save-Data, and it never asks for persistent storage.
+  #updateStaleDownload() {
+    if (this.state.compatibility?.code !== "release" || this.state.busy) return;
+    if (this.#navigator?.onLine === false || this.#navigator?.connection?.saveData) return;
+    this.#downloadOfflineData({ type: "REPAIR_OFFLINE_DATA", action: "Repair", persist: false }).catch(() => {});
+  }
+
+  // The worker refuses this tab's data requests once a newer release takes control.
+  markDataReleaseChanged() {
+    if (!this.state.updateAvailable) this.#update({ updateAvailable: true });
   }
 
   async install() {
@@ -162,6 +177,7 @@ export class PwaManager {
 
   applyUpdate() {
     if (!this.state.updateAvailable) return false;
+    // Reloading keeps the hash route, so the reader returns to the same page.
     this.#window?.location?.reload?.();
     return true;
   }
@@ -174,11 +190,11 @@ export class PwaManager {
     return this.#downloadOfflineData({ type: "REPAIR_OFFLINE_DATA", action: "Repair" });
   }
 
-  async #downloadOfflineData({ type, action }) {
+  async #downloadOfflineData({ type, action, persist = true }) {
     const previous = Object.fromEntries(offlineStateKeys.map((key) => [key, this.state[key]]));
     this.#update({ busy: true, error: null });
     try {
-      await this.requestPersistentStorage();
+      if (persist) await this.requestPersistentStorage();
       const result = await this.#request(type, {}, (progress) => {
         this.#update({ cachedFiles: progress.completed, totalFiles: progress.total });
       });

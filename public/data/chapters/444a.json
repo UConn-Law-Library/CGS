@@ -199,15 +199,19 @@
       "status": "active",
       "content": {
         "body": [
-          "Upon adoption of the plan, no mooring or anchorage shall be placed in the harbor without a permit from the harbor master or deputy harbor master for the municipality. Any permit granted by the harbor master or deputy harbor master shall be consistent with the plan and shall expire on the thirty-first day of December next following its issuance. The harbor master or deputy harbor master shall keep a record of the location of each mooring and anchorage for which a permit has been issued, the name and address of the owner and a description of the vessel to be moored. Such information shall be made available to any officer authorized to enforce the provisions of chapter 268. The harbor master or deputy harbor master shall enforce any ordinance adopted by a municipality to implement the plan.",
-          "See Secs. 15-1 and 15-7 re duties of harbor masters."
+          "Upon adoption of the plan, no mooring or anchorage shall be placed in the harbor without a permit from the harbor master or deputy harbor master for the municipality. Any permit granted by the harbor master or deputy harbor master shall be consistent with the plan and shall expire on the thirty-first day of December next following its issuance. The harbor master or deputy harbor master shall keep a record of the location of each mooring and anchorage for which a permit has been issued, the name and address of the owner and a description of the vessel to be moored. Such information shall be made available to any officer authorized to enforce the provisions of chapter 268. The harbor master or deputy harbor master shall enforce any ordinance adopted by a municipality to implement the plan."
         ],
         "sourceNotes": [
           "(P.A. 84-247, S. 8.)"
         ],
         "history": [],
-        "annotations": [],
-        "plainText": "Upon adoption of the plan, no mooring or anchorage shall be placed in the harbor without a permit from the harbor master or deputy harbor master for the municipality. Any permit granted by the harbor master or deputy harbor master shall be consistent with the plan and shall expire on the thirty-first day of December next following its issuance. The harbor master or deputy harbor master shall keep a record of the location of each mooring and anchorage for which a permit has been issued, the name and address of the owner and a description of the vessel to be moored. Such information shall be made available to any officer authorized to enforce the provisions of chapter 268. The harbor master or deputy harbor master shall enforce any ordinance adopted by a municipality to implement the plan.\n\nSee Secs. 15-1 and 15-7 re duties of harbor masters."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Secs. 15-1 and 15-7 re duties of harbor masters."
+          }
+        ],
+        "plainText": "Upon adoption of the plan, no mooring or anchorage shall be placed in the harbor without a permit from the harbor master or deputy harbor master for the municipality. Any permit granted by the harbor master or deputy harbor master shall be consistent with the plan and shall expire on the thirty-first day of December next following its issuance. The harbor master or deputy harbor master shall keep a record of the location of each mooring and anchorage for which a permit has been issued, the name and address of the owner and a description of the vessel to be moored. Such information shall be made available to any officer authorized to enforce the provisions of chapter 268. The harbor master or deputy harbor master shall enforce any ordinance adopted by a municipality to implement the plan."
       }
     },
     {

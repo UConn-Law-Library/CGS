@@ -22,8 +22,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Any person eighteen years of age or older, and of sound mind, may dispose of his estate by will.",
-          "See Sec. 45a-596 re right to appoint guardians by will."
+          "Any person eighteen years of age or older, and of sound mind, may dispose of his estate by will."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 6950; P.A. 80-476, S. 231; P.A. 88-107, S. 3.)"
@@ -32,6 +31,10 @@
           "History: P.A. 80-476 deleted provision stating that every devise purporting to convey all real estate of testator shall be construed to convey all real estate belonging to him at time of death “unless if clearly appears by his will that he intended otherwise”; P.A. 88-107 substituted reference to persons “eighteen years of age or older” for reference to persons “of the age of eighteen”; Sec. 45-160 transferred to Sec. 45a-250 in 1991."
         ],
         "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 45a-596 re right to appoint guardians by will."
+          },
           {
             "first": true,
             "text": "Annotations to former section 45-160:"
@@ -49,7 +52,7 @@
             "text": "Testamentary capacity to execute will does not require proof of testator's knowledge of full and specific condition of property but sufficient mind and memory to know and understand the business in which testator is engaged when executing the will. 206 CA 371."
           }
         ],
-        "plainText": "Any person eighteen years of age or older, and of sound mind, may dispose of his estate by will.\n\nSee Sec. 45a-596 re right to appoint guardians by will."
+        "plainText": "Any person eighteen years of age or older, and of sound mind, may dispose of his estate by will."
       }
     },
     {
@@ -454,8 +457,7 @@
       "content": {
         "body": [
           "(a) The words “child”, “children”, “issue”, “descendants”, “descendant”, “heirs”, “heir”, “unlawful heirs”, “grandchild” and “grandchildren”, when used in the singular or plural in any will or trust instrument, shall, unless such document clearly indicates a contrary intention, be deemed to include children born as a result of assisted reproduction. The provisions of this subsection shall apply to wills and trust instruments whether or not executed before, on or after October 1, 1975, unless the instrument indicates an intent to the contrary.",
-          "(b) The words “child”, “children”, “issue”, “descendants”, “descendant”, “heirs”, “heir”, “unlawful heirs”, “grandchild” and “grandchildren”, when used in the singular or plural in any will or trust instrument, shall, unless such document clearly indicates a contrary intention, be deemed to include children born after the death of the decedent, as provided in subsection (a) of section 45a-785 . The provisions of this subsection shall apply to wills and trust instruments whether or not executed before, on or after October 1, 2013, unless the instrument indicates an intent to the contrary.",
-          "See Sec. 45a-778 re application of words of inheritance to child conceived through A.I.D."
+          "(b) The words “child”, “children”, “issue”, “descendants”, “descendant”, “heirs”, “heir”, “unlawful heirs”, “grandchild” and “grandchildren”, when used in the singular or plural in any will or trust instrument, shall, unless such document clearly indicates a contrary intention, be deemed to include children born after the death of the decedent, as provided in subsection (a) of section 45a-785 . The provisions of this subsection shall apply to wills and trust instruments whether or not executed before, on or after October 1, 2013, unless the instrument indicates an intent to the contrary."
         ],
         "sourceNotes": [
           "(P.A. 80-476, S. 236; P.A. 13-301, S. 2; P.A. 21-15, S. 101.)"
@@ -463,8 +465,13 @@
         "history": [
           "History: Sec. 45-161a transferred to Sec. 45a-262 in 1991; P.A. 13-301 designated existing provisions as Subsec. (a) and made a conforming change therein, and added Subsec. (b) re application of words of inheritance to child of decedent conceived and born after death of decedent; P.A. 21-15 amended Subsec. (a) by replacing “A.I.D.” with “assisted reproduction”, effective January 1, 2022."
         ],
-        "annotations": [],
-        "plainText": "(a) The words “child”, “children”, “issue”, “descendants”, “descendant”, “heirs”, “heir”, “unlawful heirs”, “grandchild” and “grandchildren”, when used in the singular or plural in any will or trust instrument, shall, unless such document clearly indicates a contrary intention, be deemed to include children born as a result of assisted reproduction. The provisions of this subsection shall apply to wills and trust instruments whether or not executed before, on or after October 1, 1975, unless the instrument indicates an intent to the contrary.\n\n(b) The words “child”, “children”, “issue”, “descendants”, “descendant”, “heirs”, “heir”, “unlawful heirs”, “grandchild” and “grandchildren”, when used in the singular or plural in any will or trust instrument, shall, unless such document clearly indicates a contrary intention, be deemed to include children born after the death of the decedent, as provided in subsection (a) of section 45a-785 . The provisions of this subsection shall apply to wills and trust instruments whether or not executed before, on or after October 1, 2013, unless the instrument indicates an intent to the contrary.\n\nSee Sec. 45a-778 re application of words of inheritance to child conceived through A.I.D."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 45a-778 re application of words of inheritance to child conceived through A.I.D."
+          }
+        ],
+        "plainText": "(a) The words “child”, “children”, “issue”, “descendants”, “descendant”, “heirs”, “heir”, “unlawful heirs”, “grandchild” and “grandchildren”, when used in the singular or plural in any will or trust instrument, shall, unless such document clearly indicates a contrary intention, be deemed to include children born as a result of assisted reproduction. The provisions of this subsection shall apply to wills and trust instruments whether or not executed before, on or after October 1, 1975, unless the instrument indicates an intent to the contrary.\n\n(b) The words “child”, “children”, “issue”, “descendants”, “descendant”, “heirs”, “heir”, “unlawful heirs”, “grandchild” and “grandchildren”, when used in the singular or plural in any will or trust instrument, shall, unless such document clearly indicates a contrary intention, be deemed to include children born after the death of the decedent, as provided in subsection (a) of section 45a-785 . The provisions of this subsection shall apply to wills and trust instruments whether or not executed before, on or after October 1, 2013, unless the instrument indicates an intent to the contrary."
       }
     },
     {

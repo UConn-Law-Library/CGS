@@ -22,8 +22,7 @@
       "status": "active",
       "content": {
         "body": [
-          "If any person places anything, or permits anything to remain, in a highway, or digs up the ground therein, by which the passage of travelers is obstructed or endangered or the highway encumbered, the same shall be a common nuisance, and such person shall be fined not more than fifty dollars; and the court, before which the conviction is had, shall order the defendant to remove such nuisance within thirty days, and, on his failure to do so, it shall be removed at his expense by a constable of the town, and such court may tax such expense and issue an execution therefor.",
-          "See Sec. 7-148 re municipal powers."
+          "If any person places anything, or permits anything to remain, in a highway, or digs up the ground therein, by which the passage of travelers is obstructed or endangered or the highway encumbered, the same shall be a common nuisance, and such person shall be fined not more than fifty dollars; and the court, before which the conviction is had, shall order the defendant to remove such nuisance within thirty days, and, on his failure to do so, it shall be removed at his expense by a constable of the town, and such court may tax such expense and issue an execution therefor."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 4200.)"
@@ -32,6 +31,10 @@
           "History: Sec. 19-310 transferred to Sec. 19a-335 in 1983."
         ],
         "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 7-148 re municipal powers."
+          },
           {
             "first": true,
             "text": "Annotations to former section 19-310:"
@@ -61,7 +64,7 @@
             "text": "Cited. 44 CS 45."
           }
         ],
-        "plainText": "If any person places anything, or permits anything to remain, in a highway, or digs up the ground therein, by which the passage of travelers is obstructed or endangered or the highway encumbered, the same shall be a common nuisance, and such person shall be fined not more than fifty dollars; and the court, before which the conviction is had, shall order the defendant to remove such nuisance within thirty days, and, on his failure to do so, it shall be removed at his expense by a constable of the town, and such court may tax such expense and issue an execution therefor.\n\nSee Sec. 7-148 re municipal powers."
+        "plainText": "If any person places anything, or permits anything to remain, in a highway, or digs up the ground therein, by which the passage of travelers is obstructed or endangered or the highway encumbered, the same shall be a common nuisance, and such person shall be fined not more than fifty dollars; and the court, before which the conviction is had, shall order the defendant to remove such nuisance within thirty days, and, on his failure to do so, it shall be removed at his expense by a constable of the town, and such court may tax such expense and issue an execution therefor."
       }
     },
     {
@@ -76,8 +79,7 @@
       "status": "active",
       "content": {
         "body": [
-          "If any person unlawfully dams or obstructs a watercourse to the special damage of another, such diversion or obstruction shall be a common nuisance and may be abated as such. Any person who violates any provision of this section shall be fined not more than seven dollars, and each week that such nuisance continues shall be a separate offense. If any person removes or injures a mill dam which is not a nuisance, he shall pay to the party injured double damages and double costs.",
-          "See Sec. 7-147 re municipalities' powers to prohibit obstructions in waterways."
+          "If any person unlawfully dams or obstructs a watercourse to the special damage of another, such diversion or obstruction shall be a common nuisance and may be abated as such. Any person who violates any provision of this section shall be fined not more than seven dollars, and each week that such nuisance continues shall be a separate offense. If any person removes or injures a mill dam which is not a nuisance, he shall pay to the party injured double damages and double costs."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 4201.)"
@@ -88,6 +90,10 @@
         "annotations": [
           {
             "first": true,
+            "text": "See Sec. 7-147 re municipalities' powers to prohibit obstructions in waterways."
+          },
+          {
+            "first": true,
             "text": "Annotation to former section 19-311:"
           },
           {
@@ -95,7 +101,7 @@
             "text": "Cited. 147 C. 153."
           }
         ],
-        "plainText": "If any person unlawfully dams or obstructs a watercourse to the special damage of another, such diversion or obstruction shall be a common nuisance and may be abated as such. Any person who violates any provision of this section shall be fined not more than seven dollars, and each week that such nuisance continues shall be a separate offense. If any person removes or injures a mill dam which is not a nuisance, he shall pay to the party injured double damages and double costs.\n\nSee Sec. 7-147 re municipalities' powers to prohibit obstructions in waterways."
+        "plainText": "If any person unlawfully dams or obstructs a watercourse to the special damage of another, such diversion or obstruction shall be a common nuisance and may be abated as such. Any person who violates any provision of this section shall be fined not more than seven dollars, and each week that such nuisance continues shall be a separate offense. If any person removes or injures a mill dam which is not a nuisance, he shall pay to the party injured double damages and double costs."
       }
     },
     {
@@ -110,8 +116,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Any person who wilfully deposits material in any watercourse where it will naturally be carried to the land of another to his injury shall pay to the party injured thereby double damages and costs, unless, within a reasonable time after notice of the injury, he removes such material from such land.",
-          "See Sec. 7-147 re municipalities' power to prohibit obstructions in waterways."
+          "Any person who wilfully deposits material in any watercourse where it will naturally be carried to the land of another to his injury shall pay to the party injured thereby double damages and costs, unless, within a reasonable time after notice of the injury, he removes such material from such land."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 4202.)"
@@ -119,8 +124,13 @@
         "history": [
           "History: Sec. 19-312 transferred to Sec. 19a-337 in 1983."
         ],
-        "annotations": [],
-        "plainText": "Any person who wilfully deposits material in any watercourse where it will naturally be carried to the land of another to his injury shall pay to the party injured thereby double damages and costs, unless, within a reasonable time after notice of the injury, he removes such material from such land.\n\nSee Sec. 7-147 re municipalities' power to prohibit obstructions in waterways."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 7-147 re municipalities' power to prohibit obstructions in waterways."
+          }
+        ],
+        "plainText": "Any person who wilfully deposits material in any watercourse where it will naturally be carried to the land of another to his injury shall pay to the party injured thereby double damages and costs, unless, within a reasonable time after notice of the injury, he removes such material from such land."
       }
     },
     {
@@ -135,8 +145,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Any person who places any material which tends to obstruct navigation in navigable waters shall be fined not more than one hundred dollars, and such person shall be ordered by the court before which the conviction is had to remove such material within thirty days, and, on his failure to do so, any person may remove such material at the expense of the person who placed it there; but the provisions of this section shall not apply to oyster beds that have been designated and set out for the purpose of planting and cultivating oysters thereon. Nothing in this section shall prohibit the filling or wharfing out in such waters between the shore and the harbor lines established in any harbor.",
-          "See Sec. 22a-427 re prohibition against pollution of or discharge of wastes in state waters."
+          "Any person who places any material which tends to obstruct navigation in navigable waters shall be fined not more than one hundred dollars, and such person shall be ordered by the court before which the conviction is had to remove such material within thirty days, and, on his failure to do so, any person may remove such material at the expense of the person who placed it there; but the provisions of this section shall not apply to oyster beds that have been designated and set out for the purpose of planting and cultivating oysters thereon. Nothing in this section shall prohibit the filling or wharfing out in such waters between the shore and the harbor lines established in any harbor."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 4203.)"
@@ -144,8 +153,13 @@
         "history": [
           "History: Sec. 19-313 transferred to Sec. 19a-338 in 1983."
         ],
-        "annotations": [],
-        "plainText": "Any person who places any material which tends to obstruct navigation in navigable waters shall be fined not more than one hundred dollars, and such person shall be ordered by the court before which the conviction is had to remove such material within thirty days, and, on his failure to do so, any person may remove such material at the expense of the person who placed it there; but the provisions of this section shall not apply to oyster beds that have been designated and set out for the purpose of planting and cultivating oysters thereon. Nothing in this section shall prohibit the filling or wharfing out in such waters between the shore and the harbor lines established in any harbor.\n\nSee Sec. 22a-427 re prohibition against pollution of or discharge of wastes in state waters."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 22a-427 re prohibition against pollution of or discharge of wastes in state waters."
+          }
+        ],
+        "plainText": "Any person who places any material which tends to obstruct navigation in navigable waters shall be fined not more than one hundred dollars, and such person shall be ordered by the court before which the conviction is had to remove such material within thirty days, and, on his failure to do so, any person may remove such material at the expense of the person who placed it there; but the provisions of this section shall not apply to oyster beds that have been designated and set out for the purpose of planting and cultivating oysters thereon. Nothing in this section shall prohibit the filling or wharfing out in such waters between the shore and the harbor lines established in any harbor."
       }
     },
     {
@@ -160,8 +174,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Any person who unlawfully sinks any material in the Connecticut River for the purpose of obstructing the water or turning it from its natural course, or for making or enlarging any island, shall pay the expense of removing such material and be fined not more than five hundred dollars.",
-          "See Sec. 22a-359 et seq. re erection of structures and placement of fill in tidal, coastal or navigable waters."
+          "Any person who unlawfully sinks any material in the Connecticut River for the purpose of obstructing the water or turning it from its natural course, or for making or enlarging any island, shall pay the expense of removing such material and be fined not more than five hundred dollars."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 4204.)"
@@ -169,8 +182,13 @@
         "history": [
           "History: Sec. 19-314 transferred to Sec. 19a-339 in 1983."
         ],
-        "annotations": [],
-        "plainText": "Any person who unlawfully sinks any material in the Connecticut River for the purpose of obstructing the water or turning it from its natural course, or for making or enlarging any island, shall pay the expense of removing such material and be fined not more than five hundred dollars.\n\nSee Sec. 22a-359 et seq. re erection of structures and placement of fill in tidal, coastal or navigable waters."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 22a-359 et seq. re erection of structures and placement of fill in tidal, coastal or navigable waters."
+          }
+        ],
+        "plainText": "Any person who unlawfully sinks any material in the Connecticut River for the purpose of obstructing the water or turning it from its natural course, or for making or enlarging any island, shall pay the expense of removing such material and be fined not more than five hundred dollars."
       }
     },
     {
@@ -185,8 +203,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Any person who places, collects or allows to remain upon the surface of land owned or occupied by him, or discharges or allows to be discharged from his premises upon the land of another or upon any public land, any filthy water, garbage or other filthy or noxious matter, whereby the owner or occupant of land in the vicinity thereof is injured or annoyed, or discharges or deposits upon the watershed of any stream or reservoir used to supply water to any community filthy or noxious matter, or any person who, outside of a city or borough, in any town, engages or assists in the business of manufacturing fertilizers or other products from refuse animal matter, at any place within half a mile from a public highway, without license from the director of health of such town, shall be fined not more than fifty dollars. The court before which such conviction is had may order the accused to remove such nuisance within three days, and, upon his failure to do so, it shall be removed by a constable of the town where such nuisance is maintained, and the court may tax the cost of the same against the accused and issue execution therefor.",
-          "See Sec. 22a-427 re prohibition against pollution of or discharge of wastes in state waters."
+          "Any person who places, collects or allows to remain upon the surface of land owned or occupied by him, or discharges or allows to be discharged from his premises upon the land of another or upon any public land, any filthy water, garbage or other filthy or noxious matter, whereby the owner or occupant of land in the vicinity thereof is injured or annoyed, or discharges or deposits upon the watershed of any stream or reservoir used to supply water to any community filthy or noxious matter, or any person who, outside of a city or borough, in any town, engages or assists in the business of manufacturing fertilizers or other products from refuse animal matter, at any place within half a mile from a public highway, without license from the director of health of such town, shall be fined not more than fifty dollars. The court before which such conviction is had may order the accused to remove such nuisance within three days, and, upon his failure to do so, it shall be removed by a constable of the town where such nuisance is maintained, and the court may tax the cost of the same against the accused and issue execution therefor."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 4205; 1951, S. 2142d.)"
@@ -197,10 +214,14 @@
         "annotations": [
           {
             "first": true,
+            "text": "See Sec. 22a-427 re prohibition against pollution of or discharge of wastes in state waters."
+          },
+          {
+            "first": true,
             "text": "Cited. 226 C. 358."
           }
         ],
-        "plainText": "Any person who places, collects or allows to remain upon the surface of land owned or occupied by him, or discharges or allows to be discharged from his premises upon the land of another or upon any public land, any filthy water, garbage or other filthy or noxious matter, whereby the owner or occupant of land in the vicinity thereof is injured or annoyed, or discharges or deposits upon the watershed of any stream or reservoir used to supply water to any community filthy or noxious matter, or any person who, outside of a city or borough, in any town, engages or assists in the business of manufacturing fertilizers or other products from refuse animal matter, at any place within half a mile from a public highway, without license from the director of health of such town, shall be fined not more than fifty dollars. The court before which such conviction is had may order the accused to remove such nuisance within three days, and, upon his failure to do so, it shall be removed by a constable of the town where such nuisance is maintained, and the court may tax the cost of the same against the accused and issue execution therefor.\n\nSee Sec. 22a-427 re prohibition against pollution of or discharge of wastes in state waters."
+        "plainText": "Any person who places, collects or allows to remain upon the surface of land owned or occupied by him, or discharges or allows to be discharged from his premises upon the land of another or upon any public land, any filthy water, garbage or other filthy or noxious matter, whereby the owner or occupant of land in the vicinity thereof is injured or annoyed, or discharges or deposits upon the watershed of any stream or reservoir used to supply water to any community filthy or noxious matter, or any person who, outside of a city or borough, in any town, engages or assists in the business of manufacturing fertilizers or other products from refuse animal matter, at any place within half a mile from a public highway, without license from the director of health of such town, shall be fined not more than fifty dollars. The court before which such conviction is had may order the accused to remove such nuisance within three days, and, upon his failure to do so, it shall be removed by a constable of the town where such nuisance is maintained, and the court may tax the cost of the same against the accused and issue execution therefor."
       }
     },
     {

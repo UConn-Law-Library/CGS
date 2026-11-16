@@ -45,10 +45,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Any accused, when he is arraigned before the Superior Court, shall be advised by a judge that he has a right to counsel, that he has a right to refuse to make any statement and that any statement he makes may be introduced in evidence against him. Each such person shall be allowed a reasonable opportunity to consult counsel.",
-          "See Sec. 51-296 re designation of public defender for indigent defendant or codefendant.",
-          "See Sec. 54-1j re court advice re possible immigration and naturalization ramifications of guilty or nolo contendere plea.",
-          "See Sec. 54-94a re conditional plea of nolo contendere."
+          "Any accused, when he is arraigned before the Superior Court, shall be advised by a judge that he has a right to counsel, that he has a right to refuse to make any statement and that any statement he makes may be introduced in evidence against him. Each such person shall be allowed a reasonable opportunity to consult counsel."
         ],
         "sourceNotes": [
           "(1963, P.A. 126, S. 1; February, 1965, P.A. 185, S. 1; 436, S. 1; 1967, P.A. 549, S. 9; 656, S. 58; 1972, P.A. 69, S. 2; P.A. 74-183, S. 125, 291; P.A. 76-436, S. 516, 681; P.A. 80-313, S. 27.)"
@@ -57,6 +54,18 @@
           "History: 1965 acts provided bond would cover appearance in court to which accused was bound over, allowed judge to release accused on his own recognizance and added provision setting forth exceptions to requirement re presentment of accused to first session of court; 1967 acts substituted criminal “term” for criminal “session” and, effective October 1, 1968, provided accused be advised of his rights at his arraignment rather than when he is put to plea, provided alternatives to bail and added concept of incapacity in provision re exceptions to requirement for presentment of accused at first session; 1972 act added Subdiv. (4) in exception to requirement that accused be presented at first session re persons accused of misdemeanor or offenses with lesser penalties as specified; P.A. 74-183 replaced circuit court with court of common pleas, reflecting reorganization of judicial system and deleted provision first added in 1965 and amended in 1967 and 1972 re exceptions to requirement for presentment at first session of court, effective December 31, 1974; P.A. 76-436 replaced court of common pleas with superior court, reflecting transfer of all trial jurisdiction to superior court and specified that accused persons who are not released on bond or on their written promise to appear are to be committed to commissioner of correction until next criminal term of court or until discharged, effective July 1, 1978; P.A. 80-313 deleted provisions detailing conditions of release on bond or promise to appear."
         ],
         "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 51-296 re designation of public defender for indigent defendant or codefendant."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 54-1j re court advice re possible immigration and naturalization ramifications of guilty or nolo contendere plea."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 54-94a re conditional plea of nolo contendere."
+          },
           {
             "first": true,
             "text": "Prior to act, held that neither failure to warn defendant of his constitutional rights nor his lack of counsel required conclusion that his confession was involuntary. 150 C. 169. Cited. 154 C. 314, 324. Presentation before circuit court session next held in circuit where offense is alleged to have been committed means the regular session of the circuit court next to be held, excluding any session on day of arrest. 155 C. 134. Right to counsel not denied where defendant made no request for same even though defendant's attorneys, during period from his arrest to his arraignment, made repeated unsuccessful efforts to communicate with him. Id., 155. Defendant was warned of his rights prior to his plea being offered but not prior to conversation with his daughter in police barracks wherein he admitted he was guilty of crimes charged. 157 C. 25. Cited. 164 C. 402. Admission into evidence of custodial statements not violation of section. 167 C. 408. Cited. 187 C. 6; 195 C. 505; 198 C. 517; 201 C. 489; 236 C. 388."
@@ -74,7 +83,7 @@
             "text": "Cited. 2 Conn. Cir. Ct. 573. Compliance by the state with the requirements of section in no way adversely affected defendant's right to claim that his rights were violated because the court refused to appoint counsel to represent him. 3 Conn. Cir. Ct. 624, 630. Motion to dismiss on ground constitutional right to counsel had been violated should be made prior to not guilty plea. 4 Conn. Cir. Ct. 166. Court could conclude from statements and conduct of defendant that he had effectively waived his rights. Id., 168. On-the-scene questioning of person in investigation of crime without prior warning not precluded since such person is not under restraint. Id., 195. Purpose and necessity of arraignment or presentment of accused are to fix his identity, inform him of his constitutional rights and the charge against him and give him an opportunity to plead; before arraignment, there is no issue pending to which accused can plead and entry of nolle prosequi before arraignment is not a final judgment from which an appeal lies. Id., 466. Cited. 5 Conn. Cir. Ct. 35, 40. Collective statement of their rights to group of accused may be sufficient compliance with section but not as to defendants with linguistic difficulties or below average intelligence. Id., 178. Cited. Id., 243. Defendant waived his right to counsel where he had, for 6 months, obtained postponements on this ground. 6 Conn. Cir. Ct. 58."
           }
         ],
-        "plainText": "Any accused, when he is arraigned before the Superior Court, shall be advised by a judge that he has a right to counsel, that he has a right to refuse to make any statement and that any statement he makes may be introduced in evidence against him. Each such person shall be allowed a reasonable opportunity to consult counsel.\n\nSee Sec. 51-296 re designation of public defender for indigent defendant or codefendant.\n\nSee Sec. 54-1j re court advice re possible immigration and naturalization ramifications of guilty or nolo contendere plea.\n\nSee Sec. 54-94a re conditional plea of nolo contendere."
+        "plainText": "Any accused, when he is arraigned before the Superior Court, shall be advised by a judge that he has a right to counsel, that he has a right to refuse to make any statement and that any statement he makes may be introduced in evidence against him. Each such person shall be allowed a reasonable opportunity to consult counsel."
       }
     },
     {
@@ -192,8 +201,7 @@
           "(a) For purposes of this section, the respective precinct or jurisdiction of a state marshal or judicial marshal shall be wherever such marshal is required to perform duties. Peace officers, as defined in subdivision (9) of section 53a-3 , in their respective precincts, shall arrest, without previous complaint and warrant, any person for any offense in their jurisdiction, when the person is taken or apprehended in the act or on the speedy information of others, provided that no constable elected pursuant to the provisions of section 9-200 shall be considered a peace officer for the purposes of this subsection, unless the town in which such constable holds office provides, by ordinance, that constables shall be considered peace officers for the purposes of this subsection.",
           "(b) Members of the Division of State Police within the Department of Emergency Services and Public Protection or of any local police department or any chief inspector or inspector in the Division of Criminal Justice shall arrest, without previous complaint and warrant, any person who the officer has reasonable grounds to believe has committed or is committing a felony.",
           "(c) Members of any local police department or the Office of State Capitol Police and constables and state marshals who are certified under the provisions of sections 7-294a to 7-294e , inclusive, and who perform criminal law enforcement duties, when in immediate pursuit of a person who may be arrested under the provisions of this section, except a person alleged to have violated only a municipal ordinance, are authorized to pursue such person outside of their respective precincts into any part of the state in order to effect the arrest. Such person may then be returned in the custody of such officer to the precinct in which the offense was committed.",
-          "(d) Any person arrested pursuant to this section shall be presented with reasonable promptness before proper authority.",
-          "See Sec. 6-43 re special deputies."
+          "(d) Any person arrested pursuant to this section shall be presented with reasonable promptness before proper authority."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 465; 1953, S. 195d; 1961, P.A. 239; 1971, P.A. 754; P.A. 75-567, S. 69, 80; P.A. 76-111, S. 3; P.A. 77-614, S. 486, 610; P.A. 80-313, S. 1; 80-394, S. 7, 13; P.A. 81-472, S. 93, 159; P.A. 83-518, S. 2; P.A. 84-302, S. 2; P.A. 89-129, S. 1, 2; P.A. 96-219, S. 10; P.A. 00-99, S. 6, 154; P.A. 01-195, S. 70, 181; P.A. 11-51, S. 134; P.A. 15-83, S. 1.)"
@@ -202,6 +210,10 @@
           "History: 1961 act added provision authorizing members of local police departments to pursue suspects beyond their precincts and return suspects, when caught to precinct where offense was committed; 1971 act deleted the word “organized” as qualifier of references to local police departments; P.A. 75-567 substituted detectives in the division of criminal justice for county detectives; P.A. 76-111 replaced detectives with chief inspectors and inspectors of criminal justice division; P.A. 77-614 made state police department a division within the department of public safety, effective January 1, 1979; Sec. 6-49 transferred to Sec. 54-1f in 1979; P.A. 80-313 divided section into Subsecs. and substituted references to peace officers for detailed listing of persons to which provisions apply, i.e. sheriffs, inspectors, constables, etc.; P.A. 80-394 specified applicability to sheriffs, deputy sheriffs and special deputy sheriffs, adding provision re precinct or jurisdiction of deputies and special deputies; P.A. 81-472 amended Subsec. (a) to delete reference to special deputy sheriffs since such sheriffs are included in definition of peace officers; P.A. 83-518 amended Subsec. (a) providing that constables shall not be considered peace officers for purposes of Subsec. (a) unless town ordinance so provides; P.A. 84-302 permitted certified constables who perform criminal law enforcement duties to pursue offenders outside of their precincts; P.A. 89-129 amended provision in Subsec. (c) authorizing pursuit outside of precinct to include members of the office of state capitol security; P.A. 96-219 amended Subsec. (c) by changing the name of the “Office of State Capitol Security” to the “Office of State Capitol Police”; P.A. 00-99 amended Subsec. (a) by changing reference to deputy or special deputy sheriff to state marshal or judicial marshal and amended Subsec. (c) by deleting reference to sheriffs, deputy sheriffs and special deputy sheriffs and adding reference to state marshals, effective December 1, 2000; P.A. 01-195 made technical changes for purposes of gender neutrality in Subsec. (a), effective July 11, 2001; pursuant to P.A. 11-51, “Department of Public Safety” was changed editorially by the Revisors to “Department of Emergency Services and Public Protection” in Subsec. (b), effective July 1, 2011; P.A. 15-83 amended Subsec. (c) by adding exception re person alleged to have violated only a municipal ordinance and making technical changes."
         ],
         "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 6-43 re special deputies."
+          },
           {
             "first": true,
             "text": "Annotations to former section 6-49:"
@@ -275,7 +287,7 @@
             "text": "Cited. 37 CS 755."
           }
         ],
-        "plainText": "(a) For purposes of this section, the respective precinct or jurisdiction of a state marshal or judicial marshal shall be wherever such marshal is required to perform duties. Peace officers, as defined in subdivision (9) of section 53a-3 , in their respective precincts, shall arrest, without previous complaint and warrant, any person for any offense in their jurisdiction, when the person is taken or apprehended in the act or on the speedy information of others, provided that no constable elected pursuant to the provisions of section 9-200 shall be considered a peace officer for the purposes of this subsection, unless the town in which such constable holds office provides, by ordinance, that constables shall be considered peace officers for the purposes of this subsection.\n\n(b) Members of the Division of State Police within the Department of Emergency Services and Public Protection or of any local police department or any chief inspector or inspector in the Division of Criminal Justice shall arrest, without previous complaint and warrant, any person who the officer has reasonable grounds to believe has committed or is committing a felony.\n\n(c) Members of any local police department or the Office of State Capitol Police and constables and state marshals who are certified under the provisions of sections 7-294a to 7-294e , inclusive, and who perform criminal law enforcement duties, when in immediate pursuit of a person who may be arrested under the provisions of this section, except a person alleged to have violated only a municipal ordinance, are authorized to pursue such person outside of their respective precincts into any part of the state in order to effect the arrest. Such person may then be returned in the custody of such officer to the precinct in which the offense was committed.\n\n(d) Any person arrested pursuant to this section shall be presented with reasonable promptness before proper authority.\n\nSee Sec. 6-43 re special deputies."
+        "plainText": "(a) For purposes of this section, the respective precinct or jurisdiction of a state marshal or judicial marshal shall be wherever such marshal is required to perform duties. Peace officers, as defined in subdivision (9) of section 53a-3 , in their respective precincts, shall arrest, without previous complaint and warrant, any person for any offense in their jurisdiction, when the person is taken or apprehended in the act or on the speedy information of others, provided that no constable elected pursuant to the provisions of section 9-200 shall be considered a peace officer for the purposes of this subsection, unless the town in which such constable holds office provides, by ordinance, that constables shall be considered peace officers for the purposes of this subsection.\n\n(b) Members of the Division of State Police within the Department of Emergency Services and Public Protection or of any local police department or any chief inspector or inspector in the Division of Criminal Justice shall arrest, without previous complaint and warrant, any person who the officer has reasonable grounds to believe has committed or is committing a felony.\n\n(c) Members of any local police department or the Office of State Capitol Police and constables and state marshals who are certified under the provisions of sections 7-294a to 7-294e , inclusive, and who perform criminal law enforcement duties, when in immediate pursuit of a person who may be arrested under the provisions of this section, except a person alleged to have violated only a municipal ordinance, are authorized to pursue such person outside of their respective precincts into any part of the state in order to effect the arrest. Such person may then be returned in the custody of such officer to the precinct in which the offense was committed.\n\n(d) Any person arrested pursuant to this section shall be presented with reasonable promptness before proper authority."
       }
     },
     {
@@ -714,8 +726,7 @@
           "(8) The Commissioner of Transportation, or a designee;",
           "(9) The director of the Institute for Municipal and Regional Policy at The University of Connecticut, or a designee; and",
           "(10) Such other members as the board may prescribe.",
-          "(c) The chairpersons of the joint standing committee of the General Assembly having cognizance of matters relating to the judiciary shall select two chairpersons of the board from among the members of the board.",
-          "See Sec. 4-38f for definition of “administrative purposes only”."
+          "(c) The chairpersons of the joint standing committee of the General Assembly having cognizance of matters relating to the judiciary shall select two chairpersons of the board from among the members of the board."
         ],
         "sourceNotes": [
           "(P.A. 12-74, S. 2; May Sp. Sess. P.A. 16-3, S. 169; P.A. 19-117, S. 142; June Sp. Sess. P.A. 21-2, S. 26.)"
@@ -723,8 +734,13 @@
         "history": [
           "History: P.A. 12-74 effective June 6, 2012; May Sp. Sess. P.A. 16-3 amended Subsec. (b) by replacing “African-American Affairs Commission” with “Commission on Equity and Opportunity” in Subdiv. (4), replacing reference to executive director of Latino and Puerto Rican Affairs Commission or designee with reference to two members of Commission on Equity and Opportunity designated by the executive director in Subdiv. (5), deleting former Subdiv. (6) re executive director of Asian Pacific American Affairs Commission or designee and redesignating existing Subdivs. (7) to (11) as Subdivs. (6) to (10), effective July 1, 2016; P.A. 19-117 amended Subsec. (b) by replacing “Commission on Equity and Opportunity” with “Commission on Women, Children, Seniors, Equity and Opportunity” in Subdivs. (4) and (5), effective July 1, 2019; June Sp. Sess. P.A. 21-2 amended Subsec. (b)(9) by replacing “Central Connecticut State University” with “The University of Connecticut”."
         ],
-        "annotations": [],
-        "plainText": "(a) There is established, within available resources, a Racial Profiling Prohibition Project Advisory Board for the purpose of advising the Office of Policy and Management with respect to the adoption of standardized methods and guidelines pursuant to section 54-1m . The board shall be within the Office of Policy and Management for administrative purposes only.\n\n(b) The board shall include the following members:\n\n(1) The Chief State's Attorney, or a designee;\n\n(2) The Chief Public Defender, or a designee;\n\n(3) The president of the Connecticut Police Chiefs Association, or a designee;\n\n(4) The executive director of the Commission on Women, Children, Seniors, Equity and Opportunity, or a designee;\n\n(5) Two members of the Commission on Women, Children, Seniors, Equity and Opportunity, designated by the executive director;\n\n(6) The executive director of the Commission on Human Rights and Opportunities, or a designee;\n\n(7) The Commissioner of Emergency Services and Public Protection, or a designee;\n\n(8) The Commissioner of Transportation, or a designee;\n\n(9) The director of the Institute for Municipal and Regional Policy at The University of Connecticut, or a designee; and\n\n(10) Such other members as the board may prescribe.\n\n(c) The chairpersons of the joint standing committee of the General Assembly having cognizance of matters relating to the judiciary shall select two chairpersons of the board from among the members of the board.\n\nSee Sec. 4-38f for definition of “administrative purposes only”."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 4-38f for definition of “administrative purposes only”."
+          }
+        ],
+        "plainText": "(a) There is established, within available resources, a Racial Profiling Prohibition Project Advisory Board for the purpose of advising the Office of Policy and Management with respect to the adoption of standardized methods and guidelines pursuant to section 54-1m . The board shall be within the Office of Policy and Management for administrative purposes only.\n\n(b) The board shall include the following members:\n\n(1) The Chief State's Attorney, or a designee;\n\n(2) The Chief Public Defender, or a designee;\n\n(3) The president of the Connecticut Police Chiefs Association, or a designee;\n\n(4) The executive director of the Commission on Women, Children, Seniors, Equity and Opportunity, or a designee;\n\n(5) Two members of the Commission on Women, Children, Seniors, Equity and Opportunity, designated by the executive director;\n\n(6) The executive director of the Commission on Human Rights and Opportunities, or a designee;\n\n(7) The Commissioner of Emergency Services and Public Protection, or a designee;\n\n(8) The Commissioner of Transportation, or a designee;\n\n(9) The director of the Institute for Municipal and Regional Policy at The University of Connecticut, or a designee; and\n\n(10) Such other members as the board may prescribe.\n\n(c) The chairpersons of the joint standing committee of the General Assembly having cognizance of matters relating to the judiciary shall select two chairpersons of the board from among the members of the board."
       }
     },
     {
@@ -792,9 +808,7 @@
           "(b) The court, judge or judge trial referee issuing a bench warrant for the arrest of the person or persons complained against shall, in cases punishable by death, life imprisonment without the possibility of release or life imprisonment, set the conditions of release or indicate that the person or persons named in the warrant shall not be entitled to bail and may, in all other cases, set the conditions of release. The conditions of release, if included in the warrant, shall fix the first of the following conditions which the court, judge or judge trial referee finds necessary to assure such person's appearance in court: (1) Written promise to appear; (2) execution of a bond without surety in no greater amount than necessary; or (3) execution of a bond with surety in no greater amount than necessary.",
           "(c) In lieu of a warrant for the rearrest of any defendant who fails to appear for trial at the place and time specified or on any court date thereafter the court, judge or judge trial referee may issue a capias.",
           "(d) All process issued by said court or any judge thereof, or any judge trial referee shall be served by any proper officer, or an indifferent person when specially directed to do so, and shall be obeyed by any and all persons and officers to whom the same is directed or whom it may concern.",
-          "(e) Whenever a warrant or other criminal process is issued under this section or section 53a-32 , the court, judge or judge trial referee may cause such warrant or process to be entered into a central computer system in accordance with policies and procedures established by the Chief Court Administrator. Existence of the warrant or other criminal process in the computer system shall constitute prima facie evidence of the issuance of the warrant or process. Any person named in the warrant or other criminal process may be arrested based on the existence of the warrant or process in the computer system and shall, upon any such arrest, be given a copy of the warrant or process.",
-          "See Sec. 52-56(d) re execution or service of capias in any precinct by state marshal of any precinct.",
-          "See Sec. 54-64b re release following arrest on court warrant."
+          "(e) Whenever a warrant or other criminal process is issued under this section or section 53a-32 , the court, judge or judge trial referee may cause such warrant or process to be entered into a central computer system in accordance with policies and procedures established by the Chief Court Administrator. Existence of the warrant or other criminal process in the computer system shall constitute prima facie evidence of the issuance of the warrant or process. Any person named in the warrant or other criminal process may be arrested based on the existence of the warrant or process in the computer system and shall, upon any such arrest, be given a copy of the warrant or process."
         ],
         "sourceNotes": [
           "(1959, P.A. 28, S. 27; February, 1965, P.A. 194, S. 1; 1967, P.A. 10, S. 1; 152, S. 44; 549, S. 10; P.A. 74-183, S. 126, 291; P.A. 76-436, S. 518, 681; P.A. 77-576, S. 38, 65; P.A. 79-216, S. 1; P.A. 80-313, S. 2; P.A. 84-123, S. 2; P.A. 00-209, S. 4; P.A. 01-72, S. 1; P.A. 04-127, S. 8; P.A. 10-43, S. 21; P.A. 12-5, S. 24.)"
@@ -803,6 +817,14 @@
           "History: 1965 act added authority of judge to issue subpoenas and warrants; 1967 acts deleted language in last sentence qualifying power of judge as being “when the circuit court is not in session” and, effective October 1, 1968, added provisions for alternatives to bail; P.A. 74-183 replaced circuit court with court of common pleas, effective December 31, 1974; P.A. 76-436 replaced court of common pleas with superior court and deleted references to powers of other unspecified courts and judges, reflecting transfer of all trial jurisdiction to superior court, effective July 1, 1978; P.A. 77-576 added detailed provisions re procedure for issuance of bench warrants and clarified provisions with respect to crimes which are not bailable, effective July 1, 1978; P.A. 79-216 made minor wording changes; P.A. 80-313 divided section into Subsecs., restated power to issue bench warrants in Subsec. (a) and deleted detailed provisions re procedure re issuance of bench warrants and arrests made on bench warrant; P.A. 84-123 amended Subsec. (a) by authorizing the issuance of capias for defendants who violate a court order regarding any court appearance, added a new Subsec. (c) re the issuance of a capias in lieu of a rearrest warrant, and redesignated former Subsec. (c) as Subsec. (d); P.A. 00-209 made technical changes and added new Subsec. (e) authorizing the entry of a rearrest warrant into a central computer system, providing that the existence of the warrant in the computer system is prima facie evidence of its issuance and authorizing the arrest of a person based on the existence of the warrant in the computer system; P.A. 01-72 amended Subsec. (a) by adding “or any judge trial referee specifically designated by the Chief Justice to exercise the authority conferred by this section” and amended Subsecs. (b) to (e) by adding references to judge trial referee; P.A. 04-127 amended Subsec. (e) by deleting reference to “rearrest” warrant and adding reference to Sec. 53a-32; P.A. 10-43 amended Subsec. (e) to make provisions applicable to other criminal process and require that entry of warrant or process into central computer system be in accordance with policies and procedures established by Chief Court Administrator; P.A. 12-5 amended Subsec. (b) to add reference to cases punishable by life imprisonment without possibility of release, effective April 25, 2012."
         ],
         "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 52-56(d) re execution or service of capias in any precinct by state marshal of any precinct."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 54-64b re release following arrest on court warrant."
+          },
           {
             "first": true,
             "text": "Cited. 181 C. 562; 187 C. 292; 193 C. 612; 202 C. 443; 205 C. 298; 233 C. 403."
@@ -824,7 +846,7 @@
             "text": "Death penalty unconstitutional under Art. I, Secs. 8 and 9 of Connecticut Constitution. 318 C. 1."
           }
         ],
-        "plainText": "(a) In all criminal cases the Superior Court, or any judge thereof, or any judge trial referee specifically designated by the Chief Justice to exercise the authority conferred by this section may issue (1) bench warrants of arrest upon application by a prosecutorial official if the court or judge determines that the affidavit accompanying the application shows that there is probable cause to believe that an offense has been committed and that the person complained against committed it, (2) subpoenas for witnesses, (3) capias for witnesses and for defendants who violate an order of the court regarding any court appearance, and (4) all other criminal process; and may administer justice in all criminal matters.\n\n(b) The court, judge or judge trial referee issuing a bench warrant for the arrest of the person or persons complained against shall, in cases punishable by death, life imprisonment without the possibility of release or life imprisonment, set the conditions of release or indicate that the person or persons named in the warrant shall not be entitled to bail and may, in all other cases, set the conditions of release. The conditions of release, if included in the warrant, shall fix the first of the following conditions which the court, judge or judge trial referee finds necessary to assure such person's appearance in court: (1) Written promise to appear; (2) execution of a bond without surety in no greater amount than necessary; or (3) execution of a bond with surety in no greater amount than necessary.\n\n(c) In lieu of a warrant for the rearrest of any defendant who fails to appear for trial at the place and time specified or on any court date thereafter the court, judge or judge trial referee may issue a capias.\n\n(d) All process issued by said court or any judge thereof, or any judge trial referee shall be served by any proper officer, or an indifferent person when specially directed to do so, and shall be obeyed by any and all persons and officers to whom the same is directed or whom it may concern.\n\n(e) Whenever a warrant or other criminal process is issued under this section or section 53a-32 , the court, judge or judge trial referee may cause such warrant or process to be entered into a central computer system in accordance with policies and procedures established by the Chief Court Administrator. Existence of the warrant or other criminal process in the computer system shall constitute prima facie evidence of the issuance of the warrant or process. Any person named in the warrant or other criminal process may be arrested based on the existence of the warrant or process in the computer system and shall, upon any such arrest, be given a copy of the warrant or process.\n\nSee Sec. 52-56(d) re execution or service of capias in any precinct by state marshal of any precinct.\n\nSee Sec. 54-64b re release following arrest on court warrant."
+        "plainText": "(a) In all criminal cases the Superior Court, or any judge thereof, or any judge trial referee specifically designated by the Chief Justice to exercise the authority conferred by this section may issue (1) bench warrants of arrest upon application by a prosecutorial official if the court or judge determines that the affidavit accompanying the application shows that there is probable cause to believe that an offense has been committed and that the person complained against committed it, (2) subpoenas for witnesses, (3) capias for witnesses and for defendants who violate an order of the court regarding any court appearance, and (4) all other criminal process; and may administer justice in all criminal matters.\n\n(b) The court, judge or judge trial referee issuing a bench warrant for the arrest of the person or persons complained against shall, in cases punishable by death, life imprisonment without the possibility of release or life imprisonment, set the conditions of release or indicate that the person or persons named in the warrant shall not be entitled to bail and may, in all other cases, set the conditions of release. The conditions of release, if included in the warrant, shall fix the first of the following conditions which the court, judge or judge trial referee finds necessary to assure such person's appearance in court: (1) Written promise to appear; (2) execution of a bond without surety in no greater amount than necessary; or (3) execution of a bond with surety in no greater amount than necessary.\n\n(c) In lieu of a warrant for the rearrest of any defendant who fails to appear for trial at the place and time specified or on any court date thereafter the court, judge or judge trial referee may issue a capias.\n\n(d) All process issued by said court or any judge thereof, or any judge trial referee shall be served by any proper officer, or an indifferent person when specially directed to do so, and shall be obeyed by any and all persons and officers to whom the same is directed or whom it may concern.\n\n(e) Whenever a warrant or other criminal process is issued under this section or section 53a-32 , the court, judge or judge trial referee may cause such warrant or process to be entered into a central computer system in accordance with policies and procedures established by the Chief Court Administrator. Existence of the warrant or other criminal process in the computer system shall constitute prima facie evidence of the issuance of the warrant or process. Any person named in the warrant or other criminal process may be arrested based on the existence of the warrant or process in the computer system and shall, upon any such arrest, be given a copy of the warrant or process."
       }
     },
     {
@@ -881,15 +903,19 @@
       "status": "active",
       "content": {
         "body": [
-          "Not later than thirty days after the entry of the issuance of any rearrest warrant or arrest warrant for a violation of probation into the paperless rearrest warrant network, the law enforcement agency for the municipality in which the accused person resides shall, if such network is available and accessible to such agency, enter a notation in such network of the actions, if any, that have been taken by such agency to execute the warrant and apprehend the accused person.",
-          "See Sec. 54-108c re availability on Internet of information on outstanding arrest warrants for probation violations."
+          "Not later than thirty days after the entry of the issuance of any rearrest warrant or arrest warrant for a violation of probation into the paperless rearrest warrant network, the law enforcement agency for the municipality in which the accused person resides shall, if such network is available and accessible to such agency, enter a notation in such network of the actions, if any, that have been taken by such agency to execute the warrant and apprehend the accused person."
         ],
         "sourceNotes": [
           "(P.A. 06-99, S. 2.)"
         ],
         "history": [],
-        "annotations": [],
-        "plainText": "Not later than thirty days after the entry of the issuance of any rearrest warrant or arrest warrant for a violation of probation into the paperless rearrest warrant network, the law enforcement agency for the municipality in which the accused person resides shall, if such network is available and accessible to such agency, enter a notation in such network of the actions, if any, that have been taken by such agency to execute the warrant and apprehend the accused person.\n\nSee Sec. 54-108c re availability on Internet of information on outstanding arrest warrants for probation violations."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 54-108c re availability on Internet of information on outstanding arrest warrants for probation violations."
+          }
+        ],
+        "plainText": "Not later than thirty days after the entry of the issuance of any rearrest warrant or arrest warrant for a violation of probation into the paperless rearrest warrant network, the law enforcement agency for the municipality in which the accused person resides shall, if such network is available and accessible to such agency, enter a notation in such network of the actions, if any, that have been taken by such agency to execute the warrant and apprehend the accused person."
       }
     },
     {
@@ -1099,11 +1125,13 @@
       }
     },
     {
-      "id": "group-54-18a-to-54-21",
+      "id": "group-54-18a-to-54-19-to-54-20-to-54-21",
       "kind": "group",
       "citation": null,
       "citations": [
         "54-18a",
+        "54-19",
+        "54-20",
         "54-21"
       ],
       "heading": "Secs. 54-18a to 54-21. Transfer of criminal cases between Superior and Common Pleas Court. Certain cases to be tried at first term. Search when cruelty is suspected. Search warrants in cases of cruelty to animals.",
@@ -1291,8 +1319,7 @@
           "(d) A warrant may issue only on affidavit sworn to by the complainant or complainants before the judge or judge trial referee, either in person or electronically with simultaneous sight and sound, and establishing the grounds for issuing the warrant, which affidavit shall be part of the arrest file. If the judge or judge trial referee is satisfied that grounds for the application exist or that there is probable cause to believe that grounds for the application exist, the judge or judge trial referee shall issue a warrant identifying the property and naming or describing the person, place or thing to be searched or authorizing the installation and use of a tracking device and identifying the person on which or the property to, in or on which the tracking device is to be installed. The warrant shall be directed to any police officer of a regularly organized police department or any state police officer, to an inspector in the Division of Criminal Justice, to a conservation officer, special conservation officer or patrolman acting pursuant to section 26-6 or to a sworn motor vehicle inspector acting under the authority of section 14-8 . Except for a warrant for the installation and use of a tracking device, the warrant shall state the date and time of its issuance and the grounds or probable cause for its issuance and shall command the officer to search within a reasonable time the person, place or thing named, for the property specified. A warrant for the installation and use of a tracking device shall state the date and time of its issuance and the grounds or probable cause for its issuance and shall command the officer to complete the installation of the device within a specified period not later than ten days after the date of its issuance and authorize the installation and use of the tracking device, including the collection of data through such tracking device, for a reasonable period of time not to exceed thirty days from the date the tracking device is installed. Upon request and a showing of good cause, a judge or judge trial referee may authorize the use of the tracking device for an additional period of thirty days.",
           "(e) No police officer of a regularly organized police department or any state police officer, an inspector in the Division of Criminal Justice, a conservation officer, special conservation officer or patrolman acting pursuant to section 26-6 or a sworn motor vehicle inspector acting under the authority of section 14-8 , shall seek, execute or participate in the execution of a no-knock warrant. A search warrant authorized under this section shall require that an officer provide notice of such officer's identity, authority and purpose prior to entering the place to be searched for the execution of such search warrant. Prior to undertaking any search or seizure pursuant to the search warrant, the executing officer shall read and give a copy of the search warrant to the person to be searched or the owner of the place to be searched or, if the owner is not present, to any occupant of the place to be searched. If the place to be searched is unoccupied, the executing officer shall leave a copy of the search warrant suitably affixed to the place to be searched. For purposes of this subsection, “no-knock warrant” means a warrant authorizing police officers to enter certain premises without first knocking and announcing their presence or purpose prior to entering the place to be searched.",
           "(f) A judge or judge trial referee may issue a warrant pursuant to this section for records or data that are in the actual or constructive possession of a foreign corporation or business entity that transacts business in this state, including, but not limited to, a foreign corporation or business entity that provides electronic communication services or remote computing services to the public. Such a warrant may be served on an authorized representative of the foreign corporation or business entity by hand, mail, commercial delivery, facsimile or electronic transmission, provided proof of delivery can be established. When properly served with a warrant issued pursuant to this section, the foreign corporation or business entity shall provide to the applicant all records or data sought by the warrant within fourteen business days of being served with the warrant, unless the judge or judge trial referee determines that a shorter or longer period of time is necessary or appropriate.",
-          "(g) The inadvertent failure of the issuing judge or judge trial referee to state on the warrant the time of its issuance shall not in and of itself invalidate the warrant.",
-          "See Sec. 54-154 re taxing of expenses in search and seizure cases."
+          "(g) The inadvertent failure of the issuing judge or judge trial referee to state on the warrant the time of its issuance shall not in and of itself invalidate the warrant."
         ],
         "sourceNotes": [
           "(1963, P.A. 652, S. 1, 3; February, 1965, P.A. 439; 574, S. 46; P.A. 74-183, S. 138, 291; P.A. 76-436, S. 530, 681; P.A. 77-504; P.A. 79-14, S. 3; P.A. 80-313, S. 8; P.A. 81-227, S. 3; June Sp. Sess. P.A. 98-1, S. 39, 121; P.A. 00-31; P.A. 01-72, S. 2; P.A. 04-147, S. 2; P.A. 13-271, S. 42; P.A. 14-233, S. 9; P.A. 21-33, S. 7; P.A. 24-108, S. 19.)"
@@ -1301,6 +1328,10 @@
           "History: 1965 acts authorized search of person and made grammatical correction; P.A. 74-183 replaced circuit court with court of common pleas in Subsec. (b), reflecting reorganization of judicial system, effective December 31, 1974; P.A. 76-436 added reference to assistant state's attorneys and deleted reference to prosecuting attorneys and to court of common pleas in Subsec. (b), reflecting transfer of all trial jurisdiction to superior court, effective July 1, 1978; P.A. 77-504 added Subsec. (b)(3) authorizing issuance of search warrant to discover property constituting evidence of offense or evidence that a person participated in the commission of an offense; P.A. 79-14 added exception re Sec. 54-33j in Subsec. (b)(3); P.A. 80-313 substituted “may” for “shall” in Subsec. (c) provision re issuance of warrant on sworn affidavit; P.A. 81-227 amended Subsec. (c) by authorizing judges to direct search warrants to conservation officers and patrolmen acting pursuant to Sec. 26-6; June Sp. Sess. P.A. 98-1 made a technical change in Subsec. (c), effective June 24, 1998; P.A. 00-31 amended Subsec. (c) to require the warrant to state the date and time of its issuance and to add provision that the inadvertent failure of the issuing judge to state on the warrant the time of its issuance shall not in and of itself invalidate the warrant, and made technical changes in Subsecs. (b) and (c) for purposes of gender neutrality; P.A. 01-72 added references to judge trial referee in Subsecs. (b) and (c); P.A. 04-147 amended Subsec. (c) to authorize a warrant to be directed to an inspector in the Division of Criminal Justice and make a technical change for purposes of gender neutrality; P.A. 13-271 amended Subsec. (c) to authorize warrant to be directed to a sworn motor vehicle inspector acting under authority of Sec. 14-8, effective July 1, 2013; P.A. 14-233 amended Subsec. (a) to add provision defining “tracking device”, added new Subsec. (c) re warrant for tracking device, redesignated existing Subsec. (c) as Subsec. (d) and amended same to add provisions re warrant for tracking device and person or property subject to tracking device, added Subsec. (e) re warrant for records or data in actual or constructive possession of foreign corporation or business entity, designated existing provision re failure to state on warrant time of issuance as Subsec. (f), and made technical changes; P.A. 21-33 added new Subsec. (e) prohibiting no-knock warrants and redesignated existing Subsecs. (e) and (f) as Subsecs. (f) and (g); P.A. 24-108 amended Subsec. (d) by adding that required affidavit could be sworn to “either in person or electronically with simultaneous sight and sound”."
         ],
         "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 54-154 re taxing of expenses in search and seizure cases."
+          },
           {
             "first": true,
             "text": "Former statute did not authorize seizure of contraceptive material. 126 C. 428. Under former statute, obscene materials could be seized regardless of who possessed them or of knowledge or intent in such possession. 146 C. 78. This section and sections 54-33b to 54-33g passed subsequent to Mapp v. Ohio , 367 U.S. 643, which held that evidence obtained by unlawful search and seizure is inadmissible in state courts; prior to such passage if search and seizure were incidental to lawful arrest, they were not unreasonable. 149 C. 567. Cited. 153 C. 8. Judge issuing search warrant not required to recite in warrant the grounds on which he found probable cause. Id., 708, 709. Warrant calling for search and seizure of passenger automobile includes whatever was an integral part or component of that automobile, e.g., dust on floor, stains on interior, seats and cushions. 155 C. 145. Neither the recital that affiant had information from reliable informant nor statement that apartment sought to be searched had been under surveillance were sufficient grounds for issuance of warrant; warrant issued was illegal. Id., 385. Cited. 165 C. 239; 169 C. 322; 170 C. 618; 181 C. 562; 196 C. 471; 206 C. 90; 219 C. 529; 224 C. 29; 226 C. 514."
@@ -1342,7 +1373,7 @@
             "text": "Cited. 14 CA 356; 32 CA 402; judgment reversed, see 230 C. 24; 39 CA 369. Provision that “warrant shall state the date and time of its issuance” does not invalidate warrant issued with incorrect time due to scrivener's error. 124 CA 331, see also 307 C. 567."
           }
         ],
-        "plainText": "(a) As used in sections 54-33a to 54-33g , inclusive, “property” includes, but is not limited to, documents, books, papers, films, recordings, records, data and any other tangible thing; and “tracking device” means an electronic or mechanical device that permits the tracking of the movement of a person or object.\n\n(b) Upon complaint on oath by any state's attorney or assistant state's attorney or by any two credible persons, to any judge of the Superior Court or judge trial referee, that such state's attorney or assistant state's attorney or such persons have probable cause to believe that any property (1) possessed, controlled, designed or intended for use or which is or has been used or which may be used as the means of committing any criminal offense; or (2) which was stolen or embezzled; or (3) which constitutes evidence of an offense, or which constitutes evidence that a particular person participated in the commission of an offense, is within or upon any place, thing or person, such judge or judge trial referee, except as provided in section 54-33j , may issue a warrant commanding a proper officer to enter into or upon such place or thing, search such place, thing or person and take into such officer's custody all such property named in the warrant.\n\n(c) Upon complaint on oath by any state's attorney or assistant state's attorney or by any two credible persons, to any judge of the Superior Court or judge trial referee, that such state's attorney or assistant state's attorney or such persons have probable cause to believe that a criminal offense has been, is being, or will be committed and that the use of a tracking device will yield evidence of the commission of that offense, such judge or judge trial referee may issue a warrant authorizing the installation and use of a tracking device. The complaint shall identify the person on which or the property to, in or on which the tracking device is to be installed, and, if known, the owner of such property.\n\n(d) A warrant may issue only on affidavit sworn to by the complainant or complainants before the judge or judge trial referee, either in person or electronically with simultaneous sight and sound, and establishing the grounds for issuing the warrant, which affidavit shall be part of the arrest file. If the judge or judge trial referee is satisfied that grounds for the application exist or that there is probable cause to believe that grounds for the application exist, the judge or judge trial referee shall issue a warrant identifying the property and naming or describing the person, place or thing to be searched or authorizing the installation and use of a tracking device and identifying the person on which or the property to, in or on which the tracking device is to be installed. The warrant shall be directed to any police officer of a regularly organized police department or any state police officer, to an inspector in the Division of Criminal Justice, to a conservation officer, special conservation officer or patrolman acting pursuant to section 26-6 or to a sworn motor vehicle inspector acting under the authority of section 14-8 . Except for a warrant for the installation and use of a tracking device, the warrant shall state the date and time of its issuance and the grounds or probable cause for its issuance and shall command the officer to search within a reasonable time the person, place or thing named, for the property specified. A warrant for the installation and use of a tracking device shall state the date and time of its issuance and the grounds or probable cause for its issuance and shall command the officer to complete the installation of the device within a specified period not later than ten days after the date of its issuance and authorize the installation and use of the tracking device, including the collection of data through such tracking device, for a reasonable period of time not to exceed thirty days from the date the tracking device is installed. Upon request and a showing of good cause, a judge or judge trial referee may authorize the use of the tracking device for an additional period of thirty days.\n\n(e) No police officer of a regularly organized police department or any state police officer, an inspector in the Division of Criminal Justice, a conservation officer, special conservation officer or patrolman acting pursuant to section 26-6 or a sworn motor vehicle inspector acting under the authority of section 14-8 , shall seek, execute or participate in the execution of a no-knock warrant. A search warrant authorized under this section shall require that an officer provide notice of such officer's identity, authority and purpose prior to entering the place to be searched for the execution of such search warrant. Prior to undertaking any search or seizure pursuant to the search warrant, the executing officer shall read and give a copy of the search warrant to the person to be searched or the owner of the place to be searched or, if the owner is not present, to any occupant of the place to be searched. If the place to be searched is unoccupied, the executing officer shall leave a copy of the search warrant suitably affixed to the place to be searched. For purposes of this subsection, “no-knock warrant” means a warrant authorizing police officers to enter certain premises without first knocking and announcing their presence or purpose prior to entering the place to be searched.\n\n(f) A judge or judge trial referee may issue a warrant pursuant to this section for records or data that are in the actual or constructive possession of a foreign corporation or business entity that transacts business in this state, including, but not limited to, a foreign corporation or business entity that provides electronic communication services or remote computing services to the public. Such a warrant may be served on an authorized representative of the foreign corporation or business entity by hand, mail, commercial delivery, facsimile or electronic transmission, provided proof of delivery can be established. When properly served with a warrant issued pursuant to this section, the foreign corporation or business entity shall provide to the applicant all records or data sought by the warrant within fourteen business days of being served with the warrant, unless the judge or judge trial referee determines that a shorter or longer period of time is necessary or appropriate.\n\n(g) The inadvertent failure of the issuing judge or judge trial referee to state on the warrant the time of its issuance shall not in and of itself invalidate the warrant.\n\nSee Sec. 54-154 re taxing of expenses in search and seizure cases."
+        "plainText": "(a) As used in sections 54-33a to 54-33g , inclusive, “property” includes, but is not limited to, documents, books, papers, films, recordings, records, data and any other tangible thing; and “tracking device” means an electronic or mechanical device that permits the tracking of the movement of a person or object.\n\n(b) Upon complaint on oath by any state's attorney or assistant state's attorney or by any two credible persons, to any judge of the Superior Court or judge trial referee, that such state's attorney or assistant state's attorney or such persons have probable cause to believe that any property (1) possessed, controlled, designed or intended for use or which is or has been used or which may be used as the means of committing any criminal offense; or (2) which was stolen or embezzled; or (3) which constitutes evidence of an offense, or which constitutes evidence that a particular person participated in the commission of an offense, is within or upon any place, thing or person, such judge or judge trial referee, except as provided in section 54-33j , may issue a warrant commanding a proper officer to enter into or upon such place or thing, search such place, thing or person and take into such officer's custody all such property named in the warrant.\n\n(c) Upon complaint on oath by any state's attorney or assistant state's attorney or by any two credible persons, to any judge of the Superior Court or judge trial referee, that such state's attorney or assistant state's attorney or such persons have probable cause to believe that a criminal offense has been, is being, or will be committed and that the use of a tracking device will yield evidence of the commission of that offense, such judge or judge trial referee may issue a warrant authorizing the installation and use of a tracking device. The complaint shall identify the person on which or the property to, in or on which the tracking device is to be installed, and, if known, the owner of such property.\n\n(d) A warrant may issue only on affidavit sworn to by the complainant or complainants before the judge or judge trial referee, either in person or electronically with simultaneous sight and sound, and establishing the grounds for issuing the warrant, which affidavit shall be part of the arrest file. If the judge or judge trial referee is satisfied that grounds for the application exist or that there is probable cause to believe that grounds for the application exist, the judge or judge trial referee shall issue a warrant identifying the property and naming or describing the person, place or thing to be searched or authorizing the installation and use of a tracking device and identifying the person on which or the property to, in or on which the tracking device is to be installed. The warrant shall be directed to any police officer of a regularly organized police department or any state police officer, to an inspector in the Division of Criminal Justice, to a conservation officer, special conservation officer or patrolman acting pursuant to section 26-6 or to a sworn motor vehicle inspector acting under the authority of section 14-8 . Except for a warrant for the installation and use of a tracking device, the warrant shall state the date and time of its issuance and the grounds or probable cause for its issuance and shall command the officer to search within a reasonable time the person, place or thing named, for the property specified. A warrant for the installation and use of a tracking device shall state the date and time of its issuance and the grounds or probable cause for its issuance and shall command the officer to complete the installation of the device within a specified period not later than ten days after the date of its issuance and authorize the installation and use of the tracking device, including the collection of data through such tracking device, for a reasonable period of time not to exceed thirty days from the date the tracking device is installed. Upon request and a showing of good cause, a judge or judge trial referee may authorize the use of the tracking device for an additional period of thirty days.\n\n(e) No police officer of a regularly organized police department or any state police officer, an inspector in the Division of Criminal Justice, a conservation officer, special conservation officer or patrolman acting pursuant to section 26-6 or a sworn motor vehicle inspector acting under the authority of section 14-8 , shall seek, execute or participate in the execution of a no-knock warrant. A search warrant authorized under this section shall require that an officer provide notice of such officer's identity, authority and purpose prior to entering the place to be searched for the execution of such search warrant. Prior to undertaking any search or seizure pursuant to the search warrant, the executing officer shall read and give a copy of the search warrant to the person to be searched or the owner of the place to be searched or, if the owner is not present, to any occupant of the place to be searched. If the place to be searched is unoccupied, the executing officer shall leave a copy of the search warrant suitably affixed to the place to be searched. For purposes of this subsection, “no-knock warrant” means a warrant authorizing police officers to enter certain premises without first knocking and announcing their presence or purpose prior to entering the place to be searched.\n\n(f) A judge or judge trial referee may issue a warrant pursuant to this section for records or data that are in the actual or constructive possession of a foreign corporation or business entity that transacts business in this state, including, but not limited to, a foreign corporation or business entity that provides electronic communication services or remote computing services to the public. Such a warrant may be served on an authorized representative of the foreign corporation or business entity by hand, mail, commercial delivery, facsimile or electronic transmission, provided proof of delivery can be established. When properly served with a warrant issued pursuant to this section, the foreign corporation or business entity shall provide to the applicant all records or data sought by the warrant within fourteen business days of being served with the warrant, unless the judge or judge trial referee determines that a shorter or longer period of time is necessary or appropriate.\n\n(g) The inadvertent failure of the issuing judge or judge trial referee to state on the warrant the time of its issuance shall not in and of itself invalidate the warrant."
       }
     },
     {
@@ -2415,406 +2446,6 @@
         "history": [],
         "annotations": [],
         "plainText": "Transferred to Chapter 890, Sec. 51-352c ."
-      }
-    },
-    {
-      "id": "section-54-1",
-      "kind": "section",
-      "citation": "54-1",
-      "citations": [
-        "54-1"
-      ],
-      "heading": "54-1",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_959.htm#sec_54-1",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 54-1 and 54-1a. Criminal jurisdiction of trial justices; of Court of Common Pleas. Sections 54-1 and 54-1a are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 54-1 and 54-1a. Criminal jurisdiction of trial justices; of Court of Common Pleas. Sections 54-1 and 54-1a are repealed."
-      }
-    },
-    {
-      "id": "section-54-1a",
-      "kind": "section",
-      "citation": "54-1a",
-      "citations": [
-        "54-1a"
-      ],
-      "heading": "54-1a",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_959.htm#sec_54-1a",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 54-1 and 54-1a. Criminal jurisdiction of trial justices; of Court of Common Pleas. Sections 54-1 and 54-1a are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 54-1 and 54-1a. Criminal jurisdiction of trial justices; of Court of Common Pleas. Sections 54-1 and 54-1a are repealed."
-      }
-    },
-    {
-      "id": "section-54-3",
-      "kind": "section",
-      "citation": "54-3",
-      "citations": [
-        "54-3"
-      ],
-      "heading": "54-3",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_959.htm#sec_54-3",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 54-3 and 54-4. Issue of warrant after arrest. Trial justice may issue criminal process to be served anywhere in the state. Sections 54-3 and 54-4 are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 54-3 and 54-4. Issue of warrant after arrest. Trial justice may issue criminal process to be served anywhere in the state. Sections 54-3 and 54-4 are repealed."
-      }
-    },
-    {
-      "id": "section-54-4",
-      "kind": "section",
-      "citation": "54-4",
-      "citations": [
-        "54-4"
-      ],
-      "heading": "54-4",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_959.htm#sec_54-4",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 54-3 and 54-4. Issue of warrant after arrest. Trial justice may issue criminal process to be served anywhere in the state. Sections 54-3 and 54-4 are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 54-3 and 54-4. Issue of warrant after arrest. Trial justice may issue criminal process to be served anywhere in the state. Sections 54-3 and 54-4 are repealed."
-      }
-    },
-    {
-      "id": "section-54-6",
-      "kind": "section",
-      "citation": "54-6",
-      "citations": [
-        "54-6"
-      ],
-      "heading": "54-6",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_959.htm#sec_54-6",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 54-6 to 54-12. Criminal jurisdiction of municipal courts. Limit of jurisdiction of municipal courts. Jurisdiction over violations concerning overweight commercial vehicles. Bonds on adjournment of hearing. Copies of files and records for Superior Court and state's attorneys on bindover; notice when proceeding pending on seized property. Appointment of court interpreters in municipal and trial justice court. Appeal from municipal court or trial justice. Sections 54-6 to 54-12 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 54-6 to 54-12. Criminal jurisdiction of municipal courts. Limit of jurisdiction of municipal courts. Jurisdiction over violations concerning overweight commercial vehicles. Bonds on adjournment of hearing. Copies of files and records for Superior Court and state's attorneys on bindover; notice when proceeding pending on seized property. Appointment of court interpreters in municipal and trial justice court. Appeal from municipal court or trial justice. Sections 54-6 to 54-12 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-54-12",
-      "kind": "section",
-      "citation": "54-12",
-      "citations": [
-        "54-12"
-      ],
-      "heading": "54-12",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_959.htm#sec_54-12",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 54-6 to 54-12. Criminal jurisdiction of municipal courts. Limit of jurisdiction of municipal courts. Jurisdiction over violations concerning overweight commercial vehicles. Bonds on adjournment of hearing. Copies of files and records for Superior Court and state's attorneys on bindover; notice when proceeding pending on seized property. Appointment of court interpreters in municipal and trial justice court. Appeal from municipal court or trial justice. Sections 54-6 to 54-12 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 54-6 to 54-12. Criminal jurisdiction of municipal courts. Limit of jurisdiction of municipal courts. Jurisdiction over violations concerning overweight commercial vehicles. Bonds on adjournment of hearing. Copies of files and records for Superior Court and state's attorneys on bindover; notice when proceeding pending on seized property. Appointment of court interpreters in municipal and trial justice court. Appeal from municipal court or trial justice. Sections 54-6 to 54-12 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-54-15",
-      "kind": "section",
-      "citation": "54-15",
-      "citations": [
-        "54-15"
-      ],
-      "heading": "54-15",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_959.htm#sec_54-15",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 54-15 and 54-16. Binding over on probable cause. Jurisdiction of Common Pleas Court on appeals. Sections 54-15 and 54-16 are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 54-15 and 54-16. Binding over on probable cause. Jurisdiction of Common Pleas Court on appeals. Sections 54-15 and 54-16 are repealed."
-      }
-    },
-    {
-      "id": "section-54-16",
-      "kind": "section",
-      "citation": "54-16",
-      "citations": [
-        "54-16"
-      ],
-      "heading": "54-16",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_959.htm#sec_54-16",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 54-15 and 54-16. Binding over on probable cause. Jurisdiction of Common Pleas Court on appeals. Sections 54-15 and 54-16 are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 54-15 and 54-16. Binding over on probable cause. Jurisdiction of Common Pleas Court on appeals. Sections 54-15 and 54-16 are repealed."
-      }
-    },
-    {
-      "id": "section-54-18a",
-      "kind": "section",
-      "citation": "54-18a",
-      "citations": [
-        "54-18a"
-      ],
-      "heading": "54-18a",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_959.htm#sec_54-18a",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 54-18a to 54-21. Transfer of criminal cases between Superior and Common Pleas Court. Certain cases to be tried at first term. Search when cruelty is suspected. Search warrants in cases of cruelty to animals. Sections 54-18a to 54-21 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 54-18a to 54-21. Transfer of criminal cases between Superior and Common Pleas Court. Certain cases to be tried at first term. Search when cruelty is suspected. Search warrants in cases of cruelty to animals. Sections 54-18a to 54-21 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-54-21",
-      "kind": "section",
-      "citation": "54-21",
-      "citations": [
-        "54-21"
-      ],
-      "heading": "54-21",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_959.htm#sec_54-21",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 54-18a to 54-21. Transfer of criminal cases between Superior and Common Pleas Court. Certain cases to be tried at first term. Search when cruelty is suspected. Search warrants in cases of cruelty to animals. Sections 54-18a to 54-21 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 54-18a to 54-21. Transfer of criminal cases between Superior and Common Pleas Court. Certain cases to be tried at first term. Search when cruelty is suspected. Search warrants in cases of cruelty to animals. Sections 54-18a to 54-21 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-54-25",
-      "kind": "section",
-      "citation": "54-25",
-      "citations": [
-        "54-25"
-      ],
-      "heading": "54-25",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_959.htm#sec_54-25",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 54-25 and 54-26. Release on recognizance. Witnesses in courts of other states. Sections 54-25 and 54-26 are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 54-25 and 54-26. Release on recognizance. Witnesses in courts of other states. Sections 54-25 and 54-26 are repealed."
-      }
-    },
-    {
-      "id": "section-54-26",
-      "kind": "section",
-      "citation": "54-26",
-      "citations": [
-        "54-26"
-      ],
-      "heading": "54-26",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_959.htm#sec_54-26",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 54-25 and 54-26. Release on recognizance. Witnesses in courts of other states. Sections 54-25 and 54-26 are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 54-25 and 54-26. Release on recognizance. Witnesses in courts of other states. Sections 54-25 and 54-26 are repealed."
-      }
-    },
-    {
-      "id": "section-54-29",
-      "kind": "section",
-      "citation": "54-29",
-      "citations": [
-        "54-29"
-      ],
-      "heading": "54-29",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_959.htm#sec_54-29",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 54-29 to 54-31. Seizure of obscene literature and gambling implements. Illegal articles and implements to be destroyed. Judges of city courts may act. Sections 54-29 to 54-31 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 54-29 to 54-31. Seizure of obscene literature and gambling implements. Illegal articles and implements to be destroyed. Judges of city courts may act. Sections 54-29 to 54-31 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-54-31",
-      "kind": "section",
-      "citation": "54-31",
-      "citations": [
-        "54-31"
-      ],
-      "heading": "54-31",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_959.htm#sec_54-31",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 54-29 to 54-31. Seizure of obscene literature and gambling implements. Illegal articles and implements to be destroyed. Judges of city courts may act. Sections 54-29 to 54-31 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 54-29 to 54-31. Seizure of obscene literature and gambling implements. Illegal articles and implements to be destroyed. Judges of city courts may act. Sections 54-29 to 54-31 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-54-34",
-      "kind": "section",
-      "citation": "54-34",
-      "citations": [
-        "54-34"
-      ],
-      "heading": "54-34",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_959.htm#sec_54-34",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 54-34 and 54-35. Search of person. Condemnation of gambling implements, notice. Sections 54-34 and 54-35 are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 54-34 and 54-35. Search of person. Condemnation of gambling implements, notice. Sections 54-34 and 54-35 are repealed."
-      }
-    },
-    {
-      "id": "section-54-35",
-      "kind": "section",
-      "citation": "54-35",
-      "citations": [
-        "54-35"
-      ],
-      "heading": "54-35",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_959.htm#sec_54-35",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 54-34 and 54-35. Search of person. Condemnation of gambling implements, notice. Sections 54-34 and 54-35 are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 54-34 and 54-35. Search of person. Condemnation of gambling implements, notice. Sections 54-34 and 54-35 are repealed."
-      }
-    },
-    {
-      "id": "section-54-36j",
-      "kind": "section",
-      "citation": "54-36j",
-      "citations": [
-        "54-36j"
-      ],
-      "heading": "54-36j",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_959.htm#sec_54-36j",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 54-36j to 54-36 l . Seizure and forfeiture of motor vehicle used in patronizing a prostitute. Innocent owner defense to forfeiture of motor vehicle used in patronizing a prostitute. Release of motor vehicle seized in connection with arrest for patronizing a prostitute; delivery or return of motor vehicle upon disposition of prosecution. Sections 54-36j to 54-36 l , inclusive, are repealed, effective October 1, 1997."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 54-36j to 54-36 l . Seizure and forfeiture of motor vehicle used in patronizing a prostitute. Innocent owner defense to forfeiture of motor vehicle used in patronizing a prostitute. Release of motor vehicle seized in connection with arrest for patronizing a prostitute; delivery or return of motor vehicle upon disposition of prosecution. Sections 54-36j to 54-36 l , inclusive, are repealed, effective October 1, 1997."
-      }
-    },
-    {
-      "id": "section-54-36l",
-      "kind": "section",
-      "citation": "54-36l",
-      "citations": [
-        "54-36l"
-      ],
-      "heading": "54-36 l",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_959.htm#sec_54-36l",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 54-36j to 54-36 l . Seizure and forfeiture of motor vehicle used in patronizing a prostitute. Innocent owner defense to forfeiture of motor vehicle used in patronizing a prostitute. Release of motor vehicle seized in connection with arrest for patronizing a prostitute; delivery or return of motor vehicle upon disposition of prosecution. Sections 54-36j to 54-36 l , inclusive, are repealed, effective October 1, 1997."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 54-36j to 54-36 l . Seizure and forfeiture of motor vehicle used in patronizing a prostitute. Innocent owner defense to forfeiture of motor vehicle used in patronizing a prostitute. Release of motor vehicle seized in connection with arrest for patronizing a prostitute; delivery or return of motor vehicle upon disposition of prosecution. Sections 54-36j to 54-36 l , inclusive, are repealed, effective October 1, 1997."
-      }
-    },
-    {
-      "id": "section-54-37",
-      "kind": "section",
-      "citation": "54-37",
-      "citations": [
-        "54-37"
-      ],
-      "heading": "54-37",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_959.htm#sec_54-37",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 54-37 to 54-39. Disposition of accused acquitted on ground of insanity. Release of persons confined under order prior to October 1, 1959. Petition for release. Disposition of insane person upon expiration of term. Sections 54-37 to 54-39 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 54-37 to 54-39. Disposition of accused acquitted on ground of insanity. Release of persons confined under order prior to October 1, 1959. Petition for release. Disposition of insane person upon expiration of term. Sections 54-37 to 54-39 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-54-39",
-      "kind": "section",
-      "citation": "54-39",
-      "citations": [
-        "54-39"
-      ],
-      "heading": "54-39",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_959.htm#sec_54-39",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 54-37 to 54-39. Disposition of accused acquitted on ground of insanity. Release of persons confined under order prior to October 1, 1959. Petition for release. Disposition of insane person upon expiration of term. Sections 54-37 to 54-39 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 54-37 to 54-39. Disposition of accused acquitted on ground of insanity. Release of persons confined under order prior to October 1, 1959. Petition for release. Disposition of insane person upon expiration of term. Sections 54-37 to 54-39 , inclusive, are repealed."
       }
     }
   ]

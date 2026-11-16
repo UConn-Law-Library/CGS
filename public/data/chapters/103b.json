@@ -156,11 +156,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Bonds issued under authority of this chapter shall be sold by the municipality or the authority, at public or private sale at a price determined by the issuer thereof. The bonds may bear a single or variable rate of interest and may bear different rates of interest for different maturities. The proceeds arising from the sale of any bonds issued under the authority of this chapter by a municipality or authority shall be kept in accounts separate from other funds of the municipality or the authority. Said proceeds shall be expended only for the purposes and subject to the provisions of this chapter, provided the proceeds from the issuance and sale of any bonds shall first be applied to the payment of such bonds as have been issued in anticipation of such issue.",
-          "See Sec. 42b-1 for definitions re registered public obligations.",
-          "See Sec. 42b-11 re effect of chapter 748 with respect to registered public obligations issued on or after July 7, 1983.",
-          "See Sec. 42b-12 for requirement that this section and chapter 748 be construed in conjunction with the Uniform Commercial Code.",
-          "See Sec. 42b-14 re severability of provisions relating to registered public obligations."
+          "Bonds issued under authority of this chapter shall be sold by the municipality or the authority, at public or private sale at a price determined by the issuer thereof. The bonds may bear a single or variable rate of interest and may bear different rates of interest for different maturities. The proceeds arising from the sale of any bonds issued under the authority of this chapter by a municipality or authority shall be kept in accounts separate from other funds of the municipality or the authority. Said proceeds shall be expended only for the purposes and subject to the provisions of this chapter, provided the proceeds from the issuance and sale of any bonds shall first be applied to the payment of such bonds as have been issued in anticipation of such issue."
         ],
         "sourceNotes": [
           "(P.A. 81-213, S. 6, 18; P.A. 83-519, S. 19, 23; P.A. 85-478, S. 5, 10.)"
@@ -168,8 +164,25 @@
         "history": [
           "History: P.A. 83-519 eliminated requirements related to public sale of bonds or notes issued under chapter 103b to conform with more commonly adopted provisions authorizing municipalities to sell bonds, additionally such change is necessary if bonds issued under chapter 103b are to be consolidated with other types of bonds for sale as a single issue in accordance with Sec. 42b-15; P.A. 85-478 authorized public or private sale of bonds and a variable rate of interest and made technical changes."
         ],
-        "annotations": [],
-        "plainText": "Bonds issued under authority of this chapter shall be sold by the municipality or the authority, at public or private sale at a price determined by the issuer thereof. The bonds may bear a single or variable rate of interest and may bear different rates of interest for different maturities. The proceeds arising from the sale of any bonds issued under the authority of this chapter by a municipality or authority shall be kept in accounts separate from other funds of the municipality or the authority. Said proceeds shall be expended only for the purposes and subject to the provisions of this chapter, provided the proceeds from the issuance and sale of any bonds shall first be applied to the payment of such bonds as have been issued in anticipation of such issue.\n\nSee Sec. 42b-1 for definitions re registered public obligations.\n\nSee Sec. 42b-11 re effect of chapter 748 with respect to registered public obligations issued on or after July 7, 1983.\n\nSee Sec. 42b-12 for requirement that this section and chapter 748 be construed in conjunction with the Uniform Commercial Code.\n\nSee Sec. 42b-14 re severability of provisions relating to registered public obligations."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 42b-1 for definitions re registered public obligations."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 42b-11 re effect of chapter 748 with respect to registered public obligations issued on or after July 7, 1983."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 42b-12 for requirement that this section and chapter 748 be construed in conjunction with the Uniform Commercial Code."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 42b-14 re severability of provisions relating to registered public obligations."
+          }
+        ],
+        "plainText": "Bonds issued under authority of this chapter shall be sold by the municipality or the authority, at public or private sale at a price determined by the issuer thereof. The bonds may bear a single or variable rate of interest and may bear different rates of interest for different maturities. The proceeds arising from the sale of any bonds issued under the authority of this chapter by a municipality or authority shall be kept in accounts separate from other funds of the municipality or the authority. Said proceeds shall be expended only for the purposes and subject to the provisions of this chapter, provided the proceeds from the issuance and sale of any bonds shall first be applied to the payment of such bonds as have been issued in anticipation of such issue."
       }
     },
     {

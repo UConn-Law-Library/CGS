@@ -7,10 +7,30 @@
   },
   "documents": [
     {
-      "id": "group-17-1-to-17-21d",
+      "id": "group-17-1-to-17-2-to-17-3-to-17-4-to-17-5-to-17-6-to-17-7-to-17-8-to-17-9-to-17-10-to-17-11-to-17-12-to-17-13-to-17-14-to-17-15-to-17-16-to-17-17-to-17-18-to-17-19-to-17-20-to-17-21-to-17-21d",
       "citation": null,
       "citations": [
         "17-1",
+        "17-2",
+        "17-3",
+        "17-4",
+        "17-5",
+        "17-6",
+        "17-7",
+        "17-8",
+        "17-9",
+        "17-10",
+        "17-11",
+        "17-12",
+        "17-13",
+        "17-14",
+        "17-15",
+        "17-16",
+        "17-17",
+        "17-18",
+        "17-19",
+        "17-20",
+        "17-21",
         "17-21d"
       ],
       "heading": "Secs. 17-1 to 17-21d. Department of Income Maintenance. Interstate Compact on Welfare Services.",
@@ -21,7 +41,7 @@
       },
       "status": "active",
       "text": "Sections 17-1 to 17-21d , inclusive, have been transferred, repealed or deemed obsolete.\n\nNote: These sections were formerly published as chapter 299.",
-      "href": "?chapter=299&section=group-17-1-to-17-21d"
+      "href": "?chapter=299&section=group-17-1-to-17-2-to-17-3-to-17-4-to-17-5-to-17-6-to-17-7-to-17-8-to-17-9-to-17-10-to-17-11-to-17-12-to-17-13-to-17-14-to-17-15-to-17-16-to-17-17-to-17-18-to-17-19-to-17-20-to-17-21-to-17-21d"
     },
     {
       "id": "group-17-21e-to-17-21f-to-17-21g-to-17-21h-to-17-21i-to-17-21j-to-17-21k-to-17-21l-to-17-21m-to-17-21n-to-17-21o-to-17-21p-to-17-21q-to-17-21r-to-17-21s-to-17-21t",
@@ -160,10 +180,59 @@
       "href": "?chapter=299&section=group-17-31a-to-17-31b-to-17-31c-to-17-31d-to-17-31e-to-17-31f-to-17-31g-to-17-31h-to-17-31i-to-17-31j-to-17-31k-to-17-31l-to-17-31m-to-17-31n-to-17-31o-to-17-31p-to-17-31q-to-17-31r-to-17-31s-to-17-31t-to-17-31u-to-17-31v-to-17-31w-to-17-31x-to-17-31y-to-17-31z-to-17-31aa-to-17-31bb-to-17-31cc-to-17-31dd-to-17-31ee-to-17-31ff-to-17-31gg-to-17-31hh-to-17-31ii-to-17-31jj-to-17-31kk-to-17-31ll-to-17-31mm-to-17-31nn-to-17-31oo-to-17-31pp-to-17-31qq-to-17-31rr-to-17-31ss-to-17-31tt-to-17-31uu-to-17-31vv"
     },
     {
-      "id": "group-17-32-to-17-81i",
+      "id": "group-17-32-to-17-33-to-17-34-to-17-35-to-17-36-to-17-37-to-17-38-to-17-39-to-17-40-to-17-41-to-17-42-to-17-43-to-17-44-to-17-45-to-17-46-to-17-47-to-17-48-to-17-49-to-17-50-to-17-51-to-17-52-to-17-53-to-17-54-to-17-55-to-17-56-to-17-57-to-17-58-to-17-59-to-17-60-to-17-61-to-17-62-to-17-63-to-17-64-to-17-65-to-17-66-to-17-67-to-17-68-to-17-69-to-17-70-to-17-71-to-17-72-to-17-73-to-17-74-to-17-75-to-17-76-to-17-77-to-17-78-to-17-79-to-17-80-to-17-81-to-17-81i",
       "citation": null,
       "citations": [
         "17-32",
+        "17-33",
+        "17-34",
+        "17-35",
+        "17-36",
+        "17-37",
+        "17-38",
+        "17-39",
+        "17-40",
+        "17-41",
+        "17-42",
+        "17-43",
+        "17-44",
+        "17-45",
+        "17-46",
+        "17-47",
+        "17-48",
+        "17-49",
+        "17-50",
+        "17-51",
+        "17-52",
+        "17-53",
+        "17-54",
+        "17-55",
+        "17-56",
+        "17-57",
+        "17-58",
+        "17-59",
+        "17-60",
+        "17-61",
+        "17-62",
+        "17-63",
+        "17-64",
+        "17-65",
+        "17-66",
+        "17-67",
+        "17-68",
+        "17-69",
+        "17-70",
+        "17-71",
+        "17-72",
+        "17-73",
+        "17-74",
+        "17-75",
+        "17-76",
+        "17-77",
+        "17-78",
+        "17-79",
+        "17-80",
+        "17-81",
         "17-81i"
       ],
       "heading": "Secs. 17-32 to 17-81i. Child welfare.",
@@ -174,7 +243,7 @@
       },
       "status": "active",
       "text": "Sections 17-32 to 17-81i , inclusive, have been transferred or repealed.\n\nNote: These sections were formerly published as chapter 301.",
-      "href": "?chapter=299&section=group-17-32-to-17-81i"
+      "href": "?chapter=299&section=group-17-32-to-17-33-to-17-34-to-17-35-to-17-36-to-17-37-to-17-38-to-17-39-to-17-40-to-17-41-to-17-42-to-17-43-to-17-44-to-17-45-to-17-46-to-17-47-to-17-48-to-17-49-to-17-50-to-17-51-to-17-52-to-17-53-to-17-54-to-17-55-to-17-56-to-17-57-to-17-58-to-17-59-to-17-60-to-17-61-to-17-62-to-17-63-to-17-64-to-17-65-to-17-66-to-17-67-to-17-68-to-17-69-to-17-70-to-17-71-to-17-72-to-17-73-to-17-74-to-17-75-to-17-76-to-17-77-to-17-78-to-17-79-to-17-80-to-17-81-to-17-81i"
     },
     {
       "id": "group-17-82-to-17-83-to-17-84-to-17-85-to-17-86-to-17-87-to-17-88-to-17-89-to-17-90-to-17-91-to-17-92-to-17-93-to-17-94-to-17-95-to-17-96-to-17-97-to-17-98-to-17-99-to-17-100-to-17-101-to-17-102-to-17-103-to-17-104-to-17-105-to-17-106-to-17-107-to-17-108-to-17-109-to-17-110-to-17-111-to-17-112-to-17-113-to-17-114-to-17-115-to-17-116-to-17-117-to-17-118-to-17-119-to-17-120-to-17-121-to-17-122-to-17-123-to-17-124-to-17-125-to-17-126-to-17-127-to-17-128-to-17-129-to-17-130-to-17-131-to-17-132-to-17-133-to-17-134-to-17-135",
@@ -246,10 +315,12 @@
       "href": "?chapter=299&section=group-17-82-to-17-83-to-17-84-to-17-85-to-17-86-to-17-87-to-17-88-to-17-89-to-17-90-to-17-91-to-17-92-to-17-93-to-17-94-to-17-95-to-17-96-to-17-97-to-17-98-to-17-99-to-17-100-to-17-101-to-17-102-to-17-103-to-17-104-to-17-105-to-17-106-to-17-107-to-17-108-to-17-109-to-17-110-to-17-111-to-17-112-to-17-113-to-17-114-to-17-115-to-17-116-to-17-117-to-17-118-to-17-119-to-17-120-to-17-121-to-17-122-to-17-123-to-17-124-to-17-125-to-17-126-to-17-127-to-17-128-to-17-129-to-17-130-to-17-131-to-17-132-to-17-133-to-17-134-to-17-135"
     },
     {
-      "id": "group-17-135a-to-17-137f",
+      "id": "group-17-135a-to-17-136-to-17-137-to-17-137f",
       "citation": null,
       "citations": [
         "17-135a",
+        "17-136",
+        "17-137",
         "17-137f"
       ],
       "heading": "Secs. 17-135a to 17-137f. Department on Aging.",
@@ -260,7 +331,7 @@
       },
       "status": "active",
       "text": "Sections 17-135a to 17-137f , inclusive, have been transferred or repealed.\n\nNote: These sections were formerly published as chapter 303.",
-      "href": "?chapter=299&section=group-17-135a-to-17-137f"
+      "href": "?chapter=299&section=group-17-135a-to-17-136-to-17-137-to-17-137f"
     },
     {
       "id": "group-17-137g-to-17-137h-to-17-137i-to-17-137j-to-17-137k-to-17-137l-to-17-137m-to-17-137n-to-17-137o-to-17-137p-to-17-137q-to-17-137r",
@@ -411,10 +482,29 @@
       "href": "?chapter=299&section=group-17-155k-to-17-155l-to-17-155m-to-17-155n-to-17-155o-to-17-155p-to-17-155q-to-17-155r-to-17-155s-to-17-155t-to-17-155u-to-17-155v-to-17-155w-to-17-155x-to-17-155y-to-17-155z-to-17-155aa-to-17-155bb-to-17-155cc-to-17-155dd-to-17-155ee-to-17-155ff-to-17-155gg-to-17-155hh-to-17-155ii-to-17-155jj-to-17-155kk-to-17-155ll-to-17-155mm-to-17-155nn-to-17-155oo-to-17-155pp-to-17-155qq"
     },
     {
-      "id": "group-17-156-to-17-175c",
+      "id": "group-17-156-to-17-157-to-17-158-to-17-159-to-17-160-to-17-161-to-17-162-to-17-163-to-17-164-to-17-165-to-17-166-to-17-167-to-17-168-to-17-169-to-17-170-to-17-171-to-17-172-to-17-173-to-17-174-to-17-175-to-17-175c",
       "citation": null,
       "citations": [
         "17-156",
+        "17-157",
+        "17-158",
+        "17-159",
+        "17-160",
+        "17-161",
+        "17-162",
+        "17-163",
+        "17-164",
+        "17-165",
+        "17-166",
+        "17-167",
+        "17-168",
+        "17-169",
+        "17-170",
+        "17-171",
+        "17-172",
+        "17-173",
+        "17-174",
+        "17-175",
         "17-175c"
       ],
       "heading": "Secs. 17-156 to 17-175c. State training schools for mentally retarded persons.",
@@ -425,13 +515,98 @@
       },
       "status": "active",
       "text": "Sections 17-156 to 17-175c , inclusive, have been transferred or repealed.\n\nNote: These sections were formerly published as chapter 305.",
-      "href": "?chapter=299&section=group-17-156-to-17-175c"
+      "href": "?chapter=299&section=group-17-156-to-17-157-to-17-158-to-17-159-to-17-160-to-17-161-to-17-162-to-17-163-to-17-164-to-17-165-to-17-166-to-17-167-to-17-168-to-17-169-to-17-170-to-17-171-to-17-172-to-17-173-to-17-174-to-17-175-to-17-175c"
     },
     {
-      "id": "group-17-176-to-17-261a",
+      "id": "group-17-176-to-17-177-to-17-178-to-17-179-to-17-180-to-17-181-to-17-182-to-17-183-to-17-184-to-17-185-to-17-186-to-17-187-to-17-188-to-17-189-to-17-190-to-17-191-to-17-192-to-17-193-to-17-194-to-17-195-to-17-196-to-17-197-to-17-198-to-17-199-to-17-200-to-17-201-to-17-202-to-17-203-to-17-204-to-17-205-to-17-206-to-17-207-to-17-208-to-17-209-to-17-210-to-17-211-to-17-212-to-17-213-to-17-214-to-17-215-to-17-216-to-17-217-to-17-218-to-17-219-to-17-220-to-17-221-to-17-222-to-17-223-to-17-224-to-17-225-to-17-226-to-17-227-to-17-228-to-17-229-to-17-230-to-17-231-to-17-232-to-17-233-to-17-234-to-17-235-to-17-236-to-17-237-to-17-238-to-17-239-to-17-240-to-17-241-to-17-242-to-17-243-to-17-244-to-17-245-to-17-246-to-17-247-to-17-248-to-17-249-to-17-250-to-17-251-to-17-252-to-17-253-to-17-254-to-17-255-to-17-256-to-17-257-to-17-258-to-17-259-to-17-260-to-17-261-to-17-261a",
       "citation": null,
       "citations": [
         "17-176",
+        "17-177",
+        "17-178",
+        "17-179",
+        "17-180",
+        "17-181",
+        "17-182",
+        "17-183",
+        "17-184",
+        "17-185",
+        "17-186",
+        "17-187",
+        "17-188",
+        "17-189",
+        "17-190",
+        "17-191",
+        "17-192",
+        "17-193",
+        "17-194",
+        "17-195",
+        "17-196",
+        "17-197",
+        "17-198",
+        "17-199",
+        "17-200",
+        "17-201",
+        "17-202",
+        "17-203",
+        "17-204",
+        "17-205",
+        "17-206",
+        "17-207",
+        "17-208",
+        "17-209",
+        "17-210",
+        "17-211",
+        "17-212",
+        "17-213",
+        "17-214",
+        "17-215",
+        "17-216",
+        "17-217",
+        "17-218",
+        "17-219",
+        "17-220",
+        "17-221",
+        "17-222",
+        "17-223",
+        "17-224",
+        "17-225",
+        "17-226",
+        "17-227",
+        "17-228",
+        "17-229",
+        "17-230",
+        "17-231",
+        "17-232",
+        "17-233",
+        "17-234",
+        "17-235",
+        "17-236",
+        "17-237",
+        "17-238",
+        "17-239",
+        "17-240",
+        "17-241",
+        "17-242",
+        "17-243",
+        "17-244",
+        "17-245",
+        "17-246",
+        "17-247",
+        "17-248",
+        "17-249",
+        "17-250",
+        "17-251",
+        "17-252",
+        "17-253",
+        "17-254",
+        "17-255",
+        "17-256",
+        "17-257",
+        "17-258",
+        "17-259",
+        "17-260",
+        "17-261",
         "17-261a"
       ],
       "heading": "Secs. 17-176 to 17-261a. Mentally ill and drug-dependent persons.",
@@ -442,7 +617,7 @@
       },
       "status": "active",
       "text": "Sections 17-176 to 17-261a , inclusive, have been transferred or repealed.\n\nNote: These sections were formerly published as chapter 306.",
-      "href": "?chapter=299&section=group-17-176-to-17-261a"
+      "href": "?chapter=299&section=group-17-176-to-17-177-to-17-178-to-17-179-to-17-180-to-17-181-to-17-182-to-17-183-to-17-184-to-17-185-to-17-186-to-17-187-to-17-188-to-17-189-to-17-190-to-17-191-to-17-192-to-17-193-to-17-194-to-17-195-to-17-196-to-17-197-to-17-198-to-17-199-to-17-200-to-17-201-to-17-202-to-17-203-to-17-204-to-17-205-to-17-206-to-17-207-to-17-208-to-17-209-to-17-210-to-17-211-to-17-212-to-17-213-to-17-214-to-17-215-to-17-216-to-17-217-to-17-218-to-17-219-to-17-220-to-17-221-to-17-222-to-17-223-to-17-224-to-17-225-to-17-226-to-17-227-to-17-228-to-17-229-to-17-230-to-17-231-to-17-232-to-17-233-to-17-234-to-17-235-to-17-236-to-17-237-to-17-238-to-17-239-to-17-240-to-17-241-to-17-242-to-17-243-to-17-244-to-17-245-to-17-246-to-17-247-to-17-248-to-17-249-to-17-250-to-17-251-to-17-252-to-17-253-to-17-254-to-17-255-to-17-256-to-17-257-to-17-258-to-17-259-to-17-260-to-17-261-to-17-261a"
     },
     {
       "id": "group-17-262-to-17-263-to-17-264-to-17-265-to-17-266-to-17-267-to-17-268-to-17-269-to-17-270-to-17-271",
@@ -470,10 +645,93 @@
       "href": "?chapter=299&section=group-17-262-to-17-263-to-17-264-to-17-265-to-17-266-to-17-267-to-17-268-to-17-269-to-17-270-to-17-271"
     },
     {
-      "id": "group-17-272-to-17-355b",
+      "id": "group-17-272-to-17-273-to-17-274-to-17-275-to-17-276-to-17-277-to-17-278-to-17-279-to-17-280-to-17-281-to-17-282-to-17-283-to-17-284-to-17-285-to-17-286-to-17-287-to-17-288-to-17-289-to-17-290-to-17-291-to-17-292-to-17-293-to-17-294-to-17-295-to-17-296-to-17-297-to-17-298-to-17-299-to-17-300-to-17-301-to-17-302-to-17-303-to-17-304-to-17-305-to-17-306-to-17-307-to-17-308-to-17-309-to-17-310-to-17-311-to-17-312-to-17-313-to-17-314-to-17-315-to-17-316-to-17-317-to-17-318-to-17-319-to-17-320-to-17-321-to-17-322-to-17-323-to-17-324-to-17-325-to-17-326-to-17-327-to-17-328-to-17-329-to-17-330-to-17-331-to-17-332-to-17-333-to-17-334-to-17-335-to-17-336-to-17-337-to-17-338-to-17-339-to-17-340-to-17-341-to-17-342-to-17-343-to-17-344-to-17-345-to-17-346-to-17-347-to-17-348-to-17-349-to-17-350-to-17-351-to-17-352-to-17-353-to-17-354-to-17-355-to-17-355b",
       "citation": null,
       "citations": [
         "17-272",
+        "17-273",
+        "17-274",
+        "17-275",
+        "17-276",
+        "17-277",
+        "17-278",
+        "17-279",
+        "17-280",
+        "17-281",
+        "17-282",
+        "17-283",
+        "17-284",
+        "17-285",
+        "17-286",
+        "17-287",
+        "17-288",
+        "17-289",
+        "17-290",
+        "17-291",
+        "17-292",
+        "17-293",
+        "17-294",
+        "17-295",
+        "17-296",
+        "17-297",
+        "17-298",
+        "17-299",
+        "17-300",
+        "17-301",
+        "17-302",
+        "17-303",
+        "17-304",
+        "17-305",
+        "17-306",
+        "17-307",
+        "17-308",
+        "17-309",
+        "17-310",
+        "17-311",
+        "17-312",
+        "17-313",
+        "17-314",
+        "17-315",
+        "17-316",
+        "17-317",
+        "17-318",
+        "17-319",
+        "17-320",
+        "17-321",
+        "17-322",
+        "17-323",
+        "17-324",
+        "17-325",
+        "17-326",
+        "17-327",
+        "17-328",
+        "17-329",
+        "17-330",
+        "17-331",
+        "17-332",
+        "17-333",
+        "17-334",
+        "17-335",
+        "17-336",
+        "17-337",
+        "17-338",
+        "17-339",
+        "17-340",
+        "17-341",
+        "17-342",
+        "17-343",
+        "17-344",
+        "17-345",
+        "17-346",
+        "17-347",
+        "17-348",
+        "17-349",
+        "17-350",
+        "17-351",
+        "17-352",
+        "17-353",
+        "17-354",
+        "17-355",
         "17-355b"
       ],
       "heading": "Secs. 17-272 to 17-355b. Support.",
@@ -484,7 +742,7 @@
       },
       "status": "active",
       "text": "Sections 17-272 to 17-355b , inclusive, have been transferred or repealed.\n\nNote: These sections were formerly published as chapter 308.",
-      "href": "?chapter=299&section=group-17-272-to-17-355b"
+      "href": "?chapter=299&section=group-17-272-to-17-273-to-17-274-to-17-275-to-17-276-to-17-277-to-17-278-to-17-279-to-17-280-to-17-281-to-17-282-to-17-283-to-17-284-to-17-285-to-17-286-to-17-287-to-17-288-to-17-289-to-17-290-to-17-291-to-17-292-to-17-293-to-17-294-to-17-295-to-17-296-to-17-297-to-17-298-to-17-299-to-17-300-to-17-301-to-17-302-to-17-303-to-17-304-to-17-305-to-17-306-to-17-307-to-17-308-to-17-309-to-17-310-to-17-311-to-17-312-to-17-313-to-17-314-to-17-315-to-17-316-to-17-317-to-17-318-to-17-319-to-17-320-to-17-321-to-17-322-to-17-323-to-17-324-to-17-325-to-17-326-to-17-327-to-17-328-to-17-329-to-17-330-to-17-331-to-17-332-to-17-333-to-17-334-to-17-335-to-17-336-to-17-337-to-17-338-to-17-339-to-17-340-to-17-341-to-17-342-to-17-343-to-17-344-to-17-345-to-17-346-to-17-347-to-17-348-to-17-349-to-17-350-to-17-351-to-17-352-to-17-353-to-17-354-to-17-355-to-17-355b"
     },
     {
       "id": "group-17-356-to-17-357-to-17-358-to-17-359-to-17-360-to-17-361-to-17-362-to-17-363-to-17-364-to-17-365-to-17-366-to-17-367-to-17-368-to-17-369-to-17-370-to-17-371-to-17-372-to-17-373-to-17-374-to-17-375-to-17-376-to-17-377-to-17-378-to-17-379-to-17-380-to-17-381-to-17-382-to-17-383-to-17-384-to-17-385-to-17-386-to-17-387-to-17-388-to-17-389-to-17-390-to-17-391-to-17-392-to-17-393-to-17-394-to-17-395-to-17-396-to-17-397-to-17-398-to-17-399-to-17-400-to-17-401-to-17-402-to-17-403-to-17-404-to-17-405-to-17-406-to-17-407-to-17-408-to-17-409",
@@ -1000,966 +1258,6 @@
       "status": "active",
       "text": "Sections 17-660 to 17-675 , inclusive, have been transferred or repealed.\n\nNote: These sections were formerly published as chapter 318c.",
       "href": "?chapter=299&section=group-17-660-to-17-661-to-17-662-to-17-663-to-17-664-to-17-665-to-17-666-to-17-667-to-17-668-to-17-669-to-17-670-to-17-671-to-17-672-to-17-673-to-17-674-to-17-675"
-    },
-    {
-      "id": "section-17-1",
-      "citation": "17-1",
-      "citations": [
-        "17-1"
-      ],
-      "heading": "17-1",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=299&section=section-17-1"
-    },
-    {
-      "id": "section-17-21d",
-      "citation": "17-21d",
-      "citations": [
-        "17-21d"
-      ],
-      "heading": "17-21d",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=299&section=section-17-21d"
-    },
-    {
-      "id": "section-17-21e",
-      "citation": "17-21e",
-      "citations": [
-        "17-21e"
-      ],
-      "heading": "17-21e",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=299&section=section-17-21e"
-    },
-    {
-      "id": "section-17-21t",
-      "citation": "17-21t",
-      "citations": [
-        "17-21t"
-      ],
-      "heading": "17-21t",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=299&section=section-17-21t"
-    },
-    {
-      "id": "section-17-21u",
-      "citation": "17-21u",
-      "citations": [
-        "17-21u"
-      ],
-      "heading": "17-21u",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "repealed",
-      "text": "Secs. 17-21u and 17-21v. Human Services Reorganization Commission. Sections 17-21u and 17-21v are repealed.",
-      "href": "?chapter=299&section=section-17-21u"
-    },
-    {
-      "id": "section-17-21v",
-      "citation": "17-21v",
-      "citations": [
-        "17-21v"
-      ],
-      "heading": "17-21v",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "repealed",
-      "text": "Secs. 17-21u and 17-21v. Human Services Reorganization Commission. Sections 17-21u and 17-21v are repealed.",
-      "href": "?chapter=299&section=section-17-21v"
-    },
-    {
-      "id": "section-17-22",
-      "citation": "17-22",
-      "citations": [
-        "17-22"
-      ],
-      "heading": "17-22",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=299&section=section-17-22"
-    },
-    {
-      "id": "section-17-31",
-      "citation": "17-31",
-      "citations": [
-        "17-31"
-      ],
-      "heading": "17-31",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=299&section=section-17-31"
-    },
-    {
-      "id": "section-17-31a",
-      "citation": "17-31a",
-      "citations": [
-        "17-31a"
-      ],
-      "heading": "17-31a",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=299&section=section-17-31a"
-    },
-    {
-      "id": "section-17-31vv",
-      "citation": "17-31vv",
-      "citations": [
-        "17-31vv"
-      ],
-      "heading": "17-31vv",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=299&section=section-17-31vv"
-    },
-    {
-      "id": "section-17-32",
-      "citation": "17-32",
-      "citations": [
-        "17-32"
-      ],
-      "heading": "17-32",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=299&section=section-17-32"
-    },
-    {
-      "id": "section-17-81i",
-      "citation": "17-81i",
-      "citations": [
-        "17-81i"
-      ],
-      "heading": "17-81i",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=299&section=section-17-81i"
-    },
-    {
-      "id": "section-17-82",
-      "citation": "17-82",
-      "citations": [
-        "17-82"
-      ],
-      "heading": "17-82",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=299&section=section-17-82"
-    },
-    {
-      "id": "section-17-135",
-      "citation": "17-135",
-      "citations": [
-        "17-135"
-      ],
-      "heading": "17-135",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=299&section=section-17-135"
-    },
-    {
-      "id": "section-17-135a",
-      "citation": "17-135a",
-      "citations": [
-        "17-135a"
-      ],
-      "heading": "17-135a",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=299&section=section-17-135a"
-    },
-    {
-      "id": "section-17-137f",
-      "citation": "17-137f",
-      "citations": [
-        "17-137f"
-      ],
-      "heading": "17-137f",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=299&section=section-17-137f"
-    },
-    {
-      "id": "section-17-137g",
-      "citation": "17-137g",
-      "citations": [
-        "17-137g"
-      ],
-      "heading": "17-137g",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=299&section=section-17-137g"
-    },
-    {
-      "id": "section-17-137r",
-      "citation": "17-137r",
-      "citations": [
-        "17-137r"
-      ],
-      "heading": "17-137r",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=299&section=section-17-137r"
-    },
-    {
-      "id": "section-17-138",
-      "citation": "17-138",
-      "citations": [
-        "17-138"
-      ],
-      "heading": "17-138",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "repealed",
-      "text": "Secs. 17-138 to 17-155. Inebriates and dipsomaniacs. Sections 17-138 to 17-155 , inclusive, are repealed.",
-      "href": "?chapter=299&section=section-17-138"
-    },
-    {
-      "id": "section-17-155",
-      "citation": "17-155",
-      "citations": [
-        "17-155"
-      ],
-      "heading": "17-155",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "repealed",
-      "text": "Secs. 17-138 to 17-155. Inebriates and dipsomaniacs. Sections 17-138 to 17-155 , inclusive, are repealed.",
-      "href": "?chapter=299&section=section-17-155"
-    },
-    {
-      "id": "section-17-155a",
-      "citation": "17-155a",
-      "citations": [
-        "17-155a"
-      ],
-      "heading": "17-155a",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "repealed",
-      "text": "Secs. 17-155a to 17-155f. Alcohol and Drug Dependence Division. Sections 17-155a to 17-155f , inclusive, are repealed.",
-      "href": "?chapter=299&section=section-17-155a"
-    },
-    {
-      "id": "section-17-155f",
-      "citation": "17-155f",
-      "citations": [
-        "17-155f"
-      ],
-      "heading": "17-155f",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "repealed",
-      "text": "Secs. 17-155a to 17-155f. Alcohol and Drug Dependence Division. Sections 17-155a to 17-155f , inclusive, are repealed.",
-      "href": "?chapter=299&section=section-17-155f"
-    },
-    {
-      "id": "section-17-155g",
-      "citation": "17-155g",
-      "citations": [
-        "17-155g"
-      ],
-      "heading": "17-155g",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "repealed",
-      "text": "Secs. 17-155g to 17-155j. Commitment of alcoholics. Sections 17-155g to 17-155j , inclusive, are repealed.",
-      "href": "?chapter=299&section=section-17-155g"
-    },
-    {
-      "id": "section-17-155j",
-      "citation": "17-155j",
-      "citations": [
-        "17-155j"
-      ],
-      "heading": "17-155j",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "repealed",
-      "text": "Secs. 17-155g to 17-155j. Commitment of alcoholics. Sections 17-155g to 17-155j , inclusive, are repealed.",
-      "href": "?chapter=299&section=section-17-155j"
-    },
-    {
-      "id": "section-17-155k",
-      "citation": "17-155k",
-      "citations": [
-        "17-155k"
-      ],
-      "heading": "17-155k",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=299&section=section-17-155k"
-    },
-    {
-      "id": "section-17-155qq",
-      "citation": "17-155qq",
-      "citations": [
-        "17-155qq"
-      ],
-      "heading": "17-155qq",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=299&section=section-17-155qq"
-    },
-    {
-      "id": "section-17-156",
-      "citation": "17-156",
-      "citations": [
-        "17-156"
-      ],
-      "heading": "17-156",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=299&section=section-17-156"
-    },
-    {
-      "id": "section-17-175c",
-      "citation": "17-175c",
-      "citations": [
-        "17-175c"
-      ],
-      "heading": "17-175c",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=299&section=section-17-175c"
-    },
-    {
-      "id": "section-17-176",
-      "citation": "17-176",
-      "citations": [
-        "17-176"
-      ],
-      "heading": "17-176",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=299&section=section-17-176"
-    },
-    {
-      "id": "section-17-261a",
-      "citation": "17-261a",
-      "citations": [
-        "17-261a"
-      ],
-      "heading": "17-261a",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=299&section=section-17-261a"
-    },
-    {
-      "id": "section-17-262",
-      "citation": "17-262",
-      "citations": [
-        "17-262"
-      ],
-      "heading": "17-262",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "repealed",
-      "text": "Secs. 17-262 to 17-271. Settlement. Sections 17-262 to 17-271 , inclusive, are repealed.",
-      "href": "?chapter=299&section=section-17-262"
-    },
-    {
-      "id": "section-17-271",
-      "citation": "17-271",
-      "citations": [
-        "17-271"
-      ],
-      "heading": "17-271",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "repealed",
-      "text": "Secs. 17-262 to 17-271. Settlement. Sections 17-262 to 17-271 , inclusive, are repealed.",
-      "href": "?chapter=299&section=section-17-271"
-    },
-    {
-      "id": "section-17-272",
-      "citation": "17-272",
-      "citations": [
-        "17-272"
-      ],
-      "heading": "17-272",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=299&section=section-17-272"
-    },
-    {
-      "id": "section-17-355b",
-      "citation": "17-355b",
-      "citations": [
-        "17-355b"
-      ],
-      "heading": "17-355b",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=299&section=section-17-355b"
-    },
-    {
-      "id": "section-17-356",
-      "citation": "17-356",
-      "citations": [
-        "17-356"
-      ],
-      "heading": "17-356",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=299&section=section-17-356"
-    },
-    {
-      "id": "section-17-409",
-      "citation": "17-409",
-      "citations": [
-        "17-409"
-      ],
-      "heading": "17-409",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=299&section=section-17-409"
-    },
-    {
-      "id": "section-17-410",
-      "citation": "17-410",
-      "citations": [
-        "17-410"
-      ],
-      "heading": "17-410",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=299&section=section-17-410"
-    },
-    {
-      "id": "section-17-459",
-      "citation": "17-459",
-      "citations": [
-        "17-459"
-      ],
-      "heading": "17-459",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=299&section=section-17-459"
-    },
-    {
-      "id": "section-17-460",
-      "citation": "17-460",
-      "citations": [
-        "17-460"
-      ],
-      "heading": "17-460",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=299&section=section-17-460"
-    },
-    {
-      "id": "section-17-475",
-      "citation": "17-475",
-      "citations": [
-        "17-475"
-      ],
-      "heading": "17-475",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=299&section=section-17-475"
-    },
-    {
-      "id": "section-17-476",
-      "citation": "17-476",
-      "citations": [
-        "17-476"
-      ],
-      "heading": "17-476",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=299&section=section-17-476"
-    },
-    {
-      "id": "section-17-482",
-      "citation": "17-482",
-      "citations": [
-        "17-482"
-      ],
-      "heading": "17-482",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=299&section=section-17-482"
-    },
-    {
-      "id": "section-17-483",
-      "citation": "17-483",
-      "citations": [
-        "17-483"
-      ],
-      "heading": "17-483",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=299&section=section-17-483"
-    },
-    {
-      "id": "section-17-499",
-      "citation": "17-499",
-      "citations": [
-        "17-499"
-      ],
-      "heading": "17-499",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=299&section=section-17-499"
-    },
-    {
-      "id": "section-17-500",
-      "citation": "17-500",
-      "citations": [
-        "17-500"
-      ],
-      "heading": "17-500",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=299&section=section-17-500"
-    },
-    {
-      "id": "section-17-509",
-      "citation": "17-509",
-      "citations": [
-        "17-509"
-      ],
-      "heading": "17-509",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=299&section=section-17-509"
-    },
-    {
-      "id": "section-17-510",
-      "citation": "17-510",
-      "citations": [
-        "17-510"
-      ],
-      "heading": "17-510",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=299&section=section-17-510"
-    },
-    {
-      "id": "section-17-534",
-      "citation": "17-534",
-      "citations": [
-        "17-534"
-      ],
-      "heading": "17-534",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=299&section=section-17-534"
-    },
-    {
-      "id": "section-17-535",
-      "citation": "17-535",
-      "citations": [
-        "17-535"
-      ],
-      "heading": "17-535",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=299&section=section-17-535"
-    },
-    {
-      "id": "section-17-559",
-      "citation": "17-559",
-      "citations": [
-        "17-559"
-      ],
-      "heading": "17-559",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=299&section=section-17-559"
-    },
-    {
-      "id": "section-17-560",
-      "citation": "17-560",
-      "citations": [
-        "17-560"
-      ],
-      "heading": "17-560",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=299&section=section-17-560"
-    },
-    {
-      "id": "section-17-569",
-      "citation": "17-569",
-      "citations": [
-        "17-569"
-      ],
-      "heading": "17-569",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=299&section=section-17-569"
-    },
-    {
-      "id": "section-17-570",
-      "citation": "17-570",
-      "citations": [
-        "17-570"
-      ],
-      "heading": "17-570",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=299&section=section-17-570"
-    },
-    {
-      "id": "section-17-634",
-      "citation": "17-634",
-      "citations": [
-        "17-634"
-      ],
-      "heading": "17-634",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=299&section=section-17-634"
-    },
-    {
-      "id": "section-17-635",
-      "citation": "17-635",
-      "citations": [
-        "17-635"
-      ],
-      "heading": "17-635",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=299&section=section-17-635"
-    },
-    {
-      "id": "section-17-654",
-      "citation": "17-654",
-      "citations": [
-        "17-654"
-      ],
-      "heading": "17-654",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=299&section=section-17-654"
-    },
-    {
-      "id": "section-17-655",
-      "citation": "17-655",
-      "citations": [
-        "17-655"
-      ],
-      "heading": "17-655",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=299&section=section-17-655"
-    },
-    {
-      "id": "section-17-659",
-      "citation": "17-659",
-      "citations": [
-        "17-659"
-      ],
-      "heading": "17-659",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=299&section=section-17-659"
-    },
-    {
-      "id": "section-17-660",
-      "citation": "17-660",
-      "citations": [
-        "17-660"
-      ],
-      "heading": "17-660",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=299&section=section-17-660"
-    },
-    {
-      "id": "section-17-675",
-      "citation": "17-675",
-      "citations": [
-        "17-675"
-      ],
-      "heading": "17-675",
-      "chapter": {
-        "id": "chapter-299",
-        "number": "299",
-        "name": "Chapters 299–318c Public Assistance and Welfare Services"
-      },
-      "status": "active",
-      "text": "",
-      "href": "?chapter=299&section=section-17-675"
     }
   ]
 }

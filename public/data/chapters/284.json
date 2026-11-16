@@ -57,8 +57,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Any such corporation seeking the benefits of sections 16-263 to 16-269 , inclusive, shall file with the Secretary of the State a certified copy of the certificate of public convenience and necessity issued to such corporation under the provisions of said federal Natural Gas Act. Upon the filing of such certificate and, in the case of a corporation organized under the laws of any state other than Connecticut, upon compliance with the provisions of sections 33-920 and 33-922 , such corporation shall be entitled and empowered to take by eminent domain such land, rights-of-way, easements or other interests in land in this state as are necessary for the construction, operation, maintenance and alteration of such pipeline or pipelines and for the installation of compressor stations, appliances or other appurtenant equipment.",
-          "See Sec. 16-280 re filing of copy of certificate with Secretary of the State."
+          "Any such corporation seeking the benefits of sections 16-263 to 16-269 , inclusive, shall file with the Secretary of the State a certified copy of the certificate of public convenience and necessity issued to such corporation under the provisions of said federal Natural Gas Act. Upon the filing of such certificate and, in the case of a corporation organized under the laws of any state other than Connecticut, upon compliance with the provisions of sections 33-920 and 33-922 , such corporation shall be entitled and empowered to take by eminent domain such land, rights-of-way, easements or other interests in land in this state as are necessary for the construction, operation, maintenance and alteration of such pipeline or pipelines and for the installation of compressor stations, appliances or other appurtenant equipment."
         ],
         "sourceNotes": [
           "(March, 1950, S. 2618d; February, 1965, P.A. 574, S. 23; P.A. 96-271, S. 161, 254.)"
@@ -69,6 +68,10 @@
         "annotations": [
           {
             "first": true,
+            "text": "See Sec. 16-280 re filing of copy of certificate with Secretary of the State."
+          },
+          {
+            "first": true,
             "text": "Cited. 138 C. 370. Act held constitutional; taking of temporary interest in land is authorized. Id., 582."
           },
           {
@@ -76,7 +79,7 @@
             "text": "Cited. 20 CS 51."
           }
         ],
-        "plainText": "Any such corporation seeking the benefits of sections 16-263 to 16-269 , inclusive, shall file with the Secretary of the State a certified copy of the certificate of public convenience and necessity issued to such corporation under the provisions of said federal Natural Gas Act. Upon the filing of such certificate and, in the case of a corporation organized under the laws of any state other than Connecticut, upon compliance with the provisions of sections 33-920 and 33-922 , such corporation shall be entitled and empowered to take by eminent domain such land, rights-of-way, easements or other interests in land in this state as are necessary for the construction, operation, maintenance and alteration of such pipeline or pipelines and for the installation of compressor stations, appliances or other appurtenant equipment.\n\nSee Sec. 16-280 re filing of copy of certificate with Secretary of the State."
+        "plainText": "Any such corporation seeking the benefits of sections 16-263 to 16-269 , inclusive, shall file with the Secretary of the State a certified copy of the certificate of public convenience and necessity issued to such corporation under the provisions of said federal Natural Gas Act. Upon the filing of such certificate and, in the case of a corporation organized under the laws of any state other than Connecticut, upon compliance with the provisions of sections 33-920 and 33-922 , such corporation shall be entitled and empowered to take by eminent domain such land, rights-of-way, easements or other interests in land in this state as are necessary for the construction, operation, maintenance and alteration of such pipeline or pipelines and for the installation of compressor stations, appliances or other appurtenant equipment."
       }
     },
     {
@@ -489,15 +492,19 @@
       "status": "active",
       "content": {
         "body": [
-          "Any corporation which intends to construct or operate any natural gas pipeline within this state shall file with the Secretary of the State a certified copy of the certificate of public convenience and necessity issued to such corporation under the federal Natural Gas Act, such filing to be at least thirty days before the start of construction.",
-          "See Sec. 16-264 re filing of certificate of public convenience and necessity."
+          "Any corporation which intends to construct or operate any natural gas pipeline within this state shall file with the Secretary of the State a certified copy of the certificate of public convenience and necessity issued to such corporation under the federal Natural Gas Act, such filing to be at least thirty days before the start of construction."
         ],
         "sourceNotes": [
           "(1951, S. 2634d.)"
         ],
         "history": [],
-        "annotations": [],
-        "plainText": "Any corporation which intends to construct or operate any natural gas pipeline within this state shall file with the Secretary of the State a certified copy of the certificate of public convenience and necessity issued to such corporation under the federal Natural Gas Act, such filing to be at least thirty days before the start of construction.\n\nSee Sec. 16-264 re filing of certificate of public convenience and necessity."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 16-264 re filing of certificate of public convenience and necessity."
+          }
+        ],
+        "plainText": "Any corporation which intends to construct or operate any natural gas pipeline within this state shall file with the Secretary of the State a certified copy of the certificate of public convenience and necessity issued to such corporation under the federal Natural Gas Act, such filing to be at least thirty days before the start of construction."
       }
     },
     {

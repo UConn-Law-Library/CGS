@@ -546,8 +546,7 @@
       "status": "active",
       "content": {
         "body": [
-          "No person shall offer or sell any security in this state unless (1) it is registered under sections 36b-2 to 36b-34 , inclusive, (2) the security or transaction is exempted under section 36b-21 , or (3) the security is a covered security provided such person complies with any applicable requirements in subsections (c), (d) and (e) of section 36b-21 .",
-          "See Sec. 3-123ee re exemption for Connecticut Home Care Trust Fund participation, offering and solicitation."
+          "No person shall offer or sell any security in this state unless (1) it is registered under sections 36b-2 to 36b-34 , inclusive, (2) the security or transaction is exempted under section 36b-21 , or (3) the security is a covered security provided such person complies with any applicable requirements in subsections (c), (d) and (e) of section 36b-21 ."
         ],
         "sourceNotes": [
           "(P.A. 77-482, S. 16; P.A. 81-292, S. 5; P.A. 89-220, S. 5; P.A. 97-220, S. 8, 15; P.A. 10-141, S. 11.)"
@@ -558,6 +557,10 @@
         "annotations": [
           {
             "first": true,
+            "text": "See Sec. 3-123ee re exemption for Connecticut Home Care Trust Fund participation, offering and solicitation."
+          },
+          {
+            "first": true,
             "text": "Cited. 233 C. 304. Defendant's claim that her convictions under statute should be reversed because she reasonably relied on advice of legal counsel in selling unregistered securities is unavailing; offense of selling unregistered securities requires proof only that defendant intended to do the act prohibited by statute and no specific intent to violate the law is required. 256 C. 313."
           },
           {
@@ -565,7 +568,7 @@
             "text": "A note that does not require payment until expiration of a 9-month period does not fall within the exemptions from registration provided for in Sec. 36b-21. 77 CA 621."
           }
         ],
-        "plainText": "No person shall offer or sell any security in this state unless (1) it is registered under sections 36b-2 to 36b-34 , inclusive, (2) the security or transaction is exempted under section 36b-21 , or (3) the security is a covered security provided such person complies with any applicable requirements in subsections (c), (d) and (e) of section 36b-21 .\n\nSee Sec. 3-123ee re exemption for Connecticut Home Care Trust Fund participation, offering and solicitation."
+        "plainText": "No person shall offer or sell any security in this state unless (1) it is registered under sections 36b-2 to 36b-34 , inclusive, (2) the security or transaction is exempted under section 36b-21 , or (3) the security is a covered security provided such person complies with any applicable requirements in subsections (c), (d) and (e) of section 36b-21 ."
       }
     },
     {
@@ -751,8 +754,7 @@
       "status": "active",
       "content": {
         "body": [
-          "The commissioner may, by regulation adopted, in accordance with chapter 54, or order, require the filing of any prospectus, pamphlet, circular, form letter, advertisement or other sales literature or advertising communication addressed or intended for distribution to prospective investors, including clients or prospective clients of an investment adviser registered or required to be registered under sections 36b-2 to 36b-34 , inclusive, unless the security or transaction is (1) exempted by subsection (a) or (b) of section 36b-21 , except for transactions exempted by subdivision (13) of subsection (b) of said section 36b-21 , or (2) a covered security.",
-          "See Sec. 3-123ee re exemption for Connecticut Home Care Trust Fund participation, offering and solicitation."
+          "The commissioner may, by regulation adopted, in accordance with chapter 54, or order, require the filing of any prospectus, pamphlet, circular, form letter, advertisement or other sales literature or advertising communication addressed or intended for distribution to prospective investors, including clients or prospective clients of an investment adviser registered or required to be registered under sections 36b-2 to 36b-34 , inclusive, unless the security or transaction is (1) exempted by subsection (a) or (b) of section 36b-21 , except for transactions exempted by subdivision (13) of subsection (b) of said section 36b-21 , or (2) a covered security."
         ],
         "sourceNotes": [
           "(P.A. 77-482, S. 23; P.A. 79-396, S. 7, 11; P.A. 82-149, S. 14, 16; P.A. 97-220, S. 12, 15; P.A. 05-177, S. 7; P.A. 10-141, S. 17.)"
@@ -760,8 +762,13 @@
         "history": [
           "History: P.A. 79-396 substituted Sec. “36-490” for “36-491”; P.A. 82-149 added “except for transactions exempted by subdivision (12) of subsection (b) of said section”; Sec. 36-491 transferred to Sec. 36b-22 in 1995; P.A. 97-220 added exception for a covered security, effective July 1, 1997; (Revisor's note: In 1999 a reference to “subdivision (12)” of Subsec. (b) of Sec. 36b-21 was replaced editorially by the Revisors with “subdivision (13)” pursuant to changes to Sec. 36b-21 enacted by P.A. 98-162); P.A. 05-177 required that regulation be adopted in accordance with chapter 54, provided that filings of literature and advertising communications addressed or intended for prospective clients apply to investment advisers registered or required to be registered under Secs. 36b-2 to 36b-33, inclusive, and made technical changes; P.A. 10-141 replaced reference to Sec. 36b-33 with reference to Sec. 36b-34, effective June 7, 2010."
         ],
-        "annotations": [],
-        "plainText": "The commissioner may, by regulation adopted, in accordance with chapter 54, or order, require the filing of any prospectus, pamphlet, circular, form letter, advertisement or other sales literature or advertising communication addressed or intended for distribution to prospective investors, including clients or prospective clients of an investment adviser registered or required to be registered under sections 36b-2 to 36b-34 , inclusive, unless the security or transaction is (1) exempted by subsection (a) or (b) of section 36b-21 , except for transactions exempted by subdivision (13) of subsection (b) of said section 36b-21 , or (2) a covered security.\n\nSee Sec. 3-123ee re exemption for Connecticut Home Care Trust Fund participation, offering and solicitation."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 3-123ee re exemption for Connecticut Home Care Trust Fund participation, offering and solicitation."
+          }
+        ],
+        "plainText": "The commissioner may, by regulation adopted, in accordance with chapter 54, or order, require the filing of any prospectus, pamphlet, circular, form letter, advertisement or other sales literature or advertising communication addressed or intended for distribution to prospective investors, including clients or prospective clients of an investment adviser registered or required to be registered under sections 36b-2 to 36b-34 , inclusive, unless the security or transaction is (1) exempted by subsection (a) or (b) of section 36b-21 , except for transactions exempted by subdivision (13) of subsection (b) of said section 36b-21 , or (2) a covered security."
       }
     },
     {

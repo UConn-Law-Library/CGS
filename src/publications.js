@@ -4,9 +4,9 @@
 // year, so it reflects legislation through the end of the year before
 // (https://www.cga.ct.gov/lco/resources-aboutbills.asp).
 //
-// Only the editions below are described as published. Add a year after confirming it on
-// cga.ct.gov; every "published", "anticipated", and "latest" label in the guide derives from
-// this list, so nothing else needs to change when a new edition appears.
+// The guide reads the reviewed list in data/editions/published.json, which a rollover or supplement
+// discovery updates in its data pull request. This copy is the fallback when that file cannot load;
+// every "published", "anticipated", and "latest" label derives from whichever list is used.
 export const PUBLISHED_EDITIONS = Object.freeze([
   Object.freeze({ year: 2023, url: "https://www.cga.ct.gov/2023/pub/titles.htm" }),
   Object.freeze({ year: 2024, url: "https://www.cga.ct.gov/2024/sup/titles.htm" }),

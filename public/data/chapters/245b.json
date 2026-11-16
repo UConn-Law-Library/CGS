@@ -474,8 +474,7 @@
       "status": "active",
       "content": {
         "body": [
-          "The Commissioner of Transportation may make orders for the regulation of the speed at which locomotives and cars shall cross highways and generally may make all orders which he deems necessary to prevent inconvenience to the public relating to the crossing or obstruction of highways by locomotives and cars. Any company which violates any such order shall forfeit to the state fifty dollars for each day of such violation.",
-          "See Sec. 13b-348 re regulation of trains' speed in cities and boroughs."
+          "The Commissioner of Transportation may make orders for the regulation of the speed at which locomotives and cars shall cross highways and generally may make all orders which he deems necessary to prevent inconvenience to the public relating to the crossing or obstruction of highways by locomotives and cars. Any company which violates any such order shall forfeit to the state fifty dollars for each day of such violation."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 5540; P.A. 75-486, S. 1, 69; P.A. 77-614, S. 571, 587, 610; P.A. 78-303, S. 85, 136.)"
@@ -484,6 +483,10 @@
           "History: P.A. 75-486 substituted “public utilities control authority” for “commission”, i.e. public utilities commission, effective December 1, 1975; P.A. 77-614 and P.A. 78-303 substituted “commissioner of transportation” for “public utilities control authority”, effective January 1, 1979; in 1981 Sec. 16-158 transferred to Sec. 13b-342."
         ],
         "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 13b-348 re regulation of trains' speed in cities and boroughs."
+          },
           {
             "first": true,
             "text": "Annotations to former section 16-158:"
@@ -505,7 +508,7 @@
             "text": "Cited. 33 CA 775."
           }
         ],
-        "plainText": "The Commissioner of Transportation may make orders for the regulation of the speed at which locomotives and cars shall cross highways and generally may make all orders which he deems necessary to prevent inconvenience to the public relating to the crossing or obstruction of highways by locomotives and cars. Any company which violates any such order shall forfeit to the state fifty dollars for each day of such violation.\n\nSee Sec. 13b-348 re regulation of trains' speed in cities and boroughs."
+        "plainText": "The Commissioner of Transportation may make orders for the regulation of the speed at which locomotives and cars shall cross highways and generally may make all orders which he deems necessary to prevent inconvenience to the public relating to the crossing or obstruction of highways by locomotives and cars. Any company which violates any such order shall forfeit to the state fifty dollars for each day of such violation."
       }
     },
     {
@@ -768,8 +771,7 @@
       "status": "active",
       "content": {
         "body": [
-          "The power to regulate the speed of railroad trains within the limits of cities and boroughs shall be vested exclusively in the Commissioner of Transportation.",
-          "See Sec. 13b-342 re general orders regarding crossings."
+          "The power to regulate the speed of railroad trains within the limits of cities and boroughs shall be vested exclusively in the Commissioner of Transportation."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 5546; P.A. 75-486, S. 1, 69; P.A. 77-614, S. 571, 610.)"
@@ -777,8 +779,13 @@
         "history": [
           "History: P.A. 75-486 substituted “public utilities control authority” for “commission”, i.e. public utilities commission, effective December 1, 1975; P.A. 77-614 substituted “commissioner of transportation” for “public utilities control authority”, effective January 1, 1979; in 1981 Sec. 16-164 transferred to Sec. 13b-348."
         ],
-        "annotations": [],
-        "plainText": "The power to regulate the speed of railroad trains within the limits of cities and boroughs shall be vested exclusively in the Commissioner of Transportation.\n\nSee Sec. 13b-342 re general orders regarding crossings."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 13b-342 re general orders regarding crossings."
+          }
+        ],
+        "plainText": "The power to regulate the speed of railroad trains within the limits of cities and boroughs shall be vested exclusively in the Commissioner of Transportation."
       }
     },
     {
@@ -1030,8 +1037,7 @@
       "status": "active",
       "content": {
         "body": [
-          "When property is injured by fire communicated by an engine of a railroad company, without contributory negligence on the part of the person entitled to the care and possession of such property, such company shall be held responsible in damages to the extent of such injury to the person so injured. Each such company shall have an insurable interest in the property for which it may be so held responsible in damages and may procure insurance thereon in its own behalf.",
-          "See Sec. 23-42 et seq. re liability of railroads for damages caused by sparks and railroad fire hazards generally."
+          "When property is injured by fire communicated by an engine of a railroad company, without contributory negligence on the part of the person entitled to the care and possession of such property, such company shall be held responsible in damages to the extent of such injury to the person so injured. Each such company shall have an insurable interest in the property for which it may be so held responsible in damages and may procure insurance thereon in its own behalf."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 5557.)"
@@ -1042,6 +1048,10 @@
         "annotations": [
           {
             "first": true,
+            "text": "See Sec. 23-42 et seq. re liability of railroads for damages caused by sparks and railroad fire hazards generally."
+          },
+          {
+            "first": true,
             "text": "Annotations to former section 16-175:"
           },
           {
@@ -1049,7 +1059,7 @@
             "text": "Company held for damage to B's property caused by fire starting on A's land, and left burning at A's request. 52 C. 271. Statute held constitutional; “property” included fences and trees. 54 C. 447. Statute is not penal, and action thereon is not barred for 6 years. 56 C. 21. Company cannot have advantage of owner's insurance on property destroyed. 60 C. 129. Liability statutory, not for negligence. 62 C. 339; 93 C. 79. Contributory negligence will defeat recovery on statute. 72 C. 28. Nature of evidence admissible; other fires set by sparks from engine. 93 C. 79. What evidence of damage is admissible; 106 C. 424; where equitable relief is also claimed; Id., 434; measure of damage where property has no real market value. Id., 430."
           }
         ],
-        "plainText": "When property is injured by fire communicated by an engine of a railroad company, without contributory negligence on the part of the person entitled to the care and possession of such property, such company shall be held responsible in damages to the extent of such injury to the person so injured. Each such company shall have an insurable interest in the property for which it may be so held responsible in damages and may procure insurance thereon in its own behalf.\n\nSee Sec. 23-42 et seq. re liability of railroads for damages caused by sparks and railroad fire hazards generally."
+        "plainText": "When property is injured by fire communicated by an engine of a railroad company, without contributory negligence on the part of the person entitled to the care and possession of such property, such company shall be held responsible in damages to the extent of such injury to the person so injured. Each such company shall have an insurable interest in the property for which it may be so held responsible in damages and may procure insurance thereon in its own behalf."
       }
     },
     {
@@ -1226,8 +1236,7 @@
           "(b) The Commissioner of Transportation shall: (1) Ensure the Operation Lifesaver Committee, established pursuant to subsection (c) of this section, guides and promotes the program on the local level; (2) educate the public with information designed to reduce the number of accidents, deaths and injuries at railroad and at-grade crossings; (3) encourage state and local law enforcement agencies to vigorously enforce the law governing motorist and pedestrian rights and responsibilities; (4) encourage the development of engineering and safety improvements; (5) encourage the maintenance of railroad and at-grade crossings; (6) if a national nonprofit organization operates and maintains the program, require such organization to submit an annual report regarding the status of the program and make any recommendations regarding additional goals or objectives of the program to the Operation Lifesaver Committee; and (7) adhere to the goals and objectives of the program.",
           "(c) There is established an Operation Lifesaver Committee which shall be within the Department of Transportation. The committee shall consist of the Commissioner of Transportation or the commissioner's designee, the Commissioner of Emergency Services and Public Protection or the commissioner's designee and the Commissioner of Motor Vehicles or the commissioner's designee. The Commissioner of Transportation or the commissioner's designee shall serve as chairperson of the committee. The committee shall meet at such times as it deems necessary.",
           "(d) The Commissioner of Transportation may, within available federal resources, make grants and otherwise administer funds to public or private school systems to assist such school systems to establish, operate or maintain an operation lifesaver training program. The commissioner may apply for, receive and accept grants, gifts and bequests of funds made available by any person, political subdivision or entity, or any other agency, governmental or private, including the United States or any of its agencies and instrumentalities, to carry out the purposes of this section.",
-          "(e) The Department of Transportation may adopt regulations, in accordance with the provisions of chapter 54, to carry out the purposes of this section.",
-          "See Sec. 4-38f for definition of “administrative purposes only”."
+          "(e) The Department of Transportation may adopt regulations, in accordance with the provisions of chapter 54, to carry out the purposes of this section."
         ],
         "sourceNotes": [
           "(P.A. 92-98, S. 1–3; P.A. 11-51, S. 134; P.A. 19-161, S. 1; P.A. 21-40, S. 13.)"
@@ -1235,8 +1244,13 @@
         "history": [
           "History: Pursuant to P.A. 11-51, “Commissioner of Public Safety” was changed editorially by the Revisors to “Commissioner of Emergency Services and Public Protection”, effective July 1, 2011; P.A. 19-161 amended Subsec. (a) to replace provisions re Operation Lifesaver Committee with provisions re Commissioner of Transportation to enter into agreements with national nonprofit organization, amended Subsec. (b) to replace “Operation Lifesaver Committee” with “Commissioner of Transportation”, delete former Subdiv. (1) re administration and operation of operation lifesaver program, redesignate existing Subdivs. (2) to (7) as Subdivs. (1) to (6), amend redesignated Subdiv. (6) by replacing provision re annual report by committee with provision re annual report by national nonprofit organization and add new Subdiv. (7) re goals and objectives, added new Subsec. (c) re Operation Lifesaver Committee, added Subsec. (d) re grants to public and private school systems and applications to receive and accept grants, gifts and bequests of funds, and redesignated existing Subsec. (c) as Subsec. (e), effective July 12, 2019; P.A. 21-40 made a technical change in Subsec. (c)."
         ],
-        "annotations": [],
-        "plainText": "(a) The Commissioner of Transportation shall establish and operate an operation lifesaver program designed to reduce the number of accidents at railway crossings and to increase the public awareness of railroad crossing hazards. The commissioner may enter into agreements with any national nonprofit organization dedicated to increasing public safety and providing education regarding railroad crossing hazards to establish, operate and maintain the program.\n\n(b) The Commissioner of Transportation shall: (1) Ensure the Operation Lifesaver Committee, established pursuant to subsection (c) of this section, guides and promotes the program on the local level; (2) educate the public with information designed to reduce the number of accidents, deaths and injuries at railroad and at-grade crossings; (3) encourage state and local law enforcement agencies to vigorously enforce the law governing motorist and pedestrian rights and responsibilities; (4) encourage the development of engineering and safety improvements; (5) encourage the maintenance of railroad and at-grade crossings; (6) if a national nonprofit organization operates and maintains the program, require such organization to submit an annual report regarding the status of the program and make any recommendations regarding additional goals or objectives of the program to the Operation Lifesaver Committee; and (7) adhere to the goals and objectives of the program.\n\n(c) There is established an Operation Lifesaver Committee which shall be within the Department of Transportation. The committee shall consist of the Commissioner of Transportation or the commissioner's designee, the Commissioner of Emergency Services and Public Protection or the commissioner's designee and the Commissioner of Motor Vehicles or the commissioner's designee. The Commissioner of Transportation or the commissioner's designee shall serve as chairperson of the committee. The committee shall meet at such times as it deems necessary.\n\n(d) The Commissioner of Transportation may, within available federal resources, make grants and otherwise administer funds to public or private school systems to assist such school systems to establish, operate or maintain an operation lifesaver training program. The commissioner may apply for, receive and accept grants, gifts and bequests of funds made available by any person, political subdivision or entity, or any other agency, governmental or private, including the United States or any of its agencies and instrumentalities, to carry out the purposes of this section.\n\n(e) The Department of Transportation may adopt regulations, in accordance with the provisions of chapter 54, to carry out the purposes of this section.\n\nSee Sec. 4-38f for definition of “administrative purposes only”."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 4-38f for definition of “administrative purposes only”."
+          }
+        ],
+        "plainText": "(a) The Commissioner of Transportation shall establish and operate an operation lifesaver program designed to reduce the number of accidents at railway crossings and to increase the public awareness of railroad crossing hazards. The commissioner may enter into agreements with any national nonprofit organization dedicated to increasing public safety and providing education regarding railroad crossing hazards to establish, operate and maintain the program.\n\n(b) The Commissioner of Transportation shall: (1) Ensure the Operation Lifesaver Committee, established pursuant to subsection (c) of this section, guides and promotes the program on the local level; (2) educate the public with information designed to reduce the number of accidents, deaths and injuries at railroad and at-grade crossings; (3) encourage state and local law enforcement agencies to vigorously enforce the law governing motorist and pedestrian rights and responsibilities; (4) encourage the development of engineering and safety improvements; (5) encourage the maintenance of railroad and at-grade crossings; (6) if a national nonprofit organization operates and maintains the program, require such organization to submit an annual report regarding the status of the program and make any recommendations regarding additional goals or objectives of the program to the Operation Lifesaver Committee; and (7) adhere to the goals and objectives of the program.\n\n(c) There is established an Operation Lifesaver Committee which shall be within the Department of Transportation. The committee shall consist of the Commissioner of Transportation or the commissioner's designee, the Commissioner of Emergency Services and Public Protection or the commissioner's designee and the Commissioner of Motor Vehicles or the commissioner's designee. The Commissioner of Transportation or the commissioner's designee shall serve as chairperson of the committee. The committee shall meet at such times as it deems necessary.\n\n(d) The Commissioner of Transportation may, within available federal resources, make grants and otherwise administer funds to public or private school systems to assist such school systems to establish, operate or maintain an operation lifesaver training program. The commissioner may apply for, receive and accept grants, gifts and bequests of funds made available by any person, political subdivision or entity, or any other agency, governmental or private, including the United States or any of its agencies and instrumentalities, to carry out the purposes of this section.\n\n(e) The Department of Transportation may adopt regulations, in accordance with the provisions of chapter 54, to carry out the purposes of this section."
       }
     },
     {
@@ -1266,166 +1280,6 @@
         "history": [],
         "annotations": [],
         "plainText": "Reserved for future use."
-      }
-    },
-    {
-      "id": "section-13b-326",
-      "kind": "section",
-      "citation": "13b-326",
-      "citations": [
-        "13b-326"
-      ],
-      "heading": "13b-326",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_245b.htm#sec_13b-326",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 13b-326 to 13b-328. (Formerly Secs. 16-142 to 16-144). Operation: Of gasoline cars; by electricity; of aircraft. Sections 13b-326 to 13b-328 , inclusive, are repealed, effective October 1, 2002."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 13b-326 to 13b-328. (Formerly Secs. 16-142 to 16-144). Operation: Of gasoline cars; by electricity; of aircraft. Sections 13b-326 to 13b-328 , inclusive, are repealed, effective October 1, 2002."
-      }
-    },
-    {
-      "id": "section-13b-328",
-      "kind": "section",
-      "citation": "13b-328",
-      "citations": [
-        "13b-328"
-      ],
-      "heading": "13b-328",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_245b.htm#sec_13b-328",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 13b-326 to 13b-328. (Formerly Secs. 16-142 to 16-144). Operation: Of gasoline cars; by electricity; of aircraft. Sections 13b-326 to 13b-328 , inclusive, are repealed, effective October 1, 2002."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 13b-326 to 13b-328. (Formerly Secs. 16-142 to 16-144). Operation: Of gasoline cars; by electricity; of aircraft. Sections 13b-326 to 13b-328 , inclusive, are repealed, effective October 1, 2002."
-      }
-    },
-    {
-      "id": "section-13b-356",
-      "kind": "section",
-      "citation": "13b-356",
-      "citations": [
-        "13b-356"
-      ],
-      "heading": "13b-356",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_245b.htm#sec_13b-356",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 13b-356 to 13b-359. (Formerly Secs. 16-171 to 16-174). Transportation of explosives; forfeiture. Charge for storage; forfeiture. Lien for transportation charges. Receipt; forfeiture. Sections 13b-356 to 13b-359 , inclusive, are repealed, effective October 1, 2002."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 13b-356 to 13b-359. (Formerly Secs. 16-171 to 16-174). Transportation of explosives; forfeiture. Charge for storage; forfeiture. Lien for transportation charges. Receipt; forfeiture. Sections 13b-356 to 13b-359 , inclusive, are repealed, effective October 1, 2002."
-      }
-    },
-    {
-      "id": "section-13b-359",
-      "kind": "section",
-      "citation": "13b-359",
-      "citations": [
-        "13b-359"
-      ],
-      "heading": "13b-359",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_245b.htm#sec_13b-359",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 13b-356 to 13b-359. (Formerly Secs. 16-171 to 16-174). Transportation of explosives; forfeiture. Charge for storage; forfeiture. Lien for transportation charges. Receipt; forfeiture. Sections 13b-356 to 13b-359 , inclusive, are repealed, effective October 1, 2002."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 13b-356 to 13b-359. (Formerly Secs. 16-171 to 16-174). Transportation of explosives; forfeiture. Charge for storage; forfeiture. Lien for transportation charges. Receipt; forfeiture. Sections 13b-356 to 13b-359 , inclusive, are repealed, effective October 1, 2002."
-      }
-    },
-    {
-      "id": "section-13b-363",
-      "kind": "section",
-      "citation": "13b-363",
-      "citations": [
-        "13b-363"
-      ],
-      "heading": "13b-363",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_245b.htm#sec_13b-363",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 13b-363 and 13b-364. (Formerly Secs. 16-178 and 16-179). Clearing land adjacent to railroad right-of-way. Land damages not affected by fire risk. Sections 13b-363 and 13b-364 are repealed, effective October 1, 2002."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 13b-363 and 13b-364. (Formerly Secs. 16-178 and 16-179). Clearing land adjacent to railroad right-of-way. Land damages not affected by fire risk. Sections 13b-363 and 13b-364 are repealed, effective October 1, 2002."
-      }
-    },
-    {
-      "id": "section-13b-364",
-      "kind": "section",
-      "citation": "13b-364",
-      "citations": [
-        "13b-364"
-      ],
-      "heading": "13b-364",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_245b.htm#sec_13b-364",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 13b-363 and 13b-364. (Formerly Secs. 16-178 and 16-179). Clearing land adjacent to railroad right-of-way. Land damages not affected by fire risk. Sections 13b-363 and 13b-364 are repealed, effective October 1, 2002."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 13b-363 and 13b-364. (Formerly Secs. 16-178 and 16-179). Clearing land adjacent to railroad right-of-way. Land damages not affected by fire risk. Sections 13b-363 and 13b-364 are repealed, effective October 1, 2002."
-      }
-    },
-    {
-      "id": "section-13b-366",
-      "kind": "section",
-      "citation": "13b-366",
-      "citations": [
-        "13b-366"
-      ],
-      "heading": "13b-366",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_245b.htm#sec_13b-366",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 13b-366 to 13b-374. (Formerly Secs. 16-182 to 16-190). Trains to stop before crossing drawbridge or railroad. Interference with navigation. Drawbridges. Passing switches, stations and crossings without stopping; forfeiture. Platforms for shipment of livestock. Hospital stretchers. Hours of labor of telegraph and telephone operators and train dispatchers. Passenger car regulations. Heating and lighting cars. Sections 13b-366 to 13b-374 , inclusive, are repealed, effective October 1, 2002."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 13b-366 to 13b-374. (Formerly Secs. 16-182 to 16-190). Trains to stop before crossing drawbridge or railroad. Interference with navigation. Drawbridges. Passing switches, stations and crossings without stopping; forfeiture. Platforms for shipment of livestock. Hospital stretchers. Hours of labor of telegraph and telephone operators and train dispatchers. Passenger car regulations. Heating and lighting cars. Sections 13b-366 to 13b-374 , inclusive, are repealed, effective October 1, 2002."
-      }
-    },
-    {
-      "id": "section-13b-374",
-      "kind": "section",
-      "citation": "13b-374",
-      "citations": [
-        "13b-374"
-      ],
-      "heading": "13b-374",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_245b.htm#sec_13b-374",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 13b-366 to 13b-374. (Formerly Secs. 16-182 to 16-190). Trains to stop before crossing drawbridge or railroad. Interference with navigation. Drawbridges. Passing switches, stations and crossings without stopping; forfeiture. Platforms for shipment of livestock. Hospital stretchers. Hours of labor of telegraph and telephone operators and train dispatchers. Passenger car regulations. Heating and lighting cars. Sections 13b-366 to 13b-374 , inclusive, are repealed, effective October 1, 2002."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 13b-366 to 13b-374. (Formerly Secs. 16-182 to 16-190). Trains to stop before crossing drawbridge or railroad. Interference with navigation. Drawbridges. Passing switches, stations and crossings without stopping; forfeiture. Platforms for shipment of livestock. Hospital stretchers. Hours of labor of telegraph and telephone operators and train dispatchers. Passenger car regulations. Heating and lighting cars. Sections 13b-366 to 13b-374 , inclusive, are repealed, effective October 1, 2002."
       }
     }
   ]

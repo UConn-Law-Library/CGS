@@ -51,8 +51,7 @@
       "status": "active",
       "content": {
         "body": [
-          "The tax provided for in chapter 208 on the net income or minimum base, as far as air carriers incorporated or doing business in this state are concerned, shall be allocated to this state by use of the arithmetical average of the following three ratios, provided, if it should be found that such ratios should so operate as to subject a taxpayer to taxation on a greater or lesser portion of its business than is reasonably attributable to this state, the provisions of section 12-221a shall apply: (a) The ratio which the aircraft arrivals and departures within this state scheduled by such air carrier during the income year bears to the total aircraft arrivals and departures scheduled by such carrier on its entire system during the same period; provided, in the case of nonscheduled operations, all arrivals and departures shall be substituted for scheduled arrivals and departures; (b) the ratio which the revenue tons handled by such air carrier at airports within this state during the income year bears to the total revenue tons handled by such carrier at all airports on its entire system during the same period; (c) the ratio which such air carrier's originating revenue within this state for the income year bears to the total originating revenue of such carrier from its entire system for the same period.",
-          "See chapter 138c re tax credits for donations to Rental Housing Assistance Trust Fund."
+          "The tax provided for in chapter 208 on the net income or minimum base, as far as air carriers incorporated or doing business in this state are concerned, shall be allocated to this state by use of the arithmetical average of the following three ratios, provided, if it should be found that such ratios should so operate as to subject a taxpayer to taxation on a greater or lesser portion of its business than is reasonably attributable to this state, the provisions of section 12-221a shall apply: (a) The ratio which the aircraft arrivals and departures within this state scheduled by such air carrier during the income year bears to the total aircraft arrivals and departures scheduled by such carrier on its entire system during the same period; provided, in the case of nonscheduled operations, all arrivals and departures shall be substituted for scheduled arrivals and departures; (b) the ratio which the revenue tons handled by such air carrier at airports within this state during the income year bears to the total revenue tons handled by such carrier at all airports on its entire system during the same period; (c) the ratio which such air carrier's originating revenue within this state for the income year bears to the total originating revenue of such carrier from its entire system for the same period."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 1923; 1949, 1951, S. 1106d; P.A. 73-350, S. 15, 27.)"
@@ -60,8 +59,13 @@
         "history": [
           "History: P.A. 73-350 substituted reference to Sec. 12-221a for reference to repealed Sec. 12-221."
         ],
-        "annotations": [],
-        "plainText": "The tax provided for in chapter 208 on the net income or minimum base, as far as air carriers incorporated or doing business in this state are concerned, shall be allocated to this state by use of the arithmetical average of the following three ratios, provided, if it should be found that such ratios should so operate as to subject a taxpayer to taxation on a greater or lesser portion of its business than is reasonably attributable to this state, the provisions of section 12-221a shall apply: (a) The ratio which the aircraft arrivals and departures within this state scheduled by such air carrier during the income year bears to the total aircraft arrivals and departures scheduled by such carrier on its entire system during the same period; provided, in the case of nonscheduled operations, all arrivals and departures shall be substituted for scheduled arrivals and departures; (b) the ratio which the revenue tons handled by such air carrier at airports within this state during the income year bears to the total revenue tons handled by such carrier at all airports on its entire system during the same period; (c) the ratio which such air carrier's originating revenue within this state for the income year bears to the total originating revenue of such carrier from its entire system for the same period.\n\nSee chapter 138c re tax credits for donations to Rental Housing Assistance Trust Fund."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See chapter 138c re tax credits for donations to Rental Housing Assistance Trust Fund."
+          }
+        ],
+        "plainText": "The tax provided for in chapter 208 on the net income or minimum base, as far as air carriers incorporated or doing business in this state are concerned, shall be allocated to this state by use of the arithmetical average of the following three ratios, provided, if it should be found that such ratios should so operate as to subject a taxpayer to taxation on a greater or lesser portion of its business than is reasonably attributable to this state, the provisions of section 12-221a shall apply: (a) The ratio which the aircraft arrivals and departures within this state scheduled by such air carrier during the income year bears to the total aircraft arrivals and departures scheduled by such carrier on its entire system during the same period; provided, in the case of nonscheduled operations, all arrivals and departures shall be substituted for scheduled arrivals and departures; (b) the ratio which the revenue tons handled by such air carrier at airports within this state during the income year bears to the total revenue tons handled by such carrier at all airports on its entire system during the same period; (c) the ratio which such air carrier's originating revenue within this state for the income year bears to the total originating revenue of such carrier from its entire system for the same period."
       }
     },
     {
@@ -184,46 +188,6 @@
         "history": [],
         "annotations": [],
         "plainText": "So far as the same are consistent with this chapter, the provisions of chapter 208 shall apply to incorporated air carriers."
-      }
-    },
-    {
-      "id": "section-12-247a",
-      "kind": "section",
-      "citation": "12-247a",
-      "citations": [
-        "12-247a"
-      ],
-      "heading": "12-247a",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_209.htm#sec_12-247a",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 12-247a and 12-247b. Credit against tax for expenditures for air pollution abatement. Tax credit for expenditures for industrial waste treatment facilities. Sections 12-247a and 12-247b are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 12-247a and 12-247b. Credit against tax for expenditures for air pollution abatement. Tax credit for expenditures for industrial waste treatment facilities. Sections 12-247a and 12-247b are repealed."
-      }
-    },
-    {
-      "id": "section-12-247b",
-      "kind": "section",
-      "citation": "12-247b",
-      "citations": [
-        "12-247b"
-      ],
-      "heading": "12-247b",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_209.htm#sec_12-247b",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 12-247a and 12-247b. Credit against tax for expenditures for air pollution abatement. Tax credit for expenditures for industrial waste treatment facilities. Sections 12-247a and 12-247b are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 12-247a and 12-247b. Credit against tax for expenditures for air pollution abatement. Tax credit for expenditures for industrial waste treatment facilities. Sections 12-247a and 12-247b are repealed."
       }
     }
   ]

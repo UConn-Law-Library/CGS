@@ -106,46 +106,6 @@
         "annotations": [],
         "plainText": "Sections 42-1 to 42-76 , inclusive, are repealed."
       }
-    },
-    {
-      "id": "section-42-1",
-      "kind": "section",
-      "citation": "42-1",
-      "citations": [
-        "42-1"
-      ],
-      "heading": "42-1",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_731.htm#sec_42-1",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 42-1 to 42-76. The Sales Act. Sections 42-1 to 42-76 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 42-1 to 42-76. The Sales Act. Sections 42-1 to 42-76 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-42-76",
-      "kind": "section",
-      "citation": "42-76",
-      "citations": [
-        "42-76"
-      ],
-      "heading": "42-76",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_731.htm#sec_42-76",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 42-1 to 42-76. The Sales Act. Sections 42-1 to 42-76 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 42-1 to 42-76. The Sales Act. Sections 42-1 to 42-76 , inclusive, are repealed."
-      }
     }
   ]
 }

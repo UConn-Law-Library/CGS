@@ -13,7 +13,6 @@ test("acts refreshes remain review-gated", () => {
   assert.match(workflow, /python -m crawler\.cgs_crawler\.acts[\s\S]*?--report "\$REPORT_DIR\/text-report\.json"/);
   assert.match(workflow, /Verify the candidate data\s*\n\s*if: steps\.review\.outputs\.has_changes == 'true'\s*\n\s*run: npm run check/);
   assert.match(workflow, /git add -- public\/data\/acts/);
-  assert.match(workflow, /gh pr create[\s\S]*?--base main[\s\S]*?--draft/);
-  assert.match(workflow, /gh workflow run ci\.yml --ref "\$branch"/);
+  assert.match(workflow, /run: bash scripts\/publish-refresh\.sh automation\/acts-refresh \.crawl\/publish/);
   assert.doesNotMatch(workflow, /git push\s+origin\s+main/);
 });

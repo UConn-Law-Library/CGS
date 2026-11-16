@@ -338,8 +338,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Each household goods carrier subject to the provisions of this chapter shall issue a bill of lading upon the receipt of household goods for transportation for hire. The rights and obligations of such household goods carrier and the holder of such bill of lading shall be determined in accordance with the provisions of article 7 of the Uniform Commercial Code, title 42a, respecting bills of lading.",
-          "See Sec. 42a-7-301 et seq. re bills of lading under Uniform Commercial Code."
+          "Each household goods carrier subject to the provisions of this chapter shall issue a bill of lading upon the receipt of household goods for transportation for hire. The rights and obligations of such household goods carrier and the holder of such bill of lading shall be determined in accordance with the provisions of article 7 of the Uniform Commercial Code, title 42a, respecting bills of lading."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 5684; 1961, P.A. 116, S. 17; P.A. 95-126, S. 12, 25.)"
@@ -350,6 +349,10 @@
         "annotations": [
           {
             "first": true,
+            "text": "See Sec. 42a-7-301 et seq. re bills of lading under Uniform Commercial Code."
+          },
+          {
+            "first": true,
             "text": "Annotation to former section 16-290:"
           },
           {
@@ -357,7 +360,7 @@
             "text": "A common carrier is excused from liability only by an act of God, the public enemy, faulty packaging or inherent vice; to escape liability, it is incumbent upon defendant carrier to prove the shipment delivered in a damaged condition fell within a class as to which the carrier is not an insurer and that no fault of his contributed to the damage. 5 Conn. Cir. Ct. 91."
           }
         ],
-        "plainText": "Each household goods carrier subject to the provisions of this chapter shall issue a bill of lading upon the receipt of household goods for transportation for hire. The rights and obligations of such household goods carrier and the holder of such bill of lading shall be determined in accordance with the provisions of article 7 of the Uniform Commercial Code, title 42a, respecting bills of lading.\n\nSee Sec. 42a-7-301 et seq. re bills of lading under Uniform Commercial Code."
+        "plainText": "Each household goods carrier subject to the provisions of this chapter shall issue a bill of lading upon the receipt of household goods for transportation for hire. The rights and obligations of such household goods carrier and the holder of such bill of lading shall be determined in accordance with the provisions of article 7 of the Uniform Commercial Code, title 42a, respecting bills of lading."
       }
     },
     {
@@ -1012,66 +1015,6 @@
         ],
         "annotations": [],
         "plainText": "No motor carrier, as defined in 49 CFR 350.105 or 49 CFR 390.5, as amended, shall authorize or employ any person to operate any motor vehicle registered or required to be registered in this state with a gross vehicle weight rating or gross combination weight rating of eighteen thousand one or more pounds without an on-the-road skills test performed in such motor vehicle and without a written certification, signed and dated by such motor carrier, that such person possesses the skills, capability and fitness to operate such motor vehicle safely."
-      }
-    },
-    {
-      "id": "section-13b-404",
-      "kind": "section",
-      "citation": "13b-404",
-      "citations": [
-        "13b-404"
-      ],
-      "heading": "13b-404",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_245c.htm#sec_13b-404",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 13b-404, 13b-404a and 13b-405. (Formerly Secs. 16-298, 16-298a and 16-299). Interstate carrier; permit; identification stamps; cab cards. Interstate carriers exempt from Interstate Commerce Commission regulation; registration. Application for certificate or permit; identification stamps; cab cards. Sections 13b-404 , 13b-404a and 13b-405 are repealed, effective June 29, 1993."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 13b-404, 13b-404a and 13b-405. (Formerly Secs. 16-298, 16-298a and 16-299). Interstate carrier; permit; identification stamps; cab cards. Interstate carriers exempt from Interstate Commerce Commission regulation; registration. Application for certificate or permit; identification stamps; cab cards. Sections 13b-404 , 13b-404a and 13b-405 are repealed, effective June 29, 1993."
-      }
-    },
-    {
-      "id": "section-13b-404a",
-      "kind": "section",
-      "citation": "13b-404a",
-      "citations": [
-        "13b-404a"
-      ],
-      "heading": "13b-404a",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_245c.htm#sec_13b-404a",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 13b-404, 13b-404a and 13b-405. (Formerly Secs. 16-298, 16-298a and 16-299). Interstate carrier; permit; identification stamps; cab cards. Interstate carriers exempt from Interstate Commerce Commission regulation; registration. Application for certificate or permit; identification stamps; cab cards. Sections 13b-404 , 13b-404a and 13b-405 are repealed, effective June 29, 1993."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 13b-404, 13b-404a and 13b-405. (Formerly Secs. 16-298, 16-298a and 16-299). Interstate carrier; permit; identification stamps; cab cards. Interstate carriers exempt from Interstate Commerce Commission regulation; registration. Application for certificate or permit; identification stamps; cab cards. Sections 13b-404 , 13b-404a and 13b-405 are repealed, effective June 29, 1993."
-      }
-    },
-    {
-      "id": "section-13b-405",
-      "kind": "section",
-      "citation": "13b-405",
-      "citations": [
-        "13b-405"
-      ],
-      "heading": "13b-405",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_245c.htm#sec_13b-405",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 13b-404, 13b-404a and 13b-405. (Formerly Secs. 16-298, 16-298a and 16-299). Interstate carrier; permit; identification stamps; cab cards. Interstate carriers exempt from Interstate Commerce Commission regulation; registration. Application for certificate or permit; identification stamps; cab cards. Sections 13b-404 , 13b-404a and 13b-405 are repealed, effective June 29, 1993."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 13b-404, 13b-404a and 13b-405. (Formerly Secs. 16-298, 16-298a and 16-299). Interstate carrier; permit; identification stamps; cab cards. Interstate carriers exempt from Interstate Commerce Commission regulation; registration. Application for certificate or permit; identification stamps; cab cards. Sections 13b-404 , 13b-404a and 13b-405 are repealed, effective June 29, 1993."
       }
     }
   ]

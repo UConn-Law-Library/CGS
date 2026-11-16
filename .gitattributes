@@ -12,3 +12,5 @@
 *.yml text eol=lf
 *.yaml text eol=lf
 *.pdf binary
+*.pem text eol=lf
+*.sh text eol=lf

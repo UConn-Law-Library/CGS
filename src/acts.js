@@ -1,4 +1,4 @@
-import { dataUrl } from "./data-loader.js";
+import { checkDataResponse, dataUrl } from "./data-loader.js";
 import { statuteTextEdition } from "./publications.js";
 import { escapeHtml, renderLinkedText } from "./reader.js";
 import { actRouteHref } from "./routes.js";
@@ -22,7 +22,7 @@ export class ActsRepository {
     if (!this.#cache.has(relativePath)) {
       this.#cache.set(relativePath, (async () => {
         const response = await this.#fetch(dataUrl(new URL(relativePath, this.#baseUrl)), { signal: AbortSignal.timeout(15000) });
-        if (!response.ok) throw new Error(`Could not load ${label} (${response.status})`);
+        checkDataResponse(response, label);
         return response.json();
       })().catch((error) => {
         this.#cache.delete(relativePath);
@@ -86,7 +86,7 @@ export function normalizeActsOptions({ session = null, type = null, query = null
     query: String(query ?? "").trim() || null,
     sort: Object.hasOwn(sorts, sort) ? sort : Object.keys(sorts)[0],
     order: effective && order === "desc" ? "desc" : "asc",
-    view: effective ? "effective" : "acts",
+    view: effective ? "effective" : view === "past" ? "past" : "acts",
     on: EFFECTIVE_ON.test(on ?? "") ? on.slice(0, 7) : null
   };
 }
@@ -202,9 +202,40 @@ export function actsCurrencyNote(session, { supplementEditionYear = null, baseRe
     return `The statute text in this app includes the ${edition.label}, which reflects legislation through the ${edition.legislationThrough} session. Acts from the ${session.name} are not yet reflected in that text.`;
   }
   if (edition) {
-    return `Acts from the ${session.name} should already be reflected in the ${edition.label} text in this app.`;
+    return `Acts from the ${session.name} should already be reflected in the ${edition.label} text in this app, which covers legislation through the ${edition.legislationThrough} sessions. This session is kept under Past sessions for reference.`;
   }
   return `Acts from the ${session.name} may not yet be reflected in the statute text in this app.`;
+}
+
+// "recent" while the active statute edition cannot include the session's acts yet, "past" once
+// it covers the session's year. The rule is the same for regular and special sessions, and it
+// is the one that decides which acts produce notices on statute pages.
+export function sessionCoverage(session, { supplementEditionYear = null, baseRevisionYear = null } = {}) {
+  const edition = statuteTextEdition({ baseRevisionYear, supplementYear: supplementEditionYear });
+  return edition && session.year <= edition.legislationThrough ? "past" : "recent";
+}
+
+export function partitionSessions(sessions = [], years = {}) {
+  const recent = [];
+  const past = [];
+  for (const session of sessions) (sessionCoverage(session, years) === "past" ? past : recent).push(session);
+  return { recent, past };
+}
+
+// Past sessions, grouped by year: sessions the statute text now covers. Their acts, texts, and
+// links stay published.
+export function renderPastSessions(sessions, years, { sessionHref }) {
+  const edition = statuteTextEdition({ baseRevisionYear: years.baseRevisionYear ?? null, supplementYear: years.supplementEditionYear ?? null });
+  if (!sessions.length) {
+    return `<p class="empty-state">No past sessions yet. A session moves here once the statute text in this app covers it${edition ? ` (the ${escapeHtml(edition.label)} covers legislation through the ${edition.legislationThrough} sessions)` : ""}.</p>`;
+  }
+  const byYear = new Map();
+  for (const session of sessions) byYear.set(session.year, [...(byYear.get(session.year) ?? []), session]);
+  return `<p class="note">${edition ? `The ${escapeHtml(edition.label)} in this app covers legislation through the ${edition.legislationThrough} sessions, so the acts of these sessions should already be reflected in its text.` : ""} Each act keeps its text, sections, effective dates, and links to the official PDF and bill status.</p>
+    ${[...byYear].sort(([left], [right]) => right - left).map(([year, list]) => `<section class="past-sessions-year" aria-labelledby="past-sessions-${year}">
+      <h2 id="past-sessions-${year}">${year}</h2>
+      <ul class="past-sessions">${list.map((session) => `<li><a href="${escapeHtml(sessionHref(session))}"><strong>${escapeHtml(session.name)}</strong><span>${escapeHtml(actsCountLabel(session.counts))}</span></a></li>`).join("")}</ul>
+    </section>`).join("")}`;
 }
 
 export function actsCountLabel(counts) {

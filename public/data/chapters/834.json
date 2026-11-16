@@ -31,11 +31,7 @@
           "(6) All actions involving one or more violations of any state or municipal health, housing, building, electrical, plumbing, fire or sanitation code, including violations occurring in commercial properties, or of any other statute, ordinance or regulation concerned with the health, safety or welfare of any occupant of any housing;",
           "(7) All actions under sections 47a-56a to 47a-59 , inclusive;",
           "(8) All actions for back rent, damages, return of security deposits and other relief arising out of the parties' relationship as landlord and tenant or owner and occupant;",
-          "(9) All other actions of any nature concerning the health, safety or welfare of any occupant of any place used or intended for use as a place of human habitation if any such action arises from or is related to its occupancy or right of occupancy.",
-          "See Sec. 51-51v re appointment of clerks for housing matters.",
-          "See Sec. 51-165 re assignment of judges to hear housing matters.",
-          "See Sec. 51-278(b) re designation of assistant or deputy assistant state's attorneys to handle prosecutions of housing matters.",
-          "See Sec. 51-348 re separate docket for housing matters."
+          "(9) All other actions of any nature concerning the health, safety or welfare of any occupant of any place used or intended for use as a place of human habitation if any such action arises from or is related to its occupancy or right of occupancy."
         ],
         "sourceNotes": [
           "(P.A. 78-365, S. 1, 13; P.A. 80-268, S. 1, 2; P.A. 81-472, S. 87, 159; P.A. 83-510, S. 5, 9; P.A. 87-439, S. 4, 6; P.A. 91-383, S. 23; P.A. 03-202, S. 16; June 12 Sp. Sess. P.A. 12-2, S. 84.)"
@@ -44,6 +40,22 @@
           "History: P.A. 80-268 deleted former Subdiv. (f) which had included “tort claims arising from premises subject to chapter 830” as housing matters, relettering remaining Subdivs. as necessary; P.A. 81-472 made technical changes; P.A. 83-510 made no substantive change; P.A. 87-439 amended Subdiv. (e) by adding reference to Sec. 47-294; P.A. 91-383 amended Subdiv. (e) by adding reference to chapter 412; P.A. 03-202 amended Subdiv. (f) by adding provision re inclusion of violations occurring in commercial properties and making a technical change; June 12 Sp. Sess. P.A. 12-2 substituted Subdiv. designators (1) to (9) for Subdiv. designators (a) to (i) and made a technical change."
         ],
         "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 51-51v re appointment of clerks for housing matters."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 51-165 re assignment of judges to hear housing matters."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 51-278(b) re designation of assistant or deputy assistant state's attorneys to handle prosecutions of housing matters."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 51-348 re separate docket for housing matters."
+          },
           {
             "first": true,
             "text": "Cited. 214 C. 256; 217 C. 57."
@@ -57,7 +69,7 @@
             "text": "Cited. 36 CS 47. Jurisdiction of housing session of Superior Court over prosecutions of state and city building code violations is beyond reproach. Id., 103. Cited. 37 CS 534; Id., 569."
           }
         ],
-        "plainText": "As used in this chapter, sections 51-51v and 51-165 , subsection (b) of section 51-278 and section 51-348 , “housing matters” means:\n\n(1) Summary process;\n\n(2) Appeals from the decisions of a fair rent commission under sections 7-148e and 7-148f ;\n\n(3) Actions and administrative appeals involving discrimination in the sale or rental of residential property;\n\n(4) All actions regarding forcible entry and detainer;\n\n(5) Actions under the provisions of this title, chapter 412 or section 47-294 ;\n\n(6) All actions involving one or more violations of any state or municipal health, housing, building, electrical, plumbing, fire or sanitation code, including violations occurring in commercial properties, or of any other statute, ordinance or regulation concerned with the health, safety or welfare of any occupant of any housing;\n\n(7) All actions under sections 47a-56a to 47a-59 , inclusive;\n\n(8) All actions for back rent, damages, return of security deposits and other relief arising out of the parties' relationship as landlord and tenant or owner and occupant;\n\n(9) All other actions of any nature concerning the health, safety or welfare of any occupant of any place used or intended for use as a place of human habitation if any such action arises from or is related to its occupancy or right of occupancy.\n\nSee Sec. 51-51v re appointment of clerks for housing matters.\n\nSee Sec. 51-165 re assignment of judges to hear housing matters.\n\nSee Sec. 51-278(b) re designation of assistant or deputy assistant state's attorneys to handle prosecutions of housing matters.\n\nSee Sec. 51-348 re separate docket for housing matters."
+        "plainText": "As used in this chapter, sections 51-51v and 51-165 , subsection (b) of section 51-278 and section 51-348 , “housing matters” means:\n\n(1) Summary process;\n\n(2) Appeals from the decisions of a fair rent commission under sections 7-148e and 7-148f ;\n\n(3) Actions and administrative appeals involving discrimination in the sale or rental of residential property;\n\n(4) All actions regarding forcible entry and detainer;\n\n(5) Actions under the provisions of this title, chapter 412 or section 47-294 ;\n\n(6) All actions involving one or more violations of any state or municipal health, housing, building, electrical, plumbing, fire or sanitation code, including violations occurring in commercial properties, or of any other statute, ordinance or regulation concerned with the health, safety or welfare of any occupant of any housing;\n\n(7) All actions under sections 47a-56a to 47a-59 , inclusive;\n\n(8) All actions for back rent, damages, return of security deposits and other relief arising out of the parties' relationship as landlord and tenant or owner and occupant;\n\n(9) All other actions of any nature concerning the health, safety or welfare of any occupant of any place used or intended for use as a place of human habitation if any such action arises from or is related to its occupancy or right of occupancy."
       }
     },
     {
@@ -74,11 +86,7 @@
         "body": [
           "(a) The Chief Court Administrator may appoint such housing mediators as the administrator deems necessary for the purpose of assisting the court in the prompt and efficient hearing of housing matters within the limit of their appropriation therefor. The Chief Court Administrator shall appoint not less than two such mediators for each of the judicial districts of Hartford, New Haven and Bridgeport and may designate one of them in each judicial district as chief housing mediator. The Chief Court Administrator shall also appoint not less than three such housing mediators for all other judicial districts. The housing mediators for the judicial district of New Haven shall assist the court in the hearing of housing matters in the judicial district of Waterbury, the housing mediators for the judicial district of Hartford shall assist the court in the hearing of housing matters in the judicial district of New Britain and the housing mediators for the judicial district of Bridgeport shall assist the court in the hearing of housing matters in the judicial district of Stamford-Norwalk.",
           "(b) Housing mediators shall be knowledgeable in the maintenance, repair and rehabilitation of dwelling units and the federal, state and municipal laws, ordinances, rules and regulations pertaining thereto. Housing mediators shall also have knowledge necessary to advise parties regarding the type of funds and services available to assist owners, landlords and tenants in the financing of resolutions to housing problems. Housing mediators shall make inspections and conduct investigations at the request of the court, shall advise parties in locating possible sources of financial assistance necessary to comply with orders of the court and shall exercise such other powers and perform such other duties as the judge may from time to time prescribe.",
-          "(c) Housing mediators (1) shall be responsible for the initial screening and evaluation of all contested housing matters eligible for placement on the housing docket pursuant to section 47a-68 , (2) may conduct investigations of such matters including, but not limited to, interviews with the parties, and (3) may recommend settlements.",
-          "See Sec. 51-51v re appointment of clerks for housing matters.",
-          "See Sec. 51-165 re assignment of judges to hear housing matters.",
-          "See Sec. 51-278(b) re designation of assistant or deputy assistant state's attorneys to handle prosecutions of housing matters.",
-          "See Sec. 51-348 re separate docket for housing matters."
+          "(c) Housing mediators (1) shall be responsible for the initial screening and evaluation of all contested housing matters eligible for placement on the housing docket pursuant to section 47a-68 , (2) may conduct investigations of such matters including, but not limited to, interviews with the parties, and (3) may recommend settlements."
         ],
         "sourceNotes": [
           "(P.A. 78-365, S. 2, 13; P.A. 80-448, S. 1, 8; P.A. 81-419, S. 1, 11; P.A. 82-461, S. 1, 15; P.A. 87-351, S. 1, 2; P.A. 88-230, S. 3, 12; P.A. 90-98, S. 1, 2; P.A. 93-142, S. 7, 8; P.A. 95-220, S. 4–6; P.A. 10-43, S. 14; P.A. 23-46, S. 35; P.A. 24-108, S. 9.)"
@@ -89,10 +97,26 @@
         "annotations": [
           {
             "first": true,
+            "text": "See Sec. 51-51v re appointment of clerks for housing matters."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 51-165 re assignment of judges to hear housing matters."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 51-278(b) re designation of assistant or deputy assistant state's attorneys to handle prosecutions of housing matters."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 51-348 re separate docket for housing matters."
+          },
+          {
+            "first": true,
             "text": "Cited. 225 C. 757."
           }
         ],
-        "plainText": "(a) The Chief Court Administrator may appoint such housing mediators as the administrator deems necessary for the purpose of assisting the court in the prompt and efficient hearing of housing matters within the limit of their appropriation therefor. The Chief Court Administrator shall appoint not less than two such mediators for each of the judicial districts of Hartford, New Haven and Bridgeport and may designate one of them in each judicial district as chief housing mediator. The Chief Court Administrator shall also appoint not less than three such housing mediators for all other judicial districts. The housing mediators for the judicial district of New Haven shall assist the court in the hearing of housing matters in the judicial district of Waterbury, the housing mediators for the judicial district of Hartford shall assist the court in the hearing of housing matters in the judicial district of New Britain and the housing mediators for the judicial district of Bridgeport shall assist the court in the hearing of housing matters in the judicial district of Stamford-Norwalk.\n\n(b) Housing mediators shall be knowledgeable in the maintenance, repair and rehabilitation of dwelling units and the federal, state and municipal laws, ordinances, rules and regulations pertaining thereto. Housing mediators shall also have knowledge necessary to advise parties regarding the type of funds and services available to assist owners, landlords and tenants in the financing of resolutions to housing problems. Housing mediators shall make inspections and conduct investigations at the request of the court, shall advise parties in locating possible sources of financial assistance necessary to comply with orders of the court and shall exercise such other powers and perform such other duties as the judge may from time to time prescribe.\n\n(c) Housing mediators (1) shall be responsible for the initial screening and evaluation of all contested housing matters eligible for placement on the housing docket pursuant to section 47a-68 , (2) may conduct investigations of such matters including, but not limited to, interviews with the parties, and (3) may recommend settlements.\n\nSee Sec. 51-51v re appointment of clerks for housing matters.\n\nSee Sec. 51-165 re assignment of judges to hear housing matters.\n\nSee Sec. 51-278(b) re designation of assistant or deputy assistant state's attorneys to handle prosecutions of housing matters.\n\nSee Sec. 51-348 re separate docket for housing matters."
+        "plainText": "(a) The Chief Court Administrator may appoint such housing mediators as the administrator deems necessary for the purpose of assisting the court in the prompt and efficient hearing of housing matters within the limit of their appropriation therefor. The Chief Court Administrator shall appoint not less than two such mediators for each of the judicial districts of Hartford, New Haven and Bridgeport and may designate one of them in each judicial district as chief housing mediator. The Chief Court Administrator shall also appoint not less than three such housing mediators for all other judicial districts. The housing mediators for the judicial district of New Haven shall assist the court in the hearing of housing matters in the judicial district of Waterbury, the housing mediators for the judicial district of Hartford shall assist the court in the hearing of housing matters in the judicial district of New Britain and the housing mediators for the judicial district of Bridgeport shall assist the court in the hearing of housing matters in the judicial district of Stamford-Norwalk.\n\n(b) Housing mediators shall be knowledgeable in the maintenance, repair and rehabilitation of dwelling units and the federal, state and municipal laws, ordinances, rules and regulations pertaining thereto. Housing mediators shall also have knowledge necessary to advise parties regarding the type of funds and services available to assist owners, landlords and tenants in the financing of resolutions to housing problems. Housing mediators shall make inspections and conduct investigations at the request of the court, shall advise parties in locating possible sources of financial assistance necessary to comply with orders of the court and shall exercise such other powers and perform such other duties as the judge may from time to time prescribe.\n\n(c) Housing mediators (1) shall be responsible for the initial screening and evaluation of all contested housing matters eligible for placement on the housing docket pursuant to section 47a-68 , (2) may conduct investigations of such matters including, but not limited to, interviews with the parties, and (3) may recommend settlements."
       }
     },
     {
@@ -108,11 +132,7 @@
       "content": {
         "body": [
           "(a) All proceedings involving a housing matter in the judicial district of Hartford, New Britain, New Haven, Bridgeport, Waterbury or Stamford-Norwalk shall first be placed on the housing docket for that district, provided the judge before whom such proceeding is brought may transfer such matter to the regular docket for a judicial district if he determines that such matter is not a housing matter or that such docket is more suitable for the disposition of the case. Any case so entered or transferred to either docket shall be proceeded upon as are other cases of like nature standing on such docket.",
-          "(b) If two or more actions are pending between the same parties, including for the purposes hereof any other court proceedings arising out of or connected with the same housing accommodation, of which one or more of such actions is on the housing docket and one or more of such actions is on some other docket, the judge handling such other docket, upon motion of any party to any of such actions, may order that the action pending on such docket, with all papers relating thereto, be transferred to the housing docket; and such action or actions shall thereafter proceed as though originally entered there.",
-          "See Sec. 51-51v re appointment of clerks for housing matters.",
-          "See Sec. 51-165 re assignment of judges to hear housing matters.",
-          "See Sec. 51-278(b) re designation of assistant or deputy assistant state's attorneys to prosecute housing matters.",
-          "See Sec. 51-348 re separate docket for housing matters."
+          "(b) If two or more actions are pending between the same parties, including for the purposes hereof any other court proceedings arising out of or connected with the same housing accommodation, of which one or more of such actions is on the housing docket and one or more of such actions is on some other docket, the judge handling such other docket, upon motion of any party to any of such actions, may order that the action pending on such docket, with all papers relating thereto, be transferred to the housing docket; and such action or actions shall thereafter proceed as though originally entered there."
         ],
         "sourceNotes": [
           "(P.A. 78-365, S. 6, 13; P.A. 81-419, S. 2; P.A. 82-461, S. 2; P.A. 88-230, S. 4, 12; P.A. 90-98, S. 1, 2; P.A. 93-142, S. 7, 8; P.A. 95-220, S. 4–6; P.A. 17-99, S. 6; P.A. 23-46, S. 36.)"
@@ -123,6 +143,22 @@
         "annotations": [
           {
             "first": true,
+            "text": "See Sec. 51-51v re appointment of clerks for housing matters."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 51-165 re assignment of judges to hear housing matters."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 51-278(b) re designation of assistant or deputy assistant state's attorneys to prosecute housing matters."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 51-348 re separate docket for housing matters."
+          },
+          {
+            "first": true,
             "text": "Cited. 214 C. 256; 217 C. 57."
           },
           {
@@ -130,7 +166,7 @@
             "text": "Housing judge has the discretion to transfer to regular civil docket a summary process action which because of its complexity would formerly have been outside the ambit of summary process. 1 CA 439."
           }
         ],
-        "plainText": "(a) All proceedings involving a housing matter in the judicial district of Hartford, New Britain, New Haven, Bridgeport, Waterbury or Stamford-Norwalk shall first be placed on the housing docket for that district, provided the judge before whom such proceeding is brought may transfer such matter to the regular docket for a judicial district if he determines that such matter is not a housing matter or that such docket is more suitable for the disposition of the case. Any case so entered or transferred to either docket shall be proceeded upon as are other cases of like nature standing on such docket.\n\n(b) If two or more actions are pending between the same parties, including for the purposes hereof any other court proceedings arising out of or connected with the same housing accommodation, of which one or more of such actions is on the housing docket and one or more of such actions is on some other docket, the judge handling such other docket, upon motion of any party to any of such actions, may order that the action pending on such docket, with all papers relating thereto, be transferred to the housing docket; and such action or actions shall thereafter proceed as though originally entered there.\n\nSee Sec. 51-51v re appointment of clerks for housing matters.\n\nSee Sec. 51-165 re assignment of judges to hear housing matters.\n\nSee Sec. 51-278(b) re designation of assistant or deputy assistant state's attorneys to prosecute housing matters.\n\nSee Sec. 51-348 re separate docket for housing matters."
+        "plainText": "(a) All proceedings involving a housing matter in the judicial district of Hartford, New Britain, New Haven, Bridgeport, Waterbury or Stamford-Norwalk shall first be placed on the housing docket for that district, provided the judge before whom such proceeding is brought may transfer such matter to the regular docket for a judicial district if he determines that such matter is not a housing matter or that such docket is more suitable for the disposition of the case. Any case so entered or transferred to either docket shall be proceeded upon as are other cases of like nature standing on such docket.\n\n(b) If two or more actions are pending between the same parties, including for the purposes hereof any other court proceedings arising out of or connected with the same housing accommodation, of which one or more of such actions is on the housing docket and one or more of such actions is on some other docket, the judge handling such other docket, upon motion of any party to any of such actions, may order that the action pending on such docket, with all papers relating thereto, be transferred to the housing docket; and such action or actions shall thereafter proceed as though originally entered there."
       }
     },
     {
@@ -192,11 +228,7 @@
       "content": {
         "body": [
           "(a) The council shall from time to time view the housing docket proceedings and review the manner in which the housing docket is functioning, consult with the judges assigned to housing matters and the Chief Court Administrator and assist them in such manner as is appropriate, assist in making the public aware of the existence of the housing docket, receive comments from the general public about the handling of housing matters, and make such recommendations as it may choose. The council shall meet as a full body at least two times a year and on such additional occasions as it may require. The council may divide itself into subcommittees as it deems appropriate. The council may submit its recommendations concerning housing matters to the Chief Court Administrator, to any judge hearing housing matters and to the General Assembly. Members of the council shall receive no compensation and, notwithstanding the provisions of section 4-1 , shall not receive their actual and necessary expenses incurred in the performance of their official duties.",
-          "(b) The council may recommend to the Governor and to the Chief Court Administrator the names of persons it believes to be suitable for appointment or assignment to hear housing matters in any judicial district for which a special housing session has been established, pursuant to subsection (a) of section 47a-70 .",
-          "See Sec. 51-51v re appointment of clerks for housing matters.",
-          "See Sec. 51-165 re assignment of judges to hear housing matters.",
-          "See Sec. 51-278(b) re designation of assistant or deputy assistant state's attorneys to prosecute housing matters.",
-          "See Sec. 51-348 re separate docket for housing matters."
+          "(b) The council may recommend to the Governor and to the Chief Court Administrator the names of persons it believes to be suitable for appointment or assignment to hear housing matters in any judicial district for which a special housing session has been established, pursuant to subsection (a) of section 47a-70 ."
         ],
         "sourceNotes": [
           "(P.A. 78-365, S. 8, 13; P.A. 81-419, S. 4, 11; P.A. 83-497, S. 3.)"
@@ -204,8 +236,25 @@
         "history": [
           "History: P.A. 81-419 deleted a reference to the judicial district of Hartford-New Britain, changed “the” council to “each” council and made certain other changes to reflect the creation of an additional council pursuant to Sec. 47a-71; P.A. 83-497 amended section to reflect establishment of single council pursuant to Sec. 47a-71a in place of the former three separate councils, required the council to meet as a full body at least two times a year and authorized the council to divide itself into subcommittees and to submit its recommendations to the general assembly."
         ],
-        "annotations": [],
-        "plainText": "(a) The council shall from time to time view the housing docket proceedings and review the manner in which the housing docket is functioning, consult with the judges assigned to housing matters and the Chief Court Administrator and assist them in such manner as is appropriate, assist in making the public aware of the existence of the housing docket, receive comments from the general public about the handling of housing matters, and make such recommendations as it may choose. The council shall meet as a full body at least two times a year and on such additional occasions as it may require. The council may divide itself into subcommittees as it deems appropriate. The council may submit its recommendations concerning housing matters to the Chief Court Administrator, to any judge hearing housing matters and to the General Assembly. Members of the council shall receive no compensation and, notwithstanding the provisions of section 4-1 , shall not receive their actual and necessary expenses incurred in the performance of their official duties.\n\n(b) The council may recommend to the Governor and to the Chief Court Administrator the names of persons it believes to be suitable for appointment or assignment to hear housing matters in any judicial district for which a special housing session has been established, pursuant to subsection (a) of section 47a-70 .\n\nSee Sec. 51-51v re appointment of clerks for housing matters.\n\nSee Sec. 51-165 re assignment of judges to hear housing matters.\n\nSee Sec. 51-278(b) re designation of assistant or deputy assistant state's attorneys to prosecute housing matters.\n\nSee Sec. 51-348 re separate docket for housing matters."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 51-51v re appointment of clerks for housing matters."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 51-165 re assignment of judges to hear housing matters."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 51-278(b) re designation of assistant or deputy assistant state's attorneys to prosecute housing matters."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 51-348 re separate docket for housing matters."
+          }
+        ],
+        "plainText": "(a) The council shall from time to time view the housing docket proceedings and review the manner in which the housing docket is functioning, consult with the judges assigned to housing matters and the Chief Court Administrator and assist them in such manner as is appropriate, assist in making the public aware of the existence of the housing docket, receive comments from the general public about the handling of housing matters, and make such recommendations as it may choose. The council shall meet as a full body at least two times a year and on such additional occasions as it may require. The council may divide itself into subcommittees as it deems appropriate. The council may submit its recommendations concerning housing matters to the Chief Court Administrator, to any judge hearing housing matters and to the General Assembly. Members of the council shall receive no compensation and, notwithstanding the provisions of section 4-1 , shall not receive their actual and necessary expenses incurred in the performance of their official duties.\n\n(b) The council may recommend to the Governor and to the Chief Court Administrator the names of persons it believes to be suitable for appointment or assignment to hear housing matters in any judicial district for which a special housing session has been established, pursuant to subsection (a) of section 47a-70 ."
       }
     },
     {
@@ -220,11 +269,7 @@
       "status": "active",
       "content": {
         "body": [
-          "The judges hearing housing matters and the Connecticut Advisory Council on Housing Matters shall each submit a report, in accordance with the provisions of section 11-4a , with respect to the operation of the special docket for housing matters and their respective recommendations to the General Assembly at the opening of its regular sessions in the odd-numbered years. Such reports may also include recommendations for legislation with respect to housing matters.",
-          "See Sec. 51-51v re appointment of clerks for housing matters.",
-          "See Sec. 51-165 re assignment of judges to hear housing matters.",
-          "See Sec. 51-278(b) re designation of assistant or deputy assistant state's attorneys to prosecute housing matters.",
-          "See Sec. 51-348 re separate docket for housing matters."
+          "The judges hearing housing matters and the Connecticut Advisory Council on Housing Matters shall each submit a report, in accordance with the provisions of section 11-4a , with respect to the operation of the special docket for housing matters and their respective recommendations to the General Assembly at the opening of its regular sessions in the odd-numbered years. Such reports may also include recommendations for legislation with respect to housing matters."
         ],
         "sourceNotes": [
           "(P.A. 78-365, S. 9, 13; P.A. 80-448, S. 3, 8; P.A. 81-419, S. 5; P.A. 82-461, S. 4; P.A. 83-497, S. 4; P.A. 13-299, S. 36; P.A. 14-4, S. 2.)"
@@ -232,8 +277,25 @@
         "history": [
           "History: P.A. 80-448 substituted “reports” for “report” and changed report deadline from February, 1980, to January, 1981; P.A. 81-419 deleted a specific reference to the judicial district of Hartford-New Britain, referring instead to housing dockets and advisory councils for judicial districts in general, deleted a requirement that the reports contain recommendations concerning the hearing of housing matters in other judicial districts, and replaced the requirement that reports be made by January, 1981 with a new reporting date of January, 1983; P.A. 82-461 required the judge and citizens advisory council for the Fairfield judicial district to make their reports in January, 1984; P.A. 83-497 amended section to reflect establishment of single advisory council pursuant to Sec. 47a-71a in place of the former three separate councils; P.A. 13-299 replaced reference to Citizens Advisory Council with reference to the Advisory Council to the Superior Court Housing Session, effective July 1, 2013; P.A. 14-4 replaced reference to Advisory Council to the Superior Court Housing Session with reference to Connecticut Advisory Council on Housing Matters, made a technical change and added reference to Sec. 11-4a, effective July 1, 2014."
         ],
-        "annotations": [],
-        "plainText": "The judges hearing housing matters and the Connecticut Advisory Council on Housing Matters shall each submit a report, in accordance with the provisions of section 11-4a , with respect to the operation of the special docket for housing matters and their respective recommendations to the General Assembly at the opening of its regular sessions in the odd-numbered years. Such reports may also include recommendations for legislation with respect to housing matters.\n\nSee Sec. 51-51v re appointment of clerks for housing matters.\n\nSee Sec. 51-165 re assignment of judges to hear housing matters.\n\nSee Sec. 51-278(b) re designation of assistant or deputy assistant state's attorneys to prosecute housing matters.\n\nSee Sec. 51-348 re separate docket for housing matters."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 51-51v re appointment of clerks for housing matters."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 51-165 re assignment of judges to hear housing matters."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 51-278(b) re designation of assistant or deputy assistant state's attorneys to prosecute housing matters."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 51-348 re separate docket for housing matters."
+          }
+        ],
+        "plainText": "The judges hearing housing matters and the Connecticut Advisory Council on Housing Matters shall each submit a report, in accordance with the provisions of section 11-4a , with respect to the operation of the special docket for housing matters and their respective recommendations to the General Assembly at the opening of its regular sessions in the odd-numbered years. Such reports may also include recommendations for legislation with respect to housing matters."
       }
     },
     {
@@ -248,11 +310,7 @@
       "status": "active",
       "content": {
         "body": [
-          "The judges of the Superior Court may adopt such rules of practice and procedure not inconsistent with the general statutes to implement the provisions of this chapter and section 51-51v , 51-165 , 51-348 and subsection (b) of section 51-278 .",
-          "See Sec. 51-51v re appointment of clerks for housing matters.",
-          "See Sec. 51-165 re assignment of judges to hear housing matters.",
-          "See Sec. 51-278(b) re designation of assistant or deputy assistant state's attorneys to prosecute housing matters.",
-          "See Sec. 51-348 re separate docket for housing matters."
+          "The judges of the Superior Court may adopt such rules of practice and procedure not inconsistent with the general statutes to implement the provisions of this chapter and section 51-51v , 51-165 , 51-348 and subsection (b) of section 51-278 ."
         ],
         "sourceNotes": [
           "(P.A. 78-365, S. 11, 13; P.A. 81-472, S. 88, 159.)"
@@ -260,8 +318,25 @@
         "history": [
           "History: P.A. 81-472 made technical changes."
         ],
-        "annotations": [],
-        "plainText": "The judges of the Superior Court may adopt such rules of practice and procedure not inconsistent with the general statutes to implement the provisions of this chapter and section 51-51v , 51-165 , 51-348 and subsection (b) of section 51-278 .\n\nSee Sec. 51-51v re appointment of clerks for housing matters.\n\nSee Sec. 51-165 re assignment of judges to hear housing matters.\n\nSee Sec. 51-278(b) re designation of assistant or deputy assistant state's attorneys to prosecute housing matters.\n\nSee Sec. 51-348 re separate docket for housing matters."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 51-51v re appointment of clerks for housing matters."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 51-165 re assignment of judges to hear housing matters."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 51-278(b) re designation of assistant or deputy assistant state's attorneys to prosecute housing matters."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 51-348 re separate docket for housing matters."
+          }
+        ],
+        "plainText": "The judges of the Superior Court may adopt such rules of practice and procedure not inconsistent with the general statutes to implement the provisions of this chapter and section 51-51v , 51-165 , 51-348 and subsection (b) of section 51-278 ."
       }
     },
     {

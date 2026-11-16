@@ -44,8 +44,7 @@
       "status": "active",
       "content": {
         "body": [
-          "No judge, except a judge of probate, shall hold the office of constable.",
-          "See Sec. 29-154c re prohibition against licensure of constable as private detective, watchman, security guard, etc."
+          "No judge, except a judge of probate, shall hold the office of constable."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 605; 1953, S. 243d; P.A. 82-11, S. 10, 12.)"
@@ -53,8 +52,13 @@
         "history": [
           "History: P.A. 82-11 deleted the prohibition against a justice of the peace being a constable."
         ],
-        "annotations": [],
-        "plainText": "No judge, except a judge of probate, shall hold the office of constable.\n\nSee Sec. 29-154c re prohibition against licensure of constable as private detective, watchman, security guard, etc."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 29-154c re prohibition against licensure of constable as private detective, watchman, security guard, etc."
+          }
+        ],
+        "plainText": "No judge, except a judge of probate, shall hold the office of constable."
       }
     },
     {
@@ -120,8 +124,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Any constable, when necessary, may command any person to assist him in the execution of the duties of his office.",
-          "See Sec. 53a-167b re penalty for failure to assist peace officer."
+          "Any constable, when necessary, may command any person to assist him in the execution of the duties of his office."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 607.)"
@@ -130,10 +133,14 @@
         "annotations": [
           {
             "first": true,
+            "text": "See Sec. 53a-167b re penalty for failure to assist peace officer."
+          },
+          {
+            "first": true,
             "text": "One may lawfully assist an officer de facto who he believes is an officer de jure. 46 C. 218. Cited. 217 C. 73."
           }
         ],
-        "plainText": "Any constable, when necessary, may command any person to assist him in the execution of the duties of his office.\n\nSee Sec. 53a-167b re penalty for failure to assist peace officer."
+        "plainText": "Any constable, when necessary, may command any person to assist him in the execution of the duties of his office."
       }
     },
     {
@@ -236,46 +243,6 @@
         "history": [],
         "annotations": [],
         "plainText": "Any town, city or borough, in addition to such powers as it has under the provisions of the general statutes or of any special act, is authorized to make appropriations to pay for the services of constables, special constables and other officers."
-      }
-    },
-    {
-      "id": "section-7-93",
-      "kind": "section",
-      "citation": "7-93",
-      "citations": [
-        "7-93"
-      ],
-      "heading": "7-93",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_095.htm#sec_7-93",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 7-93 to 7-96. Special constables for manufacturing and retail establishments and parking areas and for certain societies. School janitors and janitors of public buildings as special constables. Sections 7-93 to 7-96 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 7-93 to 7-96. Special constables for manufacturing and retail establishments and parking areas and for certain societies. School janitors and janitors of public buildings as special constables. Sections 7-93 to 7-96 , inclusive, are repealed."
-      }
-    },
-    {
-      "id": "section-7-96",
-      "kind": "section",
-      "citation": "7-96",
-      "citations": [
-        "7-96"
-      ],
-      "heading": "7-96",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_095.htm#sec_7-96",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 7-93 to 7-96. Special constables for manufacturing and retail establishments and parking areas and for certain societies. School janitors and janitors of public buildings as special constables. Sections 7-93 to 7-96 , inclusive, are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 7-93 to 7-96. Special constables for manufacturing and retail establishments and parking areas and for certain societies. School janitors and janitors of public buildings as special constables. Sections 7-93 to 7-96 , inclusive, are repealed."
       }
     }
   ]

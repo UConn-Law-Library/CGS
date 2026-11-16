@@ -140,9 +140,11 @@ export function findActMatches(sessions, query, limit = 3) {
 export function actSearchLinks(sessions, query) {
   const value = String(query ?? "").trim();
   if (!value) return [];
-  return sessions.flatMap(({ entry, acts, index }, order) => {
+  // Each link names its session: the list's default is the newest session the statute text does
+  // not cover yet, which may not be this one.
+  return sessions.flatMap(({ entry, acts, index }) => {
     const count = filterActs(acts, { query: value }, matchActText(index, value)).length;
-    return count ? [{ session: entry, count, href: actsRouteHref({ session: order ? entry.id : null, query: value }) }] : [];
+    return count ? [{ session: entry, count, href: actsRouteHref({ session: entry.id, query: value }) }] : [];
   });
 }
 

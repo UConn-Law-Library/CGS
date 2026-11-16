@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import { existsSync } from "node:fs";
 import { cp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { generateDiscovery } from "./lib/discovery.mjs";
@@ -11,6 +12,7 @@ import { buildRepositoryMap } from "./lib/build-repository-map.mjs";
 import { generateActAmendments } from "./lib/act-amendments-artifact.mjs";
 import { generateIndexHeadings } from "./lib/index-headings.mjs";
 import { generateDataRelease } from "./lib/data-release.mjs";
+import { buildEditions } from "./lib/editions-build.mjs";
 import { PRODUCTION_SITE_URL, applyPreviewNamespace, applyPreviewNoindex } from "./lib/preview-build.mjs";
 
 const root = process.cwd();
@@ -19,6 +21,15 @@ await rm(output, { recursive: true, force: true });
 await mkdir(output, { recursive: true });
 await cp(path.join(root, "src"), output, { recursive: true });
 await cp(path.join(root, "public"), output, { recursive: true });
+// Browser tests serve a rehearsal archive this way; production builds never pass it.
+const editionsOverlayIndex = process.argv.indexOf("--editions-overlay");
+if (editionsOverlayIndex !== -1) {
+  // Only archived editions; the site keeps its own reviewed list of published editions.
+  for (const kind of ["statutes", "secondary"]) {
+    const source = path.resolve(process.argv[editionsOverlayIndex + 1], kind);
+    if (existsSync(source)) await cp(source, path.join(output, "data", "editions", kind), { recursive: true });
+  }
+}
 const preview = process.env.CGS_PREVIEW_BUILD === "true";
 if (preview) {
   await applyPreviewNamespace(output);
@@ -53,6 +64,7 @@ const indexHeadings = await generateIndexHeadings({
   indexDir: path.join(dataDirectory, "secondary", "statutes-index"),
   outputFile: path.join(output, "data", "index-headings.json")
 });
+const editions = await buildEditions({ dataDir: path.join(output, "data"), generatedAt: catalog.generatedAt });
 const dataRelease = await generateDataRelease(path.join(output, "data"));
 const loaderPath = path.join(output, "data-loader.js");
 await writeFile(loaderPath, (await readFile(loaderPath, "utf8")).replaceAll("__CGS_DATA_RELEASE_ID__", dataRelease.id));
@@ -64,7 +76,7 @@ const buildId = await stampServiceWorker(output, undefined, {
 });
 const repositoryMap = await buildRepositoryMap({ root, output });
 if (preview) await applyPreviewNoindex(output);
-console.log(`Built static site ${appVersion} at ${output} with ${discovery.pages} indexed URLs, ${supplementIndex.editions.length} supplement editions, ${searchV2.counts.documents} extended search documents, ${actAmendments.counts.citations} sections amended by listed acts, ${indexHeadings.count} index headings, ${repositoryMap.diagrams} repository map diagrams, and PWA build ${buildId}`);
+console.log(`Built static site ${appVersion} at ${output} with ${discovery.pages} indexed URLs, ${supplementIndex.editions.length} supplement editions, ${searchV2.counts.documents} extended search documents, ${actAmendments.counts.citations} sections amended by listed acts, ${indexHeadings.count} index headings, ${editions.statutes.length} archived statute editions, ${repositoryMap.diagrams} repository map diagrams, and PWA build ${buildId}`);
 
 // Without hints the browser finds each module only after parsing the one that imports it, and
 // the catalog only after every module has run. Preloading them from index.html lets the whole

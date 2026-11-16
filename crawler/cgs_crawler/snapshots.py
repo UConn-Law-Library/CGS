@@ -4,6 +4,7 @@ import hashlib
 import json
 import os
 import tempfile
+import time
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Dict, Optional
@@ -104,7 +105,15 @@ class SnapshotStore:
         try:
             with os.fdopen(fd, mode) as handle:
                 handle.write(value)
-            os.replace(temporary, path)
+            # On Windows a virus scanner or indexer can briefly hold the file being replaced.
+            for attempt in range(8):
+                try:
+                    os.replace(temporary, path)
+                    break
+                except PermissionError:
+                    if os.name != "nt" or attempt == 7:
+                        raise
+                    time.sleep(0.05 * (attempt + 1))
         finally:
             if os.path.exists(temporary):
                 os.remove(temporary)

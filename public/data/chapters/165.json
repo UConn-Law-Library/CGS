@@ -11,11 +11,13 @@
   "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_165.htm",
   "sections": [
     {
-      "id": "group-10-117-to-10-119a",
+      "id": "group-10-117-to-10-118-to-10-119-to-10-119a",
       "kind": "group",
       "citation": null,
       "citations": [
         "10-117",
+        "10-118",
+        "10-119",
         "10-119a"
       ],
       "heading": "Secs. 10-117 to 10-119a.",
@@ -147,11 +149,20 @@
       }
     },
     {
-      "id": "group-10-132-to-10-141i",
+      "id": "group-10-132-to-10-133-to-10-134-to-10-135-to-10-136-to-10-137-to-10-138-to-10-139-to-10-140-to-10-141-to-10-141i",
       "kind": "group",
       "citation": null,
       "citations": [
         "10-132",
+        "10-133",
+        "10-134",
+        "10-135",
+        "10-136",
+        "10-137",
+        "10-138",
+        "10-139",
+        "10-140",
+        "10-141",
         "10-141i"
       ],
       "heading": "Secs. 10-132 to 10-141i.",
@@ -211,11 +222,13 @@
       }
     },
     {
-      "id": "group-10-142-to-10-144c",
+      "id": "group-10-142-to-10-143-to-10-144-to-10-144c",
       "kind": "group",
       "citation": null,
       "citations": [
         "10-142",
+        "10-143",
+        "10-144",
         "10-144c"
       ],
       "heading": "Secs. 10-142 to 10-144c.",
@@ -313,46 +326,6 @@
         "history": [],
         "annotations": [],
         "plainText": "Reserved for future use."
-      }
-    },
-    {
-      "id": "section-10-121",
-      "kind": "section",
-      "citation": "10-121",
-      "citations": [
-        "10-121"
-      ],
-      "heading": "10-121",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_165.htm#sec_10-121",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 10-121 and 10-122. Gifts to university. Appointment and compensation of professional staff. Sections 10-121 and 10-122 are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 10-121 and 10-122. Gifts to university. Appointment and compensation of professional staff. Sections 10-121 and 10-122 are repealed."
-      }
-    },
-    {
-      "id": "section-10-122",
-      "kind": "section",
-      "citation": "10-122",
-      "citations": [
-        "10-122"
-      ],
-      "heading": "10-122",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_165.htm#sec_10-122",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 10-121 and 10-122. Gifts to university. Appointment and compensation of professional staff. Sections 10-121 and 10-122 are repealed."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 10-121 and 10-122. Gifts to university. Appointment and compensation of professional staff. Sections 10-121 and 10-122 are repealed."
       }
     }
   ]

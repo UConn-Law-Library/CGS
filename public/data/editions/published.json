@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.0.0",
+  "editions": [
+    {
+      "year": 2023,
+      "kind": "revision",
+      "url": "https://www.cga.ct.gov/2023/pub/titles.htm"
+    },
+    {
+      "year": 2024,
+      "kind": "supplement",
+      "url": "https://www.cga.ct.gov/2024/sup/titles.htm"
+    },
+    {
+      "year": 2025,
+      "kind": "revision",
+      "url": "https://www.cga.ct.gov/2025/pub/titles.htm"
+    },
+    {
+      "year": 2026,
+      "kind": "supplement",
+      "url": "https://www.cga.ct.gov/2026/sup/titles.htm"
+    }
+  ]
+}

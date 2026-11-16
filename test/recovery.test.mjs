@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { retryableLoader } from "../src/data-loader.js";
+import { DATA_RELEASE_CHANGED_EVENT, checkDataResponse, isDataReleaseChanged, retryableLoader } from "../src/data-loader.js";
 import { DeviceState } from "../src/device-state.js";
 import { QuickSearchRepository } from "../src/quick-search.js";
 import { ProgressiveSearchClient } from "../src/search-client.js";
@@ -59,4 +59,28 @@ test("additional result batches reuse the completed search and changed queries r
   assert.equal(scans, 1);
   await client.search("records");
   assert.equal(scans, 2);
+});
+
+test("a request refused for an older data release is reported as a release change", () => {
+  const events = [];
+  const listener = (event) => events.push(event.type);
+  const target = new EventTarget();
+  const original = globalThis.dispatchEvent;
+  globalThis.dispatchEvent = (event) => target.dispatchEvent(event);
+  target.addEventListener(DATA_RELEASE_CHANGED_EVENT, listener);
+  try {
+    assert.throws(() => checkDataResponse(new Response("", { status: 409 }), "chapters/001.json"), (error) => {
+      assert.equal(error.name, "DataReleaseChangedError");
+      assert.ok(isDataReleaseChanged(error));
+      // The message alone identifies it after crossing a worker boundary.
+      assert.ok(isDataReleaseChanged(new Error(error.message)));
+      return true;
+    });
+    assert.deepEqual(events, [DATA_RELEASE_CHANGED_EVENT]);
+    assert.throws(() => checkDataResponse(new Response("", { status: 503 }), "chapters/001.json"), /Could not load chapters\/001\.json \(503\)/);
+    assert.equal(isDataReleaseChanged(new Error("Could not load chapters/001.json (503)")), false);
+    assert.equal(events.length, 1);
+  } finally {
+    globalThis.dispatchEvent = original;
+  }
 });

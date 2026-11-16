@@ -22,8 +22,7 @@
       "status": "active",
       "content": {
         "body": [
-          "The action of replevin may be maintained to recover any goods or chattels in which the plaintiff has a general or special property interest with a right to immediate possession and which are wrongfully detained from him in any manner, together with the damages for such wrongful detention.",
-          "See Sec. 42a-2-716(3) re goods identified to sales contract."
+          "The action of replevin may be maintained to recover any goods or chattels in which the plaintiff has a general or special property interest with a right to immediate possession and which are wrongfully detained from him in any manner, together with the damages for such wrongful detention."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 8251; P.A. 82-160, S. 202.)"
@@ -34,6 +33,10 @@
         "annotations": [
           {
             "first": true,
+            "text": "See Sec. 42a-2-716(3) re goods identified to sales contract."
+          },
+          {
+            "first": true,
             "text": "Replevin is governed by statute rather than by rules of the common-law action of the same name. 66 C. 547. Action of replevin examined and explained. 14 C. 114. Review of various changes in legislation. 38 C. 249. If cattle lawfully impounded are unlawfully detained by the poundkeeper, the impounder is not liable in this action. 24 C. 361. Prior to 1875 revision, replevin would not lie for property taken on execution; 39 C. 213; 41 C. 321; 44 C. 176, 177; but statute, as then revised, embraces chattels held on an execution. 49 C. 112, 113. Right to immediate possession was necessary at common law; 42 C. 76; 60 C. 465; otherwise by statute. 42 C. 76. When previous demand unnecessary. 42 C. 425; 86 C. 372; 105 C. 677. Replevin is maintainable by a receiptor of goods attached. 45 C. 109. Not maintainable by purchaser of stolen goods against officer holding them for identification. Id., 548. Replevin does not lie for liquors seized for condemnation; 48 C. 200; nor for liquors kept to be sold in violation of law. 49 C. 164. Effect of acquiring right to the property pending suit. 51 C. 176. Lies only for specific, distinguishable property. 54 C. 318. When money is not repleviable. 66 C. 511. Lies to recover liquor license; 74 C. 392; to recover goods fraudulently obtained. 73 C. 547. Does not lie to recover real fixture; 75 C. 170; nor can mortgagee out of possession recover fixture severed by mortgagor. 72 C. 464. It does not lie where possession was originally secured lawfully and has not become unlawful. 83 C. 159. Lies against several where one defendant refuses delivery and others claim under him; 77 C. 462; but not where each claims different portion of goods. 86 C. 372. Bringing of action by seller of goods as rescission of sale; proof of claim in bankruptcy for part of goods sold as defense to replevin of rest. 91 C. 482. Quaere, whether writ lies for goods already held under another replevin writ. Id., 320. Effect of abandonment of replevin action. 99 C. 265. Defendant not entitled to damages unless he counterclaims; amount of damages. 101 C. 60. Demand unnecessary where conditional vendor has right to immediate possession. 105 C. 677. Owner entitled to damages for loss of use of automobile wrongfully replevied. 108 C. 526. Verdict set aside for refusal to award any damages; and for awarding excessive damages. 100 C. 97, 99. Plaintiff must rely on strength of his title rather than weakness of defendant's and must prove a right to immediate possession. 135 C. 517. Power of sale gives chattel mortgagee a right of general property and replevin lies. 137 C. 145. Depreciation in value during period of detention is proper element of damages, but right to such damages ceases on termination of the detention. 152 C. 695. Plaintiff did not, as a matter of statutory law, have right to immediate personal possession of pathology slides. 246 C. 45."
           },
           {
@@ -41,7 +44,7 @@
             "text": "Court lacked a legal basis on which to grant opportunity to redeem, repurchase or bond goods or chattels subject to replevin because an action of replevin is purely statutory, not equitable, in nature. 105 CA 749."
           }
         ],
-        "plainText": "The action of replevin may be maintained to recover any goods or chattels in which the plaintiff has a general or special property interest with a right to immediate possession and which are wrongfully detained from him in any manner, together with the damages for such wrongful detention.\n\nSee Sec. 42a-2-716(3) re goods identified to sales contract."
+        "plainText": "The action of replevin may be maintained to recover any goods or chattels in which the plaintiff has a general or special property interest with a right to immediate possession and which are wrongfully detained from him in any manner, together with the damages for such wrongful detention."
       }
     },
     {
@@ -57,8 +60,7 @@
       "content": {
         "body": [
           "(a) An action of replevin shall be commenced by a writ of summons or attachment, describing the parties, the court to which it is returnable and the time and place of appearance. The writ shall be signed as in other civil actions and may run into any judicial district.",
-          "(b) An action of replevin, to the extent that it includes a prejudgment remedy as defined in section 52-278a , shall not be allowed unless the provisions of sections 52-278a to 52-278f , inclusive, are complied with.",
-          "See Sec. 51-15 re rules of procedure in certain civil actions."
+          "(b) An action of replevin, to the extent that it includes a prejudgment remedy as defined in section 52-278a , shall not be allowed unless the provisions of sections 52-278a to 52-278f , inclusive, are complied with."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 8252; P.A. 78-280, S. 2, 127; P.A. 82-160, S. 203.)"
@@ -69,10 +71,14 @@
         "annotations": [
           {
             "first": true,
+            "text": "See Sec. 51-15 re rules of procedure in certain civil actions."
+          },
+          {
+            "first": true,
             "text": "Cited. 66 C. 549. Writ without complaint is a nullity; not amendable; remedy is to erase from docket; defendant has no right to plead further or to damages. 97 C. 399; 98 C. 229. Effect of returning writ to wrong court. 105 C. 673. Misdescription of property replevied; cured by provision in original conditional bill of sale permitting vendor on default to enter and take possession. Id., 675. Cited. 222 C. 361."
           }
         ],
-        "plainText": "(a) An action of replevin shall be commenced by a writ of summons or attachment, describing the parties, the court to which it is returnable and the time and place of appearance. The writ shall be signed as in other civil actions and may run into any judicial district.\n\n(b) An action of replevin, to the extent that it includes a prejudgment remedy as defined in section 52-278a , shall not be allowed unless the provisions of sections 52-278a to 52-278f , inclusive, are complied with.\n\nSee Sec. 51-15 re rules of procedure in certain civil actions."
+        "plainText": "(a) An action of replevin shall be commenced by a writ of summons or attachment, describing the parties, the court to which it is returnable and the time and place of appearance. The writ shall be signed as in other civil actions and may run into any judicial district.\n\n(b) An action of replevin, to the extent that it includes a prejudgment remedy as defined in section 52-278a , shall not be allowed unless the provisions of sections 52-278a to 52-278f , inclusive, are complied with."
       }
     },
     {
@@ -171,8 +177,7 @@
           "Signed by the obligors in the presence of",
           "X.Y.",
           "Subscribed and taken before me,",
-          "E.F., Commissioner of the Superior Court.",
-          "See Sec. 51-15 re rules of procedure in certain civil actions."
+          "E.F., Commissioner of the Superior Court."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 8255; P.A. 78-280, S. 2, 127; P.A. 82-160, S. 206.)"
@@ -183,6 +188,10 @@
         "annotations": [
           {
             "first": true,
+            "text": "See Sec. 51-15 re rules of procedure in certain civil actions."
+          },
+          {
+            "first": true,
             "text": "Form need not be literally followed; substantial compliance is sufficient. 45 C. 158, 159; 54 C. 314; 57 C. 193. Immaterial variance in copy of affidavit is not a ground of abatement. 65 C. 542. Cited. 70 C. 340. Estoppel against obligors in recognizance. 77 C. 181. Nominal damages in action on bond where defendant prevails on replevin. 96 C. 683. Service of writ without complaint constitutes fatal defect, which may not be amended. 97 C. 399; 98 C. 229. Reformation of bond denied where surety mistakenly gave bond which did not contain condition covering failure to prosecute to effect. 125 C. 440."
           },
           {
@@ -190,7 +199,7 @@
             "text": "Cited. 6 CS 156."
           }
         ],
-        "plainText": "The writ in an action of replevin, and the accompanying affidavit and recognizance, may be in the following form:\n\nTo any proper officer:\n\nBy authority of the state of Connecticut, you are hereby commanded, without delay, to cause to be replevied to A.B. of .... certain goods and chattels, to wit: .... of the value of (here insert the value as stated in the affidavit) dollars, now in the possession of C.D. of .... at .... and wrongfully detained by him, and (to attach the goods or estate of C.D., to the value of .... dollars and) him summon to appear before the superior court to be held at .... within and for the judicial district of .... on the .... Tuesday of ...., 20..; then and there to answer to A.B., in a civil action, in which the plaintiff complains and says:\n\n(Here follows complaint.)\n\nHereof fail not, but make due service and return.\n\nDated at ...., this .... day of ...., 20..\n\nE.F., Commissioner of the Superior Court.\n\nJudicial district of .... ss. Town of ...., 20..\n\nJ.S., of ...., being duly sworn, deposes and says that he believes that A.B. of .... is entitled to the immediate possession of the following described goods and chattels, namely: ....; that the deponent knows the nature and value of said goods and chattels, and that their true and just value, as nearly as the deponent can estimate it, is .... dollars.\n\nJ.S.\n\nSubscribed and sworn to before me,\n\nE.F., Commissioner of the Superior Court.\n\nBe it remembered that at the town of .... in .... judicial district, on the .... day of ...., 20.., there personally appear before me, A.B. of ...., as principal, and I.J. of ...., as surety, both of whom are known to be of sufficient responsibility, and acknowledged themselves jointly and severally bound to C.D. of ...., in a recognizance in the sum of .... dollars, that A.B. of ...., who brought the foregoing writ and complaint against C.D., shall prosecute his action to effect, and shall pay to C.D. any judgment that C.D. may recover in the action, and return to C.D. the goods and chattels that may be recovered under the writ, and pay to him all damages that he may sustain by the replevying thereof if A.B. shall fail to establish his right to the possession of the same in the action.\n\nA.B.\n\nI.J.\n\nSigned by the obligors in the presence of\n\nX.Y.\n\nSubscribed and taken before me,\n\nE.F., Commissioner of the Superior Court.\n\nSee Sec. 51-15 re rules of procedure in certain civil actions."
+        "plainText": "The writ in an action of replevin, and the accompanying affidavit and recognizance, may be in the following form:\n\nTo any proper officer:\n\nBy authority of the state of Connecticut, you are hereby commanded, without delay, to cause to be replevied to A.B. of .... certain goods and chattels, to wit: .... of the value of (here insert the value as stated in the affidavit) dollars, now in the possession of C.D. of .... at .... and wrongfully detained by him, and (to attach the goods or estate of C.D., to the value of .... dollars and) him summon to appear before the superior court to be held at .... within and for the judicial district of .... on the .... Tuesday of ...., 20..; then and there to answer to A.B., in a civil action, in which the plaintiff complains and says:\n\n(Here follows complaint.)\n\nHereof fail not, but make due service and return.\n\nDated at ...., this .... day of ...., 20..\n\nE.F., Commissioner of the Superior Court.\n\nJudicial district of .... ss. Town of ...., 20..\n\nJ.S., of ...., being duly sworn, deposes and says that he believes that A.B. of .... is entitled to the immediate possession of the following described goods and chattels, namely: ....; that the deponent knows the nature and value of said goods and chattels, and that their true and just value, as nearly as the deponent can estimate it, is .... dollars.\n\nJ.S.\n\nSubscribed and sworn to before me,\n\nE.F., Commissioner of the Superior Court.\n\nBe it remembered that at the town of .... in .... judicial district, on the .... day of ...., 20.., there personally appear before me, A.B. of ...., as principal, and I.J. of ...., as surety, both of whom are known to be of sufficient responsibility, and acknowledged themselves jointly and severally bound to C.D. of ...., in a recognizance in the sum of .... dollars, that A.B. of ...., who brought the foregoing writ and complaint against C.D., shall prosecute his action to effect, and shall pay to C.D. any judgment that C.D. may recover in the action, and return to C.D. the goods and chattels that may be recovered under the writ, and pay to him all damages that he may sustain by the replevying thereof if A.B. shall fail to establish his right to the possession of the same in the action.\n\nA.B.\n\nI.J.\n\nSigned by the obligors in the presence of\n\nX.Y.\n\nSubscribed and taken before me,\n\nE.F., Commissioner of the Superior Court."
       }
     },
     {
@@ -259,8 +268,7 @@
       "status": "active",
       "content": {
         "body": [
-          "In an action of replevin, no cause of action, except of replevin or for a conversion of the goods described in the writ of replevin, may be stated. The pleadings in such action shall conform to the requirements of pleadings in civil actions so far as such requirements may be consistent with the substantive rights secured by this chapter.",
-          "See Sec. 51-15 re rules of procedure in certain civil actions."
+          "In an action of replevin, no cause of action, except of replevin or for a conversion of the goods described in the writ of replevin, may be stated. The pleadings in such action shall conform to the requirements of pleadings in civil actions so far as such requirements may be consistent with the substantive rights secured by this chapter."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 8258; P.A. 82-160, S. 208.)"
@@ -268,8 +276,13 @@
         "history": [
           "History: P.A. 82-160 made minor changes in wording."
         ],
-        "annotations": [],
-        "plainText": "In an action of replevin, no cause of action, except of replevin or for a conversion of the goods described in the writ of replevin, may be stated. The pleadings in such action shall conform to the requirements of pleadings in civil actions so far as such requirements may be consistent with the substantive rights secured by this chapter.\n\nSee Sec. 51-15 re rules of procedure in certain civil actions."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 51-15 re rules of procedure in certain civil actions."
+          }
+        ],
+        "plainText": "In an action of replevin, no cause of action, except of replevin or for a conversion of the goods described in the writ of replevin, may be stated. The pleadings in such action shall conform to the requirements of pleadings in civil actions so far as such requirements may be consistent with the substantive rights secured by this chapter."
       }
     },
     {

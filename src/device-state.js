@@ -49,7 +49,7 @@ function validBookmark(item) {
   return item && typeof item.id === "string" && item.id.length > 0 && item.id.length <= 1000
     && ["statute", "infraction"].includes(item.type)
     && typeof item.title === "string" && item.title.length > 0 && item.title.length <= 5000
-    && typeof item.href === "string" && /^#\/(?:t\/|infractions(?:[/?]|$))/.test(item.href)
+    && typeof item.href === "string" && /^#\/(?:t\/|editions\/\d{4}\/t\/|infractions(?:[/?]|$))/.test(item.href)
     && item.href.length <= 5000;
 }
 

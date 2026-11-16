@@ -155,8 +155,7 @@
       "status": "active",
       "content": {
         "body": [
-          "No deed, instrument or writing which is subject to tax under this chapter shall be recorded by any town clerk unless a return prescribed and furnished by the Commissioner of Revenue Services has been filed with such town clerk and the tax reported to be due thereon has been paid, provided no town clerk may refuse to record any such deed, instrument or writing if (1) the tax return accompanying any such deed, instrument or writing does not include Social Security account number information, or (2) an exemption is claimed under section 12-498 and there is a dispute as to the amount of tax due.",
-          "See Sec. 12-503 re recording without payment of tax as constructive notice."
+          "No deed, instrument or writing which is subject to tax under this chapter shall be recorded by any town clerk unless a return prescribed and furnished by the Commissioner of Revenue Services has been filed with such town clerk and the tax reported to be due thereon has been paid, provided no town clerk may refuse to record any such deed, instrument or writing if (1) the tax return accompanying any such deed, instrument or writing does not include Social Security account number information, or (2) an exemption is claimed under section 12-498 and there is a dispute as to the amount of tax due."
         ],
         "sourceNotes": [
           "(1967, P.A. 693, S. 4; P.A. 86-167; P.A. 91-236, S. 17, 25; P.A. 93-389, S. 5, 7.)"
@@ -164,8 +163,13 @@
         "history": [
           "History: P.A. 86-167 added provision prohibiting town clerk to refuse to record deed for failure to provide Social Security information or as a result of dispute as to tax due; P.A. 91-236 provided that the tax be made on a return prescribed and furnished by the commissioner and deleted the provisions which prohibited the town clerk from refusing to record a document that is not accompanied by Social Security account number information or where there is a dispute as to the tax due because of an exemption claimed under Sec. 12-498, effective July 1, 1991, and applicable to taxes due on or after that date; P.A. 93-389 restored provision that prohibits a town clerk refusing to record a document if the accompanying tax return does not include Social Security account number information or an exemption is claimed and there is a dispute as to the amount of tax due, effective July 1, 1993."
         ],
-        "annotations": [],
-        "plainText": "No deed, instrument or writing which is subject to tax under this chapter shall be recorded by any town clerk unless a return prescribed and furnished by the Commissioner of Revenue Services has been filed with such town clerk and the tax reported to be due thereon has been paid, provided no town clerk may refuse to record any such deed, instrument or writing if (1) the tax return accompanying any such deed, instrument or writing does not include Social Security account number information, or (2) an exemption is claimed under section 12-498 and there is a dispute as to the amount of tax due.\n\nSee Sec. 12-503 re recording without payment of tax as constructive notice."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 12-503 re recording without payment of tax as constructive notice."
+          }
+        ],
+        "plainText": "No deed, instrument or writing which is subject to tax under this chapter shall be recorded by any town clerk unless a return prescribed and furnished by the Commissioner of Revenue Services has been filed with such town clerk and the tax reported to be due thereon has been paid, provided no town clerk may refuse to record any such deed, instrument or writing if (1) the tax return accompanying any such deed, instrument or writing does not include Social Security account number information, or (2) an exemption is claimed under section 12-498 and there is a dispute as to the amount of tax due."
       }
     },
     {
@@ -688,46 +692,6 @@
           }
         ],
         "plainText": "Any such classification of farm land pursuant to section 12-107c , forest land pursuant to section 12-107d , open space land pursuant to section 12-107e or maritime heritage land pursuant to section 12-107g , shall be deemed personal to the particular owner who requests and receives such classification and shall not run with the land. Any such land which has been classified by a record owner shall remain so classified without the filing of any new application subsequent to such classification, notwithstanding the provisions of sections 12-107c , 12-107d , 12-107e and 12-107g , until either of the following shall occur: (1) The use of such land is changed to a use other than that described in the application for the existing classification by said record owner, or (2) such land is sold or transferred by said record owner. Upon the sale or transfer of any such property, the classification of such land as farm land pursuant to section 12-107c , forest land pursuant to section 12-107d , open space land pursuant to section 12-107e or maritime heritage land pursuant to section 12-107g , shall cease as of the date of sale or transfer. In the event that a change in use of any such property occurs, the provisions of section 12-504e shall apply in terms of determining the date of change and the classification of such land as farm land pursuant to section 12-107c , forest land pursuant to section 12-107d , open space land pursuant to section 12-107e or maritime heritage land pursuant to section 12-107g , shall cease as of such date."
-      }
-    },
-    {
-      "id": "section-12-501",
-      "kind": "section",
-      "citation": "12-501",
-      "citations": [
-        "12-501"
-      ],
-      "heading": "12-501",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_223.htm#sec_12-501",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 12-501 and 12-502. False statement of tax prohibited. Penalty. Sections 12-501 and 12-502 are repealed effective July 1, 1991, and applicable to taxes due on or after that date."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 12-501 and 12-502. False statement of tax prohibited. Penalty. Sections 12-501 and 12-502 are repealed effective July 1, 1991, and applicable to taxes due on or after that date."
-      }
-    },
-    {
-      "id": "section-12-502",
-      "kind": "section",
-      "citation": "12-502",
-      "citations": [
-        "12-502"
-      ],
-      "heading": "12-502",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_223.htm#sec_12-502",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 12-501 and 12-502. False statement of tax prohibited. Penalty. Sections 12-501 and 12-502 are repealed effective July 1, 1991, and applicable to taxes due on or after that date."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 12-501 and 12-502. False statement of tax prohibited. Penalty. Sections 12-501 and 12-502 are repealed effective July 1, 1991, and applicable to taxes due on or after that date."
       }
     }
   ]

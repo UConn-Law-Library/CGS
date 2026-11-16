@@ -22,9 +22,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Three or more persons of lawful age and inhabitants of this state, may, by written articles of association, associate themselves together for the purposes of trade or for carrying on any lawful mercantile, mechanical, manufacturing or agricultural business within this state, and, when such articles of association have been executed and filed in the office of the Secretary of the State, the franchise tax provided by section 33-187 paid to, and such articles of association approved by, said secretary, such persons shall become a corporation and enjoy all the powers and privileges and be subject to all the duties, restrictions and liabilities of other corporations, except so far as such duties, restrictions and liabilities may be limited or enlarged by this chapter.",
-          "See Sec. 33-205 re admission of members in cooperative marketing corporations.",
-          "See Sec. 33-206 re merger of cooperative association and cooperative marketing corporation."
+          "Three or more persons of lawful age and inhabitants of this state, may, by written articles of association, associate themselves together for the purposes of trade or for carrying on any lawful mercantile, mechanical, manufacturing or agricultural business within this state, and, when such articles of association have been executed and filed in the office of the Secretary of the State, the franchise tax provided by section 33-187 paid to, and such articles of association approved by, said secretary, such persons shall become a corporation and enjoy all the powers and privileges and be subject to all the duties, restrictions and liabilities of other corporations, except so far as such duties, restrictions and liabilities may be limited or enlarged by this chapter."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 5293; 1967, P.A. 277, S. 1; P.A. 00-92, S. 8; P.A. 19-65, S. 1.)"
@@ -32,8 +30,17 @@
         "history": [
           "History: 1967 act required that copy of articles of association be filed in town in which association's principal office is located rather than in town where business is to be carried on; P.A. 00-92 deleted requirement that certified copy of articles of association be filed and recorded in the office of the town clerk in the town where the association's principal office is located; P.A. 19-65 replaced “seven or more persons” with “three or more persons”, replaced “articles of agreement” with “articles of association” and made technical changes."
         ],
-        "annotations": [],
-        "plainText": "Three or more persons of lawful age and inhabitants of this state, may, by written articles of association, associate themselves together for the purposes of trade or for carrying on any lawful mercantile, mechanical, manufacturing or agricultural business within this state, and, when such articles of association have been executed and filed in the office of the Secretary of the State, the franchise tax provided by section 33-187 paid to, and such articles of association approved by, said secretary, such persons shall become a corporation and enjoy all the powers and privileges and be subject to all the duties, restrictions and liabilities of other corporations, except so far as such duties, restrictions and liabilities may be limited or enlarged by this chapter.\n\nSee Sec. 33-205 re admission of members in cooperative marketing corporations.\n\nSee Sec. 33-206 re merger of cooperative association and cooperative marketing corporation."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 33-205 re admission of members in cooperative marketing corporations."
+          },
+          {
+            "first": false,
+            "text": "See Sec. 33-206 re merger of cooperative association and cooperative marketing corporation."
+          }
+        ],
+        "plainText": "Three or more persons of lawful age and inhabitants of this state, may, by written articles of association, associate themselves together for the purposes of trade or for carrying on any lawful mercantile, mechanical, manufacturing or agricultural business within this state, and, when such articles of association have been executed and filed in the office of the Secretary of the State, the franchise tax provided by section 33-187 paid to, and such articles of association approved by, said secretary, such persons shall become a corporation and enjoy all the powers and privileges and be subject to all the duties, restrictions and liabilities of other corporations, except so far as such duties, restrictions and liabilities may be limited or enlarged by this chapter."
       }
     },
     {
@@ -121,8 +128,7 @@
       "status": "active",
       "content": {
         "body": [
-          "The amount of capital stock of any cooperative association organized under the provisions of this chapter shall be fixed by its articles of association at a sum not exceeding fifty million dollars par value, and shall be subject to the same franchise tax as the capital stock of other corporations organized under the general laws, which tax shall be paid to the Secretary of the State. The association may increase or diminish the amount and number of shares of such stock at any meeting of the member shareholders specially called for such purpose, but no shares shall be issued at less than their par value. Not later than five days after the passage of any vote increasing or diminishing such stock, such association shall cause a certificate setting forth such vote, signed by a majority of the board of directors, to be recorded in the office of the Secretary of the State.",
-          "See Sec. 33-618 re franchise tax on stock corporations."
+          "The amount of capital stock of any cooperative association organized under the provisions of this chapter shall be fixed by its articles of association at a sum not exceeding fifty million dollars par value, and shall be subject to the same franchise tax as the capital stock of other corporations organized under the general laws, which tax shall be paid to the Secretary of the State. The association may increase or diminish the amount and number of shares of such stock at any meeting of the member shareholders specially called for such purpose, but no shares shall be issued at less than their par value. Not later than five days after the passage of any vote increasing or diminishing such stock, such association shall cause a certificate setting forth such vote, signed by a majority of the board of directors, to be recorded in the office of the Secretary of the State."
         ],
         "sourceNotes": [
           "(1949 Rev., S. 5297; September, 1957, P.A. 5, S. 1; 1967, P.A. 277, S. 3; P.A. 85-78; P.A. 19-65, S. 4.)"
@@ -130,8 +136,13 @@
         "history": [
           "History: 1967 act deleted requirement that certificate of vote to increase or diminish stock be filed in town clerk's office of town where association's business is carried on; P.A. 85-78 increased limit on value of capital stock of cooperative association from $500,000 to $5,000,000; P.A. 19-65 replaced “five million dollars” with “fifty million dollars par value”, replaced “stockholders” with “member shareholders”, replaced “board of managers” with “board of directors” and made technical changes."
         ],
-        "annotations": [],
-        "plainText": "The amount of capital stock of any cooperative association organized under the provisions of this chapter shall be fixed by its articles of association at a sum not exceeding fifty million dollars par value, and shall be subject to the same franchise tax as the capital stock of other corporations organized under the general laws, which tax shall be paid to the Secretary of the State. The association may increase or diminish the amount and number of shares of such stock at any meeting of the member shareholders specially called for such purpose, but no shares shall be issued at less than their par value. Not later than five days after the passage of any vote increasing or diminishing such stock, such association shall cause a certificate setting forth such vote, signed by a majority of the board of directors, to be recorded in the office of the Secretary of the State.\n\nSee Sec. 33-618 re franchise tax on stock corporations."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 33-618 re franchise tax on stock corporations."
+          }
+        ],
+        "plainText": "The amount of capital stock of any cooperative association organized under the provisions of this chapter shall be fixed by its articles of association at a sum not exceeding fifty million dollars par value, and shall be subject to the same franchise tax as the capital stock of other corporations organized under the general laws, which tax shall be paid to the Secretary of the State. The association may increase or diminish the amount and number of shares of such stock at any meeting of the member shareholders specially called for such purpose, but no shares shall be issued at less than their par value. Not later than five days after the passage of any vote increasing or diminishing such stock, such association shall cause a certificate setting forth such vote, signed by a majority of the board of directors, to be recorded in the office of the Secretary of the State."
       }
     },
     {

@@ -1,17 +1,17 @@
 {
   "schemaVersion": "1.0.0",
   "editionYear": 2026,
-  "generatedAt": "2026-07-14T16:20:56Z",
+  "generatedAt": "2026-11-12T22:44:55Z",
   "strategy": "replace-by-citation",
   "base": {
     "schemaVersion": "1.0.0",
-    "generatedAt": "2026-07-14T00:27:33Z",
-    "manifestSha256": "9fb4cdc169f66b09b61add8d64f08ba29b9a5d1d2b87fb9779aaa15d6abca14c"
+    "generatedAt": "2026-11-12T22:30:49Z",
+    "manifestSha256": "cdb2c088749fda20f00424acde06beb61caf55ea0167d8d6b8539765a04d3898"
   },
   "source": {
     "name": "Connecticut General Statutes 2026 supplement",
     "url": "https://www.cga.ct.gov/2026/sup/titles.htm",
-    "retrievedAt": "2026-07-14T16:20:56Z"
+    "retrievedAt": "2026-11-12T22:44:55Z"
   },
   "titles": [
     {
@@ -19,6 +19,7 @@
       "number": "01",
       "name": "Provisions of General Application",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_01.htm",
+      "searchPath": "search/title-01.json",
       "chapters": [
         {
           "id": "chapter-001",
@@ -80,14 +81,14 @@
           "replacementCount": 1,
           "additionCount": 0
         }
-      ],
-      "searchPath": "search/title-01.json"
+      ]
     },
     {
       "id": "title-02",
       "number": "02",
       "name": "General Assembly and Legislative Agencies",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_02.htm",
+      "searchPath": "search/title-02.json",
       "chapters": [
         {
           "id": "chapter-016",
@@ -149,14 +150,14 @@
           "replacementCount": 0,
           "additionCount": 1
         }
-      ],
-      "searchPath": "search/title-02.json"
+      ]
     },
     {
       "id": "title-03",
       "number": "03",
       "name": "State Elective Officers",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_03.htm",
+      "searchPath": "search/title-03.json",
       "chapters": [
         {
           "id": "chapter-032",
@@ -198,14 +199,14 @@
           "replacementCount": 1,
           "additionCount": 0
         }
-      ],
-      "searchPath": "search/title-03.json"
+      ]
     },
     {
       "id": "title-04",
       "number": "04",
       "name": "Management of State Agencies",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_04.htm",
+      "searchPath": "search/title-04.json",
       "chapters": [
         {
           "id": "chapter-046",
@@ -277,14 +278,14 @@
           "replacementCount": 1,
           "additionCount": 0
         }
-      ],
-      "searchPath": "search/title-04.json"
+      ]
     },
     {
       "id": "title-04a",
       "number": "04a",
       "name": "Administrative Services",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_04a.htm",
+      "searchPath": "search/title-04a.json",
       "chapters": [
         {
           "id": "chapter-057",
@@ -306,14 +307,14 @@
           "replacementCount": 6,
           "additionCount": 4
         }
-      ],
-      "searchPath": "search/title-04a.json"
+      ]
     },
     {
       "id": "title-04b",
       "number": "04b",
       "name": "State Real Property",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_04b.htm",
+      "searchPath": "search/title-04b.json",
       "chapters": [
         {
           "id": "chapter-059",
@@ -335,14 +336,14 @@
           "replacementCount": 9,
           "additionCount": 0
         }
-      ],
-      "searchPath": "search/title-04b.json"
+      ]
     },
     {
       "id": "title-04d",
       "number": "04d",
       "name": "State Information and Telecommunication Systems",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_04d.htm",
+      "searchPath": "search/title-04d.json",
       "chapters": [
         {
           "id": "chapter-061a",
@@ -364,14 +365,14 @@
           "replacementCount": 0,
           "additionCount": 1
         }
-      ],
-      "searchPath": "search/title-04d.json"
+      ]
     },
     {
       "id": "title-04e",
       "number": "04e",
       "name": "State Contracting",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_04e.htm",
+      "searchPath": "search/title-04e.json",
       "chapters": [
         {
           "id": "chapter-062",
@@ -383,14 +384,14 @@
           "replacementCount": 1,
           "additionCount": 0
         }
-      ],
-      "searchPath": "search/title-04e.json"
+      ]
     },
     {
       "id": "title-05",
       "number": "05",
       "name": "State Employees",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_05.htm",
+      "searchPath": "search/title-05.json",
       "chapters": [
         {
           "id": "chapter-064a",
@@ -422,14 +423,14 @@
           "replacementCount": 3,
           "additionCount": 1
         }
-      ],
-      "searchPath": "search/title-05.json"
+      ]
     },
     {
       "id": "title-06",
       "number": "06",
       "name": "Counties and County Officers. Judicial and State Marshals",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_06.htm",
+      "searchPath": "search/title-06.json",
       "chapters": [
         {
           "id": "chapter-078",
@@ -441,14 +442,14 @@
           "replacementCount": 10,
           "additionCount": 0
         }
-      ],
-      "searchPath": "search/title-06.json"
+      ]
     },
     {
       "id": "title-07",
       "number": "07",
       "name": "Municipalities",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_07.htm",
+      "searchPath": "search/title-07.json",
       "chapters": [
         {
           "id": "chapter-092",
@@ -610,14 +611,14 @@
           "replacementCount": 1,
           "additionCount": 0
         }
-      ],
-      "searchPath": "search/title-07.json"
+      ]
     },
     {
       "id": "title-08",
       "number": "08",
       "name": "Zoning, Planning, Housing and Economic and Community Development",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_08.htm",
+      "searchPath": "search/title-08.json",
       "chapters": [
         {
           "id": "chapter-124",
@@ -769,14 +770,14 @@
           "replacementCount": 2,
           "additionCount": 0
         }
-      ],
-      "searchPath": "search/title-08.json"
+      ]
     },
     {
       "id": "title-09",
       "number": "09",
       "name": "Elections",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_09.htm",
+      "searchPath": "search/title-09.json",
       "chapters": [
         {
           "id": "chapter-141",
@@ -878,14 +879,14 @@
           "replacementCount": 5,
           "additionCount": 0
         }
-      ],
-      "searchPath": "search/title-09.json"
+      ]
     },
     {
       "id": "title-10",
       "number": "10",
       "name": "Education and Culture",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_10.htm",
+      "searchPath": "search/title-10.json",
       "chapters": [
         {
           "id": "chapter-163",
@@ -1007,14 +1008,14 @@
           "replacementCount": 9,
           "additionCount": 15
         }
-      ],
-      "searchPath": "search/title-10.json"
+      ]
     },
     {
       "id": "title-10a",
       "number": "10a",
       "name": "State System of Higher Education",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_10a.htm",
+      "searchPath": "search/title-10a.json",
       "chapters": [
         {
           "id": "chapter-185",
@@ -1066,14 +1067,14 @@
           "replacementCount": 4,
           "additionCount": 0
         }
-      ],
-      "searchPath": "search/title-10a.json"
+      ]
     },
     {
       "id": "title-11",
       "number": "11",
       "name": "Libraries and Museums",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_11.htm",
+      "searchPath": "search/title-11.json",
       "chapters": [
         {
           "id": "chapter-188",
@@ -1095,14 +1096,14 @@
           "replacementCount": 1,
           "additionCount": 2
         }
-      ],
-      "searchPath": "search/title-11.json"
+      ]
     },
     {
       "id": "title-12",
       "number": "12",
       "name": "Taxation",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_12.htm",
+      "searchPath": "search/title-12.json",
       "chapters": [
         {
           "id": "chapter-201",
@@ -1294,14 +1295,14 @@
           "replacementCount": 7,
           "additionCount": 2
         }
-      ],
-      "searchPath": "search/title-12.json"
+      ]
     },
     {
       "id": "title-13a",
       "number": "13a",
       "name": "Highways and Bridges",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_13a.htm",
+      "searchPath": "search/title-13a.json",
       "chapters": [
         {
           "id": "chapter-238",
@@ -1333,14 +1334,14 @@
           "replacementCount": 3,
           "additionCount": 0
         }
-      ],
-      "searchPath": "search/title-13a.json"
+      ]
     },
     {
       "id": "title-13b",
       "number": "13b",
       "name": "Transportation",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_13b.htm",
+      "searchPath": "search/title-13b.json",
       "chapters": [
         {
           "id": "chapter-242",
@@ -1392,14 +1393,14 @@
           "replacementCount": 1,
           "additionCount": 0
         }
-      ],
-      "searchPath": "search/title-13b.json"
+      ]
     },
     {
       "id": "title-14",
       "number": "14",
       "name": "Motor Vehicles. Use of the Highway by Vehicles. Gasoline",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_14.htm",
+      "searchPath": "search/title-14.json",
       "chapters": [
         {
           "id": "chapter-246",
@@ -1461,14 +1462,14 @@
           "replacementCount": 2,
           "additionCount": 0
         }
-      ],
-      "searchPath": "search/title-14.json"
+      ]
     },
     {
       "id": "title-15",
       "number": "15",
       "name": "Navigation and Aeronautics",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_15.htm",
+      "searchPath": "search/title-15.json",
       "chapters": [
         {
           "id": "chapter-264a",
@@ -1510,14 +1511,14 @@
           "replacementCount": 1,
           "additionCount": 0
         }
-      ],
-      "searchPath": "search/title-15.json"
+      ]
     },
     {
       "id": "title-16",
       "number": "16",
       "name": "Public Service Companies",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_16.htm",
+      "searchPath": "search/title-16.json",
       "chapters": [
         {
           "id": "chapter-277",
@@ -1559,14 +1560,14 @@
           "replacementCount": 3,
           "additionCount": 1
         }
-      ],
-      "searchPath": "search/title-16.json"
+      ]
     },
     {
       "id": "title-16a",
       "number": "16a",
       "name": "Planning and Energy Policy",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_16a.htm",
+      "searchPath": "search/title-16a.json",
       "chapters": [
         {
           "id": "chapter-295",
@@ -1608,14 +1609,14 @@
           "replacementCount": 2,
           "additionCount": 1
         }
-      ],
-      "searchPath": "search/title-16a.json"
+      ]
     },
     {
       "id": "title-17a",
       "number": "17a",
       "name": "Social and Human Services and Resources",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_17a.htm",
+      "searchPath": "search/title-17a.json",
       "chapters": [
         {
           "id": "chapter-319",
@@ -1687,14 +1688,14 @@
           "replacementCount": 4,
           "additionCount": 1
         }
-      ],
-      "searchPath": "search/title-17a.json"
+      ]
     },
     {
       "id": "title-17b",
       "number": "17b",
       "name": "Social Services",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_17b.htm",
+      "searchPath": "search/title-17b.json",
       "chapters": [
         {
           "id": "chapter-319o",
@@ -1766,14 +1767,14 @@
           "replacementCount": 1,
           "additionCount": 0
         }
-      ],
-      "searchPath": "search/title-17b.json"
+      ]
     },
     {
       "id": "title-18",
       "number": "18",
       "name": "Correctional Institutions and Department of Correction",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_18.htm",
+      "searchPath": "search/title-18.json",
       "chapters": [
         {
           "id": "chapter-325",
@@ -1785,14 +1786,14 @@
           "replacementCount": 10,
           "additionCount": 4
         }
-      ],
-      "searchPath": "search/title-18.json"
+      ]
     },
     {
       "id": "title-19a",
       "number": "19a",
       "name": "Public Health and Well-Being",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_19a.htm",
+      "searchPath": "search/title-19a.json",
       "chapters": [
         {
           "id": "chapter-368a",
@@ -1904,14 +1905,14 @@
           "replacementCount": 5,
           "additionCount": 2
         }
-      ],
-      "searchPath": "search/title-19a.json"
+      ]
     },
     {
       "id": "title-20",
       "number": "20",
       "name": "Professional and Occupational Licensing, Certification, Title Protection and Registration. Examining Boards",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_20.htm",
+      "searchPath": "search/title-20.json",
       "chapters": [
         {
           "id": "chapter-370",
@@ -2183,14 +2184,14 @@
           "replacementCount": 1,
           "additionCount": 0
         }
-      ],
-      "searchPath": "search/title-20.json"
+      ]
     },
     {
       "id": "title-21",
       "number": "21",
       "name": "Licenses",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_21.htm",
+      "searchPath": "search/title-21.json",
       "chapters": [
         {
           "id": "chapter-407a",
@@ -2212,14 +2213,14 @@
           "replacementCount": 3,
           "additionCount": 1
         }
-      ],
-      "searchPath": "search/title-21.json"
+      ]
     },
     {
       "id": "title-21a",
       "number": "21a",
       "name": "Consumer Protection",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_21a.htm",
+      "searchPath": "search/title-21a.json",
       "chapters": [
         {
           "id": "chapter-416",
@@ -2351,14 +2352,14 @@
           "replacementCount": 2,
           "additionCount": 1
         }
-      ],
-      "searchPath": "search/title-21a.json"
+      ]
     },
     {
       "id": "title-22",
       "number": "22",
       "name": "Agriculture. Domestic Animals",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_22.htm",
+      "searchPath": "search/title-22.json",
       "chapters": [
         {
           "id": "chapter-422",
@@ -2440,14 +2441,14 @@
           "replacementCount": 3,
           "additionCount": 0
         }
-      ],
-      "searchPath": "search/title-22.json"
+      ]
     },
     {
       "id": "title-22a",
       "number": "22a",
       "name": "Environmental Protection",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_22a.htm",
+      "searchPath": "search/title-22a.json",
       "chapters": [
         {
           "id": "chapter-439",
@@ -2599,14 +2600,14 @@
           "replacementCount": 2,
           "additionCount": 1
         }
-      ],
-      "searchPath": "search/title-22a.json"
+      ]
     },
     {
       "id": "title-23",
       "number": "23",
       "name": "Parks, Forests and Public Shade Trees",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_23.htm",
+      "searchPath": "search/title-23.json",
       "chapters": [
         {
           "id": "chapter-447",
@@ -2638,14 +2639,14 @@
           "replacementCount": 1,
           "additionCount": 0
         }
-      ],
-      "searchPath": "search/title-23.json"
+      ]
     },
     {
       "id": "title-25",
       "number": "25",
       "name": "Water Resources. Flood and Erosion Control",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_25.htm",
+      "searchPath": "search/title-25.json",
       "chapters": [
         {
           "id": "chapter-474",
@@ -2677,14 +2678,14 @@
           "replacementCount": 1,
           "additionCount": 0
         }
-      ],
-      "searchPath": "search/title-25.json"
+      ]
     },
     {
       "id": "title-26",
       "number": "26",
       "name": "Fisheries and Game",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_26.htm",
+      "searchPath": "search/title-26.json",
       "chapters": [
         {
           "id": "chapter-490",
@@ -2716,14 +2717,14 @@
           "replacementCount": 1,
           "additionCount": 1
         }
-      ],
-      "searchPath": "search/title-26.json"
+      ]
     },
     {
       "id": "title-27",
       "number": "27",
       "name": "Armed Forces and Veterans",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_27.htm",
+      "searchPath": "search/title-27.json",
       "chapters": [
         {
           "id": "chapter-504",
@@ -2745,14 +2746,14 @@
           "replacementCount": 1,
           "additionCount": 0
         }
-      ],
-      "searchPath": "search/title-27.json"
+      ]
     },
     {
       "id": "title-28",
       "number": "28",
       "name": "Civil Preparedness and Emergency Services",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_28.htm",
+      "searchPath": "search/title-28.json",
       "chapters": [
         {
           "id": "chapter-517",
@@ -2784,14 +2785,14 @@
           "replacementCount": 0,
           "additionCount": 1
         }
-      ],
-      "searchPath": "search/title-28.json"
+      ]
     },
     {
       "id": "title-29",
       "number": "29",
       "name": "Public Safety and State Police",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_29.htm",
+      "searchPath": "search/title-29.json",
       "chapters": [
         {
           "id": "chapter-528",
@@ -2873,14 +2874,14 @@
           "replacementCount": 0,
           "additionCount": 1
         }
-      ],
-      "searchPath": "search/title-29.json"
+      ]
     },
     {
       "id": "title-30",
       "number": "30",
       "name": "Intoxicating Liquors",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_30.htm",
+      "searchPath": "search/title-30.json",
       "chapters": [
         {
           "id": "chapter-545",
@@ -2892,14 +2893,14 @@
           "replacementCount": 21,
           "additionCount": 0
         }
-      ],
-      "searchPath": "search/title-30.json"
+      ]
     },
     {
       "id": "title-31",
       "number": "31",
       "name": "Labor",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_31.htm",
+      "searchPath": "search/title-31.json",
       "chapters": [
         {
           "id": "chapter-556",
@@ -2961,14 +2962,14 @@
           "replacementCount": 2,
           "additionCount": 0
         }
-      ],
-      "searchPath": "search/title-31.json"
+      ]
     },
     {
       "id": "title-32",
       "number": "32",
       "name": "Commerce and Economic and Community Development",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_32.htm",
+      "searchPath": "search/title-32.json",
       "chapters": [
         {
           "id": "chapter-578",
@@ -3080,14 +3081,14 @@
           "replacementCount": 0,
           "additionCount": 1
         }
-      ],
-      "searchPath": "search/title-32.json"
+      ]
     },
     {
       "id": "title-34",
       "number": "34",
       "name": "Limited Partnerships, Partnerships, Professional Associations, Limited Liability Companies and Statutory Trusts",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_34.htm",
+      "searchPath": "search/title-34.json",
       "chapters": [
         {
           "id": "chapter-613a",
@@ -3099,14 +3100,14 @@
           "replacementCount": 2,
           "additionCount": 0
         }
-      ],
-      "searchPath": "search/title-34.json"
+      ]
     },
     {
       "id": "title-36a",
       "number": "36a",
       "name": "The Banking Law of Connecticut",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_36a.htm",
+      "searchPath": "search/title-36a.json",
       "chapters": [
         {
           "id": "chapter-664",
@@ -3188,14 +3189,14 @@
           "replacementCount": 24,
           "additionCount": 0
         }
-      ],
-      "searchPath": "search/title-36a.json"
+      ]
     },
     {
       "id": "title-36b",
       "number": "36b",
       "name": "Connecticut Securities Law and Business Opportunity Investment Act",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_36b.htm",
+      "searchPath": "search/title-36b.json",
       "chapters": [
         {
           "id": "chapter-672a",
@@ -3207,14 +3208,14 @@
           "replacementCount": 3,
           "additionCount": 0
         }
-      ],
-      "searchPath": "search/title-36b.json"
+      ]
     },
     {
       "id": "title-38a",
       "number": "38a",
       "name": "Insurance",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_38a.htm",
+      "searchPath": "search/title-38a.json",
       "chapters": [
         {
           "id": "chapter-697",
@@ -3346,14 +3347,14 @@
           "replacementCount": 1,
           "additionCount": 0
         }
-      ],
-      "searchPath": "search/title-38a.json"
+      ]
     },
     {
       "id": "title-42",
       "number": "42",
       "name": "Business, Selling, Trading and Collection Practices",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_42.htm",
+      "searchPath": "search/title-42.json",
       "chapters": [
         {
           "id": "chapter-735a",
@@ -3485,14 +3486,14 @@
           "replacementCount": 0,
           "additionCount": 1
         }
-      ],
-      "searchPath": "search/title-42.json"
+      ]
     },
     {
       "id": "title-42a",
       "number": "42a",
       "name": "Uniform Commercial Code",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_42a.htm",
+      "searchPath": "search/title-42a.json",
       "chapters": [
         {
           "id": "chapter-art-001",
@@ -3604,14 +3605,14 @@
           "replacementCount": 0,
           "additionCount": 9
         }
-      ],
-      "searchPath": "search/title-42a.json"
+      ]
     },
     {
       "id": "title-45a",
       "number": "45a",
       "name": "Probate Courts and Procedure",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_45a.htm",
+      "searchPath": "search/title-45a.json",
       "chapters": [
         {
           "id": "chapter-801",
@@ -3653,14 +3654,14 @@
           "replacementCount": 1,
           "additionCount": 0
         }
-      ],
-      "searchPath": "search/title-45a.json"
+      ]
     },
     {
       "id": "title-46a",
       "number": "46a",
       "name": "Human Rights",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_46a.htm",
+      "searchPath": "search/title-46a.json",
       "chapters": [
         {
           "id": "chapter-813a",
@@ -3692,14 +3693,14 @@
           "replacementCount": 1,
           "additionCount": 0
         }
-      ],
-      "searchPath": "search/title-46a.json"
+      ]
     },
     {
       "id": "title-46b",
       "number": "46b",
       "name": "Family Law",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_46b.htm",
+      "searchPath": "search/title-46b.json",
       "chapters": [
         {
           "id": "chapter-815",
@@ -3761,14 +3762,14 @@
           "replacementCount": 0,
           "additionCount": 22
         }
-      ],
-      "searchPath": "search/title-46b.json"
+      ]
     },
     {
       "id": "title-47",
       "number": "47",
       "name": "Land and Land Titles",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_47.htm",
+      "searchPath": "search/title-47.json",
       "chapters": [
         {
           "id": "chapter-821",
@@ -3810,14 +3811,14 @@
           "replacementCount": 4,
           "additionCount": 1
         }
-      ],
-      "searchPath": "search/title-47.json"
+      ]
     },
     {
       "id": "title-47a",
       "number": "47a",
       "name": "Landlord and Tenant",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_47a.htm",
+      "searchPath": "search/title-47a.json",
       "chapters": [
         {
           "id": "chapter-830",
@@ -3859,14 +3860,14 @@
           "replacementCount": 2,
           "additionCount": 0
         }
-      ],
-      "searchPath": "search/title-47a.json"
+      ]
     },
     {
       "id": "title-48",
       "number": "48",
       "name": "Eminent Domain",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_48.htm",
+      "searchPath": "search/title-48.json",
       "chapters": [
         {
           "id": "chapter-835",
@@ -3878,14 +3879,14 @@
           "replacementCount": 1,
           "additionCount": 0
         }
-      ],
-      "searchPath": "search/title-48.json"
+      ]
     },
     {
       "id": "title-49",
       "number": "49",
       "name": "Mortgages and Liens",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_49.htm",
+      "searchPath": "search/title-49.json",
       "chapters": [
         {
           "id": "chapter-846",
@@ -3907,14 +3908,14 @@
           "replacementCount": 2,
           "additionCount": 0
         }
-      ],
-      "searchPath": "search/title-49.json"
+      ]
     },
     {
       "id": "title-51",
       "number": "51",
       "name": "Courts",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_51.htm",
+      "searchPath": "search/title-51.json",
       "chapters": [
         {
           "id": "chapter-870",
@@ -4006,14 +4007,14 @@
           "replacementCount": 3,
           "additionCount": 0
         }
-      ],
-      "searchPath": "search/title-51.json"
+      ]
     },
     {
       "id": "title-52",
       "number": "52",
       "name": "Civil Actions",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_52.htm",
+      "searchPath": "search/title-52.json",
       "chapters": [
         {
           "id": "chapter-896",
@@ -4125,14 +4126,14 @@
           "replacementCount": 0,
           "additionCount": 16
         }
-      ],
-      "searchPath": "search/title-52.json"
+      ]
     },
     {
       "id": "title-53",
       "number": "53",
       "name": "Crimes",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_53.htm",
+      "searchPath": "search/title-53.json",
       "chapters": [
         {
           "id": "chapter-941",
@@ -4164,14 +4165,14 @@
           "replacementCount": 1,
           "additionCount": 0
         }
-      ],
-      "searchPath": "search/title-53.json"
+      ]
     },
     {
       "id": "title-53a",
       "number": "53a",
       "name": "Penal Code",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_53a.htm",
+      "searchPath": "search/title-53a.json",
       "chapters": [
         {
           "id": "chapter-950",
@@ -4203,14 +4204,14 @@
           "replacementCount": 8,
           "additionCount": 1
         }
-      ],
-      "searchPath": "search/title-53a.json"
+      ]
     },
     {
       "id": "title-54",
       "number": "54",
       "name": "Criminal Procedure",
       "sourceUrl": "https://www.cga.ct.gov/2026/sup/title_54.htm",
+      "searchPath": "search/title-54.json",
       "chapters": [
         {
           "id": "chapter-959",
@@ -4302,8 +4303,7 @@
           "replacementCount": 1,
           "additionCount": 0
         }
-      ],
-      "searchPath": "search/title-54.json"
+      ]
     }
   ],
   "counts": {
@@ -6256,8 +6256,8 @@
     },
     {
       "path": "search/title-09.json",
-      "bytes": 271607,
-      "sha256": "a5c5bd5e5dbff4a673a620d3e2d3e3f7d5581b6bcc81e702a31f66512d0ffaf7"
+      "bytes": 269772,
+      "sha256": "2f601f5e64aa53f8570bd45daccbbffedb5f879b1643ee342dfe92a045233d3f"
     },
     {
       "path": "search/title-10.json",
@@ -6281,8 +6281,8 @@
     },
     {
       "path": "search/title-13a.json",
-      "bytes": 23632,
-      "sha256": "7d49669570dff53153677063028b3b15ace7795b8cbe0f6d4d6452e6d0baa11c"
+      "bytes": 22259,
+      "sha256": "673ab63b3d7f7c0d852a44cb3b0cbb5a3892862b90734437723e92032b3a9657"
     },
     {
       "path": "search/title-13b.json",
@@ -6486,8 +6486,8 @@
     },
     {
       "path": "search/title-54.json",
-      "bytes": 262471,
-      "sha256": "7e312f1dab6ebf8ccc1ac3e9f7d2a58603b22866d6cfb77b1bc88e449d379d7d"
+      "bytes": 259492,
+      "sha256": "cda54d4d7f1ba489e2df7f00db578c5a0e5f0aa451beeca4c2d3e1ee276b7b74"
     }
   ]
 }

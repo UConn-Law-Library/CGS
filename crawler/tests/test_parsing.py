@@ -2,6 +2,7 @@ from pathlib import Path
 import unittest
 
 from crawler.cgs_crawler.parsing import (
+    attach_section_content,
     detect_section_status,
     expand_grouped_section_keys,
     extract_chapter_links,
@@ -129,6 +130,96 @@ class ParsingTests(unittest.TestCase):
             detect_section_status("All sections transferred, repealed or obsolete."),
             ["repealed", "transferred", "obsolete"],
         )
+
+    def test_a_status_word_starting_a_catchline_is_not_a_status(self):
+        self.assertEqual(detect_section_status("Sec. 33-656. Reserved name."), [])
+        self.assertEqual(detect_section_status("Sec. 5-183. Transferred county employees."), [])
+        self.assertEqual(detect_section_status("Secs. 33-822 to 33-829. Reserved."), ["reserved"])
+        self.assertEqual(detect_section_status("Secs. 33-822 to 33-829. Reserved for future use."), ["reserved"])
+        self.assertEqual(detect_section_status("Sec. 4c-3. Obsolete."), ["obsolete"])
+        self.assertEqual(detect_section_status("Sec. 1-1a. (Formerly Sec. 1-2). Repealed."), ["repealed"])
+        self.assertEqual(detect_section_status("Sec. 5-183. Transferred."), ["transferred"])
+
+    def test_links_in_provision_text_do_not_become_provisions(self):
+        url = "https://www.cga.ct.gov/current/pub/chap_007.htm"
+        html = (
+            '<p class="toc_catchln"><a href="#secs_1-42_to_1-44">Secs. 1-42 to 1-44. Short title.</a></p>'
+            '<p class="toc_catchln"><a href="#sec_1-45">Sec. 1-45. Reserved name.</a></p>'
+            '<p><span class="catchln" id="secs_1-42_to_1-44">Secs. 1-42 to 1-44. Short title.</span> '
+            'Sections <a href="chap_007.htm#sec_1-42">1-42</a> to <a href="chap_007.htm#sec_1-44">1-44</a>, '
+            "inclusive, are repealed.</p>"
+            '<p><span class="catchln" id="sec_1-45">Sec. 1-45. Reserved name.</span> (a) A person may reserve '
+            'a name. See section <a href="chap_007.htm#sec_1-46">1-46</a><i>l</i>.</p>'
+        )
+        sections = extract_section_links(html, url, "01")
+        attach_section_content(html, sections)
+        self.assertEqual([section.get("section_key") or section["section_keys"] for section in sections], [
+            ["1-42", "1-43", "1-44"],
+            "1-45",
+        ])
+        self.assertEqual(sections[0]["content"]["status"], "repealed")
+        self.assertNotIn("status", sections[1]["content"])
+        self.assertTrue(all("cross_reference" not in section for section in sections))
+
+    def test_an_italic_l_suffix_is_part_of_the_section_number(self):
+        # CGA sets a trailing "l" in italics so it is not read as "1".
+        url = "https://www.cga.ct.gov/current/pub/chap_961.htm"
+        html = (
+            '<p class="toc_catchln"><a href="#sec_54-102l">Sec. 54-102<i>l</i>. Expungement of DNA data bank records.</a></p>'
+            '<p class="toc_catchln"><a href="#secs_54-102ll_to_54-102oo">Secs. 54-102<i>ll</i> to 54-102oo.</a> <b>Reserved</b></p>'
+            '<p class="toc_catchln"><a href="#secs_1-56l_to_1-56n">Secs. 1-56<i>l</i> to 1-56n. Repealed.</a></p>'
+            '<p><span class="catchln" id="sec_54-102l">Sec. 54-102<i>l</i>. Expungement of DNA data bank records.</span> '
+            "(a) A DNA profile that has been included in the data bank shall be expunged.</p>"
+            '<p><span class="catchln" id="secs_54-102ll_to_54-102oo">Secs. 54-102<i>ll</i> to 54-102oo.</span> Reserved for future use.</p>'
+            '<p><span class="catchln" id="secs_1-56l_to_1-56n">Secs. 1-56<i>l</i> to 1-56n. Repealed.</span></p>'
+        )
+        sections = extract_section_links(html, url, "54")
+        attach_section_content(html, sections)
+        section = sections[0]
+        self.assertEqual(section["section_key"], "54-102l")
+        self.assertEqual(section["label"], "Sec. 54-102 l . Expungement of DNA data bank records.")
+        self.assertNotIn("identifier_warning", section)
+        self.assertNotIn("status", section["content"])
+        self.assertIn("DNA profile", section["content"]["text"])
+        self.assertEqual(sections[1]["section_keys"], ["54-102ll", "54-102mm", "54-102nn", "54-102oo"])
+        self.assertEqual(sections[1]["content"]["status"], "reserved")
+        self.assertEqual(sections[2]["section_keys"], ["1-56l", "1-56m", "1-56n"])
+
+    def test_a_range_with_mixed_suffixes_covers_the_plain_numbers_between(self):
+        self.assertEqual(
+            expand_grouped_section_keys("secs_19-207_to_19-210l"),
+            ["19-207", "19-208", "19-209", "19-210", "19-210l"],
+        )
+        self.assertEqual(expand_grouped_section_keys("secs_12-21a_to_12-23"), ["12-21a", "12-22", "12-23"])
+
+    def test_a_linked_key_outside_any_group_with_text_is_kept(self):
+        # CGA's heading misnumbers the second section ("51-51o" for 31-51o), so only the link in
+        # the repeal note reaches 31-51o.
+        url = "https://www.cga.ct.gov/current/pub/chap_557.htm"
+        html = (
+            '<p class="toc_catchln"><a href="#secs_31-51n_51-51o">Secs. 31-51n and 51-51o. Definitions.</a></p>'
+            '<p><span class="catchln" id="secs_31-51n_51-51o">Secs. 31-51n and 51-51o. Definitions.</span> '
+            'Sections <a href="chap_557.htm#sec_31-51n">31-51n</a> and <a href="chap_557.htm#sec_31-51o">31-51o</a> '
+            "are repealed.</p>"
+        )
+        sections = extract_section_links(html, url, "31")
+        attach_section_content(html, sections)
+        keys = [section.get("section_key") or tuple(section["section_keys"]) for section in sections]
+        self.assertEqual(keys, [("31-51n", "51-51o"), "31-51o"])
+        self.assertEqual(sections[1]["content"]["status"], "repealed")
+
+    def test_a_linked_key_inside_a_mixed_suffix_range_is_dropped(self):
+        url = "https://www.cga.ct.gov/current/pub/chap_201.htm"
+        html = (
+            '<p class="toc_catchln"><a href="#secs_12-21_to_12-24a">Secs. 12-21 to 12-24a. Grants.</a></p>'
+            '<p><span class="catchln" id="secs_12-21_to_12-24a">Secs. 12-21 to 12-24a. Grants.</span> '
+            'Sections <a href="chap_201.htm#sec_12-21">12-21</a> and <a href="chap_201.htm#sec_12-22">12-22</a> '
+            "are repealed.</p>"
+        )
+        sections = extract_section_links(html, url, "12")
+        attach_section_content(html, sections)
+        self.assertEqual(len(sections), 1)
+        self.assertEqual(sections[0]["section_keys"], ["12-21", "12-22", "12-23", "12-24", "12-24a"])
 
 
 if __name__ == "__main__":

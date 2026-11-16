@@ -153,3 +153,24 @@ Only this standalone workflow acquires new secondary-source editions. Primary co
 The reviewed artifacts are published under `public/data/secondary`. A statute page loads its title-level reverse-link shard on demand, then retrieves only the referenced infraction, fee-rule, and subject-index artifacts. Chart B relationships are labeled as `Fee authority` or `Affected statute`; source dates and official publication links remain visible beside the derived records.
 
 The hash route `#/index` opens the General Statutes index. Alphabetical browsing loads only the selected letter's shards. Search derives the relevant initial letter from the query, searches that letter in memory, and caps the rendered result set at 100. Large headings render 250 entries at a time. These boundaries preserve responsive GitHub Pages behavior without a server or database.
+
+## Superseded editions
+
+A source edition is the publisher's edition: the subject index's "revised to" date or the infractions schedule's effective date, together with the SHA-256 of its PDFs (`sourceEditionIdentity` in `scripts/lib/secondary-editions.mjs`, for example `2026-10-01-d9d37545`). Two different operations follow from that:
+
+- **A link update.** `secondary:rebind` in the corpus refresh rebuilds resolutions, reverse links, and the base binding against new statutes. The printed records and PDFs are the same, so the edition is the same and nothing is archived. Rebinding the published records to the 2023 revision in a rehearsal changed 1,513 of the index's 169,467 resolved references and left both editions' identities unchanged.
+- **A new edition.** When `Review secondary sources refresh` acquires a different publication, the **Retain sources and archive replaced editions** step (`scripts/archive-secondary-editions.mjs`) copies the outgoing source's published files, byte for byte with the statute links as they were resolved, to `public/data/editions/secondary/<kind>/<edition id>/` with an `edition.json` record, and the draft pull request has a **Secondary-source editions** section.
+
+The record (`schemas/secondary-edition.schema.json`) has the publisher, name, official URL, revision or effective date, Chart B revision, counts, each source PDF's URL, size, and SHA-256, the edition that replaced it, the digest of every archived file, and the statute snapshot the links were resolved against (revision year, supplement years, base `generatedAt` and manifest SHA-256).
+
+### Source PDFs
+
+Source PDFs are kept by digest in `public/data/editions/secondary/sources/<sha256>.pdf`, published with the site so an archived edition can link its own PDF after the official URL moves on (the Judicial Branch reuses one URL for every schedule). The refresh keeps the PDFs of the editions it publishes; the first refresh after this change keeps the current editions' PDFs, even when nothing else changed. Editions acquired before that, including any archived before their PDFs were kept, record their digests and `"retained": false`, and the archive page says so.
+
+### Reading an archived edition
+
+`#/editions` lists the current and archived editions of each source. An archived schedule opens at `#/editions/infractions/<id>` and an archived index at `#/editions/index/<id>/<letter>`. Their statute links open the statute text they were resolved against: the current revision while it is still current, then its archived edition (`#/editions/<year>/t/…`) after a rollover. A citation that did not resolve is shown with "(not resolved)", and one whose statute edition is not archived with "(statute edition not archived)", rather than a link to different text. Current index and infractions lookup, statute pages' related records, and the offline download use only the current editions.
+
+`npm run validate` checks every archived edition: its record, that each file matches its recorded digest, that the archived manifest still describes the recorded edition, that retained PDFs match their digests, and that every file in the source store is named by its digest. An archive is never replaced; a rerun with the same inputs is a no-op, and different bytes stop the run.
+
+To roll back, revert the refresh's merge commit; that removes the archive and restores the earlier edition as current.

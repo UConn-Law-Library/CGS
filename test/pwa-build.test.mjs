@@ -3,7 +3,7 @@ import { mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import test from "node:test";
-import { stampServiceWorker } from "../scripts/lib/pwa-build.mjs";
+import { shellInputs, stampServiceWorker } from "../scripts/lib/pwa-build.mjs";
 
 test("stamps the deployed service worker with a deterministic shell fingerprint", async (t) => {
   const directory = await mkdtemp(path.join(os.tmpdir(), "cgs-pwa-build-"));
@@ -23,4 +23,17 @@ const CORPUS_SCHEMA_VERSION = "__CGS_CORPUS_SCHEMA_VERSION__";`, "utf8");
   assert.match(worker, /2026-07-14T00:27:33Z/);
   assert.match(worker, /1\.0\.0/);
   assert.doesNotMatch(worker, /__CGS_(?:BUILD_ID|CORPUS_GENERATED_AT|CORPUS_SCHEMA_VERSION)__/);
+});
+
+test("the worker precaches exactly the files the shell build fingerprints", async () => {
+  const worker = await readFile(new URL("../src/service-worker.js", import.meta.url), "utf8");
+  const list = worker.match(/const SHELL_FILES = \[([\s\S]*?)\];/)[1];
+  const precached = [...list.matchAll(/"\.\/([^"]*)"/g)].map((match) => match[1])
+    // The scope root is index.html, and data files are checked against the data release.
+    .filter((file) => file && !file.startsWith("data/"));
+  const fingerprinted = shellInputs.filter((file) => file !== "service-worker.js");
+  assert.deepEqual([...precached].sort(), [...fingerprinted].sort());
+  for (const file of shellInputs) {
+    await readFile(new URL(`../src/${file}`, import.meta.url));
+  }
 });

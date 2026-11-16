@@ -43,7 +43,8 @@ test("reports additions, removals, content changes, and status transitions", asy
     added: 1,
     removed: 1,
     changed: 1,
-    statusTransitions: 1
+    statusTransitions: 1,
+    shrunkBodies: 0
   });
   assert.equal(report.added[0].citation, "1-2");
   assert.equal(report.removed[0].citations[0], "1-1o");
@@ -98,7 +99,8 @@ test("can limit a shadow comparison to selected title IDs", async (t) => {
     added: 0,
     removed: 0,
     changed: 0,
-    statusTransitions: 0
+    statusTransitions: 0,
+    shrunkBodies: 0
   });
   assert.equal(report.before.counts.provisionsRead, 0);
 });
@@ -124,4 +126,28 @@ test("reports title and chapter metadata changes", async (t) => {
   assert.deepEqual(report.structure.chapters.changed[0].changes, ["name"]);
   assert.match(renderDiffMarkdown(report), /Titles changed/);
   assert.match(renderDiffMarkdown(report), /Chapters changed/);
+});
+
+test("reports text that shrinks without a status change, and corpus quality counts", async (t) => {
+  const temporary = await mkdtemp(path.join(os.tmpdir(), "cgs-diff-"));
+  t.after(() => rm(temporary, { recursive: true, force: true }));
+  const before = path.join(temporary, "before");
+  const after = path.join(temporary, "after");
+  await importLegacy({ inputDir: path.resolve("fixtures/legacy"), outputDir: before });
+  await cp(before, after, { recursive: true });
+
+  const chapterFile = path.join(after, "chapters", "001.json");
+  const chapter = JSON.parse(await readFile(chapterFile, "utf8"));
+  const shrunk = chapter.sections.find((section) => section.status === "active" && section.content.body.join("").length > 20);
+  shrunk.content.body = [];
+  shrunk.identifierWarning = "heading key disagrees with fragment key";
+  await writeFile(chapterFile, `${JSON.stringify(chapter, null, 2)}\n`);
+
+  const report = await diffCorpora({ beforeDir: before, afterDir: after });
+  assert.equal(report.summary.shrunkBodies, 1);
+  assert.equal(report.shrunkBodies[0].citation, shrunk.citation);
+  assert.equal(report.shrunkBodies[0].afterLength, 0);
+  assert.equal(report.after.quality.emptyActive, report.before.quality.emptyActive + 1);
+  assert.equal(report.after.quality.identifierWarnings, report.before.quality.identifierWarnings + 1);
+  assert.match(renderDiffMarkdown(report), /Bodies shrunk by more than half/);
 });

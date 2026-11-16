@@ -749,7 +749,8 @@ test("Hide sections removes only entries whose every status is hidden, and persi
   await expect(both).toHaveCount(0);
   await expect(transferredOnly).toHaveCount(0);
   await page.reload();
-  await expect(list.locator("a").first()).toBeVisible();
+  // Every entry in chapter 808 is repealed or transferred, so the chapter reports them all hidden.
+  await expect(page.locator(".chapter-overview .eyebrow")).toContainText("hidden");
   await expect(both).toHaveCount(0);
   const reopened = await openNavigationSettings(page);
   await expect(reopened.panel.locator('input[data-hide-status="transferred"]')).toBeChecked();

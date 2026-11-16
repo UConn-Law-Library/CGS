@@ -498,8 +498,7 @@
       "content": {
         "body": [
           "(a) For the purposes of the general statutes, “state marshal” means a qualified deputy sheriff incumbent on June 30, 2000, under section 6-38 or appointed pursuant to section 6-38b who shall have authority to provide legal execution and service of process in the counties in this state pursuant to section 6-38 as an independent contractor compensated on a fee for service basis, determined, subject to any minimum rate promulgated by the state, by agreement with an attorney, court or public agency requiring execution or service of process.",
-          "(b) Any state marshal, shall, in the performance of execution or service of process functions, have the right of entry on private property and no such person shall be personally liable for damage or injury, not wanton, reckless or malicious, caused by the discharge of such functions.",
-          "See Sec. 2-90a re authority of Auditors of Public Accounts to audit trust accounts maintained by state marshals."
+          "(b) Any state marshal, shall, in the performance of execution or service of process functions, have the right of entry on private property and no such person shall be personally liable for damage or injury, not wanton, reckless or malicious, caused by the discharge of such functions."
         ],
         "sourceNotes": [
           "(P.A. 00-99, S. 7, 154; P.A. 03-224, S. 2.)"
@@ -510,10 +509,14 @@
         "annotations": [
           {
             "first": true,
+            "text": "See Sec. 2-90a re authority of Auditors of Public Accounts to audit trust accounts maintained by state marshals."
+          },
+          {
+            "first": true,
             "text": "State marshals are not state officials or state employees, thus the doctrine of sovereign immunity is not available as a defense to an action for tortious conduct against a state marshal. 207 CA 490."
           }
         ],
-        "plainText": "(a) For the purposes of the general statutes, “state marshal” means a qualified deputy sheriff incumbent on June 30, 2000, under section 6-38 or appointed pursuant to section 6-38b who shall have authority to provide legal execution and service of process in the counties in this state pursuant to section 6-38 as an independent contractor compensated on a fee for service basis, determined, subject to any minimum rate promulgated by the state, by agreement with an attorney, court or public agency requiring execution or service of process.\n\n(b) Any state marshal, shall, in the performance of execution or service of process functions, have the right of entry on private property and no such person shall be personally liable for damage or injury, not wanton, reckless or malicious, caused by the discharge of such functions.\n\nSee Sec. 2-90a re authority of Auditors of Public Accounts to audit trust accounts maintained by state marshals."
+        "plainText": "(a) For the purposes of the general statutes, “state marshal” means a qualified deputy sheriff incumbent on June 30, 2000, under section 6-38 or appointed pursuant to section 6-38b who shall have authority to provide legal execution and service of process in the counties in this state pursuant to section 6-38 as an independent contractor compensated on a fee for service basis, determined, subject to any minimum rate promulgated by the state, by agreement with an attorney, court or public agency requiring execution or service of process.\n\n(b) Any state marshal, shall, in the performance of execution or service of process functions, have the right of entry on private property and no such person shall be personally liable for damage or injury, not wanton, reckless or malicious, caused by the discharge of such functions."
       }
     },
     {
@@ -616,8 +619,7 @@
       "status": "active",
       "content": {
         "body": [
-          "The State Marshal Commission shall periodically review and audit the records and accounts of the state marshals. Upon the death or disability of a state marshal, the commission shall appoint a qualified individual to oversee and audit the records and accounts of such state marshal and render an accounting to the commission. All information obtained by the commission from any audit conducted pursuant to this section shall be confidential and shall not be subject to disclosure under the Freedom of Information Act, as defined in section 1-200 .",
-          "See Sec. 2-90a re authority of Auditors of Public Accounts to audit trust accounts maintained by state marshals."
+          "The State Marshal Commission shall periodically review and audit the records and accounts of the state marshals. Upon the death or disability of a state marshal, the commission shall appoint a qualified individual to oversee and audit the records and accounts of such state marshal and render an accounting to the commission. All information obtained by the commission from any audit conducted pursuant to this section shall be confidential and shall not be subject to disclosure under the Freedom of Information Act, as defined in section 1-200 ."
         ],
         "sourceNotes": [
           "(P.A. 00-99, S. 152, 154; P.A. 03-224, S. 4.)"
@@ -625,8 +627,13 @@
         "history": [
           "History: P.A. 00-99 effective December 1, 2000; P.A. 03-224 added provisions re confidentiality of audit information, effective July 2, 2003."
         ],
-        "annotations": [],
-        "plainText": "The State Marshal Commission shall periodically review and audit the records and accounts of the state marshals. Upon the death or disability of a state marshal, the commission shall appoint a qualified individual to oversee and audit the records and accounts of such state marshal and render an accounting to the commission. All information obtained by the commission from any audit conducted pursuant to this section shall be confidential and shall not be subject to disclosure under the Freedom of Information Act, as defined in section 1-200 .\n\nSee Sec. 2-90a re authority of Auditors of Public Accounts to audit trust accounts maintained by state marshals."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 2-90a re authority of Auditors of Public Accounts to audit trust accounts maintained by state marshals."
+          }
+        ],
+        "plainText": "The State Marshal Commission shall periodically review and audit the records and accounts of the state marshals. Upon the death or disability of a state marshal, the commission shall appoint a qualified individual to oversee and audit the records and accounts of such state marshal and render an accounting to the commission. All information obtained by the commission from any audit conducted pursuant to this section shall be confidential and shall not be subject to disclosure under the Freedom of Information Act, as defined in section 1-200 ."
       }
     },
     {
@@ -1081,206 +1088,6 @@
         "history": [],
         "annotations": [],
         "plainText": "Transferred to Chapter 959, Sec. 54-1h ."
-      }
-    },
-    {
-      "id": "section-6-32a",
-      "kind": "section",
-      "citation": "6-32a",
-      "citations": [
-        "6-32a"
-      ],
-      "heading": "6-32a",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_078.htm#sec_6-32a",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 6-32a and 6-32b. Prisoner transportation and courthouse security system; Sheriffs' Advisory Board established. Powers and duties of Sheriffs' Advisory Board. Sections 6-32a and 6-32b are repealed, effective December 1, 2000."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 6-32a and 6-32b. Prisoner transportation and courthouse security system; Sheriffs' Advisory Board established. Powers and duties of Sheriffs' Advisory Board. Sections 6-32a and 6-32b are repealed, effective December 1, 2000."
-      }
-    },
-    {
-      "id": "section-6-32b",
-      "kind": "section",
-      "citation": "6-32b",
-      "citations": [
-        "6-32b"
-      ],
-      "heading": "6-32b",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_078.htm#sec_6-32b",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 6-32a and 6-32b. Prisoner transportation and courthouse security system; Sheriffs' Advisory Board established. Powers and duties of Sheriffs' Advisory Board. Sections 6-32a and 6-32b are repealed, effective December 1, 2000."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 6-32a and 6-32b. Prisoner transportation and courthouse security system; Sheriffs' Advisory Board established. Powers and duties of Sheriffs' Advisory Board. Sections 6-32a and 6-32b are repealed, effective December 1, 2000."
-      }
-    },
-    {
-      "id": "section-6-33",
-      "kind": "section",
-      "citation": "6-33",
-      "citations": [
-        "6-33"
-      ],
-      "heading": "6-33",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_078.htm#sec_6-33",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 6-33 and 6-33a. Salaries. Reimbursement to state for use of motor vehicle owned or leased by state, when. Sections 6-33 and 6-33a are repealed, effective June 11, 2018."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 6-33 and 6-33a. Salaries. Reimbursement to state for use of motor vehicle owned or leased by state, when. Sections 6-33 and 6-33a are repealed, effective June 11, 2018."
-      }
-    },
-    {
-      "id": "section-6-33a",
-      "kind": "section",
-      "citation": "6-33a",
-      "citations": [
-        "6-33a"
-      ],
-      "heading": "6-33a",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_078.htm#sec_6-33a",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 6-33 and 6-33a. Salaries. Reimbursement to state for use of motor vehicle owned or leased by state, when. Sections 6-33 and 6-33a are repealed, effective June 11, 2018."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 6-33 and 6-33a. Salaries. Reimbursement to state for use of motor vehicle owned or leased by state, when. Sections 6-33 and 6-33a are repealed, effective June 11, 2018."
-      }
-    },
-    {
-      "id": "section-6-37",
-      "kind": "section",
-      "citation": "6-37",
-      "citations": [
-        "6-37"
-      ],
-      "heading": "6-37",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_078.htm#sec_6-37",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 6-37 and 6-37a. Deputies; chief deputy. Reference manual for deputy sheriffs. Sections 6-37 and 6-37a are repealed, effective December 1, 2000."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 6-37 and 6-37a. Deputies; chief deputy. Reference manual for deputy sheriffs. Sections 6-37 and 6-37a are repealed, effective December 1, 2000."
-      }
-    },
-    {
-      "id": "section-6-37a",
-      "kind": "section",
-      "citation": "6-37a",
-      "citations": [
-        "6-37a"
-      ],
-      "heading": "6-37a",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_078.htm#sec_6-37a",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 6-37 and 6-37a. Deputies; chief deputy. Reference manual for deputy sheriffs. Sections 6-37 and 6-37a are repealed, effective December 1, 2000."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 6-37 and 6-37a. Deputies; chief deputy. Reference manual for deputy sheriffs. Sections 6-37 and 6-37a are repealed, effective December 1, 2000."
-      }
-    },
-    {
-      "id": "section-6-40",
-      "kind": "section",
-      "citation": "6-40",
-      "citations": [
-        "6-40"
-      ],
-      "heading": "6-40",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_078.htm#sec_6-40",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 6-40 and 6-41. Chief deputies' salaries. Compensation of: Constables for court attendance; deputy sheriffs and special deputy sheriffs for court attendance or services at overnight jail facility. Sections 6-40 and 6-41 are repealed, effective December 1, 2000."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 6-40 and 6-41. Chief deputies' salaries. Compensation of: Constables for court attendance; deputy sheriffs and special deputy sheriffs for court attendance or services at overnight jail facility. Sections 6-40 and 6-41 are repealed, effective December 1, 2000."
-      }
-    },
-    {
-      "id": "section-6-41",
-      "kind": "section",
-      "citation": "6-41",
-      "citations": [
-        "6-41"
-      ],
-      "heading": "6-41",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_078.htm#sec_6-41",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 6-40 and 6-41. Chief deputies' salaries. Compensation of: Constables for court attendance; deputy sheriffs and special deputy sheriffs for court attendance or services at overnight jail facility. Sections 6-40 and 6-41 are repealed, effective December 1, 2000."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 6-40 and 6-41. Chief deputies' salaries. Compensation of: Constables for court attendance; deputy sheriffs and special deputy sheriffs for court attendance or services at overnight jail facility. Sections 6-40 and 6-41 are repealed, effective December 1, 2000."
-      }
-    },
-    {
-      "id": "section-6-44",
-      "kind": "section",
-      "citation": "6-44",
-      "citations": [
-        "6-44"
-      ],
-      "heading": "6-44",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_078.htm#sec_6-44",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 6-44 to 6-46. Appointment of special deputies upon application. Appointment and removal of deputies. Sheriff may recover on bond of deputy; not to demand fee from deputy. Sections 6-44 to 6-46 , inclusive, are repealed, effective December 1, 2000."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 6-44 to 6-46. Appointment of special deputies upon application. Appointment and removal of deputies. Sheriff may recover on bond of deputy; not to demand fee from deputy. Sections 6-44 to 6-46 , inclusive, are repealed, effective December 1, 2000."
-      }
-    },
-    {
-      "id": "section-6-46",
-      "kind": "section",
-      "citation": "6-46",
-      "citations": [
-        "6-46"
-      ],
-      "heading": "6-46",
-      "sourceUrl": "https://www.cga.ct.gov/current/pub/chap_078.htm#sec_6-46",
-      "status": "repealed",
-      "content": {
-        "body": [
-          "Secs. 6-44 to 6-46. Appointment of special deputies upon application. Appointment and removal of deputies. Sheriff may recover on bond of deputy; not to demand fee from deputy. Sections 6-44 to 6-46 , inclusive, are repealed, effective December 1, 2000."
-        ],
-        "sourceNotes": [],
-        "history": [],
-        "annotations": [],
-        "plainText": "Secs. 6-44 to 6-46. Appointment of special deputies upon application. Appointment and removal of deputies. Sheriff may recover on bond of deputy; not to demand fee from deputy. Sections 6-44 to 6-46 , inclusive, are repealed, effective December 1, 2000."
       }
     }
   ]

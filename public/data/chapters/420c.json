@@ -150,8 +150,7 @@
       "status": "active",
       "content": {
         "body": [
-          "Registration may be renewed by application to the Commissioner of Consumer Protection. Renewal applications shall be in such form as the commissioner shall prescribe and shall be accompanied by a biennial renewal fee of forty dollars. A separate fee shall be required for each place of business or professional practice where the practitioner stores, distributes or dispenses controlled substances.",
-          "See Sec. 21a-10(b) re staggered schedule for license renewals."
+          "Registration may be renewed by application to the Commissioner of Consumer Protection. Renewal applications shall be in such form as the commissioner shall prescribe and shall be accompanied by a biennial renewal fee of forty dollars. A separate fee shall be required for each place of business or professional practice where the practitioner stores, distributes or dispenses controlled substances."
         ],
         "sourceNotes": [
           "(P.A. 77-485, S. 5, 13; P.A. 82-355, S. 5, 8; P.A. 94-36, S. 9, 42; June 30 Sp. Sess. P.A. 03-6, S. 146(c); P.A. 04-189, S. 1; P.A. 08-25, S. 2; June Sp. Sess. P.A. 09-3, S. 290.)"
@@ -159,8 +158,13 @@
         "history": [
           "History: P.A. 82-355 provided for biennial licensure with phase-in during even-numbered months of 1983; Sec. 19-504p transferred to Sec. 21a-321 in 1983; P.A. 94-36 replaced biennial registration with annual registration, deleted alphabetical schedule of registration renewal and deleted provision concerning calendar year 1983, effective January 1, 1995; June 30 Sp. Sess. P.A. 03-6 replaced Commissioner of Consumer Protection with Commissioner of Agriculture and Consumer Protection, effective July 1, 2004; P.A. 04-189 repealed Sec. 146 of June 30 Sp. Sess. P.A. 03-6, thereby reversing the merger of the Departments of Agriculture and Consumer Protection, effective June 1, 2004; P.A. 08-25 changed annual $10 registration fee to biennial $20 registration fee; June Sp. Sess. P.A. 09-3 increased biennial renewal fee from $20 to $40."
         ],
-        "annotations": [],
-        "plainText": "Registration may be renewed by application to the Commissioner of Consumer Protection. Renewal applications shall be in such form as the commissioner shall prescribe and shall be accompanied by a biennial renewal fee of forty dollars. A separate fee shall be required for each place of business or professional practice where the practitioner stores, distributes or dispenses controlled substances.\n\nSee Sec. 21a-10(b) re staggered schedule for license renewals."
+        "annotations": [
+          {
+            "first": true,
+            "text": "See Sec. 21a-10(b) re staggered schedule for license renewals."
+          }
+        ],
+        "plainText": "Registration may be renewed by application to the Commissioner of Consumer Protection. Renewal applications shall be in such form as the commissioner shall prescribe and shall be accompanied by a biennial renewal fee of forty dollars. A separate fee shall be required for each place of business or professional practice where the practitioner stores, distributes or dispenses controlled substances."
       }
     },
     {

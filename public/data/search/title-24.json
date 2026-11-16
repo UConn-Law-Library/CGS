@@ -104,38 +104,6 @@
       "status": "repealed",
       "text": "Sections 24-5 to 24-8 , inclusive, are repealed.",
       "href": "?chapter=463&section=group-24-5-to-24-6-to-24-7-to-24-8"
-    },
-    {
-      "id": "section-24-5",
-      "citation": "24-5",
-      "citations": [
-        "24-5"
-      ],
-      "heading": "24-5",
-      "chapter": {
-        "id": "chapter-463",
-        "number": "463",
-        "name": "Weather Control Board"
-      },
-      "status": "repealed",
-      "text": "Secs. 24-5 to 24-8. Weather Control Board. Sections 24-5 to 24-8 , inclusive, are repealed.",
-      "href": "?chapter=463&section=section-24-5"
-    },
-    {
-      "id": "section-24-8",
-      "citation": "24-8",
-      "citations": [
-        "24-8"
-      ],
-      "heading": "24-8",
-      "chapter": {
-        "id": "chapter-463",
-        "number": "463",
-        "name": "Weather Control Board"
-      },
-      "status": "repealed",
-      "text": "Secs. 24-5 to 24-8. Weather Control Board. Sections 24-5 to 24-8 , inclusive, are repealed.",
-      "href": "?chapter=463&section=section-24-8"
     }
   ]
 }

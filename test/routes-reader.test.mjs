@@ -176,6 +176,24 @@ test("statuses come from the record, or from a group's disposition note", () => 
   assert.deepEqual(sectionStatuses({ status: "active", content: { body: ["Section 46-31a has been transferred."] } }), ["transferred"]);
   assert.deepEqual(sectionStatuses({ status: "active", content: { body: ["S ections 17-460 to 17-475 , inclusive, have been transferred."] } }), ["transferred"]);
   assert.deepEqual(sectionStatuses({ status: "active", content: { body: ["(a) A lease that has been recorded as provided in section 47-19 is valid."] } }), []);
+  assert.deepEqual(sectionStatuses({ status: "active", content: { body: ["Sections 17-1 to 17-21d , inclusive, have been transferred, repealed or deemed obsolete."] } }), ["transferred", "repealed", "obsolete"]);
+  assert.deepEqual(sectionStatuses({ status: "active", content: { body: ["Sections 4-5 to 4-9 apply to any agency whose authority has been transferred to another agency."] } }), []);
+});
+
+test("a mixed entry shows the same tags as the note it was recorded from", () => {
+  const note = "Sections 46-1 to 46-8 , inclusive, have been transferred or repealed.";
+  const beforeRefresh = { status: "active", content: { body: [note] } };
+  // The crawler lists statuses in its own pattern order; tags keep one order either way.
+  const afterRefresh = { status: "mixed", statuses: ["repealed", "transferred"], content: { body: [note] } };
+  assert.deepEqual(sectionStatuses(afterRefresh), ["transferred", "repealed"]);
+  assert.deepEqual(sectionStatuses(afterRefresh), sectionStatuses(beforeRefresh));
+  // A mixed entry without a list falls back to its note, and search documents read `text`.
+  assert.deepEqual(sectionStatuses({ status: "mixed", content: { body: [note] } }), ["transferred", "repealed"]);
+  assert.deepEqual(sectionStatuses({ status: "active", text: `${note}\n\nNote: These sections were formerly published as chapter 808.` }), ["transferred", "repealed"]);
+  for (const section of [beforeRefresh, afterRefresh]) {
+    assert.equal(navigationSections([section], { hiddenStatuses: ["repealed"] }).length, 1);
+    assert.equal(navigationSections([section], { hiddenStatuses: ["repealed", "transferred"] }).length, 0);
+  }
 });
 
 test("short descriptions skip a leading former-number note", () => {

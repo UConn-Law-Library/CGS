@@ -2,6 +2,7 @@ from pathlib import Path
 import unittest
 
 from crawler.cgs_crawler.parsing import (
+    apply_section_status,
     attach_section_content,
     detect_section_status,
     expand_grouped_section_keys,
@@ -220,6 +221,53 @@ class ParsingTests(unittest.TestCase):
         attach_section_content(html, sections)
         self.assertEqual(len(sections), 1)
         self.assertEqual(sections[0]["section_keys"], ["12-21", "12-22", "12-23", "12-24", "12-24a"])
+
+    def test_has_been_disposition_notes(self):
+        self.assertEqual(detect_section_status("Section 46-31a has been transferred."), ["transferred"])
+        self.assertEqual(
+            detect_section_status("Sections 17-21e to 17-21t , inclusive, have been transferred."),
+            ["transferred"],
+        )
+        self.assertEqual(
+            detect_section_status("Section 4-12 has been repealed."),
+            ["repealed"],
+        )
+        self.assertEqual(
+            detect_section_status("S ections 17-460 to 17-475 , inclusive, have been transferred."),
+            ["transferred"],
+        )
+
+    def test_disposition_notes_listing_several_statuses(self):
+        self.assertEqual(
+            detect_section_status("Sections 46-1 to 46-8 , inclusive, have been transferred or repealed."),
+            ["repealed", "transferred"],
+        )
+        self.assertEqual(
+            detect_section_status(
+                "Sections 17-1 to 17-21d , inclusive, have been transferred, repealed or deemed obsolete."
+            ),
+            ["repealed", "transferred", "obsolete"],
+        )
+        self.assertEqual(
+            detect_section_status("Sections 13-193 to 13-249 , inclusive, are obsolete or repealed."),
+            ["repealed", "obsolete"],
+        )
+
+    def test_transferred_or_repealed_group_is_recorded_as_mixed(self):
+        content = {"text": "Sections 46-1 to 46-8 , inclusive, have been transferred or repealed."}
+        apply_section_status(content, "Secs. 46-1 to 46-8. Marriage.")
+        self.assertEqual(content["status"], "mixed")
+        self.assertEqual(content["statuses"], ["repealed", "transferred"])
+
+    def test_statute_text_mentioning_a_repeal_stays_active(self):
+        for text in (
+            "(a) A lease that has been recorded as provided in section 47-19 is valid.",
+            "(a) Any statute that has been repealed shall not revive.",
+            "Sections 4-5 to 4-9 apply to any agency whose authority has been transferred to another agency.",
+            "Sec. 12-5. Funds that have been transferred.",
+        ):
+            with self.subTest(text=text):
+                self.assertEqual(detect_section_status(text), [])
 
 
 if __name__ == "__main__":

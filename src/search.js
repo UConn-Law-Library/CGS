@@ -1,5 +1,6 @@
 import { checkDataResponse, dataUrl } from "./data-loader.js";
 import { mergeSupplementSearchShard } from "./supplements.js";
+import { sectionStatuses, statusFilterMatches } from "./reader.js";
 
 export function normalizeText(value) {
   return String(value ?? "")
@@ -303,14 +304,14 @@ function scoreCompiledDocument(document, compiled) {
     if (fieldNames.includes("history") && entryMatchesTerm(fields.entries.history, term)) score += term.phrase ? 16 : 9;
     if (fieldNames.includes("annotations") && entryMatchesTerm(fields.entries.annotations, term)) score += term.phrase ? 14 : 8;
   }
-  if (document.status !== "active") score -= 0.25;
+  if (document.status !== "active" || sectionStatuses(document).length) score -= 0.25;
   const matchedFields = fieldNames.filter((name) => compiled.positives.some((term) => entryMatchesTerm(fields.entries[name], term)));
   return { score, matchedFields };
 }
 
 function documentMatchesFilters(document, options) {
   if (options.chapter && ![document.chapter?.id, document.chapter?.number].some((value) => String(value ?? "") === options.chapter)) return false;
-  if (options.status && document.status !== options.status) return false;
+  if (!statusFilterMatches(document, options.status)) return false;
   if (options.supplement === "updated" && !document.supplement) return false;
   if (options.supplement === "base" && document.supplement) return false;
   return true;

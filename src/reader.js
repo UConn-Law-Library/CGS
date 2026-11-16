@@ -36,18 +36,45 @@ export function isHiddenByStatus(statuses, hiddenStatuses) {
   return statuses.length > 0 && statuses.every((status) => hiddenStatuses.includes(status));
 }
 
-const TAGGED_STATUSES = new Set(["repealed", "transferred", "obsolete", "reserved"]);
-const GROUP_DISPOSITION = /^S\s?ections?\s+.{0,300}?\b(?:has|have)\s+been\s+(transferred|repealed)(?:\s+or\s+(transferred|repealed))?\b/i;
+// Tags always show in this order, whether they come from the stored data or from the note.
+const TAGGED_STATUSES = ["transferred", "repealed", "obsolete", "reserved"];
+const DISPOSITION_WORD = "(?:deemed\\s+)?(?:transferred|repealed|obsolete|reserved)";
+const GROUP_DISPOSITION = new RegExp(
+  `^S\\s?ections?\\s+.{0,300}?\\b(?:has|have)\\s+been\\s+((?:${DISPOSITION_WORD},?\\s+(?:(?:or|and)\\s+)?)*${DISPOSITION_WORD})\\s*(?:[.;,]|$)`,
+  "is"
+);
 
-// The statuses a section's tags show. Some entries are recorded as active although their text
-// is only a disposition note, such as "Sections 46-1 to 46-8, inclusive, have been transferred
-// or repealed."; that sentence decides their tags. The recorded data is left as published.
+function orderedStatuses(values) {
+  const present = new Set(values.map((value) => String(value).toLowerCase()));
+  return TAGGED_STATUSES.filter((status) => present.has(status));
+}
+
+// The statuses a section's tags show. A "mixed" entry lists its statuses in `statuses`. Entries
+// imported before issue #64 was fixed are recorded as active although their text is only a
+// disposition note, such as "Sections 46-1 to 46-8, inclusive, have been transferred or
+// repealed."; that sentence decides their tags until the next corpus refresh records them.
+// Search documents, which carry `text` rather than `content.body`, are read the same way.
 export function sectionStatuses(section) {
   const status = section?.status;
-  if (TAGGED_STATUSES.has(status)) return [status];
-  if (status && status !== "active") return [];
-  const match = String(section?.content?.body?.[0] ?? "").match(GROUP_DISPOSITION);
-  return match ? [...new Set([match[1], match[2]].filter(Boolean).map((value) => value.toLowerCase()))] : [];
+  if (TAGGED_STATUSES.includes(status)) return [status];
+  if (status === "mixed" && Array.isArray(section.statuses)) {
+    const stored = orderedStatuses(section.statuses);
+    if (stored.length) return stored;
+  }
+  if (status && status !== "active" && status !== "mixed") return [];
+  const note = section?.content?.body?.[0] ?? String(section?.text ?? "").split("\n\n", 1)[0];
+  const match = String(note ?? "").match(GROUP_DISPOSITION);
+  return match ? orderedStatuses(match[1].match(/transferred|repealed|obsolete|reserved/gi)) : [];
+}
+
+// The advanced search's status filter reads the same tags as navigation. A filter on one
+// status finds entries that list it among others; "Mixed" finds entries with several.
+export function statusFilterMatches(section, filter) {
+  if (!filter) return true;
+  const tags = sectionStatuses(section);
+  if (filter === "active") return tags.length === 0 && (section?.status ?? "active") === "active";
+  if (filter === "mixed") return section?.status === "mixed" || tags.length > 1;
+  return section?.status === filter || tags.includes(filter);
 }
 
 function compactCitation(citation) {

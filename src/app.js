@@ -791,7 +791,8 @@ function canShareFromDevice() {
 function renderProvision(title, chapter, section, maps, secondaryContext = null, change = null, amendments = []) {
   const route = provisionRoute(title, chapter, section);
   const absolute = new URL(route, location.href).href;
-  const status = section.status === "active" ? section.kind : section.status;
+  const tags = sectionStatuses(section);
+  const status = tags.length ? tags.join(", ") : section.status === "active" || section.status === "mixed" ? section.kind : section.status;
   const email = `mailto:?subject=${encodeURIComponent(section.heading)}&body=${encodeURIComponent(absolute)}`;
   // An archived section is a different bookmark from the current one with the same citation.
   const bookmark = {
@@ -839,7 +840,9 @@ function renderSearchResults(matches, results, query, searchOptions = {}) {
   const options = normalizeSearchOptions(searchOptions);
   const highlightTerms = searchHighlightTerms(query, { within: options.within });
   results.innerHTML = matches.map(({ document, score, matchedFields = [] }) => {
-    const documentStatus = document.status === "active" ? "" : `<span class="status">${escapeHtml(document.status)}</span>`;
+    const tags = sectionStatuses(document);
+    const statusText = tags.length ? tags.join(", ") : ["active", "mixed"].includes(document.status) ? "" : document.status;
+    const documentStatus = statusText ? `<span class="status">${escapeHtml(statusText)}</span>` : "";
     const supplement = document.supplement ? `<span class="supplement-pill supplement-${escapeHtml(document.supplement.presentation)}">${escapeHtml(supplementLabel(document.supplement, { short: true }))}</span>` : "";
     const field = ["all", "statute"].includes(options.field) && matchedFields.length
       ? `<span class="result-match-field">${escapeHtml(matchedFields.map((name) => SEARCH_FIELD_LABELS[name] ?? name).join(", "))}</span>`

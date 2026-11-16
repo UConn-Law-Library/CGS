@@ -31,7 +31,7 @@ test("the search page lists matching acts and infractions beside the statute res
   const seeAllActs = acts.getByRole("link", { name: /^See all \d+ matching acts?$/ });
   const actCount = (await seeAllActs.textContent()).match(/\d+/)[0];
   await seeAllActs.click();
-  await expect(page).toHaveURL(/#\/acts\?q=beverage%20containers$/);
+  await expect(page).toHaveURL(/#\/acts\?session=2026-regular&q=beverage%20containers$/);
   await expect(page.locator(".acts-page [role=status]")).toContainText(`Showing ${actCount} of`);
 
   await page.goBack();
@@ -52,7 +52,7 @@ test("a search that names an act lists it under the acts group", async ({ page }
   const acts = alsoFound(page).getByRole("region", { name: "Public and Special Acts" });
   await expect(acts.getByRole("listitem")).toHaveCount(1);
   await expect(acts.getByRole("link").first()).toContainText("P.A. 26-2");
-  await expect(acts.getByRole("link", { name: "See all 1 matching act" })).toHaveAttribute("href", "#/acts?q=PA%2026-2");
+  await expect(acts.getByRole("link", { name: "See all 1 matching act" })).toHaveAttribute("href", "#/acts?session=2026-regular&q=PA%2026-2");
   await expect(page.locator("#search-status")).toContainText(/Showing|No results/);
 });
 

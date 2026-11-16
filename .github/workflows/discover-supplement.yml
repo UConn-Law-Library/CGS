@@ -142,7 +142,8 @@ jobs:
             fi
           done
 
-      # A rerun whose artifacts match the open draft changes nothing, so it publishes nothing.
+      # A rerun whose artifacts match the open draft (built on the same main commit) publishes
+      # nothing. Only the manifest's capture and generation times may differ.
       - name: Package the candidate commit
         id: package
         if: steps.stage.outcome == 'success' && env.CREATE_PULL_REQUEST == 'true'
@@ -151,9 +152,8 @@ jobs:
         run: |
           branch=automation/supplement-discovery
           if git fetch --no-tags --quiet origin "refs/heads/$branch" 2>/dev/null \
-            && git diff --quiet FETCH_HEAD -- public/data \
-            && [ -z "$(git ls-files --others --exclude-standard -- public/data)" ] \
-            && [ "$(git rev-parse FETCH_HEAD^)" = "$GITHUB_SHA" ]; then
+            && [ "$(git rev-parse FETCH_HEAD^)" = "$GITHUB_SHA" ] \
+            && node scripts/same-supplement-candidate.mjs --ref FETCH_HEAD --year "$YEAR"; then
             echo "The open draft on $branch already has these reviewed artifacts. Nothing to publish." >> "$GITHUB_STEP_SUMMARY"
             exit 0
           fi

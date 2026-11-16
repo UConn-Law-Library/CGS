@@ -115,5 +115,7 @@ To undo only an archive (for example, one created by mistake) while keeping the 
 
 ## What still depends on CGA
 
+- **Timing.** The refresh workflows run only from `main`. Until this work is merged there, the `main` workflow that sees the 2027 revision retires the 2026 Supplement by deleting it, with no archive, and the Acts list still expects sessions to be retired by hand. Merge this before CGA publishes 2027 (normally early in the year), or hold the first 2027 refresh pull request until it is merged.
+
 - The 2027 revision: the workflow detects it from `/current/pub/titles.htm`. Before the first refresh after it appears, settle the chapter-metadata limit in `config/corpus-refresh-policy.json` in its own reviewed pull request, as [docs/corpus-refresh.md](corpus-refresh.md#a-new-full-revision) describes.
 - The `/2025/pub/` pages that archived "Official source" links point to. CGA serves `https://www.cga.ct.gov/2025/pub/titles.htm` today; check it still does when reviewing the rollover.

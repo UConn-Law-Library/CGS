@@ -41,6 +41,15 @@ test("once the 2027 revision is active, 2026 acts move to Past sessions and thei
   await expect(page.getByRole("heading", { level: 1 })).toContainText("26-8");
   await expect(page.locator("main")).toContainText("2027 General Statutes");
 
+  // A search still finds 2026 acts, and "See all" opens their past session rather than the
+  // empty recent view.
+  await openApp(page, "#/search?q=PA%2026-8");
+  await page.locator("details", { hasText: "Also found in" }).locator("summary").first().click();
+  await page.getByRole("link", { name: "See all 1 matching act" }).click();
+  await expect(page).toHaveURL(/#\/acts\?session=2026-regular&q=PA%2026-8$/);
+  await expect(page.locator(".acts-page .eyebrow").first()).toContainText("Past session");
+  await expect(page.locator("main table")).toContainText("26-8");
+
   // The current statute page no longer shows the 2026 act notice.
   await openApp(page, "#/t/01/c/001/s/1-1");
   await expect(page.locator(".reader-content > .source-note")).toContainText("Text: 2027 revision.");

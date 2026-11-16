@@ -34,6 +34,10 @@ export async function recordPublishedEdition(dataDir, edition) {
 export async function validatePublishedEditions({ dataDir, schemaDir }) {
   const root = path.resolve(dataDir);
   const file = path.join(root, EDITIONS_DIR, PUBLISHED_FILE);
+  // A freshly imported refresh candidate has no editions directory until the rollover step
+  // carries it forward (and staging refuses a candidate without it), so its absence is not an
+  // error. An editions directory without the list is.
+  if (!(await isDirectory(path.join(root, EDITIONS_DIR)))) return { errors: [], editions: [] };
   if (!(await exists(file))) return { errors: [`${EDITIONS_DIR}/${PUBLISHED_FILE} is missing`], editions: [] };
   const value = await readJson(file);
   const schema = await readJson(path.join(path.resolve(schemaDir), "published-editions.schema.json"));

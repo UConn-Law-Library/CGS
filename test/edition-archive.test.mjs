@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
-import { cp, mkdtemp, readFile, rm, stat, writeFile } from "node:fs/promises";
+import { spawnSync } from "node:child_process";
+import { cp, mkdir, mkdtemp, readFile, rm, stat, writeFile } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import test from "node:test";
@@ -59,6 +60,28 @@ test("a new revision archives the outgoing revision and its supplement byte for 
   assert.match(summary, /## Edition rollover/);
   assert.match(summary, /archives the outgoing 2025 revision and the 2026 Supplement under `public\/data\/editions\/statutes\/2025`/);
   assert.match(summary, /#\/editions\/2025/);
+});
+
+// The corpus workflow's real order: import, validate the bare candidate, carry editions forward
+// (archiving on a new revision), stage, and validate again.
+test("the corpus refresh order validates a bare candidate and then the carried-forward one", async (t) => {
+  const { published, candidate } = await fixture(t);
+  const validate = (dataDir) => spawnSync(process.execPath, ["scripts/validate.mjs", "--data", dataDir, "--schemas", schemaDir], { encoding: "utf8" });
+  const bare = validate(candidate);
+  assert.equal(bare.status, 0, bare.stderr);
+  await mkdir(path.join(published, "editions"), { recursive: true });
+  await writeFile(path.join(published, "editions", "published.json"), `${JSON.stringify({ schemaVersion: "1.0.0", editions: [
+    { year: 2025, kind: "revision", url: "https://www.cga.ct.gov/2025/pub/titles.htm" },
+    { year: 2026, kind: "supplement", url: "https://www.cga.ct.gov/2026/sup/titles.htm" }
+  ] }, null, 2)}\n`, "utf8");
+  assert.equal(validate(published).status, 0);
+  await rolloverEdition({ publishedDir: published, candidateDir: candidate, schemaDir });
+  const staged = validate(candidate);
+  assert.equal(staged.status, 0, staged.stderr);
+  assert.match(staged.stdout, /1 archived statute edition/);
+  // An editions directory that lost its list fails.
+  await rm(path.join(candidate, "editions", "published.json"));
+  assert.match(validate(candidate).stderr, /editions\/published\.json is missing/);
 });
 
 test("rerunning the rollover is a no-op that produces the same bytes", async (t) => {

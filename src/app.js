@@ -1899,7 +1899,8 @@ async function renderAct(catalog, route, sequence) {
   if (shown?.dataset.actPage === act.id && shown.dataset.actQuery === (route.query ?? "") && shown.dataset.actSections === (sections ? route.sections : "")) return showActTarget(route);
 
   setDocumentTitle(act.citation, "Public and Special Acts");
-  const listHref = actsRouteHref({ session: entry.id === manifest.sessions[0]?.id ? null : entry.id });
+  // Named explicitly: once the statute text covers this session, the list's default is another one.
+  const listHref = actsRouteHref({ session: entry.id });
   const officialLinks = `<a href="${escapeHtml(act.url)}" target="_blank" rel="noopener">Official PDF <span aria-hidden="true">↗</span></a> · <a href="${escapeHtml(act.billUrl)}" target="_blank" rel="noopener">${escapeHtml(act.bill)} bill status <span aria-hidden="true">↗</span></a>`;
   const currency = act.type === "special"
     ? "Special Acts apply to particular people, places, or programs and are not added to the General Statutes."

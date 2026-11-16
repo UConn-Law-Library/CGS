@@ -91,6 +91,17 @@ jobs:
             --state "$REPORT_DIR/refresh-state.json" \
             --github-output "$GITHUB_OUTPUT"
 
+      # Every candidate carries the published editions (archived statutes and secondary sources, and
+      # the reviewed list of published editions) forward. A candidate that is a newer full revision
+      # also archives the outgoing revision and the supplements it supersedes, in this same update.
+      - name: Carry forward and archive editions
+        if: steps.review.outputs.has_changes == 'true'
+        run: |
+          node scripts/rollover-edition.mjs             --published public/data             --candidate "$CANONICAL_DIR"             --summary "$REPORT_DIR/edition-rollover.md"
+          if [ -f "$REPORT_DIR/edition-rollover.md" ]; then
+            cat "$REPORT_DIR/edition-rollover.md" >> "$GITHUB_STEP_SUMMARY"
+          fi
+
       - name: Rebind secondary sources to the candidate corpus
         if: steps.review.outputs.has_changes == 'true'
         run: |
@@ -188,6 +199,10 @@ jobs:
           if [ -d public/data/acts ]; then
             cp -a public/data/acts "$CANONICAL_DIR/acts"
           fi
+          if [ -d public/data/editions ] && [ ! -d "$CANONICAL_DIR/editions" ]; then
+            echo "The candidate does not carry public/data/editions forward; nothing was staged." >&2
+            exit 1
+          fi
           rm -rf public/data
           cp -a "$CANONICAL_DIR" public/data
           npm run check
@@ -205,6 +220,10 @@ jobs:
               if [ -f "$report" ]; then cat "$report"; fi
             done
             echo
+            if [ -f "$REPORT_DIR/edition-rollover.md" ]; then
+              cat "$REPORT_DIR/edition-rollover.md"
+              echo
+            fi
             if [ -f "$REPORT_DIR/supplement-retirement.md" ]; then
               cat "$REPORT_DIR/supplement-retirement.md"
               echo

@@ -163,18 +163,13 @@ def merge_sessions(
     published: Dict[str, dict],
     *,
     retrieved_at: str,
-    retire: Iterable[str] = (),
     allow_removals: bool = False,
 ) -> List[dict]:
-    retire = set(retire)
-    unknown = retire - set(published) - {entry["session"]["id"] for entry in parsed}
-    if unknown:
-        raise ValueError(f"Cannot retire unknown session(s): {', '.join(sorted(unknown))}")
-    merged = {key: value for key, value in published.items() if key not in retire}
+    # Every published session is kept. Once the statute text covers a session, the app lists it
+    # under Past sessions; its acts, texts, and links stay published.
+    merged = dict(published)
     for entry in parsed:
         session_id = entry["session"]["id"]
-        if session_id in retire:
-            continue
         previous = merged.get(session_id)
         if previous:
             missing = {act["id"] for act in previous["acts"]} - {act["id"] for act in entry["acts"]}
@@ -314,7 +309,6 @@ def parser() -> argparse.ArgumentParser:
     value.add_argument("--snapshots", type=Path, default=Path(".crawl/acts-snapshots"))
     value.add_argument("--html", type=Path, help="parse a saved copy of the page instead of fetching it")
     value.add_argument("--retrieved-at", help="ISO-8601 timestamp recorded for changed sessions")
-    value.add_argument("--retire", action="append", default=[], help="drop a published session id, such as 2025-regular")
     value.add_argument("--allow-removals", action="store_true", help="accept acts that no longer appear on the page")
     value.add_argument("--no-text", action="store_true", help="keep published act texts without checking the PDFs")
     value.add_argument("--refresh-text", action="store_true", help="extract every act's text again")
@@ -345,7 +339,6 @@ def main() -> None:
         parsed,
         published,
         retrieved_at=retrieved_at,
-        retire=args.retire,
         allow_removals=args.allow_removals,
     )
     previous_texts = {act_id: document for value in published.values() for act_id, document in value["texts"].items()}

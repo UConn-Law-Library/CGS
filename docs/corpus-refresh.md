@@ -60,27 +60,27 @@ Refresh pull requests contain only `public/data` changes. Review the corpus summ
 
 When supplement editions are published under `public/data/supplements/<year>`, a base-corpus refresh recrawls and re-imports every published edition later than the candidate's revision year against the candidate base before staging the pull request (`scripts/plan-supplement-rebind.mjs` decides which). A supplement acquisition, import, or validation failure stops the refresh; the workflow never copies a stale base-bound overlay forward and never silently drops a published edition. An edition the candidate revision supersedes is retired instead, as described below. Replayable supplement snapshots are retained with the workflow artifacts.
 
-Public and Special Acts have their own refresh workflow and are not bound to the base; the refresh copies `public/data/acts` into the candidate unchanged.
+Public and Special Acts have their own refresh workflow and are not bound to the base; the refresh copies `public/data/acts` into the candidate unchanged. It also carries `public/data/editions` (archived editions and the reviewed list of published editions) into every candidate, and staging stops if a candidate lost it.
 
 ## A new full revision
 
-CGA publishes a full revision of the General Statutes in odd-numbered years, and `/current/pub/` switches to it. The crawler reads the edition from the titles page heading ("Revised to January 1, 2027") and fails if the page does not state it; the importer records it in `catalog.json` as `source.revisionYear`. The weekly refresh then:
+CGA publishes a full revision of the General Statutes in odd-numbered years, and `/current/pub/` switches to it. The crawler reads the edition from the titles page heading ("Revised to January 1, 2027") and fails if the page does not state it; the importer records it in `catalog.json` as `source.revisionYear`. The weekly refresh then, in one draft pull request:
 
 1. diffs the new revision against the published one and applies the safety policy (see below);
-2. retires every published supplement whose year is not later than the new revision year. The 2027 revision supersedes the 2026 Supplement, so the refresh pull request deletes `public/data/supplements/2026` and adds a "Retired supplements" section to its description;
-3. rebinds secondary sources, and any newer supplement, to the new revision as usual.
+2. archives the outgoing revision and the supplement read with it, byte for byte, under `public/data/editions/statutes/<year>` (`scripts/rollover-edition.mjs`), and carries every earlier archive forward;
+3. removes the superseded supplement from the current statutes (it stays in the archive) and rebinds any newer one;
+4. rebinds secondary sources to the new revision as usual.
 
-The app judges which Public Acts are pending from the newer of the base revision year and the supplement year, so once the 2027 revision merges, 2026 acts are no longer reported as pending.
+Acts sessions the revision covers move to Past sessions on their own; see [docs/acts.md](acts.md#past-sessions). [docs/edition-rollover.md](edition-rollover.md) is the full runbook: storage, links, rehearsal, review, publication, and rollback.
 
 Steps that remain manual:
 
-- **Safety policy.** A revision changes two years of legislation at once, and the current policy is not expected to pass one. Diffing the 2023 revision against the published 2025 revision (October 2026, with source URLs normalized to `/current/pub/`) gave 9.10% changed provisions (limit 35%), 2.36% added (5%), 0.31% removed (2%), a 2.05% provision count delta (5%), 1.51% chapter additions (5%), and no title changes, all passing; but 15.10% of chapters changed metadata (limit 10%), 161 of those 170 only because new sections changed their section count. Settle the chapter-metadata limit in a separate, reviewed policy pull request before the first refresh after a revision; workflow inputs cannot bypass the gate.
-- **Acts sessions.** After the refresh merges, retire every session the revision codifies (for the 2027 revision, the 2025 and 2026 sessions, special sessions included), as [docs/acts.md](acts.md#retiring-a-session) describes: `python -m crawler.cgs_crawler.acts --retire 2026-regular --output public/data/acts --no-text`.
-- **Published editions.** Add the year to `PUBLISHED_EDITIONS` in `src/publications.js` after confirming the edition on cga.ct.gov (`https://www.cga.ct.gov/2027/pub/titles.htm`). The guide's timeline and worked examples follow that list.
+- **Safety policy.** A revision changes two years of legislation at once. Diffing the 2023 revision against the published 2025 revision (October 2026, with source URLs normalized to `/current/pub/`) gave 9.10% changed provisions, 2.36% added, 0.31% removed, a 2.05% provision count delta, 1.51% chapter additions, and no title changes, and 15.10% of chapters changed metadata, mostly because new sections changed their section count. Check the current limits in `config/corpus-refresh-policy.json` against those figures, and settle any change in a separate, reviewed policy pull request before the first refresh after a revision; workflow inputs cannot bypass the gate.
+- **Published editions.** Confirm the edition on cga.ct.gov (`https://www.cga.ct.gov/2027/pub/titles.htm`) while reviewing; the guide's list of published editions is updated as described in [docs/supplements.md](supplements.md#discovering-a-new-supplement).
 
 ## Rollback
 
-To roll back a bad refresh, revert its merge commit through a pull request. The previous immutable chapter artifacts remain in Git history; no database restoration is involved.
+To roll back a bad refresh, revert its merge commit through a pull request. The previous immutable chapter artifacts remain in Git history; no database restoration is involved. Reverting a rollover restores the previous revision and supplement as current and removes the archive in the same change.
 
 ## Scheduling gate
 

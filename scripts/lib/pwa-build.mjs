@@ -33,6 +33,7 @@ export const shellInputs = Object.freeze([
   "omnisearch.js",
   "offline-integrity.js",
   "publications.js",
+  "editions.js",
   "pwa.js",
   "reader.js",
   "release.js",

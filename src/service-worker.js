@@ -15,6 +15,8 @@ const CONTROL_CACHE = "cgs-data-control-v1";
 const OFFLINE_CACHE_PREFIX = "cgs-data-offline-";
 const METADATA_URL = "./__offline-metadata__";
 const ACTIVE_CACHE_URL = "./__active-offline-cache__";
+// Archived statute and secondary-source editions are left out of the full offline download.
+const ARCHIVED_DATA = /^editions\/(statutes|secondary)\//;
 let offlineOperation = Promise.resolve();
 
 function serializeOfflineOperation(operation) {
@@ -74,6 +76,7 @@ const SHELL_FILES = [
   "./act-amendments.js",
   "./guide.js",
   "./publications.js",
+  "./editions.js",
   "./supplement-overlay.js",
   "./supplements.js",
   "./data/catalog.json",
@@ -372,7 +375,11 @@ async function cacheOfflineData({ port }) {
       "supplements/manifest.json", "acts/manifest.json", "acts/amendments.json",
       ...supplementIndex.editions.map((edition) => `supplements/${edition.path}`)
     ]);
-    const artifacts = release.artifacts.filter((entry) => !loaded.has(entry.path)).map((entry) => artifactTask("./data/", entry));
+    // The offline copy is the current law. Archived editions open online, and a page of one that
+    // was visited stays in the runtime cache like any other.
+    const artifacts = release.artifacts
+      .filter((entry) => !loaded.has(entry.path) && !ARCHIVED_DATA.test(entry.path))
+      .map((entry) => artifactTask("./data/", entry));
     let completed = 6 + supplementData.cachedManifests;
     let cursor = 0;
     let verifiedBytes = 0;

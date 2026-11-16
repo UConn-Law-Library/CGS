@@ -4,7 +4,7 @@ import tempfile
 import unittest
 
 from crawler.cgs_crawler.act_text import text_bytes
-from crawler.cgs_crawler.acts import attach_texts, merge_sessions, parse_acts_page, read_published, write_published
+from crawler.cgs_crawler.acts import attach_texts, merge_sessions, parse_acts_page, parser, read_published, write_published
 
 FIXTURES = Path(__file__).parent / "fixtures"
 PAGE_URL = "https://www.cga.ct.gov/asp/CGATodayFileCopies/CGAAllPA.asp"
@@ -81,11 +81,13 @@ class MergeSessionsTests(unittest.TestCase):
         [entry] = merge_sessions([{"session": SESSION, "acts": [act(1)]}], published, retrieved_at="2026-10-05T00:00:00Z", allow_removals=True)
         self.assertEqual(len(entry["acts"]), 1)
 
-    def test_retires_named_sessions(self):
+    def test_keeps_sessions_the_statutes_now_cover(self):
+        # Retirement is gone: a session stays published (and its links keep working) after the
+        # statute text covers it. The app moves it to Past sessions.
         published = {"2025-regular": {"session": {"id": "2025-regular", "year": 2025, "name": "2025 Regular Session"}, "acts": [act(1)], "updatedAt": "2025-07-01T00:00:00Z"}}
-        self.assertEqual(merge_sessions([], published, retrieved_at="2026-10-05T00:00:00Z", retire=["2025-regular"]), [])
-        with self.assertRaisesRegex(ValueError, "unknown session"):
-            merge_sessions([], published, retrieved_at="2026-10-05T00:00:00Z", retire=["1999-regular"])
+        self.assertEqual([entry["session"]["id"] for entry in merge_sessions([], published, retrieved_at="2026-10-05T00:00:00Z")], ["2025-regular"])
+        with self.assertRaises(SystemExit):
+            parser().parse_args(["--retire", "2025-regular"])
 
 
 class PublishTests(unittest.TestCase):
@@ -99,15 +101,6 @@ class PublishTests(unittest.TestCase):
             before = {path.name: path.read_bytes() for path in root.iterdir()}
             write_published(merge_sessions(parsed, read_published(root), retrieved_at="2026-10-12T00:00:00Z"), root)
             self.assertEqual({path.name: path.read_bytes() for path in root.iterdir()}, before)
-
-    def test_removes_files_for_retired_sessions(self):
-        with tempfile.TemporaryDirectory() as directory:
-            root = Path(directory)
-            parsed = parse_acts_page(fixture_page(), PAGE_URL)
-            write_published(merge_sessions(parsed, {}, retrieved_at="2026-10-05T00:00:00Z"), root)
-            write_published(merge_sessions([], read_published(root), retrieved_at="2026-10-05T00:00:00Z", retire=["2026-regular"]), root)
-            self.assertEqual(sorted(path.name for path in root.iterdir()), ["manifest.json"])
-            self.assertEqual(json.loads((root / "manifest.json").read_text(encoding="utf-8"))["sessions"], [])
 
     def test_refuses_a_directory_that_holds_other_data(self):
         with tempfile.TemporaryDirectory() as directory:

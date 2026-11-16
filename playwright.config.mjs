@@ -54,7 +54,9 @@ export default defineConfig({
   ],
   snapshotPathTemplate: "{testDir}/{testFileDir}/{testFileName}-snapshots/{projectName}/{arg}{ext}",
   webServer: {
-    command: "npm run build && node scripts/serve.mjs --base-path /CGS/",
+    // The served site adds a rehearsal archive (the fixture's 2021 revision with its 2022
+    // Supplement) so archive navigation is tested before a real rollover publishes one.
+    command: "node scripts/build-edition-fixture.mjs --output .crawl/browser-editions && node scripts/build-site.mjs --editions-overlay .crawl/browser-editions/candidate/editions && node scripts/serve.mjs --base-path /CGS/",
     url: baseURL,
     reuseExistingServer: !process.env.CI,
     timeout: 120_000

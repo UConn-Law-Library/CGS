@@ -11,6 +11,8 @@ import { renderBookmarkPage } from "./bookmark-page.js";
 import { bindBookmarkControls } from "./bookmark-controls.js";
 import { explainSearchQuery, normalizeSearchOptions, SearchRepository } from "./search.js";
 import { applyChapterOverlay, mergeSupplementTitleChapters, SupplementRepository } from "./supplements.js";
+import { statuteTextEdition } from "./publications.js";
+import { currentEditionSummary, EditionsRepository, officialSourceUrl, renderArchivedEditionNotice, renderEditionsPage, shortEditionLabel } from "./editions.js";
 import { ProgressiveSearchClient } from "./search-client.js";
 import {
   ACT_SORTS,
@@ -25,6 +27,8 @@ import {
   filterActs,
   matchActText,
   normalizeActsOptions,
+  partitionSessions,
+  renderPastSessions,
   parseSectionsParameter,
   renderActDocument,
   renderActSections,
@@ -39,6 +43,7 @@ import {
   findSection,
   findTitle,
   chapterDisplayLabel,
+  editionsRouteHref,
   aboutRouteHref,
   guideRouteHref,
   infractionsRouteHref,
@@ -96,6 +101,10 @@ import {
 
 const app = document.querySelector("#app");
 const supplementRepository = new SupplementRepository();
+const editionsRepository = new EditionsRepository();
+// The archived edition the statute pages are reading, or null for the current statutes. Set at
+// the start of each route; statute links built while it is set stay in that edition.
+let readerEdition = null;
 const repository = new SearchRepository({ supplementRepository });
 const searchClient = new ProgressiveSearchClient({ repository });
 const quickSearch = new QuickSearchRepository(repository);
@@ -391,7 +400,8 @@ function browseFilter(id, label, target, placeholder = "Number or heading") {
 
 // The three panes are the default. The page tree replaces them when chosen in Settings.
 function statuteNavigation(catalog, route, panes, current = {}) {
-  if (deviceState.preferences().navigationTree) return { contextualNavigation: [statuteTree.column(catalog, current)], columnCount: 1 };
+  // The page tree reads the current edition's heading index, so an archived edition uses panes.
+  if (deviceState.preferences().navigationTree && !readerEdition) return { contextualNavigation: [statuteTree.column(catalog, current)], columnCount: 1 };
   return { contextualNavigation: panes(), columnCount: contextualColumnCount("statutes", route) };
 }
 
@@ -515,6 +525,16 @@ function bindChapterSheet() {
   if (dialog) chapterDialogController = new NativeDialogController(dialog);
 }
 
+// The first breadcrumbs of a statute page: the title list, or for an archived edition the
+// editions list and that edition's titles.
+function editionBreadcrumbs() {
+  if (!readerEdition) return [{ label: "Titles", href: titlesRouteHref() }];
+  return [
+    { label: "Editions", href: editionsRouteHref() },
+    { label: `${readerEdition.id} edition`, href: titlesRouteHref(readerEdition.id) }
+  ];
+}
+
 function breadcrumbs(items) {
   return `<nav class="breadcrumbs" aria-label="Breadcrumb"><ol>${items.map((item) =>
     `<li>${item.href ? `<a href="${escapeHtml(item.href)}">${escapeHtml(item.label)}</a>` : `<span aria-current="page">${escapeHtml(item.label)}</span>`}</li>`
@@ -538,11 +558,11 @@ function setDocumentTitle(...parts) {
 }
 
 function titleRoute(title) {
-  return routeHref({ title: title.number });
+  return routeHref({ title: title.number, edition: readerEdition?.id });
 }
 
 function chapterRoute(title, chapter) {
-  return routeHref({ title: title.number, chapter: chapter.number });
+  return routeHref({ title: title.number, chapter: chapter.number, edition: readerEdition?.id });
 }
 
 function provisionRoute(title, chapter, section, subsection = null) {
@@ -550,8 +570,23 @@ function provisionRoute(title, chapter, section, subsection = null) {
     title: title.number,
     chapter: chapter.number,
     section: sectionRouteKey(section),
-    subsection
+    subsection,
+    edition: readerEdition?.id
   });
+}
+
+// Data for the edition being read: the current statutes, or an archived edition's own copy.
+function readerSupplements() {
+  return readerEdition?.supplements ?? supplementRepository;
+}
+
+function chapterDataPath(path) {
+  return readerEdition ? new URL(path, readerEdition.dataRoot).href : `./data/${path}`;
+}
+
+// An archived page links to its edition's year-scoped CGA page, not /current/.
+function officialUrl(url) {
+  return readerEdition ? officialSourceUrl(url, readerEdition.entry.officialSources) : url;
 }
 
 async function referenceMaps(provisions, catalog, { resolve = true } = {}) {
@@ -573,7 +608,10 @@ async function referenceMaps(provisions, catalog, { resolve = true } = {}) {
     referencedTitles.get(title.id).citations.push(citation);
   }
 
-  for (const citation of references.sections) sections.set(citation, searchRouteHref(citation));
+  // Statute search covers only the current edition, so an archived page links a citation only
+  // once it resolves to a section of that same edition; one that doesn't stays plain text.
+  const edition = readerEdition;
+  if (!edition) for (const citation of references.sections) sections.set(citation, searchRouteHref(citation));
   for (const number of references.chapters) {
     const match = findChapter(catalog, number);
     if (match) chapters.set(number, chapterRoute(match.title, match.chapter));
@@ -582,12 +620,16 @@ async function referenceMaps(provisions, catalog, { resolve = true } = {}) {
 
   await Promise.all([...referencedTitles.values()].map(async ({ title, citations }) => {
     try {
-      const routes = await repository.loadCitations(title.id);
+      const routes = await (edition ? edition.loadCitations(title.id) : repository.loadCitations(title.id));
       for (const citation of citations) {
         const route = routes[citation];
-        if (route) sections.set(citation, routeHref({ title: title.number, chapter: route[0], section: route[1] }));
+        if (route) sections.set(citation, routeHref({ title: title.number, chapter: route[0], section: route[1], edition: edition?.id }));
       }
     } catch (error) {
+      if (edition) {
+        console.warn("Could not load the archived edition's citation routes", error);
+        return;
+      }
       // Without the lookup (e.g. older offline data), a search still finds the section.
       console.warn("Could not load citation routes", error);
       for (const citation of citations) sections.set(citation, searchRouteHref(citation));
@@ -750,10 +792,11 @@ function renderProvision(title, chapter, section, maps, secondaryContext = null,
   const absolute = new URL(route, location.href).href;
   const status = section.status === "active" ? section.kind : section.status;
   const email = `mailto:?subject=${encodeURIComponent(section.heading)}&body=${encodeURIComponent(absolute)}`;
+  // An archived section is a different bookmark from the current one with the same citation.
   const bookmark = {
-    id: `statute:${title.id}:${chapter.id}:${section.id}`,
+    id: readerEdition ? `statute:edition-${readerEdition.id}:${title.id}:${chapter.id}:${section.id}` : `statute:${title.id}:${chapter.id}:${section.id}`,
     type: "statute",
-    title: sectionLabel(section),
+    title: readerEdition ? `${sectionLabel(section)} (${readerEdition.id} edition)` : sectionLabel(section),
     subtitle: section.heading,
     href: route
   };
@@ -764,12 +807,12 @@ function renderProvision(title, chapter, section, maps, secondaryContext = null,
     </div>
     <div data-amendments-status><p class="visually-hidden" role="status">Amendment information loading…</p></div>
     <div class="section-actions" aria-label="Section actions">
-      <button type="button" class="icon-action" data-copy-citation="${escapeHtml(`Conn. Gen. Stat. ${section.citation ? `§ ${section.citation}` : sectionLabel(section)}`)}">${iconActionLabel(icons.copy, "Copy citation")}</button>
+      <button type="button" class="icon-action" data-copy-citation="${escapeHtml(`Conn. Gen. Stat. ${section.citation ? `§ ${section.citation}` : sectionLabel(section)}${readerEdition ? ` (${change ? `Supp. ${change.editionYear}` : readerEdition.entry.revisionYear})` : ""}`)}">${iconActionLabel(icons.copy, "Copy citation")}</button>
       ${bookmarkButton(bookmark, "icon-action")}
       <button type="button" class="icon-action" data-copy-link="${escapeHtml(route)}">${iconActionLabel(icons.link, "Copy link")}</button>
       ${canShareFromDevice() ? `<button type="button" class="icon-action" data-share-link="${escapeHtml(route)}" data-share-title="${escapeHtml(section.heading)}">${iconActionLabel(icons.share, "Share")}</button>` : ""}
       <a class="icon-action" href="${escapeHtml(email)}">${iconActionLabel(icons.mail, "Email")}</a>
-      <a class="primary-action" href="${escapeHtml(section.sourceUrl)}">Official source</a>
+      <a class="primary-action" href="${escapeHtml(officialUrl(section.sourceUrl))}">Official source</a>
     </div>
     ${renderTextViews(section, change, `<div class="statute-text">${section.content.body.map((paragraph) => renderParagraph(paragraph, maps, title, chapter, section)).join("")}</div>
     ${renderInformationReferences(section, maps, secondaryContext, change)}`, maps)}
@@ -851,15 +894,18 @@ async function renderHome(catalog, settingsPanel) {
 }
 
 function renderTitles(catalog, settingsPanel) {
-  setDocumentTitle("Titles");
+  const edition = readerEdition;
+  setDocumentTitle(edition ? `${edition.id} edition` : "Titles");
   const mainContent = `<main class="browse-page titles-page" id="main-content">
-    <header class="browse-heading"><div><p class="eyebrow">${catalog.counts.chapters.toLocaleString()} chapters · ${catalog.counts.sections.toLocaleString()} sections</p><h1>Statute titles</h1></div></header>
+    ${edition ? breadcrumbs([{ label: "Editions", href: editionsRouteHref() }, { label: `${edition.id} edition` }]) : ""}
+    <header class="browse-heading"><div><p class="eyebrow">${catalog.counts.chapters.toLocaleString()} chapters · ${catalog.counts.sections.toLocaleString()} sections</p><h1>${edition ? escapeHtml(shortEditionLabel(edition.entry.revisionYear, edition.entry.supplementYears)) : "Statute titles"}</h1></div>${edition ? "" : `<a href="${escapeHtml(editionsRouteHref())}">Earlier editions</a>`}</header>
+    ${edition ? renderArchivedEditionNotice({ edition: edition.entry, currentHref: titlesRouteHref(), editionsHref: editionsRouteHref() }) : ""}
     <div class="statute-drilldown">
       ${browseFilter("title-filter", "Find a title", "browse-titles-list")}
       <ol class="title-list" id="browse-titles-list">${catalog.titles.map((title) => `<li><a href="${escapeHtml(titleRoute(title))}"><strong>${escapeHtml(titleLabel(title))}</strong><span>${escapeHtml(title.name)}</span><small>${title.chapters.length} chapter${title.chapters.length === 1 ? "" : "s"}</small></a></li>`).join("")}</ol>
     </div>
   </main>`;
-  const showTree = compactLayout.matches && deviceState.preferences().navigationTree;
+  const showTree = compactLayout.matches && deviceState.preferences().navigationTree && !edition;
   mountApplicationShell({
     contextualNavigation: showTree ? [statuteTree.column(catalog)] : [],
     mainContent,
@@ -1152,8 +1198,9 @@ function searchOtherSources(query) {
 function renderTitle(catalog, title, settingsPanel) {
   setDocumentTitle(titleLabel(title));
   const mainContent = `<main class="browse-page application-main" id="main-content">
-    ${breadcrumbs([{ label: "Titles", href: titlesRouteHref() }, { label: titleLabel(title) }])}
-    <div class="browse-heading"><div><p class="eyebrow">${title.chapters.length} chapter${title.chapters.length === 1 ? "" : "s"}</p><h1>${escapeHtml(titleLabel(title))} — ${escapeHtml(title.name)}</h1></div><a href="${escapeHtml(title.sourceUrl)}">Official title source</a></div>
+    ${breadcrumbs([...editionBreadcrumbs(), { label: titleLabel(title) }])}
+    ${readerEdition ? renderArchivedEditionNotice({ edition: readerEdition.entry, currentHref: routeHref({ title: title.number }), editionsHref: editionsRouteHref() }) : ""}
+    <div class="browse-heading"><div><p class="eyebrow">${title.chapters.length} chapter${title.chapters.length === 1 ? "" : "s"}</p><h1>${escapeHtml(titleLabel(title))} — ${escapeHtml(title.name)}</h1></div><a href="${escapeHtml(officialUrl(title.sourceUrl))}">Official title source</a></div>
     <p class="desktop-only">Choose a chapter from the chapters column.</p>
     <div class="mobile-only statute-drilldown">
       ${browseFilter("chapter-filter", "Find a chapter", "browse-chapters-list")}
@@ -1189,21 +1236,25 @@ async function sectionSecondaryContext(title, section, requestedCitation) {
 const pendingChapterLoads = new Map();
 
 function prefetchChapter(path) {
-  if (pendingChapterLoads.has(path)) return;
+  const url = chapterDataPath(path);
+  if (pendingChapterLoads.has(url)) return;
   pendingChapterLoads.clear();
-  const load = getJson(`./data/${path}`);
+  const load = getJson(url);
   load.catch(() => {});
-  pendingChapterLoads.set(path, load);
+  pendingChapterLoads.set(url, load);
 }
 
 function loadChapter(path) {
-  const pending = pendingChapterLoads.get(path);
-  pendingChapterLoads.delete(path);
-  return pending ?? getJson(`./data/${path}`);
+  const url = chapterDataPath(path);
+  const pending = pendingChapterLoads.get(url);
+  pendingChapterLoads.delete(url);
+  return pending ?? getJson(url);
 }
 
 async function renderChapter(catalog, title, chapterMeta, route, sequence, settingsPanel) {
-  if (route.kind === "section") {
+  const edition = readerEdition;
+  const supplements = readerSupplements();
+  if (route.kind === "section" && !edition) {
     // The section's reference links and related sources need these; fetch them with the chapter.
     repository.loadCitations(title.id).catch(() => {});
     secondaryRepository.loadSectionLinks(title.id, route.section).catch(() => {});
@@ -1212,12 +1263,14 @@ async function renderChapter(catalog, title, chapterMeta, route, sequence, setti
   // on the page below rather than replacing it.
   const basePromise = chapterMeta.supplementOnly ? Promise.resolve(null) : loadChapter(chapterMeta.path);
   const latestPromise = chapterMeta.supplementOnly
-    ? supplementRepository.loadChapter(chapterMeta.supplementEditionYear, chapterMeta.number, title.id)
+    ? supplements.loadChapter(chapterMeta.supplementEditionYear, chapterMeta.number, title.id)
       .then((supplementChapter) => ({ edition: { editionYear: chapterMeta.supplementEditionYear }, chapter: supplementChapter }))
-    : supplementRepository.loadLatestChapter(chapterMeta.number, title.id);
+    : supplements.loadLatestChapter(chapterMeta.number, title.id);
   latestPromise.catch(() => {});
-  const amendmentsPromise = actsRepository.amendments()
-    .then((index) => ({ index })).catch((error) => ({ error }));
+  // Act notices describe acts the current text does not include yet; an archived edition has none.
+  const amendmentsPromise = edition
+    ? Promise.resolve({ archived: true })
+    : actsRepository.amendments().then((index) => ({ index })).catch((error) => ({ error }));
   const baseChapter = await basePromise;
   if (sequence !== renderSequence) return;
   let chapter = baseChapter;
@@ -1251,7 +1304,9 @@ async function renderChapter(catalog, title, chapterMeta, route, sequence, setti
   }
 
   const provisions = selected ? [selected, ...(changeBySection.get(selected.id)?.previousSections ?? [])] : [];
-  const maps = selected ? await referenceMaps(provisions, catalog, { resolve: false }) : null;
+  // An archived edition's citation lookups are small and must resolve before render: there is no
+  // search fallback to link to in the meantime.
+  const maps = selected ? await referenceMaps(provisions, catalog, { resolve: Boolean(edition) }) : null;
   const secondaryContext = null;
   if (sequence !== renderSequence) return;
   const preferences = deviceState.preferences();
@@ -1264,20 +1319,25 @@ async function renderChapter(catalog, title, chapterMeta, route, sequence, setti
   setDocumentTitle(selected ? sectionLabel(selected) : chapterLabel(chapter), titleLabel(title));
   const sectionItems = statuteSectionItems(title, chapter, chapterNavigation, selected, changeBySection, pendingBySection);
   const mobileChapterList = `<section class="mobile-only mobile-section-browser statute-drilldown" aria-labelledby="mobile-sections-heading"><div class="section-heading"><div><p class="eyebrow">${chapterNavigation.length} sections${hiddenSections ? ` · ${hiddenSections} hidden` : ""}</p><h2 id="mobile-sections-heading">Sections</h2></div></div>${browseFilter("section-filter", "Find a section", "browse-sections-list")}<div id="browse-sections-list">${railList(sectionItems)}</div></section>`;
-  const mobileBrowse = preferences.navigationTree
+  const mobileBrowse = preferences.navigationTree && !edition
     ? `<a href="${escapeHtml(chapterRoute(title, chapter))}">Browse statute tree</a>`
     : '<button type="button" data-open-chapter-sheet aria-haspopup="dialog">Browse chapter</button>';
   const mainContent = `<main class="reader-content application-main" id="main-content">
       ${breadcrumbs([
-        { label: "Titles", href: titlesRouteHref() },
+        ...editionBreadcrumbs(),
         { label: titleLabel(title), href: titleRoute(title) },
         { label: chapterLabel(chapter), href: selected ? chapterRoute(title, chapter) : null },
         ...(selected ? [{ label: sectionLabel(selected) }] : [])
       ])}
-      ${supplementError ? `<p class="supplement-warning" role="alert">The published supplement could not be loaded. This page is showing the base revision only; reload before relying on it.</p>` : ""}
-      <p class="source-note">Text: ${escapeHtml(String(catalog.source?.revisionYear ?? "Published"))} revision${latestEdition && !supplementError ? ` with the ${latestEdition.editionYear} Supplement` : ""}. Captured ${escapeHtml(formatSnapshotDate(catalog.source?.retrievedAt ?? catalog.generatedAt) ?? "date unavailable")}.</p>
-      <div class="chapter-research-tools"><a href="${escapeHtml(searchRouteHref("", { title: title.id, chapter: chapter.number }))}">Search this chapter</a>${selected ? `<span class="mobile-reader-tools">${mobileBrowse}</span>` : ""}${selected ? sectionNavigation(title, chapter, chapterNavigation, selected).replace('aria-label="Adjacent sections"', 'aria-label="Section shortcuts"') : ""}</div>
-      ${selected ? `${renderProvision(title, chapter, selected, maps, secondaryContext, changeBySection.get(selected.id), pendingBySection.get(selected.id))}${sectionNavigation(title, chapter, chapterNavigation, selected)}${chapterSheet(title, chapter, chapterNavigation, selected, changeBySection, pendingBySection)}` : `<div class="chapter-overview"><p class="eyebrow">${chapterNavigation.length} sections${hiddenSections ? ` · ${hiddenSections} hidden` : ""}</p><h1>${escapeHtml(chapterLabel(chapter))} — ${escapeHtml(chapter.name)}</h1>${chapterSupplementSummary(title, chapter, overlay, changeBySection)}<div data-amendments-status><p class="visually-hidden" role="status">Amendment information loading…</p></div><p class="desktop-only">Choose a section from the sections column.</p><a href="${escapeHtml(chapter.sourceUrl)}">Official chapter source</a></div>${mobileChapterList}`}
+      ${edition ? renderArchivedEditionNotice({
+        edition: edition.entry,
+        currentHref: routeHref({ title: title.number, chapter: chapter.number, section: selected ? sectionRouteKey(selected) : null }),
+        editionsHref: editionsRouteHref()
+      }) : ""}
+      ${supplementError ? `<p class="supplement-warning" role="alert">The ${edition ? "archived" : "published"} supplement could not be loaded. This page is showing the base revision only; reload before relying on it.</p>` : ""}
+      <p class="source-note">Text: ${escapeHtml(String(catalog.source?.revisionYear ?? "Published"))} revision${latestEdition && !supplementError ? ` with the ${latestEdition.editionYear} Supplement` : ""}${edition ? " (archived edition)" : ""}. Captured ${escapeHtml(formatSnapshotDate(edition ? edition.entry.retrievedAt : catalog.source?.retrievedAt ?? catalog.generatedAt) ?? "date unavailable")}. <a href="${escapeHtml(editionsRouteHref())}">${edition ? "All editions" : "Earlier editions"}</a></p>
+      <div class="chapter-research-tools">${edition ? "" : `<a href="${escapeHtml(searchRouteHref("", { title: title.id, chapter: chapter.number }))}">Search this chapter</a>`}${selected ? `<span class="mobile-reader-tools">${mobileBrowse}</span>` : ""}${selected ? sectionNavigation(title, chapter, chapterNavigation, selected).replace('aria-label="Adjacent sections"', 'aria-label="Section shortcuts"') : ""}</div>
+      ${selected ? `${renderProvision(title, chapter, selected, maps, secondaryContext, changeBySection.get(selected.id), pendingBySection.get(selected.id))}${sectionNavigation(title, chapter, chapterNavigation, selected)}${chapterSheet(title, chapter, chapterNavigation, selected, changeBySection, pendingBySection)}` : `<div class="chapter-overview"><p class="eyebrow">${chapterNavigation.length} sections${hiddenSections ? ` · ${hiddenSections} hidden` : ""}</p><h1>${escapeHtml(chapterLabel(chapter))} — ${escapeHtml(chapter.name)}</h1>${chapterSupplementSummary(title, chapter, overlay, changeBySection)}<div data-amendments-status><p class="visually-hidden" role="status">Amendment information loading…</p></div><p class="desktop-only">Choose a section from the sections column.</p><a href="${escapeHtml(officialUrl(chapter.sourceUrl))}">Official chapter source</a></div>${mobileChapterList}`}
     </main>`;
   mountApplicationShell({
     ...statuteNavigation(catalog, route, () => [
@@ -1295,9 +1355,13 @@ async function renderChapter(catalog, title, chapterMeta, route, sequence, setti
   }, settingsPanel);
   bindChapterSheet();
   // Enrich the mounted reader without replacing its text, focus, or open disclosures.
-  amendmentsPromise.then(({ index, error }) => {
+  amendmentsPromise.then(({ index, error, archived }) => {
     if (sequence !== renderSequence) return;
     const slot = app.querySelector("[data-amendments-status]");
+    if (archived) {
+      slot.innerHTML = "";
+      return;
+    }
     if (error || supplementError) {
       slot.innerHTML = '<p class="supplement-warning" role="status">Amendment information is unavailable. Check the official acts before relying on this text.</p>';
       return;
@@ -1312,7 +1376,7 @@ async function renderChapter(catalog, title, chapterMeta, route, sequence, setti
     }
     statuteTree.revealCurrent();
   });
-  if (selected) {
+  if (selected && !edition) {
     referenceMaps(provisions, catalog).then((resolved) => {
       if (sequence !== renderSequence) return;
       for (const link of app.querySelectorAll(".provision a.legal-reference")) {
@@ -1325,11 +1389,16 @@ async function renderChapter(catalog, title, chapterMeta, route, sequence, setti
       if (sequence !== renderSequence) return;
       app.querySelector("[data-secondary-references]").innerHTML = renderSecondaryContext(context);
     });
-
+  } else if (selected) {
+    // The index and infractions records link to the current statutes.
+    const slot = app.querySelector("[data-secondary-references]");
+    if (slot) slot.innerHTML = `<p class="secondary-context-note">The subject index and infractions schedule are linked to the current statutes. <a href="${escapeHtml(routeHref({ title: title.number, chapter: chapter.number, section: sectionRouteKey(selected) }))}">Open the current text</a> to see related records.</p>`;
+  }
+  if (selected) {
     deviceState.recordRecent({
-      id: `statute:${selected.id}`,
+      id: edition ? `statute:edition-${edition.id}:${selected.id}` : `statute:${selected.id}`,
       type: "statute",
-      title: sectionLabel(selected),
+      title: edition ? `${sectionLabel(selected)} (${edition.id} edition)` : sectionLabel(selected),
       subtitle: `${titleLabel(title)} · ${chapterLabel(chapter)} — ${selected.heading}`,
       href: provisionRoute(title, chapter, selected)
     });
@@ -1629,22 +1698,44 @@ async function renderInfractions(route, sequence, settingsPanel) {
 
 async function renderActs(route, sequence) {
   const options = normalizeActsOptions(route);
-  const [{ manifest, entry, acts }, supplementEdition, catalog] = await Promise.all([
-    actsRepository.loadSession(options.session),
+  const [manifest, supplementEdition, catalog] = await Promise.all([
+    actsRepository.manifest(),
     supplementRepository.latestEdition().catch(() => null),
     loadCatalog().catch(() => null)
   ]);
   if (sequence !== renderSequence) return;
+  // Sessions the active statute edition covers are Past sessions; the default view lists the
+  // newest session it does not cover yet.
+  const years = statuteTextYears(catalog, supplementEdition);
+  const { recent, past } = partitionSessions(manifest.sessions, years);
+  const officialList = `<a href="${escapeHtml(manifest.source.url)}" target="_blank" rel="noopener">Official list <span aria-hidden="true">↗</span></a>`;
+  const pastLink = `<a href="${escapeHtml(actsRouteHref({ view: "past" }))}">Past sessions${past.length ? ` (${past.length})` : ""}</a>`;
+  if (options.view === "past") {
+    setDocumentTitle("Past sessions", "Public and Special Acts");
+    app.innerHTML = `${siteHeader()}<main class="acts-page browse-page" id="main-content">
+      ${breadcrumbs([{ label: "Public and Special Acts", href: actsRouteHref() }, { label: "Past sessions" }])}
+      <header class="index-intro"><p class="eyebrow">${escapeHtml(manifest.source.publisher)}</p><h1>Past sessions</h1></header>
+      ${renderPastSessions(past, years, { sessionHref: (session) => actsRouteHref({ session: session.id }) })}
+    </main><footer>${legalFooter()}</footer>`;
+    window.scrollTo({ top: 0 });
+    return;
+  }
+  const sessionId = options.session ?? recent[0]?.id ?? null;
+  const { entry, acts } = sessionId ? await actsRepository.loadSession(sessionId) : { entry: null, acts: [] };
+  if (sequence !== renderSequence) return;
   if (options.session && !entry) return renderNotFound("That legislative session is not in the acts list.");
   setDocumentTitle("Public and Special Acts");
-  const officialList = `<a href="${escapeHtml(manifest.source.url)}" target="_blank" rel="noopener">Official list <span aria-hidden="true">↗</span></a>`;
   if (!entry) {
+    const edition = statuteTextEdition({ baseRevisionYear: years.baseRevisionYear, supplementYear: years.supplementEditionYear });
     app.innerHTML = `${siteHeader()}<main class="acts-page browse-page" id="main-content">
       <header class="index-intro"><p class="eyebrow">${escapeHtml(manifest.source.publisher)}</p><h1>Public and Special Acts</h1></header>
-      <p class="empty-state" role="status">No acts have been published yet. ${officialList}</p>
+      <p class="empty-state" role="status">${manifest.sessions.length && edition
+        ? `No acts have been published from a session after the ${escapeHtml(String(edition.legislationThrough))} sessions, which the ${escapeHtml(edition.label)} in this app covers. ${pastLink}. ${officialList}`
+        : `No acts have been published yet. ${officialList}`}</p>
     </main>`;
     return;
   }
+  const pastSession = past.includes(entry);
   const effectiveView = options.view === "effective";
   // The word index is only needed to search the act text, and the
   // effective-date index only for the effective-date view.
@@ -1656,8 +1747,11 @@ async function renderActs(route, sequence) {
   const textMatches = matchActText(searchIndex, options.query);
   const shown = filterActs(acts, effectiveView ? { ...options, type: "public" } : options, textMatches);
   const textSearchNote = options.query && entry.search && !searchIndex ? " Act text could not be searched." : "";
+  const sessionOptions = (sessions) => sessions.map((session) => `<option value="${escapeHtml(session.id)}"${selectAttribute(session.id, entry.id)}>${escapeHtml(session.name)}</option>`).join("");
   const sessionField = manifest.sessions.length > 1
-    ? `<div class="search-field"><label for="acts-session">Session</label><select id="acts-session" name="session">${manifest.sessions.map((session) => `<option value="${escapeHtml(session.id)}"${selectAttribute(session.id, entry.id)}>${escapeHtml(session.name)}</option>`).join("")}</select></div>`
+    ? `<div class="search-field"><label for="acts-session">Session</label><select id="acts-session" name="session">${recent.length && past.length
+      ? `<optgroup label="Recent sessions">${sessionOptions(recent)}</optgroup><optgroup label="Past sessions">${sessionOptions(past)}</optgroup>`
+      : sessionOptions(manifest.sessions)}</select></div>`
     : "";
   const viewLinks = Object.entries(ACT_VIEWS).map(([view, label]) =>
     `<a href="${escapeHtml(actsRouteHref({ session: options.session, query: options.query, view }))}"${view === options.view ? ` aria-current="page"` : ""}>${label}</a>`).join("");
@@ -1694,10 +1788,10 @@ async function renderActs(route, sequence) {
   const scrollTop = window.scrollY;
   app.innerHTML = `${siteHeader()}<main class="acts-page browse-page" id="main-content" data-acts-view="${options.view}">
     <header class="index-intro">
-      <p class="eyebrow">${escapeHtml(manifest.source.publisher)}</p>
+      <p class="eyebrow">${escapeHtml(manifest.source.publisher)}${pastSession ? " · Past session" : ""}</p>
       <h1>Public and Special Acts</h1>
-      <p>${escapeHtml(actsCurrencyNote(entry, statuteTextYears(catalog, supplementEdition)))}</p>
-      <p class="source-note">${escapeHtml(entry.name)} · ${escapeHtml(actsCountLabel(entry.counts))} · Updated ${escapeHtml(formatSnapshotDate(entry.updatedAt))} · ${officialList}</p>
+      <p>${escapeHtml(actsCurrencyNote(entry, years))}</p>
+      <p class="source-note">${escapeHtml(entry.name)} · ${escapeHtml(actsCountLabel(entry.counts))} · Updated ${escapeHtml(formatSnapshotDate(entry.updatedAt))} · ${officialList} · ${pastLink}</p>
     </header>
     <aside class="acts-guidance" aria-label="Reading these acts">
       <p><strong>Public Acts</strong> change the General Statutes. Until revised statute text is published, read an act together with the sections it amends, and check the effective date of each section.</p>
@@ -1977,6 +2071,24 @@ async function renderStatutesIndex(route, sequence, settingsPanel) {
   }
 }
 
+async function renderEditions(sequence, settingsPanel) {
+  const [catalog, latest, index] = await Promise.all([
+    loadCatalog(),
+    supplementRepository.latestEdition().catch(() => null),
+    editionsRepository.index()
+  ]);
+  if (sequence !== renderSequence) return;
+  setDocumentTitle("Editions");
+  const mainContent = `<main class="browse-page editions-page" id="main-content">${renderEditionsPage({
+    current: currentEditionSummary(catalog, latest),
+    index,
+    routes: { current: titlesRouteHref(), edition: (id) => titlesRouteHref(id) },
+    formatDate: formatSnapshotDate
+  })}</main>`;
+  mountApplicationShell({ contextualNavigation: [], mainContent, mobilePresentationMode: "drilldown" }, settingsPanel);
+  if (!settingsPanel?.isConnected) window.scrollTo({ top: 0 });
+}
+
 function renderNotFound(message = "That page was not found.") {
   setDocumentTitle("Not found");
   app.innerHTML = `${siteHeader()}<main class="error" id="main-content"><p class="eyebrow">Not found</p><h1>${escapeHtml(message)}</h1><p><a href="#/">Browse the statutes</a></p></main>`;
@@ -1984,7 +2096,7 @@ function renderNotFound(message = "That page was not found.") {
 
 async function titleWithLatestSupplementChapters(title) {
   try {
-    const latest = await supplementRepository.loadLatestTitle(title.id);
+    const latest = await readerSupplements().loadLatestTitle(title.id);
     return mergeSupplementTitleChapters(title, latest.title, latest.edition?.editionYear);
   } catch (error) {
     console.warn("Could not load supplement chapter navigation", error);
@@ -2042,13 +2154,25 @@ async function renderCurrentRoute(settingsPanel) {
   const sequence = ++renderSequence;
   try {
     const route = parseRoute(location);
+    readerEdition = null;
     // Statute pages need the supplement manifests as well as the catalog; fetch them together.
-    if (["title", "chapter", "section"].includes(route.kind)) {
+    if (["title", "chapter", "section"].includes(route.kind) && !route.edition) {
       supplementRepository.latestEdition()
         .then((edition) => edition && supplementRepository.loadEdition(edition.editionYear))
         .catch(() => {});
     }
-    const catalog = await loadCatalog();
+    if (route.kind === "editions") return await renderEditions(sequence, settingsPanel);
+    let catalog;
+    if (route.edition) {
+      // An archived edition reads its own catalog, chapters, and supplement.
+      const edition = await editionsRepository.statuteEdition(route.edition);
+      if (sequence !== renderSequence) return;
+      if (!edition) return renderNotFound(`No archived ${route.edition} edition is available.`);
+      readerEdition = edition;
+      catalog = edition.catalog;
+    } else {
+      catalog = await loadCatalog();
+    }
     if (sequence !== renderSequence) return;
     if (route.kind === "home") return await renderHome(catalog, settingsPanel);
     if (route.kind === "titles") return renderTitles(catalog, settingsPanel);

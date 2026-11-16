@@ -944,9 +944,9 @@ async function loadLatestSupplement() {
 
 // The guide's code loads only on its own route, so other pages don't download it.
 async function renderGuide(catalog, route, sequence) {
-  const [guide, [supplementResult, actsResult]] = await Promise.all([
+  const [guide, [supplementResult, actsResult, publishedResult]] = await Promise.all([
     import("./guide.js"),
-    Promise.allSettled([loadLatestSupplement(), actsRepository.manifest()])
+    Promise.allSettled([loadLatestSupplement(), actsRepository.manifest(), getJson("./data/editions/published.json")])
   ]);
   if (sequence !== renderSequence) return;
   // A source that failed to load is unknown (undefined), which the guide says, rather than absent.
@@ -958,7 +958,7 @@ async function renderGuide(catalog, route, sequence) {
   setDocumentTitle("Understanding the Statutes");
   app.innerHTML = `${siteHeader()}<main class="guide-page" id="main-content">
     ${breadcrumbs([{ label: "Home", href: "#/" }, { label: "Understanding the Statutes" }])}
-    ${guide.renderGuide({ coverage })}
+    ${guide.renderGuide({ coverage, publishedEditions: publishedResult.status === "fulfilled" ? publishedResult.value.editions : null })}
   </main><footer>${legalFooter()}</footer>`;
   unmountGuide = guide.mountGuide(app.querySelector(".guide-page"), { scrollTo: route.part });
   if (!route.part) window.scrollTo({ top: 0 });

@@ -135,3 +135,13 @@ test("official links point to the verified General Assembly pages", () => {
   assert.ok(html.includes(OFFICIAL_LINKS.billFlowchart));
   assert.doesNotMatch(html, /target="_blank"(?![^>]*rel="noopener")/);
 });
+
+test("the guide follows the reviewed list of published editions it is given", async () => {
+  const { renderGuide } = await import("../src/guide.js");
+  const shipped = renderGuide({ interactive: false });
+  assert.doesNotMatch(shipped, /Researching a statute in 2028/);
+  const later = [...PUBLISHED_EDITIONS, { year: 2027, kind: "revision", url: "https://www.cga.ct.gov/2027/pub/titles.htm" }, { year: 2028, kind: "supplement", url: "https://www.cga.ct.gov/2028/sup/titles.htm" }];
+  const html = renderGuide({ interactive: false, publishedEditions: later });
+  assert.match(html, /Researching a statute in 2028/);
+  assert.match(html, /https:\/\/www\.cga\.ct\.gov\/2028\/sup\/titles\.htm/);
+});

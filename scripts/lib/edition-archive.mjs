@@ -14,6 +14,47 @@ export const STATUTE_ARCHIVE_DIR = "editions/statutes";
 // The archived base keeps exactly these files: what the base manifest and catalog describe.
 const BASE_ENTRIES = ["catalog.json", "manifest.json", "chapters", "search"];
 const RECORD_FILE = "edition.json";
+export const PUBLISHED_FILE = "published.json";
+
+// Adds an edition to editions/published.json (creating it if needed), keeping years in order.
+// An entry that is already listed is left as it was.
+export async function recordPublishedEdition(dataDir, edition) {
+  const file = path.join(path.resolve(dataDir), EDITIONS_DIR, PUBLISHED_FILE);
+  const current = await readJson(file).catch(() => ({ schemaVersion: "1.0.0", editions: [] }));
+  if (current.editions.some((entry) => entry.year === edition.year)) return false;
+  current.editions = [...current.editions, edition].sort((left, right) => left.year - right.year);
+  await mkdir(path.dirname(file), { recursive: true });
+  await writeFile(file, `${JSON.stringify(current, null, 2)}
+`, "utf8");
+  return true;
+}
+
+// The published list must name the active revision and every published supplement, with the
+// parity CGA uses: revisions in odd years, supplements in even years.
+export async function validatePublishedEditions({ dataDir, schemaDir }) {
+  const root = path.resolve(dataDir);
+  const file = path.join(root, EDITIONS_DIR, PUBLISHED_FILE);
+  if (!(await exists(file))) return { errors: [`${EDITIONS_DIR}/${PUBLISHED_FILE} is missing`], editions: [] };
+  const value = await readJson(file);
+  const schema = await readJson(path.join(path.resolve(schemaDir), "published-editions.schema.json"));
+  const errors = validateSchema(value, schema).map((error) => `${EDITIONS_DIR}/${PUBLISHED_FILE} ${error}`);
+  const years = (value.editions ?? []).map((entry) => entry.year);
+  if (new Set(years).size !== years.length || years.some((year, index) => index && year < years[index - 1])) {
+    errors.push(`${EDITIONS_DIR}/${PUBLISHED_FILE}: years must be unique and in order`);
+  }
+  for (const entry of value.editions ?? []) {
+    const kind = entry.year % 2 === 1 ? "revision" : "supplement";
+    if (entry.kind !== kind) errors.push(`${EDITIONS_DIR}/${PUBLISHED_FILE}: ${entry.year} must be a ${kind}`);
+    if (!entry.url?.includes(`/${entry.year}/${kind === "revision" ? "pub" : "sup"}/`)) errors.push(`${EDITIONS_DIR}/${PUBLISHED_FILE}: ${entry.year} links to the wrong edition`);
+  }
+  const catalog = await readJson(path.join(root, "catalog.json")).catch(() => null);
+  const active = baseRevisionYear(catalog);
+  const required = [active, ...await supplementYears(root)].filter(Number.isInteger);
+  for (const year of required) {
+    if (!years.includes(year)) errors.push(`${EDITIONS_DIR}/${PUBLISHED_FILE}: the published data includes the ${year} edition, which is not listed`);
+  }
+  return { errors, editions: value.editions ?? [] };
+}
 
 async function exists(target) {
   return Boolean(await stat(target).catch(() => null));
@@ -238,7 +279,7 @@ export async function rolloverEdition({ publishedDir, candidateDir, schemaDir })
     const existing = await treeDigest(candidateEditions);
     const expected = await treeDigest(publishedEditions);
     const prefix = `statutes/${outgoingYear}/`;
-    const strip = (entries) => entries.filter(([file]) => !file.startsWith(prefix));
+    const strip = (entries) => entries.filter(([file]) => !file.startsWith(prefix) && file !== PUBLISHED_FILE);
     if (!sameTree(strip(existing), strip(expected))) {
       throw new Error(`${path.relative(process.cwd(), candidateEditions)} differs from the published editions; start from a fresh candidate`);
     }
@@ -247,6 +288,14 @@ export async function rolloverEdition({ publishedDir, candidateDir, schemaDir })
   }
 
   if (incomingYear === outgoingYear) return { action: "none", outgoingYear, incomingYear };
+  // The new revision joins the reviewed list of published editions the guide reads.
+  await recordPublishedEdition(candidate, {
+    year: incomingYear,
+    kind: "revision",
+    url: `https://www.cga.ct.gov/${incomingYear}/pub/titles.htm`,
+    verifiedFrom: candidateCatalog.source.url,
+    heading: `Revised to January 1, ${incomingYear}`
+  });
   if (incomingYear % 2 === 0) throw new Error(`The candidate is revised to January 1, ${incomingYear}; CGA publishes full revisions in odd-numbered years`);
 
   // The pair being archived: the published base and every supplement read with it that the new

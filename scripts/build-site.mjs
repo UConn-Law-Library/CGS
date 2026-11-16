@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import { existsSync } from "node:fs";
 import { cp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { generateDiscovery } from "./lib/discovery.mjs";
@@ -23,7 +24,11 @@ await cp(path.join(root, "public"), output, { recursive: true });
 // Browser tests serve a rehearsal archive this way; production builds never pass it.
 const editionsOverlayIndex = process.argv.indexOf("--editions-overlay");
 if (editionsOverlayIndex !== -1) {
-  await cp(path.resolve(process.argv[editionsOverlayIndex + 1]), path.join(output, "data", "editions"), { recursive: true });
+  // Only archived editions; the site keeps its own reviewed list of published editions.
+  for (const kind of ["statutes", "secondary"]) {
+    const source = path.resolve(process.argv[editionsOverlayIndex + 1], kind);
+    if (existsSync(source)) await cp(source, path.join(output, "data", "editions", kind), { recursive: true });
+  }
 }
 const preview = process.env.CGS_PREVIEW_BUILD === "true";
 if (preview) {

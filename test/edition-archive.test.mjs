@@ -46,6 +46,9 @@ test("a new revision archives the outgoing revision and its supplement byte for 
   assert.deepEqual(record.supplementYears, [2026]);
   assert.equal(record.legislationThrough, 2025);
   assert.equal(record.supersededBy.revisionYear, 2027);
+  // The new revision joins the reviewed list of published editions.
+  const listed = JSON.parse(await readFile(path.join(candidate, "editions", "published.json"), "utf8"));
+  assert.deepEqual(listed.editions.at(-1), { year: 2027, kind: "revision", url: "https://www.cga.ct.gov/2027/pub/titles.htm", verifiedFrom: "https://www.cga.ct.gov/current/pub/titles.htm", heading: "Revised to January 1, 2027" });
   assert.deepEqual(record.officialSources, [{ from: "https://www.cga.ct.gov/current/pub/", to: "https://www.cga.ct.gov/2025/pub/" }]);
 
   // The archive validates as its own corpus, with the supplement bound to the archived base.

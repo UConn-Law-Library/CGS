@@ -4,7 +4,7 @@ import { validateCorpus } from "./lib/validator.mjs";
 import { validateSupplements } from "./lib/supplement-validator.mjs";
 import { validateSecondarySources } from "./lib/secondary-validator.mjs";
 import { validateActs } from "./lib/acts-validator.mjs";
-import { validateStatuteArchives } from "./lib/edition-archive.mjs";
+import { validatePublishedEditions, validateStatuteArchives } from "./lib/edition-archive.mjs";
 
 function valueAfter(flag) {
   const index = process.argv.indexOf(flag);
@@ -30,7 +30,8 @@ try {
   });
   const acts = await validateActs({ actsDir: path.join(dataDir, "acts"), schemaDir });
   const archives = await validateStatuteArchives({ dataDir, schemaDir });
-  const errors = [...result.errors, ...supplements.errors, ...secondary.errors, ...acts.errors, ...archives.errors];
+  const publications = await validatePublishedEditions({ dataDir, schemaDir });
+  const errors = [...result.errors, ...supplements.errors, ...secondary.errors, ...acts.errors, ...archives.errors, ...publications.errors];
   if (errors.length) {
     console.error(errors.map((error) => `- ${error}`).join("\n"));
     process.exitCode = 1;

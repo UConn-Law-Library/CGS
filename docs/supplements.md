@@ -53,3 +53,36 @@ When a corpus refresh imports a new revision, it retires every published supplem
 For a reviewed edition created before search patches were part of the contract, `npm run rebuild:supplement-search -- --year 2026` rebuilds only those derived shards and the manifest integrity records; it does not modify base chapters or supplement overlay chapters.
 
 Phase 11 publishes the first official edition through this review path and makes primary-corpus refreshes re-crawl, re-import, and validate every published supplement against the candidate base before a refresh PR can be opened. Phase 12 adds the automatic consolidated reader, prior-revision reference panels, supplement-aware search, and complete offline caching.
+
+## Discovering a new supplement
+
+The `Discover supplement` workflow (`.github/workflows/discover-supplement.yml`) runs Thursdays at 12:41 UTC and on demand. It looks for the Supplement read with the active revision: with the 2027 revision published here, the 2028 Supplement at `https://www.cga.ct.gov/2028/sup/titles.htm`.
+
+`python -m crawler.cgs_crawler.supplement_discovery --data public/data` reports one of:
+
+| Outcome | Meaning | Run |
+| --- | --- | --- |
+| `already-published` | `public/data/supplements/<year>` exists; the corpus refresh keeps it current | green, nothing to do |
+| `not-published` | CGA answers 404 for the page (its IIS "404.0 Not Found" page, captured in `crawler/tests/fixtures`) | green, nothing to do |
+| `available` | the page exists and says "<year> Supplement to the General Statutes of Connecticut", "Revised to January 1, <year>", names the Legislative Commissioners' Office, and says it is used with the revision of the year before | continues |
+| network failure (exit 3) | no answer, a 5xx after retries, or a TLS failure | red; nothing published |
+| invalid source (exit 2) | the page exists but is not that official edition (a placeholder, a forbidden page, another year), or the active revision is not the one the supplement is read with | red; nothing published |
+
+When the edition is available, the workflow crawls it, imports it against `public/data` (the importer and validator require the supplement year to be the base revision year plus one), validates it, stages it in `public/data/supplements/<year>`, lists it in `public/data/editions/published.json` (which the guide's timeline and worked examples read), and runs `npm run check`. The publish job then updates the rolling `automation/supplement-discovery` branch and its draft pull request, whose description has the source, the verified heading, the base it is bound to, counts by title, and the validation result. Reruns update the same draft, and a run whose `public/data` matches the open draft publishes nothing.
+
+### Rehearse
+
+- **In Actions:** dispatch the workflow with **Rehearse** selected. It checks the page of the supplement that is already published (today the 2026 Supplement), crawls, imports, and validates it, and compares it with the published edition (`rehearsal-diff.md`). A rehearsal never stages or publishes. The workflow must be on `main` to run in Actions.
+- **Locally with a real earlier pair** (after crawling the 2023 revision and 2024 Supplement as in [docs/edition-rollover.md](edition-rollover.md#rehearse-a-rollover)):
+
+```sh
+mkdir -p .crawl/rehearsal/discovery/data/editions
+cp -r .crawl/rehearsal/run/published/{catalog.json,manifest.json,chapters,search} .crawl/rehearsal/discovery/data/
+echo '{"schemaVersion":"1.0.0","editions":[{"year":2023,"kind":"revision","url":"https://www.cga.ct.gov/2023/pub/titles.htm"}]}' > .crawl/rehearsal/discovery/data/editions/published.json
+python -m crawler.cgs_crawler.supplement_discovery --data .crawl/rehearsal/discovery/data --ca-bundle .crawl/ca-bundle.pem --report .crawl/rehearsal/discovery/discovery.json
+node scripts/prepare-supplement.mjs --source .crawl/rehearsal/legacy-2024 --base .crawl/rehearsal/discovery/data --year 2024 --output .crawl/rehearsal/discovery/canonical --summary .crawl/rehearsal/discovery/summary.md --discovery .crawl/rehearsal/discovery/discovery.json --stage
+```
+
+### Review and publish
+
+Read the description's source and counts, spot-check replaced and new sections against the official pages and in the preview's Compare view, confirm `published.json` lists the year, then mark the draft ready. Merging deploys normally. To roll back, revert the merge commit.

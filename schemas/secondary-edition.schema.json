@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://uconn-law-library.github.io/CGS/schemas/secondary-edition.schema.json",
+  "title": "Archived secondary-source edition",
+  "description": "The record kept beside an archived edition of the subject index or the infractions schedule. The archived files are the published bytes, with their statute links as resolved when the edition was current.",
+  "type": "object",
+  "required": ["schemaVersion", "kind", "id", "label", "date", "publisher", "name", "sourceUrl", "generatedAt", "counts", "sources", "statuteSnapshot", "supersededBy", "artifacts"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "kind": { "enum": ["infractions", "statutes-index"] },
+    "id": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}-[0-9a-f]{8}$" },
+    "label": { "type": "string", "minLength": 1 },
+    "date": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+    "publisher": { "type": "string", "minLength": 1 },
+    "name": { "type": "string", "minLength": 1 },
+    "sourceUrl": { "type": "string", "pattern": "^https://" },
+    "revision": { "type": "string" },
+    "effective": { "type": "string" },
+    "chartBRevision": { "type": "string" },
+    "generatedAt": { "type": "string" },
+    "counts": { "type": "object" },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["url", "bytes", "sha256", "retained"],
+        "additionalProperties": false,
+        "properties": {
+          "url": { "type": "string", "pattern": "^https://" },
+          "bytes": { "type": "integer", "minimum": 1 },
+          "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+          "retained": { "type": "boolean" },
+          "path": { "type": "string" }
+        }
+      }
+    },
+    "statuteSnapshot": {
+      "type": "object",
+      "required": ["revisionYear", "supplementYears", "generatedAt", "manifestSha256"],
+      "additionalProperties": false,
+      "properties": {
+        "revisionYear": { "type": "integer", "minimum": 1958 },
+        "supplementYears": { "type": "array", "items": { "type": "integer" } },
+        "generatedAt": { "type": "string" },
+        "manifestSha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+      }
+    },
+    "supersededBy": {
+      "type": "object",
+      "required": ["id", "label"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string" },
+        "label": { "type": "string" }
+      }
+    },
+    "artifacts": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["path", "bytes", "sha256"],
+        "additionalProperties": false,
+        "properties": {
+          "path": { "type": "string" },
+          "bytes": { "type": "integer", "minimum": 0 },
+          "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+        }
+      }
+    }
+  }
+}

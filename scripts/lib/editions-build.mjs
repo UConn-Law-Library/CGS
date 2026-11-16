@@ -2,6 +2,7 @@ import { mkdir, readFile, readdir, rm, stat, writeFile } from "node:fs/promises"
 import path from "node:path";
 import { applyChapterOverlay } from "./supplement-overlay.mjs";
 import { generateSupplementIndex } from "./supplement-index.mjs";
+import { SECONDARY_KINDS, sourceEditionIdentity } from "./secondary-editions.mjs";
 
 function comparableNumber(value) {
   return String(value ?? "").trim().toLowerCase().replace(/^0+(?=d)/, "");
@@ -100,7 +101,38 @@ export async function buildEditions({ dataDir, generatedAt }) {
     }
   }
   statutes.sort((left, right) => right.revisionYear - left.revisionYear);
-  const index = { schemaVersion: "1.0.0", generatedAt, statutes };
+  // Archived secondary-source editions, and the current edition of each source for comparison.
+  const secondary = [];
+  const currentSecondary = [];
+  for (const [kind, { dir }] of Object.entries(SECONDARY_KINDS)) {
+    const current = await readJson(path.join(dataDir, "secondary", dir, "manifest.json")).catch(() => null);
+    if (current) {
+      const identity = sourceEditionIdentity(kind, current);
+      currentSecondary.push({ kind, id: identity.id, label: identity.label, date: identity.date, name: current.source.name, publisher: current.source.publisher, sourceUrl: current.source.url });
+    }
+    const kindRoot = path.join(root, "secondary", kind);
+    if (!(await isDirectory(kindRoot))) continue;
+    for (const name of (await readdir(kindRoot)).sort()) {
+      if (!(await isDirectory(path.join(kindRoot, name)))) continue;
+      const record = await readJson(path.join(kindRoot, name, "edition.json"));
+      secondary.push({
+        kind,
+        id: record.id,
+        label: record.label,
+        date: record.date,
+        name: record.name,
+        publisher: record.publisher,
+        sourceUrl: record.sourceUrl,
+        counts: record.counts,
+        sources: record.sources,
+        statuteSnapshot: record.statuteSnapshot,
+        supersededBy: record.supersededBy,
+        path: `secondary/${kind}/${name}/`
+      });
+    }
+  }
+  secondary.sort((left, right) => right.date.localeCompare(left.date));
+  const index = { schemaVersion: "1.0.0", generatedAt, statutes, secondary, currentSecondary };
   await writeJson(path.join(root, "manifest.json"), index);
   return index;
 }

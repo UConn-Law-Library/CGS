@@ -74,3 +74,16 @@ test("the built editions index opens an archived edition with its own supplement
   assert.deepEqual(citations["1-1"], ["001", "1-1"]);
   assert.deepEqual(citations["1-99"], ["001", "1-99"]);
 });
+
+test("archived index and infractions links open the statute text they were resolved against", async () => {
+  const { historicalStatuteHref } = await import("../src/editions.js");
+  const snapshot = { revisionYear: 2025, supplementYears: [2026] };
+  const resolution = { status: "exact", href: "#/t/14/c/246/s/14-4" };
+  // While the 2025 revision is current, the link is the current route.
+  assert.deepEqual(historicalStatuteHref(resolution, snapshot, { currentRevisionYear: 2025, statutes: [] }), { href: "#/t/14/c/246/s/14-4", reason: null });
+  // After the 2027 rollover archives 2025, the same record opens the archived 2025 edition.
+  assert.deepEqual(historicalStatuteHref(resolution, snapshot, { currentRevisionYear: 2027, statutes: [{ id: "2025", revisionYear: 2025 }] }), { href: "#/editions/2025/t/14/c/246/s/14-4", reason: null });
+  // Without that archive the link is withheld rather than pointed at different text.
+  assert.deepEqual(historicalStatuteHref(resolution, snapshot, { currentRevisionYear: 2027, statutes: [] }), { href: null, reason: "edition-unavailable" });
+  assert.deepEqual(historicalStatuteHref({ status: "unresolved" }, snapshot, { currentRevisionYear: 2025 }), { href: null, reason: "unresolved" });
+});

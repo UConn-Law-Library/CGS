@@ -5,6 +5,7 @@ import { validateSupplements } from "./lib/supplement-validator.mjs";
 import { validateSecondarySources } from "./lib/secondary-validator.mjs";
 import { validateActs } from "./lib/acts-validator.mjs";
 import { validatePublishedEditions, validateStatuteArchives } from "./lib/edition-archive.mjs";
+import { validateSecondaryArchives } from "./lib/secondary-editions.mjs";
 
 function valueAfter(flag) {
   const index = process.argv.indexOf(flag);
@@ -31,12 +32,13 @@ try {
   const acts = await validateActs({ actsDir: path.join(dataDir, "acts"), schemaDir });
   const archives = await validateStatuteArchives({ dataDir, schemaDir });
   const publications = await validatePublishedEditions({ dataDir, schemaDir });
-  const errors = [...result.errors, ...supplements.errors, ...secondary.errors, ...acts.errors, ...archives.errors, ...publications.errors];
+  const secondaryArchives = await validateSecondaryArchives({ dataDir, schemaDir });
+  const errors = [...result.errors, ...supplements.errors, ...secondary.errors, ...acts.errors, ...archives.errors, ...publications.errors, ...secondaryArchives.errors];
   if (errors.length) {
     console.error(errors.map((error) => `- ${error}`).join("\n"));
     process.exitCode = 1;
   } else {
-    console.log(`Validated ${result.counts.titles} titles, ${result.counts.chapters} chapters, ${result.counts.sections} provisions, ${supplements.editions} supplement editions, ${secondary.counts.infractions} infractions, ${secondary.counts.indexHeadings} index headings, ${acts.counts.acts} Public and Special Acts (${acts.counts.textActs} with text), and ${archives.editions.length} archived statute edition${archives.editions.length === 1 ? "" : "s"}.`);
+    console.log(`Validated ${result.counts.titles} titles, ${result.counts.chapters} chapters, ${result.counts.sections} provisions, ${supplements.editions} supplement editions, ${secondary.counts.infractions} infractions, ${secondary.counts.indexHeadings} index headings, ${acts.counts.acts} Public and Special Acts (${acts.counts.textActs} with text), ${archives.editions.length} archived statute edition${archives.editions.length === 1 ? "" : "s"}, and ${secondaryArchives.editions.length} archived secondary-source edition${secondaryArchives.editions.length === 1 ? "" : "s"}.`);
   }
 } catch (error) {
   console.error(error.stack ?? error.message);

@@ -16,7 +16,9 @@ public/data/
       edition.json                                  the archive record (see below)
       catalog.json, manifest.json, chapters/, search/
       supplements/<year>/                           its supplement, unchanged
-    secondary/<source>/<edition id>/                superseded subject-index and infractions editions
+    published.json                                  the reviewed list of published editions (the guide reads it)
+    secondary/<kind>/<edition id>/                  superseded subject-index and infractions editions
+    secondary/sources/<sha256>.pdf                  source PDFs kept by digest
 ```
 
 An archived edition is the published files, byte for byte. Nothing is re-imported or rewritten. `edition.json` records:

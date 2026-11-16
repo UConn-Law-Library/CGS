@@ -12,7 +12,7 @@ test("the editions view leads from the current titles into an archived edition",
   await expect(page).toHaveURL(/#\/editions$/);
   await expect(page.getByRole("heading", { level: 1, name: "Editions" })).toBeVisible();
   await expect(page.locator(".edition-current h2")).toContainText(/General Statutes revised to January 1, 2025/);
-  const archived = page.locator(".edition-list .edition-card");
+  const archived = page.locator("section[aria-labelledby='editions-archived-heading'] .edition-card");
   await expect(archived).toHaveCount(1);
   await expect(archived).toContainText("General Statutes revised to January 1, 2021, with the 2022 Supplement");
   await expect(archived).toContainText("superseded by the 2023 revision");
@@ -82,6 +82,27 @@ test("the way back leads to the current text, and current search stays on the cu
   await first.click();
   await expect(page.locator(".edition-notice")).toHaveCount(0);
   await expect(page.locator(".reader-content > .source-note")).toContainText("Text: 2025 revision");
+});
+
+test("an archived infractions schedule keeps its statute links and marks unresolved citations", async ({ page }) => {
+  await openApp(page, "#/editions");
+  const section = page.locator("section", { has: page.getByRole("heading", { name: "Infractions schedule editions" }) });
+  await section.getByRole("link", { name: /Mail-In Violations and Infractions Schedule, effective October 1, 2026/ }).click();
+  await expect(page).toHaveURL(/#\/editions\/infractions\/2026-10-01-[0-9a-f]{8}$/);
+  await expect(page.locator(".edition-notice")).toContainText("The edition effective January 1, 2099 replaced it");
+  await expect(page.locator(".edition-notice")).toContainText("the 2025 revision");
+  const manifest = await page.evaluate(() => fetch("./data/secondary/infractions/manifest.json").then((response) => response.json()));
+  await expect(page.locator(".note").first()).toHaveText(`${manifest.counts.entries.toLocaleString("en-US")} entries in ${manifest.counts.categories} categories.`);
+  await expect(page.locator(".citation-unresolved")).toHaveCount(manifest.counts.entries - manifest.counts.resolved);
+  // The schedule's statute links were resolved against the 2025 revision, which is current here.
+  const motor = page.locator("details.archived-source-group").filter({ has: page.locator("summary", { hasText: /^MOTOR VEHICLES \(/ }) });
+  await motor.locator("summary").click();
+  const link = motor.locator("a.legal-reference").first();
+  await expect(link).toHaveAttribute("href", /^#\/t\/[0-9a-z]+\/c\/[0-9a-z-]+\/s\//);
+  await expectNoHighImpactAccessibilityViolations(page);
+  // Current lookup stays on the current schedule.
+  await page.locator(".edition-notice").getByRole("link", { name: "Current edition" }).click();
+  await expect(page).toHaveURL(/#\/infractions$/);
 });
 
 test("an unknown archived edition is reported, not shown as current text", async ({ page }) => {

@@ -12,7 +12,7 @@ import { bindBookmarkControls } from "./bookmark-controls.js";
 import { explainSearchQuery, normalizeSearchOptions, SearchRepository } from "./search.js";
 import { applyChapterOverlay, mergeSupplementTitleChapters, SupplementRepository } from "./supplements.js";
 import { statuteTextEdition } from "./publications.js";
-import { currentEditionSummary, EditionsRepository, officialSourceUrl, renderArchivedEditionNotice, renderEditionsPage, shortEditionLabel } from "./editions.js";
+import { currentEditionSummary, EditionsRepository, historicalStatuteHref, officialSourceUrl, renderArchivedEditionNotice, renderArchivedIndex, renderArchivedInfractions, renderEditionsPage, renderSecondaryEditions, shortEditionLabel } from "./editions.js";
 import { ProgressiveSearchClient } from "./search-client.js";
 import {
   ACT_SORTS,
@@ -44,6 +44,7 @@ import {
   findTitle,
   chapterDisplayLabel,
   editionsRouteHref,
+  archivedSourceRouteHref,
   aboutRouteHref,
   guideRouteHref,
   infractionsRouteHref,
@@ -2084,7 +2085,43 @@ async function renderEditions(sequence, settingsPanel) {
     index,
     routes: { current: titlesRouteHref(), edition: (id) => titlesRouteHref(id) },
     formatDate: formatSnapshotDate
+  })}${renderSecondaryEditions({
+    index,
+    routes: {
+      currentSource: (kind) => kind === "infractions" ? infractionsRouteHref() : indexRouteHref(),
+      source: (kind, id) => archivedSourceRouteHref(kind, id)
+    }
   })}</main>`;
+  mountApplicationShell({ contextualNavigation: [], mainContent, mobilePresentationMode: "drilldown" }, settingsPanel);
+  if (!settingsPanel?.isConnected) window.scrollTo({ top: 0 });
+}
+
+// An archived subject index or infractions edition. Its statute links open the statute text they
+// were resolved against; current index and infractions lookup stay on the current edition.
+async function renderArchivedSource(route, sequence, settingsPanel) {
+  const kind = route.kind === "archived-infractions" ? "infractions" : "statutes-index";
+  const [source, catalog, index] = await Promise.all([
+    editionsRepository.sourceEdition(kind, route.sourceEdition),
+    loadCatalog(),
+    editionsRepository.index()
+  ]);
+  if (sequence !== renderSequence) return;
+  if (!source) return renderNotFound(`No archived ${kind === "infractions" ? "infractions schedule" : "subject index"} edition ${route.sourceEdition} is available.`);
+  const linkFor = (resolution) => historicalStatuteHref(resolution, source.entry.statuteSnapshot, { currentRevisionYear: catalog.source?.revisionYear ?? null, statutes: index.statutes });
+  const common = { entry: source.entry, linkFor, editionsHref: editionsRouteHref(), currentHref: kind === "infractions" ? infractionsRouteHref() : indexRouteHref() };
+  let body;
+  if (kind === "infractions") {
+    const shards = await Promise.all([...new Set([...source.manifest.shards.map((shard) => shard.path), "unresolved.json"])].map((file) => source.load(file)));
+    body = renderArchivedInfractions({ ...common, entries: shards.flatMap((shard) => shard.entries ?? []) });
+  } else {
+    const letters = [...new Set(source.manifest.shards.map((shard) => shard.key))];
+    const files = route.letter ? source.manifest.shards.filter((shard) => shard.key === route.letter).map((shard) => shard.path) : [];
+    const shards = await Promise.all(files.map((file) => source.load(file)));
+    body = renderArchivedIndex({ ...common, letters, letter: route.letter, headings: shards.flatMap((shard) => shard.headings), letterHref: (letter) => archivedSourceRouteHref(kind, source.entry.id, letter) });
+  }
+  if (sequence !== renderSequence) return;
+  setDocumentTitle(`${source.entry.name} (${source.entry.label})`);
+  const mainContent = `<main class="browse-page editions-page" id="main-content">${breadcrumbs([{ label: "Editions", href: editionsRouteHref() }, { label: source.entry.label }])}${body}</main>`;
   mountApplicationShell({ contextualNavigation: [], mainContent, mobilePresentationMode: "drilldown" }, settingsPanel);
   if (!settingsPanel?.isConnected) window.scrollTo({ top: 0 });
 }
@@ -2162,6 +2199,7 @@ async function renderCurrentRoute(settingsPanel) {
         .catch(() => {});
     }
     if (route.kind === "editions") return await renderEditions(sequence, settingsPanel);
+    if (route.kind === "archived-infractions" || route.kind === "archived-index") return await renderArchivedSource(route, sequence, settingsPanel);
     let catalog;
     if (route.edition) {
       // An archived edition reads its own catalog, chapters, and supplement.

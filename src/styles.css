@@ -329,6 +329,18 @@ footer { padding: 2rem 0; color: var(--muted); border-top: 1px solid var(--line)
 .past-sessions a { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .25rem 1rem; padding: .75rem .25rem; color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--line); }
 .past-sessions a:hover { background: var(--blue-light); }
 .past-sessions span { color: var(--muted); font-size: var(--text-meta); }
+.archived-source-group { margin-block: .5rem; background: var(--white); border: 1px solid var(--line); border-radius: .5rem; }
+.archived-source-group > summary { min-height: 2.75rem; padding: .7rem 1rem; font-weight: 700; cursor: pointer; }
+.archived-source-list { margin: 0; padding: 0 1rem .75rem; list-style: none; }
+.archived-source-list li { display: grid; gap: .15rem; padding: .55rem 0; border-top: 1px solid var(--line); }
+.archived-source-list li small { color: var(--muted); font-size: var(--text-meta); }
+.archived-source-list .index-level-1 { padding-inline-start: 1rem; }
+.archived-source-list .index-level-2 { padding-inline-start: 2rem; }
+.archived-source-list .index-level-3, .archived-source-list .index-level-4 { padding-inline-start: 3rem; }
+.citation-unresolved { color: var(--muted); font-size: var(--text-meta); font-weight: 400; }
+.archived-index-letters { display: flex; flex-wrap: wrap; gap: .35rem; margin-block: 1rem; }
+.archived-index-letters a { display: inline-grid; place-items: center; min-width: 2.5rem; min-height: 2.5rem; font-weight: 700; text-decoration: none; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-control); }
+.archived-index-letters a[aria-current="page"] { color: var(--on-blue); background: var(--blue); border-color: var(--blue); }
 .secondary-context-note { margin: 0; color: var(--muted); font-size: var(--text-small-reading); }
 .chapter-change-list { margin-top: .75rem; }
 .chapter-change-list + .chapter-change-list { margin-top: .5rem; }

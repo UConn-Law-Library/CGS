@@ -54,6 +54,11 @@ export function editionsRouteHref() {
   return "#/editions";
 }
 
+export function archivedSourceRouteHref(kind, id, letter = null) {
+  const route = kind === "infractions" ? "infractions" : "index";
+  return `#/editions/${route}/${encodeSegment(id)}${letter ? `/${encodeSegment(letter)}` : ""}`;
+}
+
 export function aboutRouteHref(section = null) {
   return section ? `#/about?section=${encodeSegment(section)}` : "#/about";
 }
@@ -219,6 +224,13 @@ export function parseRoute({ hash = "", search = "" } = {}) {
 
   if (parts[0] === "editions") {
     if (parts.length === 1) return { kind: "editions" };
+    // Archived subject index and infractions schedule editions: #/editions/index/<id>[/<letter>]
+    // and #/editions/infractions/<id>.
+    if (parts[1] === "infractions" && parts.length === 3 && parts[2]) return { kind: "archived-infractions", sourceEdition: parts[2] };
+    if (parts[1] === "index" && parts[2] && parts.length <= 4) {
+      if (parts[3] && !/^[a-z0-9]$/i.test(parts[3])) return { kind: "not-found" };
+      return { kind: "archived-index", sourceEdition: parts[2], letter: parts[3]?.toLowerCase() ?? null };
+    }
     if (!/^\d{4}$/.test(parts[1])) return { kind: "not-found" };
     if (parts.length === 2) return { kind: "titles", edition: parts[1] };
     const route = statuteRoute(parts.slice(2));

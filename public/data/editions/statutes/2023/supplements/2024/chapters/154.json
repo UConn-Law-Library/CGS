@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-154",
+  "number": "154",
+  "name": "Presidential Preference Primary",
+  "title": {
+    "id": "title-09",
+    "number": "09",
+    "name": "Elections"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_154.htm",
+  "sections": [
+    {
+      "id": "section-9-464",
+      "kind": "section",
+      "citation": "9-464",
+      "citations": [
+        "9-464"
+      ],
+      "heading": "Sec. 9-464. Primary date.",
+      "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_154.htm#sec_9-464",
+      "status": "active",
+      "content": {
+        "body": [
+          "On the first Tuesday in April of each year in which the President of the United States is to be elected, each party shall conduct a primary in each town if the names of two or more candidates are to be placed on such party's ballot in accordance with the provisions of this chapter."
+        ],
+        "sourceNotes": [
+          "(P.A. 77-535, S. 2; P.A. 79-481, S. 2; P.A. 83-475, S. 37, 43; P.A. 90-156, S. 8; June Sp. Sess. P.A. 91-3, S. 50, 168; P.A. 95-95, S. 1; P.A. 07-132, S. 1; P.A. 11-143, S. 1; Sept. 26 Sp. Sess. P.A. 23-1, S. 2.)"
+        ],
+        "history": [
+          "History: P.A. 79-481 changed the day for the primary to the Tuesday after the fourth Monday instead of the first Monday in March if the name of one or more candidates is to be placed on the ballot and further provided for the costs of conducting primary to be paid as prescribed in new Subsecs. (b) and (c); P.A. 83-475 amended section to require primary only if there are at least two qualifying candidates and to refer to number of voting districts used by towns in last preceding state election; P.A. 90-156 repealed former Subsec. (b) re limitations on reimbursement, relettered Subsec. (c) as Subsec. (b) and amended new Subsec. (b) by basing reimbursement on town's 1984 or 1988 reimbursement, whichever is applicable, plus 3% annually; June Sp. Sess. P.A. 91-3 removed Subsecs. (a) and (b) designators, deleted provision in Subsec. (a) requiring costs of conducting primary in each town to be paid by state in the manner and to the extent prescribed in Subsec. (b), and deleted Subsec. (b) in its entirety; P.A. 95-95 changed primary date from the Tuesday after the fourth Monday in March to first Tuesday in March; P.A. 07-132 changed presidential primary month from March to February, effective June 25, 2007; P.A. 11-143 changed primary date from the first Tuesday in February to the last Tuesday in April, effective July 1, 2011; Sept. 26 Sp. Sess. P.A. 23-1 replaced “last Tuesday” with “first Tuesday”."
+        ],
+        "annotations": [],
+        "plainText": "On the first Tuesday in April of each year in which the President of the United States is to be elected, each party shall conduct a primary in each town if the names of two or more candidates are to be placed on such party's ballot in accordance with the provisions of this chapter."
+      }
+    }
+  ]
+}

@@ -1,0 +1,388 @@
+{
+  "schemaVersion": "1.0.0",
+  "editionYear": 2024,
+  "title": {
+    "id": "title-53a",
+    "number": "53a",
+    "name": "Penal Code"
+  },
+  "removedDocumentIds": [
+    "section-53a-3",
+    "section-53a-13",
+    "section-53a-18",
+    "section-53a-28",
+    "section-53a-32",
+    "section-53a-39",
+    "section-53a-65",
+    "section-53a-73a",
+    "section-53a-167c",
+    "section-53a-217",
+    "section-53a-217a",
+    "section-53a-217c",
+    "section-53a-222",
+    "section-53a-222a",
+    "section-53a-290"
+  ],
+  "documents": [
+    {
+      "id": "section-53a-3",
+      "citation": "53a-3",
+      "citations": [
+        "53a-3"
+      ],
+      "heading": "Sec. 53a-3. Definitions.",
+      "chapter": {
+        "id": "chapter-950",
+        "number": "950",
+        "name": "Penal Code: General Provisions"
+      },
+      "status": "active",
+      "text": "Except where different meanings are expressly specified, the following terms have the following meanings when used in this title:\n\n(1) “Person” means a human being, and, where appropriate, a public or private corporation, a limited liability company, an unincorporated association, a partnership, a government or a governmental instrumentality;\n\n(2) “Possess” means to have physical possession or otherwise to exercise dominion or control over tangible property;\n\n(3) “Physical injury” means impairment of physical condition or pain;\n\n(4) “Serious physical injury” means physical injury which creates a substantial risk of death, or which causes serious disfigurement, serious impairment of health or serious loss or impairment of the function of any bodily organ;\n\n(5) “Deadly physical force” means physical force which can be reasonably expected to cause death or serious physical injury;\n\n(6) “Deadly weapon” means any weapon, whether loaded or unloaded, from which a shot may be discharged, or a switchblade knife, gravity knife, billy, blackjack, bludgeon, or metal knuckles. The definition of “deadly weapon” in this subdivision shall be deemed not to apply to section 29-38 or 53-206;\n\n(7) “Dangerous instrument” means any instrument, article or substance which, under the circumstances in which it is used or attempted or threatened to be used, is capable of causing death or serious physical injury, and includes a “vehicle” as that term is defined in this section and includes a dog that has been commanded to attack, except a dog owned by a law enforcement agency of the state or any political subdivision thereof or of the federal government when such dog is in the performance of its duties under the direct supervision, care and control of an assigned law enforcement officer;\n\n(8) “Vehicle” means a “motor vehicle” as defined in section 14-1, a snowmobile, any aircraft, or any vessel equipped for propulsion by mechanical means or sail;\n\n(9) “Peace officer” means a member of the Division of State Police within the Department of Emergency Services and Public Protection or an organized local police department, a chief inspector or inspector in the Division of Criminal Justice, a state marshal while exercising authority granted under any provision of the general statutes, a judicial marshal in the performance of the duties of a judicial marshal, a conservation officer or special conservation officer, as defined in section 26-5, a constable who performs criminal law enforcement duties, a special policeman appointed under section 29-18, 29-18a, 29-18b or 29-19, an adult probation officer, an official of the Department of Correction authorized by the Commissioner of Correction to make arrests in a correctional institution or facility, any investigator in the investigations unit of the office of the State Treasurer, an inspector of motor vehicles in the Department of Motor Vehicles, who is certified under the provisions of sections 7-294a to 7-294e, inclusive, a United States marshal or deputy marshal, any special agent of the federal government authorized to enforce the provisions of Title 21 of the United States Code, or a member of a law enforcement unit of the Mashantucket Pequot Tribe or the Mohegan Tribe of Indians of Connecticut created and governed by a memorandum of agreement under section 47-65c who is certified as a police officer by the Police Officer Standards and Training Council pursuant to sections 7-294a to 7-294e, inclusive;\n\n(10) “Firefighter” means any agent of a municipality whose duty it is to protect life and property therein as a member of a duly constituted fire department whether professional or volunteer;\n\n(11) A person acts “intentionally” with respect to a result or to conduct described by a statute defining an offense when his conscious objective is to cause such result or to engage in such conduct;\n\n(12) A person acts “knowingly” with respect to conduct or to a circumstance described by a statute defining an offense when he is aware that his conduct is of such nature or that such circumstance exists;\n\n(13) A person acts “recklessly” with respect to a result or to a circumstance described by a statute defining an offense when he is aware of and consciously disregards a substantial and unjustifiable risk that such result will occur or that such circumstance exists. The risk must be of such nature and degree that disregarding it constitutes a gross deviation from the standard of conduct that a reasonable person would observe in the situation;\n\n(14) A person acts with “criminal negligence” with respect to a result or to a circumstance described by a statute defining an offense when he fails to perceive a substantial and unjustifiable risk that such result will occur or that such circumstance exists. The risk must be of such nature and degree that the failure to perceive it constitutes a gross deviation from the standard of care that a reasonable person would observe in the situation;\n\n(15) “Machine gun” means a weapon of any description, irrespective of size, by whatever name known, loaded or unloaded, from which a number of shots or bullets may be rapidly or automatically discharged from a magazine with one continuous pull of the trigger and includes a submachine gun;\n\n(16) “Rifle” means a weapon designed or redesigned, made or remade, and intended to be fired from the shoulder and designed or redesigned and made or remade to use the energy of the explosive in a fixed metallic cartridge to fire only a single projectile through a rifled bore for each single pull of the trigger;\n\n(17) “Shotgun” means a weapon designed or redesigned, made or remade, and intended to be fired from the shoulder and designed or redesigned and made or remade to use the energy of the explosive in a fixed shotgun shell to fire through a smooth bore either a number of ball shot or a single projectile for each single pull of the trigger;\n\n(18) “Pistol” or “revolver” means any firearm having a barrel less than twelve inches;\n\n(19) “Firearm” means any sawed-off shotgun, machine gun, rifle, shotgun, pistol, revolver or other weapon, whether loaded or unloaded from which a shot may be discharged;\n\n(20) “Electronic defense weapon” means a weapon which by electronic impulse or current is capable of immobilizing a person temporarily, including a stun gun or other conductive energy device;\n\n(21) “Martial arts weapon” means a nunchaku, kama, kasari-fundo, octagon sai, tonfa or chinese star;\n\n(22) “Employee of an emergency medical service organization” means an ambulance driver, emergency medical technician or paramedic as defined in section 19a-175;\n\n(23) “Railroad property” means all tangible property owned, leased or operated by a railroad carrier including, but not limited to, a right-of-way, track, roadbed, bridge, yard, shop, station, tunnel, viaduct, trestle, depot, warehouse, terminal or any other structure or appurtenance or equipment owned, leased or used in the operation of a railroad carrier including a train, locomotive, engine, railroad car, signals or safety device or work equipment or rolling stock;\n\n(24) “Serious firearm offense” means a violation of section 29-36, 29-36a or 53-202w, possession of a stolen firearm or a firearm that is altered in a manner that renders the firearm unlawful, or any crime of which an essential element is that the person discharged, used or was armed with and threatened the use of a firearm; and\n\n(25) “Serious firearm offender” means a person who has (A) two convictions for a serious firearm offense, (B) a conviction for a serious firearm offense and was previously convicted of a violation of section 29-36, 29-36a, subdivision (1) of subsection (a) of section 53a-217 or subdivision (1) of subsection (a) of section 53a-217c, or (C) a conviction for a serious firearm offense and was previously convicted of two or more additional felony offenses.",
+      "href": "?chapter=950&section=section-53a-3",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-53a-13",
+      "citation": "53a-13",
+      "citations": [
+        "53a-13"
+      ],
+      "heading": "Sec. 53a-13. Lack of capacity due to mental disease or defect as affirmative defense.",
+      "chapter": {
+        "id": "chapter-951",
+        "number": "951",
+        "name": "Penal Code: Statutory Construction; Principles of Criminal Liability"
+      },
+      "status": "active",
+      "text": "(a) In any prosecution for an offense, it shall be an affirmative defense that the defendant, at the time the defendant committed the proscribed act or acts, lacked substantial capacity, as a result of mental disease or defect, either to appreciate the wrongfulness of his conduct or to control his conduct within the requirements of the law.\n\n(b) (1) It shall not be a defense under this section if such mental disease or defect was proximately caused by the voluntary ingestion, inhalation or injection of intoxicating liquor or any drug or substance, or any combination thereof, unless such drug was prescribed for the defendant by a prescribing practitioner, as defined in section 20-571, and was used in accordance with the directions of such prescription.\n\n(2) No defendant may claim as a defense under this section that such mental disease or defect was based solely on the discovery of, knowledge about or potential disclosure of the victim's actual or perceived sex, sexual orientation or gender identity or expression, including under circumstances in which the victim made an unwanted, nonforcible, romantic or sexual advance toward the defendant, or if the defendant and victim dated or had a romantic relationship.\n\n(c) As used in this section, (1) the terms mental disease or defect do not include (A) an abnormality manifested only by repeated criminal or otherwise antisocial conduct, or (B) pathological or compulsive gambling, and (2) “gender identity or expression” means gender identity or expression, as defined in section 53a-181i.",
+      "href": "?chapter=951&section=section-53a-13",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-53a-18",
+      "citation": "53a-18",
+      "citations": [
+        "53a-18"
+      ],
+      "heading": "Sec. 53a-18. Use of reasonable physical force or deadly physical force generally.",
+      "chapter": {
+        "id": "chapter-951",
+        "number": "951",
+        "name": "Penal Code: Statutory Construction; Principles of Criminal Liability"
+      },
+      "status": "active",
+      "text": "(a) The use of physical force upon another person which would otherwise constitute an offense is justifiable and not criminal under any of the following circumstances:\n\n(1) A parent, guardian or other person entrusted with the care and supervision of a minor or an incompetent person, except a person entrusted with the care and supervision of a minor for school purposes as described in subdivision (6) of this section, may use reasonable physical force upon such minor or incompetent person when and to the extent that he or she reasonably believes such to be necessary to maintain discipline or to promote the welfare of such minor or incompetent person.\n\n(2) An authorized official of a correctional institution or facility may, in order to maintain order and discipline, use such physical force as is reasonable and authorized by the rules and regulations of the Department of Correction.\n\n(3) A person responsible for the maintenance of order in a common carrier of passengers, or a person acting under his or her direction, may use reasonable physical force when and to the extent that he or she reasonably believes such to be necessary to maintain order, but he or she may use deadly physical force only when he or she reasonably believes such to be necessary to prevent death or serious physical injury.\n\n(4) A person acting under a reasonable belief that another person is about to commit suicide or to inflict serious physical injury upon himself or herself may use reasonable physical force upon such person to the extent that he or she reasonably believes such to be necessary to thwart such result.\n\n(5) A duly licensed physician or psychologist, or a person acting under his or her direction, may use reasonable physical force for the purpose of administering a recognized form of treatment which he or she reasonably believes to be adapted to promoting the physical or mental health of the patient, provided the treatment (A) is administered with the consent of the patient or, if the patient is a minor or an incompetent person, with the consent of his or her parent, guardian or other person entrusted with his or her care and supervision, or (B) is administered in an emergency when the physician or psychologist reasonably believes that no one competent to consent can be consulted and that a reasonable person, wishing to safeguard the welfare of the patient, would consent.\n\n(6) A teacher or other person entrusted with the care and supervision of a minor for school purposes may use reasonable physical force upon such minor when and to the extent such teacher or other person reasonably believes such force to be necessary to (A) protect such teacher, other person or others from immediate physical injury, (B) obtain possession of a dangerous instrument or controlled substance, as defined in section 21a-240, upon or within the control of such minor, (C) protect property from physical damage, or (D) restrain such minor or remove such minor to another area, to maintain order.\n\n(b) No person is justified in using force upon another person which would otherwise constitute an offense based solely on the discovery of, knowledge about or potential disclosure of the victim's actual or perceived sex, sexual orientation or gender identity or expression, including under circumstances in which the victim made an unwanted, nonforcible, romantic or sexual advance toward the defendant, or if the defendant and victim dated or had a romantic relationship.",
+      "href": "?chapter=951&section=section-53a-18",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-53a-28",
+      "citation": "53a-28",
+      "citations": [
+        "53a-28"
+      ],
+      "heading": "Sec. 53a-28. Authorized sentences.",
+      "chapter": {
+        "id": "chapter-952",
+        "number": "952",
+        "name": "Penal Code: Offenses"
+      },
+      "status": "active",
+      "text": "(a) Except as provided in section 17a-699 and chapter 420b, to the extent that the provisions of said section and chapter are inconsistent herewith, every person convicted of an offense shall be sentenced in accordance with this title.\n\n(b) Except as provided in section 53a-46a, when a person is convicted of an offense, the court shall impose one of the following sentences: (1) A term of imprisonment; or (2) a sentence authorized by section 18-65a or 18-73; or (3) a fine; or (4) a term of imprisonment and a fine; or (5) a term of imprisonment, with the execution of such sentence of imprisonment suspended, entirely or after a period set by the court, and a period of probation or a period of conditional discharge; or (6) a term of imprisonment, with the execution of such sentence of imprisonment suspended, entirely or after a period set by the court, and a fine and a period of probation or a period of conditional discharge; or (7) a fine and a sentence authorized by section 18-65a or 18-73; or (8) a sentence of unconditional discharge; or (9) a term of imprisonment and a period of special parole as provided in section 54-125e, except that the court may not impose a period of special parole for convictions of offenses under chapter 420b.\n\n(c) In addition to any sentence imposed pursuant to subsection (b) of this section, the court shall inquire on the record whether there are any requests by a victim for restitution, and if (1) a person is convicted of an offense that resulted in injury to another person or damage to or loss of property, (2) the victim requests financial restitution, and (3) the court finds that the victim has suffered injury or damage to or loss of property as a result of such offense, the court shall order the offender to make financial restitution under terms that it determines are appropriate. In determining the appropriate terms of financial restitution, the court shall consider: (A) The financial resources of the offender and the burden restitution will place on other obligations of the offender; (B) the offender's ability to pay based on installments or other conditions; (C) the rehabilitative effect on the offender of the payment of restitution and the method of payment; and (D) other circumstances, including the financial burden and impact on the victim, that the court determines make the terms of restitution appropriate. If the court determines that the current financial resources of the offender or the offender's current ability to pay based on installments or other conditions are such that no appropriate terms of restitution can be determined, the court may forego setting such terms. The court shall articulate its findings on the record with respect to each of the factors set forth in subparagraphs (A) to (D), inclusive, of this subsection. Restitution ordered by the court pursuant to this subsection shall be based on easily ascertainable damages for injury or loss of property, actual expenses incurred for treatment for injury to persons and lost wages resulting from injury. Restitution shall not include reimbursement for damages for mental anguish, pain and suffering or other intangible losses, but may include the costs of counseling reasonably related to the offense. Restitution ordered by the court pursuant to this subsection shall be imposed or directed by a written order of the court on a form prescribed by the Chief Court Administrator containing the amount of damages for injury or loss of property, actual expenses incurred for treatment for injury to persons and lost wages resulting from injury as ascertained by the court. The order of the court shall direct that a certified copy of the completed form containing the written order be delivered by certified mail to each victim and contain an advisement to the victim that the order is enforceable as a judgment in a civil action as provided in section 53a-28a. The court shall retain the original of each form containing a written order of restitution as part of such offender's court record.\n\n(d) A sentence to a period of probation or conditional discharge in accordance with sections 53a-29 to 53a-34, inclusive, shall be deemed a revocable disposition, in that such sentence shall be tentative to the extent that it may be altered or revoked in accordance with said sections but for all other purposes it shall be deemed to be a final judgment of conviction.\n\n(e) When sentencing a person to a period of probation who has been convicted of (1) a misdemeanor that did not involve the use, attempted use or threatened use of physical force against another person or (2) a motor vehicle violation for which a sentence to a term of imprisonment may be imposed, the court shall consider, as a condition of such sentence of probation, ordering the person to perform community service in the community in which the offense or violation occurred. If the court determines that community service is appropriate, such community service may be implemented by a community court established in accordance with section 51-181c if the offense or violation occurred within the jurisdiction of a community court established by said section.\n\n(f) When sentencing a person to a period of probation who is or has been subject to a protective order, the court may issue a protective order that is effective during such period of probation.\n\n(g) In addition to any sentence imposed pursuant to section 53-247 or section 53a-73b, at the time of a person's sentencing for any conviction under said sections, the court shall order that, for the five-year period commencing from the date of such conviction or the date of such person's release from imprisonment for such conviction, whichever is later, such person (1) shall not harbor, own, possess, reside with, adopt or serve as a foster placement for any animal, and (2) shall not be employed by, or volunteer for, any entity in any position that involves care for, or regular contact with, any animal.",
+      "href": "?chapter=952&section=section-53a-28",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-53a-32",
+      "citation": "53a-32",
+      "citations": [
+        "53a-32"
+      ],
+      "heading": "Sec. 53a-32. Violation of probation or conditional discharge. Notice to victim or victim advocate. Arrest. Pretrial release conditions and supervision. Hearing. Disposition.",
+      "chapter": {
+        "id": "chapter-952",
+        "number": "952",
+        "name": "Penal Code: Offenses"
+      },
+      "status": "active",
+      "text": "(a) At any time during the period of probation or conditional discharge, the court or any judge thereof may issue a warrant for the arrest of a defendant for violation of any of the conditions of probation or conditional discharge, or may issue a notice to appear to answer to a charge of such violation, which notice shall be personally served upon the defendant. Whenever a probation officer has probable cause to believe that a person on probation who is a serious firearm offender has violated a condition of probation, or knows that a person on probation for a felony conviction has been arrested for the commission of a serious firearm offense, such probation officer shall apply to the court or any judge thereof for a warrant for the arrest of such person for violation of a condition or conditions of probation or conditional discharge. Any such warrant shall authorize all officers named therein to return the defendant to the custody of the court or to any suitable detention facility designated by the court. Whenever a probation officer has probable cause to believe that a person has violated a condition of such person's probation, such probation officer (1) may notify any police officer that such person has, in such officer's judgment, violated the conditions of such person's probation, and (2) shall notify such police officer if such person is a serious firearm offender or is on probation for a felony conviction and has been arrested for the commission of a serious firearm offense. Such notice shall be sufficient warrant for the police officer to arrest such person and return such person to the custody of the court or to any suitable detention facility designated by the court. Whenever a probation officer so notifies a police officer, the probation officer shall notify the victim of the offense for which such person is on probation, and any victim advocate assigned to assist the victim, provided the probation officer has been provided with the name and contact information for such victim or victim advocate. Any probation officer may arrest any defendant on probation without a warrant or may deputize any other officer with power to arrest to do so by giving such other officer a written statement setting forth that the defendant has, in the judgment of the probation officer, violated the conditions of the defendant's probation. Such written statement, delivered with the defendant by the arresting officer to the official in charge of any correctional center or other place of detention, shall be sufficient warrant for the detention of the defendant. After making such an arrest, such probation officer shall present to the detaining authorities a similar statement of the circumstances of violation. Except as provided in subsection (e) of this section, provisions regarding release on bail of persons charged with a crime shall be applicable to any defendant arrested under the provisions of this section. Upon such arrest and detention, the probation officer shall immediately so notify the court or any judge thereof.\n\n(b) When the defendant is presented for arraignment on the charge of violation of any of the conditions of probation or conditional discharge, the court shall review any conditions previously imposed on the defendant and may order, as a condition of the pretrial release of the defendant, that the defendant comply with any or all of such conditions in addition to any conditions imposed pursuant to section 54-64a. Unless the court, pursuant to subsection (c) of section 54-64a, orders that the defendant remain under the supervision of a probation officer or other designated person or organization, the defendant shall be supervised by the Court Support Services Division of the Judicial Branch in accordance with subsection (a) of section 54-63b.\n\n(c) Upon notification by the probation officer of the arrest of the defendant or upon an arrest by warrant as herein provided, the court shall cause the defendant to be brought before it without unnecessary delay for a hearing on the violation charges. At such hearing the defendant shall be informed of the manner in which such defendant is alleged to have violated the conditions of such defendant's probation or conditional discharge, shall be advised by the court that such defendant has the right to retain counsel and, if indigent, shall be entitled to the services of the public defender, and shall have the right to cross-examine witnesses and to present evidence in such defendant's own behalf. Unless good cause is shown, a charge of violation of any of the conditions of probation or conditional discharge shall be disposed of or scheduled for a hearing not later than one hundred twenty days after the defendant is arraigned on such charge, except, if the defendant is a serious firearm offender, or is on probation for a felony conviction and has been arrested for the commission of a serious firearm offense, such charge shall be disposed of or scheduled for a hearing not later than sixty days after the defendant is arraigned on such charge.\n\n(d) If such violation is established and the violation consisted of the commission of a serious firearm offense or the defendant is a serious firearm offender, the court shall revoke the sentence of probation or conditional discharge, otherwise, the court may: (1) Continue the sentence of probation or conditional discharge; (2) modify or enlarge the conditions of probation or conditional discharge; (3) extend the period of probation or conditional discharge, provided the original period with any extensions shall not exceed the periods authorized by section 53a-29; or (4) revoke the sentence of probation or conditional discharge. If such sentence is revoked, the court shall require the defendant to serve the sentence imposed or impose any lesser sentence. Any such lesser sentence may include a term of imprisonment, all or a portion of which may be suspended entirely or after a period set by the court, followed by a period of probation with such conditions as the court may establish. No such revocation shall be ordered, except upon consideration of the whole record and unless such violation is established by the introduction of reliable and probative evidence and by a preponderance of the evidence.\n\n(e) Provisions regarding release on bail of any serious firearm offender arrested pursuant to this section who is charged with a crime, or any felony offender arrested pursuant to this section for a serious firearm offense, shall be applicable to such serious firearm offender provided that, for the purpose of applying such provisions, there shall be a rebuttable presumption that such serious firearm offender poses a danger to the safety of other persons.",
+      "href": "?chapter=952&section=section-53a-32",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-53a-39",
+      "citation": "53a-39",
+      "citations": [
+        "53a-39"
+      ],
+      "heading": "Sec. 53a-39. Reduction of sentence or discharge of defendant by sentencing court or judge. Statement by victim.",
+      "chapter": {
+        "id": "chapter-952",
+        "number": "952",
+        "name": "Penal Code: Offenses"
+      },
+      "status": "active",
+      "text": "(a) Except as provided in subsection (b) of this section, at any time during an executed period of incarceration, the sentencing court or judge may, after hearing and for good cause shown, reduce the sentence, order the defendant discharged, or order the defendant discharged on probation or conditional discharge for a period not to exceed that to which the defendant could have been originally sentenced.\n\n(b) On and after October 1, 2021, at any time during the period of a sentence in which a defendant has been sentenced prior to, on or after October 1, 2021, to an executed period of incarceration of more than seven years as a result of a plea agreement, including an agreement in which there is an agreed upon range of sentence, upon agreement of the defendant and the state's attorney to seek review of the sentence, the sentencing court or judge may, after hearing and for good cause shown, reduce the sentence, order the defendant discharged, or order the defendant discharged on probation or conditional discharge for a period not to exceed that to which the defendant could have been originally sentenced.\n\n(c) If, after a hearing pursuant to this section, the sentencing court or judge denies or grants in full a motion to reduce a defendant's sentence or discharge the defendant, the defendant may not file a subsequent motion for relief under this section until five years have elapsed from the date of the most recent decision denying such defendant relief pursuant to this section. If, after a hearing pursuant to this section, the sentencing court or judge grants in part a motion to reduce a defendant's sentence, the defendant may not file a subsequent motion for relief under this section until three years from the date of the most recent decision granting such defendant relief pursuant to this section.\n\n(d) The provisions of this section shall not apply to any portion of a sentence imposed that is a mandatory minimum sentence for an offense which may not be suspended or reduced by the court.\n\n(e) At the time the defendant files a motion with the court, the defendant shall provide the state with a copy of the motion and any materials and documentation filed with the court in support of such motion.\n\n(f) At a hearing held by the sentencing court or judge under this section, such court or judge shall permit any victim of the crime to appear before the court or judge for the purpose of making a statement for the record concerning whether or not the sentence of the defendant should be reduced, the defendant should be discharged or the defendant should be discharged on probation or conditional discharge pursuant to subsection (a) or (b) of this section. In lieu of such appearance, the victim may submit a written statement to the court or judge and the court or judge shall make such statement a part of the record at the hearing. For the purposes of this subsection, “victim” means the victim, the legal representative of the victim or a member of the deceased victim's immediate family.",
+      "href": "?chapter=952&section=section-53a-39",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-53a-65",
+      "citation": "53a-65",
+      "citations": [
+        "53a-65"
+      ],
+      "heading": "Sec. 53a-65. Definitions.",
+      "chapter": {
+        "id": "chapter-952",
+        "number": "952",
+        "name": "Penal Code: Offenses"
+      },
+      "status": "active",
+      "text": "As used in this part, the following terms have the following meanings:\n\n(1) “Actor” means a person accused of sexual assault.\n\n(2) “Sexual intercourse” means vaginal intercourse, anal intercourse, fellatio or cunnilingus between persons regardless of sex. Penetration, however slight, is sufficient to complete vaginal intercourse, anal intercourse or fellatio and does not require emission of semen. Penetration may be committed by an object manipulated by the actor into the genital or anal opening of the victim's body.\n\n(3) “Sexual contact” means (A) any contact with the intimate parts of a person for the purpose of sexual gratification of the actor or for the purpose of degrading or humiliating such person or any contact of the intimate parts of the actor with a person for the purpose of sexual gratification of the actor or for the purpose of degrading or humiliating such person, or (B) for the purposes of subdivision (4) of subsection (a) of section 53a-73a, any contact with the intimate parts of a dead human body, or any contact of the intimate parts of the actor with a dead human body, for the purpose of sexual gratification of the actor.\n\n(4) “Impaired because of mental disability or disease” means that a person suffers from a mental disability or disease which renders such person incapable of appraising the nature of such person's conduct.\n\n(5) “Mentally incapacitated” means that a person is rendered temporarily incapable of appraising or controlling such person's conduct owing to the influence of a drug or intoxicating substance administered to such person without such person's consent, or owing to any other act committed upon such person without such person's consent.\n\n(6) “Physically helpless” means that a person is (A) unconscious, or (B) for any other reason, is physically unable to resist an act of sexual intercourse or sexual contact or to communicate unwillingness to an act of sexual intercourse or sexual contact.\n\n(7) “Use of force” means: (A) Use of a dangerous instrument; or (B) use of actual physical force or violence or superior physical strength against the victim.\n\n(8) “Intimate parts” means the genital area or any substance emitted therefrom, groin, anus or any substance emitted therefrom, inner thighs, buttocks or breasts.\n\n(9) “Psychotherapist” means a physician, psychologist, nurse, substance abuse counselor, social worker, clergyman, marital and family therapist, mental health service provider, hypnotist or other person, whether or not licensed or certified by the state, who performs or purports to perform psychotherapy.\n\n(10) “Psychotherapy” means the professional treatment, assessment or counseling of a mental or emotional illness, symptom or condition.\n\n(11) “Emotionally dependent” means that the nature of the patient's or former patient's emotional condition and the nature of the treatment provided by the psychotherapist are such that the psychotherapist knows or has reason to know that the patient or former patient is unable to withhold consent to sexual contact by or sexual intercourse with the psychotherapist.\n\n(12) “Therapeutic deception” means a representation by a psychotherapist that sexual contact by or sexual intercourse with the psychotherapist is consistent with or part of the patient's treatment.\n\n(13) “School employee” means: (A) A teacher, substitute teacher, school administrator, school superintendent, guidance counselor, school counselor, psychologist, social worker, nurse, physician, school paraprofessional or coach employed by a local or regional board of education or a private elementary, middle or high school or working in a public or private elementary, middle or high school; or (B) any other person who, in the performance of his or her duties, has regular contact with students and who provides services to or on behalf of students enrolled in (i) a public elementary, middle or high school, pursuant to a contract with the local or regional board of education, or (ii) a private elementary, middle or high school, pursuant to a contract with the supervisory agent of such private school.\n\n(14) “Animal” has the same meaning as provided in section 22-327.\n\n(15) “Sexual contact with an animal” means: (A) Any act between a person and an animal that involves contact between a sex organ or anus of one and the mouth, anus or a sex organ of the other; (B) a person touching or fondling a sex organ or anus of an animal, either directly or through clothing, without a bona fide veterinary or animal husbandry purpose; (C) any intentional transfer or transmission of semen by a person upon any part of an animal; or (D) the insertion, however slight, of any part of a person's body or any object into the vaginal or anal opening of an animal, without a bona fide veterinary or animal husbandry purpose, or the insertion of any part of the animal's body into the vaginal or anal opening of the person.",
+      "href": "?chapter=952&section=section-53a-65",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-53a-73a",
+      "citation": "53a-73a",
+      "citations": [
+        "53a-73a"
+      ],
+      "heading": "Sec. 53a-73a. Sexual assault in the fourth degree: Class A misdemeanor or class D felony.",
+      "chapter": {
+        "id": "chapter-952",
+        "number": "952",
+        "name": "Penal Code: Offenses"
+      },
+      "status": "active",
+      "text": "(a) A person is guilty of sexual assault in the fourth degree when: (1) Such person subjects another person to sexual contact who is (A) under thirteen years of age and the actor is more than two years older than such other person, or (B) thirteen years of age or older but under fifteen years of age and the actor is more than three years older than such other person, or (C) physically helpless, or (D) less than eighteen years old and the actor is such other person's guardian or otherwise responsible for the general supervision of such other person's welfare, or (E) in custody of law or detained in a hospital or other institution and the actor has supervisory or disciplinary authority over such other person; or (2) such person subjects another person to sexual contact without such other person's consent; or (3) such person engages in sexual contact with a dead human body; or (4) such person is a psychotherapist and subjects another person to sexual contact who is (A) a patient of the actor and the sexual contact occurs during the psychotherapy session, or (B) a patient or former patient of the actor and such patient or former patient is emotionally dependent upon the actor, or (C) a patient or former patient of the actor and the sexual contact occurs by means of therapeutic deception; or (5) such person subjects another person to sexual contact and accomplishes the sexual contact by means of false representation that the sexual contact is for a bona fide medical purpose by a health care professional; or (6) such person is a school employee and subjects another person to sexual contact who is a student enrolled in a school in which the actor works or a school under the jurisdiction of the local or regional board of education which employs the actor; or (7) such person is a coach in an athletic activity or a person who provides intensive, ongoing instruction and subjects another person to sexual contact who is a recipient of coaching or instruction from the actor and (A) is a secondary school student and receives such coaching or instruction in a secondary school setting, or (B) is under eighteen years of age; or (8) such person subjects another person to sexual contact and (A) the actor is twenty years of age or older and stands in a position of power, authority or supervision over such other person by virtue of the actor's professional, legal, occupational or volunteer status and such other person's participation in a program or activity, and (B) such other person is under eighteen years of age; or (9) such person subjects another person to sexual contact who is placed or receiving services under the direction of the Commissioner of Developmental Services in any public or private facility or program and the actor has supervisory or disciplinary authority over such other person.\n\n(b) Sexual assault in the fourth degree is a class A misdemeanor or, if the victim of the offense is under sixteen years of age, a class D felony.",
+      "href": "?chapter=952&section=section-53a-73a",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-53a-73b",
+      "citation": "53a-73b",
+      "citations": [
+        "53a-73b"
+      ],
+      "heading": "Sec. 53a-73b. Sexual assault of an animal: Class A misdemeanor. Additional sentence.",
+      "chapter": {
+        "id": "chapter-952",
+        "number": "952",
+        "name": "Penal Code: Offenses"
+      },
+      "status": "active",
+      "text": "(a) A person is guilty of sexual assault of an animal when such person knowingly and for the purpose of sexual gratification of the actor or of another person: (1) Engages in sexual contact with an animal; (2) forces another person to engage in sexual contact with an animal; or (3) creates or distributes pornographic images of prohibited sexual contact with an animal.\n\n(b) Sexual assault of an animal is a class A misdemeanor.\n\n(c) In addition to any sentence imposed pursuant to subsection (b) of this section, at the time of a person's sentencing for a conviction under this section, the court shall order that, for the five-year period commencing from the date of such conviction or the date of such person's release from imprisonment for such conviction, whichever is later, such person (1) shall not harbor, own, possess, reside with, adopt or serve as a foster placement for any animal, and (2) shall not be employed by, or volunteer for, any entity in any position that involves care for, or regular contact with, any animal.",
+      "href": "?chapter=952&section=section-53a-73b",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-53a-110e",
+      "citation": "53a-110e",
+      "citations": [
+        "53a-110e"
+      ],
+      "heading": "Sec. 53a-110e. Simple trespass of Watershed land: Infraction.",
+      "chapter": {
+        "id": "chapter-952",
+        "number": "952",
+        "name": "Penal Code: Offenses"
+      },
+      "status": "active",
+      "text": "(a) For the purposes of this section, “water company” has the same meaning as provided in section 25-32a. A person is guilty of simple trespass of public water supply watershed land that is owned, controlled or managed by a water company when, knowing that such person is not licensed or privileged to do so, such person enters or remains on the watershed land without lawful authority or the consent of the water company.\n\n(b) Any person who violates any provision of this section shall have committed an infraction and be fined ninety dollars.",
+      "href": "?chapter=952&section=section-53a-110e",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-53a-167c",
+      "citation": "53a-167c",
+      "citations": [
+        "53a-167c"
+      ],
+      "heading": "Sec. 53a-167c. Assault of public safety, emergency medical, public transit or health care personnel: Class C felony.",
+      "chapter": {
+        "id": "chapter-952",
+        "number": "952",
+        "name": "Penal Code: Offenses"
+      },
+      "status": "active",
+      "text": "(a) A person is guilty of assault of public safety, emergency medical, public transit or health care personnel when, with intent to prevent a reasonably identifiable peace officer, firefighter or employee of an emergency medical service organization, as defined in section 53a-3, emergency room physician or nurse, health care employee as defined in section 19a-490q, employee of the Department of Correction, member or employee of the Board of Pardons and Paroles, probation officer, employee of the Judicial Branch assigned to provide pretrial or post-conviction secure detention and programming services to juveniles accused of the commission of a delinquent act, liquor control agent, state or municipal animal control officer, security officer, employee of the Department of Children and Families assigned to provide direct services to children and youths in the care or custody of the department, employee of a municipal police department assigned to provide security at the police department's lockup and holding facility, active individual member of a volunteer canine search and rescue team, as defined in section 5-249, or public transit employee from performing his or her duties, and while such peace officer, firefighter, employee, physician, nurse, health care employee, member, liquor control agent, animal control officer, security officer, probation officer or active individual member is acting in the performance of his or her duties, (1) such person causes physical injury to such peace officer, firefighter, employee, physician, nurse, member, liquor control agent, animal control officer, security officer, probation officer or active individual member, or (2) such person throws or hurls, or causes to be thrown or hurled, any rock, bottle, can or other article, object or missile of any kind capable of causing physical harm, damage or injury, at such peace officer, firefighter, employee, physician, nurse, member, liquor control agent, animal control officer, security officer, probation officer or active individual member, or (3) such person uses or causes to be used any mace, tear gas or any like or similar deleterious agent against such peace officer, firefighter, employee, physician, nurse, member, liquor control agent, animal control officer, security officer, probation officer or active individual member, or (4) such person throws or hurls, or causes to be thrown or hurled, any paint, dye or other like or similar staining, discoloring or coloring agent or any type of offensive or noxious liquid, agent or substance at such peace officer, firefighter, employee, physician, nurse, member, liquor control agent, animal control officer, security officer, probation officer or active individual member, or (5) such person throws or hurls, or causes to be thrown or hurled, any bodily fluid including, but not limited to, urine, feces, blood or saliva at such peace officer, firefighter, employee, physician, nurse, member, liquor control agent, animal control officer, security officer, probation officer or active individual member. For the purposes of this section, “public transit employee” means a person employed by the state, a political subdivision of the state, a transit district formed under chapter 103a or a person with whom the Commissioner of Transportation has contracted in accordance with section 13b-34 to provide transportation services who operates a vehicle or vessel providing public ferry service or fixed route bus service or performs duties directly related to the operation of such vehicle or vessel, or who, as part of the provision of public rail service, is a train operator, conductor, inspector, signal person or station agent and “security officer” has the same meaning as provided in section 29-152u.\n\n(b) Assault of public safety, emergency medical, public transit or health care personnel is a class C felony. If any person who is confined in an institution or facility of the Department of Correction is sentenced to a term of imprisonment for assault of an employee of the Department of Correction under this section, such term shall run consecutively to the term for which the person was serving at the time of the assault.\n\n(c) In any prosecution under this section involving assault of a health care employee, as defined in section 19a-490q, it shall be an affirmative defense that the defendant is a person with a disability as described in subdivision (13), (15) or (20) of section 46a-51 and the defendant's conduct was a clear and direct manifestation of the disability, except that for the purposes of this subsection, “mental disability”, as defined in subdivision (20) of section 46a-51, does not include any abnormality manifested only by repeated criminal or antisocial conduct.",
+      "href": "?chapter=952&section=section-53a-167c",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-53a-196j",
+      "citation": "53a-196j",
+      "citations": [
+        "53a-196j"
+      ],
+      "heading": "Sec. 53a-196j. Harmful communication with a minor: Class A misdemeanor.",
+      "chapter": {
+        "id": "chapter-952",
+        "number": "952",
+        "name": "Penal Code: Offenses"
+      },
+      "status": "active",
+      "text": "(a) As used in this section:\n\n(1) “Minor” means any person under eighteen years of age, or who the actor reasonably believes to be under eighteen years of age;\n\n(2) “Interactive computer service” has the same meaning as provided in section 53a-90a;\n\n(3) “Inappropriate relationship” means a relationship that is patently offensive to prevailing standards in the adult community as a whole with respect to what is a suitable relationship between an adult and a minor; and\n\n(4) “Harmful to the minor” means communication with a minor that is patently offensive to prevailing standards in the adult community as a whole with respect to what is a suitable form of communication between an adult and a minor.\n\n(b) A person, who is twenty-five years of age or older, is guilty of harmful communication with a minor when such person uses an interactive computer service or text message to knowingly persuade, induce, entice or coerce a minor, to: (1) Share a photographic or other recorded image of the minor for the purpose of providing sexual gratification to the person who requests that the image be shared, (2) share a photographic or other recorded image of the minor, which the person who requests the image then disseminates to one or more third persons for the purpose of providing sexual gratification to such third persons, (3) engage in any communication that is part of a pattern of communication or behavior designed to form or maintain an inappropriate relationship, or (4) engage in any communication that is harmful to the minor.\n\n(c) For the purposes of this section, a violation may be deemed to have been committed either at the place where the communication originated or at the place where it was received.\n\n(d) Harmful communication with a minor is a class A misdemeanor.",
+      "href": "?chapter=952&section=section-53a-196j",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-53a-217",
+      "citation": "53a-217",
+      "citations": [
+        "53a-217"
+      ],
+      "heading": "Sec. 53a-217. Criminal possession of a firearm, ammunition or an electronic defense weapon: Class C felony.",
+      "chapter": {
+        "id": "chapter-952",
+        "number": "952",
+        "name": "Penal Code: Offenses"
+      },
+      "status": "active",
+      "text": "(a) A person is guilty of criminal possession of a firearm, ammunition or an electronic defense weapon when such person possesses a firearm, ammunition or an electronic defense weapon and (1) has been convicted of (A) a felony committed prior to, on or after October 1, 2013, (B) a misdemeanor violation of section 21a-279 on or after October 1, 2015, (C) a misdemeanor violation of section 53a-58, 53a-61, 53a-61a, 53a-62, 53a-63, 53a-96, 53a-175, 53a-176, 53a-178 or 53a-181d committed on or after October 1, 2013, and during the preceding twenty years, or (D) a misdemeanor violation of any law of this state that has been designated as a family violence crime pursuant to section 46b-38h and was committed on or after October 1, 2023, (2) has been convicted as delinquent for the commission of a serious juvenile offense, as defined in section 46b-120, (3) has been discharged from custody within the preceding twenty years after having been found not guilty of a crime by reason of mental disease or defect pursuant to section 53a-13, (4) knows that such person is subject to (A) a restraining or protective order of a court of this state that has been issued against such person, after notice has been provided to such person, in a case involving the use, attempted use or threatened use of physical force against another person, or (B) a foreign order of protection, as defined in section 46b-15a, that has been issued against such person in a case involving the use, attempted use or threatened use of physical force against another person, (5) (A) has been confined on or after October 1, 2013, in a hospital for persons with psychiatric disabilities, as defined in section 17a-495, within the preceding sixty months by order of a probate court, or with respect to any person who holds a valid permit or certificate that was issued or renewed under the provisions of section 29-28 or 29-36f in effect prior to October 1, 2013, such person has been confined in such hospital within the preceding twelve months, or (B) has been voluntarily admitted on or after October 1, 2013, or has been committed under an emergency certificate pursuant to section 17a-502 on or after October 1, 2023, to a hospital for persons with psychiatric disabilities, as defined in section 17a-495, within the preceding six months for care and treatment of a psychiatric disability, unless the person (i) was admitted or committed solely for being an alcohol-dependent person or a drug-dependent person as those terms are defined in section 17a-680, or (ii) is a police officer who was voluntarily admitted and had his or her firearm, ammunition or electronic defense weapon used in the performance of the police officer's official duties returned in accordance with section 7-291d, (6) knows that such person is subject to a firearms seizure order issued prior to June 1, 2022, pursuant to section 29-38c after notice and an opportunity to be heard has been provided to such person, or a risk protection order or risk protection investigation order issued on or after June 1, 2022, pursuant to section 29-38c, or (7) is prohibited from shipping, transporting, possessing or receiving a firearm pursuant to 18 USC 922(g)(2), (g)(4) or (g)(9). For the purposes of this section, “convicted” means having a judgment of conviction entered by a court of competent jurisdiction, “ammunition” means a loaded cartridge, consisting of a primed case, propellant or projectile, designed for use in any firearm, and a motor vehicle violation for which a sentence to a term of imprisonment of more than one year may be imposed shall be deemed an unclassified felony.\n\n(b) Criminal possession of a firearm, ammunition or an electronic defense weapon is a class C felony, for which two years and one day of the sentence imposed may not be suspended or reduced by the court, and five thousand dollars of the fine imposed may not be remitted or reduced by the court unless the court states on the record its reasons for remitting or reducing such fine.",
+      "href": "?chapter=952&section=section-53a-217",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-53a-217a",
+      "citation": "53a-217a",
+      "citations": [
+        "53a-217a"
+      ],
+      "heading": "Sec. 53a-217a. Criminally negligent storage of a firearm: Class D felony.",
+      "chapter": {
+        "id": "chapter-952",
+        "number": "952",
+        "name": "Penal Code: Offenses"
+      },
+      "status": "active",
+      "text": "(a) Except as provided in subsection (b) of this section, a person is guilty of criminally negligent storage of a firearm when such person violates the provisions of section 29-37i and another person obtains the firearm and causes the injury or death of such person or any other person.\n\n(b) The provisions of this section shall not apply if the person obtains the firearm as a result of an unlawful entry to any premises by any person and, if such firearm is stolen, such firearm is reported stolen pursuant to the provisions of section 53-202g.\n\n(c) Criminally negligent storage of a firearm is a class D felony.",
+      "href": "?chapter=952&section=section-53a-217a",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-53a-217c",
+      "citation": "53a-217c",
+      "citations": [
+        "53a-217c"
+      ],
+      "heading": "Sec. 53a-217c. Criminal possession of a pistol or revolver: Class C felony.",
+      "chapter": {
+        "id": "chapter-952",
+        "number": "952",
+        "name": "Penal Code: Offenses"
+      },
+      "status": "active",
+      "text": "(a) A person is guilty of criminal possession of a pistol or revolver when such person possesses a pistol or revolver, as defined in section 29-27, and (1) has been convicted of (A) a felony committed prior to, on or after October 1, 2013, (B) a misdemeanor violation of section 21a-279 committed on or after October 1, 2015, (C) a misdemeanor violation of section 53a-58, 53a-61, 53a-61a, 53a-62, 53a-63, 53a-96, 53a-175, 53a-176, 53a-178 or 53a-181d committed during the preceding twenty years, or (D) a misdemeanor violation of any law of this state that has been designated as a family violence crime pursuant to section 46b-38h and was committed on or after October 1, 2023, (2) has been convicted as delinquent for the commission of a serious juvenile offense, as defined in section 46b-120, (3) has been discharged from custody within the preceding twenty years after having been found not guilty of a crime by reason of mental disease or defect pursuant to section 53a-13, (4) (A) has been confined prior to October 1, 2013, in a hospital for persons with psychiatric disabilities, as defined in section 17a-495, within the preceding twelve months by order of a probate court, or has been confined on or after October 1, 2013, in a hospital for persons with psychiatric disabilities, as defined in section 17a-495, within the preceding sixty months by order of a probate court, or, with respect to any person who holds a valid permit or certificate that was issued or renewed under the provisions of section 29-28 or 29-36f, in effect prior to October 1, 2013, such person has been confined in such hospital within the preceding twelve months, or (B) has been voluntarily admitted on or after October 1, 2013, or has been committed under an emergency certificate pursuant to section 17a-502 on or after October 1, 2023, to a hospital for persons with psychiatric disabilities, as defined in section 17a-495, within the preceding six months for care and treatment of a psychiatric disability, unless the person (i) was admitted or committed solely for being an alcohol-dependent person or a drug-dependent person as those terms are defined in section 17a-680, or (ii) is a police officer who was voluntarily admitted and had his or her firearm, ammunition or electronic defense weapon used in the performance of the police officer's official duties returned in accordance with section 7-291d, (5) knows that such person is subject to (A) a restraining or protective order of a court of this state that has been issued against such person, after notice has been provided to such person, in a case involving the use, attempted use or threatened use of physical force against another person, or (B) a foreign order of protection, as defined in section 46b-15a, that has been issued against such person in a case involving the use, attempted use or threatened use of physical force against another person, (6) knows that such person is subject to a firearms seizure order issued prior to June 1, 2022, pursuant to section 29-38c after notice and an opportunity to be heard has been provided to such person, or a risk protection order or risk protection investigation order issued on or after June 1, 2022, pursuant to section 29-38c, (7) is prohibited from shipping, transporting, possessing or receiving a firearm pursuant to 18 USC 922(g)(2), (g)(4) or (g)(9), or (8) is an alien illegally or unlawfully in the United States. For the purposes of this section, “convicted” means having a judgment of conviction entered by a court of competent jurisdiction.\n\n(b) Criminal possession of a pistol or revolver is a class C felony, for which two years of the sentence imposed may not be suspended or reduced by the court, and five thousand dollars of the fine imposed may not be remitted or reduced by the court unless the court states on the record its reasons for remitting or reducing such fine.",
+      "href": "?chapter=952&section=section-53a-217c",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-53a-222",
+      "citation": "53a-222",
+      "citations": [
+        "53a-222"
+      ],
+      "heading": "Sec. 53a-222. Violation of conditions of release in the first degree: Class D or Class C felony.",
+      "chapter": {
+        "id": "chapter-952",
+        "number": "952",
+        "name": "Penal Code: Offenses"
+      },
+      "status": "active",
+      "text": "(a) A person is guilty of violation of conditions of release in the first degree when, while charged with the commission of a felony, such person is released pursuant to subsection (b) of section 54-63c, subsection (c) of section 54-63d or subsection (d) of section 54-64a and intentionally violates one or more of the imposed conditions of release.\n\n(b) Violation of conditions of release in the first degree is a class D felony, except that any violation of conditions of release that involve (1) imposing any restraint upon the person or liberty of a person in violation of the conditions of release, or (2) threatening, harassing, assaulting, molesting, sexually assaulting or attacking a person in violation of the conditions of release is a class C felony.",
+      "href": "?chapter=952&section=section-53a-222",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-53a-222a",
+      "citation": "53a-222a",
+      "citations": [
+        "53a-222a"
+      ],
+      "heading": "Sec. 53a-222a. Violation of conditions of release in the second degree: Class A misdemeanor or Class D felony.",
+      "chapter": {
+        "id": "chapter-952",
+        "number": "952",
+        "name": "Penal Code: Offenses"
+      },
+      "status": "active",
+      "text": "(a) A person is guilty of violation of conditions of release in the second degree when, while charged with the commission of a misdemeanor or motor vehicle violation for which a sentence to a term of imprisonment may be imposed, such person is released pursuant to subsection (b) of section 54-63c, subsection (c) of section 54-63d or subsection (d) of section 54-64a and intentionally violates one or more of the imposed conditions of release.\n\n(b) Violation of conditions of release in the second degree is a class A misdemeanor, except that any violation of conditions of release that involve (1) imposing any restraint upon the person or liberty of a person in violation of the conditions of release, or (2) threatening, harassing, assaulting, molesting, sexually assaulting or attacking a person in violation of the conditions of release is a class D felony.",
+      "href": "?chapter=952&section=section-53a-222a",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-53a-290",
+      "citation": "53a-290",
+      "citations": [
+        "53a-290"
+      ],
+      "heading": "Sec. 53a-290. “Vendor fraud” defined.",
+      "chapter": {
+        "id": "chapter-952",
+        "number": "952",
+        "name": "Penal Code: Offenses"
+      },
+      "status": "active",
+      "text": "A person commits vendor fraud when, with intent to defraud and acting on such person's own behalf or on behalf of an entity, such person provides goods or services to a beneficiary under sections 17b-22, 17b-75 to 17b-77, inclusive, 17b-79 to 17b-103, inclusive, 17b-180a, 17b-183, 17b-260 to 17b-262, inclusive, 17b-264 to 17b-285, inclusive, 17b-357 to 17b-361, inclusive, 17b-600 to 17b-604, inclusive, 17b-749 and 17b-808 or provides services to a recipient under Title XIX of the Social Security Act, as amended, and, (1) presents for payment any false claim for goods or services performed; (2) accepts payment for goods or services performed, which exceeds either the amounts due for goods or services performed, or the amounts authorized by law for the cost of such goods or services; (3) solicits to perform services for or sell goods to any such beneficiary, knowing that such beneficiary is not in need of such goods or services; (4) sells goods to or performs services for any such beneficiary without prior authorization by the Department of Social Services, when prior authorization is required by said department for the buying of such goods or the performance of any service; (5) accepts from any person or source other than the state an additional compensation in excess of the amount authorized by law; or (6) having knowledge of the occurrence of any event affecting (A) his or her initial or continued right to any such benefit or payment, or (B) the initial or continued right to any such benefit or payment of any other individual in whose behalf he or she has applied for or is receiving such benefit or payment, conceals or fails to disclose such event with an intent to fraudulently secure such benefit or payment either in a greater amount or quantity than is due or when no such benefit or payment is authorized.",
+      "href": "?chapter=952&section=section-53a-290",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    }
+  ]
+}

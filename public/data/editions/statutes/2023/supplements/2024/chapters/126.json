@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-126",
+  "number": "126",
+  "name": "Municipal Planning Commissions",
+  "title": {
+    "id": "title-08",
+    "number": "08",
+    "name": "Zoning, Planning, Housing and Economic and Community Development"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_126.htm",
+  "sections": [
+    {
+      "id": "section-8-19a",
+      "kind": "section",
+      "citation": "8-19a",
+      "citations": [
+        "8-19a"
+      ],
+      "heading": "Sec. 8-19a. Alternate members of planning commission.",
+      "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_126.htm#sec_8-19a",
+      "status": "active",
+      "content": {
+        "body": [
+          "Any municipality, in addition to such powers as it has under the provisions of the general statutes or any special act, shall have the power to provide by ordinance for the appointment or election of alternate members to its planning commission. Such alternate members shall be electors, and, when seated as herein provided, have all the powers and duties set forth in the general statutes or any special act relating to such municipality for such commission and its members. Such alternate members may attend all meetings and executive sessions of said commission. Any alternate member who also serves or served on the zoning commission or zoning board of appeals in such municipality shall recuse himself or herself from participation in any appeal before the zoning board of appeals from a decision of the planning commission if such alternate member participated in such decision. Such ordinance shall provide for the manner of designating alternates to act."
+        ],
+        "sourceNotes": [
+          "(1971, P.A. 763, S. 8; P.A. 74-90; P.A. 84-154, S. 2, 3; P.A. 85-284, S. 2, 5; P.A. 23-173, S. 2.)"
+        ],
+        "history": [
+          "History: P.A. 74-90 permitted alternates to attend meetings and executive sessions; P.A. 84-154 provided for mandatory appointment or election of alternates, effective January 1, 1986; P.A. 85-284 repealed provisions of P.A. 84-154 and provided that local ordinances shall provide for the manner of designating alternates to act; P.A. 23-173 deleted provision prohibiting alternate members of a board of a planning commission from also serving on the zoning commission or zoning board of appeals, and added provision re any alternate member of a board of a planning commission that also serves or served on a zoning commission or zoning board of appeals shall recuse themselves from any appeal of planning commission decision if such member participated in such decision."
+        ],
+        "annotations": [],
+        "plainText": "Any municipality, in addition to such powers as it has under the provisions of the general statutes or any special act, shall have the power to provide by ordinance for the appointment or election of alternate members to its planning commission. Such alternate members shall be electors, and, when seated as herein provided, have all the powers and duties set forth in the general statutes or any special act relating to such municipality for such commission and its members. Such alternate members may attend all meetings and executive sessions of said commission. Any alternate member who also serves or served on the zoning commission or zoning board of appeals in such municipality shall recuse himself or herself from participation in any appeal before the zoning board of appeals from a decision of the planning commission if such alternate member participated in such decision. Such ordinance shall provide for the manner of designating alternates to act."
+      }
+    }
+  ]
+}

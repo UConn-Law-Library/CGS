@@ -1,0 +1,113 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-061",
+  "number": "061",
+  "name": "State Information and Telecommunication Systems Management and Contracts",
+  "title": {
+    "id": "title-04d",
+    "number": "04d",
+    "name": "State Information and Telecommunication Systems"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_061.htm",
+  "sections": [
+    {
+      "id": "section-4d-30",
+      "kind": "section",
+      "citation": "4d-30",
+      "citations": [
+        "4d-30"
+      ],
+      "heading": "Sec. 4d-30. Definitions.",
+      "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_061.htm#sec_4d-30",
+      "status": "active",
+      "content": {
+        "body": [
+          "As used in this section and sections 4d-31 to 4d-44, inclusive:",
+          "(1) “Contract” means a contract for state agency information system or telecommunication system facilities, equipment or services, which is awarded pursuant to this chapter or subsection (e) of section 1-205, subsection (c) of section 1-211, subsection (b) of section 1-212, section 4-5, subsection (a) of section 10a-151b, or subsection (b) of section 19a-110.",
+          "(2) “Contractor” means a business entity or individual who is awarded a contract or an amendment to a contract.",
+          "(3) “Subcontractor” means a subcontractor of a contractor for work under a contract or an amendment to a contract."
+        ],
+        "sourceNotes": [
+          "(June 18 Sp. Sess. P.A. 97-9, S. 30, 50; P.A. 00-187, S. 47, 75; P.A. 11-131, S. 1; P.A. 23-31, S. 40.)"
+        ],
+        "history": [
+          "History: June 18 Sp. Sess. P.A. 97-9 effective July 1, 1997; P.A. 00-187 made a technical change in Subdiv. (1), effective July 1, 2000; P.A. 11-131 removed reference to repealed Sec. 32-6i(b) in Subdiv. (1), effective July 1, 2011; P.A. 23-31 amended Subdiv. (1) by replacing reference to Sec. 19a-110(a) with reference to Sec. 19a-110(b)."
+        ],
+        "annotations": [],
+        "plainText": "As used in this section and sections 4d-31 to 4d-44, inclusive:\n\n(1) “Contract” means a contract for state agency information system or telecommunication system facilities, equipment or services, which is awarded pursuant to this chapter or subsection (e) of section 1-205, subsection (c) of section 1-211, subsection (b) of section 1-212, section 4-5, subsection (a) of section 10a-151b, or subsection (b) of section 19a-110.\n\n(2) “Contractor” means a business entity or individual who is awarded a contract or an amendment to a contract.\n\n(3) “Subcontractor” means a subcontractor of a contractor for work under a contract or an amendment to a contract."
+      }
+    },
+    {
+      "id": "section-4d-32",
+      "kind": "section",
+      "citation": "4d-32",
+      "citations": [
+        "4d-32"
+      ],
+      "heading": "Sec. 4d-32. Approval of subcontract awards.",
+      "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_061.htm#sec_4d-32",
+      "status": "active",
+      "content": {
+        "body": [
+          "No contractor shall award a subcontract for work under a contract or for work under an amendment to a contract without the approval of the Commissioner of Administrative Services or a designee of (1) the selection of the subcontractor, and (2) the disclosure of the provisions of the subcontract."
+        ],
+        "sourceNotes": [
+          "(June 18 Sp. Sess. P.A. 97-9, S. 32, 50; P.A. 11-51, S. 83; P.A. 23-204, S. 424.)"
+        ],
+        "history": [
+          "History: June 18 Sp. Sess. P.A. 97-9 effective July 1, 1997; P.A. 11-51 changed “Chief Information Officer” to “Commissioner of Administrative Services”, added “the disclosure of” in Subsec. (a)(2) and made technical changes, effective July 1, 2011; P.A. 23-204 deleted former Subsec. (b) re filing copy of executed subcontracts or amendments with the commissioner and deleted Subsec. designator (a), effective June 12, 2023."
+        ],
+        "annotations": [],
+        "plainText": "No contractor shall award a subcontract for work under a contract or for work under an amendment to a contract without the approval of the Commissioner of Administrative Services or a designee of (1) the selection of the subcontractor, and (2) the disclosure of the provisions of the subcontract."
+      }
+    },
+    {
+      "id": "section-4d-47",
+      "kind": "section",
+      "citation": "4d-47",
+      "citations": [
+        "4d-47"
+      ],
+      "heading": "Sec. 4d-47. Hiring of state employees by contractors and subcontractors.",
+      "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_061.htm#sec_4d-47",
+      "status": "active",
+      "content": {
+        "body": [
+          "With respect to any state employee whose position is eliminated or who is laid off as a result of any contract or amendment to a contract which is subject to the provisions of this chapter and subsection (e) of section 1-205, subsection (c) of section 1-211, subsection (b) of section 1-212, section 4-5, 4a-50, 4a-51, subsection (b) of section 4a-57, subsection (a) of section 10a-151b, or subsection (b) of section 19a-110, or any subcontract for work under such contract or amendment, (1) the contractor shall hire the employee, upon application by the employee, unless the employee is hired by a subcontractor of the contractor, or (2) the employee may transfer to any vacant position in state service for which such employee is qualified, to the extent allowed under the provisions of existing collectively bargained agreements and the general statutes. If the contractor or any such subcontractor hires any such state employee and does not provide the employee with fringe benefits which are equivalent to, or greater than, the fringe benefits that the employee would have received in state service, the state shall, for two years after the employee terminates from state service, provide to the employee either (A) the same benefits that such employee received from the state, or (B) compensation in an amount which represents the difference in the value of the fringe benefits that such employee received when in state service and the fringe benefits that such employee receives from the contractor or subcontractor."
+        ],
+        "sourceNotes": [
+          "(S.A. 97-21, S. 85, 106; June 18 Sp. Sess. P.A. 97-9, S. 47, 50; P.A. 99-161, S. 7, 11; P.A. 00-187, S. 48, 75; P.A. 01-173, S. 2, 67; P.A. 11-131, S. 2; P.A. 23-31, S. 41.)"
+        ],
+        "history": [
+          "History: S.A. 97-21 and June 18 Sp. Sess. P.A. 97-9 effective July 1, 1997; P.A. 99-161 made a technical change, effective July 1, 1999; P.A. 00-187 made a technical change, effective July 1, 2000; P.A. 01-173 made technical changes for the purposes of gender neutrality, effective July 1, 2001; P.A. 11-131 removed reference to repealed Sec. 32-6i(b), effective July 1, 2011; P.A. 23-31 replaced reference to Sec. 19a-110(a) with reference to Sec. 19a-110(b)."
+        ],
+        "annotations": [],
+        "plainText": "With respect to any state employee whose position is eliminated or who is laid off as a result of any contract or amendment to a contract which is subject to the provisions of this chapter and subsection (e) of section 1-205, subsection (c) of section 1-211, subsection (b) of section 1-212, section 4-5, 4a-50, 4a-51, subsection (b) of section 4a-57, subsection (a) of section 10a-151b, or subsection (b) of section 19a-110, or any subcontract for work under such contract or amendment, (1) the contractor shall hire the employee, upon application by the employee, unless the employee is hired by a subcontractor of the contractor, or (2) the employee may transfer to any vacant position in state service for which such employee is qualified, to the extent allowed under the provisions of existing collectively bargained agreements and the general statutes. If the contractor or any such subcontractor hires any such state employee and does not provide the employee with fringe benefits which are equivalent to, or greater than, the fringe benefits that the employee would have received in state service, the state shall, for two years after the employee terminates from state service, provide to the employee either (A) the same benefits that such employee received from the state, or (B) compensation in an amount which represents the difference in the value of the fringe benefits that such employee received when in state service and the fringe benefits that such employee receives from the contractor or subcontractor."
+      }
+    },
+    {
+      "id": "section-4d-48",
+      "kind": "section",
+      "citation": "4d-48",
+      "citations": [
+        "4d-48"
+      ],
+      "heading": "Sec. 4d-48. Disqualification of potential contractors and subcontractors for past nonperformance.",
+      "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_061.htm#sec_4d-48",
+      "status": "active",
+      "content": {
+        "body": [
+          "No contract or subcontract for state agency information system or telecommunication system facilities, equipment or services may be awarded to any business entity or individual pursuant to this chapter or subsection (e) of section 1-205, subsection (c) of section 1-211, subsection (b) of section 1-212, section 4-5, subsection (a) of section 10a-151b, or subsection (b) of section 19a-110, if such business entity or individual previously had a contract with the state or a state agency to provide information system or telecommunication system facilities, equipment or services and such prior contract was finally terminated by the state or a state agency within the previous five years for the reason that such business entity or individual failed to perform or otherwise breached a material obligation of the contract related to information system or telecommunication system facilities, equipment or services. If the termination of any such previous contract is contested in an arbitration or judicial proceeding, the termination shall not be final until the conclusion of such arbitration or judicial proceeding. If the fact-finder determines, or a settlement stipulates, that the contractor failed to perform or otherwise breached a material obligation of the contract related to information system or telecommunication system facilities, equipment or services, any award of a contract pursuant to said chapter or sections during the pendency of such arbitration or proceeding shall be rescinded and the bar provided in this section shall apply to such business entity or individual."
+        ],
+        "sourceNotes": [
+          "(June 18 Sp. Sess. P.A. 97-9, S. 48, 50; P.A. 00-187, S. 49, 75; P.A. 11-131, S. 3; P.A. 23-31, S. 42.)"
+        ],
+        "history": [
+          "History: June 18 Sp. Sess. P.A. 97-9 effective July 1, 1997; P.A. 00-187 made a technical change, effective July 1, 2000; P.A. 11-131 removed reference to repealed Sec. 32-6i(b), effective July 1, 2011; P.A. 23-31 replaced reference to Sec. 19a-110(a) with reference to Sec. 19a-110(b)."
+        ],
+        "annotations": [],
+        "plainText": "No contract or subcontract for state agency information system or telecommunication system facilities, equipment or services may be awarded to any business entity or individual pursuant to this chapter or subsection (e) of section 1-205, subsection (c) of section 1-211, subsection (b) of section 1-212, section 4-5, subsection (a) of section 10a-151b, or subsection (b) of section 19a-110, if such business entity or individual previously had a contract with the state or a state agency to provide information system or telecommunication system facilities, equipment or services and such prior contract was finally terminated by the state or a state agency within the previous five years for the reason that such business entity or individual failed to perform or otherwise breached a material obligation of the contract related to information system or telecommunication system facilities, equipment or services. If the termination of any such previous contract is contested in an arbitration or judicial proceeding, the termination shall not be final until the conclusion of such arbitration or judicial proceeding. If the fact-finder determines, or a settlement stipulates, that the contractor failed to perform or otherwise breached a material obligation of the contract related to information system or telecommunication system facilities, equipment or services, any award of a contract pursuant to said chapter or sections during the pendency of such arbitration or proceeding shall be rescinded and the bar provided in this section shall apply to such business entity or individual."
+      }
+    }
+  ]
+}

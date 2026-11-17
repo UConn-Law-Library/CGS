@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-821",
+  "number": "821",
+  "name": "Land Titles",
+  "title": {
+    "id": "title-47",
+    "number": "47",
+    "name": "Land and Land Titles"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_821.htm",
+  "sections": [
+    {
+      "id": "section-47-7",
+      "kind": "section",
+      "citation": "47-7",
+      "citations": [
+        "47-7"
+      ],
+      "heading": "Sec. 47-7. Conveyances and releases executed outside this state. Exception.",
+      "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_821.htm#sec_47-7",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) Notwithstanding the provisions of section 1-36, any conveyance of real estate situated in this state, any mortgage or release of mortgage or lien upon any real estate situated in this state, and any power of attorney authorizing another to convey any interest in real estate situated in this state, executed and acknowledged in any other state or territory in conformity with the laws of that state or territory relating to the conveyance of real estate therein situated or of any interest therein or with the laws of this state, is valid.",
+          "(b) No county clerk's certificate or other authenticating certificate is required for such conveyance, mortgage, release, lien or power of attorney to be valid, provided the officer taking the acknowledgment indicated thereon the date, if any, on which his current commission expires.",
+          "(c) The provisions of this section shall not apply to any conveyance of real estate situated in this state, or any mortgage or release of mortgage or lien upon any real estate situated in this state, executed by a remotely located individual, as defined in section 3-95b, in the conduct of a real estate closing, as defined in section 51-88a."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 7087; February, 1965, P.A. 167; 1967, P.A. 300; 1969, P.A. 10; P.A. 79-602, S. 3; P.A. 23-28, S. 3.)"
+        ],
+        "history": [
+          "History: 1965 act specified that conveyance's validity does not depend on whether county clerk's certificate has been affixed “provided the officer taking such acknowledgment shall have indicated thereon the date on which his current commission expires”; 1967 act specified that provisions apply “notwithstanding the provisions of section 1-36” and added reference to “other authenticating” certificates; 1969 act rephrased provision re county clerk's or other certificates; P.A. 79-602 divided section into Subsecs. and restated provisions; P.A. 23-28 added Subsec. (c) re section not applicable to any conveyance, mortgage or release of mortgage or lien executed by remotely located individual concerning real estate situated in this state in the conduct of a real estate closing."
+        ],
+        "annotations": [],
+        "plainText": "(a) Notwithstanding the provisions of section 1-36, any conveyance of real estate situated in this state, any mortgage or release of mortgage or lien upon any real estate situated in this state, and any power of attorney authorizing another to convey any interest in real estate situated in this state, executed and acknowledged in any other state or territory in conformity with the laws of that state or territory relating to the conveyance of real estate therein situated or of any interest therein or with the laws of this state, is valid.\n\n(b) No county clerk's certificate or other authenticating certificate is required for such conveyance, mortgage, release, lien or power of attorney to be valid, provided the officer taking the acknowledgment indicated thereon the date, if any, on which his current commission expires.\n\n(c) The provisions of this section shall not apply to any conveyance of real estate situated in this state, or any mortgage or release of mortgage or lien upon any real estate situated in this state, executed by a remotely located individual, as defined in section 3-95b, in the conduct of a real estate closing, as defined in section 51-88a."
+      }
+    }
+  ]
+}

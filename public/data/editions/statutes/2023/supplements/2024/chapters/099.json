@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-099",
+  "number": "099",
+  "name": "Municipal Charters and Special Acts",
+  "title": {
+    "id": "title-07",
+    "number": "07",
+    "name": "Municipalities"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_099.htm",
+  "sections": [
+    {
+      "id": "section-7-191c",
+      "kind": "section",
+      "citation": "7-191c",
+      "citations": [
+        "7-191c"
+      ],
+      "heading": "Sec. 7-191c. Prohibited charter amendments.",
+      "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_099.htm#sec_7-191c",
+      "status": "active",
+      "content": {
+        "body": [
+          "Notwithstanding any provision of any special act, municipal charter or ordinance to the contrary, a municipality, as defined in section 7-401, may not modify a municipal charter in a manner that (1) modifies the manner in which any petition is filed with a local legislative body or a zoning board of appeals to challenge a decision of a planning commission, zoning commission or combined planning and zoning commission, including, but not limited to, the number of signatures required upon such petition, the manner of obtaining such signatures, or residency or location requirements concerning real property owned by persons signing any such petition, as set forth in this title or title 8; (2) modifies any regulations concerning any planning commission, zoning commission or combined planning and zoning commission set forth in this title or title 8; (3) modifies any vote requirement concerning the initiation or completion of the process of eminent domain, or otherwise modifies the public notice or hearing requirements of such process, set forth in this title or title 8; or (4) modifies any vote requirement concerning the disposition of municipal property, or otherwise modifies the public notice or hearing requirements concerning such disposition, set forth in this title or title 8."
+        ],
+        "sourceNotes": [
+          "(P.A. 23-205, S. 158.)"
+        ],
+        "history": [
+          "History: P.A. 23-205 effective June 29, 2023."
+        ],
+        "annotations": [],
+        "plainText": "Notwithstanding any provision of any special act, municipal charter or ordinance to the contrary, a municipality, as defined in section 7-401, may not modify a municipal charter in a manner that (1) modifies the manner in which any petition is filed with a local legislative body or a zoning board of appeals to challenge a decision of a planning commission, zoning commission or combined planning and zoning commission, including, but not limited to, the number of signatures required upon such petition, the manner of obtaining such signatures, or residency or location requirements concerning real property owned by persons signing any such petition, as set forth in this title or title 8; (2) modifies any regulations concerning any planning commission, zoning commission or combined planning and zoning commission set forth in this title or title 8; (3) modifies any vote requirement concerning the initiation or completion of the process of eminent domain, or otherwise modifies the public notice or hearing requirements of such process, set forth in this title or title 8; or (4) modifies any vote requirement concerning the disposition of municipal property, or otherwise modifies the public notice or hearing requirements concerning such disposition, set forth in this title or title 8."
+      }
+    }
+  ]
+}

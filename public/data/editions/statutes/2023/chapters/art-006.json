@@ -1,0 +1,73 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-art-006",
+  "number": "art-006",
+  "name": "Bulk Transfers",
+  "title": {
+    "id": "title-42a",
+    "number": "42a",
+    "name": "Uniform Commercial Code"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2023/pub/art_006.htm",
+  "sections": [
+    {
+      "id": "group-42a-6-101-to-42a-6-102-to-42a-6-103-to-42a-6-104-to-42a-6-105-to-42a-6-106-to-42a-6-107-to-42a-6-108-to-42a-6-109-to-42a-6-110-to-42a-6-110a",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "42a-6-101",
+        "42a-6-102",
+        "42a-6-103",
+        "42a-6-104",
+        "42a-6-105",
+        "42a-6-106",
+        "42a-6-107",
+        "42a-6-108",
+        "42a-6-109",
+        "42a-6-110",
+        "42a-6-110a"
+      ],
+      "heading": "Secs. 42a-6-101 to 42a-6-110a. Uniform Commercial Code–Bulk Transfers.",
+      "sourceUrl": "https://www.cga.ct.gov/2023/pub/art_006.htm#secs_42a-6-101_to_42a-6-110a",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Sections 42a-6-101 to 42a-6-110a , inclusive, are repealed."
+        ],
+        "sourceNotes": [
+          "(1959, P.A. 133, S. 6-101 – 6-110; 1961, P.A. 116, S. 5, 6; 1963, P.A. 526, S. 10 – 13; February, 1965, P.A. 377, S. 4; 1967, P.A. 898; 1969, P.A. 554; 1971, P.A. 207, S. 1; May Sp. Sess. P.A. 92-6, S. 108, 109, 117; P.A. 93-107, S. 4.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 42a-6-101 to 42a-6-110a , inclusive, are repealed."
+      }
+    },
+    {
+      "id": "section-42a-6-110b",
+      "kind": "section",
+      "citation": "42a-6-110b",
+      "citations": [
+        "42a-6-110b"
+      ],
+      "heading": "Sec. 42a-6-110b. Validity and enforceability of rights and obligations arising under former provisions on bulk transfers.",
+      "sourceUrl": "https://www.cga.ct.gov/2023/pub/art_006.htm#sec_42a-6-110b",
+      "status": "active",
+      "content": {
+        "body": [
+          "Rights and obligations that arose under sections 42a-6-101 to 42a-6-110a , inclusive, and section 42a-9-111 before their repeal on October 1, 1993, remain valid and may be enforced as though those sections had not been repealed."
+        ],
+        "sourceNotes": [
+          "(P.A. 93-107, S. 3.)"
+        ],
+        "history": [],
+        "annotations": [
+          {
+            "first": true,
+            "text": "Cited. 38 CA 44."
+          }
+        ],
+        "plainText": "Rights and obligations that arose under sections 42a-6-101 to 42a-6-110a , inclusive, and section 42a-9-111 before their repeal on October 1, 1993, remain valid and may be enforced as though those sections had not been repealed."
+      }
+    }
+  ]
+}

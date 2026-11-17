@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-384",
+  "number": "384",
+  "name": "Veterinary Medicine",
+  "title": {
+    "id": "title-20",
+    "number": "20",
+    "name": "Professional and Occupational Licensing, Certification, Title Protection and Registration. Examining Boards"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_384.htm",
+  "sections": [
+    {
+      "id": "section-20-204b",
+      "kind": "section",
+      "citation": "20-204b",
+      "citations": [
+        "20-204b"
+      ],
+      "heading": "Sec. 20-204b. Reporting of animal fighting for amusement or gain to law enforcement agency or animal control officer.",
+      "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_384.htm#sec_20-204b",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) Any veterinarian licensed in accordance with the provisions of this chapter, who in the course of his or her employment, has reasonable cause to suspect that an animal is being or has been harmed, neglected or treated cruelly due to participation in an exhibition of animal fighting for amusement or gain, shall report the following information to the local law enforcement agency or animal control officer: (1) The address of the owner or other person responsible for care of the animal; (2) a description of the animal; and (3) the approximate date and time of discovery of such harm, neglect or cruelty.",
+          "(b) Any veterinarian, who in good faith, makes a report pursuant to this section, shall be immune from any civil liability which might otherwise arise from or be related to the actions taken pursuant to this section and shall have the same immunity with respect to any judicial proceeding which results from such report. The immunity from civil liability extends only to actions done pursuant to this section and does not extend to the malpractice of a veterinarian that results in injury to, or the death of, an animal."
+        ],
+        "sourceNotes": [
+          "(P.A. 23-149, S. 6.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "(a) Any veterinarian licensed in accordance with the provisions of this chapter, who in the course of his or her employment, has reasonable cause to suspect that an animal is being or has been harmed, neglected or treated cruelly due to participation in an exhibition of animal fighting for amusement or gain, shall report the following information to the local law enforcement agency or animal control officer: (1) The address of the owner or other person responsible for care of the animal; (2) a description of the animal; and (3) the approximate date and time of discovery of such harm, neglect or cruelty.\n\n(b) Any veterinarian, who in good faith, makes a report pursuant to this section, shall be immune from any civil liability which might otherwise arise from or be related to the actions taken pursuant to this section and shall have the same immunity with respect to any judicial proceeding which results from such report. The immunity from civil liability extends only to actions done pursuant to this section and does not extend to the malpractice of a veterinarian that results in injury to, or the death of, an animal."
+      }
+    }
+  ]
+}

@@ -1,0 +1,264 @@
+{
+  "schemaVersion": "1.0.0",
+  "editionYear": 2024,
+  "title": {
+    "id": "title-26",
+    "number": "26",
+    "name": "Fisheries and Game"
+  },
+  "removedDocumentIds": [
+    "section-26-5",
+    "section-26-25a",
+    "section-26-47",
+    "section-26-80a",
+    "section-26-102",
+    "section-26-113",
+    "section-26-116",
+    "section-26-137",
+    "section-26-142b",
+    "section-26-159c",
+    "section-26-194"
+  ],
+  "documents": [
+    {
+      "id": "section-26-5",
+      "citation": "26-5",
+      "citations": [
+        "26-5"
+      ],
+      "heading": "Sec. 26-5. Appointment of conservation officers, special conservation officers and patrolmen.",
+      "chapter": {
+        "id": "chapter-490",
+        "number": "490",
+        "name": "Fisheries and Game"
+      },
+      "status": "active",
+      "text": "The Commissioner of Energy and Environmental Protection shall appoint such number of conservation officers as may be necessary for the efficient execution of the duties of the department under section 26-6. The commissioner may supplement the regular conservation officer force by appointing as special conservation officer any employee of the department or any sworn federal law enforcement officer of the United States Fish and Wildlife Service or National Marine Fisheries Service, provided such federal officer shall not be considered an employee of the state and may only exercise such officer's authority pursuant to section 26-6 when working with a full-time conservation officer. The commissioner may also appoint any lake patrolman as a special conservation officer solely for the purpose of enforcing boating laws within such patrolman's jurisdiction, provided such patrolman shall not be considered an employee of the state, and further provided that such patrolman has completed a police training course at a Police Officer Standards and Training Council approved training academy. Notwithstanding the provisions of this section, no such lake patrolman shall carry a firearm while in the performance of such patrolman's duties as a special conservation officer unless the board of selectmen of the town or towns in which the lake on which the lake patrolman serves is located approves such carrying of a firearm, or in the case of any town having no board of selectmen, the lake patrolman obtains the approval of the legislative body of such town or towns in which the lake is located. Each conservation officer shall be certified by the Police Officer Standards and Training Council in accordance with the provisions of section 7-294d not later than one year after appointment. Each special conservation officer shall be certified by the Police Officer Standards and Training Council in accordance with the provisions of section 7-294d or complete an equivalent course approved by the Commissioner of Emergency Services and Public Protection. Special conservation officers who are employees of the department shall be entitled to the same benefits to which conservation officers are entitled under the provisions of section 5-142, and such an appointment shall be deemed not to be in conflict with any of the provisions of chapter 67. In addition to their salaries, conservation officers and special conservation officers who are employees of the department shall be reimbursed for all expenses incurred in performance of official duty.",
+      "href": "?chapter=490&section=section-26-5",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-26-25a",
+      "citation": "26-25a",
+      "citations": [
+        "26-25a"
+      ],
+      "heading": "Sec. 26-25a. Regulation of feeding of wildlife on state-owned property. Intentional feeding of potentially dangerous animals on private property. Prohibition. Regulations. More restrictive municipal ordinances.",
+      "chapter": {
+        "id": "chapter-490",
+        "number": "490",
+        "name": "Fisheries and Game"
+      },
+      "status": "active",
+      "text": "(a)(1) For purposes of this section:\n\n(A) “Intentionally feed” means to place, provide, give, expose, deposit, scatter or distribute any edible material or attractant with the intent of feeding, attracting or enticing potentially dangerous animals.\n\n(B) “Potentially dangerous animal” means any of the following: (i) The felidae, including, but not limited to, bobcat; (ii) the canidae, including, but not limited to, coyote and fox; and (iii) the ursidae, including, but not limited to, black bear. “Potentially dangerous animal” does not include any: (I) Domestic cat or dog, or (II) animal under the care, custody or control of any zoo or wildlife facility.\n\n(2) No person shall intentionally feed any potentially dangerous animal on any land that is not owned by the state.\n\n(3) The provisions of this subsection shall not be construed to apply to: (A) Composting at facilities authorized pursuant to section 22a-208a or 22a-430, provided best management practices are used to mitigate the attraction of any potentially dangerous animal, (B) small-scale composting operations, (C) the composting of agricultural waste, (D) the disposal of agricultural mortalities, or (E) agriculture, farming or aquaculture.\n\n(4) The Commissioner of Energy and Environmental Protection may adopt regulations, in accordance with the provisions of chapter 54, to implement the provisions of this subsection.\n\n(5) The Commissioner of Energy and Environmental Protection may adopt regulations in accordance with the provisions of chapter 54 prohibiting or restricting the feeding of wildlife on state-owned property. Such regulations shall include, but not be limited to, procedures for designating areas subject to such prohibitions or restrictions. Any such designation shall be effective after public notice and a public comment period.\n\n(b) Any conservation officer appointed pursuant to section 26-5 and any other officer authorized to serve criminal process may enforce the provisions of this section and any regulations adopted pursuant to this section. Any violation of this section or any such regulations shall be an infraction.\n\n(c) Notwithstanding the provisions of subsection (a) of this section, any municipal ordinance that is more restrictive than the provisions of this section concerning the intentional feeding of wildlife on land that is not owned by the state shall not be preempted by the provisions of subsection (a) of this section.",
+      "href": "?chapter=490&section=section-26-25a",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-26-47",
+      "citation": "26-47",
+      "citations": [
+        "26-47"
+      ],
+      "heading": "Sec. 26-47. Permits to take wildlife damaging crops. License to control nuisance wildlife. Permits to take wildlife damaging agricultural crops, livestock or apiaries. Conditions. Means. Methods. Times. Disposal of wildlife taken.",
+      "chapter": {
+        "id": "chapter-490",
+        "number": "490",
+        "name": "Fisheries and Game"
+      },
+      "status": "active",
+      "text": "(a) When it is shown to the satisfaction of the commissioner that wildlife is causing unreasonable damage to agricultural crops during the night and it is found by the commissioner that control of such damage by wildlife is impracticable during the daylight hours, the commissioner may issue permits for the taking of such wildlife as the commissioner deems necessary to control such damage by such method as the commissioner determines, including the use of lights, during the period between sunset and sunrise, upon written application of the owner or lessee of record of the land on which such crops are grown. Such permits may be issued to any qualified person designated by such landowner or lessee. The person to whom such permit is issued shall be held responsible for complying with the conditions under which such permit is issued. The provisions of this section shall not apply to deer.\n\n(b) (1) No person shall engage in the business of controlling nuisance wildlife, other than rats or mice, without obtaining a license from the commissioner. Such license shall be valid for a period of two years and may be renewed in accordance with a schedule established by the commissioner. The fee for such license shall be two hundred fifty dollars. The controlling of nuisance wildlife at the direction of the commissioner shall not constitute engaging in the business of controlling nuisance wildlife for the purposes of this section. No person shall be licensed under this subsection unless the person: (A) Provides evidence, satisfactory to the commissioner, that the person has completed training which included instruction in site evaluation, methods of nonlethal and approved lethal resolution of common nuisance wildlife problems, techniques to prevent reoccurrence of such problems and humane capture, handling and euthanasia of nuisance wildlife and instruction in methods of nonlethal resolution of common nuisance wildlife problems, including, but not limited to, training regarding frightening devices, repellants, one-way door exclusion and other exclusion methods, habitat modification and live-trapping and releasing and other methods as the commissioner may deem appropriate; and (B) is a resident of this state or of a state that does not prohibit residents of this state from being licensed as nuisance wildlife control operators because of lack of residency.\n\n(2) The licensure requirements shall apply to municipal employees who engage in the control or handling of animals, including, but not limited to, animal control officers, except that no license shall be required of such employees for the emergency control of rabies. Notwithstanding the requirements of this subsection, the commissioner shall waive the licensure fee for such employees. The commissioner shall provide to such municipal employees, without charge, the training required for licensure under this subsection. A license held by a municipal employee shall be noncommercial, nontransferable and conditional upon municipal employment.\n\n(3) The commissioner shall adopt regulations, in accordance with the provisions of chapter 54, which (A) define the scope and methods for controlling nuisance wildlife provided such regulations shall incorporate the recommendations of the 1993 report of the American Veterinary Medical Association panel on euthanasia and further provided such regulations may provide for the use of specific alternatives to such recommendations only in specified circumstances where use of a method of killing approved by such association would involve an imminent threat to human health or safety and only if such alternatives are designed to kill the animal as quickly and painlessly as practicable while protecting human health and safety, and (B) establish criteria and procedures for issuance of a license.\n\n(4) Except as otherwise provided in regulations adopted under this section, no person licensed under this subsection may kill any animal by any method which does not conform to the recommendations of the 1993 report of the American Veterinary Medical Association panel on euthanasia. No person may advertise any services relating to humane capture or relocation of wildlife unless all methods employed in such services conform to such regulations.\n\n(5) Any person licensed under this subsection shall provide all clients with a written statement approved by the commissioner regarding approved lethal and nonlethal options, as provided in this subsection, which are available to the client for resolution of common nuisance problems. If a written statement cannot be delivered to the client prior to services being rendered, the licensee shall leave the statement at the job site or other location arranged with the client.\n\n(6) Each person licensed under this subsection shall submit a report to the commissioner, on such date as the commissioner may determine, that specifies the means utilized in each case of nuisance wildlife control service provided in the preceding calendar year including any method used in those cases where an animal was killed. Any information included in such report which identifies a client of such person or the client's street address may be released by the commissioner only pursuant to an investigation related to enforcement of this section.\n\n(c) Any person who violates any provision of this section, or any condition under which a permit or license is issued, shall be guilty of a class D misdemeanor; and any permit or license issued to such person, and all other such permits or licenses issued to any other person for such property, shall be revoked by the commissioner and the right to obtain such permit or license shall remain suspended for such period of time as the commissioner determines.\n\n(d) Any permit or license issued under this section shall not authorize the taking of deer.\n\n(e) Notwithstanding the provisions of subsection (a) of this section, the Commissioner of Energy and Environmental Protection may issue permits for the taking of wildlife that threatens or causes damage to agricultural crops, livestock or apiaries, if: (1) The owner or lessee of the subject property utilized reasonable nonlethal efforts to protect such crops, apiaries or livestock, including, but not limited to, electric fencing, animal guardians or fortified enclosed structures, and (2) an investigation by Department of Energy and Environmental Protection personnel determines that the taking of such wildlife is necessary to protect agricultural crops, apiaries or livestock from excessive damage and that reasonable nonlethal efforts to protect such crops, apiaries or livestock have not been or are not likely to be successful in preventing further damage. Any such permit issued pursuant to this subsection shall specify the means, methods and times for which such take is allowed and shall only be issued by the commissioner to the: (A) Owner of the subject property on which such excessive damage occurred, (B) agent of such owner, or (C) lessee of such subject property, provided such lessee has the written permission of such owner to take wildlife. Any wildlife taken pursuant to this section shall be disposed of as directed by the department. The provisions of this subsection shall not be construed to authorize the taking of any federally protected species.",
+      "href": "?chapter=490&section=section-26-47",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-26-80a",
+      "citation": "26-80a",
+      "citations": [
+        "26-80a"
+      ],
+      "heading": "Sec. 26-80a. Illegal taking of moose or bear. Suspension of hunting license. Penalties. Use of deadly force to kill a bear. Authorization. Requirements.",
+      "chapter": {
+        "id": "chapter-490",
+        "number": "490",
+        "name": "Fisheries and Game"
+      },
+      "status": "active",
+      "text": "(a) Any person who takes moose or bear in violation of this part shall (1) for a first offense, be fined not more than five hundred dollars or imprisoned not more than thirty days, or both, and the Commissioner of Energy and Environmental Protection shall suspend such person's hunting license for a period of not less than one year, (2) for a second offense, be fined not more than seven hundred fifty dollars or imprisoned not more than three months, or both, and the commissioner shall suspend such person's hunting license for a period of not less than two years, and (3) for a third or subsequent offense, be fined not more than one thousand dollars or imprisoned not more than six months, or both, and the commissioner shall permanently revoke such person's hunting license.\n\n(b) Nothing in this section shall prevent the commissioner from designating an open season on the hunting of moose and bear pursuant to this part.\n\n(c) Nothing in this section shall be construed to prevent any person from using deadly physical force to kill a bear if such person reasonably believes that a bear is: (1) Inflicting or is about to inflict great bodily harm to a human, (2) injuring or killing such person's pet that is otherwise controlled in accordance with any applicable provision of the general statutes or any regulation adopted pursuant to such a provision, or (3) entering a building occupied by persons.",
+      "href": "?chapter=490&section=section-26-80a",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-26-102",
+      "citation": "26-102",
+      "citations": [
+        "26-102"
+      ],
+      "heading": "Sec. 26-102. Fish spawning areas and refuges.",
+      "chapter": {
+        "id": "chapter-490",
+        "number": "490",
+        "name": "Fisheries and Game"
+      },
+      "status": "active",
+      "text": "The commissioner may establish fish spawning areas and refuges on any waters; and the commissioner may establish closed areas and safety zones on public lands and waters and, with the consent of the owner, on private lands and waters, and close any such area to fishing and trespassing. The commissioner shall have emergency authority to declare a closed season on any regulated species threatened with undue depletion from any cause and, the provisions of section 26-116, notwithstanding, if such cause is any person, firm or corporation engaged in commercial fishing activity, the commissioner shall have the additional emergency power to establish prescribed conditions for the operation of such commercial fishing activity, or suspend or prohibit the right of such person, firm or corporation to operate within such waters for such period of time as the commissioner deems necessary. The commissioner may, if the commissioner deems it necessary, close any waters, or portions thereof, in the inland district to fishing for limited periods of time.",
+      "href": "?chapter=490&section=section-26-102",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-26-113",
+      "citation": "26-113",
+      "citations": [
+        "26-113"
+      ],
+      "heading": "Sec. 26-113. Hearings.",
+      "chapter": {
+        "id": "chapter-490",
+        "number": "490",
+        "name": "Fisheries and Game"
+      },
+      "status": "active",
+      "text": "Notice of such hearing shall be advertised in one or more newspapers having a general circulation in each of the counties of the state or in the locality where such waters are situated and shall be posted on the eRegulations System and on the Department of Energy and Environmental Protection's Internet web site. The Commissioner of Energy and Environmental Protection, or the commissioner's designee, shall provide a copy of such notice to each municipality where such waters are located for publication of such notice on the Internet web site of each such municipality. Such notice shall specify the time, not less than fourteen days thereafter, the agenda and the place designated by the commissioner at which such hearing shall be held, and at which persons having an interest therein will have an opportunity to be heard. The commissioner or the commissioner's designated representative shall conduct such hearing and cause a record thereof to be made. After such notice and hearing the commissioner shall issue such regulations based upon standards of sound fisheries management including the following: (a) Scientific and factual findings of a biological nature; (b) the availability of the species involved; (c) unusual weather conditions and special hazards; (d) the available supply of food and natural cover; (e) the general condition of the waters; (f) the control of the species; (g) the number of permits issued; (h) the area available; (i) the rights and privileges of sportsmen, landowners and the general public; (j) the problem of providing and perpetuating a sound program of fisheries management and a sound recreational program consistent with the availability of the species.",
+      "href": "?chapter=490&section=section-26-113",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-26-116",
+      "citation": "26-116",
+      "citations": [
+        "26-116"
+      ],
+      "heading": "Sec. 26-116. Exceptions.",
+      "chapter": {
+        "id": "chapter-490",
+        "number": "490",
+        "name": "Fisheries and Game"
+      },
+      "status": "active",
+      "text": "The provisions of sections 26-111 to 26-117, inclusive, shall not apply to the taking of fish for commercial purposes and shall not affect any statute regulating fishing in any lake, pond or reservoir used for domestic water supply, nor shall any action be taken under the provisions of said sections which will unreasonably interfere with the proper management of a public water supply system.",
+      "href": "?chapter=490&section=section-26-116",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-26-137",
+      "citation": "26-137",
+      "citations": [
+        "26-137"
+      ],
+      "heading": "Sec. 26-137. Fishing near fishways.",
+      "chapter": {
+        "id": "chapter-490",
+        "number": "490",
+        "name": "Fisheries and Game"
+      },
+      "status": "active",
+      "text": "No person shall take or attempt to take any fish within two hundred fifty feet of any fishway, except that the commissioner when the commissioner deems necessary may extend or reduce such distance and shall indicate such other distance by posting.",
+      "href": "?chapter=490&section=section-26-137",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-26-142b",
+      "citation": "26-142b",
+      "citations": [
+        "26-142b"
+      ],
+      "heading": "Sec. 26-142b. Resident-held and nonresident-held principal commercial fishing license, general commercial fishing license and commercial lobster pot fishing license. Restrictions on reissuance, transfer and renewal.",
+      "chapter": {
+        "id": "chapter-490",
+        "number": "490",
+        "name": "Fisheries and Game"
+      },
+      "status": "active",
+      "text": "(a) For the purposes of this section, “active” with regard to a principal commercial fishing license, general commercial fishing license or commercial lobster pot fishing license means that the license has been renewed in the current year.\n\n(b) Notwithstanding any other provision of law, the Commissioner of Energy and Environmental Protection may reissue an active principal commercial fishing license, general commercial fishing license or commercial lobster pot fishing license in the event the license holder is temporarily incapacitated and unable to operate a vessel or perform other necessary functions associated with commercial fishing or in the event a license holder is unable to conduct commercial fishing due to exigencies related to medical care of an immediate family member. Such temporary license may only be issued to a member of such license holder's immediate family or to a member of such license holder's crew, as designated by such license holder, for the duration of such license holder's incapacity or exigencies related to medical care of an immediate family member of such license holder. Such temporary license shall be subject to the provisions of section 26-142a. Landings during the period of such temporary license reissue may be used to satisfy the requirements for license transfer in subsection (c) of this section, provided the licensee met all such requirements for transfer at the time of such temporary reissue.\n\n(c) The commissioner may authorize the transfer of an active principal commercial fishing license, general commercial fishing license or commercial lobster pot fishing license, issued pursuant to subsection (f) of section 26-142a, provided: (1) For purposes of an active resident-held principal or general commercial fishing license or commercial lobster pot fishing license: (A) The person receiving the license in such transfer is a resident of this state, and (B) the person transferring the license held the license and landed regulated species or owned a vessel that landed regulated species under the privilege of a quota-managed species endorsement associated with the license in at least five of the eight calendar years preceding the transfer request and such landings were reported to the commissioner, pursuant to section 26-157b, for not less than thirty fishing days in each year, or (2) for purposes of an active nonresident-held principal or general commercial fishing license or commercial lobster pot fishing license: The person transferring the license held the license and landed regulated species or owned a vessel that landed regulated species under the privilege of a quota-managed species endorsement associated with the license in at least five of the eight calendar years preceding the transfer request and such landings were reported to the commissioner, pursuant to section 26-157b, for not less than thirty fishing days in each year. Such landings shall be verified by seafood dealer reports submitted pursuant to section 26-157b. The recipient of a transferred commercial lobster pot fishing license or principal commercial fishing license shall be limited to the number of lobster pots allocated to such license, except a transferee who currently holds a commercial lobster pot fishing license, issued pursuant to subsection (f) of section 26-142a, shall be limited to the number of pots allocated to such person's currently held commercial lobster pot fishing license or principal commercial fishing license or to the transferred license, whichever is greater. The length of any commercial fishing vessel used by the recipient of a transferred license to fish with a trawl net in the waters of this state shall be not more than twenty per cent greater than the length of the largest vessel used by the person transferring the license during such qualifying period.\n\n(d) (1) In the event of the death of the holder of an active principal commercial fishing license, general commercial fishing license or commercial lobster pot fishing license, the commissioner may authorize the transfer of such license pursuant to subsection (c) of this section, for a period of two years from the date of death of such license holder.\n\n(2) If the deceased license holder held such license for a period of less than five complete calendar years, the commissioner may authorize the transfer of such license (A) subject to the provisions of this section, and (B) provided the deceased license holder landed regulated species or owned a vessel that landed regulated species under the privilege of a quota-managed species endorsement associated with the license in each calendar year during which the deceased license holder held the license for six months or longer, and (C) provided such landings were reported to the commissioner by the deceased license holder, pursuant to section 26-157b, for not less than thirty fishing days in each year.\n\n(e) Upon transfer of a license, the original license holder shall become ineligible to obtain a renewal of that license. Such original license holder may acquire a new license through a subsequent license transfer.\n\n(f) A transfer of a license under this section shall not be made while a commercial fishery license, registration or vessel permit held by the transferor or transferee is under suspension and a transfer shall not be authorized for any transferee who has had a commercial fishery license, registration or vessel permit revoked or suspended within the preceding twelve months.",
+      "href": "?chapter=490&section=section-26-142b",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-26-159c",
+      "citation": "26-159c",
+      "citations": [
+        "26-159c"
+      ],
+      "heading": "Sec. 26-159c. Commissioner to conduct public hearings in coastal areas.",
+      "chapter": {
+        "id": "chapter-490",
+        "number": "490",
+        "name": "Fisheries and Game"
+      },
+      "status": "active",
+      "text": "Prior to the adoption of any regulation under subsection (g) of section 26-142a or section 26-159a, the commissioner or the commissioner's designated representative shall conduct a public hearing or hearings in those coastal areas where persons substantially affected by such regulation and having an interest therein may be heard. The commissioner shall cause notice of such hearing or hearings to be published at least once not more than thirty days and not fewer than ten days before the date set for such hearing or hearings in a newspaper or newspapers having general circulation in those areas which may be affected by such regulation and shall be posted on the eRegulations System and on the Department of Energy and Environmental Protection's Internet web site not fewer than fourteen days prior to the date set for such hearing or hearings. The commissioner, or the commissioner's designee, shall provide a copy of such notice to all coastal municipalities with persons who may be substantially affected by such regulations for publication of such notice on the Internet web site of each such municipality.",
+      "href": "?chapter=490&section=section-26-159c",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-26-194",
+      "citation": "26-194",
+      "citations": [
+        "26-194"
+      ],
+      "heading": "Sec. 26-194. Leasing of shellfish grounds. Fee. Utility lines and public use structures. Shellfish removal or relocation costs. Annual host payments for Long Island Sound crossings. Deposit of fee proceeds. Designation of shellfish areas to regional agricultural science and technology education centers. Leases for small-scale aquaculture operations.",
+      "chapter": {
+        "id": "chapter-491",
+        "number": "491",
+        "name": "State Shellfisheries"
+      },
+      "status": "active",
+      "text": "(a) Except as provided in subsection (e) of this section, the Commissioner of Agriculture may lease in the name of the state, under such regulations as the commissioner may prescribe and for a period not longer than ten years, all shellfish areas that have been conveyed to the state or placed under state jurisdiction by the town of West Haven and any undesignated grounds, within the exclusive jurisdiction of the state, for the purpose of planting and cultivating shellfish. The authority herein conferred shall include the Cormell Reef, Portchester, Great Captain's Island, Field Point and Greenwich Point natural beds as located and described in section 3295 of the general statutes, revision of 1918. Any person desiring to lease grounds for such purpose shall make application in writing to the commissioner and all grounds leased by authority of the provisions of this section shall be leased to the highest responsible bidder, for a minimum fee of four dollars per acre. Such lease or lease renewal shall require the lessee to make a good faith effort to cultivate and harvest shellfish from the leased area. Such lease or lease renewal shall prohibit the lessee from entering a contract whereby the lessee agrees not to cultivate and harvest shellfish for any period of time. No lessee may enter an agreement with a third party that will prevent the lessee from carrying out the lessee's obligations under the lease unless the Department of Agriculture and the Attorney General have approved such agreement. The form of such application and lease shall be approved by the Attorney General, and all such leases shall be recorded in the records of the commissioner. No lease shall be granted to a resident of a state which does not lease shellfish grounds to residents of this state, except that any nonresident who was granted a lease on or before October 1, 1985, may, upon the expiration of such lease, apply for a renewal or further lease as provided in this section. The commissioner shall grant any such lease to nonresidents upon the same terms and conditions as to residents of this state. Any lessee or holder of shellfish grounds, on the expiration of any lease thereof which has been or which may be granted, having fulfilled all of such lessee's or holder's obligations under the lease shall, upon application to the commissioner, have preference in the reletting of such ground for a like term to that granted in the original lease, excluding the rental fee, which shall not be less than the minimum fee per acre as provided in this subsection. A lease renewal shall not be granted if the applicant is in arrears for rent on the original lease of such grounds. Such application for such renewal or further lease shall be granted without notice or advertisement of the pendency thereof; provided no renewal or further lease of such ground shall be granted when the commissioner, for cause, ceases to lease such ground for shellfish culture. All assignments or transfers of leases shall be subject to the approval of the commissioner and shall be recorded in his records. Any person who interferes with, annoys or molests another in the enjoyment of any lease authorized by the provisions of this section shall be subject to the penalties provided in section 26-237. The provisions of sections 26-212, 26-215 and 26-232 shall not apply to any shellfish grounds leased pursuant to the provisions of this section.\n\n(b) Upon request of a lessee, the commissioner may divide or consolidate shellfish grounds leased by such lessee, if the commissioner determines such division or consolidation to be in the best interests of the state. The minimum fee per acre shall apply to shellfish grounds divided or consolidated pursuant to this subsection.\n\n(c) The Commissioner of Agriculture shall assess the owner of any facility that requires a certificate issued pursuant to section 16-50k or that requires approval by the Federal Energy Regulatory Commission and that crosses any grounds of Long Island Sound within the jurisdiction of the state, including, but not limited to, any shellfish area or leased, designated or granted grounds, an annual host payment fee of forty cents per linear foot for the length of such facility within the jurisdiction of the state. Seventy-five per cent of the proceeds of such fee shall be deposited in the Shellfish Fund, established pursuant to section 26-237b, and in the expand and grow Connecticut agriculture account, established in section 22-38c. The commissioner shall determine the portion of such seventy-five per cent that shall be deposited in each account. The commissioner shall transfer the remaining twenty-five per cent of such proceeds to the General Fund.\n\n(d) Notwithstanding the provisions of subsection (a) of this section, any owner of a utility line or public use structure that impacts a leased area shall pay to the lessee the costs of removing or relocating any shellfish. Nothing in this subsection shall be construed to prohibit the state or any lessee from recovering damages incurred by the state or the lessee caused by the installation, construction or presence of such utility line or public use structure.\n\n(e) The commissioner may designate to each regional agricultural science and technology education center, established pursuant to section 10-64, shellfish areas described in subsection (a) of this section that are necessary for conducting educational grow-out activities related to commercial scale aquaculture operations within state jurisdictional waters, provided: (1) The total acreage designated pursuant to this subsection for each such center is not more than fifty acres of restricted relay grow-out beds and fifty acres of approved harvest beds; and (2) any shellfish areas designated pursuant to this subsection are not in production at the time of such designation.\n\n(f) The Commissioner of Agriculture may designate an agent within the department to exercise the authority of said commissioner under this section.\n\n(g) The Commissioner of Agriculture shall encourage the development and expansion of new and existing small-scale aquaculture operations for shellfish. The commissioner may designate shellfish grounds available for annual leasing to such small-scale aquaculture operations under the provisions of subsection (a) of this section, except that the commissioner may require that all bidders be a small-scale aquaculture operation or offer such leases at a fixed price determined by the commissioner. Each applicant and all required individuals associated with the applicant shall have obtained the necessary licenses under this chapter prior to the commencement of the lease. All provisions of section 26-192c shall apply to leases issued pursuant to this subsection. For purposes of this subsection, “small-scale aquaculture operation” means an aquaculture operation that either operates in one hundred fifty acres or less of shellfish grounds or that has operated for the production of shellfish for four or fewer years.",
+      "href": "?chapter=491&section=section-26-194",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-26-292d",
+      "citation": "26-292d",
+      "citations": [
+        "26-292d"
+      ],
+      "heading": "Sec. 26-292d. Hand-harvesting of horseshoe crabs or eggs. Prohibition. Exception. Fine. Enforcement.",
+      "chapter": {
+        "id": "chapter-492",
+        "number": "492",
+        "name": "Local Shellfisheries"
+      },
+      "status": "active",
+      "text": "(a) Notwithstanding the provisions of this title, no person shall engage in the hand-harvesting of horseshoe crabs or the eggs of horseshoe crabs from the waters of this state.\n\n(b) Notwithstanding the provisions of subsection (a) of this section, the Commissioner of Energy and Environmental Protection may authorize the hand-harvesting of horseshoe crabs by permit for educational or scientific purposes provided the commissioner determines that such harvesting will not cause harm to the horseshoe crab population in this state.\n\n(c) Any person who violates the provisions of this section shall be fined twenty-five dollars for each specimen taken in violation of this section.\n\n(d) The Commissioner of Energy and Environmental Protection shall enforce the provisions of this section.",
+      "href": "?chapter=492&section=section-26-292d",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "new"
+      }
+    }
+  ]
+}

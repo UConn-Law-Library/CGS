@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-226",
+  "number": "226",
+  "name": "Gaming Policy, Regulation and Revenue",
+  "title": {
+    "id": "title-12",
+    "number": "12",
+    "name": "Taxation"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_226.htm",
+  "sections": [
+    {
+      "id": "section-12-570b",
+      "kind": "section",
+      "citation": "12-570b",
+      "citations": [
+        "12-570b"
+      ],
+      "heading": "Sec. 12-570b. Suspension of sales of Powerball tickets.",
+      "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_226.htm#sec_12-570b",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 12-570b is repealed, effective October 1, 2023."
+        ],
+        "sourceNotes": [
+          "(June Sp. Sess. P.A. 99-2, S. 10, 72; P.A. 00-230, S. 9; P.A. 23-85, S. 4.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 12-570b is repealed, effective October 1, 2023."
+      }
+    }
+  ]
+}

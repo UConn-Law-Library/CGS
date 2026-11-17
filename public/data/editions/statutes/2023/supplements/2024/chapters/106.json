@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-106",
+  "number": "106",
+  "name": "Town Boards of Finance",
+  "title": {
+    "id": "title-07",
+    "number": "07",
+    "name": "Municipalities"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_106.htm",
+  "sections": [
+    {
+      "id": "section-7-340a",
+      "kind": "section",
+      "citation": "7-340a",
+      "citations": [
+        "7-340a"
+      ],
+      "heading": "Sec. 7-340a. Alternate members of boards of finance. Appointment or election provided for by ordinance.",
+      "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_106.htm#sec_7-340a",
+      "status": "active",
+      "content": {
+        "body": [
+          "Any town, in addition to such powers as it has under the provisions of the general statutes, any special act or municipal charter, shall have the power to provide by ordinance for the appointment or election of not more than three alternate members to its board of finance, subject to the provisions of section 9-167a, concerning minority representation. Such alternate members shall, when seated as herein provided, have all the powers and duties set forth in the general statutes, any special act or municipal charter relating to such town for such board of finance and its members. Such alternate members shall be electors and taxpayers of such town. If a regular member of such board is absent or is disqualified, such absent or disqualified member shall designate an alternate to so act. In the event that an absent or disqualified regular member shall fail or refuse to designate an alternate to so act, the majority of the regular members of the board of finance not absent and not disqualified may designate an alternate subject to the provisions of section 9-167a to so act for such absent or disqualified regular member."
+        ],
+        "sourceNotes": [
+          "(P.A. 75-440, S. 1, 2; P.A. 76-72, S. 1, 2; P.A. 23-205, S. 165.)"
+        ],
+        "history": [
+          "History: P.A. 76-72 provided for appointment of alternate by majority vote of those present when not designated by regular member he is to replace; P.A. 23-205 replaced “minority representation of political parties” with “minority representation”, effective June 29, 2023."
+        ],
+        "annotations": [],
+        "plainText": "Any town, in addition to such powers as it has under the provisions of the general statutes, any special act or municipal charter, shall have the power to provide by ordinance for the appointment or election of not more than three alternate members to its board of finance, subject to the provisions of section 9-167a, concerning minority representation. Such alternate members shall, when seated as herein provided, have all the powers and duties set forth in the general statutes, any special act or municipal charter relating to such town for such board of finance and its members. Such alternate members shall be electors and taxpayers of such town. If a regular member of such board is absent or is disqualified, such absent or disqualified member shall designate an alternate to so act. In the event that an absent or disqualified regular member shall fail or refuse to designate an alternate to so act, the majority of the regular members of the board of finance not absent and not disqualified may designate an alternate subject to the provisions of section 9-167a to so act for such absent or disqualified regular member."
+      }
+    }
+  ]
+}

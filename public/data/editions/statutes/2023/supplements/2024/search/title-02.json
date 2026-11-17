@@ -1,0 +1,271 @@
+{
+  "schemaVersion": "1.0.0",
+  "editionYear": 2024,
+  "title": {
+    "id": "title-02",
+    "number": "02",
+    "name": "General Assembly and Legislative Agencies"
+  },
+  "removedDocumentIds": [
+    "section-2-33c",
+    "section-2-71x",
+    "section-2-85",
+    "section-2-86",
+    "section-2-87",
+    "section-2-88",
+    "section-2-90d",
+    "section-2-111",
+    "section-2-123",
+    "section-2-124",
+    "section-2-124a",
+    "section-2-129",
+    "section-2-137"
+  ],
+  "documents": [
+    {
+      "id": "section-2-33c",
+      "citation": "2-33c",
+      "citations": [
+        "2-33c"
+      ],
+      "heading": "Sec. 2-33c. Limitation on General Fund and Special Transportation Fund appropriations.",
+      "chapter": {
+        "id": "chapter-016",
+        "number": "016",
+        "name": "General Assembly"
+      },
+      "status": "active",
+      "text": "(a) In addition to the provisions of section 2-33a, on and after July 1, 2019, except as provided in subsection (b) of this section, the General Assembly shall not authorize General Fund and Special Transportation Fund appropriations for any fiscal year in an amount that, in the aggregate, exceeds the percentage of the statement of estimated revenue passed pursuant to subsection (b) of section 2-35 for each fiscal year indicated as follows:\n\nFiscal Year Ending June 30,\n\nPercentage of Estimated Revenue\n\n2020\n\n99.5\n\n2021\n\n99.25\n\n2022\n\n99\n\n2023, and each fiscal year thereafter\n\n98.75\n\n(b) The General Assembly may authorize General Fund and Special Transportation Fund appropriations for any fiscal year in an amount that, in the aggregate, exceeds the percentage of estimated revenue specified in subsection (a) of this section for such fiscal year, if:\n\n(1) (A) The Governor declares an emergency or the existence of extraordinary circumstances and at least three-fifths of the members of each house of the General Assembly vote to exceed such percentage for the purposes of such emergency or extraordinary circumstances, and (B) any such appropriation is for the fiscal year in progress only. Any such declaration shall specify the nature of such emergency or circumstances; or\n\n(2) Each house of the General Assembly approves by majority vote any such appropriation for purposes of an adjusted appropriation and revenue plan.",
+      "href": "?chapter=016&section=section-2-33c",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-2-56m",
+      "citation": "2-56m",
+      "citations": [
+        "2-56m"
+      ],
+      "heading": "Sec. 2-56m. Codification of public act 23-204*.",
+      "chapter": {
+        "id": "chapter-017",
+        "number": "017",
+        "name": "Legislative Commissioners' Office"
+      },
+      "status": "active",
+      "text": "The Legislative Commissioners' Office shall, in codifying the provisions of public act 23-204, make such technical, grammatical and punctuation changes as are necessary to carry out the purposes of this act, including, but not limited to, correcting inaccurate internal references.",
+      "href": "?chapter=017&section=section-2-56m",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-2-71x",
+      "citation": "2-71x",
+      "citations": [
+        "2-71x"
+      ],
+      "heading": "Sec. 2-71x. Funds for Connecticut Television Network coverage.",
+      "chapter": {
+        "id": "chapter-018a",
+        "number": "018a",
+        "name": "Joint Committee on Legislative Management"
+      },
+      "status": "active",
+      "text": "For the fiscal year ending June 30, 2024, and each fiscal year thereafter, the Comptroller shall segregate three million two hundred thousand dollars of the amount of the funds received by the state from the tax imposed under chapter 211 on public service companies providing community antenna television service in this state. The moneys segregated by the Comptroller shall be deposited with the Treasurer and made available to the Office of Legislative Management to defray the cost of providing the citizens of this state with Connecticut Television Network coverage of state government deliberations and public policy events.",
+      "href": "?chapter=018a&section=section-2-71x",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "group-2-85-to-2-86-to-2-87-to-2-88",
+      "citation": null,
+      "citations": [
+        "2-85",
+        "2-86",
+        "2-87",
+        "2-88"
+      ],
+      "heading": "Secs. 2-85 to 2-88. Law Revision Commission established in Legislative Department. Members of the commission. Duties of the commission. Public and private assistance.",
+      "chapter": {
+        "id": "chapter-022",
+        "number": "022",
+        "name": "Connecticut Law Revision Commission"
+      },
+      "status": "repealed",
+      "text": "Sections 2-85 to 2-88, inclusive, are repealed, effective July 1, 2023.",
+      "href": "?chapter=022&section=group-2-85-to-2-86-to-2-87-to-2-88",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "repealed"
+      }
+    },
+    {
+      "id": "section-2-90d",
+      "citation": "2-90d",
+      "citations": [
+        "2-90d"
+      ],
+      "heading": "Sec. 2-90d. Notification to auditors re auditing service contracts.",
+      "chapter": {
+        "id": "chapter-023",
+        "number": "023",
+        "name": "Auditors of Public Accounts"
+      },
+      "status": "active",
+      "text": "On and after October 1, 2021, any state agency proposing to enter into or amend a contract for the purchase of auditing services shall (1) notify the Auditors of Public Accounts of such contract at least fifteen days prior to entering into or amending such contract, and (2) not enter into or amend such contract until the Auditors of Public Accounts have advised the agency whether the auditing services could be provided by said auditors. As used in this section, “state agency” has the same meaning as provided in section 4-37e and “contract” does not include any personal service agreement subject to section 4-216.",
+      "href": "?chapter=023&section=section-2-90d",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-2-111",
+      "citation": "2-111",
+      "citations": [
+        "2-111"
+      ],
+      "heading": "Sec. 2-111. Results First Policy Oversight Committee.",
+      "chapter": {
+        "id": "chapter-023c",
+        "number": "023c",
+        "name": "Results First Policy Oversight Committee and Chronic Kidney Disease Advisory Committee"
+      },
+      "status": "repealed",
+      "text": "Section 2-111 is repealed, effective July 1, 2023.",
+      "href": "?chapter=023c&section=section-2-111",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "repealed"
+      }
+    },
+    {
+      "id": "group-2-123-to-2-124-to-2-124a",
+      "citation": null,
+      "citations": [
+        "2-123",
+        "2-124",
+        "2-124a"
+      ],
+      "heading": "Secs. 2-123 to 2-124a. Connecticut Competitiveness Council; membership; vacancies; duties; annual report. Commission on Economic Competitiveness; membership; vacancies; duties; annual report. Health data collaborative working group; duties; membership; annual report.",
+      "chapter": {
+        "id": "chapter-023g",
+        "number": "023g",
+        "name": "Connecticut Competitiveness Council. Commission on Economic Competitiveness"
+      },
+      "status": "repealed",
+      "text": "Sections 2-123 to 2-124a, inclusive, are repealed, effective July 1, 2023.",
+      "href": "?chapter=023g&section=group-2-123-to-2-124-to-2-124a",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "repealed"
+      }
+    },
+    {
+      "id": "section-2-128a",
+      "citation": "2-128a",
+      "citations": [
+        "2-128a"
+      ],
+      "heading": "Sec. 2-128a. Title IX compliance toolkit.",
+      "chapter": {
+        "id": "chapter-023h",
+        "number": "023h",
+        "name": "Commission on Women, Children, Seniors, Equity and Opportunity"
+      },
+      "status": "active",
+      "text": "(a) The Commission on Women, Children, Seniors, Equity and Opportunity shall convene and lead a working group to identify or develop a Title IX compliance toolkit for use by local and regional boards of education, students and parents and guardians of students. For purposes of this section and sections 10-11c, 10-222y and 10-222z, “Title IX” means the provisions of Title IX of the Elementary and Secondary Education Act of 1972, 20 USC 1681 et seq., as amended from time to time.\n\n(b) The Title IX compliance toolkit shall include:\n\n(1) Training for school administrators, Title IX coordinators, school personnel, students and parents and guardians of students that includes (A) information regarding the prevention, identification and response to adult sexual misconduct in schools, as described in the United States Department of Education's “Training Guide for Administrators and Educators on Addressing Adult Sexual Misconduct in the School Setting”, and (B) research and data regarding the prevalence of child sexual abuse, adult sexual misconduct and the unique risk to sexual abuse for students with disabilities or who are lesbian, gay, bisexual, transgender, queer or another sexual orientation or gender identity;\n\n(2) A model antidiscrimination and abuse prevention policy and procedures that include but are not limited to, policies addressing the needs of students with disabilities or who are lesbian, gay, bisexual, transgender, queer or another sexual orientation or gender identity;\n\n(3) A summary of applicable state and federal statutory and regulatory requirements and how such requirements affect the rights of students, including students with disabilities or who are lesbian, gay, bisexual, transgender, queer or another sexual orientation or gender identity, to be free from discrimination, harassment and abuse;\n\n(4) Provisions relating to the process for reporting an incident of adult sexual misconduct, including documents accessible to parents and guardians of students, students, school personnel and administrators;\n\n(5) Requirements for investigating reports of adult sexual misconduct, including information regarding the need to offer safety planning and services to the complainant or victim;\n\n(6) An explanation of the Title IX complaint procedures, including, but not limited to, the various methods accessible to parents and guardians of students, students, school personnel and administrators of submitting complaints;\n\n(7) Information explaining the right of an individual to seek redress from the Commission on Human Rights and Opportunities and the United States Department of Health and Human Services' Office for Civil Rights that is accessible to parents and guardians of students, students, school personnel and administrators;\n\n(8) Procedures for publishing and disseminating information to parents and guardians of students, students, school personnel and administrators from the Connecticut School Health Survey, administered pursuant to section 10-217h, and school climate assessment instruments, completed pursuant to section 10-222d;\n\n(9) Information relating to personnel and resources at the state and federal level that are available to provide ongoing technical assistance and support to local and regional boards of education with regard to such boards' compliance with Title IX requirements; and\n\n(10) Information relating to resources that are available to provide support to students, educators and parents and guardians regarding prevention, identification and response to child sexual harassment, discrimination and abuse.\n\n(c) The working group shall consist of: (1) The executive director of the Commission on Women, Children, Seniors, Equity and Opportunity, or the executive director's designee, (2) the Commissioner of Education, or the commissioner's designee, (3) the Commissioner of Children and Families, or the commissioner's designee, (4) the Commissioner of Public Health, or the commissioner's designee, (5) the executive director of the Commission on Human Rights and Opportunities, or the executive director's designee, (6) the Child Advocate, or the Child Advocate's designee, (7) a representative from each of the following organizations, designated by each such organization: (A) The Connecticut Alliance to End Sexual Violence, (B) the Connecticut Children's Alliance, (C) Disability Rights of Connecticut, (D) the Connecticut Association of Public School Superintendents, and (E) the Connecticut Association of Boards of Education, and (8) any additional members who have expertise in human resources and Internet technology, designated by the executive director of the Commission on Women, Children, Seniors, Equity and Opportunity.\n\n(d) Not later than July 1, 2024, the working group shall submit the Title IX compliance toolkit to the joint standing committee of the General Assembly having cognizance of matters relating to children, in accordance with the provisions of section 11-4a. The working group shall terminate on the date that it submits such toolkit or July 1, 2024, whichever is later.",
+      "href": "?chapter=023h&section=section-2-128a",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-2-129",
+      "citation": "2-129",
+      "citations": [
+        "2-129"
+      ],
+      "heading": "Sec. 2-129. Term “Commission on Women, Children, Seniors, Equity and Opportunity” substituted for former legislative commissions.",
+      "chapter": {
+        "id": "chapter-023h",
+        "number": "023h",
+        "name": "Commission on Women, Children, Seniors, Equity and Opportunity"
+      },
+      "status": "active",
+      "text": "(a) Wherever the term “Commission on Women, Children and Seniors” is used in any public or special act of the 2019 regular session, the term “Commission on Women, Children, Seniors, Equity and Opportunity” shall be substituted in lieu thereof. Wherever the term “Commission on Equity and Opportunity” is used in any public or special act of the 2019 regular session, the term “Commission on Women, Children, Seniors, Equity and Opportunity” shall be substituted in lieu thereof.\n\n(b) The Legislative Commissioners' Office shall, in codifying the provisions of this section, make such technical, grammatical and punctuation changes as are necessary to carry out the purposes of this section.",
+      "href": "?chapter=023h&section=section-2-129",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-2-137",
+      "citation": "2-137",
+      "citations": [
+        "2-137"
+      ],
+      "heading": "Sec. 2-137. Transforming Children's Behavioral Health Policy and Planning Committee. Membership. Duties. Strategic plan. Reports.",
+      "chapter": {
+        "id": "chapter-023j",
+        "number": "023j",
+        "name": "Behavioral and Mental Health Policy and Oversight Committee"
+      },
+      "status": "active",
+      "text": "(a) There is established a Transforming Children's Behavioral Health Policy and Planning Committee. The committee shall evaluate the availability and efficacy of prevention, early intervention, and behavioral health treatment services and options for children from birth to age eighteen and make recommendations to the General Assembly and executive agencies regarding the governance and administration of the behavioral health care system for children. The committee shall be within the Legislative Department. For purposes of this section, “behavioral health” means mental health and substance use disorders, as well as overall psychological well-being.\n\n(b) The committee shall consist of the following members:\n\n(1) The chairpersons and ranking members of the joint standing committees of the General Assembly having cognizance of matters relating to public health, human services, children and appropriations and the budgets of state agencies, or their designees;\n\n(2) Three appointed by the speaker of the House of Representatives, one of whom shall be a member of the General Assembly and two of whom shall be providers of behavioral health services for children in the state;\n\n(3) Three appointed by the president pro tempore of the Senate, one of whom shall be a member of the General Assembly and two of whom shall be representatives of private advocacy groups that provide services for children and families in the state;\n\n(4) (A) Two appointed by the chairperson of the committee selected by the speaker of the House of Representatives pursuant to subsection (e) of this section, one of whom shall be a child or youth advocate; and (B) two appointed by the chairperson of the committee selected by the president pro tempore of the Senate pursuant to subsection (e) of this section, one of whom shall be a child or youth advocate;\n\n(5) Two appointed by the majority leader of the House of Representatives, who shall be representatives of children's hospitals;\n\n(6) One appointed by the majority leader of the Senate, who shall be a representative of public school superintendents in the state;\n\n(7) Two appointed by the minority leader of the House of Representatives, who shall be representatives of families with children who have been diagnosed with behavioral health disorders;\n\n(8) Two appointed by the minority leader of the Senate, who shall be providers of behavioral health services;\n\n(9) The Commissioners of Children and Families, Correction, Developmental Services, Early Childhood, Education, Insurance, Mental Health and Addiction Services, Public Health and Social Services, or their designees;\n\n(10) The executive director of the Office of Health Strategy, or the executive director's designee;\n\n(11) The Child Advocate, or the Child Advocate's designee;\n\n(12) The Healthcare Advocate, or the Healthcare Advocate's designee;\n\n(13) The executive director of the Court Support Services Division of the Judicial Branch, or the executive director's designee;\n\n(14) The executive director of the Commission on Women, Children, Seniors, Equity and Opportunity, or the executive director's designee;\n\n(15) The Secretary of the Office of Policy and Management, or the secretary's designee; and\n\n(16) One representative from each administrative services organization under contract with the Department of Social Services to provide such services for recipients of assistance under the HUSKY Health program, who shall be ex-officio, nonvoting members.\n\n(c) Any member of the committee appointed under subdivisions (1) to (8), inclusive, of subsection (b) of this section may be a member of the General Assembly.\n\n(d) Any vacancy shall be filled by the appointing authority.\n\n(e) The chairpersons of the committee shall be (1) the Secretary of the Office of Policy and Management, or the secretary's designee, and (2) two members of the General Assembly, one each selected by the speaker of the House of Representatives and the president pro tempore of the Senate from among the members serving pursuant to subdivision (1), (2) or (3) of subsection (b) of this section. The three chairpersons shall schedule the first meeting of the committee, which shall be held not later than September 1, 2023.\n\n(f) Members of the committee shall serve without compensation, except for necessary expenses incurred in the performance of their duties.\n\n(g) Not later than December 1, 2023, the committee shall report, in accordance with section 11-4a, to the joint standing committees of the General Assembly having cognizance of matters relating to appropriations and the budgets of state agencies, public health, human services and children, and the Office of Policy and Management, regarding the following:\n\n(1) Any statutory and budgetary changes needed concerning the behavioral health system of prevention, development and treatment that the committee recommends to (A) improve developmental and behavioral health outcomes for children; (B) improve transparency and accountability with respect to state-funded services for children and youth with an emphasis on goals identified by the committee for community-based programs and facility-based interventions; and (C) promote the efficient sharing of information by state and state-funded agencies to ensure the regular collection and reporting of data regarding children and families' access to, utilization of and benefit from services necessary to promote public health and behavioral health outcomes for children and youth and their families;\n\n(2) The gaps in services identified by the committee with respect to children and families involved in the behavioral health system, and recommendations to address such gaps in services;\n\n(3) Strengths and barriers identified by the committee that support or impede the behavioral health needs of children and youth with specific recommendations for reforms;\n\n(4) An examination of the way state agencies can work collaboratively through school-based efforts and other processes to improve developmental and behavioral health outcomes for children;\n\n(5) An examination of disproportionate access and outcomes across the behavioral health care system for children of color;\n\n(6) An examination of disproportionate access and outcomes across the behavioral health care system for children with developmental disabilities;\n\n(7) A plan to ensure a quality assurance framework for facilities and programs that are part of the behavioral health care system and are operated privately or by the state that includes data regarding efficacy and outcomes; and\n\n(8) A governance structure for the children's behavioral health system that will best facilitate the public policy and healthcare goals of the state to ensure that all children and families, in urban, rural and all other areas of the state, can access high-quality behavioral health care.\n\n(h) The committee may complete its duties under this section after requesting consultation with one or more organizations that focus on children's behavioral health. The committee may accept administrative support and technical and research assistance from any organization.\n\n(i) The committee shall be given access to data collected by the state on matters related to children's behavioral health from the relevant state agencies or directly from contracted administrative service organizations, as applicable.\n\n(j) The committee may include two or more subcommittees chaired by a member of the committee to inform its recommendations. The subcommittees may focus on: Workforce-related issues, school-based health, prevention, and intermediate or acute care. Any subcommittees may examine gaps, reimbursement rates, parity in the outcomes of services or the efficacy of services.\n\n(k) The committee shall, annually, establish a work plan for reviewing and making follow-up reports on the status or progress of the committee's recommendations and activities. The work plan shall include specific recommendations to improve outcomes related to children's behavioral health and a timeline indicating dates by which specific tasks or outcomes should be achieved.\n\n(l) The committee shall develop a strategic plan that integrates the recommendations identified pursuant to subsection (g) of this section. In developing the plan, the committee may collaborate with any state agency with responsibilities relating to the behavioral health system.\n\n(m) Not later than December 1, 2024, the committee shall report, in accordance with section 11-4a, such plan, together with an account of progress made toward the full implementation of such plan, and any recommendations concerning the implementation of identified goals in the plan to the joint standing committees of the General Assembly having cognizance of matters relating to appropriations and the budgets of state agencies, public health, human services and children, and the Office of Policy and Management.",
+      "href": "?chapter=023j&section=section-2-137",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-2-138",
+      "citation": "2-138",
+      "citations": [
+        "2-138"
+      ],
+      "heading": "Sec. 2-138. Connecticut Council for Advancing Nuclear Energy Development. Duties. Membership. Annual report.",
+      "chapter": {
+        "id": "chapter-023k",
+        "number": "023k",
+        "name": "Connecticut Council for Advancing Nuclear Energy Development"
+      },
+      "status": "active",
+      "text": "(a) There is established a Connecticut Council for Advancing Nuclear Energy Development, which shall meet not less than four times each year for the purpose of discussing and planning for the advancement of nuclear energy in the state. The council shall be an independent body within the Legislative Department for administrative purposes only.\n\n(b) The council shall consist of the following members:\n\n(1) The chairpersons and ranking members of the joint standing committee of the General Assembly having cognizance of matters relating to energy and technology, or their designees;\n\n(2) The Commissioner of Energy and Environmental Protection, or the commissioner's designee;\n\n(3) The Consumer Counsel, or the Consumer Counsel's designee;\n\n(4) A representative of a nuclear power generating facility in the state, who shall be appointed by the speaker of the House of Representatives;\n\n(5) A representative of the United States Naval Submarine Base-New London, who shall be appointed by the president pro tempore of the Senate;\n\n(6) A representative of a manufacturer of nuclear-powered submarines, who shall be appointed by the majority leader of the House of Representatives;\n\n(7) A representative of an engineering firm in the state that provides services in the field of nuclear engineering, who shall be appointed by the minority leader of the House of Representatives;\n\n(8) Two representatives of institutions of higher education in the state, one of whom shall be appointed by the majority leader of the Senate and one of whom shall be appointed by the minority leader of the Senate;\n\n(9) Two representatives of organizations that advocate for the protection of the environment, one of whom shall be appointed by the speaker of the House of Representatives and one of whom shall be appointed by the president pro tempore of the Senate;\n\n(10) A representative of a state-wide organization of municipal leaders, who shall be appointed by the majority leader of the House of Representatives;\n\n(11) One who has expertise in workforce development, who shall be appointed by the minority leader of the House of Representatives;\n\n(12) One who has expertise in spent nuclear fuel storage, who shall be appointed by the majority leader of the Senate; and\n\n(13) One who has expertise in the supply chain of the state's nuclear industry, who shall be appointed by the minority leader of the Senate.\n\n(c) All initial appointments to the council shall be made not later than thirty days after the effective date of this section. Any vacancy shall be filled by the appointing authority.\n\n(d) The members of the council shall select the chairperson of the council from among the members of the council. Until such selection, the speaker of the House of Representatives and the president pro tempore of the Senate shall select an acting chairperson of the council from among the members of the council. Such acting chairperson shall schedule the first meeting of the council, which shall be held not later than sixty days after the effective date of this section.\n\n(e) Not later than February 1, 2024, and annually thereafter, the council shall submit a report concerning advancements that are occurring in nuclear energy development to the joint standing committee of the General Assembly having cognizance of matters relating to energy, in accordance with the provisions of section 11-4a. Such report may include recommendations, including, but not limited to, recommendations concerning (1) opportunities for regional partnerships related to nuclear energy development, expansion and research, (2) opportunities for state agencies to collaborate with federal agencies, institutions of higher education, businesses, nonprofit organizations and other stakeholders to organize the state's resources related to nuclear energy, and (3) other ways to promote nuclear energy development, expansion and research in the state.",
+      "href": "?chapter=023k&section=section-2-138",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-2-139",
+      "citation": "2-139",
+      "citations": [
+        "2-139"
+      ],
+      "heading": "Sec. 2-139. Majority leaders' roundtable group on affordable housing. Membership. Reports.",
+      "chapter": {
+        "id": "chapter-023l",
+        "number": "023l",
+        "name": "Majority Leader's Roundtable Group on Affordable Housing"
+      },
+      "status": "active",
+      "text": "(a) There is established the majority leaders' roundtable group on affordable housing. The group shall study (1) existing affordable housing policies, programs and initiatives in the state, (2) the potential conversion of state properties into affordable housing developments, (3) successful models and best practices from other states or regions to inform potential policy recommendations, (4) the potential conversion of commercial properties such as hotels, malls and office buildings into residential buildings, and (5) any other topics related to the promotion and development of affordable housing in the state.\n\n(b) The roundtable group shall consist of the following members:\n\n(1) The cochairs and ranking members of the joint standing committees of the General Assembly having cognizance of matters relating to housing and planning and development;\n\n(2) The majority leader of the Senate;\n\n(3) The majority leader of the House of Representatives;\n\n(4) Three appointed by the majority leader of the House of Representatives, one of whom has expertise in public housing, one of whom represents a regional council of governments, and one of whom represents a business advocacy organization or regional chamber of commerce;\n\n(5) Three appointed by the majority leader of the Senate, one of whom has expertise in regional planning, one of whom has expertise in local planning and zoning, and one of whom has expertise in housing development;\n\n(6) The Commissioner of Administrative Services, or the commissioner's designee;\n\n(7) The Commissioner of Housing, or the commissioner's designee;\n\n(8) The Commissioner of Economic and Community Development, or the commissioner's designee;\n\n(9) The Commissioner of Transportation, or the commissioner's designee;\n\n(10) The Responsible Growth Coordinator, or the coordinator's designee;\n\n(11) The executive director of the Connecticut Housing Finance Authority, or the executive director's designee;\n\n(12) A representative of the Connecticut Conference of Municipalities; and\n\n(13) A representative of the Connecticut Council of Small Towns.\n\n(c) Any member of the roundtable group appointed under subdivision (1), (2), (3) or (4) of subsection (b) of this section may be a member of the General Assembly.\n\n(d) All initial appointments to the roundtable group shall be made not later than thirty days after the effective date of this section. Any vacancy shall be filled by the appointing authority.\n\n(e) The majority leader of the Senate and the majority leader of the House of Representatives shall be the chairpersons for the roundtable group. The chairpersons shall schedule the first meeting of the roundtable group, which shall be held not later than sixty days after the effective date of this section.\n\n(f) The administrative staff of the joint standing committee of the General Assembly having cognizance of matters relating to housing shall serve as administrative staff of the roundtable group.\n\n(g) Not later than January 1, 2024, and annually on January first thereafter, the roundtable group shall submit a report on its findings and recommendations to the joint standing committee of the General Assembly having cognizance of matters relating to housing, in accordance with the provisions of section 11-4a.",
+      "href": "?chapter=023l&section=section-2-139",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "new"
+      }
+    }
+  ]
+}

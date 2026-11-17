@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-815p",
+  "number": "815p",
+  "name": "Uniform Child Custody Jurisdiction and Enforcement Act",
+  "title": {
+    "id": "title-46b",
+    "number": "46b",
+    "name": "Family Law"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_815p.htm",
+  "sections": [
+    {
+      "id": "section-46b-115c",
+      "kind": "section",
+      "citation": "46b-115c",
+      "citations": [
+        "46b-115c"
+      ],
+      "heading": "Sec. 46b-115c. Application to Indian tribes.",
+      "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_815p.htm#sec_46b-115c",
+      "status": "active",
+      "content": {
+        "body": [
+          "A child custody proceeding that pertains to an Indian child as defined in section 46b-116a is not subject to this chapter to the extent that it is governed by sections 46b-116 to 46b-116aa, inclusive."
+        ],
+        "sourceNotes": [
+          "(P.A. 99-185, S. 4, 40; P.A. 23-113, S. 32.)"
+        ],
+        "history": [
+          "History: P.A. 99-185 effective July 1, 2000; P.A. 23-113 replaced references to federal Indian Child Welfare Act with references to Connecticut Indian Child Welfare Act, Secs. 46b-116 to 46b-116aa, effective June 26, 2023."
+        ],
+        "annotations": [],
+        "plainText": "A child custody proceeding that pertains to an Indian child as defined in section 46b-116a is not subject to this chapter to the extent that it is governed by sections 46b-116 to 46b-116aa, inclusive."
+      }
+    }
+  ]
+}

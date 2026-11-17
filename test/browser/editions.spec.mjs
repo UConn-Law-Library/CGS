@@ -1,9 +1,9 @@
 import { expect, test } from "@playwright/test";
 import { expectNoHighImpactAccessibilityViolations, isMobileProject, openApp } from "./helpers.mjs";
 
-// The served site includes a rehearsal archive built by scripts/build-edition-fixture.mjs: the
-// fixture's 2021 revision with its 2022 Supplement, superseded by a 2023 revision. The current
-// statutes are the published data.
+// The served site has the published archive of the 2023 revision with its 2024 Supplement, and a
+// rehearsal archive built by scripts/build-edition-fixture.mjs: the fixture's 2021 revision with
+// its 2022 Supplement, superseded by a 2023 revision. The current statutes are the published data.
 const ARCHIVED_SECTION = "#/editions/2021/t/01/c/001/s/1-1";
 
 test("the editions view leads from the current titles into an archived edition", async ({ page }) => {
@@ -12,8 +12,12 @@ test("the editions view leads from the current titles into an archived edition",
   await expect(page).toHaveURL(/#\/editions$/);
   await expect(page.getByRole("heading", { level: 1, name: "Editions" })).toBeVisible();
   await expect(page.locator(".edition-current h2")).toContainText(/General Statutes revised to January 1, 2025/);
-  const archived = page.locator("section[aria-labelledby='editions-archived-heading'] .edition-card");
-  await expect(archived).toHaveCount(1);
+  const cards = page.locator("section[aria-labelledby='editions-archived-heading'] .edition-card");
+  // Newest first.
+  await expect(cards).toHaveCount(2);
+  await expect(cards.nth(0)).toContainText("General Statutes revised to January 1, 2023, with the 2024 Supplement");
+  await expect(cards.nth(0)).toContainText("superseded by the 2025 revision");
+  const archived = cards.nth(1);
   await expect(archived).toContainText("General Statutes revised to January 1, 2021, with the 2022 Supplement");
   await expect(archived).toContainText("superseded by the 2023 revision");
   await expectNoHighImpactAccessibilityViolations(page);
@@ -63,6 +67,23 @@ test("an archived section keeps its base and supplement comparison and stays in 
   await page.getByRole("link", { name: "Next" }).last().click();
   await expect(page).toHaveURL(/#\/editions\/2021\/t\/01\/c\/001\/s\//);
   await expect(page.locator(".edition-notice")).toBeVisible();
+});
+
+test("the published 2023 archive reads a section with its 2024 Supplement comparison", async ({ page }) => {
+  // Sec. 1-24 was replaced by the 2024 Supplement.
+  await openApp(page, "#/editions/2023/t/01/c/004/s/1-24");
+  await expect(page.getByRole("heading", { level: 1 })).toContainText("Sec. 1-24.");
+  await expect(page.locator(".edition-notice")).toContainText("General Statutes revised to January 1, 2023, with the 2024 Supplement");
+  await expect(page.locator(".reader-content > .source-note")).toContainText("Text: 2023 revision with the 2024 Supplement (archived edition)");
+  await expect(page.locator(".provision a.primary-action")).toHaveAttribute("href", /^https:\/\/www\.cga\.ct\.gov\/2024\/sup\/chap_004\.htm/);
+  const tabs = page.getByRole("tablist", { name: "Section text version" });
+  await expect(tabs.getByRole("tab")).toHaveText(["2024 Supplement", "2023 text", "Compare"]);
+  await tabs.getByRole("tab", { name: "Compare" }).click();
+  await expect(page.locator(".revision-view:not([hidden]) h2")).toHaveText("2024 Supplement compared with 2023");
+  await expect(page.locator(".revision-view:not([hidden]) :is(ins, del)").first()).toBeVisible();
+  await page.locator(".edition-notice").getByRole("link", { name: "Current text" }).click();
+  await expect(page).toHaveURL(/#\/t\/01\/c\/004\/s\/1-24$/);
+  await expect(page.locator(".reader-content > .source-note")).toContainText("Text: 2025 revision");
 });
 
 test("the way back leads to the current text, and current search stays on the current revision", async ({ page }) => {

@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-062a",
+  "number": "062a",
+  "name": "State Contracting: General Provisions",
+  "title": {
+    "id": "title-04e",
+    "number": "04e",
+    "name": "State Contracting"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_062a.htm",
+  "sections": [
+    {
+      "id": "section-4e-72a",
+      "kind": "section",
+      "citation": "4e-72a",
+      "citations": [
+        "4e-72a"
+      ],
+      "heading": "Sec. 4e-72a. State contracts to contain provision requiring compliance with consumer data privacy and online monitoring requirements.",
+      "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_062a.htm#sec_4e-72a",
+      "status": "active",
+      "content": {
+        "body": [
+          "Notwithstanding any provision of the general statutes, no state contracting agency shall enter into any contract with a business on or after October 1, 2023, unless such contract contains a provision requiring the business to comply with all applicable provisions of sections 42-515 to 42-525, inclusive. For the purposes of this section, “business”, “contract” and “state contracting agency” have the same meanings as provided in section 4e-1."
+        ],
+        "sourceNotes": [
+          "(P.A. 23-16, S. 4.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Notwithstanding any provision of the general statutes, no state contracting agency shall enter into any contract with a business on or after October 1, 2023, unless such contract contains a provision requiring the business to comply with all applicable provisions of sections 42-515 to 42-525, inclusive. For the purposes of this section, “business”, “contract” and “state contracting agency” have the same meanings as provided in section 4e-1."
+      }
+    }
+  ]
+}

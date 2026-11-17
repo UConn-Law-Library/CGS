@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0.0",
+  "editionYear": 2024,
+  "title": {
+    "id": "title-13a",
+    "number": "13a",
+    "name": "Highways and Bridges"
+  },
+  "removedDocumentIds": [
+    "section-13a-26"
+  ],
+  "documents": [
+    {
+      "id": "section-13a-26",
+      "citation": "13a-26",
+      "citations": [
+        "13a-26"
+      ],
+      "heading": "Sec. 13a-26. Parkways and freeways.",
+      "chapter": {
+        "id": "chapter-237",
+        "number": "237",
+        "name": "State Highway System"
+      },
+      "status": "active",
+      "text": "(a) Definitions. As used in this section, “parkway” means any state highway receiving special treatment in landscaping and marginal planting, especially designed for, and devoted exclusively to, the use and accommodation of noncommercial motor vehicle traffic and to which access may be allowed only at highway intersections designated by the commissioner and designed by him so as to eliminate cross traffic of vehicles, and “freeway” means any state highway designed to separate through, high-speed, noncommercial motor vehicle traffic from all other types of traffic by the use of independent traffic lanes. Connection between local traffic and through traffic lanes shall be provided at intervals in the discretion of the commissioner.\n\n(b) Construction. The commissioner shall, upon direction by the General Assembly, lay out and construct any state highway as a parkway or freeway. Said commissioner, prior to such construction, shall submit to the General Assembly the following information concerning such construction of any parkway or freeway: The approximate cost of the parkway or freeway and a definite route with an official map showing the towns through which it will pass. The commissioner shall not alter the route submitted except with the advice and approval of the Governor and the Attorney General, and changes therein shall not be approved until a public hearing or hearings are held at which the towns affected and their residents may be heard.\n\n(c) Service highways. As an adjunct of any parkway or freeway, the commissioner is authorized to lay out and construct highways and drives, to be designated as service highways, to provide access from areas adjacent to a parkway or freeway and to provide for the restriction or elimination of cross traffic on such parkway or freeway, when he deems the same to be necessary in the public interest.\n\n(d) Acquisition of land. The commissioner may purchase or take any real property or rights in real property necessary or required for the construction, alteration, extension, widening, change of grade or improvement of such parkways, freeways or service highways in the same manner as is provided in the general statutes in the case of state highways. The provisions of the general statutes relating to state highways not inconsistent with the provisions of this section shall apply to parkways, freeways and service highways.\n\n(e) Alteration. The commissioner, with the advice and approval of the Governor and the Attorney General, may alter the layout or construction or use of any such authorized parkway or freeway, or designated portions thereof, when, in their opinion, such change would be in the interests of public convenience, safety and necessity.\n\n(f) Vehicle use of Wilbur Cross Parkway and Merritt Parkway. Regulations. The provisions of this part restricting the use and accommodation of motor vehicle traffic on parkways to noncommercial vehicles shall not apply to use of the Merritt and Wilbur Cross Parkways by (1) taxicabs, as defined in section 13b-95, (2) vanpool vehicles, as defined in section 14-1, (3) service buses, service buses for students with special needs, or two-axle, four-wheeled type II, registered school buses with a gross vehicle weight rating of ten thousand pounds or less, which are owned by or under contract to a public, private or religious school or public school district and which are engaged in the transportation of school children to and from school or school activities, provided (A) such service buses conform to the regulations establishing the maximum weight, length, height or width of vehicles permitted to use such parkways; (B) such school buses are not more than ninety-eight inches high, eighty-four inches wide and two hundred three inches long; and (C) such service buses for students with special needs are not more than one hundred twenty inches high, ninety inches wide and two hundred eighty-eight inches long, (4) vehicles with a gross vehicle weight rating of seven thousand five hundred pounds or less, even if such vehicles contain any branding, advertising or logos thereon, or (5) commercial motor vehicles used by an automobile club or association, licensed in accordance with the provisions of section 14-67, solely for the purpose of providing roadside assistance to vehicles located on the parkway, provided such commercial motor vehicles confirm to the regulations establishing the maximum length, height or width of vehicles permitted to use such parkways. The Office of the State Traffic Administration shall adopt regulations, in accordance with chapter 54, establishing the maximum allowable length and height for any vanpool vehicle using said Merritt and Wilbur Cross Parkways and reducing the maximum weight, length, height or width of, or limiting the registration classes of, motor vehicles permitted to use such parkways, in order to fully carry out the prohibition on the operation of commercial motor vehicles on such parkways.",
+      "href": "?chapter=237&section=section-13a-26",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-13a-26b",
+      "citation": "13a-26b",
+      "citations": [
+        "13a-26b"
+      ],
+      "heading": "Sec. 13a-26b. Commerical motor vehicles prohibited on parkways. Exceptions. Penalty.",
+      "chapter": {
+        "id": "chapter-237",
+        "number": "237",
+        "name": "State Highway System"
+      },
+      "status": "active",
+      "text": "(a) For the purposes of this section, (1) “commercial motor vehicle” means any motor vehicle designed or used to transport merchandise or freight and bearing commercial registration, and (2) “parkway” has the same meaning as provided in section 13a-26.\n\n(b) No person shall operate any commercial motor vehicle, nor shall the owner or lessee of any commercial motor vehicle allow such motor vehicle to be operated, upon a parkway in this state.\n\n(c) The provisions of subsection (b) of this section shall not apply to a person operating a commercial motor vehicle upon a parkway pursuant to subdivision (4) or (5) of subsection (f) of section 13a-26 or any regulation adopted by the Office of State Traffic Administration under section 14-298.\n\n(d) Any person who violates the provisions of this section shall, for a first violation, be fined five hundred dollars and, for any subsequent violation, be fined one thousand dollars. Such fines shall be assessed against the owner of a commercial motor vehicle when the owner, the owner's agent or employee is the operator of such vehicle, or against the lessee of such vehicle when the lessee, the lessee's agent or employee is the operator of a leased or rented commercial motor vehicle.",
+      "href": "?chapter=237&section=section-13a-26b",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "new"
+      }
+    }
+  ]
+}

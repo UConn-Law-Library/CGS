@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-266c",
+  "number": "266c",
+  "name": "Bradley International Airport: General Provisions",
+  "title": {
+    "id": "title-15",
+    "number": "15",
+    "name": "Navigation and Aeronautics"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_266c.htm",
+  "sections": [
+    {
+      "id": "section-15-101pp",
+      "kind": "section",
+      "citation": "15-101pp",
+      "citations": [
+        "15-101pp"
+      ],
+      "heading": "Sec. 15-101pp. Bradley International Community Advisory Board: Established.",
+      "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_266c.htm#sec_15-101pp",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 15-101pp is repealed, effective July 1, 2023."
+        ],
+        "sourceNotes": [
+          "(June Sp. Sess. P.A. 01-5, S. 11, 18; P.A. 23-135, S. 53.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 15-101pp is repealed, effective July 1, 2023."
+      }
+    }
+  ]
+}

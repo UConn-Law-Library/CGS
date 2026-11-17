@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-035",
+  "number": "035",
+  "name": "Attorney General",
+  "title": {
+    "id": "title-03",
+    "number": "03",
+    "name": "State Elective Officers"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_035.htm",
+  "sections": [
+    {
+      "id": "section-3-124",
+      "kind": "section",
+      "citation": "3-124",
+      "citations": [
+        "3-124"
+      ],
+      "heading": "Sec. 3-124. Election; qualifications; salary; bond. Office of Attorney General full time.",
+      "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_035.htm#sec_3-124",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) There shall be an Attorney General to be elected in the same manner as other state officers in accordance with the provisions of section 9-181. The Attorney General shall (1) be an elector of this state, (2) be a member in good standing of the bar of this state, and (3) have engaged in the practice of law in this state for at least ten years, either consecutively or nonconsecutively.",
+          "(b) The office of the Attorney General shall be at the Capitol. On and after January 4, 2023, the Attorney General shall receive an annual salary equal to the annual salary of a judge of the Superior Court under subsection (a) of section 51-47, provided thereafter, no increase in the annual salary of the Attorney General shall take effect until the first Wednesday following the first Monday of the January succeeding the next election of the Attorney General following any increase in the annual salary of a judge of the Superior Court under section 51-47. The Attorney General shall devote full time to the duties of the office and shall give bond in the sum of ten thousand dollars."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 211, 3586, subs. (6); 1951, S. 1960d, subs. (6); 1953, June, 1955, S. 71d; February, 1965, P.A. 331, S. 44; 1972, P.A. 281, S. 38; P.A. 77-576, S. 56, 65; P.A. 82-365, S. 7, 8; P.A. 86-375, S. 6, 9; P.A. 98-227, S. 6, 9; P.A. 00-231, S. 5, 10; P.A. 22-85, S. 7; P.A. 23-204, S. 202.)"
+        ],
+        "history": [
+          "History: 1965 act increased salary from $12,500 to $20,000 effective with respect to attorney general elected November 8, 1966; 1972 act increased salary to $30,000, effective January 8, 1975; P.A. 77-576 increased attorney general's salary to $38,500, effective January 1, 1979; P.A. 82-365 increased attorney general's annual salary to $50,000 and added provision requiring attorney general to devote full time to duties of office; P.A. 86-375 increased attorney general's annual salary to $60,000; P.A. 98-227 increased Attorney General's annual salary to $75,000, effective January 6, 1999; P.A. 00-231 increased Attorney General's salary to $110,000 and made technical changes for the purposes of gender neutrality, effective January 8, 2003; P.A. 22-85 replaced salary of $110,000 with equivalent salary of Superior Court judge on and after January 4, 2023, and added provision re effective date of subsequent increases, effective January 1, 2023; P.A. 23-204 designated existing provisions as Subsecs. (a) and (b) and amended Subsec. (a) to designate existing provision re elector as Subdiv. (1), delete provision re attorney at law of at least 10 years' active practice at state bar and add Subdiv. (2) re good standing of state bar and Subdiv. (3) re consecutive or nonconsecutive practice of law in state, effective June 12, 2023."
+        ],
+        "annotations": [],
+        "plainText": "(a) There shall be an Attorney General to be elected in the same manner as other state officers in accordance with the provisions of section 9-181. The Attorney General shall (1) be an elector of this state, (2) be a member in good standing of the bar of this state, and (3) have engaged in the practice of law in this state for at least ten years, either consecutively or nonconsecutively.\n\n(b) The office of the Attorney General shall be at the Capitol. On and after January 4, 2023, the Attorney General shall receive an annual salary equal to the annual salary of a judge of the Superior Court under subsection (a) of section 51-47, provided thereafter, no increase in the annual salary of the Attorney General shall take effect until the first Wednesday following the first Monday of the January succeeding the next election of the Attorney General following any increase in the annual salary of a judge of the Superior Court under section 51-47. The Attorney General shall devote full time to the duties of the office and shall give bond in the sum of ten thousand dollars."
+      }
+    }
+  ]
+}

@@ -1,0 +1,1028 @@
+{
+  "schemaVersion": "1.0.0",
+  "editionYear": 2024,
+  "title": {
+    "id": "title-17a",
+    "number": "17a",
+    "name": "Social and Human Services and Resources"
+  },
+  "removedDocumentIds": [
+    "section-17a-6a",
+    "section-17a-6g",
+    "section-17a-28",
+    "section-17a-52a",
+    "section-17a-210a",
+    "section-17a-215",
+    "section-17a-215c",
+    "section-17a-215d",
+    "section-17a-215e",
+    "section-17a-217",
+    "section-17a-227a",
+    "section-17a-248",
+    "section-17a-248e",
+    "section-17a-248g",
+    "group-17a-249-to-17a-250-to-17a-251-to-17a-252-to-17a-253-to-17a-254-to-17a-255-to-17a-256-to-17a-257-to-17a-258-to-17a-259-to-17a-260-to-17a-261-to-17a-262-to-17a-263-to-17a-264-to-17a-265-to-17a-266-to-17a-267-to-17a-268-to-17a-269",
+    "section-17a-277",
+    "section-17a-450a",
+    "section-17a-453h",
+    "section-17a-460",
+    "section-17a-470",
+    "section-17a-471a",
+    "section-17a-476",
+    "section-17a-480",
+    "section-17a-482",
+    "section-17a-500",
+    "section-17a-506a",
+    "section-17a-566",
+    "section-17a-674c",
+    "section-17a-674d",
+    "group-17a-718-to-17a-719-to-17a-720-to-17a-721-to-17a-722-to-17a-723-to-17a-724-to-17a-725-to-17a-726-to-17a-727-to-17a-728-to-17a-729-to-17a-730-to-17a-731-to-17a-732-to-17a-733-to-17a-734-to-17a-735-to-17a-736-to-17a-737-to-17a-738-to-17a-739-to-17a-740-to-17a-741-to-17a-742-to-17a-743-to-17a-744-to-17a-745-to-17a-746-to-17a-747-to-17a-748-to-17a-749",
+    "section-17a-861",
+    "group-17a-862-to-17a-863-to-17a-864-to-17a-865-to-17a-866-to-17a-867-to-17a-868-to-17a-869",
+    "section-17a-878"
+  ],
+  "documents": [
+    {
+      "id": "section-17a-6a",
+      "citation": "17a-6a",
+      "citations": [
+        "17a-6a"
+      ],
+      "heading": "Sec. 17a-6a. Commissioners to require applicants, vendors and contractors to submit to state and national criminal history records checks and state child abuse and neglect registry checks. Requests to check child abuse and neglect registry by child welfare agencies of other states.",
+      "chapter": {
+        "id": "chapter-319",
+        "number": "319",
+        "name": "Department of Children and Families"
+      },
+      "status": "active",
+      "text": "(a) The Commissioners of Children and Families and Administrative Services shall (1) require each applicant for a position with the Department of Children and Families to state in writing whether such person has ever been convicted of a crime or whether criminal charges are pending against such person at the time such person submits an application, and (2) require each applicant to submit to state and national criminal history records checks, in accordance with section 29-17a. The Commissioner of Children and Families shall also check the state child abuse registry established pursuant to section 17a-101k for the name of such applicant.\n\n(b) The Commissioner of Children and Families shall require each vendor or contractor of the department and each employee of such vendor or contractor that provides direct services to children or youths in the care and custody of the department or that has access to the department's records to submit to state and national criminal history records checks, in accordance with section 29-17a. The commissioner shall check the (1) state child abuse and neglect registry established pursuant to section 17a-101k for the name of such vendor or contractor and each employee of such vendor or contractor that provides direct services to children or youths in the care and custody of the department or has access to records of the department, and (2) child abuse and neglect registry in any state in which a vendor or contractor or employee of a vendor or contractor that provides direct services to children or youths in the care and custody of the department or has access to records of the department has resided in the preceding five years for the name of such vendor or contractor or employee. The commissioner shall comply with any request to check the child abuse and neglect registry established pursuant to section 17a-101k made by the child welfare agency of another state.",
+      "href": "?chapter=319&section=section-17a-6a",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-17a-6g",
+      "citation": "17a-6g",
+      "citations": [
+        "17a-6g"
+      ],
+      "heading": "Sec. 17a-6g. Connecticut Indian Child Welfare Act. Application to actions and proceedings involving an Indian child.",
+      "chapter": {
+        "id": "chapter-319",
+        "number": "319",
+        "name": "Department of Children and Families"
+      },
+      "status": "active",
+      "text": "(a) As used in this section, “Indian child” has the same meaning as provided in section 46b-116a.\n\n(b) In any action or proceeding under this chapter or chapter 319a involving an Indian child's custody, including foster care placement, preadoptive placement, adoptive placement or termination of the parental rights of the parents of such child, the Commissioner of Children and Families shall ensure that such action or proceeding is conducted in accordance with sections 46b-116 to 46b-116aa, inclusive.",
+      "href": "?chapter=319&section=section-17a-6g",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-17a-28",
+      "citation": "17a-28",
+      "citations": [
+        "17a-28"
+      ],
+      "heading": "Sec. 17a-28. (Formerly Sec. 17-431). Definitions. Confidentiality and access to records; exceptions. Procedure for aggrieved persons.",
+      "chapter": {
+        "id": "chapter-319",
+        "number": "319",
+        "name": "Department of Children and Families"
+      },
+      "status": "active",
+      "text": "(a) As used in this section:\n\n(1) “Person” means (A) any individual named in a record, maintained by the department, who (i) is presently or at any prior time was a ward of or committed to the commissioner for any reason; (ii) otherwise received services, voluntarily or involuntarily, from the department; or (iii) is presently or was at any prior time the subject of an investigation by the department; (B) a parent whose parental rights have not been terminated or current guardian of an individual described in subparagraph (A) of this subdivision, if such individual is a minor; or (C) the authorized representative of an individual described in subparagraph (A) of this subdivision, if such individual is deceased;\n\n(2) “Attorney” means the licensed attorney authorized to assert the confidentiality of or right of access to records of a person;\n\n(3) “Authorized representative” means a parent, guardian, guardian ad litem, attorney, conservator or other individual authorized to assert the confidentiality of or right of access to records of a person;\n\n(4) “Consent” means permission given in writing by a person, such person's attorney or authorized representative to disclose specified information, within a limited time period, regarding the person to specifically identified individuals or entities;\n\n(5) “Records” means information created or obtained in connection with the department's child protection activities or other activities related to a child while in the care or custody of the department, including information in the registry of reports to be maintained by the commissioner pursuant to section 17a-101k;\n\n(6) “Disclose” means (A) to provide an oral summary of records maintained by the department to an individual, agency, corporation or organization, or (B) to allow an individual, agency, corporation or organization to review or obtain copies of such records in whole, part or summary form;\n\n(7) “Near fatality” means an act that places a child in serious or critical condition.\n\n(b) Notwithstanding the provisions of section 1-210, 1-211 or 1-213, records maintained by the department shall be confidential and shall not be disclosed, unless the department receives written consent from the person or as provided in this section, section 17a-101g or section 17a-101k. Any unauthorized disclosure shall be punishable by a fine of not more than one thousand dollars or imprisonment for not more than one year, or both. Any employee of the department who in the ordinary course of such person's employment has reasonable cause to suspect or believe that another employee has engaged in the unauthorized disclosure of records shall report in writing such unauthorized disclosure of records to the commissioner. The report shall include the name of the person disclosing the information and the nature of the information disclosed and to whom it was disclosed, if known.\n\n(c) Records that (1) contain privileged communications, or (2) are confidential pursuant to any federal law or regulation shall not be disclosed except as authorized by law.\n\n(d) Any information disclosed from a person's record shall not be further disclosed to another individual or entity without the written consent of the person, except (1) pursuant to section 19a-80 or 19a-80f, provided such disclosure is otherwise permitted pursuant to subsections (b) and (c) of this section, (2) pursuant to the order of a court of competent jurisdiction, or (3) as otherwise provided by law.\n\n(e) The commissioner shall, upon written request, disclose the following information concerning agencies licensed by the Department of Children and Families, except foster care parents, relatives of the child who are licensed to provide foster care or prospective adoptive families: (1) The name of the licensee; (2) the date the original license was issued; (3) the current status of the license; (4) whether an agency investigation or review is pending or has been completed; and (5) any licensing action taken by the department at any time during the period such license was issued and the reason for such action, provided disclosure of such information will not jeopardize a pending investigation.\n\n(f) The name of any individual who reports suspected abuse or neglect of a child or youth or cooperates with an investigation of child abuse or neglect shall be kept confidential upon request or upon determination by the department that disclosure of such information may be detrimental to the safety or interests of the individual, except the name of any such individual shall be disclosed pursuant to subparagraph (B) of subdivision (1) of subsection (g) of this section to (1) an employee of the department for reasons reasonably related to the business of the department; (2) a law enforcement officer for purposes of investigating (A) abuse or neglect of a child or youth, or (B) an allegation that such individual falsely reported the suspected abuse or neglect of a child or youth; (3) a state's attorney for purposes of investigating or prosecuting (A) abuse or neglect of a child or youth, or (B) an allegation that such individual falsely reported the suspected abuse or neglect of a child or youth; (4) an assistant attorney general or other legal counsel representing the department; (5) a judge of the Superior Court and all necessary parties in a court proceeding pursuant to section 17a-112 or 46b-129, or a criminal prosecution involving child abuse or neglect; (6) a state child care licensing agency; or (7) the executive director of any institution, school or facility or superintendent of schools pursuant to section 17a-101i.\n\n(g) The department shall disclose records, subject to subsections (b) and (c) of this section, without the consent of the person who is the subject of the record, to:\n\n(1) The person named in the record or such person's authorized representative, provided such disclosure shall be limited to information (A) contained in the record about such person or about such person's biological or adoptive minor child, if such person's parental rights to such child have not been terminated; and (B) identifying an individual who reported abuse or neglect of the person, including any tape recording of an oral report pursuant to section 17a-103, if a court determines that there is reasonable cause to believe the reporter knowingly made a false report or that the interests of justice require disclosure;\n\n(2) An employee of the department for any purpose reasonably related to the performance of such employee's duties;\n\n(3) A guardian ad litem or attorney appointed to represent a child or youth in litigation affecting the best interests of the child or youth;\n\n(4) An attorney representing a parent, guardian or child in a petition filed in the Superior Court pursuant to section 17a-112 or 46b-129, provided (A) if such records do not pertain to such attorney's client or such client's child, such records shall not be further disclosed to another individual or entity by such attorney except pursuant to the order of a court of competent jurisdiction, (B) if such records are confidential pursuant to federal law, such records shall not be disclosed to such attorney or such attorney's client unless such attorney or such attorney's client is otherwise entitled to such records, and (C) nothing in this subdivision shall limit the disclosure of records under subdivision (3) of this subsection;\n\n(5) The Attorney General, any assistant attorney general or any other legal counsel retained to represent the department during the course of a legal proceeding involving the department or an employee of the department;\n\n(6) The Child Advocate or the Child Advocate's designee;\n\n(7) The Chief Public Defender or the Chief Public Defender's designee for purposes of ensuring competent representation by the attorneys with whom the Chief Public Defender contracts to provide legal and guardian ad litem services to the subjects of such records and for ensuring accurate payments for services rendered by such attorneys;\n\n(8) The Chief State's Attorney or the Chief State's Attorney's designee for purposes of investigating or prosecuting (A) an allegation related to child abuse or neglect, (B) an allegation that an individual made a false report of suspected child abuse or neglect, (C) an allegation that a mandated reporter failed to report suspected child abuse or neglect in accordance with section 17a-101a, provided such prosecuting authority shall have access to records of a child charged with the commission of a delinquent act, who is not being charged with an offense related to child abuse, only while the case is being prosecuted and after obtaining a release, or (D) an allegation of fraud in the receipt of public or private benefits, provided no information identifying the subject of the record is disclosed unless such information is essential to such investigation or prosecution;\n\n(9) A state or federal law enforcement officer, including a military law enforcement authority under the United States Department of Defense, for purposes of investigating (A) an allegation related to child abuse or neglect, (B) an allegation that an individual made a false report of suspected child abuse or neglect, or (C) an allegation that a mandated reporter failed to report suspected child abuse or neglect in accordance with section 17a-101a;\n\n(10) A foster or prospective adoptive parent, if the records pertain to a child or youth currently placed with the foster or prospective adoptive parent, or a child or youth being considered for placement with the foster or prospective adoptive parent, and the records are necessary to address the social, medical, psychological or educational needs of the child or youth, provided no information identifying a biological parent is disclosed without the permission of such biological parent;\n\n(11) The Governor, when requested in writing in the course of the Governor's official functions, the joint standing committee of the General Assembly having cognizance of matters relating to human services, the joint standing committee of the General Assembly having cognizance of matters relating to the judiciary or the joint standing committee of the General Assembly having cognizance of matters relating to children, when requested in writing by any of such committees in the course of such committee's official functions, and upon a majority vote of such committee, provided no name or other identifying information is disclosed unless such information is essential to the gubernatorial or legislative purpose;\n\n(12) The Office of Early Childhood for the purpose of (A) determining the suitability of a person to care for children in a facility licensed pursuant to section 19a-77, 19a-80, 19a-87b or 19a-421; (B) determining the suitability of such person for licensure; (C) determining the suitability of a person to provide child care services to a child and receive a child care subsidy pursuant to section 17b-749k; (D) an investigation conducted pursuant to section 19a-80f; (E) notifying the office when the Department of Children and Families places an individual licensed or certified by the office on the child abuse and neglect registry pursuant to section 17a-101k; or (F) notifying the office when the Department of Children and Families possesses information regarding an office regulatory violation committed by an individual licensed or certified by the office;\n\n(13) The Department of Developmental Services, to allow said department to determine eligibility, facilitate enrollment and plan for the provision of services to a child who is a client of said department and who is applying to enroll in or is enrolled in said department's behavioral services program. At the time that a parent or guardian completes an application for enrollment of a child in the Department of Developmental Services' behavioral services program, or at the time that said department updates a child's annual individualized plan of care, said department shall notify such parent or guardian that the Department of Children and Families may provide records to the Department of Developmental Services for the purposes specified in this subdivision without the consent of such parent or guardian;\n\n(14) Any individual or entity for the purposes of identifying resources that will promote the permanency plan of a child or youth approved by the court pursuant to sections 17a-11, 17a-111b and 46b-129;\n\n(15) A state agency that licenses or certifies a person to educate, care for or provide services to children or youths;\n\n(16) A judge or employee of a Probate Court who requires access to such records in order to perform such judge's or employee's official duties;\n\n(17) A judge of the Superior Court for purposes of determining the appropriate disposition of a child adjudicated as delinquent;\n\n(18) A judge of the Superior Court in a criminal prosecution for purposes of in camera inspection whenever (A) the court has ordered that the record be provided to the court; or (B) a party to the proceeding has issued a subpoena for the record;\n\n(19) A judge of the Superior Court and all necessary parties in a family violence proceeding when such records concern family violence with respect to the child who is the subject of the proceeding or the parent of such child who is the subject of the proceeding;\n\n(20) The Auditors of Public Accounts, or their representative, provided no information identifying the subject of the record is disclosed unless such information is essential to an audit conducted pursuant to section 2-90;\n\n(21) A local or regional board of education, provided the records are limited to educational records created or obtained by the state or Connecticut Unified School District #2, established pursuant to section 17a-37;\n\n(22) The superintendent of schools for any school district for the purpose of determining the suitability of a person to be employed by the local or regional board of education for such school district pursuant to subsection (a) of section 10-221d;\n\n(23) The Department of Motor Vehicles for the purpose of criminal history records checks pursuant to subsection (e) of section 14-44, provided information disclosed pursuant to this subdivision shall be limited to information included on the Department of Children and Families child abuse and neglect registry established pursuant to section 17a-101k, subject to the provisions of sections 17a-101g and 17a-101k concerning the nondisclosure of findings of responsibility for abuse and neglect;\n\n(24) The Department of Mental Health and Addiction Services for the purpose of treatment planning for young adults who have transitioned from the care of the Department of Children and Families;\n\n(25) The superintendent of a public school district or the executive director or other head of a public or private institution for children providing care for children or a private school (A) pursuant to sections 17a-11, 17a-101b, 17a-101c, 17a-101i, 17a-111b and 46b-129, or (B) when the Department of Children and Families places an individual employed by such institution or school on the child abuse and neglect registry pursuant to section 17a-101k;\n\n(26) The Department of Social Services for the purpose of (A) determining the suitability of a person for payment from the Department of Social Services for providing child care; (B) promoting the health, safety and welfare of a child or youth receiving services from either department; or (C) investigating allegations of fraud provided no information identifying the subject of the record is disclosed unless such information is essential to any such investigation;\n\n(27) The Court Support Services Division of the Judicial Branch, to allow the division to determine the supervision and treatment needs of a child or youth, and provide appropriate supervision and treatment services to such child or youth, provided such disclosure shall be limited to information that identifies the child or youth, or a member of such child's or youth's immediate family, as being or having been (A) committed to the custody of the Commissioner of Children and Families as delinquent, (B) under the supervision of the Commissioner of Children and Families, or (C) enrolled in the voluntary services program operated by the Department of Children and Families;\n\n(28) The Court Support Services Division of the Judicial Branch for the purpose of sharing common case records to track recidivism of juvenile offenders;\n\n(29) The birth-to-three program's referral intake office for the purpose of (A) determining eligibility of, (B) facilitating enrollment for, and (C) providing services to (i) substantiated victims of child abuse and neglect with suspected developmental delays, and (ii) newborns impacted by withdrawal symptoms resulting from prenatal drug exposure;\n\n(30) The Department of Public Health for the purpose of notification when the Commissioner of Children and Families places an individual licensed or certified by the Department of Public Health on the child abuse and neglect registry established pursuant to section 17a-101k;\n\n(31) The Department of Correction, for the purpose of determining the supervision and treatment needs of a child or youth, and providing appropriate supervision and treatment services to such child or youth;\n\n(32) Any child placing agency subject to licensure by the Department of Children and Families, for the purpose of determining the suitability of a person (A) for employment by such agency, or (B) to adopt or provide foster care pursuant to sections 17a-114 and 17a-151; and\n\n(33) The Department of Administrative Services, for the purpose of determining whether an applicant for employment with the state, who would have contact with children in the course of such employment, appears on the child abuse or neglect registry maintained pursuant to section 17a-101k.\n\n(h) The department may, subject to subsections (b) and (c) of this section, disclose records without the consent of the person who is the subject of the record, to:\n\n(1) An employee or former employee of the department or such employee or former employee's authorized representative for purposes of participating in any court, administrative or disciplinary proceeding, provided such disclosure shall be limited to records that are necessary to the proceeding, as determined by the department;\n\n(2) Multidisciplinary teams, as described in section 17a-106a;\n\n(3) A provider of professional services for a child, youth or parent referred to such provider, provided such disclosure is limited to information necessary to provide services to the child, youth or parent;\n\n(4) An individual or agency under contract with the department for the purposes of identifying and assessing a potential foster or adoptive home or visiting resource for a child or youth, provided no information identifying a biological parent of a child or youth is disclosed without the permission of such biological parent;\n\n(5) A physician examining a child with respect to whom abuse or neglect is suspected and who is authorized pursuant to section 17a-101f to keep the child in the custody of a hospital when such physician requires the information in a record of the department to determine whether to keep the child in protective custody;\n\n(6) An individual who reports child abuse or neglect pursuant to sections 17a-101a to 17a-101c, inclusive, or section 17a-103, who made a report of abuse or neglect, provided the information disclosed is limited to (A) the status of the investigation conducted pursuant to section 17a-101g resulting from the individual's report; and (B) in general terms, the action taken by the department as a result of such investigation;\n\n(7) An individual or organization engaged in the business of medical, psychological or psychiatric diagnosis and treatment and who is treating a person, provided the commissioner, or the commissioner's designee, determines that the disclosure is necessary to accomplish the objectives of diagnosis or treatment;\n\n(8) A court or public agency in another state or a federally recognized Indian tribe, that is responsible for investigating child abuse or neglect, preventing child abuse and neglect or providing services to families at risk for child abuse or neglect, for the purpose of such investigation, prevention or providing services to such families;\n\n(9) An individual conducting bona fide research, provided no information identifying the subject of the record is disclosed unless (A) such information is essential to the purpose of the research; and (B) the department has given written approval for the use of such information;\n\n(10) An individual or agency involved in the collection of fees for services, provided such information is limited to the name and address of the person who received the services and the fees for services, except as provided in section 17b-225. In cases where a dispute arises over such fees or claims or where additional information is needed to substantiate the fee or claim, the Department of Children and Families may disclose the following: (A) That the person was, in fact, provided services by the department; (B) the dates and duration of such services; and (C) a general description of the types of services, including evidence that a service or treatment plan exists and has been carried out and evidence to substantiate the necessity for admission and length of stay in an institution or facility;\n\n(11) A law enforcement officer or state's attorney if there is reasonable cause to believe that (A) a child or youth is being abused or neglected or at risk of being abused or neglected as a result of any suspected criminal activity by any individual, or (B) an employee of the department is being threatened or harassed or has been assaulted by a client or coworker;\n\n(12) Any individual interviewed as part of an investigation conducted pursuant to section 17a-101g, who is not otherwise entitled to such information, provided such disclosure is limited to: (A) The general nature of the allegations contained in the reports; (B) the identity of the child or youth alleged to have been abused or neglected; and (C) information necessary to effectively conduct the investigation;\n\n(13) Any individual, when information concerning an incident of child abuse or neglect has been made public or the commissioner reasonably believes publication of such information is likely, provided such disclosure is limited to: (A) Whether the department has received any report in accordance with sections 17a-101a to 17a-101c, inclusive, or section 17a-103; (B) in general terms, any action taken by the department, provided: (i) Names or other individually identifiable information of the child or other family members is not disclosed, regardless of whether such individually identifiable information is otherwise available, and (ii) the name or other individually identifiable information of the person suspected to be responsible for the abuse or neglect is not disclosed unless such person has been arrested for a crime due to such abuse or neglect; (C) confirmation or denial of the accuracy of information that has been made public; and (D) notwithstanding the provisions of section 46b-124, in general terms, the legal status of the case;\n\n(14) Any individual for the purpose of locating such individual's missing parent, child, sibling, aunt, uncle, first cousin or grandparent, provided such disclosure is limited to information that assists in locating such missing parent, child, sibling, aunt, uncle, first cousin or grandparent;\n\n(15) Any individual, when the information concerns an incident of abuse or neglect that resulted in a child or youth fatality or near fatality of a child or youth, provided disclosure of such information is in general terms and does not jeopardize a pending investigation;\n\n(16) A judge of a court of competent jurisdiction whenever an employee of the department is subpoenaed and ordered to testify about such records for purposes of in camera inspection to determine if such records may be disclosed pursuant to this section if (A) the court has ordered that such records be provided to the court; or (B) a party to the proceeding has issued a subpoena for such records;\n\n(17) An individual who is not employed by the department who arranges, performs or assists in performing functions or activities on behalf of the department, including, but not limited to, data analysis, processing or administration, utilization reviews, quality assurance, practice management, consultation, data aggregation and accreditation services.\n\n(i) Notwithstanding the provisions of subsections (e) to (h), inclusive, of this section, the department may refuse to disclose records to any individual, provided the department gives such individual notice (1) that records are being withheld; (2) of the general nature of the records being withheld; (3) of the department's reason for refusing to disclose the records; and (4) of the individual's right to judicial relief pursuant to subsection (j) of this section.\n\n(j) (1) Any person or individual aggrieved by a violation of subsection (b) or (d), subsections (f) to (h), inclusive, or subsection (k) of this section, or a person's authorized representative, may seek judicial relief in the manner prescribed in section 52-146j.\n\n(2) Any person, individual or authorized representative denied access to records by the commissioner under subdivision (i) of this section may petition the superior court for the venue district provided in section 46b-142 in which the person resides for an order requiring the commissioner to permit access to those records, and the court, after a hearing and an in camera review of the records in question, shall issue such an order unless it determines that permitting disclosure of all or any portion of the record (A) would be contrary to the best interests of the person or the person's authorized representative; (B) could reasonably result in the risk of harm to any individual; or (C) would contravene the public policy of the state.\n\n(k) All written records disclosed to an individual who is not the subject of the record, an agency, an entity or an organization shall bear a stamp requiring confidentiality in accordance with the provisions of this section. Such records shall not be disclosed to another individual, agency, entity or an organization without the written consent of the person who is the subject of the record or as provided by this section. A copy of the consent form, specifying to whom and for what specific use the record is disclosed or a statement setting forth any other statutory authorization for disclosure and the limitations imposed on such disclosure, shall accompany the record. In cases where the disclosure is made orally, the individual disclosing the information shall inform the recipient that such information is governed by the provisions of this section.\n\n(l) Whenever any person, attorney or authorized representative, having obtained access to any record, believes there are factually inaccurate entries or materials contained in such record, such person, attorney or authorized representative may add a statement to the record setting forth what such person, attorney or authorized representative believes to be an accurate statement of those facts and such statement shall become a permanent part of the record.\n\n(m) The Department of Children and Families may charge a reasonable fee for any record disclosed pursuant to this section that exceeds one hundred pages in length. Such fee shall be waived if the individual requesting such record is indigent.",
+      "href": "?chapter=319&section=section-17a-28",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-17a-52a",
+      "citation": "17a-52a",
+      "citations": [
+        "17a-52a"
+      ],
+      "heading": "Sec. 17a-52a. *(See end of section for amended version of subsection (c) and effective date.) Evidence-based youth suicide prevention training program.",
+      "chapter": {
+        "id": "chapter-319",
+        "number": "319",
+        "name": "Department of Children and Families"
+      },
+      "status": "active",
+      "text": "(a) As used in this section, (1) “evidence-based” describes a training program that (A) incorporates methods demonstrated to be effective for the intended population through scientifically based research, including statistically controlled evaluations or randomized trials, (B) can be implemented with a set of procedures to allow successful replication in the state, (C) achieves sustained, desirable outcomes, and (D) when possible, has been determined to be cost-beneficial, and (2) “Question, Persuade and Refer (QPR) Institute Gatekeeper Training” means an educational program designed to teach lay and professional persons who work with youth the warning signs of a suicide crisis and how to respond.\n\n(b) The Youth Suicide Advisory Board, established pursuant to section 17a-52, and the Office of the Child Advocate, shall jointly administer an evidence-based youth suicide prevention training program in each local health department and district department of health formed pursuant to section 19a-241. The training program shall provide certification in QPR Institute Gatekeeper Training, utilizing a training model that will enable participants to provide QPR Institute Gatekeeper Training to other individuals upon completion of the training program. Such training program shall be offered not later than July 1, 2022, and at least once every three years thereafter.\n\n*(c) The director of health for each local health department and district department of health shall determine the eligibility criteria for participation in the youth suicide prevention training program. Participants shall be members of the following groups within such district: (1) Employees of such local health department and district department of health, (2) employees of youth service bureaus established pursuant to section 10-19m, (3) school employees, as defined in section 10-222d, (4) employees and volunteers of youth-serving organizations, (5) employees and volunteers of operators of youth athletic activities, as defined in section 21a-432, (6) employees of municipal social service agencies, (7) members of paid municipal or volunteer fire departments, and (8) members of local police departments. With respect to school employees, such training program may be included as part of an in-service training program provided pursuant to section 10-220a.\n\n(d) Any individual who has received certification in QPR Institute Gatekeeper Training through the training program administered pursuant to subsection (b) of this section may, during the period in which such certification is valid, provide QPR Institute Gatekeeper Training to any member of a group described in subdivisions (1) to (8), inclusive, of subsection (c) of this section and members of the public.\n\n(e) The Youth Suicide Advisory Board and the Office of the Child Advocate may contract with a nongovernmental entity that provides evidence-based suicide prevention training to carry out the provisions of this section.\n\n* Note: On and after July 1, 2025, subsection (c) of this section, as amended by section 69 of public act 23-167, is to read as follows:\n\n“(c) The director of health for each local health department and district department of health shall determine the eligibility criteria for participation in the youth suicide prevention training program. Participants shall be members of the following groups within such district: (1) Employees of such local health department and district department of health, (2) employees of youth service bureaus established pursuant to section 10-19m, (3) school employees, as defined in section 10-222aa, (4) employees and volunteers of youth-serving organizations, (5) employees and volunteers of operators of youth athletic activities, as defined in section 21a-432, (6) employees of municipal social service agencies, (7) members of paid municipal or volunteer fire departments, and (8) members of local police departments. With respect to school employees, such training program may be included as part of an in-service training program provided pursuant to section 10-220a.”",
+      "href": "?chapter=319&section=section-17a-52a",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-17a-210a",
+      "citation": "17a-210a",
+      "citations": [
+        "17a-210a"
+      ],
+      "heading": "Sec. 17a-210a. Ombudsperson.",
+      "chapter": {
+        "id": "chapter-319b",
+        "number": "319b",
+        "name": "Department of Developmental Services"
+      },
+      "status": "active",
+      "text": "(a) There is established an independent ombudsperson office within the Department of Developmental Services that is responsible for receiving and making recommendations to the commissioner for resolving complaints affecting individuals under the care or supervision of the department or of any public or private agency with which the department has contracted for the provision of services.\n\n(b) The director of the ombudsperson office shall be appointed by the Governor, with the approval of the General Assembly. Said director shall be an elector of the state with expertise and experience in the fields of developmental services and advocacy for the rights of the individuals specified in subsection (a) of this section and shall be exempt from the classified service.\n\n(c) The Governor shall appoint the director of the ombudsperson office from a list of candidates prepared and submitted to the Governor by the Council on Developmental Services, established by section 17a-270. The Governor shall notify the council of the pending expiration of the term of an incumbent ombudsperson not less than ninety days prior to the final day of the ombudsperson's term in office. If a vacancy occurs in the position of ombudsperson, the Governor shall notify the council immediately of the vacancy. The council shall meet to consider qualified candidates for the position of ombudsperson and shall submit a list of not more than five candidates to the Governor ranked in order of preference, not more than sixty days after receiving notice from the Governor of the pending expiration of the ombudsperson's term or the occurrence of a vacancy. The Governor shall designate, not more than sixty days after receipt of the list of candidates from the council, one candidate from the list for the position of ombudsperson. If, after the list is submitted to the Governor by the council, any candidate withdraws from consideration, the Governor shall designate a candidate from those remaining on the list. If the Governor fails to designate a candidate within sixty days of receipt of the list from the council, the council shall refer the candidate with the highest ranking on the list to the General Assembly for confirmation. If the General Assembly is not in session at the time of the Governor's or council's designation of a candidate, the candidate shall serve as the acting ombudsperson until the General Assembly meets and confirms the candidate as ombudsperson. A candidate serving as acting ombudsperson shall be entitled to compensation and have all the powers, duties and privileges of the ombudsperson. An ombudsperson shall serve a term of four years, not including any time served as acting ombudsperson, and may be reappointed by the Governor or shall remain in the position until a successor is appointed pursuant to this subsection. Although an incumbent ombudsperson may be reappointed, the Governor shall also consider additional candidates from a list submitted by the council as provided in this section.\n\n(d) The director of the ombudsperson office shall report monthly to the Council on Developmental Services and, in accordance with the provisions of section 11-4a, annually to the joint standing committee of the General Assembly having cognizance of matters relating to public health.",
+      "href": "?chapter=319b&section=section-17a-210a",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-17a-211g",
+      "citation": "17a-211g",
+      "citations": [
+        "17a-211g"
+      ],
+      "heading": "Sec. 17a-211g. Employment of transition advisors.",
+      "chapter": {
+        "id": "chapter-319b",
+        "number": "319b",
+        "name": "Department of Developmental Services"
+      },
+      "status": "active",
+      "text": "The Commissioner of Developmental Services shall employ, within available appropriations, a sufficient number of transition advisors to provide transition services, as defined in section 10-74o, for children requiring special education who may be eligible to receive services from the Department of Developmental Services as determined through a planning and placement team meeting pursuant to subdivision (9) of subsection (a) of section 10-76d.",
+      "href": "?chapter=319b&section=section-17a-211g",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-17a-215",
+      "citation": "17a-215",
+      "citations": [
+        "17a-215"
+      ],
+      "heading": "Sec. 17a-215. (Formerly Sec. 19a-462). Department of Social Services designated as lead agency for autism spectrum disorder services.",
+      "chapter": {
+        "id": "chapter-319b",
+        "number": "319b",
+        "name": "Department of Developmental Services"
+      },
+      "status": "repealed",
+      "text": "Section 17a-215 is repealed, effective June 12, 2023.",
+      "href": "?chapter=319b&section=section-17a-215",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "repealed"
+      }
+    },
+    {
+      "id": "section-17a-215c",
+      "citation": "17a-215c",
+      "citations": [
+        "17a-215c"
+      ],
+      "heading": "Sec. 17a-215c. Division of Autism Spectrum Disorder Services within Department of Social Services. Services and programs for state residents diagnosed with autism spectrum disorder.",
+      "chapter": {
+        "id": "chapter-319b",
+        "number": "319b",
+        "name": "Department of Developmental Services"
+      },
+      "status": "active",
+      "text": "(a) There is established a Division of Autism Spectrum Disorder Services within the Department of Social Services to oversee the operation of Medicaid state plan services and the Medicaid waiver program for autism spectrum disorder services.\n\n(b) The Department of Social Services may adopt regulations, in accordance with chapter 54, to define the term “autism spectrum disorder”, establish eligibility standards and criteria for the receipt of services by any resident of the state diagnosed with autism spectrum disorder, regardless of age, and data collection, maintenance and reporting processes. The Commissioner of Social Services may implement policies and procedures necessary to administer the provisions of this section prior to adoption of such regulations, provided the commissioner shall publish notice of intent to adopt such regulations not later than twenty days after implementation of such policies and procedures. Any such policies and procedures shall be valid until such regulations are adopted.\n\n(c) The case records of the Division of Autism Spectrum Disorder Services maintained by the division for any purpose authorized pursuant to this section shall be subject to the same confidentiality requirements, under state and federal law, that govern all client records maintained by the Department of Social Services.\n\n(d) The Commissioner of Social Services may seek approval of an amendment to the Medicaid state plan or a waiver from federal law, whichever is sufficient and most expeditious, to establish and implement a Medicaid-financed home and community-based program to provide community-based services and, if necessary, housing assistance, to adults diagnosed with autism spectrum disorder but not with intellectual disability.\n\n(e) The Commissioner of Social Services, in consultation with the Autism Spectrum Disorder Advisory Council, shall designate services and interventions that demonstrate, in accordance with medically established and research-based best practices, empirical effectiveness for the treatment of autism spectrum disorder. The commissioner shall update such designations periodically and whenever the commissioner deems it necessary to conform to changes generally recognized by the relevant medical community in evidence-based practices or research.",
+      "href": "?chapter=319b&section=section-17a-215c",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-17a-215d",
+      "citation": "17a-215d",
+      "citations": [
+        "17a-215d"
+      ],
+      "heading": "Sec. 17a-215d. Autism Spectrum Disorder Advisory Council.",
+      "chapter": {
+        "id": "chapter-319b",
+        "number": "319b",
+        "name": "Department of Developmental Services"
+      },
+      "status": "repealed",
+      "text": "Section 17a-215d is repealed, effective June 12, 2023.",
+      "href": "?chapter=319b&section=section-17a-215d",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "repealed"
+      }
+    },
+    {
+      "id": "section-17a-215e",
+      "citation": "17a-215e",
+      "citations": [
+        "17a-215e"
+      ],
+      "heading": "Sec. 17a-215e. Annual report on Division of Autism Spectrum Disorder Services and Autism Spectrum Disorder Advisory Council.",
+      "chapter": {
+        "id": "chapter-319b",
+        "number": "319b",
+        "name": "Department of Developmental Services"
+      },
+      "status": "active",
+      "text": "Not later than February 1, 2017, and annually thereafter, the Commissioner of Social Services shall report, in accordance with the provisions of section 11-4a, to the joint standing committee of the General Assembly having cognizance of matters relating to human services concerning the activities of the Department of Social Services' Division of Autism Spectrum Disorder Services, established pursuant to section 17a-215c, and the Autism Spectrum Disorder Advisory Council, established pursuant to section 17a-215j. Such report shall include, but not be limited to: (1) The number and ages of persons with autism spectrum disorder who are served by the Department of Social Services' Division of Autism Spectrum Disorder Services and, when practicable to report, the number and ages of such persons who are served by other state agencies; (2) the number and ages of persons with autism spectrum disorder on said division's waiting list for Medicaid waiver services; (3) the type of Medicaid waiver services currently provided by the department to persons with autism spectrum disorder; (4) a description of the unmet needs of persons with autism spectrum disorder on said division's waiting list; (5) the projected estimates for a five-year period of the costs to the state due to such unmet needs; (6) measurable outcome data for persons with autism spectrum disorder who are eligible to receive services from said division, including, but not limited to, (A) the number of such persons who are enrolled in postsecondary education, (B) the employment status of such persons, and (C) a description of such persons' living arrangements; and (7) a description of new initiatives and proposals for new initiatives that are under consideration.",
+      "href": "?chapter=319b&section=section-17a-215e",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-17a-215g",
+      "citation": "17a-215g",
+      "citations": [
+        "17a-215g"
+      ],
+      "heading": "Sec. 17a-215g. Medicaid waiver program for persons with autism spectrum disorder. Reduction of waiting list. Required reporting.",
+      "chapter": {
+        "id": "chapter-319b",
+        "number": "319b",
+        "name": "Department of Developmental Services"
+      },
+      "status": "active",
+      "text": "(a) The Commissioner of Social Services, in consultation with the Secretary of the Office of Policy and Management and within available appropriations, shall expand the Medicaid waiver program for persons with autism spectrum disorder to reduce the number of persons on a waiting list to receive services under the program.\n\n(b) Not later than January 1, 2024, and annually thereafter, the state-wide coordinator of programs and services provided by state agencies for individuals with autism spectrum disorder, appointed pursuant to section 4-67bb, shall file a report, in accordance with the provisions of section 11-4a and in consultation with the Commissioner of Social Services, on (1) the number of persons waiting for services in the program, (2) the number of underserved persons in the program waiting for additional services, (3) the number of persons added and subtracted from the waiting list in the previous calendar year, (4) whether such waiting list has increased or decreased over the previous calendar year and, if so, by how may persons, and (5) recommendations to further reduce the waiting list and associated costs with the joint standing committees of the General Assembly having cognizance of matters relating to appropriations and the budgets of state agencies and human services.",
+      "href": "?chapter=319b&section=section-17a-215g",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-17a-215h",
+      "citation": "17a-215h",
+      "citations": [
+        "17a-215h"
+      ],
+      "heading": "Sec. 17a-215h. Compensation of family caregivers in Medicaid waiver programs for clients of the Department of Developmental Services.",
+      "chapter": {
+        "id": "chapter-319b",
+        "number": "319b",
+        "name": "Department of Developmental Services"
+      },
+      "status": "active",
+      "text": "(a) As used in this section, (1) “legally responsible relative” means a spouse, parent or legal guardian of a person enrolled in a Medicaid waiver program, and (2) “Medicaid waiver program” means any of the three programs established under Section 1915(c) of the Social Security Act to provide home and community-based services to clients of the Department of Developmental Services.\n\n(b) Not later than November 1, 2023, the Commissioner of Social Services, in consultation with the Commissioner of Developmental Services, shall amend the current Medicaid waiver programs to authorize compensation for family caregivers providing personal care assistance services to participants in the Medicaid waiver programs, including, but not limited to, family caregivers who are legally responsible relatives. Such amendment shall be implemented upon approval from the Centers for Medicare and Medicaid Services. For purposes of this section, “family caregiver” means a caregiver related by blood or marriage or a legal guardian of a participant in a Medicaid waiver program.",
+      "href": "?chapter=319b&section=section-17a-215h",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-17a-215i",
+      "citation": "17a-215i",
+      "citations": [
+        "17a-215i"
+      ],
+      "heading": "Sec. 17a-215i. Office of Policy and Management lead agency for autism spectrum disorder services.",
+      "chapter": {
+        "id": "chapter-319b",
+        "number": "319b",
+        "name": "Department of Developmental Services"
+      },
+      "status": "active",
+      "text": "(a) The Office of Policy and Management shall serve as the lead agency to coordinate, where possible, with the state agencies that have responsibility for providing services to persons diagnosed with autism spectrum disorder.\n\n(b) The Office of Policy and Management may examine and make recommendations regarding the delivery of appropriate and necessary services and programs for all residents of the state with autism spectrum disorder. Such services and programs may include, but need not be limited to: (1) Autism-specific early intervention services for any child under the age of three diagnosed with autism spectrum disorder; (2) education, recreation, habilitation, vocational and transition services for individuals age three to twenty-two, inclusive, diagnosed with autism spectrum disorder; (3) services for adults over the age of twenty-two diagnosed with autism spectrum disorder; (4) housing assistance for individuals diagnosed with autism spectrum disorder; (5) services that address the intersection of autism services and the criminal justice system; (6) coverage of autism services under commercial insurance and by other payors; (7) workforce training specific to autism spectrum disorder; and (8) related autism spectrum disorder services deemed necessary by the Secretary of the Office of Policy and Management.\n\n(c) The Office of Policy and Management shall serve as the lead state agency for the purpose of the federal Combating Autism Act, P.L. 109-416, as amended from time to time, and for applying for and receiving funds and performing any related responsibilities concerning autism spectrum disorder that are authorized pursuant to any state or federal law.\n\n(d) The Office of Policy and Management may make recommendations to the Governor and the joint standing committees of the General Assembly having cognizance of matters relating to human services, public health and appropriations and the budgets of state agencies concerning legislation and funding required to provide necessary services to persons diagnosed with autism spectrum disorder.\n\n(e) The Office of Policy and Management shall research and locate possible funding streams for the continued development and implementation of services for persons diagnosed with autism spectrum disorder.",
+      "href": "?chapter=319b&section=section-17a-215i",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-17a-215j",
+      "citation": "17a-215j",
+      "citations": [
+        "17a-215j"
+      ],
+      "heading": "Sec. 17a-215j. Autism Spectrum Disorder Advisory Council. Establishment. Membership. Duties.",
+      "chapter": {
+        "id": "chapter-319b",
+        "number": "319b",
+        "name": "Department of Developmental Services"
+      },
+      "status": "active",
+      "text": "(a) There shall be an Autism Spectrum Disorder Advisory Council which shall consist of the following members: (1) The Commissioner of Social Services, or the commissioner's designee; (2) the Commissioner of Children and Families, or the commissioner's designee; (3) the Commissioner of Education, or the commissioner's designee; (4) the Commissioner of Mental Health and Addiction Services, or the commissioner's designee; (5) the Commissioner of Public Health, or the commissioner's designee; (6) the Commissioner of Aging and Disability Services, or the commissioner's designee; (7) the Commissioner of Developmental Services, or the commissioner's designee; (8) the Commissioner of Early Childhood, or the commissioner's designee; (9) the Secretary of the Office of Policy and Management, or the secretary's designee; (10) two persons with autism spectrum disorder, one each appointed by the Governor and the speaker of the House of Representatives; (11) two persons who are parents or guardians of a child with autism spectrum disorder, one each appointed by the Governor and the minority leader of the Senate; (12) two persons who are parents or guardians of an adult with autism spectrum disorder, one each appointed by the president pro tempore of the Senate and the majority leader of the House of Representatives; (13) two persons who are advocates for persons with autism spectrum disorder, one each appointed by the Governor and the speaker of the House of Representatives; (14) two persons who are licensed professionals working in the field of autism spectrum disorder, one each appointed by the Governor and the majority leader of the Senate; (15) two persons who provide services for persons with autism spectrum disorder, one each appointed by the Governor and the minority leader of the House of Representatives; (16) two persons who shall be representatives of an institution of higher education in the state with experience in the field of autism spectrum disorder, one each appointed by the Governor and the president pro tempore of the Senate; (17) the executive director of the nonprofit entity designated by the Governor in accordance with section 46a-10b to serve as the Connecticut protection and advocacy system for persons with disabilities, or the executive director's designee; and (18) one person who is a physician who treats or diagnoses persons with autism spectrum disorder, appointed by the Governor.\n\n(b) The council shall have three chairpersons who shall be elected by the members of the council, provided not less than two of the persons elected as chairpersons by the members of the council shall be: (1) A person with autism spectrum disorder appointed pursuant to subdivision (10) of subsection (a) of this section, (2) a parent or guardian of a child with autism spectrum disorder appointed pursuant to subdivision (11) of subsection (a) of this section, or (3) a parent or guardian of an adult with autism spectrum disorder appointed pursuant to subdivision (12) of subsection (a) of this section.\n\n(c) The council shall be within the Office of Policy and Management for administrative purposes only.\n\n(d) The council shall make rules for the conduct of its affairs. The council shall meet not less than four times per year and at such other times as requested by the chairpersons. Council members shall serve without compensation.\n\n(e) The council shall advise the Secretary of the Office of Policy and Management concerning policies and programs for persons with autism spectrum disorder and recommendations to improve coordination and address gaps in autism services.",
+      "href": "?chapter=319b&section=section-17a-215j",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-17a-217",
+      "citation": "17a-217",
+      "citations": [
+        "17a-217"
+      ],
+      "heading": "Sec. 17a-217. (Formerly Sec. 19a-464). Programs for children and adults with intellectual disability. Funding.",
+      "chapter": {
+        "id": "chapter-319b",
+        "number": "319b",
+        "name": "Department of Developmental Services"
+      },
+      "status": "active",
+      "text": "(a) The Department of Developmental Services shall develop day camp programs and recreational programs for children and adults with intellectual disability. Any nonprofit organization that establishes or maintains day camp programs or recreational programs for children or adults with intellectual disability may apply to the Department of Developmental Services for funds to be used to assist in establishing, maintaining or expanding such programs. For the purposes of this section: (1) A day camp program may provide children or adults with intellectual disability with a supervised program of outdoor activities that may be conducted during all or part of the months of June, July, August and September; and (2) a recreational program may provide planned and supervised recreational activities for children or adults with intellectual disability, which activities may be of a social, athletic or purely diversionary nature and which programs shall be considered separate and apart from the day camp program described in subdivision (1) of this subsection.\n\n(b) No grant made under this section to assist in establishing, maintaining or expanding any program set forth in subsection (a) of this section shall exceed the ordinary and recurring annual operating expenses of such program, nor shall any grant be made to pay for all or any part of capital expenditures. The Department of Developmental Services shall: (1) Define minimum requirements to be met by each program in order to be eligible to receive funds as provided for by this section in regard to qualification and number of staff members and program operation, including, but not limited to, physical plant and record keeping; (2) establish procedures to be used in making application for such funds; and (3) adopt regulations, in accordance with chapter 54, governing the granting of funds to assist in the establishment of day camp programs and recreational programs for persons with intellectual disability. Upon receipt of proper application, the Department of Developmental Services, within available appropriations, may grant such funds, provided the plans for financing and the standards of operation of such programs shall be approved by the department in accordance with the provisions of this section. For the purpose of developing such programs, the department may accept grants from the federal government, a municipality or any other source.",
+      "href": "?chapter=319b&section=section-17a-217",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-17a-227a",
+      "citation": "17a-227a",
+      "citations": [
+        "17a-227a"
+      ],
+      "heading": "Sec. 17a-227a. State and national criminal history records checks for applicants made an offer of conditional employment.",
+      "chapter": {
+        "id": "chapter-319b",
+        "number": "319b",
+        "name": "Department of Developmental Services"
+      },
+      "status": "active",
+      "text": "(a) The Commissioners of Developmental Services and Administrative Services shall require each applicant who has been made an offer of conditional employment by the Department of Developmental Services to be fingerprinted and submit to state and national criminal history records checks. The criminal history records checks required by this section shall be conducted in accordance with section 29-17a. Employment by the department shall be considered conditional until the results of the criminal history records checks are received and reviewed by the department.\n\n(b) The Commissioner of Developmental Services may require providers licensed or funded by the department to provide residential, day or support services to persons with intellectual disability, to require each applicant who has been made an offer of conditional employment and will have direct and ongoing contact with persons and families receiving such services to submit to a check of such applicant's state criminal background. If the Department of Developmental Services requires such providers to have such applicants who have been made an offer of conditional employment submit to such checks, the administrative costs associated with such checks shall be considered an allowable cost on the annual cost report. Employment by a provider licensed or funded by the department shall be considered conditional until the results of the background checks have been received and reviewed by the provider.",
+      "href": "?chapter=319b&section=section-17a-227a",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-17a-238b",
+      "citation": "17a-238b",
+      "citations": [
+        "17a-238b"
+      ],
+      "heading": "Sec. 17a-238b. Medicaid waiver programs. Waiting list reduction. Required reporting.",
+      "chapter": {
+        "id": "chapter-319b",
+        "number": "319b",
+        "name": "Department of Developmental Services"
+      },
+      "status": "active",
+      "text": "The Commissioner of Developmental Services, in consultation with the Commissioner of Social Services and the Secretary of the Office of Policy and Management, shall reduce waiting lists for services in Medicaid waiver programs established under Section 1915(c) of the Social Security Act and administered by the Department of Developmental Services. Not later than January 1, 2024, and annually thereafter, the staff person employed pursuant to section 4-67bb to help agencies coordinate programs and services for individuals who have an intellectual or developmental disability other than autism spectrum disorder shall file a report, in accordance with the provisions of section 11-4a and in consultation with the Commissioner of Developmental Services, on (1) the number of persons waiting for services in the waiver programs and the number of underserved persons waiting for additional services in the waiver programs, (2) the number of persons added to and subtracted from such waiting lists for the previous calendar year, and (3) whether such waiting lists have increased or decreased over the previous calendar year and, if so, by how may persons with the joint standing committees of the General Assembly having cognizance of matters relating to appropriations and the budgets of state agencies, human services and public health.",
+      "href": "?chapter=319b&section=section-17a-238b",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-17a-248",
+      "citation": "17a-248",
+      "citations": [
+        "17a-248"
+      ],
+      "heading": "Sec. 17a-248. Birth-to-three program. Definitions.",
+      "chapter": {
+        "id": "chapter-319b",
+        "number": "319b",
+        "name": "Department of Developmental Services"
+      },
+      "status": "active",
+      "text": "As used in this section, sections 17a-248b to 17a-248g, inclusive, 17a-248m, 38a-490a and 38a-516a, unless the context otherwise requires:\n\n(1) “Commissioner” means the Commissioner of Early Childhood.\n\n(2) “Council” means the State Interagency Birth-to-Three Coordinating Council established pursuant to section 17a-248b.\n\n(3) “Early intervention services” means early intervention services, as defined in 34 CFR Part 303.13, as from time to time amended.\n\n(4) “Eligible children” means children (A) (i) from birth to thirty-six months of age, who are not eligible for special education and related services pursuant to sections 10-76a to 10-76h, inclusive, and (ii) thirty-six months of age or older, who are receiving early intervention services and are eligible or being evaluated for participation in preschool services pursuant to Part B of the Individuals with Disabilities Education Act, 20 USC 1411 et seq., until such children are enrolled in such preschool services, and (B) who need early intervention services because such children are:\n\n(i) Experiencing a significant developmental delay as measured by standardized diagnostic instruments and procedures, including informed clinical opinion, in one or more of the following areas: Cognitive development; physical development, including vision or hearing; communication development; social or emotional development; or adaptive skills; or\n\n(ii) Diagnosed as having a physical or mental condition that has a high probability of resulting in developmental delay.\n\n(5) “Evaluation” means a multidisciplinary professional, objective assessment conducted by appropriately qualified personnel in order to determine a child's eligibility for early intervention services.\n\n(6) “Individualized family service plan” means a written plan for providing early intervention services to an eligible child and the child's family.\n\n(7) “Lead agency” means the Office of Early Childhood, the public agency responsible for the administration of the birth-to-three system in collaboration with the participating agencies.\n\n(8) “Parent” means (A) a biological, adoptive or foster parent of a child; (B) a guardian, except for the Commissioner of Children and Families; (C) an individual acting in the place of a biological or adoptive parent, including, but not limited to, a grandparent, stepparent, or other relative with whom the child lives; (D) an individual who is legally responsible for the child's welfare; or (E) an individual appointed to be a surrogate parent.\n\n(9) “Participating agencies” includes, but is not limited to, the Departments of Education, Social Services, Public Health, Children and Families and Developmental Services, the Office of Early Childhood, the Insurance Department and the Department of Aging and Disability Services.\n\n(10) “Qualified personnel” means persons who meet the standards specified in 34 CFR Part 303.31, as from time to time amended, and who are licensed physicians or psychologists or persons holding a state-approved or recognized license, certificate or registration in one or more of the following fields: (A) Special education, including teaching of the blind and the deaf; (B) speech and language pathology and audiology; (C) occupational therapy; (D) physical therapy; (E) social work; (F) nursing; (G) dietary or nutritional counseling; and (H) other fields designated by the commissioner that meet requirements that apply to the area in which the person is providing early intervention services, provided there is no conflict with existing professional licensing, certification and registration requirements.\n\n(11) “Service coordinator” means a person carrying out service coordination services, as defined in 34 CFR Part 303.34, as from time to time amended.\n\n(12) “Primary care provider” means physicians and advanced practice registered nurses, licensed by the Department of Public Health, who are responsible for performing or directly supervising the primary care services for children enrolled in the birth-to-three program.",
+      "href": "?chapter=319b&section=section-17a-248",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-17a-248e",
+      "citation": "17a-248e",
+      "citations": [
+        "17a-248e"
+      ],
+      "heading": "Sec. 17a-248e. Screening of children ineligible for participation in preschool programs. Individualized family service plans. Duties of the lead agency.",
+      "chapter": {
+        "id": "chapter-319b",
+        "number": "319b",
+        "name": "Department of Developmental Services"
+      },
+      "status": "active",
+      "text": "(a) Each eligible child and his or her family shall receive (1) a multidisciplinary assessment of the child's unique needs and the identification of services appropriate to meet such needs, (2) a written individualized family service plan developed by a multidisciplinary team, including the parent, within forty-five days after the referral, (3) review of the individualized family service plan with the family at least every six months, with evaluation of the individualized family service plan at least annually, and (4) not later than two months after the date on which any child is determined to be ineligible for participation in preschool programs under Part B of the Individuals with Disabilities Act, 20 USC 1471 et seq., a referral to register for a mobile application designated by the Commissioner of Early Childhood for the purpose of continued screening for developmental and social-emotional delays in partnership with the local or regional board of education for the school district in which such child resides pursuant to subparagraph (H) of subdivision (10) of subsection (a) of section 10-76d, provided a form used for screening for developmental and social-emotional delays using a validated screening tool, such as the Ages and Stages Questionnaire and the Ages and Stages Social-Emotional Questionnaire, or its equivalent, is provided to any family upon the request of such family for the purpose of completing and submitting such form to the local or regional board of education for the school district in which such child resides.\n\n(b) The individualized family service plan shall be in writing and contain: (1) A statement of the child's present level of physical development, cognitive development, language and speech development and self-help skills, based on acceptable objective criteria; (2) a statement of the family's priority, resources and concerns relating to enhancing the development of the eligible child; (3) a statement of the major outcomes expected to be achieved for the child and the family and the criteria, procedures and timelines used to determine the degree to which progress toward achieving the outcomes are being made, and whether modifications or revisions of the outcomes are necessary; (4) a statement of specific early intervention services necessary to meet the unique needs of the eligible child and the family, including the frequency, intensity and the method of delivering services; (5) a statement of the natural environments in which the services shall be provided; (6) the projected dates for initiation of services and the anticipated duration of such services; (7) the name of the approved comprehensive service provider that will provide or procure the services specified in the individualized family service plan; (8) the name of the individual service coordinator from the profession most immediately relevant to the eligible child's or the family's needs who will be responsible for the implementation of the plan and coordination with the other agencies and providers or an otherwise qualified provider selected by a parent; and (9) the steps to be taken to support the transition of the child who is eligible for participation in preschool programs under Part B of the Individuals with Disabilities Act, 20 USC 1471 et seq., as appropriate. The individualized family service plan shall be translated into and provided in Spanish for any family whose primary language is Spanish.\n\n(c) The individualized family service plan shall be signed by the child's pediatrician or a primary care provider or qualified personnel, as those terms are defined in section 17a-248.\n\n(d) The lead agency may provide early intervention services, arrange for the delivery of early intervention services by participating agencies or contract with providers to deliver early intervention services to eligible children and the families of such children. The lead agency in providing, arranging or contracting for early intervention services shall monitor all birth-to-three service providers for quality and accountability in accordance with Section 616 of the Individuals with Disabilities Education Act, 20 USC 1416 and establish state-wide rates for such services.\n\n(e) The individual service coordinator for an eligible child shall, not later than three months prior to the third birthday of such child, notify the parent or guardian of such child that the parent or guardian may meet, upon request, with the coordinator to discuss the contact information for the person responsible for the administration or coordination of special education services for the school district in which such child resides. Not later than three months prior to the third birthday of such child, the coordinator shall provide the person responsible for the administration or coordination of special education services for the school district in which such child resides with the individualized family service plan for such child.",
+      "href": "?chapter=319b&section=section-17a-248e",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-17a-248g",
+      "citation": "17a-248g",
+      "citations": [
+        "17a-248g"
+      ],
+      "heading": "Sec. 17a-248g. Birth-to-three funding. Fees for services prohibited. Insurance coverage. General administrative payments.",
+      "chapter": {
+        "id": "chapter-319b",
+        "number": "319b",
+        "name": "Department of Developmental Services"
+      },
+      "status": "active",
+      "text": "(a) Subject to the provisions of this section, funds appropriated to the lead agency for purposes of section 17a-248, sections 17a-248b to 17a-248f, inclusive, this section and sections 38a-490a and 38a-516a shall not be used to satisfy a financial commitment for services that would have been paid from another public or private source but for the enactment of said sections, except for federal funds available pursuant to Part C of the Individuals with Disabilities Education Act, 20 USC 1431 et seq., except that whenever considered necessary to prevent the delay in the receipt of appropriate early intervention services by the eligible child or family in a timely fashion, funds provided under said sections may be used to pay the service provider pending reimbursement from the public or private source that has ultimate responsibility for the payment.\n\n(b) Nothing in section 17a-248, sections 17a-248b to 17a-248f, inclusive, this section and sections 38a-490a and 38a-516a shall be construed to permit the Department of Social Services or any other state agency to reduce medical assistance pursuant to this chapter or other assistance or services available to eligible children. Notwithstanding any provision of the general statutes, costs incurred for early intervention services that otherwise qualify as medical assistance that are furnished to an eligible child who is also eligible for benefits pursuant to this chapter shall be considered medical assistance for purposes of payments to providers and state reimbursement to the extent that federal financial participation is available for such services.\n\n(c) Providers of early intervention services shall, in the first instance and where applicable, seek payment from all third-party payers prior to claiming payment from the birth-to-three system for services rendered to eligible children, provided, for the purpose of seeking payment from the Medicaid program or from other third-party payers as agreed upon by the provider, the obligation to seek payment shall not apply to a payment from a third-party payer who is not prohibited from applying such payment, and who will apply such payment, to an annual or lifetime limit specified in the third-party payer's policy or contract.\n\n(d) The commissioner, in consultation with the Office of Policy and Management and the Insurance Commissioner, shall adopt regulations, pursuant to chapter 54, providing public reimbursement for deductibles and copayments imposed under an insurance policy or health benefit plan to the extent that such deductibles and copayments are applicable to early intervention services.\n\n(e) The commissioner shall not charge a fee for early intervention services to the parents or legal guardians of eligible children.\n\n(f) With respect to early intervention services rendered prior to June 16, 2021, the commissioner shall develop and implement procedures to hold a recipient harmless for the impact of pursuit of payment for such services against lifetime insurance limits.\n\n(g) Notwithstanding any provision of title 38a relating to the permissible exclusion of payments for services under governmental programs, no such exclusion shall apply with respect to payments made pursuant to section 17a-248, sections 17a-248b to 17a-248f, inclusive, this section and sections 38a-490a and 38a-516a. Except as provided in this subsection, nothing in this section shall increase or enhance coverages provided for within an insurance contract subject to the provisions of section 10-94f, subsection (a) of section 10-94g, sections 17a-248, 17a-248b to 17a-248f, inclusive, this section, and sections 38a-490a and 38a-516a.\n\n(h) For the fiscal year ending June 30, 2023, and each fiscal year thereafter, the commissioner shall make a general administrative payment to providers in the amount of two hundred dollars for each child with an individualized family service plan on the first day of the billing month and whose plan accounts for less than nine hours of service during such billing month, provided at least one service is provided by such provider during such billing month.",
+      "href": "?chapter=319b&section=section-17a-248g",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-17a-248m",
+      "citation": "17a-248m",
+      "citations": [
+        "17a-248m"
+      ],
+      "heading": "Sec. 17a-248m. Receipt of early intervention services by Spanish-speaking qualified personnel and service coordinators. Spanish-speaking interpreting or translator services.",
+      "chapter": {
+        "id": "chapter-319b",
+        "number": "319b",
+        "name": "Department of Developmental Services"
+      },
+      "status": "active",
+      "text": "On and after July 1, 2023, an eligible child whose primary language is Spanish shall be entitled to receive early intervention services from Spanish-speaking qualified personnel and a Spanish-speaking service coordinator. If no such Spanish-speaking qualified personnel or Spanish-speaking coordinator are available within the state-wide birth-to-three system for the provision of such early intervention services, a Spanish-speaking interpreter or translator shall be used to provide interpreting or translation services to such Spanish-speaking eligible children on behalf of the qualified personnel and service coordinators providing early intervention services, and such Spanish-speaking interpreter or translator shall be reimbursed at the rate received by court-appointed interpreters and translators within the judicial branch.",
+      "href": "?chapter=319b&section=section-17a-248m",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-17a-249",
+      "citation": "17a-249",
+      "citations": [
+        "17a-249"
+      ],
+      "heading": "Sec. 17a-249. Grants for supportive housing for persons with intellectual disability or other developmental disabilities.",
+      "chapter": {
+        "id": "chapter-319b",
+        "number": "319b",
+        "name": "Department of Developmental Services"
+      },
+      "status": "active",
+      "text": "(a) The Commissioner of Developmental Services shall provide grants-in-aid to private nonprofit organizations for supportive housing for persons with an intellectual disability or other developmental disabilities, including, but not limited to, autism spectrum disorder. The commissioner shall give priority in disbursement of grants to a nonprofit organization which reserves fifty per cent or more of the initial residential capacity of a housing site for individuals with such disabilities who are on a waiting list maintained by the Department of Developmental Services or the Department of Social Services for supportive housing.\n\n(b) The Commissioner of Developmental Services shall expend not more than five million dollars on the grant program established pursuant to this section in any one service region of the Department of Developmental Services. The commissioner may expend not more than two per cent of the funds allocated to the grant program established by this section on administrative expenses directly related to the grant program.\n\n(c) The Commissioner of Developmental Services shall develop and publish guidelines for the award of grants under subsection (a) of this section and a uniform application form for such grants. The commissioner shall post such guidelines and application form on the Internet web site of the Department of Developmental Services not later than July 1, 2024.\n\n(d) Any recipient of a grant pursuant to subsection (a) of this section shall report annually to the Commissioner of Developmental Services, on a form to be developed by the commissioner, how such grant funds have been expended. The commissioner shall submit a report on January 1, 2025, and annually thereafter, in accordance with the provisions of section 11-4a, concerning the expenditure of grant funds awarded pursuant to subsection (a) of this section to the joint standing committees of the General Assembly having cognizance of matters relating to housing, human services and public health.",
+      "href": "?chapter=319b&section=section-17a-249",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-17a-250",
+      "citation": "17a-250",
+      "citations": [
+        "17a-250"
+      ],
+      "heading": "Sec. 17a-250. Bond authorization for grant-in-aid program for supportive housing for persons with an intellectual disability or other developmental disabilities.",
+      "chapter": {
+        "id": "chapter-319b",
+        "number": "319b",
+        "name": "Department of Developmental Services"
+      },
+      "status": "active",
+      "text": "(a) For the purposes described in subsection (b) of this section, the State Bond Commission shall have the power from time to time to authorize the issuance of bonds of the state in one or more series and in principal amounts not exceeding in the aggregate fifteen million dollars.\n\n(b) The proceeds of the sale of such bonds, to the extent of the amount stated in subsection (a) of this section, shall be used by the Commissioner of Developmental Services for the grant-in-aid program established pursuant to section 17a-249, for supportive housing for persons with an intellectual disability or other developmental disabilities, including, but not limited to, autism spectrum disorder.\n\n(c) All provisions of section 3-20, or the exercise of any right or power granted thereby, that are not inconsistent with the provisions of this section are hereby adopted and shall apply to all bonds authorized by the State Bond Commission pursuant to this section. Temporary notes in anticipation of the money to be derived from the sale of any such bonds so authorized may be issued in accordance with section 3-20 and from time to time renewed. Such bonds shall mature at such time or times not exceeding twenty years from their respective dates as may be provided in or pursuant to the resolution or resolutions of the State Bond Commission authorizing such bonds. None of such bonds shall be authorized except upon a finding by the State Bond Commission that there has been filed with it a request for such authorization that is signed by or on behalf of the Secretary of the Office of Policy and Management and states such terms and conditions as said commission, in its discretion, may require. Such bonds issued pursuant to this section shall be general obligations of the state and the full faith and credit of the state of Connecticut are pledged for the payment of the principal of and interest on such bonds as the same become due, and accordingly and as part of the contract of the state with the holders of such bonds, appropriation of all amounts necessary for punctual payment of such principal and interest is hereby made, and the State Treasurer shall pay such principal and interest as the same become due.",
+      "href": "?chapter=319b&section=section-17a-250",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "group-17a-251-to-17a-252-to-17a-253-to-17a-254-to-17a-255-to-17a-256-to-17a-257-to-17a-258-to-17a-259-to-17a-260-to-17a-261-to-17a-262-to-17a-263-to-17a-264-to-17a-265-to-17a-266-to-17a-267-to-17a-268-to-17a-269",
+      "citation": null,
+      "citations": [
+        "17a-251",
+        "17a-252",
+        "17a-253",
+        "17a-254",
+        "17a-255",
+        "17a-256",
+        "17a-257",
+        "17a-258",
+        "17a-259",
+        "17a-260",
+        "17a-261",
+        "17a-262",
+        "17a-263",
+        "17a-264",
+        "17a-265",
+        "17a-266",
+        "17a-267",
+        "17a-268",
+        "17a-269"
+      ],
+      "heading": "Secs. 17a-251, 17a-252, 17a-253, 17a-254, 17a-255, 17a-256, 17a-257, 17a-258, 17a-259, 17a-260, 17a-261, 17a-262, 17a-263, 17a-264, 17a-265, 17a-266, 17a-267, 17a-268 and 17a-269. Reserved for future use.",
+      "chapter": {
+        "id": "chapter-319b",
+        "number": "319b",
+        "name": "Department of Developmental Services"
+      },
+      "status": "reserved",
+      "text": "Reserved for future use.",
+      "href": "?chapter=319b&section=group-17a-251-to-17a-252-to-17a-253-to-17a-254-to-17a-255-to-17a-256-to-17a-257-to-17a-258-to-17a-259-to-17a-260-to-17a-261-to-17a-262-to-17a-263-to-17a-264-to-17a-265-to-17a-266-to-17a-267-to-17a-268-to-17a-269"
+    },
+    {
+      "id": "section-17a-277",
+      "citation": "17a-277",
+      "citations": [
+        "17a-277"
+      ],
+      "heading": "Sec. 17a-277. (Formerly Sec. 19a-451). Placement of persons with intellectual disability in residential facilities or residential programs.",
+      "chapter": {
+        "id": "chapter-319c",
+        "number": "319c",
+        "name": "Council on Developmental Services. General Provisions"
+      },
+      "status": "active",
+      "text": "A regional or training school director may place any resident with intellectual disability committed or admitted to such training school, regional facility or other residential facility provided for the care and training of persons with intellectual disability, under the provisions of sections 17a-210 to 17a-247, inclusive, and 17a-273, in a community companion home, community living arrangement, group home, other residential facility or residential program to be cared for in accordance with the following conditions:\n\n(1) Such resident shall, despite such transfer, remain subject to the control of the regional or training school director and the director may, at any time, order and provide for the return of any such resident to such training school, regional facility or other residential facility provided for the care and training of persons with intellectual disability;\n\n(2) When the transfer of any such resident has been authorized or when, having been transferred to a community companion home, community living arrangement, group home, other residential facility or residential program for persons with intellectual disability, such resident has returned to the training school, regional facility or other residential facility, the regional or training school director shall forthwith so notify the Commissioner of Developmental Services;\n\n(3) Such community companion home, community living arrangement, group home, other residential facility or residential program shall be licensed or certified by the Department of Developmental Services, licensed by the Department of Children and Families or certified by the Department of Public Health under such regulations as the departments adopt, in accordance with chapter 54; and\n\n(4) The Commissioner of Developmental Services shall, upon request, be given access to the complete record of any resident placed in a community companion home, community living arrangement, group home, other residential facility or residential program pursuant to this section.",
+      "href": "?chapter=319c&section=section-17a-277",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-17a-450a",
+      "citation": "17a-450a",
+      "citations": [
+        "17a-450a"
+      ],
+      "heading": "Sec. 17a-450a. Department of Mental Health and Addiction Services. Successor to the Department of Mental Health and to the addiction services component of the former Department of Public Health and Addiction Services.",
+      "chapter": {
+        "id": "chapter-319i",
+        "number": "319i",
+        "name": "Persons with Psychiatric Disabilities"
+      },
+      "status": "active",
+      "text": "(a) The Department of Mental Health and Addiction Services shall constitute a successor department to the Department of Mental Health. Whenever the words “Commissioner of Mental Health” are used or referred to in the following general statutes, the words “Commissioner of Mental Health and Addiction Services” shall be substituted in lieu thereof and whenever the words “Department of Mental Health” are used or referred to in the following general statutes, the words “Department of Mental Health and Addiction Services” shall be substituted in lieu thereof: 4-5, 4-38c, 4-77a, 4a-12, 4a-16, 5-142, 8-206d, 10-19, 10-71, 10-76d, 17a-14, 17a-26, 17a-31, 17a-33, 17a-218, 17a-246, 17a-450, 17a-451, 17a-453, 17a-454, 17a-455, 17a-456, 17a-457, 17a-458, 17a-459, 17a-464, 17a-465, 17a-466, 17a-467, 17a-468, 17a-470, 17a-471, 17a-472, 17a-473, 17a-474, 17a-476, 17a-478, 17a-479, 17a-480, 17a-481, 17a-482, 17a-483, 17a-498, 17a-499, 17a-502, 17a-506, 17a-510, 17a-511, 17a-512, 17a-513, 17a-519, 17a-528, 17a-560, 17a-561, 17a-562, 17a-565, 17a-581, 17a-582, 17a-675, 17-836a, 17b-28, 17b-59a, 17b-222, 17b-223, 17b-225, 17b-359, 17b-694, 19a-82, 19a-495, 19a-498, 19a-507a, 19a-576, 19a-583, 20-14i, 20-14j, 21a-240, 21a-301, 27-122a, 31-222, 38a-514, 51-51o, 52-146h and 54-56d.\n\n(b) The Department of Mental Health and Addiction Services shall constitute a successor department to the addiction services component of the Department of Public Health and Addiction Services. Whenever the words “Commissioner of Public Health and Addiction Services” are used or referred to in the following general statutes, the words “Commissioner of Mental Health and Addiction Services” shall be substituted in lieu thereof and whenever the words “Department of Public Health and Addiction Services” are used or referred to in the following general statutes, the words “Department of Mental Health and Addiction Services” shall be substituted in lieu thereof: 4a-12, 17a-670 to 17a-676, inclusive, 17a-678 to 17a-682, inclusive, 17a-684 to 17a-687, inclusive, 17a-691, 17a-694, 17a-710, 17a-712, 17a-713, 19a-89c, 20-74o, 20-74p, 20-74q, 21a-274a, 54-36i and 54-56g.\n\n(c) Any order or regulation of the Department of Mental Health or the addiction services component of the Department of Public Health and Addiction Services that is in force on July 1, 1995, shall continue in force and effect as an order or regulation of the Department of Mental Health and Addiction Services until amended, repealed or superseded pursuant to law. Where any order or regulation of the departments conflict, the Commissioner of Mental Health and Addiction Services may implement policies and procedures consistent with the provisions of public act 95-257* while in the process of adopting the policy or procedure in regulation form, provided notice of intention to adopt the regulations is printed in the Connecticut Law Journal within twenty days of implementation. The policy or procedure shall be valid until the time final regulations are effective.",
+      "href": "?chapter=319i&section=section-17a-450a",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-17a-453h",
+      "citation": "17a-453h",
+      "citations": [
+        "17a-453h"
+      ],
+      "heading": "Sec. 17a-453h. *(See end of section for amended version of subdivision (1) of subsection (c) and effective date.) Mental health first aid training program.",
+      "chapter": {
+        "id": "chapter-319i",
+        "number": "319i",
+        "name": "Persons with Psychiatric Disabilities"
+      },
+      "status": "active",
+      "text": "(a) The Commissioner of Mental Health and Addiction Services, in consultation with the Commissioner of Education, shall administer a mental health first aid training program. Said program shall: (1) Help persons attending the training program recognize the signs of mental disorders in children and young adults; and (2) connect children and young adults who show signs of having a mental disorder with a professional who offers the appropriate services.\n\n(b) Said commissioners may seek federal and state funding and may accept private donations for the administration of, and providing for persons to participate in, the mental health first aid training program.\n\n*(c) (1) For the school year commencing July 1, 2014, the Commissioner of Mental Health and Addiction Services shall provide mental health first aid training to any person appointed to serve as the district safe school climate coordinator, pursuant to section 10-222k. Each such district safe school climate coordinator shall successfully complete such mental health first aid training.\n\n(2) For the school year commencing July 1, 2015, the Commissioner of Mental Health and Addiction Services shall provide mental health and first aid training to any person appointed to serve as the district safe school climate coordinator for such school year and who did not serve as the district safe school climate coordinator for the prior school year or did not otherwise successfully complete such training. Each such district safe school climate coordinator shall successfully complete such mental health first aid training.\n\n(3) No district safe school climate coordinator shall be required to successfully complete such mental health first aid training more than once.\n\n(d) Each local and regional board of education may require teachers, school nurses, counselors and other school employees to participate in mental health first aid training.\n\n* Note: On and after July 1, 2025, subdivision (1) of subsection (c) of this section, as amended by section 70 of public act 23-167, is to read as follows:\n\n“(c) (1) For the school year commencing July 1, 2025, the Commissioner of Mental Health and Addiction Services shall provide mental health first aid training to any person appointed to serve as the school climate coordinator, as described in section 10-222dd. Each such school climate coordinator shall successfully complete such mental health first aid training.”",
+      "href": "?chapter=319i&section=section-17a-453h",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-17a-460",
+      "citation": "17a-460",
+      "citations": [
+        "17a-460"
+      ],
+      "heading": "Sec. 17a-460. (Formerly Sec. 17-209b). Center advisory board.",
+      "chapter": {
+        "id": "chapter-319i",
+        "number": "319i",
+        "name": "Persons with Psychiatric Disabilities"
+      },
+      "status": "repealed",
+      "text": "Section 17a-460 is repealed, effective June 27, 2023.",
+      "href": "?chapter=319i&section=section-17a-460",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "repealed"
+      }
+    },
+    {
+      "id": "section-17a-470",
+      "citation": "17a-470",
+      "citations": [
+        "17a-470"
+      ],
+      "heading": "Sec. 17a-470. (Formerly Sec. 17-213a). Advisory boards for state-operated facilities.",
+      "chapter": {
+        "id": "chapter-319i",
+        "number": "319i",
+        "name": "Persons with Psychiatric Disabilities"
+      },
+      "status": "active",
+      "text": "Each state-operated facility for the treatment of persons with psychiatric disabilities or persons with substance use disorders, or both, shall have an advisory board appointed by the superintendent or director of the facility for terms to be decided by such superintendent or director. The superintendent or director shall appoint at least two persons with lived experience with a behavioral health disorder to the advisory board. In any case where the present number of members of an advisory board is less than the number of members designated by the superintendent or director of the facility, the superintendent or director shall appoint additional members to such board in accordance with this section in such manner that the terms of an approximately equal number of members shall expire in each odd-numbered year. The superintendent or director shall fill any vacancy that may occur for the unexpired portion of any term. No member shall serve more than two successive terms plus the balance of any unexpired term to which the member had been appointed. The superintendent or director of the facility shall be an ex-officio member of the advisory board. Each member of an advisory board of a state-operated facility within the Department of Mental Health and Addiction Services assigned a geographical territory shall be a resident of the assigned geographical territory. Members of said advisory boards shall receive no compensation for their services but shall be reimbursed for necessary expenses involved in the performance of their duties. At least one-third of such members shall be from regional behavioral health action organizations, established pursuant to section 17a-484f, and at least one-third shall be members of the catchment area councils, as provided in section 17a-483, for the catchment areas served by such facility, except that members serving as of October 1, 1977, shall serve out their terms.",
+      "href": "?chapter=319i&section=section-17a-470",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-17a-471a",
+      "citation": "17a-471a",
+      "citations": [
+        "17a-471a"
+      ],
+      "heading": "Sec. 17a-471a. Connecticut Valley Hospital: Development of policies and standards for resident clients; advisory council.",
+      "chapter": {
+        "id": "chapter-319i",
+        "number": "319i",
+        "name": "Persons with Psychiatric Disabilities"
+      },
+      "status": "active",
+      "text": "(a) The Commissioner of Mental Health and Addiction Services, in consultation and coordination with the advisory council established under subsection (b) of this section, shall develop policies and set standards related to clients residing on the Connecticut Valley Hospital campus and to the discharge of such clients from the hospital into the adjacent community. Any such policies and standards shall ensure that no discharge of any client admitted to Whiting Forensic Hospital under commitment by the Superior Court or transfer from the Department of Correction shall take place without full compliance with sections 17a-511 to 17a-524, inclusive, 17a-566 to 17a-575, inclusive, 17a-580 to 17a-603, inclusive, and 54-56d.\n\n(b) There is established a Connecticut Valley Hospital Advisory Council that shall advise the Commissioner of Mental Health and Addiction Services on policies concerning, but not limited to, building use, security, clients residing on the campus and the discharge of clients from the campus into the adjacent community. In addition, the advisory council shall periodically review the implementation of the policies and standards established by the commissioner in consultation with the advisory council. The council shall be composed of six members appointed by the mayor of Middletown, eight members appointed by the Commissioner of Mental Health and Addiction Services and one member who shall serve as chairperson appointed by the Governor. On and after January 1, 2024, at least two members appointed by the Commissioner of Mental Health and Addiction Services shall have lived experience with a behavioral health disorder.",
+      "href": "?chapter=319i&section=section-17a-471a",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-17a-476",
+      "citation": "17a-476",
+      "citations": [
+        "17a-476"
+      ],
+      "heading": "Sec. 17a-476. (Formerly Sec. 17-226b). Grants to general hospitals, municipalities and nonprofit organizations for mental health services.",
+      "chapter": {
+        "id": "chapter-319i",
+        "number": "319i",
+        "name": "Persons with Psychiatric Disabilities"
+      },
+      "status": "active",
+      "text": "(a) Any general hospital, municipality or nonprofit organization in Connecticut may apply to the Department of Mental Health and Addiction Services for funds to establish, expand or maintain psychiatric or mental health services. The application for funds shall be submitted on forms provided by the Department of Mental Health and Addiction Services, and shall be accompanied by (1) a definition of the towns and areas to be served; (2) a plan by means of which the applicant proposes to coordinate its activities with those of other local agencies presently supplying mental health services or contributing in any way to the mental health of the area; (3) a description of the services to be provided, and the methods through which these services will be provided; and (4) indication of the methods that will be employed to effect a balance in the use of state and local resources so as to foster local initiative, responsibility and participation. In accordance with subdivision (4) of section 17a-480, the regional behavioral health action organization serving the mental health region in which the applicant is located shall review each such application with the Department of Mental Health and Addiction Services and make recommendations to the department with respect to each such application.\n\n(b) Upon receipt of the application with the recommendations of the regional behavioral health action organization and approval by the Department of Mental Health and Addiction Services, the department shall grant such funds by way of a contract or grant-in-aid within the appropriation for any annual fiscal year.\n\n(c) The Commissioner of Mental Health and Addiction Services may adopt regulations, in accordance with the provisions of chapter 54, concerning minimum standards for eligibility to receive said state contracted funds and any grants-in-aid. Any such funds or grants-in-aid made by the Department of Mental Health and Addiction Services for psychiatric or mental health services shall be made directly to the agency submitting the application and providing such service or services.",
+      "href": "?chapter=319i&section=section-17a-476",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-17a-480",
+      "citation": "17a-480",
+      "citations": [
+        "17a-480"
+      ],
+      "heading": "Sec. 17a-480. (Formerly Sec. 17-226g). Regional mental health directors.",
+      "chapter": {
+        "id": "chapter-319i",
+        "number": "319i",
+        "name": "Persons with Psychiatric Disabilities"
+      },
+      "status": "active",
+      "text": "The Department of Mental Health and Addiction Services, in consultation with regional behavioral health action organizations, established pursuant to section 17a-484f, (1) may purchase services from other public agencies and from municipal and private agencies, (2) shall supervise, plan and coordinate mental health services with the goal of improving and expanding existing services and providing new ones, (3) shall develop joint programs in conformity with Department of Mental Health and Addiction Services standards, (4) shall make recommendations concerning all requests for grants and all contract proposals emanating from the regions, (5) shall evaluate mental health service delivery and monitor such services to ensure that they are in conformity with the plans and policies of the Department of Mental Health and Addiction Services, and (6) shall report annually to the Board of Mental Health and Addiction Services on the status of programs and needs of the regions.",
+      "href": "?chapter=319i&section=section-17a-480",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-17a-482",
+      "citation": "17a-482",
+      "citations": [
+        "17a-482"
+      ],
+      "heading": "Sec. 17a-482. (Formerly Sec. 17-226j). Definitions.",
+      "chapter": {
+        "id": "chapter-319i",
+        "number": "319i",
+        "name": "Persons with Psychiatric Disabilities"
+      },
+      "status": "active",
+      "text": "As used in this section, subsection (a) of section 17a-476, sections 17a-478 to 17a-480, inclusive, and section 17a-483, unless the context otherwise requires: “Catchment area” means any geographical area within the state established as such by the Commissioner of Mental Health and Addiction Services, the boundaries of which may be redesignated by said commissioner when deemed necessary to equalize the population of each area and in such manner as is consistent with the boundaries of the municipalities therein, provided such boundaries of any catchment area shall be entirely within the boundaries of a mental health region established under section 17a-478; “council” means the catchment area council established under section 17a-483; “regional behavioral health action organization” means the organization established pursuant to section 17a-484f; and “provider” means any person who receives income from private practice or any public or private agency which delivers mental health services.",
+      "href": "?chapter=319i&section=section-17a-482",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-17a-500",
+      "citation": "17a-500",
+      "citations": [
+        "17a-500"
+      ],
+      "heading": "Sec. 17a-500. (Formerly Sec. 17-180). Maintenance and confidentiality of records of cases of persons with psychiatric disabilities. Exchange of information concerning commitment or admission status of firearm permit or certificate applicants and holders.",
+      "chapter": {
+        "id": "chapter-319i",
+        "number": "319i",
+        "name": "Persons with Psychiatric Disabilities"
+      },
+      "status": "active",
+      "text": "(a) Each court of probate shall keep a record of the cases relating to persons with psychiatric disabilities coming before it under sections 17a-75 to 17a-83, inclusive, 17a-450 to 17a-483, inclusive, 17a-495 to 17a-528, inclusive, 17a-540 to 17a-550, inclusive, 17a-560 to 17a-575, inclusive, and 17a-615 to 17a-618, inclusive, and the disposition of them. It shall also keep on file the original application and certificate of physicians required by said sections, or a microfilm duplicate of such records in accordance with regulations issued by the Probate Court Administrator. All records maintained in the courts of probate under the provisions of said sections shall be sealed and available only to the respondent or his or her counsel unless the Court of Probate, after hearing held with notice to the respondent, determines such records should be disclosed for cause shown.\n\n(b) The Commissioner of Mental Health and Addiction Services shall, notwithstanding the provisions of subsection (a) of this section, maintain information, in accordance with section 17a-499, on commitment orders by a probate court, section 17a-506a, on voluntary admissions, and section 17a-502, on commitment under an emergency certificate, and shall provide such information to the Commissioner of Emergency Services and Public Protection in fulfillment of the commissioner's obligations under sections 29-28 to 29-38, inclusive, and section 53-202d, in such a manner as to report identifying information on the commitment or voluntary admission status, including, but not limited to, name, address, sex, date of birth and date of commitment or admission, for a person who applies for or holds a permit or certificate under said sections 29-28 to 29-38, inclusive, and section 53-202d. The Commissioner of Emergency Services and Public Protection shall maintain as confidential any such information provided to him and shall use such information only for purposes of fulfilling his obligations under sections 29-28 to 29-38, inclusive, and section 53-202d, except that nothing in this section shall prohibit said commissioner from entering such information into evidence at a hearing held in accordance with section 29-32b.\n\n(c) (1) The Commissioner of Mental Health and Addiction Services shall obtain from the Commissioner of Emergency Services and Public Protection the status of any firearm application, permit or certificate under sections 29-28 to 29-38, inclusive, and section 53-202d, of each person who is the subject of an order of commitment as provided in section 17a-499 or is the subject of a voluntary admission as provided in section 17a-506a, in such a manner so as to only receive a report on the firearm application, permit or certificate status of the person with respect to whom the inquiry is made.\n\n(2) The Commissioner of Mental Health and Addiction Services shall report to the Commissioner of Emergency Services and Public Protection any commitment or voluntary admission status and identifying information for any person who is an applicant for or holder of any permit or certificate under said sections 29-28 to 29-38, inclusive, and section 53-202d.\n\n(3) The Commissioner of Mental Health and Addiction Services shall advise the hospital for psychiatric disabilities to which a person has been committed or voluntarily admitted of the status of a firearm application, permit or certificate of such person under sections 29-28 to 29-38, inclusive, and section 53-202d, as reported by the Commissioner of Emergency Services and Public Protection for consideration by such hospital in any psychiatric treatment procedures.\n\n(4) The Commissioner of Mental Health and Addiction Services and a hospital for psychiatric disabilities shall maintain as confidential any information provided to said commissioner or such hospital concerning the status of a firearm application, permit or certificate under sections 29-28 to 29-38, inclusive, and section 53-202d, of any person.",
+      "href": "?chapter=319i&section=section-17a-500",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-17a-506a",
+      "citation": "17a-506a",
+      "citations": [
+        "17a-506a"
+      ],
+      "heading": "Sec. 17a-506a. Voluntary admissions. Commitments under an emergency certificate. Notification of commissioner. Maintenance of identifying information.",
+      "chapter": {
+        "id": "chapter-319i",
+        "number": "319i",
+        "name": "Persons with Psychiatric Disabilities"
+      },
+      "status": "active",
+      "text": "Whenever a person is voluntarily admitted or committed under an emergency certificate pursuant to section 17a-502 to a hospital for persons with psychiatric disabilities, as defined in section 17a-495, for care and treatment of a psychiatric disability and not solely for being an alcohol-dependent person or a drug-dependent person as those terms are defined in section 17a-680, the hospital shall forthwith notify the Commissioner of Mental Health and Addiction Services of such admission or commitment and provide identifying information including, but not limited to, name, address, sex, date of birth and the date of admission. The commissioner shall maintain such identifying information on all such admissions occurring on and after October 1, 2013, and commitments occurring on and after October 1, 2023.",
+      "href": "?chapter=319i&section=section-17a-506a",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-17a-566",
+      "citation": "17a-566",
+      "citations": [
+        "17a-566"
+      ],
+      "heading": "Sec. 17a-566. (Formerly Sec. 17-244). Certain convicted persons to be examined. Report and recommendation.",
+      "chapter": {
+        "id": "chapter-319i",
+        "number": "319i",
+        "name": "Persons with Psychiatric Disabilities"
+      },
+      "status": "active",
+      "text": "(a) Except as provided in section 17a-574 any court prior to sentencing a person convicted of an offense for which the penalty may be imprisonment in any correctional institution of this state, or of a sex offense involving (1) physical force or violence, (2) disparity of age between an adult and a minor or (3) a sexual act of a compulsive or repetitive nature, may if it appears to the court that such person has psychiatric disabilities and is dangerous to himself or others, upon its own motion or upon request of any of the persons enumerated in subsection (b) of this section and a subsequent finding that such request is justified, order the commissioner to conduct an examination of the convicted defendant by qualified personnel of the hospital. Upon completion of such examination the examiner shall report in writing to the court. Such report shall indicate whether the convicted defendant should be committed to the diagnostic unit of the hospital for additional examination or should be sentenced in accordance with the conviction. Such examination shall be conducted and the report made to the court not later than fifteen days after the order for the examination. Such examination may be conducted at a correctional facility if the defendant is confined or it may be conducted on an outpatient basis at the hospital or other appropriate location. If the report recommends additional examination at the diagnostic unit, the court may, after a hearing, order the convicted defendant committed to the diagnostic unit of the hospital for a period not to exceed sixty days, except as provided in section 17a-567 provided the hearing may be waived by the defendant. Such commitment shall not be effective until the director certifies to the court that space is available at the diagnostic unit. While confined in said diagnostic unit, the defendant shall be given a complete physical and psychiatric examination by the staff of the unit and may receive medication and treatment without his consent. The director shall have authority to procure all court records, institutional records and probation or other reports which provide information about the defendant.\n\n(b) The request for such examination may be made by the state's attorney or assistant state's attorney who prosecuted the defendant for an offense specified in this section, or by the defendant or his attorney in his behalf. If the court orders such examination, a copy of the examination order shall be served upon the defendant to be examined.\n\n(c) Upon completion of the physical and psychiatric examination of the defendant, but not later than sixty days after admission to the diagnostic unit, a written report of the results thereof shall be filed in quadruplicate with the clerk of the court before which he was convicted, and such clerk shall cause copies to be delivered to the state's attorney, to counsel for the defendant and to the Court Support Services Division.\n\n(d) Such report shall include the following: (1) A description of the nature of the examination; (2) a diagnosis of the mental condition of the defendant; (3) an opinion as to whether the diagnosis and prognosis demonstrate clearly that the defendant is actually dangerous to himself or others and requires custody, care and treatment at the hospital; and (4) a recommendation as to whether the defendant should be sentenced in accordance with the conviction, sentenced in accordance with the conviction and confined in the hospital for custody, care and treatment, placed on probation by the court or placed on probation by the court with the requirement, as a condition to probation, that he receive outpatient psychiatric treatment.",
+      "href": "?chapter=319i&section=section-17a-566",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-17a-673c",
+      "citation": "17a-673c",
+      "citations": [
+        "17a-673c"
+      ],
+      "heading": "Sec. 17a-673c. Pilot program to prevent drug overdoses. Establishment of harm reduction centers in three municipalities. Funding.",
+      "chapter": {
+        "id": "chapter-319j",
+        "number": "319j",
+        "name": "Addiction Services"
+      },
+      "status": "active",
+      "text": "(a) As used in this section:\n\n(1) “Harm reduction center” means a medical facility where a person with a substance use disorder may (A) receive substance use disorder and other mental health counseling, (B) use a test strip to test a substance for traces of fentanyl or xylazine, or traces of any other substance recognized by the Commissioner of Mental Health and Addiction Services as having a high risk of causing an overdose, (C) receive educational information regarding opioid antagonists, as defined in section 17a-714a, and the risks of contracting diseases from sharing hypodermic needles, (D) receive referrals to substance use disorder treatment services, and (E) receive access to basic support services, including, but not limited to, laundry machines, a bathroom, a shower and a place to rest; and\n\n(2) “Test strip” means a product that a person may use to test any substance prior to injection, inhalation or ingestion of the substance to prevent accidental overdose by injection, inhalation or ingestion of the substance.\n\n(b) Not later than July 1, 2027, the Department of Mental Health and Addiction Services, in consultation with the Department of Public Health, shall establish a pilot program to prevent drug overdoses through the establishment of harm reduction centers in three municipalities in the state selected by the Commissioner of Mental Health and Addiction Services, subject to the approval of the chief elected officials of each municipality selected by said commissioner. No harm reduction center established pursuant to this subsection shall be subject to regulation by the Department of Public Health until the termination of the pilot program.\n\n(c) Each harm reduction center established pursuant to subsection (b) of this section shall (1) employ persons, including, but not limited to, licensed health care providers with experience treating persons with substance use disorders to provide substance use disorder or other mental health counseling and monitor persons utilizing the harm reduction center for the purpose of providing medical treatment to any person who experiences symptoms of an overdose, in a number determined sufficient by the Commissioner of Mental Health and Addiction Services, (2) provide persons with test strips at the request of such persons, and (3) provide referrals for substance use disorder or other mental health counseling or other mental health or medical treatment services that may be appropriate for persons utilizing the harm reduction center. A licensed health care provider's participation in the pilot program shall not be grounds for disciplinary action by the Department of Public Health pursuant to section 19a-17 or by any board or commission listed in subsection (b) of section 19a-14.\n\n(d) The Commissioner of Mental Health and Addiction Services may request a disbursement of funds from the Opioid Settlement Fund established pursuant to section 17a-674c, in whole or in part, the establishment and administration of the pilot program.",
+      "href": "?chapter=319j&section=section-17a-673c",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-17a-674c",
+      "citation": "17a-674c",
+      "citations": [
+        "17a-674c"
+      ],
+      "heading": "Sec. 17a-674c. Opioid Settlement Fund. Establishment. Report. Spending of funds.",
+      "chapter": {
+        "id": "chapter-319j",
+        "number": "319j",
+        "name": "Addiction Services"
+      },
+      "status": "active",
+      "text": "(a) There is established an Opioid Settlement Fund which shall be a separate nonlapsing fund administered by the committee.\n\n(b) Any moneys intended to address opioid use, related disorders or the impact of the opioid epidemic that are received by the state from any judgment, consent decree or settlement paid by any defendant, which is finalized on or after July 1, 2021, related to the production, distribution, dispensing and other activities related to opioids shall be deposited into the fund. Moneys remaining in the fund at the end of a fiscal year shall not revert to the General Fund.\n\n(c) Notwithstanding any provision of subsection (b) of this section, if the commissioner and the Attorney General certify that the purposes of such judgment, consent decree or settlement are inconsistent with the intent of the provisions of this section and sections 17a-674d to 17a-674f, inclusive, the commissioner and Attorney General (1) shall report in writing to the committee such certification, including any identification by the commissioner and Attorney General of an alternate fund or account and explanation of the reasons for depositing such moneys in such alternate fund or account, and (2) may deposit such moneys into such alternate fund or account. The commissioner and Attorney General shall jointly report, in accordance with the provisions of section 11-4a, to the joint standing committee of the General Assembly having cognizance of matters relating to public health regarding the intended use of such moneys in such alternate fund or account prior to allocating such moneys for other purposes.\n\n(d) Beginning on December 31, 2022, and annually thereafter, the State Treasurer shall report the following to the committee:\n\n(1) An inventory of fund investments as of the most recent fiscal year; and\n\n(2) The net income earned by the fund in the most recent fiscal year.\n\n(e) Any municipality that receives moneys directly from a settlement administrator pursuant to a judgment, consent decree or settlement related to opioid litigation shall submit an annual report to the committee detailing its expenditures for the preceding fiscal year on a form prescribed by the committee. Each such municipality shall submit such report to the committee on or before October 1, 2023, and annually thereafter, until the total amount of such moneys received by the municipality has been expended.\n\n(f) Moneys in the fund shall be spent only for the following substance use disorder abatement purposes, in accordance with the controlling judgment, consent decree or settlement, as confirmed by the Attorney General's review of such judgment, consent decree or settlement and upon the approval of the committee and the Secretary of the Office of Policy and Management:\n\n(1) State-wide, regional or community substance use disorder needs assessments to identify structural gaps and needs to inform expenditures from the fund;\n\n(2) Infrastructure required for evidence-based substance use disorder prevention, treatment, recovery or harm reduction programs, services and supports;\n\n(3) Programs, services, supports and resources for evidence-based substance use disorder prevention, treatment, recovery or harm reduction;\n\n(4) Evidence-informed substance use disorder prevention, treatment, recovery or harm reduction pilot programs or demonstration studies that are not evidence-based, but are approved by the committee as an appropriate use of moneys for a limited period of time as specified by the committee, provided the committee shall assess whether the evidence supports funding such programs or studies or whether it provides a basis for funding such programs or studies with an expectation of creating an evidence base for such programs and studies;\n\n(5) Evaluation of effectiveness and outcomes reporting for substance use disorder abatement infrastructure, programs, services, supports and resources for which moneys from the fund have been disbursed, including, but not limited to, impact on access to harm reduction services or treatment for substance use disorders or reduction in drug-related mortality;\n\n(6) One or more publicly available data interfaces managed by the commissioner to aggregate, track and report data on (A) substance use disorders, overdoses and drug-related harms, (B) spending recommendations, plans and reports, and (C) outcomes of programs, services, supports and resources for which moneys from the fund were disbursed;\n\n(7) Research on opioid abatement, including, but not limited to, development of evidence-based treatment, barriers to treatment, nonopioid treatment of chronic pain and harm reduction, supply-side enforcement;\n\n(8) Documented expenses incurred in administering and staffing the fund and the committee, and expenses, including, but not limited to, legal fees, incurred by the state or any municipality in securing settlement proceeds, deposited in the fund as permitted by the controlling judgment, consent decree or settlement;\n\n(9) Documented expenses associated with managing, investing and disbursing moneys in the fund;\n\n(10) Documented expenses, including legal fees, incurred by the state or any municipality in securing settlement proceeds deposited in the fund to the extent such expenses are not otherwise reimbursed pursuant to a fee agreement provided for by the controlling judgment, consent decree or settlement; and\n\n(11) Provision of funds to municipal police departments for the purpose of equipping police officers with opioid antagonists, with priority given to departments that do not currently have a supply of opioid antagonists.\n\n(g) (1) For purposes of this section, the fund balance shall be determined by the State Treasurer as of July first, annually.\n\n(2) Except as permitted by subdivision (8) of subsection (f) of this section, or unless otherwise required by court order to refund to the federal government a portion of the proceeds, moneys in the fund shall be used for prospective purposes and shall not be used to reimburse expenditures incurred prior to July 1, 2022.\n\n(3) Proceeds derived from any state settlement of claims against a defendant shall be allocated and disbursed only to those municipalities that execute an agreement to participate in such settlement and adhere to the terms of such agreement, provided the allocation or disbursement of such settlement proceeds for the benefit of persons within municipalities that do not execute an agreement to participate in such settlement or do not adhere to the terms of such agreement shall not be precluded or limited.\n\n(4) Governmental and nonprofit nongovernmental entities shall be eligible to receive moneys from the fund for programs, services, supports and resources for prevention, treatment, recovery and harm reduction.\n\n(5) Subject to the provisions of subdivision (6) of this subsection, fund disbursements shall be made by the commissioner upon approval of the committee. The commissioner shall not make or refuse to make any disbursement allowable under this subsection without the approval of the committee. The commissioner shall adhere to the committee's decisions regarding disbursement of moneys from the fund, provided such disbursement is a permissible expenditure under this section. The commissioner's role in the distribution of moneys after the distribution has been approved by the committee and after the review and approval required under subsection (f) of this section shall be ministerial and shall not be discretionary.\n\n(6) Moneys expended from the fund for the purposes set forth in subsection (d) of this section shall be supplemental to, and shall not supplant or take the place of, any other funds, including, but not limited to, insurance benefits or local, state or federal funding, that would otherwise have been expended for such purposes. The commissioner shall not disburse moneys from the fund during any fiscal year unless the Secretary of the Office of Policy and Management transmits to the committee a letter verifying that funds appropriated and allocated in such fiscal year's budget for substance use disorder abatement infrastructure, programs, services, supports and resources for prevention, treatment, recovery and harm reduction are in an amount not less than the sum of the funds for such purposes appropriated and allocated in the previous fiscal year's budget. As used in this subdivision, “supplemental” means additional funding, consistent with the provisions of this section, for substance use disorder abatement infrastructure or a substance use disorder abatement program, service, support or resource to ensure that funding in the current fiscal year exceeds the sum of federal, state, and local funds allocated in the previous fiscal year for such substance use disorder abatement infrastructure, program, service, support or resource.",
+      "href": "?chapter=319j&section=section-17a-674c",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-17a-674d",
+      "citation": "17a-674d",
+      "citations": [
+        "17a-674d"
+      ],
+      "heading": "Sec. 17a-674d. Opioid Settlement Advisory Committee. Membership. Duties.",
+      "chapter": {
+        "id": "chapter-319j",
+        "number": "319j",
+        "name": "Addiction Services"
+      },
+      "status": "active",
+      "text": "(a) There is established an Opioid Settlement Advisory Committee to ensure (1) that proceeds received by the state pursuant to section 17a-674c are allocated and spent on substance use disorder abatement infrastructure, programs, services, supports and resources for prevention, treatment, recovery and harm reduction, and (2) robust public involvement, accountability and transparency in allocating and accounting for the moneys in the fund.\n\n(b) The committee shall consist of the following members:\n\n(1) The Secretary of the Office of Policy and Management, or the secretary's designee;\n\n(2) The Attorney General, or the Attorney General's designee;\n\n(3) The Commissioners of Children and Families, Mental Health and Addiction Services and Public Health, or said commissioners' designees, who shall serve as ex-officio members;\n\n(4) The president pro tempore of the Senate, the speaker of the House of Representatives, the majority leaders of the Senate and House of Representatives, the minority leaders of the Senate and House of Representatives, the Senate and House chairpersons of the joint standing committees of the General Assembly having cognizance of matters relating to appropriations and the budgets of state agencies and public health, or their designees, provided such persons have experience living with a substance use disorder or are the family member of a person who has experience living with a substance use disorder;\n\n(5) Twenty-one individuals representing municipalities, who shall be appointed by the Governor;\n\n(6) The executive director of the Commission on Racial Equity in Public Health, or a representative of the commission designated by the executive director; and\n\n(7) Eight individuals appointed by the commissioner as follows: (A) A provider of community-based substance use treatment services for adults, who shall be a nonvoting member; (B) a provider of community-based substance use treatment services for adolescents, who shall be a nonvoting member; (C) an addiction medicine licensed health care professional with prescribing ability, who shall be a nonvoting member; (D) three individuals with experience living with a substance use disorder or family members of an individual with experience living with a substance use disorder; and (E) two individuals with experience supporting infants and children affected by the opioid crisis.\n\n(c) The commissioner shall be co-chairperson of the committee. The speaker of the House of Representatives and the president pro tempore of the Senate shall appoint a co-chairperson from among the individuals representing municipalities appointed pursuant to subdivision (5) of subsection (b) of this section. The co-chairpersons of the committee shall be nonvoting members.\n\n(d) Notwithstanding any other provision of the general statutes, it shall not be a conflict of interest for a trustee, director, officer or employee of an organization, or for any person having a financial interest in such organization, to serve as a member of the committee, provided such trustee, director, officer, employee or person shall disclose such position or interest to all other members of the committee and abstain from deliberation, action and vote by the committee under this section that specifically concerns the organization of which such member is a trustee, director, officer or employee, or in which such member has a financial interest.\n\n(e) All initial appointments to the committee shall be made not later than October 1, 2022. Each member of the committee, other than the ex-officio members, shall serve for a term of two years, shall serve no more than two consecutive terms and may serve until a successor is appointed, except that in the event of any vacancy, the appointing authority shall fill such vacancy for the unexpired portion of such term. Any member of the committee may be removed by the appointing authority for misfeasance, malfeasance or wilful neglect of duty.\n\n(f) The committee shall have the following duties and powers:\n\n(1) Recommend and approve policies and procedures for administration of the committee and criteria for the application, awarding and disbursement of moneys from the fund, to be used for the purposes set forth in section 17a-674c;\n\n(2) Recommend and approve goals, objectives, rationales for such goals and objectives, sustainability plans and performance indicators relating to: (A) Substance use disorder prevention, treatment, recovery and harm reduction efforts, including, but not limited to, methods of engaging persons who utilize harm reduction services in treatment and recovery; (B) reducing disparities in access to prevention, treatment, recovery and harm reduction programs, services, supports and resources; and (C) improving health outcomes in traditionally underserved populations, including, but not limited to, persons who live in rural or tribal communities, are members of racial or ethnic minorities or were formerly incarcerated; and\n\n(3) Approve the allocation of moneys from the fund.\n\n(g) Notwithstanding the provisions of section 2-5, the department shall:\n\n(1) Employ a full-time manager of the committee and provide public health research and policy expertise, support staff, facilities, technical assistance and other resources to (A) assist the manager of the committee in planning and supporting the functions of the committee, including ensuring that proceeds received by this state pursuant to section 17a-674c are allocated and spent on substance use disorder abatement infrastructure, programs, services, supports, and resources for prevention, treatment, recovery and harm reduction, and (B) ensure robust public involvement, accountability and transparency in allocating and accounting for the moneys in the fund;\n\n(2) Utilize, where feasible, appropriations from the General Fund and existing infrastructure, programs, services, supports or other resources to address substance use disorders, overdoses and drug-related harms;\n\n(3) Prepare for review and approval by the committee of the department's goals, objectives, rationales for such goals and objectives, sustainability plans and performance indicators relating to (A) substance use disorder prevention, treatment, recovery and harm reduction efforts, including, but not limited to, methods of engaging persons who utilize harm reduction services in treatment and recovery, and (B) reducing disparities in access to prevention, treatment, recovery and harm reduction programs, services, supports and resources;\n\n(4) Evaluate applications and make recommendations to the committee for the awarding of contracts and disbursements of moneys from the fund exclusively for permissible expenditures set forth in section 17a-674c;\n\n(5) Upon receipt of final approval by the committee, disburse moneys from the fund exclusively for permissible expenditures set forth in section 17a-674c;\n\n(6) Approve suspensions of allocations of moneys from the fund to recipients found by the committee or commissioner to (A) be substantially out of compliance with applicable contracts, policies, procedures, rules, regulations or state or federal law, or (B) have used such awards for a purpose other than an approved purpose, provided the committee may resume approval of such allocations once the committee has determined the recipient has adequately remedied the cause of such suspension;\n\n(7) Maintain oversight over the expenditure of moneys from the fund to ensure moneys are used exclusively for the purposes set forth in section 17a-674c, including, but not limited to, implementing procedures for evaluating the effectiveness of the infrastructure, programs, services, supports or resources that are funded pursuant to said section; and\n\n(8) Implement and publish on the department's Internet web site policies and procedures for administration of the committee and for the application, awarding and disbursement of moneys from the fund, to be used for the purposes set forth in section 17a-674c.\n\n(h) On or before October 1, 2023, and annually thereafter, recipients of moneys from the fund shall file with the committee an annual report for the prior fiscal year detailing the effectiveness of infrastructure, programs, services, supports or resources that were funded, including, but not limited to, the following:\n\n(1) A description of how the recipient used the moneys for their intended purposes;\n\n(2) The number of individuals served, delineated by race, age, gender and any other relevant demographic factor, which shall be reported in a deidentified manner;\n\n(3) A specific analysis of whether the infrastructure, program, service, support or resources reduced mortality or improved prevention, treatment, harm reduction or recovery outcomes; and\n\n(4) If a plan to ensure the sustainability of the infrastructure, program, service, support or resources funded exists, a summary of such plan.\n\n(i) The committee shall hold quarterly public meetings. A meeting may be called by the chairperson or by a majority of the committee's members. Members may attend meetings in person, remotely by audiovisual means or, upon approval by the chairperson, by audio-only means. For each meeting of the committee, a majority of the voting members shall constitute a quorum for the transaction of business. If there is a quorum, then all actions of the committee shall be taken by an affirmative vote of a majority of the members present at the meeting. Each voting member shall have one vote. The committee shall terminate when all moneys received pursuant to section 17a-674c have been received and disbursed unless the Attorney General certifies that additional moneys are anticipated.\n\n(j) The department shall create and maintain an Internet web site where the committee shall publish (1) meeting minutes, including, but not limited to, records of all votes to approve expenditures of moneys from the fund, (2) recipient agreements and reports required under subsection (h) of this section, (3) policies and procedures approved by the committee, (4) reports received from municipalities pursuant to subsection (e) of section 17a-674c, and (5) the committee's annual reports.",
+      "href": "?chapter=319j&section=section-17a-674d",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-17a-674h",
+      "citation": "17a-674h",
+      "citations": [
+        "17a-674h"
+      ],
+      "heading": "Sec. 17a-674h. Opioid Antagonist Bulk Purchase Fund. Report.",
+      "chapter": {
+        "id": "chapter-319j",
+        "number": "319j",
+        "name": "Addiction Services"
+      },
+      "status": "active",
+      "text": "(a) As used in this section:\n\n(1) “Eligible entity” means (A) a municipality, (B) a local or regional board of education, (C) a similar body governing one or more nonpublic schools, (D) a district department of health, (E) a municipal health department, (F) a law enforcement agency, or (G) an emergency medical services organization;\n\n(2) “Emergency medical services personnel” has the same meaning as provided in section 19a-175;\n\n(3) “Opioid antagonist” means naloxone hydrochloride or any other similarly acting and equally safe drug approved by the federal Food and Drug Administration for the treatment of a drug overdose;\n\n(4) “Opioid drug” has the same meaning as provided in 42 CFR 8.2, as amended from time to time;\n\n(5) “Opioid use disorder” means a medical condition characterized by a problematic pattern of opioid use and misuse leading to clinically significant impairment or distress;\n\n(6) “Pharmacist” has the same meaning as provided in section 20-609a; and\n\n(7) “Wholesaler” or “distributor” has the same meaning as provided in section 21a-70.\n\n(b) There is established an Opioid Antagonist Bulk Purchase Fund which shall be a separate nonlapsing account within the General Fund. The account shall contain any (1) amounts appropriated or otherwise made available by the state for the purposes of this section, (2) moneys required by law to be deposited in the account, and (3) gifts, grants, donations or bequests made for the purposes of this section. Investment earnings credited to the assets of the account shall become part of the assets of the account. Any balance remaining in the account at the end of any fiscal year shall be carried forward in the account for the fiscal year next succeeding. The State Treasurer shall administer the account. All moneys deposited in the account shall be used by the Department of Mental Health and Addiction Services for the purposes of this section. The department may deduct and retain from the moneys in the account an amount equal to the costs incurred by the department in administering the provisions of this section, except that said amount shall not exceed two per cent of the moneys deposited in the account in any fiscal year.\n\n(c) Not later than January 1, 2024 the Department of Mental Health and Addiction Services, in collaboration with the Department of Public Health, shall use the Opioid Antagonist Bulk Purchase Fund for the provision of opioid antagonists to eligible entities and by emergency medical services personnel to certain members of the public. Emergency medical services personnel shall distribute an opioid antagonist kit containing a personal supply of opioid antagonists and the one-page fact sheet developed by the Connecticut Alcohol and Drug Policy Council pursuant to section 17a-667a regarding the risks of taking an opioid drug, symptoms of opioid use disorder and services available in the state for persons who experience symptoms of or are otherwise affected by opioid use disorder to a patient who (1) is treated by such personnel for an overdose of an opioid drug, (2) displays symptoms to such personnel of opioid use disorder, or (3) is treated at a location where such personnel observes evidence of illicit use of an opioid drug, or to such patient's family member, caregiver or friend who is present at the location. Emergency medical services personnel shall refer the patient or such patient's family member, caregiver or friend to the written instructions regarding the administration of such opioid antagonist, as deemed appropriate by such personnel.\n\n(d) The Department of Mental Health and Addiction Services may, within available appropriations, contract with a wholesaler or distributor for the purchasing and distribution of opioid antagonists in bulk to eligible entities pursuant to subsection (c) of this section. Each eligible entity shall make such bulk-purchased opioid antagonists available at no charge to a family member, caregiver or friend of a person who has experienced an overdose of an opioid drug or displays symptoms of opioid use disorder.\n\n(e) Emergency medical services organizations may obtain opioid antagonists for dissemination pursuant to subsection (c) of this section from a pharmacist pursuant to section 20-633c, 20-633d or 21a-286.\n\n(f) Emergency medical services personnel shall document the number of opioid antagonist kits distributed pursuant to subsection (c) of this section, including, but not limited to, the number of doses of an opioid antagonist included in each kit.\n\n(g) Not later than January 1, 2025, and annually thereafter, the executive director of the Office of Emergency Medical Services shall report to the Department of Mental Health and Addiction Services regarding the implementation of the provisions of subsections (c), (e) and (f) of this section, including, but not limited to, any information required under subsection (h) of this section for inclusion in the state substance use disorder plan developed pursuant to subsection (j) of section 17a-451 known to the executive director.\n\n(h) The Commissioner of Mental Health and Addiction Services shall include in the state substance use disorder plan developed pursuant to subsection (j) of section 17a-451 the following information: (1) The amount of funds used to purchase and distribute opioid antagonists, (2) the number of eligible entities that received opioid antagonists under this section, (3) the amount of opioid antagonists purchased under this section, (4) the use of the opioid antagonists purchased by each such eligible entity, if known by the commissioner, and (5) any recommendations regarding the Opioid Antagonist Bulk Purchase Fund, including any proposed legislation to facilitate the purposes of this section.",
+      "href": "?chapter=319j&section=section-17a-674h",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-17a-718",
+      "citation": "17a-718",
+      "citations": [
+        "17a-718"
+      ],
+      "heading": "Sec. 17a-718. Nicotine addiction programs for persons under twenty-one years of age. Settlement disbursement. Report.",
+      "chapter": {
+        "id": "chapter-319j",
+        "number": "319j",
+        "name": "Addiction Services"
+      },
+      "status": "active",
+      "text": "(a) Commencing with the fiscal year ending June 30, 2024, any moneys received in the preceding fiscal year pursuant to the stipulated judgment in State of Connecticut v. JUUL Labs, Inc., shall be disbursed to the Commissioner of Mental Health and Addiction Services for distribution to the regional behavioral health action organizations, as described in section 17a-484f, for the funding of programs to support the abatement, mitigation, cessation, reduction or prevention of the use of nicotine or nicotine-synthetic products by residents under twenty-one years of age in accordance with such judgment.\n\n(b) Not later than September 1, 2024, and annually thereafter, the Commissioner of Mental Health and Addiction Services shall submit a report to the board of trustees of the Tobacco and Health Trust Fund established pursuant to section 4-28f detailing how the moneys disbursed in the preceding fiscal year were distributed by the commissioner and summarizing how the regional behavioral health action organizations expended such moneys for the purposes described in subsection (a) of this section in the preceding fiscal year.",
+      "href": "?chapter=319j&section=section-17a-718",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "group-17a-719-to-17a-720-to-17a-721-to-17a-722-to-17a-723-to-17a-724-to-17a-725-to-17a-726-to-17a-727-to-17a-728-to-17a-729-to-17a-730-to-17a-731-to-17a-732-to-17a-733-to-17a-734-to-17a-735-to-17a-736-to-17a-737-to-17a-738-to-17a-739-to-17a-740-to-17a-741-to-17a-742-to-17a-743-to-17a-744-to-17a-745-to-17a-746-to-17a-747-to-17a-748-to-17a-749",
+      "citation": null,
+      "citations": [
+        "17a-719",
+        "17a-720",
+        "17a-721",
+        "17a-722",
+        "17a-723",
+        "17a-724",
+        "17a-725",
+        "17a-726",
+        "17a-727",
+        "17a-728",
+        "17a-729",
+        "17a-730",
+        "17a-731",
+        "17a-732",
+        "17a-733",
+        "17a-734",
+        "17a-735",
+        "17a-736",
+        "17a-737",
+        "17a-738",
+        "17a-739",
+        "17a-740",
+        "17a-741",
+        "17a-742",
+        "17a-743",
+        "17a-744",
+        "17a-745",
+        "17a-746",
+        "17a-747",
+        "17a-748",
+        "17a-749"
+      ],
+      "heading": "Secs. 17a-719, 17a-720, 17a-721, 17a-722, 17a-723, 17a-724, 17a-725, 17a-726, 17a-727, 17a-728, 17a-729, 17a-730, 17a-731, 17a-732, 17a-733, 17a-734, 17a-735, 17a-736, 17a-737, 17a-738, 17a-739, 17a-740, 17a-741, 17a-742, 17a-743, 17a-744, 17a-745, 17a-746, 17a-747, 17a-748 and 17a-749. Reserved for future use.",
+      "chapter": {
+        "id": "chapter-319j",
+        "number": "319j",
+        "name": "Addiction Services"
+      },
+      "status": "reserved",
+      "text": "Reserved for future use.",
+      "href": "?chapter=319j&section=group-17a-719-to-17a-720-to-17a-721-to-17a-722-to-17a-723-to-17a-724-to-17a-725-to-17a-726-to-17a-727-to-17a-728-to-17a-729-to-17a-730-to-17a-731-to-17a-732-to-17a-733-to-17a-734-to-17a-735-to-17a-736-to-17a-737-to-17a-738-to-17a-739-to-17a-740-to-17a-741-to-17a-742-to-17a-743-to-17a-744-to-17a-745-to-17a-746-to-17a-747-to-17a-748-to-17a-749"
+    },
+    {
+      "id": "section-17a-791a",
+      "citation": "17a-791a",
+      "citations": [
+        "17a-791a"
+      ],
+      "heading": "Sec. 17a-791a. Employment of vocational rehabilitation staff.",
+      "chapter": {
+        "id": "chapter-319l",
+        "number": "319l",
+        "name": "Department of Aging and Disability Services"
+      },
+      "status": "active",
+      "text": "The Commissioner of Aging and Disability Services shall employ, within available appropriations, a sufficient number of vocational rehabilitation staff to provide transition services, as defined in section 10-74o, for children requiring special education who may be eligible to receive services from the Department of Aging and Disability Services as determined through a planning and placement team meeting pursuant to subdivision (9) of subsection (a) of section 10-76d.",
+      "href": "?chapter=319l&section=section-17a-791a",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-17a-861",
+      "citation": "17a-861",
+      "citations": [
+        "17a-861"
+      ],
+      "heading": "Sec. 17a-861. (Formerly Sec. 17b-251). Connecticut Partnership for Long-Term Care: Outreach program established.",
+      "chapter": {
+        "id": "chapter-319l",
+        "number": "319l",
+        "name": "Department of Aging and Disability Services"
+      },
+      "status": "active",
+      "text": "The Office of Policy and Management shall establish an outreach program to educate consumers as to: (1) The need for long-term care; (2) mechanisms for financing such care; (3) the availability of long-term care insurance; and (4) the asset protection provided under sections 17b-252 to 17b-254, inclusive, and 38a-475. The Office of Policy and Management shall provide public information to assist individuals in choosing appropriate insurance coverage.",
+      "href": "?chapter=319l&section=section-17a-861",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-17a-862",
+      "citation": "17a-862",
+      "citations": [
+        "17a-862"
+      ],
+      "heading": "Sec. 17a-862. Dementia Services Coordinator. Duties.",
+      "chapter": {
+        "id": "chapter-319l",
+        "number": "319l",
+        "name": "Department of Aging and Disability Services"
+      },
+      "status": "active",
+      "text": "There shall be within the Department of Aging and Disability Services a dementia services coordinator. The dementia services coordinator shall (1) coordinate dementia services across state agencies, (2) assess and analyze dementia-related data collected by the state, (3) evaluate state-funded dementia services, (4) identify and support the development of dementia-specific training programs, and (5) perform any other relevant duties to support individuals with dementia in the state, as determined by the Commissioner of Aging and Disability Services.",
+      "href": "?chapter=319l&section=section-17a-862",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "group-17a-863-to-17a-864-to-17a-865-to-17a-866-to-17a-867-to-17a-868-to-17a-869",
+      "citation": null,
+      "citations": [
+        "17a-863",
+        "17a-864",
+        "17a-865",
+        "17a-866",
+        "17a-867",
+        "17a-868",
+        "17a-869"
+      ],
+      "heading": "Secs. 17a-863, 17a-864, 17a-865, 17a-866, 17a-867, 17a-868 and 17a-869. Reserved for future use.",
+      "chapter": {
+        "id": "chapter-319l",
+        "number": "319l",
+        "name": "Department of Aging and Disability Services"
+      },
+      "status": "reserved",
+      "text": "Reserved for future use.",
+      "href": "?chapter=319l&section=group-17a-863-to-17a-864-to-17a-865-to-17a-866-to-17a-867-to-17a-868-to-17a-869"
+    },
+    {
+      "id": "section-17a-878",
+      "citation": "17a-878",
+      "citations": [
+        "17a-878"
+      ],
+      "heading": "Sec. 17a-878. (Formerly Sec. 17a-415). Powers of ombudsman and representatives. Access to records, facilities and residents. Penalty for wilful interference with representatives of office. Confidentiality. Assistance from outside persons or entities.",
+      "chapter": {
+        "id": "chapter-319l",
+        "number": "319l",
+        "name": "Department of Aging and Disability Services"
+      },
+      "status": "active",
+      "text": "(a) The State Ombudsman and representatives of the office shall have:\n\n(1) Access to long-term care facilities and residents;\n\n(2) Appropriate access to review the medical and social records of a resident, including, but not limited to, the discharge plan developed pursuant to subsection (e) to section 19a-535, if (A) the representative of the office has the permission of the resident, or the legal representative of the resident, (B) the resident is unable to consent to the review and has no legal representative, or (C) access to the records is necessary to investigate a complaint and a resident representative refuses to give permission, a representative of the office has reasonable cause to believe that the resident representative is not acting in the best interests of the resident, and the representative of the office obtains the approval of the ombudsman;\n\n(3) Access to the administrative records, policies and documents, to which the residents have, or the general public has access, of long-term care facilities; and\n\n(4) Access to and, on request, copies of all licensing and certification records maintained by the state with respect to long-term care facilities.\n\n(b) Any person or entity who wilfully interferes with representatives of the office in the performance of the official duties of the representatives of the office, or any long-term care facility or other entity which retaliates or exacts reprisals with respect to any resident, employee or other person for filing a complaint with, providing information to, or otherwise cooperating with any representative of the office, or long-term care facility which refuses to permit the State Ombudsman or any regional ombudsman or any residents' advocate entry into such facility or refuses to cooperate with the State Ombudsman, or any regional ombudsman or any residents' advocate in the carrying out of their mandated duties and responsibilities enumerated under sections 17a-412, 17a-413, 17a-870 to 17a-880, inclusive, 19a-531 and 19a-532 or refuses to permit residents or staff to communicate freely with the State Ombudsman or any regional ombudsman or any residents' advocate shall be subject to the penalty prescribed for a class B violation under section 19a-527.\n\n(c) In carrying out the duties enumerated in sections 17a-412, 17a-413, 17a-870 to 17a-880, inclusive, 19a-531 and 19a-532, the State Ombudsman, the regional ombudsmen and the residents' advocates shall have access to all relevant public records, except that records which are confidential to a resident shall only be divulged with the written consent of the resident.\n\n(d) In the performance of the duties and responsibilities enumerated under sections 17a-412, 17a-413, 17a-870 to 17a-880, inclusive, 19a-531 and 19a-532, the State Ombudsman, the regional ombudsmen and the residents' advocates may utilize any other state department, agency or commission, or any other public or private agencies, groups or individuals who are appropriate and who may be available.",
+      "href": "?chapter=319l&section=section-17a-878",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    }
+  ]
+}

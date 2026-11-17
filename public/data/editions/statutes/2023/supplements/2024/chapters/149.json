@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-149",
+  "number": "149",
+  "name": "Elections and Primaries: Contested",
+  "title": {
+    "id": "title-09",
+    "number": "09",
+    "name": "Elections"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_149.htm",
+  "sections": [
+    {
+      "id": "section-9-329b",
+      "kind": "section",
+      "citation": "9-329b",
+      "citations": [
+        "9-329b"
+      ],
+      "heading": "Sec. 9-329b. Removal of candidate's name from ballot.",
+      "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_149.htm#sec_9-329b",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) At any time prior to a primary held before April 1, 2024, and pursuant to sections 9-423, 9-425 and 9-464, or a special act, or prior to any election held before April 1, 2024, the Superior Court may issue an order removing a candidate from a ballot where it is shown that such candidate is improperly on the ballot.",
+          "(b) At any time prior to the commencement of the period of early voting at a primary held on or after April 1, 2024, and pursuant to sections 9-423, 9-425 and 9-464, or a special act, or prior to the commencement of the period of early voting at any election held on or after April 1, 2024, the Superior Court may issue an order removing a candidate from a ballot where it is shown that such candidate is improperly on the ballot."
+        ],
+        "sourceNotes": [
+          "(P.A. 78-125, S. 5; P.A. 97-154, S. 4, 27; P.A. 03-241, S. 8; P.A. 11-20, S. 1; P.A. 23-5, S. 11; 23-204, S. 180, 181.)"
+        ],
+        "history": [
+          "History: P.A. 97-154 applied section to a primary held pursuant to a special act, effective July 1, 1997; P.A. 03-241 deleted reference to Sec. 9-424, effective January 1, 2004, and applicable to primaries and elections held on or after that date; pursuant to P.A. 11-20, “ballot label” was changed editorially by the Revisors to “ballot”, effective May 24, 2011; P.A. 23-5 designated existing provision as Subsec. (a), added Subsec. (b) re early voting periods at primaries and elections on or after January 1, 2024, added references to primaries and elections held before January 1, 2024, in Subsec. (a) and made technical changes, effective June 7, 2023; P.A. 23-204 deleted Subsec. (b) and amended the provisions of existing Subsec. (a) by deleting the designation of same, deleting references to primaries and elections held before January 1, 2024, and making technical changes, effective August 1, 2023, and designated existing provision as Subsec. (a), added Subsec. (b) re early voting periods at primaries and elections on or after April 1, 2024, added references to primaries and elections held before April 1, 2024, in Subsec. (a) and made technical changes, effective January 1, 2024."
+        ],
+        "annotations": [],
+        "plainText": "(a) At any time prior to a primary held before April 1, 2024, and pursuant to sections 9-423, 9-425 and 9-464, or a special act, or prior to any election held before April 1, 2024, the Superior Court may issue an order removing a candidate from a ballot where it is shown that such candidate is improperly on the ballot.\n\n(b) At any time prior to the commencement of the period of early voting at a primary held on or after April 1, 2024, and pursuant to sections 9-423, 9-425 and 9-464, or a special act, or prior to the commencement of the period of early voting at any election held on or after April 1, 2024, the Superior Court may issue an order removing a candidate from a ballot where it is shown that such candidate is improperly on the ballot."
+      }
+    }
+  ]
+}

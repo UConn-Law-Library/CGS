@@ -1,0 +1,116 @@
+{
+  "schemaVersion": "1.0.0",
+  "editionYear": 2024,
+  "title": {
+    "id": "title-21",
+    "number": "21",
+    "name": "Licenses"
+  },
+  "removedDocumentIds": [
+    "section-21-9",
+    "section-21-39a",
+    "section-21-64"
+  ],
+  "documents": [
+    {
+      "id": "section-21-9",
+      "citation": "21-9",
+      "citations": [
+        "21-9"
+      ],
+      "heading": "Sec. 21-9. Definitions.",
+      "chapter": {
+        "id": "chapter-405",
+        "number": "405",
+        "name": "Junk Dealers"
+      },
+      "status": "active",
+      "text": "As used in this chapter:\n\n(1) (A) “Junk dealer” means any person who engages in business as a dealer and trader in junk, old metals, scrap, rags, waste paper or other secondhand articles that are no longer serviceable for their original manufactured purpose.\n\n(B) “Junk dealer” does not mean any person who operates an automated kiosk for consumer electronics in accordance with section 21a-446.\n\n(2) (A) “Junk yard” means any place in or on which old metal, glass, paper, cordage or other waste or discarded or secondhand material, which has not been a part, or is not intended to be a part, of any motor vehicle, is stored or deposited.\n\n(B) “Junk yard” does not mean an automated kiosk for consumer electronics that satisfies the requirements established in section 21a-446.",
+      "href": "?chapter=405&section=section-21-9",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-21-39a",
+      "citation": "21-39a",
+      "citations": [
+        "21-39a"
+      ],
+      "heading": "Sec. 21-39a. Definitions.",
+      "chapter": {
+        "id": "chapter-409",
+        "number": "409",
+        "name": "Pawnbrokers and Secondhand Dealers"
+      },
+      "status": "active",
+      "text": "As used in sections 21-39 to 21-47, inclusive, 21-47d, 21-47e and 21-100:\n\n(1) “Pawnbroker” means a person, other than a person operating an automated kiosk for consumer electronics in accordance with section 21a-446, who is engaged in the business of loaning money on the deposit or pledge of wearing apparel, jewelry, ornaments, household goods or other personal property or purchasing such property on condition of selling the same back again at a stipulated price;\n\n(2) “Precious metals or stones dealer” means a person who is primarily engaged in the business of purchasing gold or gold-plated ware, silver or silver-plated ware, platinum ware, watches, jewelry, precious stones, bullion or coins;\n\n(3) “Secondhand dealer” means a person who is primarily engaged in the business of purchasing personal property of any type from a person who is not a wholesaler, for the purpose of reselling or exchanging such property, and has physical possession of such property, other than an antiques dealer, art dealer, coin and stamp dealer, precious metals or stones dealer, pawnbroker, consignment shop operator, special collectibles dealer, musical instrument dealer, used book dealer, used clothing dealer, used children's products dealer, used sporting equipment dealer, dealer in motor vehicles as described in chapter 246, auctioneer as described in chapter 403, junk dealer, as defined in section 21-9, scrap metal processor, as defined in section 14-67w, recycling facility, as defined in section 22a-207, bona fide charitable or religious corporation, person operating an automated kiosk for consumer electronics in accordance with section 21a-446 or any retailer that is primarily engaged in the business of selling new items but also gives consideration other than cash in exchange for one or more items traded in to such retailer;\n\n(4) “Antiques dealer” means a person who is primarily engaged in the business of buying and selling items collected or desirable due to age, rarity, condition or some other unique feature;\n\n(5) “Art dealer” means a person who is primarily engaged in the business of buying and selling illustrative and decorative paintings, drawings, photographs, prints, sculptures or other works in the graphic or plastic arts, or decorative or artistic objects;\n\n(6) “Coin and stamp dealer” means a person who is primarily engaged in the business of buying and selling coins, stamps, currency or rare documents collected or desirable due to age, rarity, condition or some other unique feature;\n\n(7) “Consignment shop operator” means a person who is primarily engaged in the business of selling personal property as the agent of another person who has placed such property in the physical possession of the agent when such other person has not been paid for such property, retains legal title to such property and bears the risk of loss until such property is sold to a third person;\n\n(8) “Special collectibles dealer” means a person who is primarily engaged in the business of buying or selling a distinctive type of manufactured item of limited supply designed for persons to collect or that possesses attractive characteristics, rarity, uniqueness, production faults or other distinctive characteristics necessary to cause a person to save it for hobby, display or investment purposes, without regard to its value or practical use, including, but not limited to, china, glass, toys, militaria, sports memorabilia, movie memorabilia, railroad memorabilia, models, comic books, dolls, figurines or other items of interest to a discrete group of persons, excluding antiques, coins, stamps, works of art, books, jewelry or precious metals;\n\n(9) “Musical instruments dealer” means a person who is primarily engaged in the business of buying and selling new and used musical instruments and accessories;\n\n(10) “Used book dealer” means a person who is primarily engaged in the business of buying and selling books previously sold at retail from persons other than a publisher or wholesaler;\n\n(11) “Used clothing dealer” means a person who is primarily engaged in the business of buying and selling clothing previously purchased from a source other than a wholesaler;\n\n(12) “Used children's products dealer” means a person who is primarily engaged in the business of buying and selling children's products, excluding products regulated by the federal Food and Drug Administration, previously purchased from a source other than a wholesaler;\n\n(13) “Used sporting equipment dealer” means a person who is primarily engaged in the business of buying and selling sporting equipment previously purchased from a source other than a wholesaler;\n\n(14) “Wholesaler” means a person engaged in the business of buying property in large quantities and reselling the property in the same or smaller quantities to persons who resell the property to the ultimate consumer;\n\n(15) “Licensing authority” means the chief of police of any town or city or, if such town or city does not have an organized local police department, the Commissioner of Emergency Services and Public Protection; and\n\n(16) “Person” means an individual, corporation, limited liability company, partnership or association.",
+      "href": "?chapter=409&section=section-21-39a",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-21-64",
+      "citation": "21-64",
+      "citations": [
+        "21-64"
+      ],
+      "heading": "Sec. 21-64. Definitions.",
+      "chapter": {
+        "id": "chapter-412",
+        "number": "412",
+        "name": "Mobile Manufactured Homes and Mobile Manufactured Home Parks. Park Owners and Residents"
+      },
+      "status": "active",
+      "text": "As used in this chapter:\n\n(1) “Mobile manufactured home” means a detached residential unit having three-dimensional components which are intrinsically mobile with or without a wheeled chassis or a detached residential unit built on or after June 15, 1976, in accordance with federal manufactured home construction and safety standards, and, in either case, containing sleeping accommodations, a flush toilet, tub or shower bath, kitchen facilities and plumbing and electrical connections for attachment to outside systems, and designed for long-term occupancy and to be placed on rigid supports at the site where it is to be occupied as a residence, complete and ready for occupancy, except for minor and incidental unpacking and assembly operations and connection to utilities systems;\n\n(2) “Mobile manufactured home park” or “park” means a plot of ground upon which two or more mobile manufactured homes, occupied for residential purposes are located;\n\n(3) “Mobile manufactured home space or lot” means a plot of ground within a mobile manufactured home park designed for the accommodation of one mobile manufactured home;\n\n(4) “Licensee” means any person licensed to operate and maintain a mobile manufactured home park under the provisions of this chapter;\n\n(5) “Resident” means a person who owns, or rents and occupies, a mobile manufactured home in a mobile manufactured home park;\n\n(6) “Department” means the Department of Consumer Protection;\n\n(7) “Park owner” or “owner” means a licensee or permittee or any person who owns, operates or maintains a mobile manufactured home park;\n\n(8) “Dwelling unit” means a mobile manufactured home;\n\n(9) “Person” means an individual, corporation, limited liability company, the state or any political subdivision thereof, agency, business trust, estate, trust, partnership or association, two or more persons having a joint or common interest, and any other legal or commercial entity;\n\n(10) “Premises” means a dwelling unit and facilities and appurtenances therein and grounds, areas and facilities held out for the use of residents generally or whose use is promised to the resident;\n\n(11) “Rent” means all periodic payments to be made to the owner under the rental agreement;\n\n(12) “Rental agreement” means all agreements, written or oral, and valid rules and regulations adopted under subsection (d) of section 21-70, embodying the terms and conditions concerning the use and occupancy of a dwelling unit or premises.",
+      "href": "?chapter=412&section=section-21-64",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-21-70b",
+      "citation": "21-70b",
+      "citations": [
+        "21-70b"
+      ],
+      "heading": "Sec. 21-70b. Opportunity for residents to purchase mobile manufactured home parks.",
+      "chapter": {
+        "id": "chapter-412",
+        "number": "412",
+        "name": "Mobile Manufactured Homes and Mobile Manufactured Home Parks. Park Owners and Residents"
+      },
+      "status": "active",
+      "text": "(a) Any owner of a mobile manufactured home park who intends to sell, lease or transfer land used as a mobile manufactured home park to any person, except a sale, lease or transfer governed by subsection (f) of section 21-70, shall give written notice to the owner of each dwelling unit upon such land by certified mail with a return receipt requested, by first class mail with tracking and by personal delivery. Such notice shall include (1) a statement advising the recipient of the notice of the intended sale, lease or other transfer of the park, (2) a statement of the residents' rights under this section and the deadlines for exercising such rights, and (3) the price, terms and conditions of any offer the park owner has conditionally accepted or plans to accept concerning the park, or a copy of any written contract or offer executed by the park owner concerning the park, and shall be mailed and delivered at least forty-five days prior to the proposed sale or lease of the park, except that for a sale, lease or transfer of a park occurring before October 1, 2025, such notice shall be mailed and delivered at least sixty days prior to such proposed sale or lease. A park owner may accept an offer for the sale, lease or transfer of the land before providing a copy of such notice as long as the agreement is conditioned upon giving the residents the notice and the opportunity to purchase required by this section.\n\n(b) A copy of any notice required pursuant to subsection (a) of this section shall be simultaneously sent by first class mail to (1) any association of residents of the park that has made a written request for any such notice to the park owner, (2) the Department of Housing, (3) the Connecticut Housing Finance Authority, and (4) the Department of Consumer Protection. If an owner of any dwelling unit has given the park owner written notice that the unit owner resides in a place other than the owner's unit, the park owner shall also send such notice by first class mail to the address provided by such unit owner.\n\n(c) Not later than forty-five days after the notice provided for in subsection (a) of this section has been mailed or personally delivered, or, before October 1, 2025, not later than sixty days after such notice has been mailed or personally delivered, whichever delivery method is later, any association representing more than fifty per cent of the units in the park that are occupied by the owners of such dwelling units or one or more of the owner's immediate family members, as defined in section 20-670, including an association formed after the issuance of such notice, may notify the park owner that such association is interested in purchasing the park. A copy of any such notice from such association may be filed on the land records of the municipality in which the park is located. Except as provided in subsection (e) of this section, if such notice is given by such association, the association shall have one hundred eighty days after the notice required in subsection (a) of this section has been mailed or personally delivered, whichever is later, to purchase and close upon the sale of the park. Upon the request of such association, the Department of Housing and the Connecticut Housing Finance Authority shall assist the association in developing financing for the purchase of the park.\n\n(d) If the association and the park owner cannot otherwise agree upon a purchase price for the park, the association shall have the right to purchase the property upon the same, price, terms and conditions of any existing bona fide offer to purchase the park made by another potential purchaser if the park owner has accepted such offer or intends to accept such offer. No park owner shall unreasonably refuse to enter into, or unreasonably delay the execution of or closing upon, a purchase and sale agreement with an association that has made a bona fide offer to match the same price, terms and conditions of an offer for which notice is required to be given pursuant to this section. If, not later than ninety days after the notice required in subsection (a) of this section has been mailed or personally delivered, whichever is later, no agreement for the sale of the park executed between the association and the park owner has been filed upon the land records of the municipality in which the park is located, the right provided in this subsection to purchase the park shall be void and any recorded notice filed pursuant to subsection (c) of this section shall be void.\n\n(e) If an association that meets the more than fifty per cent unit ownership requirement in subsection (c) of this section desires to make an offer to purchase the park, but the offer for which notice is required to be given involves the sale of more than one mobile manufactured home park or involves purchase of a controlling interest in the park by a stock transfer or other noncash instrument, and the association cannot match such offer, the association may submit to the park owner a proposed purchase and sale agreement concerning the park in which such association is located within the applicable time period prescribed by said subsection. In such case, the park owner shall consider the association's offer but shall not be bound to sell to the association nor shall the park owner be required to delay completion of a sale to another entity.\n\n(f) The park owner and the park residents shall at all times have a duty to act and bargain in good faith with each other.\n\n(g) An association of residents that has rights under this section may, at its election, assign such rights to (1) the municipality in which such association is located, (2) a housing authority located in such municipality, or (3) a nonprofit organization, for the purpose of continuing the use of the property as a mobile manufactured home park.\n\n(h) The requirements of this section shall apply separately to each substantially different offer to sell or purchase a mobile manufactured home park.\n\n(i) This section shall not apply if:\n\n(1) The sale, lease or transfer is to an immediate family member of the owner or to a trust, the beneficiaries of which are immediate family members of the owner;\n\n(2) The transfer is by gift, devise or required by operation of law;\n\n(3) The sale, lease or transfer is by a partnership or a limited liability company to one or more of its partners or members;\n\n(4) The conveyance of an interest in the park is incidental to the financing of such park;\n\n(5) The lease is the lease of a lot within the mobile manufactured home park to a person who will live in a mobile manufactured home on such lot;\n\n(6) The sale, lease or transfer is between joint tenants or tenants in common;\n\n(7) The transfer is made by a business entity to a subsidiary or affiliate of such entity;\n\n(8) The transfer is made by eminent domain; or\n\n(9) The mobile manufactured home park is comprised of fewer than fifteen lots.\n\n(j) The exclusions set forth in subsection (i) of this section shall not carry over to any subsequent resale, lease or transfer of a park unless such subsequent resale, lease or transfer independently meets the criteria set forth in said subsection.",
+      "href": "?chapter=412&section=section-21-70b",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-21-70c",
+      "citation": "21-70c",
+      "citations": [
+        "21-70c"
+      ],
+      "heading": "Sec. 21-70c. Conveyance tax exemption when a mobile manufactured home park is purchased by its residents.",
+      "chapter": {
+        "id": "chapter-412",
+        "number": "412",
+        "name": "Mobile Manufactured Homes and Mobile Manufactured Home Parks. Park Owners and Residents"
+      },
+      "status": "active",
+      "text": "An owner of a mobile manufactured home park that sells, leases or transfers such park to residents of the park in compliance with the requirements of section 21-70b or subsection (f) of section 21-70 shall be exempt from the payment of any state or municipal conveyance tax otherwise due under chapter 223 based on the sale price of the park, provided (1) the entity purchasing the mobile manufactured home park is owned by more than fifty per cent of the residents of the park or an organization to which the rights of the residents have been assigned pursuant to subsection (g) of section 21-70b, and (2) the sale requires the continued maintenance of the property as a mobile manufactured home park. For such a sale, the buyer of the park shall be liable for the municipal portion of the conveyance tax and for fifty per cent of the state portion of such tax, unless the buyer is otherwise exempt by law from such conveyance tax. The transaction shall otherwise be exempt from the balance of such tax.",
+      "href": "?chapter=412&section=section-21-70c",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "new"
+      }
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-125",
+  "number": "125",
+  "name": "Zoning Districts for Commercial Structures and Advertising Signs",
+  "title": {
+    "id": "title-08",
+    "number": "08",
+    "name": "Zoning, Planning, Housing and Economic and Community Development"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2023/pub/chap_125.htm",
+  "sections": [
+    {
+      "id": "group-8-14-to-8-15-to-8-16-to-8-17",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "8-14",
+        "8-15",
+        "8-16",
+        "8-17"
+      ],
+      "heading": "Secs. 8-14 to 8-17. Purpose. License. Appeal. Exceptions.",
+      "sourceUrl": "https://www.cga.ct.gov/2023/pub/chap_125.htm#secs_8-14_to_8-17",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Sections 8-14 to 8-17 , inclusive, are repealed."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 849–852; 1957, P.A. 13, S. 42; 1967, P.A. 69.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Sections 8-14 to 8-17 , inclusive, are repealed."
+      }
+    }
+  ]
+}

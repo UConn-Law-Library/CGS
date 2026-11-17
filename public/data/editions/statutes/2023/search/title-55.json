@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "1.0.0",
+  "title": {
+    "id": "title-55",
+    "number": "55",
+    "name": "Concluding Provisions"
+  },
+  "documents": [
+    {
+      "id": "section-55-1",
+      "citation": "55-1",
+      "citations": [
+        "55-1"
+      ],
+      "heading": "Sec. 55-1. Repeal of former statutes.",
+      "chapter": {
+        "id": "chapter-978",
+        "number": "978",
+        "name": "Concluding Provisions"
+      },
+      "status": "obsolete",
+      "text": "Obsolete.",
+      "href": "?chapter=978&section=section-55-1"
+    },
+    {
+      "id": "section-55-2",
+      "citation": "55-2",
+      "citations": [
+        "55-2"
+      ],
+      "heading": "Sec. 55-2. Certain rights, penalties and criminal liabilities not affected by repeal.",
+      "chapter": {
+        "id": "chapter-978",
+        "number": "978",
+        "name": "Concluding Provisions"
+      },
+      "status": "obsolete",
+      "text": "Obsolete.",
+      "href": "?chapter=978&section=section-55-2"
+    },
+    {
+      "id": "section-55-3",
+      "citation": "55-3",
+      "citations": [
+        "55-3"
+      ],
+      "heading": "Sec. 55-3. Limitation of effect of certain acts.",
+      "chapter": {
+        "id": "chapter-978",
+        "number": "978",
+        "name": "Concluding Provisions"
+      },
+      "status": "active",
+      "text": "No provision of the general statutes, not previously contained in the statutes of the state, which imposes any new obligation on any person or corporation, shall be construed to have a retrospective effect.",
+      "href": "?chapter=978&section=section-55-3"
+    },
+    {
+      "id": "section-55-4",
+      "citation": "55-4",
+      "citations": [
+        "55-4"
+      ],
+      "heading": "Sec. 55-4. Terms of office not affected.",
+      "chapter": {
+        "id": "chapter-978",
+        "number": "978",
+        "name": "Concluding Provisions"
+      },
+      "status": "obsolete",
+      "text": "Obsolete.",
+      "href": "?chapter=978&section=section-55-4"
+    }
+  ]
+}

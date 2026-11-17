@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-023",
+  "number": "023",
+  "name": "Auditors of Public Accounts",
+  "title": {
+    "id": "title-02",
+    "number": "02",
+    "name": "General Assembly and Legislative Agencies"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_023.htm",
+  "sections": [
+    {
+      "id": "section-2-90d",
+      "kind": "section",
+      "citation": "2-90d",
+      "citations": [
+        "2-90d"
+      ],
+      "heading": "Sec. 2-90d. Notification to auditors re auditing service contracts.",
+      "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_023.htm#sec_2-90d",
+      "status": "active",
+      "content": {
+        "body": [
+          "On and after October 1, 2021, any state agency proposing to enter into or amend a contract for the purchase of auditing services shall (1) notify the Auditors of Public Accounts of such contract at least fifteen days prior to entering into or amending such contract, and (2) not enter into or amend such contract until the Auditors of Public Accounts have advised the agency whether the auditing services could be provided by said auditors. As used in this section, “state agency” has the same meaning as provided in section 4-37e and “contract” does not include any personal service agreement subject to section 4-216."
+        ],
+        "sourceNotes": [
+          "(P.A. 21-145, S. 4; P.A. 23-204, S. 109.)"
+        ],
+        "history": [
+          "History: P.A. 23-204 deleted reference to Sec. 4-215, effective January 1, 2024."
+        ],
+        "annotations": [],
+        "plainText": "On and after October 1, 2021, any state agency proposing to enter into or amend a contract for the purchase of auditing services shall (1) notify the Auditors of Public Accounts of such contract at least fifteen days prior to entering into or amending such contract, and (2) not enter into or amend such contract until the Auditors of Public Accounts have advised the agency whether the auditing services could be provided by said auditors. As used in this section, “state agency” has the same meaning as provided in section 4-37e and “contract” does not include any personal service agreement subject to section 4-216."
+      }
+    }
+  ]
+}

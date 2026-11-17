@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-505a",
+  "number": "505a",
+  "name": "United States Armed Forces",
+  "title": {
+    "id": "title-27",
+    "number": "27",
+    "name": "Armed Forces and Veterans"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_505a.htm",
+  "sections": [
+    {
+      "id": "section-27-102b",
+      "kind": "section",
+      "citation": "27-102b",
+      "citations": [
+        "27-102b"
+      ],
+      "heading": "Sec. 27-102b. Credits and exemptions re state licensure and certification requirements for training, schooling or experience while serving as a member of the armed forces.",
+      "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_505a.htm#sec_27-102b",
+      "status": "active",
+      "content": {
+        "body": [
+          "Notwithstanding any provision of the general statutes or any regulation of Connecticut state agencies, a state agency or board that issues licenses or certificates for which professional training, schooling or apprenticeship is required shall provide credits or exemptions from requirements toward licensure or certification for any applicant who received applicable training, schooling or experience while serving as a member of the armed forces. An applicant shall not be required to repeat any substantively similar training or schooling required for licensure or certification. Credits or exemptions from requirements toward licenses or certificates awarded by the constituent units of the state system of public higher education pursuant to this section shall be granted in a manner consistent with (1) guidelines established by the American Council on Education, (2) the constituent units' transfer credit policies, and (3) 38 CFR 21.4253 and 38 CFR 21.4254. For purposes of this section, “armed forces” means the United States Army, Navy, Marine Corps, Coast Guard, Air Force and Space Force and any reserve component thereof, including the Connecticut National Guard and the state militia."
+        ],
+        "sourceNotes": [
+          "(P.A. 10-105, S. 1; P.A. 23-71, S. 5.)"
+        ],
+        "history": [
+          "History: P.A. 23-71 redefined “armed forces” by adding reference to United States Space Force."
+        ],
+        "annotations": [],
+        "plainText": "Notwithstanding any provision of the general statutes or any regulation of Connecticut state agencies, a state agency or board that issues licenses or certificates for which professional training, schooling or apprenticeship is required shall provide credits or exemptions from requirements toward licensure or certification for any applicant who received applicable training, schooling or experience while serving as a member of the armed forces. An applicant shall not be required to repeat any substantively similar training or schooling required for licensure or certification. Credits or exemptions from requirements toward licenses or certificates awarded by the constituent units of the state system of public higher education pursuant to this section shall be granted in a manner consistent with (1) guidelines established by the American Council on Education, (2) the constituent units' transfer credit policies, and (3) 38 CFR 21.4253 and 38 CFR 21.4254. For purposes of this section, “armed forces” means the United States Army, Navy, Marine Corps, Coast Guard, Air Force and Space Force and any reserve component thereof, including the Connecticut National Guard and the state militia."
+      }
+    }
+  ]
+}

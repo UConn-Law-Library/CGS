@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-405",
+  "number": "405",
+  "name": "Junk Dealers",
+  "title": {
+    "id": "title-21",
+    "number": "21",
+    "name": "Licenses"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_405.htm",
+  "sections": [
+    {
+      "id": "section-21-9",
+      "kind": "section",
+      "citation": "21-9",
+      "citations": [
+        "21-9"
+      ],
+      "heading": "Sec. 21-9. Definitions.",
+      "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_405.htm#sec_21-9",
+      "status": "active",
+      "content": {
+        "body": [
+          "As used in this chapter:",
+          "(1) (A) “Junk dealer” means any person who engages in business as a dealer and trader in junk, old metals, scrap, rags, waste paper or other secondhand articles that are no longer serviceable for their original manufactured purpose.",
+          "(B) “Junk dealer” does not mean any person who operates an automated kiosk for consumer electronics in accordance with section 21a-446.",
+          "(2) (A) “Junk yard” means any place in or on which old metal, glass, paper, cordage or other waste or discarded or secondhand material, which has not been a part, or is not intended to be a part, of any motor vehicle, is stored or deposited.",
+          "(B) “Junk yard” does not mean an automated kiosk for consumer electronics that satisfies the requirements established in section 21a-446."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 4647; 1953, S. 2330d; P.A. 11-100, S. 13; P.A. 23-109, S. 2.)"
+        ],
+        "history": [
+          "History: P.A. 11-100 redefined “junk dealer” by adding “that are no longer serviceable for their original manufactured purpose”; P.A. 23-109 designated existing provisions defining “junk dealer” as Subdiv. (1)(A), added Subdiv. (1)(B) excluding automated kiosks for consumer electronics, designated existing provisions defining “junk yard” as Subdiv. (2)(A), added Subdiv. (2)(B) excluding automated kiosks for consumer electronics, and made technical and conforming changes throughout."
+        ],
+        "annotations": [],
+        "plainText": "As used in this chapter:\n\n(1) (A) “Junk dealer” means any person who engages in business as a dealer and trader in junk, old metals, scrap, rags, waste paper or other secondhand articles that are no longer serviceable for their original manufactured purpose.\n\n(B) “Junk dealer” does not mean any person who operates an automated kiosk for consumer electronics in accordance with section 21a-446.\n\n(2) (A) “Junk yard” means any place in or on which old metal, glass, paper, cordage or other waste or discarded or secondhand material, which has not been a part, or is not intended to be a part, of any motor vehicle, is stored or deposited.\n\n(B) “Junk yard” does not mean an automated kiosk for consumer electronics that satisfies the requirements established in section 21a-446."
+      }
+    }
+  ]
+}

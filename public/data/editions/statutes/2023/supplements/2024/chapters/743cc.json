@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-743cc",
+  "number": "743cc",
+  "name": "Gift Certificates and Prepaid Cards",
+  "title": {
+    "id": "title-42",
+    "number": "42",
+    "name": "Business, Selling, Trading and Collection Practices"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_743cc.htm",
+  "sections": [
+    {
+      "id": "section-42-461",
+      "kind": "section",
+      "citation": "42-461",
+      "citations": [
+        "42-461"
+      ],
+      "heading": "Sec. 42-461. Gift cards.",
+      "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_743cc.htm#sec_42-461",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) For the purposes of this section, “gift card” means a record evidencing a promise, made for consideration, by the seller or issuer of the record that goods or services will be provided to the owner of the record to the value shown in the record and includes, but is not limited to, a record that contains a microprocessor chip, magnetic stripe or other means for the storage of information, that is prefunded and for which the value is decremented upon each use, an electronic gift card, stored-value card or certificate, a store card or a similar record or card. “Gift card” does not include: (1) A general-use prepaid card, as defined in 12 CFR 1005.20(a)(3), as from time to time amended, (2) a gift certificate donated or sold below face value by a retailer to a charitable organization or nonprofit community organization, (3) a linked prepaid card, as defined in section 42-460a, (4) a card or certificate issued by a retailer pursuant to an awards, loyalty or promotional program for which no money or other item of monetary value was exchanged, (5) a gift certificate or card sold below face value by a retailer, (6) a gift certificate or card sold by a retailer that does not have a retail establishment in this state, or (7) a gift certificate that is issued only on paper.",
+          "(b) Each seller or issuer of a gift card shall provide the purchaser of such gift card with either an electronic or paper copy of a (1) proof of purchase receipt, or (2) gift receipt for such gift card.",
+          "(c) If a person uses a gift card to purchase goods or services and the balance on the gift card is less than five dollars after such purchase, the person accepting the gift card as payment, if requested by the purchaser, shall provide the purchaser with a cash refund equal to the value of the remaining balance on the gift card after the purchase."
+        ],
+        "sourceNotes": [
+          "(P.A. 16-140, S. 1; P.A. 23-10, S. 1.)"
+        ],
+        "history": [
+          "History: P.A. 23-10 replaced “three” with “five” in Subsec. (c) and deleted former Subsec. (d)."
+        ],
+        "annotations": [],
+        "plainText": "(a) For the purposes of this section, “gift card” means a record evidencing a promise, made for consideration, by the seller or issuer of the record that goods or services will be provided to the owner of the record to the value shown in the record and includes, but is not limited to, a record that contains a microprocessor chip, magnetic stripe or other means for the storage of information, that is prefunded and for which the value is decremented upon each use, an electronic gift card, stored-value card or certificate, a store card or a similar record or card. “Gift card” does not include: (1) A general-use prepaid card, as defined in 12 CFR 1005.20(a)(3), as from time to time amended, (2) a gift certificate donated or sold below face value by a retailer to a charitable organization or nonprofit community organization, (3) a linked prepaid card, as defined in section 42-460a, (4) a card or certificate issued by a retailer pursuant to an awards, loyalty or promotional program for which no money or other item of monetary value was exchanged, (5) a gift certificate or card sold below face value by a retailer, (6) a gift certificate or card sold by a retailer that does not have a retail establishment in this state, or (7) a gift certificate that is issued only on paper.\n\n(b) Each seller or issuer of a gift card shall provide the purchaser of such gift card with either an electronic or paper copy of a (1) proof of purchase receipt, or (2) gift receipt for such gift card.\n\n(c) If a person uses a gift card to purchase goods or services and the balance on the gift card is less than five dollars after such purchase, the person accepting the gift card as payment, if requested by the purchaser, shall provide the purchaser with a cash refund equal to the value of the remaining balance on the gift card after the purchase."
+      }
+    }
+  ]
+}

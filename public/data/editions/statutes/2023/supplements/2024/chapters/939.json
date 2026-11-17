@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-939",
+  "number": "939",
+  "name": "Offenses Against the Person",
+  "title": {
+    "id": "title-53",
+    "number": "53",
+    "name": "Crimes"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_939.htm",
+  "sections": [
+    {
+      "id": "section-53-21a",
+      "kind": "section",
+      "citation": "53-21a",
+      "citations": [
+        "53-21a"
+      ],
+      "heading": "Sec. 53-21a. Leaving child unsupervised in place of public accommodation or motor vehicle. Failure to report disappearance of a child.",
+      "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_939.htm#sec_53-21a",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a)(1) Any parent, guardian or person having custody or control, or providing supervision, of any child under the age of twelve years who knowingly leaves such child unsupervised in a place of public accommodation or a motor vehicle for a period of time that presents a substantial risk to the child's health or safety, shall be guilty of a class A misdemeanor.",
+          "(2) In determining whether an action constitutes a violation of this subsection, (A) consideration shall be given to whether or not the parent, guardian or person having custody or control, or providing supervision, of a child under the age of twelve years exercised judgment that a reasonable person would use in determining whether the child was of sufficient age, maturity, physical ability and mental ability to be unsupervised under the circumstances, and (B) no finding of substantial risk may be based solely on a parent, guardian or person having custody or control, or providing supervision, of such child allowing such child's participation in independent activities, including, but not limited to, traveling to and from school, traveling to and from commercial or recreational facilities located near such child's home and unsupervised outdoor play, provided such child is of sufficient age, maturity, physical ability and mental ability to engage in such activities and the child's participation would not lead a reasonable person to believe that such participation creates an obvious danger to the child's safety."
+        ],
+        "sourceNotes": [
+          "(P.A. 97-298; P.A. 12-112, S. 1; P.A. 23-176, S. 1.)"
+        ],
+        "history": [
+          "History: P.A. 12-112 added Subsec. (d) re failure to report disappearance of a child; P.A. 23-176 amended Subsec. (a) by redesignating existing Subsec. (a) as Subsec. (a)(1) and adding Subdiv. (2) re determination of whether an action violates subsection."
+        ],
+        "annotations": [],
+        "plainText": "(a)(1) Any parent, guardian or person having custody or control, or providing supervision, of any child under the age of twelve years who knowingly leaves such child unsupervised in a place of public accommodation or a motor vehicle for a period of time that presents a substantial risk to the child's health or safety, shall be guilty of a class A misdemeanor.\n\n(2) In determining whether an action constitutes a violation of this subsection, (A) consideration shall be given to whether or not the parent, guardian or person having custody or control, or providing supervision, of a child under the age of twelve years exercised judgment that a reasonable person would use in determining whether the child was of sufficient age, maturity, physical ability and mental ability to be unsupervised under the circumstances, and (B) no finding of substantial risk may be based solely on a parent, guardian or person having custody or control, or providing supervision, of such child allowing such child's participation in independent activities, including, but not limited to, traveling to and from school, traveling to and from commercial or recreational facilities located near such child's home and unsupervised outdoor play, provided such child is of sufficient age, maturity, physical ability and mental ability to engage in such activities and the child's participation would not lead a reasonable person to believe that such participation creates an obvious danger to the child's safety."
+      }
+    }
+  ]
+}

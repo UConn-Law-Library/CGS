@@ -66,6 +66,34 @@ test("records the revision year the crawl captured and refuses input that does n
   await assert.rejects(() => importLegacy({ inputDir: undated, outputDir: path.join(temporary, "out") }), /does not state its revision year/);
 });
 
+test("keeps the statuses a mixed entry lists, in its chapter and its search document", async (t) => {
+  const temporary = await mkdtemp(path.join(os.tmpdir(), "cgs-mixed-"));
+  t.after(() => rm(temporary, { recursive: true, force: true }));
+  const input = path.join(temporary, "input");
+  await cp(fixture, input, { recursive: true });
+  const titleFile = path.join(input, "title_01.json");
+  const title = JSON.parse(await readFile(titleFile, "utf8"));
+  const note = "Sections 1-1o to 1-1s , inclusive, have been transferred or repealed.";
+  Object.assign(title.chapters[0].sections[1].content, {
+    body_paragraphs: [note], text: note, statuses: ["repealed", "transferred"], status: "mixed"
+  });
+  await writeFile(titleFile, JSON.stringify(title), "utf8");
+
+  const output = path.join(temporary, "data");
+  await importLegacy({ inputDir: input, outputDir: output });
+  const chapter = JSON.parse(await readFile(path.join(output, "chapters", "001.json"), "utf8"));
+  assert.equal(chapter.sections[1].status, "mixed");
+  assert.deepEqual(chapter.sections[1].statuses, ["repealed", "transferred"]);
+  assert.equal("statuses" in chapter.sections[0], false, "single-status entries gain no statuses field");
+  const shard = JSON.parse(await readFile(path.join(output, "search", "title-01.json"), "utf8"));
+  const document = shard.documents.find((entry) => entry.id === chapter.sections[1].id);
+  assert.deepEqual(document.statuses, ["repealed", "transferred"]);
+
+  title.chapters[0].sections[1].content.statuses = ["repealed", "renumbered"];
+  await writeFile(titleFile, JSON.stringify(title), "utf8");
+  await assert.rejects(() => importLegacy({ inputDir: input, outputDir: path.join(temporary, "bad") }), /unsupported status "renumbered" in statuses/);
+});
+
 test("refuses to overwrite its input directory", async () => {
   await assert.rejects(() => importLegacy({ inputDir: fixture, outputDir: fixture }), /cannot be the input directory/);
 });

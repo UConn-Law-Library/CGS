@@ -88,6 +88,23 @@ test("filters fields, chapters, status, and supplement state and can search with
   assert.deepEqual(normalizeSearchOptions({ field: "unknown", sort: "unknown" }), { field: "statute", status: null, supplement: null, sort: "relevance", chapter: null, within: null });
 });
 
+test("the status filter reads the same tags as navigation, before and after a refresh records them", () => {
+  const note = "Sections 46-1 to 46-8 , inclusive, have been transferred or repealed.";
+  const values = [
+    { ...documents[0], id: "plain-active", text: "Marriage licenses issued by the registrar." },
+    { ...documents[0], id: "recorded-active", heading: "Secs. 46-1 to 46-8. Marriage.", text: note },
+    { ...documents[0], id: "recorded-mixed", heading: "Secs. 46-1 to 46-8. Marriage.", status: "mixed", statuses: ["repealed", "transferred"], text: note },
+    { ...documents[0], id: "transferred-only", heading: "Secs. 17-21e to 17-21t. Marriage.", text: "Sections 17-21e to 17-21t , inclusive, have been transferred." },
+    { ...documents[1], id: "repealed", heading: "Sec. 46-9. Marriage. Repealed." }
+  ];
+  const ids = (status) => searchDocuments(values, "marriage", { field: "heading", status }).map(({ document }) => document.id).sort();
+  assert.deepEqual(ids("active"), []);
+  assert.deepEqual(searchDocuments(values, "registrar", { status: "active" }).map(({ document }) => document.id), ["plain-active"]);
+  assert.deepEqual(ids("repealed"), ["recorded-active", "recorded-mixed", "repealed"]);
+  assert.deepEqual(ids("transferred"), ["recorded-active", "recorded-mixed", "transferred-only"]);
+  assert.deepEqual(ids("mixed"), ["recorded-active", "recorded-mixed"]);
+});
+
 test("sorts results by legal citation when requested", () => {
   const values = [
     { ...documents[0], id: "ten", citation: "10-2", citations: ["10-2"], text: "shared term" },

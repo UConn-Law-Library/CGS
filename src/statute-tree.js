@@ -60,7 +60,7 @@ export function createStatuteTree({ titleLabel, chapterLabel, titleRoute, chapte
   let catalog = null;
   let current = {};
   let query = "";
-  let statusFilter = "all";
+  const selectedStatuses = new Set();
   let pendingActs = null;
   let pendingActsLoad = null;
   let pendingActsFailed = false;
@@ -80,9 +80,19 @@ export function createStatuteTree({ titleLabel, chapterLabel, titleRoute, chapte
   const titleKey = (title) => `t:${title.id}`;
   const chapterKey = (title, chapter) => `c:${title.id}:${chapter.id}`;
 
-  const filtering = () => Boolean(query.trim()) || statusFilter !== "all";
+  const filtering = () => Boolean(query.trim()) || selectedStatuses.size > 0;
   // Sections are only searched once the query has two characters, or a status is chosen.
-  const searchesSections = () => query.trim().length >= MINIMUM_SECTION_QUERY || statusFilter !== "all";
+  const searchesSections = () => query.trim().length >= MINIMUM_SECTION_QUERY || selectedStatuses.size > 0;
+  const firstSelectedStatus = () => selectedStatuses.values().next().value ?? "all";
+
+  function statusSelection() {
+    if (selectedStatuses.size > 1) return `${selectedStatuses.size} selected`;
+    return statusBadge(firstSelectedStatus());
+  }
+
+  function statusSelected(status) {
+    return status === "all" ? selectedStatuses.size === 0 : selectedStatuses.has(status);
+  }
 
   function isOpen(key, byDefault = false) {
     return (filtering() ? filterExpanded : expanded).get(key) ?? byDefault;
@@ -109,15 +119,14 @@ export function createStatuteTree({ titleLabel, chapterLabel, titleRoute, chapte
   // Sections hidden in Settings, as in the chapter lists. The open section always stays, and
   // choosing a status in the Status filter shows those sections anyway.
   function isHidden(row, href) {
-    if (statusFilter !== "all" || href === current.sectionHref) return false;
+    if (selectedStatuses.size || href === current.sectionHref) return false;
     const statuses = row.tags.filter((tag) => !tag.startsWith("supplement-"));
     return isHiddenByStatus(statuses, hiddenStatuses());
   }
 
   function hasStatus(row) {
-    if (statusFilter === "all") return true;
-    if (statusFilter === "act") return actsFor(row).length > 0;
-    return row.tags.includes(statusFilter);
+    return !selectedStatuses.size || row.tags.some((tag) => selectedStatuses.has(tag)) ||
+      (selectedStatuses.has("act") && actsFor(row).length > 0);
   }
 
   function ensureHeadings(title) {
@@ -219,7 +228,7 @@ export function createStatuteTree({ titleLabel, chapterLabel, titleRoute, chapte
     const words = queryWords(query);
     const searchSections = searchesSections();
     // Titles and chapters carry no status, so a status filter lists sections only.
-    const byStatus = statusFilter !== "all";
+    const byStatus = selectedStatuses.size > 0;
     const counts = { titles: 0, chapters: 0, sections: 0, shown: 0 };
     const nodes = [];
     for (const title of catalog.titles) {
@@ -248,10 +257,13 @@ export function createStatuteTree({ titleLabel, chapterLabel, titleRoute, chapte
 
   function statusText(counts) {
     const total = counts.titles + counts.chapters + counts.sections;
-    if (statusFilter === "act" && pendingActsFailed) return "Recent Public Acts could not be loaded.";
-    if (statusFilter === "act" && !pendingActs) return "Checking recent Public Acts…";
+    let actStatus = "";
+    if (selectedStatuses.has("act") && !pendingActs) {
+      actStatus = pendingActsFailed ? "Recent Public Acts could not be loaded." : "Checking recent Public Acts…";
+      if (selectedStatuses.size === 1) return actStatus;
+    }
     if (searching) return `Searching sections…${total ? ` ${total.toLocaleString()} match${total === 1 ? "" : "es"} so far.` : ""}`;
-    const incomplete = failedTitles.size ? " Some section headings could not be loaded." : "";
+    const incomplete = (failedTitles.size ? " Some section headings could not be loaded." : "") + (actStatus ? ` ${actStatus}` : "");
     if (!total) return `No matching titles, chapters, or sections.${incomplete}`;
     const summary = `${[["title", counts.titles], ["chapter", counts.chapters], ["section", counts.sections]].filter(([, count]) => count).map(([noun, count]) => plural(count, noun)).join(", ")}.`;
     const capped = counts.sections > counts.shown ? ` Showing the first ${SECTION_RESULT_LIMIT} sections; add a word to narrow them.` : "";
@@ -362,16 +374,16 @@ export function createStatuteTree({ titleLabel, chapterLabel, titleRoute, chapte
     const option = event.target.closest("[data-tree-status-option]");
     if (!option) return;
     const menu = option.closest("[popover]");
-    menu.hidePopover();
-    document.getElementById("statute-tree-status").focus({ preventScroll: true });
     const status = option.dataset.treeStatusOption;
-    if (status === statusFilter) return;
-    statusFilter = status;
-    document.getElementById("statute-tree-status-value").innerHTML = statusBadge(statusFilter);
+    if (status === "all") {
+      if (!selectedStatuses.size) return;
+      selectedStatuses.clear();
+    } else if (selectedStatuses.has(status)) selectedStatuses.delete(status);
+    else selectedStatuses.add(status);
+    document.getElementById("statute-tree-status-value").innerHTML = statusSelection();
     for (const choice of menu.querySelectorAll("[data-tree-status-option]")) {
-      const selected = choice === option;
-      choice.setAttribute("aria-pressed", String(selected));
-      choice.toggleAttribute("autofocus", selected);
+      choice.setAttribute("aria-pressed", String(statusSelected(choice.dataset.treeStatusOption)));
+      choice.toggleAttribute("autofocus", choice.dataset.treeStatusOption === firstSelectedStatus());
     }
     filterExpanded.clear();
     if (searchesSections()) loadEveryTitle();
@@ -419,10 +431,10 @@ export function createStatuteTree({ titleLabel, chapterLabel, titleRoute, chapte
         <p class="browse-filter-status" role="status" aria-live="polite" data-tree-filter-status>${escapeHtml(status)}</p></div>
         <div class="tree-status-filter"><span id="statute-tree-status-label">Status</span>
           <button type="button" id="statute-tree-status" popovertarget="statute-tree-status-menu" aria-labelledby="statute-tree-status-label statute-tree-status-value">
-            <span id="statute-tree-status-value">${statusBadge(statusFilter)}</span>${chevron}
+            <span id="statute-tree-status-value">${statusSelection()}</span>${chevron}
           </button>
           <div id="statute-tree-status-menu" class="tree-status-menu" popover aria-labelledby="statute-tree-status-label" role="group">
-            ${Object.keys(STATUS_FILTERS).map((status) => `<button type="button" data-tree-status-option="${status}" aria-pressed="${status === statusFilter}"${status === statusFilter ? " autofocus" : ""}>${statusBadge(status)}</button>`).join("")}
+            ${Object.keys(STATUS_FILTERS).map((status) => `<button type="button" data-tree-status-option="${status}" aria-pressed="${statusSelected(status)}"${status === firstSelectedStatus() ? " autofocus" : ""}>${statusBadge(status)}</button>`).join("")}
           </div>
         </div>`,
       content: `<div id="${RAIL_ID}" class="statute-tree">${html}</div>`

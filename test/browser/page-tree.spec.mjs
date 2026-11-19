@@ -3,10 +3,10 @@ import { expectNoHighImpactAccessibilityViolations, isMobileProject, openApp, op
 
 const turnTreeOn = async (page, route = "#/") => {
   await openApp(page, route);
-  await openNavigationSettings(page);
+  const { panel } = await openNavigationSettings(page);
   await page.locator("[data-navigation-tree]:visible").check();
   await expect(page.locator(".statute-tree-column")).toBeVisible();
-  await page.locator("[data-close-navigation-settings]").click();
+  await panel.getByRole("button", { name: /^Close / }).click();
 };
 const rail = (page) => page.locator("#rail-statute-tree");
 const desktopOnly = (testInfo) => test.skip(isMobileProject(testInfo), "panes are desktop only");
@@ -235,8 +235,7 @@ test("every chevron lines up on the right, at every level of the tree", async ({
   expect(Math.max(...edges) - Math.min(...edges)).toBeLessThanOrEqual(1);
 });
 
-test("filter results keep their status tags, and the status filter narrows to a tag", async ({ page }, testInfo) => {
-  desktopOnly(testInfo);
+test("the status filter combines tags and applies them alongside the text filter", async ({ page }) => {
   await turnTreeOn(page, "#/t/01/c/010");
   const filter = page.getByLabel("Filter titles, chapters, and sections");
   await filter.fill("1-84");
@@ -249,37 +248,62 @@ test("filter results keep their status tags, and the status filter narrows to a 
 
   const statusFilter = page.getByRole("button", { name: /^Status / });
   await statusFilter.press("Enter");
-  const anyStatus = page.getByRole("button", { name: "Any status", exact: true });
+  const menu = page.getByRole("group", { name: "Status", exact: true });
+  const choice = (name) => menu.getByRole("button", { name, exact: true });
+  const anyStatus = choice("Any status");
   await expect(anyStatus).toBeFocused();
   await anyStatus.press("ArrowDown");
   await expect(page.getByRole("button", { name: "Supplement amendments", exact: true })).toBeFocused();
   await page.keyboard.press("Escape");
   await expect(statusFilter).toBeFocused();
-  const chooseStatus = async (name) => {
-    await statusFilter.click();
-    await page.getByRole("group", { name: "Status", exact: true }).getByRole("button", { name, exact: true }).click();
-    await expect(statusFilter).toBeFocused();
-    await expect(statusFilter).toHaveAccessibleName(`Status ${name}`);
-  };
-  await chooseStatus("Recent Public Acts");
+  await statusFilter.click();
+  await choice("Recent Public Acts").click();
+  await expect(choice("Recent Public Acts")).toHaveAttribute("aria-pressed", "true");
+  await expect(choice("Recent Public Acts")).toBeFocused();
+  await expect(statusFilter).toHaveAccessibleName("Status Recent Public Acts");
   await expect(status).toHaveText("2 sections.");
   await expect(rail(page).locator(".section-navigation-link")).toHaveCount(2);
   for (const link of await rail(page).locator(".section-navigation-link").all()) {
     await expect(link.locator(".act-pending-pill")).toHaveCount(1);
   }
 
+  await page.keyboard.press("Escape");
+  await filter.fill("16a-3");
+  await statusFilter.click();
+  await choice("Supplement amendments").press("Space");
+  await expect(statusFilter).toHaveAccessibleName("Status 2 selected");
+  await expect(choice("Recent Public Acts")).toHaveAttribute("aria-pressed", "true");
+  await expect(choice("Supplement amendments")).toHaveAttribute("aria-pressed", "true");
+  await expect(anyStatus).toHaveAttribute("aria-pressed", "false");
+  await expect(rail(page).locator('a[href="#/t/16a/c/295/s/16a-3d"]')).toBeVisible();
+  await expect(rail(page).locator('a[href="#/t/16a/c/295/s/16a-3g"]')).toBeVisible();
+  await expect(rail(page).locator('a[href="#/t/16a/c/295/s/16a-3e"]')).toHaveCount(0);
+  // Removing a selection keeps the other one active, and the menu stays open.
+  await choice("Recent Public Acts").click();
+  await expect(choice("Recent Public Acts")).toHaveAttribute("aria-pressed", "false");
+  await expect(statusFilter).toHaveAccessibleName("Status Supplement amendments");
+  await expect(rail(page).locator('a[href="#/t/16a/c/295/s/16a-3d"]')).toHaveCount(0);
+  await expect(rail(page).locator('a[href="#/t/16a/c/295/s/16a-3g"]')).toBeVisible();
+  await anyStatus.click();
+  await expect(anyStatus).toHaveAttribute("aria-pressed", "true");
+  await expect(statusFilter).toHaveAccessibleName("Status Any status");
+
+  await filter.click();
   await filter.fill("");
-  await chooseStatus("Transferred");
+  await statusFilter.click();
+  await choice("Transferred").click();
   await expect(status).toHaveText(/^[\d,]+ sections\. Showing the first 200 sections/);
   await expect(rail(page).locator(".transferred-pill")).toHaveCount(200);
-  await chooseStatus("Supplement additions");
+  await anyStatus.click();
+  await choice("Supplement additions").click();
   await expect(status).toHaveText(/^[\d,]+ sections\. Showing the first 200 sections/);
   await expect(rail(page).locator(".supplement-new")).toHaveCount(200);
   await expect(rail(page).locator(".supplement-amended")).toHaveCount(0);
-  await chooseStatus("Obsolete");
+  await anyStatus.click();
+  await choice("Obsolete").click();
   await expect(status).toHaveText(/^\d+ sections\.$/);
   await expect(rail(page).locator(".obsolete-pill")).toHaveCount(await rail(page).locator(".section-navigation-link").count());
-  await chooseStatus("Any status");
+  await anyStatus.click();
   await expect(status).toBeHidden();
   await expect(rail(page).locator(".tree-title")).toHaveCount(81);
 });

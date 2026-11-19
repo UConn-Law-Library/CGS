@@ -2524,10 +2524,15 @@ function closeNavigationSettings({ restoreFocus = true } = {}) {
   if (restoreFocus) visibleNavigationSettingsButton()?.focus();
 }
 
-window.addEventListener("resize", () => closeNavigationSettings({ restoreFocus: false }));
+window.addEventListener("resize", () => {
+  if (document.querySelector("[data-navigation-settings].tour-panel:not([hidden])") && visibleNavigationSettingsButton()) {
+    positionNavigationSettings();
+  } else closeNavigationSettings({ restoreFocus: false });
+});
 
 document.addEventListener("pointerdown", (event) => {
   if (!event.target.closest("[data-global-search]")) closeOmni();
+  if (event.target.closest("[data-tour]")) return;
   if (navigationSettingsOpen() && !event.target.closest("[data-navigation-settings], [data-open-navigation-settings]")) {
     closeNavigationSettings({ restoreFocus: false });
   }

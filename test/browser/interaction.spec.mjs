@@ -787,27 +787,82 @@ test("chapter notices share one shape, with headings and openable section lists"
   await expect(acts.locator(".context-list a").first()).toBeVisible();
 });
 
-test("What's new walks through the changes and returns focus when closed", async ({ page }) => {
+test("What's new opens the relevant settings, visits the archive, and restores focus", async ({ page }, testInfo) => {
   await openApp(page);
   const button = page.locator("[data-open-whats-new]");
   await button.click();
-  const card = page.getByRole("dialog", { name: "Navigation settings" });
+  const card = page.getByRole("dialog", { name: /What's new.*Navigation settings/ });
+  const next = page.locator("[data-tour-next]");
+  const back = page.locator("[data-tour-back]");
+  const settings = page.locator("[data-settings-panel]");
+  const paneSettings = page.locator("[data-navigation-settings]");
+  const mobile = isMobileProject(testInfo);
   await expect(card).toBeVisible();
   await expect(page).toHaveURL(/#\/t\/16a\/c\/295$/);
-  await expect(page.locator(".tour-target")).toHaveCount(1);
-  const titles = ["Filter sections by status", "Reading width", "Chapter change summaries", "Compare a section's versions"];
+  await expect(mobile ? settings : paneSettings).toBeVisible();
+  await expect(mobile ? settings.locator(".navigation-setting-rows") : paneSettings).toHaveClass(/tour-target/);
+  const firstTrigger = page.locator(mobile ? "[data-open-settings]" : "[data-open-navigation-settings]:visible");
+  await expect(firstTrigger).toHaveClass(/tour-target/);
+  const firstCardBox = await card.boundingBox();
+  const firstPanelBox = await (mobile ? settings : paneSettings).boundingBox();
+  if (mobile) {
+    const triggerBox = await firstTrigger.boundingBox();
+    expect(triggerBox.y + triggerBox.height).toBeLessThan(firstPanelBox.y);
+    expect(firstPanelBox.y + firstPanelBox.height).toBeLessThan(firstCardBox.y);
+  } else expect(firstPanelBox.x + firstPanelBox.width).toBeLessThan(firstCardBox.x);
+
+  await next.click();
+  await expect(page.locator("#tour-title")).toHaveText("Filter sections by status");
+  await expect(paneSettings).toBeHidden();
+  await expect(settings).toBeHidden();
+  await next.click();
+  await expect(page.locator("#tour-title")).toHaveText("Reading width");
+  await expect(page.locator("[data-open-settings]")).toHaveClass(/tour-target/);
+  if (mobile) await expect(settings).toBeHidden();
+  else {
+    await expect(settings).toBeVisible();
+    const width = page.locator(".reading-width-setting");
+    await expect(width).toHaveClass(/tour-target/);
+    await expect(width).toBeInViewport({ ratio: 1 });
+    const cardBox = await page.locator("[data-tour]").boundingBox();
+    const settingsBox = await settings.boundingBox();
+    expect(cardBox.x + cardBox.width).toBeLessThan(settingsBox.x);
+  }
+
+  const titles = ["Chapter change summaries", "Compare a section's versions"];
   for (const title of titles) {
-    await page.locator("[data-tour-next]").click();
+    await next.click();
     await expect(page.locator("#tour-title")).toHaveText(title);
   }
+  await expect(settings).toBeHidden();
   await expect(page).toHaveURL(/#\/t\/16a\/c\/295\/s\/16a-3g$/);
   await expect(page.locator(".revision-view-switch")).toHaveClass(/tour-target/);
-  await expect(page.locator("[data-tour-progress]")).toHaveText("What's new · 5 of 5");
-  await expect(page.locator("[data-tour-next]")).toHaveText("Done");
-  await page.locator("[data-tour-back]").click();
-  await expect(page.locator("#tour-title")).toHaveText("Chapter change summaries");
-  await page.keyboard.press("Escape");
+  await expect(page.locator("[data-tour-progress]")).toHaveText("What's new · 5 of 6");
+  await next.click();
+  await expect(page.locator("#tour-title")).toHaveText("Archived statute editions");
+  await expect(page).toHaveURL(/#\/editions$/);
+  const archive = page.locator(".edition-list .edition-card").first();
+  await expect(archive).toHaveClass(/tour-target/);
+  await expect(archive).toBeInViewport();
+  if (mobile) {
+    const archiveBox = await archive.boundingBox();
+    const cardBox = await page.locator("[data-tour]").boundingBox();
+    expect(archiveBox.y + archiveBox.height).toBeLessThan(cardBox.y);
+  }
+  await expect(next).toHaveText("Done");
+  await back.click();
+  await expect(page.locator(".revision-view-switch")).toHaveClass(/tour-target/);
+  await next.click();
+  await expect(archive).toHaveClass(/tour-target/);
+  await next.click();
   await expect(page.locator("[data-tour]")).toHaveCount(0);
   await expect(page.locator(".tour-target")).toHaveCount(0);
   await expect(page.locator("[data-open-whats-new]")).toBeFocused();
+
+  await button.click();
+  await expect(card).toBeVisible();
+  await page.keyboard.press("Escape");
+  await expect(page.locator("[data-tour]")).toHaveCount(0);
+  await expect(mobile ? settings : paneSettings).toBeHidden();
+  await expect(button).toBeFocused();
 });

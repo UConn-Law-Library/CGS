@@ -48,18 +48,21 @@ HEADER_TOP = 110            # page number / INDEX running head sits above this
 BODY_FONT_SIZE_MAX = 9.5    # intro text and letter dividers are larger
 
 # statute section reference, including UCC article segments, e.g. 15-76,
-# 19a-601(d), 42a-1-309, and 42a-2A-102(a)(7)
+# 19a-601(d), 42a-1-309, and 42a-2A-102(a)(7). Only a UCC article segment is
+# capitalized; a title never is, so "Schedule 14D-1" names no section.
 SEC_REF_RE = re.compile(
-    r"^(\d+[a-z]{0,3}(?:-\d+[a-z]{0,3})+)((?:\([^()]*\))*)[,.;]?$",
-    re.IGNORECASE,
+    r"^(\d+[a-z]{0,3}(?:-\d+[a-zA-Z]{0,3})+)((?:\([^()]*\))*)[,.;]?$"
 )
 PARTIAL_SEC_REF_RE = re.compile(
     r"\d+[a-z]{0,3}(?:-\d+[a-z]{0,3})*-$", re.IGNORECASE
 )
-# tokens that belong to constitution citations: U.S. Const. Am. XIV:1
-CONST_TOKEN_RE = re.compile(r"^(?:U\.S\.|Ct\.|Const\.|Am\.|[IVXLC]+(?::\d+[a-z]?)?[,.;]?)$")
+# tokens that may belong to constitution citations: U.S. Const. Am. XIV:1,
+# Ct. Const. Am.XVII. A bare numeral is a reference only inside a full
+# citation (see split_refs): "Hepatitis C" and "Tier I" are entry text.
+CONST_TOKEN_RE = re.compile(
+    r"^(?:U\.S\.|Ct\.|Const\.|Am\.|(?:Am\.)?[IVXLC]+(?::\d+[a-z]?)?[,.;]?)$")
 CONST_REF_RE = re.compile(
-    r"(?:U\.S\.|Ct\.)\s+Const\.(?:\s+Am\.)?\s+[IVXLC]+(?::\d+[a-z]?)?", re.IGNORECASE)
+    r"(?:U\.S\.|Ct\.)\s+Const\.\s+(?:Am\.\s*)?[IVXLC]+(?::\d+[a-z]?)?", re.IGNORECASE)
 CONTD_RE = re.compile(r"[—–-]\s*Cont[’']?d\.?$")
 
 
@@ -108,6 +111,30 @@ def has_terminator(text):
     return token_is_ref(text.split()[-1])
 
 
+def reference_run_start(toks, start):
+    """Where the references really begin within the trailing run toks[start:].
+
+    Every token of the run must be a section reference or part of a full
+    constitution citation. A word that merely looks like a citation part
+    (the "C" of "Hepatitis C", the "I" of "Tier I") stays with the entry text,
+    along with everything before it.
+    """
+    covered = []
+    spans = []
+    offset = 0
+    tail = " ".join(toks[start:])
+    for m in CONST_REF_RE.finditer(tail):
+        spans.append((m.start(), m.end()))
+    for tok in toks[start:]:
+        in_citation = any(lo <= offset < hi for lo, hi in spans)
+        covered.append(in_citation or bool(SEC_REF_RE.match(tok)))
+        offset += len(tok) + 1
+    for k in range(len(covered) - 1, -1, -1):
+        if not covered[k]:
+            return start + k + 1
+    return start
+
+
 def split_refs(text):
     """Split trailing statute/constitution references off an entry text."""
     text = normalize_reference_spacing(text)
@@ -115,6 +142,7 @@ def split_refs(text):
     i = len(toks)
     while i > 0 and token_is_ref(toks[i - 1]):
         i -= 1
+    i = reference_run_start(toks, i)
     desc = " ".join(toks[:i]).rstrip(",;").strip()
     tail = " ".join(toks[i:])
     refs = []
@@ -137,7 +165,9 @@ def split_see(text, current_heading=None):
         return None
     targets = []
     for part in m.group(1).split(";"):
-        part = part.strip().rstrip(".").strip()
+        part = part.strip()
+        if not part.endswith("U.S."):  # the heading "SENATORS, U.S." keeps its period
+            part = part.rstrip(".").strip()
         if not part:
             continue
         same_heading = re.fullmatch(

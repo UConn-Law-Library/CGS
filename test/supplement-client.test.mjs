@@ -229,3 +229,23 @@ test("adds supplement-only chapters to title navigation and scopes their lookup"
   assert.equal((await repository.loadLatestChapter("art-012a", "title-42a")).chapter.id, "chapter-art-012a");
   assert.equal((await repository.loadLatestChapter("art-012a", "title-01")).chapter, null);
 });
+
+test("orders overlaid sections by statute numbering, with double letters after single", () => {
+  const base = {
+    ...baseChapter,
+    sections: ["1-1", "1-1b", "1-1z"].map((citation) => ({ id: `section-${citation}`, citation, citations: [citation], text: "base" }))
+  };
+  const overlay = {
+    ...overlayChapter,
+    sections: [{ id: "section-1-1aa", citation: "1-1aa", citations: ["1-1aa"], text: "addition" }]
+  };
+  const result = applyChapterOverlay(base, overlay, 2026);
+  assert.deepEqual(result.chapter.sections.map((section) => section.citation), ["1-1", "1-1b", "1-1z", "1-1aa"]);
+});
+
+test("orders supplement-only chapters by statute numbering", () => {
+  const title = { id: "title-01", chapters: [{ id: "chapter-319z", number: "319z" }, { id: "chapter-320", number: "320" }] };
+  const supplementTitle = { id: "title-01", chapters: [{ id: "chapter-319aa", number: "319aa" }, { id: "chapter-319b", number: "319b" }] };
+  const merged = mergeSupplementTitleChapters(title, supplementTitle, 2026);
+  assert.deepEqual(merged.chapters.map((chapter) => chapter.number), ["319b", "319z", "319aa", "320"]);
+});

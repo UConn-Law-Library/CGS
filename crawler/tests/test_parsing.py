@@ -222,6 +222,23 @@ class ParsingTests(unittest.TestCase):
         self.assertEqual(len(sections), 1)
         self.assertEqual(sections[0]["section_keys"], ["12-21", "12-22", "12-23", "12-24", "12-24a"])
 
+    def test_a_section_without_body_text_keeps_its_source_note(self):
+        # From the 2023 revision of chapter 246: the table of contents repeats the repeal note,
+        # so stripping the heading leaves no body, but the source note still belongs to 14-53.
+        url = "https://www.cga.ct.gov/2023/pub/chap_246.htm"
+        html = (
+            '<p class="toc_catchln"><a href="#sec_14-53">Sec. 14-53. Location of business to be approved. '
+            "Section 14-53 is repealed, effective July 1, 2002.</a></p>"
+            '<p><span class="catchln" id="sec_14-53">Sec. 14-53. Location of business to be approved.</span> '
+            'Section <a href ="chap_246.htm#sec_14-53">14-53</a> is repealed, effective July 1, 2002.</p>'
+            '<p class="source-first">(1949 Rev., S. 2393; 1953, S. 1309d; P.A. 02-70, S. 87.)</p>'
+        )
+        sections = extract_section_links(html, url, "14")
+        attach_section_content(html, sections)
+        content = sections[0]["content"]
+        self.assertEqual(content["source"], ["(1949 Rev., S. 2393; 1953, S. 1309d; P.A. 02-70, S. 87.)"])
+        self.assertEqual(content["status"], "repealed")
+
     def test_has_been_disposition_notes(self):
         self.assertEqual(detect_section_status("Section 46-31a has been transferred."), ["transferred"])
         self.assertEqual(

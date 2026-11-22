@@ -36,6 +36,7 @@ export function createSearchWorkerHandler(postMessage) {
         return;
       }
       searches.set(message.requestId, { ...createSearchState(message), cacheKey: message.cacheKey });
+      if (message.cached) postMessage({ type: "cache-miss", requestId: message.requestId });
       return;
     }
     if (message.type === "cancel") {

@@ -170,3 +170,45 @@ test("worker pagination reuses a completed ranking without loading shards again"
   await client.search("public AND records");
   assert.equal(scans, 2);
 });
+
+test("a ranking the worker cached after the tab stopped waiting does not strand a later search", async () => {
+  let scans = 0, listener, holdFinish = null;
+  const handle = createSearchWorkerHandler((data) => queueMicrotask(() => listener({ data })));
+  // Delivers messages to the worker in order, but can hold one "finish" so a cancel races it.
+  const worker = {
+    addEventListener(type, callback) { if (type === "message") listener = callback; },
+    postMessage(message) {
+      if (holdFinish && message.type === "finish") { holdFinish(message); return; }
+      handle(message);
+    }
+  };
+  const repository = {
+    async init() { return { shards: [{ titleId: "title-01" }] }; },
+    async loadTitles(ids, { onTitle }) {
+      scans++;
+      onTitle(shard("01", [document("a", "1-1", "public records"), document("b", "1-2", "public")]));
+    }
+  };
+  const client = new ProgressiveSearchClient({ repository, workerFactory: () => worker });
+  await client.search("public");
+
+  // A second search reaches "finish" in the worker, but the tab cancels it first.
+  const controller = new AbortController();
+  let release;
+  const finished = new Promise((resolve) => { holdFinish = (message) => { release = () => handle(message); resolve(); }; });
+  const second = client.search("records", { signal: controller.signal });
+  await finished;
+  holdFinish = null;
+  release();
+  controller.abort();
+  await assert.rejects(second, { name: "AbortError" });
+  await new Promise((resolve) => setTimeout(resolve, 0));
+
+  // The tab still believes "public" is cached; the worker now holds "records".
+  const third = await Promise.race([
+    client.search("public"),
+    new Promise((_, reject) => setTimeout(() => reject(new Error("search hung")), 500))
+  ]);
+  assert.equal(third.results.length, 2);
+  assert.equal(scans, 3);
+});

@@ -113,6 +113,16 @@ self.addEventListener("activate", (event) => {
   })());
 });
 
+// Keeping a copy is a convenience: a full device (QuotaExceededError) must not turn a good
+// network response into a failure.
+async function rememberResponse(cache, request, response) {
+  try {
+    await cache.put(request, response);
+  } catch (error) {
+    console.warn("Could not keep a copy for offline use", error);
+  }
+}
+
 async function networkFirst(request, cacheName, fallback = null) {
   const cache = await caches.open(cacheName);
   try {
@@ -121,7 +131,7 @@ async function networkFirst(request, cacheName, fallback = null) {
       return new Response(await incoming.arrayBuffer(), { status: incoming.status, statusText: incoming.statusText, headers: incoming.headers });
     });
     if (transientFailure(response)) throw new Error(`Server unavailable (${response.status})`);
-    if (response.ok) await cache.put(request, response.clone());
+    if (response.ok) await rememberResponse(cache, request, response.clone());
     return response;
   } catch (error) {
     const cached = await cache.match(request) ?? (fallback ? await cache.match(fallback) : null);
@@ -233,7 +243,7 @@ async function dataNetworkFirst(request) {
   if (!artifact) return new Response("Not part of this data release. Reload to update.", { status: 404 });
   try {
     const response = await verifiedResponse(request, artifact);
-    await runtime.put(request, response.clone());
+    await rememberResponse(runtime, request, response.clone());
     return response;
   } catch (error) {
     // A download from an earlier release still serves every file whose bytes this release
@@ -387,19 +397,28 @@ async function cacheOfflineData({ port }) {
     const pending = artifacts;
     const total = pending.length + completed;
     port.postMessage({ type: "progress", completed, total });
+    // One failure stops every worker, and all of them settle before the staging cache is
+    // deleted, so none keeps downloading into it or reports progress after the error.
+    let failure = null;
     async function worker() {
-      while (cursor < pending.length) {
+      while (!failure && cursor < pending.length) {
         const artifact = pending[cursor++];
-        const result = await fetchVerifiedIntoCache(artifact, cache, previous);
-        verifiedBytes += result.bytes;
-        if (result.reused) reusedFiles += 1;
+        try {
+          const result = await fetchVerifiedIntoCache(artifact, cache, previous);
+          verifiedBytes += result.bytes;
+          if (result.reused) reusedFiles += 1;
+        } catch (error) {
+          failure ??= error;
+          return;
+        }
         completed += 1;
-        if (completed === total || completed % 10 === 0) {
+        if (!failure && (completed === total || completed % 10 === 0)) {
           port.postMessage({ type: "progress", completed, total });
         }
       }
     }
     await Promise.all(Array.from({ length: 6 }, worker));
+    if (failure) throw failure;
     const metadata = {
       offlineFormatVersion: OFFLINE_FORMAT_VERSION,
       dataReleaseId: DATA_RELEASE_ID,

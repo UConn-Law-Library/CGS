@@ -87,6 +87,7 @@ import {
   plainSearchWords
 } from "./omnisearch.js";
 import {
+  amountLabel,
   formatMoney,
   findIndexSubheadingEntry,
   groupIndexEntries,
@@ -1383,7 +1384,7 @@ async function renderChapter(catalog, title, chapterMeta, route, sequence, setti
   if (selected && !edition) {
     referenceMaps(provisions, catalog).then((resolved) => {
       if (sequence !== renderSequence) return;
-      for (const link of app.querySelectorAll(".provision a.legal-reference")) {
+      for (const link of app.querySelectorAll(".provision a.legal-reference:not([data-public-act])")) {
         const key = link.textContent.toLowerCase();
         const href = resolved.sections.get(key) ?? resolved.chapters.get(key);
         if (href) link.setAttribute("href", href);
@@ -1600,11 +1601,6 @@ function renderInfractionListItem(entry, { showCategory = false } = {}) {
     <a href="${escapeHtml(href)}"><span class="infraction-citation">Sec. ${escapeHtml(entry.citation)}${showCategory ? ` · ${escapeHtml(entry.category)}` : ""}</span><strong>${escapeHtml(entry.description)}</strong>${total != null ? `<small>Total due ${escapeHtml(formatMoney(total))}</small>` : ""}</a>
     ${bookmarkButton(infractionBookmark(entry), "compact-bookmark")}
   </li>`;
-}
-
-function amountLabel(key) {
-  return ({ total_due: "Total due", fine: "Fine", fee: "Fee", surcharge: "Surcharge", cost: "Cost" })[key]
-    ?? key.replaceAll("_", " ").replace(/^./, (value) => value.toUpperCase());
 }
 
 function renderInfractionDetail(entry, source) {
@@ -1978,7 +1974,8 @@ async function renderStatutesIndex(route, sequence, settingsPanel) {
   const manifests = await secondaryRepository.init();
   if (sequence !== renderSequence) return;
   const letterCounts = aggregateShardCounts(manifests.index.shards);
-  const available = [...letterCounts.keys()].filter((key) => /^[a-z]$/.test(key));
+  // Headings that start with a digit ("211 INFOLINE PROGRAM") are filed under that digit.
+  const available = [...letterCounts.keys()].filter((key) => /^[a-z0-9]$/.test(key));
   const letter = route.letter;
   if (letter && !available.includes(letter)) return renderNotFound("That index letter was not found.");
   const topics = letter ? await secondaryRepository.loadIndexLetter(letter) : [];

@@ -588,12 +588,16 @@ def attach_section_content(html: str, sections: List[Dict[str, object]]) -> None
         else:
             content = text_map.get(key)
             if not content or not content.get("text"):
+                # A section with no body text can still carry source, history, and annotations
+                # (often a repealed section's history notes). Keep them; only the body comes
+                # from the chapter's repeal note.
                 note = repealed_map.get(key)
                 content = {
-                    "body_paragraphs": [note] if note else [],
                     "source": [],
                     "history": [],
                     "annotations": [],
+                    **(content or {}),
+                    "body_paragraphs": [note] if note else [],
                     "text": note or "",
                 }
                 if note:

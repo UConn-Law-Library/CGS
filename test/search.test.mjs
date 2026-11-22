@@ -234,3 +234,42 @@ test("SearchRepository preserves base search when supplement data is unavailable
   assert.equal(await repository.loadTitle("title-01"), recovered);
   assert.equal(supplementCalls, 2);
 });
+
+test("quoted phrases match whole words, not parts of words", () => {
+  const values = [
+    { ...documents[0], id: "exact", text: "see section 1-21 and the state act" },
+    { ...documents[0], id: "longer", text: "see section 1-210 and the estate action on taxation" }
+  ];
+  const ids = (query) => searchDocuments(values, query).map(({ document }) => document.id);
+  assert.deepEqual(ids('"1-21"'), ["exact"]);
+  assert.deepEqual(ids('"state act"'), ["exact"]);
+  assert.deepEqual(ids('"tax"'), []);
+});
+
+test("a lone dash between words is not a search term", () => {
+  const values = [{ ...documents[0], id: "both", text: "landlord and tenant" }];
+  assert.deepEqual(searchDocuments(values, "landlord - tenant").map(({ document }) => document.id), ["both"]);
+  assert.throws(() => compileSearchQuery('"-"'), /cannot be empty/i);
+});
+
+test("NEAR measures from the end of a phrase and needs two matches of the same word", () => {
+  const values = [
+    { ...documents[0], id: "adjacent", text: "the freedom of information act commissioner" },
+    { ...documents[0], id: "one-warrant", text: "a warrant issued" },
+    { ...documents[0], id: "two-warrants", text: "warrant warrant" }
+  ];
+  const ids = (query) => searchDocuments(values, query).map(({ document }) => document.id);
+  assert.deepEqual(ids('"freedom of information act" NEAR/1 commissioner'), ["adjacent"]);
+  assert.deepEqual(ids('commissioner NEAR/1 "freedom of information act"'), ["adjacent"]);
+  assert.deepEqual(ids("warrant NEAR/1 warrant"), ["two-warrants"]);
+});
+
+test("citation sort puts double-letter sections after single-letter ones", () => {
+  const values = ["1-1aa", "1-1b", "1-1z", "1-1", "1-2"].map((citation) => ({
+    ...documents[0], id: citation, citation, citations: [citation], text: "public records"
+  }));
+  assert.deepEqual(
+    searchDocuments(values, "records", { sort: "citation" }).map(({ document }) => document.citation),
+    ["1-1", "1-1b", "1-1z", "1-1aa", "1-2"]
+  );
+});

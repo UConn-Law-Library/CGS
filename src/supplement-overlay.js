@@ -1,4 +1,4 @@
-const collator = new Intl.Collator("en", { numeric: true, sensitivity: "base" });
+import { compareStatuteNumbers } from "./routes.js";
 
 function citations(section) {
   return section.citations ?? (section.citation ? [section.citation] : []);
@@ -187,7 +187,7 @@ export function applyChapterOverlay(baseChapter, overlayChapter, editionYear) {
   }
 
   const sections = entries.map((entry) => entry.section);
-  sections.sort((left, right) => collator.compare(sectionKey(left), sectionKey(right)));
+  sections.sort((left, right) => compareStatuteNumbers(sectionKey(left), sectionKey(right)));
   return {
     chapter: { ...(baseChapter ?? overlayChapter), sections },
     overlay: { editionYear, sourceUrl: overlayChapter.sourceUrl, changes }

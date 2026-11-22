@@ -307,3 +307,18 @@ test("the shell is precached past the HTTP cache and served from its own generat
   assert.equal(await (await response).text(), "precached page");
   assert.ok(!worker.fetched.includes("app.js"));
 });
+
+test("a full device does not turn a good data response into a failure", async () => {
+  const worker = await offlineWorker();
+  const runtime = await worker.caches.open(`cgs-data-runtime-${encodeURIComponent("/CGS/")}-__CGS_DATA_RELEASE_ID__`);
+  runtime.put = async () => { throw new DOMException("Quota exceeded", "QuotaExceededError"); };
+  const warn = console.warn;
+  console.warn = () => {};
+  try {
+    const response = await worker.fetchArtifact();
+    assert.equal(response.status, 200);
+    assert.deepEqual(await response.json(), { revision: "verified" });
+  } finally {
+    console.warn = warn;
+  }
+});

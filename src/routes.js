@@ -17,6 +17,30 @@ export function comparableNumber(value) {
     .replace(/^0+(?=\d)/, "");
 }
 
+const statuteSegment = /^(\d+)([a-z]*)(.*)$/;
+const fallbackCollator = new Intl.Collator("en", { numeric: true, sensitivity: "base" });
+
+// Statute, chapter, and title numbers sort segment by segment: the number, then the letter
+// suffix, where a longer suffix comes later (1-1z before 1-1aa, chapter 319z before 319aa).
+// A numeric collator would put 1-1aa before 1-1b.
+export function compareStatuteNumbers(left, right) {
+  const a = String(left ?? "").trim().toLowerCase().split("-");
+  const b = String(right ?? "").trim().toLowerCase().split("-");
+  for (let index = 0; index < Math.min(a.length, b.length); index += 1) {
+    if (a[index] === b[index]) continue;
+    const x = a[index].match(statuteSegment);
+    const y = b[index].match(statuteSegment);
+    const order = x && y
+      ? (Number(x[1]) - Number(y[1]))
+        || (x[2].length - y[2].length)
+        || (x[2] < y[2] ? -1 : x[2] > y[2] ? 1 : 0)
+        || fallbackCollator.compare(x[3], y[3])
+      : fallbackCollator.compare(a[index], b[index]);
+    if (order) return order;
+  }
+  return a.length - b.length;
+}
+
 export function chapterDisplayLabel(chapter) {
   const number = String(chapter?.number ?? chapter ?? "");
   const article = number.match(/^art[-_](.+)$/i);

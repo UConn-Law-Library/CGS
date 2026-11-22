@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import {
+  amountLabel,
   formatMoney,
   findIndexSubheadingEntry,
   groupIndexEntries,
@@ -137,4 +138,11 @@ test("omits empty related-record groups without rendering a placeholder", () => 
     indexEntries: []
   });
   assert.equal(html, "");
+});
+
+test("fee labels spell out the schedule's column abbreviations", () => {
+  assert.equal(amountLabel("stf"), "Transportation Fund");
+  assert.equal(amountLabel("bipsa"), "Brain injury assessment");
+  assert.equal(amountLabel("z_fee"), "Zone fee");
+  assert.equal(amountLabel("new_column"), "New column");
 });

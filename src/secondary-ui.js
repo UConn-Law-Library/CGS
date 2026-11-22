@@ -1,6 +1,7 @@
 import { escapeHtml } from "./reader.js";
 import { indexRouteHref } from "./routes.js";
 
+// The schedule's own column abbreviations; one map serves the list and the detail page.
 const amountLabels = {
   total_due: "Total due",
   fine: "Fine",
@@ -28,11 +29,15 @@ function renderResolution(display, resolution) {
     : `<span>${escapeHtml(display)}</span>`;
 }
 
+export function amountLabel(key) {
+  return amountLabels[key] ?? String(key).replaceAll("_", " ").replace(/^./, (value) => value.toUpperCase());
+}
+
 function renderAmounts(amounts = {}) {
   const values = Object.entries(amounts);
   if (!values.length) return "";
   return `<dl class="amounts">${values.map(([key, value]) =>
-    `<div><dt>${escapeHtml(amountLabels[key] ?? key)}</dt><dd>${escapeHtml(formatMoney(value))}</dd></div>`
+    `<div><dt>${escapeHtml(amountLabel(key))}</dt><dd>${escapeHtml(formatMoney(value))}</dd></div>`
   ).join("")}</dl>`;
 }
 

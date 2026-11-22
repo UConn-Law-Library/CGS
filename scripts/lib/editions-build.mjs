@@ -3,10 +3,7 @@ import path from "node:path";
 import { applyChapterOverlay } from "./supplement-overlay.mjs";
 import { generateSupplementIndex } from "./supplement-index.mjs";
 import { SECONDARY_KINDS, sourceEditionIdentity } from "./secondary-editions.mjs";
-
-function comparableNumber(value) {
-  return String(value ?? "").trim().toLowerCase().replace(/^0+(?=d)/, "");
-}
+import { comparableNumber } from "../../src/routes.js";
 
 async function isDirectory(target) {
   return Boolean((await stat(target).catch(() => null))?.isDirectory());

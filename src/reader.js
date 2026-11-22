@@ -197,7 +197,9 @@ export function renderLinkedText(value, { sections = new Map(), chapters = new M
   for (const { kind, target, index, end, href: actHref } of references) {
     parts.push(escapeHtml(text.slice(cursor, index)));
     const href = kind ? (kind === "sections" ? sections : chapters).get(target.toLowerCase()) : actHref;
-    const attributes = kind ? "" : ` target="_blank" rel="noopener noreferrer" title="Public Act ${escapeHtml(target)} on the Connecticut General Assembly website (opens in a new tab)"`;
+    // data-public-act keeps later statute-link enrichment off these links: "P.A. 14-1" and
+    // "section 14-1" read the same once the prefix is gone.
+    const attributes = kind ? "" : ` data-public-act target="_blank" rel="noopener noreferrer" title="Public Act ${escapeHtml(target)} on the Connecticut General Assembly website (opens in a new tab)"`;
     parts.push(href
       ? `<a class="legal-reference" href="${escapeHtml(href)}"${attributes}>${escapeHtml(target)}</a>`
       : escapeHtml(target));

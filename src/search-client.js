@@ -59,12 +59,7 @@ export class ProgressiveSearchClient {
         this.#worker?.postMessage({ type: "cancel", requestId });
         this.#settle(requestId, { reject, error: abortError() });
       };
-      signal?.addEventListener("abort", onAbort, { once: true });
-      this.#pending.set(requestId, { resolve, reject, onProgress, signal, onAbort, cacheKey });
-      this.#worker.postMessage({ type: "start", requestId, query, limit, total: ids.length, searchOptions, cacheKey });
-      if (this.#completedKey === cacheKey) return;
-
-      this.#repository.loadTitles(ids, {
+      const load = () => this.#repository.loadTitles(ids, {
         signal,
         includeAuxiliary: ["all", "history", "annotations"].includes(searchOptions.field),
         onTitle: (shard) => this.#worker?.postMessage({ type: "shard", requestId, shard })
@@ -74,6 +69,14 @@ export class ProgressiveSearchClient {
         this.#worker?.postMessage({ type: "cancel", requestId });
         this.#settle(requestId, { reject, error });
       });
+      signal?.addEventListener("abort", onAbort, { once: true });
+      this.#pending.set(requestId, { resolve, reject, onProgress, signal, onAbort, cacheKey, load });
+      // The worker may have cached a newer ranking than this tab knows about (a search can
+      // finish there after this tab stopped waiting for it), so a cached start only asks: the
+      // worker answers with the ranking or with "cache-miss", and then the shards are loaded.
+      const cached = this.#completedKey === cacheKey;
+      this.#worker.postMessage({ type: "start", requestId, query, limit, total: ids.length, searchOptions, cacheKey, cached });
+      if (!cached) load();
     });
   }
 
@@ -101,6 +104,11 @@ export class ProgressiveSearchClient {
   #handleMessage(message) {
     const pending = this.#pending.get(message.requestId);
     if (!pending) return;
+    if (message.type === "cache-miss") {
+      this.#completedKey = null;
+      pending.load();
+      return;
+    }
     if (message.type === "complete") this.#completedKey = message.supplementUnavailable ? null : pending.cacheKey;
     const progress = {
       completed: message.processed,

@@ -1,6 +1,7 @@
 import { diffSupplement, evaluateSupplementDiff, renderSupplementDiff } from "../scripts/lib/supplement-diff.mjs";
 import { generateDiscovery } from "../scripts/lib/discovery.mjs";
 import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
 import { cp, mkdtemp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
@@ -102,6 +103,23 @@ test("imports supplements as year-scoped non-destructive citation overlays", asy
   const indexSchema = JSON.parse(await readFile(path.join(schemas, "supplement-index.schema.json"), "utf8"));
   assert.deepEqual(validateSchema(index, indexSchema), []);
   assert.equal(index.editions[0].path, "2026/manifest.json");
+
+  const searchArtifact = manifest.artifacts.find((artifact) => artifact.path === manifest.titles[0].searchPath);
+  async function writeSearchShard() {
+    const bytes = Buffer.from(`${JSON.stringify(search, null, 2)}\n`);
+    searchArtifact.bytes = bytes.length;
+    searchArtifact.sha256 = createHash("sha256").update(bytes).digest("hex");
+    await writeFile(path.join(output, searchArtifact.path), bytes);
+    await writeFile(path.join(output, "manifest.json"), `${JSON.stringify(manifest, null, 2)}\n`);
+  }
+  search.documents.reverse();
+  await writeSearchShard();
+  assert.deepEqual((await validateSupplement({ supplementDir: output, baseDataDir: base, schemaDir: schemas })).errors, []);
+
+  search.documents[0].text = "Unrelated search text.";
+  await writeSearchShard();
+  const invalidSearch = await validateSupplement({ supplementDir: output, baseDataDir: base, schemaDir: schemas });
+  assert.deepEqual(invalidSearch.errors, ["search/title-01.json: documents do not match the consolidated supplement corpus"]);
 
   await writeFile(path.join(base, "manifest.json"), `${await readFile(path.join(base, "manifest.json"), "utf8")}\n`, "utf8");
   const stale = await validateSupplement({ supplementDir: output, baseDataDir: base, schemaDir: schemas });

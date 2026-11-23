@@ -13,12 +13,23 @@ export const DEFAULT_PREFERENCES = Object.freeze({
   textScale: 1,
   fontProfile: "default",
   lineSpacing: 1.55,
-  compactLists: true,
-  hideRepealedSections: false
+  compactLists: false,
+  hiddenStatuses: Object.freeze([]),
+  subtleNotices: false,
+  navigationTree: false,
+  readingWidth: "standard"
 });
 
 const themes = new Set(["auto", "light", "dark", "oled"]);
+// Statuses a person can hide from chapter navigation, in the order Settings lists them.
+export const HIDEABLE_STATUSES = Object.freeze(["repealed", "transferred", "obsolete", "reserved"]);
+
+function normalizeHiddenStatuses(value, legacyHideRepealed = false) {
+  const wanted = Array.isArray(value) ? value : legacyHideRepealed ? ["repealed"] : [];
+  return HIDEABLE_STATUSES.filter((status) => wanted.includes(status));
+}
 const fontProfiles = new Set(["default", "atkinson", "lexend", "inclusive"]);
+export const READING_WIDTHS = Object.freeze({ standard: "Standard", wide: "Wide", widest: "Widest" });
 
 function normalizeLineSpacing(value) {
   if (value === null || value === undefined || value === "") return DEFAULT_PREFERENCES.lineSpacing;
@@ -38,7 +49,7 @@ function validBookmark(item) {
   return item && typeof item.id === "string" && item.id.length > 0 && item.id.length <= 1000
     && ["statute", "infraction"].includes(item.type)
     && typeof item.title === "string" && item.title.length > 0 && item.title.length <= 5000
-    && typeof item.href === "string" && /^#\/(?:t\/|infractions(?:[/?]|$))/.test(item.href)
+    && typeof item.href === "string" && /^#\/(?:t\/|editions\/\d{4}\/t\/|infractions(?:[/?]|$))/.test(item.href)
     && item.href.length <= 5000;
 }
 
@@ -216,7 +227,8 @@ export class DeviceState {
       widths: Array.from({ length: 3 }, (_, index) => {
         const width = Number(value?.widths?.[index]);
         return Number.isFinite(width) && width >= 144 && width <= 420 ? Math.round(width) : null;
-      })
+      }),
+      treeWidth: Number.isFinite(value?.treeWidth) && value.treeWidth >= 144 && value.treeWidth <= 420 ? Math.round(value.treeWidth) : null
     };
   }
 
@@ -239,7 +251,10 @@ export class DeviceState {
       compactLists: Object.prototype.hasOwnProperty.call(value, "compactLists")
         ? Boolean(value.compactLists)
         : DEFAULT_PREFERENCES.compactLists,
-      hideRepealedSections: Boolean(value.hideRepealedSections)
+      hiddenStatuses: normalizeHiddenStatuses(value.hiddenStatuses, value.hideRepealedSections === true),
+      subtleNotices: value.subtleNotices === true,
+      navigationTree: Object.prototype.hasOwnProperty.call(value, "navigationTree") ? value.navigationTree === true : DEFAULT_PREFERENCES.navigationTree,
+      readingWidth: Object.hasOwn(READING_WIDTHS, value.readingWidth) ? value.readingWidth : DEFAULT_PREFERENCES.readingWidth
     };
   }
 
@@ -250,7 +265,11 @@ export class DeviceState {
     if (!fontProfiles.has(value.fontProfile)) value.fontProfile = DEFAULT_PREFERENCES.fontProfile;
     value.lineSpacing = normalizeLineSpacing(value.lineSpacing);
     value.compactLists = Boolean(value.compactLists);
-    value.hideRepealedSections = Boolean(value.hideRepealedSections);
+    value.hiddenStatuses = normalizeHiddenStatuses(value.hiddenStatuses);
+    delete value.hideRepealedSections;
+    value.subtleNotices = value.subtleNotices === true;
+    value.navigationTree = value.navigationTree === true;
+    if (!Object.hasOwn(READING_WIDTHS, value.readingWidth)) value.readingWidth = DEFAULT_PREFERENCES.readingWidth;
     this.#write(PREFERENCES_KEY, value);
     return value;
   }
@@ -260,7 +279,8 @@ export function applyPreferences(preferences, root = document.documentElement) {
   root.dataset.theme = preferences.theme;
   root.dataset.fontProfile = preferences.fontProfile;
   root.dataset.compactLists = String(preferences.compactLists);
-  root.dataset.hideRepealedSections = String(preferences.hideRepealedSections);
+  root.dataset.subtleNotices = String(preferences.subtleNotices);
+  root.dataset.readingWidth = preferences.readingWidth;
   root.style.setProperty("--text-scale", String(preferences.textScale));
   root.style.setProperty("--line-spacing", String(preferences.lineSpacing));
   root.style.setProperty("--line-spacing-factor", String(preferences.lineSpacing / DEFAULT_PREFERENCES.lineSpacing));

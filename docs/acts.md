@@ -45,7 +45,7 @@ Searching the list matches each word against act titles, citations, and bills, a
 
 The header search (the omnibar) suggests acts too, from every published session, by the same rules: up to three acts, those whose citation, bill, or title match ahead of those that match only in their text. A query that names an act or bill (`PA 26-2`, `SB 299`) lists the act first, above statute results; a bare `26-2` does not, since it is also a statute citation. A text match opens the act with the matches highlighted, and an act without text opens the list filtered to it.
 
-The full search page (`#/search`, where Enter in the header search goes) lists the same top three acts under "Also found in", below the query and above the statute results, with a "See all N matching acts" link to the list searched for the query. N is the number that list shows. The list searches one session at a time, so when more than one session has matches each gets its own link, and only the newest session's link leaves the session out. The page searches acts with the query's plain words: quotes, a trailing `*`, and `AND` are dropped, and a query that uses `OR`, `NOT`, `NEAR/n`, or parentheses does not search acts at all, since the list cannot apply those operators. The title, chapter, field, status, and supplement filters apply to statutes only. The statute search does not wait for the acts to load, and if they fail to load the acts group is left out.
+The full search page (`#/search`, where Enter in the header search goes) lists the same top three acts under "Also found in", below the query and above the statute results, with a "See all N matching acts" link to the list searched for the query. N is the number that list shows. The list searches one session at a time, so when more than one session has matches each gets its own link. Each link names its session, since the list's default is the newest session the statute text does not cover yet, which may not be the newest session with matches. The page searches acts with the query's plain words: quotes, a trailing `*`, and `AND` are dropped, and a query that uses `OR`, `NOT`, `NEAR/n`, or parentheses does not search acts at all, since the list cannot apply those operators. The title, chapter, field, status, and supplement filters apply to statutes only. The statute search does not wait for the acts to load, and if they fail to load the acts group is left out.
 
 Statute citations in an act's text link to the section in the app. To keep act pages light, the link resolves its title's section list only when it is followed; without JavaScript it falls back to a statute search for the citation.
 
@@ -70,7 +70,7 @@ python -m crawler.cgs_crawler.tls --output .crawl/ca-bundle.pem
 python -m crawler.cgs_crawler.acts --output public/data/acts --pdf-cache .crawl/acts-pdfs --report report.json --ca-bundle .crawl/ca-bundle.pem
 ```
 
-then opens a draft pull request only when the published files change. The pull request lists the acts whose text could not be extracted. A session's `updatedAt` changes only when its acts or their texts change, so an unchanged page produces no diff.
+then opens a draft pull request only when the published files change. Every previously published session is kept. The pull request lists the acts whose text could not be extracted. A session's `updatedAt` changes only when its acts or their texts change, so an unchanged page produces no diff.
 
 Other options:
 
@@ -84,15 +84,13 @@ The CGA page shows only the current session and empties when a new session conve
 
 When an act has no text, run the command locally and read the warning. A PDF that CGA replaced mid-run will extract on the next run; a PDF whose layout the extractor does not handle needs an extractor fix. Check fixes with `npm run test:crawler`, and spot-check the act in the app against its PDF.
 
-## Retiring a session
+## Past sessions
 
-Once the app's statute text includes a session's acts (for example, after the revision or supplement that codifies them is imported), retire that session so the page does not list laws that are already in the statutes:
+Sessions are never removed. Once the statute text in the app covers a session, the acts list moves it from the recent view to **Past sessions** (`#/acts?view=past`). Coverage comes from the active edition: the newest edition in the statute text, the base revision recorded in `catalog.json` (`source.revisionYear`) or a later supplement, covers legislation through the year before its own. A session whose year is at or before that year is past. The rule is the same for regular and special sessions, and it is the same rule that decides which acts produce notices on statute pages, so a session leaves the recent view and its notices disappear in the same release.
 
-```sh
-python -m crawler.cgs_crawler.acts --retire 2026-regular --output public/data/acts --no-text
-npm run validate
-```
+- `#/acts` opens the newest recent session. When no session is recent (just after a revision is published, before the next session's acts are listed) it says so and links to Past sessions.
+- `#/acts?view=past` lists past sessions by year with their counts. Each opens at `#/acts?session=<id>`, marked "Past session", with the session-level coverage note.
+- The session picker groups sessions into Recent and Past when both exist.
+- Act and section links (`#/acts/2026-regular/pa-8?section=1`), act text, sections, effective dates, and the official PDF and bill-status links are unchanged. The header search keeps suggesting acts from every session.
 
-Retiring removes the session's texts, search index, and effective-date index too. The page's currency note compares each session's year with the newest edition in the statute text: the base revision recorded in `catalog.json`, or the latest supplement when it is later. A session that edition already covers is described as "should already be reflected", which is a cue to retire it.
-
-A new full revision covers two years of sessions at once. After the refresh that imports the 2027 revision merges, for example, retire every 2025 and 2026 session still listed (special sessions included), as [docs/corpus-refresh.md](corpus-refresh.md#a-new-full-revision) describes.
+Nothing changes in `public/data/acts` at a rollover. When the 2027 revision becomes active, the 2025 and 2026 sessions (special sessions included) move to Past sessions, their notices leave the current statute pages, and the weekly refresh adds the 2027 session to the recent view as its acts are published. The `--retire` option that used to delete a session has been removed.

@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-093",
+  "number": "093",
+  "name": "Registrars of Vital Statistics",
+  "title": {
+    "id": "title-07",
+    "number": "07",
+    "name": "Municipalities"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_093.htm",
+  "sections": [
+    {
+      "id": "section-7-60",
+      "kind": "section",
+      "citation": "7-60",
+      "citations": [
+        "7-60"
+      ],
+      "heading": "Sec. 7-60. Fetal death certificates.",
+      "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_093.htm#sec_7-60",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) As used in this section, “fetal death” means the death of a fetus prior to the complete expulsion or extraction from the uterus, irrespective of the duration of pregnancy, in which there is no evidence of life after such expulsion or extraction, including, but not limited to, beating of the heart, pulsation of the umbilical cord or definite movement of voluntary muscles. “Fetal death” does not include an induced termination of a pregnancy.",
+          "(b) For each fetal death occurring after a period of gestation of not less than twenty weeks, a fetal death certificate shall be filed with the registrar of vital statistics in the manner required by sections 7-48 and 7-51 with respect to the filing, content and issuance of birth certificates. A fetal death certificate shall be signed by a physician or, when no physician was in attendance, by the nurse-midwife in attendance at the birth, the Chief Medical Examiner, Deputy Chief Medical Examiner, an associate medical examiner or an authorized assistant medical examiner. The provisions of this subsection shall not apply to a father or mother when a birth occurs outside an institution and a physician or midwife is not in attendance at such birth, as described in subsection (c) of section 7-48.",
+          "(c) Such certificate shall include, on a confidential portion of the certificate, any additional information required by the department, provided the information obtained under this section shall be used only for medical and health purposes."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 581; 1951, 1953, S. 232d; 1969, P.A. 699, S. 19; P.A. 77-614, S. 323, 610; P.A. 79-47, S. 1; 79-434, S. 5; P.A. 93-381, S. 9, 39; P.A. 95-257, S. 12, 21, 58; P.A. 01-163, S. 20; P.A. 03-19, S. 18; P.A. 07-79, S. 2; P.A. 12-197, S. 1; P.A. 23-31, S. 21.)"
+        ],
+        "history": [
+          "History: 1969 act specified chief, deputy and authorized assistant medical examiners as signers of certificate replacing former reference simply to “medical examiner”; P.A. 77-614 substituted department of health services for department of health, effective January 1, 1979; P.A. 79-47 replaced deputy medical examiner with deputy chief medical examiner and included associate medical examiner as authorized signer; P.A. 79-434 divided section into Subsecs. and added requirement that additional information be used only for medical and health purposes and is not to be placed in permanent official records; P.A. 93-381 replaced department of health services with department of public health and addiction services, effective July 1, 1993; P.A. 95-257 replaced Commissioner and Department of Public Health and Addiction Services with Commissioner and Department of Public Health, effective July 1, 1995; P.A. 01-163 amended Subsec. (a) by adding reference to Secs. 7-50, 7-51 and 7-52 re content and issuance of birth certificates and amended Subsec. (b) by adding provision re confidential portion of certificate, deleting provision re information shall not be incorporated into permanent records of department and making a technical change; P.A. 03-19 made a technical change in Subsec. (a), effective May 12, 2003; P.A. 07-79 amended Subsec. (a) to allow nurse-midwife in attendance at a birth in which a physician is not present to sign the fetal death certificate for a fetus born dead; P.A. 12-197 amended Subsec. (a) by deleting reference to Sec. 7-50; P.A. 23-31 added new Subsec. (a) defining “fetal death”, redesignated existing Subsec. (a) as Subsec. (b) and amended same by replacing “Each case of fetal death shall be registered and” with “For each fetal death occurring after a period of gestation of not less than 20 weeks,”, deleting reference to Sec. 7-52, deleting provision re a fetus born after a period of gestation of not less than 20 weeks, adding provision re applicability of section when birth occurs outside an institution and making conforming changes, and redesignated existing Subsec. (b) as Subsec. (c)."
+        ],
+        "annotations": [],
+        "plainText": "(a) As used in this section, “fetal death” means the death of a fetus prior to the complete expulsion or extraction from the uterus, irrespective of the duration of pregnancy, in which there is no evidence of life after such expulsion or extraction, including, but not limited to, beating of the heart, pulsation of the umbilical cord or definite movement of voluntary muscles. “Fetal death” does not include an induced termination of a pregnancy.\n\n(b) For each fetal death occurring after a period of gestation of not less than twenty weeks, a fetal death certificate shall be filed with the registrar of vital statistics in the manner required by sections 7-48 and 7-51 with respect to the filing, content and issuance of birth certificates. A fetal death certificate shall be signed by a physician or, when no physician was in attendance, by the nurse-midwife in attendance at the birth, the Chief Medical Examiner, Deputy Chief Medical Examiner, an associate medical examiner or an authorized assistant medical examiner. The provisions of this subsection shall not apply to a father or mother when a birth occurs outside an institution and a physician or midwife is not in attendance at such birth, as described in subsection (c) of section 7-48.\n\n(c) Such certificate shall include, on a confidential portion of the certificate, any additional information required by the department, provided the information obtained under this section shall be used only for medical and health purposes."
+      }
+    }
+  ]
+}

@@ -1,0 +1,346 @@
+{
+  "schemaVersion": "1.0.0",
+  "editionYear": 2024,
+  "title": {
+    "id": "title-47a",
+    "number": "47a",
+    "name": "Landlord and Tenant"
+  },
+  "removedDocumentIds": [
+    "section-47a-1",
+    "section-47a-4",
+    "section-47a-6a",
+    "section-47a-15a",
+    "section-47a-21",
+    "section-47a-23c",
+    "section-47a-56a",
+    "section-47a-56i",
+    "section-47a-56k",
+    "section-47a-58",
+    "section-47a-69",
+    "section-47a-70",
+    "section-47a-71a"
+  ],
+  "documents": [
+    {
+      "id": "section-47a-1",
+      "citation": "47a-1",
+      "citations": [
+        "47a-1"
+      ],
+      "heading": "Sec. 47a-1. Definitions.",
+      "chapter": {
+        "id": "chapter-830",
+        "number": "830",
+        "name": "Rights and Responsibilities of Landlord and Tenant"
+      },
+      "status": "active",
+      "text": "As used in this chapter, sections 47a-21, 47a-23 to 47a-23c, inclusive, 47a-26a to 47a-26g, inclusive, 47a-35 to 47a-35b, inclusive, 47a-41a, 47a-43, and 47a-46:\n\n(a) “Action” includes recoupment, counterclaim, set-off, cause of action and any other proceeding in which rights are determined, including an action for possession.\n\n(b) “Building and housing codes” include any law, ordinance or governmental regulation concerning fitness for habitation or the construction, maintenance, operation, occupancy, use or appearance of any premises or dwelling unit.\n\n(c) “Dwelling unit” means any house or building, or portion thereof, which is occupied, is designed to be occupied, or is rented, leased or hired out to be occupied, as a home or residence of one or more persons.\n\n(d) “Landlord” means the owner, lessor or sublessor of the dwelling unit, the building of which it is a part or the premises.\n\n(e) “Owner” means one or more persons, jointly or severally, in whom is vested (1) all or part of the legal title to property, or (2) all or part of the beneficial ownership and a right to present use and enjoyment of the premises and includes a mortgagee in possession.\n\n(f) “Person” means an individual, corporation, limited liability company, the state or any political subdivision thereof, or agency, business trust, estate, trust, partnership or association, two or more persons having a joint or common interest, and any other legal or commercial entity.\n\n(g) “Premises” means a dwelling unit and the structure of which it is a part and facilities and appurtenances therein and grounds, areas and facilities held out for the use of tenants generally or whose use is promised to the tenant.\n\n(h) “Rent” means all periodic payments to be made to the landlord under the rental agreement.\n\n(i) “Rental agreement” means all agreements, written or oral, and valid rules and regulations adopted under section 47a-9 or subsection (d) of section 21-70 embodying the terms and conditions concerning the use and occupancy of a dwelling unit or premises.\n\n(j) “Roomer” means a person occupying a dwelling unit, which unit does not include a refrigerator, stove, kitchen sink, toilet and shower or bathtub and one or more of these facilities are used in common by other occupants in the structure.\n\n(k) “Single-family residence” means a structure maintained and used as a single dwelling unit. Notwithstanding that a dwelling unit shares one or more walls with another dwelling unit or has a common parking facility, it is a single-family residence if it has direct access to a street or thoroughfare and does not share heating facilities, hot water equipment or any other essential facility or service with any other dwelling unit.\n\n(l) “Tenant” means the lessee, sublessee or person entitled under a rental agreement to occupy a dwelling unit or premises to the exclusion of others or as is otherwise defined by law.\n\n(m) “Tenement house” means any house or building, or portion thereof, which is rented, leased or hired out to be occupied, or is arranged or designed to be occupied, or is occupied, as the home or residence of three or more families, living independently of each other, and doing their cooking upon the premises, and having a common right in the halls, stairways or yards.",
+      "href": "?chapter=830&section=section-47a-1",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-47a-4",
+      "citation": "47a-4",
+      "citations": [
+        "47a-4"
+      ],
+      "heading": "Sec. 47a-4. Terms prohibited in rental agreement.",
+      "chapter": {
+        "id": "chapter-830",
+        "number": "830",
+        "name": "Rights and Responsibilities of Landlord and Tenant"
+      },
+      "status": "active",
+      "text": "(a) A rental agreement shall not provide that the tenant: (1) Agrees to waive or forfeit rights or remedies under this chapter and sections 47a-21, 47a-23 to 47a-23b, inclusive, 47a-26 to 47a-26g, inclusive, 47a-35 to 47a-35b, inclusive, 47a-41a, 47a-43 and 47a-46, or under any section of the general statutes or any municipal ordinance unless such section or ordinance expressly states that such rights may be waived; (2) authorizes the landlord to confess judgment on a claim arising out of the rental agreement; (3) agrees to the exculpation or limitation of any liability of the landlord arising under law or to indemnify the landlord for that liability or the costs connected therewith; (4) agrees to waive his right to the interest on the security deposit pursuant to section 47a-21; (5) agrees to permit the landlord to dispossess him without resort to court order; (6) consents to the distraint of his property for rent; (7) agrees to pay the landlord's attorney's fees in excess of fifteen per cent of any judgment against the tenant in any action in which money damages are awarded; (8) agrees to pay a late charge prior to the expiration of the grace period set forth in section 47a-15a or to pay rent in a reduced amount if such rent is paid prior to the expiration of such grace period; (9) agrees to pay a late charge on rent payments made subsequent to such grace period in an amount exceeding the amounts set forth in section 47a-15a; or (10) agrees to pay a heat or utilities surcharge if heat or utilities is included in the rental agreement.\n\n(b) A provision prohibited by subsection (a) of this section included in a rental agreement is unenforceable.",
+      "href": "?chapter=830&section=section-47a-4",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-47a-4d",
+      "citation": "47a-4d",
+      "citations": [
+        "47a-4d"
+      ],
+      "heading": "Sec. 47a-4d. Fees for tenant screening reports.",
+      "chapter": {
+        "id": "chapter-830",
+        "number": "830",
+        "name": "Rights and Responsibilities of Landlord and Tenant"
+      },
+      "status": "active",
+      "text": "(a) As used in this section, “tenant screening report” means a credit report, a criminal background report, an employment history report, a rental history report or any combination thereof, used by a landlord to determine the suitability of a prospective tenant.\n\n(b) No landlord may demand from a prospective tenant any payment, fee or charge for the processing, review or acceptance of any rental application, or demand any other payment, fee or charge before or at the beginning of the tenancy, except a security deposit pursuant to section 47a-21, advance payment for the first month's rent or a deposit for a key or any special equipment, or a fee for a tenant screening report as provided in subsection (c) of this section. No landlord may charge a tenant a move-in or move-out fee.\n\n(c) On and after October 1, 2023, a landlord may charge a fee not exceeding fifty dollars plus an adjustment reflecting any increase in the consumer price index for urban consumers, as determined by the Commissioner of Housing on an annual basis, for a tenant screening report concerning a prospective tenant.\n\n(d) A landlord that charges a fee for a tenant screening report concerning a prospective tenant shall provide the prospective tenant with (1) a copy of the tenant screening report or, if the landlord is prohibited from providing such a copy, information concerning such report that would allow such tenant to request a copy of such report from the service provider that produced such report, and (2) a copy of the receipt or invoice from the entity conducting the tenant screening report concerning the prospective tenant.",
+      "href": "?chapter=830&section=section-47a-4d",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-47a-6a",
+      "citation": "47a-6a",
+      "citations": [
+        "47a-6a"
+      ],
+      "heading": "Sec. 47a-6a. Filing in designated municipal office of residential address of nonresident landlord.",
+      "chapter": {
+        "id": "chapter-830",
+        "number": "830",
+        "name": "Rights and Responsibilities of Landlord and Tenant"
+      },
+      "status": "active",
+      "text": "(a) As used in this section, (1) “address” means a location as described by the full street number, if any, the street name, the city or town, and the state, and not a mailing address such as a post office box, (2) “dwelling unit” means any house or building, or portion thereof, which is rented, leased or hired out to be occupied, or is arranged or designed to be occupied, or is occupied, as the home or residence of one or more persons, living independently of each other, and doing their cooking upon the premises, and having a common right in the halls, stairways or yards, (3) “agent in charge” or “agent” means one who manages real estate, including, but not limited to, the collection of rents and supervision of property, (4) “controlling participant” means an individual that exercises day-to-day financial or operational control, and (5) “project-based housing provider” means a property owner who contracts with the United States Department of Housing and Urban Development to provide housing to tenants under the federal Housing Choice Voucher Program, 42 USC 1437f(o).\n\n(b) Any municipality may require the nonresident owner or project-based housing provider of occupied or vacant rental real property to report to the tax assessor, or other municipal office designated by the municipality, the current residential address of the nonresident owner or project-based housing provider of such property, if the nonresident owner or project-based housing provider is an individual, or the current residential address of the agent in charge of the building, if the nonresident owner or project-based housing provider is a corporation, partnership, trust or other legally recognized entity owning rental real property in the state. If the nonresident owners or project-based housing providers are a corporation, partnership, trust or other legally recognized entity owning rental real property in the state, such report shall also include identifying information and the current residential address of each controlling participant associated with the property. If such residential address changes, notice of the new residential address shall be provided by such nonresident owner, project-based housing provider or agent in charge of the building to the office of the tax assessor or other designated municipal office not more than twenty-one days after the date that the address change occurred. If the nonresident owner, project-based housing provider or agent fails to file an address under this section, the address to which the municipality mails property tax bills for the rental real property shall be deemed to be the nonresident owner, project-based housing provider or agent's current address. Such address may be used for compliance with the provisions of subsection (c) of this section.\n\n(c) Service of state or municipal orders relating to maintenance of such rental real property or compliance with state law and local codes concerning such real property directed to the nonresident owner, project-based housing provider or agent at the address on file, or deemed to be on file in accordance with the provisions of this section, shall be sufficient proof of service of notice of such orders in any subsequent criminal or civil action against the owner, project-based housing provider or agent for failure to comply with the orders. The provisions of this section shall not be construed to limit the validity of any other means of giving notice of such orders that may be used by the state or such municipality.\n\n(d) Any person who violates any provision of this section shall have committed an infraction.\n\n(e) Any report provided to a tax assessor pursuant to subsection (b) of this section on or after October 1, 2023, shall be confidential and shall not be disclosed under chapter 14.",
+      "href": "?chapter=830&section=section-47a-6a",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-47a-7c",
+      "citation": "47a-7c",
+      "citations": [
+        "47a-7c"
+      ],
+      "heading": "Sec. 47a-7c. Walk-through inspections prior to occupancy.",
+      "chapter": {
+        "id": "chapter-830",
+        "number": "830",
+        "name": "Rights and Responsibilities of Landlord and Tenant"
+      },
+      "status": "active",
+      "text": "(a) As used in this section, “walk-through” means a joint physical inspection of the dwelling unit by the landlord and the tenant, or their designees, for the purpose of noting and listing any observed conditions within the dwelling unit. On and after January 1, 2024, upon or after the entry into a rental agreement but prior to the tenant's occupancy of a dwelling unit, a landlord shall offer such tenant the opportunity to conduct a walk-through of the dwelling unit. If the tenant requests such a walk-through, the landlord and tenant, or their designees, shall use a copy of the preoccupancy walk-through checklist prepared by the Commissioner of Housing under subsection (c) of this section. The landlord and the tenant, or their designees, shall specifically note on the walk-through checklist any existing conditions, defects or damages to the dwelling unit present at the time of the walk-through. After the walk-through, the landlord and the tenant, or their designees, shall sign duplicate copies of the walk-through checklist and each shall receive a copy.\n\n(b) Upon the tenant's vacating of the dwelling unit, the landlord may not retain any part of the security deposit collected under chapter 831 or seek payment from the tenant for any condition, defect or damage that was noted in the preoccupancy walk-through checklist. Such walk-through checklist shall be admissible, subject to the rules of evidence, but shall not be conclusive, as evidence of the condition of the dwelling unit at the beginning of a tenant's occupancy in any administrative or judicial proceeding.\n\n(c) Not later than December 1, 2023, the Commissioner of Housing shall (1) prepare a standardized preoccupancy walk-through checklist for any landlord and tenant to use to document the condition of any dwelling unit during a preoccupancy walk-through under subsection (a) of this section, and (2) make such checklist available on the Department of Housing's Internet web site.\n\n(d) The provisions of this section shall not apply to any tenancy under a rental agreement entered into prior to January 1, 2024.",
+      "href": "?chapter=830&section=section-47a-7c",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-47a-15a",
+      "citation": "47a-15a",
+      "citations": [
+        "47a-15a"
+      ],
+      "heading": "Sec. 47a-15a. Nonpayment of rent by tenant: Landlord's remedy. Charges for late rent.",
+      "chapter": {
+        "id": "chapter-830",
+        "number": "830",
+        "name": "Rights and Responsibilities of Landlord and Tenant"
+      },
+      "status": "active",
+      "text": "(a) If rent is unpaid when due and the tenant fails to pay rent within nine days thereafter or, in the case of a one-week tenancy, within four days thereafter, the landlord may terminate the rental agreement in accordance with the provisions of sections 47a-23 to 47a-23b, inclusive. For purposes of this section, “grace period” means the nine-day or four-day time periods identified in this subsection, as applicable.\n\n(b) If a rental agreement contains a valid written agreement to pay a late charge in accordance with subsection (a) of section 47a-4 a landlord may assess a tenant such a late charge on a rent payment made subsequent to the grace period in accordance with this section. Such late charge may not exceed the lesser of (1) five dollars per day, up to a maximum of fifty dollars, or (2) five per cent of the delinquent rent payment or, in the case of a rental agreement paid in whole or in part by a governmental or charitable entity, five per cent of the tenant's share of the delinquent rent payment. The landlord may not assess more than one late charge upon a delinquent rent payment, regardless of how long the rent remains unpaid.",
+      "href": "?chapter=830&section=section-47a-15a",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-47a-21",
+      "citation": "47a-21",
+      "citations": [
+        "47a-21"
+      ],
+      "heading": "Sec. 47a-21. Security deposits.",
+      "chapter": {
+        "id": "chapter-831",
+        "number": "831",
+        "name": "Security Deposits"
+      },
+      "status": "active",
+      "text": "(a) Definitions. As used in this chapter:\n\n(1) “Accrued interest” means the interest due on a security deposit as provided in subsection (i) of this section, compounded annually to the extent applicable.\n\n(2) “Commissioner” means the Banking Commissioner.\n\n(3) “Escrow account” means any account at a financial institution which is not subject to execution by the creditors of the escrow agent and includes a clients' funds account.\n\n(4) “Escrow agent” means the person in whose name an escrow account is maintained.\n\n(5) “Financial institution” means any state bank and trust company, national bank, savings bank, federal savings bank, savings and loan association, and federal savings and loan association that is located in this state.\n\n(6) “Forwarding address” means the address to which a security deposit may be mailed for delivery to a former tenant.\n\n(7) “Landlord” means any landlord of residential real property, and includes (A) any receiver; (B) any successor; and (C) any tenant who sublets his premises.\n\n(8) “Receiver” means any person who is appointed or authorized by any state, federal or probate court to receive rents from tenants, and includes trustees, executors, administrators, guardians, conservators, receivers, and receivers of rent.\n\n(9) “Rent receiver” means a receiver who lacks court authorization to return security deposits and to inspect the premises of tenants and former tenants.\n\n(10) “Residential real property” means real property containing one or more residential units, including residential units not owned by the landlord, and containing one or more tenants who paid a security deposit.\n\n(11) “Security deposit” means any advance rental payment, or any installment payment collected pursuant to section 47a-22a, except an advance payment for the first month's rent or a deposit for a key or any special equipment.\n\n(12) “Successor” means any person who succeeds to a landlord's interest whether by purchase, foreclosure or otherwise and includes a receiver.\n\n(13) “Tenant” means a tenant, as defined in section 47a-1, or a resident, as defined in section 21-64.\n\n(14) “Tenant's obligations” means (A) the amount of any rental or utility payment due the landlord from a tenant; (B) a tenant's obligations under the provisions of section 47a-11; and (C) the actual reasonable cost of changing the locks of the dwelling unit pursuant to section 47a-7b, if the tenant has not paid such cost.\n\n(b) Amount of security deposit. (1) In the case of a tenant under sixty-two years of age, a landlord shall not demand a security deposit in an amount that exceeds two months' rent.\n\n(2) In the case of a tenant sixty-two years of age or older, a landlord shall not demand a security deposit in an amount that exceeds one month's rent. Any landlord who has received a security deposit in an amount that exceeds one month's rent from a tenant who becomes sixty-two years of age after paying such security deposit shall return the portion of such security deposit that exceeds one month's rent to the tenant upon the tenant's request.\n\n(c) Exemption from attachment and execution. Assignment to successor. Any security deposit paid by a tenant shall remain the property of such tenant in which the landlord shall have a security interest, as defined in subdivision (35) of subsection (b) of section 42a-1-201, to secure such tenant's obligations. A security deposit shall be exempt from attachment and execution by the creditors of the landlord and shall not be considered part of the estate of the landlord in any legal proceeding. Any voluntary or involuntary transfer of a landlord's interest in residential real property to a successor shall constitute an assignment to such successor of such landlord's security interest in all security deposits paid by tenants of such transferred residential real property.\n\n(d) Payment of security deposit and interest at termination of tenancy. (1) Not later than the time specified in subdivision (2) of this subsection, the person who is the landlord at the time a tenancy is terminated, other than a rent receiver, shall pay to the tenant or former tenant: (A) The amount of any security deposit that was deposited by the tenant with the person who was landlord at the time such security deposit was deposited less the value of any damages that any person who was a landlord of such premises at any time during the tenancy of such tenant has suffered as a result of such tenant's failure to comply with such tenant's obligations; and (B) any accrued interest. If the landlord at the time of termination of a tenancy is a rent receiver, such rent receiver shall return security deposits in accordance with the provisions of subdivision (3) of this subsection.\n\n(2) Upon termination of a tenancy, any tenant may notify the landlord in writing of such tenant's forwarding address. Not later than twenty-one days after termination of a tenancy or fifteen days after receiving written notification of such tenant's forwarding address, whichever is later, each landlord other than a rent receiver shall deliver to the tenant or former tenant at such forwarding address either (A) the full amount of the security deposit paid by such tenant plus accrued interest, or (B) the balance of such security deposit and accrued interest after deduction for any damages suffered by such landlord by reason of such tenant's failure to comply with such tenant's obligations, together with a written statement itemizing the nature and amount of such damages. Any landlord who violates any provision of this subsection shall be liable for twice the amount of any security deposit paid by such tenant, except that, if the only violation is the failure to deliver the accrued interest, such landlord shall be liable for ten dollars or twice the amount of the accrued interest, whichever is greater.\n\n(3) (A) Any receiver who is authorized by a court to return security deposits and to inspect the premises of any tenant shall pay security deposits and accrued interest in accordance with the provisions of subdivisions (1) and (2) of this subsection from the operating income of such receivership to the extent that any such payments exceed the amount in any escrow accounts for such tenants. (B) Any rent receiver shall present any claim by any tenant for return of a security deposit to the court which authorized the rent receiver. Such court shall determine the validity of any such claim and shall direct such rent receiver to pay from the escrow account or from the operating income of such property the amount due such tenant as determined by such court.\n\n(e) Liability of successor and receiver re payment of security deposit. A successor, other than a receiver, shall be liable for the claims of tenants of such property for return of any part of such security deposit which is or becomes due to such tenant during the time such successor is a landlord. A receiver's liability for payment of security deposits and interest under this section shall be limited to the balance in any escrow account for such tenants maintained by such receiver in such receivership in accordance with subsection (h) of this section and to the operating income generated in such receivership.\n\n(f) Nonresident landlord. Any landlord who is not a resident of this state shall appoint in writing the Secretary of the State as the landlord's attorney upon whom all process in any action or proceeding against such landlord may be served.\n\n(g) Action to reclaim security deposit. Any person may bring an action in replevin or for money damages in any court of competent jurisdiction to reclaim any part of such person's security deposit which may be due. This section does not preclude the landlord or tenant from recovering other damages to which the landlord or tenant may be entitled.\n\n(h) Escrow deposit. (1) Each landlord shall immediately deposit the entire amount of any security deposit received by such landlord from each tenant into one or more escrow accounts established or maintained in a financial institution for the benefit of each tenant. Each landlord shall maintain each such account as escrow agent and shall not withdraw funds from such account except as provided in subdivision (2) of this subsection.\n\n(2) The escrow agent may withdraw funds from an escrow account to: (A) Disburse the amount of any security deposit and accrued interest due to a tenant pursuant to subsection (d) of this section; (B) disburse interest to a tenant pursuant to subsection (i) of this section; (C) make a transfer of the entire amount of certain security deposits pursuant to subdivision (3) of this subsection; (D) retain interest credited to the account in excess of the amount of interest payable to the tenant under subsection (i) of this section; (E) retain all or any part of a security deposit and accrued interest after termination of tenancy equal to the damages suffered by the landlord by reason of the tenant's failure to comply with such tenant's obligations; (F) disburse all or any part of the security deposit to a tenant at any time during tenancy; or (G) transfer such funds to another financial institution or escrow account, provided such funds remain continuously in an escrow account.\n\n(3) (A) Whenever any real estate is voluntarily or involuntarily transferred from a landlord, other than a receiver, to a successor, including a receiver, such landlord shall withdraw from the escrow account and deliver to the successor the entire amount of security deposits paid by tenants of the property being transferred, plus any interest accrued pursuant to subsection (i) of this section. If at the time of transfer of such real estate the funds in such account are commingled with security deposits paid by tenants in real estate not being transferred to such successor, and if at such time the funds in such account are less than the amount of security deposits paid by all tenants whose security deposits are contained in such account, such landlord shall deliver to such successor a pro rata share of security deposits paid by tenants of the real estate being transferred to such successor. (B) Whenever any real estate is transferred from a receiver to a successor, such receiver shall dispose of the escrow accounts as ordered by the court which appointed such receiver. The order of such court shall provide for the priority of the present and future rights of tenants to security deposits paid by them over the rights of any secured or unsecured creditor of any person and shall provide that the funds in such account shall be delivered to the successor of such receiver for immediate deposit in an escrow account for tenants who paid security deposits.\n\n(4) (A) The landlord shall provide each tenant with a written notice stating the amount held for the benefit of the tenant and the name and address of the financial institution at which the tenant's security deposit is being held not later than thirty days after the landlord receives a security deposit from the tenant or the tenant's previous landlord or transfers the security deposit to another financial institution or escrow account.\n\n(B) If the commissioner makes a written request to the landlord for any information related to a tenant's security deposit, including the name of each financial institution in which any escrow account is maintained and the account number of each escrow account, the landlord shall provide such information to the commissioner not later than seven days after the request is made.\n\n(i) Payment of interest on security deposits. On and after July 1, 1993, each landlord other than a landlord of a residential unit in any building owned or controlled by any educational institution and used by such institution for the purpose of housing students of such institution and their families, and each landlord or owner of a mobile manufactured home or of a mobile manufactured home space or lot or park, as such terms are defined in subdivisions (1), (2) and (3) of section 21-64, shall pay interest on each security deposit received by such landlord at a rate of not less than the average rate paid, as of December 30, 1992, on savings deposits by insured commercial banks as published in the Federal Reserve Board Bulletin rounded to the nearest one-tenth of one percentage point, except in no event shall the rate be less than one and one-half per cent. On and after January 1, 1994, the rate for each calendar year shall be not less than the deposit index, determined under this section as it was in effect during such year. On and after January 1, 2012, the rate for each calendar year shall be not less than the deposit index, as defined in section 36a-26, for that year. On the anniversary date of the tenancy and annually thereafter, such interest shall be paid to the tenant or resident or credited toward the next rental payment due from the tenant or resident, as the landlord or owner shall determine. If the tenancy is terminated before the anniversary date of such tenancy, or if the landlord or owner returns all or part of a security deposit prior to termination of the tenancy, the landlord or owner shall pay the accrued interest to the tenant or resident not later than twenty-one days after such termination or return. Interest shall not be paid to a tenant for any month in which the tenant has been delinquent for more than ten days in the payment of any monthly rent, unless the landlord imposes a late charge for such delinquency. No landlord shall increase the rent due from a tenant because of the requirement that the landlord pay on interest the security deposit.\n\n(j) Investigation of complaints by commissioner. Order. Jurisdiction. Regulations. (1) Except as provided in subdivision (2) of this subsection, the commissioner may receive and investigate complaints regarding any alleged violation of subsections (b), (d), (h) or (i) of this section. For the purposes of such investigation, any person who is or was a landlord shall be subject to the provisions of section 36a-17. If the commissioner determines that any landlord has violated any provision of this section over which the commissioner has jurisdiction, the commissioner may, in accordance with section 36a-52, order such person to cease and desist from such practices and to comply with the provisions of this section.\n\n(2) The commissioner shall not have jurisdiction over (A) the failure of a landlord to pay interest to a tenant annually under subsection (i) of this section, or (B) the refusal or other failure of the landlord to return all or part of the security deposit if such failure results from the landlord's good faith claim that such landlord has suffered damages as a result of a tenant's failure to comply with such tenant's obligations, regardless of whether the existence or amount of the alleged damages is disputed by the tenant. For purposes of this section, “good faith claim” means a claim for actual damages suffered by the landlord for which written notification of such damages has been provided to the tenant in accordance with the provisions of subdivision (2) of subsection (d) of this section.\n\n(3) The commissioner may adopt regulations, in accordance with chapter 54, to carry out the purposes of this section.\n\n(k) Penalties. (1) Any person who is a landlord at the time of termination of a tenancy and who knowingly and wilfully fails to pay all or any part of a security deposit when due shall be subject to a fine of not more than two hundred fifty dollars for each offense, provided it shall be an affirmative defense under this subdivision that such failure was caused by such landlord's good faith belief that he was entitled to deduct the value of damages he has suffered as a result of such tenant's failure to comply with such tenant's obligations.\n\n(2) Any person who knowingly and wilfully violates the provisions of subsection (h) of this section on or after October 1, 1979, shall be subject to a fine of not more than five hundred dollars or imprisonment of not more than thirty days or both for each offense. It shall be an affirmative defense under the provisions of this subdivision that at the time of the offense, such person leased residential real property to fewer than four tenants who paid a security deposit.\n\n(3) Any person who is a landlord at the time an interest payment is due under the provisions of subsection (i) of this section and who knowingly and wilfully violates the provisions of such subsection shall be subject to a fine of not more than one hundred dollars for each offense.\n\n(4) No financial institution shall be liable for any violation of this section except for any violation in its capacity as a landlord.\n\n(l) Rights not limited. Nothing in this section shall be construed as a limitation upon: (1) The power or authority of the state, the Attorney General or the commissioner to seek administrative, legal or equitable relief permitted by the general statutes or at common law; or (2) the right of any tenant to bring a civil action permitted by the general statutes or at common law.",
+      "href": "?chapter=831&section=section-47a-21",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-47a-23c",
+      "citation": "47a-23c",
+      "citations": [
+        "47a-23c"
+      ],
+      "heading": "Sec. 47a-23c. Prohibition on eviction of certain tenants except for good cause.",
+      "chapter": {
+        "id": "chapter-832",
+        "number": "832",
+        "name": "Summary Process"
+      },
+      "status": "active",
+      "text": "(a)(1) Except as provided in subdivision (2) of this subsection, this section applies to any tenant who resides in a building or complex consisting of five or more separate dwelling units or who resides in a mobile manufactured home park and who is either: (A) Sixty-two years of age or older, or whose spouse, sibling, parent or grandparent is sixty-two years of age or older and permanently resides with that tenant, or (B) a person with a physical or mental disability, as defined in subdivision (12) of section 46a-64b, or whose spouse, sibling, child, parent or grandparent is a person with a physical or mental disability who permanently resides with that tenant, but only if such disability can be expected to result in death or to last for a continuous period of at least twelve months.\n\n(2) With respect to tenants in common interest communities, this section applies only to (A) a conversion tenant, as defined in subsection (3) of section 47-283, who (i) is described in subdivision (1) of this subsection, or (ii) is not described in subdivision (1) of this subsection but, during a transition period, as defined in subsection (4) of section 47-283, is residing in a conversion condominium created after May 6, 1980, or in any other conversion common interest community created after December 31, 1982, or (iii) is not described in subdivision (1) of this subsection but is otherwise protected as a conversion tenant by public act 80-370*, and (B) a tenant who is not a conversion tenant but who is described in subdivision (1) of this subsection if his landlord owns five or more dwelling units in the common interest community in which the dwelling unit is located.\n\n(3) As used in this section, “tenant” includes each resident of a mobile manufactured home park, as defined in section 21-64, including a resident who owns his own home, “landlord” includes a “licensee” and an “owner” of a mobile manufactured home park, as defined in section 21-64, “complex” means two or more buildings on the same or contiguous parcels of real property under the same ownership, and “mobile manufactured home park” means a parcel of real property, or contiguous parcels of real property under the same ownership, upon which five or more mobile manufactured homes occupied for residential purposes are located.\n\n(b) (1) No landlord may bring an action of summary process or other action to dispossess a tenant described in subsection (a) of this section except for one or more of the following reasons: (A) Nonpayment of rent; (B) refusal to agree to a fair and equitable rent increase, as defined in subsection (c) of this section; (C) material noncompliance with section 47a-11 or subsection (b) of section 21-82, which materially affects the health and safety of the other tenants or which materially affects the physical condition of the premises; (D) voiding of the rental agreement pursuant to section 47a-31, or material noncompliance with the rental agreement; (E) material noncompliance with the rules and regulations of the landlord adopted in accordance with section 47a-9 or 21-70; (F) permanent removal by the landlord of the dwelling unit of such tenant from the housing market; or (G) bona fide intention by the landlord to use such dwelling unit as his principal residence.\n\n(2) The ground stated in subparagraph (G) of subdivision (1) of this subsection is not available to the owner of a dwelling unit in a common interest community occupied by a conversion tenant.\n\n(3) A tenant may not be dispossessed for a reason described in subparagraph (B), (F) or (G) of subdivision (1) of this subsection during the term of any existing rental agreement.\n\n(c) (1) The rent of a tenant protected by this section may be increased only to the extent that such increase is fair and equitable, based on the criteria set forth in section 7-148c.\n\n(2) Any such tenant aggrieved by a rent increase or proposed rent increase may file a complaint with the fair rent commission, if any, for the town, city or borough where his dwelling unit or mobile manufactured home park lot is located; or, if no such fair rent commission exists, may bring an action in the Superior Court to contest the increase. In any such court proceeding, the court shall determine whether the rent increase is fair and equitable, based on the criteria set forth in section 7-148c.\n\n(d) A landlord, to determine whether a tenant is a protected tenant, as described in subdivision (1) of subsection (a) of this section, may request proof of such protected status. On such request, any tenant claiming protection shall provide proof of the protected status within thirty days. The proof shall include a statement of a physician or an advanced practice registered nurse in the case of alleged blindness or other physical disability.\n\n(e) (1) On and after January 1, 2024, whenever a dwelling unit located in a building or complex consisting of five or more separate dwelling units or in a mobile manufactured home park is rented to, or a rental agreement is entered into or renewed with, a tenant, the landlord of such dwelling unit or such landlord's agent shall provide such tenant with written notice of the provisions of subsections (b) and (c) of this section in a form as described in subdivision (2) of this subsection.\n\n(2) Not later than December 1, 2023, the Commissioner of Housing shall create a notice to be used by landlords, pursuant to subdivision (1) of this subsection, to inform tenants of the rights provided to protected tenants under subsections (b) and (c) of this section. Such notice shall be a one-page, plain-language summary of such rights and shall be available in both English and Spanish. Not later than December 1, 2023, such notice shall be posted on the Department of Housing's Internet web site.\n\n(3) Not later than December 1, 2028, the commissioner shall (A) translate the notice required under subdivision (2) of this subsection into the five most commonly spoken languages in the state, as determined by the commissioner, and (B) post such translations on the Department of Housing's Internet web site not later than December 1, 2028.",
+      "href": "?chapter=832&section=section-47a-23c",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-47a-26j",
+      "citation": "47a-26j",
+      "citations": [
+        "47a-26j"
+      ],
+      "heading": "Sec. 47a-26j. (Note: This section is effective July 1, 2024.) Records of summary process actions.",
+      "chapter": {
+        "id": "chapter-832",
+        "number": "832",
+        "name": "Summary Process"
+      },
+      "status": "active",
+      "text": "(a) In any summary process action instituted pursuant to this chapter or chapter 412, not more than thirty days after (1) the withdrawal of such action, (2) a judgment of dismissal or nonsuit of such action upon any grounds, or (3) a final disposition of such action that includes a judgment for the defendant, the Judicial Department shall remove from its Internet web site any record or identifying information concerning such summary process action.\n\n(b) If there is any activity in a case that has had any record or identifying information associated with such case removed pursuant to subsection (a) of this section, or if a case continues beyond the date upon which any such record or information is required to be removed pursuant to subsection (a) of this section because of an appeal, the Judicial Department shall restore the case to, or retain the case on, the Judicial Department Internet web site, together with any such record and information associated with such case. For any record and identifying information restored or retained on the Judicial Department Internet web site pursuant to this subsection, any such record or information shall remain on such web site for thirty days after the final disposition of the associated case, or for the applicable time period from the original disposition specified in subsection (a) of this section, whichever is later.\n\n(c) Any record or identifying information concerning any summary process action that has been removed from the Judicial Department Internet web site pursuant to this section shall not be included in any sale or transfer of bulk case records by the Judicial Department to any person or entity purchasing such records for any commercial purpose.\n\n(d) No person or entity shall, for any commercial purpose, disclose any record or identifying information concerning any summary process action that has been removed from the Judicial Department Internet web site pursuant to subsection (a) of this section. As used in this section, “commercial purpose” means (1) the individual or bulk sale of any record or identifying information concerning any summary process action, (2) the making of consumer reports containing any such record or information, (3) any use related to screening any prospective tenant to determine the suitability of such prospective tenant, and (4) any other use of any such record or information for pecuniary gain, but does not include the use of any such record or information for governmental, scholarly, educational, journalistic or any other noncommercial purpose.\n\n(e) Nothing in this section shall preclude the publication of any formal written judicial opinion by the Judicial Department or by any case reporting service.",
+      "href": "?chapter=832&section=section-47a-26j",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-47a-56a",
+      "citation": "47a-56a",
+      "citations": [
+        "47a-56a"
+      ],
+      "heading": "Sec. 47a-56a. (Formerly Sec. 19-347b). Appointment of receiver of rents: Application.",
+      "chapter": {
+        "id": "chapter-833a",
+        "number": "833a",
+        "name": "Public Enforcement of Health and Safety Standards in Tenement and Boarding Houses, and in Rented Dwellings"
+      },
+      "status": "active",
+      "text": "Whenever any order issued under the provisions of section 47a-53 or section 47a-55, or under the provisions of any municipal charter or special act or ordinance relating to the abatement of nuisances in tenement houses is not complied with, or not so far complied with as the appropriate authority finds reasonable, within the time allowed, or whenever a landlord has not substantially complied with the provisions of section 47a-7, the authority appointed under the provisions of section 47a-56 may apply to the superior court for the judicial district where the property is situated for an order requiring the owner to show cause why a receiver of rents, issues and profits should not be appointed and why such receiver should not remove or remedy such condition and obtain a lien in favor of the municipality, having priority with respect to all existing mortgages or liens, to secure payment of the costs incurred by the receiver in removing or remedying such condition. Such application shall contain: (1) Proof by affidavit that an order of the proper authority has been issued and served on the owner; (2) a statement that a nuisance exists because a landlord has been in substantial noncompliance with the provisions of section 47a-7 or a nuisance exists that constitutes a fire hazard or a serious threat to life, health or safety and that such nuisance continued to exist in such property after the time fixed for the removal thereof in such order, and such statement shall contain a description of the property and the conditions constituting such nuisance; and (3) a brief description of the nature of the work required to remove or remedy the condition and an estimate as to the cost thereof.",
+      "href": "?chapter=833a&section=section-47a-56a",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-47a-56i",
+      "citation": "47a-56i",
+      "citations": [
+        "47a-56i"
+      ],
+      "heading": "Sec. 47a-56i. (Formerly Sec. 19-347h). Housing Receivership Revolving Fund. Source of funds for expenses of a receiver in remedying certain tenement conditions.",
+      "chapter": {
+        "id": "chapter-833a",
+        "number": "833a",
+        "name": "Public Enforcement of Health and Safety Standards in Tenement and Boarding Houses, and in Rented Dwellings"
+      },
+      "status": "active",
+      "text": "(a) The expenses incurred by a receiver in removing or remedying a condition pursuant to the provisions of sections 47a-14a to 47a-14g, inclusive, and sections 47a-56 to 47a-56i, inclusive, shall be met by the rents collected by the receiver, the municipality in which the property is located or, with court approval, from a fund to be known as the Housing Receivership Revolving Fund, which shall be maintained by the Commissioner of Housing. The court may also approve resort to such fund to meet expenses incurred by a receiver of rents for residential premises pursuant to the provisions of section 16-262f or 47a-14h or chapter 735a or pursuant to any other action involving the making of repairs to residential rental property under court supervision. A court may authorize resort to such fund if (1) sufficient sources of money are not otherwise immediately available, and (2) the anticipated average expense from the fund per dwelling unit or per space or lot in such park is not in excess of ten thousand dollars.\n\n(b) The receiver shall repay the amounts so expended to such fund from the proceeds of any amounts recovered pursuant to the provisions of said sections.\n\n(c) The owner of the property shall be liable for repayment to the fund of all amounts expended from the fund upon or in connection with such property and to the municipality for all amounts expended by it upon or in connection with such property. Any such funds expended from the fund shall be secured by a lien on such property for the benefit of the state, which shall have priority over all mortgages or other liens on such property. Any such funds expended by the municipality shall be secured by a lien on such property which shall have the same priority as a lien for municipal taxes.",
+      "href": "?chapter=833a&section=section-47a-56i",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-47a-56k",
+      "citation": "47a-56k",
+      "citations": [
+        "47a-56k"
+      ],
+      "heading": "Sec. 47a-56k. Authorization of state bonds for purposes of the Housing Receivership Revolving Fund.",
+      "chapter": {
+        "id": "chapter-833a",
+        "number": "833a",
+        "name": "Public Enforcement of Health and Safety Standards in Tenement and Boarding Houses, and in Rented Dwellings"
+      },
+      "status": "active",
+      "text": "(a) The State Bond Commission shall have power, in accordance with the provisions of this section, from time to time to authorize the issuance of bonds of the state in one or more series and in principal amounts not exceeding in the aggregate fifty million three hundred thousand dollars, the proceeds of the sale of which shall be used by the Department of Housing to provide funds for the Housing Receivership Revolving Fund established in accordance with section 47a-56i, provided twenty-five million dollars of said authorization shall be effective July 1, 2024. Not more than one million dollars may be expended from said fund in any single municipality per year.\n\n(b) All provisions of section 3-20 or the exercise of any right or power granted thereby which are not inconsistent with the provisions of this section are hereby adopted and shall apply to all bonds authorized by the State Bond Commission pursuant to this section, and temporary notes in anticipation of the money to be derived from the sale of any such bonds so authorized may be issued in accordance with said section 3-20 and from time to time renewed. Such bonds shall mature at such time or times not exceeding twenty years from their respective dates as may be provided in or pursuant to the resolution or resolutions of the State Bond Commission authorizing such bonds. None of such bonds shall be authorized except upon a finding by the State Bond Commission that there has been filed with it a request for such authorization which is signed by or on behalf of the Commissioner of Housing and states such terms and conditions as said commission in its discretion may require. Such bonds issued pursuant to this section shall be general obligations of the state and the full faith and credit of the state of Connecticut are pledged for the payment of the principal of and interest on such bonds as the same become due, and accordingly and as part of the contract of the state with the holders of such bonds, appropriation of all amounts necessary for punctual payment of such principal and interest is hereby made and the Treasurer shall pay such principal and interest as the same become due.",
+      "href": "?chapter=833a&section=section-47a-56k",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-47a-58",
+      "citation": "47a-58",
+      "citations": [
+        "47a-58"
+      ],
+      "heading": "Sec. 47a-58. (Formerly Sec. 19-347s). Notice of violation. Penalty. Injunctive relief. Municipal lien for unpaid penalty.",
+      "chapter": {
+        "id": "chapter-833a",
+        "number": "833a",
+        "name": "Public Enforcement of Health and Safety Standards in Tenement and Boarding Houses, and in Rented Dwellings"
+      },
+      "status": "active",
+      "text": "(a) Any enforcing agency may issue a notice of violation to any person who violates any provision of this chapter or a provision of a local housing code. If an enforcing agency issues an order to a registrant, such order may be delivered in accordance with section 7-148ii, provided nothing in this section shall preclude an enforcing agency from providing notice in another manner permitted by applicable law. Such notice shall specify each violation and specify the last day by which such violation shall be corrected. The date specified shall not be less than three weeks from the date of mailing of such notice, provided that in the case of a condition, which in the judgment of the enforcing agency is or in its effect is dangerous or detrimental to life or health, the date specified shall not be more than five days from the date of mailing of such notice. The enforcing agency may postpone the last day by which a violation shall be corrected upon a showing by the owner or other responsible person that he has begun to correct the violation but that full correction of the violation cannot be completed within the time provided because of technical difficulties, inability to obtain necessary materials or labor or inability to gain access to the dwelling unit wherein the violation exists.\n\n(b) When the owner or other responsible person has corrected such violation, the owner or other responsible person shall promptly, but not later than two weeks after such correction, report to the enforcing agency in writing, indicating the date when each violation was corrected. It shall be presumed that the violation was corrected on the date so indicated, unless a subsequent inspection by the enforcing agency again reveals the existence of the condition giving rise to the earlier notice of violation.\n\n(c) Any person who fails to correct any violation prior to the date set forth in the notice of violation shall be subject to a cumulative civil penalty of five dollars per day for each violation from the date set for correction in the notice of violation to the date such violation is corrected, except that in any case, the penalty shall not exceed one hundred dollars per day and the total penalty shall not exceed seven thousand five hundred dollars. The penalty may be collected by the enforcing agency by action against the owner or other responsible person or by an action against the real property. An action against the owner may be joined with an action against the real property.\n\n(d) In addition to the penalties specified in this section, the enforcing agency may enforce the provisions of this chapter or a local housing code by injunctive relief pursuant to chapter 916.\n\n(e) (1) Any penalty imposed by an enforcing agency pursuant to the provisions of subsection (c) of this section, and remaining unpaid for a period of sixty days after its due date, shall constitute a lien upon the real property against which the penalty was imposed, provided a notice of violation is recorded in the land records and indexed in the name of the property owner no later than thirty days after the penalty was imposed.\n\n(2) Each such notice of violation shall be effective from the time of the recording on the land records. Each lien shall take precedence over all transfers and encumbrances recorded after such time.\n\n(3) Any municipal lien pursuant to the provisions of this section may be foreclosed in the same manner as a mortgage.\n\n(4) Any municipal lien pursuant to this section may be discharged or dissolved in the manner provided in sections 49-35a to 49-37, inclusive.\n\n(f) Any enforcing agency imposing a penalty pursuant to subsection (c) of this section shall maintain a current record of all properties with respect to which such penalty remains unpaid in the office of such agency. Such record shall be available for inspection by the public.\n\n(g) Each enforcing agency empowered to enforce any provision of this chapter or any provision of a local housing code shall create and make available housing code violation complaint forms, written in both English and Spanish, for use by any occupant of a dwelling unit seeking to file a complaint against the owner of such unit, or other responsible party, concerning such violations.",
+      "href": "?chapter=833a&section=section-47a-58",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-47a-69",
+      "citation": "47a-69",
+      "citations": [
+        "47a-69"
+      ],
+      "heading": "Sec. 47a-69. Housing mediators. Appointment. Qualifications. Duties.",
+      "chapter": {
+        "id": "chapter-834",
+        "number": "834",
+        "name": "Court Proceedings on Housing Matters"
+      },
+      "status": "active",
+      "text": "(a) The judges of the Superior Court or an authorized committee thereof may appoint such housing mediators as they deem necessary for the purpose of assisting the court in the prompt and efficient hearing of housing matters within the limit of their appropriation therefor. Such judges or such committee shall appoint not less than two such mediators for each of the judicial districts of Hartford, New Haven and Bridgeport and may designate one of them in each judicial district as chief housing mediator. Such judges or committee shall also appoint not less than three such housing mediators for all other judicial districts. The housing mediators for the judicial district of New Haven shall assist the court in the hearing of housing matters in the judicial district of Waterbury, the housing mediators for the judicial district of Hartford shall assist the court in the hearing of housing matters in the judicial district of New Britain and the housing mediators for the judicial district of Bridgeport shall assist the court in the hearing of housing matters in the judicial district of Stamford-Norwalk.\n\n(b) Housing mediators shall be knowledgeable in the maintenance, repair and rehabilitation of dwelling units and the federal, state and municipal laws, ordinances, rules and regulations pertaining thereto. Housing mediators shall also have knowledge necessary to advise parties regarding the type of funds and services available to assist owners, landlords and tenants in the financing of resolutions to housing problems. Housing mediators shall make inspections and conduct investigations at the request of the court, shall advise parties in locating possible sources of financial assistance necessary to comply with orders of the court and shall exercise such other powers and perform such other duties as the judge may from time to time prescribe.\n\n(c) Housing mediators (1) shall be responsible for the initial screening and evaluation of all contested housing matters eligible for placement on the housing docket pursuant to section 47a-68, (2) may conduct investigations of such matters including, but not limited to, interviews with the parties, and (3) may recommend settlements.",
+      "href": "?chapter=834&section=section-47a-69",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-47a-70",
+      "citation": "47a-70",
+      "citations": [
+        "47a-70"
+      ],
+      "heading": "Sec. 47a-70. Housing docket. Entry and transfer of cases on docket.",
+      "chapter": {
+        "id": "chapter-834",
+        "number": "834",
+        "name": "Court Proceedings on Housing Matters"
+      },
+      "status": "active",
+      "text": "(a) All proceedings involving a housing matter in the judicial district of Hartford, New Britain, New Haven, Bridgeport, Waterbury or Stamford-Norwalk shall first be placed on the housing docket for that district, provided the judge before whom such proceeding is brought may transfer such matter to the regular docket for a judicial district if he determines that such matter is not a housing matter or that such docket is more suitable for the disposition of the case. Any case so entered or transferred to either docket shall be proceeded upon as are other cases of like nature standing on such docket.\n\n(b) If two or more actions are pending between the same parties, including for the purposes hereof any other court proceedings arising out of or connected with the same housing accommodation, of which one or more of such actions is on the housing docket and one or more of such actions is on some other docket, the judge handling such other docket, upon motion of any party to any of such actions, may order that the action pending on such docket, with all papers relating thereto, be transferred to the housing docket; and such action or actions shall thereafter proceed as though originally entered there.",
+      "href": "?chapter=834&section=section-47a-70",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-47a-71a",
+      "citation": "47a-71a",
+      "citations": [
+        "47a-71a"
+      ],
+      "heading": "Sec. 47a-71a. Connecticut Advisory Council on Housing Matters.",
+      "chapter": {
+        "id": "chapter-834",
+        "number": "834",
+        "name": "Court Proceedings on Housing Matters"
+      },
+      "status": "active",
+      "text": "There is hereby created the Connecticut Advisory Council on Housing Matters consisting of eighteen members. The members of the advisory council shall be appointed by the Governor for terms of four years, from July first of the year of their appointment. The advisory council shall consist of representatives of tenants, landlords, and others concerned with housing and shall reflect a balance of the interests of tenants and landlords. The members of the advisory council shall elect their own chairperson. Five members shall be residents of the judicial districts of Hartford or New Britain; five members shall be residents of the judicial districts of New Haven, Waterbury or Ansonia-Milford; five members shall be residents of the judicial districts of Bridgeport or Stamford-Norwalk; and three members shall be residents of the judicial districts of Danbury, Litchfield, Middlesex, New London, Tolland or Windham. Any member who fails to attend three consecutive meetings or who fails to attend fifty per cent of all meetings held during any calendar year shall be deemed to have resigned from office. Any vacancy in the membership of the advisory council shall be filled by the Governor for the unexpired portion of the term.",
+      "href": "?chapter=834&section=section-47a-71a",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    }
+  ]
+}

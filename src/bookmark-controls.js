@@ -1,14 +1,8 @@
 import { temporaryBookmarkMessage } from "./bookmark-page.js";
 
-export function bindBookmarkControls({ state, render, buttonLabel, root = document }) {
-  const announce = (message, button) => {
-    let status = root.querySelector("[data-bookmark-status]") ?? button?.closest(".provision")?.querySelector(".action-status");
-    if (!status) {
-      status = document.createElement("p");
-      status.setAttribute("role", "status");
-      status.dataset.bookmarkStatus = "";
-      (button?.parentElement ?? root.querySelector("main"))?.append(status);
-    }
+export function bindBookmarkControls({ state, render, buttonLabel, showActionToast, root = document }) {
+  const announce = (message) => {
+    const status = root.querySelector("[data-bookmark-status]");
     if (status) status.textContent = message;
   };
   root.addEventListener("click", (event) => {
@@ -24,9 +18,10 @@ export function bindBookmarkControls({ state, render, buttonLabel, root = docume
     } else if (button.matches("[data-import-bookmarks]")) {
       root.querySelector("[data-bookmark-file]").click();
     } else if (button.matches("[data-remove-bookmark]")) {
-      state.removeBookmark(button.dataset.removeBookmark);
+      const persisted = state.removeBookmark(button.dataset.removeBookmark);
       render();
       root.querySelector("[data-import-bookmarks]")?.focus();
+      showActionToast(persisted ? "Bookmark removed." : temporaryBookmarkMessage);
     } else if (button.matches("[data-bookmark-id]")) {
       const { saved, persisted } = state.toggleBookmark({
         id: button.dataset.bookmarkId, type: button.dataset.bookmarkType,
@@ -46,7 +41,7 @@ export function bindBookmarkControls({ state, render, buttonLabel, root = docume
         clear.disabled = !count;
         clear.querySelector("small").textContent = count ? `${count} saved` : "None saved";
       }
-      announce(persisted ? saved ? "Bookmark saved on this device." : "Bookmark removed." : temporaryBookmarkMessage, button);
+      showActionToast(persisted ? saved ? "Bookmark saved on this device." : "Bookmark removed." : temporaryBookmarkMessage);
     }
   });
   root.addEventListener("change", async (event) => {

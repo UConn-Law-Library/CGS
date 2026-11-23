@@ -1,0 +1,204 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-319jj",
+  "number": "319jj",
+  "name": "Medicare Assignment",
+  "title": {
+    "id": "title-17b",
+    "number": "17b",
+    "name": "Social Services"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2023/pub/chap_319jj.htm",
+  "sections": [
+    {
+      "id": "section-17b-550",
+      "kind": "section",
+      "citation": "17b-550",
+      "citations": [
+        "17b-550"
+      ],
+      "heading": "Sec. 17b-550. (Formerly Sec. 17a-390). Definitions.",
+      "sourceUrl": "https://www.cga.ct.gov/2023/pub/chap_319jj.htm#sec_17b-550",
+      "status": "active",
+      "content": {
+        "body": [
+          "As used in sections 17b-550 to 17b-554 , inclusive:",
+          "(1) “Department” means the Department of Social Services;",
+          "(2) “Commissioner” means the Commissioner of Social Services;",
+          "(3) “Medicare assignment” means acceptance by a health care provider of the Medicare-determined reasonable charge as payment in full for services rendered to persons enrolled in the Medicare insurance program;",
+          "(4) “Income” means adjusted gross income as determined for purposes of the federal income tax plus any other income of such person not subject to federal taxation;",
+          "(5) “Program” means the Connecticut Medicare assignment program otherwise known as CONNMAP;",
+          "(6) “Resident” means a person legally domiciled within the state for a period of not less than one hundred eighty-three days immediately preceding the date of application for inclusion in the program. Mere seasonal or temporary residences within the state, of whatever duration, shall not constitute domicile;",
+          "(7) “Health care provider” means a person who provides care, treatment, service or equipment covered by Medicare Part B under Title XVIII of the Social Security Act, as amended."
+        ],
+        "sourceNotes": [
+          "(P.A. 87-356, S. 2, 10; P.A. 89-135, S. 2, 6; P.A. 93-262, S. 1, 87.)"
+        ],
+        "history": [
+          "History: P.A. 89-135 deleted obsolete definitions of “physician”, “state society”, “participating physician” and “Medicare intermediary”, added the definition of health care provider and substituted reference to health care providers for reference to physicians in definition of “Medicare assignment”; Sec. 17-560 transferred to Sec. 17a-390 in 1991; P.A. 93-262 authorized substitution of commissioner and department of social services for commissioner and department on aging, effective July 1, 1993; Sec. 17a-390 transferred to Sec. 17b-550 in 1995."
+        ],
+        "annotations": [],
+        "plainText": "As used in sections 17b-550 to 17b-554 , inclusive:\n\n(1) “Department” means the Department of Social Services;\n\n(2) “Commissioner” means the Commissioner of Social Services;\n\n(3) “Medicare assignment” means acceptance by a health care provider of the Medicare-determined reasonable charge as payment in full for services rendered to persons enrolled in the Medicare insurance program;\n\n(4) “Income” means adjusted gross income as determined for purposes of the federal income tax plus any other income of such person not subject to federal taxation;\n\n(5) “Program” means the Connecticut Medicare assignment program otherwise known as CONNMAP;\n\n(6) “Resident” means a person legally domiciled within the state for a period of not less than one hundred eighty-three days immediately preceding the date of application for inclusion in the program. Mere seasonal or temporary residences within the state, of whatever duration, shall not constitute domicile;\n\n(7) “Health care provider” means a person who provides care, treatment, service or equipment covered by Medicare Part B under Title XVIII of the Social Security Act, as amended."
+      }
+    },
+    {
+      "id": "section-17b-551",
+      "kind": "section",
+      "citation": "17b-551",
+      "citations": [
+        "17b-551"
+      ],
+      "heading": "Sec. 17b-551. (Formerly Sec. 17a-391). Eligibility.",
+      "sourceUrl": "https://www.cga.ct.gov/2023/pub/chap_319jj.htm#sec_17b-551",
+      "status": "active",
+      "content": {
+        "body": [
+          "Eligibility for participation in the program shall be limited to a resident who is enrolled in Medicare Part B whose annual income does not exceed forty-three thousand five hundred sixty dollars or if such resident has a spouse, the combined income of such resident and his spouse does not exceed fifty-eight thousand seven hundred forty dollars. On January 1, 2014, and annually thereafter, the commissioner shall increase the income limit established under this subsection over that of the previous fiscal year to reflect the annual inflation adjustment in Social Security income, if any. Each such adjustment shall be determined to the nearest one hundred dollars."
+        ],
+        "sourceNotes": [
+          "(P.A. 87-356, S. 4, 10; P.A. 90-185; P.A. 13-234, S. 83.)"
+        ],
+        "history": [
+          "History: P.A. 90-185 substituted 165% for 150%; Sec. 17-562 transferred to Sec. 17a-391 in 1991; Sec. 17a-391 transferred to Sec. 17b-551 in 1995; P.A. 13-234 replaced provisions re annual income limit of 165 per cent of the income level established in ConnPACE program for resident and for combined income of resident and spouse with provisions re annual income limit of $43,560 for resident and $58,740 for combined income of resident and spouse and added provision re commissioner to annually increase income limit to reflect inflation adjustment, effective January 1, 2014."
+        ],
+        "annotations": [],
+        "plainText": "Eligibility for participation in the program shall be limited to a resident who is enrolled in Medicare Part B whose annual income does not exceed forty-three thousand five hundred sixty dollars or if such resident has a spouse, the combined income of such resident and his spouse does not exceed fifty-eight thousand seven hundred forty dollars. On January 1, 2014, and annually thereafter, the commissioner shall increase the income limit established under this subsection over that of the previous fiscal year to reflect the annual inflation adjustment in Social Security income, if any. Each such adjustment shall be determined to the nearest one hundred dollars."
+      }
+    },
+    {
+      "id": "section-17b-552",
+      "kind": "section",
+      "citation": "17b-552",
+      "citations": [
+        "17b-552"
+      ],
+      "heading": "Sec. 17b-552. (Formerly Sec. 17a-392). Limitation of charges. Civil penalty. Regulations.",
+      "sourceUrl": "https://www.cga.ct.gov/2023/pub/chap_319jj.htm#sec_17b-552",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) A health care provider shall limit charges for care, treatment, service or equipment covered by Medicare Part B under Title XVIII of the Social Security Act, as amended, provided to a Medicare beneficiary who meets the eligibility requirements specified in section 17b-551 , to the reasonable charge for the care, treatment, service or equipment provided as determined by the United States Secretary of Health and Human Services. No health care provider shall collect from such qualified beneficiary any amount in excess of the approved reasonable charge. Any violation of this subsection shall constitute grounds for the assessment of a civil penalty in accordance with subdivision (7) of subsection (a) of section 19a-17 . Any complaint alleging a violation of this section shall be made to the Department of Public Health or the appropriate professional licensing board or commission.",
+          "(b) The Commissioner of Social Services shall adopt regulations in accordance with the provisions of chapter 54, necessary to administer the program and to determine eligibility in accordance with the provisions of section 17b-551 ."
+        ],
+        "sourceNotes": [
+          "(P.A. 87-356, S. 5, 10; 87-589, S. 35, 87; P.A. 89-135, S. 3, 6; P.A. 90-230, S. 26, 101; P.A. 91-190, S. 3, 9; P.A. 93-262, S. 1, 87; 93-381, S. 9, 39; P.A. 95-257, S. 12, 21, 58; P.A. 13-234, S. 84; P.A. 17-10, S. 2.)"
+        ],
+        "history": [
+          "History: P.A. 87-589 made technical change in Subsec. (g); P.A. 89-135 removed language pertaining to the medical courtesy card program and added requirement for health care providers to limit charges to the amount specified by the Secretary of Health and Human Services and provided for the adoption of regulations; P.A. 90-230 substituted “Medicare assignment card” for “medical courtesy card” in Subsec. (f); Sec. 17-563 transferred to Sec. 17a-392 in 1991; P.A. 91-190 deleted former Subsecs. (c) to (e), inclusive, which had established an advisory committee for the Medicare assignment program and set forth its duties, including the submittal of an annual report to the department with findings and recommendations for modifications to the program, legislation or regulations, and relettered Subsec. (f) as Subsec. (c); P.A. 93-262 substituted commissioner and department of social services for commissioner and department on aging, effective July 1, 1993; P.A. 93-381 replaced department of health services with department of public health and addiction services, effective July 1, 1993; Sec. 17a-392 transferred to Sec. 17b-552 in 1995; P.A. 95-257 replaced Commissioner and Department of Public Health and Addiction Services with Commissioner and Department of Public Health, effective July 1, 1995; P.A. 13-234 deleted former Subsec. (c) re acceptance of identification card for ConnPACE program, effective January 1, 2014; P.A. 17-10 amended Subsec. (a) by replacing reference to Sec. 19a-17(a)(6) with reference to Sec. 19a-17(a)(7)."
+        ],
+        "annotations": [],
+        "plainText": "(a) A health care provider shall limit charges for care, treatment, service or equipment covered by Medicare Part B under Title XVIII of the Social Security Act, as amended, provided to a Medicare beneficiary who meets the eligibility requirements specified in section 17b-551 , to the reasonable charge for the care, treatment, service or equipment provided as determined by the United States Secretary of Health and Human Services. No health care provider shall collect from such qualified beneficiary any amount in excess of the approved reasonable charge. Any violation of this subsection shall constitute grounds for the assessment of a civil penalty in accordance with subdivision (7) of subsection (a) of section 19a-17 . Any complaint alleging a violation of this section shall be made to the Department of Public Health or the appropriate professional licensing board or commission.\n\n(b) The Commissioner of Social Services shall adopt regulations in accordance with the provisions of chapter 54, necessary to administer the program and to determine eligibility in accordance with the provisions of section 17b-551 ."
+      }
+    },
+    {
+      "id": "section-17b-553",
+      "kind": "section",
+      "citation": "17b-553",
+      "citations": [
+        "17b-553"
+      ],
+      "heading": "Sec. 17b-553. (Formerly Sec. 17a-393). Posting of policy relating to Medicare payments and processing.",
+      "sourceUrl": "https://www.cga.ct.gov/2023/pub/chap_319jj.htm#sec_17b-553",
+      "status": "active",
+      "content": {
+        "body": [
+          "Each health care provider who is assigned a Medicare provider number shall post in a prominent location a clearly legible sign stating his office policy related to Medicare payments and processing."
+        ],
+        "sourceNotes": [
+          "(P.A. 87-356, S. 6, 10; P.A. 89-135, S. 4, 6.)"
+        ],
+        "history": [
+          "History: P.A. 89-135 substituted “health care provider” for “physician”; Sec. 17-564 transferred to Sec. 17a-393 in 1991; Sec. 17a-393 transferred to Sec. 17b-553 in 1995."
+        ],
+        "annotations": [],
+        "plainText": "Each health care provider who is assigned a Medicare provider number shall post in a prominent location a clearly legible sign stating his office policy related to Medicare payments and processing."
+      }
+    },
+    {
+      "id": "section-17b-554",
+      "kind": "section",
+      "citation": "17b-554",
+      "citations": [
+        "17b-554"
+      ],
+      "heading": "Sec. 17b-554. (Formerly Sec. 17a-394). Regulations.",
+      "sourceUrl": "https://www.cga.ct.gov/2023/pub/chap_319jj.htm#sec_17b-554",
+      "status": "active",
+      "content": {
+        "body": [
+          "The department may adopt emergency regulations, in accordance with chapter 54, to implement the provisions of sections 17b-550 to 17b-554 , inclusive."
+        ],
+        "sourceNotes": [
+          "(P.A. 87-356, S. 8, 10.)"
+        ],
+        "history": [
+          "History: Sec. 17-565 transferred to Sec. 17a-394 in 1991; Sec. 17a-394 transferred to Sec. 17b-554 in 1995."
+        ],
+        "annotations": [],
+        "plainText": "The department may adopt emergency regulations, in accordance with chapter 54, to implement the provisions of sections 17b-550 to 17b-554 , inclusive."
+      }
+    },
+    {
+      "id": "group-17b-555-to-17b-556-to-17b-557-to-17b-558-to-17b-559-to-17b-560-to-17b-561-to-17b-562-to-17b-563-to-17b-564-to-17b-565-to-17b-566-to-17b-567-to-17b-568-to-17b-569-to-17b-570-to-17b-571-to-17b-572-to-17b-573-to-17b-574-to-17b-575-to-17b-576-to-17b-577-to-17b-578-to-17b-579-to-17b-580-to-17b-581-to-17b-582-to-17b-583-to-17b-584-to-17b-585-to-17b-586-to-17b-587-to-17b-588-to-17b-589-to-17b-590-to-17b-591-to-17b-592-to-17b-593-to-17b-594-to-17b-595-to-17b-596",
+      "kind": "group",
+      "citation": null,
+      "citations": [
+        "17b-555",
+        "17b-556",
+        "17b-557",
+        "17b-558",
+        "17b-559",
+        "17b-560",
+        "17b-561",
+        "17b-562",
+        "17b-563",
+        "17b-564",
+        "17b-565",
+        "17b-566",
+        "17b-567",
+        "17b-568",
+        "17b-569",
+        "17b-570",
+        "17b-571",
+        "17b-572",
+        "17b-573",
+        "17b-574",
+        "17b-575",
+        "17b-576",
+        "17b-577",
+        "17b-578",
+        "17b-579",
+        "17b-580",
+        "17b-581",
+        "17b-582",
+        "17b-583",
+        "17b-584",
+        "17b-585",
+        "17b-586",
+        "17b-587",
+        "17b-588",
+        "17b-589",
+        "17b-590",
+        "17b-591",
+        "17b-592",
+        "17b-593",
+        "17b-594",
+        "17b-595",
+        "17b-596"
+      ],
+      "heading": "Secs. 17b-555 to 17b-596.",
+      "sourceUrl": "https://www.cga.ct.gov/2023/pub/chap_319jj.htm#secs_17b-555_to_17b-596",
+      "status": "reserved",
+      "content": {
+        "body": [
+          "Reserved for future use.",
+          "Note: Chapters 319kk and 319 ll are also reserved for future use."
+        ],
+        "sourceNotes": [],
+        "history": [],
+        "annotations": [],
+        "plainText": "Reserved for future use.\n\nNote: Chapters 319kk and 319 ll are also reserved for future use."
+      }
+    }
+  ]
+}

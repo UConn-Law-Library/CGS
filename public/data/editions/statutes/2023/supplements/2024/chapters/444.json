@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-444",
+  "number": "444",
+  "name": "Coastal Management",
+  "title": {
+    "id": "title-22a",
+    "number": "22a",
+    "name": "Environmental Protection"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_444.htm",
+  "sections": [
+    {
+      "id": "section-22a-111c",
+      "kind": "section",
+      "citation": "22a-111c",
+      "citations": [
+        "22a-111c"
+      ],
+      "heading": "Sec. 22a-111c. Seabird and Shorebird protection program. List. Protection areas. Prohibitions. Penalty.",
+      "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_444.htm#sec_22a-111c",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) The Commissioner of Energy and Environmental Protection may establish a list of seabirds and shorebirds that are identified by said commissioner from the regulations adopted pursuant to sections 26-306 to 26-308, inclusive, for inclusion in a seabird and shorebird protection program.",
+          "(b) Pursuant to the seabird and shorebird protection program, the commissioner may designate seabird and shorebird protection areas. Such seabird and shorebird protection areas may be designated for the months of March first to September fifteenth of any calendar year, or any period of time therein, on public property that is owned by the state and is located within the coastal area, as described in subsection (a) of section 22a-94.",
+          "(c) The commissioner shall identify any such seabird and shorebird protection area by marking such area with string fencing, posts and associated signage. The commissioner may utilize agents or volunteers to install such string fencing, posts and associated signage.",
+          "(d) No person shall enter any seabird and shorebird protection area designated and identified by the commissioner in accordance with the provisions of this section unless such person is duly authorized by the commissioner to enter such seabird and shorebird protection area.",
+          "(e) No person shall allow any pet or other animal under such person's control to be closer than twenty-five feet from any seabird and shorebird protection area designated and identified pursuant to this section except for a service animal, as defined in section 22-345.",
+          "(f) No person who operates any vehicle or bicycle shall allow such vehicle or bicycle to be closer than twenty-five feet from any seabird and shorebird protection area designated and identified pursuant to this section.",
+          "(g) Any person who violates any provision of subsection (d), (e) or (f) of this section shall have committed a separate infraction for each such violation."
+        ],
+        "sourceNotes": [
+          "(P.A. 23-155, S. 1.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "(a) The Commissioner of Energy and Environmental Protection may establish a list of seabirds and shorebirds that are identified by said commissioner from the regulations adopted pursuant to sections 26-306 to 26-308, inclusive, for inclusion in a seabird and shorebird protection program.\n\n(b) Pursuant to the seabird and shorebird protection program, the commissioner may designate seabird and shorebird protection areas. Such seabird and shorebird protection areas may be designated for the months of March first to September fifteenth of any calendar year, or any period of time therein, on public property that is owned by the state and is located within the coastal area, as described in subsection (a) of section 22a-94.\n\n(c) The commissioner shall identify any such seabird and shorebird protection area by marking such area with string fencing, posts and associated signage. The commissioner may utilize agents or volunteers to install such string fencing, posts and associated signage.\n\n(d) No person shall enter any seabird and shorebird protection area designated and identified by the commissioner in accordance with the provisions of this section unless such person is duly authorized by the commissioner to enter such seabird and shorebird protection area.\n\n(e) No person shall allow any pet or other animal under such person's control to be closer than twenty-five feet from any seabird and shorebird protection area designated and identified pursuant to this section except for a service animal, as defined in section 22-345.\n\n(f) No person who operates any vehicle or bicycle shall allow such vehicle or bicycle to be closer than twenty-five feet from any seabird and shorebird protection area designated and identified pursuant to this section.\n\n(g) Any person who violates any provision of subsection (d), (e) or (f) of this section shall have committed a separate infraction for each such violation."
+      }
+    },
+    {
+      "id": "section-22a-111d",
+      "kind": "section",
+      "citation": "22a-111d",
+      "citations": [
+        "22a-111d"
+      ],
+      "heading": "Sec. 22a-111d. Seabird and shorebird protection program. Enforcement.",
+      "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_444.htm#sec_22a-111d",
+      "status": "active",
+      "content": {
+        "body": [
+          "Any conservation officer appointed pursuant to section 26-5 and any other officer authorized to serve criminal process may enforce the provisions of section 22a-111c."
+        ],
+        "sourceNotes": [
+          "(P.A. 23-155, S. 2.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Any conservation officer appointed pursuant to section 26-5 and any other officer authorized to serve criminal process may enforce the provisions of section 22a-111c."
+      }
+    }
+  ]
+}

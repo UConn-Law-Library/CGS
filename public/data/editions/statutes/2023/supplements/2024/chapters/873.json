@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-873",
+  "number": "873",
+  "name": "Court Clerks",
+  "title": {
+    "id": "title-51",
+    "number": "51",
+    "name": "Courts"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_873.htm",
+  "sections": [
+    {
+      "id": "section-51-52b",
+      "kind": "section",
+      "citation": "51-52b",
+      "citations": [
+        "51-52b"
+      ],
+      "heading": "Sec. 51-52b. (Formerly Sec. 51-171a). Certification re authority of justice of the peace or commissioner of the Superior Court in the judicial district of Bridgeport or Stamford-Norwalk.",
+      "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_873.htm#sec_51-52b",
+      "status": "active",
+      "content": {
+        "body": [
+          "The chief clerk of the superior court at Bridgeport shall, on the request of any justice of the peace or commissioner of the Superior Court in the judicial district of Bridgeport or Stamford-Norwalk and on the receipt of a fee of one dollar, furnish to the chief clerk of the superior court at Stamford a duplicate of the certificate of qualification or appointment of such justice of the peace or commissioner of the Superior Court and said clerk at Stamford may thereafter certify to the authority of such justice of the peace or commissioner of the Superior Court."
+        ],
+        "sourceNotes": [
+          "(February, 1965, P.A. 601; P.A. 78-280, S. 7, 127; P.A. 80-201, S. 3, 9; P.A. 81-34, S. 6, 9; P.A. 23-46, S. 32.)"
+        ],
+        "history": [
+          "History: P.A. 78-280 replaced “Fairfield county” with “judicial district of Fairfield”; P.A. 80-201 applied provisions to judicial district of Stamford-Norwalk; P.A. 81-34 eliminated the authority of the clerk of the superior court at Bridgeport to certify authority of notaries public and specified that chief clerk empowered to certify the authority of justice of the peace or commissioners of the superior court, effective July 1, 1982; Sec. 51-171a transferred to Sec. 51-52b in 1983; P.A. 23-46 replaced judicial district of Fairfield with judicial district of Bridgeport, effective January 1, 2024."
+        ],
+        "annotations": [],
+        "plainText": "The chief clerk of the superior court at Bridgeport shall, on the request of any justice of the peace or commissioner of the Superior Court in the judicial district of Bridgeport or Stamford-Norwalk and on the receipt of a fee of one dollar, furnish to the chief clerk of the superior court at Stamford a duplicate of the certificate of qualification or appointment of such justice of the peace or commissioner of the Superior Court and said clerk at Stamford may thereafter certify to the authority of such justice of the peace or commissioner of the Superior Court."
+      }
+    }
+  ]
+}

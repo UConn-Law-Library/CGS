@@ -1,0 +1,97 @@
+{
+  "schemaVersion": "1.0.0",
+  "editionYear": 2024,
+  "title": {
+    "id": "title-04d",
+    "number": "04d",
+    "name": "State Information and Telecommunication Systems"
+  },
+  "removedDocumentIds": [
+    "section-4d-30",
+    "section-4d-32",
+    "section-4d-47",
+    "section-4d-48"
+  ],
+  "documents": [
+    {
+      "id": "section-4d-30",
+      "citation": "4d-30",
+      "citations": [
+        "4d-30"
+      ],
+      "heading": "Sec. 4d-30. Definitions.",
+      "chapter": {
+        "id": "chapter-061",
+        "number": "061",
+        "name": "State Information and Telecommunication Systems Management and Contracts"
+      },
+      "status": "active",
+      "text": "As used in this section and sections 4d-31 to 4d-44, inclusive:\n\n(1) “Contract” means a contract for state agency information system or telecommunication system facilities, equipment or services, which is awarded pursuant to this chapter or subsection (e) of section 1-205, subsection (c) of section 1-211, subsection (b) of section 1-212, section 4-5, subsection (a) of section 10a-151b, or subsection (b) of section 19a-110.\n\n(2) “Contractor” means a business entity or individual who is awarded a contract or an amendment to a contract.\n\n(3) “Subcontractor” means a subcontractor of a contractor for work under a contract or an amendment to a contract.",
+      "href": "?chapter=061&section=section-4d-30",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-4d-32",
+      "citation": "4d-32",
+      "citations": [
+        "4d-32"
+      ],
+      "heading": "Sec. 4d-32. Approval of subcontract awards.",
+      "chapter": {
+        "id": "chapter-061",
+        "number": "061",
+        "name": "State Information and Telecommunication Systems Management and Contracts"
+      },
+      "status": "active",
+      "text": "No contractor shall award a subcontract for work under a contract or for work under an amendment to a contract without the approval of the Commissioner of Administrative Services or a designee of (1) the selection of the subcontractor, and (2) the disclosure of the provisions of the subcontract.",
+      "href": "?chapter=061&section=section-4d-32",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-4d-47",
+      "citation": "4d-47",
+      "citations": [
+        "4d-47"
+      ],
+      "heading": "Sec. 4d-47. Hiring of state employees by contractors and subcontractors.",
+      "chapter": {
+        "id": "chapter-061",
+        "number": "061",
+        "name": "State Information and Telecommunication Systems Management and Contracts"
+      },
+      "status": "active",
+      "text": "With respect to any state employee whose position is eliminated or who is laid off as a result of any contract or amendment to a contract which is subject to the provisions of this chapter and subsection (e) of section 1-205, subsection (c) of section 1-211, subsection (b) of section 1-212, section 4-5, 4a-50, 4a-51, subsection (b) of section 4a-57, subsection (a) of section 10a-151b, or subsection (b) of section 19a-110, or any subcontract for work under such contract or amendment, (1) the contractor shall hire the employee, upon application by the employee, unless the employee is hired by a subcontractor of the contractor, or (2) the employee may transfer to any vacant position in state service for which such employee is qualified, to the extent allowed under the provisions of existing collectively bargained agreements and the general statutes. If the contractor or any such subcontractor hires any such state employee and does not provide the employee with fringe benefits which are equivalent to, or greater than, the fringe benefits that the employee would have received in state service, the state shall, for two years after the employee terminates from state service, provide to the employee either (A) the same benefits that such employee received from the state, or (B) compensation in an amount which represents the difference in the value of the fringe benefits that such employee received when in state service and the fringe benefits that such employee receives from the contractor or subcontractor.",
+      "href": "?chapter=061&section=section-4d-47",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-4d-48",
+      "citation": "4d-48",
+      "citations": [
+        "4d-48"
+      ],
+      "heading": "Sec. 4d-48. Disqualification of potential contractors and subcontractors for past nonperformance.",
+      "chapter": {
+        "id": "chapter-061",
+        "number": "061",
+        "name": "State Information and Telecommunication Systems Management and Contracts"
+      },
+      "status": "active",
+      "text": "No contract or subcontract for state agency information system or telecommunication system facilities, equipment or services may be awarded to any business entity or individual pursuant to this chapter or subsection (e) of section 1-205, subsection (c) of section 1-211, subsection (b) of section 1-212, section 4-5, subsection (a) of section 10a-151b, or subsection (b) of section 19a-110, if such business entity or individual previously had a contract with the state or a state agency to provide information system or telecommunication system facilities, equipment or services and such prior contract was finally terminated by the state or a state agency within the previous five years for the reason that such business entity or individual failed to perform or otherwise breached a material obligation of the contract related to information system or telecommunication system facilities, equipment or services. If the termination of any such previous contract is contested in an arbitration or judicial proceeding, the termination shall not be final until the conclusion of such arbitration or judicial proceeding. If the fact-finder determines, or a settlement stipulates, that the contractor failed to perform or otherwise breached a material obligation of the contract related to information system or telecommunication system facilities, equipment or services, any award of a contract pursuant to said chapter or sections during the pendency of such arbitration or proceeding shall be rescinded and the bar provided in this section shall apply to such business entity or individual.",
+      "href": "?chapter=061&section=section-4d-48",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    }
+  ]
+}

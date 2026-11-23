@@ -149,7 +149,7 @@ async function publishedCoverage(catalog, dataDirectory) {
   });
 }
 
-function renderGuidePage(coverage, siteUrl) {
+function renderGuidePage(coverage, siteUrl, publishedEditions = null) {
   const home = relativeFile(guideFile, "index.html");
   return page({
     file: guideFile,
@@ -157,7 +157,7 @@ function renderGuidePage(coverage, siteUrl) {
     description: "How Connecticut bills become law, how Public Acts are codified into the General Statutes, the biennial revision and supplement cycle, and what this app's data covers.",
     siteUrl,
     breadcrumbs: [{ label: "Understanding the Statutes" }],
-    body: `<div class="guide-page">${renderGuide({ coverage, interactive: false, appBase: home })}
+    body: `<div class="guide-page">${renderGuide({ coverage, interactive: false, appBase: home, publishedEditions })}
     <p><a href="${escapeHtml(home + guideRouteHref())}">Open the interactive version</a></p></div>`
   });
 }
@@ -178,7 +178,7 @@ export async function generateDiscovery({ catalog, dataDirectory, output, siteUr
   const canonicalUrl = new URL(canonicalSiteUrl.endsWith("/") ? canonicalSiteUrl : `${canonicalSiteUrl}/`);
   const render = (html) => indexable ? html : html.replace('<link rel="canonical"', `${NOINDEX_META}\n  <link rel="canonical"`);
   const pages = ["index.html", discoveryRoot, guideFile];
-  await write(output, guideFile, render(renderGuidePage(await publishedCoverage(baseCatalog, dataDirectory), canonicalUrl)));
+  await write(output, guideFile, render(renderGuidePage(await publishedCoverage(baseCatalog, dataDirectory), canonicalUrl, (await readJsonIfPresent(path.join(dataDirectory, "editions", "published.json")))?.editions)));
 
   for (const title of catalog.titles) {
     const titleFile = titleDiscoveryPath(title);

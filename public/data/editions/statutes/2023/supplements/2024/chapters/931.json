@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-931",
+  "number": "931",
+  "name": "Connecticut Interstate Depositions and Discovery Act",
+  "title": {
+    "id": "title-52",
+    "number": "52",
+    "name": "Civil Actions"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_931.htm",
+  "sections": [
+    {
+      "id": "section-52-660",
+      "kind": "section",
+      "citation": "52-660",
+      "citations": [
+        "52-660"
+      ],
+      "heading": "Sec. 52-660. Uniformity of application and construction.",
+      "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_931.htm#sec_52-660",
+      "status": "active",
+      "content": {
+        "body": [
+          "In applying and construing the provisions of sections 52-655 to 52-659, inclusive, consideration shall be given to the need to promote uniformity of the law with respect to its subject matter among the states that enact such uniform provisions."
+        ],
+        "sourceNotes": [
+          "(P.A. 22-26, S. 49; P.A. 23-38, S. 4.)"
+        ],
+        "history": [
+          "History: P.A. 22-26 effective July 1, 2023, and applicable to any request for discovery in an action pending on or filed on or after said date; P.A. 23-38 replaced reference to Sec. 52-660 with reference to Sec. 52-659."
+        ],
+        "annotations": [],
+        "plainText": "In applying and construing the provisions of sections 52-655 to 52-659, inclusive, consideration shall be given to the need to promote uniformity of the law with respect to its subject matter among the states that enact such uniform provisions."
+      }
+    }
+  ]
+}

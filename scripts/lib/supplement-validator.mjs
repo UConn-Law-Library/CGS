@@ -1,6 +1,7 @@
 import { createHash } from "node:crypto";
 import { readFile, readdir, stat } from "node:fs/promises";
 import path from "node:path";
+import { isDeepStrictEqual } from "node:util";
 import { validateSchema } from "./json-schema.mjs";
 import { applyChapterOverlay, classifyChapterOverlay } from "./supplement-overlay.mjs";
 import { createSupplementSearchPatch } from "./supplement-search.mjs";
@@ -8,6 +9,10 @@ import { supersededSupplementError } from "./supplement-retirement.mjs";
 
 async function readJson(file) {
   return JSON.parse(await readFile(file, "utf8"));
+}
+
+function compareDocumentIds(left, right) {
+  return String(left?.id ?? "").localeCompare(String(right?.id ?? ""), "en");
 }
 
 export async function validateSupplement({ supplementDir, baseDataDir, schemaDir }) {
@@ -106,7 +111,11 @@ export async function validateSupplement({ supplementDir, baseDataDir, schemaDir
       if (JSON.stringify(searchShard.removedDocumentIds) !== JSON.stringify(expectedRemovedIds)) {
         errors.push(`${title.searchPath}: removed document ids do not match the consolidated supplement corpus`);
       }
-      if (JSON.stringify(searchShard.documents) !== JSON.stringify(expectedDocuments)) {
+      // A change in statute display order does not invalidate the search content of a published edition.
+      if (!Array.isArray(searchShard.documents) || !isDeepStrictEqual(
+        searchShard.documents.toSorted(compareDocumentIds),
+        expectedDocuments.toSorted(compareDocumentIds)
+      )) {
         errors.push(`${title.searchPath}: documents do not match the consolidated supplement corpus`);
       }
       await validateArtifact(title.searchPath);

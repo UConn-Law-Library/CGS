@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-152",
+  "number": "152",
+  "name": "Referenda",
+  "title": {
+    "id": "title-09",
+    "number": "09",
+    "name": "Elections"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_152.htm",
+  "sections": [
+    {
+      "id": "section-9-371c",
+      "kind": "section",
+      "citation": "9-371c",
+      "citations": [
+        "9-371c"
+      ],
+      "heading": "Sec. 9-371c. Annual report from municipalities that adopt budgets by referendum pursuant to charter.",
+      "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_152.htm#sec_9-371c",
+      "status": "active",
+      "content": {
+        "body": [
+          "Not later than January 15, 2024, and annually thereafter, the chief executive officer of each municipality that, pursuant to its municipal charter, conducts referenda for the purpose of adopting such municipality's budgets shall submit to the joint standing committee of the General Assembly having cognizance of matters relating to elections a report detailing the provisions of such municipal charter concerning the conduct of referenda for such purpose and the procedures for such conduct."
+        ],
+        "sourceNotes": [
+          "(P.A. 23-5, S. 33.)"
+        ],
+        "history": [
+          "History: P.A. 23-5 effective July 1, 2023."
+        ],
+        "annotations": [],
+        "plainText": "Not later than January 15, 2024, and annually thereafter, the chief executive officer of each municipality that, pursuant to its municipal charter, conducts referenda for the purpose of adopting such municipality's budgets shall submit to the joint standing committee of the General Assembly having cognizance of matters relating to elections a report detailing the provisions of such municipal charter concerning the conduct of referenda for such purpose and the procedures for such conduct."
+      }
+    }
+  ]
+}

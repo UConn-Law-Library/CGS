@@ -6,26 +6,102 @@ export function escapeHtml(value) {
   })[character]);
 }
 
-export function navigationSections(sections, { hideRepealed = false, selected = null } = {}) {
-  if (!hideRepealed) return sections;
-  return sections.filter((section) => section.status !== "repealed" || section === selected);
+// A link inside a grouped entry can be imported as a separate section whose heading is
+// just its citation. Use the first matching provision, as citation routes do.
+export function groupedSectionAliases(sections) {
+  const firstByCitation = new Map();
+  const aliases = new Map();
+  for (const section of sections) {
+    const citation = section.citation?.toLowerCase();
+    const first = firstByCitation.get(citation);
+    if (first?.kind === "group" && section.heading?.replace(/\s+/g, "").toLowerCase() === citation) {
+      aliases.set(section, first);
+    }
+    for (const value of section.citations ?? (citation ? [citation] : [])) {
+      const key = value.toLowerCase();
+      if (!firstByCitation.has(key)) firstByCitation.set(key, section);
+    }
+  }
+  return aliases;
+}
+
+// Leaves out sections whose every status is hidden. An entry that was "transferred or
+// repealed" stays unless both are hidden. The open section always stays.
+export function navigationSections(sections, { hiddenStatuses = [], selected = null } = {}) {
+  if (!hiddenStatuses.length) return sections;
+  return sections.filter((section) => section === selected || !isHiddenByStatus(sectionStatuses(section), hiddenStatuses));
+}
+
+export function isHiddenByStatus(statuses, hiddenStatuses) {
+  return statuses.length > 0 && statuses.every((status) => hiddenStatuses.includes(status));
+}
+
+// Tags always show in this order, whether they come from the stored data or from the note.
+const TAGGED_STATUSES = ["transferred", "repealed", "obsolete", "reserved"];
+const DISPOSITION_WORD = "(?:deemed\\s+)?(?:transferred|repealed|obsolete|reserved)";
+const GROUP_DISPOSITION = new RegExp(
+  `^S\\s?ections?\\s+.{0,300}?\\b(?:has|have)\\s+been\\s+((?:${DISPOSITION_WORD},?\\s+(?:(?:or|and)\\s+)?)*${DISPOSITION_WORD})\\s*(?:[.;,]|$)`,
+  "is"
+);
+
+function orderedStatuses(values) {
+  const present = new Set(values.map((value) => String(value).toLowerCase()));
+  return TAGGED_STATUSES.filter((status) => present.has(status));
+}
+
+// The statuses a section's tags show. A "mixed" entry lists its statuses in `statuses`. Entries
+// imported before issue #64 was fixed are recorded as active although their text is only a
+// disposition note, such as "Sections 46-1 to 46-8, inclusive, have been transferred or
+// repealed."; that sentence decides their tags until the next corpus refresh records them.
+// Search documents, which carry `text` rather than `content.body`, are read the same way.
+export function sectionStatuses(section) {
+  const status = section?.status;
+  if (TAGGED_STATUSES.includes(status)) return [status];
+  if (status === "mixed" && Array.isArray(section.statuses)) {
+    const stored = orderedStatuses(section.statuses);
+    if (stored.length) return stored;
+  }
+  if (status && status !== "active" && status !== "mixed") return [];
+  const note = section?.content?.body?.[0] ?? String(section?.text ?? "").split("\n\n", 1)[0];
+  const match = String(note ?? "").match(GROUP_DISPOSITION);
+  return match ? orderedStatuses(match[1].match(/transferred|repealed|obsolete|reserved/gi)) : [];
+}
+
+// The advanced search's status filter reads the same tags as navigation. A filter on one
+// status finds entries that list it among others; "Mixed" finds entries with several.
+export function statusFilterMatches(section, filter) {
+  if (!filter) return true;
+  const tags = sectionStatuses(section);
+  if (filter === "active") return tags.length === 0 && (section?.status ?? "active") === "active";
+  if (filter === "mixed") return section?.status === "mixed" || tags.length > 1;
+  return section?.status === filter || tags.includes(filter);
 }
 
 function compactCitation(citation) {
   return String(citation ?? "").replace(/^[^-]+-/, "");
 }
 
-export function navigationSectionLabel(section) {
+export function navigationSectionLabel(section, { compact = true } = {}) {
   const citations = section.citations?.filter(Boolean) ?? (section.citation ? [section.citation] : []);
   if (citations.length > 1) {
-    return `§§ ${citations[0]}–${compactCitation(citations.at(-1))}`;
+    const first = citations[0];
+    const last = citations.at(-1);
+    return compact ? `§§ ${first}–${compactCitation(last)}` : `Secs. ${first} to ${last}`;
   }
-  if (citations.length === 1) return `§ ${citations[0]}`;
+  if (citations.length === 1) return `${compact ? "§" : "Sec."} ${citations[0]}`;
   return section.heading;
 }
 
 export function navigationSectionDescription(section) {
   return String(section.heading ?? "").replace(/^Secs?\.\s*[^.]+\.\s*/i, "").trim();
+}
+
+// The first sentence of a description, for compact navigation rows. A leading
+// "(Formerly Sec. 1-66)." note is skipped, since its periods would end the sentence early.
+export function shortSectionDescription(description) {
+  const text = String(description ?? "");
+  const title = text.replace(/^\(Formerly\b[^()]*\)\.?\s*/i, "");
+  return title ? title.split(/(?<=\.)\s+/, 1)[0] : text;
 }
 
 export function leadingSubsection(value) {
@@ -121,7 +197,9 @@ export function renderLinkedText(value, { sections = new Map(), chapters = new M
   for (const { kind, target, index, end, href: actHref } of references) {
     parts.push(escapeHtml(text.slice(cursor, index)));
     const href = kind ? (kind === "sections" ? sections : chapters).get(target.toLowerCase()) : actHref;
-    const attributes = kind ? "" : ` target="_blank" rel="noopener noreferrer" title="Public Act ${escapeHtml(target)} on the Connecticut General Assembly website (opens in a new tab)"`;
+    // data-public-act keeps later statute-link enrichment off these links: "P.A. 14-1" and
+    // "section 14-1" read the same once the prefix is gone.
+    const attributes = kind ? "" : ` data-public-act target="_blank" rel="noopener noreferrer" title="Public Act ${escapeHtml(target)} on the Connecticut General Assembly website (opens in a new tab)"`;
     parts.push(href
       ? `<a class="legal-reference" href="${escapeHtml(href)}"${attributes}>${escapeHtml(target)}</a>`
       : escapeHtml(target));

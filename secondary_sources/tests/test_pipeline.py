@@ -118,6 +118,9 @@ class PipelineTests(unittest.TestCase):
             (("14-163c8b1", "14-163c", "14-163c8b1"), ("14-163c", "14-163c8b1")),
             # public act rows never resolve against the C.G.S.
             (("PA26-63(6a2A", "pa26-63", "PA 26-63(6)(a)(2)(A)"), ("pa26-63", "PA 26-63(6)(a)(2)(A)")),
+            # a base printed whole stays put when the corpus lacks it, rather than moving to 14-296aa
+            (("14-296aac(b", "14-296aac", "14-296aac(b)"), ("14-296aac", "14-296aac(b)")),
+            (("14-296aac", "14-296aac", "14-296aac"), ("14-296aac", "14-296aac")),
         ]
         for (printed, section, citation), expected in cases:
             entry = {"printedCitation": printed, "sectionCitation": section, "citation": citation}

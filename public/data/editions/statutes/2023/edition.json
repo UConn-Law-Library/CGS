@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "2023",
+  "label": "General Statutes revised to January 1, 2023, with the 2024 Supplement",
+  "revisionYear": 2023,
+  "supplementYears": [
+    2024
+  ],
+  "legislationThrough": 2023,
+  "base": {
+    "schemaVersion": "1.0.0",
+    "generatedAt": "2026-11-16T21:17:28Z",
+    "retrievedAt": "2026-11-16T21:17:28Z",
+    "sourceUrl": "https://www.cga.ct.gov/2023/pub/titles.htm",
+    "catalogSha256": "8a4efc06bf30a7ffbb99e4775d34a1e37e95c5faa5af62d9b3c4ca275d3aa88f",
+    "manifestSha256": "3604415c79f194c8a5cff2b05fbc614514c0c2043a8da7fc45f7e3814addf041",
+    "counts": {
+      "titles": 81,
+      "chapters": 1126,
+      "sections": 29970
+    }
+  },
+  "supplements": [
+    {
+      "editionYear": 2024,
+      "generatedAt": "2026-11-16T21:13:52Z",
+      "retrievedAt": "2026-11-16T21:13:52Z",
+      "sourceUrl": "https://www.cga.ct.gov/2024/sup/titles.htm",
+      "manifestSha256": "d9bd00d07db2c2d0f902fe3c7771ed35e3392c6d1ffe3c536572ae609134d0cb",
+      "counts": {
+        "titles": 58,
+        "chapters": 352,
+        "sections": 1782,
+        "replacements": 1429,
+        "additions": 353
+      }
+    }
+  ],
+  "supersededBy": {
+    "revisionYear": 2025,
+    "generatedAt": "2026-11-12T22:30:49Z",
+    "manifestSha256": "cdb2c088749fda20f00424acde06beb61caf55ea0167d8d6b8539765a04d3898"
+  },
+  "officialSources": [
+    {
+      "from": "https://www.cga.ct.gov/current/pub/",
+      "to": "https://www.cga.ct.gov/2023/pub/"
+    }
+  ]
+}

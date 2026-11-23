@@ -1,0 +1,215 @@
+name: Discover supplement
+
+# Looks for the Supplement expected after the active full revision (the 2028 Supplement once the
+# 2027 revision is published here) and, once CGA publishes it, prepares a draft data pull request.
+# Not published yet is a normal, green outcome. A network failure or a page that is not the
+# expected official edition fails the run; nothing is published either way.
+on:
+  schedule:
+    - cron: "41 12 * * 4"
+  workflow_dispatch:
+    inputs:
+      create_pull_request:
+        description: Create a draft pull request (requires main; disable to preview a branch)
+        required: true
+        default: true
+        type: boolean
+      rehearse:
+        description: Rehearse with the published supplement (verify, crawl, import, validate, and compare; never publishes)
+        required: true
+        default: false
+        type: boolean
+
+# The discovery job installs packages and parses downloaded pages, so it holds no write access.
+# Only the short publish job can push, and it runs no downloaded code.
+permissions:
+  contents: read
+
+concurrency:
+  group: supplement-discovery
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    outputs:
+      publish: ${{ steps.package.outputs.publish }}
+    defaults:
+      run:
+        shell: bash
+    env:
+      CGS_CA_BUNDLE: .crawl/ca-bundle.pem
+      WORK_DIR: .crawl/supplement-discovery
+      REPORT_DIR: .crawl/supplement-discovery/reports
+      REHEARSE: ${{ github.event_name == 'workflow_dispatch' && inputs.rehearse }}
+      CREATE_PULL_REQUEST: ${{ github.event_name == 'schedule' || (inputs.create_pull_request && !inputs.rehearse) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Require main for publication
+        run: |
+          if [ "$GITHUB_REF" != "refs/heads/main" ] && [ "$CREATE_PULL_REQUEST" = "true" ]; then
+            echo "Publishing a supplement requires main. Disable create_pull_request to preview a branch." >&2
+            exit 1
+          fi
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: crawler/requirements-lock.txt
+      - run: python -m pip install -r crawler/requirements-lock.txt
+      - run: python -m crawler.cgs_crawler.tls --output .crawl/ca-bundle.pem
+      - run: npm ci
+
+      - name: Check CGA for the expected supplement
+        id: discover
+        run: |
+          mkdir -p "$REPORT_DIR"
+          rehearse=()
+          if [ "$REHEARSE" = "true" ]; then rehearse=(--rehearse); fi
+          python -m crawler.cgs_crawler.supplement_discovery \
+            --data public/data \
+            --snapshots "$WORK_DIR/discovery-snapshots" \
+            --report "$REPORT_DIR/discovery.json" \
+            --github-output "$GITHUB_OUTPUT" \
+            "${rehearse[@]}" \
+            2>&1 | tee "$REPORT_DIR/discovery.log"
+          exit "${PIPESTATUS[0]}"
+
+      - name: Crawl, import, and validate the supplement
+        if: steps.discover.outputs.status == 'available'
+        env:
+          YEAR: ${{ steps.discover.outputs.year }}
+        run: |
+          set -o pipefail
+          python -m crawler.cgs_crawler.cli \
+            --edition supplement \
+            --supplement-year "$YEAR" \
+            --output "$WORK_DIR/legacy" \
+            --snapshots "$WORK_DIR/snapshots" \
+            2>&1 | tee "$REPORT_DIR/crawl.log"
+          # Imported against the exact revision it is read with; the importer and validator refuse
+          # any other base.
+          node scripts/prepare-supplement.mjs \
+            --source "$WORK_DIR/legacy" \
+            --base public/data \
+            --year "$YEAR" \
+            --output "$WORK_DIR/canonical" \
+            --summary "$REPORT_DIR/supplement-summary.md" \
+            --discovery "$REPORT_DIR/discovery.json"
+
+      - name: Compare the rehearsal with the published edition
+        if: steps.discover.outputs.status == 'available' && env.REHEARSE == 'true'
+        env:
+          YEAR: ${{ steps.discover.outputs.year }}
+        run: |
+          node scripts/review-supplement.mjs \
+            --before "public/data/supplements/$YEAR" \
+            --after "$WORK_DIR/canonical" \
+            --before-base public/data --after-base public/data \
+            --policy config/supplement-refresh-policy.json \
+            --json "$REPORT_DIR/rehearsal-diff.json" \
+            --markdown "$REPORT_DIR/rehearsal-diff.md"
+
+      - name: Stage and verify the supplement
+        id: stage
+        if: steps.discover.outputs.status == 'available' && env.REHEARSE != 'true'
+        env:
+          YEAR: ${{ steps.discover.outputs.year }}
+        run: |
+          node scripts/prepare-supplement.mjs \
+            --source "$WORK_DIR/legacy" \
+            --base public/data \
+            --year "$YEAR" \
+            --output "$WORK_DIR/canonical" \
+            --discovery "$REPORT_DIR/discovery.json" \
+            --stage
+          npm run check
+
+      - name: Publish review summary
+        if: always()
+        run: |
+          for report in discovery.log supplement-summary.md rehearsal-diff.md; do
+            if [ -f "$REPORT_DIR/$report" ]; then
+              cat "$REPORT_DIR/$report" >> "$GITHUB_STEP_SUMMARY"
+              echo >> "$GITHUB_STEP_SUMMARY"
+            fi
+          done
+
+      # A rerun whose artifacts match the open draft (built on the same main commit) publishes
+      # nothing. Only the manifest's capture and generation times may differ.
+      - name: Package the candidate commit
+        id: package
+        if: steps.stage.outcome == 'success' && env.CREATE_PULL_REQUEST == 'true'
+        env:
+          YEAR: ${{ steps.discover.outputs.year }}
+        run: |
+          branch=automation/supplement-discovery
+          if git fetch --no-tags --quiet origin "refs/heads/$branch" 2>/dev/null \
+            && [ "$(git rev-parse FETCH_HEAD^)" = "$GITHUB_SHA" ] \
+            && node scripts/same-supplement-candidate.mjs --ref FETCH_HEAD --year "$YEAR"; then
+            echo "The open draft on $branch already has these reviewed artifacts. Nothing to publish." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          title="Add the $YEAR Supplement"
+          mkdir -p .crawl/publish
+          cp "$REPORT_DIR/supplement-summary.md" .crawl/publish/pull-request.md
+          {
+            echo
+            echo "The crawl log, discovery report, and replayable snapshots are retained on the [workflow run]($GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)."
+          } >> .crawl/publish/pull-request.md
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- public/data
+          git commit --quiet -m "$title"
+          git bundle create .crawl/publish/candidate.bundle "$GITHUB_SHA..HEAD"
+          echo "$title" > .crawl/publish/title.txt
+          echo "publish=true" >> "$GITHUB_OUTPUT"
+
+      - name: Upload the candidate commit
+        if: steps.package.outputs.publish == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: supplement-discovery-candidate-${{ github.run_id }}-${{ github.run_attempt }}
+          path: .crawl/publish/
+          include-hidden-files: true
+          retention-days: 7
+
+      - name: Upload discovery reports and snapshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: supplement-discovery-review-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            .crawl/supplement-discovery/reports/
+            .crawl/supplement-discovery/discovery-snapshots/
+            .crawl/supplement-discovery/snapshots/
+          if-no-files-found: ignore
+          include-hidden-files: true
+          retention-days: 30
+
+  publish:
+    needs: refresh
+    if: needs.refresh.outputs.publish == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      actions: write
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: supplement-discovery-candidate-${{ github.run_id }}-${{ github.run_attempt }}
+          path: .crawl/publish
+      - name: Update the draft supplement pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: bash scripts/publish-refresh.sh automation/supplement-discovery .crawl/publish

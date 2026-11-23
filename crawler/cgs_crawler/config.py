@@ -30,6 +30,9 @@ class CrawlConfig:
     snapshot_dir: Path
     edition: str = "current"
     supplement_year: Optional[int] = None
+    # A year-scoped full revision (https://www.cga.ct.gov/<year>/pub/), as used to rehearse an
+    # edition rollover from an earlier revision. The weekly refresh crawls "current".
+    revision_year: Optional[int] = None
     only_titles: FrozenSet[str] = field(default_factory=frozenset)
     offline: bool = False
     generated_at: Optional[str] = None
@@ -41,4 +44,6 @@ class CrawlConfig:
             return CURRENT_TITLES_URL
         if self.edition == "supplement" and self.supplement_year:
             return f"https://www.cga.ct.gov/{self.supplement_year}/sup/titles.htm"
-        raise ValueError("edition must be 'current', or supplement_year must be provided")
+        if self.edition == "revision" and self.revision_year:
+            return f"https://www.cga.ct.gov/{self.revision_year}/pub/titles.htm"
+        raise ValueError("edition must be 'current', or supplement_year or revision_year must be provided")

@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-763",
+  "number": "763",
+  "name": "Hotels and Other Lodging",
+  "title": {
+    "id": "title-44",
+    "number": "44",
+    "name": "Hotel and Inn Keepers"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_763.htm",
+  "sections": [
+    {
+      "id": "section-44-6",
+      "kind": "section",
+      "citation": "44-6",
+      "citations": [
+        "44-6"
+      ],
+      "heading": "Sec. 44-6. Room that includes sleeping accommodations, offer or provision of financial discount or benefit for, limitations re.",
+      "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_763.htm#sec_44-6",
+      "status": "active",
+      "content": {
+        "body": [
+          "When offering or providing a room that includes sleeping accommodations, no operator of a hotel, motel or similar lodging may offer or provide a financial discount or benefit for such room that is based upon an hourly rate or an occupancy period that is for a term of twelve hours or less."
+        ],
+        "sourceNotes": [
+          "(P.A. 23-20, S. 1.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "When offering or providing a room that includes sleeping accommodations, no operator of a hotel, motel or similar lodging may offer or provide a financial discount or benefit for such room that is based upon an hourly rate or an occupancy period that is for a term of twelve hours or less."
+      }
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-900",
+  "number": "900",
+  "name": "Court Practice and Procedure",
+  "title": {
+    "id": "title-52",
+    "number": "52",
+    "name": "Civil Actions"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_900.htm",
+  "sections": [
+    {
+      "id": "section-52-212",
+      "kind": "section",
+      "citation": "52-212",
+      "citations": [
+        "52-212"
+      ],
+      "heading": "Sec. 52-212. Opening judgment upon default or nonsuit.",
+      "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_900.htm#sec_52-212",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) Any judgment rendered or decree passed upon a default or nonsuit in the Superior Court may be set aside, within four months following the date on which the notice of judgment or decree was sent, and the case reinstated on the docket, on such terms in respect to costs as the court deems reasonable, upon the complaint or written motion of any party or person prejudiced thereby, showing reasonable cause, or that a good cause of action or defense in whole or in part existed at the time of the rendition of the judgment or the passage of the decree, and that the plaintiff or defendant was prevented by mistake, accident or other reasonable cause from prosecuting the action or making the defense.",
+          "(b) In addition to the provisions of subsection (a) of this section, any judgment rendered or decree passed in an action for dissolution of marriage or civil union or for legal separation upon default of appearance of the defendant pursuant to subsection (b) of section 46b-67 may be set aside at any time and the case reinstated to the docket upon a showing of material misrepresentation in the affidavit of the plaintiff filed pursuant to said subsection.",
+          "(c) The complaint or written motion shall be verified by the oath of the complainant or his attorney, shall state in general terms the nature of the claim or defense and shall particularly set forth the reason why the plaintiff or defendant failed to appear.",
+          "(d) The court shall order reasonable notice of the pendency of the complaint or written motion to be given to the adverse party, and may enjoin him against enforcing the judgment or decree until the decision upon the complaint or written motion."
+        ],
+        "sourceNotes": [
+          "(1949 Rev., S. 7963, 7964; 1959, P.A. 28, S. 114; 1967, P.A. 849; P.A. 74-183, S. 87, 291; P.A. 76-436, S. 131, 681; P.A. 82-160, S. 102; P.A. 18-14, S. 3; P.A. 21-104, S. 43; P.A. 23-46, S. 20.)"
+        ],
+        "history": [
+          "History: 1959 act substituted circuit court for municipal court which was abolished; 1967 act clarified rights of plaintiff; P.A. 74-183 removed circuit court from purview of section, reflecting transfer of its functions to court of common pleas, effective December 31, 1974; P.A. 76-436 removed court of common pleas from purview of section, reflecting transfer of all trial jurisdiction to superior court, effective July 1, 1978; P.A. 82-160 rephrased the section and inserted Subsec. indicators; P.A. 18-14 added new Subsec. (b) re setting aside of judgment or decree in action for dissolution of marriage or civil union or legal separation when waiting period had been waived pursuant to Sec. 46b-67(c) and redesignated existing Subsecs. (b) and (c) as Subsecs. (c) and (d); P.A. 21-104 amended Subsec. (a) to replace “it was rendered or passed” with “the notice of judgment or decree was sent”, effective June 28, 2021; P.A. 23-46 amended Subsec. (b) by replacing “in which the waiting period was waived pursuant to subsection (c) of section 46b-67” with “upon default of appearance of the defendant pursuant to subsection (b) of section 46b-67”."
+        ],
+        "annotations": [],
+        "plainText": "(a) Any judgment rendered or decree passed upon a default or nonsuit in the Superior Court may be set aside, within four months following the date on which the notice of judgment or decree was sent, and the case reinstated on the docket, on such terms in respect to costs as the court deems reasonable, upon the complaint or written motion of any party or person prejudiced thereby, showing reasonable cause, or that a good cause of action or defense in whole or in part existed at the time of the rendition of the judgment or the passage of the decree, and that the plaintiff or defendant was prevented by mistake, accident or other reasonable cause from prosecuting the action or making the defense.\n\n(b) In addition to the provisions of subsection (a) of this section, any judgment rendered or decree passed in an action for dissolution of marriage or civil union or for legal separation upon default of appearance of the defendant pursuant to subsection (b) of section 46b-67 may be set aside at any time and the case reinstated to the docket upon a showing of material misrepresentation in the affidavit of the plaintiff filed pursuant to said subsection.\n\n(c) The complaint or written motion shall be verified by the oath of the complainant or his attorney, shall state in general terms the nature of the claim or defense and shall particularly set forth the reason why the plaintiff or defendant failed to appear.\n\n(d) The court shall order reasonable notice of the pendency of the complaint or written motion to be given to the adverse party, and may enjoin him against enforcing the judgment or decree until the decision upon the complaint or written motion."
+      }
+    }
+  ]
+}

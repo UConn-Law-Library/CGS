@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-151",
+  "number": "151",
+  "name": "Elections: Prohibited Acts and Penalties",
+  "title": {
+    "id": "title-09",
+    "number": "09",
+    "name": "Elections"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_151.htm",
+  "sections": [
+    {
+      "id": "section-9-368c",
+      "kind": "section",
+      "citation": "9-368c",
+      "citations": [
+        "9-368c"
+      ],
+      "heading": "Sec. 9-368c. Misrepresentation of contents of a petition.",
+      "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_151.htm#sec_9-368c",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) No person shall intentionally misrepresent the contents of a petition circulated under this title.",
+          "(b) Any person who violates any provision of this section shall be guilty of a class D felony."
+        ],
+        "sourceNotes": [
+          "(P.A. 87-530; P.A. 23-22, S. 7.)"
+        ],
+        "history": [
+          "History: P.A. 23-22 made a technical change."
+        ],
+        "annotations": [],
+        "plainText": "(a) No person shall intentionally misrepresent the contents of a petition circulated under this title.\n\n(b) Any person who violates any provision of this section shall be guilty of a class D felony."
+      }
+    }
+  ]
+}

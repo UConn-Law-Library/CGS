@@ -303,9 +303,9 @@ Reading-comfort profiles (Atkinson Hyperlegible, Lexend, Inclusive Sans) replace
 
 The app is designed for phones first and used equally at a desk. Below 60rem it is a single column under a sticky header, with a six-item tab bar fixed to the bottom. At large text sizes the header scrolls away instead of covering a quarter of the screen. Safe-area insets are respected on notched phones.
 
-From 60rem up, statute, index, and infraction pages use a three-level pane browser: titles, then chapters, then sections. Panes default to 176, 208, and 240px, each resizable between 144 and 420px with a 6px keyboard-operable divider. The reading column always keeps at least 36rem. When the panes and that column don't fit side by side, the outermost pane gives way first; the breadcrumb still reaches every level. Users can collapse all panes. Everything that sticks below the header (panes, the phone "Browse chapter" bar, subsection links) is offset by the header's measured height (`--header-height`), never a fixed guess, because the header grows with text size.
+From 60rem up, statute, index, and infraction pages use a three-level pane browser: titles, then chapters, then sections. Panes default to 176, 208, and 240px, each resizable between 144 and 420px with a 6px keyboard-operable divider. The reading column always keeps at least 36rem. When the panes and that column don't fit side by side, the outermost pane gives way first; the breadcrumb still reaches every level. Users can collapse all panes. Settings also offers page tree navigation: one panel (320px by default, with its own stored width) where chapters nest under titles and sections under chapters, with rounded elbow connectors, a filter across all three levels, and a status filter that lists only sections carrying one tag (Supplement, New · Supplement, Recent Act, Repealed, Transferred, Obsolete, or Reserved). Section rows show the same tags as the chapter lists, including in filter results. A Collapse all button appears in a tree's heading while any row is open. The preview build starts visitors on page tree navigation; this branch's default stays the panes. A What's new button beside History opens a short guided tour: a floating card beside an outlined control, with Back, Next, and a step count. The button, card, outline, and Next button use the Transferred tag's green so the tour reads as one feature. On phones the card docks above the tab bar. The same setting turns the subject index (letters, then headings) and the infraction schedule (categories, then entries) into one-panel trees. The index tree's filter searches headings under every letter, from a compact list of heading names the build derives from the index (the whole index is too large to download for a filter). If that list can't load, it falls back to the headings under the letter the query starts with. It leaves phones unchanged. Everything that sticks below the header (panes, the phone "Browse chapter" bar, subsection links) is offset by the header's measured height (`--header-height`), never a fixed guess, because the header grows with text size.
 
-Content widths: the reading column is up to 54rem (never below 36rem beside the panes), interface pages are 54rem, the home page is 64rem, and full-width pages cap at 72rem. Breakpoints sit at 36rem, 44rem, and 60rem. Components inside the reading column respond to the column through a container query, not the viewport. Spacing follows a 0.35 / 0.5 / 0.75 / 1 / 1.5 / 2rem rhythm. A Compact lists setting tightens list padding without changing type.
+Content widths: the reading column is up to 54rem (never below 36rem beside the panes; on this branch it is 44rem, and a desktop-only Reading width setting offers Wide, 56rem, and Widest, 72rem), interface pages are 54rem, the home page is 64rem, and full-width pages cap at 72rem. Breakpoints sit at 36rem, 44rem, and 60rem. Components inside the reading column respond to the column through a container query, not the viewport. Spacing follows a 0.35 / 0.5 / 0.75 / 1 / 1.5 / 2rem rhythm. A Compact lists setting tightens list padding without changing type. Compact lists, Hide sections (by status: Repealed, Transferred, Obsolete, Reserved), Subtle notices, and page tree navigation open from a settings icon in the first visible pane's heading. Phones, and desktop pages without a showing pane, keep them in Settings.
 
 ## Elevation & Depth
 
@@ -318,6 +318,8 @@ The system is flat. Surfaces at rest have no shadow; depth comes from tone (pape
 
 ### Named Rules
 **The Flat-By-Default Rule.** Nothing at rest casts a shadow. If a card needs separation, give it a border or a tint, not elevation. *(Confirmed with the user.)*
+
+**The Motion Rule.** Motion only shows something appearing or leaving. Menus, panels, and dialogs fade and slide a few pixels, easing out over 250ms when they open and 200ms when they close. When a list opens (a tree row expanded, search suggestions appearing, the phone chapter sheet), its rows fade in 30ms apart, up to the tenth row; later rows join the tenth. Redraws of a list that is already open don't replay it. Reduced motion turns all of it off.
 
 ## Shapes
 
@@ -353,17 +355,28 @@ Plain and sturdy; their job is to be found and pressed, not admired.
 
 ### Navigation
 - **Desktop header:** The brand, then six destinations as text-and-icon links on Header Night. The current destination is a Header Accent pill with dark text. A full-width search row sits under them with Back, Search, and History.
-- **Phone tab bar:** Six equal columns on Tab Bar Night, icon over a 0.65rem label. It drops to icons only when the widest label no longer fits; labels stay as accessible names.
+- **Phone header:** The brand is centered, with Back in the top-left corner and the search row beneath them.
+- **Phone tab bar:** Six equal columns on Tab Bar Night, icon over a 0.65rem label. It drops to icons only when the widest label no longer fits; labels stay as accessible names. Statutes opens the title list here, and the brand links to Home.
 - **Panes:** Lists on Pane Surface with sticky headings; the current item gets Navy Wash and the 4px navy marker.
 - **Breadcrumbs:** UI-size links separated by slashes.
 
 ### Statute Reader (signature)
-The core surface. A label line gives status and source ("Amended — 2026 Supplement"), then the headline, a 2px ink rule, a row of actions (Bookmark, Copy link, Share, Email, Official source), and the Reading-font text. Each subsection starts with a small UI-face link to itself. Targeting a subsection washes it in Highlight and reveals a copy-citation chip. Citations within the text are bold navy links. Below the text: the supplement comparison and earlier revisions in collapsed panels, then Information references grouped in disclosure rows.
+The core surface. A label line gives status and source ("Amended — 2026 Supplement"), then the headline, a 2px ink rule, a row of icon actions (Copy citation, Bookmark, Copy link, Email, and Share where the device has a share sheet) with a blue Official source button, a text-version button group on sections with earlier text, and the Reading-font text. Each subsection starts with a small UI-face link to itself. Targeting a subsection washes it in Highlight and reveals a copy-citation chip. Citations within the text are bold navy links. Below the text: the supplement comparison and earlier revisions in collapsed panels, then Information references grouped in disclosure rows.
 
 ### Amendment Marks (signature)
 Inserted language sits on the Addition tint and deleted language on the Deletion tint with a strikethrough. Screen readers announce each change ("added", "deleted"). Printing keeps additions underlined so the marks survive without color.
 
 ## Do's and Don'ts
+
+### Isolated modernization prototype
+
+On `codex/cgs-reading-room-prototype`, the [prototype design report](docs/modernization-prototype.md)
+documents intentional experiments with neutral header/tab surfaces, sentence-case
+metadata, 44rem reading measure, flat collection links and filterable navigation.
+The final prototype block in `src/styles.css` supersedes the corresponding visual
+rules above on this branch. Semantic palette roles, font preferences, source
+provenance, focus visibility and reduced-motion requirements still apply.
+This addendum does not authorize a production deployment.
 
 ### Do:
 - **Do** take every color from a token; the header and tab bar use the frame tokens, which stay the same in every theme.

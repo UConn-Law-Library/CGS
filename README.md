@@ -1,5 +1,21 @@
 # CGS
 
+This branch contains an isolated [UI/UX modernization prototype](docs/modernization-prototype.md),
+including the audit, local preview instructions, screenshots, validation results,
+and an incremental rollout recommendation. It has not been deployed to production.
+
+Pushes to this branch publish to the [preview site](https://uconn-law-library.github.io/CGS-Preview/)
+through `publish-preview.yml`. Production still deploys only from `main`, so merging this branch
+into `main` is what puts it live.
+
+`npm run build:preview` builds the same site locally. It sets the preview URL and renames browser
+storage (`cgs-preview.*`), because both sites share an origin and would otherwise share bookmarks,
+settings, and offline data.
+
+Publishing needs a deploy key: add the public key to `UConn-Law-Library/CGS-Preview` as a deploy
+key with write access, and the private key to this repository as the `CGS_PREVIEW_DEPLOY_KEY`
+Actions secret. Without it, the workflow skips publishing and leaves a notice on the run.
+
 A database-free, GitHub Pages-only platform for publishing and searching the Connecticut General Statutes.
 
 The repository turns the legacy title-level JSON export into versioned, canonical, chapter-level artifacts. The browser reads those static artifacts directly; there is no API server, database, hosted search service, or runtime build step.
@@ -163,13 +179,17 @@ Each edition records the exact base schema version and generation timestamp it w
 
 The reviewed 2026 edition is published under `public/data/supplements/2026`: 1,602 replacement records and 350 additions across 376 chapters. Its fresh official crawl was reconciled citation-for-citation and text-for-text with the legacy PWA dataset; see [reports/2026-supplement-validation.md](reports/2026-supplement-validation.md).
 
+## Editions and archives
+
+`#/editions` lists the current edition and every archived one. When the weekly corpus refresh crawls a new full revision, the same reviewed pull request archives the outgoing revision and its supplement, byte for byte, under `public/data/editions/statutes/<year>` and switches the current reader. Archived sections open at `#/editions/<year>/t/…` with the supplement comparison intact; current routes and search always use the active edition. A `Discover supplement` workflow checks CGA for the next even-year Supplement and prepares its draft data pull request. Superseded subject-index and infractions editions are archived under `public/data/editions/secondary` with their statute links as resolved. See [docs/edition-rollover.md](docs/edition-rollover.md).
+
 ## Infractions and General Statutes index
 
 The Phase 7 pipeline migrates the legacy PDF geometry parsers into deterministic, content-addressed ingestion for the official Judicial Branch infractions schedule (Charts A and B) and the three-volume LCO subject index. The reviewed artifacts are published under `public/data/secondary`. Statute pages lazily display linked schedule entries, fee-rule roles, and subject-index records; `#/index` provides alphabetical browsing and letter-scoped client search without a database. Each letter page lists its subject headings as collapsed disclosure tabs whose indented subheadings expand in place, and structured `SEE` references link directly to and open their referenced index heading. Phase 9 adds a weekly, manually dispatchable `Review secondary sources refresh` workflow that retains source PDFs and opens a draft PR only after validation, a bounded diff, and the committed safety policy pass. See [docs/secondary-sources.md](docs/secondary-sources.md) for commands, provenance, artifact contracts, and the refresh runbook.
 
 ## Public and Special Acts
 
-`#/acts` lists the acts passed by the General Assembly that the statute text does not yet reflect. Each act opens in the app with its full text, extracted from the CGA PDF with added language highlighted in green and deleted language struck through in red, plus its sections, effective dates, and links to the PDF and bill status page. The list searches act text as well as titles. A weekly, manually dispatchable `Review acts refresh` workflow captures the CGA list, extracts the text of new or changed acts, and opens a draft PR when anything changes. Published sessions are kept after the CGA page moves on to a new session, and are retired by hand once the statute text includes them. See [docs/acts.md](docs/acts.md).
+`#/acts` lists the acts passed by the General Assembly that the statute text does not yet reflect. Each act opens in the app with its full text, extracted from the CGA PDF with added language highlighted in green and deleted language struck through in red, plus its sections, effective dates, and links to the PDF and bill status page. The list searches act text as well as titles. A weekly, manually dispatchable `Review acts refresh` workflow captures the CGA list, extracts the text of new or changed acts, and opens a draft PR when anything changes. Published sessions are kept after the CGA page moves on to a new session. Once the statute text covers a session, it moves to Past sessions, with its links unchanged. See [docs/acts.md](docs/acts.md).
 
 ## Mobile application interface
 

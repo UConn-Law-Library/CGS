@@ -15,6 +15,10 @@ export function supersededSupplementError(editionYear, catalog) {
   if (editionYear <= base) {
     return `the ${editionYear} Supplement is superseded by the base corpus, revised to January 1, ${base}; retire supplements/${editionYear}`;
   }
+  // LCO publishes each supplement for use with the revision published the year before it.
+  if (editionYear !== base + 1) {
+    return `the ${editionYear} Supplement is read with the ${editionYear - 1} revision, but the base corpus is revised to January 1, ${base}`;
+  }
   return null;
 }
 
@@ -48,9 +52,9 @@ export function renderRetirementSummary(plan) {
   return [
     "## Retired supplements",
     "",
-    `The candidate corpus is the General Statutes revised to January 1, ${plan.baseRevisionYear}, which already contains the changes in the ${editions}. This pull request removes ${plan.retire.map((year) => `\`public/data/supplements/${year}\``).join(", ")} instead of overlaying the older text on the new revision.`,
+    `The candidate corpus is the General Statutes revised to January 1, ${plan.baseRevisionYear}, which already contains the changes in the ${editions}. This pull request removes ${plan.retire.map((year) => `\`public/data/supplements/${year}\``).join(", ")} from the current statutes instead of overlaying the older text on the new revision. The edition rollover keeps ${plan.retire.length === 1 ? "it" : "them"}, with the revision ${plan.retire.length === 1 ? "it was" : "they were"} read with, in the archived edition.`,
     "",
-    `Also retire the Public Acts sessions this revision now codifies (\`python -m crawler.cgs_crawler.acts --retire <session-id>\`) and add ${plan.baseRevisionYear} to \`PUBLISHED_EDITIONS\` in \`src/publications.js\` after confirming the edition on cga.ct.gov. See docs/corpus-refresh.md.`,
+    `Public and Special Acts sessions that the ${plan.baseRevisionYear} revision covers move to Past sessions on their own; no act data is removed. See docs/edition-rollover.md.`,
     ""
   ].join("\n");
 }

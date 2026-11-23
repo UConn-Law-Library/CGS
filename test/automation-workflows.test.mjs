@@ -7,7 +7,8 @@ const read = (file) => readFile(new URL(`../${file}`, import.meta.url), "utf8");
 for (const [file, branch] of [
   ["refresh-corpus.yml", "automation/corpus-refresh"],
   ["refresh-acts.yml", "automation/acts-refresh"],
-  ["refresh-secondary.yml", "automation/secondary-refresh"]
+  ["refresh-secondary.yml", "automation/secondary-refresh"],
+  ["discover-supplement.yml", "automation/supplement-discovery"]
 ]) {
   test(`${file} refreshes without write access and publishes one rolling draft`, async () => {
     const workflow = await read(`.github/workflows/${file}`);

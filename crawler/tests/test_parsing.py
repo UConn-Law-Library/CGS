@@ -2,6 +2,7 @@ from pathlib import Path
 import unittest
 
 from crawler.cgs_crawler.parsing import (
+    apply_section_status,
     attach_section_content,
     detect_section_status,
     expand_grouped_section_keys,
@@ -220,6 +221,70 @@ class ParsingTests(unittest.TestCase):
         attach_section_content(html, sections)
         self.assertEqual(len(sections), 1)
         self.assertEqual(sections[0]["section_keys"], ["12-21", "12-22", "12-23", "12-24", "12-24a"])
+
+    def test_a_section_without_body_text_keeps_its_source_note(self):
+        # From the 2023 revision of chapter 246: the table of contents repeats the repeal note,
+        # so stripping the heading leaves no body, but the source note still belongs to 14-53.
+        url = "https://www.cga.ct.gov/2023/pub/chap_246.htm"
+        html = (
+            '<p class="toc_catchln"><a href="#sec_14-53">Sec. 14-53. Location of business to be approved. '
+            "Section 14-53 is repealed, effective July 1, 2002.</a></p>"
+            '<p><span class="catchln" id="sec_14-53">Sec. 14-53. Location of business to be approved.</span> '
+            'Section <a href ="chap_246.htm#sec_14-53">14-53</a> is repealed, effective July 1, 2002.</p>'
+            '<p class="source-first">(1949 Rev., S. 2393; 1953, S. 1309d; P.A. 02-70, S. 87.)</p>'
+        )
+        sections = extract_section_links(html, url, "14")
+        attach_section_content(html, sections)
+        content = sections[0]["content"]
+        self.assertEqual(content["source"], ["(1949 Rev., S. 2393; 1953, S. 1309d; P.A. 02-70, S. 87.)"])
+        self.assertEqual(content["status"], "repealed")
+
+    def test_has_been_disposition_notes(self):
+        self.assertEqual(detect_section_status("Section 46-31a has been transferred."), ["transferred"])
+        self.assertEqual(
+            detect_section_status("Sections 17-21e to 17-21t , inclusive, have been transferred."),
+            ["transferred"],
+        )
+        self.assertEqual(
+            detect_section_status("Section 4-12 has been repealed."),
+            ["repealed"],
+        )
+        self.assertEqual(
+            detect_section_status("S ections 17-460 to 17-475 , inclusive, have been transferred."),
+            ["transferred"],
+        )
+
+    def test_disposition_notes_listing_several_statuses(self):
+        self.assertEqual(
+            detect_section_status("Sections 46-1 to 46-8 , inclusive, have been transferred or repealed."),
+            ["repealed", "transferred"],
+        )
+        self.assertEqual(
+            detect_section_status(
+                "Sections 17-1 to 17-21d , inclusive, have been transferred, repealed or deemed obsolete."
+            ),
+            ["repealed", "transferred", "obsolete"],
+        )
+        self.assertEqual(
+            detect_section_status("Sections 13-193 to 13-249 , inclusive, are obsolete or repealed."),
+            ["repealed", "obsolete"],
+        )
+
+    def test_transferred_or_repealed_group_is_recorded_as_mixed(self):
+        content = {"text": "Sections 46-1 to 46-8 , inclusive, have been transferred or repealed."}
+        apply_section_status(content, "Secs. 46-1 to 46-8. Marriage.")
+        self.assertEqual(content["status"], "mixed")
+        self.assertEqual(content["statuses"], ["repealed", "transferred"])
+
+    def test_statute_text_mentioning_a_repeal_stays_active(self):
+        for text in (
+            "(a) A lease that has been recorded as provided in section 47-19 is valid.",
+            "(a) Any statute that has been repealed shall not revive.",
+            "Sections 4-5 to 4-9 apply to any agency whose authority has been transferred to another agency.",
+            "Sec. 12-5. Funds that have been transferred.",
+        ):
+            with self.subTest(text=text):
+                self.assertEqual(detect_section_status(text), [])
 
 
 if __name__ == "__main__":

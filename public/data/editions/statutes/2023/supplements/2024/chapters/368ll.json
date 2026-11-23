@@ -1,0 +1,88 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-368ll",
+  "number": "368ll",
+  "name": "Miscellaneous Provisions",
+  "title": {
+    "id": "title-19a",
+    "number": "19a",
+    "name": "Public Health and Well-Being"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_368ll.htm",
+  "sections": [
+    {
+      "id": "section-19a-900a",
+      "kind": "section",
+      "citation": "19a-900a",
+      "citations": [
+        "19a-900a"
+      ],
+      "heading": "Sec. 19a-900a. Administration of epinephrine by cartridge injector to certain children for purpose of emergency first aid.",
+      "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_368ll.htm#sec_19a-900a",
+      "status": "active",
+      "content": {
+        "body": [
+          "Any provider of child care services, as described in section 19a-77, licensed by the Office of Early Childhood, that maintains a supply of epinephrine cartridge injectors pursuant to section 19a-909, may administer such epinephrine for the purpose of emergency first aid to a child in the care of such provider who experiences an allergic reaction and does not have a prior written authorization of a parent or guardian or a prior written order of a qualified medical professional for the administration of epinephrine, provided the person administering such epinephrine is a person with training, as defined in section 19a-909. The parent or guardian of a child may submit, in writing, to such child's provider of child care services, that epinephrine shall not be administered to such child pursuant to this section."
+        ],
+        "sourceNotes": [
+          "(P.A. 23-150, S. 3.)"
+        ],
+        "history": [
+          "History: P.A. 23-150 effective July 1, 2023."
+        ],
+        "annotations": [],
+        "plainText": "Any provider of child care services, as described in section 19a-77, licensed by the Office of Early Childhood, that maintains a supply of epinephrine cartridge injectors pursuant to section 19a-909, may administer such epinephrine for the purpose of emergency first aid to a child in the care of such provider who experiences an allergic reaction and does not have a prior written authorization of a parent or guardian or a prior written order of a qualified medical professional for the administration of epinephrine, provided the person administering such epinephrine is a person with training, as defined in section 19a-909. The parent or guardian of a child may submit, in writing, to such child's provider of child care services, that epinephrine shall not be administered to such child pursuant to this section."
+      }
+    },
+    {
+      "id": "section-19a-911a",
+      "kind": "section",
+      "citation": "19a-911a",
+      "citations": [
+        "19a-911a"
+      ],
+      "heading": "Sec. 19a-911a. Accessing, continuing or completing assisted reproductive technology treatments or procedures or the performance of such treatments or procedures. Prohibition of or unreasonable limitation on prohibited.",
+      "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_368ll.htm#sec_19a-911a",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) As used in this section, (1) “assisted reproductive technology” has the same meaning as provided in 42 USC 263a-7, as amended from time to time, and (2) “assisted reproduction” has the same meaning as provided in section 46b-451.",
+          "(b) No person or entity may prohibit or unreasonably limit any person from (1) accessing assisted reproductive technology or assisted reproduction, (2) continuing or completing an ongoing assisted reproductive technology treatment or procedure or an ongoing assisted reproduction treatment or procedure pursuant to a written plan or agreement with a health care provider, or (3) retaining all rights regarding the use of reproductive genetic materials, including, but not limited to, gametes.",
+          "(c) No person or entity may prohibit or unreasonably limit a health care provider who is licensed, certified or otherwise authorized to perform assisted reproductive technology treatments or procedures or assisted reproduction treatments or procedures from (1) performing any such treatment or procedure, or (2) providing evidence-based information related to assisted reproductive technology or assisted reproduction."
+        ],
+        "sourceNotes": [
+          "(P.A. 23-97, S. 1.)"
+        ],
+        "history": [
+          "History: P.A. 23-97 effective June 28, 2023"
+        ],
+        "annotations": [],
+        "plainText": "(a) As used in this section, (1) “assisted reproductive technology” has the same meaning as provided in 42 USC 263a-7, as amended from time to time, and (2) “assisted reproduction” has the same meaning as provided in section 46b-451.\n\n(b) No person or entity may prohibit or unreasonably limit any person from (1) accessing assisted reproductive technology or assisted reproduction, (2) continuing or completing an ongoing assisted reproductive technology treatment or procedure or an ongoing assisted reproduction treatment or procedure pursuant to a written plan or agreement with a health care provider, or (3) retaining all rights regarding the use of reproductive genetic materials, including, but not limited to, gametes.\n\n(c) No person or entity may prohibit or unreasonably limit a health care provider who is licensed, certified or otherwise authorized to perform assisted reproductive technology treatments or procedures or assisted reproduction treatments or procedures from (1) performing any such treatment or procedure, or (2) providing evidence-based information related to assisted reproductive technology or assisted reproduction."
+      }
+    },
+    {
+      "id": "section-19a-916",
+      "kind": "section",
+      "citation": "19a-916",
+      "citations": [
+        "19a-916"
+      ],
+      "heading": "Sec. 19a-916. Splash pad and spray park signage.",
+      "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_368ll.htm#sec_19a-916",
+      "status": "active",
+      "content": {
+        "body": [
+          "Not later than January 1, 2024, the owner or operator of each splash pad and spray park where water is recirculated shall post a sign in a conspicuous location at or near the entryway to the splash pad or spray park stating that the water is recirculated and warning that there is a potential health risk to persons ingesting the water."
+        ],
+        "sourceNotes": [
+          "(P.A. 23-97, S. 21.)"
+        ],
+        "history": [
+          "History: P.A. 23-97 effective July 1, 2023."
+        ],
+        "annotations": [],
+        "plainText": "Not later than January 1, 2024, the owner or operator of each splash pad and spray park where water is recirculated shall post a sign in a conspicuous location at or near the entryway to the splash pad or spray park stating that the water is recirculated and warning that there is a potential health risk to persons ingesting the water."
+      }
+    }
+  ]
+}

@@ -38,7 +38,7 @@ test.describe("dark color scheme", () => {
 
 test("Settings remains accessible while expanded", async ({ page }) => {
   await openApp(page);
-  const settingsButton = page.getByRole("button", { name: "Settings" });
+  const settingsButton = page.getByRole("button", { name: "Settings", exact: true });
   await settingsButton.click();
   await expect(page.getByRole("dialog", { name: "Settings" })).toBeVisible();
   await expect(page.getByRole("button", { name: "Close settings" })).toBeFocused();

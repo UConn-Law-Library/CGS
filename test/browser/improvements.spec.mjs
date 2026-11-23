@@ -27,7 +27,7 @@ test("blocked bookmark storage remains usable and can be exported and imported l
   await page.addInitScript(() => { Storage.prototype.setItem = () => { throw new DOMException("Blocked", "QuotaExceededError"); }; });
   await openApp(page, "#/t/01/c/001/s/1-1");
   await page.locator("[data-bookmark-id]").click();
-  await expect(page.locator(".action-status")).toContainText(/temporary|temporarily/i);
+  await expect(page.locator("[data-action-toast]")).toContainText(/temporary|temporarily/i);
   await page.evaluate(() => { location.hash = "#/bookmarks"; });
   await expect(page.locator("[data-remove-bookmark]")).toHaveCount(1);
   const download = page.waitForEvent("download");

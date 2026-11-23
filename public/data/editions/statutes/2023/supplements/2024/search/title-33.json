@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0.0",
+  "editionYear": 2024,
+  "title": {
+    "id": "title-33",
+    "number": "33",
+    "name": "Corporations"
+  },
+  "removedDocumentIds": [
+    "section-33-2001"
+  ],
+  "documents": [
+    {
+      "id": "section-33-2001",
+      "citation": "33-2001",
+      "citations": [
+        "33-2001"
+      ],
+      "heading": "Sec. 33-2001. Commission on Connecticut's Leadership in Corporation and Business Law.",
+      "chapter": {
+        "id": "chapter-608",
+        "number": "608",
+        "name": "Miscellaneous Provisions"
+      },
+      "status": "repealed",
+      "text": "Section 33-2001 is repealed, effective July 1, 2023.",
+      "href": "?chapter=608&section=section-33-2001",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "repealed"
+      }
+    }
+  ]
+}

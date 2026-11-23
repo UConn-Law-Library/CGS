@@ -132,7 +132,7 @@ test("counts the acts each session's list shows and links to that list", () => {
   };
   assert.deepEqual(actSearchLinks([...actSessions, older], "beverage").map(({ session, count, href }) => [session.id, count, href]), [
     // The list opens on the newest session, so its link names only the query.
-    ["2026-regular", 2, "#/acts?q=beverage"],
+    ["2026-regular", 2, "#/acts?session=2026-regular&q=beverage"],
     ["2025-regular", 1, "#/acts?session=2025-regular&q=beverage"]
   ]);
   // Text matches count too, as they do in the list.

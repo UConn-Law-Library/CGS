@@ -1,0 +1,306 @@
+{
+  "schemaVersion": "1.0.0",
+  "editionYear": 2024,
+  "title": {
+    "id": "title-46a",
+    "number": "46a",
+    "name": "Human Rights"
+  },
+  "removedDocumentIds": [
+    "section-46a-51",
+    "section-46a-56",
+    "section-46a-58",
+    "section-46a-68b",
+    "section-46a-68c",
+    "section-46a-81a",
+    "section-46a-81e",
+    "section-46a-81p",
+    "section-46a-81q",
+    "section-46a-82",
+    "section-46a-86",
+    "section-46a-131",
+    "section-46a-170"
+  ],
+  "documents": [
+    {
+      "id": "section-46a-51",
+      "citation": "46a-51",
+      "citations": [
+        "46a-51"
+      ],
+      "heading": "Sec. 46a-51. (Formerly Sec. 31-122). Definitions.",
+      "chapter": {
+        "id": "chapter-814c",
+        "number": "814c",
+        "name": "Human Rights and Opportunities"
+      },
+      "status": "active",
+      "text": "As used in section 4a-60a and this chapter:\n\n(1) “Blind” refers to an individual whose central visual acuity does not exceed 20/200 in the better eye with correcting lenses, or whose visual acuity is greater than 20/200 but is accompanied by a limitation in the fields of vision such that the widest diameter of the visual field subtends an angle no greater than twenty degrees;\n\n(2) “Commission” means the Commission on Human Rights and Opportunities created by section 46a-52;\n\n(3) “Commission legal counsel” means a member of the legal staff employed by the commission pursuant to section 46a-54;\n\n(4) “Commissioner” means a member of the commission;\n\n(5) “Court” means the Superior Court or any judge of said court;\n\n(6) “Discrimination” includes segregation and separation;\n\n(7) “Discriminatory employment practice” means any discriminatory practice specified in subsection (b), (d), (e) or (f) of section 31-51i or section 46a-60 or 46a-81c;\n\n(8) “Discriminatory practice” means a violation of section 4a-60, 4a-60a, 4a-60g, 31-40y, subsection (b), (d), (e) or (f) of section 31-51i, subparagraph (C) of subdivision (15) of section 46a-54, subdivisions (16) and (17) of section 46a-54, section 46a-58, 46a-59, 46a-60, 46a-64, 46a-64c, 46a-66, 46a-68, 46a-68c to 46a-68f, inclusive, or 46a-70 to 46a-78, inclusive, subsection (a) of section 46a-80 or sections 46a-81b to 46a-81o, inclusive, and sections 46a-80b to 46a-80e, inclusive, and sections 46a-80k to 46a-80m, inclusive;\n\n(9) “Employee” means any person employed by an employer but shall not include any individual employed by such individual's parents, spouse or child. “Employee” includes any elected or appointed official of a municipality, board, commission, counsel or other governmental body;\n\n(10) “Employer” includes the state and all political subdivisions thereof and means any person or employer with one or more persons in such person's or employer's employ;\n\n(11) “Employment agency” means any person undertaking with or without compensation to procure employees or opportunities to work;\n\n(12) “Labor organization” means any organization which exists for the purpose, in whole or in part, of collective bargaining or of dealing with employers concerning grievances, terms or conditions of employment, or of other mutual aid or protection in connection with employment;\n\n(13) “Intellectual disability” means intellectual disability as defined in section 1-1g;\n\n(14) “Person” means one or more individuals, partnerships, associations, corporations, limited liability companies, legal representatives, trustees, trustees in bankruptcy, receivers and the state and all political subdivisions and agencies thereof;\n\n(15) “Physically disabled” refers to any individual who has any chronic physical handicap, infirmity or impairment, whether congenital or resulting from bodily injury, organic processes or changes or from illness, including, but not limited to, epilepsy, deafness or being hard of hearing or reliance on a wheelchair or other remedial appliance or device;\n\n(16) “Respondent” means any person alleged in a complaint filed pursuant to section 46a-82 to have committed a discriminatory practice;\n\n(17) “Discrimination on the basis of sex” includes but is not limited to discrimination related to pregnancy, child-bearing capacity, sterilization, fertility or related medical conditions;\n\n(18) “Discrimination on the basis of religious creed” includes but is not limited to discrimination related to all aspects of religious observances and practice as well as belief, unless an employer demonstrates that the employer is unable to reasonably accommodate to an employee's or prospective employee's religious observance or practice without undue hardship on the conduct of the employer's business;\n\n(19) “Learning disability” refers to an individual who exhibits a severe discrepancy between educational performance and measured intellectual ability and who exhibits a disorder in one or more of the basic psychological processes involved in understanding or in using language, spoken or written, which may manifest itself in a diminished ability to listen, speak, read, write, spell or to do mathematical calculations;\n\n(20) “Mental disability” refers to an individual who has a record of, or is regarded as having one or more mental disorders, as defined in the most recent edition of the American Psychiatric Association's “Diagnostic and Statistical Manual of Mental Disorders”; and\n\n(21) “Gender identity or expression” means a person's gender-related identity, appearance or behavior, whether or not that gender-related identity, appearance or behavior is different from that traditionally associated with the person's physiology or assigned sex at birth, which gender-related identity can be shown by providing evidence including, but not limited to, medical history, care or treatment of the gender-related identity, consistent and uniform assertion of the gender-related identity or any other evidence that the gender-related identity is sincerely held, part of a person's core identity or not being asserted for an improper purpose;\n\n(22) “Veteran” means veteran as defined in subsection (a) of section 27-103;\n\n(23) “Race” is inclusive of ethnic traits historically associated with race, including, but not limited to, hair texture and protective hairstyles;\n\n(24) “Protective hairstyles” includes, but is not limited to, wigs, headwraps and hairstyles such as individual braids, cornrows, locs, twists, Bantu knots, afros and afro puffs;\n\n(25) “Domestic violence” has the same meaning as provided in subsection (b) of section 46b-1; and\n\n(26) “Sexual orientation” means a person's identity in relation to the gender or genders to which they are romantically, emotionally or sexually attracted, inclusive of any identity that a person (A) may have previously expressed, or (B) is perceived by another person to hold.",
+      "href": "?chapter=814c&section=section-46a-51",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-46a-56",
+      "citation": "46a-56",
+      "citations": [
+        "46a-56"
+      ],
+      "heading": "Sec. 46a-56. Commission duties.",
+      "chapter": {
+        "id": "chapter-814c",
+        "number": "814c",
+        "name": "Human Rights and Opportunities"
+      },
+      "status": "active",
+      "text": "(a) The commission shall:\n\n(1) Investigate the possibilities of affording equal opportunity of profitable employment to all persons, with particular reference to job training and placement;\n\n(2) Compile facts concerning discrimination in employment, violations of civil liberties and other related matters;\n\n(3) Investigate and proceed in all cases of discriminatory practices under this chapter and noncompliance with the provisions of section 4a-60 or 4a-60a or sections 46a-68c to 46a-68f, inclusive, provided, the commission, whenever it has reason to believe that a person who is a party to a discriminatory practice case has engaged or is engaged in conduct that constitutes a violation of part VI, of chapter 952, may refer such matter to the Office of the Chief State's Attorney and said office shall conduct a further investigation as deemed necessary;\n\n(4) From time to time, but not less than once a year, report to the Governor as provided in section 4-60, making recommendations for the removal of such injustices as it may find to exist and such other recommendations as it deems advisable and describing the investigations, proceedings and hearings it has conducted and their outcome, the decisions it has rendered and the other work it has performed;\n\n(5) Monitor state contracts to determine whether they are in compliance with sections 4a-60 and 4a-60a, and those provisions of the general statutes which prohibit discrimination;\n\n(6) Compile data concerning state contracts with female and minority business enterprises and submit a report annually to the General Assembly concerning the employment of such business enterprises as contractors and subcontractors;\n\n(7) Develop and include on the commission's Internet web site a link concerning the illegality of sexual harassment, as defined in section 46a-60, and the remedies available to victims of sexual harassment;\n\n(8) Develop and make available at no cost to employers an online training and education video or other interactive method of training and education that fulfills the requirements prescribed in subdivision (15) of section 46a-54;\n\n(9) Develop, in conjunction with organizations that advocate on behalf of victims of domestic violence, and include on the commission's Internet web site a link concerning domestic violence and the resources available to victims of domestic violence; and\n\n(10) Develop, in conjunction with organizations that advocate on behalf of victims of domestic violence, and make available at no cost to each state agency an online training and education video or other interactive method of training and education that fulfills the requirements prescribed in subdivision (19) of section 46a-54.\n\n(b) The commission may, when it is deemed in the best interests of the state, exempt a contractor from the requirements of complying with any or all of the provisions of section 4a-60, 4a-60a, 46a-68c, 46a-68d or 46a-68e in any specific contract. Exemptions under the provisions of this section may include, but not be limited to, the following instances: (1) If the work is to be or has been performed outside the state and no recruitment of workers within the limits of the state is involved; (2) those involving less than specified amounts of money or specified numbers of workers; (3) to the extent that they involve subcontracts below a specified tier. The commission may also exempt facilities of a contractor which are in all respects separate and distinct from activities of the contractor related to the performance of the contract, provided such an exemption shall not interfere with or impede the effectuation of the purposes of this section and sections 4a-60, 4a-60a, 4a-60g and 46a-68b to 46a-68k, inclusive.\n\n(c) If the commission determines through its monitoring and compliance procedures that a contractor or subcontractor is not complying with antidiscrimination statutes or contract provisions required under section 4a-60 or 4a-60a or sections 46a-68c to 46a-68f, inclusive, the commission may issue a complaint pursuant to subsection (c) of section 46a-82. Such complaint shall be scheduled for a hearing before a human rights referee appointed by the chief referee to act as a presiding officer. Such hearing shall be held in accordance with chapter 54 and section 46a-84. If, after such hearing, the presiding officer makes a finding of noncompliance with antidiscrimination statutes or contract provisions required under section 4a-60 or 4a-60a or sections 46a-68c to 46a-68f, inclusive, the presiding officer shall order such relief as is necessary to achieve full compliance with any antidiscrimination statute and required contract provisions. The presiding officer may: (1) (A) In the case of a state contract, order the state to retain two per cent of the total contract price per month on any existing contract with such contractor that the state withheld pursuant to section 46a-68d and transfer the funds to the State Treasurer for deposit in the special fund described in subsection (e) of this section, or (B) in the case of a municipal public works or quasi-public agency contract, order the municipality or entity to retain two per cent of the total contract price per month on any existing contract with such contractor; (2) prohibit the contractor from participation in any further contracts with state agencies or any further municipal public works contracts or quasi-public agency project contracts, as applicable until: (A) The expiration of a period of two years from the date of the finding of noncompliance, or (B) the presiding officer determines that the contractor has adopted policies consistent with such statutes, provided the presiding officer shall make such determination not later than forty-five days after such finding of noncompliance; (3) publish, or cause to be published, the names of contractors or unions that the presiding officer has found to be in noncompliance with such provisions; (4) notify the Attorney General that, in cases in which there is substantial violation or the threat of substantial violation of section 4a-60 or 4a-60a, appropriate proceedings should be brought to enforce such provisions, including the enjoining of organizations, individuals or groups that prevent, or seek to prevent, compliance with section 4a-60 or 4a-60a; (5) recommend to the Equal Employment Opportunity Commission or the Department of Justice that appropriate proceedings be instituted under Title VII of the Civil Rights Act of 1964 or related laws when necessary; (6) recommend to the appropriate prosecuting authority that criminal proceedings be brought for the furnishing of false information to any awarding agency or to the commission; (7) order the contractor to bring itself into compliance with antidiscrimination statutes or contract provisions required under section 4a-60 or 4a-60a or sections 46a-68c to 46a-68f, inclusive, not later than a period of thirty days after the issuance of such order or, for good cause shown, within an additional period of thirty days, and, if such contractor fails to bring itself into such compliance within such time period and such noncompliance is substantial or there is a pattern of noncompliance, recommend to the awarding agency that such agency declare the contractor to be in breach of the contract and that such agency pursue all available remedies or, in the case of a municipal public works or quasi-public agency project contract, recommend the municipality or entity to make such a declaration and pursue all available remedies; (8) order the awarding agency or, in the case of a municipal public works or quasi-public agency project contract, the municipality or entity, to refrain from entering into further contracts, or extensions or other modifications of existing contracts, with any noncomplying contractor, until such contractor has satisfied the commission that such contractor has established and will carry out personnel and employment policies in compliance with antidiscrimination statutes and section 4a-60 or 4a-60a and sections 46a-68c to 46a-68f, inclusive; or (9) order two or more remedies or other relief designed to achieve full compliance with antidiscrimination statutes and required contract provisions. The commission shall adopt regulations, in accordance with chapter 54, to implement the provisions of this section.\n\n(d) If the commission determines, through its monitoring and compliance procedures, that, with respect to a state contract, municipal public works contract or quasi-public agency project contract, a contractor, subcontractor, service provider or supplier of materials has (1) fraudulently qualified as a minority business enterprise, or (2) performed services or supplied materials on behalf of another contractor, subcontractor, service provider or supplier of materials knowing (A) that such other contractor, subcontractor, service provider or supplier has fraudulently qualified as a minority business enterprise in order to appear to comply with antidiscrimination statutes or contract provisions required under section 4a-60 or 4a-60a, and (B) that such services or materials are to be used in connection with a contract entered into pursuant to subsection (b) of section 4a-60g, the commission may issue a complaint pursuant to subsection (c) of section 46a-82. Such complaint shall be scheduled for a hearing before a referee assigned by the chief referee to act as a presiding officer. Such hearing shall be held in accordance with chapter 54 and section 46a-84. If, after such hearing, the presiding officer makes a finding that a contractor, subcontractor, service provider or supplier of materials has violated this subsection, the presiding officer shall assess a civil penalty of not more than ten thousand dollars upon such contractor, subcontractor, service provider or supplier of materials.\n\n(e) The Attorney General, upon complaint of the commission, shall institute a civil action in the superior court for the judicial district of Hartford to recover any penalty assessed pursuant to subsection (d) of this section. Any penalties recovered pursuant to this subsection shall be deposited in a special fund and shall be held by the State Treasurer separate and apart from all other moneys, funds and accounts. The resources in such fund shall, pursuant to regulations adopted by the commission in accordance with the provisions of chapter 54, be used to assist minority business enterprises. As used in this section, “minority business enterprise” means any contractor, subcontractor or supplier of materials fifty-one per cent or more of the capital stock, if any, or assets of which is owned by a person or persons: (1) Who are active in the daily affairs of the enterprise; (2) who have the power to direct the management and policies of the enterprise; and (3) who are members of a minority, as defined in subsection (a) of section 32-9n.",
+      "href": "?chapter=814c&section=section-46a-56",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-46a-58",
+      "citation": "46a-58",
+      "citations": [
+        "46a-58"
+      ],
+      "heading": "Sec. 46a-58. (Formerly Sec. 53-34). Deprivation of rights. Desecration of property. Placing of burning cross or noose on property. Penalty. Restitution.",
+      "chapter": {
+        "id": "chapter-814c",
+        "number": "814c",
+        "name": "Human Rights and Opportunities"
+      },
+      "status": "active",
+      "text": "(a) It shall be a discriminatory practice in violation of this section for any person to subject, or cause to be subjected, any other person to the deprivation of any rights, privileges or immunities, secured or protected by the Constitution or laws of this state or of the United States, on account of religion, national origin, alienage, color, race, sex, gender identity or expression, sexual orientation, blindness, mental disability, physical disability, age, status as a veteran or status as a victim of domestic violence.\n\n(b) Any person who intentionally desecrates any public property, monument or structure, or any religious object, symbol or house of religious worship, or any cemetery, or any private structure not owned by such person, shall be in violation of subsection (a) of this section. For the purposes of this subsection, “desecrate” means to mar, deface or damage as a demonstration of irreverence or contempt.\n\n(c) Any person who places a burning cross or a simulation thereof on any public property, or on any private property without the written consent of the owner, and with intent to intimidate or harass any other person or group of persons, shall be in violation of subsection (a) of this section.\n\n(d) Any person who places a noose or a simulation thereof on any public property, or on any private property without the written consent of the owner, and with intent to intimidate or harass any other person on account of religion, national origin, alienage, color, race, sex, gender identity or expression, sexual orientation, blindness, mental disability, physical disability, age, status as a veteran or status as a victim of domestic violence, shall be in violation of subsection (a) of this section.\n\n(e) (1) Except as provided in subdivision (2) of this subsection, any person who violates any provision of this section shall be guilty of a class A misdemeanor and shall be fined not less than one thousand dollars, except that if property is damaged as a consequence of such violation in an amount in excess of one thousand dollars, such person shall be guilty of a class D felony and shall be fined not less than one thousand dollars.\n\n(2) Any person who violates the provisions of this section by intentionally desecrating a house of religious worship (A) shall be guilty of a class D felony and shall be fined not less than one thousand dollars if property is damaged as a consequence of such violation in an amount up to and including ten thousand dollars, and (B) shall be guilty of a class C felony and shall be fined not less than three thousand dollars if the property damaged as a consequence of such violation is in an amount in excess of ten thousand dollars.\n\n(3) The minimum amount of any fine imposed by the provisions of this section may not be remitted or reduced by the court unless the court states on the record its reasons for remitting or reducing such fine.\n\n(4) The court may order restitution for any victim of a violation of this section pursuant to subsection (c) of section 53a-28.",
+      "href": "?chapter=814c&section=section-46a-58",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-46a-68b",
+      "citation": "46a-68b",
+      "citations": [
+        "46a-68b"
+      ],
+      "heading": "Sec. 46a-68b. Definitions.",
+      "chapter": {
+        "id": "chapter-814c",
+        "number": "814c",
+        "name": "Human Rights and Opportunities"
+      },
+      "status": "active",
+      "text": "As used in this section and sections 4a-60, 4a-60a, 46a-56 and 46a-68c to 46a-68k, inclusive: “Public works contract” means any agreement between any individual, firm or corporation and the state or any political subdivision of the state other than a municipality for construction, rehabilitation, conversion, extension, demolition or repair of a public building, highway or other changes or improvements in real property, or which is financed in whole or in part by the state, including, but not limited to, matching expenditures, grants, loans, insurance or guarantees and “municipal public works contract”, “quasi-public agency project” and “awarding agency” have the same meanings as provided in section 4a-60g.",
+      "href": "?chapter=814c&section=section-46a-68b",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-46a-68c",
+      "citation": "46a-68c",
+      "citations": [
+        "46a-68c"
+      ],
+      "heading": "Sec. 46a-68c. Contractors required to file affirmative action plan. Review and approval of plan by executive director or designee. Certificate of compliance issued by executive director or designee. Revocation.",
+      "chapter": {
+        "id": "chapter-814c",
+        "number": "814c",
+        "name": "Human Rights and Opportunities"
+      },
+      "status": "active",
+      "text": "(a) In addition to the provisions of section 4a-60, each contractor with fifty or more employees awarded a public works contract, municipal public works contract or contract for a quasi-public agency project in excess of fifty thousand dollars in any fiscal year, but not subject to the provisions of section 46a-68d, shall develop and file an affirmative action plan with the Commission on Human Rights and Opportunities which shall comply with regulations adopted by the commission. The executive director or the executive director's designee shall review and formally approve, conditionally approve or disapprove the content of the affirmative action plan not later than one hundred twenty days following the date of the submission of the plan to the commission. If the executive director or the executive director's designee fails to approve, conditionally approve or disapprove a plan within such one-hundred-twenty-day period, the plan shall be deemed to be either approved or deficient without consequence. The executive director or the executive director's designee shall, not later than fifteen days after the date of deeming an affirmative action plan approved or deficient without consequence, provide the contractor with written notification of the action taken with respect to such plan. Failure to develop an affirmative action plan that is either approved or deficient without consequence shall act as a bar to bidding on or the award of future contracts until such requirement has been met.\n\n(b) When the executive director or the executive director's designee approves an affirmative action plan pursuant to this section, the executive director or the executive director's designee shall issue a certificate of compliance to the contractor. Such certificate shall be prima facie proof of the contractor's eligibility to bid or be awarded contracts for a period of two years from the date of the certificate. Such certificate shall not excuse the contractor from monitoring by the commission or from the reporting and record-keeping requirements of sections 46a-68e and 46a-68f. The executive director or the executive director's designee may revoke the certificate of a contractor if the contractor does not implement its affirmative action plan in compliance with this section and sections 4a-60, 4a-60g, 46a-56, 46a-68b, 46a-68d, and 46a-68e to 46a-68k, inclusive.",
+      "href": "?chapter=814c&section=section-46a-68c",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-46a-81a",
+      "citation": "46a-81a",
+      "citations": [
+        "46a-81a"
+      ],
+      "heading": "Sec. 46a-81a. Sexual orientation discrimination: Definitions.",
+      "chapter": {
+        "id": "chapter-814c",
+        "number": "814c",
+        "name": "Human Rights and Opportunities"
+      },
+      "status": "repealed",
+      "text": "Section 46a-81a is repealed, effective July 1, 2023.",
+      "href": "?chapter=814c&section=section-46a-81a",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "repealed"
+      }
+    },
+    {
+      "id": "section-46a-81e",
+      "citation": "46a-81e",
+      "citations": [
+        "46a-81e"
+      ],
+      "heading": "Sec. 46a-81e. Sexual orientation discrimination: Housing.",
+      "chapter": {
+        "id": "chapter-814c",
+        "number": "814c",
+        "name": "Human Rights and Opportunities"
+      },
+      "status": "active",
+      "text": "(a) It shall be a discriminatory practice in violation of this section:\n\n(1) To refuse to sell or rent after the making of a bona fide offer, or to refuse to negotiate for the sale or rental of, or otherwise make unavailable or deny, a dwelling to any person because of sexual orientation or civil union status.\n\n(2) To discriminate against any person in the terms, conditions, or privileges of sale or rental of a dwelling, or in the provision of services or facilities in connection therewith, because of sexual orientation or civil union status.\n\n(3) To make, print or publish, or cause to be made, printed or published any notice, statement, or advertisement, with respect to the sale or rental of a dwelling that indicates any preference, limitation, or discrimination based on sexual orientation or civil union status, or an intention to make any such preference, limitation or discrimination.\n\n(4) (A) To represent to any person because of sexual orientation or civil union status, that any dwelling is not available for inspection, sale or rental when such dwelling is in fact so available. (B) It shall be a violation of this subdivision for any person to restrict or attempt to restrict the choices of any buyer or renter to purchase or rent a dwelling (i) to an area which is substantially populated, even if less than a majority, by persons of the same sexual orientation or civil union status as the buyer or renter, (ii) while such person is authorized to offer for sale or rent another dwelling which meets the housing criteria as expressed by the buyer or renter to such person and (iii) such other dwelling is in an area which is not substantially populated by persons of the same sexual orientation or civil union status as the buyer or renter. As used in this subdivision, “area” means municipality, neighborhood or other geographic subdivision which may include an apartment or condominium complex.\n\n(5) For profit, to induce or attempt to induce any person to sell or rent any dwelling by representations regarding the entry or prospective entry into the neighborhood of a person or persons of a particular sexual orientation or civil union status.\n\n(6) For any person or other entity engaging in residential-real-estate-related transactions to discriminate against any person in making available such a transaction, or in the terms or conditions of such a transaction, because of sexual orientation or civil union status.\n\n(7) To deny any person access to or membership or participation in any multiple-listing service, real estate brokers' organization or other service, organization, or facility relating to the business of selling or renting dwellings, or to discriminate against him in the terms or conditions of such access, membership or participation, on account of sexual orientation or civil union status.\n\n(8) To coerce, intimidate, threaten, or interfere with any person in the exercise or enjoyment of, or on account of his having exercised or enjoyed, or on account of his having aided or encouraged any other person in the exercise or enjoyment of, any right granted or protected by this section.\n\n(b) Nothing in this section limits the applicability of any reasonable state statute or municipal ordinance restricting the maximum number of persons permitted to occupy a dwelling.\n\n(c) Nothing in this section prohibits a person engaged in the business of furnishing appraisals of real property to take into consideration factors other than sexual orientation or civil union status.\n\n(d) Notwithstanding any other provision of this chapter, complaints alleging a violation of this section shall be investigated within one hundred days of filing and a final administrative disposition shall be made within one year of filing unless it is impracticable to do so. If the Commission on Human Rights and Opportunities is unable to complete its investigation or make a final administrative determination within such time frames, it shall notify the complainant and the respondent in writing of the reasons for not doing so.\n\n(e) Any person who violates any provision of this section shall be guilty of a class D misdemeanor.",
+      "href": "?chapter=814c&section=section-46a-81e",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-46a-81p",
+      "citation": "46a-81p",
+      "citations": [
+        "46a-81p"
+      ],
+      "heading": "Sec. 46a-81p. Sexual orientation discrimination: Religious organizations.",
+      "chapter": {
+        "id": "chapter-814c",
+        "number": "814c",
+        "name": "Human Rights and Opportunities"
+      },
+      "status": "active",
+      "text": "The provisions of sections 4a-60a and 46a-81b to 46a-81o, inclusive, shall not apply to a religious corporation, entity, association, educational institution or society with respect to the employment of individuals to perform work connected with the carrying on by such corporation, entity, association, educational institution or society of its activities, or with respect to matters of discipline, faith, internal organization or ecclesiastical rule, custom or law which are established by such corporation, entity, association, educational institution or society.",
+      "href": "?chapter=814c&section=section-46a-81p",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-46a-81q",
+      "citation": "46a-81q",
+      "citations": [
+        "46a-81q"
+      ],
+      "heading": "Sec. 46a-81q. Sexual orientation discrimination: ROTC programs.",
+      "chapter": {
+        "id": "chapter-814c",
+        "number": "814c",
+        "name": "Human Rights and Opportunities"
+      },
+      "status": "active",
+      "text": "The provisions of sections 4a-60a and 46a-81b to 46a-81o, inclusive, shall not apply to the conduct and administration of a ROTC program established and maintained pursuant to 10 USC Sections 2101 to 2111, inclusive, as amended from time to time, and the regulations thereunder, at an institution of higher education. For purposes of this section, “ROTC” means the Reserve Officers' Training Corps.",
+      "href": "?chapter=814c&section=section-46a-81q",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-46a-82",
+      "citation": "46a-82",
+      "citations": [
+        "46a-82"
+      ],
+      "heading": "Sec. 46a-82. (Formerly Sec. 31-127). Complaint: Filing.",
+      "chapter": {
+        "id": "chapter-814c",
+        "number": "814c",
+        "name": "Human Rights and Opportunities"
+      },
+      "status": "active",
+      "text": "(a) Any person claiming to be aggrieved by an alleged discriminatory practice, except for an alleged violation of section 4a-60g or 46a-68 or the provisions of sections 46a-68c to 46a-68f, inclusive, may, by himself or herself or by such person's attorney, file with the commission a complaint in writing under oath, except that a complaint that alleges a violation of section 46a-64c need not be notarized. The complaint shall state the name and address of the person alleged to have committed the discriminatory practice, provide a short and plain statement of the allegations upon which the claim is based and contain such other information as may be required by the commission. The commission whenever it has reason to believe that a person who is named as party to a discriminatory practice complaint has engaged or is engaged in conduct that constitutes a violation of part VI, of chapter 952, may refer such matter to the Office of the Chief State's Attorney and said office shall conduct a further investigation as deemed necessary. After the filing of a complaint, the commission shall provide the complainant with a notice that: (1) Acknowledges receipt of the complaint; and (2) advises of the time frames and choice of forums available under this chapter.\n\n(b) The commission, whenever it has reason to believe that any person has been engaged or is engaged in a discriminatory practice, may issue a complaint, except for a violation of subsection (a) of section 46a-80.\n\n(c) The commission, whenever it has reason to believe that any contractor or subcontractor is not complying with antidiscrimination statutes or contract provisions required under section 4a-60, 4a-60a or 4a-60g or the provisions of sections 46a-68c to 46a-68f, inclusive, may issue a complaint.\n\n(d) The commission may issue a complaint if: (1) An affirmative action plan filed pursuant to section 46a-68 is in violation of any of the provisions of section 4-61u or 4-61w, sections 46a-54 to 46a-64, inclusive, section 46a-64c or sections 46a-70 to 46a-78, inclusive; or (2) an agency, department, board or commission fails to submit an affirmative action plan required under section 46a-68.\n\n(e) Any employer whose employees, or any of them, refuse or threaten to refuse to comply with the provisions of section 46a-60 or 46a-81c may file with the commission a written complaint under oath asking for assistance by conciliation or other remedial action.\n\n(f) (1) Any complaint filed pursuant to this section for an alleged act of discrimination that occurred prior to October 1, 2021, shall be filed within one hundred and eighty days after the date of the alleged act of discrimination, except that any complaint by a person (A) claiming to be aggrieved by a violation of subsection (a) of section 46a-80 that occurred before October 1, 2019, shall be filed within thirty days of the date of the alleged act of discrimination, and (B) claiming to be aggrieved by a violation of section 46a-60, sections 46a-70 to 46a-78, inclusive, or section 46a-80 or 46a-81c, that occurred on or after October 1, 2019, and prior to October 1, 2021, shall be filed not later than three hundred days after the date of the alleged act of discrimination.\n\n(2) Any complaint filed pursuant to this section for an alleged act of discrimination that occurred on or after October 1, 2021, shall be filed within three hundred days after the date of the alleged act of discrimination.",
+      "href": "?chapter=814c&section=section-46a-82",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-46a-86",
+      "citation": "46a-86",
+      "citations": [
+        "46a-86"
+      ],
+      "heading": "Sec. 46a-86. Complaint: Determination; orders; dismissal. Treatment of discrimination awards.",
+      "chapter": {
+        "id": "chapter-814c",
+        "number": "814c",
+        "name": "Human Rights and Opportunities"
+      },
+      "status": "active",
+      "text": "(a) If, upon all the evidence presented at the hearing conducted pursuant to section 46a-84, the presiding officer finds that a respondent has engaged in any discriminatory practice, the presiding officer shall make written findings of fact and file with the commission and serve on the complainant and respondent an order requiring the respondent to cease and desist from the discriminatory practice and to take such affirmative action as is necessary to achieve the purpose of this chapter.\n\n(b) In addition to any other action taken under this section, upon a finding of a discriminatory employment practice, the presiding officer shall (1) issue an order to eliminate the discriminatory employment practice complained of and to make the complainant whole, including restoration to membership in any respondent labor organization, and (2) may (A) determine the amount of damages suffered by the complainant, including the actual costs incurred by the complainant as a result of the discriminatory employment practice, and (B) allow reasonable attorney's fees and costs. The amount of attorney's fees allowed shall not be contingent upon the amount of damages requested by or awarded to the complainant. Liability for back pay shall not accrue from a date more than two years prior to the filing or issuance of the complaint. Interim earnings, including unemployment compensation and welfare assistance or amounts which could have been earned with reasonable diligence on the part of the person to whom back pay is awarded shall be deducted from the amount of back pay to which such person is otherwise entitled. The amount of any deduction for interim unemployment compensation or welfare assistance shall be paid by the respondent to the commission which shall transfer such amount to the appropriate state or local agency. Not later than October 1, 2020, and annually thereafter, the executive director of the commission shall report, in accordance with the provisions of section 11-4a, to the joint standing committee of the General Assembly having cognizance of matters relating to the judiciary on the commission's award of reasonable attorney's fees and costs under this section. Such report shall include, but not be limited to: (i) The awards of reasonable attorney's fees and a comparison of such awards to awards of damages; (ii) the category of complaint for which damages and attorney's fees are awarded; (iii) the commission's methodology for calculating awards of reasonable attorney's fees and costs, if such methodology may be ascertained; (iv) data on the number of employees employed by respondents who were subject to awards of reasonable attorney's fees and costs; and (v) the percentage of complainants and respondents represented by counsel in matters in which awards of reasonable attorney's fees and costs are made.\n\n(c) In addition to any other action taken under this section, upon a finding of a discriminatory practice prohibited by section 46a-58, 46a-59, 46a-64, 46a-64c, 46a-81b, 46a-81d or 46a-81e, the presiding officer shall determine the damage suffered by the complainant, which damage shall include, but not be limited to, the expense incurred by the complainant for obtaining alternate housing or space, storage of goods and effects, moving costs and other costs actually incurred by the complainant as a result of such discriminatory practice and shall allow reasonable attorney's fees and costs. The amount of attorney's fees allowed shall not be contingent upon the amount of damages requested by or awarded to the complainant.\n\n(d) In addition to any other action taken under this section, upon a finding of a discriminatory practice prohibited by section 46a-66 or 46a-81f, the presiding officer shall file with the commission and serve on the respondent an order requiring the respondent to pay the complainant the damages resulting from the discriminatory practice.\n\n(e) In addition to any other action taken under this section, upon a finding of noncompliance with antidiscrimination statutes or contract provisions required under section 4a-60 or 4a-60a or the provisions of sections 46a-68c to 46a-68f, inclusive, the presiding officer shall file with the commission and serve on the respondent an order with respect to any remedial action imposed pursuant to subsection (c) or (d) of section 46a-56.\n\n(f) If, upon all the evidence and after a complete hearing, the presiding officer finds that the respondent has not engaged in any alleged discriminatory practice, the presiding officer shall make written findings of fact and shall file with the commission and serve on the complainant and respondent an order dismissing the complaint.\n\n(g) Any payment received by a complainant under this chapter or under any equivalent federal antidiscrimination law, either as a settlement of a claim or as an award made in a judicial or administrative proceeding, shall not be considered as income, resources or assets for the purpose of determining the eligibility of or amount of assistance to be received by such person in the month of receipt or the three months following receipt under the state supplement program, Medicaid or any other medical assistance program, temporary family assistance program, state-administered general assistance program, or the temporary assistance for needy families program. After such time period, any remaining funds shall be subject to state and federal laws governing such programs.",
+      "href": "?chapter=814c&section=section-46a-86",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-46a-131",
+      "citation": "46a-131",
+      "citations": [
+        "46a-131"
+      ],
+      "heading": "Sec. 46a-131. Information and assistance from state agencies. Acceptance of gifts.",
+      "chapter": {
+        "id": "chapter-814d",
+        "number": "814d",
+        "name": "Commission on Women, Children, Seniors, Equity and Opportunity Concerning Children"
+      },
+      "status": "repealed",
+      "text": "Section 46a-131 is repealed, effective June 7, 2023.",
+      "href": "?chapter=814d&section=section-46a-131",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "repealed"
+      }
+    },
+    {
+      "id": "section-46a-170",
+      "citation": "46a-170",
+      "citations": [
+        "46a-170"
+      ],
+      "heading": "Sec. 46a-170. Trafficking in Persons Council. Membership. Duties. Reports.",
+      "chapter": {
+        "id": "chapter-814f",
+        "number": "814f",
+        "name": "Trafficking in Persons Council"
+      },
+      "status": "active",
+      "text": "(a) There is established a Trafficking in Persons Council that shall be within the Commission on Women, Children, Seniors, Equity and Opportunity for administrative purposes only.\n\n(b) The council shall consist of the following members: (1) The Chief State's Attorney, or a designee; (2) the Chief Public Defender, or a designee; (3) the Commissioner of Emergency Services and Public Protection, or the commissioner's designee; (4) the Labor Commissioner, or the commissioner's designee; (5) the Commissioner of Social Services, or the commissioner's designee; (6) the Commissioner of Public Health, or the commissioner's designee; (7) the Commissioner of Mental Health and Addiction Services, or the commissioner's designee; (8) the Commissioner of Children and Families, or the commissioner's designee; (9) the Commissioner of Consumer Protection, or the commissioner's designee; (10) the Commissioner of Developmental Services, or the commissioner's designee; (11) the director of the Basic Training Division of the Police Officer Standards and Training Council, or the director's designee; (12) the Child Advocate, or the Child Advocate's designee; (13) the Victim Advocate, or the Victim Advocate's designee; (14) a chairperson of the Commission on Women, Children, Seniors, Equity and Opportunity, or the chairperson's designee; (15) one representative of the Office of Victim Services of the Judicial Branch appointed by the Chief Court Administrator; (16) a municipal police chief appointed by the Connecticut Police Chiefs Association, or a designee; (17) the Commissioner of Education, or the commissioner's designee; (18) an adult victim of trafficking, appointed by the Governor; (19) a judge of the Superior Court, appointed by the Chief Court Administrator; (20) a state's attorney appointed by the Chief State's Attorney; (21) a public defender appointed by the Chief Public Defender; and (22) fifteen public members appointed as follows: The Governor shall appoint three members, one of whom shall represent victims of commercial exploitation of children, one of whom shall represent sex trafficking victims who are children and one of whom shall represent a coalition of children's advocacy centers and multidisciplinary teams that are dedicated to serving child abuse victims and their families, the president pro tempore of the Senate shall appoint two members, one of whom shall represent the Connecticut Alliance to End Sexual Violence and one of whom shall represent an organization that provides civil legal services to low-income individuals, the speaker of the House of Representatives shall appoint two members, one of whom shall represent the Connecticut Coalition Against Domestic Violence and one of whom shall represent the Connecticut Lodging Association, the majority leader of the Senate shall appoint two members, one of whom shall represent an organization that deals with behavioral health needs of women and children and one of whom shall represent the Connecticut Coalition to End Homelessness, the majority leader of the House of Representatives shall appoint two members, one of whom shall represent an organization that advocates on social justice and human rights issues and one of whom shall represent the Connecticut Criminal Defense Lawyers Association, the minority leader of the Senate shall appoint two members, one of whom shall represent the Connecticut Immigrant and Refugee Coalition and one of whom shall represent massage therapists, and the minority leader of the House of Representatives shall appoint two members, one of whom shall represent the Motor Transport Association of Connecticut, Inc. and one of whom shall represent an organization that works with adult victims of trafficking.\n\n(c) The chairperson of the Commission on Women, Children, Seniors, Equity and Opportunity, or a designee, shall serve as chairperson of the council. The members of the council shall serve without compensation but shall be reimbursed for necessary expenses incurred in the performance of their duties.\n\n(d) The council shall: (1) Hold meetings to provide updates and progress reports, (2) coordinate the collection, analysis and dissemination of data regarding human trafficking, and (3) consult with governmental and nongovernmental organizations in developing recommendations to strengthen state and local efforts to prevent trafficking, protect and assist victims of trafficking and prosecute traffickers. The council shall meet at least three times per year.\n\n(e) The council may request data and other information from state and local agencies to carry out its duties under this section.\n\n(f) (1) The council shall:\n\n(A) Develop a list of key indicators that a person is a victim of trafficking;\n\n(B) Develop a standardized curriculum and conduct training for doctors, nurses, pharmacists, pharmacy technicians, emergency medical services personnel, teachers, school counselors, school administrators and personnel from the Department of Children and Families and the Department of Public Health to identify victims of human trafficking, using the list of key indicators developed under subparagraph (A) of this subdivision, and assist such victims;\n\n(C) Develop and conduct training for personnel from the Departments of Children and Families and Public Health on methods for identifying children in foster care who may be at risk of becoming victims of trafficking;\n\n(D) Develop a plan for mental health, support and substance abuse programs for individuals identified as victims of trafficking and those arrested for prostitution in violation of section 53a-82. The plan shall provide for (i) the diversion of victims of trafficking and prostitution offenders into community-based treatment and support services, including, but not limited to, substance abuse recovery, housing, healthcare, job training, treatment and mental health support, and (ii) after the successful completion of the program, the dismissal of any related criminal charges against the accused.\n\n(2) The council shall include such plan and any recommendations for legislation to implement the plan as part of any report submitted pursuant of subsection (h) of this section not later than January 1, 2018.\n\n(g) The council shall examine the challenges faced by victims of trafficking who are persons without legal immigration status. The council may recommend services that such persons could benefit from and legislation to provide such services as part of any report submitted pursuant to subsection (h) of this section.\n\n(h) Not later than January 1, 2008, and annually thereafter, the council shall submit a report of its activities, including any recommendations for legislation, to the General Assembly in accordance with section 11-4a.\n\n(i) For the purposes of this section, “trafficking” means all acts involved in the recruitment, abduction, transport, harboring, transfer, sale or receipt of persons, within national or across international borders, through force, coercion, fraud or deception, to place persons in situations of slavery or slavery-like conditions, forced labor or services, such as forced prostitution or sexual services, domestic servitude, bonded sweatshop labor or other debt bondage.",
+      "href": "?chapter=814f&section=section-46a-170",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-46a-175",
+      "citation": "46a-175",
+      "citations": [
+        "46a-175"
+      ],
+      "heading": "Sec. 46a-175. (Formerly Sec. 19a-132). Lesbian, Gay, Bisexual, Transgender and Queer Justice and Opportunity Network.",
+      "chapter": {
+        "id": "chapter-814g",
+        "number": "814g",
+        "name": "Lesbian, Gay, Bisexual, Transgender and Queer Justice and Opportunity Network"
+      },
+      "status": "active",
+      "text": "(a) There is established a Lesbian, Gay, Bisexual, Transgender and Queer Justice and Opportunity Network to make recommendations to the state legislative, executive and judicial branches of government concerning the delivery of access and opportunity services to lesbian, gay, bisexual, transgender and queer persons in the state.\n\n(b) The network shall work to build a more just, safer and healthier environment for gay, lesbian, bisexual, transgender and queer persons by (1) conducting a needs analysis, within available appropriations, (2) collecting additional data on the access and opportunity needs of such persons as necessary, (3) informing state policy through reports submitted at least biennially, in accordance with the provisions of section 11-4a, to the joint standing committees of the General Assembly having cognizance of matters relating to the judiciary, public health, human services, appropriations and the budgets of state agencies, other legislative committees as necessary, the Governor and the Chief Court Administrator, and (4) building organizational member capacity, leadership and advocacy across the geographic and social spectrum of the lesbian, gay, bisexual, transgender and queer community.\n\n(c) The network shall include, but need not be limited to, the following members, or their designees:\n\n(1) The president of Connecticut Latinas/os Achieving Rights and Opportunities (CLARO);\n\n(2) The executive director of the Safe Harbor Project;\n\n(3) The executive director of the New Haven Pride Center;\n\n(4) The executive director of the Triangle Community Center in Norwalk;\n\n(5) The executive director of Advancing CT Together;\n\n(6) The executive director of the Connecticut chapter of the Gay, Lesbian & Straight Education Network (GLSEN);\n\n(7) The executive director of the Rainbow Center at The University of Connecticut;\n\n(8) The executive director of the Hartford Gay and Lesbian Health Collective;\n\n(9) The executive director of the Connecticut Transadvocacy Coalition;\n\n(10) The president of OutCT in New London;\n\n(11) The executive director of the Queer Unity Empowerment Support Team;\n\n(12) The executive director of the Commission on Women, Children, Seniors, Equity and Opportunity;\n\n(13) A lesbian, gay, bisexual, transgender or queer physician, licensed pursuant to chapter 370, appointed by the speaker of the House of Representatives;\n\n(14) A member of the LGBT Aging Advocacy coalition, appointed by the Governor;\n\n(15) The president of Connecticut Community Care;\n\n(16) The executive director of A Place to Nourish Your Health;\n\n(17) The executive director of Kamora's Cultural Corner;\n\n(18) A lesbian, gay, bisexual, transgender or queer provider of mental health services, licensed pursuant to chapter 370 or 383;\n\n(19) The executive director of Apex Community Care; and\n\n(20) The executive director of Queer Youth Program of Connecticut.\n\n(d) Members shall serve at the will of the speaker of the House of Representatives and the president pro tempore of the Senate, who may each appoint additional members and set term limits for each member. Appointments to the network shall be made not later than sixty days after July 1, 2019. Members shall choose chairpersons. Any vacancy shall be filled by the speaker of the House of Representatives, acting in consultation with the president pro tempore of the Senate.\n\n(e) The administrative staff of the Commission on Women, Children, Seniors, Equity and Opportunity shall, within available appropriations, provide administrative support to the network.",
+      "href": "?chapter=814g&section=section-46a-175",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "new"
+      }
+    }
+  ]
+}

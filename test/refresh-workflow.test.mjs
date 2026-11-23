@@ -24,3 +24,13 @@ test("weekly corpus refreshes retain the reviewed publication safeguards", () =>
   assert.doesNotMatch(workflow, /secondary:acquire|secondary:import|SECONDARY_SOURCE_DIR|corpus-refresh-secondary-sources/);
   assert.doesNotMatch(workflow, /git push\s+origin\s+main/);
 });
+
+test("every staged corpus candidate carries the editions forward and archives an outgoing revision", () => {
+  const step = workflow.match(/- name: Carry forward and archive editions[\s\S]*?(?=\n {6}- name:)/)?.[0] ?? "";
+  assert.match(step, /if: steps\.review\.outputs\.has_changes == 'true'/);
+  assert.match(step, /node scripts\/rollover-edition\.mjs[\s\S]*?--published public\/data[\s\S]*?--candidate "\$CANONICAL_DIR"[\s\S]*?--summary "\$REPORT_DIR\/edition-rollover\.md"/);
+  // The archive is built before the candidate replaces public/data, and staging refuses a candidate without it.
+  assert.ok(workflow.indexOf("Carry forward and archive editions") < workflow.indexOf("Stage and verify the candidate corpus"));
+  assert.match(workflow, /\[ -d public\/data\/editions \] && \[ ! -d "\$CANONICAL_DIR\/editions" \][\s\S]*?exit 1[\s\S]*?rm -rf public\/data/);
+  assert.match(workflow, /Prepare pull request description[\s\S]*?cat "\$REPORT_DIR\/edition-rollover\.md"/);
+});

@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-016",
+  "number": "016",
+  "name": "General Assembly",
+  "title": {
+    "id": "title-02",
+    "number": "02",
+    "name": "General Assembly and Legislative Agencies"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_016.htm",
+  "sections": [
+    {
+      "id": "section-2-33c",
+      "kind": "section",
+      "citation": "2-33c",
+      "citations": [
+        "2-33c"
+      ],
+      "heading": "Sec. 2-33c. Limitation on General Fund and Special Transportation Fund appropriations.",
+      "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_016.htm#sec_2-33c",
+      "status": "active",
+      "content": {
+        "body": [
+          "(a) In addition to the provisions of section 2-33a, on and after July 1, 2019, except as provided in subsection (b) of this section, the General Assembly shall not authorize General Fund and Special Transportation Fund appropriations for any fiscal year in an amount that, in the aggregate, exceeds the percentage of the statement of estimated revenue passed pursuant to subsection (b) of section 2-35 for each fiscal year indicated as follows:",
+          "Fiscal Year Ending June 30,",
+          "Percentage of Estimated Revenue",
+          "2020",
+          "99.5",
+          "2021",
+          "99.25",
+          "2022",
+          "99",
+          "2023, and each fiscal year thereafter",
+          "98.75",
+          "(b) The General Assembly may authorize General Fund and Special Transportation Fund appropriations for any fiscal year in an amount that, in the aggregate, exceeds the percentage of estimated revenue specified in subsection (a) of this section for such fiscal year, if:",
+          "(1) (A) The Governor declares an emergency or the existence of extraordinary circumstances and at least three-fifths of the members of each house of the General Assembly vote to exceed such percentage for the purposes of such emergency or extraordinary circumstances, and (B) any such appropriation is for the fiscal year in progress only. Any such declaration shall specify the nature of such emergency or circumstances; or",
+          "(2) Each house of the General Assembly approves by majority vote any such appropriation for purposes of an adjusted appropriation and revenue plan."
+        ],
+        "sourceNotes": [
+          "(June Sp. Sess. P.A. 17-2, S. 705; P.A. 23-1, S. 16.)"
+        ],
+        "history": [
+          "History: June Sp. Sess. P.A. 17-2 effective October 31, 2017; P.A. 23-1 amended Subsec. (a) by requiring percentage of estimated revenue applicable for fiscal year ending June 30, 2023, to be applicable for each fiscal year thereafter and deleting percentages specified for fiscal years ending June 30, 2024, 2025, 2026, and each fiscal year thereafter, effective July 1, 2023."
+        ],
+        "annotations": [],
+        "plainText": "(a) In addition to the provisions of section 2-33a, on and after July 1, 2019, except as provided in subsection (b) of this section, the General Assembly shall not authorize General Fund and Special Transportation Fund appropriations for any fiscal year in an amount that, in the aggregate, exceeds the percentage of the statement of estimated revenue passed pursuant to subsection (b) of section 2-35 for each fiscal year indicated as follows:\n\nFiscal Year Ending June 30,\n\nPercentage of Estimated Revenue\n\n2020\n\n99.5\n\n2021\n\n99.25\n\n2022\n\n99\n\n2023, and each fiscal year thereafter\n\n98.75\n\n(b) The General Assembly may authorize General Fund and Special Transportation Fund appropriations for any fiscal year in an amount that, in the aggregate, exceeds the percentage of estimated revenue specified in subsection (a) of this section for such fiscal year, if:\n\n(1) (A) The Governor declares an emergency or the existence of extraordinary circumstances and at least three-fifths of the members of each house of the General Assembly vote to exceed such percentage for the purposes of such emergency or extraordinary circumstances, and (B) any such appropriation is for the fiscal year in progress only. Any such declaration shall specify the nature of such emergency or circumstances; or\n\n(2) Each house of the General Assembly approves by majority vote any such appropriation for purposes of an adjusted appropriation and revenue plan."
+      }
+    }
+  ]
+}

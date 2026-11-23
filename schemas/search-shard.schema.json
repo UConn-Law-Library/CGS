@@ -42,6 +42,7 @@
         "heading": { "type": "string", "minLength": 1 },
         "chapter": { "$ref": "#/$defs/chapter" },
         "status": { "enum": ["active", "mixed", "obsolete", "repealed", "reserved", "transferred"] },
+        "statuses": { "type": "array", "items": { "enum": ["obsolete", "repealed", "reserved", "transferred"] }, "minItems": 1, "uniqueItems": true },
         "text": { "type": "string" },
         "href": { "type": "string", "minLength": 1 }
       }

@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-017",
+  "number": "017",
+  "name": "Legislative Commissioners' Office",
+  "title": {
+    "id": "title-02",
+    "number": "02",
+    "name": "General Assembly and Legislative Agencies"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_017.htm",
+  "sections": [
+    {
+      "id": "section-2-56m",
+      "kind": "section",
+      "citation": "2-56m",
+      "citations": [
+        "2-56m"
+      ],
+      "heading": "Sec. 2-56m. Codification of public act 23-204*.",
+      "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_017.htm#sec_2-56m",
+      "status": "active",
+      "content": {
+        "body": [
+          "The Legislative Commissioners' Office shall, in codifying the provisions of public act 23-204, make such technical, grammatical and punctuation changes as are necessary to carry out the purposes of this act, including, but not limited to, correcting inaccurate internal references."
+        ],
+        "sourceNotes": [
+          "(P.A. 23-204, S. 66.)",
+          "*Note: Public act 23-204 is entitled “An Act Concerning the State Budget for the Biennium Ending June 30, 2025, and Making Appropriations Therefor, and Provisions Related to Revenue and Other Items Implementing the State Budget.” (See Reference Table captioned “Public Acts of 2023” in Volume 3 which lists the sections amended, created or repealed by the act.)"
+        ],
+        "history": [
+          "History: P.A. 23-204 effective June 12, 2023."
+        ],
+        "annotations": [],
+        "plainText": "The Legislative Commissioners' Office shall, in codifying the provisions of public act 23-204, make such technical, grammatical and punctuation changes as are necessary to carry out the purposes of this act, including, but not limited to, correcting inaccurate internal references."
+      }
+    }
+  ]
+}

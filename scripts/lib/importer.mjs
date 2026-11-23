@@ -45,6 +45,18 @@ function normalizeAnnotations(value) {
     .filter((annotation) => annotation.text);
 }
 
+const listedStatuses = new Set(["obsolete", "repealed", "reserved", "transferred"]);
+
+function mixedStatuses(section, chapterNumber) {
+  const statuses = [...new Set(stringArray(section.content?.statuses).map((value) => value.toLowerCase()))];
+  for (const value of statuses) {
+    if (!listedStatuses.has(value)) {
+      throw new Error(`Chapter ${chapterNumber}, ${section.label}: unsupported status ${JSON.stringify(value)} in statuses`);
+    }
+  }
+  return statuses;
+}
+
 function normalizeSection(section, chapterNumber) {
   const citation = cleanString(section.section_key) || null;
   const grouped = section.grouped === true;
@@ -57,6 +69,8 @@ function normalizeSection(section, chapterNumber) {
   if (!allowedStatuses.has(status)) {
     throw new Error(`Chapter ${chapterNumber}, ${section.label}: unsupported status ${JSON.stringify(status)}`);
   }
+  // A "mixed" entry, such as one "transferred or repealed", keeps the statuses it lists.
+  const statuses = status === "mixed" ? mixedStatuses(section, chapterNumber) : [];
 
   const body = stringArray(section.content?.body_paragraphs);
   const normalized = {
@@ -67,6 +81,7 @@ function normalizeSection(section, chapterNumber) {
     heading: cleanString(section.label) || citation || "Untitled provision",
     sourceUrl: cleanString(section.url),
     status,
+    ...(statuses.length ? { statuses } : {}),
     content: {
       body,
       sourceNotes: stringArray(section.content?.source),
@@ -112,6 +127,7 @@ export function searchDocument(section, chapter) {
     heading: section.heading,
     chapter: { id: chapter.id, number: chapter.number, name: chapter.name },
     status: section.status,
+    ...(section.statuses?.length ? { statuses: section.statuses } : {}),
     text: section.content.plainText,
     href: `?chapter=${encodeURIComponent(chapter.number)}&section=${encodeURIComponent(section.id)}`
   };

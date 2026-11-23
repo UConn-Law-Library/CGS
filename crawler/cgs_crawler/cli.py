@@ -15,8 +15,9 @@ def parser() -> argparse.ArgumentParser:
     value = argparse.ArgumentParser(description="Acquire and parse Connecticut General Statutes into the legacy adapter format.")
     value.add_argument("--output", type=Path, default=Path(".crawl/legacy"))
     value.add_argument("--snapshots", type=Path, default=Path(".crawl/snapshots"))
-    value.add_argument("--edition", choices=("current", "supplement"), default="current")
+    value.add_argument("--edition", choices=("current", "supplement", "revision"), default="current")
     value.add_argument("--supplement-year", type=int)
+    value.add_argument("--revision-year", type=int, help="year of a full revision under /<year>/pub/ (with --edition revision)")
     value.add_argument("--titles", default="", help="Comma-separated normalized or unpadded title keys")
     value.add_argument("--offline", action="store_true", help="Replay only from the snapshot store; make no network requests")
     value.add_argument("--generated-at", help="ISO-8601 timestamp used in generated indexes")
@@ -34,6 +35,8 @@ def main() -> None:
     args = parser().parse_args()
     if args.edition == "supplement" and not args.supplement_year:
         raise SystemExit("--supplement-year is required for the supplement edition")
+    if args.edition == "revision" and not args.revision_year:
+        raise SystemExit("--revision-year is required for the revision edition")
     titles = frozenset(normalize_title_key(value) for value in args.titles.split(",") if value.strip())
     if not args.no_ssl_verify:
         try:
@@ -46,6 +49,7 @@ def main() -> None:
         snapshot_dir=args.snapshots,
         edition=args.edition,
         supplement_year=args.supplement_year,
+        revision_year=args.revision_year,
         only_titles=titles,
         offline=args.offline,
         generated_at=args.generated_at,

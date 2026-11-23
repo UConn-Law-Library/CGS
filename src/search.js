@@ -1,5 +1,7 @@
 import { checkDataResponse, dataUrl } from "./data-loader.js";
 import { mergeSupplementSearchShard } from "./supplements.js";
+import { sectionStatuses, statusFilterMatches } from "./reader.js";
+import { compareStatuteNumbers } from "./routes.js";
 
 export function normalizeText(value) {
   return String(value ?? "")
@@ -74,7 +76,7 @@ function lexQuery(query) {
       }
       if (!closed) throw new SyntaxError("Boolean search has an unclosed quoted phrase.");
       const normalized = normalizeText(value);
-      if (!normalized) throw new SyntaxError("Boolean search phrases cannot be empty.");
+      if (!tokenize(normalized).length) throw new SyntaxError("Boolean search phrases cannot be empty.");
       tokens.push({ type: "TERM", value: normalized, phrase: true, prefix: false });
       continue;
     }
@@ -94,7 +96,8 @@ function lexQuery(query) {
       }
       const prefix = raw.endsWith("*");
       const normalized = normalizeText(prefix ? raw.slice(0, -1) : raw);
-      if (normalized) tokens.push({ type: "TERM", value: normalized, phrase: false, prefix });
+      // A lone dash ("landlord - tenant") holds no word to find, so it is not a term.
+      if (tokenize(normalized).length) tokens.push({ type: "TERM", value: normalized, phrase: false, prefix });
     }
   }
   const expanded = [];
@@ -266,16 +269,27 @@ function termPositions(entry, term) {
   return positions;
 }
 
+// Phrases match whole words in order, like single terms: "1-21" does not find 1-210, and
+// "state act" does not find "estate action".
 function entryMatchesTerm(entry, term) {
   if (!entry.text) return false;
-  if (term.phrase) return entry.text.includes(term.value);
   return termPositions(entry, term).length > 0;
 }
 
+// Distance runs from the end of one match to the start of the other, so a phrase is measured
+// from its last word, and adjacent words are 1 apart. Overlapping matches are the same words,
+// so "warrant NEAR/1 warrant" needs two occurrences.
 function entryMatchesNear(entry, node) {
+  const leftWidth = termTokens(node.left).length;
+  const rightWidth = termTokens(node.right).length;
   const left = termPositions(entry, node.left);
   const right = termPositions(entry, node.right);
-  return left.some((leftIndex) => right.some((rightIndex) => Math.abs(leftIndex - rightIndex) <= node.distance));
+  return left.some((leftStart) => right.some((rightStart) => {
+    const gap = rightStart >= leftStart
+      ? rightStart - (leftStart + leftWidth - 1)
+      : leftStart - (rightStart + rightWidth - 1);
+    return gap >= 1 && gap <= node.distance;
+  }));
 }
 
 function matchesExpression(node, fields, fieldNames) {
@@ -303,14 +317,14 @@ function scoreCompiledDocument(document, compiled) {
     if (fieldNames.includes("history") && entryMatchesTerm(fields.entries.history, term)) score += term.phrase ? 16 : 9;
     if (fieldNames.includes("annotations") && entryMatchesTerm(fields.entries.annotations, term)) score += term.phrase ? 14 : 8;
   }
-  if (document.status !== "active") score -= 0.25;
+  if (document.status !== "active" || sectionStatuses(document).length) score -= 0.25;
   const matchedFields = fieldNames.filter((name) => compiled.positives.some((term) => entryMatchesTerm(fields.entries[name], term)));
   return { score, matchedFields };
 }
 
 function documentMatchesFilters(document, options) {
   if (options.chapter && ![document.chapter?.id, document.chapter?.number].some((value) => String(value ?? "") === options.chapter)) return false;
-  if (options.status && document.status !== options.status) return false;
+  if (!statusFilterMatches(document, options.status)) return false;
   if (options.supplement === "updated" && !document.supplement) return false;
   if (options.supplement === "base" && document.supplement) return false;
   return true;
@@ -322,13 +336,12 @@ export function scoreDocument(document, query, options = {}) {
 }
 
 function citationOrder(left, right) {
-  return String(left.document.citation ?? left.document.citations?.[0] ?? "").localeCompare(
-      String(right.document.citation ?? right.document.citations?.[0] ?? ""),
-      "en",
-      { numeric: true }
+  return compareStatuteNumbers(
+      left.document.citation ?? left.document.citations?.[0],
+      right.document.citation ?? right.document.citations?.[0]
     )
-    || String(left.document.title?.number ?? "").localeCompare(String(right.document.title?.number ?? ""), "en", { numeric: true })
-    || String(left.document.chapter?.number ?? "").localeCompare(String(right.document.chapter?.number ?? ""), "en", { numeric: true })
+    || compareStatuteNumbers(left.document.title?.number, right.document.title?.number)
+    || compareStatuteNumbers(left.document.chapter?.number, right.document.chapter?.number)
     || String(left.document.id).localeCompare(String(right.document.id));
 }
 

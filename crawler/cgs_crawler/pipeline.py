@@ -61,6 +61,8 @@ def _revision_year(titles_html: str, config: CrawlConfig) -> int:
         raise RuntimeError(f"{config.titles_url} does not state the revision year (\"Revised to January 1, YYYY\")")
     if config.edition == "supplement" and year != config.supplement_year:
         raise RuntimeError(f"{config.titles_url} is revised to January 1, {year}, not {config.supplement_year}")
+    if config.edition == "revision" and year != config.revision_year:
+        raise RuntimeError(f"{config.titles_url} is revised to January 1, {year}, not {config.revision_year}")
     return year
 
 
@@ -113,7 +115,7 @@ def _validate(index: Dict[str, object], stage: Path, config: CrawlConfig) -> Dic
     if empty:
         listed = ", ".join(empty[:20]) + (f", and {len(empty) - 20} more" if len(empty) > 20 else "")
         raise RuntimeError(f"Crawl produced {len(empty)} in-force provision(s) with no text: {listed}")
-    if config.edition == "current" and not requested:
+    if config.edition in ("current", "revision") and not requested:
         if not 60 <= len(entries) <= 110:
             raise RuntimeError(f"Implausible full-crawl title count: {len(entries)}")
         if not 900 <= chapter_count <= 1400:

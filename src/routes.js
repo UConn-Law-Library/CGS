@@ -17,6 +17,30 @@ export function comparableNumber(value) {
     .replace(/^0+(?=\d)/, "");
 }
 
+const statuteSegment = /^(\d+)([a-z]*)(.*)$/;
+const fallbackCollator = new Intl.Collator("en", { numeric: true, sensitivity: "base" });
+
+// Statute, chapter, and title numbers sort segment by segment: the number, then the letter
+// suffix, where a longer suffix comes later (1-1z before 1-1aa, chapter 319z before 319aa).
+// A numeric collator would put 1-1aa before 1-1b.
+export function compareStatuteNumbers(left, right) {
+  const a = String(left ?? "").trim().toLowerCase().split("-");
+  const b = String(right ?? "").trim().toLowerCase().split("-");
+  for (let index = 0; index < Math.min(a.length, b.length); index += 1) {
+    if (a[index] === b[index]) continue;
+    const x = a[index].match(statuteSegment);
+    const y = b[index].match(statuteSegment);
+    const order = x && y
+      ? (Number(x[1]) - Number(y[1]))
+        || (x[2].length - y[2].length)
+        || (x[2] < y[2] ? -1 : x[2] > y[2] ? 1 : 0)
+        || fallbackCollator.compare(x[3], y[3])
+      : fallbackCollator.compare(a[index], b[index]);
+    if (order) return order;
+  }
+  return a.length - b.length;
+}
+
 export function chapterDisplayLabel(chapter) {
   const number = String(chapter?.number ?? chapter ?? "");
   const article = number.match(/^art[-_](.+)$/i);
@@ -32,9 +56,12 @@ export function chapterDisplayLabel(chapter) {
   return `Chapter ${number.replace(/^0+(?=\d)/, "")}`;
 }
 
-export function routeHref({ title, chapter, section, subsection } = {}) {
-  if (!title) return "#/";
-  let route = `#/t/${encodeSegment(title)}`;
+// Statute routes. With an edition, the same path opens that archived edition instead of the
+// current statutes: #/editions/2025/t/1/c/001/s/1-1.
+export function routeHref({ title, chapter, section, subsection, edition = null } = {}) {
+  const prefix = edition ? `#/editions/${encodeSegment(edition)}` : "#";
+  if (!title) return edition ? prefix : "#/";
+  let route = `${prefix}/t/${encodeSegment(title)}`;
   if (!chapter) return route;
   route += `/c/${encodeSegment(chapter)}`;
   if (!section) return route;
@@ -43,8 +70,17 @@ export function routeHref({ title, chapter, section, subsection } = {}) {
   return route;
 }
 
-export function titlesRouteHref() {
-  return "#/titles";
+export function titlesRouteHref(edition = null) {
+  return edition ? `#/editions/${encodeSegment(edition)}` : "#/titles";
+}
+
+export function editionsRouteHref() {
+  return "#/editions";
+}
+
+export function archivedSourceRouteHref(kind, id, letter = null) {
+  const route = kind === "infractions" ? "infractions" : "index";
+  return `#/editions/${route}/${encodeSegment(id)}${letter ? `/${encodeSegment(letter)}` : ""}`;
 }
 
 export function aboutRouteHref(section = null) {
@@ -210,6 +246,25 @@ export function parseRoute({ hash = "", search = "" } = {}) {
     return { kind: "not-found" };
   }
 
+  if (parts[0] === "editions") {
+    if (parts.length === 1) return { kind: "editions" };
+    // Archived subject index and infractions schedule editions: #/editions/index/<id>[/<letter>]
+    // and #/editions/infractions/<id>.
+    if (parts[1] === "infractions" && parts.length === 3 && parts[2]) return { kind: "archived-infractions", sourceEdition: parts[2] };
+    if (parts[1] === "index" && parts[2] && parts.length <= 4) {
+      if (parts[3] && !/^[a-z0-9]$/i.test(parts[3])) return { kind: "not-found" };
+      return { kind: "archived-index", sourceEdition: parts[2], letter: parts[3]?.toLowerCase() ?? null };
+    }
+    if (!/^\d{4}$/.test(parts[1])) return { kind: "not-found" };
+    if (parts.length === 2) return { kind: "titles", edition: parts[1] };
+    const route = statuteRoute(parts.slice(2));
+    return route.kind === "not-found" ? route : { ...route, edition: parts[1] };
+  }
+
+  return statuteRoute(parts);
+}
+
+function statuteRoute(parts) {
   if (parts[0] !== "t" || !parts[1]) return { kind: "not-found" };
   if (parts.length === 2) return { kind: "title", title: parts[1] };
   if (parts[2] !== "c" || !parts[3]) return { kind: "not-found" };

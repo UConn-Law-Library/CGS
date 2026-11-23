@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-377",
+  "number": "377",
+  "name": "Midwifery",
+  "title": {
+    "id": "title-20",
+    "number": "20",
+    "name": "Professional and Occupational Licensing, Certification, Title Protection and Registration. Examining Boards"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_377.htm",
+  "sections": [
+    {
+      "id": "section-20-86b",
+      "kind": "section",
+      "citation": "20-86b",
+      "citations": [
+        "20-86b"
+      ],
+      "heading": "Sec. 20-86b. Scope of practice.",
+      "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_377.htm#sec_20-86b",
+      "status": "active",
+      "content": {
+        "body": [
+          "Nurse-midwives shall practice within a health care system or birth center and have clinical relationships with obstetrician-gynecologists that provide for consultation, collaborative management or referral, as indicated by the health status of the patient. Nurse-midwifery care shall be consistent with the standards of care established by the Accreditation Commission for Midwifery Education. Each nurse-midwife shall provide each patient with information regarding, or referral to, other providers and services upon request of the patient or when the care required by the patient is not within the midwife's scope of practice. Each nurse-midwife shall sign the birth certificate of each infant delivered by the nurse-midwife. If an infant is born alive and then dies within the twenty-four-hour period after birth, the nurse-midwife may make the actual determination and pronouncement of death provided: (1) The death is an anticipated death; (2) the nurse-midwife attests to such pronouncement on the certificate of death; and (3) the nurse-midwife or a physician licensed pursuant to chapter 370 certifies the certificate of death not later than twenty-four hours after such pronouncement. In a case of fetal death, as described in section 7-60, the nurse-midwife who delivered the fetus may make the actual determination of fetal death and certify the date of delivery and that the fetus was born dead."
+        ],
+        "sourceNotes": [
+          "(P.A. 83-441, S. 2, 10; P.A. 89-389, S. 8, 22; P.A. 93-381, S. 9, 39; P.A. 95-257, S. 12, 21, 58; P.A. 04-221, S. 28; P.A. 05-272, S. 19; P.A. 06-195, S. 37; P.A. 07-79, S. 4; P.A. 16-66, S. 16; P.A. 23-147, S. 4.)"
+        ],
+        "history": [
+          "History: P.A. 89-389 added the description of the protocols and required that they be filed with the department of health services; P.A. 93-381 replaced department of health services with department of public health and addiction services, effective July 1, 1993; P.A. 95-257 replaced Commissioner and Department of Public Health and Addiction Services with Commissioner and Department of Public Health, effective July 1, 1995; P.A. 04-221 authorized nurse-midwife to make determination and pronouncement of death under certain conditions; P.A. 05-272 made a technical change and required protocols to be in writing and provided to Department of Public Health upon request, rather than filed with department, effective July 13, 2005; P.A. 06-195 revised scope of practice by eliminating requirement that clinical practice relationship between nurse-midwives and obstetrician-gynecologists be based on mutually agreed upon medical guidelines and protocols and requiring nurse-midwives to practice standards of care established by American College of Nurse-Midwives and provide information and referrals to other providers and services upon patient request or when patient care needs exceed midwives' scope of practice; P.A. 07-79 clarified when a nurse-midwife may make actual determination of death in cases when an infant is born alive and dies within 24 hours after birth and authorized a nurse-midwife who delivered the fetus to make the actual determination of fetal death and certify date of delivery and that the fetus was born dead; P.A. 16-66 replaced “American College of Nurse-Midwives” with “Accreditation Commission for Midwifery Education”; P.A. 23-147 added “or birth center”, effective January 1, 2024."
+        ],
+        "annotations": [],
+        "plainText": "Nurse-midwives shall practice within a health care system or birth center and have clinical relationships with obstetrician-gynecologists that provide for consultation, collaborative management or referral, as indicated by the health status of the patient. Nurse-midwifery care shall be consistent with the standards of care established by the Accreditation Commission for Midwifery Education. Each nurse-midwife shall provide each patient with information regarding, or referral to, other providers and services upon request of the patient or when the care required by the patient is not within the midwife's scope of practice. Each nurse-midwife shall sign the birth certificate of each infant delivered by the nurse-midwife. If an infant is born alive and then dies within the twenty-four-hour period after birth, the nurse-midwife may make the actual determination and pronouncement of death provided: (1) The death is an anticipated death; (2) the nurse-midwife attests to such pronouncement on the certificate of death; and (3) the nurse-midwife or a physician licensed pursuant to chapter 370 certifies the certificate of death not later than twenty-four hours after such pronouncement. In a case of fetal death, as described in section 7-60, the nurse-midwife who delivered the fetus may make the actual determination of fetal death and certify the date of delivery and that the fetus was born dead."
+      }
+    }
+  ]
+}

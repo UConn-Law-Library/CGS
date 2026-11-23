@@ -88,15 +88,21 @@ def rebase_infraction(entry, locations):
     A citation printed without its parentheses reads too greedily: "14-296aab1A"
     is 14-296aa(b)(1)(A), but its printed base "14-296aab" is no section. When
     the printed base is unknown, the longest shorter base that is a section wins.
+
+    A base the schedule prints whole, followed by "(" or nothing, is never moved: "14-296aa(b"
+    names 14-296aa even when the corpus lacks that section, and must stay unresolved rather
+    than land on 14-296a.
     """
     section = entry["sectionCitation"]
     if section in locations or section.startswith("pa"):
+        return
+    printed = str(entry.get("printedCitation") or "")
+    if printed.lower().startswith(section) and printed[len(section):len(section) + 1] in ("", "("):
         return
     base = section
     while base and base[-1].isalpha():
         base = base[:-1]
         if base in locations:
-            printed = entry["printedCitation"]
             entry["sectionCitation"] = base
             entry["citation"] = clean_citation(f"{base}({printed[len(base):]}", base)
             return

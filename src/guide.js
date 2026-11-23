@@ -16,6 +16,10 @@ import {
 } from "./publications.js";
 
 const short = (year) => String(year).slice(-2);
+
+// The editions the guide calls published: the reviewed list in data/editions/published.json
+// when the caller passes it, otherwise the list shipped with the app. Set by renderGuide.
+let editions = PUBLISHED_EDITIONS;
 const external = (href, label) => `<a href="${escapeHtml(href)}" target="_blank" rel="noopener">${label}<span class="visually-hidden"> (opens in a new tab)</span> <span aria-hidden="true">↗</span></a>`;
 
 export const GUIDE_PARTS = Object.freeze([
@@ -271,8 +275,8 @@ function yearDetail(publication, coverage) {
 }
 
 function renderCycle({ interactive, coverage }) {
-  const years = publicationCycle();
-  const selectedYear = Math.max(...PUBLISHED_EDITIONS.map((edition) => edition.year));
+  const years = publicationCycle(editions);
+  const selectedYear = Math.max(...editions.map((edition) => edition.year));
   const items = years.map((publication) => {
     const revision = publication.type === "revision";
     const status = publication.status === "anticipated" ? "Anticipated" : publication.status === "published" ? "Published" : "";
@@ -504,7 +508,7 @@ const RESEARCH_STEPS = Object.freeze([
     title: (e) => `Check whether the ${e.supplementYear} Supplement updates it`,
     body: (e) => `<p>The Supplement contains the updated versions of sections amended, added, or repealed during the ${e.revisionYear} sessions.</p>`,
     question: (e) => `Does the ${e.supplementYear} Supplement include the section?`,
-    yes: (e) => `Use the Supplement’s text. In this app the section is labeled “${e.supplementYear} Supp.”, and the earlier text is under “Compare with ${e.revisionYear} text.” Continue to step 3.`,
+    yes: (e) => `Use the Supplement’s text. In this app the section is labeled “${e.supplementYear} Supp.”, and the earlier text is under the “${e.revisionYear} text” button. Continue to step 3.`,
     no: (e) => `The ${e.revisionYear} sessions generally did not change it, so the ${e.revisionYear} text carries forward. Continue to step 3: later legislation can still change it.`
   },
   {
@@ -562,8 +566,8 @@ function renderResearch({ interactive, example, appBase }) {
 }
 
 function renderOfficial({ example }) {
-  const revision = publicationForYear(example.revisionYear);
-  const supplement = publicationForYear(example.supplementYear);
+  const revision = publicationForYear(example.revisionYear, editions);
+  const supplement = publicationForYear(example.supplementYear, editions);
   const groups = [
     {
       title: "The statutes",
@@ -607,8 +611,9 @@ function renderOfficial({ example }) {
     </section>`).join("")}</div>`);
 }
 
-export function renderGuide({ coverage = null, interactive = true, appBase = "" } = {}) {
-  const example = exampleCycle();
+export function renderGuide({ coverage = null, interactive = true, appBase = "", publishedEditions = null } = {}) {
+  editions = publishedEditions?.length ? publishedEditions : PUBLISHED_EDITIONS;
+  const example = exampleCycle(editions);
   // The app's hash router owns fragment links, so its contents open guide routes; the static
   // copy has no router and uses ordinary in-page anchors.
   const contents = GUIDE_PARTS.map((part) => interactive

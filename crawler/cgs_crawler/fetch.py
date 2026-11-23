@@ -24,6 +24,10 @@ META_CHARSET_RE = re.compile(rb"<meta[^>]+charset\s*=\s*[\"']?([\w.:-]+)", re.IG
 class PermanentFetchError(RuntimeError):
     """The server answered, and retrying will not change the answer."""
 
+    def __init__(self, message: str, status: Optional[int] = None):
+        super().__init__(message)
+        self.status = status
+
 
 def _known_codec(name: Optional[str]) -> Optional[str]:
     if not name:
@@ -133,7 +137,7 @@ class Fetcher:
                 status = getattr(response, "status_code", 200)
                 if status >= 400:
                     if status not in RETRYABLE_STATUSES:
-                        raise PermanentFetchError(f"Failed to fetch {url}: HTTP {status}")
+                        raise PermanentFetchError(f"Failed to fetch {url}: HTTP {status}", status)
                     retry_after = _retry_after(response)
                 response.raise_for_status()
                 return read(response)

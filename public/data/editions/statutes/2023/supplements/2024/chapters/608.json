@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-608",
+  "number": "608",
+  "name": "Miscellaneous Provisions",
+  "title": {
+    "id": "title-33",
+    "number": "33",
+    "name": "Corporations"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_608.htm",
+  "sections": [
+    {
+      "id": "section-33-2001",
+      "kind": "section",
+      "citation": "33-2001",
+      "citations": [
+        "33-2001"
+      ],
+      "heading": "Sec. 33-2001. Commission on Connecticut's Leadership in Corporation and Business Law.",
+      "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_608.htm#sec_33-2001",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 33-2001 is repealed, effective July 1, 2023."
+        ],
+        "sourceNotes": [
+          "(P.A. 14-89, S. 50; P.A. 23-204, S. 444.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 33-2001 is repealed, effective July 1, 2023."
+      }
+    }
+  ]
+}

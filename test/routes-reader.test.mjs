@@ -19,6 +19,8 @@ import {
   extractLegalReferences,
   leadingSubsection,
   navigationSectionDescription,
+  sectionStatuses,
+  shortSectionDescription,
   navigationSectionLabel,
   navigationSections,
   renderLinkedText,
@@ -147,18 +149,59 @@ test("filters repealed sections from navigation while preserving a selected dire
   const active = { id: "active", status: "active" };
   const repealed = { id: "repealed", status: "repealed" };
   assert.deepEqual(navigationSections([active, repealed]), [active, repealed]);
-  assert.deepEqual(navigationSections([active, repealed], { hideRepealed: true }), [active]);
-  assert.deepEqual(navigationSections([active, repealed], { hideRepealed: true, selected: repealed }), [active, repealed]);
+  assert.deepEqual(navigationSections([active, repealed], { hiddenStatuses: ["repealed"] }), [active]);
+  assert.deepEqual(navigationSections([active, repealed], { hiddenStatuses: ["repealed"], selected: repealed }), [active, repealed]);
+  assert.deepEqual(navigationSections([active, repealed], { hiddenStatuses: ["transferred"] }), [active, repealed]);
+  const both = { status: "active", content: { body: ["Sections 46-1 to 46-8 , inclusive, have been transferred or repealed."] } };
+  assert.deepEqual(navigationSections([both], { hiddenStatuses: ["repealed"] }), [both]);
+  assert.deepEqual(navigationSections([both], { hiddenStatuses: ["repealed", "transferred"] }), []);
 });
 
 test("uses complete citations and clean descriptions in chapter navigation", () => {
   assert.equal(navigationSectionLabel({ citation: "36-53", citations: ["36-53"] }), "§ 36-53");
   assert.equal(navigationSectionLabel({ citation: null, citations: ["36-53", "36-54", "36-93"] }), "§§ 36-53–93");
+  assert.equal(navigationSectionLabel({ citations: ["1-42", "1-43", "1-54"] }, { compact: false }), "Secs. 1-42 to 1-54");
   assert.equal(
     navigationSectionDescription({ heading: "Sec. 9-135b. Preparation and printing of absentee ballots." }),
     "Preparation and printing of absentee ballots."
   );
   assert.equal(navigationSectionDescription({ heading: "Sec. 9-136." }), "");
+});
+
+test("statuses come from the record, or from a group's disposition note", () => {
+  assert.deepEqual(sectionStatuses({ status: "obsolete" }), ["obsolete"]);
+  assert.deepEqual(sectionStatuses({ status: "reserved" }), ["reserved"]);
+  assert.deepEqual(sectionStatuses({ status: "active", content: { body: ["(a) Any person may apply."] } }), []);
+  assert.deepEqual(sectionStatuses({ status: "active", content: { body: ["Sections 46-1 to 46-8 , inclusive, have been transferred or repealed."] } }), ["transferred", "repealed"]);
+  assert.deepEqual(sectionStatuses({ status: "active", content: { body: ["Section 46-31a has been transferred."] } }), ["transferred"]);
+  assert.deepEqual(sectionStatuses({ status: "active", content: { body: ["S ections 17-460 to 17-475 , inclusive, have been transferred."] } }), ["transferred"]);
+  assert.deepEqual(sectionStatuses({ status: "active", content: { body: ["(a) A lease that has been recorded as provided in section 47-19 is valid."] } }), []);
+  assert.deepEqual(sectionStatuses({ status: "active", content: { body: ["Sections 17-1 to 17-21d , inclusive, have been transferred, repealed or deemed obsolete."] } }), ["transferred", "repealed", "obsolete"]);
+  assert.deepEqual(sectionStatuses({ status: "active", content: { body: ["Sections 4-5 to 4-9 apply to any agency whose authority has been transferred to another agency."] } }), []);
+});
+
+test("a mixed entry shows the same tags as the note it was recorded from", () => {
+  const note = "Sections 46-1 to 46-8 , inclusive, have been transferred or repealed.";
+  const beforeRefresh = { status: "active", content: { body: [note] } };
+  // The crawler lists statuses in its own pattern order; tags keep one order either way.
+  const afterRefresh = { status: "mixed", statuses: ["repealed", "transferred"], content: { body: [note] } };
+  assert.deepEqual(sectionStatuses(afterRefresh), ["transferred", "repealed"]);
+  assert.deepEqual(sectionStatuses(afterRefresh), sectionStatuses(beforeRefresh));
+  // A mixed entry without a list falls back to its note, and search documents read `text`.
+  assert.deepEqual(sectionStatuses({ status: "mixed", content: { body: [note] } }), ["transferred", "repealed"]);
+  assert.deepEqual(sectionStatuses({ status: "active", text: `${note}\n\nNote: These sections were formerly published as chapter 808.` }), ["transferred", "repealed"]);
+  for (const section of [beforeRefresh, afterRefresh]) {
+    assert.equal(navigationSections([section], { hiddenStatuses: ["repealed"] }).length, 1);
+    assert.equal(navigationSections([section], { hiddenStatuses: ["repealed", "transferred"] }).length, 0);
+  }
+});
+
+test("short descriptions skip a leading former-number note", () => {
+  assert.equal(shortSectionDescription("(Formerly Sec. 1-66). Prohibited activities. Exception re employment of immediate family at constituent unit."), "Prohibited activities.");
+  assert.equal(shortSectionDescription("(Formerly Secs. 32-7a to 32-7d). Regional councils of elected officials. Duties of council."), "Regional councils of elected officials.");
+  assert.equal(shortSectionDescription("Preparation and printing of absentee ballots. Contents."), "Preparation and printing of absentee ballots.");
+  assert.equal(shortSectionDescription("(Note: This section is effective July 1, 2026.) Off-street parking regulations. Assessments."), "(Note: This section is effective July 1, 2026.) Off-street parking regulations.");
+  assert.equal(shortSectionDescription("(Formerly Sec. 1-66)."), "(Formerly Sec. 1-66).");
 });
 
 test("recognizes subsection markers and safely renders linked legal references", () => {

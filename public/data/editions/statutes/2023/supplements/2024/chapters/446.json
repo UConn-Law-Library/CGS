@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-446",
+  "number": "446",
+  "name": "Nuclear Energy",
+  "title": {
+    "id": "title-22a",
+    "number": "22a",
+    "name": "Environmental Protection"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_446.htm",
+  "sections": [
+    {
+      "id": "section-22a-136",
+      "kind": "section",
+      "citation": "22a-136",
+      "citations": [
+        "22a-136"
+      ],
+      "heading": "Sec. 22a-136. Moratorium on construction of nuclear power facilities.",
+      "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_446.htm#sec_22a-136",
+      "status": "active",
+      "content": {
+        "body": [
+          "No construction shall commence on a fifth nuclear power facility until the Commissioner of Energy and Environmental Protection finds that the United States Government, through its authorized agency, has identified and approved a demonstrable technology or means for the disposal of high level nuclear waste. The provisions of this section shall not apply to construction at any nuclear power generating facility operating in the state as of October 1, 2022. As used in this section, “high level nuclear waste” means those aqueous wastes resulting from the operation of the first cycle of the solvent extraction system or equivalent and the concentrated wastes of the subsequent extraction cycles or equivalent in a facility for reprocessing irradiated reactor fuel and shall include spent fuel assemblies prior to fuel reprocessing."
+        ],
+        "sourceNotes": [
+          "(P.A. 79-487; P.A. 11-80, S. 1; P.A. 22-76, S. 1; P.A. 23-102, S. 34.)"
+        ],
+        "history": [
+          "History: Pursuant to P.A. 11-80, “Commissioner of Environmental Protection” was changed editorially by the Revisors to “Commissioner of Energy and Environmental Protection”, effective July 1, 2011; P.A. 22-76 added provision re existing nuclear power generating facilities in the state; P.A. 23-102 added “construction at”."
+        ],
+        "annotations": [],
+        "plainText": "No construction shall commence on a fifth nuclear power facility until the Commissioner of Energy and Environmental Protection finds that the United States Government, through its authorized agency, has identified and approved a demonstrable technology or means for the disposal of high level nuclear waste. The provisions of this section shall not apply to construction at any nuclear power generating facility operating in the state as of October 1, 2022. As used in this section, “high level nuclear waste” means those aqueous wastes resulting from the operation of the first cycle of the solvent extraction system or equivalent and the concentrated wastes of the subsequent extraction cycles or equivalent in a facility for reprocessing irradiated reactor fuel and shall include spent fuel assemblies prior to fuel reprocessing."
+      }
+    }
+  ]
+}

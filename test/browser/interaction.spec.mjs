@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/test";
-import { isMobileProject, openApp } from "./helpers.mjs";
+import { isMobileProject, openApp, openNavigationSettings } from "./helpers.mjs";
 
 async function textContrastRatios(locator, childSelector = null) {
   return locator.evaluate((element, selector) => {
@@ -153,9 +153,18 @@ test("Home exposes the core application destinations", async ({ page }) => {
   expect(overflow).toBeLessThanOrEqual(1);
 });
 
-test("Settings closes and restores focus to its trigger", async ({ page }) => {
+test("Settings opens from the header and restores focus to its trigger", async ({ page }, testInfo) => {
   await openApp(page);
-  const trigger = page.getByRole("button", { name: "Settings" });
+  const header = page.locator(".site-header");
+  const trigger = header.getByRole("button", { name: "Settings", exact: true });
+  if (isMobileProject(testInfo)) {
+    const back = await header.getByRole("button", { name: "Go back" }).boundingBox();
+    const settings = await trigger.boundingBox();
+    expect(settings.y).toBe(back.y);
+    expect(settings.width).toBe(back.width);
+    expect(settings.x + settings.width).toBeCloseTo((await header.boundingBox()).width - back.x, 0);
+    await expect(header.getByRole("navigation", { name: "Main sections" }).getByRole("link")).toHaveCount(5);
+  }
   await trigger.click();
   await page.getByRole("button", { name: "Close settings" }).click();
   await expect(page.getByRole("dialog", { name: "Settings" })).toBeHidden();
@@ -164,7 +173,7 @@ test("Settings closes and restores focus to its trigger", async ({ page }) => {
 
 test("Text size slider follows Font and persists its value", async ({ page }) => {
   await openApp(page);
-  await page.getByRole("button", { name: "Settings" }).click();
+  await page.getByRole("button", { name: "Settings", exact: true }).click();
   const font = page.getByLabel("Font", { exact: true });
   const slider = page.getByLabel("Text size");
   expect(await font.evaluate((element) => Boolean(element.closest(".setting-group").nextElementSibling.querySelector("[data-text-size]")))).toBe(true);
@@ -172,42 +181,102 @@ test("Text size slider follows Font and persists its value", async ({ page }) =>
   await expect(page.locator("[data-text-size-value]")).toHaveText("120%");
   await expect.poll(() => page.evaluate(() => getComputedStyle(document.documentElement).fontSize)).toBe("19.2px");
   await page.reload();
-  await page.getByRole("button", { name: "Settings" }).click();
+  await page.getByRole("button", { name: "Settings", exact: true }).click();
   await expect(page.getByLabel("Text size")).toHaveValue("1.2");
   await expect(page.locator("[data-text-size-value]")).toHaveText("120%");
 });
 
-test("Hide repealed sections keeps Settings open and focused after the chapter redraws", async ({ page }) => {
+test("hiding repealed sections keeps the same panel open and focused after the chapter redraws", async ({ page }) => {
   await openApp(page, "#/t/03/c/033/s/3-99h");
-  const settingsButton = page.getByRole("button", { name: "Settings", exact: true });
-  await settingsButton.click();
-  const checkbox = page.locator("input[data-hide-repealed]");
-  await checkbox.check();
-  await expect(page.getByRole("dialog", { name: "Settings" })).toBeVisible();
-  await expect(settingsButton).toHaveAttribute("aria-expanded", "true");
-  await expect(checkbox).toBeChecked();
-  await expect(checkbox).toBeFocused();
-  await checkbox.uncheck();
-  await expect(page.getByRole("dialog", { name: "Settings" })).toBeVisible();
-  await expect(checkbox).not.toBeChecked();
+  const { trigger, panel } = await openNavigationSettings(page);
+  const toggle = panel.getByRole("switch", { name: "Repealed" });
+  const originalPanel = await panel.elementHandle();
+  const originalReader = await page.locator("main").elementHandle();
+  await toggle.check();
+  await expect.poll(() => originalReader.evaluate((reader) => reader.isConnected)).toBe(false);
+  expect(await originalPanel.evaluate((element) => element.isConnected)).toBe(true);
+  await expect(panel).toBeVisible();
+  await expect(trigger).toHaveAttribute("aria-expanded", "true");
+  await expect(toggle).toBeChecked();
+  await expect(toggle).toBeFocused();
+  await toggle.press("Space");
+  await expect(panel).toBeVisible();
+  await expect(toggle).not.toBeChecked();
 });
 
-test("Compact lists changes chapter navigation density", async ({ page }, testInfo) => {
+test("Compact lists hides section headings visually and keeps them searchable", async ({ page }, testInfo) => {
   await openApp(page, "#/t/02/c/017");
-  const row = page.locator(isMobileProject(testInfo) ? ".mobile-section-browser .context-list a" : ".context-column .context-list a").first();
-  const compactHeight = (await row.boundingBox()).height;
-  await page.getByRole("button", { name: "Settings" }).click();
-  await page.locator("input[data-compact-lists]").uncheck();
-  const comfortableHeight = (await row.boundingBox()).height;
-  expect(comfortableHeight).toBeGreaterThan(compactHeight + 5);
-  await page.locator("input[data-compact-lists]").check();
-  expect((await row.boundingBox()).height).toBe(compactHeight);
+  const row = page.locator(isMobileProject(testInfo) ? ".mobile-section-browser .section-navigation-link" : ".sections-column .section-navigation-link").first();
+  const description = row.locator(".section-navigation-description");
+  await expect(description).toHaveCSS("position", "static");
+  const heading = await description.textContent();
+  const { panel } = await openNavigationSettings(page);
+  const toggle = panel.getByRole("switch", { name: "Compact lists" });
+  await expect(toggle).not.toBeChecked();
+  await toggle.check();
+  await expect(description).toHaveCSS("position", "absolute");
+  await expect(row).toHaveAccessibleName(new RegExp(heading.replace(/[.*+?^$${}()|[\]\\]/g, "\\$&")));
+  await page.keyboard.press("Escape");
+  await page.getByRole("searchbox", { name: isMobileProject(testInfo) ? "Find a section" : "Filter sections" }).fill(heading);
+  await expect(row).toBeVisible();
+  await expect(row.locator("strong")).toBeVisible();
+});
+
+test("navigation settings open from the side panel, and stay in Settings without one", async ({ page }, testInfo) => {
+  const settingsRows = page.locator("[data-settings-panel] .navigation-setting-rows");
+  const settings = page.getByRole("button", { name: "Settings", exact: true });
+  if (isMobileProject(testInfo)) {
+    await openApp(page, "#/t/02/c/017");
+    await expect(page.locator("[data-open-navigation-settings]:visible")).toHaveCount(0);
+    await settings.click();
+    await expect(settingsRows).toBeVisible();
+    return;
+  }
+  await openApp(page, "#/t/02/c/017/s/2-55");
+  const icon = page.getByRole("button", { name: "Navigation settings", exact: true });
+  await expect(icon).toHaveCount(1);
+  const pane = await page.locator(".context-column:visible").first().boundingBox();
+  const iconBox = await icon.boundingBox();
+  expect(iconBox.x + iconBox.width).toBeLessThanOrEqual(pane.x + pane.width);
+  await settings.click();
+  await expect(settingsRows).toBeHidden();
+  await settings.click();
+
+  await icon.click();
+  const panel = page.getByRole("dialog", { name: "Navigation settings" });
+  await expect(panel).toBeVisible();
+  await expect(icon).toHaveAttribute("aria-expanded", "true");
+  const panelBox = await panel.boundingBox();
+  expect(panelBox.width).toBeGreaterThan(pane.width);
+  expect(panelBox.y).toBeGreaterThanOrEqual(iconBox.y + iconBox.height);
+  expect(panelBox.y + panelBox.height).toBeLessThanOrEqual(page.viewportSize().height);
+  await panel.locator("input[data-subtle-notices]").check();
+  await expect(page.locator("html")).toHaveAttribute("data-subtle-notices", "true");
+  await page.keyboard.press("Escape");
+  await expect(panel).toBeHidden();
+  await expect(icon).toBeFocused();
+  await expect(icon).toHaveAttribute("aria-expanded", "false");
+
+  // With the panes collapsed there is no icon, so Settings shows the rows, with the same values.
+  await page.locator("[data-toggle-navigation]").click();
+  await expect(icon).toBeHidden();
+  await settings.click();
+  await expect(settingsRows).toBeVisible();
+  await expect(settingsRows.locator("input[data-subtle-notices]")).toBeChecked();
+  await settings.click();
+  await page.locator("[data-toggle-navigation]").click();
+
+  await page.locator('.app-nav a[href="#/bookmarks"]').click();
+  await expect(page.locator(".bookmarks-page")).toBeVisible();
+  await expect(icon).toHaveCount(0);
+  await settings.click();
+  await expect(settingsRows).toBeVisible();
 });
 
 test("feedback action keeps readable hover contrast in light and dark themes", async ({ page }, testInfo) => {
   test.skip(isMobileProject(testInfo), "Hover is a desktop interaction");
   await openApp(page);
-  await page.getByRole("button", { name: "Settings" }).click();
+  await page.getByRole("button", { name: "Settings", exact: true }).click();
   const feedback = page.locator("[data-open-feedback]");
   for (const theme of ["light", "dark"]) {
     await page.locator(`[data-theme-value="${theme}"]`).click();
@@ -219,7 +288,7 @@ test("feedback action keeps readable hover contrast in light and dark themes", a
 
 test("section action buttons have readable contrast in dark mode", async ({ page }) => {
   await openApp(page, "#/t/03/c/033/s/3-99h");
-  await page.getByRole("button", { name: "Settings" }).click();
+  await page.getByRole("button", { name: "Settings", exact: true }).click();
   await page.locator('[data-theme-value="dark"]').click();
   for (const button of await page.locator(".section-actions button").all()) {
     const ratio = (await textContrastRatios(button))[0];
@@ -232,7 +301,7 @@ test("font and line spacing settings apply across the app and survive reload", a
   const statute = page.locator(".statute-text").first();
   const originalFont = await statute.evaluate((element) => getComputedStyle(element).fontFamily);
   const originalSpacing = await statute.evaluate((element) => getComputedStyle(element).lineHeight);
-  await page.getByRole("button", { name: "Settings" }).click();
+  await page.getByRole("button", { name: "Settings", exact: true }).click();
   await page.getByLabel("Font", { exact: true }).selectOption("atkinson");
   await expect.poll(() => statute.evaluate((element) => getComputedStyle(element).fontFamily)).toContain("Atkinson Hyperlegible");
   await expect.poll(() => page.locator(".brand").evaluate((element) => getComputedStyle(element).fontFamily)).toContain("Atkinson Hyperlegible");
@@ -246,7 +315,7 @@ test("font and line spacing settings apply across the app and survive reload", a
   expect(await statute.evaluate((element) => getComputedStyle(element).lineHeight)).not.toBe(originalSpacing);
   await page.reload();
   await expect(page.locator(".statute-text").first()).toBeVisible();
-  await page.getByRole("button", { name: "Settings" }).click();
+  await page.getByRole("button", { name: "Settings", exact: true }).click();
   await expect(page.getByLabel("Font", { exact: true })).toHaveValue("atkinson");
   await expect(page.getByLabel("Line spacing")).toHaveValue("1.9");
   await page.getByLabel("Font", { exact: true }).selectOption("default");
@@ -288,8 +357,9 @@ test("About shows recent updates and expands earlier changes", async ({ page }, 
 test("desktop contextual rail retains its scroll position after section navigation", async ({ page }, testInfo) => {
   test.skip(isMobileProject(testInfo), "Contextual rails are a desktop presentation.");
   await openApp(page, "#/t/17b/c/319v/s/17b-238");
-  const sections = page.locator(".sections-column");
+  const sections = page.locator("#rail-sections");
   const before = await sections.evaluate((element) => element.scrollTop);
+  expect(before).toBeGreaterThan(0);
   await sections.locator('a[href="#/t/17b/c/319v/s/17b-239"]').click();
   await expect(page).toHaveURL(/#\/t\/17b\/c\/319v\/s\/17b-239$/);
   await expect(page.getByRole("heading", { level: 1, name: /Sec\. 17b-239/ })).toBeVisible();
@@ -342,7 +412,7 @@ test("Settings feedback form posts to the Law Library through FormSubmit", async
     await route.fulfill({ status: 200, contentType: "text/html", body: "<title>Feedback received</title>" });
   });
   await openApp(page);
-  await page.getByRole("button", { name: "Settings" }).click();
+  await page.getByRole("button", { name: "Settings", exact: true }).click();
   const feedbackButton = page.getByRole("button", { name: /Submit feedback/ });
   await feedbackButton.click();
   const dialog = page.getByRole("dialog", { name: "Submit feedback" });
@@ -367,7 +437,7 @@ test("offline feedback stays in the dialog instead of leaving the app", async ({
   let posted = false;
   await page.route("https://formsubmit.co/**", (route) => { posted = true; return route.abort(); });
   await openApp(page);
-  await page.getByRole("button", { name: "Settings" }).click();
+  await page.getByRole("button", { name: "Settings", exact: true }).click();
   await page.getByRole("button", { name: /Submit feedback/ }).click();
   const dialog = page.getByRole("dialog", { name: "Submit feedback" });
   await dialog.getByRole("textbox", { name: "Name" }).fill("Jane Reader");
@@ -413,7 +483,7 @@ test("Clear Data actions require confirmation", async ({ page }) => {
     localStorage.setItem("cgs.search-history.v1", JSON.stringify([{ query: "law", href: "#/search?q=law", searchedAt: new Date().toISOString() }]));
   });
   await openApp(page, "#/t/02c/c/028a/s/2c-21");
-  await page.getByRole("button", { name: "Settings" }).click();
+  await page.getByRole("button", { name: "Settings", exact: true }).click();
   const menu = page.locator(".clear-data-menu");
   await expect(menu.getByRole("button", { name: /Clear bookmarks/ })).toBeHidden();
   await menu.locator("summary").click();
@@ -466,6 +536,7 @@ test("Search v2 preserves filters, explains the query, searches within results, 
   await expect(page.getByRole("heading", { level: 2, name: "public" })).toBeVisible();
   await expect(page.locator("#search-status")).toContainText(/Showing|No results/);
 
+  await page.locator(".search-within-disclosure > summary").click();
   await page.locator("#search-within-query").fill("records");
   await page.locator("[data-search-within]").getByRole("button", { name: "Apply" }).click();
   await expect(page).toHaveURL(/within=records/);
@@ -503,7 +574,7 @@ test("a targeted statute paragraph exposes and copies its citation", async ({ pa
 
   await copyCitation.click();
   await expect(copyCitation).toHaveText("Copied");
-  await expect(page.locator(".action-status")).toHaveText("C.G.S. § 1-34(1) copied.");
+  await expect(page.locator("[data-action-toast]")).toHaveText("C.G.S. § 1-34(1) copied.");
   await expect.poll(() => page.evaluate(() => window.__copiedCitation)).toBe("C.G.S. § 1-34(1)");
 });
 
@@ -515,10 +586,13 @@ test("print mode keeps statute text and removes application chrome", async ({ pa
   await expect(page.locator("article.provision .statute-text")).toBeVisible();
 });
 
-test("the search shortcut moves focus to the omnisearch field", async ({ page }) => {
+test("the search shortcut moves focus to the homepage omnisearch field", async ({ page }) => {
   await openApp(page);
+  await expect(page.locator("[data-omni-input]")).toHaveCount(1);
+  const input = page.getByRole("banner").getByRole("combobox");
+  await expect(input).toBeVisible();
   await page.keyboard.press("/");
-  await expect(page.locator("#global-query")).toBeFocused();
+  await expect(input).toBeFocused();
 });
 
 test("the omnisearch field suggests Public Acts by citation and by text", async ({ page }) => {
@@ -576,7 +650,7 @@ test("choosing a section from the pane keeps focus in the pane and announces the
 
 test("Settings closes with Escape or a click outside the panel", async ({ page }) => {
   await openApp(page);
-  const button = page.getByRole("button", { name: "Settings" });
+  const button = page.getByRole("button", { name: "Settings", exact: true });
   const panel = page.getByRole("dialog", { name: "Settings" });
   await button.click();
   await expect(panel).toBeVisible();
@@ -660,4 +734,135 @@ test("the header and pages reflow without sideways scrolling at 200% text", asyn
     await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth)).toBe(0);
     await expect(page.locator(".site-header")).toHaveCSS("position", "relative");
   }
+});
+
+test("Hide sections removes only entries whose every status is hidden, and persists", async ({ page }, testInfo) => {
+  await openApp(page, "#/t/46/c/808");
+  const list = page.locator(isMobileProject(testInfo) ? ".mobile-section-browser .context-list" : "#rail-sections");
+  const both = list.getByRole("link", { name: /^§§ 46-1–8/ });
+  const transferredOnly = list.getByRole("link", { name: /^§§ 46-9–12/ });
+  const { panel } = await openNavigationSettings(page);
+  await panel.locator('input[data-hide-status="repealed"]').check();
+  await expect(both).toBeVisible();
+  await expect(transferredOnly).toBeVisible();
+  await panel.locator('input[data-hide-status="transferred"]').check();
+  await expect(both).toHaveCount(0);
+  await expect(transferredOnly).toHaveCount(0);
+  await page.reload();
+  // Every entry in chapter 808 is repealed or transferred, so the chapter reports them all hidden.
+  await expect(page.locator(".chapter-overview .eyebrow")).toContainText("hidden");
+  await expect(both).toHaveCount(0);
+  const reopened = await openNavigationSettings(page);
+  await expect(reopened.panel.locator('input[data-hide-status="transferred"]')).toBeChecked();
+  await expect(reopened.panel.locator('input[data-hide-status="obsolete"]')).not.toBeChecked();
+});
+
+test("Reading width widens the desktop reading column and persists", async ({ page }, testInfo) => {
+  test.skip(isMobileProject(testInfo), "Desktop setting; phones use the full width.");
+  await page.setViewportSize({ width: 1800, height: 1000 });
+  await openApp(page, "#/t/06/c/078/s/6-32d");
+  const column = page.locator(".reader-content");
+  const standard = (await column.boundingBox()).width;
+  await page.getByRole("button", { name: "Settings", exact: true }).click();
+  const group = page.getByRole("group", { name: "Reading width" });
+  await group.getByRole("button", { name: "Widest", exact: true }).click();
+  await expect(group.getByRole("button", { name: "Widest", exact: true })).toHaveAttribute("aria-pressed", "true");
+  expect((await column.boundingBox()).width).toBeGreaterThan(standard + 300);
+  await page.reload();
+  await expect(page.locator("html")).toHaveAttribute("data-reading-width", "widest");
+});
+
+test("chapter notices share one shape, with headings and openable section lists", async ({ page }) => {
+  await openApp(page, "#/t/06/c/078");
+  const supplement = page.locator(".supplement-summary");
+  const acts = page.locator(".pending-amendments-summary");
+  await expect(supplement.getByRole("heading", { level: 2 })).toHaveText("Changed by the 2026 Supplement");
+  await expect(acts.getByRole("heading", { level: 2 })).toHaveText("Changed by recent Public Acts");
+  const supplementBox = await supplement.boundingBox();
+  const actsBox = await acts.boundingBox();
+  expect(Math.abs(supplementBox.width - actsBox.width)).toBeLessThanOrEqual(1);
+  const summary = acts.locator("summary");
+  await expect(summary).toHaveText(/^Affected sections \(\d+\)$/);
+  await summary.click();
+  await expect(acts.locator(".context-list a").first()).toBeVisible();
+});
+
+test("What's new opens the relevant settings, visits the archive, and restores focus", async ({ page }, testInfo) => {
+  await openApp(page);
+  const button = page.locator("[data-open-whats-new]");
+  await button.click();
+  const card = page.getByRole("dialog", { name: /What's new.*Navigation settings/ });
+  const next = page.locator("[data-tour-next]");
+  const back = page.locator("[data-tour-back]");
+  const settings = page.locator("[data-settings-panel]");
+  const paneSettings = page.locator("[data-navigation-settings]");
+  const mobile = isMobileProject(testInfo);
+  await expect(card).toBeVisible();
+  await expect(page).toHaveURL(/#\/t\/16a\/c\/295$/);
+  await expect(mobile ? settings : paneSettings).toBeVisible();
+  await expect(mobile ? settings.locator(".navigation-setting-rows") : paneSettings).toHaveClass(/tour-target/);
+  const firstTrigger = page.locator(mobile ? "[data-open-settings]" : "[data-open-navigation-settings]:visible");
+  await expect(firstTrigger).toHaveClass(/tour-target/);
+  const firstCardBox = await card.boundingBox();
+  const firstPanelBox = await (mobile ? settings : paneSettings).boundingBox();
+  if (mobile) {
+    const triggerBox = await firstTrigger.boundingBox();
+    expect(triggerBox.y + triggerBox.height).toBeLessThan(firstPanelBox.y);
+    expect(firstPanelBox.y + firstPanelBox.height).toBeLessThan(firstCardBox.y);
+  } else expect(firstPanelBox.x + firstPanelBox.width).toBeLessThan(firstCardBox.x);
+
+  await next.click();
+  await expect(page.locator("#tour-title")).toHaveText("Filter sections by status");
+  await expect(paneSettings).toBeHidden();
+  await expect(settings).toBeHidden();
+  await next.click();
+  await expect(page.locator("#tour-title")).toHaveText("Reading width");
+  await expect(page.locator("[data-open-settings]")).toHaveClass(/tour-target/);
+  if (mobile) await expect(settings).toBeHidden();
+  else {
+    await expect(settings).toBeVisible();
+    const width = page.locator(".reading-width-setting");
+    await expect(width).toHaveClass(/tour-target/);
+    await expect(width).toBeInViewport({ ratio: 1 });
+    const cardBox = await page.locator("[data-tour]").boundingBox();
+    const settingsBox = await settings.boundingBox();
+    expect(cardBox.x + cardBox.width).toBeLessThan(settingsBox.x);
+  }
+
+  const titles = ["Chapter change summaries", "Compare a section's versions"];
+  for (const title of titles) {
+    await next.click();
+    await expect(page.locator("#tour-title")).toHaveText(title);
+  }
+  await expect(settings).toBeHidden();
+  await expect(page).toHaveURL(/#\/t\/16a\/c\/295\/s\/16a-3g$/);
+  await expect(page.locator(".revision-view-switch")).toHaveClass(/tour-target/);
+  await expect(page.locator("[data-tour-progress]")).toHaveText("What's new · 5 of 6");
+  await next.click();
+  await expect(page.locator("#tour-title")).toHaveText("Archived statute editions");
+  await expect(page).toHaveURL(/#\/editions$/);
+  const archive = page.locator(".edition-list .edition-card").first();
+  await expect(archive).toHaveClass(/tour-target/);
+  await expect(archive).toBeInViewport();
+  if (mobile) {
+    const archiveBox = await archive.boundingBox();
+    const cardBox = await page.locator("[data-tour]").boundingBox();
+    expect(archiveBox.y + archiveBox.height).toBeLessThan(cardBox.y);
+  }
+  await expect(next).toHaveText("Done");
+  await back.click();
+  await expect(page.locator(".revision-view-switch")).toHaveClass(/tour-target/);
+  await next.click();
+  await expect(archive).toHaveClass(/tour-target/);
+  await next.click();
+  await expect(page.locator("[data-tour]")).toHaveCount(0);
+  await expect(page.locator(".tour-target")).toHaveCount(0);
+  await expect(page.locator("[data-open-whats-new]")).toBeFocused();
+
+  await button.click();
+  await expect(card).toBeVisible();
+  await page.keyboard.press("Escape");
+  await expect(page.locator("[data-tour]")).toHaveCount(0);
+  await expect(mobile ? settings : paneSettings).toBeHidden();
+  await expect(button).toBeFocused();
 });

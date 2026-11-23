@@ -1,9 +1,7 @@
 import { checkDataResponse, dataUrl } from "./data-loader.js";
-import { comparableNumber } from "./routes.js";
+import { comparableNumber, compareStatuteNumbers } from "./routes.js";
 
 export { applyChapterOverlay } from "./supplement-overlay.js";
-
-const collator = new Intl.Collator("en", { numeric: true, sensitivity: "base" });
 
 export function mergeSupplementTitleChapters(title, supplementTitle, editionYear) {
   if (!supplementTitle) return title;
@@ -19,8 +17,7 @@ export function mergeSupplementTitleChapters(title, supplementTitle, editionYear
   if (!additions.length) return title;
   return {
     ...title,
-    chapters: [...title.chapters, ...additions].sort((left, right) =>
-      collator.compare(comparableNumber(left.number), comparableNumber(right.number)))
+    chapters: [...title.chapters, ...additions].sort((left, right) => compareStatuteNumbers(left.number, right.number))
   };
 }
 

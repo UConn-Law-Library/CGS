@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-319uu",
+  "number": "319uu",
+  "name": "Housing Assistance",
+  "title": {
+    "id": "title-17b",
+    "number": "17b",
+    "name": "Social Services"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_319uu.htm",
+  "sections": [
+    {
+      "id": "section-17b-807",
+      "kind": "section",
+      "citation": "17b-807",
+      "citations": [
+        "17b-807"
+      ],
+      "heading": "Sec. 17b-807. (Formerly Sec. 17-86d). Policy re provision of emergency shelter in hotels or motels.",
+      "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_319uu.htm#sec_17b-807",
+      "status": "repealed",
+      "content": {
+        "body": [
+          "Section 17b-807 is repealed, effective June 12, 2023."
+        ],
+        "sourceNotes": [
+          "(P.A. 90-257, S. 1, 17; June 18 Sp. Sess. P.A. 97-2, S. 86, 165; P.A. 23-204, S. 443.)"
+        ],
+        "history": [],
+        "annotations": [],
+        "plainText": "Section 17b-807 is repealed, effective June 12, 2023."
+      }
+    }
+  ]
+}

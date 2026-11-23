@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-134",
+  "number": "134",
+  "name": "Connecticut Housing Finance Authority Act",
+  "title": {
+    "id": "title-08",
+    "number": "08",
+    "name": "Zoning, Planning, Housing and Economic and Community Development"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_134.htm",
+  "sections": [
+    {
+      "id": "section-8-265yy",
+      "kind": "section",
+      "citation": "8-265yy",
+      "citations": [
+        "8-265yy"
+      ],
+      "heading": "Sec. 8-265yy. (Note: This section is effective June 1, 2024.) Mortgage assistance for workforce housing projects.",
+      "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_134.htm#sec_8-265yy",
+      "status": "active",
+      "content": {
+        "body": [
+          "The Connecticut Housing Finance Authority shall develop and administer a program of mortgage assistance for (1) developers for the construction or substantial rehabilitation of eligible workforce housing opportunity development projects, as defined in section 8-395a, and (2) developers for the construction or substantial rehabilitation of workforce housing development projects, as defined in section 8-395. In making mortgage assistance available under the program, the authority shall utilize any appropriate housing subsidies."
+        ],
+        "sourceNotes": [
+          "(P.A. 23-207, S. 34.)"
+        ],
+        "history": [
+          "History: P.A. 23-207 effective June 1, 2024."
+        ],
+        "annotations": [],
+        "plainText": "The Connecticut Housing Finance Authority shall develop and administer a program of mortgage assistance for (1) developers for the construction or substantial rehabilitation of eligible workforce housing opportunity development projects, as defined in section 8-395a, and (2) developers for the construction or substantial rehabilitation of workforce housing development projects, as defined in section 8-395. In making mortgage assistance available under the program, the authority shall utilize any appropriate housing subsidies."
+      }
+    }
+  ]
+}

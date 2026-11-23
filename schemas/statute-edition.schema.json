@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://uconn-law-library.github.io/CGS/schemas/statute-edition.schema.json",
+  "title": "Archived General Statutes edition",
+  "description": "The record kept beside an archived base revision and the supplements read with it. The archived files are the published bytes; this record names them and the edition that superseded them.",
+  "type": "object",
+  "required": ["schemaVersion", "id", "label", "revisionYear", "supplementYears", "legislationThrough", "base", "supplements", "supersededBy", "officialSources"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "id": { "type": "string", "pattern": "^[0-9]{4}$" },
+    "label": { "type": "string", "minLength": 1 },
+    "revisionYear": { "type": "integer", "minimum": 1958 },
+    "supplementYears": { "type": "array", "items": { "type": "integer", "minimum": 1958 } },
+    "legislationThrough": { "type": "integer", "minimum": 1957 },
+    "base": {
+      "type": "object",
+      "required": ["schemaVersion", "generatedAt", "retrievedAt", "sourceUrl", "catalogSha256", "manifestSha256", "counts"],
+      "additionalProperties": false,
+      "properties": {
+        "schemaVersion": { "type": "string" },
+        "generatedAt": { "type": "string", "format": "date-time" },
+        "retrievedAt": { "type": "string", "format": "date-time" },
+        "sourceUrl": { "type": "string", "pattern": "^https://" },
+        "catalogSha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        "manifestSha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        "counts": {
+          "type": "object",
+          "required": ["titles", "chapters", "sections"],
+          "properties": {
+            "titles": { "type": "integer", "minimum": 0 },
+            "chapters": { "type": "integer", "minimum": 0 },
+            "sections": { "type": "integer", "minimum": 0 }
+          }
+        }
+      }
+    },
+    "supplements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["editionYear", "generatedAt", "retrievedAt", "sourceUrl", "manifestSha256", "counts"],
+        "additionalProperties": false,
+        "properties": {
+          "editionYear": { "type": "integer", "minimum": 1958 },
+          "generatedAt": { "type": "string", "format": "date-time" },
+          "retrievedAt": { "type": "string", "format": "date-time" },
+          "sourceUrl": { "type": "string", "pattern": "^https://" },
+          "manifestSha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+          "counts": { "type": "object" }
+        }
+      }
+    },
+    "supersededBy": {
+      "type": "object",
+      "required": ["revisionYear", "generatedAt", "manifestSha256"],
+      "additionalProperties": false,
+      "properties": {
+        "revisionYear": { "type": "integer", "minimum": 1958 },
+        "generatedAt": { "type": "string", "format": "date-time" },
+        "manifestSha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+      }
+    },
+    "officialSources": {
+      "description": "Archived chapters keep their original source URLs. CGA's /current/ pages move to the next revision, so the reader links these prefixes to the edition's own year-scoped pages instead.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["from", "to"],
+        "additionalProperties": false,
+        "properties": {
+          "from": { "type": "string", "pattern": "^https://" },
+          "to": { "type": "string", "pattern": "^https://" }
+        }
+      }
+    }
+  }
+}

@@ -7,7 +7,7 @@ const stylesSource = await readFile(new URL("../src/styles.css", import.meta.url
 const wordmarkSource = await readFile(new URL("../public/wordmark.svg", import.meta.url), "utf8");
 
 test("home statute browsing uses the dedicated compact titles route", () => {
-  assert.match(appSource, /<a href="\$\{titlesRouteHref\(\)\}">/);
+  assert.match(appSource, /<a data-destination="statutes" href="\$\{titlesRouteHref\(\)\}">/);
   assert.doesNotMatch(appSource, /href="#browse-titles"/);
 });
 
@@ -20,13 +20,13 @@ test("dense shell exposes bookmark count and device-local activity", () => {
 });
 
 test("Search v2 uses structured filters, highlighted field-aware excerpts, and local history", () => {
-  assert.match(appSource, /class="search-field search-query-field"/);
+  assert.match(appSource, /class="search-query-field"/);
   assert.match(appSource, /renderSearchHighlight\(document\.heading, highlightTerms\)/);
   assert.match(appSource, /renderSearchExcerpt\(searchResultContext\(document, options\), highlightTerms\)/);
-  assert.match(appSource, /NEAR\/n proximity/);
+  assert.match(appSource, /NEAR\/5/);
   assert.match(appSource, /data-search-within/);
   assert.match(appSource, /deviceState\.recordSearch/);
-  assert.match(stylesSource, /\.search-primary-controls \{ display: grid;/);
+  assert.match(stylesSource, /\.search-query-row \{ display: grid;/);
   assert.match(stylesSource, /\.results mark \{[^}]*background: var\(--highlight-surface\)/);
 });
 
@@ -34,12 +34,12 @@ test("shared application shell provides contextual rails and mobile presentation
   assert.match(appSource, /function applicationShell\(\{[\s\S]*contextualNavigation = \[\],[\s\S]*mainContent,[\s\S]*columnCount = contextualNavigation\.length,[\s\S]*mobilePresentationMode = "focused"/);
   assert.match(appSource, /class="application-shell mobile-\$\{escapeHtml\(mobilePresentationMode\)\}" data-context-columns="\$\{columnCount\}"/);
   assert.match(appSource, /statuteTitleColumn\(catalog, title\)/);
-  assert.match(appSource, /contextualNavigation: \[statuteTitleColumn\(catalog, title\), statuteChapterColumn\(title\)\]/);
+  assert.match(appSource, /statuteNavigation\(catalog, \{ kind: "title" \}, \(\) => \[statuteTitleColumn\(catalog, title\), statuteChapterColumn\(title\)\]/);
   assert.match(appSource, /statuteChapterColumn\(title, chapter\)/);
   assert.match(appSource, /statuteSectionColumn\(title, chapter, chapterNavigation, selected, changeBySection, pendingBySection\)/);
   assert.match(stylesSource, /\.context-list a\[aria-current="page"\]/);
   assert.match(appSource, /data-context-key="\$\{escapeHtml\(column\.className \|\| column\.label\)\}"/);
-  assert.match(appSource, /function mountApplicationShell\(options\)[\s\S]*contextScrollPositions\(\)[\s\S]*restoreContextScrollPositions\(positions\)/);
+  assert.match(appSource, /function mountApplicationShell\([^)]*\)[\s\S]*contextScrollPositions\(\)[\s\S]*restoreContextScrollPositions\(positions\)/);
   assert.match(appSource, /column\.scrollTop = previous/);
 });
 
@@ -70,8 +70,8 @@ test("index letters render collapsed topics, dedicated large topics, and repeale
   assert.match(appSource, /target\?\.scrollIntoView\(\{ block: "center" \}\)/);
   assert.match(stylesSource, /\.index-topic \{[^}]*scroll-margin-top: 8rem;/);
   assert.match(stylesSource, /\.index-topic-jumps \{[^}]*overflow-x: auto/);
-  assert.match(appSource, /data-hide-repealed/);
-  assert.match(appSource, /class="section-status-pill repealed-pill">Repealed/);
+  assert.match(appSource, /data-hide-status/);
+  assert.match(appSource, /repealed: "Repealed", transferred: "Transferred"/);
 });
 
 test("infractions categories are one alphabetical column", () => {
@@ -103,12 +103,12 @@ test("statute metadata shares one populated Information and References region", 
   assert.doesNotMatch(stylesSource, /\.secondary-sources \{ margin-top:/);
 });
 
-test("amended supplement sections offer a collapsed native language comparison at the bottom", () => {
-  assert.match(appSource, /<details class="revision-comparison" id=/);
-  assert.match(appSource, /<summary>Compare with \$\{priorYear\} text<\/summary>/);
+test("amended supplement sections switch between Supplement, previous text, and a language comparison", () => {
+  assert.match(appSource, /role="tablist" aria-label="Section text version"/);
+  assert.match(appSource, /\["compare", "Compare", renderRevisionComparison\(section, change, maps\)\]/);
   assert.match(appSource, /<ins class="revision-addition">/);
   assert.match(appSource, /<del class="revision-deletion">/);
-  assert.match(appSource, /renderInformationReferences\(section, maps, secondaryContext, change\)\}\s*\$\{comparison\}/);
+  assert.match(appSource, /renderTextViews\(section, change, `<div class="statute-text">/);
   assert.doesNotMatch(appSource, /data-revision-comparison-toggle/);
   assert.match(stylesSource, /\.revision-addition \{ color: var\(--addition-ink\); background: var\(--addition-surface\)/);
   assert.match(stylesSource, /\.revision-deletion \{ color: var\(--deletion-ink\); background: var\(--deletion-surface\); text-decoration-color: currentColor/);

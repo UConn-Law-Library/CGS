@@ -183,6 +183,43 @@ class ParserTests(unittest.TestCase):
         self.assertEqual(items[2]["r"], [["42a-1-309", "42a-1-309"]])
         self.assertEqual(items[4]["r"], [["42a-2A-102(a)(7)", "42a-2A-102"]])
 
+    def test_index_parser_keeps_numerals_and_capitals_that_are_entry_text(self):
+        parser = IndexParser()
+        parser.feed_line(0, "HEPATITIS")
+        parser.feed_line(0, "Hepatitis C,")
+        parser.feed_line(0, "Hazardous duty members of Tier I, 5-192n")
+        parser.feed_line(0, "Schedule 14D-1, 36b-41(10)")
+        parser.feed_line(0, "Advisory committee, 26-295 Art. VII")
+        parser.feed_line(0, "See SENATORS, U.S.")
+        items = parser.finish()[0]["items"]
+        self.assertEqual(
+            [item["t"] for item in items],
+            [
+                "Hepatitis C",
+                "Hazardous duty members of Tier I",
+                "Schedule 14D-1",
+                "Advisory committee, 26-295 Art. VII",
+                "See SENATORS, U.S.",
+            ],
+        )
+        self.assertNotIn("r", items[0])
+        self.assertEqual(items[1]["r"], [["5-192n", "5-192n"]])
+        self.assertEqual(items[2]["r"], [["36b-41(10)", "36b-41"]])
+        self.assertEqual(items[4]["see"], [["SENATORS, U.S.", None]])
+
+    def test_index_parser_reads_constitution_citations(self):
+        parser = IndexParser()
+        parser.feed_line(0, "CONSTITUTION")
+        parser.feed_line(0, "Witnesses, Ct. Const. Am.XVII, Ct. Const. I:8, U.S. Const. Am. VI")
+        parser.feed_line(0, "Census, U.S. Const. I:2")
+        items = parser.finish()[0]["items"]
+        self.assertEqual(items[0]["t"], "Witnesses")
+        self.assertEqual(
+            items[0]["r"],
+            [["Ct. Const. Am.XVII", None], ["Ct. Const. I:8", None], ["U.S. Const. Am. VI", None]],
+        )
+        self.assertEqual(items[1]["r"], [["U.S. Const. I:2", None]])
+
     def test_index_parser_normalizes_pdf_spacing_inside_citations(self):
         parser = IndexParser()
         parser.feed_line(0, "UNIFORM COMMERCIAL CODE")

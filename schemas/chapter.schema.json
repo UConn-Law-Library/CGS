@@ -63,6 +63,7 @@
         "sourceAnchor": { "type": "string", "minLength": 1 },
         "identifierWarning": { "type": "string", "minLength": 1 },
         "status": { "enum": ["active", "mixed", "obsolete", "repealed", "reserved", "transferred"] },
+        "statuses": { "type": "array", "items": { "enum": ["obsolete", "repealed", "reserved", "transferred"] }, "minItems": 1, "uniqueItems": true },
         "content": { "$ref": "#/$defs/content" }
       }
     }

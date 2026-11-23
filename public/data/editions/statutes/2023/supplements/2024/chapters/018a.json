@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "chapter-018a",
+  "number": "018a",
+  "name": "Joint Committee on Legislative Management",
+  "title": {
+    "id": "title-02",
+    "number": "02",
+    "name": "General Assembly and Legislative Agencies"
+  },
+  "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_018a.htm",
+  "sections": [
+    {
+      "id": "section-2-71x",
+      "kind": "section",
+      "citation": "2-71x",
+      "citations": [
+        "2-71x"
+      ],
+      "heading": "Sec. 2-71x. Funds for Connecticut Television Network coverage.",
+      "sourceUrl": "https://www.cga.ct.gov/2024/sup/chap_018a.htm#sec_2-71x",
+      "status": "active",
+      "content": {
+        "body": [
+          "For the fiscal year ending June 30, 2024, and each fiscal year thereafter, the Comptroller shall segregate three million two hundred thousand dollars of the amount of the funds received by the state from the tax imposed under chapter 211 on public service companies providing community antenna television service in this state. The moneys segregated by the Comptroller shall be deposited with the Treasurer and made available to the Office of Legislative Management to defray the cost of providing the citizens of this state with Connecticut Television Network coverage of state government deliberations and public policy events."
+        ],
+        "sourceNotes": [
+          "(June 30 Sp. Sess. P.A. 03-1, S. 106; P.A. 06-187, S. 77; P.A. 14-47, S. 45; June Sp. Sess. P.A. 17-2, S. 662; P.A. 18-81, S. 35; P.A. 23-204, S. 358.)"
+        ],
+        "history": [
+          "History: June 30 Sp. Sess. P.A. 03-1 effective August 16, 2003; P.A. 06-187 required Comptroller, rather than Commissioner of Revenue Services, to segregate funds from tax on public service companies providing community antenna television service and increased amount segregated from $2,000,000 to $2,500,000, effective July 1, 2006; P.A. 14-47 increased amount segregated from $2,500,000 to $3,200,000 for the fiscal year ending June 30, 2015, and each fiscal year thereafter, effective May 29, 2014; June Sp. Sess. P.A. 17-2 decreased amount segregated from $3,200,000 to $1,600,000 for fiscal year ending June 30, 2018, and each fiscal year thereafter, effective October 31, 2017; P.A. 18-81 increased amount of funds to be segregated to defray costs of providing citizens with Connecticut Television Network coverage, effective July 1, 2018; P.A. 23-204 increased amount segregated from $2,600,000 to $3,200,000 for fiscal year ending June 30, 2024, and each fiscal year thereafter, effective July 1, 2023."
+        ],
+        "annotations": [],
+        "plainText": "For the fiscal year ending June 30, 2024, and each fiscal year thereafter, the Comptroller shall segregate three million two hundred thousand dollars of the amount of the funds received by the state from the tax imposed under chapter 211 on public service companies providing community antenna television service in this state. The moneys segregated by the Comptroller shall be deposited with the Treasurer and made available to the Office of Legislative Management to defray the cost of providing the citizens of this state with Connecticut Television Network coverage of state government deliberations and public policy events."
+      }
+    }
+  ]
+}

@@ -88,6 +88,23 @@ test("filters fields, chapters, status, and supplement state and can search with
   assert.deepEqual(normalizeSearchOptions({ field: "unknown", sort: "unknown" }), { field: "statute", status: null, supplement: null, sort: "relevance", chapter: null, within: null });
 });
 
+test("the status filter reads the same tags as navigation, before and after a refresh records them", () => {
+  const note = "Sections 46-1 to 46-8 , inclusive, have been transferred or repealed.";
+  const values = [
+    { ...documents[0], id: "plain-active", text: "Marriage licenses issued by the registrar." },
+    { ...documents[0], id: "recorded-active", heading: "Secs. 46-1 to 46-8. Marriage.", text: note },
+    { ...documents[0], id: "recorded-mixed", heading: "Secs. 46-1 to 46-8. Marriage.", status: "mixed", statuses: ["repealed", "transferred"], text: note },
+    { ...documents[0], id: "transferred-only", heading: "Secs. 17-21e to 17-21t. Marriage.", text: "Sections 17-21e to 17-21t , inclusive, have been transferred." },
+    { ...documents[1], id: "repealed", heading: "Sec. 46-9. Marriage. Repealed." }
+  ];
+  const ids = (status) => searchDocuments(values, "marriage", { field: "heading", status }).map(({ document }) => document.id).sort();
+  assert.deepEqual(ids("active"), []);
+  assert.deepEqual(searchDocuments(values, "registrar", { status: "active" }).map(({ document }) => document.id), ["plain-active"]);
+  assert.deepEqual(ids("repealed"), ["recorded-active", "recorded-mixed", "repealed"]);
+  assert.deepEqual(ids("transferred"), ["recorded-active", "recorded-mixed", "transferred-only"]);
+  assert.deepEqual(ids("mixed"), ["recorded-active", "recorded-mixed"]);
+});
+
 test("sorts results by legal citation when requested", () => {
   const values = [
     { ...documents[0], id: "ten", citation: "10-2", citations: ["10-2"], text: "shared term" },
@@ -216,4 +233,43 @@ test("SearchRepository preserves base search when supplement data is unavailable
   assert.deepEqual(recovered.documents.map((document) => document.id), ["recovered"]);
   assert.equal(await repository.loadTitle("title-01"), recovered);
   assert.equal(supplementCalls, 2);
+});
+
+test("quoted phrases match whole words, not parts of words", () => {
+  const values = [
+    { ...documents[0], id: "exact", text: "see section 1-21 and the state act" },
+    { ...documents[0], id: "longer", text: "see section 1-210 and the estate action on taxation" }
+  ];
+  const ids = (query) => searchDocuments(values, query).map(({ document }) => document.id);
+  assert.deepEqual(ids('"1-21"'), ["exact"]);
+  assert.deepEqual(ids('"state act"'), ["exact"]);
+  assert.deepEqual(ids('"tax"'), []);
+});
+
+test("a lone dash between words is not a search term", () => {
+  const values = [{ ...documents[0], id: "both", text: "landlord and tenant" }];
+  assert.deepEqual(searchDocuments(values, "landlord - tenant").map(({ document }) => document.id), ["both"]);
+  assert.throws(() => compileSearchQuery('"-"'), /cannot be empty/i);
+});
+
+test("NEAR measures from the end of a phrase and needs two matches of the same word", () => {
+  const values = [
+    { ...documents[0], id: "adjacent", text: "the freedom of information act commissioner" },
+    { ...documents[0], id: "one-warrant", text: "a warrant issued" },
+    { ...documents[0], id: "two-warrants", text: "warrant warrant" }
+  ];
+  const ids = (query) => searchDocuments(values, query).map(({ document }) => document.id);
+  assert.deepEqual(ids('"freedom of information act" NEAR/1 commissioner'), ["adjacent"]);
+  assert.deepEqual(ids('commissioner NEAR/1 "freedom of information act"'), ["adjacent"]);
+  assert.deepEqual(ids("warrant NEAR/1 warrant"), ["two-warrants"]);
+});
+
+test("citation sort puts double-letter sections after single-letter ones", () => {
+  const values = ["1-1aa", "1-1b", "1-1z", "1-1", "1-2"].map((citation) => ({
+    ...documents[0], id: citation, citation, citations: [citation], text: "public records"
+  }));
+  assert.deepEqual(
+    searchDocuments(values, "records", { sort: "citation" }).map(({ document }) => document.citation),
+    ["1-1", "1-1b", "1-1z", "1-1aa", "1-2"]
+  );
 });

@@ -31,23 +31,47 @@ def _heading_status(word: str) -> str:
     return rf"Secs?\..{{0,300}}?\.\s*{word}(?:\s+for\s+future\s+use)?\s*\.?\s*$"
 
 
+def _disposition_note(status: str) -> str:
+    """A note such as "Sections 46-1 to 46-8, inclusive, have been transferred or repealed."
+
+    The verb may be "is/are" or "has/have been", and the note may list several
+    dispositions ("transferred, repealed or deemed obsolete"); each one listed
+    counts. One source note spells "S ections" with a stray space.
+
+    After "has/have been" the list must end the clause, so statute text such as
+    "Sections 4-5 to 4-9 apply to an agency whose authority has been transferred
+    to another agency" stays active. The "has/have been" form also has to start
+    with "Section(s)", as body notes do, so a heading such as "Sec. 12-5. Funds
+    that have been transferred." stays active. "Is/are" notes keep their older,
+    looser form ("are repealed effective October 1, 1990").
+    """
+    other = r"(?:deemed\s+)?(?:transferred|repealed|obsolete|reserved)"
+    before = rf"(?:{other},?\s+(?:(?:or|and)\s+)?)*"
+    after = rf"(?:,?\s+(?:(?:or|and)\s+)?{other})*"
+    target = rf"(?:deemed\s+)?{status}\b"
+    return (
+        rf"(?:Secs?\.?|S\s?ections?)\s+.{{0,300}}?\b(?:is|are)\s+{before}{target}|"
+        rf"S\s?ections?\s+.{{0,300}}?\b(?:has|have)\s+been\s+{before}{target}{after}\s*(?:[.;,]|$)"
+    )
+
+
 SECTION_STATUS_PATTERNS = (
     ("repealed", re.compile(
         rf"^\s*(?:repealed\b|{_heading_status('repealed')}|"
-        r"(?:Secs?\.?|Sections?)\s+.{0,300}?\b(?:is|are)\s+repealed\b|"
+        rf"{_disposition_note('repealed')}|"
         r"All\s+sections\b.{0,300}?\brepealed\b)", re.IGNORECASE | re.DOTALL)),
     ("reserved", re.compile(
-        r"^\s*(?:reserved\b|(?:Secs?\.?|Sections?)\s+.{0,300}?"
-        r"\b(?:is|are)\s+reserved\b|All\s+sections\b.{0,300}?\breserved\b|"
+        rf"^\s*(?:reserved\b|{_disposition_note('reserved')}|"
+        r"All\s+sections\b.{0,300}?\breserved\b|"
         rf"{_heading_status('reserved')})", re.IGNORECASE | re.DOTALL)),
     ("transferred", re.compile(
         r"^\s*(?:transferred\b|(?:Secs?\.?|Sections?)\s+(?:are\s+)?transferred\b|"
-        rf"{_heading_status('transferred')}|(?:Secs?\.?|Sections?)\s+.{{0,300}}?"
-        r"\b(?:is|are)\s+transferred\b|All\s+sections\b.{0,300}?\btransferred\b)",
+        rf"{_heading_status('transferred')}|{_disposition_note('transferred')}|"
+        r"All\s+sections\b.{0,300}?\btransferred\b)",
         re.IGNORECASE | re.DOTALL)),
     ("obsolete", re.compile(
         rf"^\s*(?:obsolete\b|{_heading_status('obsolete')}|"
-        r"(?:Secs?\.?|Sections?)\s+.{0,300}?\b(?:is|are)\s+obsolete\b|"
+        rf"{_disposition_note('obsolete')}|"
         r"All\s+sections\b.{0,300}?\bobsolete\b)", re.IGNORECASE | re.DOTALL)),
 )
 
@@ -564,12 +588,16 @@ def attach_section_content(html: str, sections: List[Dict[str, object]]) -> None
         else:
             content = text_map.get(key)
             if not content or not content.get("text"):
+                # A section with no body text can still carry source, history, and annotations
+                # (often a repealed section's history notes). Keep them; only the body comes
+                # from the chapter's repeal note.
                 note = repealed_map.get(key)
                 content = {
-                    "body_paragraphs": [note] if note else [],
                     "source": [],
                     "history": [],
                     "annotations": [],
+                    **(content or {}),
+                    "body_paragraphs": [note] if note else [],
                     "text": note or "",
                 }
                 if note:

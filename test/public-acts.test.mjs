@@ -18,6 +18,8 @@ test("links the public act reference in 4a-52a without confusing it with a statu
   });
   assert.equal((html.match(/<a /g) ?? []).length, 3);
   assert.match(html, /target="_blank" rel="noopener noreferrer"/);
+  // Marked so statute-link enrichment in the reader leaves it alone.
+  assert.match(html, /<a class="legal-reference" href="https:\/\/www\.cga\.ct\.gov[^"]*" data-public-act target="_blank"/);
   assert.match(html, /title="Public Act 93-336 on the Connecticut General Assembly website \(opens in a new tab\)"/);
   assert.match(html, />93-336<\/a>\*/);
   assert.equal(html.replace(/<a\b[^>]*>([^<]*)<\/a>/g, "$1"), escapeHtml(text));

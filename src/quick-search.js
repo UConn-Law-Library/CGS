@@ -12,6 +12,23 @@ export class QuickSearchRepository {
     this.#manifest = retryableLoader(() => getJson("./data/search-v2/manifest.json"));
   }
 
+  #shard(path) {
+    if (!this.#shards.has(path)) {
+      this.#shards.set(path, getJson(`./data/search-v2/${path}`).catch((error) => {
+        this.#shards.delete(path);
+        throw error;
+      }));
+    }
+    return this.#shards.get(path);
+  }
+
+  // Section rows for one title: [section, chapter, heading, citations].
+  async loadHeadings(titleId) {
+    const manifest = await this.#manifest();
+    const entry = (manifest.headingShards ?? []).find((candidate) => candidate.titleId === titleId);
+    return entry ? (await this.#shard(entry.path)).headings : [];
+  }
+
   async search(query, catalog, { signal, onProgress, limit = 5 } = {}) {
     const wanted = query.trim().toLowerCase().replace(/^(?:c\.g\.s\.\s*)?(?:§|sec\.)\s*/i, "");
     if (/^\d+[a-z]*-\d+[a-z0-9-]*$/.test(wanted)) {
@@ -33,13 +50,7 @@ export class QuickSearchRepository {
     const worker = async () => {
       while (cursor < entries.length && !signal?.aborted) {
         const entry = entries[cursor++];
-        if (!this.#shards.has(entry.path)) {
-          this.#shards.set(entry.path, getJson(`./data/search-v2/${entry.path}`).catch((error) => {
-            this.#shards.delete(entry.path);
-            throw error;
-          }));
-        }
-        const shard = await this.#shards.get(entry.path);
+        const shard = await this.#shard(entry.path);
         if (signal?.aborted) return;
         const title = titles.get(entry.titleId);
         if (!title) continue;

@@ -98,24 +98,35 @@ jobs:
             --state "$REPORT_DIR/refresh-state.json" \
             --github-output "$GITHUB_OUTPUT"
 
+      # A different publication (new revision or effective date, or different PDFs) archives the
+      # outgoing edition; the source PDFs of the candidate's editions are kept by digest. A statute
+      # rebind happens in the corpus refresh and never archives anything.
+      - name: Retain sources and archive replaced editions
+        id: editions
+        run: |
+          node scripts/archive-secondary-editions.mjs             --data public/data             --candidate "$CANDIDATE_DIR"             --sources "$SOURCE_DIR/manifest.json"             --summary "$REPORT_DIR/secondary-editions.md"             --github-output "$GITHUB_OUTPUT"
+
       - name: Publish review summary
         if: always()
         run: |
           if [ -f "$REPORT_DIR/refresh-summary.md" ]; then
             cat "$REPORT_DIR/refresh-summary.md" >> "$GITHUB_STEP_SUMMARY"
+            if [ -f "$REPORT_DIR/secondary-editions.md" ]; then cat "$REPORT_DIR/secondary-editions.md" >> "$GITHUB_STEP_SUMMARY"; fi
           elif [ "${{ steps.acquire.outcome }}" = "failure" ]; then
             echo "Secondary-source acquisition failed. See the acquisition log and captured source PDFs in this run's artifacts. No data was published; the statute refresh runs independently." >> "$GITHUB_STEP_SUMMARY"
           fi
 
       - name: Stage and verify candidate artifacts
-        if: steps.review.outputs.has_changes == 'true'
+        if: steps.review.outputs.has_changes == 'true' || steps.editions.outputs.changed == 'true'
         run: |
-          rm -rf public/data/secondary
-          cp -a "$CANDIDATE_DIR" public/data/secondary
+          if [ "${{ steps.review.outputs.has_changes }}" = "true" ]; then
+            rm -rf public/data/secondary
+            cp -a "$CANDIDATE_DIR" public/data/secondary
+          fi
           npm run check
 
       - name: Prepare pull request description
-        if: steps.review.outputs.has_changes == 'true' && env.CREATE_PULL_REQUEST == 'true'
+        if: (steps.review.outputs.has_changes == 'true' || steps.editions.outputs.changed == 'true') && env.CREATE_PULL_REQUEST == 'true'
         run: |
           {
             echo "# Automated secondary-source refresh"
@@ -124,6 +135,10 @@ jobs:
             echo
             cat "$REPORT_DIR/refresh-summary.md"
             echo
+            if [ -f "$REPORT_DIR/secondary-editions.md" ]; then
+              cat "$REPORT_DIR/secondary-editions.md"
+              echo
+            fi
             cat "$REPORT_DIR/secondary-diff.md"
             echo
             echo "The complete reports and content-addressed source PDFs are retained on the [workflow run]($GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)."
@@ -133,12 +148,12 @@ jobs:
 
       - name: Package the candidate commit
         id: package
-        if: steps.review.outputs.has_changes == 'true' && env.CREATE_PULL_REQUEST == 'true'
+        if: (steps.review.outputs.has_changes == 'true' || steps.editions.outputs.changed == 'true') && env.CREATE_PULL_REQUEST == 'true'
         run: |
           title="Refresh secondary sources $(date -u +%Y-%m-%d)"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -- public/data/secondary
+          git add -- public/data/secondary public/data/editions/secondary
           if git diff --cached --quiet; then
             echo "The review reported meaningful changes, but no secondary artifacts changed." >&2
             exit 1

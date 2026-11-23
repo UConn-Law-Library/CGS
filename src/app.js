@@ -1,11 +1,18 @@
 import { createOmnisearchController } from "./omnisearch-controller.js";
 import { createAboutPage, formatSnapshotDate } from "./about-page.js";
-import { createShell, icons, bookmarkButtonLabel } from "./shell.js";
+import { createShell, icons, bookmarkButtonLabel, iconActionLabel, statutesNavHref } from "./shell.js";
+import { createStatuteTree } from "./statute-tree.js";
+import { createGroupTree } from "./group-tree.js";
+import { createWhatsNewTour } from "./whats-new.js";
+
+const whatsNewTour = createWhatsNewTour();
 import { QuickSearchRepository } from "./quick-search.js";
 import { renderBookmarkPage } from "./bookmark-page.js";
 import { bindBookmarkControls } from "./bookmark-controls.js";
 import { explainSearchQuery, normalizeSearchOptions, SearchRepository } from "./search.js";
 import { applyChapterOverlay, mergeSupplementTitleChapters, SupplementRepository } from "./supplements.js";
+import { statuteTextEdition } from "./publications.js";
+import { currentEditionSummary, EditionsRepository, historicalStatuteHref, officialSourceUrl, renderArchivedEditionNotice, renderArchivedIndex, renderArchivedInfractions, renderEditionsPage, renderSecondaryEditions, shortEditionLabel } from "./editions.js";
 import { ProgressiveSearchClient } from "./search-client.js";
 import {
   ACT_SORTS,
@@ -20,6 +27,8 @@ import {
   filterActs,
   matchActText,
   normalizeActsOptions,
+  partitionSessions,
+  renderPastSessions,
   parseSectionsParameter,
   renderActDocument,
   renderActSections,
@@ -34,6 +43,8 @@ import {
   findSection,
   findTitle,
   chapterDisplayLabel,
+  editionsRouteHref,
+  archivedSourceRouteHref,
   aboutRouteHref,
   guideRouteHref,
   infractionsRouteHref,
@@ -49,11 +60,14 @@ import { amendmentsForSection } from "./act-amendments.js";
 import {
   escapeHtml,
   extractLegalReferences,
+  groupedSectionAliases,
   leadingSubsection,
   navigationSectionDescription,
   navigationSectionLabel,
   navigationSections,
   renderLinkedText,
+  sectionStatuses,
+  shortSectionDescription,
   routeForDocument,
   subsectionCitation
 } from "./reader.js";
@@ -73,6 +87,7 @@ import {
   plainSearchWords
 } from "./omnisearch.js";
 import {
+  amountLabel,
   formatMoney,
   findIndexSubheadingEntry,
   groupIndexEntries,
@@ -88,9 +103,69 @@ import {
 
 const app = document.querySelector("#app");
 const supplementRepository = new SupplementRepository();
+const editionsRepository = new EditionsRepository();
+// The archived edition the statute pages are reading, or null for the current statutes. Set at
+// the start of each route; statute links built while it is set stay in that edition.
+let readerEdition = null;
 const repository = new SearchRepository({ supplementRepository });
 const searchClient = new ProgressiveSearchClient({ repository });
 const quickSearch = new QuickSearchRepository(repository);
+const statuteTree = createStatuteTree({
+  titleLabel,
+  chapterLabel,
+  titleRoute,
+  chapterRoute,
+  loadHeadings: (titleId) => quickSearch.loadHeadings(titleId),
+  // Recent Act tags for heading rows, judged against the same statute text the reader shows.
+  loadPendingActs: async (catalog) => {
+    const [index, edition] = await Promise.all([actsRepository.amendments(), supplementRepository.latestEdition()]);
+    const years = statuteTextYears(catalog, edition);
+    return (row) => amendmentsForSection(index, row, years);
+  },
+  noticePills: headingNoticePills,
+  hiddenStatuses: () => deviceState.preferences().hiddenStatuses
+});
+
+// Page tree navigation for the subject index and the infraction schedule.
+const indexTree = createGroupTree({
+  id: "index",
+  label: "Index letters and headings",
+  heading: "Subject index",
+  filterLabel: "Filter letters and headings",
+  placeholder: "Heading",
+  nouns: { group: ["letter", "letters"], item: ["heading", "headings"] },
+  loadItems: async (group) => indexTreeItems(group.key, await secondaryRepository.loadIndexLetter(group.key)),
+  // A filter searches every letter's headings from one compact list. If that list can't load,
+  // it falls back to the headings under the letter the query starts with, as the index search does.
+  loadSearchItems: async () => new Map(Object.entries(await secondaryRepository.loadIndexHeadings())
+    .map(([letter, headings]) => [letter, indexTreeItems(letter, headings.map(([id, label]) => ({ id, label })))])),
+  searchGroups: (query, groups) => groups.filter((group) => group.key === topicLetter(query)),
+  scopeNote: (query) => query.trim().length >= 2 ? `Headings are searched under ${topicLetter(query).toUpperCase()}.` : ""
+});
+
+function indexTreeItems(letter, topics) {
+  return topics.map((topic) => ({ key: topic.id, label: topic.label, href: indexRouteHref(letter, { topic: topic.id }), text: topic.label.toLocaleLowerCase() }));
+}
+
+const infractionTree = createGroupTree({
+  id: "infractions",
+  label: "Infraction categories and entries",
+  heading: "Infractions",
+  filterLabel: "Filter categories and entries",
+  placeholder: "Citation or description",
+  nouns: { group: ["category", "categories"], item: ["entry", "entries"] },
+  loadItems: async (group) => (await secondaryRepository.loadAllInfractions()).filter((entry) => entry.category === group.key).map(infractionTreeItem)
+});
+
+function infractionTreeItem(entry) {
+  return {
+    key: entry.id,
+    label: `Sec. ${entry.citation}`,
+    description: entry.description,
+    href: infractionsRouteHref(entry.category, { entry: entry.id }),
+    text: `${entry.citation} ${entry.description}`.toLocaleLowerCase()
+  };
+}
 const secondaryRepository = new SecondarySourceRepository();
 const actsRepository = new ActsRepository();
 const deviceState = new DeviceState();
@@ -109,7 +184,7 @@ let pwaState = pwaManager.state;
 const { closeOmni, scheduleOmnisearch, moveOmniSelection, selectedOmniItem } = createOmnisearchController({ loadCatalog, quickSearch, secondaryRepository, actsRepository });
 const SEARCH_BATCH_SIZE = 50;
 const LARGE_INDEX_TOPIC_THRESHOLD = 200;
-const { siteHeader, updatePwaControls } = createShell({ deviceState, navigationHistory, getPwaState: () => pwaState });
+const { siteHeader, navigationSettingsButton, navigationSettingsPanel, updatePwaControls } = createShell({ deviceState, navigationHistory, getPwaState: () => pwaState });
 const renderAbout = createAboutPage({ app, secondaryRepository, actsRepository, loadLatestSupplement, setDocumentTitle, siteHeader, breadcrumbs, legalFooter, isCurrent: (sequence) => sequence === renderSequence });
 applyPreferences(deviceState.preferences());
 pwaManager.subscribe((state) => {
@@ -175,7 +250,9 @@ function applicationShell({
 }) {
   const layout = deviceState.navigationLayout();
   const defaults = { 1: [256], 2: [208, 272], 3: [176, 208, 240] };
-  const paneWidths = (defaults[columnCount] ?? []).map((width, index) => layout.widths[index] ?? width);
+  const paneWidths = contextualNavigation[0]?.defaultWidth
+    ? [layout.treeWidth ?? contextualNavigation[0].defaultWidth]
+    : (defaults[columnCount] ?? []).map((width, index) => layout.widths[index] ?? width);
   const fit = contextFit(paneWidths, viewport.width, viewport.rem);
   const style = [
     ...fit.widths.map((width, index) => `--context-width-${index + 1}:${width}px`),
@@ -183,10 +260,10 @@ function applicationShell({
     `--context-total-width:${fit.total}px`
   ].join(";");
   const hidden = (index) => index < fit.first ? " hidden" : "";
-  return `${siteHeader()}<div class="application-shell mobile-${escapeHtml(mobilePresentationMode)}" data-context-columns="${columnCount}" data-context-widths="${paneWidths.join(",")}" id="context-navigation" data-navigation-collapsed="${layout.collapsed}" style="${style}">
+  return `${siteHeader()}${columnCount ? navigationSettingsPanel() : ""}<div class="application-shell mobile-${escapeHtml(mobilePresentationMode)}" data-context-columns="${columnCount}" data-context-widths="${paneWidths.join(",")}" id="context-navigation" data-navigation-collapsed="${layout.collapsed}" style="${style}">
     ${columnCount ? `<button type="button" class="context-collapse-toggle" data-toggle-navigation aria-controls="context-navigation" aria-expanded="${!layout.collapsed}" aria-label="${layout.collapsed ? "Show navigation panes" : "Hide navigation panes"}" title="${layout.collapsed ? "Show navigation panes" : "Hide navigation panes"}"><span aria-hidden="true">${layout.collapsed ? "›" : "‹"}</span></button>` : ""}
     ${contextualNavigation.map((column, index) => `<aside class="context-column ${escapeHtml(column.className ?? "")}" id="context-pane-${index + 1}" data-context-key="${escapeHtml(column.className || column.label)}" aria-label="${escapeHtml(column.label)}"${hidden(index)}>
-      ${column.heading ? `<div class="context-column-heading">${column.heading}</div>` : ""}${column.content}
+      ${column.heading ? `<div class="context-column-heading">${navigationSettingsButton()}${column.heading}</div>` : ""}${column.content}
     </aside><div class="context-resizer" role="separator" tabindex="0" aria-orientation="vertical" aria-label="Resize ${escapeHtml(column.label)} pane" aria-controls="context-pane-${index + 1}" aria-valuemin="144" aria-valuemax="420" aria-valuenow="${fit.widths[index]}" data-resize-pane="${index}"${hidden(index)}></div>`).join("")}
     ${mainContent}
   </div><footer>${footer}</footer>`;
@@ -194,18 +271,19 @@ function applicationShell({
 
 function contextScrollPositions() {
   return new Map([...document.querySelectorAll(".context-column[data-context-key]")]
-    .map((column) => [column.dataset.contextKey, column.scrollTop]));
+    .map((column) => [column.dataset.contextKey, (column.querySelector(':scope > [id^="rail-"]') ?? column).scrollTop]));
 }
 
 function restoreContextScrollPositions(positions) {
   requestAnimationFrame(() => {
-    for (const column of document.querySelectorAll(".context-column[data-context-key]")) {
-      const previous = positions.get(column.dataset.contextKey);
+    for (const pane of document.querySelectorAll(".context-column[data-context-key]")) {
+      const column = pane.querySelector(':scope > [id^="rail-"]') ?? pane;
+      const previous = positions.get(pane.dataset.contextKey);
       if (previous != null) column.scrollTop = previous;
       const selected = column.querySelector('[aria-current="page"]');
       if (selected) {
         const headingHeight = column.querySelector(".context-column-heading")?.offsetHeight ?? 0;
-        const selectedTop = selected.offsetTop;
+        const selectedTop = selected.getBoundingClientRect().top - column.getBoundingClientRect().top + column.scrollTop;
         const selectedBottom = selectedTop + selected.offsetHeight;
         const visibleTop = column.scrollTop + headingHeight;
         const visibleBottom = column.scrollTop + column.clientHeight;
@@ -217,7 +295,16 @@ function restoreContextScrollPositions(positions) {
   });
 }
 
-function mountApplicationShell(options) {
+function orderStatuteTree() {
+  const shell = app.querySelector(".application-shell.mobile-drilldown:has(> .statute-tree-column > #rail-statute-tree)");
+  if (!shell) return;
+  const main = shell.querySelector(":scope > main");
+  const tree = shell.querySelector(":scope > .statute-tree-column");
+  if (compactLayout.matches && main.nextElementSibling !== tree) tree.before(main);
+  if (!compactLayout.matches && main !== shell.lastElementChild) shell.append(main);
+}
+
+function mountApplicationShell(options, settingsPanel) {
   const positions = contextScrollPositions();
   // Measured while the outgoing page's layout is still current, so fitting the panes into the
   // new page costs no extra layout pass over it.
@@ -225,7 +312,19 @@ function mountApplicationShell(options) {
     width: document.documentElement.clientWidth,
     rem: parseFloat(getComputedStyle(document.documentElement).fontSize)
   };
-  app.innerHTML = applicationShell({ ...options, viewport });
+  const markup = applicationShell({ ...options, viewport });
+  const currentShell = app.querySelector(".application-shell");
+  if (settingsPanel?.isConnected && currentShell) {
+    // Keep the header and settings panels mounted so the open panel retains focus,
+    // its scroll position, and its current animation state.
+    const template = document.createElement("template");
+    template.innerHTML = markup;
+    currentShell.replaceWith(template.content.querySelector(".application-shell"));
+    if (navigationSettingsOpen()) positionNavigationSettings();
+  } else {
+    app.innerHTML = markup;
+  }
+  orderStatuteTree();
   restoreContextScrollPositions(positions);
 }
 
@@ -279,17 +378,41 @@ function scheduleContextFit() {
 }
 window.addEventListener("resize", scheduleContextFit);
 
+const actionToast = document.querySelector("[data-action-toast]");
+let actionToastTimer;
+
+function showActionToast(message) {
+  clearTimeout(actionToastTimer);
+  actionToast.replaceChildren(message);
+  actionToastTimer = setTimeout(() => actionToast.replaceChildren(), 3500);
+}
+
 function railList(items, { className = "", empty = "No items are available." } = {}) {
   if (!items.length) return `<p class="context-empty">${escapeHtml(empty)}</p>`;
   return `<ol class="context-list ${escapeHtml(className)}">${items.join("")}</ol>`;
+}
+
+// One small, local list filter shared by navigation panes and touch browse lists.
+// It only filters rendered headings; full-text search remains in its existing worker.
+function browseFilter(id, label, target, placeholder = "Number or heading") {
+  return `<div class="browse-filter"><label for="${id}">${escapeHtml(label)}</label>
+    <input id="${id}" type="search" placeholder="${escapeHtml(placeholder)}" data-filter-list="${target}" aria-controls="${target}" autocomplete="off">
+    <p class="browse-filter-status" role="status" aria-live="polite" data-filter-status="${target}"></p></div>`;
+}
+
+// The three panes are the default. The page tree replaces them when chosen in Settings.
+function statuteNavigation(catalog, route, panes, current = {}) {
+  // The page tree reads the current edition's heading index, so an archived edition uses panes.
+  if (deviceState.preferences().navigationTree && !readerEdition) return { contextualNavigation: [statuteTree.column(catalog, current)], columnCount: 1 };
+  return { contextualNavigation: panes(), columnCount: contextualColumnCount("statutes", route) };
 }
 
 function statuteTitleColumn(catalog, selected = null) {
   return {
     label: "Statute titles",
     className: "titles-column",
-    heading: `<p class="eyebrow">Statutes</p><strong>Titles</strong>`,
-    content: railList(catalog.titles.map((title) => `<li><a href="${escapeHtml(titleRoute(title))}"${selected?.id === title.id ? ` aria-current="page"` : ""}><strong>${escapeHtml(titleLabel(title))}</strong><span>${escapeHtml(title.name)}</span></a></li>`))
+    heading: `<p class="eyebrow">Statutes</p><strong>Titles</strong>${browseFilter("rail-title-filter", "Filter titles", "rail-titles")}`,
+    content: `<div id="rail-titles">${railList(catalog.titles.map((title) => `<li><a href="${escapeHtml(titleRoute(title))}"${selected?.id === title.id ? ` aria-current="page"` : ""}><strong>${escapeHtml(titleLabel(title))}</strong><span>${escapeHtml(title.name)}</span></a></li>`))}</div>`
   };
 }
 
@@ -297,8 +420,8 @@ function statuteChapterColumn(title, selected = null) {
   return {
     label: `Chapters in ${titleLabel(title)}`,
     className: "chapters-column",
-    heading: `<p class="eyebrow">${escapeHtml(titleLabel(title))}</p><strong>Chapters</strong>`,
-    content: railList(title.chapters.map((chapter) => `<li><a href="${escapeHtml(chapterRoute(title, chapter))}"${selected?.id === chapter.id ? ` aria-current="page"` : ""}><strong>${escapeHtml(chapterLabel(chapter))}</strong><span>${escapeHtml(chapter.name)}</span><small>${chapter.sectionCount} section${chapter.sectionCount === 1 ? "" : "s"}</small></a></li>`))
+    heading: `<p class="eyebrow">${escapeHtml(titleLabel(title))}</p><strong>Chapters</strong>${browseFilter("rail-chapter-filter", "Filter chapters", "rail-chapters")}`,
+    content: `<div id="rail-chapters">${railList(title.chapters.map((chapter) => `<li><a href="${escapeHtml(chapterRoute(title, chapter))}"${selected?.id === chapter.id ? ` aria-current="page"` : ""}><strong>${escapeHtml(chapterLabel(chapter))}</strong><span>${escapeHtml(chapter.name)}</span><small>${chapter.sectionCount} section${chapter.sectionCount === 1 ? "" : "s"}</small></a></li>`))}</div>`
   };
 }
 
@@ -307,41 +430,92 @@ function statuteChapterColumn(title, selected = null) {
 function pendingActPill(amendments = []) {
   if (!amendments.length) return "";
   const repealed = amendments.every((amendment) => amendment.action === "repealed");
-  return `<span class="section-status-pill act-pending-pill"><span aria-hidden="true">Recent Act</span><span class="visually-hidden">${repealed ? "Repealed" : "Amended"} by ${amendments.length === 1 ? "a recent Public Act" : "recent Public Acts"}</span></span>`;
+  const description = `${repealed ? "Repealed" : "Amended"} by ${amendments.length === 1 ? "a recent Public Act" : "recent Public Acts"}`;
+  return `<span class="section-status-pill act-pending-pill navigation-notice" title="${description}"><span class="navigation-notice-label" aria-hidden="true">Recent Act</span><span class="visually-hidden">${description}</span></span>`;
+}
+
+const STATUS_LABELS = { repealed: "Repealed", transferred: "Transferred", obsolete: "Obsolete", reserved: "Reserved" };
+
+// The status tags (Repealed, Transferred, Obsolete, Reserved) and the supplement tag. Recent Act
+// tags load separately.
+function sectionNoticePills(statuses, change) {
+  const statusPill = statuses.filter((status) => STATUS_LABELS[status]).map((status) => `<span class="section-status-pill ${status}-pill navigation-notice" title="${STATUS_LABELS[status]}"><span class="navigation-notice-label">${STATUS_LABELS[status]}</span></span>`).join("");
+  const supplementText = change ? escapeHtml(supplementLabel(change, { short: true })) : "";
+  const supplementPill = change ? `<span class="supplement-pill supplement-${escapeHtml(change.presentation)} navigation-notice" title="${supplementText}"><span class="navigation-notice-label">${supplementText}</span></span>` : "";
+  return `${statusPill}${supplementPill}`;
+}
+
+// The same tags for a row of a heading index, which records each status by name and the
+// supplement tag as "supplement-<presentation>".
+function headingNoticePills(tags = [], amendments = []) {
+  const supplement = tags.find((tag) => tag.startsWith("supplement-"));
+  return `${sectionNoticePills(tags.filter((tag) => STATUS_LABELS[tag]), supplement ? { presentation: supplement.slice("supplement-".length) } : null)}${pendingActPill(amendments)}`;
 }
 
 function statuteSectionItems(title, chapter, sections, selected, changeBySection = new Map(), pendingBySection = new Map()) {
   return sections.map((section) => {
-    const change = changeBySection.get(section.id);
-    const status = section.status === "repealed" ? `<span class="section-status-pill repealed-pill">Repealed</span>` : "";
-    const supplement = change ? `<span class="supplement-pill supplement-${escapeHtml(change.presentation)}">${escapeHtml(supplementLabel(change, { short: true }))}</span>` : "";
+    const notices = sectionNoticePills(sectionStatuses(section), changeBySection.get(section.id));
+    const label = navigationSectionLabel(section);
     const description = navigationSectionDescription(section);
-    const showDescription = description && description !== section.citation;
-    return `<li><a href="${escapeHtml(provisionRoute(title, chapter, section))}"${selected?.id === section.id ? ` aria-current="page"` : ""}><strong>${escapeHtml(navigationSectionLabel(section))}</strong>${status}${supplement}<span data-act-notice-for="${escapeHtml(section.id)}">${pendingActPill(pendingBySection.get(section.id))}</span>${showDescription ? `<span>${escapeHtml(description)}</span>` : ""}</a></li>`;
+    const shortDescription = shortSectionDescription(description);
+    const showDescription = shortDescription && description !== section.citation && label !== section.heading;
+    const shortLabel = label === section.heading ? label.split(/(?<=\.)\s+/, 1)[0] : label;
+    return `<li data-filter-heading="${escapeHtml(section.heading)}"><a class="section-navigation-link" href="${escapeHtml(provisionRoute(title, chapter, section))}"${selected?.id === section.id ? ` aria-current="page"` : ""}><strong>${escapeHtml(shortLabel)}</strong><span class="section-navigation-notices">${notices}<span data-act-notice-for="${escapeHtml(section.id)}">${pendingActPill(pendingBySection.get(section.id))}</span></span>${showDescription ? `<span class="section-navigation-description">${escapeHtml(shortDescription)}</span>` : ""}</a></li>`;
   });
 }
 
-function pendingChapterSummary(pendingBySection) {
+const disclosureChevron = `<svg class="tree-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>`;
+
+// A collapsed list of a chapter's sections, drawn as a row with a chevron so it reads as
+// something to open.
+function chapterChangeList(label, items) {
+  return `<details class="chapter-change-list"><summary><span>${label}</span>${disclosureChevron}</summary>${railList(items)}</details>`;
+}
+
+// The supplement and Recent Act notices share one shape: a heading, one sentence, and the
+// sections as collapsed lists. Their colors carry the meaning (blue supplement, amber caution).
+function chapterSupplementSummary(title, chapter, overlay, changeBySection) {
+  if (!changeBySection.size) return "";
+  const updated = [];
+  const added = [];
+  for (const section of chapter.sections) {
+    const change = changeBySection.get(section.id);
+    if (change) (change.presentation === "new" ? added : updated).push(section);
+  }
+  const count = updated.length + added.length;
+  const groups = [["Updated sections", updated], ["New sections", added]];
+  return `<section class="chapter-notice supplement-summary"><h2>Changed by the ${overlay.editionYear} Supplement</h2>
+    <p>The text of ${count} section${count === 1 ? "" : "s"} in this chapter comes from the ${overlay.editionYear} Supplement.</p>
+    ${groups.filter(([, sections]) => sections.length).map(([label, sections]) =>
+      chapterChangeList(`${label} (${sections.length})`, statuteSectionItems(title, chapter, sections, null, changeBySection))
+    ).join("")}</section>`;
+}
+
+function pendingChapterSummary(title, chapter, changeBySection, pendingBySection) {
   if (!pendingBySection.size) return "";
   const all = [...pendingBySection.values()].flat();
   const count = pendingBySection.size;
   const oneAct = new Set(all.map((amendment) => amendment.citation)).size === 1;
-  return `<p class="pending-amendments-summary"><strong>${oneAct ? "A recent Public Act changes" : "Recent Public Acts change"} ${count} section${count === 1 ? "" : "s"} in this chapter.</strong> ${count === 1 ? "It is" : "They are"} marked “Recent Act” in the list. The text shown does not include those changes yet.</p>`;
+  const sections = chapter.sections.filter((section) => pendingBySection.has(section.id));
+  return `<section class="chapter-notice pending-amendments-summary"><h2>Changed by recent Public Acts</h2>
+    <p>${oneAct ? "A recent Public Act changes" : "Recent Public Acts change"} ${count} section${count === 1 ? "" : "s"} in this chapter. The statute text does not include those changes yet.</p>
+    ${chapterChangeList(`Affected sections (${count})`, statuteSectionItems(title, chapter, sections, null, changeBySection, pendingBySection))}</section>`;
 }
 
 function statuteSectionColumn(title, chapter, sections, selected, changeBySection, pendingBySection) {
   return {
     label: `Sections in ${chapterLabel(chapter)}`,
     className: "sections-column",
-    heading: `<p class="eyebrow">${escapeHtml(chapterLabel(chapter))}</p><strong>Sections</strong>`,
-    content: railList(statuteSectionItems(title, chapter, sections, selected, changeBySection, pendingBySection))
+    heading: `<p class="eyebrow">${escapeHtml(chapterLabel(chapter))}</p><strong>Sections</strong>${browseFilter("rail-section-filter", "Filter sections", "rail-sections")}`,
+    content: `<div id="rail-sections">${railList(statuteSectionItems(title, chapter, sections, selected, changeBySection, pendingBySection))}</div>`
   };
 }
 
 function chapterSheet(title, chapter, sections, selected, changeBySection, pendingBySection) {
   return `<dialog class="chapter-sheet" data-chapter-sheet aria-labelledby="chapter-sheet-title">
     <div class="chapter-sheet-panel"><header><div><p class="eyebrow">${escapeHtml(titleLabel(title))}</p><h2 id="chapter-sheet-title">${escapeHtml(chapterLabel(chapter))} sections</h2></div><button type="button" data-close-chapter-sheet autofocus>Close</button></header>
-      ${railList(statuteSectionItems(title, chapter, sections, selected, changeBySection, pendingBySection), { className: "chapter-sheet-list" })}
+      ${browseFilter("sheet-section-filter", "Filter chapter sections", "sheet-sections")}
+      <div id="sheet-sections">${railList(statuteSectionItems(title, chapter, sections, selected, changeBySection, pendingBySection), { className: "chapter-sheet-list stagger-rows" })}</div>
     </div>
   </dialog>`;
 }
@@ -351,6 +525,16 @@ function bindChapterSheet() {
   chapterDialogController = null;
   const dialog = document.querySelector("[data-chapter-sheet]");
   if (dialog) chapterDialogController = new NativeDialogController(dialog);
+}
+
+// The first breadcrumbs of a statute page: the title list, or for an archived edition the
+// editions list and that edition's titles.
+function editionBreadcrumbs() {
+  if (!readerEdition) return [{ label: "Titles", href: titlesRouteHref() }];
+  return [
+    { label: "Editions", href: editionsRouteHref() },
+    { label: `${readerEdition.id} edition`, href: titlesRouteHref(readerEdition.id) }
+  ];
 }
 
 function breadcrumbs(items) {
@@ -376,11 +560,11 @@ function setDocumentTitle(...parts) {
 }
 
 function titleRoute(title) {
-  return routeHref({ title: title.number });
+  return routeHref({ title: title.number, edition: readerEdition?.id });
 }
 
 function chapterRoute(title, chapter) {
-  return routeHref({ title: title.number, chapter: chapter.number });
+  return routeHref({ title: title.number, chapter: chapter.number, edition: readerEdition?.id });
 }
 
 function provisionRoute(title, chapter, section, subsection = null) {
@@ -388,8 +572,23 @@ function provisionRoute(title, chapter, section, subsection = null) {
     title: title.number,
     chapter: chapter.number,
     section: sectionRouteKey(section),
-    subsection
+    subsection,
+    edition: readerEdition?.id
   });
+}
+
+// Data for the edition being read: the current statutes, or an archived edition's own copy.
+function readerSupplements() {
+  return readerEdition?.supplements ?? supplementRepository;
+}
+
+function chapterDataPath(path) {
+  return readerEdition ? new URL(path, readerEdition.dataRoot).href : `./data/${path}`;
+}
+
+// An archived page links to its edition's year-scoped CGA page, not /current/.
+function officialUrl(url) {
+  return readerEdition ? officialSourceUrl(url, readerEdition.entry.officialSources) : url;
 }
 
 async function referenceMaps(provisions, catalog, { resolve = true } = {}) {
@@ -411,7 +610,10 @@ async function referenceMaps(provisions, catalog, { resolve = true } = {}) {
     referencedTitles.get(title.id).citations.push(citation);
   }
 
-  for (const citation of references.sections) sections.set(citation, searchRouteHref(citation));
+  // Statute search covers only the current edition, so an archived page links a citation only
+  // once it resolves to a section of that same edition; one that doesn't stays plain text.
+  const edition = readerEdition;
+  if (!edition) for (const citation of references.sections) sections.set(citation, searchRouteHref(citation));
   for (const number of references.chapters) {
     const match = findChapter(catalog, number);
     if (match) chapters.set(number, chapterRoute(match.title, match.chapter));
@@ -420,12 +622,16 @@ async function referenceMaps(provisions, catalog, { resolve = true } = {}) {
 
   await Promise.all([...referencedTitles.values()].map(async ({ title, citations }) => {
     try {
-      const routes = await repository.loadCitations(title.id);
+      const routes = await (edition ? edition.loadCitations(title.id) : repository.loadCitations(title.id));
       for (const citation of citations) {
         const route = routes[citation];
-        if (route) sections.set(citation, routeHref({ title: title.number, chapter: route[0], section: route[1] }));
+        if (route) sections.set(citation, routeHref({ title: title.number, chapter: route[0], section: route[1], edition: edition?.id }));
       }
     } catch (error) {
+      if (edition) {
+        console.warn("Could not load the archived edition's citation routes", error);
+        return;
+      }
       // Without the lookup (e.g. older offline data), a search still finds the section.
       console.warn("Could not load citation routes", error);
       for (const citation of citations) sections.set(citation, searchRouteHref(citation));
@@ -493,11 +699,9 @@ function supplementLabel(change, { short = false } = {}) {
 }
 
 function renderPreviousRevision(change, maps) {
-  if (!change?.previousSections?.length) return "";
   const priorYear = change.editionYear - 1;
-  return `<details class="prior-revision">
-    <summary>Text of the ${priorYear} revision (superseded by the ${change.editionYear} Supplement)</summary>
-    <div>${change.previousSections.map((section) => `<section class="prior-provision">
+  return `<p class="revision-view-note">Text of the ${priorYear} revision, superseded by the ${change.editionYear} Supplement.</p>
+    ${change.previousSections.map((section) => `<section class="prior-provision">
       <h2>${escapeHtml(section.heading)}</h2>
       <div class="statute-text">${section.content.body.map((paragraph) => `<p>${renderLinkedText(paragraph, maps)}</p>`).join("")}</div>
       <div class="section-notes">
@@ -505,14 +709,11 @@ function renderPreviousRevision(change, maps) {
         ${renderNotes("History", section.content.history, maps)}
         ${renderAnnotations(section.content.annotations, maps)}
       </div>
-    </section>`).join("")}</div>
-  </details>`;
+    </section>`).join("")}`;
 }
 
 function renderRevisionComparison(section, change, maps) {
-  if (!change?.previousSections?.length) return "";
   const priorYear = change.editionYear - 1;
-  const id = `revision-comparison-${section.id.replace(/[^a-z0-9_-]/gi, "-")}`;
   const previousText = change.previousSections
     .map((previous) => previous.content.body.join("\n\n"))
     .join("\n\n");
@@ -524,15 +725,27 @@ function renderRevisionComparison(section, change, maps) {
     if (segment.type === "delete") return `<del class="revision-deletion">${text}</del>`;
     return text;
   }).join("");
-  return `<details class="revision-comparison" id="${escapeHtml(id)}">
-    <summary>Compare with ${priorYear} text</summary>
-    <div class="revision-comparison-content" aria-labelledby="${escapeHtml(id)}-heading">
-      <header><p class="eyebrow">Language comparison</p><h2 id="${escapeHtml(id)}-heading">${change.editionYear} Supplement compared with ${priorYear}</h2><p>Formatting changes may appear as textual changes. Verify language with the official sources.</p></header>
+  return `<div class="revision-comparison-content">
+      <header><p class="eyebrow">Language comparison</p><h2>${change.editionYear} Supplement compared with ${priorYear}</h2><p>Formatting changes may appear as textual changes. Verify language with the official sources.</p></header>
       <div class="revision-diff-legend" aria-label="Comparison legend"><span class="revision-addition">Added in ${change.editionYear}</span><span class="revision-deletion">Removed from ${priorYear}</span></div>
       <div class="statute-text revision-diff-text">${diff}</div>
-      ${renderPreviousRevision(change, maps)}
-    </div>
-  </details>`;
+    </div>`;
+}
+
+// A section with earlier text switches between three views. The Supplement's text comes first
+// because it is the current law. Any other section renders its text directly.
+function renderTextViews(section, change, currentView, maps) {
+  if (!change?.previousSections?.length) return currentView;
+  const id = `revision-views-${section.id.replace(/[^a-z0-9_-]/gi, "-")}`;
+  const views = [
+    ["current", `${change.editionYear} Supplement`, currentView],
+    ["previous", `${change.editionYear - 1} text`, renderPreviousRevision(change, maps)],
+    ["compare", "Compare", renderRevisionComparison(section, change, maps)]
+  ];
+  return `<div class="revision-view-switch"><div class="button-group" role="tablist" aria-label="Section text version">
+      ${views.map(([key, label], index) => `<button type="button" role="tab" id="${id}-${key}-tab" aria-controls="${id}-${key}" aria-selected="${index === 0}"${index ? ' tabindex="-1"' : ""} data-revision-view>${escapeHtml(label)}</button>`).join("")}
+    </div></div>
+    ${views.map(([key, , content], index) => `<div class="revision-view" role="tabpanel" id="${id}-${key}" aria-labelledby="${id}-${key}-tab" tabindex="0"${index ? " hidden" : ""}>${content}</div>`).join("")}`;
 }
 
 function sectionNavigation(title, chapter, sections, selected) {
@@ -540,8 +753,8 @@ function sectionNavigation(title, chapter, sections, selected) {
   const previous = index > 0 ? sections[index - 1] : null;
   const next = index < sections.length - 1 ? sections[index + 1] : null;
   return `<nav class="adjacent" aria-label="Adjacent sections">
-    ${previous ? `<a rel="prev" href="${escapeHtml(provisionRoute(title, chapter, previous))}"><span>Previous</span>${escapeHtml(sectionLabel(previous))}</a>` : "<span></span>"}
-    ${next ? `<a rel="next" href="${escapeHtml(provisionRoute(title, chapter, next))}"><span>Next</span>${escapeHtml(sectionLabel(next))}</a>` : ""}
+    ${previous ? `<a rel="prev" href="${escapeHtml(provisionRoute(title, chapter, previous))}"><span>Previous</span>${escapeHtml(navigationSectionLabel(previous, { compact: false }))}</a>` : "<span></span>"}
+    ${next ? `<a rel="next" href="${escapeHtml(provisionRoute(title, chapter, next))}"><span>Next</span>${escapeHtml(navigationSectionLabel(next, { compact: false }))}</a>` : ""}
   </nav>`;
 }
 
@@ -571,36 +784,41 @@ function renderPendingAmendments(amendments = []) {
   </aside>`;
 }
 
+// Share opens the device's share sheet. Where there is none, it would only repeat Copy link.
+function canShareFromDevice() {
+  return typeof navigator.share === "function" && matchMedia("(pointer: coarse)").matches;
+}
+
 function renderProvision(title, chapter, section, maps, secondaryContext = null, change = null, amendments = []) {
   const route = provisionRoute(title, chapter, section);
   const absolute = new URL(route, location.href).href;
-  const status = section.status === "active" ? section.kind : section.status;
+  const tags = sectionStatuses(section);
+  const status = tags.length ? tags.join(", ") : section.status === "active" || section.status === "mixed" ? section.kind : section.status;
   const email = `mailto:?subject=${encodeURIComponent(section.heading)}&body=${encodeURIComponent(absolute)}`;
+  // An archived section is a different bookmark from the current one with the same citation.
   const bookmark = {
-    id: `statute:${title.id}:${chapter.id}:${section.id}`,
+    id: readerEdition ? `statute:edition-${readerEdition.id}:${title.id}:${chapter.id}:${section.id}` : `statute:${title.id}:${chapter.id}:${section.id}`,
     type: "statute",
-    title: sectionLabel(section),
+    title: readerEdition ? `${sectionLabel(section)} (${readerEdition.id} edition)` : sectionLabel(section),
     subtitle: section.heading,
     href: route
   };
-  const comparison = renderRevisionComparison(section, change, maps);
   return `<article class="provision" id="${escapeHtml(section.id)}">
     <div class="provision-heading">
       <p class="eyebrow">${escapeHtml(change ? supplementLabel(change) : status)}</p>
       <h1>${escapeHtml(section.heading)}</h1>
     </div>
-    <div data-amendments-status><p role="status">Amendment information loading…</p></div>
+    <div data-amendments-status><p class="visually-hidden" role="status">Amendment information loading…</p></div>
     <div class="section-actions" aria-label="Section actions">
-      ${bookmarkButton(bookmark)}
-      <button type="button" data-copy-link="${escapeHtml(route)}">Copy link</button>
-      <button type="button" data-share-link="${escapeHtml(route)}" data-share-title="${escapeHtml(section.heading)}">Share</button>
-      <a href="${escapeHtml(email)}">Email</a>
-      <a href="${escapeHtml(section.sourceUrl)}">Official source</a>
+      <button type="button" class="icon-action" data-copy-citation="${escapeHtml(`Conn. Gen. Stat. ${section.citation ? `§ ${section.citation}` : sectionLabel(section)}${readerEdition ? ` (${change ? `Supp. ${change.editionYear}` : readerEdition.entry.revisionYear})` : ""}`)}">${iconActionLabel(icons.copy, "Copy citation")}</button>
+      ${bookmarkButton(bookmark, "icon-action")}
+      <button type="button" class="icon-action" data-copy-link="${escapeHtml(route)}">${iconActionLabel(icons.link, "Copy link")}</button>
+      ${canShareFromDevice() ? `<button type="button" class="icon-action" data-share-link="${escapeHtml(route)}" data-share-title="${escapeHtml(section.heading)}">${iconActionLabel(icons.share, "Share")}</button>` : ""}
+      <a class="icon-action" href="${escapeHtml(email)}">${iconActionLabel(icons.mail, "Email")}</a>
+      <a class="primary-action" href="${escapeHtml(officialUrl(section.sourceUrl))}">Official source</a>
     </div>
-    <p class="action-status" role="status" aria-live="polite"></p>
-    <div class="statute-text">${section.content.body.map((paragraph) => renderParagraph(paragraph, maps, title, chapter, section)).join("")}</div>
-    ${renderInformationReferences(section, maps, secondaryContext, change)}
-    ${comparison}
+    ${renderTextViews(section, change, `<div class="statute-text">${section.content.body.map((paragraph) => renderParagraph(paragraph, maps, title, chapter, section)).join("")}</div>
+    ${renderInformationReferences(section, maps, secondaryContext, change)}`, maps)}
   </article>`;
 }
 
@@ -623,7 +841,9 @@ function renderSearchResults(matches, results, query, searchOptions = {}) {
   const options = normalizeSearchOptions(searchOptions);
   const highlightTerms = searchHighlightTerms(query, { within: options.within });
   results.innerHTML = matches.map(({ document, score, matchedFields = [] }) => {
-    const documentStatus = document.status === "active" ? "" : `<span class="status">${escapeHtml(document.status)}</span>`;
+    const tags = sectionStatuses(document);
+    const statusText = tags.length ? tags.join(", ") : ["active", "mixed"].includes(document.status) ? "" : document.status;
+    const documentStatus = statusText ? `<span class="status">${escapeHtml(statusText)}</span>` : "";
     const supplement = document.supplement ? `<span class="supplement-pill supplement-${escapeHtml(document.supplement.presentation)}">${escapeHtml(supplementLabel(document.supplement, { short: true }))}</span>` : "";
     const field = ["all", "statute"].includes(options.field) && matchedFields.length
       ? `<span class="result-match-field">${escapeHtml(matchedFields.map((name) => SEARCH_FIELD_LABELS[name] ?? name).join(", "))}</span>`
@@ -646,7 +866,7 @@ function renderActivityList(items, emptyMessage) {
   </a></li>`).join("")}</ol>`;
 }
 
-async function renderHome(catalog) {
+async function renderHome(catalog, settingsPanel) {
   const recents = deviceState.recents().slice(0, 5);
   const bookmarks = deviceState.bookmarks().slice(0, 5);
   setDocumentTitle();
@@ -655,13 +875,16 @@ async function renderHome(catalog) {
       <h1>Connecticut General Statutes</h1>
       <p>Browse and search the statutes, the official subject index, the Judicial Branch infraction schedule, and recent Public and Special Acts. Save frequently used material on this device.</p>
     </header>
+    <section class="research-start" aria-label="Search examples">
+      <p>Search Connecticut law by citation or keywords. Try <a href="${searchRouteHref("1-210")}">1-210</a>, <a href="${searchRouteHref('"freedom of information"')}">“freedom of information”</a>, or <a href="${searchRouteHref("landlord AND tenant")}">landlord AND tenant</a></p>
+    </section>
     <section class="destination-grid" aria-label="Explore legal materials">
-      <a href="${titlesRouteHref()}"><span aria-hidden="true">§</span><strong>Browse statutes</strong><small>Navigate by title, chapter, or section.</small></a>
-      <a href="#/index"><span aria-hidden="true">A–Z</span><strong>Subject index</strong><small>Find statutes by topic in the official LCO index.</small></a>
-      <a href="#/infractions"><span aria-hidden="true">${icons.scale}</span><strong>Infraction schedule</strong><small>Review violations, amounts, and linked statutes.</small></a>
-      <a href="#/acts"><span aria-hidden="true">${icons.document}</span><strong>Public and Special Acts</strong><small>See recent laws not yet reflected in the statute text.</small></a>
-      <a href="#/bookmarks"><span aria-hidden="true">${icons.bookmark}</span><strong>Bookmarks</strong><small>Return to sections and infractions saved on this device.</small></a>
-      <a href="${guideRouteHref()}"><span aria-hidden="true">${icons.help}</span><strong>Understanding the Statutes</strong><small>How bills become law and how current the published text is.</small></a>
+      <a data-destination="statutes" href="${titlesRouteHref()}"><span aria-hidden="true">§</span><strong>Browse statutes</strong><small>Navigate by title, chapter, or section.</small></a>
+      <a data-destination="index" href="#/index"><span aria-hidden="true">A–Z</span><strong>Subject index</strong><small>Find statutes by topic in the official LCO index.</small></a>
+      <a data-destination="infractions" href="#/infractions"><span aria-hidden="true">${icons.scale}</span><strong>Infraction schedule</strong><small>Review violations, amounts, and linked statutes.</small></a>
+      <a data-destination="acts" href="#/acts"><span aria-hidden="true">${icons.document}</span><strong>Public and Special Acts</strong><small>See recent laws not yet reflected in the statute text.</small></a>
+      <a data-destination="bookmarks" href="#/bookmarks"><span aria-hidden="true">${icons.bookmark}</span><strong>Bookmarks</strong><small>Return to sections and infractions saved on this device.</small></a>
+      <a data-destination="guide" href="${guideRouteHref()}"><span aria-hidden="true">${icons.help}</span><strong>Understanding the Statutes</strong><small>How bills become law and how current the published text is.</small></a>
     </section>
     <section class="home-activity" aria-label="Your activity">
       <div><div class="section-heading"><div><p class="eyebrow">On this device</p><h2>Recently viewed</h2></div>${recents.length ? `<button type="button" class="text-button" data-clear-recents>Clear</button>` : ""}</div>${renderActivityList(recents, "Sections, index topics, and infractions you open will appear here.")}</div>
@@ -669,20 +892,31 @@ async function renderHome(catalog) {
     </section>
   </main>`;
   mountApplicationShell({
-    contextualNavigation: [statuteTitleColumn(catalog)],
+    ...statuteNavigation(catalog, { kind: "home" }, () => [statuteTitleColumn(catalog)]),
     mainContent,
-    columnCount: contextualColumnCount("statutes", { kind: "home" }),
     mobilePresentationMode: "home"
-  });
+  }, settingsPanel);
 }
 
-function renderTitles(catalog) {
-  setDocumentTitle("Titles");
-  app.innerHTML = `${siteHeader()}<main class="browse-page titles-page" id="main-content">
-    <header class="browse-heading"><div><p class="eyebrow">${catalog.counts.chapters.toLocaleString()} chapters · ${catalog.counts.sections.toLocaleString()} sections</p><h1>Statute titles</h1></div></header>
-    <ol class="title-list">${catalog.titles.map((title) => `<li><a href="${escapeHtml(titleRoute(title))}"><strong>${escapeHtml(titleLabel(title))}</strong><span>${escapeHtml(title.name)}</span><small>${title.chapters.length} chapter${title.chapters.length === 1 ? "" : "s"}</small></a></li>`).join("")}</ol>
-  </main><footer>${legalFooter()}</footer>`;
-  window.scrollTo({ top: 0 });
+function renderTitles(catalog, settingsPanel) {
+  const edition = readerEdition;
+  setDocumentTitle(edition ? `${edition.id} edition` : "Titles");
+  const mainContent = `<main class="browse-page titles-page" id="main-content">
+    ${edition ? breadcrumbs([{ label: "Editions", href: editionsRouteHref() }, { label: `${edition.id} edition` }]) : ""}
+    <header class="browse-heading"><div><p class="eyebrow">${catalog.counts.chapters.toLocaleString()} chapters · ${catalog.counts.sections.toLocaleString()} sections</p><h1>${edition ? escapeHtml(shortEditionLabel(edition.entry.revisionYear, edition.entry.supplementYears)) : "Statute titles"}</h1></div>${edition ? "" : `<a href="${escapeHtml(editionsRouteHref())}">Earlier editions</a>`}</header>
+    ${edition ? renderArchivedEditionNotice({ edition: edition.entry, currentHref: titlesRouteHref(), editionsHref: editionsRouteHref() }) : ""}
+    <div class="statute-drilldown">
+      ${browseFilter("title-filter", "Find a title", "browse-titles-list")}
+      <ol class="title-list" id="browse-titles-list">${catalog.titles.map((title) => `<li><a href="${escapeHtml(titleRoute(title))}"><strong>${escapeHtml(titleLabel(title))}</strong><span>${escapeHtml(title.name)}</span><small>${title.chapters.length} chapter${title.chapters.length === 1 ? "" : "s"}</small></a></li>`).join("")}</ol>
+    </div>
+  </main>`;
+  const showTree = compactLayout.matches && deviceState.preferences().navigationTree && !edition;
+  mountApplicationShell({
+    contextualNavigation: showTree ? [statuteTree.column(catalog)] : [],
+    mainContent,
+    mobilePresentationMode: "drilldown"
+  }, settingsPanel);
+  if (!settingsPanel?.isConnected) window.scrollTo({ top: 0 });
 }
 
 function renderHistory() {
@@ -715,9 +949,9 @@ async function loadLatestSupplement() {
 
 // The guide's code loads only on its own route, so other pages don't download it.
 async function renderGuide(catalog, route, sequence) {
-  const [guide, [supplementResult, actsResult]] = await Promise.all([
+  const [guide, [supplementResult, actsResult, publishedResult]] = await Promise.all([
     import("./guide.js"),
-    Promise.allSettled([loadLatestSupplement(), actsRepository.manifest()])
+    Promise.allSettled([loadLatestSupplement(), actsRepository.manifest(), getJson("./data/editions/published.json")])
   ]);
   if (sequence !== renderSequence) return;
   // A source that failed to load is unknown (undefined), which the guide says, rather than absent.
@@ -729,7 +963,7 @@ async function renderGuide(catalog, route, sequence) {
   setDocumentTitle("Understanding the Statutes");
   app.innerHTML = `${siteHeader()}<main class="guide-page" id="main-content">
     ${breadcrumbs([{ label: "Home", href: "#/" }, { label: "Understanding the Statutes" }])}
-    ${guide.renderGuide({ coverage })}
+    ${guide.renderGuide({ coverage, publishedEditions: publishedResult.status === "fulfilled" ? publishedResult.value.editions : null })}
   </main><footer>${legalFooter()}</footer>`;
   unmountGuide = guide.mountGuide(app.querySelector(".guide-page"), { scrollTo: route.part });
   if (!route.part) window.scrollTo({ top: 0 });
@@ -779,7 +1013,7 @@ function queryExplanationMarkup(query, routeOptions = {}) {
     if (options.field !== "statute") filters.push(`${SEARCH_FIELD_LABELS[options.field] ?? options.field} field`);
     if (options.status) filters.push(`${options.status} sections`);
     if (options.supplement) filters.push(options.supplement === "updated" ? "supplement-updated sections" : "base revision only");
-    return `<section class="query-explanation" aria-labelledby="query-explanation-heading"><p class="eyebrow">Query interpretation</p><h2 id="query-explanation-heading">${escapeHtml(explainSearchQuery(query, options))}</h2>${filters.length ? `<p>${filters.map((value) => escapeHtml(value)).join(" · ")}</p>` : ""}<p>Sorted by ${options.sort === "citation" ? "citation" : "relevance"}. Exact terms are used; fuzzy matching and stemming are off.</p></section>`;
+    return `<section class="query-explanation" aria-labelledby="query-explanation-heading"><p class="eyebrow">Query interpretation</p><h2 id="query-explanation-heading">${escapeHtml(explainSearchQuery(query, options))}</h2>${filters.length ? `<p>${filters.map((value) => escapeHtml(value)).join(" · ")}</p>` : ""}<p>Sorted by ${options.sort === "citation" ? "citation" : "relevance"}.</p></section>`;
   } catch (error) {
     return `<section class="query-explanation query-explanation-error" role="alert"><strong>Query could not be interpreted</strong><p>${escapeHtml(error.message)}</p></section>`;
   }
@@ -826,7 +1060,7 @@ async function runStatuteSearch(query, routeOptions = {}, { limit = SEARCH_BATCH
     const { results: matches, totalMatches, supplementUnavailable } = outcome;
     status.textContent = totalMatches
       ? `Showing ${matches.length.toLocaleString()} of ${totalMatches.toLocaleString()} result${totalMatches === 1 ? "" : "s"}`
-      : "No results";
+      : "No results. Try fewer words, check the citation, or broaden the title and chapter filters.";
     warning.hidden = !supplementUnavailable;
     renderSearchResults(matches, results, query, options);
     const href = searchRouteHref(query, { ...options, title: routeOptions.title });
@@ -853,36 +1087,60 @@ async function runStatuteSearch(query, routeOptions = {}, { limit = SEARCH_BATCH
   }
 }
 
+function searchQueryRow({ id, label, query = "", placeholder, submit = "Search", required = false, autocompleteOff = false }) {
+  return `<label for="${id}">${escapeHtml(label)}</label>
+    <div class="search-query-row">
+      <div class="search-query-field"><span aria-hidden="true">${icons.search}</span>
+        <input id="${id}" name="query" type="search"${required ? ' minlength="2" required' : ""}${autocompleteOff ? ' autocomplete="off"' : ""} placeholder="${escapeHtml(placeholder)}" value="${escapeHtml(query)}"></div>
+      <button type="submit">${escapeHtml(submit)}</button>
+    </div>`;
+}
+
 async function renderSearchPage(catalog, route) {
   const query = route.query ?? "";
   const options = searchRouteOptions(route);
   const selectedTitle = catalog.titles.find((title) => title.id === options.title) ?? null;
+  const hasAdvancedOptions = options.title || options.chapter || options.field !== "statute" || options.status || options.supplement || options.sort !== "relevance";
   setDocumentTitle(query ? `Search: ${query}` : "Search");
   app.innerHTML = `${siteHeader()}<main class="search-page" id="main-content">
-    <header><p class="eyebrow">Statutes, acts, and infractions</p><h1>Search</h1><p>Search the full statute text and, when selected, legislative history and annotations. Matching Public and Special Acts and infractions are listed under “Also found in”; the filters below apply to statutes only.</p></header>
-    <form class="search-refine search-v2-refine" data-search-refine>
-      <div class="search-primary-controls">
-        <div class="search-field search-query-field"><label for="search-page-query">Citation, phrase, or keyword</label>
-          <input id="search-page-query" name="query" type="search" minlength="2" required aria-describedby="search-help" value="${escapeHtml(query)}"></div>
-        <div class="search-field"><label for="search-title">Title</label>
-          <select id="search-title" name="title"><option value="">All titles</option>${catalog.titles.map((title) => `<option value="${escapeHtml(title.id)}"${selectAttribute(title.id, options.title)}>${escapeHtml(titleLabel(title))} — ${escapeHtml(title.name)}</option>`).join("")}</select></div>
-        <div class="search-field"><label for="search-chapter">Chapter</label>
-          <select id="search-chapter" name="chapter"${selectedTitle ? "" : " disabled"}><option value="">All chapters</option>${selectedTitle?.chapters.map((chapter) => `<option value="${escapeHtml(chapter.number)}"${selectAttribute(chapter.number, options.chapter)}>${escapeHtml(chapterLabel(chapter))} — ${escapeHtml(chapter.name)}</option>`).join("") ?? ""}</select></div>
-        <button type="submit">Search</button>
-      </div>
-      <details class="search-advanced"${options.field !== "statute" || options.status || options.supplement || options.sort !== "relevance" ? " open" : ""}>
-        <summary>Advanced search options</summary>
+    <header><h1>Search</h1><p>Search statutes, Public and Special Acts, and infractions. Advanced filters apply to statutes only.</p></header>
+    <form class="search-refine search-v2-refine" role="search" aria-label="Search statutes, acts, and infractions" data-search-refine>
+      ${searchQueryRow({
+        id: "search-page-query",
+        label: "Citation, phrase, or keyword",
+        query,
+        placeholder: "e.g., 1-210 or freedom of information",
+        required: true
+      })}
+      <details class="search-advanced"${hasAdvancedOptions ? " open" : ""}>
+        <summary><span aria-hidden="true">${icons.settings}</span>Advanced search options${disclosureChevron}</summary>
         <div class="search-filter-grid">
+          <div class="search-field"><label for="search-title">Title</label>
+            <select id="search-title" name="title"><option value="">All titles</option>${catalog.titles.map((title) => `<option value="${escapeHtml(title.id)}"${selectAttribute(title.id, options.title)}>${escapeHtml(titleLabel(title))} — ${escapeHtml(title.name)}</option>`).join("")}</select></div>
+          <div class="search-field"><label for="search-chapter">Chapter</label>
+            <select id="search-chapter" name="chapter"${selectedTitle ? "" : " disabled"}><option value="">${selectedTitle ? "All chapters" : "Choose a title first"}</option>${selectedTitle?.chapters.map((chapter) => `<option value="${escapeHtml(chapter.number)}"${selectAttribute(chapter.number, options.chapter)}>${escapeHtml(chapterLabel(chapter))} — ${escapeHtml(chapter.name)}</option>`).join("") ?? ""}</select></div>
           <div class="search-field"><label for="search-field">Search field</label><select id="search-field" name="field">${[["statute", "Statute text"], ["citation", "Citation"], ["heading", "Heading"], ["body", "Body"], ["history", "History"], ["annotations", "Annotations"], ["all", "All fields"]].map(([value, label]) => `<option value="${value}"${selectAttribute(value, options.field)}>${label}</option>`).join("")}</select></div>
           <div class="search-field"><label for="search-status-filter">Section status</label><select id="search-status-filter" name="status"><option value="">Any status</option>${["active", "mixed", "obsolete", "repealed", "reserved", "transferred"].map((value) => `<option value="${value}"${selectAttribute(value, options.status)}>${value[0].toUpperCase()}${value.slice(1)}</option>`).join("")}</select></div>
           <div class="search-field"><label for="search-supplement-filter">Supplement</label><select id="search-supplement-filter" name="supplement"><option value="">Base and supplement</option><option value="updated"${selectAttribute("updated", options.supplement)}>Updated by supplement</option><option value="base"${selectAttribute("base", options.supplement)}>Base revision only</option></select></div>
           <div class="search-field"><label for="search-sort">Sort</label><select id="search-sort" name="sort"><option value="relevance"${selectAttribute("relevance", options.sort)}>Relevance</option><option value="citation"${selectAttribute("citation", options.sort)}>Citation</option></select></div>
         </div>
       </details>
+      <details class="search-syntax"><summary>Search tips</summary><div class="search-help" id="search-help">
+        <ul>
+          <li><code>landlord AND tenant</code> finds both words. Words with no operator between them are joined by AND.</li>
+          <li><code>lease OR rental</code> finds either word.</li>
+          <li><code>tenant NOT commercial</code> leaves out the word after NOT.</li>
+          <li><code>"security deposit"</code> finds the exact phrase.</li>
+          <li><code>landlord NEAR/5 tenant</code> finds words within 5 words of each other.</li>
+          <li><code>regulat*</code> finds any word starting with those letters. The wildcard works only at the end of a word.</li>
+          <li><code>(lease OR rental) AND deposit</code> groups terms with parentheses.</li>
+        </ul>
+        <p>Stemming and fuzzy matching are off, so <code>tenant</code> does not find “tenants.” Use <code>tenant*</code> to find both.</p>
+      </div></details>
     </form>
-    <p class="search-help" id="search-help">Use AND, OR, NOT, parentheses, quoted phrases, NEAR/n proximity, and a trailing wildcard such as <code>regulat*</code>. Multiple words use AND automatically. Fuzzy matching and stemming are not applied.</p>
+
     ${queryExplanationMarkup(query, options)}
-    ${query ? `<form class="search-within" data-search-within><label for="search-within-query">Search within these results</label><div><input id="search-within-query" name="within" type="search" minlength="2" value="${escapeHtml(options.within ?? "")}" placeholder="Add another term or Boolean query"><button type="submit">Apply</button></div>${options.within ? `<a href="${escapeHtml(searchRouteHref(query, { ...options, within: null }))}">Clear within search</a>` : ""}</form>` : ""}
+    ${query ? `<details class="search-within-disclosure"${options.within ? " open" : ""}><summary>Search within these results</summary><form class="search-within" data-search-within><label for="search-within-query">Search within these results</label><div><input id="search-within-query" name="within" type="search" minlength="2" value="${escapeHtml(options.within ?? "")}" placeholder="Add another term or Boolean query"><button type="submit">Apply</button></div>${options.within ? `<a href="${escapeHtml(searchRouteHref(query, { ...options, within: null }))}">Clear within search</a>` : ""}</form></details>` : ""}
     ${query.length >= 2 ? alsoFoundMarkup(query) : ""}
     <progress id="search-progress" value="0" max="1" hidden>Search progress</progress>
     <div id="search-status" role="status" aria-live="polite">${query ? "Preparing search…" : "Enter at least two characters."}</div>
@@ -903,13 +1161,13 @@ function alsoFoundMarkup(query) {
   if (!plainSearchWords(query)) {
     return `<p class="also-found-note">Public and Special Acts and infractions are not searched when a query uses OR, NOT, NEAR, or parentheses.</p>`;
   }
-  return `<section class="also-found" data-also-found aria-labelledby="also-found-heading" hidden>
-    <h2 id="also-found-heading">Also found in</h2>
+  return `<details class="also-found" data-also-found hidden>
+    <summary>Also found in${disclosureChevron}</summary>
     <div class="also-found-groups">
       <section class="also-found-group" data-also-found-group="acts" aria-labelledby="also-found-acts" hidden></section>
       <section class="also-found-group" data-also-found-group="infractions" aria-labelledby="also-found-infractions" hidden></section>
     </div>
-  </section>`;
+  </details>`;
 }
 
 function fillAlsoFoundGroup(section, name, heading, rows, links) {
@@ -942,20 +1200,23 @@ function searchOtherSources(query) {
   }).catch((error) => console.warn("Could not search the infractions", error));
 }
 
-function renderTitle(catalog, title) {
+function renderTitle(catalog, title, settingsPanel) {
   setDocumentTitle(titleLabel(title));
   const mainContent = `<main class="browse-page application-main" id="main-content">
-    ${breadcrumbs([{ label: "Titles", href: titlesRouteHref() }, { label: titleLabel(title) }])}
-    <div class="browse-heading"><div><p class="eyebrow">${title.chapters.length} chapter${title.chapters.length === 1 ? "" : "s"}</p><h1>${escapeHtml(titleLabel(title))} — ${escapeHtml(title.name)}</h1></div><a href="${escapeHtml(title.sourceUrl)}">Official title source</a></div>
+    ${breadcrumbs([...editionBreadcrumbs(), { label: titleLabel(title) }])}
+    ${readerEdition ? renderArchivedEditionNotice({ edition: readerEdition.entry, currentHref: routeHref({ title: title.number }), editionsHref: editionsRouteHref() }) : ""}
+    <div class="browse-heading"><div><p class="eyebrow">${title.chapters.length} chapter${title.chapters.length === 1 ? "" : "s"}</p><h1>${escapeHtml(titleLabel(title))} — ${escapeHtml(title.name)}</h1></div><a href="${escapeHtml(officialUrl(title.sourceUrl))}">Official title source</a></div>
     <p class="desktop-only">Choose a chapter from the chapters column.</p>
-    <ol class="chapter-list mobile-only">${title.chapters.map((chapter) => `<li><a href="${escapeHtml(chapterRoute(title, chapter))}"><strong>${escapeHtml(chapterLabel(chapter))}</strong><span>${escapeHtml(chapter.name)}</span><small>${chapter.sectionCount} section${chapter.sectionCount === 1 ? "" : "s"}</small></a></li>`).join("")}</ol>
+    <div class="mobile-only statute-drilldown">
+      ${browseFilter("chapter-filter", "Find a chapter", "browse-chapters-list")}
+      <ol class="chapter-list" id="browse-chapters-list">${title.chapters.map((chapter) => `<li><a href="${escapeHtml(chapterRoute(title, chapter))}"><strong>${escapeHtml(chapterLabel(chapter))}</strong><span>${escapeHtml(chapter.name)}</span><small>${chapter.sectionCount} section${chapter.sectionCount === 1 ? "" : "s"}</small></a></li>`).join("")}</ol>
+    </div>
   </main>`;
   mountApplicationShell({
-    contextualNavigation: [statuteTitleColumn(catalog, title), statuteChapterColumn(title)],
+    ...statuteNavigation(catalog, { kind: "title" }, () => [statuteTitleColumn(catalog, title), statuteChapterColumn(title)], { title }),
     mainContent,
-    columnCount: contextualColumnCount("statutes", { kind: "title" }),
     mobilePresentationMode: "drilldown"
-  });
+  }, settingsPanel);
 }
 
 async function sectionSecondaryContext(title, section, requestedCitation) {
@@ -980,21 +1241,25 @@ async function sectionSecondaryContext(title, section, requestedCitation) {
 const pendingChapterLoads = new Map();
 
 function prefetchChapter(path) {
-  if (pendingChapterLoads.has(path)) return;
+  const url = chapterDataPath(path);
+  if (pendingChapterLoads.has(url)) return;
   pendingChapterLoads.clear();
-  const load = getJson(`./data/${path}`);
+  const load = getJson(url);
   load.catch(() => {});
-  pendingChapterLoads.set(path, load);
+  pendingChapterLoads.set(url, load);
 }
 
 function loadChapter(path) {
-  const pending = pendingChapterLoads.get(path);
-  pendingChapterLoads.delete(path);
-  return pending ?? getJson(`./data/${path}`);
+  const url = chapterDataPath(path);
+  const pending = pendingChapterLoads.get(url);
+  pendingChapterLoads.delete(url);
+  return pending ?? getJson(url);
 }
 
-async function renderChapter(catalog, title, chapterMeta, route, sequence) {
-  if (route.kind === "section") {
+async function renderChapter(catalog, title, chapterMeta, route, sequence, settingsPanel) {
+  const edition = readerEdition;
+  const supplements = readerSupplements();
+  if (route.kind === "section" && !edition) {
     // The section's reference links and related sources need these; fetch them with the chapter.
     repository.loadCitations(title.id).catch(() => {});
     secondaryRepository.loadSectionLinks(title.id, route.section).catch(() => {});
@@ -1003,12 +1268,14 @@ async function renderChapter(catalog, title, chapterMeta, route, sequence) {
   // on the page below rather than replacing it.
   const basePromise = chapterMeta.supplementOnly ? Promise.resolve(null) : loadChapter(chapterMeta.path);
   const latestPromise = chapterMeta.supplementOnly
-    ? supplementRepository.loadChapter(chapterMeta.supplementEditionYear, chapterMeta.number, title.id)
+    ? supplements.loadChapter(chapterMeta.supplementEditionYear, chapterMeta.number, title.id)
       .then((supplementChapter) => ({ edition: { editionYear: chapterMeta.supplementEditionYear }, chapter: supplementChapter }))
-    : supplementRepository.loadLatestChapter(chapterMeta.number, title.id);
+    : supplements.loadLatestChapter(chapterMeta.number, title.id);
   latestPromise.catch(() => {});
-  const amendmentsPromise = actsRepository.amendments()
-    .then((index) => ({ index })).catch((error) => ({ error }));
+  // Act notices describe acts the current text does not include yet; an archived edition has none.
+  const amendmentsPromise = edition
+    ? Promise.resolve({ archived: true })
+    : actsRepository.amendments().then((index) => ({ index })).catch((error) => ({ error }));
   const baseChapter = await basePromise;
   if (sequence !== renderSequence) return;
   let chapter = baseChapter;
@@ -1031,7 +1298,9 @@ async function renderChapter(catalog, title, chapterMeta, route, sequence) {
   if (!chapter) return renderNotFound("That supplement chapter could not be loaded.");
   const changeBySection = new Map((overlay?.changes ?? []).map((change) => [change.sectionId, { ...change, editionYear: overlay.editionYear }]));
   const pendingBySection = new Map();
-  const selected = route.kind === "section" ? findSection(chapter, route.section) : null;
+  const aliases = groupedSectionAliases(chapter.sections);
+  const requestedSection = route.kind === "section" ? findSection(chapter, route.section) : null;
+  const selected = aliases.get(requestedSection) ?? requestedSection;
   if (route.kind === "section" && !selected) return renderNotFound("That section was not found.");
 
   if (route.legacyQuery) {
@@ -1040,44 +1309,64 @@ async function renderChapter(catalog, title, chapterMeta, route, sequence) {
   }
 
   const provisions = selected ? [selected, ...(changeBySection.get(selected.id)?.previousSections ?? [])] : [];
-  const maps = selected ? await referenceMaps(provisions, catalog, { resolve: false }) : null;
+  // An archived edition's citation lookups are small and must resolve before render: there is no
+  // search fallback to link to in the meantime.
+  const maps = selected ? await referenceMaps(provisions, catalog, { resolve: Boolean(edition) }) : null;
   const secondaryContext = null;
   if (sequence !== renderSequence) return;
   const preferences = deviceState.preferences();
-  const chapterNavigation = navigationSections(chapter.sections, {
-    hideRepealed: preferences.hideRepealedSections,
+  const sections = chapter.sections.filter((section) => !aliases.has(section));
+  const chapterNavigation = navigationSections(sections, {
+    hiddenStatuses: preferences.hiddenStatuses,
     selected
   });
-  const hiddenRepealed = chapter.sections.length - chapterNavigation.length;
+  const hiddenSections = sections.length - chapterNavigation.length;
   setDocumentTitle(selected ? sectionLabel(selected) : chapterLabel(chapter), titleLabel(title));
   const sectionItems = statuteSectionItems(title, chapter, chapterNavigation, selected, changeBySection, pendingBySection);
-  const mobileChapterList = `<section class="mobile-only mobile-section-browser" aria-labelledby="mobile-sections-heading"><div class="section-heading"><div><p class="eyebrow">${chapterNavigation.length} sections${hiddenRepealed ? ` · ${hiddenRepealed} repealed hidden` : ""}</p><h2 id="mobile-sections-heading">Sections</h2></div></div>${railList(sectionItems)}</section>`;
+  const mobileChapterList = `<section class="mobile-only mobile-section-browser statute-drilldown" aria-labelledby="mobile-sections-heading"><div class="section-heading"><div><p class="eyebrow">${chapterNavigation.length} sections${hiddenSections ? ` · ${hiddenSections} hidden` : ""}</p><h2 id="mobile-sections-heading">Sections</h2></div></div>${browseFilter("section-filter", "Find a section", "browse-sections-list")}<div id="browse-sections-list">${railList(sectionItems)}</div></section>`;
+  const mobileBrowse = preferences.navigationTree && !edition
+    ? `<a href="${escapeHtml(chapterRoute(title, chapter))}">Browse statute tree</a>`
+    : '<button type="button" data-open-chapter-sheet aria-haspopup="dialog">Browse chapter</button>';
   const mainContent = `<main class="reader-content application-main" id="main-content">
       ${breadcrumbs([
-        { label: "Titles", href: titlesRouteHref() },
+        ...editionBreadcrumbs(),
         { label: titleLabel(title), href: titleRoute(title) },
         { label: chapterLabel(chapter), href: selected ? chapterRoute(title, chapter) : null },
         ...(selected ? [{ label: sectionLabel(selected) }] : [])
       ])}
-      ${supplementError ? `<p class="supplement-warning" role="alert">The published supplement could not be loaded. This page is showing the base revision only; reload before relying on it.</p>` : ""}
-      <p class="source-note">Text: ${escapeHtml(String(catalog.source?.revisionYear ?? "Published"))} revision${latestEdition && !supplementError ? ` with the ${latestEdition.editionYear} Supplement` : ""}. Captured ${escapeHtml(formatSnapshotDate(catalog.source?.retrievedAt ?? catalog.generatedAt) ?? "date unavailable")}.</p>
-      ${selected ? `<div class="mobile-reader-tools"><button type="button" data-open-chapter-sheet aria-haspopup="dialog">Browse chapter</button></div>${renderProvision(title, chapter, selected, maps, secondaryContext, changeBySection.get(selected.id), pendingBySection.get(selected.id))}${sectionNavigation(title, chapter, chapterNavigation, selected)}${chapterSheet(title, chapter, chapterNavigation, selected, changeBySection, pendingBySection)}` : `<div class="chapter-overview"><p class="eyebrow">${chapterNavigation.length} sections${hiddenRepealed ? ` · ${hiddenRepealed} repealed hidden` : ""}</p><h1>${escapeHtml(chapterLabel(chapter))} — ${escapeHtml(chapter.name)}</h1>${overlay?.changes.length ? `<p class="supplement-summary"><strong>${overlay.editionYear} Supplement applied.</strong> ${overlay.changes.length} updated section${overlay.changes.length === 1 ? "" : "s"} are labeled in the chapter list.</p>` : ""}<div data-amendments-status><p role="status">Amendment information loading…</p></div><p class="desktop-only">Choose a section from the sections column.</p><a href="${escapeHtml(chapter.sourceUrl)}">Official chapter source</a></div>${mobileChapterList}`}
+      ${edition ? renderArchivedEditionNotice({
+        edition: edition.entry,
+        currentHref: routeHref({ title: title.number, chapter: chapter.number, section: selected ? sectionRouteKey(selected) : null }),
+        editionsHref: editionsRouteHref()
+      }) : ""}
+      ${supplementError ? `<p class="supplement-warning" role="alert">The ${edition ? "archived" : "published"} supplement could not be loaded. This page is showing the base revision only; reload before relying on it.</p>` : ""}
+      <p class="source-note">Text: ${escapeHtml(String(catalog.source?.revisionYear ?? "Published"))} revision${latestEdition && !supplementError ? ` with the ${latestEdition.editionYear} Supplement` : ""}${edition ? " (archived edition)" : ""}. Captured ${escapeHtml(formatSnapshotDate(edition ? edition.entry.retrievedAt : catalog.source?.retrievedAt ?? catalog.generatedAt) ?? "date unavailable")}. <a href="${escapeHtml(editionsRouteHref())}">${edition ? "All editions" : "Earlier editions"}</a></p>
+      <div class="chapter-research-tools">${edition ? "" : `<a href="${escapeHtml(searchRouteHref("", { title: title.id, chapter: chapter.number }))}">Search this chapter</a>`}${selected ? `<span class="mobile-reader-tools">${mobileBrowse}</span>` : ""}${selected ? sectionNavigation(title, chapter, chapterNavigation, selected).replace('aria-label="Adjacent sections"', 'aria-label="Section shortcuts"') : ""}</div>
+      ${selected ? `${renderProvision(title, chapter, selected, maps, secondaryContext, changeBySection.get(selected.id), pendingBySection.get(selected.id))}${sectionNavigation(title, chapter, chapterNavigation, selected)}${chapterSheet(title, chapter, chapterNavigation, selected, changeBySection, pendingBySection)}` : `<div class="chapter-overview"><p class="eyebrow">${chapterNavigation.length} sections${hiddenSections ? ` · ${hiddenSections} hidden` : ""}</p><h1>${escapeHtml(chapterLabel(chapter))} — ${escapeHtml(chapter.name)}</h1>${chapterSupplementSummary(title, chapter, overlay, changeBySection)}<div data-amendments-status><p class="visually-hidden" role="status">Amendment information loading…</p></div><p class="desktop-only">Choose a section from the sections column.</p><a href="${escapeHtml(officialUrl(chapter.sourceUrl))}">Official chapter source</a></div>${mobileChapterList}`}
     </main>`;
   mountApplicationShell({
-    contextualNavigation: [
+    ...statuteNavigation(catalog, route, () => [
       statuteTitleColumn(catalog, title),
       statuteChapterColumn(title, chapter),
       statuteSectionColumn(title, chapter, chapterNavigation, selected, changeBySection, pendingBySection)
-    ],
+    ], {
+      title,
+      chapter,
+      sectionHref: selected ? provisionRoute(title, chapter, selected) : null,
+      sectionItems: () => statuteSectionItems(title, chapter, chapterNavigation, selected, changeBySection, pendingBySection)
+    }),
     mainContent,
-    columnCount: contextualColumnCount("statutes", route),
     mobilePresentationMode: selected ? "reader" : "drilldown"
-  });
+  }, settingsPanel);
   bindChapterSheet();
   // Enrich the mounted reader without replacing its text, focus, or open disclosures.
-  amendmentsPromise.then(({ index, error }) => {
+  amendmentsPromise.then(({ index, error, archived }) => {
     if (sequence !== renderSequence) return;
     const slot = app.querySelector("[data-amendments-status]");
+    if (archived) {
+      slot.innerHTML = "";
+      return;
+    }
     if (error || supplementError) {
       slot.innerHTML = '<p class="supplement-warning" role="status">Amendment information is unavailable. Check the official acts before relying on this text.</p>';
       return;
@@ -1086,16 +1375,16 @@ async function renderChapter(catalog, title, chapterMeta, route, sequence) {
       const amendments = amendmentsForSection(index, section, statuteTextYears(catalog, latestEdition));
       if (amendments.length) pendingBySection.set(section.id, amendments);
     }
-    slot.innerHTML = (selected ? renderPendingAmendments(pendingBySection.get(selected.id)) : pendingChapterSummary(pendingBySection))
-      || '<p class="source-note">No amendments found in the listed acts. Other acts may affect this section; verify with official sources.</p>';
+    slot.innerHTML = (selected ? renderPendingAmendments(pendingBySection.get(selected.id)) : pendingChapterSummary(title, chapter, changeBySection, pendingBySection)) || "";
     for (const marker of app.querySelectorAll("[data-act-notice-for]")) {
       marker.innerHTML = pendingActPill(pendingBySection.get(marker.dataset.actNoticeFor));
     }
+    statuteTree.revealCurrent();
   });
-  if (selected) {
+  if (selected && !edition) {
     referenceMaps(provisions, catalog).then((resolved) => {
       if (sequence !== renderSequence) return;
-      for (const link of app.querySelectorAll(".provision a.legal-reference")) {
+      for (const link of app.querySelectorAll(".provision a.legal-reference:not([data-public-act])")) {
         const key = link.textContent.toLowerCase();
         const href = resolved.sections.get(key) ?? resolved.chapters.get(key);
         if (href) link.setAttribute("href", href);
@@ -1105,11 +1394,16 @@ async function renderChapter(catalog, title, chapterMeta, route, sequence) {
       if (sequence !== renderSequence) return;
       app.querySelector("[data-secondary-references]").innerHTML = renderSecondaryContext(context);
     });
-
+  } else if (selected) {
+    // The index and infractions records link to the current statutes.
+    const slot = app.querySelector("[data-secondary-references]");
+    if (slot) slot.innerHTML = `<p class="secondary-context-note">The subject index and infractions schedule are linked to the current statutes. <a href="${escapeHtml(routeHref({ title: title.number, chapter: chapter.number, section: sectionRouteKey(selected) }))}">Open the current text</a> to see related records.</p>`;
+  }
+  if (selected) {
     deviceState.recordRecent({
-      id: `statute:${selected.id}`,
+      id: edition ? `statute:edition-${edition.id}:${selected.id}` : `statute:${selected.id}`,
       type: "statute",
-      title: sectionLabel(selected),
+      title: edition ? `${sectionLabel(selected)} (${edition.id} edition)` : sectionLabel(selected),
       subtitle: `${titleLabel(title)} · ${chapterLabel(chapter)} — ${selected.heading}`,
       href: provisionRoute(title, chapter, selected)
     });
@@ -1120,11 +1414,13 @@ async function renderChapter(catalog, title, chapterMeta, route, sequence) {
     if (target) {
       target.classList.add("subsection-target");
       target.tabIndex = -1;
-      // Start, not center: a long subsection would otherwise open with its first lines hidden.
-      target.scrollIntoView({ block: "start" });
-      target.focus({ preventScroll: true });
+      if (!settingsPanel?.isConnected) {
+        // Start, not center: a long subsection would otherwise open with its first lines hidden.
+        target.scrollIntoView({ block: "start" });
+        target.focus({ preventScroll: true });
+      }
     }
-  } else {
+  } else if (!settingsPanel?.isConnected) {
     window.scrollTo({ top: 0 });
   }
 }
@@ -1211,7 +1507,7 @@ function renderSelectedIndexTopic(topic, groups, targetEntry, query = "") {
   </section>`;
 }
 
-function attachLargeIndexTopic(topic, groups, targetEntry) {
+function attachLargeIndexTopic(topic, groups, targetEntry, { moveToEntry = true } = {}) {
   const groupById = new Map(groups.map((group) => [group[0].id, group]));
   const populate = (details) => {
     const list = details.querySelector("[data-index-group-entries]");
@@ -1261,9 +1557,11 @@ function attachLargeIndexTopic(topic, groups, targetEntry) {
       details?.classList.add("index-entry-target");
       target = details?.querySelector("summary") ?? details;
     } else target.classList.add("index-entry-target");
-    target?.scrollIntoView({ block: "center" });
-    target?.focus({ preventScroll: true });
-  } else window.scrollTo({ top: 0 });
+    if (moveToEntry) {
+      target?.scrollIntoView({ block: "center" });
+      target?.focus({ preventScroll: true });
+    }
+  } else if (moveToEntry) window.scrollTo({ top: 0 });
 }
 
 function bookmarkButton(bookmark, className = "") {
@@ -1305,11 +1603,6 @@ function renderInfractionListItem(entry, { showCategory = false } = {}) {
   </li>`;
 }
 
-function amountLabel(key) {
-  return ({ total_due: "Total due", fine: "Fine", fee: "Fee", surcharge: "Surcharge", cost: "Cost" })[key]
-    ?? key.replaceAll("_", " ").replace(/^./, (value) => value.toUpperCase());
-}
-
 function renderInfractionDetail(entry, source) {
   return `<article class="infraction-detail">
     <p class="eyebrow">${escapeHtml(entry.category)}</p>
@@ -1326,7 +1619,7 @@ function renderInfractionDetail(entry, source) {
   </article>`;
 }
 
-async function renderInfractions(route, sequence) {
+async function renderInfractions(route, sequence, settingsPanel) {
   const [manifests, entries] = await Promise.all([
     secondaryRepository.init(),
     secondaryRepository.loadAllInfractions()
@@ -1349,11 +1642,9 @@ async function renderInfractions(route, sequence) {
   const categoryItems = groups.map(([category, values]) => `<li><a href="${escapeHtml(infractionsRouteHref(category))}"${selectedGroup?.[0] === category ? ` aria-current="page"` : ""}><strong>${escapeHtml(category)}</strong><span>${values.length.toLocaleString()} entries</span></a></li>`);
   const entryItems = shown.map((entry) => `<li><a href="${escapeHtml(infractionsRouteHref(entry.category, { entry: entry.id }))}"${selectedEntry?.id === entry.id ? ` aria-current="page"` : ""}><strong>Sec. ${escapeHtml(entry.citation)}</strong><span>${escapeHtml(entry.description)}</span></a></li>`);
   setDocumentTitle(selectedEntry ? `Sec. ${selectedEntry.citation}` : selectedGroup?.[0] ?? "Infractions");
-  const searchForm = (label, placeholder) => `<form class="infraction-search" data-infraction-search>
-        <label for="infraction-query">${label}</label>
-        <input id="infraction-query" name="query" type="search" value="${escapeHtml(route.query ?? "")}" placeholder="${placeholder}">
-        <button type="submit">Search</button>
-      </form>`;
+  const searchForm = (label, placeholder) => `<form class="search-refine infraction-search" data-infraction-search role="search" aria-label="Infractions">
+    ${searchQueryRow({ id: "infraction-query", label, query, placeholder })}
+  </form>`;
   const matchCount = (suffix = "") => `<p class="note">${filtered.length.toLocaleString()} matching entr${filtered.length === 1 ? "y" : "ies"}${filtered.length > shown.length ? `; showing the first ${shown.length}` : ""}.${suffix}</p>`;
   const mainBody = selectedEntry ? renderInfractionDetail(selectedEntry, manifests.infractions.source) : selectedGroup ? `<header class="section-heading"><div><p class="eyebrow">Judicial Branch schedule</p><h1>${escapeHtml(selectedGroup[0])}</h1></div><p>${selectedGroup[1].length.toLocaleString()} entries</p></header>
       ${searchForm("Search this category", "Citation or description")}
@@ -1371,8 +1662,8 @@ async function renderInfractions(route, sequence) {
   const contextualNavigation = [{
     label: "Infraction categories",
     className: "infraction-categories-column",
-    heading: `<p class="eyebrow">Infractions</p><strong>Categories</strong>`,
-    content: railList(categoryItems)
+    heading: `<p class="eyebrow">Infractions</p><strong>Categories</strong>${browseFilter("rail-category-filter", "Filter categories", "rail-infraction-categories", "Category name")}`,
+    content: `<div id="rail-infraction-categories">${railList(categoryItems)}</div>`
   }];
   if (selectedGroup) contextualNavigation.push({
     label: `${selectedGroup[0]} infractions`,
@@ -1380,13 +1671,19 @@ async function renderInfractions(route, sequence) {
     heading: `<p class="eyebrow">${escapeHtml(selectedGroup[0])}</p><strong>Entries</strong>`,
     content: railList(entryItems, { empty: "No entries match this search." })
   });
+  const infractionsAsTree = deviceState.preferences().navigationTree;
   mountApplicationShell({
-    contextualNavigation,
+    contextualNavigation: infractionsAsTree ? [infractionTree.column({
+      groups: groups.map(([category, values]) => ({ key: category, label: category, description: `${values.length.toLocaleString()} entries`, href: infractionsRouteHref(category) })),
+      groupKey: selectedGroup?.[0] ?? null,
+      itemHref: selectedEntry ? infractionsRouteHref(selectedEntry.category, { entry: selectedEntry.id }) : null,
+      items: groups.map(([category, values]) => [category, values.map(infractionTreeItem)])
+    })] : contextualNavigation,
     mainContent,
-    columnCount: contextualColumnCount("infractions", route),
+    columnCount: infractionsAsTree ? 1 : contextualColumnCount("infractions", route),
     mobilePresentationMode: selectedEntry ? "detail" : "drilldown",
     footer: legalFooter()
-  });
+  }, settingsPanel);
   if (selectedEntry) {
     deviceState.recordRecent({
       id: `infraction:${selectedEntry.id}`,
@@ -1396,27 +1693,49 @@ async function renderInfractions(route, sequence) {
       href: infractionsRouteHref(selectedGroup[0], { entry: selectedEntry.id })
     });
   }
-  window.scrollTo({ top: 0 });
+  if (!settingsPanel?.isConnected) window.scrollTo({ top: 0 });
 }
 
 async function renderActs(route, sequence) {
   const options = normalizeActsOptions(route);
-  const [{ manifest, entry, acts }, supplementEdition, catalog] = await Promise.all([
-    actsRepository.loadSession(options.session),
+  const [manifest, supplementEdition, catalog] = await Promise.all([
+    actsRepository.manifest(),
     supplementRepository.latestEdition().catch(() => null),
     loadCatalog().catch(() => null)
   ]);
   if (sequence !== renderSequence) return;
+  // Sessions the active statute edition covers are Past sessions; the default view lists the
+  // newest session it does not cover yet.
+  const years = statuteTextYears(catalog, supplementEdition);
+  const { recent, past } = partitionSessions(manifest.sessions, years);
+  const officialList = `<a href="${escapeHtml(manifest.source.url)}" target="_blank" rel="noopener">Official list <span aria-hidden="true">↗</span></a>`;
+  const pastLink = `<a href="${escapeHtml(actsRouteHref({ view: "past" }))}">Past sessions${past.length ? ` (${past.length})` : ""}</a>`;
+  if (options.view === "past") {
+    setDocumentTitle("Past sessions", "Public and Special Acts");
+    app.innerHTML = `${siteHeader()}<main class="acts-page browse-page" id="main-content">
+      ${breadcrumbs([{ label: "Public and Special Acts", href: actsRouteHref() }, { label: "Past sessions" }])}
+      <header class="index-intro"><p class="eyebrow">${escapeHtml(manifest.source.publisher)}</p><h1>Past sessions</h1></header>
+      ${renderPastSessions(past, years, { sessionHref: (session) => actsRouteHref({ session: session.id }) })}
+    </main><footer>${legalFooter()}</footer>`;
+    window.scrollTo({ top: 0 });
+    return;
+  }
+  const sessionId = options.session ?? recent[0]?.id ?? null;
+  const { entry, acts } = sessionId ? await actsRepository.loadSession(sessionId) : { entry: null, acts: [] };
+  if (sequence !== renderSequence) return;
   if (options.session && !entry) return renderNotFound("That legislative session is not in the acts list.");
   setDocumentTitle("Public and Special Acts");
-  const officialList = `<a href="${escapeHtml(manifest.source.url)}" target="_blank" rel="noopener">Official list <span aria-hidden="true">↗</span></a>`;
   if (!entry) {
+    const edition = statuteTextEdition({ baseRevisionYear: years.baseRevisionYear, supplementYear: years.supplementEditionYear });
     app.innerHTML = `${siteHeader()}<main class="acts-page browse-page" id="main-content">
       <header class="index-intro"><p class="eyebrow">${escapeHtml(manifest.source.publisher)}</p><h1>Public and Special Acts</h1></header>
-      <p class="empty-state" role="status">No acts have been published yet. ${officialList}</p>
+      <p class="empty-state" role="status">${manifest.sessions.length && edition
+        ? `No acts have been published from a session after the ${escapeHtml(String(edition.legislationThrough))} sessions, which the ${escapeHtml(edition.label)} in this app covers. ${pastLink}. ${officialList}`
+        : `No acts have been published yet. ${officialList}`}</p>
     </main>`;
     return;
   }
+  const pastSession = past.includes(entry);
   const effectiveView = options.view === "effective";
   // The word index is only needed to search the act text, and the
   // effective-date index only for the effective-date view.
@@ -1428,8 +1747,11 @@ async function renderActs(route, sequence) {
   const textMatches = matchActText(searchIndex, options.query);
   const shown = filterActs(acts, effectiveView ? { ...options, type: "public" } : options, textMatches);
   const textSearchNote = options.query && entry.search && !searchIndex ? " Act text could not be searched." : "";
+  const sessionOptions = (sessions) => sessions.map((session) => `<option value="${escapeHtml(session.id)}"${selectAttribute(session.id, entry.id)}>${escapeHtml(session.name)}</option>`).join("");
   const sessionField = manifest.sessions.length > 1
-    ? `<div class="search-field"><label for="acts-session">Session</label><select id="acts-session" name="session">${manifest.sessions.map((session) => `<option value="${escapeHtml(session.id)}"${selectAttribute(session.id, entry.id)}>${escapeHtml(session.name)}</option>`).join("")}</select></div>`
+    ? `<div class="search-field"><label for="acts-session">Session</label><select id="acts-session" name="session">${recent.length && past.length
+      ? `<optgroup label="Recent sessions">${sessionOptions(recent)}</optgroup><optgroup label="Past sessions">${sessionOptions(past)}</optgroup>`
+      : sessionOptions(manifest.sessions)}</select></div>`
     : "";
   const viewLinks = Object.entries(ACT_VIEWS).map(([view, label]) =>
     `<a href="${escapeHtml(actsRouteHref({ session: options.session, query: options.query, view }))}"${view === options.view ? ` aria-current="page"` : ""}>${label}</a>`).join("");
@@ -1466,10 +1788,10 @@ async function renderActs(route, sequence) {
   const scrollTop = window.scrollY;
   app.innerHTML = `${siteHeader()}<main class="acts-page browse-page" id="main-content" data-acts-view="${options.view}">
     <header class="index-intro">
-      <p class="eyebrow">${escapeHtml(manifest.source.publisher)}</p>
+      <p class="eyebrow">${escapeHtml(manifest.source.publisher)}${pastSession ? " · Past session" : ""}</p>
       <h1>Public and Special Acts</h1>
-      <p>${escapeHtml(actsCurrencyNote(entry, statuteTextYears(catalog, supplementEdition)))}</p>
-      <p class="source-note">${escapeHtml(entry.name)} · ${escapeHtml(actsCountLabel(entry.counts))} · Updated ${escapeHtml(formatSnapshotDate(entry.updatedAt))} · ${officialList}</p>
+      <p>${escapeHtml(actsCurrencyNote(entry, years))}</p>
+      <p class="source-note">${escapeHtml(entry.name)} · ${escapeHtml(actsCountLabel(entry.counts))} · Updated ${escapeHtml(formatSnapshotDate(entry.updatedAt))} · ${officialList} · ${pastLink}</p>
     </header>
     <aside class="acts-guidance" aria-label="Reading these acts">
       <p><strong>Public Acts</strong> change the General Statutes. Until revised statute text is published, read an act together with the sections it amends, and check the effective date of each section.</p>
@@ -1480,12 +1802,18 @@ async function renderActs(route, sequence) {
         : entry.counts.textActs ? `<p>Select an act to read its text here. Search matches words in each act's title and text.</p>` : ""}
     </aside>
     <nav class="acts-views" aria-label="Acts view">${viewLinks}</nav>
-    <form class="search-refine search-v2-refine acts-filter${sessionField ? " acts-filter-sessions" : ""}${effectiveView ? " acts-filter-effective" : ""}" data-acts-filter role="search" aria-label="Filter acts">
-      <div class="search-primary-controls">
-        <div class="search-field"><label for="acts-query">Search ${effectiveView ? "Public Acts" : "acts"}</label><input id="acts-query" name="query" type="search" value="${escapeHtml(options.query ?? "")}" placeholder="${entry.counts.textActs ? "Words, act, or bill number" : "Title, act, or bill number"}" autocomplete="off"></div>
+    <form class="search-refine" data-acts-filter role="search" aria-label="Filter acts">
+      ${searchQueryRow({
+        id: "acts-query",
+        label: effectiveView ? "Search Public Acts" : "Search acts",
+        query: options.query ?? "",
+        placeholder: entry.counts.textActs ? "Words, act, or bill number" : "Title, act, or bill number",
+        submit: "Apply",
+        autocompleteOff: true
+      })}
+      <div class="acts-filter-fields">
         ${sessionField}
         ${filterFields}
-        <button type="submit">Apply</button>
       </div>
     </form>
     ${results}
@@ -1570,7 +1898,8 @@ async function renderAct(catalog, route, sequence) {
   if (shown?.dataset.actPage === act.id && shown.dataset.actQuery === (route.query ?? "") && shown.dataset.actSections === (sections ? route.sections : "")) return showActTarget(route);
 
   setDocumentTitle(act.citation, "Public and Special Acts");
-  const listHref = actsRouteHref({ session: entry.id === manifest.sessions[0]?.id ? null : entry.id });
+  // Named explicitly: once the statute text covers this session, the list's default is another one.
+  const listHref = actsRouteHref({ session: entry.id });
   const officialLinks = `<a href="${escapeHtml(act.url)}" target="_blank" rel="noopener">Official PDF <span aria-hidden="true">↗</span></a> · <a href="${escapeHtml(act.billUrl)}" target="_blank" rel="noopener">${escapeHtml(act.bill)} bill status <span aria-hidden="true">↗</span></a>`;
   const currency = act.type === "special"
     ? "Special Acts apply to particular people, places, or programs and are not added to the General Statutes."
@@ -1641,11 +1970,12 @@ function renderBookmarks() {
   app.innerHTML = renderBookmarkPage(deviceState, siteHeader());
 }
 
-async function renderStatutesIndex(route, sequence) {
+async function renderStatutesIndex(route, sequence, settingsPanel) {
   const manifests = await secondaryRepository.init();
   if (sequence !== renderSequence) return;
   const letterCounts = aggregateShardCounts(manifests.index.shards);
-  const available = [...letterCounts.keys()].filter((key) => /^[a-z]$/.test(key));
+  // Headings that start with a digit ("211 INFOLINE PROGRAM") are filed under that digit.
+  const available = [...letterCounts.keys()].filter((key) => /^[a-z0-9]$/.test(key));
   const letter = route.letter;
   if (letter && !available.includes(letter)) return renderNotFound("That index letter was not found.");
   const topics = letter ? await secondaryRepository.loadIndexLetter(letter) : [];
@@ -1668,10 +1998,15 @@ async function renderStatutesIndex(route, sequence) {
       <p>Browse official subject headings and open linked statute sections. ${escapeHtml(source.revision)}.</p>
       <p class="source-note"><a href="${escapeHtml(source.url)}">View the official index volumes</a> · ${manifests.index.counts.headings.toLocaleString()} headings · ${manifests.index.counts.items.toLocaleString()} entries</p>
     </header>
-    <form class="index-search-form" id="index-search-form">
-      <label for="index-query">Search the subject index</label>
-      <input id="index-query" name="query" type="search" minlength="2" required value="${escapeHtml(route.query ?? "")}" placeholder="Try motor vehicles">
-      <button type="submit">Search index</button>
+    <form class="search-refine" id="index-search-form" role="search" aria-label="Subject index">
+      ${searchQueryRow({
+        id: "index-query",
+        label: "Search the subject index",
+        query: route.query ?? "",
+        placeholder: "Try motor vehicles",
+        submit: "Search index",
+        required: true
+      })}
     </form>`;
   const mainBody = selected ? `<header class="index-intro index-topic-intro">
       <p class="eyebrow">General Statutes index</p>
@@ -1699,12 +2034,18 @@ async function renderStatutesIndex(route, sequence) {
     content: railList(headingItems)
   });
   setDocumentTitle(selected?.label ?? (letter ? `Statutes index ${letter.toUpperCase()}` : "Statutes index"));
+  const indexAsTree = deviceState.preferences().navigationTree;
   mountApplicationShell({
-    contextualNavigation,
+    contextualNavigation: indexAsTree ? [indexTree.column({
+      groups: available.map((key) => ({ key, label: key.toUpperCase(), description: `${(letterCounts.get(key) ?? 0).toLocaleString()} headings`, href: indexRouteHref(key) })),
+      groupKey: letter ?? null,
+      itemHref: selected ? indexRouteHref(letter, { topic: selected.id }) : null,
+      items: letter ? [[letter, indexTreeItems(letter, topics)]] : []
+    })] : contextualNavigation,
     mainContent,
-    columnCount: contextualColumnCount("index", route),
+    columnCount: indexAsTree ? 1 : contextualColumnCount("index", route),
     mobilePresentationMode: selected ? "detail" : "drilldown"
-  });
+  }, settingsPanel);
 
   document.querySelector("#index-search-form")?.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -1712,13 +2053,15 @@ async function renderStatutesIndex(route, sequence) {
     location.hash = indexRouteHref(topicLetter(query), { query });
   });
   if (selected?.items.length > LARGE_INDEX_TOPIC_THRESHOLD) {
-    attachLargeIndexTopic(selected, topicGroups, matchingEntry);
+    attachLargeIndexTopic(selected, topicGroups, matchingEntry, { moveToEntry: !settingsPanel?.isConnected });
   } else if (selected && matchingEntry) {
     const target = document.getElementById(matchingEntry.id);
     target?.classList.add("index-entry-target");
-    target?.scrollIntoView({ block: "center" });
-    target?.focus({ preventScroll: true });
-  } else window.scrollTo({ top: 0 });
+    if (!settingsPanel?.isConnected) {
+      target?.scrollIntoView({ block: "center" });
+      target?.focus({ preventScroll: true });
+    }
+  } else if (!settingsPanel?.isConnected) window.scrollTo({ top: 0 });
   if (selected) {
     deviceState.recordRecent({
       id: `index:${selected.id}`,
@@ -1730,6 +2073,60 @@ async function renderStatutesIndex(route, sequence) {
   }
 }
 
+async function renderEditions(sequence, settingsPanel) {
+  const [catalog, latest, index] = await Promise.all([
+    loadCatalog(),
+    supplementRepository.latestEdition().catch(() => null),
+    editionsRepository.index()
+  ]);
+  if (sequence !== renderSequence) return;
+  setDocumentTitle("Editions");
+  const mainContent = `<main class="browse-page editions-page" id="main-content">${renderEditionsPage({
+    current: currentEditionSummary(catalog, latest),
+    index,
+    routes: { current: titlesRouteHref(), edition: (id) => titlesRouteHref(id) },
+    formatDate: formatSnapshotDate
+  })}${renderSecondaryEditions({
+    index,
+    routes: {
+      currentSource: (kind) => kind === "infractions" ? infractionsRouteHref() : indexRouteHref(),
+      source: (kind, id) => archivedSourceRouteHref(kind, id)
+    }
+  })}</main>`;
+  mountApplicationShell({ contextualNavigation: [], mainContent, mobilePresentationMode: "drilldown" }, settingsPanel);
+  if (!settingsPanel?.isConnected) window.scrollTo({ top: 0 });
+}
+
+// An archived subject index or infractions edition. Its statute links open the statute text they
+// were resolved against; current index and infractions lookup stay on the current edition.
+async function renderArchivedSource(route, sequence, settingsPanel) {
+  const kind = route.kind === "archived-infractions" ? "infractions" : "statutes-index";
+  const [source, catalog, index] = await Promise.all([
+    editionsRepository.sourceEdition(kind, route.sourceEdition),
+    loadCatalog(),
+    editionsRepository.index()
+  ]);
+  if (sequence !== renderSequence) return;
+  if (!source) return renderNotFound(`No archived ${kind === "infractions" ? "infractions schedule" : "subject index"} edition ${route.sourceEdition} is available.`);
+  const linkFor = (resolution) => historicalStatuteHref(resolution, source.entry.statuteSnapshot, { currentRevisionYear: catalog.source?.revisionYear ?? null, statutes: index.statutes });
+  const common = { entry: source.entry, linkFor, editionsHref: editionsRouteHref(), currentHref: kind === "infractions" ? infractionsRouteHref() : indexRouteHref() };
+  let body;
+  if (kind === "infractions") {
+    const shards = await Promise.all([...new Set([...source.manifest.shards.map((shard) => shard.path), "unresolved.json"])].map((file) => source.load(file)));
+    body = renderArchivedInfractions({ ...common, entries: shards.flatMap((shard) => shard.entries ?? []) });
+  } else {
+    const letters = [...new Set(source.manifest.shards.map((shard) => shard.key))];
+    const files = route.letter ? source.manifest.shards.filter((shard) => shard.key === route.letter).map((shard) => shard.path) : [];
+    const shards = await Promise.all(files.map((file) => source.load(file)));
+    body = renderArchivedIndex({ ...common, letters, letter: route.letter, headings: shards.flatMap((shard) => shard.headings), letterHref: (letter) => archivedSourceRouteHref(kind, source.entry.id, letter) });
+  }
+  if (sequence !== renderSequence) return;
+  setDocumentTitle(`${source.entry.name} (${source.entry.label})`);
+  const mainContent = `<main class="browse-page editions-page" id="main-content">${breadcrumbs([{ label: "Editions", href: editionsRouteHref() }, { label: source.entry.label }])}${body}</main>`;
+  mountApplicationShell({ contextualNavigation: [], mainContent, mobilePresentationMode: "drilldown" }, settingsPanel);
+  if (!settingsPanel?.isConnected) window.scrollTo({ top: 0 });
+}
+
 function renderNotFound(message = "That page was not found.") {
   setDocumentTitle("Not found");
   app.innerHTML = `${siteHeader()}<main class="error" id="main-content"><p class="eyebrow">Not found</p><h1>${escapeHtml(message)}</h1><p><a href="#/">Browse the statutes</a></p></main>`;
@@ -1737,7 +2134,7 @@ function renderNotFound(message = "That page was not found.") {
 
 async function titleWithLatestSupplementChapters(title) {
   try {
-    const latest = await supplementRepository.loadLatestTitle(title.id);
+    const latest = await readerSupplements().loadLatestTitle(title.id);
     return mergeSupplementTitleChapters(title, latest.title, latest.edition?.editionYear);
   } catch (error) {
     console.warn("Could not load supplement chapter navigation", error);
@@ -1770,7 +2167,7 @@ function restoreRouteFocus(priorFocus) {
   if (pane && href) {
     const match = [...document.querySelectorAll(".context-column[data-context-key] a[href]")]
       .find((link) => link.getAttribute("href") === href && link.closest(".context-column").dataset.contextKey === pane.dataset.contextKey);
-    if (match) {
+    if (match?.offsetParent) {
       match.focus({ preventScroll: true });
       announceRoute();
       return;
@@ -1782,7 +2179,7 @@ function restoreRouteFocus(priorFocus) {
   heading.focus({ preventScroll: true });
 }
 
-async function renderCurrentRoute() {
+async function renderCurrentRoute(settingsPanel) {
   const priorFocus = document.activeElement;
   const initialRender = !hasRendered;
   hasRendered = true;
@@ -1795,26 +2192,39 @@ async function renderCurrentRoute() {
   const sequence = ++renderSequence;
   try {
     const route = parseRoute(location);
+    readerEdition = null;
     // Statute pages need the supplement manifests as well as the catalog; fetch them together.
-    if (["title", "chapter", "section"].includes(route.kind)) {
+    if (["title", "chapter", "section"].includes(route.kind) && !route.edition) {
       supplementRepository.latestEdition()
         .then((edition) => edition && supplementRepository.loadEdition(edition.editionYear))
         .catch(() => {});
     }
-    const catalog = await loadCatalog();
+    if (route.kind === "editions") return await renderEditions(sequence, settingsPanel);
+    if (route.kind === "archived-infractions" || route.kind === "archived-index") return await renderArchivedSource(route, sequence, settingsPanel);
+    let catalog;
+    if (route.edition) {
+      // An archived edition reads its own catalog, chapters, and supplement.
+      const edition = await editionsRepository.statuteEdition(route.edition);
+      if (sequence !== renderSequence) return;
+      if (!edition) return renderNotFound(`No archived ${route.edition} edition is available.`);
+      readerEdition = edition;
+      catalog = edition.catalog;
+    } else {
+      catalog = await loadCatalog();
+    }
     if (sequence !== renderSequence) return;
-    if (route.kind === "home") return await renderHome(catalog);
-    if (route.kind === "titles") return renderTitles(catalog);
+    if (route.kind === "home") return await renderHome(catalog, settingsPanel);
+    if (route.kind === "titles") return renderTitles(catalog, settingsPanel);
     if (route.kind === "not-found") return renderNotFound();
     if (route.kind === "search") return await renderSearchPage(catalog, route);
-    if (route.kind === "infractions") return await renderInfractions(route, sequence);
+    if (route.kind === "infractions") return await renderInfractions(route, sequence, settingsPanel);
     if (route.kind === "acts") return await renderActs(route, sequence);
     if (route.kind === "act") return await renderAct(catalog, route, sequence);
     if (route.kind === "bookmarks") return renderBookmarks();
     if (route.kind === "history") return renderHistory();
     if (route.kind === "about") return await renderAbout(catalog, route, sequence);
     if (route.kind === "guide") return await renderGuide(catalog, route, sequence);
-    if (route.kind === "index") return await renderStatutesIndex(route, sequence);
+    if (route.kind === "index") return await renderStatutesIndex(route, sequence, settingsPanel);
 
     let title = route.title ? findTitle(catalog, route.title) : null;
     const baseMatch = route.chapter ? findChapter(catalog, route.chapter, title) : null;
@@ -1824,10 +2234,10 @@ async function renderCurrentRoute() {
     let chapterMatch = route.chapter ? findChapter(catalog, route.chapter, title) : null;
     if (!title && chapterMatch) title = chapterMatch.title;
     if (!title) return renderNotFound("That title was not found.");
-    if (route.kind === "title") return renderTitle(catalog, title);
+    if (route.kind === "title") return renderTitle(catalog, title, settingsPanel);
     if (!chapterMatch) chapterMatch = findChapter(catalog, route.chapter, title);
     if (!chapterMatch) return renderNotFound("That chapter was not found.");
-    return await renderChapter(catalog, title, chapterMatch.chapter, route, sequence);
+    return await renderChapter(catalog, title, chapterMatch.chapter, route, sequence, settingsPanel);
   } catch (error) {
     if (sequence !== renderSequence) return;
     setDocumentTitle("Could not load");
@@ -1860,9 +2270,13 @@ function resizeContextPane(handle, width, { save = false } = {}) {
   shell.dataset.contextWidths = intended.join(",");
   handle.setAttribute("aria-valuenow", String(nextWidth));
   if (save) {
-    const widths = deviceState.navigationLayout().widths;
-    widths[index] = nextWidth;
-    deviceState.updateNavigationLayout({ widths });
+    if (resized.matches(".statute-tree-column")) {
+      deviceState.updateNavigationLayout({ treeWidth: nextWidth });
+    } else {
+      const widths = deviceState.navigationLayout().widths;
+      widths[index] = nextWidth;
+      deviceState.updateNavigationLayout({ widths });
+    }
   }
 }
 
@@ -1896,7 +2310,58 @@ async function clearDeviceData(action, button) {
   }
 }
 
+// Headings take focus on route changes for screen readers. Only someone tabbing through the
+// page needs to see that as a focus ring (styles.css).
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Tab") document.documentElement.toggleAttribute("data-keyboard-navigation", true);
+}, true);
+document.addEventListener("pointerdown", () => {
+  document.documentElement.toggleAttribute("data-keyboard-navigation", false);
+}, true);
+
+function selectRevisionView(tab) {
+  for (const other of tab.parentElement.querySelectorAll("[data-revision-view]")) {
+    const selected = other === tab;
+    other.setAttribute("aria-selected", String(selected));
+    other.tabIndex = selected ? 0 : -1;
+    document.getElementById(other.getAttribute("aria-controls")).hidden = !selected;
+  }
+}
+document.addEventListener("click", (event) => {
+  const tab = event.target.closest("[data-revision-view]");
+  if (tab) selectRevisionView(tab);
+});
+document.addEventListener("keydown", (event) => {
+  const tab = event.target.closest?.("[data-revision-view]");
+  if (!tab || event.altKey || event.ctrlKey || event.metaKey) return;
+  const tabs = [...tab.parentElement.querySelectorAll("[data-revision-view]")];
+  const index = tabs.indexOf(tab);
+  const next = { ArrowLeft: tabs[(index - 1 + tabs.length) % tabs.length], ArrowRight: tabs[(index + 1) % tabs.length], Home: tabs[0], End: tabs.at(-1) }[event.key];
+  if (!next) return;
+  event.preventDefault();
+  selectRevisionView(next);
+  next.focus();
+});
+
 document.addEventListener("input", (event) => {
+  if (event.target.matches("[data-filter-list]")) {
+    const target = document.getElementById(event.target.dataset.filterList);
+    if (!target) return;
+    const words = event.target.value.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
+    const items = [...target.querySelectorAll("li")];
+    let visible = 0;
+    for (const item of items) {
+      const searchable = `${item.textContent} ${item.dataset.filterHeading ?? ""}`.toLocaleLowerCase();
+      const matches = words.every((word) => searchable.includes(word));
+      item.hidden = !matches;
+      if (matches) visible += 1;
+    }
+    const status = document.querySelector(`[data-filter-status="${target.id}"]`);
+    if (status) status.textContent = words.length
+      ? visible ? `${visible} of ${items.length} shown` : "No matching headings. Try a number or fewer words."
+      : "";
+    return;
+  }
   if (event.target.matches("[data-text-size]")) {
     const preferences = deviceState.updatePreferences({ textScale: event.target.value });
     applyPreferences(preferences);
@@ -1949,6 +2414,13 @@ document.addEventListener("focusin", (event) => {
 });
 
 document.addEventListener("keydown", (event) => {
+  // Search inputs consume Escape to clear their value in Chromium. In the
+  // modal chapter sheet Escape consistently dismisses and restores focus.
+  if (event.key === "Escape" && event.target.closest?.("[data-chapter-sheet][open]")) {
+    event.preventDefault();
+    chapterDialogController?.close();
+    return;
+  }
   const resizeHandle = event.target.closest?.("[data-resize-pane]");
   if (resizeHandle && (event.key === "ArrowLeft" || event.key === "ArrowRight")) {
     event.preventDefault();
@@ -1983,10 +2455,15 @@ document.addEventListener("keydown", (event) => {
     closeSettingsPanel();
     return;
   }
+  if (event.key === "Escape" && navigationSettingsOpen() && !document.querySelector("dialog[open]")) {
+    event.preventDefault();
+    closeNavigationSettings();
+    return;
+  }
   const inField = /^(input|select|textarea)$/i.test(document.activeElement?.tagName ?? "");
   if (event.key === "/" && !inField && !event.metaKey && !event.ctrlKey && !event.altKey) {
     event.preventDefault();
-    const globalInput = document.querySelector("[data-omni-input]");
+    const globalInput = document.querySelector("[data-omni-input], #search-page-query");
     globalInput?.focus();
     globalInput?.select();
   }
@@ -2006,8 +2483,56 @@ function closeSettingsPanel({ restoreFocus = true } = {}) {
   if (restoreFocus) button?.focus();
 }
 
+function navigationSettingsOpen() {
+  const panel = document.querySelector("[data-navigation-settings]");
+  return Boolean(panel && !panel.hidden);
+}
+
+// Only the first visible pane shows the button; CSS hides the others.
+function visibleNavigationSettingsButton() {
+  return [...document.querySelectorAll("[data-open-navigation-settings]")].find((button) => button.offsetParent);
+}
+
+// The panes are too narrow to hold the panel and clip what overflows them, so it sits
+// outside them and is placed under the button.
+function positionNavigationSettings() {
+  const panel = document.querySelector("[data-navigation-settings]");
+  const button = visibleNavigationSettingsButton();
+  if (!panel || !button) return;
+  panel.hidden = false;
+  const { bottom, left } = button.getBoundingClientRect();
+  const gutter = 16;
+  const top = bottom + 6;
+  panel.style.top = `${top}px`;
+  panel.style.left = `${Math.max(gutter, Math.min(left, innerWidth - panel.offsetWidth - gutter))}px`;
+  panel.style.maxHeight = `${innerHeight - top - gutter}px`;
+  button.setAttribute("aria-expanded", "true");
+  return panel;
+}
+
+function openNavigationSettings() {
+  positionNavigationSettings()?.querySelector("button")?.focus();
+}
+
+function closeNavigationSettings({ restoreFocus = true } = {}) {
+  if (!navigationSettingsOpen()) return;
+  document.querySelector("[data-navigation-settings]").hidden = true;
+  for (const button of document.querySelectorAll("[data-open-navigation-settings]")) button.setAttribute("aria-expanded", "false");
+  if (restoreFocus) visibleNavigationSettingsButton()?.focus();
+}
+
+window.addEventListener("resize", () => {
+  if (document.querySelector("[data-navigation-settings].tour-panel:not([hidden])") && visibleNavigationSettingsButton()) {
+    positionNavigationSettings();
+  } else closeNavigationSettings({ restoreFocus: false });
+});
+
 document.addEventListener("pointerdown", (event) => {
   if (!event.target.closest("[data-global-search]")) closeOmni();
+  if (event.target.closest("[data-tour]")) return;
+  if (navigationSettingsOpen() && !event.target.closest("[data-navigation-settings], [data-open-navigation-settings]")) {
+    closeNavigationSettings({ restoreFocus: false });
+  }
   // Dialogs opened from Settings sit outside the panel but belong to it.
   if (settingsPanelOpen() && !event.target.closest("[data-settings-panel], [data-open-settings], dialog")) {
     closeSettingsPanel({ restoreFocus: false });
@@ -2122,6 +2647,12 @@ document.addEventListener("click", async (event) => {
     } else closeSettingsPanel();
     return;
   }
+  const openPaneSettings = event.target.closest("[data-open-navigation-settings]");
+  if (openPaneSettings || event.target.closest("[data-close-navigation-settings]")) {
+    if (openPaneSettings && !navigationSettingsOpen()) openNavigationSettings();
+    else closeNavigationSettings();
+    return;
+  }
   const openFeedback = event.target.closest("[data-open-feedback]");
   if (openFeedback) {
     const dialog = document.querySelector("[data-feedback-dialog]");
@@ -2148,6 +2679,17 @@ document.addEventListener("click", async (event) => {
     const preferences = deviceState.updatePreferences({ theme: themeButton.dataset.themeValue });
     applyPreferences(preferences);
     document.querySelectorAll("[data-theme-value]").forEach((button) => button.setAttribute("aria-pressed", String(button === themeButton)));
+    return;
+  }
+  const whatsNew = event.target.closest("[data-open-whats-new]");
+  if (whatsNew) {
+    whatsNewTour.start(whatsNew);
+    return;
+  }
+  const widthButton = event.target.closest("[data-reading-width-value]");
+  if (widthButton) {
+    applyPreferences(deviceState.updatePreferences({ readingWidth: widthButton.dataset.readingWidthValue }));
+    document.querySelectorAll("[data-reading-width-value]").forEach((button) => button.setAttribute("aria-pressed", String(button === widthButton)));
     return;
   }
   const applyUpdate = event.target.closest("[data-apply-update]");
@@ -2233,31 +2775,40 @@ document.addEventListener("click", async (event) => {
   }
   const copyCitation = event.target.closest("[data-copy-citation]");
   if (copyCitation) {
-    const status = copyCitation.closest(".provision")?.querySelector(".action-status");
     try {
       await navigator.clipboard.writeText(copyCitation.dataset.copyCitation);
-      copyCitation.textContent = "Copied";
-      if (status) status.textContent = `${copyCitation.dataset.copyCitation} copied.`;
-      window.setTimeout(() => {
-        if (copyCitation.isConnected) copyCitation.textContent = "Copy citation";
-      }, 1200);
+      if (!copyCitation.isConnected) return;
+      // Icon actions swap to a check mark; the text-only button swaps its words.
+      const iconOnly = copyCitation.classList.contains("icon-action");
+      copyCitation.innerHTML = iconOnly ? iconActionLabel(icons.copied, "Copied") : "Copied";
+      showActionToast(`${copyCitation.dataset.copyCitation} copied.`);
+      window.clearTimeout(Number(copyCitation.dataset.copyTimer));
+      copyCitation.dataset.copyTimer = String(window.setTimeout(() => {
+        if (copyCitation.isConnected) copyCitation.innerHTML = iconOnly ? iconActionLabel(icons.copy, "Copy citation") : "Copy citation";
+      }, 1600));
     } catch {
-      if (status) status.textContent = "The citation could not be copied automatically.";
+      if (copyCitation.isConnected) showActionToast("The citation could not be copied automatically.");
+    }
+    return;
+  }
+  const share = event.target.closest("[data-share-link]");
+  if (share) {
+    try {
+      await navigator.share({ title: share.dataset.shareTitle, url: new URL(share.dataset.shareLink, location.href).href });
+      if (share.isConnected) showActionToast("Share options opened.");
+    } catch (error) {
+      // Closing the share sheet without choosing anything is not a failure.
+      if (error.name !== "AbortError" && share.isConnected) showActionToast("The share options could not be opened. Use Copy link instead.");
     }
     return;
   }
   const copy = event.target.closest("[data-copy-link]");
-  const share = event.target.closest("[data-share-link]");
-  if (!copy && !share) return;
-  const button = copy ?? share;
-  const url = new URL(button.dataset.copyLink ?? button.dataset.shareLink, location.href).href;
-  const status = button.closest(".provision")?.querySelector(".action-status");
+  if (!copy) return;
   try {
-    if (share && navigator.share) await navigator.share({ title: share.dataset.shareTitle, url });
-    else await navigator.clipboard.writeText(url);
-    if (status) status.textContent = share && navigator.share ? "Share options opened." : "Link copied.";
-  } catch (error) {
-    if (error.name !== "AbortError" && status) status.textContent = "The link could not be copied automatically.";
+    await navigator.clipboard.writeText(new URL(copy.dataset.copyLink, location.href).href);
+    if (copy.isConnected) showActionToast("Link copied.");
+  } catch {
+    if (copy.isConnected) showActionToast("The link could not be copied automatically.");
   }
 });
 
@@ -2270,30 +2821,38 @@ document.addEventListener("change", async (event) => {
     const chapterSelect = document.querySelector("#search-chapter");
     const catalog = await loadCatalog();
     const title = catalog.titles.find((candidate) => candidate.id === event.target.value);
-    const options = [new Option("All chapters", ""), ...(title?.chapters ?? []).map((chapter) => new Option(`${chapterLabel(chapter)} — ${chapter.name}`, chapter.number))];
+    const options = [new Option(title ? "All chapters" : "Choose a title first", ""), ...(title?.chapters ?? []).map((chapter) => new Option(`${chapterLabel(chapter)} — ${chapter.name}`, chapter.number))];
     chapterSelect.replaceChildren(...options);
     chapterSelect.disabled = !title;
     return;
+  }
+  // These rows exist in both Settings and the side panel's popover, so each copy stays current.
+  const navigationSetting = ["compact-lists", "subtle-notices", "navigation-tree"].find((name) => event.target.hasAttribute(`data-${name}`));
+  const copies = navigationSetting ? `input[data-${navigationSetting}]`
+    : event.target.matches("[data-hide-status]") ? `input[data-hide-status="${CSS.escape(event.target.dataset.hideStatus)}"]` : null;
+  if (copies) {
+    for (const input of document.querySelectorAll(copies)) input.checked = event.target.checked;
   }
   if (event.target.matches("[data-compact-lists]")) {
     applyPreferences(deviceState.updatePreferences({ compactLists: event.target.checked }));
     return;
   }
-  if (event.target.matches("[data-hide-repealed]")) {
-    applyPreferences(deviceState.updatePreferences({ hideRepealedSections: event.target.checked }));
-    const route = parseRoute(location);
-    if (["chapter", "section"].includes(route.kind)) {
-      const currentHash = location.hash;
-      const scrollTop = event.target.closest("[data-settings-panel]").scrollTop;
-      await renderCurrentRoute();
-      if (location.hash !== currentHash) return;
-      const panel = document.querySelector("[data-settings-panel]");
-      if (!panel) return;
-      panel.hidden = false;
-      document.querySelector("[data-open-settings]")?.setAttribute("aria-expanded", "true");
-      panel.querySelector("[data-hide-repealed]")?.focus({ preventScroll: true });
-      panel.scrollTop = scrollTop;
-    }
+  if (event.target.matches("[data-subtle-notices]")) {
+    applyPreferences(deviceState.updatePreferences({ subtleNotices: event.target.checked }));
+    return;
+  }
+  if (event.target.matches("[data-hide-status]")) {
+    const status = event.target.dataset.hideStatus;
+    const hidden = deviceState.preferences().hiddenStatuses.filter((value) => value !== status);
+    applyPreferences(deviceState.updatePreferences({ hiddenStatuses: event.target.checked ? [...hidden, status] : hidden }));
+    // The tree hides sections on every statute page; the panes only list a chapter's sections.
+    const pages = deviceState.preferences().navigationTree ? ["home", "titles", "title", "chapter", "section"] : ["chapter", "section"];
+    if (pages.includes(parseRoute(location).kind)) await renderCurrentRoute(event.target.closest(".settings-panel"));
+    return;
+  }
+  if (event.target.matches("[data-navigation-tree]")) {
+    applyPreferences(deviceState.updatePreferences({ navigationTree: event.target.checked }));
+    if (["home", "titles", "title", "chapter", "section", "index", "infractions"].includes(parseRoute(location).kind)) await renderCurrentRoute(event.target.closest(".settings-panel"));
     return;
   }
 });
@@ -2394,12 +2953,17 @@ function updateHeaderPinning() {
   }
 }
 new ResizeObserver(updateHeaderPinning).observe(document.body);
+compactLayout.addEventListener("change", () => {
+  document.querySelector(".app-nav > a:first-child")?.setAttribute("href", statutesNavHref());
+  if (parseRoute(location).kind === "titles" && deviceState.preferences().navigationTree) renderCurrentRoute();
+  else orderStatuteTree();
+});
 
-window.addEventListener("hashchange", renderCurrentRoute);
+window.addEventListener("hashchange", () => renderCurrentRoute());
 // A page that failed only because the connection dropped loads itself again on reconnect.
 window.addEventListener("online", () => {
   if (app.querySelector("[data-load-failure]")) renderCurrentRoute();
 });
 renderCurrentRoute();
 
-bindBookmarkControls({ state: deviceState, render: renderBookmarks, buttonLabel: bookmarkButtonLabel });
+bindBookmarkControls({ state: deviceState, render: renderBookmarks, buttonLabel: bookmarkButtonLabel, showActionToast });

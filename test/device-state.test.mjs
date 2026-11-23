@@ -59,7 +59,8 @@ test("normalizes and applies reader preferences", () => {
     fontProfile: "atkinson",
     lineSpacing: 2.8,
     compactLists: true,
-    hideRepealedSections: true
+    hiddenStatuses: ["reserved", "repealed", "unknown"],
+    subtleNotices: true
   });
   assert.deepEqual(preferences, {
     theme: "oled",
@@ -67,7 +68,10 @@ test("normalizes and applies reader preferences", () => {
     fontProfile: "atkinson",
     lineSpacing: 2.2,
     compactLists: true,
-    hideRepealedSections: true
+    hiddenStatuses: ["repealed", "reserved"],
+    subtleNotices: true,
+    navigationTree: false,
+    readingWidth: "standard"
   });
   const style = { values: new Map(), setProperty(key, value) { this.values.set(key, value); } };
   const root = { dataset: {}, style };
@@ -75,7 +79,8 @@ test("normalizes and applies reader preferences", () => {
   assert.equal(root.dataset.theme, "oled");
   assert.equal(root.dataset.fontProfile, "atkinson");
   assert.equal(root.dataset.compactLists, "true");
-  assert.equal(root.dataset.hideRepealedSections, "true");
+  assert.equal(root.dataset.subtleNotices, "true");
+  assert.equal(root.dataset.readingWidth, "standard");
   assert.equal(style.values.get("--text-scale"), "1.25");
   assert.equal(style.values.get("--line-spacing"), "2.2");
   assert.equal(style.values.get("--line-spacing-factor"), String(2.2 / 1.55));
@@ -94,12 +99,12 @@ test("font and line spacing preferences persist and reject unsupported values", 
   assert.equal(state.preferences().lineSpacing, 1.55);
 });
 
-test("uses compact lists by default while preserving an explicit comfortable preference", () => {
+test("shows full labels by default and persists the compact lists preference", () => {
   const storage = memoryStorage();
   const state = new DeviceState({ storage });
-  assert.equal(state.preferences().compactLists, true);
-  state.updatePreferences({ compactLists: false });
   assert.equal(state.preferences().compactLists, false);
+  state.updatePreferences({ compactLists: true });
+  assert.equal(new DeviceState({ storage }).preferences().compactLists, true);
 });
 
 test("deduplicates, orders, limits, and clears recent items", () => {
@@ -149,7 +154,7 @@ test("deduplicates, orders, limits, and clears device-local search history", () 
 
 test("storage failures remain non-fatal for preferences, bookmarks, recents, and search history", () => {
   const state = new DeviceState({ storage: failingStorage() });
-  assert.equal(state.preferences().compactLists, true);
+  assert.equal(state.preferences().compactLists, false);
   assert.deepEqual(state.bookmarks(), []);
   assert.equal(state.recordRecent({ id: "x", type: "statute", title: "X", href: "#/x" }).length, 1);
   assert.deepEqual(state.recents(), []);
@@ -157,4 +162,17 @@ test("storage failures remain non-fatal for preferences, bookmarks, recents, and
   assert.equal(state.recordSearch({ query: "public", href: "#/search?q=public" }).length, 1);
   assert.deepEqual(state.searchHistory(), []);
   assert.doesNotThrow(() => state.clearSearchHistory());
+});
+
+test("the earlier hide-repealed switch carries over as hiding repealed sections", () => {
+  const storage = memoryStorage();
+  storage.setItem("cgs.preferences.v1", JSON.stringify({ hideRepealedSections: true }));
+  assert.deepEqual(new DeviceState({ storage }).preferences().hiddenStatuses, ["repealed"]);
+  assert.deepEqual(new DeviceState({ storage: memoryStorage() }).preferences().hiddenStatuses, []);
+});
+
+test("reading width keeps known values only", () => {
+  const state = new DeviceState({ storage: memoryStorage() });
+  assert.equal(state.updatePreferences({ readingWidth: "wide" }).readingWidth, "wide");
+  assert.equal(state.updatePreferences({ readingWidth: "huge" }).readingWidth, "standard");
 });

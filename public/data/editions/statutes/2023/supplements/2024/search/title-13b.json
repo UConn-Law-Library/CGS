@@ -1,0 +1,572 @@
+{
+  "schemaVersion": "1.0.0",
+  "editionYear": 2024,
+  "title": {
+    "id": "title-13b",
+    "number": "13b",
+    "name": "Transportation"
+  },
+  "removedDocumentIds": [
+    "section-13b-39a",
+    "section-13b-39b",
+    "section-13b-39d",
+    "section-13b-39g",
+    "section-13b-44a",
+    "section-13b-47",
+    "section-13b-49a",
+    "section-13b-50",
+    "section-13b-50a",
+    "section-13b-50b",
+    "section-13b-50c",
+    "section-13b-79u",
+    "section-13b-97",
+    "section-13b-99",
+    "section-13b-102",
+    "section-13b-103",
+    "section-13b-212b",
+    "section-13b-212c",
+    "section-13b-236"
+  ],
+  "documents": [
+    {
+      "id": "section-13b-23d",
+      "citation": "13b-23d",
+      "citations": [
+        "13b-23d"
+      ],
+      "heading": "Sec. 13b-23d. Exemplary “Vision Zero” program distinction.",
+      "chapter": {
+        "id": "chapter-242",
+        "number": "242",
+        "name": "Department of Transportation"
+      },
+      "status": "active",
+      "text": "The Department of Transportation, in consultation with the State Board of Education and the Department of Motor Vehicles, upon receipt of a request by a local or regional board of education, shall award an exemplary “Vision Zero” program distinction to those local and regional boards of education that offer a program that provides students in grades six to twelve, inclusive, with opportunities to learn about the mission of the Vision Zero Council, established pursuant to section 13b-23b, and the importance of practicing safe driving habits and learning pedestrian safety skills. Such opportunities may include, but need not be limited to, classes, extracurricular activities, presentations, symposiums, peer-to-peer education, parent involvement and parenting education and outreach. A local or regional board of education may submit, at such time and in such manner as the Department of Transportation prescribes, a request for such distinction by providing details about such board's program to the department. The Department of Transportation shall make information about the distinction available on the department's Internet web site.",
+      "href": "?chapter=242&section=section-13b-23d",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-13b-23e",
+      "citation": "13b-23e",
+      "citations": [
+        "13b-23e"
+      ],
+      "heading": "Sec. 13b-23e. Program to promote use of seat safety belts among vulnerable communities.",
+      "chapter": {
+        "id": "chapter-242",
+        "number": "242",
+        "name": "Department of Transportation"
+      },
+      "status": "active",
+      "text": "The Department of Transportation, in collaboration with the Departments of Education, Motor Vehicles, Public Health, Social Services and Veterans Affairs, shall establish a program to promote the use of seat safety belts among vulnerable communities, as identified by the Department of Transportation, that are less likely to wear a seat safety belt when in a motor vehicle. Such program may include, but need not be limited to, peer-to-peer education and outreach to parents and various community organizations.",
+      "href": "?chapter=242&section=section-13b-23e",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-13b-23f",
+      "citation": "13b-23f",
+      "citations": [
+        "13b-23f"
+      ],
+      "heading": "Sec. 13b-23f. State transportation carbon dioxide reduction target. Strategic plan.",
+      "chapter": {
+        "id": "chapter-242",
+        "number": "242",
+        "name": "Department of Transportation"
+      },
+      "status": "active",
+      "text": "(a) Not later than October 1, 2030, and biennially thereafter, the Commissioner of Transportation, in consultation with the Commissioner of Energy and Environmental Protection, shall establish a transportation carbon dioxide reduction target for the state that sets the maximum amount of carbon dioxide emissions permitted from the transportation sector. The commissioners shall consider the long-term emission reductions required by section 22a-200a when establishing the transportation carbon dioxide reduction target.\n\n(b) The Commissioner of Transportation shall develop and implement a strategic plan to ensure transportation projects that are included in the state transportation improvement plan, developed pursuant to 49 USC 5304(g), as amended from time to time, do not exceed the maximum amount of carbon dioxide emissions established in the transportation carbon dioxide reduction target for the state pursuant to subsection (a) of this section. The strategic plan shall include, but need not be limited to, (1) a definition of “transportation project” that excludes transportation projects designated as exempt pursuant to 40 CFR 93.126 to 40 CFR 93.128, inclusive, as amended from time to time, (2) the methodology for calculating the carbon dioxide emissions expected from future transportation projects, and (3) a description of carbon dioxide mitigation transportation projects, including, but not limited to, improving public transportation, constructing bikeways, pedestrian walkways or other multiuse trails or paths and installing electric vehicle charging infrastructure. Not later than July 1, 2028, the commissioner shall submit, in accordance with the provisions of section 11-4a, the strategic plan to the joint standing committees of the General Assembly having cognizance of matters relating to transportation and the environment.\n\n(c) The Commissioner of Transportation, in consultation with the Commissioner of Energy and Environmental Protection, shall implement a public outreach plan to ensure sufficient public and stakeholder engagement in the development of the transportation carbon dioxide reduction target and the strategic plan required under subsection (b) of this section.\n\n(d) On or before January 1, 2025, and annually thereafter until January 1, 2030, the Commissioner of Transportation shall submit, in accordance with the provisions of section 11-4a, a report to the joint standing committees of the General Assembly having cognizance of matters relating to transportation and the environment. Such report shall include, but need not be limited to, the status of the development of the transportation carbon dioxide reduction target for the state, the strategic plan and a description and the results of any public outreach conducted pursuant to subsection (c) of this section.\n\n(e) On or before October 1, 2030, and biennially thereafter, the Commissioner of Transportation shall submit, in accordance with the provisions of section 11-4a, to the joint standing committees of the General Assembly having cognizance of matters relating to transportation and the environment, a copy of the transportation carbon dioxide reduction target for the state and any recommendations for legislation to implement such target.",
+      "href": "?chapter=242&section=section-13b-23f",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-13b-26b",
+      "citation": "13b-26b",
+      "citations": [
+        "13b-26b"
+      ],
+      "heading": "Sec. 13b-26b. Intersection control evaluation policy.",
+      "chapter": {
+        "id": "chapter-242",
+        "number": "242",
+        "name": "Department of Transportation"
+      },
+      "status": "active",
+      "text": "Not later than July 1, 2024, the Commissioner of Transportation shall adopt an intersection control evaluation policy to be used by the Department of Transportation when evaluating the construction of a new intersection or the modification of an existing intersection. Such policy shall (1) provide a decision-making framework to screen intersection alternatives with specific performance-based criteria in order to identify an optimal solution, (2) require the use of consistent documentation for each evaluation of a new or existing intersection, and (3) be revised as the commissioner deems necessary.",
+      "href": "?chapter=242&section=section-13b-26b",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-13b-31g",
+      "citation": "13b-31g",
+      "citations": [
+        "13b-31g"
+      ],
+      "heading": "Sec. 13b-31g. Implementation of wrong-way driving countermeasures.",
+      "chapter": {
+        "id": "chapter-242",
+        "number": "242",
+        "name": "Department of Transportation"
+      },
+      "status": "active",
+      "text": "(a) For the purposes of this section, (1) “wrong-way driving detection and notification system” means a system capable of alerting a motor vehicle operator with the use of flashing lights when such operator is driving in the wrong direction and notifying a law enforcement unit when a wrong-way operator is detected, and (2) “law enforcement unit” has the same meaning as provided in section 7-294a.\n\n(b) The Department of Transportation shall expand efforts to implement wrong-way driving countermeasures throughout the state. Such efforts shall include, but need not be limited to: (1) The installation of wrong-way driving detection and notification systems on at least one hundred twenty highway exit ramps that the department determines are at high risk for motor vehicle operators driving in the wrong direction; and (2) a public awareness campaign to educate the public concerning ways to reduce incidents of operators driving in the wrong direction and actions to take when an operator encounters a motor vehicle being operated in the wrong direction.",
+      "href": "?chapter=242&section=section-13b-31g",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-13b-31h",
+      "citation": "13b-31h",
+      "citations": [
+        "13b-31h"
+      ],
+      "heading": "Sec. 13b-31h. Guidelines re tree and vegetation management, removal and replacement along state highways.",
+      "chapter": {
+        "id": "chapter-242",
+        "number": "242",
+        "name": "Department of Transportation"
+      },
+      "status": "active",
+      "text": "(a) The Department of Transportation shall develop, and thereafter revise as necessary, guidelines governing tree and vegetation management, removal and replacement along state highways for use by its employees and contractors when undertaking maintenance and construction projects. The goal of the guidelines shall be to ensure the impacts of maintenance and construction projects on the environment, landscape and noise pollution are balanced or outweighed by measures taken to avoid and minimize the impacts.\n\n(b) Such guidelines shall include, but need not be limited to, provisions addressing (1) the safety of the traveling public; (2) general roadside vegetation management activities performed by the department, including, but not limited to, mowing, herbicide application, grassing, replanting with native species whenever practicable, limb management, tree removal and debris removal; (3) beautification, enhancements and the effect on scenic roads designated pursuant to section 13b-31c; (4) visibility enhancement; and (5) the environmental impact of such work, including (A) preventing invasive tree, brush or plant species' growth and impact, (B) storm water run-off, (C) erosion, (D) replanting of vegetation species to expand and improve pollinator habitats, as described in section 22-90b, and (E) reduced mowing. Such guidelines shall apply to construction projects financed, in whole or in part, with federal funds to the extent such guidelines do not conflict with federal laws and regulations.\n\n(c) Such guidelines shall not apply to the removal of any trees or vegetation necessary to maintain public safety or that is performed because of a weather-related civil preparedness emergency declared pursuant to section 28-9.\n\n(d) On or before January 1, 2024, the Commissioner of Transportation shall submit such guidelines to the joint standing committees of the General Assembly having cognizance of matters relating to transportation and the environment, in accordance with the provisions of section 11-4a. The committees shall hold a joint public hearing on such guidelines and the commissioner shall present such guidelines at the public hearing.",
+      "href": "?chapter=242&section=section-13b-31h",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-13b-38ff",
+      "citation": "13b-38ff",
+      "citations": [
+        "13b-38ff"
+      ],
+      "heading": "Sec. 13b-38ff. Modernization and maintenance of bus stops and shelters.",
+      "chapter": {
+        "id": "chapter-242",
+        "number": "242",
+        "name": "Department of Transportation"
+      },
+      "status": "active",
+      "text": "(a) The Commissioner of Transportation and each transit district established under chapter 103a or any special act shall jointly develop a plan to modernize and maintain bus stops and shelters throughout the state. The plan shall: (1) Ensure all bus stops and shelters are constructed and maintained in compliance with physical accessibility guidelines, as applicable, under the federal Americans with Disabilities Act, 42 USC 12101, et seq., as amended from time to time, (2) conveniently and safely serve users of all ages and abilities with the inclusion of sidewalks, appropriate curb cuts and ramps, shelter from weather conditions, lighting and signage that provides real-time information concerning transportation services, (3) consider the installation of solar photovoltaic systems at such bus stops and shelters to operate the lights and permit the charging of mobile electronic devices, and (4) include ways to ensure the maintenance and safety of such bus stops and shelters after construction. The commissioner shall submit the plan regarding bus stops and shelters owned by the Department of Transportation and the plan regarding bus stops and shelters owned by transit districts not later than July 1, 2024, with the joint standing committee of the General Assembly having cognizance of matters relating to transportation, in accordance with the provisions of section 11-4a.\n\n(b) On and after July 1, 2024, each bus stop or shelter constructed by the Department of Transportation or a transit district shall (1) be in accordance with the plan developed pursuant to subsection (a) of this section, and (2) comply with physical accessibility guidelines, as applicable, under the federal Americans with Disabilities Act, 42 USC 12101, et seq., as amended from time to time.",
+      "href": "?chapter=242&section=section-13b-38ff",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-13b-38gg",
+      "citation": "13b-38gg",
+      "citations": [
+        "13b-38gg"
+      ],
+      "heading": "Sec. 13b-38gg. Notice concerning certain training programs funded by Department of Transportation.",
+      "chapter": {
+        "id": "chapter-242",
+        "number": "242",
+        "name": "Department of Transportation"
+      },
+      "status": "active",
+      "text": "Not later than January 1, 2024, the Department of Transportation shall develop, and thereafter revise as necessary, a notice concerning the availability of training programs funded by the department that provide instruction on how to safely use commuter railroad systems and public transit services and submit such notice to the Department of Developmental Services and the State Education Resource Center, established under section 10-357a. The Department of Developmental Services shall provide such notice to the department's service providers. The State Education Resource Center shall publish such notice on its Internet web site.",
+      "href": "?chapter=242&section=section-13b-38gg",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "new"
+      }
+    },
+    {
+      "id": "section-13b-39a",
+      "citation": "13b-39a",
+      "citations": [
+        "13b-39a"
+      ],
+      "heading": "Sec. 13b-39a. Registration of aircraft.",
+      "chapter": {
+        "id": "chapter-242",
+        "number": "242",
+        "name": "Department of Transportation"
+      },
+      "status": "active",
+      "text": "The owner of any aircraft, as defined in subdivision (5) of section 15-34, which is based or primarily used at any airport facility, heliport, air navigation facility, restricted landing area or seaplane base in a municipality within this state shall, not later than October 1, 1993, and annually thereafter, be required to register with the municipality in which such aircraft is based or primarily used, by filing an application form, or renewal thereof, and paying the appropriate registration fee, as provided for in section 12-71, this section and section 13b-39b. The owner of any aircraft which is based or primarily used at any such air navigation facility or restricted landing area in this state shall register such aircraft not later than July 1, 1994, and annually thereafter not later than the first of October. Any aircraft shall be deemed to be based or primarily used in a municipality when in the normal course of its use, it leaves from and returns to or remains at one or more points within the municipality more often or longer than at any other single location outside of the municipality.",
+      "href": "?chapter=242&section=section-13b-39a",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-13b-39b",
+      "citation": "13b-39b",
+      "citations": [
+        "13b-39b"
+      ],
+      "heading": "Sec. 13b-39b. Aircraft registration forms and decals.",
+      "chapter": {
+        "id": "chapter-242",
+        "number": "242",
+        "name": "Department of Transportation"
+      },
+      "status": "active",
+      "text": "The executive director of the Connecticut Airport Authority shall prepare and distribute to each municipality in which aircraft are based or primarily used, forms and decals for the registration of aircraft and the renewal of such registrations. Each municipality shall designate a municipal registration official who may be an official or employee of the municipality or of any airport facility, heliport or seaplane base located within the municipality, to utilize the information obtained pursuant to section 13b-49a, and perform the duties of registration of aircraft as set forth in sections 13b-39a to 13b-39g, inclusive, and shall furnish to the executive director, in writing, the name, address and telephone number of each such official. The municipality shall immediately notify the executive director upon any changes relative to the municipal registration official.",
+      "href": "?chapter=242&section=section-13b-39b",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-13b-39d",
+      "citation": "13b-39d",
+      "citations": [
+        "13b-39d"
+      ],
+      "heading": "Sec. 13b-39d. Registration fee.",
+      "chapter": {
+        "id": "chapter-242",
+        "number": "242",
+        "name": "Department of Transportation"
+      },
+      "status": "active",
+      "text": "The owner shall pay a fee to the municipal registration official for each aircraft so numbered or registered in accordance with the following schedule:\n\nGross Weight (lbs.)\n\nFee\n\nLess than 3,000\n\n$90.00\n\n3,001 – 4,500\n\n250.00\n\n4,501 – 8,000\n\n700.00\n\n8,001 – 12,500\n\n1,500.00\n\n12,501 and over\n\n2,500.00\n\nAircraft manufactured before 1946 shall pay the lesser of one hundred dollars or the fee as required on the basis of gross weight as set forth in this section. Any person or firm that acquires ownership of an aircraft shall obtain a new registration in the name of such owner within thirty days of the date of such acquisition, provided no additional registration fee shall be payable in cases where one or more new ownership interests are being added to the registration or in cases of legal change of name of the registrant. All registrations shall be renewed within thirty days of the date of expiration as stated in the certificate. If a valid certificate or number decal is lost, mutilated or destroyed, the aircraft owner shall notify the municipal registration official within fifteen days, and such owner shall be issued a duplicate certificate or number decal upon payment of a fee of five dollars.",
+      "href": "?chapter=242&section=section-13b-39d",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-13b-39g",
+      "citation": "13b-39g",
+      "citations": [
+        "13b-39g"
+      ],
+      "heading": "Sec. 13b-39g. Municipality may retain fees.",
+      "chapter": {
+        "id": "chapter-242",
+        "number": "242",
+        "name": "Department of Transportation"
+      },
+      "status": "active",
+      "text": "Each municipality which issues and renews registrations for aircraft in accordance with this section and sections 13b-39a to 13b-39f, inclusive, may retain for its own use and purposes, as a grant in lieu of property taxes, all revenue received from the receipt of aircraft registration fees. On or before February 1, 2024, and annually thereafter, each such municipality shall furnish the executive director with a report concerning the number of registrations issued, the names of registrants and the descriptions of aircraft registered during the preceding calendar year.",
+      "href": "?chapter=242&section=section-13b-39g",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-13b-44a",
+      "citation": "13b-44a",
+      "citations": [
+        "13b-44a"
+      ],
+      "heading": "Sec. 13b-44a. Filing of documents with the Properties Review Board.",
+      "chapter": {
+        "id": "chapter-242",
+        "number": "242",
+        "name": "Department of Transportation"
+      },
+      "status": "repealed",
+      "text": "Section 13b-44a is repealed, effective July 1, 2023.",
+      "href": "?chapter=242&section=section-13b-44a",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "repealed"
+      }
+    },
+    {
+      "id": "section-13b-47",
+      "citation": "13b-47",
+      "citations": [
+        "13b-47"
+      ],
+      "heading": "Sec. 13b-47. Criteria for approval.",
+      "chapter": {
+        "id": "chapter-242",
+        "number": "242",
+        "name": "Department of Transportation"
+      },
+      "status": "active",
+      "text": "(a) In determining whether to issue a certificate of approval or license for the use or operation of any proposed public use air navigation facility, the executive director of the Connecticut Airport Authority shall take into consideration (1) its proposed location, size and layout, (2) its relationship to any comprehensive plan for state-wide and nation-wide development, (3) the availability of areas suitable for safe future expansion, (4) the freedom of adjoining areas from obstructions based on a proper glide ratio, (5) the nature of the terrain and of the uses to which the proposed facility will be put, and (6) the possibilities for future development. Prior to the issuance of a certificate of approval, license or license renewal, each proposed or existing public use air navigation facility shall provide documentation to the authority, in such form as the executive director may prescribe, that the factors described in subdivisions (1) to (6), inclusive, of this subsection demonstrate that such facility will provide or currently provides for safe aircraft operations.\n\n(b) In determining whether to issue a certificate of approval or license for the use or operation of any proposed private use air navigation facility, the executive director shall take into consideration: (1) Its proposed location, size and layout; (2) the freedom of adjacent areas from obstructions based on a proper glide ratio; (3) the nature of the terrain and the uses to which the proposed air navigation facility will be put; (4) the type of equipment to be utilized and the flight experience of the operator; (5) the amount of noise to be produced at such facility; and (6) such other factors as the executive director deems appropriate. Prior to the issuance of a certificate of approval, license or license renewal, each proposed or existing private use air navigation facility shall provide documentation to the authority, in such form as the executive director may prescribe, that the factors described in subdivisions (1) to (6), inclusive, of this subsection demonstrate that such facility will provide or currently provides for safe aircraft operations.",
+      "href": "?chapter=242&section=section-13b-47",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-13b-49a",
+      "citation": "13b-49a",
+      "citations": [
+        "13b-49a"
+      ],
+      "heading": "Sec. 13b-49a. Owner or operator of airport or other air navigation facility to submit information re aircraft based or primarily used at such facility. Penalty.",
+      "chapter": {
+        "id": "chapter-242",
+        "number": "242",
+        "name": "Department of Transportation"
+      },
+      "status": "active",
+      "text": "(a) Not later than July thirty-first annually, the owner or operator of any airport, heliport, restricted landing area, seaplane base or other air navigation facility licensed under the provisions of section 13b-46 shall submit to the executive director and the municipality in which the aircraft is based, the following information with respect to an aircraft which is based or primarily used at such facility as of July first of such year: (1) The identity and address of the owner and form of ownership, including information as to whether the owner is an individual, partnership, corporation or other entity; (2) the type of aircraft, including the year of manufacture, the manufacturer, the model and the certified gross weight; and (3) the Federal Aviation Aircraft Registration number.\n\n(b) The executive director, after notice and opportunity for hearing, may suspend or revoke the license of any such facility in the event the owner or operator thereof knowingly or intentionally fails to comply with the provisions of subsection (a) of this section.",
+      "href": "?chapter=242&section=section-13b-49a",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-13b-50",
+      "citation": "13b-50",
+      "citations": [
+        "13b-50"
+      ],
+      "heading": "Sec. 13b-50. Cooperation with federal government. State assistance to municipalities and owners of commercial airports.",
+      "chapter": {
+        "id": "chapter-242",
+        "number": "242",
+        "name": "Department of Transportation"
+      },
+      "status": "active",
+      "text": "(a) The executive director of the Connecticut Airport Authority is authorized to cooperate with the government of the United States or any agency or department thereof in the acquisition, construction, improvement, maintenance and operation of airports, heliports, landing fields and other aeronautical facilities in this state where federal financial aid is received and to comply with the provisions of the laws of the United States and any regulations made thereunder for the expenditure of federal moneys upon such airports, heliports and facilities. The executive director is authorized to accept, receive and receipt for federal or other moneys for and on behalf of this state or any political subdivision thereof for the acquisition, construction, improvement, maintenance and operation of facilities within this state. All moneys accepted for disbursement by the executive director pursuant to this subsection shall be disbursed in accordance with the provisions of the respective grants.\n\n(b) Any municipality is authorized to accept, receive and receipt for federal moneys and other moneys, either public or private, for the acquisition, construction, enlargement, improvement, maintenance, equipment or operation of airports and other air navigation facilities and sites therefor and to comply with the provisions of the laws of the United States and any rules and regulations made thereunder for the expenditure of federal moneys upon such airports and facilities. No municipality shall submit to the administrator of civil aeronautics of the United States any project application under the provisions of Section 9(a) of Public Law 377, 79th Congress, or any amendment thereof, unless the project and the project application have been approved by the executive director.\n\n(c) Any municipality is authorized to designate by ordinance the executive director as its agent to accept, receive and receipt for federal moneys in its behalf for airport purposes and to contract for the acquisition, construction, enlargement, improvement, maintenance, equipment or operation of such airports or other air navigation facilities, and may enter into an agreement with the executive director prescribing the terms and conditions of such agency in accordance with federal laws, rules and regulations and applicable laws of this state. Such moneys as are paid by the United States government shall be paid to such municipality under such terms and conditions as may be imposed by the United States in making such grant.\n\n(d) All contracts for the acquisition, construction, enlargement, improvement, maintenance, equipment or operation of airports or other air navigation facilities, made by the municipality itself or through the executive director, shall be made pursuant to the laws of this state governing the making of like contracts; provided, where such acquisition, construction, improvement, enlargement, maintenance, equipment or operation is financed wholly or partly with federal moneys, the municipality, or the executive director as its agent, may let contracts in the manner prescribed by the federal authorities, acting under the laws of the United States, and any rules or regulations made thereunder, notwithstanding any other state law to the contrary.\n\n(e) The executive director may render financial assistance by grant of funds to any municipality or municipalities acting jointly in the planning, acquisition, construction or improvement of an airport owned or controlled, or to be owned or controlled, by such municipality or municipalities. Such financial assistance may be furnished in connection with federal or other financial aid for the same purposes for not more than seventy-five per cent of the cost exclusive of federal aid. The executive director may establish procedures to be followed in granting funds under this subsection and may prescribe forms to be used in connection therewith.\n\n(f) The executive director may, whenever the executive director considers such assistance desirable or feasible, make available engineering and other technical services of the executive director, with or without charge, to any municipality or owner of a commercial airport requesting such services in connection with the planning, acquisition, construction, improvement, maintenance or operation of airports or aeronautical facilities.\n\n(g) Any town, city or borough may lease any airport or contract for any airport facilities or privileges from any person, firm or corporation, municipal or private, operating a municipal or private airport in any location which has been approved by the executive director.",
+      "href": "?chapter=242&section=section-13b-50",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-13b-50a",
+      "citation": "13b-50a",
+      "citations": [
+        "13b-50a"
+      ],
+      "heading": "Sec. 13b-50a. Initiatives for the preservation of airports.",
+      "chapter": {
+        "id": "chapter-242",
+        "number": "242",
+        "name": "Department of Transportation"
+      },
+      "status": "active",
+      "text": "The following initiatives shall be established to preserve Connecticut's licensed privately owned, publicly used airports which have a paved runway and a minimum of five thousand operations per year: (1) The state shall have the right of first refusal to purchase, via fair market value and state property acquisition procedures, an airport, if that airport is threatened with sale or closure, for the express purpose of preserving the airport; (2) the executive director may acquire the development rights, based on fair market value for such rights, of such airports, provided the airport remains a public airport; (3) the state may fund capital improvements to private airports, in which case the state may fund not more than ninety per cent of the eligible costs and the balance by the sponsor, with budget and priorities to be determined by the executive director, and engineering in accordance with Federal Aviation Administration Advisory Circulars; and (4) the establishment of a new airport zoning category for the airport's imaginary surfaces as defined by Federal Aviation Regulations and a program to mitigate noise in airport neighborhoods in which the noise exceeds applicable Federal Aviation Administration standards. Such program may be combined with existing energy conservation programs. Funding for such program shall be from available federal resources.",
+      "href": "?chapter=242&section=section-13b-50a",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-13b-50b",
+      "citation": "13b-50b",
+      "citations": [
+        "13b-50b"
+      ],
+      "heading": "Sec. 13b-50b. Set aside for veterans with service in time of war.",
+      "chapter": {
+        "id": "chapter-242",
+        "number": "242",
+        "name": "Department of Transportation"
+      },
+      "status": "repealed",
+      "text": "Section 13b-50b is repealed, effective July 1, 2023.",
+      "href": "?chapter=242&section=section-13b-50b",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "repealed"
+      }
+    },
+    {
+      "id": "section-13b-50c",
+      "citation": "13b-50c",
+      "citations": [
+        "13b-50c"
+      ],
+      "heading": "Sec. 13b-50c. Connecticut airport and aviation account.",
+      "chapter": {
+        "id": "chapter-242",
+        "number": "242",
+        "name": "Department of Transportation"
+      },
+      "status": "active",
+      "text": "(a) There is established an account to be known as the “Connecticut airport and aviation account” which shall be a separate, nonlapsing account within the Grants and Restricted Accounts Fund established pursuant to section 4-31c. The account shall contain any moneys required by law to be deposited in the account. Moneys in the account shall be expended by the executive director of the Connecticut Airport Authority, with the approval of the Secretary of the Office of Policy and Management, for airport and aviation-related purposes.\n\n(b) (1) Notwithstanding the provisions of section 13b-61a, on and after October 31, 2017, the Commissioner of Revenue Services shall deposit into said account seventy-five and three-tenths per cent of the amounts received by the state from aviation fuel sources from the tax imposed under section 12-587.\n\n(2) On and after July 1, 2025, the Commissioner of Revenue Services shall deposit into said account one hundred per cent of the amounts received by the state from the tax imposed under section 12-477aa.",
+      "href": "?chapter=242&section=section-13b-50c",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-13b-79u",
+      "citation": "13b-79u",
+      "citations": [
+        "13b-79u"
+      ],
+      "heading": "Sec. 13b-79u. Operation of New Haven-Hartford-Springfield rail line and Shore Line East rail line.",
+      "chapter": {
+        "id": "chapter-243",
+        "number": "243",
+        "name": "Infrastructure Program"
+      },
+      "status": "active",
+      "text": "(a) The Commissioner of Transportation is authorized and directed, in consultation with the Secretary of the Office of Policy and Management and with the approval of the Governor, to enter into any agreements with the National Rail Passenger Corporation or its successor in interest that are necessary for the operation of rail passenger service on the New Haven-Hartford-Springfield rail line.\n\n(b) The commissioner is authorized and directed, in consultation with the secretary and with approval of the Governor, to enter into any agreements with the commonwealth of Massachusetts, or any entity authorized to act on its behalf, or the state of Vermont, or any entity authorized to act on its behalf, that are necessary for the state's participation in the provision of rail passenger service on the New Haven-Hartford-Springfield rail line.\n\n(c) The commissioner is authorized and directed, in consultation with the secretary and with the approval of the Governor, to select through a competitive process and contract with an operator or operators for rail service on the New Haven-Hartford-Springfield rail line.\n\n(d) The commissioner is authorized and directed to select through a competitive process and contract with an operator or operators for rail service on the Shore Line East rail line.",
+      "href": "?chapter=243&section=section-13b-79u",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-13b-97",
+      "citation": "13b-97",
+      "citations": [
+        "13b-97"
+      ],
+      "heading": "Sec. 13b-97. (Formerly Sec. 16-320). Certificate of public convenience and necessity. Service at Bradley International Airport.",
+      "chapter": {
+        "id": "chapter-244a",
+        "number": "244a",
+        "name": "Taxicabs"
+      },
+      "status": "active",
+      "text": "(a) No person, association, limited liability company or corporation shall operate a taxicab until such person, association, limited liability company or corporation has obtained a certificate from the Department of Transportation certifying that public convenience and necessity require the operation of a taxicab or taxicabs for transportation of passengers, the acceptance or solicitation of which originates within the territory specified in such certificate except as provided under subsection (d) of this section. No such certificate shall be issued unless the department finds that the person, association, limited liability company or corporation is suitable to operate a taxicab service, after giving due consideration to, at a minimum, the following factors: (1) Any convictions of the applicant under federal, state or local laws relative to safety, motor vehicle or criminal violations; (2) the number of taxicabs to be operated under the certificate, provided no applicant for a new certificate shall operate fewer than three taxicabs; (3) the adequacy of the applicant's financial resources to operate the taxicab service; (4) the adequacy of insurance coverage and safety equipment; and (5) the availability of qualified taxicab operators. The commissioner shall request the state criminal history records check for any person or any officer of any association, limited liability company or corporation applying for such certificate from the State Police Bureau of Identification. The commissioner shall arrange for the fingerprinting of any person or any officer of any association, limited liability company or corporation applying for such certificate and forward the fingerprints to said bureau which shall submit the fingerprints to the Federal Bureau of Investigation for a national criminal history records check for any federal conviction specified in subdivision (1) of this subsection. The commissioner shall charge a fee for each such national criminal history records check which shall be equal to the fee charged by the Federal Bureau of Investigation for performing such check. Such certificate shall be issued only after written application, fingerprinting and said criminal history records check for the same has been made and public hearing held thereon. The application shall be accompanied by a fee of two thousand dollars and the fee for said criminal history records check. Upon receipt of such application, the department shall fix a time and place of hearing thereon and shall promptly give written notice of the pendency of such application and of the time and place of such hearing to the applicant, the mayor of each city, the warden of each borough or the first selectman of each town in which the applicant desires to originate the transportation of such passengers, and to any common carrier operating within the territory specified. Notwithstanding any provision of this subsection to the contrary, the department may, upon receipt of a written application, amend an existing certificate to increase the number of taxicabs which may be operated pursuant to the certificate without holding a hearing on the application, provided the department issues a legal notice of such application in a daily newspaper in accordance with the provisions of section 1-2, gives written notice of the pendency of such application to any common carrier operating within the territory specified and no objection is filed with the department within thirty days of each such notice.\n\n(b) Any town, city or borough within which taxicab service is operated or any interested party may bring a written petition to the department with respect to fares, service, operation or equipment or the convenience, protection and safety of passengers and the public. Thereupon, the department may fix a time and place for a hearing upon such petition, and give written notice thereof to the parties in interest at least one week prior to such hearing.\n\n(c) No certificate shall be sold or transferred until the department, upon written application to it setting forth the purpose, terms and conditions thereof, and after investigation, finds that the purchaser or transferee is suitable to operate a taxicab service after consideration of the factors specified in subsection (a) of this section and approves the same. The application shall be accompanied by a fee of one thousand dollars. The department may amend or, for sufficient cause shown, may suspend or revoke any such certificate. The department may impose a civil penalty on any person or any officer of any association, limited liability company or corporation or any driver who violates any provision of this chapter or any regulation adopted under section 13b-96 with respect to fares, service, operation or equipment, in an amount not to exceed one hundred dollars per day for each violation. Any such certificate issued by the department shall remain valid unless suspended or revoked by the department. Any such certificate issued by the Division of Public Utility Control within the Department of Business Regulation prior to October 1, 1979, or by any transit district prior to March 1, 1997, shall remain valid unless suspended or revoked by the Department of Transportation.\n\n(d) Any person, association, limited liability company or corporation which has obtained a certificate under subsection (a) of this section, after providing proof that service has been active and in compliance with all relevant statutes and regulations, may solicit, receive and discharge taxicab passengers at Bradley International Airport, subject to formal agreement with the executive director of the Connecticut Airport Authority. Any such person, association, limited liability company or corporation may discharge taxicab passengers received at such airport within a territory other than the territory specified in its certificate. The executive director may charge and collect a reasonable fee from any such person, association, limited liability company or corporation for the privilege of solicitation of such passengers.",
+      "href": "?chapter=244a&section=section-13b-97",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-13b-99",
+      "citation": "13b-99",
+      "citations": [
+        "13b-99"
+      ],
+      "heading": "Sec. 13b-99. (Formerly Sec. 16-322). Registration. Jurisdiction of Commissioner of Motor Vehicles. Rooftop light. Operator phone number. Inspection. Exemption from child restraint system requirements. Regulations.",
+      "chapter": {
+        "id": "chapter-244a",
+        "number": "244a",
+        "name": "Taxicabs"
+      },
+      "status": "active",
+      "text": "(a) Upon the granting of a certificate of public convenience and necessity as provided in section 13b-97, the holder thereof may apply to the Commissioner of Motor Vehicles for the registration of any taxicab of which the holder is the owner or lessee and which is to be used as specified in such certificate, and the Commissioner of Motor Vehicles shall have jurisdiction over the registration of any taxicab and its exterior lighting equipment and over the licensing of its operator. Each registered taxicab shall have an electric light attached to the rooftop of the taxicab. Each registered taxicab shall indicate, in type affixed to the outside of such taxicab, the phone number of the company operating such taxicab.\n\n(b) Each such taxicab shall be inspected, biennially, at the time of renewal of registration of such taxicab, by a repairer licensed and authorized by the Commissioner of Motor Vehicles to perform such inspections. The commissioner shall set a fee for such an inspection.\n\n(c) Each such taxicab shall be exempt from the provisions of subsection (d) of section 14-100a.\n\n(d) The Commissioner of Motor Vehicles shall adopt regulations, in accordance with chapter 54, to carry out the purposes of this section. The Commissioner of Motor Vehicles shall consult with the Commissioner of Transportation before adopting any regulation concerning the attachment of a rooftop light to a taxicab under subsection (a) of this section.",
+      "href": "?chapter=244a&section=section-13b-99",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-13b-102",
+      "citation": "13b-102",
+      "citations": [
+        "13b-102"
+      ],
+      "heading": "Sec. 13b-102. (Formerly Sec. 16-325). Operation to be under jurisdiction of department. Rates and charges. Regulations. Exceptions. Registration of authorization for interstate operation.",
+      "chapter": {
+        "id": "chapter-244b",
+        "number": "244b",
+        "name": "Motor Vehicles in Livery Service"
+      },
+      "status": "active",
+      "text": "(a)(1) Each person, association, limited liability company or corporation owning or operating a motor vehicle in livery service shall be subject to the jurisdiction of the Department of Transportation, and the department may prescribe adequate service and reasonable rates and charges and prescribe and establish such reasonable regulations, in accordance with the provisions of chapter 54, with respect to fares, service, operation, equipment, management and staffing as it deems necessary for the convenience, protection, safety and best interests of passengers and the public.\n\n(2) Notwithstanding the provisions of subdivision (1) of this subsection with respect to reasonable rates and charges, each person, association, limited liability company or corporation operating a motor vehicle in livery service having a seating capacity of ten or more adults shall file a schedule of reasonable maximum rates and charges with the Department of Transportation. The provisions of subdivision (1) of this subsection with respect to rates and charges shall not apply to any person, association, limited liability company or corporation operating a motor vehicle engaged in the transportation of passengers for hire by virtue of a contract with, or a lower tier contract for, any federal, state or municipal agency.\n\n(b) Each person, association, limited liability company or corporation operating a motor vehicle by virtue of authorization issued by the Federal Motor Carrier Safety Administration for charter and special operation shall register such authorization for interstate operation with the Department of Transportation if such person, association, limited liability company or corporation maintains a domicile or principal office in the state. Each person operating a motor vehicle by virtue of authorization issued by the Federal Motor Carrier Safety Administration for charter and special operation shall, prior to such registration, submit to a state and national criminal history records check, conducted in accordance with section 29-17a, and provide the results of such records check to the Department of Transportation.",
+      "href": "?chapter=244b&section=section-13b-102",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-13b-103",
+      "citation": "13b-103",
+      "citations": [
+        "13b-103"
+      ],
+      "heading": "Sec. 13b-103. (Formerly Sec. 16-326). Permits. Penalty. Amounts remitted to municipality. Revocation of permit.",
+      "chapter": {
+        "id": "chapter-244b",
+        "number": "244b",
+        "name": "Motor Vehicles in Livery Service"
+      },
+      "status": "active",
+      "text": "(a)(1) No person, association, limited liability company or corporation shall operate a motor vehicle in livery service until such person, association, limited liability company or corporation has obtained a permit from the Department of Transportation, specifying the nature and extent of the service to be rendered and certifying that public convenience and necessity will be improved by the operation and conduct of such livery service. Such permits shall be issued only after a written application for the same has been made and a public hearing has been held thereon. Upon receipt of such application, together with the payment of a fee of two hundred dollars, the department shall fix a time and place of hearing thereon, within a reasonable time, and shall promptly give written notice of the pendency of such application and of the time and place of such hearing to each applicant, the mayor of each city, the warden of each borough and the first selectman of each town, within which any such applicant desires to maintain an office or headquarters, to any carrier legally operating motor vehicles in livery service within the same territory and to other interested parties as determined by the department. (2) Notwithstanding the provisions of subdivision (1) of this subsection, the department may issue a permit for the operation of vehicles (A) having a capacity of less than eleven adults or to be used exclusively at funerals, weddings, christenings, processions or celebrations, without holding a hearing and certifying that public convenience and necessity would be improved by the operation of such vehicles, or (B) having a capacity of not less than eleven or more than fourteen adults and used for sightseeing and related purposes, without holding a hearing, provided the department issues a legal notice, as provided under section 1-2, of such application and no objection is filed with the department within thirty days of publication of such notice. (3) Notwithstanding the provisions of subdivision (1) of this subsection, the department may issue a temporary or permanent permit to any person, association, limited liability company or corporation operating a motor vehicle engaged in the transportation of passengers for hire by virtue of a contract with, or a lower tier contract for, any federal, state or municipal agency that (A) is in effect on July 1, 1997, with or without hearing, after a written application for the same has been made and the department has determined that the applicant meets the requirements of subsection (b) of this section except with respect to public convenience and necessity, or (B) becomes effective after July 1, 1997, with or without hearing, after a written application for the same has been made and the department has determined that the applicant meets the requirements of subsection (b) of this section. Any such permit issued under the provisions of this subdivision (i) shall be limited to service provided under any such contract, and (ii) with respect to any contract under the provisions of subparagraph (A) of this subdivision, shall not authorize a total number of motor vehicles exceeding the number required to provide service existing under such contract on July 1, 1997. (4) Notwithstanding the provisions of subdivision (1) of this subsection, the department shall issue to any person who has an intrastate livery permit for at least one year, upon the application of such person, up to two additional vehicle authorizations each year without a hearing and without written notice of the pendency of the application, if all the existing permits held by such person are registered and in use and if there are no outstanding violations or matters pending adjudication against such person. Such person may submit a second application for up to two additional vehicle authorizations each year. The department shall have thirty calendar days to issue such amended permit upon receipt of an application and the payment of the fee described in subdivision (1) of this subsection.\n\n(b) In determining whether or not such a permit will be granted, the Department of Transportation shall take into consideration the present or future public convenience and necessity for the service the applicant proposes to render, the suitability of the applicant or the suitability of the management if the applicant is a limited liability company or corporation, the financial responsibility of the applicant, the ability of the applicant efficiently and properly to perform the service for which authority is requested and the fitness, willingness and ability of the applicant to conform to the provisions of this chapter and the requirements and regulations of the department under this chapter.\n\n(c) Any interested party may bring a written petition to the Department of Transportation in respect to fares, service, operation or equipment, or the convenience, protection and safety of the public with regard to any carrier operating a motor vehicle in livery service. Thereupon, the department may fix a time and place for a hearing upon such petition and give notice thereof. No permit shall be sold or transferred until the department, upon written application to it setting forth the purpose, terms and conditions thereof and accompanied by a fee of two hundred dollars, after investigation, approves the same. The department may amend or, for sufficient cause shown, may suspend or revoke any such permit. The department may order appropriate corrective action as the department deems necessary, including, but not limited to, the attendance of a motor vehicle operator retraining program. The department may impose a civil penalty on any person or any officer of any association, limited liability company or corporation who violates any provision of this chapter or any regulation adopted under section 13b-102 with respect to fares, service, operation, equipment, management or staffing, in an amount not to exceed one thousand dollars per day for each violation. Prior to the imposition of a civil penalty under this subsection, the department shall provide notice to such person or officer no later than fifteen business days after receipt of information concerning an alleged violation and shall provide an opportunity for a hearing.\n\n(d) (1) Any person who holds himself or herself out to be the operator of a motor vehicle in livery service who has not received a permit under this section shall be guilty of a class B misdemeanor.\n\n(2) The state shall remit to a municipality fifty per cent of the fine amount received for a violation of subdivision (1) of this subsection with respect to each summons issued by such municipality. Each clerk of the Superior Court or the Chief Court Administrator, or any other official of the Superior Court designated by the Chief Court Administrator, shall, on or before the thirtieth day of January, April, July and October in each year, certify to the Comptroller the amount due for the previous quarter under this subsection to each municipality served by the office of the clerk or official.\n\n(e) The Department of Transportation may revoke a permit issued under this section or section 13b-105 without a hearing, provided (1) the department sends a notice of revocation to the permit holder at the address of the permit holder on file with the department and (A) the notice is returned as undeliverable or could not be delivered, or (B) the permit holder fails to respond to the notice within the time period specified by the department in such notice, (2) the department conducts a physical inspection of the address of the permit holder on file with the department and determines that no livery service is operated at such address, and (3) no motor vehicle is registered by the permit holder with the Department of Motor Vehicles to be used as specified in the permit pursuant to section 13b-106.",
+      "href": "?chapter=244b&section=section-13b-103",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-13b-212b",
+      "citation": "13b-212b",
+      "citations": [
+        "13b-212b"
+      ],
+      "heading": "Sec. 13b-212b. Connecticut Public Transportation Council.",
+      "chapter": {
+        "id": "chapter-245",
+        "number": "245",
+        "name": "Railroads and Railways"
+      },
+      "status": "active",
+      "text": "(a) There is established a Connecticut Public Transportation Council which shall consist of fifteen members, all of whom shall be (1) residents who regularly use the transportation services of the New Haven commuter railroad line which includes the New Canaan, Danbury and Waterbury branches of such line, (2) residents who regularly use the transportation services of the Shore Line East railroad line, (3) residents who regularly use the transportation services of the Hartford railroad line, or (4) residents who regularly use public transit services funded by the state. Members shall be appointed as follows: (A) The Governor shall appoint four members; (B) the president pro tempore of the Senate shall appoint two members, one of whom regularly uses public transit services funded by the state and one of whom regularly uses the transportation services of the New Haven railroad line; (C) the speaker of the House of Representatives shall appoint two members, one of whom regularly uses public transit services funded by the state and one of whom regularly uses the transportation services of the Hartford railroad line; (D) the majority leader of the Senate shall appoint one member; (E) the majority leader of the House of Representatives shall appoint one member; (F) the minority leader of the Senate shall appoint one member; (G) the minority leader of the House of Representatives shall appoint one member; (H) the chairpersons of the joint standing committee of the General Assembly having cognizance of matters relating to transportation shall each appoint one member, one of whom regularly uses public transit services funded by the state and one of whom regularly uses the transportation services of the Shore Line East railroad line; and (I) the ranking members of said committee shall jointly appoint one member who regularly uses public transit services funded by the state. Each member shall serve for a term of four years. All initial appointments to the council shall be made by August 1, 2023, and initial members shall serve a four-year term commencing on August 1, 2023, except that any member appointed prior to July 1, 2023, to serve on the former Connecticut Commuter Rail Council and serving on June 30, 2023, shall be deemed appointed to serve on the Connecticut Public Transportation Council and may continue to serve until the expiration of such member's term and a successor has qualified. Any vacancy shall be filled by the original appointing authority by appointment for the unexpired portion of any term. Members of the council shall serve until their respective successors are appointed.\n\n(b) Notwithstanding the provisions of section 4-9a, the members of the council shall choose one of the members of the council to be chairperson of the council. A majority of the members of the council then in office shall constitute a quorum for the transaction of any business, and action shall be by vote of a majority of the members present at a meeting. The council shall meet at least once during each calendar quarter and at such other times as the chairperson deems necessary or upon the request of a majority of the members in office. Special meetings shall be held at the request of such majority after notice in accordance with the provisions of section 1-225. Any member who fails to attend fifty per cent of all meetings held during any calendar year or who fails to attend three consecutive meetings shall be deemed to have resigned from office. Not later than ten days after a vacancy occurs in the council or the resignation of a member, the chairperson shall notify the appointing authority of such vacancy or resignation.\n\n(c) The Department of Transportation shall maintain records of each request for information and data received from the council and denote the status of any such request.",
+      "href": "?chapter=245&section=section-13b-212b",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-13b-212c",
+      "citation": "13b-212c",
+      "citations": [
+        "13b-212c"
+      ],
+      "heading": "Sec. 13b-212c. Powers and duties of Connecticut Public Transportation Council.",
+      "chapter": {
+        "id": "chapter-245",
+        "number": "245",
+        "name": "Railroads and Railways"
+      },
+      "status": "active",
+      "text": "The Connecticut Public Transportation Council shall study and investigate all aspects of the daily operation of the commuter railroad systems and public transit services funded by the state, monitor their performance and recommend changes to improve the efficiency, equity and quality of service on such commuter rail systems and public transit services. The council may request and shall receive, if available, from any department, division, board, bureau, commission, agency or public authority of the state, or any political subdivision thereof, such assistance and data that will enable it to properly carry out its activities for the purposes set forth in this section. The council shall also serve as an advocate for customers of all commuter railroad systems and public transit services funded by the state. The Department of Transportation shall (1) submit monthly reports with information and data concerning the on-time performance and passenger ridership of the commuter railroad systems and public transit services funded by the state, and (2) make quarterly presentations at the meetings of the council concerning such reports and respond to reasonable inquiries made in advance of any meeting by the council. The council shall report its findings and recommendations annually on or before January fifteenth, to the Governor, the Commissioner of Transportation, the General Assembly, the Metro North Rail Commuter Council located in the state of New York and the management advisory board of the office of the inspector general of the Metropolitan Transportation Authority located in the state of New York. The council shall also annually present its findings and recommendations to the joint standing committee of the General Assembly having cognizance of matters relating to transportation.",
+      "href": "?chapter=245&section=section-13b-212c",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    },
+    {
+      "id": "section-13b-236",
+      "citation": "13b-236",
+      "citations": [
+        "13b-236"
+      ],
+      "heading": "Sec. 13b-236. Bond issue for grants for commercial rail freight lines.",
+      "chapter": {
+        "id": "chapter-245",
+        "number": "245",
+        "name": "Railroads and Railways"
+      },
+      "status": "active",
+      "text": "(a) For the purposes described in subsection (b) of this section, the State Bond Commission shall have the power, from time to time to authorize the issuance of bonds of the state in one or more series and in principal amounts not exceeding in the aggregate twenty-seven million five hundred thousand dollars.\n\n(b) The proceeds of the sale of said bonds, to the extent of the amount stated in subsection (a) of this section, shall be used by the Department of Transportation for a program of competitive grants for commercial rail freight lines operating in the state for improvements and repairs to, and the modernization of, existing rail, rail beds and related facilities. Such program shall include the following: (1) (A) Grants of one hundred per cent of the amount necessary to improve, repair or modernize state-owned rights of way, and (B) grants of seventy per cent of the amount necessary to improve, repair or modernize privately owned rail lines, provided the commissioner may waive the requirement for a thirty per cent matching grant if such improvement, repair or modernization demonstrably increases rail freight traffic; and (2) preference for grants shall be given to (A) freight rail projects that improve at-grade rail crossings to eliminate hazards or increase safety, (B) freight rail projects that provide connection to major freight generators, (C) projects that further the goals and objectives of the Department of Transportation's Connecticut State Rail Plan, and (D) freight rail projects that improve freight rail infrastructure by increasing the capacity for rail freight traffic.\n\n(c) All provisions of section 3-20, or the exercise of any right or power granted thereby, which are not inconsistent with the provisions of this section are hereby adopted and shall apply to all bonds authorized by the State Bond Commission pursuant to this section, and temporary notes in anticipation of the money to be derived from the sale of any such bonds so authorized may be issued in accordance with said section 3-20 and from time to time renewed. Such bonds shall mature at such time or times not exceeding twenty years from their respective dates as may be provided in or pursuant to the resolution or resolutions of the State Bond Commission authorizing such bonds. None of said bonds shall be authorized except upon a finding by the State Bond Commission that there has been filed with it a request for such authorization which is signed by or on behalf of the Secretary of the Office of Policy and Management and states such terms and conditions as said commission, in its discretion, may require. Said bonds issued pursuant to this section shall be general obligations of the state and the full faith and credit of the state of Connecticut are pledged for the payment of the principal of and interest on said bonds as the same become due, and accordingly and as part of the contract of the state with the holders of said bonds, appropriation of all amounts necessary for punctual payment of such principal and interest is hereby made, and the State Treasurer shall pay such principal and interest as the same become due.",
+      "href": "?chapter=245&section=section-13b-236",
+      "supplement": {
+        "editionYear": 2024,
+        "presentation": "amended"
+      }
+    }
+  ]
+}

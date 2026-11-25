@@ -114,10 +114,11 @@ test("amended supplement sections switch between Supplement, previous text, and 
   assert.match(stylesSource, /\.revision-deletion \{ color: var\(--deletion-ink\); background: var\(--deletion-surface\); text-decoration-color: currentColor/);
 });
 
-test("supplement notices use blue while repealed notices retain warning colors", () => {
-  assert.match(stylesSource, /\.supplement-pill,[\s\S]*color: var\(--blue-dark\);[\s\S]*background: var\(--blue-light\);[\s\S]*border-color: var\(--blue\);/);
-  assert.match(stylesSource, /\.context-list \.section-status-pill \{ color: var\(--warning-ink\); \}/);
-  assert.match(stylesSource, /\.supplement-summary \{[^}]*color: var\(--blue-dark\);[^}]*background: var\(--blue-light\);/);
+test("section status tags and the supplement notice use semantic colors", () => {
+  assert.match(stylesSource, /\.supplement-pill, \.supplement-summary \{[^}]*color: var\(--addition-ink\);[^}]*background: var\(--addition-surface\);/);
+  assert.match(stylesSource, /\.repealed-pill, \.obsolete-pill \{[^}]*color: var\(--deletion-ink\);[^}]*background: var\(--deletion-surface\);/);
+  assert.match(stylesSource, /\.reserved-pill \{[^}]*color: var\(--muted\);[^}]*background: var\(--amount-surface\);/);
+  assert.match(stylesSource, /\.section-status-pill \{[^}]*color: var\(--warning-ink\);[^}]*background: var\(--warning-surface\);/);
   assert.doesNotMatch(stylesSource, /border-left: (?:[2-9]px|\.25rem) solid/);
 });
 

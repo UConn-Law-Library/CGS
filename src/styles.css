@@ -275,13 +275,12 @@ footer { padding: 2rem 0; color: var(--muted); border-top: 1px solid var(--line)
   text-transform: uppercase;
   vertical-align: .1em;
 }
-.supplement-pill {
-  color: var(--blue-dark);
-  background: var(--blue-light);
-  border-color: var(--blue);
+.repealed-pill, .obsolete-pill {
+  color: var(--deletion-ink);
+  background: var(--deletion-surface);
+  border-color: color-mix(in srgb, currentColor 65%, var(--deletion-surface));
 }
-/* Repealed, obsolete, and reserved sections have no text in force: neutral gray, so they read apart from the amber Recent Act caution. */
-.repealed-pill, .obsolete-pill, .reserved-pill {
+.reserved-pill {
   color: var(--muted);
   background: var(--amount-surface);
   border-color: var(--field-line);
@@ -290,7 +289,11 @@ footer { padding: 2rem 0; color: var(--muted); border-top: 1px solid var(--line)
 .chapter-notice { max-width: var(--measure-reading); margin-block: 1rem; padding: 1rem; border: 1px solid transparent; border-radius: .5rem; }
 .chapter-notice h2 { margin: 0; font-size: 1.05rem; line-height: 1.3; }
 .chapter-notice > p { margin: .35rem 0 0; font-size: var(--text-small-reading); }
-.supplement-summary { color: var(--blue-dark); background: var(--blue-light); border-color: var(--blue); }
+.supplement-pill, .supplement-summary {
+  color: var(--addition-ink);
+  background: var(--addition-surface);
+  border-color: color-mix(in srgb, currentColor 65%, var(--addition-surface));
+}
 .supplement-warning { padding: 1rem; color: var(--warning-ink); background: var(--warning-surface); border: 1px solid var(--warning-line); }
 /* A listed Public Act changes this section after the published text: amber, for caution. */
 .pending-amendments, .pending-amendments-summary { max-width: var(--measure-reading); color: var(--warning-ink); background: var(--warning-surface); border: 1px solid var(--warning-line); border-radius: .5rem; }
@@ -950,11 +953,8 @@ body.resizing-context { cursor: col-resize; user-select: none; }
 .context-list a[aria-current="page"] { color: var(--ink); background: var(--blue-light); box-shadow: inset 4px 0 0 var(--blue); }
 .context-list strong, .context-list span, .context-list small { overflow-wrap: anywhere; }
 .context-list strong { font-size: var(--text-meta); line-height: 1.25; }
-.context-list span, .context-list small { display: block; margin-top: .12rem; color: var(--muted); font-size: var(--text-caption); line-height: 1.3; }
+.context-list :where(span:not(.supplement-pill, .section-status-pill), small) { display: block; margin-top: .12rem; color: var(--muted); font-size: var(--text-caption); line-height: 1.3; }
 .context-list .supplement-pill, .context-list .section-status-pill { display: inline-flex; margin: 0 0 0 .25rem; }
-.context-list .supplement-pill { color: var(--blue-dark); }
-.context-list .section-status-pill { color: var(--warning-ink); }
-.context-list :is(.repealed-pill, .obsolete-pill, .reserved-pill) { color: var(--muted); }
 .context-empty { padding: 1rem; color: var(--muted); font-size: var(--text-meta); }
 .application-main { width: min(54rem, calc(100% - 2.5rem)); min-width: 0; margin-inline: auto; padding-block: 1.5rem 5rem; container: reading / inline-size; }
 /* The reading column's width depends on the panes beside it, not only the window, so what
@@ -1560,9 +1560,8 @@ h1,
   --research-gap: 2rem;
   --control-height: 2.75rem;
   --bookmark-accent: light-dark(#704488, #d8aff0);
-  /* The Transferred tag's green, shared by the What's new button and tour. */
-  --transferred-accent: light-dark(#09645e, #74d6cb);
-  --on-transferred: light-dark(#fff, #062521);
+  --tour-accent: light-dark(#09645e, #74d6cb);
+  --on-tour-accent: light-dark(#fff, #062521);
 }
 .brand-library { display: block; margin-bottom: .3rem; font-size: var(--text-caption); font-weight: 400; letter-spacing: .025em; }
 .mobile-utility-icon { display: none; }
@@ -1648,13 +1647,13 @@ h1,
   :root[data-reading-width="widest"] { --measure-reading: 72rem; }
   .reading-width-setting .segmented { grid-template-columns: repeat(3, 1fr); }
   @media (max-width: 60rem) { .reading-width-setting { display: none; } }
-  /* What's new tour: the button, card, and outlined control share the Transferred tag's green. */
+  /* The What's new button, card, and outlined control share a teal accent. */
   .whats-new-button { font: inherit; cursor: pointer; }
   /* Tinted like the home page's Understanding the Statutes card, not filled. */
-  .global-search .whats-new-button { color: var(--ink); background: color-mix(in srgb, var(--transferred-accent) 12%, var(--surface-raised)); border-color: color-mix(in srgb, var(--transferred-accent) 65%, var(--line)); font-weight: 700; }
-  .global-search .whats-new-button:hover { background: color-mix(in srgb, var(--transferred-accent) 20%, var(--surface-raised)); border-color: var(--transferred-accent); }
-  .whats-new-button:focus-visible { outline: 3px solid var(--transferred-accent); outline-offset: 2px; }
-  .tour-card { position: fixed; z-index: 70; width: min(22rem, calc(100vw - 2rem)); max-height: calc(100dvh - 2rem); padding: 1rem; overflow: auto; color: var(--ink); background: color-mix(in srgb, var(--transferred-accent) 12%, var(--surface-raised)); border: 1px solid var(--transferred-accent); border-radius: .8rem; box-shadow: var(--shadow); }
+  .global-search .whats-new-button { color: var(--ink); background: color-mix(in srgb, var(--tour-accent) 12%, var(--surface-raised)); border-color: color-mix(in srgb, var(--tour-accent) 65%, var(--line)); font-weight: 700; }
+  .global-search .whats-new-button:hover { background: color-mix(in srgb, var(--tour-accent) 20%, var(--surface-raised)); border-color: var(--tour-accent); }
+  .whats-new-button:focus-visible { outline: 3px solid var(--tour-accent); outline-offset: 2px; }
+  .tour-card { position: fixed; z-index: 70; width: min(22rem, calc(100vw - 2rem)); max-height: calc(100dvh - 2rem); padding: 1rem; overflow: auto; color: var(--ink); background: color-mix(in srgb, var(--tour-accent) 12%, var(--surface-raised)); border: 1px solid var(--tour-accent); border-radius: .8rem; box-shadow: var(--shadow); }
   .tour-card[hidden] { display: none; }
   .tour-card:focus { outline: none; }
   .tour-card-header { display: flex; align-items: center; justify-content: space-between; gap: .5rem; }
@@ -1666,8 +1665,8 @@ h1,
   .tour-actions button { min-height: 2.5rem; padding: .45rem .9rem; border-radius: var(--radius-control); font-size: var(--text-ui); font-weight: 700; }
   .tour-actions [data-tour-back] { color: var(--ink); background: transparent; border: 1px solid var(--field-line); }
   .tour-actions [data-tour-back]:disabled { opacity: .45; }
-  .tour-actions [data-tour-next] { color: var(--on-transferred); background: var(--transferred-accent); border: 1px solid var(--transferred-accent); }
-  .tour-target { outline: 3px solid var(--transferred-accent) !important; outline-offset: 4px; }
+  .tour-actions [data-tour-next] { color: var(--on-tour-accent); background: var(--tour-accent); border: 1px solid var(--tour-accent); }
+  .tour-target { outline: 3px solid var(--tour-accent) !important; outline-offset: 4px; }
   .tour-target:focus-visible { outline-color: var(--focus) !important; }
   @media (max-width: 60rem) {
     .tour-card { top: auto; right: .75rem; bottom: calc(5rem + env(safe-area-inset-bottom)); left: .75rem; width: auto; max-height: calc(100dvh - 6rem - env(safe-area-inset-bottom)); }
@@ -1785,11 +1784,6 @@ h1,
   .context-list a { margin-block: .1rem; padding: .7rem .65rem; border-radius: var(--radius-control); }
   .context-list strong { font-weight: 600; }
   .context-list span { font-size: var(--text-meta); line-height: 1.45; }
-  :is(.context-list, .tree-status-filter) .transferred-pill {
-    color: var(--transferred-accent);
-    background: color-mix(in srgb, currentColor 12%, var(--surface-raised));
-    border-color: currentColor;
-  }
   .context-list a.section-navigation-link:has(.navigation-notice) {
     display: flex;
     flex-wrap: wrap;
@@ -1933,7 +1927,7 @@ h1,
   .section-actions { gap: .5rem; padding-block: .7rem; border-block: 1px solid var(--line); }
   .section-actions :is(button, a) { display: inline-flex; align-items: center; justify-content: center; min-height: var(--control-height); padding: .5rem .65rem; color: var(--ink); background: var(--surface-raised); border: 1px solid var(--line); border-radius: var(--radius-control); font-size: var(--text-meta); font-weight: 500; }
   .section-actions :is(button, a):hover { color: var(--ink); background: var(--soft-surface); border-color: var(--field-line); }
-  .section-actions .primary-action { margin-inline-start: auto; color: var(--on-blue); background: var(--blue); border-color: var(--blue); }
+  .section-actions .primary-action { gap: .3rem; margin-inline-start: auto; color: var(--on-blue); background: var(--blue); border-color: var(--blue); }
   .section-actions .primary-action:hover { color: var(--on-blue); background: var(--blue-dark); border-color: var(--blue-dark); }
   .section-actions .icon-action { position: relative; flex: none; width: var(--control-height); padding: 0; border: 0; background: transparent; }
   .section-actions .icon-action:hover { color: var(--blue); background: transparent; }

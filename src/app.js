@@ -815,7 +815,7 @@ function renderProvision(title, chapter, section, maps, secondaryContext = null,
       <button type="button" class="icon-action" data-copy-link="${escapeHtml(route)}">${iconActionLabel(icons.link, "Copy link")}</button>
       ${canShareFromDevice() ? `<button type="button" class="icon-action" data-share-link="${escapeHtml(route)}" data-share-title="${escapeHtml(section.heading)}">${iconActionLabel(icons.share, "Share")}</button>` : ""}
       <a class="icon-action" href="${escapeHtml(email)}">${iconActionLabel(icons.mail, "Email")}</a>
-      <a class="primary-action" href="${escapeHtml(officialUrl(section.sourceUrl))}">Official source</a>
+      <a class="primary-action" href="${escapeHtml(officialUrl(section.sourceUrl))}" target="_blank" rel="noopener" aria-description="Opens in a new tab">Official source <span aria-hidden="true">↗</span></a>
     </div>
     ${renderTextViews(section, change, `<div class="statute-text">${section.content.body.map((paragraph) => renderParagraph(paragraph, maps, title, chapter, section)).join("")}</div>
     ${renderInformationReferences(section, maps, secondaryContext, change)}`, maps)}
@@ -842,8 +842,9 @@ function renderSearchResults(matches, results, query, searchOptions = {}) {
   const highlightTerms = searchHighlightTerms(query, { within: options.within });
   results.innerHTML = matches.map(({ document, score, matchedFields = [] }) => {
     const tags = sectionStatuses(document);
-    const statusText = tags.length ? tags.join(", ") : ["active", "mixed"].includes(document.status) ? "" : document.status;
-    const documentStatus = statusText ? `<span class="status">${escapeHtml(statusText)}</span>` : "";
+    const documentStatus = tags.length
+      ? tags.map((status) => `<span class="status ${status}-pill">${STATUS_LABELS[status]}</span>`).join(" ")
+      : !document.status || ["active", "mixed"].includes(document.status) ? "" : `<span class="status">${escapeHtml(document.status)}</span>`;
     const supplement = document.supplement ? `<span class="supplement-pill supplement-${escapeHtml(document.supplement.presentation)}">${escapeHtml(supplementLabel(document.supplement, { short: true }))}</span>` : "";
     const field = ["all", "statute"].includes(options.field) && matchedFields.length
       ? `<span class="result-match-field">${escapeHtml(matchedFields.map((name) => SEARCH_FIELD_LABELS[name] ?? name).join(", "))}</span>`

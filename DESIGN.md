@@ -181,14 +181,14 @@ components:
     textColor: "{colors.header-night}"
     rounded: "{rounded.header-control}"
   chip-supplement:
-    backgroundColor: "{colors.navy-wash}"
-    textColor: "{colors.navy-deep}"
+    backgroundColor: "{colors.addition-surface}"
+    textColor: "{colors.addition-ink}"
     typography: "{typography.caption}"
     rounded: "{rounded.pill}"
     padding: "0.12rem 0.45rem"
   chip-repealed:
-    backgroundColor: "{colors.warning-surface}"
-    textColor: "{colors.warning-ink}"
+    backgroundColor: "{colors.deletion-surface}"
+    textColor: "{colors.deletion-ink}"
     typography: "{typography.caption}"
     rounded: "{rounded.pill}"
     padding: "0.12rem 0.45rem"
@@ -216,7 +216,7 @@ components:
 
 A reading room is open to anyone, quiet, well lit, and has nothing for sale. This reader works the same way: warm paper surfaces, a book serif for the law itself, and an interface that steps back so the statute text sits at the center. A resident checking a ticket on a phone and a clerk pulling a citation at a desk get the same room. Nothing in the design asks for attention the text has not earned.
 
-The mood is **precise and trustworthy**. Precision shows up as exact citations, provenance on every page, consistent states, and a fixed reading measure. Trust shows up as restraint: no gradients, no glows, no decorative motion. Color carries meaning (navy for action and the current place, blue for supplement changes, amber for repealed text and warnings, green and red for added and deleted language), never ornament.
+The mood is **precise and trustworthy**. Precision shows up as exact citations, provenance on every page, consistent states, and a fixed reading measure. Trust shows up as restraint: no gradients, no glows, no decorative motion. Color carries meaning (navy for action and the current place, green for Supplement tags, amber for Recent Public Act and Transferred tags and warnings, red for Repealed and Obsolete tags, grey for Reserved tags), never ornament.
 
 The room is lit from the page, not the chrome. The dark header and tab bar are a frame; everything you read sits on Reading Room Paper or a white surface, flat, separated by hairlines and quiet tints. Shadows exist only for things that float above the page.
 
@@ -224,7 +224,7 @@ The room is lit from the page, not the chrome. The dark header and tab bar are a
 - Flat paper surfaces with hairline borders; tints, not shadows, group content.
 - Each device's own UI face for the interface; Georgia for statute and act text.
 - A wide reading column (up to 54rem) so a desktop screen holds more of each section; it never drops below 36rem beside the panes.
-- Color is semantic: navy acts, blue marks supplements, amber warns, green adds, red deletes.
+- Color is semantic: navy marks actions, and status tags use green, amber, red, and grey.
 - A dark frame (header, tab bar) that never changes with theme; light, dark, and OLED themes for everything inside it.
 - Accessibility is structural: 3:1 boundaries on fields and focus, reading-comfort controls, screen-reader text for amendments.
 
@@ -234,8 +234,8 @@ A warm paper ground, one navy for action and place, and a set of quiet semantic 
 
 ### Primary
 - **Reading Room Navy** (#0b3b70): Primary buttons, links, the selected state of segmented controls and view tabs, the current-item marker in navigation panes, and the outline of secondary buttons. In dark themes it lightens to #8dbbf4 with near-black text on it.
-- **Navy Deep** (#062b54): Hover for filled navy buttons, and the text color on navy-wash surfaces (supplement chips and callouts).
-- **Navy Wash** (#dceafb): Hover and current-item background in lists and panes, supplement pills and summaries, index entry targets.
+- **Navy Deep** (#062b54): Hover for filled navy buttons and text on navy-wash surfaces.
+- **Navy Wash** (#dceafb): Hover and current-item background in lists and panes, and the background for index entry targets.
 
 ### Neutral
 - **Ink** (#172538): All body and heading text on light surfaces.
@@ -252,8 +252,8 @@ A warm paper ground, one navy for action and place, and a set of quiet semantic 
 - **Signal Amber** (#a86200): The focus ring on light page surfaces (3.9:1 or better on all of them).
 - **Signal Amber Bright** (#f0a202): The focus ring on the dark header and tab bar, and in dark themes everywhere.
 - **Highlight** (#fff1b8 with #4a3500 text): Search-term marks and the targeted subsection.
-- **Warning** (#fff1d7 surface, #4a3500 text, #e2b45f line): Repealed pills, supplement-load warnings, offline compatibility notes.
-- **Addition** (#dcfce7 with #14532d) and **Deletion** (#fee2e2 with #991b1b): Inserted and struck language in act text and supplement comparisons.
+- **Warning** (#fff1d7 surface, #4a3500 text, #e2b45f line): Recent Public Act and Transferred tags, supplement-load warnings, offline compatibility notes.
+- **Addition** (#dcfce7 with #14532d) and **Deletion** (#fee2e2 with #991b1b): Inserted and struck language in act text and supplement comparisons. Supplement tags use Addition colors. Repealed and Obsolete tags use Deletion colors.
 - **Danger** (#9c2f2f): Destructive confirmation fills and query-error outlines. In dark themes the outline color lightens to #f08a84; the fill stays #9c2f2f so white text keeps its contrast.
 
 ### Frame
@@ -265,7 +265,7 @@ A warm paper ground, one navy for action and place, and a set of quiet semantic 
 The `night-*` tokens are the Dark theme (and Auto under a dark system setting); OLED uses the same values on true black (`print-ink` doubles as its paper) with the `oled-*` surfaces. The header frame tokens never change. Print sets `print-ink` on white and drops all tints except amendment marks. **Wordmark Plate** (#000e2f) is the dark backdrop the UConn wordmark is drawn for, used only on the About page.
 
 ### Named Rules
-**The Meaning-Only Color Rule.** Every hue says something: navy is action or "you are here", blue is a supplement change, amber is caution or repeal, green and red are added and deleted language. Never use one of these colors for decoration, and never introduce a hue without a meaning.
+**The Meaning-Only Color Rule.** Every hue says something: navy is action or "you are here", green marks Supplement tags, amber marks Recent Public Act and Transferred tags, red marks Repealed and Obsolete tags, and grey marks Reserved tags. Never use one of these colors for decoration, and never introduce a hue without a meaning.
 
 **The Twin Themes Rule.** Dark values exist twice, once for the Dark and OLED settings and once for Auto under `prefers-color-scheme`. Change both together; `test/theme.test.mjs` fails if they drift.
 
@@ -303,7 +303,7 @@ Reading-comfort profiles (Atkinson Hyperlegible, Lexend, Inclusive Sans) replace
 
 The app is designed for phones first and used equally at a desk. Below 60rem it is a single column under a sticky header, with a six-item tab bar fixed to the bottom. At large text sizes the header scrolls away instead of covering a quarter of the screen. Safe-area insets are respected on notched phones.
 
-From 60rem up, statute, index, and infraction pages use a three-level pane browser: titles, then chapters, then sections. Panes default to 176, 208, and 240px, each resizable between 144 and 420px with a 6px keyboard-operable divider. The reading column always keeps at least 36rem. When the panes and that column don't fit side by side, the outermost pane gives way first; the breadcrumb still reaches every level. Users can collapse all panes. Settings also offers page tree navigation: one panel (320px by default, with its own stored width) where chapters nest under titles and sections under chapters, with rounded elbow connectors, a filter across all three levels, and a status filter that lists only sections carrying one tag (Supplement, New · Supplement, Recent Act, Repealed, Transferred, Obsolete, or Reserved). Section rows show the same tags as the chapter lists, including in filter results. A Collapse all button appears in a tree's heading while any row is open. The preview build starts visitors on page tree navigation; this branch's default stays the panes. A What's new button beside History opens a short guided tour: a floating card beside an outlined control, with Back, Next, and a step count. The button, card, outline, and Next button use the Transferred tag's green so the tour reads as one feature. On phones the card docks above the tab bar. The same setting turns the subject index (letters, then headings) and the infraction schedule (categories, then entries) into one-panel trees. The index tree's filter searches headings under every letter, from a compact list of heading names the build derives from the index (the whole index is too large to download for a filter). If that list can't load, it falls back to the headings under the letter the query starts with. It leaves phones unchanged. Everything that sticks below the header (panes, the phone "Browse chapter" bar, subsection links) is offset by the header's measured height (`--header-height`), never a fixed guess, because the header grows with text size.
+From 60rem up, statute, index, and infraction pages use a three-level pane browser: titles, then chapters, then sections. Panes default to 176, 208, and 240px, each resizable between 144 and 420px with a 6px keyboard-operable divider. The reading column always keeps at least 36rem. When the panes and that column don't fit side by side, the outermost pane gives way first; the breadcrumb still reaches every level. Users can collapse all panes. Settings also offers page tree navigation: one panel (320px by default, with its own stored width) where chapters nest under titles and sections under chapters, with rounded elbow connectors, a filter across all three levels, and a status filter that lists only sections carrying one tag (Supplement, New · Supplement, Recent Act, Repealed, Transferred, Obsolete, or Reserved). Section rows show the same tags as the chapter lists, including in filter results. A Collapse all button appears in a tree's heading while any row is open. The preview build starts visitors on page tree navigation; this branch's default stays the panes. A What's new button beside History opens a short guided tour: a floating card beside an outlined control, with Back, Next, and a step count. The button, card, outline, and Next button share a teal accent so the tour reads as one feature. On phones the card docks above the tab bar. The same setting turns the subject index (letters, then headings) and the infraction schedule (categories, then entries) into one-panel trees. The index tree's filter searches headings under every letter, from a compact list of heading names the build derives from the index (the whole index is too large to download for a filter). If that list can't load, it falls back to the headings under the letter the query starts with. It leaves phones unchanged. Everything that sticks below the header (panes, the phone "Browse chapter" bar, subsection links) is offset by the header's measured height (`--header-height`), never a fixed guess, because the header grows with text size.
 
 Content widths: the reading column is up to 54rem (never below 36rem beside the panes; on this branch it is 44rem, and a desktop-only Reading width setting offers Wide, 56rem, and Widest, 72rem), interface pages are 54rem, the home page is 64rem, and full-width pages cap at 72rem. Breakpoints sit at 36rem, 44rem, and 60rem. Components inside the reading column respond to the column through a container query, not the viewport. Spacing follows a 0.35 / 0.5 / 0.75 / 1 / 1.5 / 2rem rhythm. A Compact lists setting tightens list padding without changing type. Compact lists, Hide sections (by status: Repealed, Transferred, Obsolete, Reserved), Subtle notices, and page tree navigation open from a settings icon in the first visible pane's heading. Phones, and desktop pages without a showing pane, keep them in Settings.
 
@@ -337,8 +337,10 @@ Plain and sturdy; their job is to be found and pressed, not admired.
 - **Text buttons:** Navy text with no fill; Navy Wash on hover.
 
 ### Chips
-- **Supplement pill:** Navy Wash fill, Navy Deep text, navy hairline, uppercase caption.
-- **Repealed pill:** Warning surface, warning ink, warning line.
+- **Supplement tags and chapter notices** use the green Addition surface and ink.
+- **Recent Public Act and Transferred tags** use the amber Warning surface, ink, and line.
+- **Repealed and Obsolete tags** use the red Deletion surface and ink.
+- **Reserved tags** use the grey Ledger surface, Muted Ink, and Field Edge border.
 - **Record tag:** Navy Wash fill with Navy Deep text, as on infraction and fee records. **Match-field tag:** Soft Surface with muted text, naming where a search matched. Neither is interactive.
 
 ### Cards / Containers
@@ -361,7 +363,7 @@ Plain and sturdy; their job is to be found and pressed, not admired.
 - **Breadcrumbs:** UI-size links separated by slashes.
 
 ### Statute Reader (signature)
-The core surface. A label line gives status and source ("Amended — 2026 Supplement"), then the headline, a 2px ink rule, a row of icon actions (Copy citation, Bookmark, Copy link, Email, and Share where the device has a share sheet) with a blue Official source button, a text-version button group on sections with earlier text, and the Reading-font text. Each subsection starts with a small UI-face link to itself. Targeting a subsection washes it in Highlight and reveals a copy-citation chip. Citations within the text are bold navy links. Below the text: the supplement comparison and earlier revisions in collapsed panels, then Information references grouped in disclosure rows.
+The core surface. A label line gives status and source ("Amended — 2026 Supplement"), then the headline, a 2px ink rule, a row of icon actions (Copy citation, Bookmark, Copy link, Email, and Share where the device has a share sheet) with a blue Official source button that opens a new tab, a text-version button group on sections with earlier text, and the Reading-font text. Each subsection starts with a small UI-face link to itself. Targeting a subsection washes it in Highlight and reveals a copy-citation chip. Citations within the text are bold navy links. Below the text: the supplement comparison and earlier revisions in collapsed panels, then Information references grouped in disclosure rows.
 
 ### Amendment Marks (signature)
 Inserted language sits on the Addition tint and deleted language on the Deletion tint with a strikethrough. Screen readers announce each change ("added", "deleted"). Printing keeps additions underlined so the marks survive without color.
@@ -385,7 +387,7 @@ This addendum does not authorize a production deployment.
 - **Do** use a 3px Signal Amber focus outline, #a86200 on page surfaces and #f0a202 on the dark frame.
 - **Do** give every input and select a Field Edge (#727d8a) border.
 - **Do** show selection on page surfaces as a navy fill with on-navy text, and in the header as a Header Accent pill.
-- **Do** mark supplement changes in blue, repealed text and warnings in amber, and amendments in green and red, with screen-reader text for each.
+- **Do** use the status tag colors consistently and keep text labels available to screen readers.
 - **Do** let outer navigation panes give way before the reading column drops below 36rem.
 
 ### Don't:

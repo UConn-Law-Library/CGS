@@ -26,7 +26,7 @@ const STEPS = [
     route: "#/t/16a/c/295",
     targets: [".chapter-notice"],
     title: "Chapter change summaries",
-    text: "A chapter opens with what changed: sections whose text comes from the latest Supplement, in blue, and sections recent Public Acts change, in amber. Open a list to go to a section."
+    text: "A chapter opens with what changed: sections whose text comes from the latest Supplement, in green, and sections recent Public Acts change, in amber. Open a list to go to a section."
   },
   {
     route: "#/t/16a/c/295/s/16a-3g",

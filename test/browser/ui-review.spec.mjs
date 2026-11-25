@@ -241,6 +241,8 @@ test("section actions are four named icons and a blue Official source button", a
   }
   const source = actions.getByRole("link", { name: "Official source" });
   await expect(source).toHaveClass(/primary-action/);
+  await expect(source).toHaveAttribute("rel", "noopener");
+  await expect(source).toHaveAccessibleDescription("Opens in a new tab");
   expect(await source.evaluate((element) => getComputedStyle(element).backgroundColor)).toBe(await page.evaluate(() => {
     const probe = document.createElement("div");
     probe.style.background = "var(--blue)";
@@ -258,6 +260,13 @@ test("section actions are four named icons and a blue Official source button", a
   }
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   await expectNoHighImpactAccessibilityViolations(page);
+  const sectionUrl = page.url();
+  const sourceUrl = await source.evaluate((link) => link.href);
+  await page.context().route((url) => url.host === new URL(sourceUrl).host, (route) => route.fulfill({ body: "Official source" }));
+  const [sourceTab] = await Promise.all([page.waitForEvent("popup"), source.click()]);
+  await expect(sourceTab).toHaveURL(sourceUrl);
+  await expect(page).toHaveURL(sectionUrl);
+  await sourceTab.close();
 });
 
 test("tooltips appear on hover and keyboard focus and icon actions still work", async ({ page }, testInfo) => {

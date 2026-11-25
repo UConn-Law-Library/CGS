@@ -346,8 +346,12 @@ test("Share shows only on touch devices that have a share sheet", async ({ page 
   if (!isMobileProject(testInfo)) return;
   // share-06, between Copy link and Email.
   expect((await share.locator("svg path").getAttribute("d")).startsWith("M20.791 12.607")).toBe(true);
-  const names = await page.locator(".provision .section-actions > *").evaluateAll((items) => items.map((item) => item.textContent.trim()));
-  expect(names).toEqual(["Copy citation", "Bookmark", "Copy link", "Share", "Email", "Official source"]);
+  const actions = page.locator(".provision .section-actions > *");
+  const expectedNames = ["Copy citation", "Bookmark", "Copy link", "Share", "Email", "Official source"];
+  await expect(actions).toHaveCount(expectedNames.length);
+  for (const [index, name] of expectedNames.entries()) {
+    await expect(actions.nth(index)).toHaveAccessibleName(name);
+  }
   await share.click();
   await expect.poll(() => page.evaluate(() => window.shared.length)).toBe(1);
   const data = await page.evaluate(() => window.shared[0]);
